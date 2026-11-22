@@ -279,7 +279,7 @@ def test_offline_run_english(tmp_path, monkeypatch):
     assert ml["papers"][0]["summary"]["one_liner"].startswith("We derive")
     assert next(t for t in index["topics"] if t["slug"] == "ml-theory")["new_today"] == len(ml["papers"])
     site = json.loads((data / "site.json").read_text(encoding="utf-8"))
-    assert site["title"] == "Research Radar" and site["supabase_url"] == ""
+    assert site["title"] == "Research Radar" and set(site) == {"title", "supabase_url", "supabase_anon_key"}
 
     # a second run the same day redoes today's selection (e.g. after adding an API key)
     md2 = run(args).read_text(encoding="utf-8")

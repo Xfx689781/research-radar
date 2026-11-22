@@ -38,8 +38,8 @@ site_title: Research Radar
 # Optional accounts (sign in by email, topic choices sync across devices).
 # Leave empty and the site still works: choices are saved in the browser.
 # See README "Accounts" for the 10-minute Supabase setup.
-supabase_url: ""
-supabase_anon_key: ""
+supabase_url: "https://vwszwnloifqpczudjzif.supabase.co"
+supabase_anon_key: "sb_publishable_Dt_mVw-uEYrF1ZH0BSddsA_U65tS8fk"
 
 topics:
   # Readers choose from all of these on the website. Remove any you do not want to fetch.
