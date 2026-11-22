@@ -1,0 +1,320 @@
+{
+ "updated": "2026-11-22",
+ "language": "en",
+ "fields": [
+  "Mathematics",
+  "Computer science and AI",
+  "Physics",
+  "Chemistry",
+  "Biology",
+  "Economics"
+ ],
+ "topics": [
+  {
+   "slug": "probability",
+   "name": "Probability",
+   "field": "Mathematics",
+   "description": "Probability theory, random matrices, stochastic differential equations, interacting particle systems, mean-field limits, propagation of chaos, optimal transport, concentration of measure, high-dimensional probability, Gaussian processes, spin glasses, percolation, Markov chain mixing, stochastic analysis with connections to statistics and machine learning.",
+   "source": "arxiv",
+   "categories": [
+    "math.PR"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "statistics-theory",
+   "name": "Statistics theory",
+   "field": "Mathematics",
+   "description": "Mathematical statistics, high-dimensional statistics, minimax rates, nonparametric estimation, Bayesian asymptotics, causal inference, conformal prediction, uncertainty quantification, multiple testing, selective inference, robust statistics.",
+   "source": "arxiv",
+   "categories": [
+    "math.ST",
+    "stat.ME"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "differential-geometry",
+   "name": "Differential geometry",
+   "field": "Mathematics",
+   "description": "Riemannian geometry, curvature, geometric flows, geometric analysis, Lie groups, connections and fiber bundles, symplectic and Hamiltonian geometry, moment maps, optimal transport on manifolds, information geometry.",
+   "source": "arxiv",
+   "categories": [
+    "math.DG",
+    "math.SG"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "pde",
+   "name": "Partial differential equations",
+   "field": "Mathematics",
+   "description": "Nonlinear partial differential equations, elliptic and parabolic PDE, dispersive equations, nonlinear Schrodinger equation, wave equations, fluid equations, Hamilton-Jacobi equations, viscosity solutions, Fokker-Planck equations, gradient flows, regularity theory, free boundary problems.",
+   "source": "arxiv",
+   "categories": [
+    "math.AP"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "harmonic-analysis",
+   "name": "Harmonic analysis",
+   "field": "Mathematics",
+   "description": "Harmonic analysis, Fourier analysis, singular integrals, Calderon-Zygmund theory, Littlewood-Paley theory, Fourier restriction, decoupling, Kakeya problems, oscillatory integrals, Fourier multipliers, maximal functions, weighted inequalities, wavelets, time-frequency analysis, functional analysis, operator theory, Banach and Hilbert spaces.",
+   "source": "arxiv",
+   "categories": [
+    "math.CA",
+    "math.FA"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "complex-analysis",
+   "name": "Complex analysis",
+   "field": "Mathematics",
+   "description": "Holomorphic functions, normal families, conformal mappings, Riemann surfaces, potential theory, value distribution, several complex variables, complex dynamics, applications to random matrices and partition function zeros.",
+   "source": "arxiv",
+   "categories": [
+    "math.CV"
+   ],
+   "new_today": 1
+  },
+  {
+   "slug": "combinatorics",
+   "name": "Combinatorics",
+   "field": "Mathematics",
+   "description": "Extremal and probabilistic combinatorics, random graphs, additive combinatorics, Ramsey theory, combinatorial designs, enumerative and analytic combinatorics, Erdos problems.",
+   "source": "arxiv",
+   "categories": [
+    "math.CO"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "math-physics",
+   "name": "Mathematical physics",
+   "field": "Mathematics",
+   "description": "Rigorous statistical mechanics, quantum mechanics and spectral theory, Schrodinger operators, random matrices in physics, integrable systems, gauge theory, mathematical general relativity, nonlinear PDE from physics, rigorous results on phase transitions.",
+   "source": "arxiv",
+   "categories": [
+    "math-ph"
+   ],
+   "new_today": 0
+  },
+  {
+   "slug": "optimization-control",
+   "name": "Optimization and control",
+   "field": "Mathematics",
+   "description": "Convex and nonconvex optimization, first-order methods, convergence rates, stochastic optimization, optimal control, stochastic control, reinforcement learning theory, control barrier functions, safety verification, mean-field games.",
+   "source": "arxiv",
+   "categories": [
+    "math.OC",
+    "eess.SY"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "ml-theory",
+   "name": "Machine learning theory",
+   "field": "Computer science and AI",
+   "description": "Rigorous theory of machine learning, generalization bounds, PAC-Bayes, sample complexity, optimization and training dynamics of neural networks, mean-field limits and Wasserstein gradient flows, neural tangent kernel, implicit bias, benign overfitting and double descent, random matrix theory for high-dimensional learning, theory of diffusion and score-based models, uncertainty quantification and conformal prediction, singular learning theory, information geometry.",
+   "source": "arxiv",
+   "categories": [
+    "stat.ML",
+    "cs.LG"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "interpretability",
+   "name": "Interpretability",
+   "field": "Computer science and AI",
+   "description": "Mechanistic interpretability of neural networks and language models, superposition, sparse autoencoders, circuits, linear representations, geometry of learned representations, developmental interpretability, singular learning theory, mathematical foundations of interpretability.",
+   "source": "arxiv",
+   "categories": [
+    "cs.LG",
+    "cs.CL",
+    "cs.AI"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "ai4math",
+   "name": "AI for mathematics",
+   "field": "Computer science and AI",
+   "description": "Automated and interactive theorem proving in Lean, Coq/Rocq and Isabelle, autoformalization, mathlib, LLM provers, AI systems solving open mathematical problems, verification of AI-generated proofs, benchmarks for research-level mathematical reasoning.",
+   "source": "arxiv",
+   "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.LO",
+    "cs.CL",
+    "math.HO"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "embodied-ai",
+   "name": "Embodied AI and robotics",
+   "field": "Computer science and AI",
+   "description": "Vision-language-action models, robot foundation models, world models, humanoid robots, dexterous manipulation, sim-to-real transfer, reinforcement learning and optimal control for robots, safety guarantees, Lie groups for robot state estimation.",
+   "source": "arxiv",
+   "categories": [
+    "cs.RO"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "theoretical-physics",
+   "name": "Theoretical physics",
+   "field": "Physics",
+   "description": "Quantum field theory, conformal field theory, scattering amplitudes, integrability, general relativity and black holes, statistical mechanics of disordered systems, spin glasses and replica methods, physics of learning and neural networks, exactly solvable models.",
+   "source": "arxiv",
+   "categories": [
+    "hep-th",
+    "gr-qc",
+    "cond-mat.stat-mech"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "quantum",
+   "name": "Quantum information and computing",
+   "field": "Physics",
+   "description": "Quantum algorithms, quantum error correction, quantum complexity theory, quantum information theory, entanglement, quantum many-body systems, quantum machine learning, near-term quantum devices.",
+   "source": "arxiv",
+   "categories": [
+    "quant-ph"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "chemistry",
+   "name": "Chemistry and materials",
+   "field": "Chemistry",
+   "description": "Theoretical and computational chemistry, electronic structure, density functional theory, molecular dynamics, reaction mechanisms, catalysis, spectroscopy, materials discovery, batteries and energy materials, machine learning potentials and force fields.",
+   "source": "arxiv",
+   "categories": [
+    "physics.chem-ph",
+    "cond-mat.mtrl-sci"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "ml-for-molecules",
+   "name": "Machine learning for molecules and materials",
+   "field": "Chemistry",
+   "description": "Machine learning for chemistry and materials, equivariant neural networks for molecules, machine learning interatomic potentials, generative models for molecules, crystals and proteins, drug discovery, protein structure and design, inverse design of materials.",
+   "source": "arxiv",
+   "categories": [
+    "physics.chem-ph",
+    "cond-mat.mtrl-sci",
+    "q-bio.BM",
+    "cs.LG"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "biology",
+   "name": "Computational and systems biology",
+   "field": "Biology",
+   "description": "Computational biology, bioinformatics, systems biology, biophysics, genomics, single-cell analysis, gene regulatory networks, protein structure prediction, mathematical models of cells and tissues, synthetic biology, machine learning for biology.",
+   "source": "biorxiv",
+   "categories": [
+    "bioinformatics",
+    "systems biology",
+    "biophysics",
+    "genomics",
+    "synthetic biology"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "neuroscience",
+   "name": "Neuroscience",
+   "field": "Biology",
+   "description": "Computational and theoretical neuroscience, neural coding, learning and plasticity, neural population dynamics, brain-inspired machine learning, connectomics, large-scale neural recordings.",
+   "source": "biorxiv",
+   "categories": [
+    "neuroscience"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "quantitative-biology",
+   "name": "Quantitative biology (arXiv)",
+   "field": "Biology",
+   "description": "Mathematical and physical models in biology, population dynamics, evolution, epidemic models, biochemical networks, stochastic models of gene expression, theoretical neuroscience, biological physics.",
+   "source": "arxiv",
+   "categories": [
+    "q-bio.BM",
+    "q-bio.CB",
+    "q-bio.GN",
+    "q-bio.MN",
+    "q-bio.NC",
+    "q-bio.OT",
+    "q-bio.PE",
+    "q-bio.QM",
+    "q-bio.SC",
+    "q-bio.TO"
+   ],
+   "new_today": 1
+  },
+  {
+   "slug": "epidemiology",
+   "name": "Epidemiology (medRxiv)",
+   "field": "Biology",
+   "description": "Epidemiological methods, causal inference in health data, infectious disease modelling, clinical prediction models, health informatics, statistical methods for medical research.",
+   "source": "medrxiv",
+   "categories": [
+    "epidemiology",
+    "health informatics"
+   ],
+   "new_today": 0
+  },
+  {
+   "slug": "economics",
+   "name": "Economics",
+   "field": "Economics",
+   "description": "Econometrics, causal inference, identification, structural estimation, economic theory, mechanism design, game theory, market design, macroeconomics, labor and development economics, economics of AI.",
+   "source": "arxiv",
+   "categories": [
+    "econ.EM",
+    "econ.TH",
+    "econ.GN"
+   ],
+   "new_today": 0
+  },
+  {
+   "slug": "game-theory",
+   "name": "Game theory and mechanism design",
+   "field": "Economics",
+   "description": "Game theory, mechanism design, auctions, matching markets, social choice, learning in games, equilibrium computation, algorithmic economics.",
+   "source": "arxiv",
+   "categories": [
+    "cs.GT",
+    "econ.TH"
+   ],
+   "new_today": 3
+  },
+  {
+   "slug": "quantitative-finance",
+   "name": "Quantitative finance",
+   "field": "Economics",
+   "description": "Mathematical finance, stochastic calculus, option pricing, stochastic volatility, portfolio optimization, stochastic control, market microstructure, optimal execution, risk management, machine learning in finance.",
+   "source": "arxiv",
+   "categories": [
+    "q-fin.CP",
+    "q-fin.EC",
+    "q-fin.GN",
+    "q-fin.MF",
+    "q-fin.PM",
+    "q-fin.PR",
+    "q-fin.RM",
+    "q-fin.ST",
+    "q-fin.TR"
+   ],
+   "new_today": 1
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "slug": "complex-analysis",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25948",
+   "title": "On the solution of a question for meromorphic functions sharing three values IM and a fourth value CM in the complex plane",
+   "url": "https://arxiv.org/abs/2611.25948v1",
+   "authors": [
+    "Xiao-Min Li",
+    "Jun Wang",
+    "Hong-Xun Yi"
+   ],
+   "label": "arXiv:2611.25948v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "In 1926, Nevanlinna (Acta Math.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "In 1926, Nevanlinna (Acta Math. {\\bf 48} (1926), no. 3-4, 367-391) proved that if two distinct and non-constant meromorphic functions $f$ and $g$ share $a_1,$ $a_2,$ $a_3,$ $a_4$ CM in the complex plane, where $a_1,$ $a_2,$ $a_3,$ $a_4$ are four distinct complex values in the extended complex plane, then $f$ is a Möbius transformation of $g$, two of the shared values, say $a_1$ and $a_2$, are Picard exceptional values, and the cross ratio $\\left(a_1, a_2, a_3, a_4\\right)=-1.$ Later on, Gundersen (Trans. Amer. Math. Soc. {\\bf 277} (1983), no. 2, 545-567. Correction: {\\bf 304} (1987), 847-850) proved that if two non-constant meromorphic functions share two values CM and share two other values IM, then the functions share all four values CM. In 1992, Gundersen (Complex Var. Elliptic Equ. {\\bf 20} (1992), no. 1-4, 99-106) proposed the following famous question: if two non-constant meromorphic functions share three distinct values IM and share a fourth value CM, then do the functions necessarily share all four values CM? This question is a long-standing question in the studies of the Nevanlinna's value distribution theory of meromorphic functions, and has not been completely resolved by now. In this paper, we completely resolve the question, and prove that if two distinct and non-constant meromorphic functions $f$ and $g$ share $a_1,$ $a_2,$ $a_3$ IM and $\\infty$ CM, where $a_1,$ $a_2,$ $a_3$ are three distinct and finite complex values in the complex plane, then $f$ and $g$ also share $a_1,$ $a_2,$ $a_3$ CM.",
+   "source": "arxiv"
+  }
+ ]
+}

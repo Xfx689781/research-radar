@@ -1,0 +1,72 @@
+{
+ "slug": "theoretical-physics",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26394",
+   "title": "Nonequilibrium Statistical Mechanics: Physical Concepts & Mathematical Tools",
+   "url": "https://arxiv.org/abs/2611.26394v1",
+   "authors": [
+    "Sagar Chakraborty"
+   ],
+   "label": "arXiv:2611.26394v1",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics. At the same time, nonequilibrium statistical mechanics has transcended traditional physics to become a powerful language for complex systems. Prompted by an enthusiastic curiosity about complex systems, these cursory lecture notes attempt to elucidate some introductory concepts and techniques used in classical nonequilibrium statistical mechanics, which find successful applications not only in foundational physics, but also across other fields such as biology, ecology, economics, and sociology. Except for the specific synthesis and presentation of the material, which assumes basic familiarity with equilibrium statistical mechanics, the author claims no originality.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26474",
+   "title": "Bianchi cosmologies with four-dimensional groups of motion in New General Relativity",
+   "url": "https://arxiv.org/abs/2611.26474v1",
+   "authors": [
+    "Manuel Hohmann",
+    "Paul Martin Kull",
+    "Margus Saal"
+   ],
+   "label": "arXiv:2611.26474v1",
+   "primary_category": "gr-qc",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity. We first show that in each of these classes the most general metric teleparallel geometry is described by four free functions of time, while another four functions of time describe the most general energy-momentum tensor compatible with the same symmetries. We then derive the field equations of New General Relativity for this class of geometries. Finally, we present some solutions to these field equations. Our results show that both solutions resembling features of the standard Friedmann-Lemaître-Robertson-Walker cosmology of General Relativity and deviations thereof exist.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25992",
+   "title": "Revisiting Kerr-Newman-(A)dS Black Holes in \\(f(R)\\) Gravity: A Kerr-Schild Approach",
+   "url": "https://arxiv.org/abs/2611.25992v1",
+   "authors": [
+    "Göksel Daylan Esmer",
+    "Saliha Türkmen"
+   ],
+   "label": "arXiv:2611.25992v1",
+   "primary_category": "gr-qc",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "It is known that, in the constant-curvature regime, the field equations of $f(R)$ gravity reduce to the Einstein form with an effective cosmological constant, establishing a direct correspondence between stationary and axisymmetric black hole solutions in $f(R)$ gravity and their counterparts in gen…",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "It is known that, in the constant-curvature regime, the field equations of $f(R)$ gravity reduce to the Einstein form with an effective cosmological constant, establishing a direct correspondence between stationary and axisymmetric black hole solutions in $f(R)$ gravity and their counterparts in general relativity, including the Kerr--Newman--(A)dS family. Within this framework, we revisit the derivation of these metrics using the Kerr--Schild approach for illustrative purposes. The Maxwell equations are solved independently of the Kerr--Schild function, allowing the electromagnetic source to be determined before addressing the gravitational field equations. We then investigate the possibility of non-constant-curvature solutions, taking quadratic $f(R)$ gravity as a representative model. Remarkably, the field equations within the Kerr--Schild ansatz force the Ricci scalar to be constant, reducing the resulting geometries to the familiar Kerr--Newman--(A)dS family. Thus, our analysis extends the recently established no-go result for uncharged black holes to electrically charged configurations within the framework considered here.",
+   "source": "arxiv"
+  }
+ ]
+}

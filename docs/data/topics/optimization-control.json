@@ -1,0 +1,51 @@
+{
+ "slug": "optimization-control",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26568",
+   "title": "Optimal Control in Pairs Trading with Negative-Power Utility",
+   "url": "https://arxiv.org/abs/2611.26568v1",
+   "authors": [
+    "Aleksei Kozhevnikov"
+   ],
+   "label": "arXiv:2611.26568v1",
+   "primary_category": "q-fin.MF",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We solve a finite-horizon consumption and investment problem in a pairs trading model with an Ornstein-Uhlenbeck spread and utility $U(x)=-x^{-γ}$, $γ>0$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We solve a finite-horizon consumption and investment problem in a pairs trading model with an Ornstein-Uhlenbeck spread and utility $U(x)=-x^{-γ}$, $γ>0$. Linearizing the Hamilton-Jacobi-Bellman equation gives explicit formulas for the value function and the optimal feedback control. A budget inequality and concavity verify optimality over all admissible strategies with nonnegative wealth on every finite horizon, without Novikov's condition. Under the optimal feedback, wealth and consumption admit deterministic upper bounds when the interest rate $r$ is at most the mean-reversion rate $κ$. If $r>κ$, each exceeds any prescribed level with positive probability at every time after the start. If $r>\\sqrt{2+γ} κ$, there is an explicit critical horizon at and beyond which expected terminal wealth is infinite, while optimal expected utility is finite. When the critical time falls before maturity, expected wealth at that time is finite exactly when the initial spread is zero. We also show that the suprema of the negative powers of optimal wealth and consumption are integrable on every finite horizon exactly for orders $0<m\\le 1+γ$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26295",
+   "title": "Hamiltonian Potential Optimization for Partially Observed Stochastic Optimal Control",
+   "url": "https://arxiv.org/abs/2611.26295v1",
+   "authors": [
+    "Christian Bayer",
+    "Saifeddine Ben Naamia",
+    "Erik von Schwerin",
+    "Raul Tempone"
+   ],
+   "label": "arXiv:2611.26295v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We develop a Hamiltonian potential optimization method for partially observed stochastic optimal control with continuous-time state dynamics and discrete-time noisy observations, including controlled sensing.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We develop a Hamiltonian potential optimization method for partially observed stochastic optimal control with continuous-time state dynamics and discrete-time noisy observations, including controlled sensing. Rather than solving the infinite-dimensional belief-space Hamilton-Jacobi-Bellman equation, we optimize over parametrized potentials depending on the state variable and the available observation history. The associated Hamiltonian minimizers induce admissible continuous controls and, when observations are controlled, sensing decisions. An extended Hamiltonian incorporating a cost multiplier provides a common representation of the induced belief dynamics and running and observation costs. This construction yields a finite-dimensional optimization problem, with gradients computed by a forward simulation and a backward discrete adjoint sweep. The numerical implementation uses Gaussian beliefs represented by conditional means and covariances. For nonsmooth Hamiltonians arising from switching controls, we introduce smooth Hamiltonian approximations to enable gradient-based optimization. To assess the resulting policies, we develop belief-space information relaxation lower bounds. A separate optimization of the dual test functional provides a lower bound which, paired with the admissible policy cost, yields an a posteriori primal-dual diagnostic. Numerical experiments investigate scalar and multidimensional linear-quadratic-Gaussian problems, controlled sensing with and without control bounds, a nonquadratic obstacle penalty, and Hamiltonian smoothing for a discontinuous control selector.",
+   "source": "arxiv"
+  }
+ ]
+}

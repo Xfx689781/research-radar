@@ -1,0 +1,80 @@
+{
+ "slug": "quantum",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26506",
+   "title": "When the Noise Gets Noisy: Quantum Error Correction with Disordered Noise and Misinformed Decoding",
+   "url": "https://arxiv.org/abs/2611.26506v1",
+   "authors": [
+    "Cory T. Aitchison",
+    "Lucas H. English",
+    "Benjamin Béri",
+    "Dominic J. Williamson",
+    "Campbell K. McLauchlan"
+   ],
+   "label": "arXiv:2611.26506v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Experimental demonstrations of quantum error correction often exhibit noise that varies across space and time, and attempting to characterize this disorder has been shown to substantially improve decoding performance.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Experimental demonstrations of quantum error correction often exhibit noise that varies across space and time, and attempting to characterize this disorder has been shown to substantially improve decoding performance. However, theoretical studies of quantum error correction typically assume fixed, perfectly known, homogeneous noise. Here we model decoding with incomplete or inaccurate knowledge of disordered noise channels by treating physical error rates as random variables. We show that the decoding performance is set by a small number of information-theoretic functionals of the noise distribution: the entropy determines the threshold while Bhattacharyya coefficients bound the deep sub-threshold decay rate of logical failures. Furthermore, our results give a quantitative measure of the benefits of characterizing this noise. We numerically investigate both maximum-likelihood and minimum-weight-error decoding of surface codes, showing good agreement with theory across the code-capacity, phenomenological, and circuit-level noise settings, including with noise distributions seen in open-access superconducting devices. When it comes to error correction in realistic settings, reporting the average entropy and Bhattacharyya coefficient of noise distributions could therefore be more informative than the mean or median error rates of a device's components.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25880",
+   "title": "Evolving Decoding Algorithms for Quantum Error Correction",
+   "url": "https://arxiv.org/abs/2611.25880v1",
+   "authors": [
+    "Eduardo Dueñez",
+    "Edgar Said Hernandez Sanchez",
+    "Edgar A. Duéñez-Guzmán",
+    "Suzanne Sadedin"
+   ],
+   "label": "arXiv:2611.25880v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Quantum computation entails robustness engineering: a noisy quantum state is measured continuously, and a classical algorithm (the decoder) must infer corrections that reliably remove the noise, fast enough to keep up.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Quantum computation entails robustness engineering: a noisy quantum state is measured continuously, and a classical algorithm (the decoder) must infer corrections that reliably remove the noise, fast enough to keep up. We write several published belief-propagation (BP) decoders for quantum low-density parity-check (qLDPC) codes in a Domain-Specific Language (DSL), and search over it with grammatical evolution. Written in the language, the published decoders show their parameters in plain view, allowing us to re-parameterise BP+OSD (ordered statistics decoding) and BP+LSD (localized statistics decoding) decoders with damping, before any search, making each 17.1--41.0$\\times$ faster at a higher error rate, and BP+OSD-0 about 103 faster than the ldpc package's version tuned on the [[72,12,6]] bivariate-bicycle code. Evolution over the language finds decoders that improve the time-error front. One makes 23% fewer logical errors than BP+OSD-0 with damping at 0.64$\\times$ its time, and decoders evolved from random code are more accurate than ldpc's tuned BP+OSD-0 at 1/31 of its time or less. Frozen at one operating point, the two fastest evolved decoders generalize well across noise levels, code sizes and round counts, staying at the time-error front. Ultimately, we demonstrate that capturing expert knowledge within a DSL creates a powerful intermediate layer---one that effectively bridges human intuition and machine-driven optimization to unlock highly efficient quantum error correction.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26582",
+   "title": "End-to-End Quantum Algorithm for Differential Equations: Application to Simulating a Biomolecular System",
+   "url": "https://arxiv.org/abs/2611.26582v1",
+   "authors": [
+    "Mohsen Bagherimehrab",
+    "Daniyaal Farooqi",
+    "Gavin K. Brennen",
+    "Barry C. Sanders",
+    "Alán Aspuru-Guzik"
+   ],
+   "label": "arXiv:2611.26582v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Quantum algorithms for differential equations have the potential for substantial algorithmic speedups over classical methods.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Quantum algorithms for differential equations have the potential for substantial algorithmic speedups over classical methods. However, they rely on certain assumptions and abstract oracle specifications that leave their practical feasibility and computational advantages for realistic applications unclear. Here we formalize the concept of an end-to-end quantum algorithm for differential equations as one that accepts classical inputs and returns classical outputs, and provide implementations for algorithmic primitives in constructing such algorithms. We present a tailored end-to-end quantum algorithm for the linearized Poisson-Boltzmann (LPB) equation, a partial differential equation (PDE) with variable coefficients widely used in simulating a biomolecular system. We explicitly implement all aspects of the algorithm, from preparing an initial state to generating a quantum solution and estimating properties of the system. In particular, we develop a new discrete representation for variable-coefficient PDEs on a grid that enables efficient implementation of the operator oracle, and build on a recent technique based on optimal wavelet preconditioning to generate a quantum solution with a cost independent of the condition number of the discretized operator. We show the algorithm can be implemented by quantum circuits of size polylogarithmic in both the number of grid points $N_g$ and the inverse of the desired accuracy $\\varepsilon$, with an overall gate cost polylogarithmic in $N_g$ and quasilinear in $1/\\varepsilon$. We also show the classical preprocessing to construct the circuits has polylogarithmic cost in $N_g$ and $1/\\varepsilon$. Our work provides a concrete end-to-end quantum algorithm for a PDE of practical value, demonstrates an exponential improvement in scaling with $N_g$ over classical methods, and provides a foundation for assessing its potential quantum advantage in practice.",
+   "source": "arxiv"
+  }
+ ]
+}

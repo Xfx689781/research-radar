@@ -1,0 +1,83 @@
+{
+ "slug": "embodied-ai",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25336",
+   "title": "MoRE: Mixture-of-Experts for Multi-Physics Robotic World Models",
+   "url": "https://arxiv.org/abs/2611.25336v1",
+   "authors": [
+    "Ziyu Zhu",
+    "Shaowei Liu",
+    "Albert J. Zhai",
+    "Henry Che",
+    "Wei-Chiu Ma",
+    "Shenlong Wang"
+   ],
+   "label": "arXiv:2611.25336v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "A robotic world model should predict how objects evolve under robot actions and physical dynamics.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "A robotic world model should predict how objects evolve under robot actions and physical dynamics. While recent 3D world models have shown strong predictive capabilities, they still struggle with the heterogeneous dynamics arising from diverse object interactions. To address this in a unified framework, we decompose robotic interactions into distinct physical regimes and assign each to a specialized motion expert. We introduce MoRE, a 3D world model with a mixture of motion experts organized around rigid, deformable, and prehensile dynamics. This design enables a single model to capture diverse physical behaviors while preserving regime-specific priors. Trained on mixed simulation and real-world data, MoRE integrates with Model Predictive Control (MPC) to support diverse manipulation tasks. Experiments show that MoRE improves prediction accuracy across physics regimes, leading to stronger real-world MPC performance. Code, data, and project website are available at https://alwaysleepy.github.io/MoRE-WM-site/.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25778",
+   "title": "ECHO: In-Context Behavior foundation model for Humanoid Whole-Body Control",
+   "url": "https://arxiv.org/abs/2611.25778v1",
+   "authors": [
+    "Xingyi Wang",
+    "Bin Li",
+    "Jiyuan Shi",
+    "Chenyun Zhang",
+    "Weiji Xie",
+    "Xiangyu Miao",
+    "Junsong Wu",
+    "Wei Song",
+    "Shiqiang Zhu",
+    "Chenjia Bai"
+   ],
+   "label": "arXiv:2611.25778v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Humanoid behavior foundation models (BFMs) acquire diverse skills through large-scale motion imitation and massively parallel reinforcement learning, yet broad behavioral capability does not ensure precise execution across physical conditions.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Humanoid behavior foundation models (BFMs) acquire diverse skills through large-scale motion imitation and massively parallel reinforcement learning, yet broad behavioral capability does not ensure precise execution across physical conditions. Without distinguishing the underlying dynamics, policies may favor conservative compromises over environment-specific precision. We introduce ECHO, an in-context BFM that turns interaction experience into environment-specific control, separating general behavioral capability from dynamics-specific execution. Mixed and Annealed Sampling first establishes a behavior prior in a single pretraining stage by balancing targeted practice with broad motion coverage. Building on this prior, Context Representation and Residual Adaptation learns structured dynamics representations from interaction histories to guide residual corrections to the frozen prior, enabling adaptation without test-time parameter updates. Extensive experiments show that ECHO outperforms all baseline methods across diverse motions and physical conditions. Moreover, deployment on the Unitree G1 demonstrates whole-body teleoperation spanning extreme acrobatics and terrain interaction, alongside payload adaptation in manipulation and whole-body control. Page is available at https://mwondering.github.io/echo-bfm/",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26420",
+   "title": "Awaken-HI: Scaling Humanoid Intelligence with Whole-Body Human Experience",
+   "url": "https://arxiv.org/abs/2611.26420v1",
+   "authors": [
+    "EngineAI"
+   ],
+   "label": "arXiv:2611.26420v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "A central goal of humanoid robotics is for robots to perform the everyday work people do in homes and workplaces.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "A central goal of humanoid robotics is for robots to perform the everyday work people do in homes and workplaces. Existing egocentric video datasets cover many of these activities but provide little synchronized whole-body motion data for learning loco-manipulation at scale. We build Awaken-Human, which pairs approximately 50,000 hours of egocentric stereo video with synchronized whole-body human motion and covers more than 100 skills. Building on this, we also introduce Awaken-HI (Humanoid Intelligence), a vision-language-action model for humanoid loco-manipulation that jointly predicts original human motion and retargeted robot actions through a shared action expert. We show that loco-manipulation skills transfer more effectively from people to humanoids when human trajectories directly supervise the shared action expert. Increasing human pretraining data reduces held-out robot action prediction error according to an empirical scaling law and raises the mean success rate on downstream real-robot tasks. After full-corpus pretraining and T800 adaptation, Awaken-HI achieves a mean success rate of 93.75% across eight individual tasks and outperforms GR00T N1.7 and $π_{0.5}$ in both individual and long-horizon evaluations. The same policy generalizes to objects unseen during robot post-training and to new pairings of familiar objects and destinations.",
+   "source": "arxiv"
+  }
+ ]
+}

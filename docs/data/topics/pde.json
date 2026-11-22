@@ -1,0 +1,72 @@
+{
+ "slug": "pde",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26580",
+   "title": "Existence and Uniqueness of Mild Solutions to Rough Stochastic Partial Differential Equations driven by Fractional Brownian Motion with Hurst Index $H > 1/4$",
+   "url": "https://arxiv.org/abs/2611.26580v1",
+   "authors": [
+    "Maksim Vaskouski",
+    "Maksim Firsau"
+   ],
+   "label": "arXiv:2611.26580v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\\frac{1}{4}$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\\frac{1}{4}$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25345",
+   "title": "On the regularity of stationary solutions to free boundary problems",
+   "url": "https://arxiv.org/abs/2611.25345v1",
+   "authors": [
+    "Daniel Restrepo"
+   ],
+   "label": "arXiv:2611.25345v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "In this note, we improve the regularity of Hölder continuous stationary solutions with respect to inner variations which are harmonic outside their zero set.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "In this note, we improve the regularity of Hölder continuous stationary solutions with respect to inner variations which are harmonic outside their zero set. We obtain a $\\sqrt{\\log}$-Lipschitz estimate for a class of solutions allowing a generalized phase variable and including the two-phase problem. In the case of the one-phase problem, we can improve to Lipschitz regularity. In particular, we show that the initial Lipschitz assumption in the class of variational solutions considered by Kriventsov and Weiss can be replaced by any positive Hölder exponent",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25660",
+   "title": "Large-scale regularity theory for optimal $p-$transport maps and application to concentration in the matching problem",
+   "url": "https://arxiv.org/abs/2611.25660v1",
+   "authors": [
+    "Michael Goldman",
+    "Lukas Koch",
+    "Dario Trevisan"
+   ],
+   "label": "arXiv:2611.25660v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We consider the random bipartite matching problem between two independent families of uniformly distributed points in dimension three and higher, for the cost given by the $p$-th power of the distance.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We consider the random bipartite matching problem between two independent families of uniformly distributed points in dimension three and higher, for the cost given by the $p$-th power of the distance. We show that, up to logarithmic factors, every moment of the displacement of the optimal matching is of the order of the typical interparticle distance. This is a higher integrability, or Calderón--Zygmund type, estimate for optimal transport, and it settles, on the torus and up to logarithmic factors, a recent conjecture of D'Achille, Mattesini and the third author. As a consequence, we obtain concentration of the matching cost around its mean for every $p\\ge2$. The proof combines a deterministic large-scale regularity theory for optimal transport with $p$-costs, based on a harmonic approximation by a non-linear elliptic equation of $p$-Laplacian type, with tail bounds on local matching costs.",
+   "source": "arxiv"
+  }
+ ]
+}

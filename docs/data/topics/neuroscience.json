@@ -1,0 +1,71 @@
+{
+ "slug": "neuroscience",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767886",
+   "title": "Universal barcoded connectomics for massively parallel single-neuron projection mapping in diverse vertebrate species",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767886v1",
+   "authors": [
+    "Qi, H.",
+    "Wan, X.",
+    "Cheron, J.",
+    "Majeed, M.",
+    "Elorette, C.",
+    "Fan, A.",
+    "Yang, Z.",
+    "Anant, M. M.-G.",
+    "Faltine-Gonzalez, D. Z.",
+    "Shi, C.",
+    "Washington, C.",
+    "Lowman, M.",
+    "Bourne, J. A.",
+    "Horwitz, G. D.",
+    "Rudebeck, P. H.",
+    "Chen, X.",
+    "Long, M. A.",
+    "Sakata, J. T.",
+    "Kebschull, J. M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767886 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Neuroscience relies on diverse model species to understand animal behavior and brain function.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Neuroscience relies on diverse model species to understand animal behavior and brain function. Yet, tools for rapid, high-resolution brain connectivity mapping remain unavailable in most vertebrate species, slowing progress in many neuroscience models and rendering cross-species circuit comparisons challenging. Here, we overcome this barrier by establishing sequencing-based barcoded connectomics for rapid single-neuron tracing in seven vertebrate species ranging from frogs to birds to non-human primates. We develop a general solution to viral tropism and barcode trafficking, validate our reagents by mapping the projections of thousands of neurons in the songbird HVC, and discover a single set of reagents that functions across highly divergent species. Together, we provide ready-to-use barcoding reagents for diverse species and a simple framework for further adapting them if necessary, enabling high throughput single-neuron tracing across vertebrates.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767269",
+   "title": "Motor learning engages intrinsic plasticity in the human cortex",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767269v1",
+   "authors": [
+    "Clennell, B.",
+    "Luo, B.",
+    "Lam, K. T.",
+    "Hu, Y.",
+    "Peterchev, A. V.",
+    "Hannah, R."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767269 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Learning is commonly explained by changes in synaptic strength.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Learning is commonly explained by changes in synaptic strength. In animals, however, learning also engages intrinsic plasticity -- changes in how readily neurons convert synaptic input into firing. Its contribution to human learning has been unclear, because conventional non-invasive measures of cortical excitability primarily reflect synaptic strength. Here we used controllable-pulse transcranial magnetic stimulation to estimate two biophysical indices of intrinsic excitability in human motor cortex, before and after motor training. Training produced signatures of increased intrinsic excitability, selectively in the cortical representation of the trained muscle, but not an untrained muscle. Individuals showing larger intrinsic excitability changes learned faster, independently of changes in motor-evoked potential amplitude, an index of synaptic excitability that increased following training but did not predict learning rate. An axon model reproduced the measured changes through small shifts in membrane excitability. These findings provide evidence that intrinsic plasticity is expressed in the intact human brain, and that it represents a behaviourally relevant component of learning-related cortical adaptation.",
+   "source": "biorxiv"
+  }
+ ]
+}

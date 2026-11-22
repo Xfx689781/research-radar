@@ -1,0 +1,51 @@
+{
+ "slug": "combinatorics",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25893",
+   "title": "A very robust Ramsey theorem for hypergraph matchings",
+   "url": "https://arxiv.org/abs/2611.25893v1",
+   "authors": [
+    "Peter Keevash",
+    "Peleg Michaeli"
+   ],
+   "label": "arXiv:2611.25893v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "A fundamental result in Ramsey theory due to Alon, Frankl and Lovász gives an exact formula for the $q$-colour Ramsey numbers of matchings in $r$-uniform hypergraphs: if $n\\ge\\mathsf{AFL}_r(\\mathbf{t})=(r-1)\\|\\mathbf{t}\\|_\\infty+1+\\sum_{j=1}^q(t_j-1)$ then in any $q$-edge-colouring of $K^r_n$ there…",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "A fundamental result in Ramsey theory due to Alon, Frankl and Lovász gives an exact formula for the $q$-colour Ramsey numbers of matchings in $r$-uniform hypergraphs: if $n\\ge\\mathsf{AFL}_r(\\mathbf{t})=(r-1)\\|\\mathbf{t}\\|_\\infty+1+\\sum_{j=1}^q(t_j-1)$ then in any $q$-edge-colouring of $K^r_n$ there is some colour $j$ with a matching of size $t_j$. We show that a very weak quasirandomness assumption suffices for this Ramsey property: we can replace $K^r_n$ by any $r$-graph $H$ on at least $\\mathsf{AFL}_r(\\mathbf{t})+o(n)$ vertices that is a sublinear connector, meaning that it has no balanced $r$-partite holes of linear size. This generalises the result for $r=2$ (ordinary graphs) that we proved previously using a compression algorithm based on Gallai-Edmonds decompositions. This structure theory is unavailable in the hypergraph setting, so we combine two other proof methods, namely (a) simultaneous optimisation in all colours by clustering vertices using fractional cover weights from LP duality, and (b) local-to-global structure via random sampling and Kahn's matching theorem.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25516",
+   "title": "Rational Designs and Prouhet--Tarry--Escott Problems",
+   "url": "https://arxiv.org/abs/2611.25516v1",
+   "authors": [
+    "Ryutaro Misawa",
+    "Masanori Sawa",
+    "Filip Špiranec"
+   ],
+   "label": "arXiv:2611.25516v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "For every strength, we prove the existence of rational designs on spheres, orthogonal and unitary groups, real and complex Grassmannians, and ellipsoids that are defined by positive-definite quadratic forms with rational coefficients and have a rational point.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "For every strength, we prove the existence of rational designs on spheres, orthogonal and unitary groups, real and complex Grassmannians, and ellipsoids that are defined by positive-definite quadratic forms with rational coefficients and have a rational point. This answers Bannai's Problem for these spaces, solves the problem of Cui--Xia--Xiang on rational spherical $4$-designs on the unit circle, and proves Xiang's conjecture in the stronger form of existence in every dimension. To this end, we introduce the $(G,\\mathcal{S})$-Prouhet--Tarry--Escott problem for an abelian group $G$ and a finite set of characters $\\mathcal{S}$ and develop its existence and minimality theory. We also prove a general theorem transforming integer-weighted rational designs into equi-weighted designs on distinct rational points. On the unit circle $\\mathbb{S}^1$, we determine the minimum sizes of rational spherical designs of strengths $4,5,6,7$ and show that they are respectively $2304,4608,9216,9216$. We also show that the minimum size of a rational spherical $5$-design on $\\mathbb{S}^2$ is $192$. We further apply our framework to prove a conjecture of Thuswaldner--Ziegler on sums of distinct units and to answer Mahabaduge's problem on convex equilateral lattice polygons affirmatively.",
+   "source": "arxiv"
+  }
+ ]
+}

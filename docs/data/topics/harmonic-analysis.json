@@ -1,0 +1,50 @@
+{
+ "slug": "harmonic-analysis",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26265",
+   "title": "Oscillatory integral operators of arbitrary signature: beyond the universal estimates",
+   "url": "https://arxiv.org/abs/2611.26265v1",
+   "authors": [
+    "Fernando Ballesta-Yagüe",
+    "Jonathan Hickman",
+    "Hrit Roy"
+   ],
+   "label": "arXiv:2611.26265v1",
+   "primary_category": "math.CA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We consider Hörmander oscillatory integral operators on $\\mathbb{R}^n$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We consider Hörmander oscillatory integral operators on $\\mathbb{R}^n$. In particular, we are interested in proving bounds with dependence on the signature of the phase. The sharp universal range of $L^p\\to L^p$ estimates was obtained for any given signature by the second author and Iliopoulou. Under the mild non-compression hypotheses on the phase introduced in Chen et al., we prove $L^p\\to L^p$ estimates that go beyond this universal range in odd dimensions. We also obtain the sharp universal range of $L^p\\to L^q$ estimates for odd $n$. The techniques are based on the breakthrough work of Wang--Wu on the Fourier restriction conjecture.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25622",
+   "title": "Collineations of the diamond lattice in a Hilbert space",
+   "url": "https://arxiv.org/abs/2611.25622v1",
+   "authors": [
+    "Janko Bračič"
+   ],
+   "label": "arXiv:2611.25622v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Let $\\mathscr{M}$ and $\\mathscr{N}$ be non-trivial closed subspaces of a separable Hilbert space $\\mathscr{H}$ such that $\\mathscr{M}\\cap\\mathscr{N}=\\{0\\}$ and $\\mathscr{M}+\\mathscr{N}$ is dense in $\\mathscr{H}$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Let $\\mathscr{M}$ and $\\mathscr{N}$ be non-trivial closed subspaces of a separable Hilbert space $\\mathscr{H}$ such that $\\mathscr{M}\\cap\\mathscr{N}=\\{0\\}$ and $\\mathscr{M}+\\mathscr{N}$ is dense in $\\mathscr{H}$. We characterize when there exists an invertible operator on $\\mathscr{H}$ which maps $\\mathscr{M}$ onto $\\mathscr{N}$ and $\\mathscr{N}$ onto $\\mathscr{M}$. We prove that such an operator exists if and only if $\\mathscr{M}$ and $\\mathscr{N}$ have a common algebraic complement. This happens if and only if either neither of the operators $(I-P)Q$ and $(I-Q)P$ is compact, or $P-Q$ is compact and $\\dim(\\mathscr{M}\\cap\\mathscr{N}^\\perp)=\\dim(\\mathscr{M}^\\perp\\cap\\mathscr{N})$, where $P$ and $Q$ are the orthogonal projections onto $\\mathscr{M}$ and $\\mathscr{N}$. Moreover, the operator can be chosen to be an involution. Consequently, the group of collineations of the diamond lattice $\\{\\{0\\},\\mathscr{M},\\mathscr{N},\\mathscr{H}\\}$ which fix $\\mathscr{M}$ and $\\mathscr{N}$ is always complemented in the group of all its collineations.",
+   "source": "arxiv"
+  }
+ ]
+}
