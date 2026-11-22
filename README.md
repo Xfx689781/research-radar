@@ -1,37 +1,56 @@
 # research-radar
 
-A daily research digest for curious readers. Every morning it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** in the fields you choose, picks the most relevant ones, has Claude explain each in plain words, and publishes the result as a small website.
+A daily research feed for curious readers. Readers open the website, choose the fields they care about (as many as they like, changeable at any time), and every day they see the newest papers in those fields, each explained in plain words by Claude.
 
-**Read the digests:** https://xfx689781.github.io/research-radar/
+**Open the site:** https://xfx689781.github.io/research-radar/
 
-It ships with presets for mathematics, physics, computer science and AI, chemistry, biology and economics, and you can add any topic of your own.
+Behind the site, a GitHub Actions job runs every morning: it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** for 24 topics across mathematics, physics, computer science and AI, chemistry, biology and economics, picks the most relevant papers per topic, asks Claude for summaries, and publishes them.
 
 ```
-arXiv / bioRxiv / medRxiv ──► fetch (categories + optional keywords) ──► skip papers already recommended
-   ──► rank (TF-IDF similarity to each topic + keyword bonus) ──► top papers per topic, no duplicates
-   ──► Claude summary in plain words ──► docs/digests/YYYY-MM-DD.md ──► website via GitHub Pages
+arXiv / bioRxiv / medRxiv ──► fetch per topic ──► skip papers already recommended
+   ──► rank (TF-IDF similarity to each topic + keyword bonus) ──► top papers per topic
+   ──► Claude summary in plain words ──► docs/data/*.json ──► website (GitHub Pages)
 ```
 
-Each paper in a digest gets:
+Each paper gets:
 
-- **In one sentence**: what the paper does, for specialists
 - **In plain words**: the problem and the result, for readers from other fields
+- **In one sentence**: what the paper does, for specialists
 - **Why it matters**, **background needed** and a difficulty level
 - a link to the paper and its original abstract
 
-## Make your own in 10 minutes
+## For readers
+
+1. Open the site and pick your topics.
+2. Come back any day; your feed shows the latest papers in your topics. Use the chips to look at one topic at a time, and **Edit topics** to change your choice.
+3. Your choice is saved in your browser. If the site has accounts turned on, **Sign in** with your email to keep your topics on every device.
+
+## Run your own copy in 10 minutes
 
 1. Click **Use this template → Create a new repository**.
-2. Edit `config.yaml` and choose your topics (see below).
-3. **AI summaries.** Create an API key at [console.anthropic.com](https://console.anthropic.com) (it needs a small amount of prepaid credit), then in your repository go to **Settings → Secrets and variables → Actions → New repository secret**, name it `ANTHROPIC_API_KEY` and paste the key. Never put the key in a file. Without it, the digest still works but shows only the first sentence of each abstract.
-4. **Website.** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main`, folder `/docs` → Save.** After a minute or two your site is at `https://<your-username>.github.io/<repository-name>/`.
+2. Edit `config.yaml`: keep or remove topics, or add your own (see below).
+3. **AI summaries.** Create an API key at [console.anthropic.com](https://console.anthropic.com) (it needs a small amount of prepaid credit), then in your repository go to **Settings → Secrets and variables → Actions → New repository secret**, name it `ANTHROPIC_API_KEY` and paste the key. Never put the key in a file. Without it, the site still works but shows only the first sentence of each abstract.
+4. **Website.** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main`, folder `/docs` → Save.** Your site will be at `https://<your-username>.github.io/<repository-name>/`.
 5. **First run.** **Actions → research-digest → Run workflow.** After that it runs every day by itself.
+6. Optional: **accounts**, see below.
 
 If the commit step fails with a permission error, go to **Settings → Actions → General → Workflow permissions** and select **Read and write permissions**.
 
-**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper, about 20–30 short requests a day with the default config. See Anthropic's pricing page for current rates, and set a spending limit in the console if you like. GitHub Actions and Pages are free for public repositories.
+**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper: with 24 topics and up to 3 papers each, at most 72 short requests a day (fewer on quiet days). See Anthropic's pricing page for current rates, and set a spending limit in the console. Lower `top_k_per_topic` or remove topics to spend less. GitHub Actions and Pages are free for public repositories.
 
-**Weekly instead of daily:** set `days: 7` in `config.yaml` and change the cron line in `.github/workflows/digest.yml` to `"51 12 * * 0"` (Sundays).
+## Accounts (optional)
+
+Without accounts, each reader's topics are stored in their browser. To let readers sign in by email and keep their topics on every device, connect a free [Supabase](https://supabase.com) project:
+
+1. Create a project at supabase.com.
+2. **SQL Editor → New query**, paste the contents of `supabase/schema.sql`, **Run**. This creates the `preferences` table with row-level security, so every reader can only read and change their own row.
+3. **Authentication → Sign In / Providers**: make sure **Email** is enabled.
+4. **Authentication → URL Configuration**: set **Site URL** to your site's address (e.g. `https://xfx689781.github.io/research-radar/`) and add the same address under **Redirect URLs**.
+5. **Project Settings → API** (or **Data API**): copy the **Project URL** and the **anon / publishable** key into `config.yaml` as `supabase_url` and `supabase_anon_key`, commit, and run the workflow once.
+
+The anon key is meant to be public; row-level security is what protects each reader's data. Never put the `service_role` key anywhere in this repository.
+
+Supabase's built-in email service only sends a few sign-in emails per hour, which is fine for a handful of readers. For more, connect your own SMTP provider under **Authentication → Emails**.
 
 ## Choosing topics
 
@@ -43,14 +62,14 @@ python -m radar presets
 
 | Field | Presets |
 |---|---|
-| Mathematics | `probability`, `statistics-theory`, `differential-geometry`, `analysis-pde`, `complex-analysis`, `combinatorics`, `math-physics`, `optimization-control` |
+| Mathematics | `probability`, `statistics-theory`, `differential-geometry`, `pde`, `harmonic-analysis`, `complex-analysis`, `combinatorics`, `math-physics`, `optimization-control` |
 | Computer science and AI | `ml-theory`, `interpretability`, `ai4math`, `embodied-ai` |
 | Physics | `theoretical-physics`, `quantum` |
 | Chemistry | `chemistry`, `ml-for-molecules` |
 | Biology | `biology` (bioRxiv), `neuroscience` (bioRxiv), `quantitative-biology` (arXiv), `epidemiology` (medRxiv) |
 | Economics | `economics`, `game-theory`, `quantitative-finance` |
 
-In `config.yaml`, each topic can be a preset, a preset with changes, or your own:
+Every topic listed in `config.yaml` is fetched daily and offered to readers on the site. Each entry can be a preset, a preset with changes, or your own:
 
 ```yaml
 topics:
@@ -71,7 +90,8 @@ topics:
 - `interest`: a comma-separated list of specific things you care about, in English. Ranking depends on it most.
 - `keywords`: for very large categories such as `cs.LG`, only papers containing at least one keyword are fetched; matches also add a small bonus.
 - `language`: `en` or `zh` for the digest text and AI summaries.
-- `top_k_per_topic`: papers per topic in each digest. `must_read`: how many highlights go at the top.
+- `top_k_per_topic`: papers per topic per day. `feed_days`: how far back the site shows papers.
+- **Weekly instead of daily:** set `days: 7` and change the cron line in `.github/workflows/digest.yml` to `"51 12 * * 0"` (Sundays).
 
 ## Run locally
 
@@ -85,7 +105,9 @@ python -m radar run --no-summary                              # real run, no AI 
 ANTHROPIC_API_KEY=... python -m radar run                     # real run with summaries
 ```
 
-A real run writes `docs/digests/<date>.md`, `docs/digests/latest.md` and the site's home page `docs/index.md`. It takes a few minutes because the APIs ask clients to pause between requests.
+A real run writes the site data (`docs/data/`), a Markdown digest of the day (`docs/digests/<date>.md`, handy for reading on GitHub) and the archive of recommended papers (`state/archive.jsonl`). It takes several minutes because the APIs ask clients to pause between requests.
+
+To look at the website locally: `python -m http.server -d docs 8000` and open http://localhost:8000.
 
 ## How ranking works
 
@@ -100,6 +122,7 @@ The maximum over facets matters: compared with the whole interest text at once, 
 Other details:
 
 - A paper listed in several topics goes only to the topic where it scores highest.
+- Running twice on the same day (for example after adding the API key) redoes that day's selection instead of skipping it.
 - Each run looks back `days + overlap_days` days, since papers appear with a delay; `state/seen.json` makes sure nothing is recommended twice.
 - Highlights are chosen by z-score within each topic, so topics with keywords (which score higher in absolute terms) do not crowd out the others.
 - For bioRxiv and medRxiv, only first versions count as new; set `include_revisions: true` to also see updated preprints.
@@ -112,12 +135,15 @@ radar/
   sources/biorxiv.py   bioRxiv / medRxiv API
   rank.py              scoring and cross-topic de-duplication
   summarize.py         Claude summaries, with a fallback when no key is set
-  digest.py            Markdown output
-  site.py              the website's home page
+  digest.py            daily Markdown digest
+  archive.py           every recommended paper with its summary (state/archive.jsonl)
+  site.py              JSON data for the website
   presets.yaml         built-in topics
   i18n.py              English and Chinese text
 config.yaml            your topics and settings
-docs/                  the website (GitHub Pages): index.md and digests/
+docs/index.html        the website: topic picker, personal feed, optional sign-in
+docs/data/             data the website reads, rebuilt every run
+supabase/schema.sql    table and security rules for optional accounts
 tests/                 unit tests and invented test data (not real papers)
 .github/workflows/digest.yml   the daily schedule
 ```
@@ -135,7 +161,8 @@ tests/                 unit tests and invented test data (not real papers)
 - [ ] Try sentence embeddings instead of TF-IDF, and compare precision@k.
 - [ ] Learn from feedback: add liked papers to `seed_ids` automatically.
 - [ ] More sources: ChemRxiv, NBER, Semantic Scholar citation signals.
-- [ ] Email or RSS for new digests.
+- [ ] A daily email to each signed-in reader with their topics.
+- [ ] RSS feed per topic.
 - [ ] Check AI summaries for numbers or claims that are not in the abstract.
 
 ## Acknowledgements

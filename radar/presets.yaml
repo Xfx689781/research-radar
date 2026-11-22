@@ -44,16 +44,29 @@ differential-geometry:
     geometry, moment maps, optimal transport on manifolds, information geometry.
   top_k: 2
 
-analysis-pde:
-  name: Analysis and PDE
-  name_zh: 分析与偏微分方程
+pde:
+  name: Partial differential equations
+  name_zh: 偏微分方程
   field: Mathematics
-  categories: [math.AP, math.CA, math.FA]
+  categories: [math.AP]
   interest: >
     Nonlinear partial differential equations, elliptic and parabolic PDE,
-    dispersive equations, nonlinear Schrodinger equation, Hamilton-Jacobi
-    equations, viscosity solutions, Fokker-Planck equations, gradient flows,
-    harmonic analysis, Sobolev spaces, functional analysis, spectral theory.
+    dispersive equations, nonlinear Schrodinger equation, wave equations,
+    fluid equations, Hamilton-Jacobi equations, viscosity solutions,
+    Fokker-Planck equations, gradient flows, regularity theory, free boundary problems.
+  top_k: 2
+
+harmonic-analysis:
+  name: Harmonic analysis
+  name_zh: 调和分析
+  field: Mathematics
+  categories: [math.CA, math.FA]
+  interest: >
+    Harmonic analysis, Fourier analysis, singular integrals, Calderon-Zygmund
+    theory, Littlewood-Paley theory, Fourier restriction, decoupling, Kakeya
+    problems, oscillatory integrals, Fourier multipliers, maximal functions,
+    weighted inequalities, wavelets, time-frequency analysis, functional analysis,
+    operator theory, Banach and Hilbert spaces.
   top_k: 2
 
 complex-analysis:

@@ -2,7 +2,7 @@
 
     python -m radar run                         # fetch, rank, summarize, write digest
     python -m radar run --no-summary            # skip the AI summaries
-    python -m radar run --offline tests/fixtures --dry-run   # test without network
+    python -m radar run --offline tests/fixtures   # test data; writes to offline-output/
     python -m radar presets                     # list the built-in topic presets
 """
 
@@ -19,7 +19,8 @@ from .config import load_config, load_presets
 from .digest import TopicStats, render
 from .models import Paper
 from .rank import assign_unique, score_papers
-from .site import build_index
+from .archive import Archive
+from .site import export_site
 from .state import SeenState
 from .summarize import summarize_all
 
@@ -34,6 +35,7 @@ def run(args: argparse.Namespace) -> Path:
         # Offline runs use test data: never let them overwrite the real digests or state.
         cfg.output_dir, cfg.site_dir = "offline-output/digests", "offline-output"
         cfg.state_path = "offline-output/seen.json"
+        cfg.archive_path = "offline-output/archive.jsonl"
 
     now = datetime.now(timezone.utc)
     # Look back a few extra days: arXiv and bioRxiv announce papers with a delay, so a
@@ -41,6 +43,9 @@ def run(args: argparse.Namespace) -> Path:
     # The seen-state makes sure nothing is recommended twice.
     start = now - timedelta(days=cfg.days + cfg.overlap_days)
     state = SeenState(cfg.state_path)
+    # A second run on the same day (say, after adding an API key) should redo today's
+    # selection, not skip today's papers as already seen.
+    state.forget_day(now.date())
     offline = sources.load_offline(args.offline) if args.offline else None
 
     ranked: dict[str, list[Paper]] = {}
@@ -89,15 +94,18 @@ def run(args: argparse.Namespace) -> Path:
     (out_dir / "latest.md").write_text(md, encoding="utf-8")
     log.info("wrote %s (%d papers)", out, len(all_chosen))
 
+    archive = Archive(cfg.archive_path)
+    archive.add(chosen, now.date())
+    archive.prune(now.date(), cfg.archive_days)
     if cfg.site_dir:
-        index = build_index(Path(cfg.site_dir), out_dir, cfg.topics, must_read, topic_of,
-                            len(all_chosen), cfg.language)
-        log.info("wrote %s", index)
+        files = export_site(Path(cfg.site_dir), cfg, archive, now.date())
+        log.info("wrote %d data files for the website", len(files))
 
     if not args.dry_run:
         state.mark([p.uid for p in all_chosen], now.date())
         state.prune(now.date())
         state.save()
+        archive.save()
     return out
 
 

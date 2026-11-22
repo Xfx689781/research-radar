@@ -1,49 +1,64 @@
-"""Build the home page of the GitHub Pages site (docs/index.md).
+"""Export the data the web app reads (docs/data/*.json).
 
-GitHub Pages turns every Markdown file under docs/ into a web page, so the
-digests themselves need no extra work; this module only writes the front page
-with the latest highlights and links to every past digest.
+The website is a single static page (docs/index.html). Each run writes:
+
+  data/topics.json          every topic: name, field, description, papers added today
+  data/topics/<slug>.json   one topic's recent papers with their summaries
+  data/site.json            public site settings (title, optional login settings)
+
+The page loads topics.json, lets the reader pick topics, then loads only the
+files of the topics they picked.
 """
 
 from __future__ import annotations
 
-import os
+import json
+from datetime import date, timedelta
 from pathlib import Path
 
-from .config import Topic
-from .digest import LIQUID_CLOSE, LIQUID_OPEN
-from .i18n import STRINGS
-from .models import Paper
+from .archive import Archive
+from .config import Config
+
+PAPER_FIELDS = ("uid", "title", "url", "authors", "label", "primary_category", "date",
+                "summary", "abstract", "source")
 
 
-def digest_files(digest_dir: Path) -> list[Path]:
-    """Dated digests, newest first (latest.md is a copy and is skipped)."""
-    return sorted((p for p in digest_dir.glob("????-??-??.md")), reverse=True)
+def _write(path: Path, data) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
-def build_index(site_dir: Path, digest_dir: Path, topics: list[Topic], highlights: list[Paper],
-                topic_of: dict[str, str], n_papers: int, language: str = "en") -> Path:
-    s = STRINGS[language]
-    files = digest_files(digest_dir)
-    rel = Path(os.path.relpath(digest_dir, site_dir)).as_posix()
+def export_site(site_dir: Path, cfg: Config, archive: Archive, today: date) -> list[Path]:
+    data_dir = site_dir / "data"
+    since = today - timedelta(days=cfg.feed_days)
+    written = []
 
-    out = [f"# {s['site_title']}", LIQUID_OPEN, "", s["site_intro"], ""]
-    if files:
-        latest = files[0]
-        out += [f"## {s['latest']}: [{latest.stem}]({rel}/{latest.name})", "",
-                f"{n_papers} {s['papers']}", ""]
-        for p in highlights:
-            summ = p.summary or {}
-            text = summ.get("plain") or summ.get("one_liner", "")
-            out.append(f"- **[{p.title}]({p.url})** ({topic_of.get(p.uid, '')}){s['colon']}{text}")
-        out.append("")
+    fields: list[str] = []
+    topics = []
+    for t in cfg.topics:
+        fld = t.field or "Other"
+        if fld not in fields:
+            fields.append(fld)
+        topics.append({
+            "slug": t.slug,
+            "name": t.display_name(cfg.language),
+            "field": fld,
+            "description": " ".join(t.interest.split()),
+            "source": t.source,
+            "categories": t.categories,
+            "new_today": archive.count_on(t.slug, today),
+        })
 
-    out += [f"## {s['topics']}", "", s["list_sep"].join(t.display_name(language) for t in topics), ""]
-    out += [f"## {s['archive']}", ""]
-    out += [f"- [{f.stem}]({rel}/{f.name})" for f in files]
-    out += ["", LIQUID_CLOSE, ""]
+        papers = [{k: r.get(k) for k in PAPER_FIELDS} for r in archive.for_topic(t.slug, since)]
+        path = data_dir / "topics" / f"{t.slug}.json"
+        _write(path, {"slug": t.slug, "updated": today.isoformat(), "papers": papers})
+        written.append(path)
 
-    site_dir.mkdir(parents=True, exist_ok=True)
-    index = site_dir / "index.md"
-    index.write_text("\n".join(out), encoding="utf-8")
-    return index
+    index = data_dir / "topics.json"
+    _write(index, {"updated": today.isoformat(), "language": cfg.language,
+                   "fields": fields, "topics": topics})
+    settings = data_dir / "site.json"
+    _write(settings, {"title": cfg.site_title,
+                      "supabase_url": cfg.supabase_url,
+                      "supabase_anon_key": cfg.supabase_anon_key})
+    return [index, settings, *written]

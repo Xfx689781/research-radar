@@ -241,7 +241,8 @@ def test_summarize_with_fake_client(papers, monkeypatch):
 def write_config(tmp_path, **overrides):
     cfg = yaml.safe_load((REPO / "config.yaml").read_text(encoding="utf-8"))
     cfg.update(output_dir=str(tmp_path / "docs" / "digests"), site_dir=str(tmp_path / "docs"),
-               state_path=str(tmp_path / "state" / "seen.json"), **overrides)
+               state_path=str(tmp_path / "state" / "seen.json"),
+               archive_path=str(tmp_path / "state" / "archive.jsonl"), **overrides)
     path = tmp_path / "config.yaml"
     path.write_text(yaml.safe_dump(cfg, allow_unicode=True), encoding="utf-8")
     return path
@@ -267,14 +268,24 @@ def test_offline_run_english(tmp_path, monkeypatch):
     assert "## Complex analysis\n\nNothing notable this time." in md
     # Liquid guard so GitHub Pages does not choke on "{{" in abstracts
     assert md.splitlines()[1] == "<!-- {% raw %} -->" and md.rstrip().endswith("<!-- {% endraw %} -->")
-    # website home page
-    index = (tmp_path / "docs" / "index.md").read_text(encoding="utf-8")
-    assert index.startswith("# Research Radar")
-    assert "](digests/" in index and "## All digests" in index
+    # website data
+    data = tmp_path / "docs" / "data"
+    index = json.loads((data / "topics.json").read_text(encoding="utf-8"))
+    slugs = [t["slug"] for t in index["topics"]]
+    assert "harmonic-analysis" in slugs and "economics" in slugs and "biology" in slugs
+    assert index["fields"][0] == "Mathematics" and "Chemistry" in index["fields"]
+    ml = json.loads((data / "topics" / "ml-theory.json").read_text(encoding="utf-8"))
+    assert [p["uid"] for p in ml["papers"]][0] == "arxiv:2611.00002"
+    assert ml["papers"][0]["summary"]["one_liner"].startswith("We derive")
+    assert next(t for t in index["topics"] if t["slug"] == "ml-theory")["new_today"] == len(ml["papers"])
+    site = json.loads((data / "site.json").read_text(encoding="utf-8"))
+    assert site["title"] == "Research Radar" and site["supabase_url"] == ""
 
-    # second run: everything already recommended, so nothing repeats
+    # a second run the same day redoes today's selection (e.g. after adding an API key)
     md2 = run(args).read_text(encoding="utf-8")
-    assert "2611.00002" not in md2.split("## Fetch statistics")[0]
+    assert "2611.00002" in md2
+    archive = (tmp_path / "state" / "archive.jsonl").read_text(encoding="utf-8").splitlines()
+    assert len(archive) == len(set(json.loads(l)["uid"] for l in archive))   # no duplicates
 
 
 def test_offline_run_chinese(tmp_path, monkeypatch):
@@ -309,13 +320,31 @@ def test_top_k_per_topic_override(tmp_path):
     assert {t.top_k for t in cfg.topics} == {1}
 
 
-def test_index_lists_digests_newest_first(tmp_path):
-    from radar.site import build_index
-    d = tmp_path / "docs" / "digests"
-    d.mkdir(parents=True)
-    for name in ["2026-11-20.md", "2026-11-22.md", "latest.md"]:
-        (d / name).write_text("x")
-    cfg = load_config(REPO / "config.yaml")
-    index = build_index(tmp_path / "docs", d, cfg.topics[:2], [], {}, 0).read_text()
-    assert index.index("2026-11-22") < index.index("2026-11-20")
-    assert "latest.md" not in index.split("## All digests")[1]
+def test_seen_papers_are_skipped_on_later_days(tmp_path, papers):
+    path = tmp_path / "seen.json"
+    s = SeenState(path)
+    s.mark(["arxiv:2611.00002"], date(2026, 11, 21))
+    s.forget_day(date(2026, 11, 22))          # forgetting today keeps yesterday's marks
+    assert s.is_seen("arxiv:2611.00002")
+    s.forget_day(date(2026, 11, 21))
+    assert not s.is_seen("arxiv:2611.00002")
+
+
+def test_archive_roundtrip(tmp_path, papers):
+    from radar.archive import Archive, to_paper
+    a = Archive(tmp_path / "a.jsonl")
+    p = papers[0]
+    p.summary = {"one_liner": "x", "ai": True}
+    a.add({"prob": [p]}, date(2026, 11, 20))
+    a.add({"prob": [papers[1]]}, date(2026, 11, 22))
+    a.add({"prob": [papers[2]]}, date(2026, 11, 22))   # same day: replaces that day's entries
+    a.prune(date(2026, 11, 22), keep_days=30)
+    a.save()
+    b = Archive(tmp_path / "a.jsonl")
+    recs = b.for_topic("prob")
+    assert [r["uid"] for r in recs] == [papers[2].uid, p.uid]
+    assert b.count_on("prob", date(2026, 11, 22)) == 1
+    back = to_paper(recs[1])
+    assert back.title == p.title and back.summary["one_liner"] == "x"
+    a.prune(date(2027, 1, 1), keep_days=30)
+    assert a.records == []

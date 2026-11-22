@@ -22,26 +22,54 @@ days: 1                 # 1 for a daily digest, 7 for weekly (match the schedule
 overlap_days: 3         # extra lookback for late announcements; nothing is recommended twice
 max_per_topic: 600
 min_score: 0.10         # raise if digests feel noisy, lower if too many topics are empty
-top_k_per_topic: 2      # papers per topic per digest; remove to use each topic's own top_k
+top_k_per_topic: 3      # papers per topic per day; remove to use each topic's own top_k
 must_read: 3            # number of highlights at the top
 include_revisions: false  # bioRxiv/medRxiv: skip new versions of older preprints
 summarize: true         # needs the ANTHROPIC_API_KEY secret; without it, the abstract's first sentence is shown
 model: claude-haiku-5-5
-output_dir: docs/digests
-site_dir: docs          # home page for GitHub Pages
+output_dir: docs/digests        # daily Markdown digests (readable on GitHub)
+site_dir: docs                  # the website (GitHub Pages, folder /docs)
 state_path: state/seen.json
+archive_path: state/archive.jsonl
+archive_days: 90
+feed_days: 30                   # how far back each topic's feed goes on the website
+site_title: Research Radar
+
+# Optional accounts (sign in by email, topic choices sync across devices).
+# Leave empty and the site still works: choices are saved in the browser.
+# See README "Accounts" for the 10-minute Supabase setup.
+supabase_url: ""
+supabase_anon_key: ""
 
 topics:
-  # Mathematics, physics and AI
-  - ml-theory
+  # Readers choose from all of these on the website. Remove any you do not want to fetch.
+  # Mathematics
   - probability
+  - statistics-theory
   - differential-geometry
-  - math-physics
+  - pde
+  - harmonic-analysis
   - complex-analysis
+  - combinatorics
+  - math-physics
+  - optimization-control
+  # Computer science and AI
+  - ml-theory
+  - interpretability
   - ai4math
   - embodied-ai
+  # Physics
   - theoretical-physics
-  # Chemistry, biology and economics
+  - quantum
+  # Chemistry
   - chemistry
+  - ml-for-molecules
+  # Biology
   - biology
+  - neuroscience
+  - quantitative-biology
+  - epidemiology
+  # Economics
   - economics
+  - game-theory
+  - quantitative-finance

@@ -42,9 +42,15 @@ class Config:
     include_revisions: bool = False      # bioRxiv/medRxiv: also show new versions of old preprints
     summarize: bool = True
     model: str = "claude-haiku-5-5"
-    output_dir: str = "docs/digests"
-    site_dir: str | None = "docs"        # where the website home page goes; null to skip
+    output_dir: str = "docs/digests"     # daily Markdown digests (readable on GitHub)
+    site_dir: str | None = "docs"        # the website; its data goes to <site_dir>/data
     state_path: str = "state/seen.json"
+    archive_path: str = "state/archive.jsonl"
+    archive_days: int = 90               # how long recommended papers are kept
+    feed_days: int = 30                  # how far back each topic's feed goes on the website
+    site_title: str = "Research Radar"
+    supabase_url: str = ""               # optional login; see README "Accounts"
+    supabase_anon_key: str = ""          # public by design; access is limited by row-level security
 
 
 def load_presets() -> dict[str, dict]:

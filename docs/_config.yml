@@ -1,5 +1,0 @@
-# GitHub Pages settings for the digest website.
-# Turn the site on in Settings -> Pages -> Deploy from a branch -> main, /docs.
-title: Research Radar
-description: New research from many fields, picked and summarized every day.
-theme: jekyll-theme-cayman

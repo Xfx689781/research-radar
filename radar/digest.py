@@ -1,4 +1,4 @@
-"""Render the weekly digest as Markdown."""
+"""Render the daily (or weekly) digest as Markdown."""
 
 from __future__ import annotations
 

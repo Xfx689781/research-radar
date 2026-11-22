@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Radar</title>
+<meta name="description" content="New research papers in the fields you choose, explained in plain words, every day.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d1f22; --muted: #5d636b; --faint: #8a9098;
+    --line: #e6e2da; --accent: #0f6b5c; --accent-soft: #e3f1ee; --accent-ink: #ffffff;
+    --warn: #8a5a00; --radius: 12px;
+    --serif: "Iowan Old Style", "Charter", "Source Serif Pro", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141618; --surface: #1c1f22; --ink: #ecebe7; --muted: #a5abb2; --faint: #7d838a;
+      --line: #2d3136; --accent: #5cc4ad; --accent-soft: #1d3632; --accent-ink: #0b1c18; --warn: #e0b25c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--sans); }
+  a { color: var(--accent); }
+  button { font: inherit; cursor: pointer; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  header.top { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; }
+  .brand { font: 600 1.25rem/1 var(--serif); letter-spacing: .01em; color: var(--ink); text-decoration: none; }
+  .updated { color: var(--faint); font-size: .85rem; }
+  .spacer { flex: 1; }
+  .account { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--muted); }
+
+  .btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 7px 14px; }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+  .btn.link { border: none; background: none; color: var(--accent); padding: 4px 6px; }
+  .btn:disabled { opacity: .5; cursor: default; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  main { padding: 28px 0 120px; }
+  h1 { font: 600 2rem/1.2 var(--serif); margin: 0 0 6px; }
+  h2.field { font: 600 1.15rem/1.3 var(--serif); margin: 30px 0 12px; }
+  .lede { color: var(--muted); margin: 0 0 18px; max-width: 60ch; }
+  .notice { background: var(--accent-soft); border-radius: var(--radius); padding: 10px 14px; font-size: .92rem; margin: 0 0 18px; }
+  .error { color: var(--warn); }
+
+  /* topic picker */
+  .search { width: 100%; padding: 11px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); font: inherit; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+  .topic { position: relative; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 12px 14px 12px 42px; color: var(--ink); }
+  .topic:hover { border-color: var(--accent); }
+  .topic[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .topic .box { position: absolute; left: 14px; top: 14px; width: 18px; height: 18px; border: 1.5px solid var(--faint); border-radius: 5px; }
+  .topic[aria-pressed="true"] .box { background: var(--accent); border-color: var(--accent); }
+  .topic[aria-pressed="true"] .box::after { content: ""; position: absolute; left: 5px; top: 1px; width: 5px; height: 10px; border: solid var(--accent-ink); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+  .topic .name { font-weight: 600; display: block; }
+  .topic .desc { color: var(--muted); font-size: .84rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 2px; }
+  .topic .meta { color: var(--faint); font-size: .78rem; margin-top: 6px; display: block; }
+  .savebar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--line); z-index: 6; }
+  .savebar .wrap { display: flex; align-items: center; gap: 12px; min-height: 68px; }
+
+  /* feed */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; }
+  .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 12px; font-size: .88rem; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  h2.day { font: 600 1.05rem/1.3 var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: 34px 0 12px; font-size: .8rem; }
+  article.paper { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 14px; }
+  .tag { display: inline-block; font-size: .75rem; font-weight: 600; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 10px; margin-bottom: 8px; }
+  article h3 { font: 600 1.18rem/1.35 var(--serif); margin: 0 0 4px; }
+  article h3 a { color: var(--ink); text-decoration: none; }
+  article h3 a:hover { text-decoration: underline; }
+  .byline { color: var(--faint); font-size: .85rem; margin-bottom: 12px; }
+  .plain { font-size: 1.02rem; margin: 0 0 10px; }
+  .row { margin: 6px 0; font-size: .93rem; }
+  .row b { font-weight: 600; }
+  .muted { color: var(--muted); }
+  details { margin-top: 10px; font-size: .9rem; color: var(--muted); }
+  summary { cursor: pointer; color: var(--accent); }
+  .empty { text-align: center; color: var(--muted); padding: 50px 10px; }
+
+  dialog { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); padding: 22px; max-width: 420px; width: calc(100% - 40px); }
+  dialog::backdrop { background: rgba(0,0,0,.35); }
+  dialog input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; margin: 10px 0 14px; }
+  footer { color: var(--faint); font-size: .82rem; padding: 30px 0; border-top: 1px solid var(--line); }
+  @media (max-width: 520px) { .updated { display: none; } h1 { font-size: 1.6rem; } }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" id="brand">Research Radar</a>
+    <span class="updated" id="updated"></span>
+    <span class="spacer"></span>
+    <div class="account" id="account"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="notice error" id="load-error" hidden></p>
+
+  <!-- Topic picker -->
+  <section id="picker" hidden aria-labelledby="picker-title">
+    <h1 id="picker-title">Choose your topics</h1>
+    <p class="lede">Pick as many as you like. Every day you will see the newest papers in these fields, each explained in plain words. You can change them at any time.</p>
+    <p class="notice" id="storage-note" hidden></p>
+    <input class="search" id="search" type="search" placeholder="Filter topics, e.g. geometry, neuroscience, finance" aria-label="Filter topics">
+    <div id="fields"></div>
+  </section>
+
+  <!-- Personal feed -->
+  <section id="feed" hidden aria-labelledby="feed-title">
+    <h1 id="feed-title">Your daily papers</h1>
+    <p class="lede" id="feed-lede"></p>
+    <div class="chips" id="topic-chips" role="group" aria-label="Show topics"></div>
+    <div class="controls">
+      <label class="muted">Show
+        <select id="range">
+          <option value="1">latest day</option>
+          <option value="7" selected>last 7 days</option>
+          <option value="30">last 30 days</option>
+        </select>
+      </label>
+      <button class="btn" id="edit-topics">Edit topics</button>
+    </div>
+    <div id="papers" aria-live="polite"></div>
+  </section>
+</main>
+
+<div class="savebar" id="savebar" hidden>
+  <div class="wrap">
+    <span id="count" class="muted">0 topics selected</span>
+    <span class="spacer"></span>
+    <button class="btn link" id="cancel" hidden>Cancel</button>
+    <button class="btn primary" id="save" disabled>Show my papers</button>
+  </div>
+</div>
+
+<dialog id="signin">
+  <form method="dialog" id="signin-form">
+    <h2 style="margin:0 0 6px;font:600 1.2rem var(--serif)">Sign in</h2>
+    <p class="muted" style="margin:0;font-size:.92rem">We will email you a link. Your topics are then saved to your account and follow you to any device.</p>
+    <input type="email" id="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+    <p id="signin-msg" class="muted" style="font-size:.9rem;margin:0 0 12px" hidden></p>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button class="btn" value="cancel" formnovalidate>Close</button>
+      <button class="btn primary" id="send-link" value="send">Email me a link</button>
+    </div>
+  </form>
+</dialog>
+
+<footer class="wrap">
+  Papers come from arXiv, bioRxiv and medRxiv. Summaries are written by AI from each abstract and can be wrong; open the paper before relying on them. Thank you to arXiv for use of its open access interoperability.
+  <a href="https://github.com/Xfx689781/research-radar">Source on GitHub</a>.
+</footer>
+
+<script type="module">
+const STORE_KEY = "research-radar.topics.v1";
+const $ = (id) => document.getElementById(id);
+const state = { topics: [], fields: [], bySlug: {}, selected: new Set(), draft: new Set(),
+                cache: {}, filter: null, user: null, supabase: null, updated: "" };
+
+// ------------------------------------------------------------------ helpers
+function el(tag, attrs = {}, ...children) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v === null || v === undefined || v === false) continue;
+    if (k === "class") node.className = v;
+    else if (k.startsWith("on")) node.addEventListener(k.slice(2), v);
+    else node.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of children.flat()) {
+    if (c === null || c === undefined || c === false) continue;
+    node.append(c instanceof Node ? c : document.createTextNode(String(c)));  // text is never parsed as HTML
+  }
+  return node;
+}
+const safeUrl = (u) => (typeof u === "string" && /^https:\/\//.test(u)) ? u : null;
+
+function readLocal() {
+  try { return JSON.parse(localStorage.getItem(STORE_KEY) || "null"); } catch { return null; }
+}
+function writeLocal(list) {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(list)); return true; } catch { return false; }
+}
+function fmtDay(iso) {
+  const d = new Date(iso + "T12:00:00Z");
+  return d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
+}
+function daysBetween(a, b) { return Math.round((new Date(a + "T00:00:00Z") - new Date(b + "T00:00:00Z")) / 864e5); }
+function renderMath(root) {
+  if (window.renderMathInElement) {
+    try {
+      window.renderMathInElement(root, { delimiters: [
+        { left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
+        throwOnError: false });
+    } catch { /* math stays as plain text */ }
+  }
+}
+async function getJSON(path) {
+  const r = await fetch(path, { cache: "no-cache" });
+  if (!r.ok) throw new Error(`${path}: ${r.status}`);
+  return r.json();
+}
+
+// ------------------------------------------------------------------ selection storage
+async function loadSelection() {
+  const fromUrl = new URLSearchParams(location.search).get("topics");
+  let list = null;
+  if (state.user && state.supabase) {
+    const { data, error } = await state.supabase.from("preferences")
+      .select("topics").eq("user_id", state.user.id).maybeSingle();
+    if (!error && data && Array.isArray(data.topics) && data.topics.length) list = data.topics;
+    else if (!error) {                       // first sign-in: carry over this browser's choice
+      const local = readLocal();
+      if (local && local.length) { list = local; await saveRemote(local); }
+    }
+  }
+  if (!list) list = readLocal();
+  if (!list && fromUrl) list = fromUrl.split(",");
+  return (list || []).filter((s) => state.bySlug[s]);
+}
+async function saveRemote(list) {
+  if (!(state.user && state.supabase)) return;
+  const { error } = await state.supabase.from("preferences")
+    .upsert({ user_id: state.user.id, topics: list, updated_at: new Date().toISOString() });
+  if (error) console.warn("could not save to account:", error.message);
+}
+async function saveSelection(list) {
+  writeLocal(list);
+  await saveRemote(list);
+}
+
+// ------------------------------------------------------------------ accounts (optional)
+async function initAuth(site) {
+  if (!site.supabase_url || !site.supabase_anon_key) return;
+  try {
+    const { createClient } = await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
+    state.supabase = createClient(site.supabase_url, site.supabase_anon_key);
+    const { data } = await state.supabase.auth.getSession();
+    state.user = data.session ? data.session.user : null;
+    state.supabase.auth.onAuthStateChange(async (_event, session) => {
+      const before = state.user && state.user.id;
+      state.user = session ? session.user : null;
+      renderAccount();
+      if ((state.user && state.user.id) !== before) await start();
+    });
+  } catch (e) {
+    console.warn("sign-in unavailable:", e);
+    state.supabase = null;
+  }
+}
+function renderAccount() {
+  const box = $("account");
+  box.replaceChildren();
+  if (!state.supabase) return;
+  if (state.user) {
+    box.append(el("span", {}, state.user.email || "Signed in"),
+      el("button", { class: "btn", onclick: async () => { await state.supabase.auth.signOut(); } }, "Sign out"));
+  } else {
+    box.append(el("button", { class: "btn", onclick: () => { $("signin-msg").hidden = true; $("signin").showModal(); } }, "Sign in"));
+  }
+}
+$("signin-form").addEventListener("submit", async (ev) => {
+  if (ev.submitter && ev.submitter.value !== "send") return;
+  ev.preventDefault();
+  const email = $("email").value.trim();
+  const msg = $("signin-msg");
+  $("send-link").disabled = true;
+  const { error } = await state.supabase.auth.signInWithOtp({
+    email, options: { emailRedirectTo: location.origin + location.pathname } });
+  $("send-link").disabled = false;
+  msg.hidden = false;
+  msg.textContent = error ? `Could not send the link: ${error.message}`
+                          : "Check your inbox and open the link on this device.";
+});
+
+// ------------------------------------------------------------------ topic picker
+function showPicker(editing) {
+  state.draft = new Set(state.selected);
+  $("feed").hidden = true;
+  $("picker").hidden = false;
+  $("savebar").hidden = false;
+  $("cancel").hidden = !editing;
+  $("picker-title").textContent = editing ? "Edit your topics" : "Choose your topics";
+  const note = $("storage-note");
+  note.hidden = !!state.user;
+  note.textContent = state.supabase
+    ? "Your choices are saved in this browser. Sign in to keep them on every device."
+    : "Your choices are saved in this browser.";
+  $("search").value = "";
+  renderPicker();
+  window.scrollTo(0, 0);
+}
+function renderPicker() {
+  const q = $("search").value.trim().toLowerCase();
+  const box = $("fields");
+  box.replaceChildren();
+  for (const field of state.fields) {
+    const items = state.topics.filter((t) => t.field === field &&
+      (!q || (t.name + " " + t.description + " " + t.field).toLowerCase().includes(q)));
+    if (!items.length) continue;
+    box.append(el("h2", { class: "field" }, field));
+    box.append(el("div", { class: "grid" }, items.map((t) => {
+      const on = state.draft.has(t.slug);
+      const src = { arxiv: "arXiv", biorxiv: "bioRxiv", medrxiv: "medRxiv" }[t.source] || t.source;
+      return el("button", {
+        class: "topic", type: "button", "aria-pressed": on ? "true" : "false",
+        onclick: () => { on ? state.draft.delete(t.slug) : state.draft.add(t.slug); renderPicker(); },
+      }, el("span", { class: "box", "aria-hidden": "true" }),
+         el("span", { class: "name" }, t.name),
+         el("span", { class: "desc" }, t.description),
+         el("span", { class: "meta" }, `${src}${t.new_today ? ` · ${t.new_today} new today` : ""}`));
+    })));
+  }
+  if (!box.children.length) box.append(el("p", { class: "empty" }, "No topic matches that filter."));
+  const n = state.draft.size;
+  $("count").textContent = `${n} topic${n === 1 ? "" : "s"} selected`;
+  $("save").disabled = n === 0;
+}
+$("search").addEventListener("input", renderPicker);
+$("save").addEventListener("click", async () => {
+  state.selected = new Set(state.draft);
+  state.filter = null;
+  await saveSelection([...state.selected]);
+  showFeed();
+});
+$("cancel").addEventListener("click", () => showFeed());
+$("edit-topics").addEventListener("click", () => showPicker(true));
+
+// ------------------------------------------------------------------ feed
+async function loadTopic(slug) {
+  if (!state.cache[slug]) state.cache[slug] = getJSON(`data/topics/${slug}.json`).catch(() => ({ papers: [] }));
+  return state.cache[slug];
+}
+async function showFeed() {
+  $("picker").hidden = true;
+  $("savebar").hidden = true;
+  $("feed").hidden = false;
+  window.scrollTo(0, 0);
+  const n = state.selected.size;
+  $("feed-lede").textContent = `New papers in your ${n} topic${n === 1 ? "" : "s"}, newest first. Updated every day.`;
+  renderChips();
+  await renderPapers();
+}
+function renderChips() {
+  const box = $("topic-chips");
+  box.replaceChildren(el("button", { class: "chip", "aria-pressed": state.filter ? "false" : "true",
+    onclick: () => { state.filter = null; renderChips(); renderPapers(); } }, "All"));
+  for (const slug of state.selected) {
+    box.append(el("button", { class: "chip", "aria-pressed": state.filter === slug ? "true" : "false",
+      onclick: () => { state.filter = slug; renderChips(); renderPapers(); } }, state.bySlug[slug].name));
+  }
+}
+function paperCard(p, topicName) {
+  const s = p.summary || {};
+  const authors = (p.authors || []);
+  const sep = authors.some((a) => a.includes(",")) ? "; " : ", ";
+  const who = authors.length > 3 ? authors.slice(0, 3).join(sep) + " et al." : authors.join(sep);
+  const link = safeUrl(p.url);
+  return el("article", { class: "paper" },
+    el("span", { class: "tag" }, topicName),
+    el("h3", {}, link ? el("a", { href: link, target: "_blank", rel: "noopener" }, p.title) : p.title),
+    el("div", { class: "byline" }, [who, p.label, p.primary_category].filter(Boolean).join(" · ")),
+    s.plain ? el("p", { class: "plain" }, s.plain) : null,
+    s.one_liner ? el("div", { class: "row" }, el("b", {}, s.ai ? "In one sentence: " : "From the abstract: "),
+      el("span", { class: "muted" }, s.one_liner)) : null,
+    s.why ? el("div", { class: "row" }, el("b", {}, "Why it matters: "), s.why) : null,
+    (s.background || s.difficulty) ? el("div", { class: "row muted" },
+      s.background ? `Background: ${s.background}` : "", s.background && s.difficulty ? " · " : "",
+      s.difficulty ? `Level: ${s.difficulty}` : "") : null,
+    p.abstract ? el("details", {}, el("summary", {}, "Original abstract"), el("p", {}, p.abstract)) : null);
+}
+async function renderPapers() {
+  const box = $("papers");
+  box.replaceChildren(el("p", { class: "empty" }, "Loading papers…"));
+  const slugs = state.filter ? [state.filter] : [...state.selected];
+  const files = await Promise.all(slugs.map(loadTopic));
+  let papers = [];
+  files.forEach((f, i) => (f.papers || []).forEach((p) => papers.push({ ...p, _topic: slugs[i] })));
+  const latest = papers.reduce((m, p) => (p.date > m ? p.date : m), "");
+  const range = Number($("range").value);
+  papers = papers.filter((p) => latest && daysBetween(latest, p.date) < range);
+  papers.sort((a, b) => (b.date.localeCompare(a.date)) ||
+    (slugs.indexOf(a._topic) - slugs.indexOf(b._topic)));
+
+  box.replaceChildren();
+  if (!papers.length) {
+    box.append(el("p", { class: "empty" },
+      "No new papers for these topics in this period. Try a longer period or add more topics."));
+    return;
+  }
+  let day = "";
+  for (const p of papers) {
+    if (p.date !== day) {
+      day = p.date;
+      box.append(el("h2", { class: "day" }, fmtDay(day)));
+    }
+    box.append(paperCard(p, state.bySlug[p._topic].name));
+  }
+  renderMath(box);
+}
+$("range").addEventListener("change", renderPapers);
+
+// ------------------------------------------------------------------ start
+async function start() {
+  state.selected = new Set(await loadSelection());
+  renderAccount();
+  if (state.selected.size) await showFeed(); else showPicker(false);
+}
+(async function init() {
+  try {
+    const [site, index] = await Promise.all([
+      getJSON("data/site.json").catch(() => ({})), getJSON("data/topics.json")]);
+    state.topics = index.topics; state.fields = index.fields; state.updated = index.updated;
+    state.bySlug = Object.fromEntries(index.topics.map((t) => [t.slug, t]));
+    if (site.title) { document.title = site.title; $("brand").textContent = site.title; }
+    $("updated").textContent = index.updated ? `Updated ${fmtDay(index.updated)}` : "";
+    await initAuth(site);
+    await start();
+  } catch (e) {
+    const box = $("load-error");
+    box.hidden = false;
+    box.textContent = "The paper data could not be loaded yet. If this site was just set up, run the workflow once and try again.";
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>

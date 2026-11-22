@@ -26,6 +26,10 @@ class SeenState:
         for u in uids:
             self.seen.setdefault(u, day.isoformat())
 
+    def forget_day(self, day: date) -> None:
+        """Un-mark papers first recommended on `day`, so a re-run that day can pick them again."""
+        self.seen = {k: v for k, v in self.seen.items() if v != day.isoformat()}
+
     def prune(self, today: date, keep_days: int = 120) -> None:
         cutoff = (today - timedelta(days=keep_days)).isoformat()
         self.seen = {k: v for k, v in self.seen.items() if v >= cutoff}
