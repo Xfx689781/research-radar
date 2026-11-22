@@ -1,353 +1,240 @@
 # Research digest · 2026-11-22
+<!-- {% raw %} -->
 
-Covers papers posted from about 2026-11-15 to 2026-11-22 (UTC).
+New papers posted from about 2026-11-21 to 2026-11-22 (UTC).
 
-> Relevance = TF-IDF cosine similarity to your interest description, plus a keyword bonus. It measures how close the wording is to what you care about, not how good a paper is. AI summaries are written from the abstract only; check the paper before relying on them.
+> Papers are picked by how closely their wording matches each topic's description (the "relevance" score), not by quality. Summaries are written by AI from the abstract only; open the paper before relying on them.
 
-## Must-read this week
+## Highlights
 
-- **[DiWALI: Diffusion Policy Learning in World Models via Latent Action Inference from Human and Robot Play](https://arxiv.org/abs/2611.24836v1)** (Embodied AI and robotics): Learning robot manipulation is constrained by the availability of action-labeled robot data, for both imitation and world models.
-- **[From Pen-and-Paper to Machine-Checked Proofs: Lean for System Identification](https://arxiv.org/abs/2611.18220v1)** (AI for mathematics): Mathematical proofs in scientific papers are often long and intricate, relying on chains of references to earlier results.
+- **[Gene regulatory networks and the organization of cell differentiation in multicellular organisms](https://www.biorxiv.org/content/10.64898/2026.11.18.767571v1)** (Computational and systems biology): Across their development, clonal multicellular organisms generate new cell types from less differentiated cell types.
+- **[Bianchi cosmologies with four-dimensional groups of motion in New General Relativity](https://arxiv.org/abs/2611.26474v1)** (Theoretical physics): We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity.
+- **[Conformal parity](https://arxiv.org/abs/2611.25497v1)** (Differential geometry): We call a Riemannian metric on a four-manifold, as well as the underlying conformal structure, conformally even/odd if its self-dual and anti-self- dual Weyl tensors acting on bivectors have, at each point, equal/opposite spectra.
 
 ## Machine learning theory
 
-### [Bellman Residual Bracketing: Resolving the Sample Complexity of Discounted and Average-Reward RL](https://arxiv.org/abs/2611.19566v1)
-*Matthew Zurek, Yudong Chen* · `cs.LG` · arXiv:2611.19566v1 · relevance 0.32
+### [Differentially Private Score Estimation with Applications to Score-Based Generative Models](https://arxiv.org/abs/2611.25536v1)
+*Mengxiao Gao, Elly K. H. Hung, Yuchen Wu et al.* · `stat.ML` · arXiv:2611.25536v1 · relevance 0.25
 
-- **In one sentence**: We study the sample complexity of the empirical planning or plug-in approach for reinforcement learning (RL) with a generative model. (first sentence of the abstract; no AI summary)
-- Matched keywords: sample complexity, minimax
+- **In one sentence**: Estimating the score function of a distribution plays a central role in statistics and machine learning, with applications in distribution estimation, sampling, and score-based generative modeling. (first sentence of the abstract; AI summaries are off)
+- Matched keywords: minimax, score-based
 
 <details><summary>Original abstract</summary>
 
-We study the sample complexity of the empirical planning or plug-in approach for reinforcement learning (RL) with a generative model. We show the discounted plug-in approach finds an $\varepsilon$-optimal policy with $O(SA (1-γ)^{-3} \varepsilon^{-2} \log(SA/δ))$ samples, where $S, A, γ, δ$ are the state and action sizes, discount factor, and failure probability, respectively. In the average-reward setting, we show that discounted plug-in and direct (undiscounted) plug-in achieve $O(SAH\varepsilon^{-2}\log(SA/δ))$ and $O(SAD\varepsilon^{-2}\log(SA/δ))$ complexities, respectively, where $H$ upper-bounds the optimal bias span and $D$ is the diameter. Combining with our lower bounds for nonadaptive generative models, these results resolve the minimax sample complexity of discounted RL and average-reward RL --- in both the span- and diameter-based classes --- up to constant factors. Our main technical contribution is a novel Bellman residual bracketing technique which improves the efficiency of prior absorbing-MDP-based concentration analyses.
+Estimating the score function of a distribution plays a central role in statistics and machine learning, with applications in distribution estimation, sampling, and score-based generative modeling. However, learning scores from sensitive data raises privacy concerns. These concerns are particularly pronounced in score-based generative modeling, where trained models may memorize individual training examples and expose sensitive information through membership inference and data extraction attacks. Although non-private score estimation has been extensively studied, the statistical limits of its private counterpart remain less understood. In this work, we study score estimation under $(α,β)$-differential privacy for $d$-dimensional sub-Gaussian distributions with locally $γ$-Hölder-continuous scores. We develop a sampling-based private score estimator using quadratic B-splines and the exponential mechanism, and we implement our proposal through projected Langevin Monte Carlo with runtime polynomial in the sample size $n$. The proposed estimator satisfies $(α,β)$-differential privacy, and achieves expected density-weighted squared error $\mbox{polylog}(n) \max(n^{-2γ/(d+2γ+2)},\,(nα)^{-2γ/(d+γ+1)})$. We also establish a nearly matching private minimax lower bound, thereby characterizing the privacy-accuracy trade-off for score estimation. As an application, we construct a differentially private diffusion model whose privacy guarantee is independent of the number of denoising steps. We show that, with an appropriate discretization scheme, the resulting diffusion model attains nearly minimax optimal expected total variation error among all private distribution estimators. We validate our theoretical findings through experiments on both synthetic and real-world datasets.
 
 </details>
 
-### [What Interpolators Store and What They Express: An Information-Theoretic Framework for Benign Overfitting and Label-Free Model Selection](https://arxiv.org/abs/2611.23630v1)
-*Nikolaos Nikolaou* · `cs.LG` · arXiv:2611.23630v1 · relevance 0.31
+### [Deviations from the NTK Regime in CNNs under Joint Depth-Width Scaling](https://arxiv.org/abs/2611.25624v1)
+*Maria Matveev, Pascal Esser, Gitta Kutyniok et al.* · `cs.LG` · arXiv:2611.25624v1 · relevance 0.24
 
-- **In one sentence**: Overparameterized learners can fit noisy training labels perfectly and still predict well, which neither classical complexity measures nor information-theoretic generalization bounds explain. (first sentence of the abstract; no AI summary)
-- Matched keywords: benign overfitting, double descent
-
-<details><summary>Original abstract</summary>
-
-Overparameterized learners can fit noisy training labels perfectly and still predict well, which neither classical complexity measures nor information-theoretic generalization bounds explain. We develop an information-theoretic framework that separates two things an interpolating learner does with its sample: storage, the information the trained model retains about its training labels, and expression, the information about the sample that reaches its predictions at fresh inputs. We first characterize the ideal model: for a loss l, the least complex l-sufficient representation is the Bayes act, whose entropy is the minimal sufficient complexity; this generalizes, and corrects, an earlier "lossless maximal compression" view of boosting. We then show that every interpolator stores exactly nH(Y|X) bits of label noise, so storage, and bounds built on it (including CMI bounds), cannot tell interpolators apart. Expression can: excess risk is bounded above and below by the expressed information V, the entropy over training samples of the prediction at an input, plus a modal-bias term, exactly so for binary labels. Benign overfitting is therefore vanishing expression, a picture that covers nearest-neighbour rules, averaging, minimum-norm least squares and double descent, and that links V to classical bias-variance decompositions and to model disagreement. Finally, V gives a model-selection criterion that needs no held-out labels. Among overparameterized learners on 15 noisy datasets, V estimated from two disjoint halves has 60% less regret than holdout validation at the same cost and matches 5-fold cross-validation at a quarter of its cost; at matched cost it also beats selection by conditional mutual information. We characterize when it fails and give remedies. Code: https://github.com/nnikolaou/GLMC
-
-</details>
-
-### [Offline KL-Regularized Reinforcement Learning with Stochastic Transitions](https://arxiv.org/abs/2611.17603v1)
-*Andrew Liu* · `cs.LG` · arXiv:2611.17603v1 · relevance 0.25
-
-- **In one sentence**: KL-regularized reinforcement learning is the objective behind RL fine-tuning of language models, and its data are often collected by the reference policy itself. (first sentence of the abstract; no AI summary)
-- Matched keywords: sample complexity, minimax
+- **In one sentence**: The concentration and training-time constancy of the neural tangent kernel (NTK) depend on the interplay between network width, depth, and initialization. (first sentence of the abstract; AI summaries are off)
+- Matched keywords: neural tangent kernel
 
 <details><summary>Original abstract</summary>
 
-KL-regularized reinforcement learning is the objective behind RL fine-tuning of language models, and its data are often collected by the reference policy itself. However, beyond bandits and deterministic transitions, little is known about how much offline data it needs. In this work, we study finite discounted Markov decision processes with unknown stochastic transitions, $K$ state-action pairs and effective horizon $H$. For data that cover the regularized optimum with concentrability $C\geq 4$, every estimator needs $Ω(KCH^3/(ε\max\{ε,β\}))$ samples on some instances when $ε$ is small, where $β$ is the temperature. Under a fixed design, pessimistic soft value iteration with a variance-aware penalty attains this rate with high probability, up to logarithmic factors, when $β\geq 1.4H$. When the data come from the reference policy itself, we show that it covers the optimum up to a power law whose exponent grows as $H/β$; in the same temperature range, this power law alone gives the estimator a sample complexity polynomial in $1/ε$, with no coverage assumption. For $β\geq H$ the power can also increase the sample size needed by a factor polynomial in $1/ε$. Finally, the plug-in estimator, which is minimax optimal with a generative model, can fail on reference data at small temperatures when many actions are rarely seen, while the pessimistic estimator does not.
+The concentration and training-time constancy of the neural tangent kernel (NTK) depend on the interplay between network width, depth, and initialization. While joint depth-width scaling has been studied in fully-connected, residual, and recurrent networks, its effects in convolutional neural networks (CNNs) remain less understood. We investigate these effects numerically in CNNs, examining NTK dispersion at initialization and kernel rotation during training. Let depth $L$ be the number of convolutional layers, and width $C$ the number of channels per layer. We find that NTK dispersion increases with $L/C$ in the critical and chaotic initialization regimes, but remains small in the ordered regime. At critical initialization, dispersion curves approximately collapse as a function of $L/C$, suggesting a nontrivial joint scaling regime. During training, kernel rotation generally increases with $L/C$, even in the ordered regime where initial dispersion is small. Together, these results suggest that $L/C$ may govern NTK deviations from the infinite-width limit in certain regimes, and that NTK concentration at initialization and stability during training exhibit different scaling behaviors.
 
 </details>
 
 ## Probability
 
-### [Existence and Uniqueness of Mild Solutions to Rough Stochastic Partial Differential Equations driven by Fractional Brownian Motion with Hurst Index $H > 1/4$](https://arxiv.org/abs/2611.26580v1)
-*Maksim Vaskouski, Maksim Firsau* · `math.PR` · arXiv:2611.26580v1 · relevance 0.22
+### [Generic arm separation for planar percolation models](https://arxiv.org/abs/2611.26458v1)
+*Loïc Gassmann, Ioan Manolescu, Maran Mohanarangan* · `math.PR` · arXiv:2611.26458v1 · relevance 0.15
 
-- **In one sentence**: In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\frac{1}{4}$. (first sentence of the abstract; no AI summary)
+- **In one sentence**: Arm separation is an important technical tool in the study of critical and near-critical planar percolation systems. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\frac{1}{4}$.
+Arm separation is an important technical tool in the study of critical and near-critical planar percolation systems. When combined with RSW estimates, it proves quasi-multiplicativity of arm-event probabilities, links the derivatives of different events and allows the identification of universal arm exponents. We provide a very generic statement of arm separation that applies to arbitrary planar percolation models. Our argument is based on exploring configurations conditioned on the existence of arms in such a way that "exposed" arms are revealed with positive probability. The exploration algorithm is independent of the percolation model and applies to all polychromatic arm events. As an application, we prove a strong arm-separation result for critical planar FK-percolation.
 
 </details>
 
-### [Convergence of replicator-mutator particle systems via bounded Wasserstein distance](https://arxiv.org/abs/2611.24472v1)
-*Giacomo Borghi* · `math.PR` · arXiv:2611.24472v1 · relevance 0.21
+### [Dynamical edge universality and the Airy$_β$ line ensemble](https://arxiv.org/abs/2611.25364v1)
+*Jiaoyang Huang, Shengjing Xu, Yulei Xu* · `math.PR` · arXiv:2611.25364v1 · relevance 0.14
 
-- **In one sentence**: Interacting particle systems with selection and mutation mechanisms arise in biological modeling, evolutionary optimization, and particle filtering methods. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-Interacting particle systems with selection and mutation mechanisms arise in biological modeling, evolutionary optimization, and particle filtering methods. In this work we will consider the paradigmatic replicator-mutator PDE, which combines a diffusive component with a source term that depends on an external potential. We derive quantitative error estimates for the distance between the empirical measure of an unweighted particle system and the solution of the PDE. The proof uses a Wasserstein-1 distance with a bounded ground cost, which allows us to treat unbounded potentials on an unbounded state space. The key tools are the optimal coupling of newly resampled particles and, for the time-continuous limit, the use of a discrete-time killing resampling.
-
-</details>
-
-### [Parameter estimation for discretely observed rough fractional interacting particle systems](https://arxiv.org/abs/2611.24287v1)
-*Chiara Amorino, Augustin Puel, Radomyra Shevchenko* · `math.ST` · arXiv:2611.24287v1 · relevance 0.21
-
-- **In one sentence**: We study parametric inference for interacting particle systems driven by independent fractional Brownian motions, based on discrete observations of all particles over a fixed time horizon. (first sentence of the abstract; no AI summary)
+- **In one sentence**: We prove dynamical edge universality for three families of interacting particle systems for every $β>0$: $β$-Dyson Brownian motion with an analytic potential, weighted $β$-corners processes, and a class of discrete-time Markov chains. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-We study parametric inference for interacting particle systems driven by independent fractional Brownian motions, based on discrete observations of all particles over a fixed time horizon. Our goal is to estimate an unknown drift parameter in the joint limit as the number of particles increases and the observation mesh vanishes. For $H>\frac 12$, we construct contrast based estimators by extending the discrete time least squares approach of Neuenkirch and Tindel to the interacting setting. For the rough regime $H\in(\frac 14,\frac 12)$, we introduce a modified contrast and use the stochastic sewing lemma to handle the first order approximations available from discrete observations. Our analysis combines the propagation of chaos for the associated fractional McKean Vlasov equation with estimates controlling the temporal discretization error. When the Hurst parameter and the diffusion coefficient are known, we establish strong consistency and asymptotic normality of the proposed estimators. The asymptotic results reveal an interplay between the number of particles and the temporal discretization: the convergence rate with respect to the observation mesh changes at $H=\frac 34$, while the asymptotic normality holds in both regimes considered. We further develop a joint estimation procedure for the drift parameter, the Hurst parameter, and the diffusion coefficient, extending quadratic-variation methods for fractional Brownian motion to the interacting particle framework. Numerical experiments illustrate the performance of the proposed estimators.
+We prove dynamical edge universality for three families of interacting particle systems for every $β>0$: $β$-Dyson Brownian motion with an analytic potential, weighted $β$-corners processes, and a class of discrete-time Markov chains. Our results apply to general non-equilibrium initial data and show that the Airy$_β$ line ensemble emerges at positive times whenever the limiting density has a regular square-root edge. More precisely, after centering at the moving deterministic edge and rescaling space and time on the $n^{-2/3}$ and $n^{-1/3}$ scales, respectively, the trajectories of the top $k$ particles converge jointly in distribution to the top $k$ curves of the Airy$_β$ line ensemble, for every fixed $k$, in the topology of uniform convergence on compact time intervals. The proof combines dynamical loop equations with characteristic-flow estimates to establish local laws near the moving edge and upper bounds on the extremal particle. We then identify the stochastic evolution of every subsequential limit of the rescaled Stieltjes transform and establish convergence through the pole-evolution characterization of the Airy$_β$ line ensemble.
 
 </details>
 
 ## Differential geometry
 
-### [Displaceability of monotone Lagrangians in $\mathbb{C}P^3(\sqrt{2})$ and $Q^4(\sqrt{2})$](https://arxiv.org/abs/2611.25699v1)
-*Han Lou, Shuo Zhang* · `math.SG` · arXiv:2611.25699v1 · relevance 0.25
+### [Conformal parity](https://arxiv.org/abs/2611.25497v1)
+*Andrzej Derdzinski, Sinhwi Kim, JeongHyeong Park* · `math.DG` · arXiv:2611.25497v1 · relevance 0.19
 
-- **In one sentence**: We show that the generalized Polterovich submanifold $L_{0, 2}^P$ in $\mathbb{C}P^3(\sqrt{2})$ and the Chekanov-Oakley-Usher Lagrangian $L_{1, 2}^{Q, \mathrm{Ch}}$ in the quadric $Q^4(\sqrt{2})$ are displaceable. (first sentence of the abstract; no AI summary)
+- **In one sentence**: We call a Riemannian metric on a four-manifold, as well as the underlying conformal structure, conformally even/odd if its self-dual and anti-self- dual Weyl tensors acting on bivectors have, at each point, equal/opposite spectra. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-We show that the generalized Polterovich submanifold $L_{0, 2}^P$ in $\mathbb{C}P^3(\sqrt{2})$ and the Chekanov-Oakley-Usher Lagrangian $L_{1, 2}^{Q, \mathrm{Ch}}$ in the quadric $Q^4(\sqrt{2})$ are displaceable. Since $L_{0, 2}^P$ and $L_{1, 2}^{Q, \mathrm{Ch}}$ are in the zero level set of the moment maps of the $\mathrm{SO}(3)$-actions on $\mathbb{C}P^3(\sqrt{2})$ and $Q^4(\sqrt{2})$, the main idea is to construct Hamiltonian diffeomorphisms mapping $L_{0, 2}^P$ and $L_{1, 2}^{Q, \mathrm{Ch}}$ to nonzero level sets of the moment maps.
+We call a Riemannian metric on a four-manifold, as well as the underlying conformal structure, conformally even/odd if its self-dual and anti-self- dual Weyl tensors acting on bivectors have, at each point, equal/opposite spectra. The term mixed parity refers to the simultaneous occurrence of both of these conditions, an obvious example being the conformally flat case. After listing various known classes of conformally even metrics, we construct examples of conformally odd ones which are not of mixed parity, as well as some metrics of mixed parity that are not conformally flat. The former examples are provided by left-invariant metrics on Lie groups, and realize uncountably many local conformal-equivalence types. The latter also include some arising from Lie groups, as well as certain 1+3 Riemannian products that are not locally conformally homogeneous.
 
 </details>
 
-### [Equivariant Flow Matching on Homogeneous Spaces](https://arxiv.org/abs/2611.22492v1)
-*Finn M. Sherry, Gijs Bellaard* · `math.DG` · arXiv:2611.22492v1 · relevance 0.19
+### [Affine Boosted Gauss Curvature Flow](https://arxiv.org/abs/2611.25390v1)
+*Andrews. Ben, Rajpal. Devesh* · `math.DG` · arXiv:2611.25390v1 · relevance 0.17
 
-- **In one sentence**: Flow matching enables the training of networks that can flow samples from an initial to a target distribution. (first sentence of the abstract; no AI summary)
+- **In one sentence**: We prove convexity in the affine orbit of entropies associated to Gauss curvature flow for sub-affine powers. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-Flow matching enables the training of networks that can flow samples from an initial to a target distribution. The network is regressed against simple vector fields that are conditioned on end points in the target distribution. In the Euclidean case, these conditional vector fields induce flows along straight lines. Various generalisations have been proposed to perform flow matching on spaces where straight lines are not well-defined, such as Riemannian manifolds and Lie groups. Riemannian flow matching applies to many domains, but typically requires expensive simulation, while flow matching on Lie groups is simulation-free but only works on Lie groups. In this work, we develop equivariant flow matching on homogeneous spaces, which generalises flow matching on Lie groups, while remaining simulation-free. We also derive all generators connecting pairs of position-orientations, generalising, and perform a similar derivation for event-velocity space, the Lorentzian analogue of position-orientation space, so that we can perform flow matching on these spaces.
+We prove convexity in the affine orbit of entropies associated to Gauss curvature flow for sub-affine powers. This allows the construction of an affine boosted Gauss curvature flow, which keeps the evolving hypersurface at the affine minimizer of the Gaussian entropy. The modified flow has bounded isoperimetric ratio, and after rescaling it converges along a sequence of times to self-similar solutions of the Gauss curvature flow. The construction also proves existence of new self-similar solutions to Gauss curvature flow in the sub-affine regime.
 
 </details>
 
 ## Mathematical physics
 
-### [Link invariants in nilpotent group gauge theories](https://arxiv.org/abs/2611.18237v1)
-*Thomas Nicosanti, Pavel Putrov, Johann Quenta-Raygada* · `hep-th` · arXiv:2611.18237v1 · relevance 0.20
-
-- **In one sentence**: We consider 3-dimensional topological gauge theories with nilpotent gauge groups, both finite, that is Dijkgraaf-Witten theories, and continuous, that is Chern-Simons theories. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-We consider 3-dimensional topological gauge theories with nilpotent gauge groups, both finite, that is Dijkgraaf-Witten theories, and continuous, that is Chern-Simons theories. Abelian topological quantum field theories are exactly those which do not detect the Borromean rings, and nilpotent gauge groups provide the natural next steps beyond the abelian case. We show that the untwisted Dijkgraaf-Witten theory with gauge group $G$ detects Brunnian links with up to $n+1$ components, but no Brunnian links with more components, if and only if $G$ is $n$-step nilpotent. Moreover, the expectation values of such links are determined by their Milnor invariants. We also study the properties of Chern-Simons theories with nilpotent Lie groups and draw parallels with those of the Dijkgraaf-Witten theories. Finally, we conjecture, using the Lazard correspondence, a relation between expectation values of line operators in the two types of theories, and test it in examples.
-
-</details>
-
-### [On the Power-Law Duality in Wigner-Yang Quantum Mechanics](https://arxiv.org/abs/2611.19246v1)
-*Georg Junker, Hassan Hassanabadi* · `math-ph` · arXiv:2611.19246v1 · relevance 0.20
-
-- **In one sentence**: In this work we first revisit the Hooke-Newton duality and its generalisation to arbitrary power laws in classical and quantum mechanics. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-In this work we first revisit the Hooke-Newton duality and its generalisation to arbitrary power laws in classical and quantum mechanics. We then consider Wigner-Yang quantum mechanics on the real line, which is a deformation of standard Heisenberg-Schrödinger quantum mechanics closely related to Dunkl's differential-difference operator formalism. We consider the corresponding eigenvalue problem for the harmonic potential and a Coulomb-like potential. We observe that the Hooke-Newton duality is also applicable to these deformed quantum systems allowing us to solve the eigenvalue problem of one by mapping it onto the other system. This approach is then generalised to arbitrary power-law potentials in Wigner-Yang quantum mechanics. Whereas in standard quantum mechanics the classical re-scaling of angular momenta has to be applied to Langer-modified quantum angular momenta, Wigner-Yang quantum mechanics requires a rescaling of deformation parameters similar to the Langer-type modification but involving the reflection operator. The energy coupling-constant exchange, however, remains the same in all three cases, classical mechanics, quantum mechanics and Wigner-Yang quantum mechanics.
-
-</details>
+Nothing notable this time.
 
 ## Complex analysis
 
-### [The Holomorphic Reduction of Pseudoconvex Homogeneous Manifolds](https://arxiv.org/abs/2611.24922v1)
-*Bruce Gilligan* · `math.CV` · arXiv:2611.24922v1 · relevance 0.20
-
-- **In one sentence**: Suppose $G$ is a connected complex Lie group and $H$ is a closed complex subgroup. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-Suppose $G$ is a connected complex Lie group and $H$ is a closed complex subgroup. Then there exists a closed complex subgroup $J$ of $G$ containing $H$ such that the fibration $π:G/H \to G/J$ is the holomorphic reduction of $G/H$, i.e., $G/J$ is holomorphically separable and ${\mathcal O}(G/H) \cong π^*{\mathcal O}(G/J)$. In this paper we prove that if $G/H$ is pseudoconvex, i.e., if $G/H$ admits a continuous plurisubharmonic exhaustion function, then $G/J$ is Stein and $J/H$ has no non-constant holomorphic functions.
-
-</details>
-
-### [On the solution of a question for meromorphic functions sharing three values IM and a fourth value CM in the complex plane](https://arxiv.org/abs/2611.25948v1)
-*Xiao-Min Li, Jun Wang, Hong-Xun Yi* · `math.CV` · arXiv:2611.25948v1 · relevance 0.14
-
-- **In one sentence**: In 1926, Nevanlinna (Acta Math. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-In 1926, Nevanlinna (Acta Math. {\bf 48} (1926), no. 3-4, 367-391) proved that if two distinct and non-constant meromorphic functions $f$ and $g$ share $a_1,$ $a_2,$ $a_3,$ $a_4$ CM in the complex plane, where $a_1,$ $a_2,$ $a_3,$ $a_4$ are four distinct complex values in the extended complex plane, then $f$ is a Möbius transformation of $g$, two of the shared values, say $a_1$ and $a_2$, are Picard exceptional values, and the cross ratio $\left(a_1, a_2, a_3, a_4\right)=-1.$ Later on, Gundersen (Trans. Amer. Math. Soc. {\bf 277} (1983), no. 2, 545-567. Correction: {\bf 304} (1987), 847-850) proved that if two non-constant meromorphic functions share two values CM and share two other values IM, then the functions share all four values CM. In 1992, Gundersen (Complex Var. Elliptic Equ. {\bf 20} (1992), no. 1-4, 99-106) proposed the following famous question: if two non-constant meromorphic functions share three distinct values IM and share a fourth value CM, then do the functions necessarily share all four values CM? This question is a long-standing question in the studies of the Nevanlinna's value distribution theory of meromorphic functions, and has not been completely resolved by now. In this paper, we completely resolve the question, and prove that if two distinct and non-constant meromorphic functions $f$ and $g$ share $a_1,$ $a_2,$ $a_3$ IM and $\infty$ CM, where $a_1,$ $a_2,$ $a_3$ are three distinct and finite complex values in the complex plane, then $f$ and $g$ also share $a_1,$ $a_2,$ $a_3$ CM.
-
-</details>
+Nothing notable this time.
 
 ## AI for mathematics
 
-### [From Pen-and-Paper to Machine-Checked Proofs: Lean for System Identification](https://arxiv.org/abs/2611.18220v1)
-*Manas Mejari, Dario Piga, Marco Forgione* · `eess.SY` · arXiv:2611.18220v1 · relevance 0.37
+### [Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents](https://arxiv.org/abs/2611.25599v1)
+*Meghana Aparna Sistla, Alaia Solko-Breslin, Somesh Jha et al.* · `cs.CR` · arXiv:2611.25599v1 · relevance 0.18
 
-- **In one sentence**: Mathematical proofs in scientific papers are often long and intricate, relying on chains of references to earlier results. (first sentence of the abstract; no AI summary)
-- Matched keywords: Lean, theorem proving, formalization, proof assistant
+- **In one sentence**: Autonomous AI agents are increasingly deployed for long-running tasks that execute arbitrary shell commands or programs. (first sentence of the abstract; AI summaries are off)
+- Matched keywords: Lean, formal verification
 
 <details><summary>Original abstract</summary>
 
-Mathematical proofs in scientific papers are often long and intricate, relying on chains of references to earlier results. This makes it difficult for readers and reviewers to verify each and every step. Interactive theorem proving offers a complement: the theorem and its proof are written as code, and every inference is checked by a small, trusted piece of software called the kernel. This paper serves as an introduction to the Lean 4 proof assistant for a system identification and control audience, assuming no prior exposure to formal methods. We first show how a Lean proof is read using two elementary examples: the first on identifiability, the second on set invariance. We then illustrate how Lean can be used to analyse results from the literature, taking as example a classic lemma on the inversion of the noise filter in prediction-error identification (Ljung, 1999, Lemma 3.1). Since in Lean every step must be justified, the formalization brings to light a subtle point: the original claim of that lemma holds almost surely, although not for every realisation, as its statement may suggest. A simple counterexample makes this concrete. Finally, the paper discusses guidelines and perspectives on the use of Lean in system identification research.
+Autonomous AI agents are increasingly deployed for long-running tasks that execute arbitrary shell commands or programs. However, these actions can result in unauthorized network requests or persistent, malicious changes to the user's file system, processes, or privileges. Existing defense mechanisms rely on either LLM-based monitors, which lack provable safety guarantees, or stateless policy enforcement layers, which miss multi-step data flows and execution side-effects unmodeled by the policy language (e.g., network calls initiated inside a Python script). We introduce Tether, a framework for runtime enforcement of stateful security policies over the observed side-effects of an agent's actions. Tether executes each proposed action in an ephemeral, isolated sandbox, inferring abstract action semantics from observed system calls. Tether then enforces stateful policies over these inferred semantics, permitting actions to proceed only if they comply with the policy. Policies and action semantics are defined in an embedded DSL in Lean 4 capable of expressing diverse constraints, including information flow control (IFC), access control, and network security policies. Because actions can propagate labels from sources to destinations, a single rule can enforce fine-grained IFC policies across multi-step execution flows of arbitrary length. Expressing policies in Lean enables formal verification that they satisfy global security invariants (e.g., preventing network access after reading a sensitive file). We evaluate Tether on realistic coding-agent benchmarks across both benign and adversarial trajectories. With a single policy shared across all tasks, Tether blocks 100% of in-scope attacks while maintaining a benign false-positive rate under 5%.
 
 </details>
 
-### [Turing Agent: Agentic Formal Verification for Mathematical Research](https://arxiv.org/abs/2611.21299v1)
-*Yang Chen, Qianyi Wang, Ronghui Yang et al.* · `cs.AI` · arXiv:2611.21299v1 · relevance 0.27
+### [Budget Internalization: Fixed-Budget RLVR Trades Test-Time Scaling for In-Budget Accuracy](https://arxiv.org/abs/2611.26172v1)
+*Ilia Zavidnyi, Alexander Kovrigin, Arina Puchkova et al.* · `cs.LG` · arXiv:2611.26172v1 · relevance 0.13
 
-- **In one sentence**: Large language models (LLMs) are rapidly advancing mathematical discovery, moving beyond benchmark-level problem solving to tackle frontier research problems. (first sentence of the abstract; no AI summary)
-- Matched keywords: formalization, formal verification
-
-<details><summary>Original abstract</summary>
-
-Large language models (LLMs) are rapidly advancing mathematical discovery, moving beyond benchmark-level problem solving to tackle frontier research problems. This progress is ushering mathematics into an era of proof abundance, raising a fundamental challenge: how can we ensure the correctness of the ever-growing volume of AI-generated proofs and transform them into trustworthy, machine-verified mathematical knowledge? We introduce Turing Agent, an agent harness designed to orchestrate end-to-end formal verification of research-level mathematics. Its wo-scale architecture integrates theorem formalization and proof formalization agents, empowered by structured proof decomposition, parallel verification, accumulated proof experience, and selective semantic review. Leveraging our collaborations with theoretical computer science (TCS) researchers, we focus our evaluation on TCS, a particularly demanding domain characterized by intricate quantification, complex dependencies, and stringent semantic requirements. Against direct generation and general-purpose coding harnesses, including Codex CLI and Claude Code, Turing Agent achieves approximately 57-62% faithful formalization success on Formal TCS Bench and 83% overall pass@1 on a TCS-focused subset of RLMEval, using GLM-5.3 and DeepSeek-V4-Pro. Notably, Turing Agent, built on DeepSeek, successfully completes the formal verification of three previously unresolved TCS tasks from OpenAI's October 2026 collection. One particularly challenging TCS problem required about a hundred formally verified auxiliary claims. Moreover, by actively exploring and refining the formalization process, Turing Agent can uncover simpler alternative proofs, expose unnecessary dependencies in original proofs, and generate reusable mathematical knowledge as a byproduct of verification.
-
-</details>
-
-### [How rigid is maximum cardinality search? Stability and locality of MCS orderings under edge updates, verified in Lean](https://arxiv.org/abs/2611.18369v1)
-*Md Thoriqul Islam Thonmay, Gregory Morse* · `cs.DS` · arXiv:2611.18369v1 · relevance 0.22
-
-- **In one sentence**: For which sets F of edge modifications do a graph G and the modified graph share a maximum cardinality search (MCS) ordering? (first sentence of the abstract; no AI summary)
-- Matched keywords: Lean, mathlib
+- **In one sentence**: Reasoning models often become more accurate when they can generate longer answers at test time. (first sentence of the abstract; AI summaries are off)
+- Matched keywords: mathematical reasoning
 
 <details><summary>Original abstract</summary>
 
-For which sets F of edge modifications do a graph G and the modified graph share a maximum cardinality search (MCS) ordering? We prove that they do whenever, along every proper common MCS prefix, each unchosen vertex's neighbour count in the second graph exceeds its count in the first by zero or one. In particular, inserting or deleting any matching, or flipping a single edge, preserves a common ordering, and under the same hypothesis every common MCS prefix extends to a full common ordering without backtracking. Neither part of the hypothesis can simply be dropped: inserting a triangle, a P_4 or a 2P_3 shows that the +1 bound cannot be relaxed to +2, and a disjoint mixed insert/delete pair shows that the one-directional condition is needed. For the canonical ordering (smallest-index tie-breaking) under a single-edge update, an insertion can first change the ordering only strictly between the endpoints' positions, and a deletion only at the later endpoint; when no break fires, the ordering is unchanged. A boolean-adjacency executable refines the abstract probe-then-repair update. All of these results, including the four obstructions, are proved in Lean 4 over Mathlib, re-checked by independent kernel checkers, and registered in the Palomar registry. On paper we further show that the first break of an insertion is located in O((deg(v)+1) log n) time, independent of the window length. We claim no worst-case asymptotic speedup over recomputation.
+Reasoning models often become more accurate when they can generate longer answers at test time. This behavior is known as test-time scaling. However, RL with verifiable rewards (RLVR) usually trains them with a fixed rollout cap. We find that this cap changes model behavior, not only training cost. After training, models use few additional tokens beyond the training budget. They outperform the base models near that budget, but their accuracy stops improving and falls below the base model at larger budgets. The rollout cap thus becomes a learned constraint, that limits model's test-time scaling. We call this effect budget internalization. We observe it across Qwen3.5-4B, Gemma4-E2B, and Nemotron-3-Nano-4B and two reasoning training tasks: mathematical reasoning and diverse, procedurally generated problems. This effect also transfers from math training to science and coding tasks. Training-objective level ablations on Qwen3.5-4B show that most changes recover little test-time scaling. Stronger KL regularization and lower training-data truncation preserve more scaling, but stronger KL reduces in-budget accuracy. Forcing an answer on truncated training rollouts largely removes budget internalization, but also removes most of the in-budget gain. SFT on artificially truncated traces reproduces budget internalization, whereas SFT on naturally short traces does not, which shows that the effect is not specific to RL. This result links budget internalization to length-censored post-training rather than to an RL-specific objective term. Thus, a rollout cap does not only control training cost. It can trade low-budget gains for lower performance when additional inference compute is available.
 
 </details>
 
 ## Embodied AI and robotics
 
-### [DiWALI: Diffusion Policy Learning in World Models via Latent Action Inference from Human and Robot Play](https://arxiv.org/abs/2611.24836v1)
-*Akshay L Chandra, Iman Nematollahi, Lingyue Zhao et al.* · `cs.RO` · arXiv:2611.24836v1 · relevance 0.38
+### [MoRE: Mixture-of-Experts for Multi-Physics Robotic World Models](https://arxiv.org/abs/2611.25336v1)
+*Ziyu Zhu, Shaowei Liu, Albert J. Zhai et al.* · `cs.RO` · arXiv:2611.25336v1 · relevance 0.34
 
-- **In one sentence**: Learning robot manipulation is constrained by the availability of action-labeled robot data, for both imitation and world models. (first sentence of the abstract; no AI summary)
-- Matched keywords: manipulation, world model, reinforcement learning
+- **In one sentence**: A robotic world model should predict how objects evolve under robot actions and physical dynamics. (first sentence of the abstract; AI summaries are off)
+- Matched keywords: manipulation, world model
 
 <details><summary>Original abstract</summary>
 
-Learning robot manipulation is constrained by the availability of action-labeled robot data, for both imitation and world models. Humans can demonstrate skills in seconds, but their demonstrations lack the required robot actions. We introduce DiWALI, a framework that learns and improves diffusion policies within a world model trained on human and robot play. DiWALI infers latent actions from consecutive frames using an inverse dynamics model, enabling world model training without action labels, and grounds them in robot commands through a decoder trained separately on robot play. Skill policies are trained over latent actions from action-free human demonstrations and improved with reinforcement learning in imagination. On the CALVIN benchmark, DiWALI policies trained solely from human demonstrations substantially outperform baselines trained with robot demonstrations. Incorporating human play into the world model training also yields stronger policies after fine-tuning than using the same amount of robot play alone. Experiments on a physical robot show that skills learned primarily from human demonstrations are further improved in imagination with a world model trained on human and robot play. Together, these results demonstrate that human experience can support both manipulation skill acquisition and subsequent policy improvement, reducing reliance on action-labeled robot data. Videos, dataset and code are available at https://diwali.cs.uni-freiburg.de.
+A robotic world model should predict how objects evolve under robot actions and physical dynamics. While recent 3D world models have shown strong predictive capabilities, they still struggle with the heterogeneous dynamics arising from diverse object interactions. To address this in a unified framework, we decompose robotic interactions into distinct physical regimes and assign each to a specialized motion expert. We introduce MoRE, a 3D world model with a mixture of motion experts organized around rigid, deformable, and prehensile dynamics. This design enables a single model to capture diverse physical behaviors while preserving regime-specific priors. Trained on mixed simulation and real-world data, MoRE integrates with Model Predictive Control (MPC) to support diverse manipulation tasks. Experiments show that MoRE improves prediction accuracy across physics regimes, leading to stronger real-world MPC performance. Code, data, and project website are available at https://alwaysleepy.github.io/MoRE-WM-site/.
 
 </details>
 
-### [JEPA4R: Embodied JEPA World Models with 4D Point Planning](https://arxiv.org/abs/2611.19771v1)
-*Jiarui Dong, Zhiheng Liang, Yanjun Li et al.* · `cs.RO` · arXiv:2611.19771v1 · relevance 0.37
+### [Verify2Act: Critic-Guided Latent World Models for Verifying Language-Conditioned Manipulation Plans](https://arxiv.org/abs/2611.25243v1)
+*Chrisantus Eze, Christopher Crick* · `cs.RO` · arXiv:2611.25243v1 · relevance 0.34
 
-- **In one sentence**: Joint-embedding predictive architecture (JEPA) world models predict future embeddings instead of pixels and plan in latent space. (first sentence of the abstract; no AI summary)
-- Matched keywords: embodied, manipulation, world model
+- **In one sentence**: Vision-Language Models (VLMs) can propose multi-step manipulation plans, but they have no grounded model of how a scene will change, and the pixel-level world models that could check those plans are slow and drift over long horizons. (first sentence of the abstract; AI summaries are off)
+- Matched keywords: manipulation, world model
 
 <details><summary>Original abstract</summary>
 
-Joint-embedding predictive architecture (JEPA) world models predict future embeddings instead of pixels and plan in latent space. Two challenges remain: 2D images leave the metric geometry that manipulation acts on implicit and entangled with appearance, and what these models imagine stays hidden, as they are mostly judged in simulation by short-horizon latent planning. We present JEPA4R, a JEPA world model that observes single-depth-camera point clouds, predicts and plans in their latent space, and acts through a policy head on its frozen latents; we call this 4D point planning. A decoder on the frozen world model shows what it imagines as 4D point clouds, with a mean point error within 1.1 cm over 200 steps. Under the policy-learning protocols of OGBench and CortexBench, JEPA4R leads pixel JEPA models on OGBench Cube-Single, Cube-Double, Cube-Triple and Scene, and ranks first on MetaWorld and Adroit Relocate with 98.4% and 88.0%, above the runner-up, R3M, at 96.0% and 65.3%. Trained only in a digital twin, JEPA4R and its policy heads run zero-shot on the real arm with both a gripper and a dexterous hand.
+Vision-Language Models (VLMs) can propose multi-step manipulation plans, but they have no grounded model of how a scene will change, and the pixel-level world models that could check those plans are slow and drift over long horizons. We present Verify2Act, a modular verification framework that separates semantic action proposal from latent physical verification. A VLM proposes candidate plans, a latent world model (V2A-WM) imagines each of them in the DINOv2 feature space, and a dual-head critic checks the imagined rollouts for temporal consistency and goal satisfaction before anything is executed. V2A-WM extends recent flow-matching world models with cross-attention action grounding and a causal temporal history window. We deploy the full system on a low-cost robot arm, training the world model and critic only on data generated in a digital twin. Across six language-conditioned tasks, Verify2Act reaches 83.3\% task success, compared with 61.7\% for a latent world model without our architectural changes, 53.3\% for the VLM alone, and 46.7\% for a pixel-diffusion world model. It verified every plan it executed and incurred no planning-induced failures: all of its failed episodes were caused by low-level grasp or placement slips. In simulation, Verify2Act obtains the highest five-task chain success on CALVIN among the compared baselines with 30$\times$ fewer reflective VLM calls than pixel-diffusion verification, and the highest success on cluttered nut assembly.
 
 </details>
 
 ## Theoretical physics
 
-### [Nonequilibrium Statistical Mechanics: Physical Concepts & Mathematical Tools](https://arxiv.org/abs/2611.26394v1)
-*Sagar Chakraborty* · `cond-mat.stat-mech` · arXiv:2611.26394v1 · relevance 0.23
+### [Bianchi cosmologies with four-dimensional groups of motion in New General Relativity](https://arxiv.org/abs/2611.26474v1)
+*Manuel Hohmann, Paul Martin Kull, Margus Saal* · `gr-qc` · arXiv:2611.26474v1 · relevance 0.16
 
-- **In one sentence**: As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics. (first sentence of the abstract; no AI summary)
+- **In one sentence**: We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics. At the same time, nonequilibrium statistical mechanics has transcended traditional physics to become a powerful language for complex systems. Prompted by an enthusiastic curiosity about complex systems, these cursory lecture notes attempt to elucidate some introductory concepts and techniques used in classical nonequilibrium statistical mechanics, which find successful applications not only in foundational physics, but also across other fields such as biology, ecology, economics, and sociology. Except for the specific synthesis and presentation of the material, which assumes basic familiarity with equilibrium statistical mechanics, the author claims no originality.
+We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity. We first show that in each of these classes the most general metric teleparallel geometry is described by four free functions of time, while another four functions of time describe the most general energy-momentum tensor compatible with the same symmetries. We then derive the field equations of New General Relativity for this class of geometries. Finally, we present some solutions to these field equations. Our results show that both solutions resembling features of the standard Friedmann-Lemaître-Robertson-Walker cosmology of General Relativity and deviations thereof exist.
 
 </details>
 
-### [An infrared-safe $S$-matrix for $\mathcal N=4$ super Yang-Mills](https://arxiv.org/abs/2611.21713v1)
-*Maria Nocchi, Leonardo Rastelli* · `hep-th` · arXiv:2611.21713v1 · relevance 0.19
+### [Revisiting Kerr-Newman-(A)dS Black Holes in \(f(R)\) Gravity: A Kerr-Schild Approach](https://arxiv.org/abs/2611.25992v1)
+*Göksel Daylan Esmer, Saliha Türkmen* · `gr-qc` · arXiv:2611.25992v1 · relevance 0.15
 
-- **In one sentence**: Scattering amplitudes of massless gauge theories are not observables: they are infrared divergent, and the standard regulators are tied either to perturbation theory or the planar limit. (first sentence of the abstract; no AI summary)
+- **In one sentence**: It is known that, in the constant-curvature regime, the field equations of $f(R)$ gravity reduce to the Einstein form with an effective cosmological constant, establishing a direct correspondence between stationary and axisymmetric black hole solutions in $f(R)$ gravity and their counterparts in gen… (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-Scattering amplitudes of massless gauge theories are not observables: they are infrared divergent, and the standard regulators are tied either to perturbation theory or the planar limit. We study $\mathcal N=4$ super Yang-Mills theory on rigid AdS$_4$ with Dirichlet boundary conditions, where the role of the amplitude is played by correlation functions of boundary operators. These are finite, and they are defined at any coupling and for any gauge group. Among them, the four-point function of the flavor-current supermultiplet is the counterpart of the $2\to2$ amplitude of the elementary supergluon states, and arguably the simplest non-trivial observable of the theory. In this paper, we compute it at weak coupling to one loop. The tree-level correlator follows directly from the microscopic theory, and the one-loop correlator, which we obtain from AdS unitarity, takes a remarkably simple form in Mellin space. In the flat-space limit, it reproduces the one-loop scattering amplitude, with the infrared divergences re-emerging as logarithms.
+It is known that, in the constant-curvature regime, the field equations of $f(R)$ gravity reduce to the Einstein form with an effective cosmological constant, establishing a direct correspondence between stationary and axisymmetric black hole solutions in $f(R)$ gravity and their counterparts in general relativity, including the Kerr--Newman--(A)dS family. Within this framework, we revisit the derivation of these metrics using the Kerr--Schild approach for illustrative purposes. The Maxwell equations are solved independently of the Kerr--Schild function, allowing the electromagnetic source to be determined before addressing the gravitational field equations. We then investigate the possibility of non-constant-curvature solutions, taking quadratic $f(R)$ gravity as a representative model. Remarkably, the field equations within the Kerr--Schild ansatz force the Ricci scalar to be constant, reducing the resulting geometries to the familiar Kerr--Newman--(A)dS family. Thus, our analysis extends the recently established no-go result for uncharged black holes to electrically charged configurations within the framework considered here.
 
 </details>
 
 ## Chemistry and materials
 
-### [Reward misalignment as an opportunity for materials discovery](https://arxiv.org/abs/2611.26186v1)
-*Ryotaro Okabe, Shoki Kishida, Abhijatmedhi Chotrattanapituk et al.* · `cond-mat.mtrl-sci` · arXiv:2611.26186v1 · relevance 0.17
+### [Molecular Dynamics Simulation of the Solidification of AlCoCuFeNi High-Entropy Alloy Nanowire](https://arxiv.org/abs/2611.25836v1)
+*O. I. Kushnerov* · `cond-mat.mtrl-sci` · arXiv:2611.25836v1 · relevance 0.16
 
-- **In one sentence**: Reward misalignment is usually regarded as a failure of artificial intelligence. (first sentence of the abstract; no AI summary)
+- **In one sentence**: Molecular dynamics simulation of the solidification behavior of an AlCoCuFeNi high-entropy alloy nanowire was performed using an embedded atom model potential at cooling rates of 10^11, 10^12, and 10^13 K/s. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-Reward misalignment is usually regarded as a failure of artificial intelligence. In materials discovery with generative AI models, however, disagreement between predefined rewards and expert judgment may reveal materials that the rewards overlook. We investigate this possibility using electronic flat bands as a prime example. Experts mostly agree with a numerical bandwidth score, but their disagreements are systematic and cannot be explained by an estimated 5% rate of mistaken labels. We learn the experts' preferences from pairwise comparisons and use them to guide a crystal diffusion model. The learned preferences and numerical score agree on the flattest bands but diverge elsewhere. For example, the preferences favor KCo2As2 and CoGa, reported compounds with partially flat bands that the score would discard. The framework also extends to synthesizability and phonon properties. Our findings suggest that reward misalignment can expose opportunities for materials discovery beyond what fixed rewards are designed to find.
+Molecular dynamics simulation of the solidification behavior of an AlCoCuFeNi high-entropy alloy nanowire was performed using an embedded atom model potential at cooling rates of 10^11, 10^12, and 10^13 K/s. Periodic boundary conditions were applied along the nanowire axis to model an effectively infinite nanowire. The crystallization process was characterized through the temperature dependence of the potential energy. Structural evolution was analyzed using adaptive common-neighbor analysis (CNA) and radial distribution functions (RDF). The results show that the final structure changes from amorphous to crystalline with decreasing cooling rate, demonstrating the strong influence of cooling conditions on phase formation in nanoscale high-entropy alloy systems.
 
 </details>
 
-### [Application of Pretrained Universal Machine Learning Force-Fields for Phase Transitions Prediction in ZrO2](https://arxiv.org/abs/2611.23535v1)
-*Rajan Khadka, Axel van de Walle, Patrick Tepesch* · `cond-mat.mtrl-sci` · arXiv:2611.23535v1 · relevance 0.16
+### [Intelligent Imaging of Thermal Transport in Nanostructures](https://arxiv.org/abs/2611.25779v1)
+*Xin Qian, Te-Huan Liu, Xiaobo Li et al.* · `cond-mat.mtrl-sci` · arXiv:2611.25779v1 · relevance 0.15
 
-- **In one sentence**: Pretrained universal machine-learning force fields can reduce the cost of finite-temperature molecular dynamics relative to density functional theory. (first sentence of the abstract; no AI summary)
+- **In one sentence**: The ability to measure thermal properties and visualize heat transport processes with high spatial resolution is becoming increasingly important for materials discovery, next-generation electronics, and advanced manufacturing. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-Pretrained universal machine-learning force fields can reduce the cost of finite-temperature molecular dynamics relative to density functional theory. However, most benchmarks test only static properties and do not assess whether these models reproduce the correct phase-transition sequence. Here, we benchmark ten open-source universal machine-learning force fields for zirconia (ZrO$_2$) using phonon dispersion calculations and variable-cell isothermal-isobaric molecular dynamics. Zirconia is a useful test because it has three thermodynamically stable crystalline phases prior to melting, following the sequence monoclinic-tetragonal-cubic. Four models reproduce this sequence: 7net-l3i5, MatterSim-v1.0.0-1M, MACE-mpa, and MACE-D3. Models with orthorhombic-tetragonal energy errors above about 10 meV/atom (7net-0, CHGNet, and MACE) instead produce an orthorhombic intermediate and predict monoclinic-orthorhombic-tetragonal-cubic-liquid upon heating. ORB-based models fail to sustain stable variable-cell dynamics because their phonon frequencies are compressed by 30-60% relative to the density functional theory reference. Across all ten models, two ground-state diagnostics predict finite-temperature behavior. Relative polymorph energetics should agree with the matched density functional theory reference within about 6 meV/atom, and the phonon spectrum should not show systematic softening. These diagnostics are practical screening metrics for assessing pretrained force fields for phase-transition predictions.
+The ability to measure thermal properties and visualize heat transport processes with high spatial resolution is becoming increasingly important for materials discovery, next-generation electronics, and advanced manufacturing. As critical dimensions and architectures of novel materials and high performance electronics shrink and become more heterogeneous, thermal transport is no longer governed by bulk material properties alone, but by local variations in microstructure, such as interfaces and defects, while the operating conditions can also play a role. With the development of non-contact pump-probe thermoreflectance techniques, specific heat, thermal conductivity, and interface conductance can be mapped either through wide-field thermos-reflectance images or by scanning technique. However, key challenges remain such as the balance between imaging throughput and measurement accuracy, the extraction of multiple parameters with high confidence, and non-intrusive subsurface characterization, etc. This Review highlights recent advancements in artificial intelligence (AI)-assistance in high-throughput data processing, visualizing interfacial thermal transport, and nonintrusive subsurface analysis, and offers outlooks for future research directions such as spectral mapping of heat carriers, three-dimensional property mapping, and AI-agentic experimental designs. We anticipate this Review will motivate future efforts in combining AI with experimental techniques to achieve unprecedented capabilities for thermal characterization of nanoscale materials and device characterization, facilitating materials discovery and electronics revolution.
 
 </details>
 
 ## Computational and systems biology
 
-### [Constructing Gene Regulatory Network using Chatterjee's Rank Correlation with Single-cell Transcriptomic Data](https://www.biorxiv.org/content/10.1101/2025.09.17.676530v4)
-*Gupta, S.; Chaudhuri, A.; Raghuraman, V. et al.* · `bioinformatics` · bioRxiv doi:10.1101/2025.09.17.676530 v4 · relevance 0.17
+### [Gene regulatory networks and the organization of cell differentiation in multicellular organisms](https://www.biorxiv.org/content/10.64898/2026.11.18.767571v1)
+*Meraz-Segura, L. F.; Guerrero Vaca, A. C.; Alcaraz Barrera, R. et al.* · `systems biology` · bioRxiv doi:10.64898/2026.11.18.767571 v1 · relevance 0.18
 
-- **In one sentence**: Constructing gene regulatory networks (GRNs) from single-cell RNA sequencing (scRNA-seq) data is critical for understanding cellular systems, yet existing methods rely either on strong modeling assumptions or on computationally intensive algorithms. (first sentence of the abstract; no AI summary)
+- **In one sentence**: Across their development, clonal multicellular organisms generate new cell types from less differentiated cell types. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-Constructing gene regulatory networks (GRNs) from single-cell RNA sequencing (scRNA-seq) data is critical for understanding cellular systems, yet existing methods rely either on strong modeling assumptions or on computationally intensive algorithms. We introduce a multiple testing framework for GRN construction based on Chatterjee's rank correlation coefficient, a nonparametric measure of dependence that captures non-linear and non-monotone relationships. The framework overcomes several limitations of traditional methods by offering a transparent, scalable, and computationally efficient alternative to recent black-box machine learning models. Because cells in scRNA-seq data are not independent observations, we develop a data-driven algorithm for estimating robust testing cutoffs. We further exploit the asymmetric nature of Chatterjee's correlation to propose a new test for asymmetric predictive associations, yielding biologically meaningful and directionally informed GRNs. In simulations, our method matches or outperforms state-of-the-art approaches in recovering true gene-gene dependencies and asymmetric associations, particularly for complex, non-linear dependencies. Application to real scRNA-seq data shows its utility for dissecting complex regulatory networks.
+Across their development, clonal multicellular organisms generate new cell types from less differentiated cell types. Differentiation pathways arrange into a hierarchical, tree-like organization: regressions from specialized to undifferentiated cell types rarely occur and undifferentiated cell types often have the potential to produce, when subject to distinct stimuli, two or more differently specialized cell types. How cell type transitions acquire such a peculiar disposition requires an explanation that must reside in the properties of gene regulatory networks (GRNs); after all, GRNs orchestrate the changes in gene activity that define cell types. We studied vast numbers of small dynamic model networks to search for elementary GRNs that could yield the simplest hierarchical, developmental-like, differentiation patterns. We found that only a small minority of GRNs are compatible with hierarchical cell type transitions. Importantly, GRNs that yielded developmental-like differentiation patterns shared common traits: One is the presence of tangles of cycles of positive interactions. Genes in such a tangle produce an all-or-none one-way response to a signal. Another such trait is mutual inhibition between genes associated to different specialized cell types, enforcing their mutually exclusive activation. Moreover, these regulatory patterns are more abundant in published experimentally sustained developmental GRNs than as expected by chance. In addition, we show that it is easy to maintain hierarchical cellular differentiation throughout evolution, even when undergoing changes in gene regulatory interactions and developmental mechanisms. Our work supports the prevalence of design principles that organize hierarchically differentiation pathways in clonal multicellular organisms.
 
 </details>
 
-### [DRAFT: graph-recurrent learning of dynamic gene regulatory networks along single-cell multi-omics trajectories](https://www.biorxiv.org/content/10.64898/2026.11.17.767145v1)
-*Zhang, Z.; Santhi Sekhar, P.; van Nierop y Sanchez, P. et al.* · `bioinformatics` · bioRxiv doi:10.64898/2026.11.17.767145 v1 · relevance 0.16
+### [Breadth over Depth: Predictor-Agnostic Consensus for Improved Antibody--Antigen Structure Prediction](https://www.biorxiv.org/content/10.64898/2026.11.17.767212v1)
+*Ullanat, V.; Gupta, A.; Li, R. et al.* · `bioinformatics` · bioRxiv doi:10.64898/2026.11.17.767212 v1 · relevance 0.11
 
-- **In one sentence**: Single-cell multi-omics data offer an opportunity to resolve how gene regulatory networks (GRNs) are rewired during cell-fate transitions, but most existing methods infer static snapshots, ignore temporal dependencies or assume linear regulation. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-Single-cell multi-omics data offer an opportunity to resolve how gene regulatory networks (GRNs) are rewired during cell-fate transitions, but most existing methods infer static snapshots, ignore temporal dependencies or assume linear regulation. Here we present DRAFT, a deep learning framework that combines graph attention with recurrent temporal memory to infer dynamic GRNs from time-resolved single-cell multi-omics data. On simulated data, DRAFT outperforms existing methods in accuracy and temporal smoothness. In mouse cellular reprogramming and Drosophila adult spermatogenesis, it recovers interactions supported by independent ChIP-seq, perturbation and Hi-C data, together with known stage-specific regulators. By inferring regulatory activity from dynamic network structure rather than expression alone, DRAFT identifies regulators whose activity precedes their transcriptional peak, including the candidate early germline regulator Mondo. Germline-specific Mondo knockdown alters germline stem cell number and expression of the predicted targets kuz and mamo. DRAFT also enables nonlinear alignment of co-developing lineages and reveals stage-specific cell-cell communication.
-
-</details>
-
-### [Gene network topologies for heterogeneity restoration during self-renewal](https://www.biorxiv.org/content/10.64898/2026.11.16.767011v1)
-*Chakravarty, S.; Ramarolahy, R. T. C.; Hong, T.* · `systems biology` · bioRxiv doi:10.64898/2026.11.16.767011 v1 · relevance 0.16
-
-- **In one sentence**: The ability for a subset of cells to establish a heterogeneous cell population with multi-lineage competency is crucial for the self-renewal capacity of tissues and organs. (first sentence of the abstract; no AI summary)
+- **In one sentence**: Antibody-antigen structure prediction commonly relies on sampling a single co-folding predictor deeply and selecting its highest-confidence output using model-specific confidence scores. (first sentence of the abstract; AI summaries are off)
 
 <details><summary>Original abstract</summary>
 
-The ability for a subset of cells to establish a heterogeneous cell population with multi-lineage competency is crucial for the self-renewal capacity of tissues and organs. Restoration of heterogeneous gene expression patterns has been observed in pluripotent and multi-potent stem cells, and the heterogeneity restoration can influence the potential of differentiation into multiple cell types. Similarly, cancer cells can acquire the capacity to establish non-genetic heterogeneity that plays a role in cancer progression and resistance to therapeutics. Specific models of gene regulatory networks have been proposed to explain heterogeneity restoration. However, due to the lack of systematic analysis, it is unclear which network topologies are more efficient for this multicellular function, and what intrinsic and extrinsic factors can determine the optimal choice of network topology. In this work, we use mathematical models describing gene expression of single cells and their underlying population dynamics to examine the influence of network topology on the recovery of multimodal expression patterns originating from a homogeneous population. We found that feedback loops are a key factor contributing to heterogeneity restoration. Negative and positive feedback loops support the existence of heterogeneity restoration, but only positive feedback can accelerate the process with low cost of single-cell-level variations of expression. Furthermore, networks with mixed feedback were the most robust ones for heterogeneity restoration with respect to changes in both kinetic rate constants and noise levels. Using experimentally validated network databases, we showed that genes involved in feedback loops are enriched with functions related to cell fate decisions, and we identified examples of realistic gene regulatory networks cell fate dynamics. Our results suggest multiple potential evolutionary paths towards gene circuits governing heterogeneity restoration and key factors contributing to the dynamics of this process. We expect that this systematic study will enable future discoveries of new gene regulatory networks governing progenitor and cancer cell dynamics as well as therapeutic strategies targeting heterogeneity-enabling circuits.
+Antibody-antigen structure prediction commonly relies on sampling a single co-folding predictor deeply and selecting its highest-confidence output using model-specific confidence scores. We introduce AbPoolRank, a predictor-agnostic structural selector that ranks mixed pools using cross-pose agreement, within-source reproducibility and interface geometry, without native confidence, predictor identities or predictor-specific parameters. On 103 cluster-disjoint, post-2021 antibody-antigen complexes from SAbDab2, three structures each from Boltz-2, Promera, Protenix-v2, ESMFold2-Fast and OpenDDE form a 15-structure pool that reaches 58.0% medium-or-better Success@1 (DockQ [&ge;] 0.49), exceeding confidence-based selection from every individual predictor sampled 100 times (26-52%). Existing ranking methods did not rescue deep single-predictor sampling or surpass our selector on mixed pools, with no method exceeding 51.5% on 100 structures from one co-folder and AbPoolRank matching the strongest single-structure methods while significantly outperforming consensus methods. AbPoolRank trained without one predictor lost at most 3.0 percentage points, and the frozen model accepted full MSA-conditioned ESMFold2, a sixth predictor absent from method development, without retraining or loss of accuracy. Diversification also improved the accuracy-compute frontier, with the 15-structure pool using 1.8-fold less aggregate GPU time than the most accurate single-predictor setting in our compute benchmark and 3.3-fold less than sampling that predictor 100 times. Together, these results show that shallow sampling across complementary co-folders, coupled with a confidence-free selector, provides an accurate and computationally efficient inference strategy for antibody-antigen structure prediction.
 
 </details>
 
 ## Economics
 
-### [Aggregating Rankings of Coalitions to Rank Individuals](https://arxiv.org/abs/2611.19021v1)
-*Takahiro Suzuki* · `econ.TH` · arXiv:2611.19021v1 · relevance 0.17
-
-- **In one sentence**: We develop an ordinal framework for aggregating a profile of rankings of coalitional performances to determine the ranking of individuals. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-We develop an ordinal framework for aggregating a profile of rankings of coalitional performances to determine the ranking of individuals. From university ratings to the assessment of team-sports players, we often evaluate individuals based on their coalitional performances. Although such evaluation has been addressed by cooperative game theory, it is only recently that its ordinal counterpart, social ranking theory (Moretti, 2015), has emerged. As most of the literature considers a single coalitional ranking (which corresponds to a real-valued characteristic function), we extend the model to allow a profile of coalitional rankings (which corresponds to a multidimensional characteristic function). We tackle the aggregation problem by introducing three families of inter-profile axioms, each representing how the rankings should interact or contribute to the output. After revealing fundamental impossibilities concerning the reconciliation of different families, we characterize a new solution, Pareto-extension Lex-cel (PEL), via some weaker versions of the inter-profile axioms. PEL extends Lex-cel, which is a central solution in social ranking theory, by analogy with Sen's Pareto extension rule. Our results develop the connection between classical Arrovian aggregation, cooperative game theory, and social ranking theory.
-
-</details>
-
-### [Menu Design Meets Market Design: Strategic Simplicity vs. Choice Complexity](https://arxiv.org/abs/2611.17984v1)
-*Gian Caspari, Paul Ergün Hild, Michael Hilweg-Waldeck et al.* · `econ.GN` · arXiv:2611.17984v1 · relevance 0.12
-
-- **In one sentence**: Strategic simplicity removes the incentive to misreport preferences, but it does not ensure that participants can identify what they prefer. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-Strategic simplicity removes the incentive to misreport preferences, but it does not ensure that participants can identify what they prefer. We study this distinction in a laboratory experiment on serial dictatorships, where optimal play only requires choosing one's favorite bundle of real-effort tasks. Participants make fifteen incentivized choices among bundles that vary in how many tasks they combine. They choose either from a large menu or through a series of binary choices. Having made all choices, they unexpectedly reconsider each assignment against a previously rejected alternative. We find that roughly one in six choices is reversed and almost one in five involves an objectively dominated bundle. Simplifying the choice architecture does not help. Binary decomposition even raises reversal rates among low-ability participants and further inflates their confidence about their choices.
-
-</details>
-
-### [Long-Term Quantile Treatment Effects with Combined Experimental and Observational Data](https://arxiv.org/abs/2611.22984v1)
-*Nan Liu, Yanbo Liu, Yuya Sasaki et al.* · `econ.EM` · arXiv:2611.22984v1 · relevance 0.11
-
-- **In one sentence**: This paper studies the identification, estimation, and inference of long-term quantile treatment effects (LTQTEs) when short-term experimental data are supplemented with long-term observational data. (first sentence of the abstract; no AI summary)
-
-<details><summary>Original abstract</summary>
-
-This paper studies the identification, estimation, and inference of long-term quantile treatment effects (LTQTEs) when short-term experimental data are supplemented with long-term observational data. Under a latent unconfoundedness framework, we establish identification of the LTQTE curve and derive the corresponding efficient influence functions. Building on these influence functions, we propose a semiparametrically efficient estimation procedure and develop a multiplier bootstrap method for uniform inference on the LTQTE curve, yielding valid simultaneous confidence bands over a continuum of quantile indices.
-
-</details>
+Nothing notable this time.
 
 ## Fetch statistics
 
 | Topic | Fetched | New | Selected |
 |---|---|---|---|
-| Machine learning theory | 75 | 75 | 3 |
-| Probability | 184 | 184 | 3 |
-| Differential geometry | 150 | 150 | 2 |
-| Mathematical physics | 258 | 258 | 2 |
-| Complex analysis | 53 | 53 | 2 |
-| AI for mathematics | 140 | 140 | 3 |
-| Embodied AI and robotics | 278 | 278 | 2 |
-| Theoretical physics | 494 | 494 | 2 |
-| Chemistry and materials | 291 | 291 | 2 |
-| Computational and systems biology | 524 | 524 | 3 |
-| Economics | 89 | 89 | 3 |
+| Machine learning theory | 10 | 10 | 2 |
+| Probability | 24 | 23 | 2 |
+| Differential geometry | 22 | 21 | 2 |
+| Mathematical physics | 33 | 33 | 0 |
+| Complex analysis | 6 | 5 | 0 |
+| AI for mathematics | 21 | 21 | 2 |
+| Embodied AI and robotics | 56 | 56 | 2 |
+| Theoretical physics | 68 | 67 | 2 |
+| Chemistry and materials | 35 | 34 | 2 |
+| Computational and systems biology | 148 | 147 | 2 |
+| Economics | 16 | 16 | 0 |
+
+<!-- {% endraw %} -->
