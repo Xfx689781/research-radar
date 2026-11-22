@@ -21,8 +21,8 @@ language: en            # en or zh (digest text and AI summaries)
 days: 1                 # 1 for a daily digest, 7 for weekly (match the schedule in .github/workflows/digest.yml)
 overlap_days: 3         # extra lookback for late announcements; nothing is recommended twice
 max_per_topic: 600
-min_score: 0.10         # raise if digests feel noisy, lower if too many topics are empty
-top_k_per_topic: 3      # papers per topic per day; remove to use each topic's own top_k
+min_score: 0.03         # raise if topics feel noisy, lower if too many topics are empty
+top_k_per_topic: 2      # papers per topic per day; remove to use each topic's own top_k
 must_read: 3            # number of highlights at the top
 include_revisions: false  # bioRxiv/medRxiv: skip new versions of older preprints
 summarize: true         # needs the ANTHROPIC_API_KEY secret; without it, the abstract's first sentence is shown
@@ -45,31 +45,89 @@ topics:
   # Readers choose from all of these on the website. Remove any you do not want to fetch.
   # Mathematics
   - probability
-  - statistics-theory
   - differential-geometry
   - pde
   - harmonic-analysis
   - complex-analysis
+  - operator-algebras
+  - algebra
+  - representation-theory
+  - number-theory
+  - algebraic-geometry
+  - topology
+  - dynamical-systems
   - combinatorics
+  - numerical-analysis
+  - logic
   - math-physics
   - optimization-control
+  # Statistics
+  - statistics-theory
+  - statistical-methods
   # Computer science and AI
   - ml-theory
+  - large-language-models
+  - computer-vision
+  - reinforcement-learning
+  - ai-safety
   - interpretability
   - ai4math
   - embodied-ai
+  - security-cryptography
+  - theory-of-computation
+  - programming-languages
+  - systems
+  - human-computer-interaction
+  - information-theory
   # Physics
   - theoretical-physics
+  - statistical-physics
+  - condensed-matter
+  - particle-physics
+  - nuclear-physics
   - quantum
-  # Chemistry
+  - optics-atomic
+  - fluids-plasma
+  - biological-physics
+  - climate-earth
+  # Astronomy
+  - cosmology
+  - galaxies
+  - exoplanets
+  - high-energy-astrophysics
+  - stars-sun
+  # Chemistry and materials
   - chemistry
+  - materials-science
+  - soft-matter
   - ml-for-molecules
+  - biochemistry
+  - pharmacology
   # Biology
   - biology
   - neuroscience
+  - genetics-genomics
+  - cell-molecular-biology
+  - immunology-microbiology
+  - cancer-biology
+  - ecology-evolution
+  - plant-biology
+  - bioengineering
   - quantitative-biology
+  # Medicine and health
   - epidemiology
-  # Economics
+  - infectious-diseases
+  - public-health
+  - mental-health
+  - oncology
+  - health-informatics
+  # Economics and finance
   - economics
+  - economic-theory
   - game-theory
   - quantitative-finance
+  - financial-markets
+  # Engineering
+  - signal-processing
+  - audio-speech
+  - control-systems

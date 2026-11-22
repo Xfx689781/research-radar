@@ -62,6 +62,9 @@ def run(args: argparse.Namespace) -> Path:
                 log.info("[%s] fetching from %s", topic.slug, topic.source)
                 cands = sources.fetch(topic, start, now, cfg.max_per_topic)
                 seeds = sources.fetch_seeds(topic)
+            if topic.primary_only:
+                # drop papers merely cross-listed into this topic from other fields
+                cands = [p for p in cands if p.primary_category in topic.categories]
             if not cfg.include_revisions:
                 # bioRxiv lists a preprint again whenever a new version is posted;
                 # by default only first versions count as new research

@@ -10,6 +10,7 @@ Each call returns up to 100 records plus a "messages" block with the total count
 from __future__ import annotations
 
 import logging
+import re
 import time
 import urllib.parse
 from datetime import date, datetime, timezone
@@ -26,8 +27,14 @@ SERVER_LABEL = {"biorxiv": "bioRxiv", "medrxiv": "medRxiv"}
 
 
 def normalize_category(c: str) -> str:
-    """bioRxiv writes "cell biology"; the query string uses "cell_biology"."""
-    return c.strip().lower().replace("_", " ")
+    """Make category names comparable.
+
+    bioRxiv writes "cell biology", the query string uses "cell_biology", and some
+    medRxiv names carry a note: "Infectious Diseases (except HIV/AIDS)".
+    All of these normalize to the plain lowercase name, e.g. "infectious diseases".
+    """
+    c = re.sub(r"\(.*?\)", " ", c.lower().replace("_", " "))
+    return " ".join(c.split())
 
 
 def _date(s: str) -> datetime:
@@ -84,33 +91,56 @@ def filter_papers(papers: list[Paper], categories: list[str], keywords: list[str
     return out
 
 
+def _fetch_pages(server: str, start: date, end: date, category: str = "",
+                 max_records: int = 100 * MAX_REQUESTS_PER_CATEGORY) -> list[Paper]:
+    """All records in the window (optionally for one API category), following pages."""
+    papers: list[Paper] = []
+    cursor = 0
+    for _ in range(MAX_REQUESTS_PER_CATEGORY):
+        url = f"{API_URL}/details/{server}/{start:%Y-%m-%d}/{end:%Y-%m-%d}/{cursor}"
+        if category:
+            url += "?" + urllib.parse.urlencode({"category": category.replace(" ", "_")})
+        data = get_json(url)
+        batch = data.get("collection") or []
+        papers += parse_collection(data, server)
+        try:
+            total = int((data.get("messages") or [{}])[0].get("total", 0) or 0)
+        except (TypeError, ValueError):
+            total = 0
+        cursor += len(batch)
+        log.info("  %s/%s: %d of %d", server, category or "all", cursor, total)
+        if not batch or cursor >= total or len(papers) >= max_records:
+            break
+        time.sleep(DELAY)
+    return papers
+
+
+# Everything posted in a window, per (server, start, end); filled only when needed.
+_ALL: dict[tuple, list[Paper]] = {}
+
+
 def search(server: str, categories: list[str], keywords: list[str],
            start: date, end: date, max_results: int = 600) -> list[Paper]:
     """Fetch preprints posted between start and end in the given categories.
 
     The category is passed to the API, and the results are also filtered here,
-    so the output is correct even if the API ignores the parameter.
+    so the output is correct even if the API ignores the parameter. If the API
+    knows a category under a slightly different name and returns nothing, we
+    fall back to fetching the whole window once and filtering it ourselves.
     """
     collected: list[Paper] = []
     for cat in categories or [""]:
-        cursor = 0
-        for _ in range(MAX_REQUESTS_PER_CATEGORY):
-            url = f"{API_URL}/details/{server}/{start:%Y-%m-%d}/{end:%Y-%m-%d}/{cursor}"
-            if cat:
-                url += "?" + urllib.parse.urlencode(
-                    {"category": normalize_category(cat).replace(" ", "_")})
-            data = get_json(url)
-            batch = data.get("collection") or []
-            collected.extend(filter_papers(parse_collection(data, server), [cat] if cat else [], keywords))
-            try:
-                total = int((data.get("messages") or [{}])[0].get("total", 0) or 0)
-            except (TypeError, ValueError):
-                total = 0
-            cursor += len(batch)
-            log.info("  %s/%s: %d of %d", server, cat or "all", cursor, total)
-            if not batch or cursor >= total or len(collected) >= max_results:
-                break
-            time.sleep(DELAY)
+        wanted = [cat] if cat else []
+        page = _fetch_pages(server, start, end, normalize_category(cat) if cat else "")
+        if cat and not page:
+            key = (server, start, end)
+            if key not in _ALL:
+                log.info("  %s: no results for %r; scanning the whole window", server, cat)
+                _ALL[key] = _fetch_pages(server, start, end)
+            page = _ALL[key]
+        collected += filter_papers(page, wanted, keywords)
+        if len(collected) >= max_results:
+            break
     return latest_versions(collected)[:max_results]
 
 

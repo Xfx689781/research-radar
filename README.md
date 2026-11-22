@@ -4,7 +4,7 @@ A daily research feed for curious readers. Readers open the website, choose the 
 
 **Open the site:** https://xfx689781.github.io/research-radar/
 
-Behind the site, a GitHub Actions job runs every morning: it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** for 24 topics across mathematics, physics, computer science and AI, chemistry, biology and economics, picks the most relevant papers per topic, asks Claude for summaries, and publishes them.
+Behind the site, a GitHub Actions job runs every morning: it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** for 78 topics across mathematics, statistics, computer science and AI, physics, astronomy, chemistry and materials, biology, medicine, economics and finance, and engineering, picks the most relevant papers per topic, asks Claude for summaries, and publishes them.
 
 ```
 arXiv / bioRxiv / medRxiv ──► fetch per topic ──► skip papers already recommended
@@ -36,7 +36,7 @@ Each paper gets:
 
 If the commit step fails with a permission error, go to **Settings → Actions → General → Workflow permissions** and select **Read and write permissions**.
 
-**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper: with 24 topics and up to 3 papers each, at most 72 short requests a day (fewer on quiet days). See Anthropic's pricing page for current rates, and set a spending limit in the console. Lower `top_k_per_topic` or remove topics to spend less. GitHub Actions and Pages are free for public repositories.
+**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper: with 78 topics and up to 2 papers each, at most about 156 short requests a day (fewer on quiet days and weekends). See Anthropic's pricing page for current rates, and set a spending limit in the console. Lower `top_k_per_topic` or remove topics to spend less. GitHub Actions and Pages are free for public repositories.
 
 ## Accounts (optional)
 
@@ -60,14 +60,18 @@ List the built-in presets:
 python -m radar presets
 ```
 
-| Field | Presets |
+| Field | Topics |
 |---|---|
-| Mathematics | `probability`, `statistics-theory`, `differential-geometry`, `pde`, `harmonic-analysis`, `complex-analysis`, `combinatorics`, `math-physics`, `optimization-control` |
-| Computer science and AI | `ml-theory`, `interpretability`, `ai4math`, `embodied-ai` |
-| Physics | `theoretical-physics`, `quantum` |
-| Chemistry | `chemistry`, `ml-for-molecules` |
-| Biology | `biology` (bioRxiv), `neuroscience` (bioRxiv), `quantitative-biology` (arXiv), `epidemiology` (medRxiv) |
-| Economics | `economics`, `game-theory`, `quantitative-finance` |
+| Mathematics (17) | Probability, Differential geometry, Partial differential equations, Harmonic analysis, Complex analysis, Operator algebras and spectral theory, Algebra, Representation theory, Number theory, Algebraic geometry, Topology, Dynamical systems, Combinatorics, Numerical analysis, Logic and foundations, Mathematical physics, Optimization and control |
+| Statistics (2) | Statistics theory, Statistical methods and applications |
+| Computer science and AI (14) | Machine learning theory, Large language models, Computer vision, Reinforcement learning, AI safety and alignment, Interpretability, AI for mathematics, Robotics and embodied AI, Security and cryptography, Algorithms and complexity, Programming languages and formal methods, Systems and networking, Human-computer interaction, Information theory |
+| Physics (10) | High-energy theory and gravity, Statistical physics, Condensed matter, Particle physics, Nuclear physics, Quantum information and computing, Optics and atomic physics, Fluids and plasma, Biological physics, Climate, atmosphere and Earth |
+| Astronomy (5) | Cosmology, Galaxies, Exoplanets and planetary science, High-energy astrophysics, Stars and the Sun |
+| Chemistry and materials (6) | Chemical physics, Materials science, Soft matter and polymers, AI for chemistry and materials, Biochemistry, Pharmacology and drug discovery |
+| Biology (10) | Computational and systems biology, Neuroscience, Genetics and genomics, Cell and molecular biology, Immunology and microbiology, Cancer biology, Ecology and evolution, Plant biology, Bioengineering and synthetic biology, Mathematical biology (arXiv) |
+| Medicine and health (6) | Epidemiology, Infectious diseases, Public and global health, Psychiatry and neurology, Oncology, Health informatics and medical AI |
+| Economics and finance (5) | Econometrics and applied economics, Economic theory, Game theory and algorithmic economics, Mathematical finance, Financial markets |
+| Engineering (3) | Signal processing, Audio and speech, Control systems |
 
 Every topic listed in `config.yaml` is fetched daily and offered to readers on the site. Each entry can be a preset, a preset with changes, or your own:
 
@@ -89,6 +93,7 @@ topics:
 - `categories`: arXiv categories ([list](https://arxiv.org/category_taxonomy)) or bioRxiv/medRxiv subject areas such as `cell biology`.
 - `interest`: a comma-separated list of specific things you care about, in English. Ranking depends on it most.
 - `keywords`: for very large categories such as `cs.LG`, only papers containing at least one keyword are fetched; matches also add a small bonus.
+- `primary_only: true`: keep a paper only if its primary arXiv category is one of the topic's categories, which drops cross-listed papers from other fields.
 - `language`: `en` or `zh` for the digest text and AI summaries.
 - `top_k_per_topic`: papers per topic per day. `feed_days`: how far back the site shows papers.
 - **Weekly instead of daily:** set `days: 7` and change the cron line in `.github/workflows/digest.yml` to `"51 12 * * 0"` (Sundays).
@@ -151,7 +156,7 @@ tests/                 unit tests and invented test data (not real papers)
 ## Limitations
 
 - TF-IDF matches words, not meaning: `Ricci flow` and `geometric evolution equation` look unrelated to it.
-- Chemistry coverage is limited to arXiv (`physics.chem-ph`, `cond-mat.mtrl-sci`); ChemRxiv is not supported yet.
+- Chemistry uses arXiv plus bioRxiv's biochemistry and pharmacology sections; ChemRxiv is not supported yet.
 - Economics uses arXiv's `econ` and `q-fin` categories; NBER and SSRN working papers are not included.
 - AI summaries are written from the abstract only and can be wrong or overstated.
 

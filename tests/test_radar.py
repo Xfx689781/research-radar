@@ -122,7 +122,9 @@ def test_presets_are_valid():
         t = resolve_topic(key, presets)
         assert t.name and t.interest and t.categories and t.field
     fields = {p["field"] for p in presets.values()}
-    assert {"Chemistry", "Biology", "Economics"} <= fields
+    assert {"Mathematics", "Statistics", "Computer science and AI", "Physics", "Astronomy",
+            "Chemistry and materials", "Biology", "Medicine and health",
+            "Economics and finance", "Engineering"} == fields
 
 
 def test_preset_override_and_custom():
@@ -255,8 +257,8 @@ def test_offline_run_english(tmp_path, monkeypatch):
     md = run(args).read_text(encoding="utf-8")
 
     assert "# Research digest" in md and "## Highlights" in md
-    for name in ["Machine learning theory", "Chemistry and materials",
-                 "Computational and systems biology", "Economics"]:
+    for name in ["Machine learning theory", "Chemical physics",
+                 "Computational and systems biology", "Econometrics and applied economics"]:
         assert f"## {name}" in md
     assert "arXiv:2611.00005v1" in md                       # chemistry
     assert "arXiv:2611.00006v1" in md                       # economics
@@ -273,7 +275,7 @@ def test_offline_run_english(tmp_path, monkeypatch):
     index = json.loads((data / "topics.json").read_text(encoding="utf-8"))
     slugs = [t["slug"] for t in index["topics"]]
     assert "harmonic-analysis" in slugs and "economics" in slugs and "biology" in slugs
-    assert index["fields"][0] == "Mathematics" and "Chemistry" in index["fields"]
+    assert index["fields"][0] == "Mathematics" and "Chemistry and materials" in index["fields"]
     ml = json.loads((data / "topics" / "ml-theory.json").read_text(encoding="utf-8"))
     assert [p["uid"] for p in ml["papers"]][0] == "arxiv:2611.00002"
     assert ml["papers"][0]["summary"]["one_liner"].startswith("We derive")
@@ -293,7 +295,7 @@ def test_offline_run_chinese(tmp_path, monkeypatch):
     args = Namespace(config=str(write_config(tmp_path, language="zh")), no_summary=True,
                      offline=str(FIXTURES), dry_run=True, keep_paths=True)
     md = run(args).read_text(encoding="utf-8")
-    assert "# 研究进展简报" in md and "## 化学与材料" in md and "## 复分析\n\n这次无重点。" in md
+    assert "# 研究进展简报" in md and "## 化学物理" in md and "## 复分析\n\n这次无重点。" in md
 
 
 def test_offline_sources_helper():
@@ -348,3 +350,47 @@ def test_archive_roundtrip(tmp_path, papers):
     assert back.title == p.title and back.summary["one_liner"] == "x"
     a.prune(date(2027, 1, 1), keep_days=30)
     assert a.records == []
+
+
+def test_primary_only_drops_cross_lists(tmp_path, monkeypatch):
+    """With primary_only, a math.PR paper cross-listed to stat.ML is not an ML-theory paper."""
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    cfg_path = write_config(tmp_path)
+    cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8"))
+    cfg["topics"] = [{"preset": "ml-theory", "primary_only": True}, "probability"]
+    cfg_path.write_text(yaml.safe_dump(cfg), encoding="utf-8")
+    args = Namespace(config=str(cfg_path), no_summary=True, offline=str(FIXTURES),
+                     dry_run=True, keep_paths=True)
+    md = run(args).read_text(encoding="utf-8")
+    ml = md.split("## Machine learning theory")[1].split("## Probability")[0]
+    assert "2611.00002" in ml and "2611.00001" not in ml   # 00001 is primary math.PR
+
+
+@pytest.mark.parametrize("raw,norm", [("Cell_Biology", "cell biology"),
+                                      ("Infectious Diseases (except HIV/AIDS)", "infectious diseases"),
+                                      ("  systems   biology ", "systems biology")])
+def test_category_normalization(raw, norm):
+    assert biorxiv.normalize_category(raw) == norm
+
+
+def test_biorxiv_falls_back_when_category_unknown(monkeypatch):
+    """If the API returns nothing for a category name, scan the window once and filter."""
+    every = {"messages": [{"total": 2}], "collection": [
+        {"doi": "10.1/x", "version": "1", "category": "Infectious Diseases (except HIV/AIDS)",
+         "title": "X", "abstract": "a", "date": "2026-11-20"},
+        {"doi": "10.1/y", "version": "1", "category": "oncology", "title": "Y",
+         "abstract": "a", "date": "2026-11-20"}]}
+    calls = []
+
+    def fake_get_json(url):
+        calls.append(url)
+        return {"messages": [{"total": 0}], "collection": []} if "category=" in url else every
+
+    monkeypatch.setattr(biorxiv, "get_json", fake_get_json)
+    monkeypatch.setattr(biorxiv, "DELAY", 0)
+    biorxiv._ALL.clear()
+    out = biorxiv.search("medrxiv", ["infectious diseases"], [], date(2026, 11, 15), date(2026, 11, 22))
+    assert [p.uid for p in out] == ["medrxiv:10.1/x"]
+    out2 = biorxiv.search("medrxiv", ["oncology"], [], date(2026, 11, 15), date(2026, 11, 22))
+    assert [p.uid for p in out2] == ["medrxiv:10.1/y"]
+    assert sum("category=" not in u for u in calls) == 1     # the full scan happened only once

@@ -2,9 +2,12 @@
 # or override fields (e.g. `- preset: probability` + `top_k: 5`).
 #
 # Fields: name, name_zh, field, source (arxiv | biorxiv | medrxiv), categories,
-#         keywords (optional), interest, top_k.
-# arXiv categories:    https://arxiv.org/category_taxonomy
-# bioRxiv categories:  the subject areas on https://www.biorxiv.org (e.g. "cell biology")
+#         keywords (optional), primary_only (optional), interest, top_k.
+#   keywords      only fetch papers whose title or abstract contains one of them
+#   primary_only  arXiv: keep a paper only if its *primary* category is listed
+#                 (drops cross-listed papers from unrelated fields)
+# arXiv categories:            https://arxiv.org/category_taxonomy
+# bioRxiv/medRxiv categories:  the subject areas on biorxiv.org / medrxiv.org
 
 # ================================================================ Mathematics
 
@@ -17,21 +20,7 @@ probability:
     Probability theory, random matrices, stochastic differential equations,
     interacting particle systems, mean-field limits, propagation of chaos,
     optimal transport, concentration of measure, high-dimensional probability,
-    Gaussian processes, spin glasses, percolation, Markov chain mixing,
-    stochastic analysis with connections to statistics and machine learning.
-  top_k: 3
-
-statistics-theory:
-  name: Statistics theory
-  name_zh: 统计理论
-  field: Mathematics
-  categories: [math.ST, stat.ME]
-  interest: >
-    Mathematical statistics, high-dimensional statistics, minimax rates,
-    nonparametric estimation, Bayesian asymptotics, causal inference,
-    conformal prediction, uncertainty quantification, multiple testing,
-    selective inference, robust statistics.
-  top_k: 3
+    Gaussian processes, spin glasses, percolation, Markov chain mixing, random graphs.
 
 differential-geometry:
   name: Differential geometry
@@ -39,10 +28,9 @@ differential-geometry:
   field: Mathematics
   categories: [math.DG, math.SG]
   interest: >
-    Riemannian geometry, curvature, geometric flows, geometric analysis,
-    Lie groups, connections and fiber bundles, symplectic and Hamiltonian
-    geometry, moment maps, optimal transport on manifolds, information geometry.
-  top_k: 2
+    Riemannian geometry, curvature, geometric flows, Ricci flow, minimal surfaces,
+    geometric analysis, Lie groups, connections and fiber bundles, symplectic and
+    Hamiltonian geometry, moment maps, Kahler geometry, information geometry.
 
 pde:
   name: Partial differential equations
@@ -52,9 +40,8 @@ pde:
   interest: >
     Nonlinear partial differential equations, elliptic and parabolic PDE,
     dispersive equations, nonlinear Schrodinger equation, wave equations,
-    fluid equations, Hamilton-Jacobi equations, viscosity solutions,
+    Navier-Stokes and fluid equations, Hamilton-Jacobi equations, viscosity solutions,
     Fokker-Planck equations, gradient flows, regularity theory, free boundary problems.
-  top_k: 2
 
 harmonic-analysis:
   name: Harmonic analysis
@@ -66,8 +53,7 @@ harmonic-analysis:
     theory, Littlewood-Paley theory, Fourier restriction, decoupling, Kakeya
     problems, oscillatory integrals, Fourier multipliers, maximal functions,
     weighted inequalities, wavelets, time-frequency analysis, functional analysis,
-    operator theory, Banach and Hilbert spaces.
-  top_k: 2
+    Banach and Hilbert spaces.
 
 complex-analysis:
   name: Complex analysis
@@ -77,8 +63,77 @@ complex-analysis:
   interest: >
     Holomorphic functions, normal families, conformal mappings, Riemann
     surfaces, potential theory, value distribution, several complex variables,
-    complex dynamics, applications to random matrices and partition function zeros.
-  top_k: 2
+    pluripotential theory, complex dynamics, quasiconformal maps.
+
+operator-algebras:
+  name: Operator algebras and spectral theory
+  name_zh: 算子代数与谱理论
+  field: Mathematics
+  categories: [math.OA, math.SP]
+  interest: >
+    C*-algebras, von Neumann algebras, operator theory, spectral theory,
+    noncommutative geometry, free probability, quantum groups, K-theory of
+    operator algebras, Schrodinger operators, eigenvalue asymptotics.
+
+algebra:
+  name: Algebra
+  name_zh: 代数
+  field: Mathematics
+  categories: [math.RA, math.AC, math.GR]
+  interest: >
+    Group theory, rings and modules, commutative algebra, homological algebra,
+    noncommutative algebra, Lie algebras, finite groups, geometric group theory,
+    Hopf algebras, quivers.
+
+representation-theory:
+  name: Representation theory
+  name_zh: 表示论
+  field: Mathematics
+  categories: [math.RT, math.QA]
+  interest: >
+    Representation theory of Lie groups and Lie algebras, quantum groups,
+    categorification, geometric representation theory, automorphic
+    representations, tensor categories, vertex algebras.
+
+number-theory:
+  name: Number theory
+  name_zh: 数论
+  field: Mathematics
+  categories: [math.NT]
+  interest: >
+    Analytic number theory, distribution of primes, L-functions, modular forms,
+    automorphic forms, Diophantine equations, elliptic curves, arithmetic geometry,
+    additive number theory, sieve methods, p-adic methods.
+
+algebraic-geometry:
+  name: Algebraic geometry
+  name_zh: 代数几何
+  field: Mathematics
+  categories: [math.AG]
+  interest: >
+    Algebraic varieties, moduli spaces, birational geometry, sheaves and
+    cohomology, derived categories, enumerative geometry, Hodge theory,
+    singularities and resolution, tropical geometry, algebraic curves and surfaces.
+
+topology:
+  name: Topology
+  name_zh: 拓扑
+  field: Mathematics
+  categories: [math.GT, math.AT, math.GN]
+  interest: >
+    Low-dimensional topology, knot theory, 3-manifolds and 4-manifolds,
+    hyperbolic geometry, algebraic topology, homotopy theory, characteristic
+    classes, topological data analysis, persistent homology.
+
+dynamical-systems:
+  name: Dynamical systems
+  name_zh: 动力系统
+  field: Mathematics
+  categories: [math.DS]
+  interest: >
+    Dynamical systems, ergodic theory, chaos, bifurcation theory, Hamiltonian
+    dynamics, KAM theory, entropy, smooth dynamics, homogeneous dynamics,
+    complex dynamics, billiards, stability of nonlinear systems.
 
 combinatorics:
   name: Combinatorics
@@ -88,8 +143,26 @@ combinatorics:
   interest: >
     Extremal and probabilistic combinatorics, random graphs, additive
     combinatorics, Ramsey theory, combinatorial designs, enumerative and
-    analytic combinatorics, Erdos problems.
-  top_k: 2
+    algebraic combinatorics, graph theory, Erdos problems.
+
+numerical-analysis:
+  name: Numerical analysis
+  name_zh: 数值分析
+  field: Mathematics
+  categories: [math.NA]
+  interest: >
+    Numerical methods for partial differential equations, finite element
+    methods, numerical linear algebra, iterative solvers, error analysis,
+    scientific computing, uncertainty quantification, neural network solvers for PDEs.
+
+logic:
+  name: Logic and foundations
+  name_zh: 数理逻辑与基础
+  field: Mathematics
+  categories: [math.LO]
+  interest: >
+    Mathematical logic, set theory, model theory, computability theory,
+    proof theory, large cardinals, forcing, reverse mathematics, type theory.
 
 math-physics:
   name: Mathematical physics
@@ -99,97 +172,260 @@ math-physics:
   interest: >
     Rigorous statistical mechanics, quantum mechanics and spectral theory,
     Schrodinger operators, random matrices in physics, integrable systems,
-    gauge theory, mathematical general relativity, nonlinear PDE from physics,
-    rigorous results on phase transitions.
-  top_k: 2
+    gauge theory, mathematical general relativity, quantum field theory from a
+    mathematical viewpoint, rigorous results on phase transitions.
 
 optimization-control:
   name: Optimization and control
   name_zh: 优化与控制
   field: Mathematics
-  categories: [math.OC, eess.SY]
+  categories: [math.OC]
   interest: >
     Convex and nonconvex optimization, first-order methods, convergence rates,
-    stochastic optimization, optimal control, stochastic control, reinforcement
-    learning theory, control barrier functions, safety verification, mean-field games.
-  top_k: 2
+    stochastic optimization, optimal control, stochastic control, optimal
+    transport, variational problems, mean-field games, operations research.
+
+# ================================================================ Statistics
+
+statistics-theory:
+  name: Statistics theory
+  name_zh: 统计理论
+  field: Statistics
+  categories: [math.ST]
+  interest: >
+    Mathematical statistics, high-dimensional statistics, minimax rates,
+    nonparametric estimation, Bayesian asymptotics, conformal prediction,
+    uncertainty quantification, multiple testing, selective inference, robust statistics.
+
+statistical-methods:
+  name: Statistical methods and applications
+  name_zh: 统计方法与应用
+  field: Statistics
+  categories: [stat.ME, stat.AP, stat.CO]
+  interest: >
+    Statistical methodology, causal inference, Bayesian methods and computation,
+    Markov chain Monte Carlo, survival analysis, time series, spatial statistics,
+    clinical trials, missing data, applied statistics in science and society.
 
 # ================================================================ Computer science and AI
 
 ml-theory:
   name: Machine learning theory
-  name_zh: ML 理论
+  name_zh: 机器学习理论
   field: Computer science and AI
   categories: [stat.ML, cs.LG]
   keywords: [generalization bound, sample complexity, PAC-Bayes, minimax, mean-field,
              neural tangent kernel, implicit bias, benign overfitting, double descent,
              conformal prediction, singular learning theory, Wasserstein gradient flow,
-             optimal transport, random matrix, information geometry, score-based]
+             optimal transport, random matrix, information geometry, convergence rate]
   interest: >
     Rigorous theory of machine learning, generalization bounds, PAC-Bayes,
     sample complexity, optimization and training dynamics of neural networks,
     mean-field limits and Wasserstein gradient flows, neural tangent kernel,
     implicit bias, benign overfitting and double descent, random matrix theory
-    for high-dimensional learning, theory of diffusion and score-based models,
-    uncertainty quantification and conformal prediction, singular learning
-    theory, information geometry.
-  top_k: 3
+    for high-dimensional learning, theory of diffusion models, conformal prediction,
+    singular learning theory, information geometry.
+
+large-language-models:
+  name: Large language models
+  name_zh: 大语言模型
+  field: Computer science and AI
+  categories: [cs.CL]
+  primary_only: true
+  interest: >
+    Large language models, pretraining and scaling laws, instruction tuning,
+    reasoning and chain of thought, tool use and agents, retrieval-augmented
+    generation, evaluation and benchmarks, multilingual models, efficient inference,
+    long context, machine translation.
+
+computer-vision:
+  name: Computer vision
+  name_zh: 计算机视觉
+  field: Computer science and AI
+  categories: [cs.CV]
+  primary_only: true
+  interest: >
+    Computer vision, image and video generation, diffusion models for images,
+    3D reconstruction, neural rendering, object detection and segmentation,
+    vision-language models, self-supervised visual representation learning,
+    video understanding, medical imaging.
+
+reinforcement-learning:
+  name: Reinforcement learning
+  name_zh: 强化学习
+  field: Computer science and AI
+  categories: [cs.LG, cs.AI, stat.ML]
+  keywords: [reinforcement learning, policy gradient, Q-learning, Markov decision process,
+             bandit, reward model, RLHF, offline RL]
+  interest: >
+    Reinforcement learning, policy optimization, value-based methods, exploration,
+    multi-armed bandits, model-based RL, offline RL, reinforcement learning from
+    human feedback, reward modelling, multi-agent RL, theory of RL.
+
+ai-safety:
+  name: AI safety and alignment
+  name_zh: AI 安全与对齐
+  field: Computer science and AI
+  categories: [cs.AI, cs.CL, cs.LG, cs.CY]
+  keywords: [alignment, AI safety, red teaming, jailbreak, reward hacking, deception,
+             oversight, sycophancy, dangerous capabilities, misuse]
+  interest: >
+    AI alignment and safety, scalable oversight, red teaming, jailbreaks and
+    robustness of language models, reward hacking, deceptive behaviour, evaluations
+    of dangerous capabilities, AI governance and policy, societal impacts of AI.
 
 interpretability:
   name: Interpretability
   name_zh: 可解释性
   field: Computer science and AI
   categories: [cs.LG, cs.CL, cs.AI]
-  keywords: [interpretability, mechanistic, sparse autoencoder, superposition, circuits,
-             probing, feature attribution, representation geometry]
+  primary_only: true
+  keywords: [interpretability, mechanistic interpretability, sparse autoencoder,
+             feature attribution, linear representation, probing classifier, explainability]
   interest: >
     Mechanistic interpretability of neural networks and language models,
-    superposition, sparse autoencoders, circuits, linear representations,
-    geometry of learned representations, developmental interpretability,
-    singular learning theory, mathematical foundations of interpretability.
-  top_k: 2
+    superposition of features, sparse autoencoders, circuits in transformers,
+    linear representations, geometry of learned representations, developmental
+    interpretability, singular learning theory, explainable AI.
 
 ai4math:
   name: AI for mathematics
-  name_zh: AI4Math
+  name_zh: AI 与数学
   field: Computer science and AI
   categories: [cs.AI, cs.LG, cs.LO, cs.CL, math.HO]
-  keywords: [Lean, theorem proving, theorem prover, autoformalization, formalization,
-             proof assistant, mathlib, formal verification, mathematical reasoning, open problem]
+  primary_only: true
+  keywords: [Lean, theorem proving, theorem prover, autoformalization, proof assistant,
+             mathlib, Isabelle, formal proof, mathematical reasoning]
   interest: >
     Automated and interactive theorem proving in Lean, Coq/Rocq and Isabelle,
     autoformalization, mathlib, LLM provers, AI systems solving open
     mathematical problems, verification of AI-generated proofs, benchmarks for
     research-level mathematical reasoning.
-  top_k: 3
 
 embodied-ai:
-  name: Embodied AI and robotics
-  name_zh: 具身智能
+  name: Robotics and embodied AI
+  name_zh: 机器人与具身智能
   field: Computer science and AI
   categories: [cs.RO]
-  keywords: [embodied, vision-language-action, foundation model, humanoid, manipulation,
-             sim-to-real, world model, reinforcement learning, safety]
   interest: >
     Vision-language-action models, robot foundation models, world models,
-    humanoid robots, dexterous manipulation, sim-to-real transfer,
-    reinforcement learning and optimal control for robots, safety guarantees,
-    Lie groups for robot state estimation.
-  top_k: 2
+    humanoid robots, dexterous manipulation, legged locomotion, sim-to-real
+    transfer, robot learning, motion planning, safety guarantees for robots,
+    autonomous driving.
+
+security-cryptography:
+  name: Security and cryptography
+  name_zh: 安全与密码学
+  field: Computer science and AI
+  categories: [cs.CR]
+  interest: >
+    Cryptography, post-quantum cryptography, zero-knowledge proofs, secure
+    computation, privacy and differential privacy, software and systems security,
+    vulnerabilities and attacks, security of machine learning models, blockchain.
+
+theory-of-computation:
+  name: Algorithms and complexity
+  name_zh: 算法与计算复杂性
+  field: Computer science and AI
+  categories: [cs.DS, cs.CC]
+  interest: >
+    Algorithms and data structures, computational complexity, approximation
+    algorithms, graph algorithms, randomized algorithms, lower bounds,
+    circuit complexity, streaming and sublinear algorithms, fine-grained complexity.
+
+programming-languages:
+  name: Programming languages and formal methods
+  name_zh: 编程语言与形式化方法
+  field: Computer science and AI
+  categories: [cs.PL, cs.LO, cs.SE]
+  primary_only: true
+  interest: >
+    Programming language theory, type systems, semantics, program verification,
+    formal methods, model checking, compilers, program synthesis, software
+    engineering with AI, code generation by language models.
+
+systems:
+  name: Systems and networking
+  name_zh: 系统与网络
+  field: Computer science and AI
+  categories: [cs.DC, cs.OS, cs.NI, cs.AR]
+  primary_only: true
+  interest: >
+    Distributed systems, cloud computing, systems for machine learning training
+    and inference, GPU and accelerator design, computer architecture, operating
+    systems, networking, energy-efficient computing.
+
+human-computer-interaction:
+  name: Human-computer interaction
+  name_zh: 人机交互
+  field: Computer science and AI
+  categories: [cs.HC, cs.CY]
+  primary_only: true
+  interest: >
+    Human-computer interaction, user studies, human-AI collaboration, AI in
+    education, accessibility, social computing, visualization, computers and society.
+
+information-theory:
+  name: Information theory
+  name_zh: 信息论
+  field: Computer science and AI
+  categories: [cs.IT]
+  interest: >
+    Information theory, channel coding, error-correcting codes, Shannon theory,
+    rate-distortion, compression, network information theory, quantum information
+    theory, information-theoretic limits of learning.
 
 # ================================================================ Physics
 
 theoretical-physics:
-  name: Theoretical physics
-  name_zh: 理论物理
+  name: High-energy theory and gravity
+  name_zh: 高能理论与引力
   field: Physics
-  categories: [hep-th, gr-qc, cond-mat.stat-mech]
+  categories: [hep-th, gr-qc]
   interest: >
-    Quantum field theory, conformal field theory, scattering amplitudes,
-    integrability, general relativity and black holes, statistical mechanics
-    of disordered systems, spin glasses and replica methods, physics of
-    learning and neural networks, exactly solvable models.
-  top_k: 2
+    Quantum field theory, conformal field theory, string theory, holography,
+    scattering amplitudes, integrability, general relativity, black holes,
+    quantum gravity, gravitational waves.
+
+statistical-physics:
+  name: Statistical physics
+  name_zh: 统计物理
+  field: Physics
+  categories: [cond-mat.stat-mech, cond-mat.dis-nn]
+  interest: >
+    Statistical mechanics, phase transitions, disordered systems, spin glasses,
+    replica methods, nonequilibrium physics, active matter, stochastic
+    thermodynamics, physics of learning and neural networks, exactly solvable models.
+
+condensed-matter:
+  name: Condensed matter
+  name_zh: 凝聚态物理
+  field: Physics
+  categories: [cond-mat.str-el, cond-mat.supr-con, cond-mat.mes-hall, cond-mat.quant-gas]
+  interest: >
+    Strongly correlated electrons, superconductivity, topological phases,
+    quantum Hall effect, moire materials, quantum magnetism, quantum spin liquids,
+    mesoscopic physics, ultracold atoms, quantum many-body dynamics.
+
+particle-physics:
+  name: Particle physics
+  name_zh: 粒子物理
+  field: Physics
+  categories: [hep-ph, hep-ex, hep-lat]
+  interest: >
+    Particle physics phenomenology, the Standard Model and beyond, dark matter,
+    neutrinos, Higgs physics, collider experiments at the LHC, lattice QCD,
+    flavour physics, searches for new particles.
+
+nuclear-physics:
+  name: Nuclear physics
+  name_zh: 核物理
+  field: Physics
+  categories: [nucl-th, nucl-ex]
+  interest: >
+    Nuclear structure, nuclear reactions, heavy-ion collisions, quark-gluon
+    plasma, neutron stars and dense matter, nuclear astrophysics, fusion-related
+    nuclear data.
 
 quantum:
   name: Quantum information and computing
@@ -198,52 +434,174 @@ quantum:
   categories: [quant-ph]
   interest: >
     Quantum algorithms, quantum error correction, quantum complexity theory,
-    quantum information theory, entanglement, quantum many-body systems,
-    quantum machine learning, near-term quantum devices.
-  top_k: 2
+    quantum information theory, entanglement, quantum hardware and qubits,
+    quantum simulation, quantum sensing, quantum machine learning.
 
-# ================================================================ Chemistry
+optics-atomic:
+  name: Optics and atomic physics
+  name_zh: 光学与原子物理
+  field: Physics
+  categories: [physics.optics, physics.atom-ph]
+  interest: >
+    Photonics, lasers, nonlinear optics, metamaterials, quantum optics, optical
+    imaging, atomic clocks, precision measurement, cold atoms, spectroscopy.
+
+fluids-plasma:
+  name: Fluids and plasma
+  name_zh: 流体与等离子体
+  field: Physics
+  categories: [physics.flu-dyn, physics.plasm-ph]
+  interest: >
+    Fluid dynamics, turbulence, Navier-Stokes simulations, multiphase flow,
+    geophysical flows, plasma physics, magnetic confinement fusion, tokamaks,
+    laser-plasma interaction, space plasma.
+
+biological-physics:
+  name: Biological physics
+  name_zh: 生物物理
+  field: Physics
+  categories: [physics.bio-ph]
+  interest: >
+    Biological physics, biomechanics, physics of cells and tissues, molecular
+    motors, membranes, protein dynamics, collective motion, physics of living systems.
+
+climate-earth:
+  name: Climate, atmosphere and Earth
+  name_zh: 气候、大气与地球科学
+  field: Physics
+  categories: [physics.ao-ph, physics.geo-ph]
+  interest: >
+    Climate science, atmospheric dynamics, weather prediction, machine learning
+    weather models, ocean circulation, climate change, extreme events,
+    geophysics, seismology, Earth system modelling.
+
+# ================================================================ Astronomy
+
+cosmology:
+  name: Cosmology
+  name_zh: 宇宙学
+  field: Astronomy
+  categories: [astro-ph.CO]
+  interest: >
+    Cosmology, cosmic microwave background, dark matter, dark energy,
+    large-scale structure, inflation, galaxy surveys, gravitational lensing,
+    Hubble tension, the early universe.
+
+galaxies:
+  name: Galaxies
+  name_zh: 星系
+  field: Astronomy
+  categories: [astro-ph.GA]
+  interest: >
+    Galaxy formation and evolution, the Milky Way, supermassive black holes,
+    active galactic nuclei, star formation, interstellar medium, high-redshift
+    galaxies, observations with JWST.
+
+exoplanets:
+  name: Exoplanets and planetary science
+  name_zh: 系外行星与行星科学
+  field: Astronomy
+  categories: [astro-ph.EP]
+  interest: >
+    Exoplanets, planet formation, exoplanet atmospheres, habitability,
+    protoplanetary disks, the solar system, asteroids and comets, planetary missions.
+
+high-energy-astrophysics:
+  name: High-energy astrophysics
+  name_zh: 高能天体物理
+  field: Astronomy
+  categories: [astro-ph.HE]
+  interest: >
+    Black holes, neutron stars, pulsars, gamma-ray bursts, supernovae,
+    gravitational-wave sources, fast radio bursts, cosmic rays, accretion physics.
+
+stars-sun:
+  name: Stars and the Sun
+  name_zh: 恒星与太阳
+  field: Astronomy
+  categories: [astro-ph.SR]
+  interest: >
+    Stellar structure and evolution, asteroseismology, binary stars, stellar
+    magnetism, the Sun, solar flares and space weather, star clusters.
+
+# ================================================================ Chemistry and materials
 
 chemistry:
-  name: Chemistry and materials
-  name_zh: 化学与材料
-  field: Chemistry
-  categories: [physics.chem-ph, cond-mat.mtrl-sci]
+  name: Chemical physics
+  name_zh: 化学物理
+  field: Chemistry and materials
+  categories: [physics.chem-ph]
   interest: >
     Theoretical and computational chemistry, electronic structure, density
-    functional theory, molecular dynamics, reaction mechanisms, catalysis,
-    spectroscopy, materials discovery, batteries and energy materials,
-    machine learning potentials and force fields.
-  top_k: 2
+    functional theory, quantum chemistry, molecular dynamics, reaction mechanisms,
+    catalysis, spectroscopy, photochemistry, machine learning potentials.
+
+materials-science:
+  name: Materials science
+  name_zh: 材料科学
+  field: Chemistry and materials
+  categories: [cond-mat.mtrl-sci]
+  interest: >
+    Materials discovery, batteries and energy materials, two-dimensional materials,
+    semiconductors, magnetic materials, crystal structure prediction, defects,
+    first-principles calculations, materials informatics.
+
+soft-matter:
+  name: Soft matter and polymers
+  name_zh: 软物质与高分子
+  field: Chemistry and materials
+  categories: [cond-mat.soft]
+  interest: >
+    Soft matter, polymers, colloids, liquid crystals, gels, granular materials,
+    active matter, self-assembly, rheology, biological soft materials.
 
 ml-for-molecules:
-  name: Machine learning for molecules and materials
-  name_zh: 分子与材料的机器学习
-  field: Chemistry
+  name: AI for chemistry and materials
+  name_zh: AI 用于化学与材料
+  field: Chemistry and materials
   categories: [physics.chem-ph, cond-mat.mtrl-sci, q-bio.BM, cs.LG]
+  primary_only: true
   keywords: [molecule, molecular, drug discovery, protein, materials discovery,
-             force field, interatomic potential, equivariant, crystal]
+             force field, interatomic potential, crystal structure]
   interest: >
     Machine learning for chemistry and materials, equivariant neural networks
     for molecules, machine learning interatomic potentials, generative models
     for molecules, crystals and proteins, drug discovery, protein structure
     and design, inverse design of materials.
-  top_k: 2
 
-# ================================================================ Biology (bioRxiv / medRxiv / arXiv q-bio)
+biochemistry:
+  name: Biochemistry
+  name_zh: 生物化学
+  field: Chemistry and materials
+  source: biorxiv
+  categories: [biochemistry]
+  interest: >
+    Biochemistry, enzymes and enzyme mechanisms, protein structure and function,
+    structural biology, cryo-EM, metabolism, lipids, nucleic acid chemistry,
+    chemical biology.
+
+pharmacology:
+  name: Pharmacology and drug discovery
+  name_zh: 药理学与药物发现
+  field: Chemistry and materials
+  source: biorxiv
+  categories: [pharmacology and toxicology]
+  interest: >
+    Pharmacology, drug discovery, drug targets, toxicology, pharmacokinetics,
+    small molecules, antibiotics and antimicrobial resistance, drug repurposing.
+
+# ================================================================ Biology (bioRxiv / arXiv q-bio)
 
 biology:
   name: Computational and systems biology
   name_zh: 计算与系统生物学
   field: Biology
   source: biorxiv
-  categories: [bioinformatics, systems biology, biophysics, genomics, synthetic biology]
+  categories: [bioinformatics, systems biology, biophysics]
   interest: >
     Computational biology, bioinformatics, systems biology, biophysics,
-    genomics, single-cell analysis, gene regulatory networks, protein structure
-    prediction, mathematical models of cells and tissues, synthetic biology,
-    machine learning for biology.
-  top_k: 3
+    single-cell analysis, gene regulatory networks, protein structure prediction,
+    mathematical models of cells and tissues, machine learning for biology.
 
 neuroscience:
   name: Neuroscience
@@ -254,64 +612,232 @@ neuroscience:
   interest: >
     Computational and theoretical neuroscience, neural coding, learning and
     plasticity, neural population dynamics, brain-inspired machine learning,
-    connectomics, large-scale neural recordings.
-  top_k: 2
+    connectomics, large-scale neural recordings, cognition and memory.
+
+genetics-genomics:
+  name: Genetics and genomics
+  name_zh: 遗传学与基因组学
+  field: Biology
+  source: biorxiv
+  categories: [genetics, genomics]
+  interest: >
+    Genetics, genomics, gene regulation, population genetics, genome-wide
+    association studies, CRISPR screens, sequencing technologies, epigenetics,
+    single-cell genomics.
+
+cell-molecular-biology:
+  name: Cell and molecular biology
+  name_zh: 细胞与分子生物学
+  field: Biology
+  source: biorxiv
+  categories: [cell biology, molecular biology, developmental biology]
+  interest: >
+    Cell biology, molecular biology, cell division, signalling pathways,
+    organelles, gene expression, RNA biology, developmental biology, stem cells,
+    organoids.
+
+immunology-microbiology:
+  name: Immunology and microbiology
+  name_zh: 免疫学与微生物学
+  field: Biology
+  source: biorxiv
+  categories: [immunology, microbiology]
+  interest: >
+    Immunology, immune responses, T cells and B cells, vaccines, microbiology,
+    bacteria and viruses, host-pathogen interactions, the microbiome,
+    antimicrobial resistance.
+
+cancer-biology:
+  name: Cancer biology
+  name_zh: 癌症生物学
+  field: Biology
+  source: biorxiv
+  categories: [cancer biology]
+  interest: >
+    Cancer biology, tumour evolution, oncogenes and tumour suppressors, the
+    tumour microenvironment, cancer immunotherapy, metastasis, cancer genomics.
+
+ecology-evolution:
+  name: Ecology and evolution
+  name_zh: 生态与进化
+  field: Biology
+  source: biorxiv
+  categories: [ecology, evolutionary biology, animal behavior and cognition]
+  interest: >
+    Ecology, evolution, biodiversity, population dynamics, species interactions,
+    climate change biology, phylogenetics, animal behaviour, evolutionary theory.
+
+plant-biology:
+  name: Plant biology
+  name_zh: 植物生物学
+  field: Biology
+  source: biorxiv
+  categories: [plant biology]
+  interest: >
+    Plant biology, photosynthesis, plant development, plant immunity,
+    crop improvement, plant-microbe interactions, plant stress responses.
+
+bioengineering:
+  name: Bioengineering and synthetic biology
+  name_zh: 生物工程与合成生物学
+  field: Biology
+  source: biorxiv
+  categories: [bioengineering, synthetic biology]
+  interest: >
+    Bioengineering, synthetic biology, genetic circuits, protein engineering,
+    tissue engineering, biomaterials, gene therapy delivery, biosensors.
 
 quantitative-biology:
-  name: Quantitative biology (arXiv)
-  name_zh: 定量生物学（arXiv）
+  name: Mathematical biology (arXiv)
+  name_zh: 数学生物学（arXiv）
   field: Biology
   categories: [q-bio.BM, q-bio.CB, q-bio.GN, q-bio.MN, q-bio.NC, q-bio.OT,
                q-bio.PE, q-bio.QM, q-bio.SC, q-bio.TO]
+  primary_only: true
   interest: >
     Mathematical and physical models in biology, population dynamics,
     evolution, epidemic models, biochemical networks, stochastic models of
     gene expression, theoretical neuroscience, biological physics.
-  top_k: 2
+
+# ================================================================ Medicine and health (medRxiv)
 
 epidemiology:
-  name: Epidemiology (medRxiv)
-  name_zh: 流行病学（medRxiv）
-  field: Biology
+  name: Epidemiology
+  name_zh: 流行病学
+  field: Medicine and health
   source: medrxiv
-  categories: [epidemiology, health informatics]
+  categories: [epidemiology]
   interest: >
-    Epidemiological methods, causal inference in health data, infectious
-    disease modelling, clinical prediction models, health informatics,
-    statistical methods for medical research.
-  top_k: 2
+    Epidemiological methods, cohort studies, causal inference in health data,
+    risk factors, disease burden, statistical methods for medical research.
+
+infectious-diseases:
+  name: Infectious diseases
+  name_zh: 传染病
+  field: Medicine and health
+  source: medrxiv
+  categories: [infectious diseases]
+  interest: >
+    Infectious diseases, viral and bacterial infections, outbreaks, vaccines and
+    vaccination, antimicrobial resistance, transmission modelling, respiratory infections.
+
+public-health:
+  name: Public and global health
+  name_zh: 公共卫生与全球健康
+  field: Medicine and health
+  source: medrxiv
+  categories: [public and global health, health policy, health economics]
+  interest: >
+    Public health, global health, health policy, health economics, health
+    inequalities, nutrition, health systems, cost-effectiveness.
+
+mental-health:
+  name: Psychiatry and neurology
+  name_zh: 精神医学与神经病学
+  field: Medicine and health
+  source: medrxiv
+  categories: [psychiatry and clinical psychology, neurology]
+  interest: >
+    Psychiatry, depression and anxiety, clinical psychology, neurology,
+    dementia and Alzheimer's disease, Parkinson's disease, stroke, epilepsy.
+
+oncology:
+  name: Oncology
+  name_zh: 肿瘤学
+  field: Medicine and health
+  source: medrxiv
+  categories: [oncology]
+  interest: >
+    Clinical oncology, cancer treatment, cancer screening, immunotherapy trials,
+    cancer outcomes, precision oncology.
+
+health-informatics:
+  name: Health informatics and medical AI
+  name_zh: 健康信息学与医疗 AI
+  field: Medicine and health
+  source: medrxiv
+  categories: [health informatics]
+  interest: >
+    Health informatics, machine learning in medicine, clinical prediction models,
+    electronic health records, large language models in health care, digital health.
 
 # ================================================================ Economics and finance
 
 economics:
-  name: Economics
-  name_zh: 经济学
-  field: Economics
-  categories: [econ.EM, econ.TH, econ.GN]
+  name: Econometrics and applied economics
+  name_zh: 计量与应用经济学
+  field: Economics and finance
+  categories: [econ.EM, econ.GN]
   interest: >
-    Econometrics, causal inference, identification, structural estimation,
-    economic theory, mechanism design, game theory, market design,
-    macroeconomics, labor and development economics, economics of AI.
-  top_k: 3
+    Econometrics, causal inference, identification, difference-in-differences,
+    instrumental variables, structural estimation, labour economics, development
+    economics, macroeconomics, economics of AI.
+
+economic-theory:
+  name: Economic theory
+  name_zh: 经济理论
+  field: Economics and finance
+  categories: [econ.TH]
+  interest: >
+    Economic theory, decision theory, mechanism design, information design,
+    contract theory, behavioural economics, social choice, general equilibrium.
 
 game-theory:
-  name: Game theory and mechanism design
-  name_zh: 博弈论与机制设计
-  field: Economics
-  categories: [cs.GT, econ.TH]
+  name: Game theory and algorithmic economics
+  name_zh: 博弈论与算法经济学
+  field: Economics and finance
+  categories: [cs.GT]
   interest: >
-    Game theory, mechanism design, auctions, matching markets, social choice,
-    learning in games, equilibrium computation, algorithmic economics.
-  top_k: 2
+    Game theory, mechanism design, auctions, matching markets, learning in games,
+    equilibrium computation, algorithmic economics, fair division.
 
 quantitative-finance:
-  name: Quantitative finance
-  name_zh: 量化金融
-  field: Economics
-  categories: [q-fin.CP, q-fin.EC, q-fin.GN, q-fin.MF, q-fin.PM, q-fin.PR,
-               q-fin.RM, q-fin.ST, q-fin.TR]
+  name: Mathematical finance
+  name_zh: 数理金融
+  field: Economics and finance
+  categories: [q-fin.MF, q-fin.PR, q-fin.CP, q-fin.RM]
   interest: >
     Mathematical finance, stochastic calculus, option pricing, stochastic
-    volatility, portfolio optimization, stochastic control, market
-    microstructure, optimal execution, risk management, machine learning in finance.
-  top_k: 2
+    volatility, risk management, computational finance, portfolio optimization,
+    stochastic control in finance.
+
+financial-markets:
+  name: Financial markets
+  name_zh: 金融市场
+  field: Economics and finance
+  categories: [q-fin.ST, q-fin.TR, q-fin.PM, q-fin.GN, q-fin.EC]
+  interest: >
+    Financial markets, market microstructure, trading, asset pricing,
+    portfolio management, financial time series, cryptocurrencies, machine
+    learning for finance, financial economics.
+
+# ================================================================ Engineering
+
+signal-processing:
+  name: Signal processing
+  name_zh: 信号处理
+  field: Engineering
+  categories: [eess.SP]
+  interest: >
+    Signal processing, wireless communications, radar, compressed sensing,
+    sparse recovery, estimation and detection, array processing, graph signal processing.
+
+audio-speech:
+  name: Audio and speech
+  name_zh: 音频与语音
+  field: Engineering
+  categories: [eess.AS, cs.SD]
+  primary_only: true
+  interest: >
+    Speech recognition, speech synthesis, audio generation, music information
+    retrieval, speaker recognition, audio language models.
+
+control-systems:
+  name: Control systems
+  name_zh: 控制系统
+  field: Engineering
+  categories: [eess.SY]
+  interest: >
+    Control theory, robust control, model predictive control, power systems and
+    smart grids, safe control, control barrier functions, autonomous vehicles,
+    networked control systems.

@@ -21,6 +21,7 @@ class Topic:
     source: str = "arxiv"          # "arxiv", "biorxiv" or "medrxiv"
     keywords: list[str] = field(default_factory=list)   # filter + ranking boost
     seed_ids: list[str] = field(default_factory=list)   # arXiv ids / bioRxiv DOIs you liked
+    primary_only: bool = False     # arXiv: keep only papers whose primary category is listed
     top_k: int = 3
     name_zh: str = ""
     field: str = ""                # e.g. "Mathematics"; only used for documentation
@@ -36,7 +37,7 @@ class Config:
     days: int = 7
     overlap_days: int = 3          # extra lookback so late-announced papers are not missed
     max_per_topic: int = 600       # cap on papers fetched per topic
-    min_score: float = 0.10        # below this, a paper is not worth recommending
+    min_score: float = 0.03        # below this, a paper is not worth recommending
     must_read: int = 3
     top_k_per_topic: int | None = None   # if set, overrides every topic's top_k
     include_revisions: bool = False      # bioRxiv/medRxiv: also show new versions of old preprints

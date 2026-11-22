@@ -10,11 +10,14 @@ import json
 import logging
 import os
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 from .i18n import DIFFICULTIES, SYSTEM_PROMPT, USER_PROMPT
 from .models import Paper
 
 log = logging.getLogger(__name__)
+
+WORKERS = 4
 
 
 def first_sentence(text: str, limit: int = 300) -> str:
@@ -57,10 +60,12 @@ def summarize_all(papers_with_topic: list[tuple[Paper, str]], enabled: bool, mod
     elif enabled:
         log.info("ANTHROPIC_API_KEY not set; using abstract fallback")
 
-    for paper, topic_name in papers_with_topic:
-        if client is None:
+    if client is None:
+        for paper, _ in papers_with_topic:
             paper.summary = fallback_summary(paper)
-            continue
+        return
+
+    def one(paper: Paper, topic_name: str) -> None:
         try:
             msg = client.messages.create(
                 model=model,
@@ -74,3 +79,9 @@ def summarize_all(papers_with_topic: list[tuple[Paper, str]], enabled: bool, mod
         except Exception as exc:  # one bad reply should not break the digest
             log.warning("summary failed for %s: %s", paper.uid, exc)
             paper.summary = fallback_summary(paper)
+
+    # A few requests at a time: much faster than one by one, gentle on rate limits.
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        list(pool.map(lambda pt: one(*pt), papers_with_topic))
+    ok = sum(1 for p, _ in papers_with_topic if p.summary.get("ai"))
+    log.info("AI summaries: %d of %d", ok, len(papers_with_topic))
