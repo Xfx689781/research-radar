@@ -10,6 +10,13 @@ from .i18n import STRINGS
 from .models import Paper
 
 
+# GitHub Pages runs Markdown through Jekyll's Liquid templating, which would choke on
+# "{{" or "{%" inside abstracts (common in LaTeX). Wrapping the body in a raw block
+# turns Liquid off; the HTML comments keep the tags invisible everywhere else.
+LIQUID_OPEN = "<!-- {% raw %} -->"
+LIQUID_CLOSE = "<!-- {% endraw %} -->"
+
+
 @dataclass
 class TopicStats:
     fetched: int = 0
@@ -34,6 +41,8 @@ def _entry(p: Paper, s: dict) -> str:
         f"- **{s['one_liner']}**{c}{summ.get('one_liner', '')}"
         + ("" if summ.get("ai") else s["fallback"]),
     ]
+    if summ.get("plain"):
+        lines.append(f"- **{s['plain']}**{c}{summ['plain']}")
     if summ.get("why"):
         lines.append(f"- **{s['why']}**{c}{summ['why']}")
     if summ.get("background") or summ.get("difficulty"):
@@ -53,6 +62,7 @@ def render(chosen: dict[str, list[Paper]], topics: list[Topic], must_read: list[
     start, end = window
     out = [
         "# " + s["title"].format(date=f"{end:%Y-%m-%d}"),
+        LIQUID_OPEN,
         "",
         s["coverage"].format(start=f"{start:%Y-%m-%d}", end=f"{end:%Y-%m-%d}"),
         "",
@@ -63,7 +73,8 @@ def render(chosen: dict[str, list[Paper]], topics: list[Topic], must_read: list[
     ]
     if must_read:
         for p in must_read:
-            one = (p.summary or {}).get("one_liner", "")
+            summ = p.summary or {}
+            one = summ.get("plain") or summ.get("one_liner", "")
             out.append(f"- **[{p.title}]({p.url})** ({topic_of.get(p.uid, '')}){s['colon']}{one}")
     else:
         out.append(s["no_must_read"])
@@ -86,5 +97,5 @@ def render(chosen: dict[str, list[Paper]], topics: list[Topic], must_read: list[
         st = stats.get(t.slug, TopicStats())
         out.append(f"| {t.display_name(language)} | {st.fetched} | {st.new} | "
                    f"{len(chosen.get(t.slug, []))} |")
-    out.append("")
+    out += ["", LIQUID_CLOSE, ""]
     return "\n".join(out)

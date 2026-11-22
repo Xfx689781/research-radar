@@ -17,15 +17,18 @@
 # Tips: write `interest` as a comma-separated list of specific things; add `keywords`
 # for huge categories like cs.LG; add `seed_ids` (papers you liked) to sharpen ranking.
 
-language: en          # en or zh (digest text and AI summaries)
-days: 7
-overlap_days: 3
+language: en            # en or zh (digest text and AI summaries)
+days: 1                 # 1 for a daily digest, 7 for weekly (match the schedule in .github/workflows/digest.yml)
+overlap_days: 3         # extra lookback for late announcements; nothing is recommended twice
 max_per_topic: 600
-min_score: 0.10       # raise if digests feel noisy, lower if too many topics are empty
-must_read: 2
-summarize: true       # needs ANTHROPIC_API_KEY; without it the first sentence of the abstract is used
+min_score: 0.10         # raise if digests feel noisy, lower if too many topics are empty
+top_k_per_topic: 2      # papers per topic per digest; remove to use each topic's own top_k
+must_read: 3            # number of highlights at the top
+include_revisions: false  # bioRxiv/medRxiv: skip new versions of older preprints
+summarize: true         # needs the ANTHROPIC_API_KEY secret; without it, the abstract's first sentence is shown
 model: claude-haiku-5-5
-output_dir: digests
+output_dir: docs/digests
+site_dir: docs          # home page for GitHub Pages
 state_path: state/seen.json
 
 topics:

@@ -1,18 +1,24 @@
-name: weekly-digest
+name: research-digest
 
 on:
   schedule:
-    # GitHub cron is in UTC. 12:51 UTC = 7:51 Toronto in winter (8:51 in summer).
-    - cron: "51 12 * * 0"
+    # Every day. GitHub cron is in UTC: 12:51 UTC = 7:51 Toronto in winter (8:51 in summer),
+    # a few hours after arXiv's evening announcement. For a weekly digest use "51 12 * * 0"
+    # and set days: 7 in config.yaml.
+    - cron: "51 12 * * *"
   workflow_dispatch: {}   # lets you click "Run workflow" by hand
 
 permissions:
   contents: write         # needed to commit the new digest back to the repo
 
+concurrency:
+  group: research-digest  # never run two digests at once
+  cancel-in-progress: false
+
 jobs:
   digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -30,12 +36,17 @@ jobs:
       - name: Build digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m radar run
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning::ANTHROPIC_API_KEY is not set, so the digest has no AI summaries. Add it under Settings > Secrets and variables > Actions."
+          fi
+          python -m radar run
 
       - name: Commit digest
         run: |
           git config user.name "research-radar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add digests state
+          git add docs state
           git diff --cached --quiet || git commit -m "digest: $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
           git push

@@ -37,10 +37,13 @@ class Config:
     overlap_days: int = 3          # extra lookback so late-announced papers are not missed
     max_per_topic: int = 600       # cap on papers fetched per topic
     min_score: float = 0.10        # below this, a paper is not worth recommending
-    must_read: int = 2
+    must_read: int = 3
+    top_k_per_topic: int | None = None   # if set, overrides every topic's top_k
+    include_revisions: bool = False      # bioRxiv/medRxiv: also show new versions of old preprints
     summarize: bool = True
     model: str = "claude-haiku-5-5"
-    output_dir: str = "digests"
+    output_dir: str = "docs/digests"
+    site_dir: str | None = "docs"        # where the website home page goes; null to skip
     state_path: str = "state/seen.json"
 
 
@@ -94,4 +97,7 @@ def load_config(path: str | Path) -> Config:
     cfg = Config(topics=topics, **raw)
     if cfg.language not in LANGUAGES:
         raise ValueError(f"language must be one of {LANGUAGES}")
+    if cfg.top_k_per_topic is not None:
+        for t in cfg.topics:
+            t.top_k = cfg.top_k_per_topic
     return cfg

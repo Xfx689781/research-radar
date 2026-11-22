@@ -24,8 +24,8 @@ def first_sentence(text: str, limit: int = 300) -> str:
 
 
 def fallback_summary(paper: Paper) -> dict:
-    return {"one_liner": first_sentence(paper.abstract), "why": "", "background": "",
-            "difficulty": "", "ai": False}
+    return {"one_liner": first_sentence(paper.abstract), "plain": "", "why": "",
+            "background": "", "difficulty": "", "ai": False}
 
 
 def parse_summary(text: str, language: str = "en") -> dict:
@@ -34,7 +34,8 @@ def parse_summary(text: str, language: str = "en") -> dict:
     if start == -1 or end <= start:
         raise ValueError("no JSON object in reply")
     data = json.loads(text[start:end + 1])
-    out = {k: str(data.get(k, "")).strip() for k in ("one_liner", "why", "background", "difficulty")}
+    out = {k: str(data.get(k, "")).strip()
+           for k in ("one_liner", "plain", "why", "background", "difficulty")}
     if not out["one_liner"]:
         raise ValueError("empty one_liner")
     if out["difficulty"].lower() not in {d.lower() for d in DIFFICULTIES[language]}:
@@ -63,7 +64,7 @@ def summarize_all(papers_with_topic: list[tuple[Paper, str]], enabled: bool, mod
         try:
             msg = client.messages.create(
                 model=model,
-                max_tokens=700,
+                max_tokens=900,
                 system=SYSTEM_PROMPT[language],
                 messages=[{"role": "user", "content": USER_PROMPT[language].format(
                     topic=topic_name, title=paper.title, abstract=paper.abstract)}],

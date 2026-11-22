@@ -221,7 +221,7 @@ def test_summarize_with_fake_client(papers, monkeypatch):
     class FakeMessages:
         def create(self, **kw):
             seen.update(kw)
-            block = types.SimpleNamespace(text='{"one_liner": "A PAC-Bayes bound", "why": "w", '
+            block = types.SimpleNamespace(text='{"one_liner": "A PAC-Bayes bound", "plain": "p", "why": "w", '
                                                '"background": "probability", "difficulty": "intermediate"}')
             return types.SimpleNamespace(content=[block])
 
@@ -232,16 +232,16 @@ def test_summarize_with_fake_client(papers, monkeypatch):
 
     p = by_uid(papers, "arxiv:2611.00002")
     summarize_all([(p, "ML theory")], enabled=True, model="test-model", language="en")
-    assert p.summary["ai"] and p.summary["difficulty"] == "intermediate"
-    assert "Topic: ML theory" in seen["messages"][0]["content"]
+    assert p.summary["ai"] and p.summary["difficulty"] == "intermediate" and p.summary["plain"] == "p"
+    assert "Field: ML theory" in seen["messages"][0]["content"]
 
 
 # ---------------------------------------------------------------- end to end
 
 def write_config(tmp_path, **overrides):
     cfg = yaml.safe_load((REPO / "config.yaml").read_text(encoding="utf-8"))
-    cfg.update(output_dir=str(tmp_path / "digests"), state_path=str(tmp_path / "state" / "seen.json"),
-               **overrides)
+    cfg.update(output_dir=str(tmp_path / "docs" / "digests"), site_dir=str(tmp_path / "docs"),
+               state_path=str(tmp_path / "state" / "seen.json"), **overrides)
     path = tmp_path / "config.yaml"
     path.write_text(yaml.safe_dump(cfg, allow_unicode=True), encoding="utf-8")
     return path
@@ -250,20 +250,27 @@ def write_config(tmp_path, **overrides):
 def test_offline_run_english(tmp_path, monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     args = Namespace(config=str(write_config(tmp_path)), no_summary=False,
-                     offline=str(FIXTURES), dry_run=False)
+                     offline=str(FIXTURES), dry_run=False, keep_paths=True)
     md = run(args).read_text(encoding="utf-8")
 
-    assert "# Research digest" in md and "## Must-read this week" in md
+    assert "# Research digest" in md and "## Highlights" in md
     for name in ["Machine learning theory", "Chemistry and materials",
                  "Computational and systems biology", "Economics"]:
         assert f"## {name}" in md
     assert "arXiv:2611.00005v1" in md                       # chemistry
     assert "arXiv:2611.00006v1" in md                       # economics
-    assert "bioRxiv doi:10.1101/2026.11.18.000001 v2" in md  # biology, newest version only
+    assert "bioRxiv doi:10.1101/2026.11.20.000003 v1" in md  # biology (first versions only)
+    assert "2026.11.18.000001" not in md                    # a revised preprint is skipped
     assert "Mitochondrial fission" not in md                # cell biology: not a chosen category
     assert "A faster GPU kernel" not in md                  # no theory keywords
     assert md.count("### [[TEST] Propagation of chaos") == 1
-    assert "## Complex analysis\n\nNothing notable this week." in md
+    assert "## Complex analysis\n\nNothing notable this time." in md
+    # Liquid guard so GitHub Pages does not choke on "{{" in abstracts
+    assert md.splitlines()[1] == "<!-- {% raw %} -->" and md.rstrip().endswith("<!-- {% endraw %} -->")
+    # website home page
+    index = (tmp_path / "docs" / "index.md").read_text(encoding="utf-8")
+    assert index.startswith("# Research Radar")
+    assert "](digests/" in index and "## All digests" in index
 
     # second run: everything already recommended, so nothing repeats
     md2 = run(args).read_text(encoding="utf-8")
@@ -273,11 +280,42 @@ def test_offline_run_english(tmp_path, monkeypatch):
 def test_offline_run_chinese(tmp_path, monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     args = Namespace(config=str(write_config(tmp_path, language="zh")), no_summary=True,
-                     offline=str(FIXTURES), dry_run=True)
+                     offline=str(FIXTURES), dry_run=True, keep_paths=True)
     md = run(args).read_text(encoding="utf-8")
-    assert "# 研究进展简报" in md and "## 化学与材料" in md and "## 复分析\n\n本周无重点。" in md
+    assert "# 研究进展简报" in md and "## 化学与材料" in md and "## 复分析\n\n这次无重点。" in md
 
 
 def test_offline_sources_helper():
     off = sources.load_offline(FIXTURES)
     assert len(off["arxiv"]) == 7 and len(off["biorxiv"]) == 3 and off["medrxiv"] == []
+
+
+def test_include_revisions(tmp_path, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    args = Namespace(config=str(write_config(tmp_path, include_revisions=True)), no_summary=True,
+                     offline=str(FIXTURES), dry_run=True, keep_paths=True)
+    md = run(args).read_text(encoding="utf-8")
+    assert "bioRxiv doi:10.1101/2026.11.18.000001 v2" in md
+
+
+def test_zscores_are_standardized(papers):
+    ranked = score_papers(papers, make_topic())
+    z = [p.zscore for p in ranked]
+    assert abs(sum(z)) < 1e-9 and z[0] == max(z) > 0
+
+
+def test_top_k_per_topic_override(tmp_path):
+    cfg = load_config(write_config(tmp_path, top_k_per_topic=1))
+    assert {t.top_k for t in cfg.topics} == {1}
+
+
+def test_index_lists_digests_newest_first(tmp_path):
+    from radar.site import build_index
+    d = tmp_path / "docs" / "digests"
+    d.mkdir(parents=True)
+    for name in ["2026-11-20.md", "2026-11-22.md", "latest.md"]:
+        (d / name).write_text("x")
+    cfg = load_config(REPO / "config.yaml")
+    index = build_index(tmp_path / "docs", d, cfg.topics[:2], [], {}, 0).read_text()
+    assert index.index("2026-11-22") < index.index("2026-11-20")
+    assert "latest.md" not in index.split("## All digests")[1]

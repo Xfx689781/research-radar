@@ -23,6 +23,7 @@ class Paper:
     version: int = 0
     # filled in later by the pipeline
     score: float = 0.0
+    zscore: float = 0.0            # score standardized within its topic's candidates
     matched_keywords: list[str] = field(default_factory=list)
     summary: dict = field(default_factory=dict)
 

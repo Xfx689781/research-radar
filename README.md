@@ -1,23 +1,37 @@
 # research-radar
 
-A personal weekly research digest. Every Sunday it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** in the topics you choose, ranks them against a plain-English description of your interests, optionally asks Claude for short summaries, and commits a Markdown digest to your repository.
+A daily research digest for curious readers. Every morning it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** in the fields you choose, picks the most relevant ones, has Claude explain each in plain words, and publishes the result as a small website.
+
+**Read the digests:** https://xfx689781.github.io/research-radar/
 
 It ships with presets for mathematics, physics, computer science and AI, chemistry, biology and economics, and you can add any topic of your own.
 
 ```
 arXiv / bioRxiv / medRxiv ──► fetch (categories + optional keywords) ──► skip papers already recommended
-   ──► rank (TF-IDF similarity to your interests + keyword bonus) ──► top papers per topic, no duplicates
-   ──► (optional) Claude summary ──► digests/YYYY-MM-DD.md
+   ──► rank (TF-IDF similarity to each topic + keyword bonus) ──► top papers per topic, no duplicates
+   ──► Claude summary in plain words ──► docs/digests/YYYY-MM-DD.md ──► website via GitHub Pages
 ```
 
-## Use it yourself in 5 minutes
+Each paper in a digest gets:
 
-1. Click **Use this template → Create a new repository** (public or private).
+- **In one sentence**: what the paper does, for specialists
+- **In plain words**: the problem and the result, for readers from other fields
+- **Why it matters**, **background needed** and a difficulty level
+- a link to the paper and its original abstract
+
+## Make your own in 10 minutes
+
+1. Click **Use this template → Create a new repository**.
 2. Edit `config.yaml` and choose your topics (see below).
-3. Optional, for AI summaries: **Settings → Secrets and variables → Actions → New repository secret**, name `ANTHROPIC_API_KEY`. Without it, each paper shows the first sentence of its abstract instead. Use your own key and never commit it to a file.
-4. **Actions → weekly-digest → Run workflow** to get your first digest now. After that it runs every Sunday.
+3. **AI summaries.** Create an API key at [console.anthropic.com](https://console.anthropic.com) (it needs a small amount of prepaid credit), then in your repository go to **Settings → Secrets and variables → Actions → New repository secret**, name it `ANTHROPIC_API_KEY` and paste the key. Never put the key in a file. Without it, the digest still works but shows only the first sentence of each abstract.
+4. **Website.** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main`, folder `/docs` → Save.** After a minute or two your site is at `https://<your-username>.github.io/<repository-name>/`.
+5. **First run.** **Actions → research-digest → Run workflow.** After that it runs every day by itself.
 
 If the commit step fails with a permission error, go to **Settings → Actions → General → Workflow permissions** and select **Read and write permissions**.
+
+**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper, about 20–30 short requests a day with the default config. See Anthropic's pricing page for current rates, and set a spending limit in the console if you like. GitHub Actions and Pages are free for public repositories.
+
+**Weekly instead of daily:** set `days: 7` in `config.yaml` and change the cron line in `.github/workflows/digest.yml` to `"51 12 * * 0"` (Sundays).
 
 ## Choosing topics
 
@@ -57,6 +71,7 @@ topics:
 - `interest`: a comma-separated list of specific things you care about, in English. Ranking depends on it most.
 - `keywords`: for very large categories such as `cs.LG`, only papers containing at least one keyword are fetched; matches also add a small bonus.
 - `language`: `en` or `zh` for the digest text and AI summaries.
+- `top_k_per_topic`: papers per topic in each digest. `must_read`: how many highlights go at the top.
 
 ## Run locally
 
@@ -65,12 +80,12 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 pytest -q                                                     # tests, no network needed
-python -m radar run --offline tests/fixtures --dry-run        # try it on the bundled test data
+python -m radar run --offline tests/fixtures                  # try it on test data (writes to offline-output/)
 python -m radar run --no-summary                              # real run, no AI summaries
 ANTHROPIC_API_KEY=... python -m radar run                     # real run with summaries
 ```
 
-The digest is written to `digests/latest.md`. A full run takes a few minutes because the APIs ask clients to pause between requests.
+A real run writes `docs/digests/<date>.md`, `docs/digests/latest.md` and the site's home page `docs/index.md`. It takes a few minutes because the APIs ask clients to pause between requests.
 
 ## How ranking works
 
@@ -86,7 +101,8 @@ Other details:
 
 - A paper listed in several topics goes only to the topic where it scores highest.
 - Each run looks back `days + overlap_days` days, since papers appear with a delay; `state/seen.json` makes sure nothing is recommended twice.
-- For bioRxiv and medRxiv, only the newest version of each preprint is kept.
+- Highlights are chosen by z-score within each topic, so topics with keywords (which score higher in absolute terms) do not crowd out the others.
+- For bioRxiv and medRxiv, only first versions count as new; set `include_revisions: true` to also see updated preprints.
 
 ## Project layout
 
@@ -95,13 +111,15 @@ radar/
   sources/arxiv.py     arXiv API query and Atom parsing (standard library only)
   sources/biorxiv.py   bioRxiv / medRxiv API
   rank.py              scoring and cross-topic de-duplication
-  summarize.py         optional Claude summaries, with a fallback
+  summarize.py         Claude summaries, with a fallback when no key is set
   digest.py            Markdown output
+  site.py              the website's home page
   presets.yaml         built-in topics
   i18n.py              English and Chinese text
 config.yaml            your topics and settings
+docs/                  the website (GitHub Pages): index.md and digests/
 tests/                 unit tests and invented test data (not real papers)
-.github/workflows/weekly.yml   the weekly schedule
+.github/workflows/digest.yml   the daily schedule
 ```
 
 ## Limitations
@@ -117,7 +135,7 @@ tests/                 unit tests and invented test data (not real papers)
 - [ ] Try sentence embeddings instead of TF-IDF, and compare precision@k.
 - [ ] Learn from feedback: add liked papers to `seed_ids` automatically.
 - [ ] More sources: ChemRxiv, NBER, Semantic Scholar citation signals.
-- [ ] Email or phone notifications.
+- [ ] Email or RSS for new digests.
 - [ ] Check AI summaries for numbers or claims that are not in the abstract.
 
 ## Acknowledgements

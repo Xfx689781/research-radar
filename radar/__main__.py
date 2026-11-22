@@ -19,6 +19,7 @@ from .config import load_config, load_presets
 from .digest import TopicStats, render
 from .models import Paper
 from .rank import assign_unique, score_papers
+from .site import build_index
 from .state import SeenState
 from .summarize import summarize_all
 
@@ -29,10 +30,14 @@ def run(args: argparse.Namespace) -> Path:
     cfg = load_config(args.config)
     if args.no_summary:
         cfg.summarize = False
+    if args.offline and not getattr(args, "keep_paths", False):
+        # Offline runs use test data: never let them overwrite the real digests or state.
+        cfg.output_dir, cfg.site_dir = "offline-output/digests", "offline-output"
+        cfg.state_path = "offline-output/seen.json"
 
     now = datetime.now(timezone.utc)
     # Look back a few extra days: arXiv and bioRxiv announce papers with a delay, so a
-    # paper submitted just before last week's run may only have appeared afterwards.
+    # paper submitted just before the last run may only have appeared afterwards.
     # The seen-state makes sure nothing is recommended twice.
     start = now - timedelta(days=cfg.days + cfg.overlap_days)
     state = SeenState(cfg.state_path)
@@ -52,6 +57,10 @@ def run(args: argparse.Namespace) -> Path:
                 log.info("[%s] fetching from %s", topic.slug, topic.source)
                 cands = sources.fetch(topic, start, now, cfg.max_per_topic)
                 seeds = sources.fetch_seeds(topic)
+            if not cfg.include_revisions:
+                # bioRxiv lists a preprint again whenever a new version is posted;
+                # by default only first versions count as new research
+                cands = [p for p in cands if p.source == "arxiv" or p.version <= 1]
             new = [p for p in cands if not state.is_seen(p.uid)]
             ranked[topic.slug] = score_papers(new, topic, [s.text for s in seeds])
             st.fetched, st.new = len(cands), len(new)
@@ -68,7 +77,8 @@ def run(args: argparse.Namespace) -> Path:
     summarize_all(pairs, enabled=cfg.summarize, model=cfg.model, language=cfg.language)
 
     all_chosen = [p for p, _ in pairs]
-    must_read = sorted(all_chosen, key=lambda p: p.score, reverse=True)[:cfg.must_read]
+    # Highlights compare z-scores, because raw scores are higher in topics with keywords.
+    must_read = sorted(all_chosen, key=lambda p: p.zscore, reverse=True)[:cfg.must_read]
     md = render(chosen, cfg.topics, must_read, stats,
                 (now - timedelta(days=cfg.days), now), topic_of, cfg.language)
 
@@ -78,6 +88,11 @@ def run(args: argparse.Namespace) -> Path:
     out.write_text(md, encoding="utf-8")
     (out_dir / "latest.md").write_text(md, encoding="utf-8")
     log.info("wrote %s (%d papers)", out, len(all_chosen))
+
+    if cfg.site_dir:
+        index = build_index(Path(cfg.site_dir), out_dir, cfg.topics, must_read, topic_of,
+                            len(all_chosen), cfg.language)
+        log.info("wrote %s", index)
 
     if not args.dry_run:
         state.mark([p.uid for p in all_chosen], now.date())

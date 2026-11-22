@@ -78,6 +78,14 @@ def score_papers(papers: list[Paper], topic: Topic,
         paper.matched_keywords = hits
         paper.score = float(sim) + min(MAX_BOOST, KEYWORD_BOOST * len(hits))
 
+    # How unusual is this paper within its own topic? Raw scores are not comparable
+    # across topics (topics with keywords score higher), z-scores are.
+    scores = [p.score for p in papers]
+    mean = sum(scores) / len(scores)
+    std = (sum((s - mean) ** 2 for s in scores) / len(scores)) ** 0.5
+    for paper in papers:
+        paper.zscore = (paper.score - mean) / std if std > 0 else 0.0
+
     return sorted(papers, key=lambda p: p.score, reverse=True)
 
 
