@@ -1,0 +1,41 @@
+name: weekly-digest
+
+on:
+  schedule:
+    # GitHub cron is in UTC. 12:51 UTC = 7:51 Toronto in winter (8:51 in summer).
+    - cron: "51 12 * * 0"
+  workflow_dispatch: {}   # lets you click "Run workflow" by hand
+
+permissions:
+  contents: write         # needed to commit the new digest back to the repo
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Test
+        run: pytest -q
+
+      - name: Build digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m radar run
+
+      - name: Commit digest
+        run: |
+          git config user.name "research-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digests state
+          git diff --cached --quiet || git commit -m "digest: $(date -u +%Y-%m-%d)"
+          git push

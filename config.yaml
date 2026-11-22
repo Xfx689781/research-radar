@@ -1,0 +1,146 @@
+# research-radar 配置
+#
+# 每个 topic：
+#   categories  arXiv 分类（https://arxiv.org/category_taxonomy）
+#   keywords    可选。设置后只抓标题或摘要里含这些词的论文（适合 cs.LG 这种每周上千篇的大分类），
+#               同时也会给命中的论文加分。分类本身不大时可以不设，全部抓下来再排序。
+#   interest    用英文写你关心什么。排序靠它和论文摘要的文字相似度，写得越具体越准。
+#   seed_ids    可选。你读过、喜欢的论文的 arXiv 编号，它们的摘要会并入兴趣描述。
+#   top_k       每周这个方向最多推荐几篇
+
+days: 7
+overlap_days: 3
+max_per_topic: 600
+min_score: 0.10
+must_read: 2
+summarize: true
+model: claude-haiku-5-5
+output_dir: digests
+state_path: state/seen.json
+
+topics:
+  - name: ML 理论
+    slug: ml-theory
+    categories: [stat.ML, cs.LG]
+    keywords:
+      - generalization bound
+      - sample complexity
+      - PAC-Bayes
+      - minimax
+      - mean-field
+      - neural tangent kernel
+      - implicit bias
+      - benign overfitting
+      - double descent
+      - conformal prediction
+      - singular learning theory
+      - superposition
+      - Wasserstein gradient flow
+      - optimal transport
+      - random matrix
+      - information geometry
+      - score-based
+    interest: >
+      Rigorous theory of machine learning: generalization bounds, PAC-Bayes,
+      sample complexity, optimization and training dynamics of neural networks,
+      mean-field limits and Wasserstein gradient flows, neural tangent kernel,
+      implicit bias, benign overfitting and double descent, random matrix theory
+      for high-dimensional learning, theory of diffusion and score-based models,
+      uncertainty quantification and conformal prediction, singular learning
+      theory, mathematical interpretability, superposition, information geometry.
+    top_k: 3
+
+  - name: 概率
+    slug: probability
+    categories: [math.PR]
+    interest: >
+      Probability theory: random matrices, stochastic differential equations,
+      interacting particle systems and mean-field limits, propagation of chaos,
+      optimal transport, concentration of measure, high-dimensional probability,
+      Gaussian processes, spin glasses, percolation, Markov chain mixing,
+      stochastic analysis with connections to statistics and machine learning.
+    top_k: 3
+
+  - name: 微分几何
+    slug: differential-geometry
+    categories: [math.DG, math.SG]
+    interest: >
+      Differential geometry and symplectic geometry: Riemannian geometry,
+      curvature, geometric flows, geometric analysis, Lie groups, connections
+      and fiber bundles, symplectic and Hamiltonian geometry, moment maps,
+      optimal transport on manifolds, information geometry, geometry with
+      connections to mathematical physics or machine learning.
+    top_k: 2
+
+  - name: 数学物理
+    slug: math-physics
+    categories: [math-ph]
+    interest: >
+      Mathematical physics: rigorous statistical mechanics, quantum mechanics
+      and spectral theory, Schrodinger operators, random matrices in physics,
+      integrable systems, gauge theory, general relativity from a mathematical
+      viewpoint, nonlinear PDE from physics, rigorous results on phase transitions.
+    top_k: 2
+
+  - name: 复分析
+    slug: complex-analysis
+    categories: [math.CV]
+    interest: >
+      Complex analysis: holomorphic functions, normal families, conformal
+      mappings, Riemann surfaces, potential theory, value distribution,
+      several complex variables, complex dynamics, applications to random
+      matrices, combinatorics and partition function zeros.
+    top_k: 2
+
+  - name: AI4Math
+    slug: ai4math
+    categories: [cs.AI, cs.LG, cs.LO, cs.CL, math.HO]
+    keywords:
+      - Lean
+      - theorem proving
+      - theorem prover
+      - autoformalization
+      - formalization
+      - proof assistant
+      - mathlib
+      - formal verification
+      - mathematical reasoning
+      - open problem
+    interest: >
+      AI for mathematics: automated and interactive theorem proving in Lean,
+      Coq/Rocq and Isabelle, autoformalization, mathlib, LLM provers,
+      AI systems solving open mathematical problems, verification of
+      AI-generated proofs, benchmarks for research-level mathematical reasoning.
+    top_k: 3
+
+  - name: 具身智能
+    slug: embodied-ai
+    categories: [cs.RO]
+    keywords:
+      - embodied
+      - vision-language-action
+      - foundation model
+      - humanoid
+      - manipulation
+      - sim-to-real
+      - world model
+      - reinforcement learning
+      - safety
+    interest: >
+      Embodied AI and robot learning: vision-language-action models, robot
+      foundation models, world models, humanoid robots, dexterous manipulation,
+      sim-to-real transfer, reinforcement learning and optimal control for
+      robots, safety guarantees and control barrier functions, Lie groups for
+      robot state estimation.
+    top_k: 2
+
+  - name: 理论物理
+    slug: theoretical-physics
+    categories: [hep-th, gr-qc, cond-mat.stat-mech]
+    interest: >
+      Mathematically deep theoretical physics: quantum field theory,
+      conformal field theory, scattering amplitudes, integrability, general
+      relativity and black holes, statistical mechanics of disordered systems,
+      spin glasses and replica methods, physics of learning and neural networks,
+      exactly solvable models.
+    top_k: 2

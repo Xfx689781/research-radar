@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEST DATA ONLY. These entries are invented for unit tests and are not real papers. -->
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+      xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <title>arXiv Query: test fixture</title>
+  <opensearch:totalResults>5</opensearch:totalResults>
+
+  <entry>
+    <id>http://arxiv.org/abs/2611.00001v2</id>
+    <updated>2026-11-18T10:00:00Z</updated>
+    <published>2026-11-17T18:00:00Z</published>
+    <title>[TEST] Propagation of chaos for mean-field
+      Langevin dynamics</title>
+    <summary>We prove uniform-in-time propagation of chaos for mean-field Langevin
+      dynamics. The limit is a Wasserstein gradient flow of an entropy-regularized
+      free energy. As an application we obtain convergence rates for training
+      two-layer neural networks in the mean-field regime.</summary>
+    <author><name>Test Author A</name></author>
+    <author><name>Test Author B</name></author>
+    <arxiv:primary_category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2611.00001v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2611.00001v2" rel="related" type="application/pdf"/>
+  </entry>
+
+  <entry>
+    <id>http://arxiv.org/abs/2611.00002v1</id>
+    <updated>2026-11-19T09:00:00Z</updated>
+    <published>2026-11-19T09:00:00Z</published>
+    <title>[TEST] PAC-Bayes generalization bounds for overparameterized networks</title>
+    <summary>We derive non-vacuous PAC-Bayes generalization bounds for overparameterized
+      neural networks. Our generalization bound depends on the sharpness of the
+      solution found by stochastic gradient descent and improves the sample
+      complexity of earlier results.</summary>
+    <author><name>Test Author C</name></author>
+    <arxiv:primary_category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2611.00002v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2611.00002v1" rel="related" type="application/pdf"/>
+  </entry>
+
+  <entry>
+    <id>http://arxiv.org/abs/2611.00003v1</id>
+    <updated>2026-11-19T12:00:00Z</updated>
+    <published>2026-11-19T12:00:00Z</published>
+    <title>[TEST] A faster GPU kernel for image segmentation</title>
+    <summary>We present a clean and fast GPU implementation of a segmentation network.
+      Benchmarks show a two times speedup on standard datasets.</summary>
+    <author><name>Test Author D</name></author>
+    <arxiv:primary_category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2611.00003v1" rel="alternate" type="text/html"/>
+  </entry>
+
+  <entry>
+    <id>http://arxiv.org/abs/2611.00004v1</id>
+    <updated>2026-11-20T08:00:00Z</updated>
+    <published>2026-11-20T08:00:00Z</published>
+    <title>[TEST] Autoformalization of undergraduate real analysis in Lean</title>
+    <summary>We use a large language model to autoformalize theorems from an
+      undergraduate real analysis course into Lean 4 and mathlib, and check every
+      proof with the proof assistant.</summary>
+    <author><name>Test Author E</name></author>
+    <author><name>Test Author F</name></author>
+    <author><name>Test Author G</name></author>
+    <author><name>Test Author H</name></author>
+    <arxiv:primary_category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/2611.00004v1" rel="alternate" type="text/html"/>
+  </entry>
+
+  <entry>
+    <id>http://arxiv.org/abs/math/0601001v1</id>
+    <updated>2026-11-20T10:00:00Z</updated>
+    <published>2026-11-20T10:00:00Z</published>
+    <title>[TEST] Ricci flow and curvature on surfaces</title>
+    <summary>We study the Ricci flow on closed Riemannian surfaces and give a short
+      proof that the normalized flow converges to a metric of constant curvature.</summary>
+    <author><name>Test Author I</name></author>
+    <arxiv:primary_category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/math/0601001v1" rel="alternate" type="text/html"/>
+  </entry>
+</feed>
