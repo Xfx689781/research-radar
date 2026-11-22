@@ -5,8 +5,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 
-from .arxiv_client import Paper
 from .config import Topic
+from .i18n import STRINGS
+from .models import Paper
 
 
 @dataclass
@@ -16,70 +17,74 @@ class TopicStats:
     error: str = ""
 
 
-def _authors(names: list[str], n: int = 3) -> str:
-    return ", ".join(names) if len(names) <= n else ", ".join(names[:n]) + " 等"
+def _authors(names: list[str], s: dict, n: int = 3) -> str:
+    # bioRxiv writes "Smith, J."; use ";" between authors so the list stays readable
+    sep = "; " if any("," in a for a in names) else ", "
+    return sep.join(names) if len(names) <= n else sep.join(names[:n]) + s["et_al"]
 
 
-def _entry(p: Paper) -> str:
-    s = p.summary or {}
+def _entry(p: Paper, s: dict) -> str:
+    summ = p.summary or {}
+    c = s["colon"]
     lines = [
         f"### [{p.title}]({p.url})",
-        f"*{_authors(p.authors)}* · `{p.primary_category}` · arXiv:{p.arxiv_id}{p.version}"
-        f" · 相关度 {p.score:.2f}",
+        f"*{_authors(p.authors, s)}* · `{p.primary_category}` · {p.label}"
+        f" · {s['relevance']} {p.score:.2f}",
         "",
-        f"- **一句话**：{s.get('one_liner', '')}" + ("" if s.get("ai") else "（摘要首句，未生成 AI 摘要）"),
+        f"- **{s['one_liner']}**{c}{summ.get('one_liner', '')}"
+        + ("" if summ.get("ai") else s["fallback"]),
     ]
-    if s.get("why"):
-        lines.append(f"- **为什么值得看**：{s['why']}")
-    if s.get("background") or s.get("difficulty"):
-        bg = s.get("background", "")
-        diff = f" · 难度：{s['difficulty']}" if s.get("difficulty") else ""
-        lines.append(f"- **需要的背景**：{bg}{diff}")
+    if summ.get("why"):
+        lines.append(f"- **{s['why']}**{c}{summ['why']}")
+    if summ.get("background") or summ.get("difficulty"):
+        diff = f" · {s['difficulty']}{c}{summ['difficulty']}" if summ.get("difficulty") else ""
+        lines.append(f"- **{s['background']}**{c}{summ.get('background', '')}{diff}")
     if p.matched_keywords:
-        lines.append("- 命中关键词：" + "、".join(p.matched_keywords))
-    lines += ["", "<details><summary>原始摘要</summary>", "", p.abstract, "", "</details>", ""]
+        lines.append(f"- {s['keywords']}{c}" + s["list_sep"].join(p.matched_keywords))
+    lines += ["", f"<details><summary>{s['abstract']}</summary>", "", p.abstract, "",
+              "</details>", ""]
     return "\n".join(lines)
 
 
 def render(chosen: dict[str, list[Paper]], topics: list[Topic], must_read: list[Paper],
            stats: dict[str, TopicStats], window: tuple[datetime, datetime],
-           topic_of: dict[str, str]) -> str:
+           topic_of: dict[str, str], language: str = "en") -> str:
+    s = STRINGS[language]
     start, end = window
     out = [
-        f"# 研究进展简报 · {end:%Y-%m-%d}",
+        "# " + s["title"].format(date=f"{end:%Y-%m-%d}"),
         "",
-        f"覆盖 arXiv 提交时间约 {start:%Y-%m-%d} 至 {end:%Y-%m-%d}（UTC）。",
+        s["coverage"].format(start=f"{start:%Y-%m-%d}", end=f"{end:%Y-%m-%d}"),
         "",
-        "> 相关度 = 和你的兴趣描述的 TF-IDF 余弦相似度 + 关键词加权。"
-        "它只衡量文字上像不像你关心的东西，不代表论文质量。AI 摘要只依据论文摘要写成，读原文前请自己核对。",
+        s["note"],
         "",
-        "## 本周必读",
+        f"## {s['must_read']}",
         "",
     ]
     if must_read:
         for p in must_read:
             one = (p.summary or {}).get("one_liner", "")
-            out.append(f"- **[{p.title}]({p.url})**（{topic_of.get(p.arxiv_id, '')}）：{one}")
+            out.append(f"- **[{p.title}]({p.url})** ({topic_of.get(p.uid, '')}){s['colon']}{one}")
     else:
-        out.append("本周没有达到推荐门槛的论文。")
+        out.append(s["no_must_read"])
     out.append("")
 
     for t in topics:
-        out += [f"## {t.name}", ""]
+        out += [f"## {t.display_name(language)}", ""]
         st = stats.get(t.slug, TopicStats())
         if st.error:
-            out += [f"⚠️ 抓取失败：{st.error}", ""]
+            out += [s["failed"].format(error=st.error), ""]
             continue
         papers = chosen.get(t.slug, [])
         if not papers:
-            out += ["本周无重点。", ""]
+            out += [s["nothing"], ""]
             continue
-        out += [_entry(p) for p in papers]
+        out += [_entry(p, s) for p in papers]
 
-    out += ["## 抓取统计", "", "| 方向 | 抓到 | 新论文 | 入选 |", "|---|---|---|---|"]
+    out += [f"## {s['stats']}", "", s["stats_header"], "|---|---|---|---|"]
     for t in topics:
         st = stats.get(t.slug, TopicStats())
-        n = len(chosen.get(t.slug, []))
-        out.append(f"| {t.name} | {st.fetched} | {st.new} | {n} |")
+        out.append(f"| {t.display_name(language)} | {st.fetched} | {st.new} | "
+                   f"{len(chosen.get(t.slug, []))} |")
     out.append("")
     return "\n".join(out)

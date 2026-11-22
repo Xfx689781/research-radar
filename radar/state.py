@@ -1,6 +1,6 @@
 """Remember which papers were already recommended, so digests do not repeat.
 
-Stored as a small JSON file ({arxiv_id: "YYYY-MM-DD"}) so it diffs nicely in git.
+Stored as a small JSON file ({uid: "YYYY-MM-DD"}) so it diffs nicely in git.
 """
 
 from __future__ import annotations
@@ -15,14 +15,16 @@ class SeenState:
         self.path = Path(path)
         self.seen: dict[str, str] = {}
         if self.path.exists():
-            self.seen = json.loads(self.path.read_text(encoding="utf-8"))
+            raw = json.loads(self.path.read_text(encoding="utf-8"))
+            # v0.1 stored bare arXiv ids; v0.2 prefixes the source ("arxiv:...")
+            self.seen = {(k if ":" in k else f"arxiv:{k}"): v for k, v in raw.items()}
 
-    def is_seen(self, arxiv_id: str) -> bool:
-        return arxiv_id in self.seen
+    def is_seen(self, uid: str) -> bool:
+        return uid in self.seen
 
-    def mark(self, arxiv_ids: list[str], day: date) -> None:
-        for i in arxiv_ids:
-            self.seen.setdefault(i, day.isoformat())
+    def mark(self, uids: list[str], day: date) -> None:
+        for u in uids:
+            self.seen.setdefault(u, day.isoformat())
 
     def prune(self, today: date, keep_days: int = 120) -> None:
         cutoff = (today - timedelta(days=keep_days)).isoformat()

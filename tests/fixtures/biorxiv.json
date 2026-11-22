@@ -1,0 +1,50 @@
+{
+  "_comment": "TEST DATA ONLY. Invented records for unit tests; not real preprints.",
+  "messages": [{"status": "ok", "interval": "2026-11-12:2026-11-22", "cursor": 0, "count": 4, "total": 4}],
+  "collection": [
+    {
+      "doi": "10.1101/2026.11.18.000001",
+      "title": "[TEST] Single-cell inference of gene regulatory networks",
+      "authors": "Tester, A.; Tester, B.",
+      "date": "2026-11-18",
+      "version": "1",
+      "type": "new results",
+      "category": "bioinformatics",
+      "abstract": "We infer gene regulatory networks from single-cell RNA sequencing with a probabilistic model and benchmark it on synthetic and real data.",
+      "server": "bioRxiv"
+    },
+    {
+      "doi": "10.1101/2026.11.18.000001",
+      "title": "[TEST] Single-cell inference of gene regulatory networks",
+      "authors": "Tester, A.; Tester, B.",
+      "date": "2026-11-21",
+      "version": "2",
+      "type": "new results",
+      "category": "bioinformatics",
+      "abstract": "We infer gene regulatory networks from single-cell RNA sequencing with a probabilistic model and benchmark it on synthetic and real data. Version 2 adds new benchmarks.",
+      "server": "bioRxiv"
+    },
+    {
+      "doi": "10.1101/2026.11.19.000002",
+      "title": "[TEST] Mitochondrial fission in yeast",
+      "authors": "Tester, C.",
+      "date": "2026-11-19",
+      "version": "1",
+      "type": "new results",
+      "category": "cell biology",
+      "abstract": "We image mitochondrial fission in budding yeast.",
+      "server": "bioRxiv"
+    },
+    {
+      "doi": "10.1101/2026.11.20.000003",
+      "title": "[TEST] A stochastic model of protein folding kinetics",
+      "authors": "Tester, D.; Tester, E.; Tester, F.; Tester, G.",
+      "date": "2026-11-20",
+      "version": "1",
+      "type": "new results",
+      "category": "biophysics",
+      "abstract": "We develop a mathematical model of protein folding kinetics based on stochastic dynamics on an energy landscape.",
+      "server": "bioRxiv"
+    }
+  ]
+}

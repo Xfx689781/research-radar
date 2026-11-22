@@ -14,18 +14,11 @@ from dataclasses import replace
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from .arxiv_client import Paper
 from .config import Topic
+from .models import Paper, matched_keywords
 
 KEYWORD_BOOST = 0.08
 MAX_BOOST = 0.24
-
-
-def matched_keywords(paper: Paper, keywords: list[str]) -> list[str]:
-    """Keywords that appear as whole words (so "Lean" does not match "clean")."""
-    text = paper.text.lower()
-    return [k for k in keywords
-            if re.search(r"(?<!\w)" + re.escape(k.lower()) + r"(?!\w)", text)]
 
 
 _TOKEN = re.compile(r"[a-z][a-z0-9\-]+")
@@ -101,10 +94,10 @@ def assign_unique(ranked: dict[str, list[Paper]], top_k: dict[str, int],
     chosen: dict[str, list[Paper]] = {slug: [] for slug in ranked}
     used: set[str] = set()
     for score, slug, paper in triples:
-        if score < min_score or paper.arxiv_id in used:
+        if score < min_score or paper.uid in used:
             continue
         if len(chosen[slug]) >= top_k[slug]:
             continue
         chosen[slug].append(paper)
-        used.add(paper.arxiv_id)
+        used.add(paper.uid)
     return chosen
