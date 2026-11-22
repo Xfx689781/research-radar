@@ -3,27 +3,6 @@
  "updated": "2026-11-22",
  "papers": [
   {
-   "uid": "arxiv:2611.25915",
-   "title": "General Methodology for Asymptotically Balanced Multiple Tests",
-   "url": "https://arxiv.org/abs/2611.25915v1",
-   "authors": [
-    "Merle Munko"
-   ],
-   "label": "arXiv:2611.25915v1",
-   "primary_category": "stat.ME",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "In statistical applications, often more than one hypothesis is of interest and, thus, multiple testing problems occur naturally.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "In statistical applications, often more than one hypothesis is of interest and, thus, multiple testing problems occur naturally. To control the family-wise error rate, popular adjustment methods, like the Bonferroni and Holm correction, have been developed. However, these methods do not use the dependence structure of the test statistics. Consequently, they are conservative in most settings. To increase the power of the tests, the joint dependence structure of the test statistics can be incorporated for the construction of critical values, for example, by using resampling schemes as bootstrap procedures to approximate the joint distribution. This has already been applied in several contexts. In this work, we develop a very flexible and general theoretical foundation, which can be used to construct asymptotically balanced multiple tests that control the family-wise error rate in the strong sense. Additionally, we prove in the general setting that consistent resampling schemes satisfy the needed conditions.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.26047",
    "title": "Sharp minimax rates and adaptive estimation of latent proportions in bivariate Poisson mixtures",
    "url": "https://arxiv.org/abs/2611.26047v1",
@@ -42,6 +21,29 @@
     "ai": false
    },
    "abstract": "We study estimation of the mean latent composition in a bivariate Poisson mixture. Conditional on an unobserved intensity S and proportion U, two counts are independent Poisson variables with respective means SU and S(1-U). The mixing law is unrestricted on the Cartesian product [a,b] x [0,1], where a and b are finite constants satisfying 0 < a < b, and dependence between S and U is allowed. Although the mixing distribution is identifiable, the usual ratio of mean counts estimates an intensity-weighted proportion and may be biased for theta = E[U]. We construct polynomial estimators based on factorial moments and establish the exact leading exponent of the minimax squared-error risk on the logarithmic scale, without claiming an exact multiplicative minimax constant. We also derive the sharp logarithmic separation exponent for testing zero latent covariance and construct an adaptive estimator achieving parametric squared-error risk on the zero-covariance submodel while retaining the optimal full-model logarithmic minimax exponent. Simulations illustrate the bias-variance trade-off, the role of polynomial regularization, and the distinction between theoretically guaranteed and empirically calibrated adaptation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25864",
+   "title": "Inference in High-Dimensional Linear Mediation Models",
+   "url": "https://arxiv.org/abs/2611.25864v1",
+   "authors": [
+    "Samriddha Lahiry",
+    "Rajarshi Mukherjee",
+    "Pragya Sur"
+   ],
+   "label": "arXiv:2611.25864v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Mediation analysis plays an important role in psychology, epidemiology, and genomics.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Mediation analysis plays an important role in psychology, epidemiology, and genomics. Al- though high-dimensional mediation has been studied extensively, existing inferential methods typically rely on sparsity assumptions that may be difficult to justify when many individually weak mediators collectively produce a substantial effect. We study inference for both the over- all indirect effect and the effect transmitted through an individual mediator in a proportional high-dimensional regime, where the number of mediators and the sample size grow at compa- rable rates, without imposing sparsity on the mediator effects. Standard debiasing procedures for high-dimensional inference commonly rely on design-covariance information or additional structural assumptions on precision-matrix directions. In mediation models, however, the full outcome-design covariance depends on unknown mediator-model coefficients, creating an addi- tional challenge when such information or structure is unavailable. To address this challenge, we introduce an approximate debiasing procedure based on partial ridge regression and show that the resulting estimator is asymptotically bias-corrected and Gaussian. We also develop a cross-fitted estimator with a smaller asymptotic variance than its sample-split counterpart. In addition, we construct consistent estimators of the limiting variances of both the sample-split and cross-fitted estimators. Together, these results provide feasible inferential procedures for global and pathwise mediation effects.",
    "source": "arxiv"
   }
  ]

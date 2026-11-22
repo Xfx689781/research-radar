@@ -1,0 +1,51 @@
+{
+ "slug": "dynamical-systems",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26205",
+   "title": "Convergence of the Most Probable Transition Paths in Multiscale Systems",
+   "url": "https://arxiv.org/abs/2611.26205v1",
+   "authors": [
+    "Qiqi Lian",
+    "Shanqi Liu",
+    "Jinqiao Duan"
+   ],
+   "label": "arXiv:2611.26205v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "This paper is devoted to study the convergence behavior of the most probable transition paths in a class of multiscale stochastic dynamical systems.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "This paper is devoted to study the convergence behavior of the most probable transition paths in a class of multiscale stochastic dynamical systems. First, based on Euler-Lagrange equations, we establish proximity and convergence results in the space of continuous functions endowed with the supremum norm. These results compare the most probable paths of the multiscale system with those of averaged system derived from the averaging principle. Next, we utilize a variational framework and analyze the Onsager-Machlup functionals using $Γ$-convergence. Together with the equi-coercivity of the functional family, we prove the convergence of both their minima and minimizers. Specifically, we show weak convergence of the minimizers in the Cameron-Martin space $H^1$, which implies their strong convergence in $L^2$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26463",
+   "title": "Neural Conditional Gaussian Model: Efficient Data Assimilation with Sequential Uncertainty Quantification for Nonlinear Dynamics",
+   "url": "https://arxiv.org/abs/2611.26463v1",
+   "authors": [
+    "Chuanqi Chen",
+    "Nan Chen"
+   ],
+   "label": "arXiv:2611.26463v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper learns a neural-network dynamical model that encodes partially observed nonlinear states into a latent space where the dynamics are conditional Gaussian, enabling closed-form data assimilation updates and a Gaussian decoder that propagates uncertainty back to physical variables.",
+    "plain": "Scientists often want to track the hidden state of a complicated system, such as weather, from noisy and incomplete measurements, and to know how uncertain their estimate is. Standard methods for this can be slow and usually need the exact equations governing the system. The authors train a neural network that translates the system into a simpler hidden representation where the update step can be computed directly, then translates back to the physical quantities together with an uncertainty estimate.",
+    "why": "Fast, uncertainty-aware state tracking matters in areas such as weather prediction and other data assimilation settings where the governing equations are incomplete. The abstract reports lower online cost and accurate estimation and forecasting on benchmark systems, but I cannot judge from the abstract how general these gains are beyond those benchmarks.",
+    "background": "['Data assimilation: combining a model of a system with incoming observations to estimate its current hidden state.', \"Nonlinear filtering: estimating a hidden state over time when the system's rules are nonlinear, so the uncertainty does not stay simply Gaussian.\", 'Gaussian (normal) distribution: a bell-shaped uncertainty described by a mean and a covariance (spread and correlations).', 'Conditional Gaussian structure: a model where some variables are Gaussian once others are known, which allows exact, cheap calculations.', 'Encoder-decoder network: one neural network maps data into a hidden (latent) space and another maps it back.', 'Negative log-likelihood training: fitting a model by rewarding predictions that assign high probability to the observed data.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Data assimilation (DA) in partially observed nonlinear systems requires repeated estimation of both hidden states and their uncertainty. Conventional nonlinear filtering can be computationally expensive and often relies on an explicit dynamical model. In this paper, we develop the Neural Conditional Gaussian Model (Neural CGM), a data-driven dynamical model that maps unobserved physical states into a learned latent space, where the dynamics of the latent states follow a conditional Gaussian structure. This structure allows closed-form DA updates in the latent space, while nonlinear encoder-decoder mappings retain the flexibility needed to represent complex dynamics in physical space. A key feature of Neural CGM is its treatment of uncertainty in DA. The latent posterior mean and covariance are mapped to the physical variables through a Gaussian decoder that combines local moment propagation with learned nonlinear corrections. The resulting physical-space posterior statistics depend on the sequentially updated latent distribution rather than on a separate post-processing estimate. The same statistics enter a Gaussian negative log-likelihood during training, so both the posterior mean and uncertainty affect the learned model. Because Neural CGM learns the dynamical model itself, it can also be used for state forecasting and simulation without explicit knowledge of the governing equations. Numerical experiments on benchmark nonlinear dynamical systems show accurate state estimation and forecasting while substantially reducing online assimilation cost relative to conventional nonlinear DA methods. Neural CGM is therefore suited to repeated state estimation, uncertainty quantification, and prediction from partial observations.",
+   "source": "arxiv"
+  }
+ ]
+}

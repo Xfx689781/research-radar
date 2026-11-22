@@ -3,27 +3,6 @@
  "updated": "2026-11-22",
  "papers": [
   {
-   "uid": "arxiv:2611.26394",
-   "title": "Nonequilibrium Statistical Mechanics: Physical Concepts & Mathematical Tools",
-   "url": "https://arxiv.org/abs/2611.26394v1",
-   "authors": [
-    "Sagar Chakraborty"
-   ],
-   "label": "arXiv:2611.26394v1",
-   "primary_category": "cond-mat.stat-mech",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics. At the same time, nonequilibrium statistical mechanics has transcended traditional physics to become a powerful language for complex systems. Prompted by an enthusiastic curiosity about complex systems, these cursory lecture notes attempt to elucidate some introductory concepts and techniques used in classical nonequilibrium statistical mechanics, which find successful applications not only in foundational physics, but also across other fields such as biology, ecology, economics, and sociology. Except for the specific synthesis and presentation of the material, which assumes basic familiarity with equilibrium statistical mechanics, the author claims no originality.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.26474",
    "title": "Bianchi cosmologies with four-dimensional groups of motion in New General Relativity",
    "url": "https://arxiv.org/abs/2611.26474v1",
@@ -36,36 +15,37 @@
    "primary_category": "gr-qc",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper derives and partially solves the field equations of New General Relativity (a one-parameter family of teleparallel gravity theories) for spatially homogeneous Bianchi II, III and IX cosmological models that possess a four-dimensional symmetry group.",
+    "plain": "Physicists build models of how the universe expands, and the standard model uses Einstein's general relativity, where gravity is curvature of spacetime. This paper works in an alternative formulation, teleparallel gravity, where gravity is described by a different geometric quantity, and it studies a family of such theories called New General Relativity. The authors restrict to simple, highly symmetric universe shapes (Bianchi types II, III and IX) and show that the geometry and the matter content can each be described by a small set of functions of time. They then write down the equations these theories require and present some solutions, which the abstract says include cases resembling the standard expanding-universe model and cases that deviate from it.",
+    "why": "It tests whether alternative geometric descriptions of gravity can produce cosmologies that look like the standard one or differ from it in checkable ways, which matters for work on dark energy and modified gravity. The abstract does not indicate how the deviations compare with observations, so its relevance to real data is unclear from this summary alone.",
+    "background": "[\"General relativity: Einstein's theory in which gravity is spacetime curvature, described by the metric (the rule for measuring distances and times).\", 'Teleparallel gravity: an equivalent-in-spirit reformulation that uses torsion (a twisting of the geometry) instead of curvature to describe gravity, with the metric as the main variable.', 'New General Relativity: a one-parameter family of teleparallel theories; the parameter selects a specific member of the family.', 'Bianchi models: spatially uniform but possibly anisotropic (direction-dependent) universe models, classified into types such as II, III and IX.', 'Friedmann-Lemaître-Robertson-Walker (FLRW) cosmology: the standard isotropic, homogeneous model of the expanding universe.', 'Field equations: the differential equations linking geometry to matter content; solving them gives the time evolution of the universe model.']",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We study the dynamics of the most general metric teleparallel spacetimes of Bianchi types II, III and IX, which admit a four-dimensional symmetry group, in the 1-parameter family of New General Relativity. We first show that in each of these classes the most general metric teleparallel geometry is described by four free functions of time, while another four functions of time describe the most general energy-momentum tensor compatible with the same symmetries. We then derive the field equations of New General Relativity for this class of geometries. Finally, we present some solutions to these field equations. Our results show that both solutions resembling features of the standard Friedmann-Lemaître-Robertson-Walker cosmology of General Relativity and deviations thereof exist.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.25992",
-   "title": "Revisiting Kerr-Newman-(A)dS Black Holes in \\(f(R)\\) Gravity: A Kerr-Schild Approach",
-   "url": "https://arxiv.org/abs/2611.25992v1",
+   "uid": "arxiv:2611.25576",
+   "title": "From Integrability to Chaos in Tensionless AdS3 String Theory",
+   "url": "https://arxiv.org/abs/2611.25576v1",
    "authors": [
-    "Göksel Daylan Esmer",
-    "Saliha Türkmen"
+    "Matthias R. Gaberdiel",
+    "Beat Nairz",
+    "Cheng Peng"
    ],
-   "label": "arXiv:2611.25992v1",
-   "primary_category": "gr-qc",
+   "label": "arXiv:2611.25576v1",
+   "primary_category": "hep-th",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "It is known that, in the constant-curvature regime, the field equations of $f(R)$ gravity reduce to the Einstein form with an effective cosmological constant, establishing a direct correspondence between stationary and axisymmetric black hole solutions in $f(R)$ gravity and their counterparts in gen…",
+    "one_liner": "We study quantum-gravitational corrections to the planar integrable structure of the symmetric product orbifold $\\text{Sym}^N(\\mathbb{T}^4)$ that is dual to tensionless string theory on AdS$_3\\times$S$^3\\times \\mathbb{T}^4$.",
     "plain": "",
     "why": "",
     "background": "",
     "difficulty": "",
     "ai": false
    },
-   "abstract": "It is known that, in the constant-curvature regime, the field equations of $f(R)$ gravity reduce to the Einstein form with an effective cosmological constant, establishing a direct correspondence between stationary and axisymmetric black hole solutions in $f(R)$ gravity and their counterparts in general relativity, including the Kerr--Newman--(A)dS family. Within this framework, we revisit the derivation of these metrics using the Kerr--Schild approach for illustrative purposes. The Maxwell equations are solved independently of the Kerr--Schild function, allowing the electromagnetic source to be determined before addressing the gravitational field equations. We then investigate the possibility of non-constant-curvature solutions, taking quadratic $f(R)$ gravity as a representative model. Remarkably, the field equations within the Kerr--Schild ansatz force the Ricci scalar to be constant, reducing the resulting geometries to the familiar Kerr--Newman--(A)dS family. Thus, our analysis extends the recently established no-go result for uncharged black holes to electrically charged configurations within the framework considered here.",
+   "abstract": "We study quantum-gravitational corrections to the planar integrable structure of the symmetric product orbifold $\\text{Sym}^N(\\mathbb{T}^4)$ that is dual to tensionless string theory on AdS$_3\\times$S$^3\\times \\mathbb{T}^4$. We consider the deformation that switches on R-R flux in the bulk, and analyze the associated level spacing statistics. The leading non-planar corrections lift the planar degeneracies and produce signs of random-matrix behavior. Our results provide a controlled example of string interactions driving the onset of quantum chaos.",
    "source": "arxiv"
   }
  ]

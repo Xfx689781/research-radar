@@ -15,12 +15,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "Arm separation is an important technical tool in the study of critical and near-critical planar percolation systems.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves a model-independent arm-separation statement for arbitrary planar percolation models, using an exploration argument that reveals arms with positive probability, and applies it to get a strong arm-separation result for critical planar FK-percolation.",
+    "plain": "Percolation is a simple random model of a porous material: each spot is open or closed at random, and one asks when open paths connect distant places. The authors study how several separate open or closed paths ('arms') can be made to stay apart from one another in a plane, a property that underpins precise estimates of how likely such connections are near the critical point. They give a general version of this separation property that does not depend on the particular random model, and they check it on a more complicated model called FK-percolation, which comes from statistical physics. The abstract does not report numerical values or further consequences beyond the statement and this application.",
+    "why": "Arm-separation results are a standard tool for deriving exponents and scaling behaviour in two-dimensional critical random systems, so a statement that works across many models could make those tools easier to reuse. The abstract does not say how widely the result will be adopted, so its impact beyond this setting is uncertain.",
+    "background": "['Percolation: sites or edges are randomly open or closed, and the question is when open clusters span large distances.', 'Critical point: the threshold probability at which large connected clusters first appear; behaviour there is scale-invariant.', 'Arm events: events that several disjoint paths of given colours (open or closed) cross a region from one place to another.', 'RSW (Russo–Seymour–Welsh) estimates: bounds saying crossing events are not too unlikely across scales.', 'Quasi-multiplicativity and arm exponents: probabilities of multiple arms factor up to constants across scales, and the decay rates are universal numbers.', 'FK-percolation: a generalisation of percolation tied to the Potts model in statistical physics.', 'Conditioning and exploration: revealing random configuration step by step to control dependence between events.']",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Arm separation is an important technical tool in the study of critical and near-critical planar percolation systems. When combined with RSW estimates, it proves quasi-multiplicativity of arm-event probabilities, links the derivatives of different events and allows the identification of universal arm exponents. We provide a very generic statement of arm separation that applies to arbitrary planar percolation models. Our argument is based on exploring configurations conditioned on the existence of arms in such a way that \"exposed\" arms are revealed with positive probability. The exploration algorithm is independent of the percolation model and applies to all polychromatic arm events. As an application, we prove a strong arm-separation result for critical planar FK-percolation.",
    "source": "arxiv"
@@ -38,36 +38,14 @@
    "primary_category": "math.PR",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "We prove dynamical edge universality for three families of interacting particle systems for every $β>0$: $β$-Dyson Brownian motion with an analytic potential, weighted $β$-corners processes, and a class of discrete-time Markov chains.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves that for every β>0, three families of interacting particle systems (β-Dyson Brownian motion with analytic potential, weighted β-corners processes, and a class of discrete-time Markov chains), started from general non-equilibrium data, have their top k particles near the moving spectral edge converge, after edge-centering and n^{-2/3} space / n^{-1/3} time rescaling, to the top k curves of the Airy_β line ensemble, using dynamical loop equations and characteristic-flow estimates.",
+    "plain": "The paper studies systems of many randomly moving particles that repel each other, such as eigenvalues of large random matrices evolving over time. When the particles spread out in a square-root-shaped pattern, the particles at the outer edge behave in a universal way, and the authors prove this holds over time for three model families, starting from fairly general initial configurations. Zooming in on the leading few particles at the edge, their paths converge to a known random object called the Airy_β line ensemble.",
+    "why": "It extends edge universality, a central theme in random matrix theory, from equilibrium snapshots to the full time evolution of the particles, covering all values of the repulsion parameter β>0. Its relevance to other areas rests on the universality claim, but the abstract does not discuss specific applications.",
+    "background": "['Random matrices and eigenvalues: a large matrix with random entries has eigenvalues that spread into a limiting density, and this paper is about the particles at the edge of that spread.', 'The parameter β: it controls how strongly the particles repel each other (β=1, 2, 4 correspond to classical symmetric, Hermitian and quaternion ensembles).', 'Universality: many different random models share the same small-scale limiting behaviour, so the detailed model matters less than general features.', 'Airy process / line ensemble: the scaling limit of edge particles, a random infinite collection of continuous curves; the Airy_β version generalizes the Airy process to every β.', 'Dyson Brownian motion: a stochastic process in which eigenvalues evolve in time as diffusing particles with mutual repulsion.', 'Stieltjes transform and loop equations: analytic tools that encode the empirical particle density through a complex function and yield algebraic identities satisfied by moments of the system.', 'Scaling: space is rescaled by n^{-2/3} and time by n^{-1/3}, the standard edge scales.']",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We prove dynamical edge universality for three families of interacting particle systems for every $β>0$: $β$-Dyson Brownian motion with an analytic potential, weighted $β$-corners processes, and a class of discrete-time Markov chains. Our results apply to general non-equilibrium initial data and show that the Airy$_β$ line ensemble emerges at positive times whenever the limiting density has a regular square-root edge. More precisely, after centering at the moving deterministic edge and rescaling space and time on the $n^{-2/3}$ and $n^{-1/3}$ scales, respectively, the trajectories of the top $k$ particles converge jointly in distribution to the top $k$ curves of the Airy$_β$ line ensemble, for every fixed $k$, in the topology of uniform convergence on compact time intervals. The proof combines dynamical loop equations with characteristic-flow estimates to establish local laws near the moving edge and upper bounds on the extremal particle. We then identify the stochastic evolution of every subsequential limit of the rescaled Stieltjes transform and establish convergence through the pole-evolution characterization of the Airy$_β$ line ensemble.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26022",
-   "title": "Conditional propagation of chaos for systems of particles with polynomial interactions",
-   "url": "https://arxiv.org/abs/2611.26022v1",
-   "authors": [
-    "Vlad Bally",
-    "Eva Löcherbach"
-   ],
-   "label": "arXiv:2611.26022v1",
-   "primary_category": "math.PR",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We consider N interacting particles taking values in the real numbers and evolving in discrete time with time step 1/n.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We consider N interacting particles taking values in the real numbers and evolving in discrete time with time step 1/n. Each particle follows an individual dynamics, driven by its own noise, which depends on the total configuration via a polynomial interaction. Moreover, all particles receive the same collective perturbation. This perturbation is given by a multilinear homogeneous sum of order $ m \\geq 2$ of independent centered random fields which are evaluated at the current positions of the particles. We show that, as N and n tend to infinity, the system converges to the solution of a conditional McKean-Vlasov equation which is driven by an additional Brownian motion which emerges in the limit from the collective perturbations. Moreover we give explicit bounds for the Wasserstein-2-distance. Our proof combines the invariance principle of Mossel, O'Donnell and Oleszkiewicz (2010), the CLT for Wiener chaoses in the Wasserstein-2-form of Ledoux, Nourdin and Peccati (2015) and a conditional law of large numbers for weighted U-statistics proven in this paper.",
    "source": "arxiv"
   }
  ]

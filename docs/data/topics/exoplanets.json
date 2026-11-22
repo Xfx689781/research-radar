@@ -1,0 +1,55 @@
+{
+ "slug": "exoplanets",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25602",
+   "title": "Dependence of Dust Growth on Magnetic field Strength in Protoplanetary Disks",
+   "url": "https://arxiv.org/abs/2611.25602v1",
+   "authors": [
+    "Takashi Shimokawa",
+    "Masahiro Machida",
+    "Yoshihiro Kawasaki"
+   ],
+   "label": "arXiv:2611.25602v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We performed one-dimensional calculations to investigate how the magnetorotational instability (MRI) affects dust growth in protoplanetary disks.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We performed one-dimensional calculations to investigate how the magnetorotational instability (MRI) affects dust growth in protoplanetary disks. We simultaneously solved the evolution of the dust size distribution and the vertical magnetic field. The dust size distribution is evolved taking into ac- count coagulation and fragmentation. For the magnetic field evolution, we considered both ambipolar diffusion and Ohmic dissipation. The MRI-driven turbulent viscosity was estimated self-consistently from the local magnetic field strength and non-ideal magnetohydrodynamics diffusivities. We found that MRI-driven turbulence becomes stronger for smaller initial plasma beta, and the enhanced tur- bulence promotes dust growth in MRI-active regions. However, dust growth is ultimately limited by radial drift, and the dependence of dust size on the magnetic field strength is significant only in the outer regions of the disk. In other words, over most of the disk, radial drift remains the dominant factor controlling the maximum dust size, and the magnetic field strength plays only a minor role in determining the overall dust size distribution.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26548",
+   "title": "Demographic inference in exoplanet chemistry is shaped by retrieval assumptions",
+   "url": "https://arxiv.org/abs/2611.26548v1",
+   "authors": [
+    "Dwaipayan Dubey",
+    "Karan Molaverdikhani",
+    "Barbara Ercolano",
+    "Surya Shivaprasad",
+    "Fabian Grübel",
+    "Rosa Arenales-Lope"
+   ],
+   "label": "arXiv:2611.26548v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Understanding the chemical diversity of exoplanet atmospheres is crucial for linking atmospheric composition to planetary formation history.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Understanding the chemical diversity of exoplanet atmospheres is crucial for linking atmospheric composition to planetary formation history. Atmospheric C/O can provide clues about where and how planets form, particularly through the accretion of gas and solids across disk snowlines. Since planetary migration can change orbital distances and hence equilibrium temperatures ($T_{eq}$), investigating C/O across different planetary populations may provide insights into their formation and evolution. As observational precision improves with the JWST, the limits of standard atmospheric retrieval methods that assume altitude-independent molecular abundances have become apparent. We present atmospheric retrievals for 20 transiting planets with published JWST transmission spectra, including complementary HST spectra for targets where such data are available, spanning gas giants, warm Neptunes, and temperate/warm sub-Neptunes, to test how population-level chemical inferences depend on retrieval assumptions. Free-chemistry retrievals show a visually non-monotonic C/O-$T_{eq}$ distribution, but this apparent pattern is not statistically robust and is sensitive to sample composition. When molecular abundances are constrained by a grid of disequilibrium models, the inferred C/O distribution becomes more restricted, showing that demographic chemical trends can depend strongly on the adopted retrieval parameterization. Several hot Jupiters converge to low C/O ($\\leq$ 0.05), whereas colder, cloudy planets retain broad posteriors that reflect limited information content of their spectra. Our results suggest that population-level chemical trends inferred from free-chemistry retrievals should be interpreted with caution unless sample selection, residual structure, prior sensitivity, and chemical assumptions are explicitly tested.",
+   "source": "arxiv"
+  }
+ ]
+}

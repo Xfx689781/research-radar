@@ -1,0 +1,53 @@
+{
+ "slug": "climate-earth",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25829",
+   "title": "Multi-scale dynamics of deep convective self-aggregation. Part II: scale-by-scale budget and mesoscale self-similarity",
+   "url": "https://arxiv.org/abs/2611.25829v1",
+   "authors": [
+    "Lorenzo Silvestri",
+    "Paolina Bongioannini Cerlini",
+    "Andrea Cimarelli"
+   ],
+   "label": "arXiv:2611.25829v1",
+   "primary_category": "physics.ao-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "This work investigates deep convective self-aggregation in the space of scales, extending the physical-space analysis of Part I.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "This work investigates deep convective self-aggregation in the space of scales, extending the physical-space analysis of Part I. We introduce a novel theoretical framework by examining and deriving a generalized Yaglom equation for the second-order structure function $\\langle δh_f^{\\prime 2} \\rangle$, the scale-dependent variance of Frozen Moist Static Energy (FMSE). Self-aggregation is found to be sustained by an inverse energy cascade driven by boundary-layer production and mediated by mesoscale circulations with horizontal scales $r \\sim$(100-250 km). The inverse cascade of energy is found to be realized through a series of shallow and mid-level mesoscale circulations which behave in a self-similar way. Accordingly, the scale-energy variance exhibits an extraordinary collapse across all atmospheric layers onto a robust self-similar power law, $\\langle δh_f^{\\prime 2} \\rangle \\sim r^{6/5}$. In contrast, horizontal velocity increments show a degree of self-similarity ($\\langle δu_r^{\\prime 2} \\rangle \\sim r^{2/5}$) that retains a residual height dependence. Interestingly, the FMSE scaling breaks down at elevations lower than 750 m and at small local scales below 100 km, allowing us to identify the boundary layer top as a scale-dependent dividing layer where the strong stratification filters the interactions between the surface and free-troposphere, so that small scale dynamics of the low and high atmospheric layers are decoupled while those at large mesoscale are coupled. The derived scaling laws are also used to quantify the moisture-convection feedback via scale-dependent correlation coefficients that show that vertical transport strengthens with scale ($ρ_{mc\\perp} \\sim r^{2/5}$), while horizontal convergence weakens at the exact inverse rate ($ρ_{mc\\parallel} \\sim r^{-2/5}$).",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26095",
+   "title": "Approximate Adjoint Models for Memory and Compute-Efficient Online Learning of Hybrid Models",
+   "url": "https://arxiv.org/abs/2611.26095v1",
+   "authors": [
+    "Emilio González-Zamora",
+    "Pierre Tandeo",
+    "Laurent Debreu",
+    "Said Ouala"
+   ],
+   "label": "arXiv:2611.26095v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Differentiable programming enables online calibration of numerical models by minimizing errors accumulated along simulated trajectories.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Differentiable programming enables online calibration of numerical models by minimizing errors accumulated along simulated trajectories. This includes estimating physical parameters and training neural sub-models in hybrid configurations. Gradients are typically computed using adjoint methods, or backpropagation through time (BPTT), whose computational and memory costs grow with the length of the training window. This limits the duration and resolution of hybrid-model training, a major bottleneck for realistic geophysical applications. Approaches like truncated BPTT reduces memory use by discarding sensitivities across truncation boundaries, introducing gradient bias and neglecting long-range dependencies. We propose a class of gradient approximation methods that preserve the adjoint recurrence over the full trajectory while approximating only the pullback operators within it. Exact pullbacks are computed by automatic differentiation at sparse anchor states only. Between anchors, sensitivities propagate either through the identity (Zero-order) or through a reused, frozen pullback (Pullback Reuse). This approximation makes the parameter pullback constant within each chunk, allowing the gradient sum to factorize so that a single evaluation per chunk replaces one per time step. We evaluate both on three systems of increasing complexity, an incomplete Lorenz-63 model, a large-eddy closure for two-dimensional quasi-geostrophic turbulence, and bias correction in a multilayer quasi-geostrophic ocean model. Peak memory falls by up to an order of magnitude and runtime up to fourfold, with Pullback Reuse staying closest to the exact gradient direction. In all three cases, approximate gradients support hybrid-model training at comparable accuracy, showing that effective online learning does not require exact gradients.",
+   "source": "arxiv"
+  }
+ ]
+}

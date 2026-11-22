@@ -1,0 +1,50 @@
+{
+ "slug": "statistical-physics",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26394",
+   "title": "Nonequilibrium Statistical Mechanics: Physical Concepts & Mathematical Tools",
+   "url": "https://arxiv.org/abs/2611.26394v1",
+   "authors": [
+    "Sagar Chakraborty"
+   ],
+   "label": "arXiv:2611.26394v1",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "These are introductory lecture notes that present core concepts and mathematical techniques of classical nonequilibrium statistical mechanics, assuming prior knowledge of equilibrium statistical mechanics.",
+    "plain": "Statistical mechanics explains how the behavior of huge collections of particles relates to averages and probabilities, and most of its textbook tools assume the system has settled into equilibrium. These lecture notes gather the basic ideas and mathematical methods for the harder case of systems that are not settled, such as systems driven by flows of energy or matter. The author says the material is a synthesis and presentation of existing ideas, not new results, and notes that the same tools are used in biology, ecology, economics and sociology. The abstract does not state specific findings.",
+    "why": "It is a teaching resource for readers who want an entry point into nonequilibrium methods used across complex-systems fields; the abstract itself makes no claims of new results, so its value lies in pedagogy rather than discovery. I cannot tell from the abstract which specific cross-field applications the notes cover.",
+    "background": "['Equilibrium statistical mechanics: how microscopic states give rise to macroscopic quantities like temperature and pressure', 'Basic probability and averages over ensembles of states', 'The general idea of a system being driven away from equilibrium, for example by a temperature or energy gradient', 'Basic calculus and differential equations']",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "As anything not in equilibrium is, by definition, nonequilibrium, there is no universally agreed-upon set of topics that can constitute an exhaustive presentation of nonequilibrium statistical mechanics. At the same time, nonequilibrium statistical mechanics has transcended traditional physics to become a powerful language for complex systems. Prompted by an enthusiastic curiosity about complex systems, these cursory lecture notes attempt to elucidate some introductory concepts and techniques used in classical nonequilibrium statistical mechanics, which find successful applications not only in foundational physics, but also across other fields such as biology, ecology, economics, and sociology. Except for the specific synthesis and presentation of the material, which assumes basic familiarity with equilibrium statistical mechanics, the author claims no originality.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26228",
+   "title": "Attention Head Specialization: Phase Transitions in Sample Complexity",
+   "url": "https://arxiv.org/abs/2611.26228v1",
+   "authors": [
+    "Léo Catteau",
+    "O. Duranthon",
+    "Lenka Zdeborová"
+   ],
+   "label": "arXiv:2611.26228v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Attention heads specialize into distinct functions during training, often emerging in stages together with sharp changes in model behavior.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Attention heads specialize into distinct functions during training, often emerging in stages together with sharp changes in model behavior. While this phenomenon has mostly been studied as a function of training time, we ask how head specialization depends on the amount of available training data. Empirically, we find that heads specialized to syntactic relations in BERT emerge as the dataset size increases. We then study this phenomenon in a solvable high-dimensional model of multi-head attention and establish that, in this model, head specialization is a genuine phase transition in sample complexity, corresponding to a non-analyticity in the test error and other observables. Depending on data structure and regularization, specialization can follow uninformative head differentiation or occur through a cascade of phase transitions that progressively recover weaker latent features, providing a statistical form of simplicity bias. Finally, we relate these statistical transitions to the stagewise emergence of specialized heads during online learning, disentangling statistical from dynamical origins of head specialization.",
+   "source": "arxiv"
+  }
+ ]
+}

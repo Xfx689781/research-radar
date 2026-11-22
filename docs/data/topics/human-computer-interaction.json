@@ -1,0 +1,54 @@
+{
+ "slug": "human-computer-interaction",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26396",
+   "title": "Rethinking Utility in Differentially Private Visualization: A Channel-Centric Perspective",
+   "url": "https://arxiv.org/abs/2611.26396v1",
+   "authors": [
+    "Jing Yang",
+    "Sarayu Pacca",
+    "Zhaocong Yang",
+    "Liyue Fan"
+   ],
+   "label": "arXiv:2611.26396v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "This paper reframes existing findings on how differential privacy noise affects charts through the lens of visual channels (position, color, size and similar mark properties), and proposes a channel-read-mechanism hypothesis for when privacy-protected visualizations stay useful.",
+    "plain": "Differential privacy adds carefully calibrated random noise to data so that individuals cannot be picked out, but the noise can make charts harder to read. The authors argue that earlier studies of this effect were tied to specific chart types, so they look at the problem through 'visual channels', the properties such as position, length or color that encode data values. They synthesize prior work, rather than running new experiments, to suggest that a chart's usefulness under noise depends on both which channels carry the data and which privacy mechanism is used.",
+    "why": "It offers a common vocabulary for comparing privacy-preserving charts across chart types and points to gaps in how these tools are evaluated, which matters for anyone designing or judging privacy-protected dashboards. Because the paper is a synthesis from the abstract alone, the strength of its hypothesis rests on how well the cited prior studies support it, which I cannot check here.",
+    "background": "[\"Differential privacy (DP): a mathematical guarantee that results reveal little about any single person's record, achieved by adding random noise to data or outputs.\", 'Visual channels: the visual properties of marks (position, length, color, size, shape) that encode data values in a chart.', 'Perceptual effectiveness: how accurately and quickly people read values from different channels; some channels are easier to read than others without noise.', 'Utility: how useful a visualization remains for its intended task after privacy noise is added.', 'Task-relevant reads: the specific judgments a viewer needs to make from a chart, such as comparing values or spotting a trend.']",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Differential privacy (DP) is increasingly adopted to protect sensitive data in visualization, but understanding how privacy-induced noise affects visual representations remains fragmented. Prior work has examined the impact of DP noise on specific chart types, yet these findings are typically tied to particular chart types and evaluation settings, making it difficult to generalize across contexts. In parallel, visualization research has long established that visual channels, the visual properties of marks that encode data attributes, differ in perceptual effectiveness under noise-free conditions. However, these principles have not been systematically revisited under DP, where noise is deliberately introduced into the data to protect privacy. In this paper, we present a channel-centric perspective to reframe prior empirical and theoretical results. Our synthesis drawson prior findings to motivate a channel-read-mechanism hypothesis: the utility of DP visualizations may depend on the task-relevant reads made salient by visual channel configurations and DP mechanism choice jointly. Moreover, this perspective highlights the role of channel choice throughout the privacy-preserving visualization pipeline, from disclosure framing and DP algorithm design to utility evaluation and interpretation of noisy outputs. The synthesis also identifies gaps in the existing evaluation literature and highlights research opportunities for channel-aware DP visualization.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25377",
+   "title": "VideoTrail: Interactive Video Foraging Through Hierarchical Visualization",
+   "url": "https://arxiv.org/abs/2611.25377v1",
+   "authors": [
+    "Catherine Yeh",
+    "Bryan Wang",
+    "Fernanda Viégas",
+    "Martin Wattenberg"
+   ],
+   "label": "arXiv:2611.25377v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "VideoTrail is a browser extension that replaces a plain video timeline with an AI-generated hierarchical map of segments, using semantic and structural cues as information scent to support goal-directed video navigation, evaluated in a 16-person user study.",
+    "plain": "People often have to watch long videos or scrub back and forth along a progress bar to find one specific moment, which is slow and hit-or-miss. VideoTrail is a browser add-on that uses AI to break a video into a nested outline of sections, with cues such as topics and on-screen text, so viewers can head toward the part they want. The authors report that in a study with 16 participants, it helped people find key moments more efficiently than a traditional timeline and allowed new ways of navigating, though the abstract gives no detailed figures.",
+    "why": "It applies a well-known idea from information foraging theory, where people follow scent cues toward likely targets, to the everyday problem of searching video, which may matter for education, lecture review and tutorial use. The abstract is thin on measured results, so how large or robust the benefit is remains unclear from this summary alone.",
+    "background": "[\"Scrubbing: dragging the playhead along a video's progress bar to skip ahead or review.\", \"Information foraging theory: a model from HCI saying people navigate information by following cues ('scent') that suggest where useful content lies.\", 'Hierarchical visualization: showing information as nested levels, such as chapters containing sections, rather than one flat list.', 'Semantic cues: meaning-based signals such as topics or transcript text; structural cues: layout signals such as scene or section boundaries.', 'Multimodal: using more than one type of input, here visual frames and text.', 'Browser extension: a small add-on that adds features to a web browser without changing the video site itself.']",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "People often watch videos to find information, but locating relevant moments can be difficult and time-consuming. Existing strategies like scrubbing rely primarily on visual scanning and linear search, providing limited support for goal-directed navigation. We present VideoTrail, an AI-powered browser extension that supports information seeking in videos through a hierarchical visualization. Inspired by information foraging theory, VideoTrail surfaces semantic and structural cues as information scent, creating an explorable roadmap of segments. The system is multimodal and adaptive, prioritizing visual or textual scent based on the video's content. In a user study (N=16), VideoTrail helped participants efficiently locate key moments and enabled new navigation strategies compared to traditional timelines, highlighting how exposing an adaptive video structure can enhance goal-directed viewing.",
+   "source": "arxiv"
+  }
+ ]
+}

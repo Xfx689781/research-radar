@@ -1,0 +1,84 @@
+{
+ "slug": "mental-health",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.19.26368410",
+   "title": "Microstructure predicts cognition following deep brain stimulation in Parkinson's disease",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368410v1",
+   "authors": [
+    "Chen, L.",
+    "Witt, L.",
+    "Calvano, A.",
+    "Bopp, M. H. A.",
+    "Nimsky, C.",
+    "Dafsari, H. S.",
+    "Timmermann, L.",
+    "Pedrosa, D. J.",
+    "Belke, M.",
+    "Loehrer, P. A."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.19.26368410 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Deep brain stimulation of the subthalamic nucleus (STN-DBS) effectively treats motor and non-motor symptoms in advanced Parkinson's disease (PD).",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Deep brain stimulation of the subthalamic nucleus (STN-DBS) effectively treats motor and non-motor symptoms in advanced Parkinson's disease (PD). However, 15-20 % of patients experience postoperative cognitive decline and identifying preoperative markers remains an unmet clinical need. In this prospective open-label study, we employed NODDI-DTI to investigate whether cerebral microstructure predicts cognitive outcomes following STN-DBS. Forty PD patients underwent diffusion MRI and neuropsychological assessments at preoperative baseline and 6-month follow-up. A whole-brain voxel-wise analysis related microstructural metrics to postoperative cognitive change. Compromised microstructure within three large-scale networks - the frontoparietal/attentional, default mode/limbic, and ventral associative/visual networks - was associated with greater postoperative cognitive decline. These findings suggest that both disease-related network degeneration and stimulation acting on compromised circuits may contribute to postoperative cognitive decline. In conclusion, preoperative evaluation of microstructural integrity may help identify patients at risk for postoperative cognitive decline, supporting individualised counselling and targeted behavioural monitoring after STN-DBS.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.18.26368420",
+   "title": "Plasma neurodegeneration biomarkers and clinical progression in early sporadic Parkinson's disease",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.18.26368420v1",
+   "authors": [
+    "Tropea, T. F.",
+    "Coughlin, D. G.",
+    "Brooker, S. M.",
+    "Chatterjee, K.",
+    "Johnson, N. S.",
+    "Marshall, M.",
+    "Nair, A.",
+    "Flores, J. E.",
+    "Lafontant, D.-E.",
+    "Coffey, C. S.",
+    "Kirmess, K. M.",
+    "West, T.",
+    "Verghese, P. B.",
+    "Russ, K. A.",
+    "Morris, A.",
+    "Lu, M.",
+    "Iaccarino, L.",
+    "Aldea-Stevenson, P.",
+    "Flitter, M.",
+    "Beck, R.",
+    "Hutten, S.",
+    "Chahine, L. M.",
+    "Weintraub, D.",
+    "Foroud, T.",
+    "Simuni, T.",
+    "Marek, K.",
+    "Merchant, K.",
+    "The Parkinson's Precision Medicine Initiative,"
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.18.26368420 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Objectives: Plasma neurodegeneration biomarkers offer an opportunity to characterize Parkinson's disease (PD) biology.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Objectives: Plasma neurodegeneration biomarkers offer an opportunity to characterize Parkinson's disease (PD) biology. The objective of this study was to investigate such biomarkers in deeply-phenotyped participants in Parkinson's Precision Medicine Initiative (PPMI). Methods: Baseline plasma samples from early (<2 years since diagnosis) sporadic PD participants with a positive CSF alpha-synuclein seed amplification assay (aSyn-SAA) and healthy controls (HC) with a negative aSyn-SAA test were utilized. Plasma P-tau217 (Roche Diagnostics), neurofilament light chain (NfL, Quanterix), glial fibrillary acidic protein (GFAP, Quanterix), and (PD only) amyloid-beta (A{beta}) levels (40 and 42, C2N Diagnostics) were measured. Clinical features at baseline and over up to 11 years were compared across biomarker tertiles in models controlling for age, sex, and baseline outcome variable. Results: The cohort was 97 HC and 523 PD and participants. Median [IQR] biomarker values (pg/mL) for HC and PD were P-tau217: 0.14 [0.06 -0.75], 0.15 [0.06 -0.90]; NfL: 10.6 [3.13 -49.85], 12.26 [3.77-62.67]; GFAP: 66.56 [19.75 -403.48], 87.19 [14.55 -531.82]; and in PD A{beta}40: 391.32 [209.95 -538.38]; A{beta}42: 42.74[27.75 -68.55]. No biomarkers differed between HC and PD. In PD, biomarkers were associated with age. In PD only, higher baseline levels of P-tau217 and NfL were associated with greater hazards of a worse cognitive and balance outcome. P-tau217, NfL, and GFAP levels were associated with change in cognitive score over time. Interpretation: Plasma P-tau217, NfL and GFAP levels in early, sporadic PD with confirmed synucleinopathy predict future cognitive and functional impairment, and these findings can inform clinical research design and clinical care.",
+   "source": "medrxiv"
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "slug": "theory-of-computation",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26080",
+   "title": "Running-Time Lower Bounds under FPT $\\neq$ W[1]",
+   "url": "https://arxiv.org/abs/2611.26080v1",
+   "authors": [
+    "Hendrik Molter"
+   ],
+   "label": "arXiv:2611.26080v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We revisit running-time lower bounds historically based on the Exponential Time Hypothesis.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We revisit running-time lower bounds historically based on the Exponential Time Hypothesis. Our case study asks how much of their quantitative content can be recovered under the assumption FPT $\\neq$ W[1]. The reductions encode the choice of a clique in few bits and control the target parameter in terms of that encoding. This makes a sufficiently fast algorithm for the target problem yield a fixed-parameter algorithm for deciding whether a graph has a clique of the requested size. We obtain twelve lower bounds for deterministic algorithms across graph, string, and integer feasibility problems, including bounds that hold under structural restrictions. In several cases the same function of the parameter appears in the exponent as in the historical bound, with the additional requirement that the cutoff for any prescribed saving in the exponent be computable.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26188",
+   "title": "Approximation Algorithms for Asymmetric Multi-Path TSP",
+   "url": "https://arxiv.org/abs/2611.26188v1",
+   "authors": [
+    "Manuel Christalla",
+    "Vera Traub"
+   ],
+   "label": "arXiv:2611.26188v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Asymmetric Multi-Path TSP is the generalization of the Asymmetric Traveling Salesperson Problem where we are looking for $k$ walks, each with prescribed start $s_i$ and prescribed end $t_i$, such that every vertex is visited by at least one of the walks.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Asymmetric Multi-Path TSP is the generalization of the Asymmetric Traveling Salesperson Problem where we are looking for $k$ walks, each with prescribed start $s_i$ and prescribed end $t_i$, such that every vertex is visited by at least one of the walks. The objective is to minimize the total length of all walks. In general, it is NP-hard to find any approximation for this problem in polynomial time (even if the approximation factor is allowed to depend on the number of vertices). We show that one can obtain an $O(k)$-approximation in time $n^{O(k)}$, answering an open question by Friggstad [2013]. For the special case where all tour start vertices $s_i$ are identical and all end vertices $t_i$ are identical, we obtain an $O(k)$-approximation in polynomial time, as well as an $(O(\\frac{1}ε), 1+ε)$-bicriteria approximation. For the multi-depot setting, where $s_i =t_i$ for all $i$, we obtain a constant-factor approximation in polynomial time. Finally, our results imply improved constant-factor approximation algorithms for Asymmetric Regret-Bounded Vehicle Routing and unit-weight Path ATSP.",
+   "source": "arxiv"
+  }
+ ]
+}

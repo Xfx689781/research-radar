@@ -1,0 +1,48 @@
+{
+ "slug": "financial-markets",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25762",
+   "title": "Trading Before a Committed Rebalance",
+   "url": "https://arxiv.org/abs/2611.25762v1",
+   "authors": [
+    "Khizar Qureshi"
+   ],
+   "label": "arXiv:2611.25762v1",
+   "primary_category": "q-fin.TR",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "An institution must complete a portfolio adjustment, but traders who prepare inventory for it can choose whether to participate.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "An institution must complete a portfolio adjustment, but traders who prepare inventory for it can choose whether to participate. We study how public forecasts affect the institution's cost in a Bayesian execution game with optional activation, transient impact, and uniform-price terminal completion. The curvature of equilibrium cost as a function of the posterior target mean determines the value of information. In the scalar model, information benefits every fixed participation roster. Optional supply can reverse this ranking at entry, at full participation, and in a smooth interior with lognormal activation costs. For centered scalar targets, information weakly lowers cost relative to no information, strictly when the posterior mean is nonzero with positive probability. Centered Gaussian precision gains are always beneficial. An exact symmetric finite-population equilibrium identifies how information resolution and individual strategic size interact near entry. A portfolio extension gives a matrix criterion for the fixed-roster ranking, which can fail under general cross-impact. Even with isotropic execution, shared activation allows equally accurate signals about target magnitude and composition to have opposite execution values under one unchanged prior. Intraday ETF price data is used to characterize target uncertainty and trading conditions without identifying activation or institutional costs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26466",
+   "title": "Bond yield dynamics: a multi-country multi-horizon string model",
+   "url": "https://arxiv.org/abs/2611.26466v1",
+   "authors": [
+    "Paul Ruelloux"
+   ],
+   "label": "arXiv:2611.26466v1",
+   "primary_category": "q-fin.ST",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "This article extends the forward rate curve model of Baaquie and Bouchaud (2004) and Le Coz and Bouchaud (2024) to the multi-country setting of government bond markets.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "This article extends the forward rate curve model of Baaquie and Bouchaud (2004) and Le Coz and Bouchaud (2024) to the multi-country setting of government bond markets. Cross-country blocks of correlation matrices of realized yield changes are found to display significant asymmetry between maturities. In the framework of the proposed model, this amounts to give to each country an idiosyncratic time scale. Each time scale describes how the perceived time between future dates depends on the dates themselves. The differences between these time scales structure the interactions between curves and reproduce the characteristic asymmetry of cross-country correlation matrices. The proposed model captures the full set of cross-curve correlations simultaneously at both daily and intra-day frequencies. When calibrated on government bonds issued by nine countries of the euro-zone, the typical reconstruction error is 1.7%.",
+   "source": "arxiv"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "slug": "number-theory",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25399",
+   "title": "Rational Elliptic Period Relations Across Realizations: Complex Lattices, Local p-adic Periods, and Drinfeld Modules",
+   "url": "https://arxiv.org/abs/2611.25399v1",
+   "authors": [
+    "Mohammadreza Mohajer"
+   ],
+   "label": "arXiv:2611.25399v1",
+   "primary_category": "math.NT",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We determine the algebraic relations among full de Rham comparison periods of elliptic curves over finite extensions of $\\mathbb Q_p$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We determine the algebraic relations among full de Rham comparison periods of elliptic curves over finite extensions of $\\mathbb Q_p$. The connected local monodromy group gives the transcendence degree and an explicit affine linear relation ideal for the full matrix in Fontaine's field $B_{\\mathrm{dR}}$. After normalizing the holomorphic row and reducing to $\\mathbb C_p$, the transcendence degree drops by one and the normalized determinant supplies the additional relation. Every polynomial relation of degree at most $d$ is detected modulo $t^{d+1}$. For $d\\ge1$ this bound is sharp for each elliptic curve. A rational quasi-period row gives a Galois-stable Tate line. Together with an algebraic holomorphic period ratio it forces potential splitting, which identifies the exact ordinary CM obstruction. We compute the full Tate matrix. For ordinary non-CM curves with $p\\ge5$, the standard quasi-period row is rational precisely at a zero of Katz's $E_{2,p}$. Away from the zeros the two full ratios are algebraically independent. At the zeros, a nonzero quasi-period and the normalized holomorphic ratio have algebraically independent images in $\\mathbb C_p$. The complex question that motivates these results, the analogue for Drinfeld modules, and a conditional arithmetic consequence for Katz values complete the comparison.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26597",
+   "title": "Equivariant iterated Eisenstein integrals for congruence subgroups of level 2",
+   "url": "https://arxiv.org/abs/2611.26597v1",
+   "authors": [
+    "Emiel Claasen",
+    "Mehregan Doroudiani",
+    "Claude Duhr",
+    "Axel Kleinschmidt",
+    "Franca Lippert",
+    "Oliver Schlotterer",
+    "Yoann Sohnle"
+   ],
+   "label": "arXiv:2611.26597v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper constructs non-holomorphic modular objects, called equivariant iterated Eisenstein integrals, for the level-2 congruence subgroups Γ(2) and Γ_0(2), built from iterated Eisenstein integrals, their complex conjugates, and level-2 cyclotomic multiple zeta values, following Brown's SL_2(Z) construction.",
+    "plain": "Modular forms are highly symmetric functions on the complex upper half-plane, and their 'antiderivatives' (integrals) do not keep that symmetry on their own. This paper repairs the problem for a specific family of symmetry groups of level 2, by adding correction terms built from special constants called multiple zeta values, together with complex conjugates. The authors work with generating series valued in an infinite-dimensional algebraic group. When they restrict to the weight-2 case, they recover known single-valued multiple polylogarithms on a particular curve. The abstract does not state any further consequences beyond this construction.",
+    "why": "It extends a known construction from the full modular group to two important congruence subgroups, and it links iterated integrals of Eisenstein series to multiple polylogarithms and to physics-adjacent single-valued functions. The abstract does not explain the wider significance beyond these connections, and I have not checked how much new this is relative to prior work.",
+    "background": "['Modular forms: complex functions on the upper half-plane with transformation rules under a group of matrices (here SL_2(Z) and its subgroups).', 'Congruence subgroups of level N: subgroups defined by reducing matrix entries mod N; Γ(2) and Γ_0(2) are the level-2 cases.', 'Eisenstein series: standard explicit modular forms; their iterated integrals are repeated antiderivatives.', 'Multiple zeta values and cyclotomic variants: iterated sums or integrals producing special constants, with roots-of-unity versions at level N.', 'Non-holomorphic modular forms: modular objects that involve complex conjugation and are not holomorphic, needed to make the corrected objects transform cleanly.', 'Generating series and pro-unipotent Lie groups/algebras: a packaging device that encodes all iteration depths at once and tracks how the corrections compose.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The modular properties of holomorphic Eisenstein series for $\\mathrm{SL}_2(\\mathbb{Z})$ and its congruence subgroups do not carry over to their primitives. Instead, the transformation of iterated Eisenstein integrals under congruence subgroups of level $N$ introduces inhomogeneous terms comprising (among others) cyclotomic multiple zeta values of level $N$. We combine iterated Eisenstein integrals for the congruence subgroups of level $N=2$ of arbitrary iteration depth with their complex conjugates and (single-valued) level-2 cyclotomic multiple zeta values such that they define non-holomorphic modular forms. Our construction of these so-called equivariant iterated Eisenstein integrals for $Γ(2)$ and $Γ_0(2)$ proceeds at the level of generating series that take values in an infinite-dimensional (pro-unipotent) Lie group and closely follow Brown's analogous construction in the $\\mathrm{SL}_2(\\mathbb{Z})$ case. The required insertions of cyclotomic multiple zeta values are controlled by zeta generators for level 2 that normalise the corresponding (pro-nilpotent) Lie algebra of the generating series and whose Lie-bracket relations we determine systematically. Upon restriction to Eisenstein series of modular weight~2, we recover single-valued multiple polylogarithms on the genus 0 modular curve $Γ(2)\\backslash \\mathbb{H}$.",
+   "source": "arxiv"
+  }
+ ]
+}

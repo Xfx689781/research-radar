@@ -3,6 +3,29 @@
  "updated": "2026-11-22",
  "papers": [
   {
+   "uid": "arxiv:2611.25980",
+   "title": "Learning What Actions Change: Action Effect Matching for Dynamics-Faithful World Models",
+   "url": "https://arxiv.org/abs/2611.25980v1",
+   "authors": [
+    "John Won",
+    "Yonghoon Dong",
+    "Jinwoo Shin"
+   ],
+   "label": "arXiv:2611.25980v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "World models aim to predict environment dynamics under actions, enabling the prediction of action consequences without executing them in the real world.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "World models aim to predict environment dynamics under actions, enabling the prediction of action consequences without executing them in the real world. Yet despite producing increasingly realistic videos, current world models often fail to capture how small action changes affect future observations. This limits their use in tasks such as robotic policy evaluation and model-based planning, where nearly identical actions can lead to qualitatively different outcomes. To address this, we propose AFFECT, an auxiliary training objective for learning the distribution of visual changes induced by action perturbations. Specifically, we inject temporally correlated noise into the actions of a policy trained on task-agnostic human teleoperation. We then train the world model so that its generated videos respond to this noise as the recorded videos do, without requiring repeated executions from the same initial state. Across OGBench simulation and real-world DROID and ALOHA-2 setups, AFFECT makes world-model rollouts more faithful to real outcomes. On DROID, the Pearson correlation between policy success rates in the world model and on the real robot rises from 0.47 to 0.79, alongside up to 23% lower FVD. These gains carry over to planning, where selecting actions with AFFECT-trained world models improves task success by up to 8.3%.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.25336",
    "title": "MoRE: Mixture-of-Experts for Multi-Physics Robotic World Models",
    "url": "https://arxiv.org/abs/2611.25336v1",
@@ -18,65 +41,14 @@
    "primary_category": "cs.RO",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "A robotic world model should predict how objects evolve under robot actions and physical dynamics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "MoRE is a 3D world model for robots that uses a mixture of motion experts, one each for rigid, deformable, and prehensile (grasping) dynamics, and plugs into model predictive control for manipulation.",
+    "plain": "A robot that plans its moves needs a model of how objects will move in response to its actions, but objects behave very differently: a rigid block, a squishy cloth, and a held object each follow different physics. The authors split these cases into separate 'expert' sub-models inside one network, so each type of motion gets its own specialized treatment. They report that this improves prediction accuracy across these regimes and gives better results when the model is used to control a real robot.",
+    "why": "Robots that must handle many kinds of objects need predictive models that do not blur together different physical behaviors, so this design choice is relevant to manipulation research. The abstract gives only a high-level summary, so the size of the gains and how broadly they hold are unclear without the full paper.",
+    "background": "['World model: a learned model that predicts how the environment will change after an action, used by robots to imagine outcomes before acting.', \"Mixture of experts: a neural network design where a gating mechanism routes inputs to specialized sub-networks ('experts') rather than using one network for everything.\", 'Rigid vs. deformable dynamics: rigid objects keep their shape when pushed, while deformable ones (cloth, dough, rope) bend and change shape, which needs different modeling.', \"Prehensile manipulation: actions where the robot grasps and holds an object, so the object's motion is tied to the gripper.\", 'Model Predictive Control (MPC): a planning method that repeatedly simulates candidate action sequences with a model, picks the best one, executes the first step, and replans.', 'Sim-to-real data: training on a mix of simulated and real-world recordings to cover more cases than real data alone provides.']",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "A robotic world model should predict how objects evolve under robot actions and physical dynamics. While recent 3D world models have shown strong predictive capabilities, they still struggle with the heterogeneous dynamics arising from diverse object interactions. To address this in a unified framework, we decompose robotic interactions into distinct physical regimes and assign each to a specialized motion expert. We introduce MoRE, a 3D world model with a mixture of motion experts organized around rigid, deformable, and prehensile dynamics. This design enables a single model to capture diverse physical behaviors while preserving regime-specific priors. Trained on mixed simulation and real-world data, MoRE integrates with Model Predictive Control (MPC) to support diverse manipulation tasks. Experiments show that MoRE improves prediction accuracy across physics regimes, leading to stronger real-world MPC performance. Code, data, and project website are available at https://alwaysleepy.github.io/MoRE-WM-site/.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25778",
-   "title": "ECHO: In-Context Behavior foundation model for Humanoid Whole-Body Control",
-   "url": "https://arxiv.org/abs/2611.25778v1",
-   "authors": [
-    "Xingyi Wang",
-    "Bin Li",
-    "Jiyuan Shi",
-    "Chenyun Zhang",
-    "Weiji Xie",
-    "Xiangyu Miao",
-    "Junsong Wu",
-    "Wei Song",
-    "Shiqiang Zhu",
-    "Chenjia Bai"
-   ],
-   "label": "arXiv:2611.25778v1",
-   "primary_category": "cs.RO",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "Humanoid behavior foundation models (BFMs) acquire diverse skills through large-scale motion imitation and massively parallel reinforcement learning, yet broad behavioral capability does not ensure precise execution across physical conditions.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "Humanoid behavior foundation models (BFMs) acquire diverse skills through large-scale motion imitation and massively parallel reinforcement learning, yet broad behavioral capability does not ensure precise execution across physical conditions. Without distinguishing the underlying dynamics, policies may favor conservative compromises over environment-specific precision. We introduce ECHO, an in-context BFM that turns interaction experience into environment-specific control, separating general behavioral capability from dynamics-specific execution. Mixed and Annealed Sampling first establishes a behavior prior in a single pretraining stage by balancing targeted practice with broad motion coverage. Building on this prior, Context Representation and Residual Adaptation learns structured dynamics representations from interaction histories to guide residual corrections to the frozen prior, enabling adaptation without test-time parameter updates. Extensive experiments show that ECHO outperforms all baseline methods across diverse motions and physical conditions. Moreover, deployment on the Unitree G1 demonstrates whole-body teleoperation spanning extreme acrobatics and terrain interaction, alongside payload adaptation in manipulation and whole-body control. Page is available at https://mwondering.github.io/echo-bfm/",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26420",
-   "title": "Awaken-HI: Scaling Humanoid Intelligence with Whole-Body Human Experience",
-   "url": "https://arxiv.org/abs/2611.26420v1",
-   "authors": [
-    "EngineAI"
-   ],
-   "label": "arXiv:2611.26420v1",
-   "primary_category": "cs.RO",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "A central goal of humanoid robotics is for robots to perform the everyday work people do in homes and workplaces.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "A central goal of humanoid robotics is for robots to perform the everyday work people do in homes and workplaces. Existing egocentric video datasets cover many of these activities but provide little synchronized whole-body motion data for learning loco-manipulation at scale. We build Awaken-Human, which pairs approximately 50,000 hours of egocentric stereo video with synchronized whole-body human motion and covers more than 100 skills. Building on this, we also introduce Awaken-HI (Humanoid Intelligence), a vision-language-action model for humanoid loco-manipulation that jointly predicts original human motion and retargeted robot actions through a shared action expert. We show that loco-manipulation skills transfer more effectively from people to humanoids when human trajectories directly supervise the shared action expert. Increasing human pretraining data reduces held-out robot action prediction error according to an empirical scaling law and raises the mean success rate on downstream real-robot tasks. After full-corpus pretraining and T800 adaptation, Awaken-HI achieves a mean success rate of 93.75% across eight individual tasks and outperforms GR00T N1.7 and $π_{0.5}$ in both individual and long-horizon evaluations. The same policy generalizes to objects unseen during robot post-training and to new pairings of familiar objects and destinations.",
    "source": "arxiv"
   }
  ]

@@ -1,0 +1,51 @@
+{
+ "slug": "topology",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25295",
+   "title": "Kernel Regression using Persistence Diagrams",
+   "url": "https://arxiv.org/abs/2611.25295v1",
+   "authors": [
+    "Saksham Aggarwal",
+    "James Nichols",
+    "Katharine Turner"
+   ],
+   "label": "arXiv:2611.25295v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper builds a kernel-weighted local-averaging regression estimator that takes persistence diagrams as inputs, uses Wasserstein distance as the similarity measure, and proves consistency and convergence-rate bounds in the L² sense.",
+    "plain": "Data scientists often summarize the shape of a dataset as a 'persistence diagram', a compact list of loops, holes, and clusters that appear at different scales. This paper asks how to predict a single number from such a shape summary, using a method that predicts by averaging the outputs of similar past examples. The authors prove the method gets more accurate as data grows, give a bound on how fast that happens, and report experiments where it performs well, especially with little data. The abstract does not give the details of those experiments.",
+    "why": "Predicting outcomes from shape features is a practical need in areas like materials science and medical imaging, and this paper gives a theoretical footing for doing so directly in diagram space. The abstract alone does not show how the assumptions or rates compare with other approaches, so the strength of the contribution is hard to judge from it.",
+    "background": "['Persistent homology: a method that tracks topological features (connected pieces, loops, voids) across a range of scales, summarized as a persistence diagram.', 'Wasserstein distance: a way to measure how far apart two distributions or point sets are, here applied to two persistence diagrams.', 'Kernel regression: predicting a value by a weighted average of training outputs, where weights fall off with the distance between inputs.', 'Consistency: the property that an estimator converges to the true relationship as the sample size grows.', 'Convergence rate and L² error: how quickly the average squared prediction error shrinks with more data.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Persistence diagrams are widely used in topological data analysis to summarize topological and geometric structure in data. We study nonparametric regression where inputs are persistence diagrams and outputs are real-valued. Using kernel-based local averaging estimators defined directly over diagram space with Wasserstein distance, we establish consistency and derive bounds on the rate of convergence under suitable assumptions in the $L^2$-theory. We also present computational experiments that demonstrate strong performance of the proposed estimator, particularly in low data regimes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25890",
+   "title": "An A $\\infty$ -algebra structure for enriched Morse complexes",
+   "url": "https://arxiv.org/abs/2611.25890v1",
+   "authors": [
+    "Jonathan Clivio",
+    "Robin Riegel"
+   ],
+   "label": "arXiv:2611.25890v1",
+   "primary_category": "math.AT",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We construct a homotopy coherent product structure extending the Chas-Sullivan product on chains of the free loop space of a manifold.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We construct a homotopy coherent product structure extending the Chas-Sullivan product on chains of the free loop space of a manifold. Our construction uses the framework of Morse homology with DG coefficients and perturbed Morse gradient trees. We define an operad given by moduli spaces of Morse gradient trees with a twisted differential. This Morse tree operad receives a map from a suspended A$\\infty$-operad and in turn acts on Morse homology with DG coefficients associated to a fibration over a manifold with a fibrewise monoidal structure.",
+   "source": "arxiv"
+  }
+ ]
+}

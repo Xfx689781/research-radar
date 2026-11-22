@@ -1,0 +1,51 @@
+{
+ "slug": "information-theory",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25859",
+   "title": "Optimal Impure $(r,δ)$-Quantum Locally Recoverable Codes with Explicit Minimum Localities",
+   "url": "https://arxiv.org/abs/2611.25859v1",
+   "authors": [
+    "Yang Li",
+    "Shitao Li",
+    "Gaojun Luo",
+    "San Ling"
+   ],
+   "label": "arXiv:2611.25859v1",
+   "primary_category": "cs.IT",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Quantum locally recoverable codes with $(r,δ)$-locality ($(r,δ)$-qLRCs) are quantum error-correcting codes in which $δ-1$ erased qudits can be recovered by accessing only $r$ other qudits.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Quantum locally recoverable codes with $(r,δ)$-locality ($(r,δ)$-qLRCs) are quantum error-correcting codes in which $δ-1$ erased qudits can be recovered by accessing only $r$ other qudits. The minimum locality of a qLRC is the least $r$ such that it has $(r,δ)$-locality. This paper aims to construct optimal impure $(r,δ)$-qLRCs with disjoint recovering sets and explicit minimum localities, where the optimality is measured by the Singleton-like bound of Guruswami, Kshirsagar, and Trivedi (GKT-optimal). Such qLRCs have particular advantages in recovering as many quantum erasures as possible while operating in parallel and with minimal qudit access overhead. We first characterize the recovering sets and the minimum locality of any CSS code by local relative distances, which are relative minimum distances of punctured codes with respect to shortened codes. We then construct impure qLRCs as CSS codes from nested pairs of generalized monomial-Cartesian codes. Grouping the monomials by their degree in the last variable, we reduce both their minimum distances and their local recovery to nested pairs of codes in the remaining variables, and the coordinates with the same values of these variables form disjoint recovering sets. In this way, we obtain four infinite families of GKT-optimal impure $(r,δ)$-qLRCs with disjoint recovering sets, and determine their minimum localities and the recovering sets attaining them for every admissible $δ$, except for a partial range of $δ$ in one family. These minimum localities need not be monotone in $δ$. In particular, two of the families contain GKT-optimal impure subfamilies of CSS codes CSS$(\\mathcal{C},\\mathcal{C})$ with $(r,δ)$-locality for some $r<n-δ+1$ at values of $δ$ for which $\\mathcal{C}$ has no classical $(r',δ)$-locality for any $0<r'<n$, where $n$ is the length of $\\mathcal{C}$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25496",
+   "title": "Convex splitting by binary quantum hypothesis testing",
+   "url": "https://arxiv.org/abs/2611.25496v1",
+   "authors": [
+    "Mark M. Wilde"
+   ],
+   "label": "arXiv:2611.25496v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "How many independent quantum systems does it take to hide one system that is correlated with a reference?",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "How many independent quantum systems does it take to hide one system that is correlated with a reference? An observer can measure all the systems together with the reference to detect the correlation. We turn any such measurement into binary tests on a single system and the reference. For each test we bound the probability of declaring a signal when an independent pair was prepared. Averaging the largest signal acceptance probabilities allowed by these bounds controls the normalized trace distance in the convex-split lemma. A second bound gives a sufficient number of systems by minimizing the hypothesis-testing relative entropy over the state of the reference. Both bounds hold for density operators on separable Hilbert spaces. Comparing two distributions for the location of the hidden system gives one-shot bounds for private communication and one-way secret key distillation, including the public information available to an eavesdropper. For a fixed finite-alphabet model with separable quantum outputs and positive information advantage and variances, we recover the known Gaussian corrections to the attainable number of private or key bits from $n$ independent repetitions and bound the remaining loss by $\\log_2 n+O(1)$ at fixed errors. The position-based key distillation protocol attains this bound with $O(n)$ public bits.",
+   "source": "arxiv"
+  }
+ ]
+}

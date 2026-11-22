@@ -1,0 +1,62 @@
+{
+ "slug": "cell-molecular-biology",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.17.767246",
+   "title": "Modelling Maternal-to-Zygotic Transition Dynamics to Identify Common Gene Expression Baselines in Zebrafish Development.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767246v1",
+   "authors": [
+    "grosse Holthaus, M.",
+    "Michaelis, P.",
+    "Schunck, F.",
+    "Focks, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.17.767246 v1",
+   "primary_category": "molecular biology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We propose a semi-mechanistic ODE-based transcription model for zebrafish embryogenesis that captures common baseline expression dynamics by integrating the maternal-to-zygotic transition mechanism.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We propose a semi-mechanistic ODE-based transcription model for zebrafish embryogenesis that captures common baseline expression dynamics by integrating the maternal-to-zygotic transition mechanism. We fitted this model to a time-course RNA-seq dataset of D. rerio spanning early developmental stages until 120 hpf. Using the inferred model parameters, we identified common gene expression pattern using fuzzy c-means clustering and compared these with clusters stemming from a shape-based approach using smooth trajectories. We show that the ODE-parameter-based approach improves to biological interpretability by linking clusters to underlying regulatory mechanism, such as the timing of zygotic genome activation, thereby generating more precise expression clusters. However, the results also revealed technical biases of the time-course data, originating from the poly(A) enrichment step.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767433",
+   "title": "Centimeter-sized Human Vitreous Organoids from Pluripotent Stem Cells",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767433v1",
+   "authors": [
+    "Zhang, X.",
+    "Jin, K.",
+    "Lin, X.",
+    "Zeng, F.",
+    "He, H.-L.",
+    "Du, M.",
+    "Zhao, D.",
+    "Zhang, Y.",
+    "Wang, W.",
+    "Liu, P.",
+    "Bi, C.",
+    "Jin, Z.-B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767433 v1",
+   "primary_category": "developmental biology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The vitreous, the largest intraocular tissue, provides a transparent light path and maintains the intraocular homeostasis.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "The vitreous, the largest intraocular tissue, provides a transparent light path and maintains the intraocular homeostasis. The reconstitution of the vitreous in vitro or in vivo remains an unsolved biomedical challenge. Here, we discovered a common feature, the \"growth edge\", constituted primarily of fibroblasts and their secreted proteins in human and mouse vitreous development. By leveraging the transforming growth factor beta signaling, we then generated centimeter-scale vitreous-like organoids (VOs) through stepwise differentiation from human pluripotent stem cells (hPSCs). The VOs exhibited striking similarity to human vitreous in terms of physical transparency, vitreoretinal interface, molecular composition, biological profiles and regenerative transplantability. Lines of evidence supported that fibroblasts are the key cell hub for vitreous development. Finally, VOs with a transthyretin (TTR) mutation recapitulated the vitreous phenotypes of human patients with vitreous amyloidosis. Together, vitreous organoid technology opens avenues for future studies of human vitreous development, disease modeling, and regenerative therapeutics for a broad spectrum of human vitreoretinal diseases.",
+   "source": "biorxiv"
+  }
+ ]
+}

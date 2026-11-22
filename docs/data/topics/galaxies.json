@@ -1,0 +1,55 @@
+{
+ "slug": "galaxies",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25355",
+   "title": "The Cosmic Infrared Background from Population III.1 Supermassive Stars and Black Holes",
+   "url": "https://arxiv.org/abs/2611.25355v1",
+   "authors": [
+    "Emir Tataroglu",
+    "Jonathan C. Tan",
+    "Rosalia D. O'Brien",
+    "Devesh Nandal"
+   ],
+   "label": "arXiv:2611.25355v1",
+   "primary_category": "astro-ph.GA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We investigate the cosmic infrared background (CIB) that is expected to arise from the Population (Pop) III.1 supermassive black hole (SMBH) formation scenario, which involves early SMBH seeding via supermassive primordial star formation enabled by dark matter annihilation heating.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We investigate the cosmic infrared background (CIB) that is expected to arise from the Population (Pop) III.1 supermassive black hole (SMBH) formation scenario, which involves early SMBH seeding via supermassive primordial star formation enabled by dark matter annihilation heating. We model the emission from Pop III.1 supermassive stars, including their growth phase, flash ionization phase, and early black hole accretion phase, as well as accompanying emission from lower-mass Pop III.2 stars. The CIB is composed of stellar and SMBH accretion disk continuum radiation, nebular continuum emission, and Ly$α$ radiation redistributed through scattering in the neutral intergalactic medium. Based on the feedback regulated Pop III.1 model of Petkova et al. (2026), our fiducial model assumes $\\sim 10^5\\,M_\\odot$ Pop III.1 stars forming by $z_{\\rm flash}=20$ with a comoving number density of $\\sim0.2\\,{\\rm cMpc}^{-3}$. For this model, the combined stellar contribution is less than $1\\%$ of existing direct and diffuse CIB measurements. However, the contribution to the CIB from $z\\sim6-20$ SMBH accretion is expected to be larger than the Pop III.1 stellar component for average Eddington ratios $λ_{\\text{Edd}} \\sim 0.01$. Latest CIB observations place constraints of $λ_{\\text{Edd}} \\lesssim 0.3$ for the fiducial Pop III.1 model during these epochs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26550",
+   "title": "Chemical Cartography Across Time: The Age-Dependent Chemical Structure of the Milky Way with a Homogeneous Sample of 580,000 Giants from Five Surveys",
+   "url": "https://arxiv.org/abs/2611.26550v1",
+   "authors": [
+    "Jeff Shen",
+    "Neige Frankel",
+    "David W. Hogg",
+    "Joshua S. Speagle",
+    "Shirley Ho"
+   ],
+   "label": "arXiv:2611.26550v1",
+   "primary_category": "astro-ph.GA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Mapping the distribution of elements in the Milky Way and understanding how that distribution has changed over time can give us insight into the formation and evolution of our Galaxy.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Mapping the distribution of elements in the Milky Way and understanding how that distribution has changed over time can give us insight into the formation and evolution of our Galaxy. Here we use homogeneously estimated atmospheric parameters, elemental abundances, distances, and ages for ~580,000 giants from five major spectroscopic surveys---all simultaneously placed on a single, self-consistent scale by one model---allowing us, for the first time, to use a large sample of stars with uniform labels and ages that cumulatively span much of the disk to trace how the metallicity structure of the Milky Way depends on stellar age. Our chrono-chemical analysis shows that the radial metallicity gradient of the disk depends non-monotonically on age: it is shallow for the youngest stars, steepening to a maximum of ~-0.07 dex/kpc at intermediate ages (~5-6 Gyr), and flattening to near zero for the oldest stars. This \"U-shaped\" age dependence is driven largely by the low-alpha (thin-disk) population, with the high-alpha (thick-disk) sequence having weak gradients at all ages. In contrast to [Fe/H], the radial [Mg/Fe] gradient is weak (<~0.01 dex/kpc) at all ages. Together, these trends are consistent with an inside-out formation scenario in which the gradient of the star-forming gas has flattened over at least the last ~6 Gyr, while the near-zero gradient of the oldest stars reflects their formation in a well-mixed disk, efficient radial migration, or both.",
+   "source": "arxiv"
+  }
+ ]
+}

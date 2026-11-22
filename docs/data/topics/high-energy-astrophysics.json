@@ -1,0 +1,54 @@
+{
+ "slug": "high-energy-astrophysics",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25666",
+   "title": "Impact of Effective Nucleon Mass and Symmetry Energy on Nuclear Pasta Phases and the Unified Equation of State of Neutron Stars",
+   "url": "https://arxiv.org/abs/2611.25666v1",
+   "authors": [
+    "Shuying Li",
+    "Hong Shen",
+    "Jinniu Hu"
+   ],
+   "label": "arXiv:2611.25666v1",
+   "primary_category": "nucl-th",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We investigate how the effective nucleon mass and symmetry energy affect pasta phase properties and the unified equation of state (EOS) of neutron stars.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We investigate how the effective nucleon mass and symmetry energy affect pasta phase properties and the unified equation of state (EOS) of neutron stars. The nonuniform pasta structure is described within the self-consistent Thomas-Fermi approximation, while nucleonic interactions are treated in the relativistic mean-field framework with several typical parameter sets adopted. Our results indicate that the symmetry energy and its slope are crucial in determining the onset of pasta phases and their geometric configurations. In the high-density region where matter becomes uniform, the effective nucleon mass plays a dominant role. A larger effective nucleon mass tends to soften the EOS, which yields a smaller radius for a canonical $1.4 M_{\\odot}$ neutron star and reduces the corresponding tidal deformability.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26043",
+   "title": "Strong Field Tidal Disruptions of Rotating Stars by Spinning Black Holes",
+   "url": "https://arxiv.org/abs/2611.26043v1",
+   "authors": [
+    "Niles Mondal",
+    "Kowsona Chakraborty",
+    "Pratap Alte",
+    "Pritam Banerjee",
+    "Tapobrata Sarkar"
+   ],
+   "label": "arXiv:2611.26043v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We study tidal disruptions of rotating solar-type stars by a rapidly spinning supermassive black hole with general-relativistic smoothed-particle hydrodynamics.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We study tidal disruptions of rotating solar-type stars by a rapidly spinning supermassive black hole with general-relativistic smoothed-particle hydrodynamics. To capture strong-field effects, we place the pericentre at a few gravitational radii of a black hole, and compare with weak-field encounters at a larger pericentre around a lighter black hole. We vary the black hole spin, the orbital inclination and the stellar rotation, using rigidly and differentially rotating stars with spin aligned, anti-aligned or perpendicular to the orbital angular momentum. In the strong field, the black hole spin decides whether a core survives on equatorial and inclined orbits, and stellar rotation reduces the surviving core in every partial disruption. At the larger pericentre, as in Newtonian studies, anti-aligned rotation instead protects the star from disruption. In both cases the tide reverses an anti-aligned spin just before pericentre. The outcome differs because in the strong field the tide keeps acting on the reversed core long after pericentre. Deep encounters leave cores spinning above break-up, which shed mass and angular momentum as they settle. Full disruptions approach the canonical fallback law, whereas the late-time slope of partial disruptions is not universal and is set by the debris energy distribution near the surviving core.",
+   "source": "arxiv"
+  }
+ ]
+}

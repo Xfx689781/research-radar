@@ -1,0 +1,51 @@
+{
+ "slug": "optics-atomic",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26496",
+   "title": "Fast electrons and high energy photons produced in strong-field ionization of atoms as diagnostics of multi-petawatt laser beams",
+   "url": "https://arxiv.org/abs/2611.26496v1",
+   "authors": [
+    "A. V. Khudov",
+    "N. V. Makarenko",
+    "A. A. Mironov",
+    "S. V. Popruzhenko"
+   ],
+   "label": "arXiv:2611.26496v1",
+   "primary_category": "physics.atom-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The authors numerically compute energy spectra and angular distributions of photoelectrons and X-ray photons from tunnel ionization of argon in focused multi-petawatt laser fields, and argue these observables track peak intensity and focal-spot field configuration as a diagnostic.",
+    "plain": "Very powerful lasers now produce light intensities so high that they tear electrons off atoms, and it is hard to measure exactly how intense the focused beam really is. This paper uses computer simulations of argon atoms hit by such beams to predict what the ejected electrons and emitted X-rays look like. The authors report that these electron and X-ray patterns change with the laser power, how tightly the beam is focused, and its polarization, which suggests they could be used to check the beam's properties.",
+    "why": "Knowing the true intensity inside the focal spot is needed to interpret experiments with the newest multi-petawatt lasers, so a reliable in-situ diagnostic would be useful. The abstract supports only a proposal with numerical predictions; whether it works in practice depends on experimental tests that the abstract does not describe.",
+    "background": "[\"Tunnel ionization: in a very strong laser field, the electric field bends the atom's binding barrier enough that an electron can leak out of the atom.\", 'Petawatt: a power of 10^15 watts, delivered in very short pulses; focusing concentrates it to extreme intensities.', 'Photoelectrons: electrons ejected from atoms by light; their energy and direction carry information about the field.', 'High-energy photons: X-rays emitted during the strong-field process, which also depend on the field.', 'Focal spot and polarization: the intensity varies across the focused beam, and the direction the electric field oscillates (polarization) changes the outcome.', \"Diagnostic: a measurement used to infer a hidden physical quantity, here the laser's peak intensity and field shape.\"]",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We calculate numerically energy spectra and angular distributions of photoelectrons and X-ray photons emitted in the process of tunnel photoionization of argon by a focused laser beam of multi-petawatt power. By scanning the beam power and varying the degree of focusing and the field polarization, we show these distributions to be sensitive both to the peak laser intensity and to the field configuration in the focal spot. Investigated parameters of the laser beam correspond to those of several recently commissioned lasers of multi-petawatt power. These findings, in line with the earlier reported proposals, provide a basis for the development of a reliable ionization diagnostics of extremely intense laser fields.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26032",
+   "title": "Dephasing-free plasma acceleration with millijoule picosecond lasers",
+   "url": "https://arxiv.org/abs/2611.26032v1",
+   "authors": [
+    "Alexander Pukhov"
+   ],
+   "label": "arXiv:2611.26032v1",
+   "primary_category": "physics.plasm-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Laser-plasma accelerators reach gradients a thousand times above radio-frequency cavities, but need joule-class femtosecond lasers firing about once per second, and electrons outrun the wave.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Laser-plasma accelerators reach gradients a thousand times above radio-frequency cavities, but need joule-class femtosecond lasers firing about once per second, and electrons outrun the wave. A comb of laser lines spaced by the plasma frequency, each in its own mode of a matched channel, drives a wake moving at the speed of light. In particle-in-cell simulations a 175\\,mJ, 0.5\\,ps drive holds 21\\,GV/m over 10\\,mm with a 0.15\\,rad phase drift; a test electron gains 208\\,MeV, 2.6 times more than in one mode. Because the wave builds up resonantly, the required energy falls steeply with density: a 29\\,mJ drive sustains 20\\,GV/m, and a 10\\,mJ drive, within reach of kilohertz industrial lasers, gives a test electron 170\\,MeV over 30\\,mm. A simulated stage transfers 5\\,\\% of the laser energy to the wake; the Manley--Rowe limit is about 18\\,\\% for five lines.",
+   "source": "arxiv"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "slug": "condensed-matter",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26604",
+   "title": "Scalable Simulation of Strongly Correlated Fermions with Neural Gaussian Tensor Networks",
+   "url": "https://arxiv.org/abs/2611.26604v1",
+   "authors": [
+    "Runze Chi",
+    "Ao Chen",
+    "Garnet Kin-Lic Chan"
+   ],
+   "label": "arXiv:2611.26604v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Accurate simulations of strongly correlated electrons remain a central challenge in computational physics.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Accurate simulations of strongly correlated electrons remain a central challenge in computational physics. We introduce neural-network Gaussian projected entangled-pair states (NN-GPEPS), which exploit the locally-entangled subspace of Gaussian states to give an architecture more compatible with modern neural networks and an exact contraction cost of $O(N^{3/2})$ on two-dimensional lattices. For the Hubbard model at $U/t=8$ and $1/8$ hole doping, we obtain state-of-the-art variational energies in large lattices of up to 1024 sites. These results demonstrate an accurate approach to strongly correlated fermions by connecting neural networks with Gaussian tensor networks.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26016",
+   "title": "Topology-Enabled Self-Verification of Quantum Hall Resistance Standards",
+   "url": "https://arxiv.org/abs/2611.26016v1",
+   "authors": [
+    "DaVonne Henry",
+    "Dominick S. Scaletta",
+    "Tamar M. Padwa",
+    "Heather M. Hill",
+    "Gretchen B. Ferguson",
+    "Evelyn E. Hopkins",
+    "Mattias Kruskopf",
+    "Dean G. Jarrett",
+    "David B. Newell",
+    "Albert F. Rigosi"
+   ],
+   "label": "arXiv:2611.26016v1",
+   "primary_category": "cond-mat.mes-hall",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The scaling of multi-element quantized Hall array resistance standards necessitates rigorous validation that internal quantization has not broken down without relying on the verification of dissipationless edge state transport.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "The scaling of multi-element quantized Hall array resistance standards necessitates rigorous validation that internal quantization has not broken down without relying on the verification of dissipationless edge state transport. One proposed solution is to use a Symmetric Precision Quantization Reliability criterion, a mathematical framework that statistically assures such validation strictly through outer terminal measurements of Cn-symmetric designs. This criterion essentially bounds the likelihood of hidden localized defects arising from quantum Hall breakdown and has potential uses in quantum computing and semiconductor testing but is presented in the context of its application toward quantum electrical standards.",
+   "source": "arxiv"
+  }
+ ]
+}

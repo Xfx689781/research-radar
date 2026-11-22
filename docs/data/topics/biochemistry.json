@@ -1,0 +1,65 @@
+{
+ "slug": "biochemistry",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767475",
+   "title": "Unexpected properties of nucleotide condensates could facilitate the RNA world",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767475v1",
+   "authors": [
+    "Hauf, S.",
+    "Baidya, L.",
+    "Nakamura, R.",
+    "Fine, J. L.",
+    "Guyen, H. T.",
+    "Moses, A.",
+    "Dindo, M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767475 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "A key question in the RNA world hypothesis for the origin of life is the nature of the compartment that separates and protects the RNA from its environment.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "A key question in the RNA world hypothesis for the origin of life is the nature of the compartment that separates and protects the RNA from its environment. While membranes are a leading candidate for the initial compartment, biomolecular condensates have been proposed as an alternative, possibly simpler route to compartments. Here we show that bona fide liquid condensates form spontaneously when nucleotides (such as ATP) are mixed with divalent cations and a short-chain alcohol or diol in water. These condensates do not require any polymer to form, but can concentrate polymers like RNA and DNA, which show unexpected chemical behavior inside the condensates. Most surprisingly, RNA survives for days inside nucleotide condensates under acidic conditions that cause rapid and extensive hydrolysis in bulk. This effect is also observed for a phosphate-ester model substrate and therefore likely reflects the suppression of backbone cleavage. Coarse-grained simulations suggest that the condensate interior is bound together by magnesium-phosphate bridging interactions and is therefore highly depleted of water. At neutral pH, the same compartment reverses the course of a hammerhead ribozyme reaction, shifting it from cleavage toward religation. Finally, we observe that nucleotide droplets also spontaneously organize phospholipids at their surface, suggesting a possible evolutionary route from biomolecular condensates toward membranes. Thus, we believe that nucleotide condensates, which are built from the same building blocks as the genetic polymers themselves, overcome long-standing challenges with the RNA world hypothesis for the origin of life by protecting nucleic acids and reshaping their chemistry.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.766442",
+   "title": "Paired Deep Mutational Scanning of Lck Activity and Inhibitor Sensitivity Enables the Engineering of Pharmacological Control of T Cell Receptor Signaling",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766442v1",
+   "authors": [
+    "Potter, Z. E.",
+    "Graves, A. N.",
+    "Brown, J. L.",
+    "Wei, C. T.",
+    "Cardenas, J.",
+    "Chiasson, M. A.",
+    "Simon, J. J.",
+    "Popp, N. A.",
+    "Brush, D. S.",
+    "Unrau, D. E.",
+    "Dowler, D. M.",
+    "Maly, D. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.766442 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Controlling signaling enzymes with small molecules is a central goal in chemical biology and is of great utility for engineering cell-derived immunotherapies.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Controlling signaling enzymes with small molecules is a central goal in chemical biology and is of great utility for engineering cell-derived immunotherapies. Yet strategies for conferring selective small-molecule sensitivity without disrupting a protein's native function remain limited. Here we present a generalizable approach to engineering small molecule-controlled multidomain protein kinases. Using deep mutational scanning of full-length Lck, a tyrosine kinase essential for T cell receptor (TCR) signaling, we measured the effect of nearly all single amino acid substitutions in the kinase domain on phosphotransferase activity. The resulting activity landscape defined the domain's tolerance to substitution, mapped the regulatory interfaces that tune phosphotransferase activity, and, by treating bulky substitutions as ligand proxies, nominated cryptic pockets where covalent liganding is predicted to allosterically inhibit Lck. In parallel screens, we measured the sensitization of each variant to five clinically approved, reversible drugs: dabrafenib, erlotinib, gefitinib, imatinib, and nilotinib. Together, these landscapes identified substitutions that preserved or enhanced activity while sensitizing Lck to inhibition. Sensitizing substitutions were distributed throughout the kinase domain, including positions more than 30 [A] from the ATP-binding site, implicating long-range allosteric networks linking distal perturbations to ATP-binding site conformation and inhibitor potency. Integrating the activity and sensitization landscapes yielded a nilotinib-sensitized variant, I312S, that supports TCR signaling and, upon drug treatment, selectively suppresses proximal signaling and IL-2 production in Jurkat cells even in the presence of endogenous Lck.",
+   "source": "biorxiv"
+  }
+ ]
+}

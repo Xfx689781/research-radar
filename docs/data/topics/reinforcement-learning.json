@@ -1,0 +1,53 @@
+{
+ "slug": "reinforcement-learning",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25597",
+   "title": "Decision-Focused Reinforcement Learning for LLM Post-Training",
+   "url": "https://arxiv.org/abs/2611.25597v1",
+   "authors": [
+    "Haotian Zhai",
+    "Leqi Liu"
+   ],
+   "label": "arXiv:2611.25597v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper post-trains LLMs to produce optimization parameters by using negative downstream decision regret as the RL reward, with two reward-cost reduction schemes (heuristic warm-starting and randomized reward correction) for when exact evaluation is expensive.",
+    "plain": "An AI model that forecasts things, like demand, is usually trained to be accurate, but a forecast that is accurate on average can still lead to poor decisions when someone plans around it. The authors train a language model to make forecasts judged by the cost of the decisions they lead to, using a reward signal that penalizes extra cost compared with the best possible decision. On three synthetic problems and a knapsack task, they report gains over methods trained only on prediction error; on an inventory planning task using H&M sales and product descriptions, they report regret reductions of 31.4% versus a supervised fine-tuning baseline and 12.4% versus the strongest conventional forecasting baseline they tested.",
+    "why": "It targets the gap between prediction accuracy and decision quality, a theme in the 'predict-then-optimize' literature, and applies it to LLM post-training, where text context is used for forecasts. The abstract does not show how far the results generalize beyond the tested tasks, so the broader significance is uncertain.",
+    "background": "['Post-training of LLMs: fine-tuning a pretrained model with supervised examples and then with reinforcement learning.', 'Reinforcement learning basics: a policy is updated to increase expected reward, often via policy gradients.', 'Predict-then-optimize: a model forecasts parameters, which feed a downstream optimization problem that chooses a decision.', 'Decision regret: the extra cost of a decision made from a forecast compared with the decision made with perfect information.', 'Prediction loss versus decision cost: a forecast can have low error yet still produce a costly decision.', 'Reward approximation: exact reward evaluation requires solving the optimization problem, which can be expensive, so cheaper estimates are used.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large language models (LLMs) have shown promise as predictors across various tasks, benefiting from their ability to use information from unstructured context. However, when predictions serve as parameters of downstream optimization problems, higher prediction accuracy does not necessarily translate into lower decision costs. We propose decision-focused reinforcement learning (DFRL), a framework for post-training LLMs to predict optimization parameters using negative downstream decision regret as reward. DFRL trains LLM predictors to minimize the costs of the decisions induced by their predictions, without requiring downstream convexity or differentiability, and integrates readily into existing RL post-training frameworks. To address expensive reward evaluation, we develop two approaches. Heuristic warm-starting uses inexpensive approximate rewards during an initial phase before switching to refinement with exact rewards. Reward correction combines inexpensive estimates with randomized exact evaluations, preserving the expected policy gradient while reducing the expected number of exact solves per update. Experiments on three synthetic optimization problems demonstrate improvements over prediction-loss baselines, while a larger knapsack experiment shows faster early improvement under short training budgets. On inventory planning with H&M transactions and product descriptions, our best configuration, in which the LLM reasons before predicting, reduces regret by 31.4% relative to the SFT baseline and 12.4% relative to the strongest evaluated conventional forecasting baseline.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25742",
+   "title": "Goal-Guided Reinforcement Learning via Fine-Tuning Vision-Language Models",
+   "url": "https://arxiv.org/abs/2611.25742v1",
+   "authors": [
+    "Yajie Qi",
+    "Wei Wei",
+    "Lin Li",
+    "Lijun Zhang",
+    "Jianye Hao"
+   ],
+   "label": "arXiv:2611.25742v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Exploration remains a major challenge for reinforcement learning (RL) agents in Craftax-style environments due to sparse rewards and long horizons.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Exploration remains a major challenge for reinforcement learning (RL) agents in Craftax-style environments due to sparse rewards and long horizons. Large language models (LLMs) can guide exploration by generating high-level goals, but methods using models without explicit task adaptation often rely on carefully designed prompts and may produce inconsistent or contextually inappropriate goals. We introduce CCGP-2M, a multimodal goal-preference dataset constructed from interaction trajectories in Craftax-Classic, and propose a vision-language model (VLM)-guided RL framework that learns environment-specific goal guidance from this dataset. The framework consists of two stages: offline VLM fine-tuning and online goal-guided RL. In the offline stage, we align the VLM with goal preferences using Kullback-Leibler Token-level Direct Preference Optimization (KLTDPO), which combines token-level KL regularization with distributionally robust reweighting. Experiments on Craftax-Classic show that our method collects diamonds earlier than state-of-the-art baselines, achieves the highest score and reward, and attains the highest success rates on most achievements.",
+   "source": "arxiv"
+  }
+ ]
+}

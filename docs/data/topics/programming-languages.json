@@ -1,0 +1,56 @@
+{
+ "slug": "programming-languages",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26312",
+   "title": "Static Analysis Guidance for Secure LLM Code Generation",
+   "url": "https://arxiv.org/abs/2611.26312v1",
+   "authors": [
+    "Daniele Lunghi",
+    "Alberick Euraste Djiré",
+    "Zacharie Chenail-Larcher",
+    "Mélissa Tessa",
+    "Quentin Stiévenart",
+    "Jacques Klein",
+    "Florent Avellaneda",
+    "Naouel Moha",
+    "Tegawendé'e F. Bissyandé"
+   ],
+   "label": "arXiv:2611.26312v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper compares two ways of feeding static-analyzer warnings into an LLM during code generation (as a code comment or in the user message, after rolling back on an alert) against iterative repair loops and a no-analyzer control, measuring functional and secure output on three Python benchmarks.",
+    "plain": "AI models that write code often produce programs with security holes, and tools that scan code for such problems can point them out. This paper tests a cheaper way to use those scanner reports: when the scanner flags a problem during writing, the model's draft is rolled back and the warning is fed back as a code comment or as part of the user's message. The authors report that this costs roughly 0.9 to 1.9 times the baseline's output, compared with up to 24 times for repeated fix-and-retry loops, and it raised the share of correct, secure programs in one tested setup from 52.5% to 64.4%.",
+    "why": "Scanner-guided generation is a practical middle ground between no feedback and costly repair loops, and the paper also reports when it backfires, such as when a warning conflicts with the task. Its results come from specific models and benchmarks, so how well they transfer to other settings is an open question.",
+    "background": "['Static analyzer: a tool that inspects code without running it and reports suspicious patterns, such as possible security flaws.', 'LLM code generation: a large language model writes program source code from a natural-language request.', 'Iterative repair loop: generate code, run the analyzer, ask the model to fix the reported issues, and repeat, which costs many extra model calls.', 'Rollback: discarding the partially generated output and restarting from the point where the alert appeared.', 'Functional vs. secure: a program can be correct for its task yet still contain a security vulnerability; benchmarks check both with test oracles.', 'Output tokens: the text units a model produces; a common proxy for compute cost.', \"False or conflicting alerts: analyzer warnings that do not match the task's actual requirements, which can push the model toward a wrong program.\"]",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Static analyzers are cheap and widely deployed, which makes their reports a candidate feedback signal for secure LLM code generation. Existing approaches place the analyzer inside an iterative repair loop with intermediate steps, which is costly and makes it hard to isolate the report's effect on the model. We introduce two strategies that give the finding to the model during generation. When the analyzer raises an alert, generation is rolled back, and the finding is inserted either as a code comment (Comment) or in the user message (Steering). We compare them with two iterative approaches and a control without the analyzer, across three models and three Python benchmarks, and we measure security using each benchmark's oracle. Guidance during generation is cheap and can be effective, at 0.9 to 1.9 times the baseline's output tokens against up to 24.1 times for iterative approaches. With DeepSeek-V4.1-flash on RiskyPy, Steering raises the share of functional and secure programs from 52.5% to 64.4%, close to the best iterative approach (66.2%) while using less than a fifth of the tokens. A per-rule analysis shows that rules with a local fix benefit most, and replacing the XML parser is net-positive on two of the three models. The study also identifies when guidance should not be applied. Analyzers flag at most 5.6% of the functional but insecure programs on SecEvalPlus, leaving little guidance to act on. When a static analysis alert (warning or error) contradicts the task, models tend to follow the analyzer and break the program. The two Qwen2.5 models often fail when the fix requires restructuring the code. These results indicate that static-analysis guidance is worth applying with a capable model, on rules with a local fix, and after filtering alerts that conflict with the task specification.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26400",
+   "title": "On the semantics of conditional branching",
+   "url": "https://arxiv.org/abs/2611.26400v1",
+   "authors": [
+    "Fredrik Dahlqvist"
+   ],
+   "label": "arXiv:2611.26400v1",
+   "primary_category": "cs.LO",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Motivated by the non-standard interpretations of if-then-else in probabilistic and quantum programs we review the different semantics of conditional branching and propose a unifying categorical structure for the interpretation of if-then-else.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Motivated by the non-standard interpretations of if-then-else in probabilistic and quantum programs we review the different semantics of conditional branching and propose a unifying categorical structure for the interpretation of if-then-else. We show that many semantically important categories possess this structure, covering inter alia classical, probabilistic, quantum or non-deterministic computations. We examine algebraic structures related to and generated by this categorical structure, in particular on collections of predicates. In this setting we show that the skew-associativity rules of GKATs and barycentric algebras are two instances of a common skew-associativity rule.",
+   "source": "arxiv"
+  }
+ ]
+}

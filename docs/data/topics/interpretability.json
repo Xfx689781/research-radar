@@ -3,72 +3,58 @@
  "updated": "2026-11-22",
  "papers": [
   {
-   "uid": "arxiv:2611.26291",
-   "title": "Who Moved My $Z$ Boson? Revealing Resonance Features Inside a Neural Network",
-   "url": "https://arxiv.org/abs/2611.26291v1",
+   "uid": "arxiv:2611.25870",
+   "title": "X Hedging: towards an eXplainable artificial intelligence option Hedging framework",
+   "url": "https://arxiv.org/abs/2611.25870v1",
    "authors": [
-    "Kevin Alberto Urquía Calderón",
-    "Midori Kato",
-    "Inar Timiryasov",
-    "Oleg Ruchayskiy"
+    "Bjørn André Aaslund",
+    "Johannes Berge",
+    "Ayoub Haida",
+    "Ying Ni",
+    "Rita Pimentel"
    ],
-   "label": "arXiv:2611.26291v1",
-   "primary_category": "hep-ph",
+   "label": "arXiv:2611.25870v1",
+   "primary_category": "cs.LG",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "Methods used in mechanistic interpretability have revealed human-aligned concepts inside language and image models.",
+    "one_liner": "We propose X Hedging, an alternative to the Deep Hedging framework that addresses computational and explainability limitations of neural-network-based hedging strategies.",
     "plain": "",
     "why": "",
     "background": "",
     "difficulty": "",
     "ai": false
    },
-   "abstract": "Methods used in mechanistic interpretability have revealed human-aligned concepts inside language and image models. In this paper, we search for physics concepts inside a neural a generative collider physics model trained on real LHC data (ShellFlow). We discover features inside ShellFlow that represent resonances, such as the $Z$, $J/ψ$, and $Υ$. The network was never told which muons come from a resonance, it was only trained to generate the kinematics of the final-state particles. We use these features to alter aspects of the $Z$ boson: we change its mass between $\\sim80$ and $105$ GeV, and removing such a feature from the neural network produces a broader $Z$ peak. In both cases the rest of the invariant mass spectrum remains mostly unchanged. The feature was built from the gradients of the neural network, and its selectivity was built using pattern recognition methods. A generative particle physics model trained on unlabeled data can be modified internally to change a physical quantity.",
+   "abstract": "We propose X Hedging, an alternative to the Deep Hedging framework that addresses computational and explainability limitations of neural-network-based hedging strategies. Deep Hedging leverages neural networks to learn flexible hedging policies but relies on opaque models and typically requires large training datasets, which can complicate interpretation and limit its effectiveness in data-constrained settings. X Hedging takes a step toward addressing these limitations by replacing neural networks with tree ensemble methods, specifically LightGBM, to estimate hedging strategies. This design provides a computationally efficient alternative while preserving strong hedging performance and moving toward more user-centered explainability. To integrate LightGBM into a reinforcement-learning-style hedging framework, we introduce an optimization approach that sequentially trains tree-ensemble models while introducing stochasticity through random training orders. In controlled experiments, X Hedging achieves performance comparable to Deep Hedging while offering greater user-centered explainability, improved computational efficiency, and substantially higher robustness when training data are limited. The numerical results demonstrate that tree-ensemble methods provide an effective computational alternative to neural networks for data-driven dynamic hedging.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.25752",
-   "title": "Beyond Error Mitigation: Using Boosting for Noisy Quantum Machine Learning",
-   "url": "https://arxiv.org/abs/2611.25752v1",
+   "uid": "arxiv:2611.25894",
+   "title": "Explainable AI for Solar PV Power Forecasting: From Model Selection to Trustworthy, Reproducible Deployment",
+   "url": "https://arxiv.org/abs/2611.25894v1",
    "authors": [
-    "Anastasiia Lukianenko",
-    "Yash J. Patel",
-    "Nurbolat Kenbayev",
-    "Vedran Dunjko"
+    "Nuzhat Khan",
+    "Muhammad Paend Bakht",
+    "Ab Al-Hadi Ab Rahman",
+    "Fabiano Pallonetto",
+    "Amy Fahy",
+    "Mohamed Khalafalla Hassan",
+    "Paul Stynes",
+    "Muhammad Anique Aslam",
+    "Terence O Donnell",
+    "Mohammad Riadh"
    ],
-   "label": "arXiv:2611.25752v1",
-   "primary_category": "quant-ph",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "Quantum error mitigation (QEM) can recover information about ideal quantum computations from noisy circuit executions, but may require a large sampling overhead.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "Quantum error mitigation (QEM) can recover information about ideal quantum computations from noisy circuit executions, but may require a large sampling overhead. Fundamental lower bounds show that recovering noiseless observables without problem-specific information can require superpolynomially many samples, with exponential overhead for broad classes of noisy circuits. However, problem-specific information can reduce the number of samples needed to obtain the required answer. We investigate this possibility in supervised quantum machine learning, where labeled examples provide information about the function to be learned. Binary classification provides such a setting, since correct prediction depends on the sign and margin of the classifier output rather than on accurate reconstruction of every noiseless expectation value. We develop a theoretical and empirical framework for comparing boosting of noisy parameterized quantum circuits with probabilistic error cancellation (PEC), requiring both methods to reach the same learning target. For the specified circuit architectures under Pauli noise, we establish a common hypothesis-class complexity bound: matching empirical margin loss gives the same upper bound on expected classification risk. We derive resource criteria and evaluate AdaBoostR and Real AdaBoost in finite-shot teacher-student simulations across circuit depth and physical noise strength. Under the same classification-accuracy target, boosting requires fewer circuit executions as depth and noise increase. Boosting also achieves higher test accuracy than the corresponding reference. For the supervised-learning problems studied, these results demonstrate a task-dependent resource advantage: exploiting information retained in noisy outputs can avoid the cost of ideal-output reconstruction without sacrificing observed classification performance.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26450",
-   "title": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights",
-   "url": "https://arxiv.org/abs/2611.26450v1",
-   "authors": [
-    "Tanmay Sah"
-   ],
-   "label": "arXiv:2611.26450v1",
+   "label": "arXiv:2611.25894v1",
    "primary_category": "cs.AI",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "Pretrained language models (LMs) remain unreliable on exact multi-digit arithmetic without gradient fine-tuning or external tool interpreters.",
+    "one_liner": "Machine learning (ML) is now a standard tool for forecasting the output of solar photovoltaic (PV) plants, yet published accuracy figures are often hard to compare and harder to trust.",
     "plain": "",
     "why": "",
     "background": "",
     "difficulty": "",
     "ai": false
    },
-   "abstract": "Pretrained language models (LMs) remain unreliable on exact multi-digit arithmetic without gradient fine-tuning or external tool interpreters. We introduce closed-form, zero-gradient circuit-grafting primitives that compile deterministic computation directly into pretrained LM weights using zero training examples and zero runtime hooks, while bounding per-layer normalization drift and preserving natural-language (NL) competence. Our construction combines three analytical mechanisms: (1) two-layer Mellin-GLU quadrature over bias-free SwiGLU/GeGLU layers, turning unknown per-token RMSNorm scaling into translation along a log-spaced gate grid ($>250\\times$ dynamic range) with IEEE 754 error bounds; (2) cross-token scale cancellation via signed Chebyshev Indefinite-RoPE self-sink attention and memoryless SiLU-antisymmetric GatedDeltaNet shifts; and (3) axis-aligned width extension ($d \\to d+K$) with $\\sqrt{d/(d+K)}$ norm compensation, Base-1000 canonical BPE emission, and differential $(+254,-256)$ tied unembeddings. An automated 5-stage compiler synthesizes 4-8 digit signed $\\{+,-,\\times\\}$ circuits in constant $\\mathsf{TC}^0$ depth alongside 3-literal Boolean (100%, $N=1{,}728$; plus 42-layer Gemma 4 E4B audits) and 5-bit Majority/Parity (100%) circuits. On 6-digit arithmetic ($N=1{,}200$, BF16), IBM Granite 4.2 3B (1.07M-1.33M active non-zeros, $\\le 0.036\\%$) and Alibaba Qwen 3.5 4B (2.25M-2.39M non-zeros, $\\le 0.057\\%$) reach 99.17% and 100.00% ALU-prefix accuracy (100% with an FP32 sidecar) and 98%-100% mid-sentence resumption, outperforming 12.8K-sample LoRA (42.2% / 61.7%, 0% inline continuation). A factorized block-sparse sidecar holds A100 memory at 7.89 / 10.65 GiB (4.60 / 8.14 GiB under INT8/INT4 + FP32 sidecar) while passing all 14/14 pre-registered $>2$K-token Tango splits ($N=4{,}392$; 0/11,134 OOD triggers).",
+   "abstract": "Machine learning (ML) is now a standard tool for forecasting the output of solar photovoltaic (PV) plants, yet published accuracy figures are often hard to compare and harder to trust. Many studies validate with random splits, report no reference forecast, and present feature attributions without saying what they can and cannot show. This paper reviews the main families of ML methods for PV power forecasting and resource assessment, from tree ensembles to deep and foundation models, and sets out a reproducible workflow that combines automated model search with explainable AI. The workflow is then tested on an openly available dataset: a 16.32 kWp plant in Porto, Portugal, forecast one day ahead from a 4 km numerical weather prediction grid. Over a full test year, the best models reach a normalised root mean square error (nRMSE) of 11.6% of installed capacity, about half the error of smart persistence. The choice of input features changed accuracy far more than the choice among strong algorithms, and shuffled cross-validation was mildly optimistic. After conformal calibration, the nominal 80% prediction intervals covered 81.7% of observations, against 64.5% before. SHAP rankings stayed stable when the model was retrained on different periods but shifted when correlated inputs were removed, so attributions should be read as properties of a model rather than of the plant. The paper closes with practical lessons and open problems, including deployment on edge hardware and the effect of a changing climate.",
    "source": "arxiv"
   }
  ]

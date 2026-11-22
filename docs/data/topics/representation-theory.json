@@ -1,0 +1,51 @@
+{
+ "slug": "representation-theory",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25676",
+   "title": "On quasi-triangular Hopf algebras of square-free dimensions",
+   "url": "https://arxiv.org/abs/2611.25676v1",
+   "authors": [
+    "Jiacheng Bao",
+    "Zhiqiang Yu",
+    "Ying Zheng"
+   ],
+   "label": "arXiv:2611.25676v1",
+   "primary_category": "math.QA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Let $H$ be a quasi-triangular Hopf algebra of sqaure-free dimension over $\\mathbb{C}$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Let $H$ be a quasi-triangular Hopf algebra of sqaure-free dimension over $\\mathbb{C}$. In this note, we show that $H$ is semisimple and cocommutative. Equivalently, a braided finite tensor category $\\mathcal{C}$ of square-free Frobenius--Perron dimension with a fiber functor is tensor equivalent to the representation category of a finite group.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26505",
+   "title": "Super quantum groups of divided powers à la Lusztig",
+   "url": "https://arxiv.org/abs/2611.26505v1",
+   "authors": [
+    "Iván Angiono",
+    "Cristian Vay"
+   ],
+   "label": "arXiv:2611.26505v1",
+   "primary_category": "math.QA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We construct super analogues of the quantum groups of divided powers introduced by Lusztig.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We construct super analogues of the quantum groups of divided powers introduced by Lusztig. We call them super analogues because the Lie-theoretical data governing their structure is comparable to that of contragredient Lie superalgebras. Indeed, we show that they admit PBW-type bases parametrized by root systems of super type, and that they also have Lusztig isomorphisms giving a representation of the corresponding Weyl groupoids. Moreover, we prove that our super objects are equipped with a Frobenius-type morphism whose kernel is the Drinfeld double of a finite-dimensional Nichols algebra of super type, a super analogue of Lusztig's small quantum group, and whose cokernel is the enveloping algebra of the semisimple Lie algebra determined by the Cartan roots of the Nichols algebra. We carry out our construction within the framework of Nichols algebras of diagonal type, specifically, those whose braiding is obtained by specializing at a root of unity. This allows us to consider a divided power integral form inside a large quantum group of De Concini--Kac--Procesi type and then, via specialization, obtain our desired object.",
+   "source": "arxiv"
+  }
+ ]
+}

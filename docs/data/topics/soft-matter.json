@@ -1,0 +1,53 @@
+{
+ "slug": "soft-matter",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25959",
+   "title": "Soft biological and bio-inspired materials",
+   "url": "https://arxiv.org/abs/2611.25959v1",
+   "authors": [
+    "Livio Nicola Carenza",
+    "Giuseppe Negro",
+    "Adriano Tiribocchi"
+   ],
+   "label": "arXiv:2611.25959v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "This review surveys modeling approaches for active matter in soft biological and bio-inspired materials, focusing on active liquid crystal theory, topological defects, active turbulence, and the effects of geometric and topological confinement.",
+    "plain": "Living things and some engineered materials can use stored energy to move, reshape, and organize themselves, which makes them behave differently from ordinary soft matter like rubber or gels. This review looks at the mathematical models scientists use to describe these self-driven materials, especially a framework borrowed from liquid crystals that tracks how their molecular or cellular orientations line up. It also covers chaotic, swirling flow patterns called active turbulence, the role of defects where orientation patterns break down, and how confinement in tissues and cells can influence processes such as cell death and the shaping of embryos. The abstract describes the scope of the review rather than reporting new experimental results.",
+    "why": "Active matter is a growing bridge between physics, biology, and materials engineering, and models that explain both living tissue and synthetic swimmers could guide the design of robots and self-organizing materials. The abstract does not show specific new findings, so its value lies mainly in consolidating the field's theoretical toolkit.",
+    "background": "['Soft matter: materials such as gels, polymers, liquid crystals, and tissues that deform easily under small forces.', 'Active matter: systems whose constituents consume energy and generate their own motion, unlike passive materials that only respond to outside forces.', 'Liquid crystals: fluids whose elongated molecules share a preferred direction (orientation), which can be described by a continuous field.', 'Topological defects: points or lines where the orientation pattern cannot be smoothly continued, similar to a whirlpool or a hair whorl.', 'Active turbulence: chaotic, swirling flow produced by self-driven particles, distinct from the turbulence of ordinary fluids.', 'Confinement: restricting a material to a small or oddly shaped space, such as a cell or a tissue boundary, which can change its behavior.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Soft biological materials are a fascinating kind of matter characterized by the unique ability of consuming internal energy to perform complex tasks to preserve the life of the single organism or a whole community. Moreover, biologically inspired materials able to mimic specific features of biological systems can be exploited to design novel materials with vast potential applications in areas ranging from healthcare and robotics to energy and environmental sustainability. In this review, we focus on the modeling approaches used to capture the dynamics of this peculiar kind of active matter, starting from the observation of orientational symmetries and reviewing the basis of the so-called active liquid crystal theory, a celebrated model that was successfully used to interpret and investigate a number of different phenomena occurring in both biological and artificial realizations. We review the role of topological defects in biological systems and discuss the complex phenomenon of active turbulence, a chaotic dynamical regime observed in a variety of different realizations of systems of both biological and synthetic origin. Finally, we discuss how geometrical and topological confinement can also play an important role in many biological processes, from cellular apoptosis in epithelial tissue, to animal morphogenesis.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25528",
+   "title": "Topological trapping of active tracers in branched ring polymer matrices",
+   "url": "https://arxiv.org/abs/2611.25528v1",
+   "authors": [
+    "Rahul Bag",
+    "Baburao Simma",
+    "Vrinda Garg",
+    "Surya K. Ghosh"
+   ],
+   "label": "arXiv:2611.25528v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Langevin dynamics simulations compare passive and self-propelled (active) tracer diffusion in a matrix of branched ring polymers versus an unlinked mixture of linear rings at equal monomer density, finding that chain stiffness and connectivity trap active tracers and produce long-time subdiffusion and transient weak ergodicity breaking.",
+    "plain": "Many cells and synthetic materials are filled with tangled, branched large molecules that act like a crowded maze for anything moving through them. This paper uses computer simulations to ask how the shape and connectivity of these molecules, rather than just how crowded they are, change the movement of tiny particles, including self-propelled ones that move on their own like swimming microbes. The authors report that passive particles barely notice the difference, but self-propelled particles get stuck in cages formed by the connected branches when the chains are stiff, and an intermediate branch design traps them most effectively.",
+    "why": "It suggests that molecular topology alone can control how active particles get trapped, which may matter for understanding transport inside cells and for designing soft materials. The abstract is based only on simulations, so how well the findings carry over to real biological or synthetic systems is not shown here.",
+    "background": "['Tracer: a small particle followed to measure how a medium moves things through it.', 'Active (self-propelled) tracer: a particle that drives its own motion, like a swimming cell, rather than only being pushed around by thermal jiggling.', 'Passive tracer: a particle moving only from random thermal kicks.', 'Ring polymer: a large molecule closed into a loop; branched ring polymers have loops with side arms attached.', 'Packing fraction and monomer density: how much of the space is filled by the molecules; here the two systems are matched on this so only connectivity differs.', 'Subdiffusion: motion that spreads more slowly over time than ordinary random walking.', \"Weak ergodicity breaking: a state where a particle's time average no longer matches its ensemble average, meaning it stays in one region for very long periods.\", 'Leptokurtic displacement statistics: step-length distributions with more very short and very long jumps than a Gaussian, a sign of heterogeneous trapping.', 'Langevin dynamics: a simulation method that models particle motion with friction and random noise.', \"Self-intermediate scattering function: a measure of how a particle's position decorrelates across a given length scale over time.\"]",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Branched macromolecular architectures are ubiquitous in living systems and synthetic polymeric systems, create topologically complex media that strongly influence tracer dynamics beyond simple packing fraction-driven crowding effects. Motivated by biological systems such as amoebae, astrocytes, cytoskeletal assemblies, and cyclic bottlebrushes, we investigate active and passive tracer transport in polymeric environments of topologically distinct architectures. Here, using Langevin dynamics simulations, we focus on how polymer topology alters diffusion behavior in a branched-ring polymeric (BRP) environment. To isolate the role of intramolecular topology from monomer density, we specifically benchmark the BRP dynamics against an unlinked linear-ring polymer mixture (LRM). In general, we find that while passive tracers are largely unaffected by the polymer connectivity and bending rigidity, the self-propelled active tracers strongly distinguish between the two architectures. Increasing chain rigidity facilitates active diffusion in the unlinked LRM but strongly restricts mobility in the BRP matrix, driving a transition to pronounced long-time subdiffusion that becomes more prominent with propulsion strength. Different physical observables reveal that interconnected topological cages are formed in the stiff limit, leading to transient weak ergodicity breaking and leptokurtic displacement statistics. Further, the self-intermediate scattering function confirms that the short-range dynamics remain unaltered by the matrix connectivity, while relaxation at large spatial length scales is governed by the topological caging. Finally, varying the branch length and number, we identified an optimal branch architecture that maximizes active trapping. Our results establish that macromolecular connectivity and stiffness dominate the active transport even in the system of identical packing fraction.",
+   "source": "arxiv"
+  }
+ ]
+}

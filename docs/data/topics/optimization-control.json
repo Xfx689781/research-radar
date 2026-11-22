@@ -3,24 +3,32 @@
  "updated": "2026-11-22",
  "papers": [
   {
-   "uid": "arxiv:2611.26568",
-   "title": "Optimal Control in Pairs Trading with Negative-Power Utility",
-   "url": "https://arxiv.org/abs/2611.26568v1",
+   "uid": "arxiv:2611.26171",
+   "title": "The FrontierOR Challenge: Agentic Algorithm Design for Operations Research",
+   "url": "https://arxiv.org/abs/2611.26171v1",
    "authors": [
-    "Aleksei Kozhevnikov"
+    "Hai Wang",
+    "Bretislav Hajek",
+    "Chonghe Jiang",
+    "Minwei Kong",
+    "Ao Qu",
+    "Huatian Gong",
+    "Bo Dong",
+    "Cynthia Barnhart",
+    "Jinhua Zhao"
    ],
-   "label": "arXiv:2611.26568v1",
-   "primary_category": "q-fin.MF",
+   "label": "arXiv:2611.26171v1",
+   "primary_category": "cs.AI",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "We solve a finite-horizon consumption and investment problem in a pairs trading model with an Ornstein-Uhlenbeck spread and utility $U(x)=-x^{-γ}$, $γ>0$.",
+    "one_liner": "Operations research (OR) relies on algorithms that experts tailor to each problem: a new routing, scheduling or network design problem can take weeks of specialist work before it is solved well at scale.",
     "plain": "",
     "why": "",
     "background": "",
     "difficulty": "",
     "ai": false
    },
-   "abstract": "We solve a finite-horizon consumption and investment problem in a pairs trading model with an Ornstein-Uhlenbeck spread and utility $U(x)=-x^{-γ}$, $γ>0$. Linearizing the Hamilton-Jacobi-Bellman equation gives explicit formulas for the value function and the optimal feedback control. A budget inequality and concavity verify optimality over all admissible strategies with nonnegative wealth on every finite horizon, without Novikov's condition. Under the optimal feedback, wealth and consumption admit deterministic upper bounds when the interest rate $r$ is at most the mean-reversion rate $κ$. If $r>κ$, each exceeds any prescribed level with positive probability at every time after the start. If $r>\\sqrt{2+γ} κ$, there is an explicit critical horizon at and beyond which expected terminal wealth is infinite, while optimal expected utility is finite. When the critical time falls before maturity, expected wealth at that time is finite exactly when the initial spread is zero. We also show that the suprema of the negative powers of optimal wealth and consumption are integrable on every finite horizon exactly for orders $0<m\\le 1+γ$.",
+   "abstract": "Operations research (OR) relies on algorithms that experts tailor to each problem: a new routing, scheduling or network design problem can take weeks of specialist work before it is solved well at scale. Large language model (LLM) agents now write, test and improve code, but whether they can design algorithms that scale to realistic instances is open: in the FrontierOR benchmark's one-shot evaluation, the strongest model matches Gurobi, with an objective within 1% of Gurobi's and no slower, on only 39% of the large instances. The FrontierOR Challenge asks teams to build agentic workflows that design, test, and improve algorithms for many optimization problems at once. Stage 1 releases 60 of the benchmark's 180 audited problems, spanning six application categories and five formulation types, in weekly rounds of 15; Stage 2 introduces new problems outside the benchmark, with unseen instances. Two tracks are ranked separately: in the Main track we run the submitted algorithms in a network-isolated sandbox with open-source dependencies only; in the Self-hosted track teams solve the instances on their own machines, with any software, within a timed window. Every solution is checked for feasibility, and a feasible solution scores the ratio of its objective to a frozen known reference, averaged over hidden instances.",
    "source": "arxiv"
   },
   {
@@ -37,12 +45,12 @@
    "primary_category": "math.OC",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "We develop a Hamiltonian potential optimization method for partially observed stochastic optimal control with continuous-time state dynamics and discrete-time noisy observations, including controlled sensing.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper replaces the infinite-dimensional belief-space HJB equation for partially observed continuous-time control with a finite-dimensional optimization over parametrized Hamiltonian potentials, uses Gaussian belief updates with adjoint gradients, smooths switching-control Hamiltonians, and certifies policies with a primal-dual information-relaxation bound.",
+    "plain": "Controlling a system when you can only see noisy, partial measurements of it is hard, because the controller must reason about its own uncertainty as well as the system's state. The authors propose a way to design controllers by tuning a small set of adjustable functions of the current state and past measurements, rather than solving an intractable equation over all possible beliefs. They test this on standard textbook-style problems, including cases where the controller also chooses when to take measurements, and pair each policy with a computed lower bound so its quality can be checked.",
+    "why": "The approach trades an intractable exact formulation for a finite, gradient-trainable one, and the primal-dual bound gives a way to judge how close a policy is to optimal. Its relevance to wider practice depends on how well the numerical experiments, which the abstract describes only at a high level, hold up on harder problems; I am not sure how it compares with existing approximate methods.",
+    "background": "['Stochastic optimal control: choosing actions over time to minimize expected cost when the system is driven by random noise.', 'Partial observation: the controller sees only noisy measurements, so it must track a belief (a probability distribution) over the hidden state.', 'Hamilton-Jacobi-Bellman (HJB) equation: the partial differential equation whose solution gives optimal cost; in belief space it is infinite-dimensional and generally unsolvable directly.', 'Hamiltonian: a function combining cost and dynamics whose minimizer gives the control action at each moment.', 'Linear-quadratic-Gaussian (LQG) problems: linear dynamics, quadratic costs and Gaussian noise, a standard benchmark with known solutions.', 'Gaussian belief: a belief summarized by a mean and covariance, as in Kalman filtering.', 'Adjoint method: a backward sweep that computes gradients of a cost with respect to parameters efficiently.', 'Information relaxation: a technique that gives lower bounds on optimal cost by relaxing the requirement that decisions depend only on available information, plus a penalty term.', 'Primal-dual gap: the difference between an achievable policy cost (primal) and a lower bound (dual) certifies how suboptimal the policy can be.']",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We develop a Hamiltonian potential optimization method for partially observed stochastic optimal control with continuous-time state dynamics and discrete-time noisy observations, including controlled sensing. Rather than solving the infinite-dimensional belief-space Hamilton-Jacobi-Bellman equation, we optimize over parametrized potentials depending on the state variable and the available observation history. The associated Hamiltonian minimizers induce admissible continuous controls and, when observations are controlled, sensing decisions. An extended Hamiltonian incorporating a cost multiplier provides a common representation of the induced belief dynamics and running and observation costs. This construction yields a finite-dimensional optimization problem, with gradients computed by a forward simulation and a backward discrete adjoint sweep. The numerical implementation uses Gaussian beliefs represented by conditional means and covariances. For nonsmooth Hamiltonians arising from switching controls, we introduce smooth Hamiltonian approximations to enable gradient-based optimization. To assess the resulting policies, we develop belief-space information relaxation lower bounds. A separate optimization of the dual test functional provides a lower bound which, paired with the admissible policy cost, yields an a posteriori primal-dual diagnostic. Numerical experiments investigate scalar and multidimensional linear-quadratic-Gaussian problems, controlled sensing with and without control bounds, a nonquadratic obstacle penalty, and Hamiltonian smoothing for a discontinuous control selector.",
    "source": "arxiv"

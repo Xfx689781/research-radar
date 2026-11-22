@@ -1,0 +1,53 @@
+{
+ "slug": "statistical-methods",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25464",
+   "title": "Faithful Generative Modeling for Censored Time-to-Event Data: From Distributional Fidelity to Statistical Inference",
+   "url": "https://arxiv.org/abs/2611.25464v1",
+   "authors": [
+    "Yin Liu",
+    "Shanshan Zhao",
+    "Didong Li"
+   ],
+   "label": "arXiv:2611.25464v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Synthetic data has emerged as a powerful tool for data sharing, clinical trial simulation, and digital twin development, with growing applications in biomedical research and drug development.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Synthetic data has emerged as a powerful tool for data sharing, clinical trial simulation, and digital twin development, with growing applications in biomedical research and drug development. However, limited attention has been devoted to synthetic time-to-event data, which are central to clinical trials and survival analysis. In particular, theoretical guarantees for the distributional fidelity of synthetic survival data remain largely unexplored. More importantly, even when a generator achieves distributional fidelity, it remains unclear whether the downstream statistical analysis is reliable. To address these gaps, we propose a general two-stage generative framework for survival data (TSGSurv) that jointly generates observed times and covariates conditional on event status, and establish its distributional convergence rate. Focusing on the widely used Cox proportional hazards model, we establish conditions under which generator fidelity guarantees consistency of model coefficient estimates. We further characterize the limitations of naive inference based on synthetic data, and develop a variance correction and a distribution calibration procedure to recover valid inference of original data. We demonstrate the effectiveness of the proposed generative and inferential framework with extensive simulations and two real data applications.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26426",
+   "title": "Exact Bayesian layers via characteristic functions",
+   "url": "https://arxiv.org/abs/2611.26426v1",
+   "authors": [
+    "William H. W. Thompson",
+    "Guillaume St-Onge",
+    "Laurent Hébert-Dufresne",
+    "Jean-Gabriel Young"
+   ],
+   "label": "arXiv:2611.26426v1",
+   "primary_category": "stat.ML",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper introduces CF-Prop, a sampling-free way to propagate uncertainty through a Bayesian ReLU layer by working with characteristic functions, which lets the variational training objective be computed in closed form for non-Gaussian likelihoods and yields the CF-VI training algorithm.",
+    "plain": "Neural networks can be built to report how unsure they are, but the usual way of estimating that uncertainty relies on repeatedly running random samples, which is slow. Earlier fast methods assumed the output uncertainty follows a bell-shaped (Gaussian) curve, which can be wrong for real problems. The authors use a mathematical transform, the characteristic function, to track the exact shape of the output uncertainty without sampling, and they report that this gives better calibration on CIFAR-100 and better tail estimates on a heavy-tailed insurance claims dataset.",
+    "why": "It targets a practical gap: fast uncertainty estimates that do not assume the output is bell-shaped, which matters for skewed or heavy-tailed data such as insurance losses. The abstract reports the results but not the full experimental details, so the size and generality of the gains are best checked in the full paper; the link to other fields is mainly through risk modelling and calibrated prediction.",
+    "background": "['Bayesian neural network: a network whose weights are probability distributions rather than fixed numbers, so predictions come with uncertainty.', 'Variational inference: training by fitting a simpler distribution to the true posterior, by maximising a score called the evidence lower bound (ELBO).', 'Monte Carlo sampling: estimating quantities by averaging many random draws; accurate but costly.', 'ReLU layer: a standard network layer that outputs the positive part of its input (zero otherwise).', 'Characteristic function: a transform that fully describes a probability distribution, similar in spirit to a Fourier transform.', 'Likelihood: the assumed distribution of observed outcomes given the model, here Gaussian, Poisson or Gamma.', \"Calibration error: how far a model's stated confidence is from how often it is actually right.\"]",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Bayesian neural networks provide principled uncertainty estimates, but training them with Monte Carlo sampling can be expensive. Sampling-free variational inference algorithms make training Bayesian neural networks feasible, but existing approaches assume a Gaussian output distribution, which can be inaccurate in applied problems. Here, we introduce CF-Prop, an uncertainty propagation method that uses characteristic functions to compute the exact output distribution of a Bayesian ReLU layer, without any sampling, even in non-Gaussian settings. Because CF-Prop propagates characteristic functions, the evidence lower bound---the objective of variational training---can be computed in closed form for a broad class of likelihoods, including the Gaussian, Poisson, and Gamma. This allows to implement an efficient resulting variational inference algorithm, CF-VI. On CIFAR-100, CF-VI achieves the lowest calibration error of any tested method, improving on the next best method by about 35%. On a heavy-tailed insurance claim dataset, CF-VI accurately captures tail uncertainty that is severely underestimated by both other sampling-free methods and Monte Carlo methods.",
+   "source": "arxiv"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "slug": "numerical-analysis",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25515",
+   "title": "When and why can integral constraints improve the accuracy of physics-informed neural networks?",
+   "url": "https://arxiv.org/abs/2611.25515v1",
+   "authors": [
+    "Myeong-Su Lee"
+   ],
+   "label": "arXiv:2611.25515v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper derives stability estimates for PINN losses with and without integral constraints on several PDEs, showing that in certain parameter regimes the standard loss gives only weak control over some error components while the integral constraints restore uniform control, and supports this with numerical experiments.",
+    "plain": "Physics-informed neural networks learn approximate solutions to equations describing physical systems by penalizing mistakes in the equation during training. Some researchers have found that adding extra conditions obtained by summing or integrating the equation over a region helps accuracy, but the reason was not well understood. The authors compare error bounds with and without these integral conditions for several equations, and report that in some parameter settings the usual training loss barely controls certain kinds of error, while the integral conditions restore control; their experiments match this, though the abstract does not give details of the specific equations or error sizes.",
+    "why": "It offers a mathematical explanation for a practical training trick that people have used in scientific machine learning, which helps decide when the trick is worth adding. Whether the reasoning carries over to other equations or network designs is not stated in the abstract and would need the full paper to judge.",
+    "background": "['Partial differential equation (PDE): an equation relating a function to its rates of change in several variables, used to model heat, waves, fluid flow and similar physics.', 'Neural network as a function approximator: a model with adjustable weights that is trained to fit data or satisfy equations.', 'Physics-informed neural network (PINN): a network trained by minimizing the residual of the PDE (and boundary/initial conditions) at sample points, so the loss measures how well the physics is satisfied.', 'Loss function: the single number the training algorithm tries to make small.', 'Integral constraint: a condition obtained by integrating the governing equation over a domain, added as an extra term in the loss.', 'Stability estimate: a mathematical bound showing how much the output error can grow relative to the size of the loss, indicating how well the loss controls the error.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Adding constraints obtained by integrating governing equations to the loss has been reported to improve the accuracy of physics-informed neural networks (PINNs) in several applications, but mathematical understanding of these benefits remains limited. For several partial differential equations (PDEs), we derive stability estimates for losses with and without integral constraints. The comparison reveals that in certain parameter regimes, the standard loss has very weak control over specific error components, and that the integral constraints restore uniform control of these components. This explains when and why the constraints improve accuracy. Finally, numerical experiments support this interpretation. In parameter regimes where the standard loss is predicted to have weak control over those components, the two losses indeed show clear differences in accuracy. Conversely, in regimes where the standard loss retains sufficient control, both losses yield similar accuracy.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25313",
+   "title": "Variational integrators for time-dependent Lagrangian systems on Lie groups",
+   "url": "https://arxiv.org/abs/2611.25313v1",
+   "authors": [
+    "Leonardo Colombo",
+    "María Emma Eyrea Irazú",
+    "David Martín de Diego",
+    "María Daniela Sánchez",
+    "Marcela Zuccalli"
+   ],
+   "label": "arXiv:2611.25313v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper builds structure-preserving variational time-stepping schemes for time-dependent Lagrangian systems evolving on Lie groups (such as rotations in SO(3)), proves their symplectic and momentum-preserving properties, gives a second-order error bound for a midpoint-Cayley variant, and analyzes long-time near-conservation via backward error analysis with an extended-phase-space formulation.",
+    "plain": "Many physical systems, such as spinning bodies or networks of orientations, have states that are rotations rather than ordinary numbers, and their laws can change with time. Computer simulations of these systems tend to drift away from the true behavior over long runs, so the authors design step-by-step computational rules that are derived from the system's variational (least-action) principle so they keep key physical quantities in line. They show the schemes preserve geometric structure and momentum, prove the method is second-order accurate, and argue that energy stays nearly constant over exponentially long times under stated assumptions. Numerical tests on a rotating rigid body and a rotation network are reported to match these predictions.",
+    "why": "Geometry-preserving integrators matter for long simulations in robotics, spacecraft attitude control, and multi-agent synchronization, where drift can accumulate into wrong answers. The paper's combination of time-dependence, Lie-group structure, and consensus stability may interest researchers in geometric numerical integration and control, though the practical reach beyond the stated assumptions is not established by the abstract.",
+    "background": "['Lagrangian mechanics: motion obtained from a least-action principle and the Euler-Lagrange equations.', 'Lie groups: smooth groups of transformations such as rotations SO(3); their tangent and cotangent spaces underlie the dynamics.', 'Symplectic maps: transformations that preserve the geometric area structure of phase space, which in turn controls long-run energy behavior.', \"Noether's theorem: each continuous symmetry of the Lagrangian gives a conserved quantity, such as momentum.\", 'Variational integrators: discrete-time schemes obtained by discretizing the action rather than the equations of motion.', 'Backward error analysis: interpreting a numerical method as the exact flow of a slightly modified equation to explain long-time accuracy.', 'Consensus dynamics: networked agents whose states are driven toward a common value, here rotations.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop fixed-step variational integrators for time-dependent Lagrangian systems on Lie groups, derive their reduced dynamics, and analyze their long-time behavior by backward error analysis. We derive the continuous Euler-Lagrange equations, energy balance, and Noether conservation laws, and construct time-indexed discrete Lagrangians using retractions, with the midpoint-Cayley scheme treated explicitly. On their regularity domains, the resulting phase-space maps are symplectic. For left-invariant discrete Lagrangians, they reduce to Lie-Poisson maps that preserve coadjoint orbits and, when $G$ is connected, every Casimir function. A variational error analysis establishes second-order accuracy of the midpoint-Cayley method. We also construct an exactly symplectic, projectable extension on $T^*(\\mathbb R\\times G)$ whose formal modified Hamiltonian is affine in the momentum conjugate to time and admits symmetry reduction. Under uniform analyticity, coefficient bounds, and domain-containment assumptions, optimal truncation yields exponentially accurate interpolation and near-conservation of the modified extended Hamiltonian over exponentially long intervals. For a connected attitude network on $SO(3)^N$ with damping and uniformly positive, non-increasing coupling weights, we prove local asymptotic stability of the static consensus set for the continuous dynamics and exact preservation of total spatial momentum by the discrete scheme. Numerical experiments on the network and on a time-dependent rigid body on $SO(3)$ illustrate second-order convergence and the extended energy balance.",
+   "source": "arxiv"
+  }
+ ]
+}

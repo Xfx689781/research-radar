@@ -1,0 +1,55 @@
+{
+ "slug": "fluids-plasma",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25750",
+   "title": "Scattering by Small Ice Crystals in Turbulence: From Orientation Statistics to Retrieval Biases",
+   "url": "https://arxiv.org/abs/2611.25750v1",
+   "authors": [
+    "Himanshu Mishra",
+    "Mohd. Meraj Khan",
+    "T. Narayana Rao",
+    "Anubhab Roy"
+   ],
+   "label": "arXiv:2611.25750v1",
+   "primary_category": "physics.flu-dyn",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Ice-cloud retrievals from polarimetric radar, lidar and submillimeter radiometry commonly assume random orientation, horizontal alignment or a prescribed flutter angle.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Ice-cloud retrievals from polarimetric radar, lidar and submillimeter radiometry commonly assume random orientation, horizontal alignment or a prescribed flutter angle. We link the orientation dynamics of ice crystals to their scattering. Fluid-inertial torque turns small settling crystals broadside on, and turbulent velocity gradients turn them away, so their orientation depends on the dissipation rate. We combine a closed-form orientation distribution for overdamped spheroids, including rotational diffusion and turbulence intermittency, with orientation-averaged Rayleigh, Rayleigh--Gans, T-matrix and specular scattering. Turbulence enters the scattering only through the Legendre moments of the orientation distribution. In the Rayleigh regime the specific differential phase follows crystal alignment, so assuming perfectly horizontal crystals biases ice-water-content retrievals low. Combining the specific differential phase with differential reflectivity limits this bias to $25\\%$ for a single size of the shapes studied. For size distributions that span the alignment transition the bound can fail, because the two observables weight sizes differently. Depolarization adds sensitivity to higher-order moments and to intermittency. At finite size the second orientation moment mainly controls the scattering cross sections and the asymmetry parameter, and for optically soft crystals its contribution vanishes $54.7^\\circ$ from the vertical. Specular returns from partly aligned plates should persist for lidars pointed $3^\\circ$ from nadir. An exploratory analysis of EarthCARE lidar data finds a weakly depolarizing, low-lidar-ratio signature most frequent near $-11^\\circ$C, where plates grow. Degree-scale tilt widths inferred from glints and lidar require larger crystals, near or beyond the validity range of the model.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25686",
+   "title": "Energy transfers in decaying three-dimensional Hall-magnetohydrodynamics turbulence: Dependence on the Ion-Inertial Length and the Magnetic Prandtl Number",
+   "url": "https://arxiv.org/abs/2611.25686v1",
+   "authors": [
+    "Pratik Patel",
+    "Sharad K. Yadav",
+    "Akanksha Gupta",
+    "Hideaki Miura",
+    "Rahul Pandit"
+   ],
+   "label": "arXiv:2611.25686v1",
+   "primary_category": "physics.plasm-ph",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper uses pseudospectral direct numerical simulations of decaying 3D Hall-MHD turbulence, with shell-to-shell energy-transfer analysis, to show how kinetic and magnetic energy exchange depends on the ion-inertial length and the magnetic Prandtl number, and how the Hall term drives inverse and forward magnetic energy transfer.",
+    "plain": "Turbulence is the chaotic swirling seen in stirred liquids and in plasmas such as the solar wind, and it moves energy from big motions to small ones. This paper studies a version of turbulence in electrically conducting plasma where the 'Hall effect' (a term that matters when ions and electrons decouple at small scales) is included. Using large computer simulations, the authors track how energy flows between moving-fluid energy and magnetic energy, and how this depends on two plasma parameters.",
+    "why": "Energy transfer across scales is central to how plasmas heat and organize themselves, including in space and astrophysical settings, so knowing which way energy flows and whether it is local or non-local is useful. The abstract does not compare these results with observations, so any link to specific space or lab plasmas is something the authors would need to establish.",
+    "background": "['Magnetohydrodynamics (MHD): a fluid model treating a conducting fluid or plasma as coupled to magnetic fields.', 'Hall term: an extra term in plasma models that becomes important at scales near the ion-inertial length, where ions and electrons no longer move together.', 'Ion-inertial length d_i: the characteristic scale below which the Hall effect matters.', 'Magnetic Prandtl number Pr_m: the ratio of fluid viscosity to magnetic diffusivity, controlling how the velocity and magnetic fields dissipate relative to each other.', 'Energy cascade: energy moving from large to small length scales (forward) or the reverse (inverse), in turbulence.', 'Shell-to-shell energy transfer: a method of splitting the wavenumber spectrum into shells and measuring how much energy moves between them.', 'Pseudospectral direct numerical simulation (DNS): solving the governing equations directly on a grid with spectral accuracy, without a turbulence model.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a systematic study of energy transfers in three-dimensional (3D) decaying Hall-magnetohydrodynamics (HMHD) turbulence. Our study has been designed to investigate the dependence of these transfers on initial energy spectra, the ion-inertial length $d_{i}$, and the magnetic Prandtl number $Pr_{m}$. Using shell-to-shell decomposition, we compute the energy transfer rates for (a) kinetic-to-kinetic, (b) magnetic-to-magnetic, (c) kinetic-to-magnetic, and (d) magnetic-to-kinetic interactions by carrying out extensive pseudospectral direct numerical simulations (DNSs) of 3D HMHD and its MHD counterpart. Furthermore, we examine the magnetic-to-magnetic and current-density-to-magnetic energy transfers arising from the Hall term in this framework. Energy transfers between like fields -- namely, kinetic-to-kinetic and magnetic-to-magnetic -- are predominantly local and forward in direction, cascading energy from large to small length scales. This behavior is consistent with a self-similar flow structure in the inertial range. Cross-field transfers, between kinetic and magnetic energy, are found to be forward but non-local in character. At low and high $Pr_{m}$, the transfers become local, and the nonlinear energy transfer is significantly suppressed. Moreover, we observe that the Hall term drives both inverse and forward transfers of magnetic energy, associated with local and non-local transfer, respectively.",
+   "source": "arxiv"
+  }
+ ]
+}

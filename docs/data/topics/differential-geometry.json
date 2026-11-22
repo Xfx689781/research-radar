@@ -3,6 +3,28 @@
  "updated": "2026-11-22",
  "papers": [
   {
+   "uid": "arxiv:2611.26238",
+   "title": "Willmore stability of minimal surfaces in the n-sphere",
+   "url": "https://arxiv.org/abs/2611.26238v1",
+   "authors": [
+    "Rob Kusner",
+    "Peng Wang"
+   ],
+   "label": "arXiv:2611.26238v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We prove that the Lawson minimal surface $ξ_{g,1}$ in $S^3$ is strongly stable for the Willmore bending energy $W$ and remains strongly $W$-stable in $S^n$ for every $n \\geq4$; our proof starts with a new lower bound on the area-index of $ξ_{m,k}$ for $m\\geq k>1$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We prove that the Lawson minimal surface $ξ_{g,1}$ in $S^3$ is strongly stable for the Willmore bending energy $W$ and remains strongly $W$-stable in $S^n$ for every $n \\geq4$; our proof starts with a new lower bound on the area-index of $ξ_{m,k}$ for $m\\geq k>1$. Next we observe that each of the $ξ_{m,k}$ and the Karcher-Pinkall-Sterling minimal surfaces in $S^3$, as well as the equilateral minimal torus in $S^5$, is the unique $W$-minimizer in its conformal class, up to Möbius transformations of $S^n$. Finally, we show that although the equilateral minimal torus is $W$-stable in $S^n$ for every $n \\geq5$, it is neither strongly $W$-stable nor a local $W$-minimizer: it has a 2-dimensional space of $W$-Jacobi fields on which almost everywhere the third-variation of $W$ is nonzero.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.25699",
    "title": "Displaceability of monotone Lagrangians in $\\mathbb{C}P^3(\\sqrt{2})$ and $Q^4(\\sqrt{2})$",
    "url": "https://arxiv.org/abs/2611.25699v1",
@@ -22,51 +44,6 @@
     "ai": false
    },
    "abstract": "We show that the generalized Polterovich submanifold $L_{0, 2}^P$ in $\\mathbb{C}P^3(\\sqrt{2})$ and the Chekanov-Oakley-Usher Lagrangian $L_{1, 2}^{Q, \\mathrm{Ch}}$ in the quadric $Q^4(\\sqrt{2})$ are displaceable. Since $L_{0, 2}^P$ and $L_{1, 2}^{Q, \\mathrm{Ch}}$ are in the zero level set of the moment maps of the $\\mathrm{SO}(3)$-actions on $\\mathbb{C}P^3(\\sqrt{2})$ and $Q^4(\\sqrt{2})$, the main idea is to construct Hamiltonian diffeomorphisms mapping $L_{0, 2}^P$ and $L_{1, 2}^{Q, \\mathrm{Ch}}$ to nonzero level sets of the moment maps.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25497",
-   "title": "Conformal parity",
-   "url": "https://arxiv.org/abs/2611.25497v1",
-   "authors": [
-    "Andrzej Derdzinski",
-    "Sinhwi Kim",
-    "JeongHyeong Park"
-   ],
-   "label": "arXiv:2611.25497v1",
-   "primary_category": "math.DG",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We call a Riemannian metric on a four-manifold, as well as the underlying conformal structure, conformally even/odd if its self-dual and anti-self- dual Weyl tensors acting on bivectors have, at each point, equal/opposite spectra.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We call a Riemannian metric on a four-manifold, as well as the underlying conformal structure, conformally even/odd if its self-dual and anti-self- dual Weyl tensors acting on bivectors have, at each point, equal/opposite spectra. The term mixed parity refers to the simultaneous occurrence of both of these conditions, an obvious example being the conformally flat case. After listing various known classes of conformally even metrics, we construct examples of conformally odd ones which are not of mixed parity, as well as some metrics of mixed parity that are not conformally flat. The former examples are provided by left-invariant metrics on Lie groups, and realize uncountably many local conformal-equivalence types. The latter also include some arising from Lie groups, as well as certain 1+3 Riemannian products that are not locally conformally homogeneous.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25390",
-   "title": "Affine Boosted Gauss Curvature Flow",
-   "url": "https://arxiv.org/abs/2611.25390v1",
-   "authors": [
-    "Andrews. Ben",
-    "Rajpal. Devesh"
-   ],
-   "label": "arXiv:2611.25390v1",
-   "primary_category": "math.DG",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We prove convexity in the affine orbit of entropies associated to Gauss curvature flow for sub-affine powers.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We prove convexity in the affine orbit of entropies associated to Gauss curvature flow for sub-affine powers. This allows the construction of an affine boosted Gauss curvature flow, which keeps the evolving hypersurface at the affine minimizer of the Gaussian entropy. The modified flow has bounded isoperimetric ratio, and after rescaling it converges along a sequence of times to self-similar solutions of the Gauss curvature flow. The construction also proves existence of new self-similar solutions to Gauss curvature flow in the sub-affine regime.",
    "source": "arxiv"
   }
  ]

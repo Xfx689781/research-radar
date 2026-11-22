@@ -1,0 +1,55 @@
+{
+ "slug": "stars-sun",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25306",
+   "title": "Sherlock 'Chrones: The Curious Case of NGC 6791 and Asteroseismic Targets Therein Reveals Mixing Length Dependence on Evolutionary Stage",
+   "url": "https://arxiv.org/abs/2611.25306v1",
+   "authors": [
+    "Eliza Frankel",
+    "Meridith Joyce",
+    "Jamie Tayar",
+    "Ily Rubio",
+    "Christian I. Johnson"
+   ],
+   "label": "arXiv:2611.25306v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "As single-aged populations containing stars spanning a range of masses but otherwise with similar properties, star clusters provide valuable testbeds for stellar evolution theory.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "As single-aged populations containing stars spanning a range of masses but otherwise with similar properties, star clusters provide valuable testbeds for stellar evolution theory. The old, metal-rich, open cluster NGC 6791 is well studied, but the availability of asteroseismic observations of individual cluster members allows for a more in-depth analysis. Driven by mounting evidence that the solar assumption for convection used in almost all 1D stellar models is not adequate, and in light of the increased precision provided by modern data and asteroseismic constraints, we built and compared custom isochrones with varying values of the convective mixing length, $α_\\text{MLT}$, to two clusters with well-determined ages: NGC 6791 and the well-studied, metal-poor globular cluster M92. For both clusters, we found that the best-fitting mixing length parameter decreases monotonically as a function of evolutionary phase, finding values between $0.98-1.10α_{\\odot}$ for NGC 6791 and $1.16-1.21α_{\\odot}$ for M92. In NGC 6791, this corresponds to an 18% decrease in the best fitting mixing length between the main sequence turn-off and upper end of the red giant branch. The degree of variation found within this one object is therefore comparable to variation across the literature in $α_\\text{MLT}$ fits for other non-solar targets, calling single-valued $α_\\text{MLT}$ fits to clusters into question. It is also consistent with $\\log g$-$α_\\text{MLT}$ trends predicted by higher-fidelity, 3D convection analyses. Our results therefore illustrate the need for more flexibility in our treatment of the mixing length in isochrones to properly model clusters.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25310",
+   "title": "3D Binary Evolution of a Merging Binary Black Hole Progenitor",
+   "url": "https://arxiv.org/abs/2611.25310v1",
+   "authors": [
+    "David Dickson",
+    "Pablo Marchant",
+    "Jon Sundqvist",
+    "Mattias Fabry"
+   ],
+   "label": "arXiv:2611.25310v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Mass transfer is a highly dynamical 3D process that spans evolutionary timescales in binary stars.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Mass transfer is a highly dynamical 3D process that spans evolutionary timescales in binary stars. It is key to the production of gravitational waves through formation of binary black holes and other double compact objects. We integrate global 3D hydrodynamics into stellar evolutionary modeling to resolve mass transfer across nuclear timescales. We employ the shellular approximation in the stellar evolution code MESA to map a 3D spatial structure by equipotential shells in the Roche geometry to maintain hydrostatic equilibrium across tidally-distorted surfaces. We employ the method of time-incremented multiscale evolution to alternate between stellar evolution and 3D hydrodynamics to span large timescales with dynamical feedback. We employ this framework to examine a likely merging binary black hole progenitor system of a low-metallicity 30Msol donor star and 9.3Msol black hole from the end of the main sequence to core Carbon depletion. We modeled two complete mass transfer phases in 3D while self-consistently accounting for stellar evolution. These comprised a thermal-timescale early Case B phase and a nuclear-timescale late Case B phase. The prescription of Kolb & Ritter (1990) closely predicted the results of 3D evolution, except at the end of the first phase of mass transfer; our 3D model remained well-contained by the outer Lagrange point, despite 1D predictions of substantial L3 overflow during this stage. We find incorporating 3D hydrodynamics during Case B mass transfer did not significantly impact expected merger times. Our model never overflowed L3 as predicted by 1D prescriptions. L2/L3 outflows formed even while underflowing those equipotentials. Our model suggests these outflows can be neglected for the evolution of similar systems, but were dense enough to potentially impact X-ray observations.",
+   "source": "arxiv"
+  }
+ ]
+}

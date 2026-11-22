@@ -1,0 +1,50 @@
+{
+ "slug": "ecology-evolution",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.766574",
+   "title": "A unifying framework for structured population dynamics in modern coexistence theory",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766574v1",
+   "authors": [
+    "Brennan, J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.766574 v1",
+   "primary_category": "ecology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper proposes a general framework for extending modern coexistence theory to account for variation among individuals within populations, and illustrates it with three case studies (influenza substrains, perennial plants, and prey with a foraging-predation risk tradeoff).",
+    "plain": "Ecologists often model a species as if every individual behaves the same way toward its competitors, but real populations contain varied individuals, and that variation can affect whether species can live together. The author proposes a single framework for building this within-population variation into the existing modern coexistence theory, which is meant to work across different areas of ecology. The abstract presents three example applications, but it does not report specific numerical results, so the strength of the findings cannot be judged from it alone.",
+    "why": "Several subfields of ecology have been working on this same question separately, so a shared framework could help them compare results and connect population-level and community-level processes. Whether it delivers on that promise depends on the detailed case studies, which the abstract only summarizes.",
+    "background": "['Coexistence theory asks why different species can persist together in the same place instead of one driving the others out.', 'Modern coexistence theory often separates stabilizing mechanisms (species limit their own growth more than that of rivals) from fitness differences (some species are simply better competitors).', 'Invasion tests check whether each species can increase when rare, which is a common way to decide whether coexistence is possible.', 'Structured populations are groups whose members differ in traits such as age, size, strain, or behavior, rather than being identical.', 'Niche overlap measures how much two species rely on the same resources.', 'A foraging-predation risk tradeoff means feeding more exposes an animal to predators, so animals must balance food gain against danger.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Variation within populations is ubiquitous in nature, yet many models and frameworks in community ecology assume that all individuals within a population interact with the community identically. Modern coexistence theory is no exception; however, several subfields of ecology have independently been integrating coexistence theory, each asking the same underlying question: how do structured population dynamics shape coexistence outcomes? Here, I propose a unifying framework for integrating population variation into modern coexistence theory that is applicable across all fields of ecology. The application of this framework is presented in three case studies: niche overlap and fitness differences between influenza substrains, mutual invasibility between competing perennial plants, and fluctuation-dependent invasion outcomes in apparently competing prey with a foraging-predation risk tradeoff. Together, these examples illustrate the framework's broad applicability, power to resolve the interaction between population and community level processes, and its potential to reveal novel ecological phenomena.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767819",
+   "title": "Phenotypic plasticity reshapes the evolution of species coexistence",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767819v1",
+   "authors": [
+    "Venugopal, V.",
+    "Baruah, G.",
+    "Wittmann, M. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767819 v1",
+   "primary_category": "ecology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper builds a framework that combines modern coexistence theory with competition-induced phenotypic plasticity and evolution for two competing species, showing that the breadth of available resources determines whether divergent or convergent plasticity promotes or hinders coexistence.",
+    "plain": "Two species that compete for the same resources can either share the living space or one can wipe out the other; ecologists have good tools for predicting this, but those tools mostly ignore that organisms can change their traits within their lifetimes in response to competitors, as well as evolving over generations. The authors write down a mathematical framework that includes both kinds of change for two competing species, and study how it plays out when the range of available resources is broad versus narrow. From the abstract, they report that in broad environments, plastic changes that push the species apart speed up the move toward coexistence, while in narrower environments the same kind of change can instead lead to one species being excluded.",
+    "why": "It matters because it suggests that short-term, reversible trait responses can change where long-term evolution ends up, so studies that ignore plasticity may misjudge which species persist. The abstract does not show empirical tests, so its practical reach is unclear; it may connect to work on how biodiversity responds to rapid environmental change.",
+    "background": "['Coexistence theory: a framework asking when competing species can persist together, usually decomposed into niche difference (how much they differ in resource use) and fitness difference (how evenly matched they are).', 'Invasion growth rate: how fast a rare species grows when competing with the common one; a positive value means it can recover and so coexist.', 'Phenotypic plasticity: an individual changing its traits (such as feeding or behaviour) during its life in response to its surroundings, as opposed to genetic change over generations.', 'Evolution of coexistence components: the idea that natural selection can shift niche and fitness differences over time, so coexistence can emerge or fail through evolution.', \"Divergent versus convergent plasticity: whether competition pushes the two species' traits further apart or closer together.\", 'Resource breadth: how many different resource types are available; narrow environments offer fewer options, so competitors overlap more.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Modern coexistence theory (MCT) has been the mainstay of recent research on coexistence of competing species. Competition not only drives evolutionary changes in traits that affect coexistence, but also induces rapid plastic changes. However, a generalised framework that integrates plasticity and evolution into MCT is lacking. We formulate such a framework for a system of two competing species and analyse how breadth of available resources modulates the effect of competition-induced plasticity on the evolution of coexistence components (niche and fitness difference). We find that, in broad environments, divergent plasticity accelerates evolution towards positive invasion growth rates for both species, facilitating coexistence, whereas convergent plasticity hinders this process. Surprisingly, in narrower environments, divergent plasticity can hinder coexistence, leading to exclusion, whereas convergent plasticity can facilitate coexistence. Our results show that plasticity reshapes the eco-evolutionary trajectories to coexistence, highlighting the importance of integrating short-term plastic responses with long-term evolutionary dynamics.",
+   "source": "biorxiv"
+  }
+ ]
+}

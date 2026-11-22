@@ -35,37 +35,14 @@
    "primary_category": "math.AP",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "In this note, we improve the regularity of Hölder continuous stationary solutions with respect to inner variations which are harmonic outside their zero set.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper sharpens the regularity theory for Hölder-continuous stationary solutions of free boundary problems that are harmonic off their zero set, obtaining a √log-Lipschitz bound for a generalized phase-variable class (including the two-phase problem), a full Lipschitz bound in the one-phase case, and showing that a Lipschitz assumption in Kriventsov–Weiss's variational class can be weakened to any positive Hölder exponent.",
+    "plain": "Free boundary problems describe shapes where two regions (for example, a region with a substance and one without, or two different materials) meet along an interface whose position is part of the answer. This note asks how smooth the solutions must be when they are stationary, meaning they are balanced against small deformations of the domain. The authors show that a weaker starting assumption on smoothness suffices than was previously required, and they get a slightly weaker or stronger smoothness conclusion depending on whether there is one phase or two.",
+    "why": "Getting by with a weaker smoothness assumption makes the regularity result apply to a broader class of solutions, which matters for free boundary theory in general. I can only judge the significance from the abstract, so the wider impact is uncertain; the connections it may have to variational and geometric questions are not spelled out there.",
+    "background": "['Partial differential equations: equations relating a function to its rates of change in several variables.', 'Free boundary problem: a problem in which the region where the solution is nonzero (or where phases differ) is itself unknown and must be determined.', 'Hölder continuity: a measure of smoothness, where an exponent between 0 and 1 controls how closely nearby values must match; Lipschitz is the case of bounded slope.', \"Harmonic function: a solution of Laplace's equation, the classic smooth 'equilibrium' function.\", 'Stationary solution with inner variations: a solution that does not change to first order under small reparametrizations of the domain, i.e. a critical point of an energy.', 'One-phase versus two-phase problems: whether the solution is zero on one side of the interface or takes two distinct nonzero regimes.', 'Regularity: how smooth a solution is guaranteed to be; here, how its gradient or continuity is controlled.']",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "In this note, we improve the regularity of Hölder continuous stationary solutions with respect to inner variations which are harmonic outside their zero set. We obtain a $\\sqrt{\\log}$-Lipschitz estimate for a class of solutions allowing a generalized phase variable and including the two-phase problem. In the case of the one-phase problem, we can improve to Lipschitz regularity. In particular, we show that the initial Lipschitz assumption in the class of variational solutions considered by Kriventsov and Weiss can be replaced by any positive Hölder exponent",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25660",
-   "title": "Large-scale regularity theory for optimal $p-$transport maps and application to concentration in the matching problem",
-   "url": "https://arxiv.org/abs/2611.25660v1",
-   "authors": [
-    "Michael Goldman",
-    "Lukas Koch",
-    "Dario Trevisan"
-   ],
-   "label": "arXiv:2611.25660v1",
-   "primary_category": "math.AP",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We consider the random bipartite matching problem between two independent families of uniformly distributed points in dimension three and higher, for the cost given by the $p$-th power of the distance.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We consider the random bipartite matching problem between two independent families of uniformly distributed points in dimension three and higher, for the cost given by the $p$-th power of the distance. We show that, up to logarithmic factors, every moment of the displacement of the optimal matching is of the order of the typical interparticle distance. This is a higher integrability, or Calderón--Zygmund type, estimate for optimal transport, and it settles, on the torus and up to logarithmic factors, a recent conjecture of D'Achille, Mattesini and the third author. As a consequence, we obtain concentration of the matching cost around its mean for every $p\\ge2$. The proof combines a deterministic large-scale regularity theory for optimal transport with $p$-costs, based on a harmonic approximation by a non-linear elliptic equation of $p$-Laplacian type, with tail bounds on local matching costs.",
    "source": "arxiv"
   }
  ]

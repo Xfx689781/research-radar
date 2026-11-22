@@ -1,5 +1,57 @@
 {
  "slug": "epidemiology",
  "updated": "2026-11-22",
- "papers": []
+ "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.18.26368387",
+   "title": "Perinatal suicide risk factors: A network analysis",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.18.26368387v1",
+   "authors": [
+    "Zivin, K.",
+    "Zhong, C.",
+    "Kahsay, E.",
+    "Johns, L.",
+    "Spring, E.",
+    "Courant, A.",
+    "Mezuk, B."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.18.26368387 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Purpose Suicide during pregnancy or after birth (the perinatal period) represents a leading, preventable cause of United States maternal deaths.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Purpose Suicide during pregnancy or after birth (the perinatal period) represents a leading, preventable cause of United States maternal deaths. This study aimed to understand the complex relationship between perinatal status and life circumstances among perinatal suicide decedents in the United States and generate insights regarding suicide risk. Methods This cross-sectional study used decedent data from the 2003-2023 National Violent Death Reporting System suicide mortality registry (N=20,217). We applied psychometric network analysis using 18 binary life circumstances indicators representing four domains: relationships, health, socioeconomic status, and risk factors for suicide. We generated two networks for the overall sample and perinatal sample and assessed network structure, bridge centralities, and stability. Results The analytic sample included 1,297 perinatal and 18,920 non-perinatal decedents. The network of the overall sample was stable. Perinatal status did not appear at the center of the network but connected primarily with intimate partner problems. The network of the perinatal sample was modestly stable. Postpartum status was not at the center of the network but connected to depressed mood and mental health diagnoses. In both networks, depressed mood had the highest bridge betweenness, and there was a consistent link between physical health domains and socioeconomic domains. Conclusion Suicide prevention strategies targeting childbearing-aged women should incorporate factors beyond pregnancy, including physical health, intimate partner relationships, and socioeconomic challenges.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.15.26368133",
+   "title": "Elevated maternal hemoglobin levels during pregnancy are associated with autism spectrum disorder in the offspring: A population-based cohort study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26368133v1",
+   "authors": [
+    "Dichter, A.",
+    "Tzoref, A.",
+    "Meiri, G.",
+    "Menashe, I."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.15.26368133 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Background Autism spectrum disorder (ASD) is an increasingly prevalent neurodevelopmental condition with multifactorial origins, including potential prenatal environmental contributions.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Background Autism spectrum disorder (ASD) is an increasingly prevalent neurodevelopmental condition with multifactorial origins, including potential prenatal environmental contributions. Maternal anemia (decreased hemoglobin [Hb] levels) has long been associated with adverse offspring neurodevelopmental outcomes. Yet, evidence regarding elevated levels of antenatal hemoglobin levels, in relation to ASD risk remains limited. This study evaluated the association between maternal Hb levels during pregnancy and the risk of ASD diagnosis in offspring. Methods This large-scale, population-based retrospective cohort study used electronic health records from births of members of Clalit Health Services (CHS), the largest health maintenance organization in Israel, between 2011 and 2021. The study included 303,234 singleton live births to Jewish mothers who had at least one measured prenatal Hb value and were CHS members. Exclusion criteria were children with known genetic disorders and births <25 weeks of gestation. Maternal Hb, and red blood cells (RBC) levels during the first and second trimesters were categorized as low (<2.5th percentile), normal (reference), or high (>97.5th percentile). The main outcome was a diagnosis of ASD in the offspring, as recorded in medical files. Statistical analyses adjusted for maternal age, socioeconomic status, gestational diabetes, BMI, and other clinical and demographic factors. Results Among the 303,234 births, 8,106 (2.7%) children were diagnosed with ASD. High maternal Hb levels were associated with elevated odds of ASD diagnosis (aOR=1.22; 95% CI=1.08:1.37), with the strongest association observed for first-trimester measurements (aOR=1.31; 95% CI=1.14-1.49). This association persisted in the sibling-matched analysis (aOR=1.64; 95% CI=1.08-2.47) and was not modified by maternal RBC levels, suggesting that it was not explained by familial factors or RBC counts. The main limitations of this study include the lack of available data on maternal smoking, and the absence of detailed information on maternal nutritional status. Conclusions These findings suggest that elevated antenatal Hb levels may be relevant to offspring neurodevelopment. Further studies are needed to replicate these findings and clarify the biological mechanisms underlying this association.",
+   "source": "medrxiv"
+  }
+ ]
 }

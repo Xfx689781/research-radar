@@ -1,0 +1,49 @@
+{
+ "slug": "algebraic-geometry",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26207",
+   "title": "Surface sheaves on the quintic I. Expanded degenerations and virtual gluing",
+   "url": "https://arxiv.org/abs/2611.26207v1",
+   "authors": [
+    "Artan Sheshmani"
+   ],
+   "label": "arXiv:2611.26207v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We study the specialization of Donaldson-Thomas virtual cycles for surface sheaves on a Calabi Yau threefold degenerating to a simple normal crossing threefold, composed of two quasi Fano threefolds glued along a common (double) divisor.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We study the specialization of Donaldson-Thomas virtual cycles for surface sheaves on a Calabi Yau threefold degenerating to a simple normal crossing threefold, composed of two quasi Fano threefolds glued along a common (double) divisor. The compactification of the two relative sheaf moduli spaces involves construction of suitable moduli space of sheaves on expanded degenerations of each quasi Fano variety. On a fixed expanded fiber the matching datum is an equivalence of the derived restrictions of the component sheaves. We identify the corresponding deformation complexes and give valuative and obstruction-theoretic hypotheses under which the specialized virtual class is a sum over marked joining divisors. When a marked space is the full fiber product of proper relative factors over a smooth simple boundary moduli space, its class is a refined diagonal pullback. For the case of sheaves supported on hyperplane sections of the threefold we discuss construction of the proper relative family by descending the chartwise stable loci, and identify both marked pieces, including the one with zero boundary. To provide some examples, we carry out explicit constructions for the moduli space of surface structure sheaf and its twists. We also prove valuative results for specified sheaves with noninvertible hulls. In a sequel, Part II, we use the construction of degeneration technique in this article to compare quintic invariants with the predicted S-duality modularity of \"M5-brane modified elliptic genus\" provided by string theorists, Gaiotto Strominger and Yin.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25501",
+   "title": "Stein degree on birational log Calabi-Yau fibrations",
+   "url": "https://arxiv.org/abs/2611.25501v1",
+   "authors": [
+    "Xintong Jiang",
+    "Santai Qu"
+   ],
+   "label": "arXiv:2611.25501v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We prove uniform bounds for the Stein degrees of boundary divisors on generalised log Calabi-Yau fibrations of Fano type over arbitrary fields of characteristic zero.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We prove uniform bounds for the Stein degrees of boundary divisors on generalised log Calabi-Yau fibrations of Fano type over arbitrary fields of characteristic zero. The main ingredient is the birational case for which we provide two approaches.",
+   "source": "arxiv"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "slug": "cancer-biology",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.767111",
+   "title": "ERM proteins antagonistically control cancer invasion and metastasis via mechanosensing regulation",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767111v1",
+   "authors": [
+    "Amer, M.",
+    "McCann, J. V.",
+    "Napso Shogan, T.",
+    "Ewald, A. J.",
+    "Wolfenson, H."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.767111 v1",
+   "primary_category": "cancer biology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper reports that in breast cancer models the three ERM proteins (ezrin, radixin, moesin) rise together in highly metastatic cells yet act in opposite directions, with ezrin loss reducing and radixin or moesin loss enhancing invasion, colony formation, and lung metastasis, linked to changes in focal adhesions, FAK activation, and force transmission to the matrix.",
+    "plain": "Cancer spreads when cells break loose and travel to new organs, and they must sense and pull on their surroundings to do so. This study looks at three related proteins, ezrin, radixin and moesin, that help link a cell's internal skeleton to its outer membrane. The authors found that all three are more abundant in highly spreading breast cancer cells, but removing ezrin reduced spread in their tests while removing radixin or moesin increased it, with the effects tied to how strongly cells pull on their surroundings.",
+    "why": "It suggests that the three proteins are not simply interchangeable markers of cancer spread but can have opposing roles, which matters if anyone tries to target them therapeutically. The abstract does not say whether these findings hold in human tumours or other cancer types, so the translational reach is unclear.",
+    "background": "['Metastasis: the spread of cancer from its original site to distant organs, such as the lungs.', 'Anchorage dependence: normal cells need to attach to a surface to grow; metastatic cells must loosen this requirement.', 'Mechanosensing: how cells detect and respond to physical forces from their environment.', 'Focal adhesions: small anchor points where a cell grips the extracellular matrix, the mesh of proteins around cells.', 'ERM proteins: ezrin, radixin and moesin, which link the cell membrane to the actin cytoskeleton (the internal scaffold of the cell).', 'FAK (focal adhesion kinase): a signalling enzyme that becomes activated at focal adhesions and helps drive cell movement.', \"Contractility: the ability of the cell's internal scaffold to pull, which generates the forces transmitted outward.\"]",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Metastasis requires cancer cells to overcome anchorage dependence and rewire mechanosensing pathways. Here, we identify the ERM proteins ezrin, radixin, and moesin as key but antagonistic regulators of breast cancer metastasis. Expression profiling across matched low- and high-metastatic breast cancer models revealed consistent upregulation of all three ERM proteins in highly metastatic cells. Despite this, ezrin depletion reduced colony formation, invasion, and lung metastasis, whereas radixin or moesin depletion enhanced these phenotypes. Loss of radixin or moesin increased ezrin localization at the cell edge, while ezrin depletion reduced membrane-associated moesin, indicating a dynamic balance among ERM proteins. Ezrin depletion also increased focal adhesion size and number, FAK activation, and force transmission to the extracellular matrix, whereas radixin or moesin silencing produced opposite effects. Cellular force magnitude was inversely correlated with invasion, and pharmacological modulation of contractility reverted the effects of ERM depletion. These findings reveal an ERM-dependent mechanosensing checkpoint that regulates metastasis through control of adhesion dynamics and force transmission.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.762837",
+   "title": "B7-H3 Orchestrates Fibro-Immune Spatial Organisation in Pancreatic Cancer",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.762837v1",
+   "authors": [
+    "Legrini, A.",
+    "Zhang, T.",
+    "McGuigan, M.-C.",
+    "Wood, C.",
+    "Patricia Schubert Santana, L.",
+    "McNickle, L.",
+    "Hatthakarnkul, P.",
+    "Pennel, K.",
+    "Kennedy Dietrich, C.",
+    "Doncheva, Y.",
+    "Latifi, G.",
+    "Vasquez, J.",
+    "Leslie, H.",
+    "Nixon, C.",
+    "Rakovic, K.",
+    "McLaren, A.",
+    "Doukas, M.",
+    "Edwards, J.",
+    "Jamieson, N."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.762837 v1",
+   "primary_category": "cancer biology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the most lethal cancers in the western world and is largely resistant to treatment.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the most lethal cancers in the western world and is largely resistant to treatment. A major barrier to effective treatment is the highly desmoplastic and immunosuppressive tumour microenvironment, where the organisation of tumour, stromal and resident immune cells limit immune infiltration. B7-H3 (CD276) is an emerging immune checkpoint marker investigated in phase I and Ib/2 clinical trials in PDAC, yet its biological role within the tumour environment remains poorly understood. We performed an integrated multiscale spatial profiling study to map B7-H3 expression across regional and single-cell spatial contexts in treatment-naive resected human PDAC. Furthermore, we explored the B7-H3 landscape in the neoadjuvant setting. Our results demonstrate that B7-H3 is not simply overexpressed in cancer but may act as a spatial organiser of the PDAC microenvironment, associated with a transition from epithelial-intrinsic tumour architecture to fibro-inflammatory immune states that underpin immune suppression, aggressive disease and poor prognosis. This fibro-inflammatory state appears conserved within the neoadjuvant landscape.",
+   "source": "biorxiv"
+  }
+ ]
+}

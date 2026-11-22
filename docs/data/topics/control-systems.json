@@ -1,0 +1,51 @@
+{
+ "slug": "control-systems",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25319",
+   "title": "The Prediction-to-Decision Gap: First-Action Informativity in Data-Driven Predictive Control",
+   "url": "https://arxiv.org/abs/2611.25319v1",
+   "authors": [
+    "Aihui Liu",
+    "Magnus Jansson"
+   ],
+   "label": "arXiv:2611.25319v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper asks whether data-compatible ARX models agree on the first input an unconstrained quadratic MPC would apply, shows that first-action agreement and multi-step prediction agreement are logically distinct, gives structural conditions for action agreement without unique identification, and approximates the action disagreement via local sensitivities and parameter covariance.",
+    "plain": "Model predictive control repeatedly plans a sequence of control inputs but only uses the first one before planning again. The authors ask whether the recorded data are enough to pin down that single first input, even when the data do not pin down the whole underlying model. They report that agreement on the first action and agreement on long-range predictions can come apart, and they offer a way to measure how much the uncertain model shifts that first action.",
+    "why": "It targets a gap between how well a learned model predicts the future and whether it leads to the same decision, which matters for anyone deploying data-driven controllers. The abstract does not show practical impact beyond the analytical and numerical examples it mentions, so its reach beyond ARX models with unconstrained quadratic MPC is unclear.",
+    "background": "['Model predictive control (MPC): at each time step, optimize a sequence of future inputs over a horizon, apply only the first, then re-optimize.', 'ARX model: a linear model that predicts the current output from past outputs and past inputs, plus exogenous (external) inputs.', 'System identification: estimating model parameters from recorded input-output data; a model is identified when the data determine its parameters uniquely.', 'Parameter covariance: a measure of how uncertain the estimated parameters are, typically from the fitting procedure.', 'Local sensitivity: how much an output (here, the first control action) changes when a parameter changes slightly, approximated by derivatives.', \"Mean-squared deviation: the average of squared differences, used here to measure how far alternative models' actions stray from the fitted model's action.\"]",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Model predictive control (MPC) applies only the first input of an optimized sequence before replanning. Do the available data determine this input? We define first-action informativity as agreement across data-compatible models at a fixed history and reference, with common MPC settings. For autoregressive models with exogenous inputs (ARX) and unconstrained quadratic MPC, we show that first-action agreement and prediction agreement under a fixed input sequence do not imply one another. We give structural conditions for action agreement without requiring unique model identification. When actions disagree, we quantify their mean-squared deviation from the fitted model's input under a specific parameter distribution. We approximate this measure using local sensitivities and parameter covariance. Analytical and numerical examples illustrate how model uncertainty affects predictions and actions differently. The framework evaluates model uncertainty through its effect on the first action MPC is about to apply.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25465",
+   "title": "DeoPC: Data-Enabled Output-Feedback Predictive Control for State Regulation",
+   "url": "https://arxiv.org/abs/2611.25465v1",
+   "authors": [
+    "Jingyuan Li",
+    "Dawei Shi",
+    "Ling Shi"
+   ],
+   "label": "arXiv:2611.25465v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper proposes DeoPC, a data-driven output-feedback model predictive controller that estimates an unknown linear system's internal state from past input-output data via SVD-based subspace methods and enforces constraints, with recursive feasibility and closed-loop stability shown under persistent excitation and initialization conditions.",
+    "plain": "Engineers often need to keep a machine's hidden internal condition within safe limits, but they can only see what goes in and what comes out, and they may not have a mathematical model of the machine. This paper builds a controller that reconstructs the hidden internal state from recent input and output records and then chooses future control actions that respect limits. The abstract reports theoretical guarantees that the controller keeps working and stays stable under stated data conditions, with and without bounded measurement noise, and tests it in simulation on an unstable batch reactor.",
+    "why": "It addresses a practical gap: controlling a system whose internal state is hidden and whose model is unknown, using only data. The approach may matter to process industries and anyone who wants model-free control with safety constraints, though the abstract does not show how it compares with existing data-driven methods on real hardware.",
+    "background": "['State: the set of internal variables that together determine how a system will evolve; often not directly measured.', 'Linear system: one whose input-output behaviour can be described by linear equations.', 'Output feedback: control that uses only measured outputs, not the full internal state.', 'Model predictive control (MPC): at each step, optimise a plan over a short future horizon subject to constraints, apply the first action, then repeat.', 'Recursive feasibility: the guarantee that the optimisation problem stays solvable at every future step, so the controller never gets stuck.', \"Persistent excitation: the requirement that the recorded input data is varied enough to reveal the system's behaviour.\", 'Singular value decomposition (SVD): a matrix factorisation used here to extract the dominant patterns in recorded data.', 'Batch reactor: a chemical vessel processed in discrete batches; used as a test case for an unstable process.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Constrained regulation of the internal state of an unknown linear system is challenging when only input-output measurements are available online. In this work, we develop a data-enabled output-feedback predictive control (DeoPC) framework for constrained state regulation using input-output data. Specifically, a data-driven state estimate is constructed from past input-output data via a subspace-based singular value decomposition. Based on this state representation, we formulate a predictive controller that directly penalizes the state and control effort while enforcing the system constraints. Under persistent excitation and initialization conditions, we establish recursive feasibility and closed-loop stability of DeoPC in both noise-free and bounded-noise settings. In addition, we show that DeoPC can be calibrated to the physical state coordinates using a few offline state measurements, or treated as a model predictive control tuning problem when no state measurements are available. The effectiveness of DeoPC is demonstrated through simulations on an unstable batch reactor system.",
+   "source": "arxiv"
+  }
+ ]
+}

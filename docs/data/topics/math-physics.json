@@ -1,5 +1,55 @@
 {
  "slug": "math-physics",
  "updated": "2026-11-22",
- "papers": []
+ "papers": [
+  {
+   "uid": "arxiv:2611.26285",
+   "title": "Dynamical Temperley-Lieb algebras from Quiver CFTs",
+   "url": "https://arxiv.org/abs/2611.26285v1",
+   "authors": [
+    "Rob Klabbers",
+    "Elli Pomoni",
+    "Ana L. Retore",
+    "Paul Ryan",
+    "Konstantinos Zoubos"
+   ],
+   "label": "arXiv:2611.26285v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The one-loop dilatation operator of a superconformal planar gauge theory can be written as a sum of local generators.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "The one-loop dilatation operator of a superconformal planar gauge theory can be written as a sum of local generators. The algebra these generators satisfy is a powerful organising principle for the spectrum. For SU(2)-like bosonic subsectors we show that this algebra can be read off directly from Feynman diagrams, which we identify as a natural graphical language for it. For N=4 super Yang-Mills this simply reproduces the Temperley-Lieb (TL) algebra of the XXX spin chain. After orbifolding and marginally deforming to N=2 superconformal quiver theories, the same recipe yields dynamical generalisations of the TL algebra. In these theories, the faces of the diagrams are coloured according to the quiver nodes, and separated by domain walls corresponding to bifundamental fields. There are two inequivalent SU(2)-like subsectors, which lead to two different TL algebras. One sector is built from the two bifundamental scalars and (in the simplest case) gives a dynamical TL algebra with a colour-dependent loop fugacity in its quadratic relation. The other sector is built from one bifundamental and one adjoint scalar, and (always) gives a novel algebra, in which the cubic TL relation becomes dynamical. In this latter case, we show that each generator of this new algebra is related to a standard XXZ TL generator by a colour-dependent twist. This twist is local and not an algebra homomorphism, and can be written as a dynamical Drinfeld twist. In both sectors, the TL structure provides a natural graphical approach to the spectral problem, as well as clarifying the structure of the irreducible representations of these chains. Finally, we give a preliminary description of the loop models associated to these algebras.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26554",
+   "title": "Twisting Spinning Particles with Superghost Backgrounds",
+   "url": "https://arxiv.org/abs/2611.26554v1",
+   "authors": [
+    "Erik Fink",
+    "Jingqian Gou",
+    "Niklas Holbach",
+    "Ondrej Hulik"
+   ],
+   "label": "arXiv:2611.26554v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We construct twists of spinning particles in the classical BV formalism by giving constant backgrounds to the bosonic ghosts of local worldline supersymmetry, in analogy with Costello and Li's twist of supergravity, which gives a nonzero background to the ghost of local spacetime supersymmetry.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We construct twists of spinning particles in the classical BV formalism by giving constant backgrounds to the bosonic ghosts of local worldline supersymmetry, in analogy with Costello and Li's twist of supergravity, which gives a nonzero background to the ghost of local spacetime supersymmetry. We represent the superghosts on polynomial states and gauge selected worldline R symmetries, imposing the shifted R constraints absolutely and the unshifted ones relatively. On flat targets, the N=2 particle, its N=4 extension on a complex target and an N=8 particle with two fermion flavors give the de Rham, Dolbeault and polynomial linear BCOV complexes. The last two are the linearized field content of the open and closed B-model target-space theories. Pairings and interactions require target-space input beyond the reduced worldline differentials.",
+   "source": "arxiv"
+  }
+ ]
 }

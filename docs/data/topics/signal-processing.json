@@ -1,0 +1,57 @@
+{
+ "slug": "signal-processing",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26442",
+   "title": "Decision Fusion in Wireless Networks: A Tutorial and Survey of Classical and Learning-Based Methods",
+   "url": "https://arxiv.org/abs/2611.26442v1",
+   "authors": [
+    "Mohamed Abdelkader",
+    "Arafat Al-Dweik",
+    "Sobia Jangsher",
+    "Hamad Yahia",
+    "Shihab Jimaa"
+   ],
+   "label": "arXiv:2611.26442v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Decision fusion combines local decisions from distributed sensors to support reliable detection of phenomena in wireless networks.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Decision fusion combines local decisions from distributed sensors to support reliable detection of phenomena in wireless networks. The effectiveness of decision fusion depends on sensing accuracy, reporting-channel reliability, and available communications and computation resources. This article surveys decision-fusion techniques for wireless sensor networks and emerging communication systems, bringing together their theoretical foundations and practical implementation requirements. We review network architectures and hard, soft, and quantized reporting strategies, and examine statistical, learning-based, game-theoretic, and heuristic fusion approaches. Advanced fusion techniques, including relay-aware combining, link-adaptive regeneration, branch selection, and likelihood approximations, are discussed with emphasis on their assumptions, information requirements, and limitations. The survey examines tradeoffs among detection performance, computational complexity, communications overhead, energy consumption, and latency. The tradeoffs are considered across representative sensing applications and emerging technologies, including massive machine-type communication, ultra-reliable low-latency communication, uncrewed aerial vehicle-assisted networks, and the massive Internet of Things. The reviewed literature highlights the importance of jointly considering sensing quality, reporting reliability, and fusion processing when selecting a suitable strategy. Finally, we identify research directions in resource-aware optimization, uncertainty calibration, and robust learning-based fusion under heterogeneous data, missing reports, and changing wireless conditions. Particular attention is given to convergence, generalization, and the costs of training and inference.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26038",
+   "title": "Channel-Aware Codebook Design for Task-Oriented Token Communication Over Wireless Networks",
+   "url": "https://arxiv.org/abs/2611.26038v1",
+   "authors": [
+    "Chenliang Wu",
+    "Zhicheng Liu",
+    "Zhouxiang Zhao",
+    "Ruopeng Xu",
+    "Zhaohui Yang",
+    "Zhaoyang Zhang"
+   ],
+   "label": "arXiv:2611.26038v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "This paper investigates the adaptive codebook design for task-oriented token communication over wireless networks with dynamic channels.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "This paper investigates the adaptive codebook design for task-oriented token communication over wireless networks with dynamic channels. This paper proposes the channel-aware codebook (CAC), a joint channel- and reconstruction-driven framework that reorders the labels of a frozen 14-bit VQGAN codebook. In the considered framework, a balanced geometric partition forms prefix groups, a prefix bijection places the groups on the label hypercube, and bijective suffix assignments place the codewords within each group. The problem is formulated to minimize the expected full-image perceptual distortion of the frozen decoder under a binary symmetric channel, averaged over a design set of bit error rates (BERs) and retaining simultaneous token errors. An offline algorithm alternates prefix and suffix exchanges and screens and confirms candidates on paired batches under a fixed decoder-evaluation budget. The assignment preserves the error-free reconstruction and the payload and deploys as static lookup tables without retraining. Under the binary symmetric channel at BER $0.01$, it reduces LPIPS by $12.3\\%$ and improves COCO AP by $14.1\\%$ ($1.72$ points) relative to the native labels, and it lowers LPIPS by a further $4.5\\%$ relative to a related assignment adaptation at the same payload.",
+   "source": "arxiv"
+  }
+ ]
+}

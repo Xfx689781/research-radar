@@ -1,0 +1,51 @@
+{
+ "slug": "operator-algebras",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26479",
+   "title": "Spectral asymptotics for vector-valued magnetic Schrödinger operators",
+   "url": "https://arxiv.org/abs/2611.26479v1",
+   "authors": [
+    "Vincenzo Leone",
+    "Marianna Porfido",
+    "Abdelaziz Rhandi"
+   ],
+   "label": "arXiv:2611.26479v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We consider vector-valued magnetic Schrödinger operators $-Δ_{a} +V$ with magnetic potential ${a}\\in C^2(\\mathbb{R}^d;\\mathbb{R}^d)$ and electric potential $V$ given by a symmetric and positive semidefinite $m\\times m$ matrix-valued function whose entries belong to $L^1_{\\rm loc}(\\mathbb{R}^d)$.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We consider vector-valued magnetic Schrödinger operators $-Δ_{a} +V$ with magnetic potential ${a}\\in C^2(\\mathbb{R}^d;\\mathbb{R}^d)$ and electric potential $V$ given by a symmetric and positive semidefinite $m\\times m$ matrix-valued function whose entries belong to $L^1_{\\rm loc}(\\mathbb{R}^d)$. Assuming that $\\|\\operatorname{curl} {a}(\\cdot)\\|\\operatorname{Id}_{\\mathbb{R}^m} + V$ belongs to a certain matrix reverse Hölder class, we characterize necessary and sufficient conditions under which the spectrum of $-Δ_{a} +V$ is discrete, and study the eigenvalue asymptotics and exponential decay of eigenfunctions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26462",
+   "title": "Spectral isometries and invertibility preservers on Banach algebras",
+   "url": "https://arxiv.org/abs/2611.26462v1",
+   "authors": [
+    "Zakariae Aznay",
+    "Fadil Chabbabi"
+   ],
+   "label": "arXiv:2611.26462v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "We prove that every unital surjective complex-linear spectral isometry between complex unital semisimple Banach algebras is a Jordan isomorphism, thereby giving an affirmative answer to the spectrum-preserving form of Kaplansky's conjecture.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "We prove that every unital surjective complex-linear spectral isometry between complex unital semisimple Banach algebras is a Jordan isomorphism, thereby giving an affirmative answer to the spectrum-preserving form of Kaplansky's conjecture. We also characterize surjective complex-linear maps between arbitrary unital Banach algebras that preserve invertibility in either direction, satisfy either spectral inclusion, or preserve the spectral radius. In particular, for a complex-linear bijection between semisimple Banach algebras, preservation of invertibility in either direction implies preservation in both directions, and either spectral inclusion implies equality of spectra, even without assuming unitality. As an application, we study preservers of the Fredholm essential spectrum and essential spectral radius.",
+   "source": "arxiv"
+  }
+ ]
+}

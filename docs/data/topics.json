@@ -3,33 +3,25 @@
  "language": "en",
  "fields": [
   "Mathematics",
+  "Statistics",
   "Computer science and AI",
   "Physics",
-  "Chemistry",
+  "Astronomy",
+  "Chemistry and materials",
   "Biology",
-  "Economics"
+  "Medicine and health",
+  "Economics and finance",
+  "Engineering"
  ],
  "topics": [
   {
    "slug": "probability",
    "name": "Probability",
    "field": "Mathematics",
-   "description": "Probability theory, random matrices, stochastic differential equations, interacting particle systems, mean-field limits, propagation of chaos, optimal transport, concentration of measure, high-dimensional probability, Gaussian processes, spin glasses, percolation, Markov chain mixing, stochastic analysis with connections to statistics and machine learning.",
+   "description": "Probability theory, random matrices, stochastic differential equations, interacting particle systems, mean-field limits, propagation of chaos, optimal transport, concentration of measure, high-dimensional probability, Gaussian processes, spin glasses, percolation, Markov chain mixing, random graphs.",
    "source": "arxiv",
    "categories": [
     "math.PR"
-   ],
-   "new_today": 3
-  },
-  {
-   "slug": "statistics-theory",
-   "name": "Statistics theory",
-   "field": "Mathematics",
-   "description": "Mathematical statistics, high-dimensional statistics, minimax rates, nonparametric estimation, Bayesian asymptotics, causal inference, conformal prediction, uncertainty quantification, multiple testing, selective inference, robust statistics.",
-   "source": "arxiv",
-   "categories": [
-    "math.ST",
-    "stat.ME"
    ],
    "new_today": 2
   },
@@ -37,30 +29,30 @@
    "slug": "differential-geometry",
    "name": "Differential geometry",
    "field": "Mathematics",
-   "description": "Riemannian geometry, curvature, geometric flows, geometric analysis, Lie groups, connections and fiber bundles, symplectic and Hamiltonian geometry, moment maps, optimal transport on manifolds, information geometry.",
+   "description": "Riemannian geometry, curvature, geometric flows, Ricci flow, minimal surfaces, geometric analysis, Lie groups, connections and fiber bundles, symplectic and Hamiltonian geometry, moment maps, Kahler geometry, information geometry.",
    "source": "arxiv",
    "categories": [
     "math.DG",
     "math.SG"
    ],
-   "new_today": 3
+   "new_today": 2
   },
   {
    "slug": "pde",
    "name": "Partial differential equations",
    "field": "Mathematics",
-   "description": "Nonlinear partial differential equations, elliptic and parabolic PDE, dispersive equations, nonlinear Schrodinger equation, wave equations, fluid equations, Hamilton-Jacobi equations, viscosity solutions, Fokker-Planck equations, gradient flows, regularity theory, free boundary problems.",
+   "description": "Nonlinear partial differential equations, elliptic and parabolic PDE, dispersive equations, nonlinear Schrodinger equation, wave equations, Navier-Stokes and fluid equations, Hamilton-Jacobi equations, viscosity solutions, Fokker-Planck equations, gradient flows, regularity theory, free boundary problems.",
    "source": "arxiv",
    "categories": [
     "math.AP"
    ],
-   "new_today": 3
+   "new_today": 2
   },
   {
    "slug": "harmonic-analysis",
    "name": "Harmonic analysis",
    "field": "Mathematics",
-   "description": "Harmonic analysis, Fourier analysis, singular integrals, Calderon-Zygmund theory, Littlewood-Paley theory, Fourier restriction, decoupling, Kakeya problems, oscillatory integrals, Fourier multipliers, maximal functions, weighted inequalities, wavelets, time-frequency analysis, functional analysis, operator theory, Banach and Hilbert spaces.",
+   "description": "Harmonic analysis, Fourier analysis, singular integrals, Calderon-Zygmund theory, Littlewood-Paley theory, Fourier restriction, decoupling, Kakeya problems, oscillatory integrals, Fourier multipliers, maximal functions, weighted inequalities, wavelets, time-frequency analysis, functional analysis, Banach and Hilbert spaces.",
    "source": "arxiv",
    "categories": [
     "math.CA",
@@ -72,18 +64,101 @@
    "slug": "complex-analysis",
    "name": "Complex analysis",
    "field": "Mathematics",
-   "description": "Holomorphic functions, normal families, conformal mappings, Riemann surfaces, potential theory, value distribution, several complex variables, complex dynamics, applications to random matrices and partition function zeros.",
+   "description": "Holomorphic functions, normal families, conformal mappings, Riemann surfaces, potential theory, value distribution, several complex variables, pluripotential theory, complex dynamics, quasiconformal maps.",
    "source": "arxiv",
    "categories": [
     "math.CV"
    ],
-   "new_today": 1
+   "new_today": 2
+  },
+  {
+   "slug": "operator-algebras",
+   "name": "Operator algebras and spectral theory",
+   "field": "Mathematics",
+   "description": "C*-algebras, von Neumann algebras, operator theory, spectral theory, noncommutative geometry, free probability, quantum groups, K-theory of operator algebras, Schrodinger operators, eigenvalue asymptotics.",
+   "source": "arxiv",
+   "categories": [
+    "math.OA",
+    "math.SP"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "algebra",
+   "name": "Algebra",
+   "field": "Mathematics",
+   "description": "Group theory, rings and modules, commutative algebra, homological algebra, noncommutative algebra, Lie algebras, finite groups, geometric group theory, Hopf algebras, quivers.",
+   "source": "arxiv",
+   "categories": [
+    "math.RA",
+    "math.AC",
+    "math.GR"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "representation-theory",
+   "name": "Representation theory",
+   "field": "Mathematics",
+   "description": "Representation theory of Lie groups and Lie algebras, quantum groups, categorification, geometric representation theory, automorphic representations, tensor categories, vertex algebras.",
+   "source": "arxiv",
+   "categories": [
+    "math.RT",
+    "math.QA"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "number-theory",
+   "name": "Number theory",
+   "field": "Mathematics",
+   "description": "Analytic number theory, distribution of primes, L-functions, modular forms, automorphic forms, Diophantine equations, elliptic curves, arithmetic geometry, additive number theory, sieve methods, p-adic methods.",
+   "source": "arxiv",
+   "categories": [
+    "math.NT"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "algebraic-geometry",
+   "name": "Algebraic geometry",
+   "field": "Mathematics",
+   "description": "Algebraic varieties, moduli spaces, birational geometry, sheaves and cohomology, derived categories, enumerative geometry, Hodge theory, singularities and resolution, tropical geometry, algebraic curves and surfaces.",
+   "source": "arxiv",
+   "categories": [
+    "math.AG"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "topology",
+   "name": "Topology",
+   "field": "Mathematics",
+   "description": "Low-dimensional topology, knot theory, 3-manifolds and 4-manifolds, hyperbolic geometry, algebraic topology, homotopy theory, characteristic classes, topological data analysis, persistent homology.",
+   "source": "arxiv",
+   "categories": [
+    "math.GT",
+    "math.AT",
+    "math.GN"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "dynamical-systems",
+   "name": "Dynamical systems",
+   "field": "Mathematics",
+   "description": "Dynamical systems, ergodic theory, chaos, bifurcation theory, Hamiltonian dynamics, KAM theory, entropy, smooth dynamics, homogeneous dynamics, complex dynamics, billiards, stability of nonlinear systems.",
+   "source": "arxiv",
+   "categories": [
+    "math.DS"
+   ],
+   "new_today": 2
   },
   {
    "slug": "combinatorics",
    "name": "Combinatorics",
    "field": "Mathematics",
-   "description": "Extremal and probabilistic combinatorics, random graphs, additive combinatorics, Ramsey theory, combinatorial designs, enumerative and analytic combinatorics, Erdos problems.",
+   "description": "Extremal and probabilistic combinatorics, random graphs, additive combinatorics, Ramsey theory, combinatorial designs, enumerative and algebraic combinatorics, graph theory, Erdos problems.",
    "source": "arxiv",
    "categories": [
     "math.CO"
@@ -91,25 +166,70 @@
    "new_today": 2
   },
   {
+   "slug": "numerical-analysis",
+   "name": "Numerical analysis",
+   "field": "Mathematics",
+   "description": "Numerical methods for partial differential equations, finite element methods, numerical linear algebra, iterative solvers, error analysis, scientific computing, uncertainty quantification, neural network solvers for PDEs.",
+   "source": "arxiv",
+   "categories": [
+    "math.NA"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "logic",
+   "name": "Logic and foundations",
+   "field": "Mathematics",
+   "description": "Mathematical logic, set theory, model theory, computability theory, proof theory, large cardinals, forcing, reverse mathematics, type theory.",
+   "source": "arxiv",
+   "categories": [
+    "math.LO"
+   ],
+   "new_today": 2
+  },
+  {
    "slug": "math-physics",
    "name": "Mathematical physics",
    "field": "Mathematics",
-   "description": "Rigorous statistical mechanics, quantum mechanics and spectral theory, Schrodinger operators, random matrices in physics, integrable systems, gauge theory, mathematical general relativity, nonlinear PDE from physics, rigorous results on phase transitions.",
+   "description": "Rigorous statistical mechanics, quantum mechanics and spectral theory, Schrodinger operators, random matrices in physics, integrable systems, gauge theory, mathematical general relativity, quantum field theory from a mathematical viewpoint, rigorous results on phase transitions.",
    "source": "arxiv",
    "categories": [
     "math-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "optimization-control",
    "name": "Optimization and control",
    "field": "Mathematics",
-   "description": "Convex and nonconvex optimization, first-order methods, convergence rates, stochastic optimization, optimal control, stochastic control, reinforcement learning theory, control barrier functions, safety verification, mean-field games.",
+   "description": "Convex and nonconvex optimization, first-order methods, convergence rates, stochastic optimization, optimal control, stochastic control, optimal transport, variational problems, mean-field games, operations research.",
    "source": "arxiv",
    "categories": [
-    "math.OC",
-    "eess.SY"
+    "math.OC"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "statistics-theory",
+   "name": "Statistics theory",
+   "field": "Statistics",
+   "description": "Mathematical statistics, high-dimensional statistics, minimax rates, nonparametric estimation, Bayesian asymptotics, conformal prediction, uncertainty quantification, multiple testing, selective inference, robust statistics.",
+   "source": "arxiv",
+   "categories": [
+    "math.ST"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "statistical-methods",
+   "name": "Statistical methods and applications",
+   "field": "Statistics",
+   "description": "Statistical methodology, causal inference, Bayesian methods and computation, Markov chain Monte Carlo, survival analysis, time series, spatial statistics, clinical trials, missing data, applied statistics in science and society.",
+   "source": "arxiv",
+   "categories": [
+    "stat.ME",
+    "stat.AP",
+    "stat.CO"
    ],
    "new_today": 2
   },
@@ -117,26 +237,75 @@
    "slug": "ml-theory",
    "name": "Machine learning theory",
    "field": "Computer science and AI",
-   "description": "Rigorous theory of machine learning, generalization bounds, PAC-Bayes, sample complexity, optimization and training dynamics of neural networks, mean-field limits and Wasserstein gradient flows, neural tangent kernel, implicit bias, benign overfitting and double descent, random matrix theory for high-dimensional learning, theory of diffusion and score-based models, uncertainty quantification and conformal prediction, singular learning theory, information geometry.",
+   "description": "Rigorous theory of machine learning, generalization bounds, PAC-Bayes, sample complexity, optimization and training dynamics of neural networks, mean-field limits and Wasserstein gradient flows, neural tangent kernel, implicit bias, benign overfitting and double descent, random matrix theory for high-dimensional learning, theory of diffusion models, conformal prediction, singular learning theory, information geometry.",
    "source": "arxiv",
    "categories": [
     "stat.ML",
     "cs.LG"
    ],
-   "new_today": 3
+   "new_today": 2
+  },
+  {
+   "slug": "large-language-models",
+   "name": "Large language models",
+   "field": "Computer science and AI",
+   "description": "Large language models, pretraining and scaling laws, instruction tuning, reasoning and chain of thought, tool use and agents, retrieval-augmented generation, evaluation and benchmarks, multilingual models, efficient inference, long context, machine translation.",
+   "source": "arxiv",
+   "categories": [
+    "cs.CL"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "computer-vision",
+   "name": "Computer vision",
+   "field": "Computer science and AI",
+   "description": "Computer vision, image and video generation, diffusion models for images, 3D reconstruction, neural rendering, object detection and segmentation, vision-language models, self-supervised visual representation learning, video understanding, medical imaging.",
+   "source": "arxiv",
+   "categories": [
+    "cs.CV"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "reinforcement-learning",
+   "name": "Reinforcement learning",
+   "field": "Computer science and AI",
+   "description": "Reinforcement learning, policy optimization, value-based methods, exploration, multi-armed bandits, model-based RL, offline RL, reinforcement learning from human feedback, reward modelling, multi-agent RL, theory of RL.",
+   "source": "arxiv",
+   "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "ai-safety",
+   "name": "AI safety and alignment",
+   "field": "Computer science and AI",
+   "description": "AI alignment and safety, scalable oversight, red teaming, jailbreaks and robustness of language models, reward hacking, deceptive behaviour, evaluations of dangerous capabilities, AI governance and policy, societal impacts of AI.",
+   "source": "arxiv",
+   "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.CY"
+   ],
+   "new_today": 2
   },
   {
    "slug": "interpretability",
    "name": "Interpretability",
    "field": "Computer science and AI",
-   "description": "Mechanistic interpretability of neural networks and language models, superposition, sparse autoencoders, circuits, linear representations, geometry of learned representations, developmental interpretability, singular learning theory, mathematical foundations of interpretability.",
+   "description": "Mechanistic interpretability of neural networks and language models, superposition of features, sparse autoencoders, circuits in transformers, linear representations, geometry of learned representations, developmental interpretability, singular learning theory, explainable AI.",
    "source": "arxiv",
    "categories": [
     "cs.LG",
     "cs.CL",
     "cs.AI"
    ],
-   "new_today": 3
+   "new_today": 2
   },
   {
    "slug": "ai4math",
@@ -151,59 +320,305 @@
     "cs.CL",
     "math.HO"
    ],
-   "new_today": 3
+   "new_today": 2
   },
   {
    "slug": "embodied-ai",
-   "name": "Embodied AI and robotics",
+   "name": "Robotics and embodied AI",
    "field": "Computer science and AI",
-   "description": "Vision-language-action models, robot foundation models, world models, humanoid robots, dexterous manipulation, sim-to-real transfer, reinforcement learning and optimal control for robots, safety guarantees, Lie groups for robot state estimation.",
+   "description": "Vision-language-action models, robot foundation models, world models, humanoid robots, dexterous manipulation, legged locomotion, sim-to-real transfer, robot learning, motion planning, safety guarantees for robots, autonomous driving.",
    "source": "arxiv",
    "categories": [
     "cs.RO"
    ],
-   "new_today": 3
+   "new_today": 2
+  },
+  {
+   "slug": "security-cryptography",
+   "name": "Security and cryptography",
+   "field": "Computer science and AI",
+   "description": "Cryptography, post-quantum cryptography, zero-knowledge proofs, secure computation, privacy and differential privacy, software and systems security, vulnerabilities and attacks, security of machine learning models, blockchain.",
+   "source": "arxiv",
+   "categories": [
+    "cs.CR"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "theory-of-computation",
+   "name": "Algorithms and complexity",
+   "field": "Computer science and AI",
+   "description": "Algorithms and data structures, computational complexity, approximation algorithms, graph algorithms, randomized algorithms, lower bounds, circuit complexity, streaming and sublinear algorithms, fine-grained complexity.",
+   "source": "arxiv",
+   "categories": [
+    "cs.DS",
+    "cs.CC"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "programming-languages",
+   "name": "Programming languages and formal methods",
+   "field": "Computer science and AI",
+   "description": "Programming language theory, type systems, semantics, program verification, formal methods, model checking, compilers, program synthesis, software engineering with AI, code generation by language models.",
+   "source": "arxiv",
+   "categories": [
+    "cs.PL",
+    "cs.LO",
+    "cs.SE"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "systems",
+   "name": "Systems and networking",
+   "field": "Computer science and AI",
+   "description": "Distributed systems, cloud computing, systems for machine learning training and inference, GPU and accelerator design, computer architecture, operating systems, networking, energy-efficient computing.",
+   "source": "arxiv",
+   "categories": [
+    "cs.DC",
+    "cs.OS",
+    "cs.NI",
+    "cs.AR"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "human-computer-interaction",
+   "name": "Human-computer interaction",
+   "field": "Computer science and AI",
+   "description": "Human-computer interaction, user studies, human-AI collaboration, AI in education, accessibility, social computing, visualization, computers and society.",
+   "source": "arxiv",
+   "categories": [
+    "cs.HC",
+    "cs.CY"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "information-theory",
+   "name": "Information theory",
+   "field": "Computer science and AI",
+   "description": "Information theory, channel coding, error-correcting codes, Shannon theory, rate-distortion, compression, network information theory, quantum information theory, information-theoretic limits of learning.",
+   "source": "arxiv",
+   "categories": [
+    "cs.IT"
+   ],
+   "new_today": 2
   },
   {
    "slug": "theoretical-physics",
-   "name": "Theoretical physics",
+   "name": "High-energy theory and gravity",
    "field": "Physics",
-   "description": "Quantum field theory, conformal field theory, scattering amplitudes, integrability, general relativity and black holes, statistical mechanics of disordered systems, spin glasses and replica methods, physics of learning and neural networks, exactly solvable models.",
+   "description": "Quantum field theory, conformal field theory, string theory, holography, scattering amplitudes, integrability, general relativity, black holes, quantum gravity, gravitational waves.",
    "source": "arxiv",
    "categories": [
     "hep-th",
-    "gr-qc",
-    "cond-mat.stat-mech"
+    "gr-qc"
    ],
-   "new_today": 3
+   "new_today": 2
+  },
+  {
+   "slug": "statistical-physics",
+   "name": "Statistical physics",
+   "field": "Physics",
+   "description": "Statistical mechanics, phase transitions, disordered systems, spin glasses, replica methods, nonequilibrium physics, active matter, stochastic thermodynamics, physics of learning and neural networks, exactly solvable models.",
+   "source": "arxiv",
+   "categories": [
+    "cond-mat.stat-mech",
+    "cond-mat.dis-nn"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "condensed-matter",
+   "name": "Condensed matter",
+   "field": "Physics",
+   "description": "Strongly correlated electrons, superconductivity, topological phases, quantum Hall effect, moire materials, quantum magnetism, quantum spin liquids, mesoscopic physics, ultracold atoms, quantum many-body dynamics.",
+   "source": "arxiv",
+   "categories": [
+    "cond-mat.str-el",
+    "cond-mat.supr-con",
+    "cond-mat.mes-hall",
+    "cond-mat.quant-gas"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "particle-physics",
+   "name": "Particle physics",
+   "field": "Physics",
+   "description": "Particle physics phenomenology, the Standard Model and beyond, dark matter, neutrinos, Higgs physics, collider experiments at the LHC, lattice QCD, flavour physics, searches for new particles.",
+   "source": "arxiv",
+   "categories": [
+    "hep-ph",
+    "hep-ex",
+    "hep-lat"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "nuclear-physics",
+   "name": "Nuclear physics",
+   "field": "Physics",
+   "description": "Nuclear structure, nuclear reactions, heavy-ion collisions, quark-gluon plasma, neutron stars and dense matter, nuclear astrophysics, fusion-related nuclear data.",
+   "source": "arxiv",
+   "categories": [
+    "nucl-th",
+    "nucl-ex"
+   ],
+   "new_today": 2
   },
   {
    "slug": "quantum",
    "name": "Quantum information and computing",
    "field": "Physics",
-   "description": "Quantum algorithms, quantum error correction, quantum complexity theory, quantum information theory, entanglement, quantum many-body systems, quantum machine learning, near-term quantum devices.",
+   "description": "Quantum algorithms, quantum error correction, quantum complexity theory, quantum information theory, entanglement, quantum hardware and qubits, quantum simulation, quantum sensing, quantum machine learning.",
    "source": "arxiv",
    "categories": [
     "quant-ph"
    ],
-   "new_today": 3
+   "new_today": 2
+  },
+  {
+   "slug": "optics-atomic",
+   "name": "Optics and atomic physics",
+   "field": "Physics",
+   "description": "Photonics, lasers, nonlinear optics, metamaterials, quantum optics, optical imaging, atomic clocks, precision measurement, cold atoms, spectroscopy.",
+   "source": "arxiv",
+   "categories": [
+    "physics.optics",
+    "physics.atom-ph"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "fluids-plasma",
+   "name": "Fluids and plasma",
+   "field": "Physics",
+   "description": "Fluid dynamics, turbulence, Navier-Stokes simulations, multiphase flow, geophysical flows, plasma physics, magnetic confinement fusion, tokamaks, laser-plasma interaction, space plasma.",
+   "source": "arxiv",
+   "categories": [
+    "physics.flu-dyn",
+    "physics.plasm-ph"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "biological-physics",
+   "name": "Biological physics",
+   "field": "Physics",
+   "description": "Biological physics, biomechanics, physics of cells and tissues, molecular motors, membranes, protein dynamics, collective motion, physics of living systems.",
+   "source": "arxiv",
+   "categories": [
+    "physics.bio-ph"
+   ],
+   "new_today": 1
+  },
+  {
+   "slug": "climate-earth",
+   "name": "Climate, atmosphere and Earth",
+   "field": "Physics",
+   "description": "Climate science, atmospheric dynamics, weather prediction, machine learning weather models, ocean circulation, climate change, extreme events, geophysics, seismology, Earth system modelling.",
+   "source": "arxiv",
+   "categories": [
+    "physics.ao-ph",
+    "physics.geo-ph"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "cosmology",
+   "name": "Cosmology",
+   "field": "Astronomy",
+   "description": "Cosmology, cosmic microwave background, dark matter, dark energy, large-scale structure, inflation, galaxy surveys, gravitational lensing, Hubble tension, the early universe.",
+   "source": "arxiv",
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "galaxies",
+   "name": "Galaxies",
+   "field": "Astronomy",
+   "description": "Galaxy formation and evolution, the Milky Way, supermassive black holes, active galactic nuclei, star formation, interstellar medium, high-redshift galaxies, observations with JWST.",
+   "source": "arxiv",
+   "categories": [
+    "astro-ph.GA"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "exoplanets",
+   "name": "Exoplanets and planetary science",
+   "field": "Astronomy",
+   "description": "Exoplanets, planet formation, exoplanet atmospheres, habitability, protoplanetary disks, the solar system, asteroids and comets, planetary missions.",
+   "source": "arxiv",
+   "categories": [
+    "astro-ph.EP"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "high-energy-astrophysics",
+   "name": "High-energy astrophysics",
+   "field": "Astronomy",
+   "description": "Black holes, neutron stars, pulsars, gamma-ray bursts, supernovae, gravitational-wave sources, fast radio bursts, cosmic rays, accretion physics.",
+   "source": "arxiv",
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "stars-sun",
+   "name": "Stars and the Sun",
+   "field": "Astronomy",
+   "description": "Stellar structure and evolution, asteroseismology, binary stars, stellar magnetism, the Sun, solar flares and space weather, star clusters.",
+   "source": "arxiv",
+   "categories": [
+    "astro-ph.SR"
+   ],
+   "new_today": 2
   },
   {
    "slug": "chemistry",
-   "name": "Chemistry and materials",
-   "field": "Chemistry",
-   "description": "Theoretical and computational chemistry, electronic structure, density functional theory, molecular dynamics, reaction mechanisms, catalysis, spectroscopy, materials discovery, batteries and energy materials, machine learning potentials and force fields.",
+   "name": "Chemical physics",
+   "field": "Chemistry and materials",
+   "description": "Theoretical and computational chemistry, electronic structure, density functional theory, quantum chemistry, molecular dynamics, reaction mechanisms, catalysis, spectroscopy, photochemistry, machine learning potentials.",
    "source": "arxiv",
    "categories": [
-    "physics.chem-ph",
+    "physics.chem-ph"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "materials-science",
+   "name": "Materials science",
+   "field": "Chemistry and materials",
+   "description": "Materials discovery, batteries and energy materials, two-dimensional materials, semiconductors, magnetic materials, crystal structure prediction, defects, first-principles calculations, materials informatics.",
+   "source": "arxiv",
+   "categories": [
     "cond-mat.mtrl-sci"
    ],
-   "new_today": 3
+   "new_today": 2
+  },
+  {
+   "slug": "soft-matter",
+   "name": "Soft matter and polymers",
+   "field": "Chemistry and materials",
+   "description": "Soft matter, polymers, colloids, liquid crystals, gels, granular materials, active matter, self-assembly, rheology, biological soft materials.",
+   "source": "arxiv",
+   "categories": [
+    "cond-mat.soft"
+   ],
+   "new_today": 2
   },
   {
    "slug": "ml-for-molecules",
-   "name": "Machine learning for molecules and materials",
-   "field": "Chemistry",
+   "name": "AI for chemistry and materials",
+   "field": "Chemistry and materials",
    "description": "Machine learning for chemistry and materials, equivariant neural networks for molecules, machine learning interatomic potentials, generative models for molecules, crystals and proteins, drug discovery, protein structure and design, inverse design of materials.",
    "source": "arxiv",
    "categories": [
@@ -212,28 +627,48 @@
     "q-bio.BM",
     "cs.LG"
    ],
-   "new_today": 3
+   "new_today": 2
+  },
+  {
+   "slug": "biochemistry",
+   "name": "Biochemistry",
+   "field": "Chemistry and materials",
+   "description": "Biochemistry, enzymes and enzyme mechanisms, protein structure and function, structural biology, cryo-EM, metabolism, lipids, nucleic acid chemistry, chemical biology.",
+   "source": "biorxiv",
+   "categories": [
+    "biochemistry"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "pharmacology",
+   "name": "Pharmacology and drug discovery",
+   "field": "Chemistry and materials",
+   "description": "Pharmacology, drug discovery, drug targets, toxicology, pharmacokinetics, small molecules, antibiotics and antimicrobial resistance, drug repurposing.",
+   "source": "biorxiv",
+   "categories": [
+    "pharmacology and toxicology"
+   ],
+   "new_today": 1
   },
   {
    "slug": "biology",
    "name": "Computational and systems biology",
    "field": "Biology",
-   "description": "Computational biology, bioinformatics, systems biology, biophysics, genomics, single-cell analysis, gene regulatory networks, protein structure prediction, mathematical models of cells and tissues, synthetic biology, machine learning for biology.",
+   "description": "Computational biology, bioinformatics, systems biology, biophysics, single-cell analysis, gene regulatory networks, protein structure prediction, mathematical models of cells and tissues, machine learning for biology.",
    "source": "biorxiv",
    "categories": [
     "bioinformatics",
     "systems biology",
-    "biophysics",
-    "genomics",
-    "synthetic biology"
+    "biophysics"
    ],
-   "new_today": 3
+   "new_today": 2
   },
   {
    "slug": "neuroscience",
    "name": "Neuroscience",
    "field": "Biology",
-   "description": "Computational and theoretical neuroscience, neural coding, learning and plasticity, neural population dynamics, brain-inspired machine learning, connectomics, large-scale neural recordings.",
+   "description": "Computational and theoretical neuroscience, neural coding, learning and plasticity, neural population dynamics, brain-inspired machine learning, connectomics, large-scale neural recordings, cognition and memory.",
    "source": "biorxiv",
    "categories": [
     "neuroscience"
@@ -241,8 +676,92 @@
    "new_today": 2
   },
   {
+   "slug": "genetics-genomics",
+   "name": "Genetics and genomics",
+   "field": "Biology",
+   "description": "Genetics, genomics, gene regulation, population genetics, genome-wide association studies, CRISPR screens, sequencing technologies, epigenetics, single-cell genomics.",
+   "source": "biorxiv",
+   "categories": [
+    "genetics",
+    "genomics"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "cell-molecular-biology",
+   "name": "Cell and molecular biology",
+   "field": "Biology",
+   "description": "Cell biology, molecular biology, cell division, signalling pathways, organelles, gene expression, RNA biology, developmental biology, stem cells, organoids.",
+   "source": "biorxiv",
+   "categories": [
+    "cell biology",
+    "molecular biology",
+    "developmental biology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "immunology-microbiology",
+   "name": "Immunology and microbiology",
+   "field": "Biology",
+   "description": "Immunology, immune responses, T cells and B cells, vaccines, microbiology, bacteria and viruses, host-pathogen interactions, the microbiome, antimicrobial resistance.",
+   "source": "biorxiv",
+   "categories": [
+    "immunology",
+    "microbiology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "cancer-biology",
+   "name": "Cancer biology",
+   "field": "Biology",
+   "description": "Cancer biology, tumour evolution, oncogenes and tumour suppressors, the tumour microenvironment, cancer immunotherapy, metastasis, cancer genomics.",
+   "source": "biorxiv",
+   "categories": [
+    "cancer biology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "ecology-evolution",
+   "name": "Ecology and evolution",
+   "field": "Biology",
+   "description": "Ecology, evolution, biodiversity, population dynamics, species interactions, climate change biology, phylogenetics, animal behaviour, evolutionary theory.",
+   "source": "biorxiv",
+   "categories": [
+    "ecology",
+    "evolutionary biology",
+    "animal behavior and cognition"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "plant-biology",
+   "name": "Plant biology",
+   "field": "Biology",
+   "description": "Plant biology, photosynthesis, plant development, plant immunity, crop improvement, plant-microbe interactions, plant stress responses.",
+   "source": "biorxiv",
+   "categories": [
+    "plant biology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "bioengineering",
+   "name": "Bioengineering and synthetic biology",
+   "field": "Biology",
+   "description": "Bioengineering, synthetic biology, genetic circuits, protein engineering, tissue engineering, biomaterials, gene therapy delivery, biosensors.",
+   "source": "biorxiv",
+   "categories": [
+    "bioengineering",
+    "synthetic biology"
+   ],
+   "new_today": 2
+  },
+  {
    "slug": "quantitative-biology",
-   "name": "Quantitative biology (arXiv)",
+   "name": "Mathematical biology (arXiv)",
    "field": "Biology",
    "description": "Mathematical and physical models in biology, population dynamics, evolution, epidemic models, biochemical networks, stochastic models of gene expression, theoretical neuroscience, biological physics.",
    "source": "arxiv",
@@ -258,63 +777,173 @@
     "q-bio.SC",
     "q-bio.TO"
    ],
-   "new_today": 1
-  },
-  {
-   "slug": "epidemiology",
-   "name": "Epidemiology (medRxiv)",
-   "field": "Biology",
-   "description": "Epidemiological methods, causal inference in health data, infectious disease modelling, clinical prediction models, health informatics, statistical methods for medical research.",
-   "source": "medrxiv",
-   "categories": [
-    "epidemiology",
-    "health informatics"
-   ],
    "new_today": 0
   },
   {
+   "slug": "epidemiology",
+   "name": "Epidemiology",
+   "field": "Medicine and health",
+   "description": "Epidemiological methods, cohort studies, causal inference in health data, risk factors, disease burden, statistical methods for medical research.",
+   "source": "medrxiv",
+   "categories": [
+    "epidemiology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "infectious-diseases",
+   "name": "Infectious diseases",
+   "field": "Medicine and health",
+   "description": "Infectious diseases, viral and bacterial infections, outbreaks, vaccines and vaccination, antimicrobial resistance, transmission modelling, respiratory infections.",
+   "source": "medrxiv",
+   "categories": [
+    "infectious diseases"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "public-health",
+   "name": "Public and global health",
+   "field": "Medicine and health",
+   "description": "Public health, global health, health policy, health economics, health inequalities, nutrition, health systems, cost-effectiveness.",
+   "source": "medrxiv",
+   "categories": [
+    "public and global health",
+    "health policy",
+    "health economics"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "mental-health",
+   "name": "Psychiatry and neurology",
+   "field": "Medicine and health",
+   "description": "Psychiatry, depression and anxiety, clinical psychology, neurology, dementia and Alzheimer's disease, Parkinson's disease, stroke, epilepsy.",
+   "source": "medrxiv",
+   "categories": [
+    "psychiatry and clinical psychology",
+    "neurology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "oncology",
+   "name": "Oncology",
+   "field": "Medicine and health",
+   "description": "Clinical oncology, cancer treatment, cancer screening, immunotherapy trials, cancer outcomes, precision oncology.",
+   "source": "medrxiv",
+   "categories": [
+    "oncology"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "health-informatics",
+   "name": "Health informatics and medical AI",
+   "field": "Medicine and health",
+   "description": "Health informatics, machine learning in medicine, clinical prediction models, electronic health records, large language models in health care, digital health.",
+   "source": "medrxiv",
+   "categories": [
+    "health informatics"
+   ],
+   "new_today": 2
+  },
+  {
    "slug": "economics",
-   "name": "Economics",
-   "field": "Economics",
-   "description": "Econometrics, causal inference, identification, structural estimation, economic theory, mechanism design, game theory, market design, macroeconomics, labor and development economics, economics of AI.",
+   "name": "Econometrics and applied economics",
+   "field": "Economics and finance",
+   "description": "Econometrics, causal inference, identification, difference-in-differences, instrumental variables, structural estimation, labour economics, development economics, macroeconomics, economics of AI.",
    "source": "arxiv",
    "categories": [
     "econ.EM",
-    "econ.TH",
     "econ.GN"
    ],
    "new_today": 0
   },
   {
-   "slug": "game-theory",
-   "name": "Game theory and mechanism design",
-   "field": "Economics",
-   "description": "Game theory, mechanism design, auctions, matching markets, social choice, learning in games, equilibrium computation, algorithmic economics.",
+   "slug": "economic-theory",
+   "name": "Economic theory",
+   "field": "Economics and finance",
+   "description": "Economic theory, decision theory, mechanism design, information design, contract theory, behavioural economics, social choice, general equilibrium.",
    "source": "arxiv",
    "categories": [
-    "cs.GT",
     "econ.TH"
    ],
-   "new_today": 3
+   "new_today": 0
+  },
+  {
+   "slug": "game-theory",
+   "name": "Game theory and algorithmic economics",
+   "field": "Economics and finance",
+   "description": "Game theory, mechanism design, auctions, matching markets, learning in games, equilibrium computation, algorithmic economics, fair division.",
+   "source": "arxiv",
+   "categories": [
+    "cs.GT"
+   ],
+   "new_today": 0
   },
   {
    "slug": "quantitative-finance",
-   "name": "Quantitative finance",
-   "field": "Economics",
-   "description": "Mathematical finance, stochastic calculus, option pricing, stochastic volatility, portfolio optimization, stochastic control, market microstructure, optimal execution, risk management, machine learning in finance.",
+   "name": "Mathematical finance",
+   "field": "Economics and finance",
+   "description": "Mathematical finance, stochastic calculus, option pricing, stochastic volatility, risk management, computational finance, portfolio optimization, stochastic control in finance.",
    "source": "arxiv",
    "categories": [
-    "q-fin.CP",
-    "q-fin.EC",
-    "q-fin.GN",
     "q-fin.MF",
-    "q-fin.PM",
     "q-fin.PR",
-    "q-fin.RM",
-    "q-fin.ST",
-    "q-fin.TR"
+    "q-fin.CP",
+    "q-fin.RM"
    ],
-   "new_today": 1
+   "new_today": 0
+  },
+  {
+   "slug": "financial-markets",
+   "name": "Financial markets",
+   "field": "Economics and finance",
+   "description": "Financial markets, market microstructure, trading, asset pricing, portfolio management, financial time series, cryptocurrencies, machine learning for finance, financial economics.",
+   "source": "arxiv",
+   "categories": [
+    "q-fin.ST",
+    "q-fin.TR",
+    "q-fin.PM",
+    "q-fin.GN",
+    "q-fin.EC"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "signal-processing",
+   "name": "Signal processing",
+   "field": "Engineering",
+   "description": "Signal processing, wireless communications, radar, compressed sensing, sparse recovery, estimation and detection, array processing, graph signal processing.",
+   "source": "arxiv",
+   "categories": [
+    "eess.SP"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "audio-speech",
+   "name": "Audio and speech",
+   "field": "Engineering",
+   "description": "Speech recognition, speech synthesis, audio generation, music information retrieval, speaker recognition, audio language models.",
+   "source": "arxiv",
+   "categories": [
+    "eess.AS",
+    "cs.SD"
+   ],
+   "new_today": 2
+  },
+  {
+   "slug": "control-systems",
+   "name": "Control systems",
+   "field": "Engineering",
+   "description": "Control theory, robust control, model predictive control, power systems and smart grids, safe control, control barrier functions, autonomous vehicles, networked control systems.",
+   "source": "arxiv",
+   "categories": [
+    "eess.SY"
+   ],
+   "new_today": 2
   }
  ]
 }

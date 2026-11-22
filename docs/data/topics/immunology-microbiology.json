@@ -1,0 +1,57 @@
+{
+ "slug": "immunology-microbiology",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767496",
+   "title": "Emergence of mobile fosA3-blaCTX-M-65 with mcr-1.1 and tet(X4) on conjugative plasmids in avian pathogenic Escherichia coli from industrial poultry in Pakistan",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767496v1",
+   "authors": [
+    "Umair, M.",
+    "Fatima, F.",
+    "Mathias, J.",
+    "Iannetelli, T.",
+    "Mohsin, M.",
+    "Farlow, A.",
+    "Walsh, T. R."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767496 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The emergence of plasmid-mediated resistance to critically important antimicrobials poses a growing threat to global health.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "The emergence of plasmid-mediated resistance to critically important antimicrobials poses a growing threat to global health. Here we report the first genomic evidence of plasmid-mediated fosA3 and blaCTX-M-65 coexisting with mcr-1.1 and tet(X4) in multidrug-resistant Escherichia coli from clinically healthy broiler chickens in Pakistan. Among 1,677 high-quality genomes collected through antimicrobial resistance surveillance in Punjab, Pakistan, three isolates recovered between 2022 and 2024 harboured all four resistance determinants. Hybrid genome assemblies showed that fosA3 and blaCTX-M-65 were co-located on IncHI2A plasmids, whereas mcr-1.1 and tet(X4) were carried on separate IncI2 and IncFIA/IncFIC plasmids, all predicted to be conjugative; in one isolate the tet(X4) contig did not circularise. The isolates belonged to sequence type 93 and exhibited resistance to fosfomycin, colistin, tigecycline and cefotaxime. Comparative genomic analysis revealed highly conserved IncHI2A plasmid backbones, with an additional integron-associated resistance region in the 2024 isolates, suggesting acquisition of accessory resistance determinants. Resistance to three last-line antimicrobial classes and a canonical virulence profile now coexist on conjugative plasmids in poultry E. coli, a combination that favours co-selection and argues for plasmid-resolved surveillance in poultry production.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767844",
+   "title": "An Infected Cryopreserved Precision-Cut Lung Slice Model for Drug Susceptibility Testing in Pneumocystis murina Pneumonia",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767844v1",
+   "authors": [
+    "Pellegrino, M. R.",
+    "McLean, J. L.",
+    "Kottom, T.",
+    "Limper, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767844 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Precision-cut lung slices (PCLS) preserve native three-dimensional lung architecture and cellular complexity, providing a valuable ex vivo platform for studying pulmonary host-pathogen interactions.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Precision-cut lung slices (PCLS) preserve native three-dimensional lung architecture and cellular complexity, providing a valuable ex vivo platform for studying pulmonary host-pathogen interactions. However, existing PCLS infection models typically introduce microorganisms into previously uninfected tissue, while fresh PCLS prepared from infected lungs have limited experimental flexibility and scalability. To our knowledge, cryopreserved PCLS generated from lungs with an established in vivo pulmonary infection have not been described. Herein, we evaluated cryopreserved PCLS from mice with established Pneumocystis murina pneumonia (PCP) as an ex vivo platform for infection and therapeutic studies. PCLS were prepared from dexamethasone-immunosuppressed mice with established PCP, rested for 24 h, cryopreserved in a novel freezing medium for 12 days in liquid nitrogen, rapidly thawed, recovered for 24 h, and treated with pentamidine for 72 h. Viability was assessed in uninfected and PCP-infected PCLS before and after cryopreservation. Although post-thaw viability decreased in both groups, substantial viability was still retained, allowing further experimentation. qPCR showed that cryopreservation did not alter expression of the type I and type II alveolar epithelial markers podoplanin (Pdpn) and surfactant protein C (Sftpc) in either group. Importantly, pentamidine significantly reduced Pneumocystis mitochondrial small subunit (mtSSU) rRNA levels in thawed PCP-infected PCLS, demonstrating suitability for anti-Pneumocystis drug testing. These findings establish the first cryopreserved ex vivo PCP model using infected mouse PCLS, preserving endogenous fungal burden and infection-associated host responses while enabling flexible, scalable studies of Pneumocystis biology, host-pathogen interactions, therapeutic efficacy, and potentially other pulmonary infections.",
+   "source": "biorxiv"
+  }
+ ]
+}

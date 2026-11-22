@@ -1,0 +1,35 @@
+{
+ "slug": "pharmacology",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767627",
+   "title": "Lipid nanoparticle-delivered Cas13b ribonucleoproteins targeting survivin overcome gemcitabine resistance in pancreatic cancer",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767627v1",
+   "authors": [
+    "Castano-Esteban, D.",
+    "Lopez-Valls, M.",
+    "Santos, M.",
+    "Recuero, E.",
+    "Martin-Vallejo, L.",
+    "Pardo, D.",
+    "Luciani, P.",
+    "Somoza, A.",
+    "Sot, B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767627 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the deadliest cancers, largely due to its poor response to chemotherapy and the development of drug resistance.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the deadliest cancers, largely due to its poor response to chemotherapy and the development of drug resistance. Survivin (BIRC5), an inhibitor of apoptosis frequently overexpressed in PDAC, contributes to tumor cell survival and gemcitabine resistance, making it an attractive therapeutic target. Here, we developed a lipid nanoparticle (LNP)-based platform for the delivery of preassembled spCas13b ribonucleoproteins (RNPs) to achieve transient and sequence-specific RNA silencing in pancreatic cancer cells. We optimized ionizable lipid formulations for Cas13b RNP encapsulation and identified a formulation achieving approximately 80% encapsulation efficiency, with sustained colloidal stability and gene-silencing activity during seven days of storage at 4{degrees}C. LNP-delivered Cas13b RNPs efficiently silenced endogenous BIRC5 in three pancreatic cancer cell lines, reducing survivin protein levels and inducing apoptosis. In gemcitabine-resistant PANC-1 cells, BIRC5 silencing synergistically enhanced the cytotoxic effect of gemcitabine in vitro. This therapeutic combination was further evaluated in a PANC-1 xenograft model, where only the combined administration of BIRC5-targeting Cas13b RNP-LNPs and gemcitabine significantly inhibited tumor growth, without apparent systemic toxicity. Intratumoral administration also restricted nanoparticle distribution to the injected tumors. These findings establish LNP-mediated delivery of Cas13b RNPs as a new strategy for transient RNA-targeted therapy and provide proof of concept for combining survivin silencing by Cas13b with chemotherapy to address gemcitabine resistance in pancreatic cancer.",
+   "source": "biorxiv"
+  }
+ ]
+}

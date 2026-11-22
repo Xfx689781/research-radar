@@ -3,27 +3,25 @@
  "updated": "2026-11-22",
  "papers": [
   {
-   "uid": "arxiv:2611.25536",
-   "title": "Differentially Private Score Estimation with Applications to Score-Based Generative Models",
-   "url": "https://arxiv.org/abs/2611.25536v1",
+   "uid": "arxiv:2611.25342",
+   "title": "Class-Conditional Conformal Triage for ICAO Face-Image Compliance under Class Imbalance",
+   "url": "https://arxiv.org/abs/2611.25342v1",
    "authors": [
-    "Mengxiao Gao",
-    "Elly K. H. Hung",
-    "Yuchen Wu",
-    "Yi Yu"
+    "Mustafa Vedat Yildirim",
+    "Inna Skarga-Bandurova"
    ],
-   "label": "arXiv:2611.25536v1",
-   "primary_category": "stat.ML",
+   "label": "arXiv:2611.25342v1",
+   "primary_category": "cs.LG",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "Estimating the score function of a distribution plays a central role in statistics and machine learning, with applications in distribution estimation, sampling, and score-based generative modeling.",
+    "one_liner": "Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph.",
     "plain": "",
     "why": "",
     "background": "",
     "difficulty": "",
     "ai": false
    },
-   "abstract": "Estimating the score function of a distribution plays a central role in statistics and machine learning, with applications in distribution estimation, sampling, and score-based generative modeling. However, learning scores from sensitive data raises privacy concerns. These concerns are particularly pronounced in score-based generative modeling, where trained models may memorize individual training examples and expose sensitive information through membership inference and data extraction attacks. Although non-private score estimation has been extensively studied, the statistical limits of its private counterpart remain less understood. In this work, we study score estimation under $(α,β)$-differential privacy for $d$-dimensional sub-Gaussian distributions with locally $γ$-Hölder-continuous scores. We develop a sampling-based private score estimator using quadratic B-splines and the exponential mechanism, and we implement our proposal through projected Langevin Monte Carlo with runtime polynomial in the sample size $n$. The proposed estimator satisfies $(α,β)$-differential privacy, and achieves expected density-weighted squared error $\\mbox{polylog}(n) \\max(n^{-2γ/(d+2γ+2)},\\,(nα)^{-2γ/(d+γ+1)})$. We also establish a nearly matching private minimax lower bound, thereby characterizing the privacy-accuracy trade-off for score estimation. As an application, we construct a differentially private diffusion model whose privacy guarantee is independent of the number of denoising steps. We show that, with an appropriate discretization scheme, the resulting diffusion model attains nearly minimax optimal expected total variation error among all private distribution estimators. We validate our theoretical findings through experiments on both synthetic and real-world datasets.",
+   "abstract": "Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph. We investigate conformal prediction as a triage layer for BioGaze, evaluating 14 compliance criteria on the synthetic TONO benchmark. Without retraining the analyser, we fit per-criterion logistic classifiers and compare marginal and label-conditional (Mondrian) conformal prediction with conventional abstention rules using subject-disjoint splits. Marginal conformal prediction achieved approximately 0.90 overall coverage but substantially under-covered violations, with a ten-partition mean of 0.37 for one criterion. The corresponding Mondrian means ranged from 0.89 to 0.92 across criteria. However, most of the reduction in criterion-level false positives came from the logistic layer (0.145 to 0.048), while tuned abstention rules achieved lower false-positive rates than Mondrian at comparable retake rates. Bonferroni correction for joint coverage across 14 criteria required retaking nearly all images. These findings show that class-conditional conformal prediction can achieve near-target empirical coverage for minority violation classes and reveal trade-offs between statistical coverage, classification performance, and retake requirements in multi-criterion face-image compliance assessment.",
    "source": "arxiv"
   },
   {
@@ -48,28 +46,6 @@
     "ai": false
    },
    "abstract": "The concentration and training-time constancy of the neural tangent kernel (NTK) depend on the interplay between network width, depth, and initialization. While joint depth-width scaling has been studied in fully-connected, residual, and recurrent networks, its effects in convolutional neural networks (CNNs) remain less understood. We investigate these effects numerically in CNNs, examining NTK dispersion at initialization and kernel rotation during training. Let depth $L$ be the number of convolutional layers, and width $C$ the number of channels per layer. We find that NTK dispersion increases with $L/C$ in the critical and chaotic initialization regimes, but remains small in the ordered regime. At critical initialization, dispersion curves approximately collapse as a function of $L/C$, suggesting a nontrivial joint scaling regime. During training, kernel rotation generally increases with $L/C$, even in the ordered regime where initial dispersion is small. Together, these results suggest that $L/C$ may govern NTK deviations from the infinite-width limit in certain regimes, and that NTK concentration at initialization and stability during training exhibit different scaling behaviors.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25342",
-   "title": "Class-Conditional Conformal Triage for ICAO Face-Image Compliance under Class Imbalance",
-   "url": "https://arxiv.org/abs/2611.25342v1",
-   "authors": [
-    "Mustafa Vedat Yildirim",
-    "Inna Skarga-Bandurova"
-   ],
-   "label": "arXiv:2611.25342v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph. We investigate conformal prediction as a triage layer for BioGaze, evaluating 14 compliance criteria on the synthetic TONO benchmark. Without retraining the analyser, we fit per-criterion logistic classifiers and compare marginal and label-conditional (Mondrian) conformal prediction with conventional abstention rules using subject-disjoint splits. Marginal conformal prediction achieved approximately 0.90 overall coverage but substantially under-covered violations, with a ten-partition mean of 0.37 for one criterion. The corresponding Mondrian means ranged from 0.89 to 0.92 across criteria. However, most of the reduction in criterion-level false positives came from the logistic layer (0.145 to 0.048), while tuned abstention rules achieved lower false-positive rates than Mondrian at comparable retake rates. Bonferroni correction for joint coverage across 14 criteria required retaking nearly all images. These findings show that class-conditional conformal prediction can achieve near-target empirical coverage for minority violation classes and reveal trade-offs between statistical coverage, classification performance, and retake requirements in multi-criterion face-image compliance assessment.",
    "source": "arxiv"
   }
  ]

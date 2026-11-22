@@ -28,52 +28,26 @@
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.25880",
-   "title": "Evolving Decoding Algorithms for Quantum Error Correction",
-   "url": "https://arxiv.org/abs/2611.25880v1",
+   "uid": "arxiv:2611.25572",
+   "title": "Algorithmic Quantum Sensing",
+   "url": "https://arxiv.org/abs/2611.25572v1",
    "authors": [
-    "Eduardo Dueñez",
-    "Edgar Said Hernandez Sanchez",
-    "Edgar A. Duéñez-Guzmán",
-    "Suzanne Sadedin"
+    "Ishaan Kannan",
+    "Aditi Venkatesh",
+    "Jordan Cotler"
    ],
-   "label": "arXiv:2611.25880v1",
+   "label": "arXiv:2611.25572v1",
    "primary_category": "quant-ph",
    "date": "2026-11-22",
    "summary": {
-    "one_liner": "Quantum computation entails robustness engineering: a noisy quantum state is measured continuously, and a classical algorithm (the decoder) must infer corrections that reliably remove the noise, fast enough to keep up.",
+    "one_liner": "We introduce a unified framework for sensing time-dependent fields through the lens of classical and quantum algorithms.",
     "plain": "",
     "why": "",
     "background": "",
     "difficulty": "",
     "ai": false
    },
-   "abstract": "Quantum computation entails robustness engineering: a noisy quantum state is measured continuously, and a classical algorithm (the decoder) must infer corrections that reliably remove the noise, fast enough to keep up. We write several published belief-propagation (BP) decoders for quantum low-density parity-check (qLDPC) codes in a Domain-Specific Language (DSL), and search over it with grammatical evolution. Written in the language, the published decoders show their parameters in plain view, allowing us to re-parameterise BP+OSD (ordered statistics decoding) and BP+LSD (localized statistics decoding) decoders with damping, before any search, making each 17.1--41.0$\\times$ faster at a higher error rate, and BP+OSD-0 about 103 faster than the ldpc package's version tuned on the [[72,12,6]] bivariate-bicycle code. Evolution over the language finds decoders that improve the time-error front. One makes 23% fewer logical errors than BP+OSD-0 with damping at 0.64$\\times$ its time, and decoders evolved from random code are more accurate than ldpc's tuned BP+OSD-0 at 1/31 of its time or less. Frozen at one operating point, the two fastest evolved decoders generalize well across noise levels, code sizes and round counts, staying at the time-error front. Ultimately, we demonstrate that capturing expert knowledge within a DSL creates a powerful intermediate layer---one that effectively bridges human intuition and machine-driven optimization to unlock highly efficient quantum error correction.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26582",
-   "title": "End-to-End Quantum Algorithm for Differential Equations: Application to Simulating a Biomolecular System",
-   "url": "https://arxiv.org/abs/2611.26582v1",
-   "authors": [
-    "Mohsen Bagherimehrab",
-    "Daniyaal Farooqi",
-    "Gavin K. Brennen",
-    "Barry C. Sanders",
-    "Alán Aspuru-Guzik"
-   ],
-   "label": "arXiv:2611.26582v1",
-   "primary_category": "quant-ph",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "Quantum algorithms for differential equations have the potential for substantial algorithmic speedups over classical methods.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "Quantum algorithms for differential equations have the potential for substantial algorithmic speedups over classical methods. However, they rely on certain assumptions and abstract oracle specifications that leave their practical feasibility and computational advantages for realistic applications unclear. Here we formalize the concept of an end-to-end quantum algorithm for differential equations as one that accepts classical inputs and returns classical outputs, and provide implementations for algorithmic primitives in constructing such algorithms. We present a tailored end-to-end quantum algorithm for the linearized Poisson-Boltzmann (LPB) equation, a partial differential equation (PDE) with variable coefficients widely used in simulating a biomolecular system. We explicitly implement all aspects of the algorithm, from preparing an initial state to generating a quantum solution and estimating properties of the system. In particular, we develop a new discrete representation for variable-coefficient PDEs on a grid that enables efficient implementation of the operator oracle, and build on a recent technique based on optimal wavelet preconditioning to generate a quantum solution with a cost independent of the condition number of the discretized operator. We show the algorithm can be implemented by quantum circuits of size polylogarithmic in both the number of grid points $N_g$ and the inverse of the desired accuracy $\\varepsilon$, with an overall gate cost polylogarithmic in $N_g$ and quasilinear in $1/\\varepsilon$. We also show the classical preprocessing to construct the circuits has polylogarithmic cost in $N_g$ and $1/\\varepsilon$. Our work provides a concrete end-to-end quantum algorithm for a PDE of practical value, demonstrates an exponential improvement in scaling with $N_g$ over classical methods, and provides a foundation for assessing its potential quantum advantage in practice.",
+   "abstract": "We introduce a unified framework for sensing time-dependent fields through the lens of classical and quantum algorithms. First, we develop three pulse sequence protocols, namely randomized, matched, and pooled spectroscopy, which outperform established approaches such as dynamical decoupling across a wide range of tasks. These protocols attain the optimal sensitivity for linear and nonlinear AC sensing on conventional spin or qubit platforms, improving existing devices by changing only their pulse sequences. We then introduce quantum computational spectroscopy (QCS), which couples quantum sensors to a quantum processor. QCS combines two new primitives: a quantum computational frequency comb that coherently converts any classical signal into a quantum oracle, and a family of quantum algorithms that use the oracle to extract signal information in superposition. Variations can be implemented on current platforms with only one memory ancilla. We show that the ultimate limit imposed by quantum mechanics lies polynomially beyond the Heisenberg limit, and that QCS achieves it. Attaining this new limit requires quantum computation, establishing a fundamental separation between conventional and quantum computational sensing. Moreover, QCS retains beyond-Heisenberg scaling for broadband signals under constant-strength sensor depolarization, while we prove that the same noise limits any protocol lacking quantum computation to standard-quantum-limit scaling. Our result provides the first asymptotic, beyond-quadratic quantum advantage in AC metrology when noise is aligned with the signal, proving that Lindblad span conditions do not apply to broadband quantum sensing. Our work builds an algorithmic theory for designing sensing protocols and establishes quantum sensing as a new frontier for quantum algorithms, with quantum advantages that surpass the Heisenberg limit and that persist under noise.",
    "source": "arxiv"
   }
  ]

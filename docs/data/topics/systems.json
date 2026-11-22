@@ -1,0 +1,64 @@
+{
+ "slug": "systems",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25947",
+   "title": "Matching Architecture to Workload: Comparing RISC-V Parallel Accelerators for Energy-Efficient Embedded Computing",
+   "url": "https://arxiv.org/abs/2611.25947v1",
+   "authors": [
+    "Luca Colombo",
+    "Luigi Ghionda",
+    "Amirhossein Kiamarzi",
+    "Yvan Tortorella",
+    "Riccardo Giunti",
+    "Niccolò Giuliani",
+    "Samuele Colmi",
+    "Angelo Garofalo",
+    "Giuseppe Tagliavini",
+    "Davide Rossi"
+   ],
+   "label": "arXiv:2611.25947v1",
+   "primary_category": "cs.DC",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Embedded computing demands high performance and energy efficiency across workloads with widely different computational characteristics.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Embedded computing demands high performance and energy efficiency across workloads with widely different computational characteristics. Choosing the most suitable execution model therefore requires a quantitative understanding of how each model maps to different workload classes. In this paper, we compare three execution models for energy-efficient embedded computing: scalar multicore, stream ing multicore, and vector processing. We use three open-source RISC-V accelerators as representative implementations: the PULP Cluster, the Snitch Cluster, and Spatz, respectively. Their open-source hardware and software stacks enable a controlled comparison based on implementations in the same 12 nm technology and a common benchmark suite. Our results reveal that no single execution model performs best across all workload classes. Spatz delivers the greatest benefits for regular and highly vectorizable compute-intensive applications, achieving up to 4.29x higher performance and 5.17x greater energy efficiency than the other architectures. However, its effectiveness strongly depends on the availability of data-level parallelism and regular computation and memory-access patterns, making it the most sensitive to workload characteristics. The Snitch Cluster performs particularly well on applications with limited parallelism and streamable memory-access patterns, providing up to 5.53x higher performance and 1.45x greater energy efficiency. Conversely, the PULP Cluster is most effective on irregular and control-dominated applications, achieving improvements of up to 5.66x in performance and 2.80x in energy efficiency. Compared with Spatz, however, the greater flexibility offered by PULP and Snitch comes at a non-negligible cost in terms of both area and power.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26517",
+   "title": "From Seed to BLOOM: Autonomously Growing a Better Out-of-Order Core",
+   "url": "https://arxiv.org/abs/2611.26517v1",
+   "authors": [
+    "Angela Cui",
+    "Ferran Hermida-Rivera",
+    "Jack Toubes",
+    "Jim Fang",
+    "Chengyi Lux Zhang",
+    "Borivoje Nikolić",
+    "Christopher W. Fletcher",
+    "Sagar Karandikar"
+   ],
+   "label": "arXiv:2611.26517v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Improving microprocessor performance while meeting ASIC implementation constraints like area and frequency is a complex and labor-intensive task that requires expertise across computer architecture, hardware design, and performance analysis and profiling.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Improving microprocessor performance while meeting ASIC implementation constraints like area and frequency is a complex and labor-intensive task that requires expertise across computer architecture, hardware design, and performance analysis and profiling. While large teams in industry can afford the engineering resources to target this problem across performance modeling, RTL design, and ASIC implementations, small teams of researchers and engineers cannot take on this huge engineering burden while keeping up with the pace of advancement in processor microarchitecture. Recent advancements in large language model (LLM) agents present a promising substrate to accelerate this traditionally human-intensive process. In this work, we build and evaluate MiracleGro, an agentic AI-based system that, without human intervention, analyzes cycle-level RTL behavior and synthesis results, identifies performance bottlenecks, and translates architectural ideas into RTL implementation in a leading open-source out-of-order superscalar application core, the Berkeley Out-of-Order Machine (BOOM). Taking into account cycle-exact performance, area, and critical path, MiracleGro automatically produces improved BOOM designs that drastically increase the human-optimized BOOM's performance on substantial workload suites such as SPEC CPU2017 with full reference inputs. MiracleGro achieves an 85% IPC speedup and a frequency improvement of 27% in SkyWater 130nm, resulting in a 2.34x wall-clock time speedup on the full SPEC CPU2017 intspeed benchmarks (30 trillion instructions). This result demonstrates the enormous opportunity to harness frontier models to improve state-of-the-art RTL-driven platforms for implementation-grounded microarchitecture research across hardware designs.",
+   "source": "arxiv"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "slug": "public-health",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.16.26368245",
+   "title": "Does educational attainment change the association between meat intake and obesity? A case-study from urban Brazil.",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26368245v1",
+   "authors": [
+    "Laurentino, J.",
+    "Palmeira, P.",
+    "Levasseur, P."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.16.26368245 v1",
+   "primary_category": "health economics",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Brazil is one of the higher meat producer and consumer worldwide.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Brazil is one of the higher meat producer and consumer worldwide. Recently, the sustainability of the meat market is questioned on regard to its high contribution to climate change and public health concerns such as obesity. Hence, further public policies are likely to regulate the meat market and simultaneously reduce meat production and consumption. However, in the context of middle-income countries marked by strong inequalities such as Brazil, the nutritional effect of such market regulation is uncertain. Indeed, one can hypothesize that meat intake plays a protective role against poor nutritious food intake and weight gain among underprivileged settings. To test this hypothesis, this study analyzes household cross-sectional yearly surveys collected from 2018 to 2023 in the 27 Brazilian State capitals. As expected, multivariate estimates show education-specific associations between meat intake and obesity. Among the most educated individuals, declaring not consuming any meat the previous day before the survey is associated with lower body mass index (BMI) and obesity risk, as observed in previous epidemiological studies. By contrast, declaring consuming meat the previous day before the survey appears to be protective against weight gain among poorly educated individuals. We also observe education-specific meat substitution behaviors that help explain these findings. In facts, meat is more likely to be replaced by sweets and ready-to-eat meals among poorly educated individuals compared to more educated ones. We conclude that, everything being equals, meat market regulation policy might worsen public health concerns for under-privileged individuals. Important investments in the education sector and anti-poverty programs are thus needed to limit the raise of nutritional inequalities.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.17.26368197",
+   "title": "Determinants of Tuberculosis Diagnosis Delays among Patients Attending Public Health Facility of Metekel Zone, Northwest Ethiopia, 2024 unmatched Case-Control Study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.17.26368197v1",
+   "authors": [
+    "Denat, A. T.",
+    "Burusso, A. B.",
+    "Yimenu, T. N."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.17.26368197 v1",
+   "primary_category": "public and global health",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Background: Tuberculosis Diagnosis delays among tuberculosis patients can worsen infection transmission, disease severity, and mortality risk.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Background: Tuberculosis Diagnosis delays among tuberculosis patients can worsen infection transmission, disease severity, and mortality risk. Identifying factors influencing delays is crucial due to its persistence across healthcare levels and communities. The study identify determinants of tuberculosis diagnosis delay among patients attending public health facility of Metekel zone, Northwest Ethiopia:2023 Methods: An unmatched case-control study was conducted in Metekel zone health facilities from March to April 2023, involving 210 tuberculosis patients (103 cases, 107 controls) selected through systematic sampling. Data collected through structured questionnaires and STATA used for analysis, including bi-variable and multi-variable logistic regressions. Variables with p-value < 0.25 in bi-variable analysis were included in the final model after checking model fitness and multicollinearity. Results: Overall, 210 tuberculosis patients were included in the study. The following independent variables were associated diagnosis delay of tuberculosis: TB patients who travel greater than 10km (AOR: 2.941, (95 % CI: 1.509, 5.731); TB patients who are living at rural area (AOR: 4.135, 95 % CI :1.759, 9.723); TB patients who prior visit in holly-water and traditional medicine [AOR: 2.978, (95% CI: 1.292, 6.863); poor knowledge about TB [AOR: 2.826, (95% CI: 1.404, 5.687)]. Conclusion: Tuberculosis diagnosis delay is a major challenge to eliminate tuberculosis by breaking the chain of transmission. This study can be attributed to factors including place of residence being rural, poor knowledge about tuberculosis, non-health facility initial actions upon symptom onset, and far distance to health institutions. Recognizing these determinants helps in identifying and addressing barriers inhibiting early diagnosis, potentially improving healthcare access and promoting more timely diagnosis and treatment for tuberculosis patients.",
+   "source": "medrxiv"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "slug": "genetics-genomics",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.17.767085",
+   "title": "ChIMe-seq enables multimodal epigenetic profiling in single molecules and single cells",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767085v1",
+   "authors": [
+    "Verity-Legg, J.",
+    "Joly-Smith, E.",
+    "Straver, R.",
+    "Mourragui, S.",
+    "Clark, S.",
+    "Bhardwaj, V.",
+    "Blotenburg, M.",
+    "Mattiroli, F.",
+    "Torres-Garcia, S.",
+    "Reik, W.",
+    "de Ridder, J.",
+    "Zeller, P.",
+    "van Oudenaarden, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.17.767085 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Recent advances in single-cell and single-molecule sequencing have enabled high-resolution characterization of epigenetic states.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Recent advances in single-cell and single-molecule sequencing have enabled high-resolution characterization of epigenetic states. However, methods that jointly measure multiple layers of epigenetic regulation within the same molecules and cells remain limited. Here, we developed Chromatin Immuno-Methylation sequencing (ChIMe-seq), a multimodal approach that simultaneously profiles histone modifications, DNA methylation, and nucleosome positioning genome-wide in single molecules and single cells. In contrast to recent approaches that rely on enzymatic fragmentation, ChIMe-seq preserves long DNA molecules by using a methyltransferase to deposit exogenous methylation marks that report on proximal histone modifications. This enables integration of multiple epigenetic features within individual molecules and supports short-read, long-read, and single-cell sequencing. These multimodal measurements are integrated into a novel mathematical framework that captures the coupling between nucleosome positioning, histone modifications, and DNA methylation. Both single-molecule and single-cell analyses reveal that DNA methylation is linked to nucleosome density in a manner modulated by local histone modifications, whilst differences in nucleosome:DNA structures are observed depending on epigenetic context and cell-type. Together, these results establish ChIMe-seq as a framework to investigate multifaceted epigenetic coordination across scales, from single-nucleotide resolution to long-range chromatin organization in single molecules and single cells.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.17.767299",
+   "title": "FULL-seq reveals isoform-specific regulatory architecture in single cells",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767299v1",
+   "authors": [
+    "Wang, M.",
+    "Qi, J.",
+    "Monticolo, F.",
+    "Chen, X.",
+    "Qiao, A.",
+    "Zou, L.",
+    "Shu, J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.17.767299 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Gene regulation is commonly modeled at the gene level, yet genes express multiple isoforms from distinct transcription start sites whose regulatory architecture is not resolved by current approaches.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Gene regulation is commonly modeled at the gene level, yet genes express multiple isoforms from distinct transcription start sites whose regulatory architecture is not resolved by current approaches. Here we introduce FULL-seq, a scalable single-cell multiomic platform that jointly profiles chromatin accessibility and full-length transcript coverage from the same cell, enabling direct coupling of regulatory elements to alternative first exon (AFE) usage. FULL-seq achieves high sensitivity for both transcriptome and chromatin accessibility while providing transcript-wide coverage across mRNAs up to 15 kb with precise exon-level mapping. We uncover diverse promoter-AFE regulatory architectures, revealing distinct transcription factor programs across alternative first exons of the same gene, and show that gene-level annotation frameworks can obscure regulatory relationships in multi-promoter genes. Applying FULL-seq to human cancer cells further reveals metastasis-associated AFE programs that are not apparent from gene-level expression. These AFE programs were reproduced in independent colorectal cancer cell-line datasets, and CALB1 AFE activation was observed in a subset of liver metastases from an independent patient cohort. Furthermore, CRISPRi-mediated repression of metastasis-associated CALB1 AFEs reduced colorectal cancer cell migration. Together, our findings establish alternative promoter and first-exon usage as a functionally relevant layer of gene regulation and demonstrate that FULL-seq enables regulatory relationships and cellular phenotypes to be connected at the promoter-isoform level.",
+   "source": "biorxiv"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "slug": "infectious-diseases",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.16.26368180",
+   "title": "The effect of smallpox vaccination: unique insights gained from Danish post-honeymoon epidemics 200 years ago",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26368180v1",
+   "authors": [
+    "Eilersen, A.",
+    "Poder, S.",
+    "Goedknegt, M. J. F.",
+    "Pedersen, A. G.",
+    "Ploug, J. B.",
+    "Davenport, R. J.",
+    "Simonsen, L."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.16.26368180 v1",
+   "primary_category": "infectious diseases",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "BackgroundHistorically, the Variola virus caused deadly smallpox epidemics in children.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "BackgroundHistorically, the Variola virus caused deadly smallpox epidemics in children. In Copenhagen, transmission was halted by 1810 when [~]90% of children were vaccinated following the introduction of a mandatory single-dose vaccine program. A 14-year honeymoon period followed, but in 1824 smallpox re-emerged as a milder disease of adults. We set out to study smallpox epidemics between 1824 and 1835 when all smallpox patients in Copenhagen were quarantined. MethodWe analyze data from 3795 smallpox patients reported by the treating physicians between 1824 and 1835. The data include age, vaccination status, and outcome. We estimate age-specific case fatality ratios (CFR) and vaccine effectiveness (VE) against mortality. FindingsFor the four outbreaks while quarantine was mandatory (1824-1834), the CFR was [~]1% among the vaccinated and [~]25% among the unvaccinated, corresponding to a VE of [~]95%. For the fifth outbreak in 1835, we found that CFR was low among the vaccinated but increased with age, which is evidence of waning vaccine protection. Almost no cases were over 40 years of age, suggesting lifelong immunity from smallpox infection. InterpretationAs the unvaccinated CFR was high and comparable to the pre-vaccine era, the milder post-honeymoon smallpox disease cannot be explained by genetic changes in the virus. Rather, high coverage with an effective vaccine combined with waning vaccine protection in adulthood explains the changing face of smallpox. We demonstrates how high vaccine coverage can disguise an outbreak of highly pathogenic smallpox as the milder Variola minor.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.16.26368138",
+   "title": "Upper respiratory microbiome and host immune signatures associated with SARS-CoV-2 susceptibility and illness in a human challenge model",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26368138v1",
+   "authors": [
+    "Hurst, J. H.",
+    "Wanchai, V.",
+    "Shi, P.",
+    "Nookaew, I.",
+    "Swain-Lenz, D.",
+    "Rowlette, L.-L.",
+    "Cleaton, S.",
+    "Arnold, J.",
+    "Kim, S. Y.",
+    "Hite, C.",
+    "Kay, K. L.",
+    "Catchpole, A.",
+    "Kalinova, M.",
+    "Killingley, B.",
+    "Mann, A.",
+    "Wagstaffe, H. R.",
+    "Chiu, C.",
+    "Kelly, M. S."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.16.26368138 v1",
+   "primary_category": "infectious diseases",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "In a controlled SARS-CoV-2 human challenge study of 34 healthy young adults, the authors compare nasal and throat microbiome composition and host gene expression before and after inoculation to identify pre-exposure signatures associated with infection, symptoms, and viral load.",
+    "plain": "Some people catch a respiratory virus after exposure while others do not, and the reasons are not well understood. Researchers deliberately exposed healthy volunteers to SARS-CoV-2 and sampled their noses and throats for two weeks, both before and after exposure. They found that people who later became infected already differed in their nasal immune activity and in the mix of bacteria living in their noses before any virus was given.",
+    "why": "Because the study records people before they are exposed, it can look for early markers of susceptibility rather than only describing infection after the fact. The links it reports are correlations among many measured features, so they point to possible microbe-immune interactions worth testing rather than establishing a cause; the abstract alone does not show how strong or reproducible these links are.",
+    "background": "['Microbiome: the community of bacteria and other microbes living on body surfaces; here, the nose and throat.', 'Commensal bacteria: harmless microbes that normally live in the body and can influence local immunity.', 'Human challenge study: volunteers are deliberately infected under controlled conditions so that infection timing is known.', 'Gene expression: measuring how actively genes are switched on in a tissue sample, used here as a readout of immune activity.', 'Interferon response: an early antiviral alarm signal produced by cells when a virus is detected.', 'Neutrophils: a type of white blood cell that responds quickly to infection and inflammation.', \"Relative abundance: the share of a sample's microbes that belong to a given species, not an absolute count.\", 'Viral load: the amount of virus detected in a sample, often used as a rough measure of infection intensity.']",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The upper respiratory tract (URT) microbiome modulates the local mucosal immune environment, with potential implications for respiratory viral infection susceptibility and outcomes. We leveraged a first-in-human SARS-CoV-2 challenge study in 34 healthy young adults, 18 of whom became infected, to characterize host gene expression and microbiome composition and dynamics in nasal and throat samples collected before viral inoculation and over the subsequent 14 days. Compared with participants who remained uninfected, participants who became infected had elevated baseline nasal expression of gene modules related to interferon, innate inflammatory, and neutrophil responses, as well as a delayed transcriptional response to viral challenge. Baseline nasal microbiome composition differed modestly by subsequent infection status, with lower relative abundances of Corynebacterium accolens and higher abundances of Dolosigranulum pigrum and Staphylococcus aureus among participants who became infected. Integrated analyses of microbiome and host gene expression data identified coordinated networks of microbiome features and host immune modules that distinguished infected from uninfected participants, including prior to inoculation. Notably, immune modules associated with infection susceptibility were positively correlated with S. aureus abundance and negatively correlated with the abundances of common nasal commensals, Corynebacterium spp. and Staphylococcus epidermidis, linking altered nasal microbiome community structure with the heightened inflammatory state associated with infection susceptibility. Symptom burden and viral load were similarly linked to distinct networks of microbiome and host gene expression features within nasal samples. Taken together, these findings highlight potential microbiome-host interactions within the nasal mucosa that may contribute to differences in respiratory viral infection outcomes.",
+   "source": "medrxiv"
+  }
+ ]
+}

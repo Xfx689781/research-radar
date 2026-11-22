@@ -1,0 +1,59 @@
+{
+ "slug": "oncology",
+ "updated": "2026-11-22",
+ "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.19.26368287",
+   "title": "Transcriptomic and Genomic Sequencing of South African Colorectal Cancer Patients Reveal Population-Specific Insights and Variants",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368287v1",
+   "authors": [
+    "Kader, Z.",
+    "Abdulla, N.",
+    "Bebington, B.",
+    "Choudhury, A.",
+    "Mpangase, P.",
+    "Kinnear, C.",
+    "Kaur, M."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.19.26368287 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Colorectal cancer (CRC) genomic studies have largely underrepresented African populations, limiting understanding of disease biology in these groups.",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Colorectal cancer (CRC) genomic studies have largely underrepresented African populations, limiting understanding of disease biology in these groups. This study addressed this gap by generating integrated genomic and transcriptomic data from South African (SA) CRC patients, establishing a foundation for future cancer studies. Bulk RNA sequencing of 32 samples identified several differentially expressed genes between tumour and normal samples, with AGAP3, AMPD2, ANKRD10, and SALL4 showing strong diagnostic performance (average sensitivity 99.9%, specificity 94.22%, PPV 99.9%, NPV 89.5%). SALL4 performed best and was validated using TCGA data and Kaplan-Meier survival analysis. Consensus Molecular Subtype classification revealed a distinct distribution, with enrichment of metabolic (CMS3, 30%) and mesenchymal (CMS4, 30%) subtypes and under-representation of canonical CMS2 (21%). APC mutation rates were lower than in European patients (~55% vs ~75%). Functional analysis identified inflammatory pathways as primary drivers of carcinogenesis, with viral influences exacerbating the inflammatory tumour microenvironment. Altered neural pathways in tumour samples suggested a consequential gut-brain axis loop as cancer infiltrates enervated tissue, an increasingly relevant field to which these data contribute. Whole-genome sequencing of 12 samples revealed pathogenic and likely pathogenic variants with transcriptomic differential expression; SMPD1, PERM1, PRRT2, and RP1 emerged as potential multi-omics markers, while novel mutations (KDM6A, C2CD2, TAF2, SLC6A16, OR5M10, PITRM1, TRIM64B, CARD11) were identified as previously unrecognised contributors to CRC progression in African samples. These findings expand genomic resources for African cancer research and provide new insights into the molecular landscape and tumourigenesis mechanisms of CRC in SA patients, supporting the development of population-specific precision oncology approaches.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.18.26368446",
+   "title": "LCatlas: A Point-Of-Care Tool for Predicting Immunotherapy Outcomes in Non-Small Cell Lung Cancer",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.18.26368446v1",
+   "authors": [
+    "Park, S. Y.",
+    "Leyba, A.",
+    "Yeung, W.",
+    "Hsu, R. C.",
+    "Nieva, J.",
+    "Lee, H. Y."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.18.26368446 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "Non-small cell lung cancer (NSCLC) remains a leading cause of cancer mortality, with a minority of patients experiencing durable responses to first-line immune checkpoint inhibitors (ICIs).",
+    "plain": "",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": false
+   },
+   "abstract": "Non-small cell lung cancer (NSCLC) remains a leading cause of cancer mortality, with a minority of patients experiencing durable responses to first-line immune checkpoint inhibitors (ICIs). Currently, there are no easily accessible tools to predict clinical benefit to first-line immunotherapy. To address this gap, we developed LCatlas (https://www.lcatlas.org), a point-of-care web application designed to predict immunotherapy outcomes and inform evidence-based treatment decisions. Using data from 79 NSCLC patients receiving first-line immunotherapy, we extracted demographic, clinical, and molecular features from electronic medical records and compared three independent approaches, statistical model (logistic regression), machine learning (XGboost), and AI model (TabTransformer) to identify the most effective predictor. LCatlas accepts nine variables, gender, smoking history, bone/pleura/liver metastasis, PDL1 tumor staining, albumin level, hemoglobin level, lymphocyte count, neutrophil count, and platelet count, to predict responses to both immunotherapy and immunotherapy plus chemotherapy. LCatlas cross-validation yielded an area under the curve (AUC) of 79% [72% - 85%], with sensitivity of 87% [72% - 95%] and specificity of 78% [64% - 89%], outperforming previous studies including high-volume data-driven deep-learning approaches. In a validation cohort consisting of 28 individuals, it demonstrated a prediction accuracy of 82%. LCatlas may serve as a valuable point-of-care tool by identifying patients likely to experience extended immunotherapy or combination therapy using readily available medical data. Its evidence-based approach can optimize personalized treatment planning and thereby promote quality and safety of care.",
+   "source": "medrxiv"
+  }
+ ]
+}
