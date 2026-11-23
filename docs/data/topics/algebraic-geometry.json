@@ -1,6 +1,6 @@
 {
  "slug": "algebraic-geometry",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26207",
@@ -11,14 +11,14 @@
    ],
    "label": "arXiv:2611.26207v1",
    "primary_category": "math.AG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We study the specialization of Donaldson-Thomas virtual cycles for surface sheaves on a Calabi Yau threefold degenerating to a simple normal crossing threefold, composed of two quasi Fano threefolds glued along a common (double) divisor.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper studies how Donaldson-Thomas virtual cycles for surface sheaves on a Calabi-Yau threefold behave under degeneration to a simple normal crossing threefold made of two quasi-Fano pieces, using expanded degenerations and virtual gluing, with examples on the quintic.",
+    "plain": "The paper looks at a standard geometric object, a Calabi-Yau threefold (a higher-dimensional analogue of a torus-shaped surface used in string theory), and asks what happens to counts of certain sheaves on it when the space is pinched apart into two pieces glued along a shared divisor. The authors build a compactified moduli space for the pieces, state conditions under which the counting class splits into a sum over marked joining divisors, and work out explicit examples such as the surface structure sheaf. The text says the results are partly conditional on valuative and obstruction-theoretic hypotheses.",
+    "why": "Degeneration formulas let hard invariants of a space be computed from simpler pieces, and the text says a sequel uses this to compare quintic invariants with a predicted modularity from string theory (Gaiotto, Strominger and Yin). Whether that comparison succeeds is not shown in this text, so its value to physics is only a stated aim here.",
+    "background": "- Calabi-Yau threefold: a special six-real-dimensional shape with trivial canonical class, central to string theory.\n- Quintic: a Calabi-Yau threefold given by a degree-five polynomial in projective four-space.\n- Sheaf: a systematic way of assigning algebraic data (like functions or bundles) to pieces of a space; a surface sheaf is supported on a surface inside the threefold.\n- Moduli space: a space whose points parametrize a family of geometric objects.\n- Donaldson-Thomas invariant / virtual cycle: a counting tool that produces a well-defined count even when the moduli space is singular or of unexpected dimension.\n- Degeneration / simple normal crossing variety: a limit where a smooth space splits into pieces meeting along a common divisor.\n- Quasi-Fano: a variety whose anticanonical class is positive in a weak sense, a standard class of building blocks.\n- Derived restriction and deformation complex: homological-algebra tools that track obstructions to deforming objects.\n- Elliptic genus and modularity: invariants from physics that should satisfy symmetry under transformations of a modular group.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We study the specialization of Donaldson-Thomas virtual cycles for surface sheaves on a Calabi Yau threefold degenerating to a simple normal crossing threefold, composed of two quasi Fano threefolds glued along a common (double) divisor. The compactification of the two relative sheaf moduli spaces involves construction of suitable moduli space of sheaves on expanded degenerations of each quasi Fano variety. On a fixed expanded fiber the matching datum is an equivalence of the derived restrictions of the component sheaves. We identify the corresponding deformation complexes and give valuative and obstruction-theoretic hypotheses under which the specialized virtual class is a sum over marked joining divisors. When a marked space is the full fiber product of proper relative factors over a smooth simple boundary moduli space, its class is a refined diagonal pullback. For the case of sheaves supported on hyperplane sections of the threefold we discuss construction of the proper relative family by descending the chartwise stable loci, and identify both marked pieces, including the one with zero boundary. To provide some examples, we carry out explicit constructions for the moduli space of surface structure sheaf and its twists. We also prove valuative results for specified sheaves with noninvertible hulls. In a sequel, Part II, we use the construction of degeneration technique in this article to compare quintic invariants with the predicted S-duality modularity of \"M5-brane modified elliptic genus\" provided by string theorists, Gaiotto Strominger and Yin.",
    "source": "arxiv"
@@ -33,16 +33,151 @@
    ],
    "label": "arXiv:2611.25501v1",
    "primary_category": "math.AG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We prove uniform bounds for the Stein degrees of boundary divisors on generalised log Calabi-Yau fibrations of Fano type over arbitrary fields of characteristic zero.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves uniform bounds on the Stein degrees of boundary divisors on generalised log Calabi-Yau fibrations of Fano type over fields of characteristic zero, with the birational case as the main ingredient, approached in two ways.",
+    "plain": "This paper is about shapes defined by polynomial equations, specifically how certain boundary pieces of a family of such shapes can be controlled. The authors prove that a particular numerical measure of these pieces, called the Stein degree, is bounded by a quantity that does not depend on the particular shape, and they do this for fields of characteristic zero. The key step is a special \"birational\" case, for which they give two separate arguments.",
+    "why": "Uniform bounds of this kind tell specialists that a complicated family of geometric objects has a limit on how wild its boundary behaviour can get. The text does not say what wider applications this has, so its connections beyond algebraic geometry are unclear from the abstract alone.",
+    "background": "- Algebraic geometry studies solution sets of polynomial equations, called varieties.\n- A birational map is an invertible correspondence between two varieties that is defined on most of their points.\n- A fibration is a map from one variety to another whose fibres (preimages of points) are the pieces of interest.\n- Log Calabi-Yau and Fano type are technical classes of varieties with controlled curvature-like properties, used to describe when a variety is well-behaved.\n- A boundary divisor is a special hypersurface removed or marked on the variety.\n- The Stein degree is a specialised numerical invariant from the paper's setting; the abstract does not define it.\n- Characteristic zero means the underlying number field behaves like the rational or real numbers, without the arithmetic quirks of prime characteristic.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We prove uniform bounds for the Stein degrees of boundary divisors on generalised log Calabi-Yau fibrations of Fano type over arbitrary fields of characteristic zero. The main ingredient is the birational case for which we provide two approaches.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24456",
+   "title": "Tropical Geometry of $G_2$",
+   "url": "https://arxiv.org/abs/2611.24456v1",
+   "authors": [
+    "Michael Joswig",
+    "Kevin Kuehn",
+    "Bernd Sturmfels",
+    "Mathieu Vallée"
+   ],
+   "label": "arXiv:2611.24456v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper tropicalizes the Grassmannian and flag variety of the exceptional algebraic group G2, showing their tropical varieties sit strictly inside the associated Dressians and describing them via G2-forests and G2-orchards, with classification of toric degenerations and Newton-Okounkov polytopes.",
+    "plain": "This paper studies a piece of algebraic geometry: shapes that describe solutions to polynomial equations, here tied to G2, one of the exceptional symmetry groups. The authors replace these shapes with a simpler \"tropical\" version made of straight-line pieces and trees, which is easier to count and compare. The text reports that the tropical versions are strictly contained in larger known spaces (the Dressians), that their points are described as trees in a \"G2-forest\" and decorated trees in a \"G2-orchard\", and that the resulting structures form hexagons in incidence geometry.",
+    "why": "The work is a foundational example for applying tropical geometry to reductive groups beyond the more familiar type A case, and the authors call it a blueprint for such studies. The text also links it to Mukai theory and tropical canonical curves of genus 10, though the abstract does not explain those connections in detail, so their full significance is unclear from this text alone.",
+    "background": "- Algebraic variety: the solution set of a system of polynomial equations.\n- Tropical geometry: a piecewise-linear \"shadow\" of an algebraic variety, obtained by replacing multiplication with addition and taking minimums, so curved objects become polyhedral ones.\n- Grassmannian and flag variety: standard spaces parametrizing subspaces and nested subspaces; here they are attached to the exceptional group G2.\n- Dressian: a combinatorial space containing the tropical Grassmannian, whose points are tree-like objects.\n- Toric degeneration and Newton-Okounkov polytope: tools for simplifying a variety into a toric (lattice-polytope) form that is easier to study.\n- Mukai theory: a classical correspondence relating certain curves of genus 10 to the G2 setting.\n- Reductive group: a class of symmetry groups (like G2) central to Lie theory.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We tropicalize the Grassmannian and the flag variety of the algebraic group of type $G_2$. The two tropical varieties are strictly contained in the associated Dressians. Their points are trees in the $G_2$-forest and decorated trees in the $G_2$-orchard. These form hexagons in incidence geometry. We classify all toric degenerations and their Newton-Okounkov polytopes. Mukai theory leads us to tropical canonical curves of genus 10. This article serves as a blueprint for studies of reductive groups in tropical geometry.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23707",
+   "title": "Functorial height and Orlov's rationality conjecture",
+   "url": "https://arxiv.org/abs/2611.23707v1",
+   "authors": [
+    "Xun Lin",
+    "Shizhuo Zhang"
+   ],
+   "label": "arXiv:2611.23707v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper generalizes Kuznetsov's height of exceptional collections from the identity functor to an arbitrary endofunctor F, applies it to line bundles and skyscraper sheaves on surfaces, and uses it to study Orlov's rationality conjecture for smooth projective complex surfaces.",
+    "plain": "The paper studies whether a geometric object (a smooth surface) can be described by a complete set of standard building blocks in its \"derived category,\" a bookkeeping universe of objects and maps. It introduces a generalized measure, called the height with coefficient F, of how far a set of building blocks fails to generate everything, and uses it to make partial progress on a conjecture of Orlov about when surfaces are rational. The text claims several special cases are settled, such as surfaces whose product with the projective line has a full collection of line bundles, and that the general case reduces to two maps being bijective.",
+    "why": "Rationality of surfaces is a classical question, and Orlov's conjecture links it to a purely algebraic description via exceptional collections, so partial results and an exact reformulation are useful to specialists. The text does not indicate wider consequences beyond this area, and I have not checked the proofs or how the new results compare with prior work.",
+    "background": "- Smooth projective variety: a smooth geometric object (here a complex surface) cut out by polynomial equations in projective space.\n- Derived category: an algebraic universe of complexes of sheaves attached to a variety; its objects can be thought of as generalized spaces.\n- Exceptional collection: a sequence of objects with no maps between them in the wrong directions and with trivial self-maps; a full one generates the whole category.\n- Line bundle: a basic twisted-function object on a variety, the algebraic analogue of a sheaf of rank one.\n- Skyscraper sheaf: an object concentrated at a single point.\n- Hochschild cohomology: an invariant measuring natural transformations from the identity functor to its shifts; Kuznetsov's height is defined through it.\n- Endofunctor: a functor from a category to itself; the paper replaces the identity by an arbitrary one.\n- Rational surface: a surface birational to the projective plane, i.e. essentially a plane in disguise.\n- Orlov's rationality conjecture: the claim that a surface is rational exactly when its derived category has a suitable full exceptional collection.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "An exceptional collection in the derived category of a smooth projective variety may fail to generate the whole category, and this failure cannot be detected by K-theory or by Hochschild homology. Kuznetsov's height detects it through Hochschild cohomology, that is, through natural transformations from the identity functor to its shifts. We replace the identity functor by an arbitrary endofunctor $F$ and define the height of a collection with coefficient $F$. It controls, in a range of degrees, the restriction of natural transformations $\\mathrm{id}\\to F$ to the orthogonal complement of the collection, and it is computed from the collection by a finite complex. For collections of line bundles on surfaces whose Hom divisors have nonnegative canonical degree, the tensor product with a skyscraper sheaf has height exactly two, and the projections of skyscraper sheaves form a two-dimensional family of point-like objects in the orthogonal complement. We apply these tools to Orlov's rationality conjecture. A smooth projective complex surface is rational if its derived category has a full exceptional collection in which all members except possibly one are line bundles, or one that consists of at most three completely orthogonal blocks of arbitrary objects; we also obtain rationality in several cases with four blocks or with a hereditary component. If $S\\times\\mathbb P^1$ has a full exceptional collection of the form $(M_i\\boxtimes\\mathcal O(a_i))$, then the $M_i$ with relative degrees of a fixed parity form a full exceptional collection on $S$; consequently $S$ is rational whenever $S\\times\\mathbb P^1$ has a full exceptional collection of line bundles. Finally, we show that the general case of the conjecture for surfaces is equivalent to the surjectivity and injectivity of two maps in Hochschild cohomology.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22992",
+   "title": "Generators of derived category and toric Frobenius morphism",
+   "url": "https://arxiv.org/abs/2611.22992v2",
+   "authors": [
+    "Rinat Dosaev"
+   ],
+   "label": "arXiv:2611.22992v2",
+   "primary_category": "math.AG",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper studies how the toric Frobenius pushforward acts on the derived category of a toric variety, characterizing which objects become generators after high enough Frobenius pushforward, and proves an extended version of a Hanlon–Hicks–Lazarev conjecture for smooth toric varieties.",
+    "plain": "This paper is about geometric objects called toric varieties, which are shapes built from simple pieces tied to lattice points and cones. The authors look at a repeated \"Frobenius\" operation that pushes these objects forward and ask which objects end up generating everything once it is applied enough times. They extend a earlier guess about which simple building blocks (line bundles) have this property to a wider class of objects, and they prove the extended guess for smooth toric varieties.",
+    "why": "A result of this kind says when a complicated structure can be rebuilt from a few pieces, which matters for the derived category's organization. The text does not say more about applications, so the wider significance is unclear from this abstract alone.",
+    "background": "- Toric variety: a geometric space described by combinatorial data (a fan of cones in a lattice), where a torus acts on it.\n- Derived category: a large algebraic category whose objects are complexes of sheaves; \"generator\" means every object can be built from it using sums, shifts and cones.\n- Frobenius pushforward: an operation from characteristic-p algebraic geometry that pushes an object forward along the p-th power map.\n- Line bundle: a simple geometric object locally like a trivial bundle, the basic building block for sheaves here.\n- Equivariant object: an object compatible with the torus action.\n- Smooth: no singular points; the conjecture is proven in this case.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the action of the toric Frobenius pushforward functor on the derived category of a toric variety. Our main goal is to characterize objects of the derived category which become generators after applying a sufficiently high Frobenius pushforward. In particular, we extend a conjecture of A. Hanlon, J. Hicks, and O. Lazarev, which describes line bundles with this property, to arbitrary equivariant objects, and prove the extended conjecture for all smooth toric varieties.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22997",
+   "title": "On Green's Conjecture for Curves on Anticanonical Surfaces",
+   "url": "https://arxiv.org/abs/2611.22997v2",
+   "authors": [
+    "Samir Geiger",
+    "Andreas Kretschmer"
+   ],
+   "label": "arXiv:2611.22997v2",
+   "primary_category": "math.AG",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Proves Green's conjecture on syzygies of canonical curves for smooth curves lying on rational surfaces where the anticanonical bundle restricted to the curve is effective, and gives partial results for birationally ruled surfaces of positive irregularity carrying an effective anticanonical divisor.",
+    "plain": "This paper is about a well-known open question in algebraic geometry, which studies curves (smooth one-dimensional shapes defined by polynomial equations) and the pattern of relations among the equations that define them. The authors prove the conjecture for curves sitting on a certain class of surfaces, namely rational surfaces where a particular natural line bundle is effective on the curve. They also prove partial cases for a wider class of ruled surfaces, under extra conditions.",
+    "why": "Green's conjecture is a long-standing question linking the geometry of a curve (how many ways it can be mapped onto a line) to the algebra of its defining relations, so settling cases of it is a meaningful step in that line of work. The text does not indicate wider applications, so its reach beyond this area is unclear.",
+    "background": "- Curve: a smooth one-dimensional algebraic variety, here studied as a set of solutions to polynomial equations.\n- Surface: a two-dimensional algebraic variety; rational surfaces are those birational to the plane, and ruled surfaces are fibred over a curve by lines.\n- Anticanonical divisor: a natural curve class on a surface, built from its geometry; \"effective\" means it is represented by an actual curve.\n- Gonality: the smallest degree of a map from the curve to the projective line; it measures how simply the curve maps to a line.\n- Syzygies / Green's conjecture: the conjecture relates the gonality of a canonical curve to the lowest level at which its syzygies (relations among relations) are nontrivial.\n- Irregularity: a surface invariant counting independent holomorphic one-forms; q ≥ 1 means it is positive.\n- Gonal pencil: a degree-minimal map from the curve to a line, viewed as a family of divisors.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove Green's conjecture for smooth curves $C$ on rational surfaces $X$ such that $-K_X|_C$ is effective on $C$. In addition, on birationally ruled surfaces $X$ of irregularity $q \\geq 1$ carrying an effective anticanonical divisor, we show that Green's conjecture holds for all smooth curves $C$ on $X$ covering the base curve with degree at least $2$, provided the latter has only finitely many gonal pencils or the gonality of $C$ is special with respect to the ruling.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21990",
+   "title": "Hyperkähler Periods in Families of Parabolic Higgs Bundle Moduli Spaces",
+   "url": "https://arxiv.org/abs/2611.21990v2",
+   "authors": [
+    "Panagiotis Dimakis",
+    "Laura Fredrickson",
+    "Arya Yae"
+   ],
+   "label": "arXiv:2611.21990v2",
+   "primary_category": "math.DG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper studies how periods (integrals over homology cycles) of hyperkähler structures vary across families of parabolic Higgs bundle moduli spaces indexed by parabolic weights and Higgs field eigenvalues, proving the period map is affine linear and computing explicit formulas for the four-dimensional E6, E7 and E8 cases.",
+    "plain": "This is about a family of geometric spaces, each built from a curve together with extra data such as weights and a \"Higgs field\" (a twisting object attached to the space). The authors let those control numbers vary, track how the spaces change as the numbers move, and ask how certain measurements of the spaces, called periods, change along the way. They prove that these periods change in a simple straight-line way as the control numbers change, and for four-dimensional spaces of three exceptional types they compute the exact formulas.",
+    "why": "Hyperkähler spaces of this kind arise in the study of symmetry and duality in mathematical physics, and periods are a standard way to encode their geometry, so a clean formula is useful for comparing them. The text does not say how far the results extend beyond the stated cases, so the wider significance is uncertain from this abstract alone.",
+    "background": "- Moduli space: a space whose points are classified objects (here, bundles on a curve with extra structure).\n- Higgs bundle: a vector bundle paired with a matrix-valued field; these spaces carry a hyperkähler (special kind of curved, symplectic) geometry.\n- Parabolic structure and weights: extra data at marked points on a curve that act like adjustable numerical settings.\n- Period map: assigns to each space the integrals of its geometric structure over chosen loops (homology classes); parallel transport tracks these as parameters move.\n- Duistermaat–Heckman theorem: a classical result that certain integrals over symplectic spaces vary piecewise polynomially; the paper generalizes it to this setting.\n- Curvature class and principal torus bundle: the topological data that sets the slope of the straight-line change.\n- Exceptional types E6, E7, E8: the three largest exceptional symmetry-type root systems from Lie theory.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We consider the period map on families of parabolic Higgs bundle moduli spaces with varying parabolic weights $α$ and Higgs field eigenvalues $σ$. We assemble the moduli spaces into a smooth family $π:\\mathscr M\\toΛ_0$ where $Λ_0$ encodes the admissible pairs $(α,σ)$, and define parallel transport for homology along paths in $Λ_0$. By generalizing a classical theorem of Duistermaat and Heckman, we prove that the period map is affine linear in $(α,σ)$, with slope governed by the curvature class of a principal torus bundle over $\\mathscr M$. For the four-dimensional moduli spaces of types $E_6,E_7,E_8$, we compute these classes to get explicit formulas for the period maps.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18357",
+   "title": "The Moduli of Canonical Threefolds of Minimum Volume",
+   "url": "https://arxiv.org/abs/2611.18357v1",
+   "authors": [
+    "Pinxian Bie",
+    "Peien Du",
+    "Zhengjie Yu"
+   ],
+   "label": "arXiv:2611.18357v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper classifies the moduli space (the family of all possible shapes) of complex projective canonical threefolds whose volume equals the minimal value 1/420, finding an irreducible rational component of dimension 33 plus two isolated rigid examples, Vega and Altair.",
+    "plain": "The paper studies a specific class of higher-dimensional geometric shapes, called canonical threefolds, that have the smallest possible \"volume\" of 1/420. It determines the full family of such shapes: one connected family that can be varied continuously, plus two special shapes that cannot be deformed at all. The two isolated shapes are named Vega and Altair and are constructed explicitly.",
+    "why": "Finding the smallest possible volume for these objects and listing every example that reaches it is a precise, concrete result in the classification of higher-dimensional shapes. The text does not say what wider applications it has, so any further connections are unclear from this summary alone.",
+    "background": "- Algebraic geometry studies shapes defined by polynomial equations, here over complex numbers.\n- A threefold is a shape with three complex dimensions (six real dimensions).\n- \"Canonical\" refers to a mild class of singularities (pointed spots) allowed on the shape, which is standard in the minimal model program for classifying such shapes.\n- \"Volume\" here is an algebro-geometric invariant (the self-intersection of the canonical class), not an ordinary measured volume.\n- A moduli space is a parameter space whose points correspond to isomorphism classes of such shapes.\n- \"Rational\" means the component is parametrized by rational functions in a loose sense, i.e. it is geometrically simple; \"rigid\" means the shape admits no continuous deformations.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We determine the moduli space of complex projective canonical threefolds of volume $1/420$. It consists of an irreducible rational component of dimension $33$ and two isolated points, represented by the explicitly constructed rigid threefolds Vega and Altair.",
    "source": "arxiv"
   }
  ]

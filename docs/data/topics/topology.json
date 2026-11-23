@@ -1,7 +1,50 @@
 {
  "slug": "topology",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.25890",
+   "title": "An A $\\infty$ -algebra structure for enriched Morse complexes",
+   "url": "https://arxiv.org/abs/2611.25890v1",
+   "authors": [
+    "Jonathan Clivio",
+    "Robin Riegel"
+   ],
+   "label": "arXiv:2611.25890v1",
+   "primary_category": "math.AT",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "The paper builds a homotopy-coherent (A-infinity) product on Morse homology with DG coefficients that extends the Chas-Sullivan product on chains of the free loop space of a manifold, using an operad of moduli spaces of perturbed Morse gradient trees.",
+    "plain": "The paper is about a way of multiplying certain shapes-of-loops measurements in a manifold (a smooth curved space) so that the multiplication stays consistent up to a controlled set of higher-order adjustments. The authors do this with a tool called Morse theory, which studies a space by following the paths of a smooth \"height\" function, and they extend an existing multiplication known as the Chas-Sullivan product. The text says they build an operad (a bookkeeping structure for how many inputs combine into one output) from moduli spaces of Morse gradient trees.",
+    "why": "The Chas-Sullivan product is a known structure linking the topology of a space to the topology of its loop space, so a fuller, more consistent version may matter to researchers in algebraic topology and string topology. The abstract does not describe applications beyond this, so the wider significance is unclear from the text alone.",
+    "background": "- Manifold: a space that locally looks like ordinary Euclidean space, such as a surface.\n- Free loop space: the space of all closed loops in a manifold.\n- Chains and homology: a way of assigning algebraic invariants to a space by counting cycles of shapes.\n- Morse homology: computing topology by studying critical points of a smooth function and the gradient paths between them.\n- Chas-Sullivan product: an existing multiplication on loop-space homology.\n- A-infinity algebra: a multiplication that is associative only up to coherent higher corrections.\n- Operad: a formal framework for collecting ways to combine inputs into outputs.\n- Moduli space: a space parametrizing families of geometric objects, here trees of gradient flow lines.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We construct a homotopy coherent product structure extending the Chas-Sullivan product on chains of the free loop space of a manifold. Our construction uses the framework of Morse homology with DG coefficients and perturbed Morse gradient trees. We define an operad given by moduli spaces of Morse gradient trees with a twisted differential. This Morse tree operad receives a map from a suspended A$\\infty$-operad and in turn acts on Morse homology with DG coefficients associated to a fibration over a manifold with a fibrewise monoidal structure.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26151",
+   "title": "Power topologies and uniformities on bistochastic operators",
+   "url": "https://arxiv.org/abs/2611.26151v1",
+   "authors": [
+    "Alexandru Chirvasitu"
+   ],
+   "label": "arXiv:2611.26151v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "The paper shows that invertible Koopman operators from the interval probability space are dense in the bistochastic operators under the polynomial weak topology, extending a known non-polynomial result, and that the plain and polynomial weak topologies differ on bistochastic operators.",
+    "plain": "The paper studies a family of mathematical objects called bistochastic operators, which generalize how randomness and mixing move mass around a space. It asks how \"typical\" the reversible ones (those coming from invertible changes of the underlying random process on the unit interval) are within the whole family, when closeness is measured in a particular way. The authors find that these reversible examples are dense, meaning they can approximate any member of the family arbitrarily well, under this measure of closeness.",
+    "why": "Density results like this tell us which kinds of dynamical behaviour are generic rather than rare in a large space of operators. The paper also separates two closely related notions of convergence, which clarifies how much the choice of topology matters; its broader connections are not spelled out in the text.",
+    "background": "- Bistochastic operator: a linear map that preserves total mass and maps non-negative functions to non-negative functions in both directions, a generalization of doubly stochastic matrices.\n- Koopman operator: an operator built from a measure-preserving transformation that acts on functions by composing them with the map; invertibility means the underlying process can be run backwards.\n- Topology (weak topology): a rule for when a sequence of operators counts as converging; \"polynomial\" refers to a variant that tests convergence against polynomial expressions.\n- Dense: every member of the larger set can be approximated arbitrarily closely by members of the subset.\n- Dense G-delta: a set that is a countable intersection of open sets and is dense; such sets are often regarded as \"large\" in Baire category sense.\n- Non-polynomial analogue: the earlier result by Brown, Vershik, Ryzhikov and Eisner, which the abstract cites as the version under the ordinary weak topology.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that the set of invertible Koopman operators attached to the usual interval probability space is dense (and hence dense $G_δ$) in the space of bistochastic operators in the polynomial weak topology. This extends the non-polynomial analogue (due to Brown/Vershik/Ryzhikov/Eisner). We also show that the plain and polynomial weak topologies are distinct on bistochastic operators, confirming the distinction between the two results.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.25295",
    "title": "Kernel Regression using Persistence Diagrams",
@@ -13,12 +56,12 @@
    ],
    "label": "arXiv:2611.25295v1",
    "primary_category": "math.ST",
-   "date": "2026-11-22",
+   "date": "2026-11-19",
    "summary": {
-    "one_liner": "The paper builds a kernel-weighted local-averaging regression estimator that takes persistence diagrams as inputs, uses Wasserstein distance as the similarity measure, and proves consistency and convergence-rate bounds in the L² sense.",
-    "plain": "Data scientists often summarize the shape of a dataset as a 'persistence diagram', a compact list of loops, holes, and clusters that appear at different scales. This paper asks how to predict a single number from such a shape summary, using a method that predicts by averaging the outputs of similar past examples. The authors prove the method gets more accurate as data grows, give a bound on how fast that happens, and report experiments where it performs well, especially with little data. The abstract does not give the details of those experiments.",
-    "why": "Predicting outcomes from shape features is a practical need in areas like materials science and medical imaging, and this paper gives a theoretical footing for doing so directly in diagram space. The abstract alone does not show how the assumptions or rates compare with other approaches, so the strength of the contribution is hard to judge from it.",
-    "background": "['Persistent homology: a method that tracks topological features (connected pieces, loops, voids) across a range of scales, summarized as a persistence diagram.', 'Wasserstein distance: a way to measure how far apart two distributions or point sets are, here applied to two persistence diagrams.', 'Kernel regression: predicting a value by a weighted average of training outputs, where weights fall off with the distance between inputs.', 'Consistency: the property that an estimator converges to the true relationship as the sample size grows.', 'Convergence rate and L² error: how quickly the average squared prediction error shrinks with more data.']",
+    "one_liner": "The paper studies kernel-based local averaging regression where the inputs are persistence diagrams, compared via Wasserstein distance, and proves consistency and convergence-rate bounds in the L^2 sense.",
+    "plain": "The paper looks at how to predict a single number from a shape summary of data, called a persistence diagram, which records the loops and holes that appear in a dataset at different scales. The authors build a prediction method that works directly on these diagrams, averaging outcomes from similar diagrams, and measure how similar two diagrams are with a distance called the Wasserstein distance. They prove the method gets closer to the right answer as data grows, and report experiments where it performs well, especially when data is scarce.",
+    "why": "Many scientific datasets are better described by their shape than by a fixed list of numbers, so a predictor that works directly on shape summaries could be useful in areas like materials science or biology. The text does not say how it compares with other methods beyond the claimed strong performance in low-data settings, so its practical reach is still unclear.",
+    "background": "- Persistence diagram: a compact summary of the holes and loops in data across scales, drawn as a set of points.\n- Wasserstein distance: a way to measure how far apart two sets of points are, by the minimum cost of moving one onto the other.\n- Nonparametric regression: predicting an outcome from inputs without assuming a fixed formula, often by averaging nearby examples.\n- Kernel estimator: a local average where closer inputs get more weight.\n- Consistency and convergence rate: the estimator approaches the true answer as data grows, and the rate says how fast.\n- L^2 theory: error is measured as the average squared difference between prediction and truth.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -26,25 +69,113 @@
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.25890",
-   "title": "An A $\\infty$ -algebra structure for enriched Morse complexes",
-   "url": "https://arxiv.org/abs/2611.25890v1",
+   "uid": "arxiv:2611.24539",
+   "title": "Torsion order and the next-to-top term of knot Floer homology",
+   "url": "https://arxiv.org/abs/2611.24539v1",
    "authors": [
-    "Jonathan Clivio",
-    "Robin Riegel"
+    "Kai Zhu"
    ],
-   "label": "arXiv:2611.25890v1",
-   "primary_category": "math.AT",
-   "date": "2026-11-22",
+   "label": "arXiv:2611.24539v1",
+   "primary_category": "math.GT",
+   "date": "2026-11-19",
    "summary": {
-    "one_liner": "We construct a homotopy coherent product structure extending the Chas-Sullivan product on chains of the free loop space of a manifold.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves Sivek's conjectured inequality between the next-to-top and top terms of knot Floer homology for knots with U-torsion order one (in HFK^- or HFK'), and deduces it for knots with rational unknotting number one, including certain satellite knots.",
+    "plain": "The paper is about knots, which are closed loops tied in three-dimensional space, and a set of algebraic invariants called knot Floer homology that act as fingerprints for them. A conjecture by Sivek predicts a comparison between two of these fingerprint pieces for every nontrivial knot. The authors show the predicted comparison holds for a specific class of knots, namely those where a certain algebraic \"torsion order\" equals one, and for knots that can be undone by one rational tangle replacement.",
+    "why": "It gives partial but concrete support for a open conjecture about a well-studied invariant, and it extends the result to a family of satellite knots (knots built by embedding one knot inside a solid torus). The text does not indicate further consequences beyond this.",
+    "background": "- Knot: a closed loop in 3D space, considered up to bending and stretching without cutting.\n- Knot Floer homology (HFK): an algebraic invariant assigned to a knot, built from counting solutions to equations in a related space; it comes as a graded collection of vector spaces.\n- \"Top\" and \"next-to-top\" terms: the pieces of this invariant at the two highest grading levels.\n- U-torsion order: a measure of how many times the algebraic operator U must be applied before a class vanishes; order one is the simplest case.\n- Unknotting number: the minimum number of crossing changes needed to turn a knot into the unknot; the rational version allows more general tangle replacements.\n- Satellite knot: a knot formed by placing a pattern knot inside a solid torus around another knot.\n- Conjecture (Sivek): the claimed inequality that the next-to-top term is at least as large as the top term for nontrivial knots.",
+    "difficulty": "research-level",
+    "ai": true
    },
-   "abstract": "We construct a homotopy coherent product structure extending the Chas-Sullivan product on chains of the free loop space of a manifold. Our construction uses the framework of Morse homology with DG coefficients and perturbed Morse gradient trees. We define an operad given by moduli spaces of Morse gradient trees with a twisted differential. This Morse tree operad receives a map from a suspended A$\\infty$-operad and in turn acts on Morse homology with DG coefficients associated to a fibration over a manifold with a fibrewise monoidal structure.",
+   "abstract": "Sivek conjectured that, for every nontrivial knot $K\\subset S^3$, the dimension of the next-to-top term of $\\widehat{\\mathrm{HFK}}(K)$ is at least that of the top term. We show that this inequality holds for knots with $U$-torsion order one in either the minus theory $\\mathrm{HFK}^-$ or the unoriented theory $\\mathrm{HFK}'$. Combined with Eftekhary's work, this implies that knots with rational unknotting number one satisfy the conjecture. In particular, the result applies to every nontrivial satellite knot whose pattern can be unknotted in the solid torus by a single rational tangle replacement.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22653",
+   "title": "Almost-Global Coordinates on Matrix Manifolds",
+   "url": "https://arxiv.org/abs/2611.22653v1",
+   "authors": [
+    "Bingjie Li",
+    "Jiaxiang Wang",
+    "Zhigang Yao"
+   ],
+   "label": "arXiv:2611.22653v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper gives elementary proofs that compact smooth manifolds admit coordinate charts covering everything except a measure-zero closed set, and builds such explicit coordinates for classical matrix groups, Stiefel manifolds, Grassmannians and real flag manifolds using Cayley transforms, graphs of linear maps and block Gaussian elimination.",
+    "plain": "Shapes like rotations or subspaces can be described by a set of numbers, called coordinates. This paper studies when one such set of coordinates can describe almost the whole shape at once, leaving out only a thin set that has zero volume. The authors show this is always possible for compact smooth shapes and then build explicit versions of this description for several families of matrix-based shapes.",
+    "why": "Having one explicit coordinate system that covers nearly everything makes it easier to do calculations such as integration and optimization on these spaces. The text itself does not say much about wider applications, so any link beyond these calculations is uncertain.",
+    "background": "- Smooth manifold: a curved space that locally looks like ordinary Euclidean space.\n- Coordinates / parametrization: a map from a simple set of numbers to points on the space.\n- Measure zero: a set so small it has no volume, so ignoring it does not change integrals.\n- Matrix groups, Stiefel manifolds, Grassmannians, flag manifolds: families of matrices or subspaces with geometric structure.\n- Cayley transform: a standard way to map skew-symmetric matrices to rotation-like matrices.\n- Riemannian gradient and Haar integral: tools for optimization and averaging over curved spaces.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study global coordinates on smooth manifolds outside some closed subsets of measure zero. We first give an elementary proof that every compact smooth manifold admits such coordinates, allowing the Euclidean parameter domain to be disconnected. We then study parametrizations of classical matrix groups, Stiefel manifolds, Grassmannians and real flag manifolds. For these parametrizations, we describe the inverse maps and compute the codimensions of the omitted subsets. We construct these parametrizations using Cayley transforms, graphs of linear maps and block Gaussian elimination. We also give formulas for Riemannian gradients and Haar integrals in these coordinates.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23166",
+   "title": "A bordism perspective on ends of manifolds",
+   "url": "https://arxiv.org/abs/2611.23166v1",
+   "authors": [
+    "Fadi Mezher"
+   ],
+   "label": "arXiv:2611.23166v1",
+   "primary_category": "math.AT",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper refines the pro-homotopy type of a manifold's end by recording the boundaries of a compact exhaustion and the bordisms between them, obtaining a functorial, exhaustion-independent invariant valued in the free sequential colimit completion of the bordism ∞-category.",
+    "plain": "A manifold is a smooth curved space, such as a surface or a higher-dimensional analogue. Its \"end\" describes how the space looks when you go out toward infinity, which is what remains after you cut away larger and larger compact pieces. This paper refines that picture by also keeping track of the boundary surfaces of those pieces and of the higher-dimensional \"bordisms\" (shapes that connect one boundary to another).",
+    "why": "The text claims a clean criterion: a manifold is the interior of a compact manifold exactly when this new invariant is representable. It also links the diffeomorphism groups (the symmetries of a space) to a fibre sequence involving a space of these ends, which may be of interest to researchers in geometric topology and homotopy theory. The abstract does not show how widely these tools will be applied beyond the results stated.",
+    "background": "- Manifold: a space that locally looks like ordinary Euclidean space, e.g. a sphere or torus.\n- Compact exhaustion: writing a manifold as an increasing union of compact (closed and bounded) pieces.\n- End of a manifold: the behaviour of the space near infinity, captured up to homotopy.\n- Pro-homotopy type: a way of recording a system of spaces indexed by these pieces, rather than a single space.\n- Bordism: a higher-dimensional region whose boundary is a given manifold; bordisms can be composed like morphisms in a category.\n- ∞-category: a category with higher-dimensional morphisms, used to organise bordisms and spaces coherently.\n- Diffeomorphism group: the group of smooth, invertible, structure-preserving maps of a manifold to itself.\n- Fibre sequence: a standard homotopy-theory pattern relating a total space, a base and a fibre.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We refine the classical pro-homotopy type of the end of a manifold by recording the boundaries of a compact exhaustion together with the bordisms between them. We show that this assignment, the bordism-end, is functorial in embeddings, and independent of the choice of exhaustion. Its target is the free sequential colimit completion of the bordism $\\infty$-category. Along the way of defining the bordism-end, we show that the category of all smooth $d$-dimensional manifolds and embeddings is formally obtained from the analogous category of compact manifolds. Through the formalism of the bordism-end, it follows that a manifold is diffeomorphic to the interior of a compact manifold if and only if its bordism-end is representable. Moreover, this formalism yields a fibre sequence relating the classifying spaces of the compactly supported diffeomorphism group of a manifold and its full diffeomorphism group, and a space of bordism-ends. Finally, we set up the pro-end functorially in embeddings, with target the cospan $\\infty$-category of pro-spaces, and show that it factors through the bordism-end.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20413",
+   "title": "An Implementation of the 3-Dimensional Extended Persistent Homology Transform",
+   "url": "https://arxiv.org/abs/2611.20413v1",
+   "authors": [
+    "Kiyoshi Takeuchi-Romo",
+    "Vanessa Robins"
+   ],
+   "label": "arXiv:2611.20413v1",
+   "primary_category": "math.AT",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper gives an algorithm for computing a finite directional sample of the three-dimensional Extended Persistent Homology Transform from a triangulated boundary mesh, using tree-cotree decomposition, evaluation-dual cocycles, and F2 linear algebra.",
+    "plain": "The paper describes a computer method for summarizing the shape of a solid object, such as one built from a 3D binary image, by looking at how its features appear as you sweep a height function across it from many directions. The method works from the object's surface mesh and combines graph constructions with arithmetic over the two-element field (0 and 1). Under stated assumptions about the surface, the result is a set of diagrams that describe the solid's extended persistence.",
+    "why": "Shape summaries that are stable and computable are useful for comparing and classifying 3D objects, such as biological structures or scanned materials. The text does not report experiments, timings, or comparisons, so its practical value is not shown here; it is best read as an algorithmic construction with stated hypotheses.",
+    "background": "- Homology: a way of counting holes and voids of different dimensions in a shape (first homology here roughly means loops and tunnels).\n- Persistent homology: tracks when holes appear (birth) and disappear (death) as a shape is filtered by a height function, recorded as a diagram of birth-death pairs.\n- Extended persistence: a variant that also keeps track of features that are not paired in the usual way, using sign labels on critical points.\n- Persistent homology transform: the collection of such diagrams over many directions, giving a shape signature.\n- Triangulated boundary: the surface of a solid represented as a mesh of triangles.\n- Tree-cotree decomposition: a way to split a surface's graph structure into a spanning tree and a dual spanning tree, used to find a basis of loops.\n- Cocycle and F2: linear-algebra objects used to detect loops; F2 arithmetic means working with 0 and 1 where addition is mod 2.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The Extended Persistent Homology Transform (XPHT) describes a shape through the extended persistence diagrams of its directional height functions. We present an algorithm for computing a finite directional sample of the three-dimensional XPHT from a triangulated boundary. Our main construction determines essential first-homology pairings by combining an ordered tree-cotree decomposition with evaluation-dual cocycles. The decomposition supplies a homology basis compatible with the height filtration, while the cocycles are used to determine the essential birth-death pairs. Degree-zero persistence and duality determine the remaining boundary diagrams. Under the boundary-reduction hypotheses and with critical-point sign labels, these diagrams yield the extended persistence of the solid. The resulting procedure uses graph constructions and linear algebra over F2 on boundary meshes extracted from three-dimensional binary images.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20463",
+   "title": "Möbius Invertibility of Rank Invariants",
+   "url": "https://arxiv.org/abs/2611.20463v1",
+   "authors": [
+    "Nathaniel Clause",
+    "Woojin Kim",
+    "Facundo Mémoli"
+   ],
+   "label": "arXiv:2611.20463v1",
+   "primary_category": "math.AT",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "This paper formalizes \"Möbius invertibility\" of the generalized rank invariant in multi-parameter persistent homology, proves it holds for finitely presentable modules when d ≤ 2, shows it can fail for d > 2 (correcting a prior error), and justifies restricting to intervals subordinate to a minimal free presentation's finite grid.",
+    "plain": "This is a mathematical paper about a tool used to summarize the shape of data that is measured along several settings at once, such as two or more scale parameters. The authors ask when a standard compact encoding of that summary, obtained by a reversal technique called Möbius inversion, still works when the usual finiteness assumptions do not hold. They find it always works in one or two parameters, can fail with three or more, and show that a practical restriction to a finite set of regions loses nothing whenever the full version works.",
+    "why": "The result matters for people who want to compute multi-parameter topological summaries in practice, since it gives a principled reason to compute only over a finite collection of intervals. It also corrects an error in the existing literature; the text does not indicate further applications beyond this theory.",
+    "background": "- Persistent homology: a method that tracks holes and connected pieces of data across a range of scales.\n- Multi-parameter persistence: the same idea when data is indexed by two or more scale parameters at once, which makes the mathematics much harder than the one-parameter case.\n- Rank invariant: a numerical summary counting how many features persist between pairs of parameter values.\n- Generalized rank invariant (GRI): an extension of the rank invariant defined over more general intervals.\n- Möbius inversion: a systematic way of recovering a compact description from a function on an ordered set, analogous to undoing a cumulative sum.\n- Finitely presentable module: a persistence module described by finitely many generators and relations, which can be stored on a finite grid.\n- Minimal free presentation: the most economical finite description of such a module.\n- Intervals: sub-regions of the parameter space over which the summary is evaluated.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "One of the best known invariants of multi-parameter persistent homology is the rank invariant, which is subsumed by the generalized rank invariant (GRI), obtained by naturally extending its domain. Möbius inversion of the GRI not only provides a compact encoding of this invariant but is also useful for clarifying its relationship with other invariants of multi-parameter persistent homology. However, Möbius inversion of the GRI has been defined only under suitable finiteness conditions on its domain and support. This work studies the extent to which Möbius inversion can be extended beyond these finiteness conditions. Namely, we formalize the notion of Möbius invertibility, which captures when Möbius inversion exists beyond these finiteness conditions, and investigate when the GRI is Möbius invertible. A central result we establish is that Möbius invertibility of the GRI is guaranteed for finitely presentable $d$-parameter persistence modules when $d\\leq 2$, but may fail when $d>2$. Establishing this failure also corrects an error in the existing literature. In response to this higher-dimensional obstruction, we show that for finitely presentable $d$-parameter persistence modules, restricting the GRI to intervals subordinate to the finite grid supporting a minimal free presentation preserves its Möbius inversion whenever the latter exists over all intervals. Since computing the GRI over all intervals in $\\mathbb{R}^d$ is infeasible in practice, this result provides a principled justification for restricting the GRI to those intervals.",
    "source": "arxiv"
   }
  ]

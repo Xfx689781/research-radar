@@ -1,6 +1,6 @@
 {
  "slug": "high-energy-astrophysics",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25666",
@@ -13,14 +13,14 @@
    ],
    "label": "arXiv:2611.25666v1",
    "primary_category": "nucl-th",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We investigate how the effective nucleon mass and symmetry energy affect pasta phase properties and the unified equation of state (EOS) of neutron stars.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "Using self-consistent Thomas-Fermi calculations with relativistic mean-field nucleon interactions, this paper examines how the effective nucleon mass and the nuclear symmetry energy (and its slope) shift the onset and geometry of nuclear pasta phases and the resulting unified neutron-star equation of state, including the 1.4 solar-mass radius and tidal deformability.",
+    "plain": "Neutron stars are extremely dense collapsed stars, and the deep crust of such a star may contain clumpy or sheet-like shapes of nuclear matter called \"pasta.\" This paper studies how two properties of nuclear matter, the apparent mass of nucleons and how the energy of nuclear matter changes when neutrons outnumber protons, affect when this pasta forms and what the overall pressure-density relation of the star looks like. The authors report that the symmetry energy controls where pasta appears and what shape it takes, while the effective nucleon mass matters most in the denser uniform core. A heavier effective mass makes the matter softer, giving a smaller star radius and a smaller tidal deformability for a 1.4 solar-mass star.",
+    "why": "Radius and tidal deformability of neutron stars are constraints that gravitational-wave and X-ray observations try to measure, so the link between nuclear inputs and these observables is of interest for testing dense-matter models. The text does not report comparisons with specific observations, so its direct bearing on those measurements is unclear from this abstract alone.",
+    "background": "- Neutron star: a stellar remnant about 1.4 times the Sun's mass packed into roughly 20 km across.\n- Equation of state (EOS): the rule relating pressure to density; it determines how big and how compressible a star is.\n- Nuclear pasta: non-spherical clumps, rods, or sheets of dense nuclear matter predicted in the star's inner crust.\n- Thomas-Fermi approximation: a simplified quantum-statistical method for estimating how matter arranges itself in space.\n- Relativistic mean-field framework: a theory describing nucleon interactions via exchanged effective fields, with fitted parameter sets.\n- Symmetry energy: the extra energy cost of making nuclear matter unbalanced between neutrons and protons; its slope describes how that cost changes with density.\n- Effective nucleon mass: the apparent mass of protons and neutrons inside dense matter, which can differ from their free mass.\n- Tidal deformability: how easily a star is stretched by a companion's gravity, an observable in merging neutron-star signals.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We investigate how the effective nucleon mass and symmetry energy affect pasta phase properties and the unified equation of state (EOS) of neutron stars. The nonuniform pasta structure is described within the self-consistent Thomas-Fermi approximation, while nucleonic interactions are treated in the relativistic mean-field framework with several typical parameter sets adopted. Our results indicate that the symmetry energy and its slope are crucial in determining the onset of pasta phases and their geometric configurations. In the high-density region where matter becomes uniform, the effective nucleon mass plays a dominant role. A larger effective nucleon mass tends to soften the EOS, which yields a smaller radius for a canonical $1.4 M_{\\odot}$ neutron star and reduces the corresponding tidal deformability.",
    "source": "arxiv"
@@ -38,16 +38,183 @@
    ],
    "label": "arXiv:2611.26043v1",
    "primary_category": "astro-ph.HE",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We study tidal disruptions of rotating solar-type stars by a rapidly spinning supermassive black hole with general-relativistic smoothed-particle hydrodynamics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "General-relativistic smoothed-particle hydrodynamics simulations of rotating solar-type stars tidally disrupted by a rapidly spinning supermassive black hole, comparing strong-field (close pericentre) and weak-field (Newtonian-like) encounters across black hole spin, orbital inclination and stellar spin alignment.",
+    "plain": "This paper looks at what happens when a star passes too close to a supermassive black hole and gets torn apart. The authors simulate stars that already spin, and vary how the black hole spins and how the star's spin lines up with its orbit. They compare very close passes, where Einstein's gravity matters strongly, with gentler passes that behave more like classic Newtonian physics.",
+    "why": "Tidal disruption events are one of the few ways to probe black holes and their surroundings from afar, so how much of a star survives and how the debris falls back affects what telescopes might see. The text reports that strong-field encounters can differ from Newtonian expectations, for example in whether anti-aligned stellar spin protects the star; how far this carries over to real observed events is not something the text establishes.",
+    "background": "- Tidal disruption: a star passing near a black hole is stretched and partly torn apart by the gravity difference across its body.\n- Pericentre: the closest point of an orbit to the black hole.\n- Gravitational radius: a length scale set by the black hole's mass; a few of them means very close to the hole, where general relativity matters.\n- Spin and inclination: the black hole's rotation and the tilt of the star's orbit relative to it.\n- Smoothed-particle hydrodynamics: a simulation method that represents gas as moving particles.\n- Partial vs full disruption: whether a dense core of the star survives the encounter.\n- Fallback law: the rate at which torn-off debris returns to the black hole, often described as a power law in time.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We study tidal disruptions of rotating solar-type stars by a rapidly spinning supermassive black hole with general-relativistic smoothed-particle hydrodynamics. To capture strong-field effects, we place the pericentre at a few gravitational radii of a black hole, and compare with weak-field encounters at a larger pericentre around a lighter black hole. We vary the black hole spin, the orbital inclination and the stellar rotation, using rigidly and differentially rotating stars with spin aligned, anti-aligned or perpendicular to the orbital angular momentum. In the strong field, the black hole spin decides whether a core survives on equatorial and inclined orbits, and stellar rotation reduces the surviving core in every partial disruption. At the larger pericentre, as in Newtonian studies, anti-aligned rotation instead protects the star from disruption. In both cases the tide reverses an anti-aligned spin just before pericentre. The outcome differs because in the strong field the tide keeps acting on the reversed core long after pericentre. Deep encounters leave cores spinning above break-up, which shed mass and angular momentum as they settle. Full disruptions approach the canonical fallback law, whereas the late-time slope of partial disruptions is not universal and is set by the debris energy distribution near the surviving core.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24664",
+   "title": "Rapid Equation of State Inference from Multiprobe Datasets",
+   "url": "https://arxiv.org/abs/2611.24664v1",
+   "authors": [
+    "Tamal RoyChowdhury",
+    "Anarya Ray",
+    "Jolien Creighton",
+    "Shaon Ghosh"
+   ],
+   "label": "arXiv:2611.24664v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A joint Bayesian analysis combining gravitational-wave data from binary neutron star mergers, NICER X-ray mass-radius measurements, and radio timing of massive pulsars to constrain the neutron star equation of state and compare candidate nuclear matter models.",
+    "plain": "Neutron stars are extremely dense remnants of collapsed stars, and the equation of state describes how squeezed their matter can get, which is hard to reproduce in labs. This paper combines three kinds of astronomical measurements, from merging neutron star pairs, from X-ray timing of pulsars, and from radio timing of very heavy pulsars, to narrow down that relationship. The reported result is a radius of about 11.9 km for a 1.4-solar-mass star and a maximum possible mass of about 2.31 solar masses, each with stated uncertainty ranges.",
+    "why": "Pinning down the equation of state links star-scale measurements to the physics of nuclear matter, a question that matters for understanding dense matter. The text does not say how these numbers compare with earlier estimates, so its significance relative to prior work is not established here.",
+    "background": "- Neutron star: the collapsed core of a massive star, roughly 1.4 times the Sun's mass packed into about 20 km across.\n- Equation of state (EoS): the rule linking pressure to density inside the star; a stiffer EoS resists compression more and supports larger masses.\n- Gravitational waves: ripples in spacetime, here from two neutron stars spiraling together.\n- NICER: an X-ray telescope on the International Space Station that measures pulsar mass and radius.\n- Radio pulsar timing: precise timing of radio pulses to measure the mass of a rapidly spinning neutron star.\n- Bayesian inference and model selection: a statistical method for updating beliefs from data and ranking competing models by how well they fit.\n- Credible interval: a range that contains the true value with a stated probability (here 90%).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Fully constraining the neutron star equation of state (EoS) requires combining observations from various channels that probe different density regimes. We perform a joint multimessenger inference of the equation of state using gravitational-wave observations from binary neutron star mergers, NICER mass-radius measurements of X-ray pulsars, and radio timing measurements of massive pulsars. We constrain the parametrized equation of state and perform Bayesian model selection among a set of candidate equations of state. The joint analysis produces a radius of $R_{1.4} = 11.93^{+1.02}_{-0.83} \\, \\rm km$ for a canonical $1.4 \\, M_\\odot$ neutron star, and a maximum non-rotating neutron star mass of $M_{\\rm max} = 2.31^{+0.23}_{-0.23} \\, M_\\odot$ with $90\\%$ credible intervals. Gravitational-wave and NICER observations constrain the equation of state at low to intermediate densities, while massive pulsar observations constrain it at high densities by requiring the equation of state to support the neutron star masses. We find no simple correlation between the stiffness of an EoS and Bayesian evidence because the observations probe the pressure at different density regimes. By combining constraints on the equation of state with Bayesian model selection using multimessenger data, our analysis connects macroscopic neutron star measurements to microscopic properties of candidate nuclear matter models.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24202",
+   "title": "A Butterfly Collector's View of Fast Radio Bursts: Repeating Sources Go Quiet within a Few Years",
+   "url": "https://arxiv.org/abs/2611.24202v1",
+   "authors": [
+    "Shotaro Yamasaki"
+   ],
+   "label": "arXiv:2611.24202v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Using an unseen-species estimator borrowed from ecology, the authors show that repeating fast radio burst sources in five years of CHIME/FRB Catalog 2 data become quiet within a few years, and that steady-rate or randomly fluctuating models do not fit this decline.",
+    "plain": "Fast radio bursts are very brief flashes of radio waves from distant space, and some sources repeat. This paper asks how long a repeating source stays active, which is important for knowing what causes them but has been poorly measured. The authors borrow a counting trick from ecology, originally used to predict how many new butterfly species a further collecting trip would find, and apply it to five years of burst data.",
+    "why": "If repeating sources switch off after a few years, that constrains what kinds of objects can produce them and how often such sources would be found in a survey. The paper is a statistical argument from one catalogue, and the text itself says longer monitoring is needed to tell the proposed models apart.",
+    "background": "- Fast radio bursts (FRBs): millisecond-long radio flashes from outside our galaxy; some sources repeat, and their origin is still debated.\n- CHIME/FRB Catalog 2: a catalogue of bursts detected by the Canadian Hydrogen Intensity Mapping Experiment telescope over about five years.\n- Unseen species estimation: a statistical method from ecology that predicts how many new species a future sample will reveal, using how many species were seen once or twice.\n- The key test: if a source's average rate is steady, the ratio R of observed to predicted later bursts should be 1 at every time gap. A ratio that falls with the gap means sources are changing over time.\n- Models compared: a fixed active lifetime of about three years, on/off cycles with two-year active phases, or a mix of short- and long-lived sources.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "How long repeating fast radio burst (FRB) sources stay active is key to their origins but poorly known as a population. We test this with unseen species estimation, a method first used to predict how many new butterfly species a further collecting trip would find. If each source keeps the same mean rate over time, the number of sources seen $k+1$ times in one window predicts how many bursts the sources seen $k$ times will emit in a later window. It assumes neither the burst rate distribution nor source distances. For the five years of CHIME/FRB Catalog 2, we measure the ratio $R$ of observed to predicted bursts against the gap $Δ$ between windows. A steady mean rate gives $R = 1$ at every $Δ$, so a change of $R$ with $Δ$ means that the sources change. $R$ is close to unity for $Δ\\lesssim 60$ days and drops by half within one year. Neither steady nor randomly fluctuating sources reproduce this decline, unless the latter are mostly silent. Three models explain the data equally well: a lifetime of about three years, on/off activity with two-year active phases, or a mix of short- and long-lived sources. Fitted to the first three years alone, they correctly predict the further decline of $R$ in the last two years. Longer monitoring of $R$, and of whether silent sources come back to life, will distinguish them. Unlike butterfly species, FRB sources do not wait for the next collecting trip, so follow-up should start soon.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22771",
+   "title": "Black hole ADaptive Multi-relation Mass Estimation based on Timing Analysis (BADMET)",
+   "url": "https://arxiv.org/abs/2611.22771v1",
+   "authors": [
+    "Ruisong Xia",
+    "Yongquan Xue",
+    "Hao Liu",
+    "Guowei Ren",
+    "Mouyuan Sun",
+    "Qingwen Wu",
+    "Jialai Wang",
+    "Shuying Zhou",
+    "Zhen-Bo Su",
+    "Shifu Zhu",
+    "Mengqiu Huang"
+   ],
+   "label": "arXiv:2611.22771v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "BADMET is a multi-relation framework that estimates supermassive black hole masses in AGN by combining several mass-related parameters, including X-ray variability timescales, to correct for timescale underestimation from short observation baselines.",
+    "plain": "This paper is about estimating how massive the black hole at the center of an active galaxy is, using how its brightness flickers over time. The authors note that a known link between flicker speed and black hole mass tends to underestimate the timescale when observations cover only a short period. They built a flexible method, called BADMET, that combines several mass-related measurements, and report that adding the flicker timescale improves estimates in simulated and observed samples.",
+    "why": "Measuring black hole masses for individual galaxies is difficult, and a method that works from a single X-ray observation could make such estimates more practical. The text reports uncertainties of about 0.5 dex (a factor of roughly three), but it does not say how this compares with other methods, so its wider significance is unclear from the summary alone.",
+    "background": "- Active galactic nucleus (AGN): a galaxy whose central supermassive black hole is actively feeding and emitting strongly.\n- Black hole mass: usually inferred indirectly, since it cannot be weighed directly.\n- Variability: changes in brightness over time; the timescale of these changes is linked to black hole size and therefore mass.\n- Finite observational baseline: the total time span over which a source is observed; short spans can miss slow changes and bias timescales low.\n- Dex: a logarithmic unit; an uncertainty of 0.5 dex means a factor of about 3 either way.\n- X-ray observation: a single telescope pointing used to measure high-energy emission from the source.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Active galactic nucleus (AGN) variability is widely recognized as a promising avenue for constraining black hole mass, yet its practical application remains limited. Although the correlation between black hole mass and variability timescale has been extensively investigated, finite observational baselines often lead to systematic underestimation of the timescale, thereby hindering reliable mass estimation for individual sources. To address this limitation, we develop the Black hole ADaptive Multi-relation Mass Estimation based on Timing analysis (BADMET), an extendable framework that provides black hole mass estimates by assimilating multiple mass-related parameters that include variability properties. We show that incorporating the variability timescale improves mass recovery in the simulated sample and enhances agreement with the reference masses in the observed sample, achieving uncertainties of $\\lesssim 0.5$ dex even with a single X-ray observation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22423",
+   "title": "QPO constraints on the rotating Fan-Wang spacetime",
+   "url": "https://arxiv.org/abs/2611.22423v1",
+   "authors": [
+    "Manas Khassanov",
+    "Gulnara Suliyeva",
+    "Marco Muccino",
+    "Kuantay Boshkayev",
+    "Daniya Utepova",
+    "Ruslan Spassyuk"
+   ],
+   "label": "arXiv:2611.22423v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper tests a rotating regular black hole (the Fan-Wang solution from nonlinear electrodynamics coupled to gravity) against quasiperiodic oscillation frequencies using the relativistic precession model and MCMC fitting, obtaining a bound l/M < 8/27 on its dimensionless parameter.",
+    "plain": "The paper asks whether a particular modified model of a spinning black hole can explain the rhythmic flickering in X-ray light coming from black hole systems. The authors calculate how small particles would orbit such a black hole, derive the wobble frequencies of those orbits, and compare them with observed flicker rates. Using statistical fitting, they find the model's extra parameter must be below about 0.296 (in units of the black hole's mass), which they say matches the theoretical limit.",
+    "why": "Observed flicker frequencies offer an indirect way to test whether black holes follow general relativity or a modified theory, so this is a concrete test of a specific alternative model. The text does not show how strongly the result favours this model over the standard black hole, so its significance should be treated as modest and specialist-facing.",
+    "background": "- Black hole spin: how fast a black hole rotates; it affects where stable orbits lie.\n- Circular orbits and innermost stable circular orbit (ISCO): the closest orbit a particle can keep without spiralling in.\n- Epicyclic frequencies: the rates at which a slightly disturbed orbiting particle wobbles radially and vertically.\n- Quasiperiodic oscillations (QPOs): nearly regular brightness flickers in X-rays from accreting black holes.\n- Relativistic precession model: a framework linking observed QPO frequencies to orbital frequencies near the black hole.\n- Regular black hole: a black hole model without a central singularity, here arising from nonlinear electrodynamics (a modified theory of electromagnetic fields coupled to gravity).\n- Markov chain Monte Carlo (MCMC): a statistical method for estimating parameter values and their uncertainties by random sampling.\n- Dimensionless parameter l/M: the extra model parameter divided by the black hole mass, so it has no units.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this work, we investigate a rotating regular black hole described by the Fan-Wang solution, which arises from nonlinear electrodynamics coupled to gravity. We examine the motion of neutral test particles along circular equatorial orbits and derive the corresponding orbital parameters, including the angular velocity, specific angular momentum, and specific energy. By perturbing these orbits in the radial and vertical directions, we calculate the associated fundamental epicyclic frequencies. We then employ the relativistic precession model to interpret the observed quasiperiodic oscillations (QPOs) in terms of these frequencies. We numerically determine the radii of the innermost stable circular orbits and perform Markov chain Monte Carlo simulations to constrain the spacetime parameters. Using observational and theoretical estimates of the black hole mass and spin parameter from the literature, together with theoretically motivated priors on the Fan-Wang parameter, we obtain the best-fit parameter values. The inferred black hole mass, spin parameter, and QPO emission radii are consistent with the corresponding estimates reported in the literature. Furthermore, the dimensionless Fan-Wang parameter satisfies $l/M < 8/27 \\approx 0.296$, in agreement with its theoretical upper bound.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21317",
+   "title": "Non-thermal emission from molecular clouds illuminated by continuous cosmic-ray accelerators: application to the stellar cluster W43",
+   "url": "https://arxiv.org/abs/2611.21317v1",
+   "authors": [
+    "Alexandre Inventar",
+    "Enrico Peretti",
+    "Naomi Tsuji",
+    "Stefano Gabici"
+   ],
+   "label": "arXiv:2611.21317v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Analytical estimates of how continuously injected cosmic rays from star clusters build up around their sources and produce gamma rays in nearby molecular clouds, applied to the W43 region.",
+    "plain": "High-energy particles called cosmic rays are thought to leak out of their sources and crash into nearby clouds of gas, which then glow in gamma rays. This paper looks at the case where a group of young stars keeps releasing such particles over a long time, rather than in one burst, and asks when the resulting glow would be bright enough to detect. The authors apply this to the W43 star-forming region and use its gamma-ray emission to estimate how cosmic rays move through the surrounding medium.",
+    "why": "Star clusters may supply a non-negligible share of Galactic cosmic rays, so a way to test them through gamma rays from gas clouds is of interest. The text reports that detectable emission generally needs either suppressed diffusion or anisotropic diffusion, which constrains transport models; the broader significance beyond W43 is not established in the text.",
+    "background": "- Cosmic rays: fast charged particles, mostly protons, moving through the galaxy.\n- Gamma rays: the highest-energy form of light; here produced when cosmic rays hit gas.\n- Molecular clouds: cold, dense gas clouds where stars form; they act as targets.\n- Diffusion: the random, scattering-driven spreading of charged particles through magnetic fields; the \"Galactic value\" is the typical rate across the galaxy.\n- Anisotropic diffusion: spreading that is faster in some directions than others.\n- Impulsive vs. continuous injection: a single burst of particles versus a steady release over time.\n- Stellar cluster W43: a dense region of young massive stars in the Milky Way that emits gamma rays.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Context: Cosmic rays escaping from their accelerators produce gamma-ray emission through interactions with ambient gas. While the scenario of an impulsive injection of cosmic rays has been extensively studied, that of a continuous injection in time has received comparatively less attention. The latter scenario is particularly relevant for stellar clusters, which may contribute to a non-negligible fraction of Galactic cosmic rays. Aims: We intend to characterize the excesses of cosmic rays around their accelerators and to assess the detectability of the gamma-ray emission resulting from the interactions of cosmic rays in nearby molecular clouds. We focus in particular on star clusters and seek to apply these considerations to the case of W43. Methods: We derive analytical estimates for the cosmic ray excess around sources as a function of source properties and transport parameters. We also evaluate under which conditions the predicted gamma-ray emission from illuminated molecular clouds can be detected by current and future instruments. We then apply these results to explain the gamma-ray emission from the the W43 region. Results: We find that producing detectable gamma-ray emission from molecular clouds illuminated by cosmic rays escaping from star clusters generally requires either suppressed diffusion relative to the Galactic value or anisotropic diffusion, with the latter scenario requiring a smaller global energetic. We applied this approach to the case of W43 and by fitting its gamma-ray emission we were able to constrain the underlying CR transport parameters.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21861",
+   "title": "A search for optical bursts from the repeating fast radio burst in the M81 globular cluster, FRB 20200120E",
+   "url": "https://arxiv.org/abs/2611.21861v1",
+   "authors": [
+    "V. S. Dhillon",
+    "L. G. Spitler",
+    "K. Lackeos",
+    "A. N. Mbole",
+    "W. J. Page",
+    "A. J. Brown",
+    "N. Castro Segura",
+    "M. J. Dyer",
+    "J. A. Garbutt",
+    "M. J. Green",
+    "D. Jarvis",
+    "M. R. Kennedy",
+    "P. Kerry",
+    "S. P. Littlefair",
+    "J. McCormac",
+    "J. Munday",
+    "S. G. Parsons",
+    "I. Pelisoli",
+    "E. Pike",
+    "D. I. Sahman",
+    "A. Yates"
+   ],
+   "label": "arXiv:2611.21861v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A simultaneous radio and high-speed optical monitoring campaign of the repeating FRB 20200120E in an M81 globular cluster finds no optical counterpart burst, yielding upper limits that constrain inverse-Compton emission models for magnetar-powered bursts.",
+    "plain": "Fast radio bursts are millisecond flashes of radio waves from distant space, and this one repeats and sits in a star cluster in the nearby galaxy M81. The team watched it at the same time with a radio telescope in Germany and a very fast optical camera on a large Spanish telescope, looking for a matching flash of visible light. They saw one radio burst but no matching optical flash, so they could only set upper limits on how bright any optical flash could have been.",
+    "why": "Finding out whether these bursts also flash in visible light would help show what produces them, and this source is the closest known extragalactic FRB, so it is a useful test case. The text reports only limits, not a detection, and it does not say how strongly these limits rule out particular models beyond the comparison it describes.",
+    "background": "- Fast radio burst (FRB): a very brief, very bright radio pulse from outside our galaxy, lasting milliseconds; the source is thought to be a highly magnetised neutron star (magnetar).\n- Repeating FRB: one that has emitted more than one burst.\n- Globular cluster: a dense, old ball of stars orbiting a galaxy.\n- M81: a large spiral galaxy about 12 million light-years away.\n- Fluence: the total energy received per unit area from a burst; here given in Jy ms (a radio flux unit times time).\n- Optical burst and upper limit: a flash of visible light; an upper limit means the instrument would have seen anything brighter, and nothing was seen.\n- Inverse-Compton scattering: a process where fast electrons boost low-energy light to higher energy; proposed as a way to make optical flashes.\n- Interstellar extinction: dimming of light by dust between us and the source, corrected for here.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a search for optical bursts from the repeating fast radio burst FRB 20200120E, which is located in a globular cluster of M81 and is the closest known extragalactic FRB. We observed FRB 20200120E simultaneously with the high-speed, quintuple-beam optical camera HiPERCAM on the 10.4-m Gran Telescopio Canarias and the Effelsberg 100-m Radio Telescope. We detected one radio burst of fluence $\\mathcal{F}_{\\rm R} = 0.14\\pm0.01$ Jy ms during our observations, but found no evidence for corresponding optical bursts in the 11.98 ms frames. We find 5$σ$ upper limits on the optical burst fluence of $\\mathcal{F}_{\\rm O} < 1.8\\times10^{-3}$ Jy ms (combined $u_s g_s r_s i_s z_s$-bands) and the optical burst energy of $E_{\\rm O} < 5.4\\times10^{36}$ erg ($r_s$-band), corrected for interstellar extinction. We compare our upper limit on the optical-to-radio fluence ratio $\\mathcal{F}_{\\rm O}/\\mathcal{F}_{\\rm R} < 0.013$ to various emission models involving inverse-Compton scattering in the magnetosphere or nebula of a highly-magnetised neutron~star.",
    "source": "arxiv"
   }
  ]

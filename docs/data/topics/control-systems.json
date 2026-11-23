@@ -1,7 +1,51 @@
 {
  "slug": "control-systems",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.27091",
+   "title": "Mode Recommendation and Dynamic Routing Guidance for Improved Trip Quality in Mixed Traffic Networks",
+   "url": "https://arxiv.org/abs/2611.27091v1",
+   "authors": [
+    "Jin Zhang",
+    "Andreas A. Malikopoulos",
+    "Ting Bai"
+   ],
+   "label": "arXiv:2611.27091v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "The paper proposes a joint mode-recommendation and dynamic routing-guidance framework for mixed urban traffic (private cars, autonomous vehicles, buses), built around a dynamic trip-quality index (DTX), and evaluates it in a simulation of 1,500 travelers on a real Shanghai road network.",
+    "plain": "Cities offer several ways to get around, such as driving your own car, riding a self-driving car, or taking a bus, but navigation advice usually fixes the mode and only suggests routes. This paper builds a system that also suggests which mode a traveler should use, scoring each option by travel time, cost, and convenience. In a computer simulation of 1,500 travelers on a real Shanghai road network, the authors report that this combined approach raised the average trip score by 13.01% over route guidance alone and by 19.68% over fixed modes with pre-planned routes.",
+    "why": "It treats choice of travel mode and choice of route as one problem rather than two, which matters as self-driving cars and buses share roads with private cars. The gains are simulation results only, so they show what the method can do under the modeled assumptions rather than how travelers would respond in practice.",
+    "background": "- Dynamic routing guidance: real-time advice to drivers about which road to take, updated as traffic changes.\n- Mixed traffic network: a road system shared by several vehicle types, here private cars, autonomous vehicles (self-driving cars offered as a service), and buses.\n- Trip index (DTX): a single score combining travel time, money cost, and convenience so that different modes can be compared on one scale.\n- Mode recommendation: suggesting which travel option a person should take; here, autonomous vehicles or buses are offered to travelers who have no private car, while capacity is kept for travelers with known demand.\n- Simulation: testing the method on a computer model of traffic rather than on real travelers, so results depend on the model's assumptions.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Urban mixed traffic networks provide diverse mobility options, yet conventional routing guidance with fixed travel modes leaves the benefits of coordinating travel modes and route planning largely unexploited. This paper proposes an integrated mode recommendation and dynamic routing guidance framework for urban mixed traffic networks comprising private vehicles, autonomous vehicles, and buses. We formulate a dynamic trip index (DTX) that incorporates mode-specific travel time, monetary cost, and convenience, enabling consistent evaluation of trip quality across travel modes. Using this measure, we develop a mode recommendation method that selects feasible autonomous vehicle or bus services based on predicted DTX for travelers without private vehicles, while preserving service capacity for travelers with known demand. We integrate this method with dynamic routing guidance for private and autonomous vehicles to improve the average trip quality of all travelers. Simulation studies involving $1{,}500$ travelers on a real-world road network in Shanghai, China, show that the proposed framework increases the mean realized DTX by $13.01\\%$ compared with dynamic routing guidance alone and by $19.68\\%$ compared with fixed travel modes with preplanned routes, highlighting the value of mode flexibility in improving trip quality beyond route adaptation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27169",
+   "title": "Which Data-Center Load Models Can Be Trusted? An Evidence-Graded Review of Dynamic Modeling and Validation for Large Computational Loads",
+   "url": "https://arxiv.org/abs/2611.27169v1",
+   "authors": [
+    "Dileep Cheerla"
+   ],
+   "label": "arXiv:2611.27169v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "An evidence-graded review of 160 documents finds that dynamic models of large data-center loads are rarely validated against measured disturbances on unseen events, and proposes context-of-use gates, release labels, and a minimum validation protocol.",
+    "plain": "Grid operators now ask for computer models of big data centers, and new rules assume those models can predict how the facilities behave when the power grid is disturbed. This review checks whether the evidence supports that assumption. The authors found very little: the one standard model they could test failed with default settings, and refitting it to single events was never checked on a different event.",
+    "why": "Data centers draw very large and fast-changing amounts of power, so how their models are trusted affects grid stability and the rules that govern connections. The paper is a careful critique of evidence rather than a new model, so its main value is in showing where validation is missing and what would count as adequate.</background>\n<parameter name=\"background\">Ride-through: a load's ability to stay connected during a brief voltage dip instead of dropping off. Dynamic model: a mathematical simulation of how equipment responds over time to grid changes. Phasor model: a simplified grid-simulation approach that tracks slow-changing voltage and current averages rather than the full waveform. Calibration vs. validation: calibration fits model settings to one dataset; validation tests the frozen model against a separate, independent measurement. Held-out event: a disturbance not used in fitting. Context-of-use: the specific question a model is meant to answer.",
+    "background": "",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Grid operators now require dynamic models of data centers and other large computational loads, and new ride-through rules assume that these models predict how facilities respond to disturbances. This review asks what evidence supports that assumption. We coded 160 documents, screened from 1,424 de-duplicated database and seed records plus 65 added documents, by the strongest reference object each presents, from grid-side records to simulation only. Across 19 field-evidence entries, 15 requirement documents from three continents and nine model classes, we find two comparisons of a standard library model with measured data-center events: with default parameters the model failed both, and refitting it to each event separately reduced the error but was never tested on an unseen event. Among the sources reviewed, we found no successful held-out validation of a frozen, facility-specific data-center model against an independent measured disturbance, and 25 of the 33 model-phenomenon combinations with any evidence involve no electrical measurement. The features that distinguish the new rules (memory of repeated dips, recovery within 0.5-3 s, proportional power reduction during the sag, overvoltage response) are those current phasor models cannot represent or have never been tested against. In the operator procedures examined, simulations and model-to-model benchmarks are accepted as evidence of model fidelity, unlike the measured validation required of generators, and proposed mitigations have mostly been evaluated on unvalidated facility models. We propose context-of-use gates that separate calibration from validation, release labels for model claims, a minimum validation protocol with acceptance criteria, and a research agenda.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.25319",
    "title": "The Prediction-to-Decision Gap: First-Action Informativity in Data-Driven Predictive Control",
@@ -12,12 +56,12 @@
    ],
    "label": "arXiv:2611.25319v1",
    "primary_category": "eess.SY",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper asks whether data-compatible ARX models agree on the first input an unconstrained quadratic MPC would apply, shows that first-action agreement and multi-step prediction agreement are logically distinct, gives structural conditions for action agreement without unique identification, and approximates the action disagreement via local sensitivities and parameter covariance.",
-    "plain": "Model predictive control repeatedly plans a sequence of control inputs but only uses the first one before planning again. The authors ask whether the recorded data are enough to pin down that single first input, even when the data do not pin down the whole underlying model. They report that agreement on the first action and agreement on long-range predictions can come apart, and they offer a way to measure how much the uncertain model shifts that first action.",
-    "why": "It targets a gap between how well a learned model predicts the future and whether it leads to the same decision, which matters for anyone deploying data-driven controllers. The abstract does not show practical impact beyond the analytical and numerical examples it mentions, so its reach beyond ARX models with unconstrained quadratic MPC is unclear.",
-    "background": "['Model predictive control (MPC): at each time step, optimize a sequence of future inputs over a horizon, apply only the first, then re-optimize.', 'ARX model: a linear model that predicts the current output from past outputs and past inputs, plus exogenous (external) inputs.', 'System identification: estimating model parameters from recorded input-output data; a model is identified when the data determine its parameters uniquely.', 'Parameter covariance: a measure of how uncertain the estimated parameters are, typically from the fitting procedure.', 'Local sensitivity: how much an output (here, the first control action) changes when a parameter changes slightly, approximated by derivatives.', \"Mean-squared deviation: the average of squared differences, used here to measure how far alternative models' actions stray from the fitted model's action.\"]",
+    "one_liner": "For data-driven unconstrained quadratic MPC on ARX models, the paper defines first-action informativity (agreement of the applied first input across data-compatible models) and shows it is not equivalent to prediction agreement, gives structural conditions for action agreement without unique identification, and approximates the mean-squared deviation of disagreeing actions via local sensitivities and parameter covariance.",
+    "plain": "Model predictive control is a method where a controller plans a sequence of future inputs but only applies the first one, then plans again. This paper asks whether the available measurement data are enough to pin down that single first input, even when the data do not fully determine the underlying system model. The authors find that agreement on the first action and agreement on predicted future outputs can differ, and they measure how far the chosen actions spread when the models disagree.",
+    "why": "The work focuses on the step a controller actually executes, which is a narrower question than whether the model is accurate overall. It may matter for data-driven control, where models are learned from limited data, but the text covers only one model class (ARX) and unconstrained quadratic MPC, so wider applicability is not shown here.",
+    "background": "- Model predictive control (MPC): at each time step, optimize a plan of future inputs over a short horizon, apply only the first input, then repeat.\n- ARX model: a simple linear model that predicts the current output from past outputs and past inputs, fitted to recorded data.\n- Data-driven control: designing a controller directly from recorded input-output data rather than from a known physical model.\n- Identifiability: whether the data are rich enough to determine a unique model; the paper does not require this.\n- Parameter covariance: a measure of how uncertain the fitted model parameters are, and how those uncertainties vary together.\n- Local sensitivity: how much an output changes when a parameter changes slightly, estimated near the fitted value.\n- Mean-squared deviation: the average of squared differences, here between the controller's action and the fitted model's input.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -35,16 +79,154 @@
    ],
    "label": "arXiv:2611.25465v1",
    "primary_category": "eess.SY",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper proposes DeoPC, a data-driven output-feedback model predictive controller that estimates an unknown linear system's internal state from past input-output data via SVD-based subspace methods and enforces constraints, with recursive feasibility and closed-loop stability shown under persistent excitation and initialization conditions.",
-    "plain": "Engineers often need to keep a machine's hidden internal condition within safe limits, but they can only see what goes in and what comes out, and they may not have a mathematical model of the machine. This paper builds a controller that reconstructs the hidden internal state from recent input and output records and then chooses future control actions that respect limits. The abstract reports theoretical guarantees that the controller keeps working and stays stable under stated data conditions, with and without bounded measurement noise, and tests it in simulation on an unstable batch reactor.",
-    "why": "It addresses a practical gap: controlling a system whose internal state is hidden and whose model is unknown, using only data. The approach may matter to process industries and anyone who wants model-free control with safety constraints, though the abstract does not show how it compares with existing data-driven methods on real hardware.",
-    "background": "['State: the set of internal variables that together determine how a system will evolve; often not directly measured.', 'Linear system: one whose input-output behaviour can be described by linear equations.', 'Output feedback: control that uses only measured outputs, not the full internal state.', 'Model predictive control (MPC): at each step, optimise a plan over a short future horizon subject to constraints, apply the first action, then repeat.', 'Recursive feasibility: the guarantee that the optimisation problem stays solvable at every future step, so the controller never gets stuck.', \"Persistent excitation: the requirement that the recorded input data is varied enough to reveal the system's behaviour.\", 'Singular value decomposition (SVD): a matrix factorisation used here to extract the dominant patterns in recorded data.', 'Batch reactor: a chemical vessel processed in discrete batches; used as a test case for an unstable process.']",
+    "one_liner": "DeoPC is a data-enabled output-feedback model predictive control scheme that estimates the internal state of an unknown linear system from past input-output data via SVD-based subspace methods, with recursive feasibility and closed-loop stability claimed under persistent excitation and initialization conditions, for both noise-free and bounded-noise cases.",
+    "plain": "Many control systems can only be observed through their inputs and outputs, while their internal state stays hidden. This paper proposes a controller that builds an estimate of that hidden state directly from recorded past inputs and outputs, without needing a full mathematical model, and then steers the state while respecting physical limits. The authors test it in simulation on an unstable chemical batch reactor.",
+    "why": "Being able to control a system from measured data alone, with safety limits respected, is useful for plants where building an accurate model is costly or impractical. The text reports theoretical guarantees and a simulation demonstration, but does not show hardware experiments, so its practical reach beyond the simulated reactor is not established.",
+    "background": "- Linear system: a system whose response is a weighted sum of its inputs, modeled with matrices.\n- Internal state: the set of hidden quantities that together determine how a system evolves.\n- Output feedback: controlling a system using only its measured outputs, not its full state.\n- Model predictive control (MPC): at each step, optimize future control actions over a short horizon under constraints, then apply the first action and repeat.\n- Subspace methods / singular value decomposition (SVD): matrix techniques that extract system structure from recorded data.\n- Persistent excitation: the input signal must be rich enough to reveal the system's behavior.\n- Recursive feasibility and closed-loop stability: the controller keeps having a valid action at every step and the system settles rather than diverges.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Constrained regulation of the internal state of an unknown linear system is challenging when only input-output measurements are available online. In this work, we develop a data-enabled output-feedback predictive control (DeoPC) framework for constrained state regulation using input-output data. Specifically, a data-driven state estimate is constructed from past input-output data via a subspace-based singular value decomposition. Based on this state representation, we formulate a predictive controller that directly penalizes the state and control effort while enforcing the system constraints. Under persistent excitation and initialization conditions, we establish recursive feasibility and closed-loop stability of DeoPC in both noise-free and bounded-noise settings. In addition, we show that DeoPC can be calibrated to the physical state coordinates using a few offline state measurements, or treated as a model predictive control tuning problem when no state measurements are available. The effectiveness of DeoPC is demonstrated through simulations on an unstable batch reactor system.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23654",
+   "title": "Radar-Native Control Barrier Functions: Doppler Range Rate as a Measured Barrier Derivative",
+   "url": "https://arxiv.org/abs/2611.23654v1",
+   "authors": [
+    "Johannes Mootz",
+    "Hesam Mojtahedi",
+    "Reza Akhavian"
+   ],
+   "label": "arXiv:2611.23654v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper uses an FMCW radar's direct Doppler velocity measurement as the time derivative of an ego-centered range control barrier function, yielding a closed-form forward-velocity safety filter with a sensor-error margin.",
+    "plain": "Robots that move near other objects need to know how far away each object is and how fast it is closing in. This paper tests a radar that measures closing speed directly, rather than estimating it from a series of distance readings, and uses that speed to limit how fast the robot can drive forward. In 508 paired encounters, the direct-speed approach caused 2 buffer incursions, versus 15 for one estimator and 25 for another; a small quadruped robot also stopped at about 0.78 m where 0.76 m was predicted.",
+    "why": "It addresses a concrete delay in safety control: range-rate estimates lag behind changes in obstacle motion, and a sensor that measures velocity directly may shorten that lag. Its scope is narrow (longitudinal range channel, bounded errors, continuously available detections), so its relevance to other settings is not established by the text.",
+    "background": "- Control barrier function (CBF): a mathematical safety boundary; a controller is kept so that the distance to an obstacle never drops below a safe limit.\n- Range rate: how fast the distance to an object is changing.\n- FMCW radar: a radar that sends a continuously varying signal; it reports distance and, via the Doppler effect (the frequency shift of reflected waves from moving objects), radial speed.\n- Kalman filter: a standard method that estimates hidden quantities such as speed from noisy measurements; the paper compares against constant-velocity and constant-acceleration versions.\n- Buffer incursion: entering the safety margin around the robot.\n- Ego-centered: measured relative to the robot itself.\n- Unitree Go1: a small quadruped (four-legged) robot used in the experiment.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Safe control around dynamic obstacles requires information about both distance and relative motion. Range-based filters commonly reconstruct the required range rate from successive range measurements or from obstacle-state estimators, which can introduce estimator delay or sensitivity to range noise when obstacle motion changes. A frequency-modulated continuous-wave (FMCW) radar measures radial relative velocity directly through Doppler. We use this measurement as the derivative of an ego-centered range control barrier function (CBF) and obtain a closed-form filter on the robot's forward velocity. A measurement margin constructed from sensor error bounds accounts for errors in range, Doppler, ego velocity, and bearing. In 508 paired encounters within the platform's retreat capability, direct Doppler produces two buffer incursions, compared with 15 for a constant-acceleration and 25 for a constant-velocity Kalman filter. On a Unitree Go1, the controller stops at $0.777 \\pm 0.015$ m against the predicted $0.758$ m and reacts to a farther approaching object while a nearer static return remains. The guarantee covers the longitudinal range channel under bounded measurement errors and continuously available detections. Direct Doppler removes the need to reconstruct range rate in the safety loop, reducing the delay between a change in obstacle motion and its effect on the safety command.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23867",
+   "title": "Control-Aware Separating Hyperplanes for Control Barrier Functions in Planar Navigation",
+   "url": "https://arxiv.org/abs/2611.23867v1",
+   "authors": [
+    "Aadarsh Ramachandiran",
+    "Rachel Kalpana Kalaimani"
+   ],
+   "label": "arXiv:2611.23867v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A solver-free method that picks control-aware separating hyperplane orientations for control barrier function collision avoidance by enumerating a polynomial set of candidate control interventions and choosing the feasible one of minimum norm, for planar polygonal robots among polygonal obstacles.",
+    "plain": "Robots that steer around obstacles often use a safety rule that depends on how a imaginary dividing line (a \"separating hyperplane\") is angled between the robot and each obstacle. This paper shows how to choose those angles so that the robot deviates as little as possible from where it wanted to go, without running a slow, possibly unreliable optimizer at each step. The authors report that, across 250 simulated navigation scenarios, the method lowered total control deviation cost by 3.6% at the median and 27.3% at the 90th percentile compared with a local nonlinear solver, and reported a 6.1x per-step speedup with 16 obstacles.",
+    "why": "Collision avoidance for autonomous robots and vehicles depends on how safety constraints are set up, and this work targets a specific trade-off between safety and deviation from the intended path. It may matter for real-time planning where solver latency is a concern, but the text only covers simulations of planar polygon scenarios, so transfer to real or 3D systems is unknown.",
+    "background": "- Control barrier function (CBF): a safety condition that a controller must keep a robot inside a safe region, enforced by modifying its commands.\n- Separating hyperplane: a straight line (or plane) that divides the robot's safe space from an obstacle; its angle affects how the safety rule acts.\n- Control intervention: how much the applied command must differ from the robot's originally intended command to stay safe.\n- Minkowski difference: a geometric shape formed by subtracting one shape from another, used to express when two shapes collide.\n- Non-convex optimization: finding the best choice when the problem has many local best points, so local solvers can get stuck.\n- Polynomial-size candidate set: the number of options checked grows at a manageable rate as obstacles are added, unlike grids that grow exponentially.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Separating hyperplanes are widely used in Control Barrier Function (CBF)-based collision avoidance, yet their orientations strongly govern control intervention-the deviation of the applied control from the robot's nominal command. Existing methods typically select hyperplane orientations from geometry alone. Jointly optimizing orientations and control yields a continuous, non-convex problem in which local nonlinear solvers suffer from initialization sensitivity, local minima, and unpredictable latency, while discretized orientation grids scale exponentially with obstacle count. For planar navigation of a polygonal robot among polygonal obstacles, we present a solver-free, control-aware separating hyperplane selection method that directly computes a global optimum of this joint problem at each step whenever it is feasible. Exploiting the geometry of Minkowski difference polygons, we reduce this continuous non-convex optimization to evaluating a polynomial-size set of candidate control interventions via closed-form algebraic checks, selecting the feasible candidate of minimum norm. Across 250 simulated navigation scenarios, our method reduces cumulative intervention cost by 3.6% at the median and 27.3% at the 90th percentile compared to a local nonlinear solver, and completion time by 0.6% and 5.6%, respectively. In scalability benchmarks, it achieves a 6.1x per-step speedup at 16 simultaneous obstacles.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22954",
+   "title": "Sim2CBF: From Forward Simulations to Implicit Control Barrier Function Safety Filtering without Model Derivatives",
+   "url": "https://arxiv.org/abs/2611.22954v1",
+   "authors": [
+    "Luzia Knoedler",
+    "Yihan Liu",
+    "Shaohang Han",
+    "Yifei Dong",
+    "Jana Tumova"
+   ],
+   "label": "arXiv:2611.22954v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Sim2CBF builds a control barrier function safety filter from backup-policy rollouts and solves its constraint using only forward evaluations of a predictive model, via finite differences and local linear interpolation over sampled controls.",
+    "plain": "Robots that interact with messy surroundings, such as pushing objects or tipping boxes, need a way to avoid failure even when their models of physics are imperfect. This paper proposes a safety layer that only needs to ask a simulator or learned world model \"what happens if I do this?\", without needing the model's mathematical derivatives. The authors report that it works in simulation, on a hardware box-toppling task, and in vision-based control, and that it needs fewer control samples than purely sampling-based filters and is less conservative than simply blending the nominal and backup controls.",
+    "why": "Safety filters are a common way to keep learned or hand-designed robot controllers from failing, and many of the most expressive models (physics simulators, learned world models) do not provide usable gradients. The approach may matter for robotics teams that want to add safety guarantees on top of such models, though the text alone does not show how it compares with other safety methods across wider settings.",
+    "background": "- Control barrier function (CBF): a function whose sign marks safe versus unsafe states; keeping it nonnegative keeps the system safe.\n- Safety filter: a layer that minimally modifies a nominal controller's command so it satisfies the safety condition.\n- Backup policy: a fallback controller whose rollouts (predicted future trajectories) are used to define safety implicitly.\n- Forward model: a simulator or predictor that maps current state and action to future states; no derivatives are needed.\n- Finite differences: estimating how a quantity changes by evaluating it at nearby inputs.\n- Sampling-based control: choosing among many candidate control inputs and checking each one.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Failure avoidance in complex robot-environment interactions is challenging because the underlying dynamics are difficult to model accurately, and available predictive models may not provide reliable derivatives. We present Sim2CBF, a failure-avoidance framework that solves the Control Barrier Function (CBF)-Safety Filter (SF) optimization problem using only forward-model evaluations, thereby avoiding differentiation of the predictive model. Specifically, we approximate the CBF constraint using finite differences and local linear interpolation over sampled control inputs while preserving failure-avoidance guarantees. The underlying CBF is implicit and constructed from backup-policy rollouts, enabling the use of expressive predictive models such as physics-based simulators and learned world models. Compared with purely sampling-based SFs, our formulation requires fewer control samples and yields less conservative behavior than direct nominal-backup blending. We evaluate Sim2CBF in simulation, hardware box-toppling, and vision-based control tasks, demonstrating its applicability to contact-rich and learned dynamics, as well as its adaptability to changes in the predictive model.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23215",
+   "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
+   "url": "https://arxiv.org/abs/2611.23215v1",
+   "authors": [
+    "Pranav Gupta",
+    "Deepan Muthirayan",
+    "Ravi Banavar"
+   ],
+   "label": "arXiv:2611.23215v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A geometric robust data-driven predictive controller, built on a feedback-linearised manipulator model, is tested in simulation against double-integrator MPC and regularised DeePC on a planar 2R arm under gravity.",
+    "plain": "This paper is about steering a robot arm so it follows a planned path, using past recordings of the arm's motion to predict how it will respond. A simple physics model first cancels most of the arm's nonlinear behaviour, and the recorded data are used to handle what the model misses. The authors test the method in computer simulation on a two-joint arm with gravity and report better tracking than a simpler prediction-based controller, though it uses more motor effort and does not clearly beat the other data-driven method in every case.",
+    "why": "Data-driven predictive control is an active area for systems where writing an accurate model is hard, and this work shows one way to combine a physical model with recorded data under worst-case uncertainty. The text reports only simulations on one small arm, so its wider value for real robots is unclear.",
+    "background": "- Model predictive control (MPC): choosing control inputs by repeatedly predicting future behaviour and optimising over a short horizon.\n- Data-driven predictive control: making predictions directly from recorded input-output trajectories instead of a written system model.\n- Feedback linearisation: using a nonlinear model to cancel out nonlinear terms so the system behaves approximately like a simple linear one.\n- Fully actuated manipulator: a robot arm where each joint has its own motor, so every motion direction can be controlled.\n- Robust control: designing for the worst case within a stated range of uncertainty.\n- Grassmannian ball: a set of possible subspaces (here, ways the data's trajectory space can be tilted) lying within a set distance of a fitted one; used to describe the uncertainty.\n- Double-integrator model: the simplest mechanical model, where acceleration is the input and position is its double integral.\n- DeePC: a known data-driven predictive control method that uses regularisation to handle noise.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Data-driven predictive control (DDPC) predicts system responses from recorded trajectories, but nonlinear dynamics can limit the accuracy of fixed linear predictors. This paper studies geometric robust DDPC for trajectory tracking of a fully actuated manipulator using model-based feedback linearisation. A mechanical model maps virtual acceleration commands into joint torques, while recorded data capture residual dynamics arising from imperfect model parameters. The controller minimises worst-case prediction error over an open Grassmannian ball centred at the fitted trajectory subspace. Simulations on a planar 2R manipulator under gravity compare the proposed method with double-integrator model predictive control (MPC) and direct regularised data-enabled predictive control (DeePC). Results show improved tracking over double-integrator MPC despite increased torque effort, while performance relative to DeePC depends on the reference trajectory.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20708",
+   "title": "Koopman Temporal Logic and Model Predictive Control of Nonlinear Systems: A Demonstration in AC-DC Power Conversion",
+   "url": "https://arxiv.org/abs/2611.20708v1",
+   "authors": [
+    "Shun Hirose",
+    "Shiu Mochiyama",
+    "Yoshihiko Susuki"
+   ],
+   "label": "arXiv:2611.20708v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper introduces Koopman Temporal Logic (KTL), a formal specification language built on Koopman operator theory for nonlinear systems, and uses it to formulate model predictive control, demonstrated on AC-DC power conversion.",
+    "plain": "The paper is about giving engineers a precise way to state what a nonlinear machine or circuit should do, and then to check and control it against that statement. The authors build on an existing kind of temporal logic for describing signals over time, and they extend it with ideas from Koopman operator theory, which rewrites nonlinear behavior in a form that is easier to handle mathematically. They then use the approach to control an AC-DC power converter, the kind of circuit that turns mains alternating current into direct current, and report that it is effective and computationally efficient.",
+    "why": "Formal specifications that can be checked and enforced on nonlinear systems are useful for safety-critical hardware such as power electronics. The text does not say how the method compares with existing approaches beyond the single demonstration, so its broader value is still to be tested.",
+    "background": "- Nonlinear system: a system whose output is not simply proportional to its input, so its behavior can be hard to predict or control.\n- Temporal logic: a formal language for writing rules about how signals behave over time, such as \"the voltage must stay within limits for the next 10 milliseconds.\"\n- Signal temporal logic: an existing version of this language designed for continuous signals; the paper reviews it before extending it.\n- Koopman operator: a mathematical tool that represents nonlinear dynamics through linear operations on measured quantities, making analysis more tractable.\n- Model predictive control (MPC): a control method that repeatedly plans future actions by optimizing a model of the system over a short horizon and applying only the first step.\n- AC-DC power conversion: converting alternating current from the grid into direct current used by electronics and batteries.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper proposes a novel temporal logic, which we call Koopman Temporal Logic (KTL), towards a formal method in which Koopman operator theory provides a mathematical way to verify and control systems with nonlinear dynamics. We first review signal temporal logic and then introduce KTL, including its syntax, Boolean semantics, and quantitative semantics. Next, we propose a formulation of Model Predictive Control (MPC) from a control specification described by KTL. Effectiveness and computational efficiency of the proposed MPC formulation are evaluated by applying it to a reliable design of AC-DC power conversion.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21987",
+   "title": "Safe Reinforcement Learning with Hard Constraints: Policy Gradient Methods with Intersample Guarantees",
+   "url": "https://arxiv.org/abs/2611.21987v1",
+   "authors": [
+    "Vipul K. Sharma",
+    "S. Sivaranjani"
+   ],
+   "label": "arXiv:2611.21987v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A policy-gradient reinforcement learning method for nonlinear sampled-data systems that uses hard, between-sample control barrier function safety constraints, with sampling-period conditions guaranteeing safety throughout each sampling interval and finite-time convergence and sample complexity results.",
+    "plain": "This paper is about teaching a controller to learn by trial and error while never breaking safety rules, such as keeping a drone away from obstacles. The controller picks actions only from a set that is known to be safe at the moments it acts, and the authors give conditions on how often it acts so that it also stays safe in the gaps between those moments. The method is tested on a simulated quadrotor (drone) navigation task.",
+    "why": "Many learning-based controllers are only checked for safety at discrete decision times, so safety between those times is an open concern for real hardware. The paper's sampling-period conditions and convergence guarantees speak directly to that gap, though the text only reports a single simulated quadrotor example, so practical reach is unclear.",
+    "background": "- Reinforcement learning: an agent improves its actions by trial and reward; policy gradient methods adjust a parameterized action rule along the direction that raises expected reward.\n- Sampled-data system: a continuous physical system controlled by a computer that acts only at fixed time intervals (the sampling period).\n- Control barrier function (CBF): a mathematical function whose sign certifies that the system stays inside a safe region; a CBF-based constraint limits actions so the safe region is preserved.\n- Inter-sample safety: safety maintained during the time between two control updates, not just at the update instants.\n- Stochastic policy with truncated support: actions are randomly drawn, but only from the set of actions already judged safe.\n- Finite-time convergence and sample complexity: how quickly, and with how much data, the learning algorithm reaches a good policy; gradient dominance is a condition that makes local improvement imply global optimality.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop a policy-gradient (PG) reinforcement learning (RL) framework with hard inter-sample control barrier function (CBF)-based safety constraints for nonlinear sampled-data systems. We first design a class of stochastic policies with support truncated to sampling-period-dependent safe control sets, that guarantee safety-by-construction at sampling instants. We then propose a model-free PG algorithm that searches over the class of safe-by-design policies and establish sufficient conditions on sampling-period such that any action sampled from safe control sets remains safe throughout the sampling interval, providing inter-sample guarantees. We further establish finite-time convergence and sample complexity guarantees for the proposed PG algorithm and characterize its global optimality under gradient dominance. Finally, we illustrate inter-sample safety guarantees on a safe quadrotor navigation environment.",
    "source": "arxiv"
   }
  ]

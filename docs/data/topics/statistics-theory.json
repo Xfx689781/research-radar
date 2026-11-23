@@ -1,6 +1,6 @@
 {
  "slug": "statistics-theory",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26047",
@@ -11,14 +11,14 @@
    ],
    "label": "arXiv:2611.26047v1",
    "primary_category": "math.ST",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We study estimation of the mean latent composition in a bivariate Poisson mixture.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper studies minimax estimation of the mean latent proportion theta = E[U] in a bivariate Poisson mixture with unrestricted mixing on [a,b] x [0,1], giving polynomial factorial-moment estimators, the exact logarithmic minimax exponent, a logarithmic separation exponent for testing zero latent covariance, and an adaptive estimator.",
+    "plain": "The paper looks at pairs of counts that come from a hidden overall rate and a hidden split between two categories, and asks how well the average split can be estimated from those counts. The naive estimate, the ratio of the mean counts, is shown to target a different, intensity-weighted quantity and can be biased. The authors build estimators from factorial moments (a standard way of summarizing count data) and characterize how the best achievable error shrinks, on a logarithmic scale.",
+    "why": "It gives a theoretical benchmark for how hard this estimation problem is and when a simple ratio estimate misleads, which matters for anyone using paired count data with hidden structure. The text does not indicate specific applications, so any wider connection is uncertain.",
+    "background": "- Poisson distribution: a model for counts of random events over a fixed period, with a mean rate.\n- Mixture model: data come from a hidden random choice of parameters, here an unseen intensity S and proportion U.\n- Latent variable: a quantity that is never observed directly and must be inferred.\n- Minimax risk: the smallest worst-case estimation error any method can achieve over a class of possible models.\n- Logarithmic exponent: the rate of error is described on a log scale, so the paper pins down the power-law-type order of the error, not an exact constant.\n- Factorial moments: averages of products of falling powers of counts, used to recover mixing information.\n- Adaptive estimator: one that automatically performs well in a simpler sub-case (here zero covariance) without knowing in advance which case holds.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We study estimation of the mean latent composition in a bivariate Poisson mixture. Conditional on an unobserved intensity S and proportion U, two counts are independent Poisson variables with respective means SU and S(1-U). The mixing law is unrestricted on the Cartesian product [a,b] x [0,1], where a and b are finite constants satisfying 0 < a < b, and dependence between S and U is allowed. Although the mixing distribution is identifiable, the usual ratio of mean counts estimates an intensity-weighted proportion and may be biased for theta = E[U]. We construct polynomial estimators based on factorial moments and establish the exact leading exponent of the minimax squared-error risk on the logarithmic scale, without claiming an exact multiplicative minimax constant. We also derive the sharp logarithmic separation exponent for testing zero latent covariance and construct an adaptive estimator achieving parametric squared-error risk on the zero-covariance submodel while retaining the optimal full-model logarithmic minimax exponent. Simulations illustrate the bias-variance trade-off, the role of polynomial regularization, and the distinction between theoretically guaranteed and empirically calibrated adaptation.",
    "source": "arxiv"
@@ -34,16 +34,149 @@
    ],
    "label": "arXiv:2611.25864v1",
    "primary_category": "math.ST",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Mediation analysis plays an important role in psychology, epidemiology, and genomics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper develops feasible inference for the global indirect effect and pathwise mediation effects in high-dimensional linear mediation models under a proportional regime, using partial ridge regression for approximate debiasing, plus cross-fitting and consistent variance estimators, without assuming sparse mediator effects.",
+    "plain": "Mediation analysis asks how much of a treatment's effect on an outcome travels through an intermediate variable, such as a biological marker. When there are many such intermediates, each with only a small effect, standard methods often assume that only a few matter, which may not hold. This paper gives inferential procedures (ways to produce confidence-type conclusions) for the total indirect effect and for the effect through each individual intermediate, without that assumption.",
+    "why": "Many weak mediators acting together is a plausible situation in fields like genomics and epidemiology, so relaxing sparsity matters for those applications. The text reports asymptotic bias correction, Gaussian limits, and variance estimators, but it does not report empirical or simulation results, so its practical performance is not shown here.",
+    "background": "- Mediation analysis: splitting a total effect into a direct part and a part passing through an intermediate variable (the mediator).\n- High-dimensional regime: the number of mediators is comparable to the sample size, so classical methods break down.\n- Sparsity: the assumption that only a few effects are nonzero; this paper avoids it.\n- Debiasing: correcting the bias that regularized estimators (such as ridge regression, which shrinks coefficients toward zero) introduce, so that valid confidence intervals can be built.\n- Partial ridge regression: a shrinkage method that penalizes only some coefficients.\n- Cross-fitting: splitting data so that estimation and evaluation use different parts, reducing variance relative to simple sample splitting.\n- Asymptotic: describing behavior as sample size grows large.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Mediation analysis plays an important role in psychology, epidemiology, and genomics. Al- though high-dimensional mediation has been studied extensively, existing inferential methods typically rely on sparsity assumptions that may be difficult to justify when many individually weak mediators collectively produce a substantial effect. We study inference for both the over- all indirect effect and the effect transmitted through an individual mediator in a proportional high-dimensional regime, where the number of mediators and the sample size grow at compa- rable rates, without imposing sparsity on the mediator effects. Standard debiasing procedures for high-dimensional inference commonly rely on design-covariance information or additional structural assumptions on precision-matrix directions. In mediation models, however, the full outcome-design covariance depends on unknown mediator-model coefficients, creating an addi- tional challenge when such information or structure is unavailable. To address this challenge, we introduce an approximate debiasing procedure based on partial ridge regression and show that the resulting estimator is asymptotically bias-corrected and Gaussian. We also develop a cross-fitted estimator with a smaller asymptotic variance than its sample-split counterpart. In addition, we construct consistent estimators of the limiting variances of both the sample-split and cross-fitted estimators. Together, these results provide feasible inferential procedures for global and pathwise mediation effects.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25007",
+   "title": "Geometry, Local Minimax Risk, and the Limits of Sample Average Approximation in Linear Stochastic Optimization",
+   "url": "https://arxiv.org/abs/2611.25007v1",
+   "authors": [
+    "Hanbo Yang",
+    "Ming Yuan"
+   ],
+   "label": "arXiv:2611.25007v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A local minimax analysis of linear stochastic optimization shows how the geometry of the feasible set sets the best achievable expected decision regret, when sample average approximation (SAA) is optimal, and how a truncated SAA rule and a KL-ball robustness model change the picture.",
+    "plain": "The paper asks how hard it is to make a good decision when you only have data about an uncertain quantity, and how much that difficulty depends on the shape of the set of allowed decisions. It finds that the achievable error rate can be n to the power of minus one half, minus one, minus two, or an unusual non-power rate, depending on that shape. It also shows that a simple averaging method is best in some cases, but can do worse when rare extreme data points dominate the average, and that a modified rule avoids this.",
+    "why": "The text gives a theoretical characterization rather than an application, so its practical reach is unclear from the text alone. It may matter for anyone choosing decisions from limited data under possible distribution shift, since it quantifies a cost of robustness, but the text does not show how it connects to specific applied problems.",
+    "background": "- Stochastic optimization: choosing a decision that performs well when some quantity is random, judged on average.\n- Expected regret: the average extra loss compared with the best decision had the true distribution been known.\n- Sample average approximation (SAA): replacing the unknown average with the average over observed data, then optimizing.\n- Minimax rate: the best worst-case error any method can guarantee, as sample size n grows.\n- Support function and linearization: a way of describing a convex set by its extent in each direction, and its local straight-line approximation.\n- Kullback–Leibler (KL) ball: a set of probability distributions close to a reference distribution, measured by an information distance.\n- Gaussian mean model: a simplified setting where the data are normal, used as a benchmark.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study how the local geometry of a linear stochastic optimization problem determines its statistical difficulty, measured by expected decision regret. The optimal local rate is governed by how fast the support function of the feasible set grows away from its linearization at the true mean; depending on the instance, it can be $n^{-1/2}$, $n^{-1}$, $n^{-2}$, or a non-power rate, and sample average approximation (SAA) attains these rates in a Gaussian mean model. At smooth instances, SAA also attains the classical sharp local minimax constant. We then allow the data distribution to vary in a Kullback--Leibler (KL) ball of radius proportional to $1/n$ around a reference distribution $P$. The exact local minimax limit of this benchmark, which may depend on $P$, coincides with that of a Gaussian model whose local parameter set is the covariance ellipsoid of $P$. A simple coordinatewise truncated SAA rule, which does not use $P$, attains the minimax rate, and at smooth instances its constant matches the minimax constant as the neighborhood radius grows. Ordinary SAA, in contrast, can have strictly suboptimal worst-case expected regret when the local rate is fast relative to the tails of $P$, because rare tail events then dominate the expectation. The results delineate when SAA is sharply optimal, rate-optimal, or statistically suboptimal, and quantify the local price of distributional robustness.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24228",
+   "title": "Functional Principal Component Analysis: Minimax Optimality from Sparse to Dense Designs and Beyond",
+   "url": "https://arxiv.org/abs/2611.24228v1",
+   "authors": [
+    "Shunxing Yan",
+    "Fang Yao"
+   ],
+   "label": "arXiv:2611.24228v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "This paper establishes minimax-optimal rates for sieve-based functional principal component analysis under noisy, discretely sampled random designs, covering eigenfunctions with diverging indices and growing principal subspaces, from sparse to dense sampling.",
+    "plain": "The paper studies how to find the main patterns in curves that are measured at a handful of points each, with noise, and how well that can be done at best. It proves the best achievable accuracy for estimating these patterns, including higher-order ones, across the full range from very sparse to very dense sampling. It also shows that the resulting method, applied to functional linear regression, reaches the same best-possible rates.",
+    "why": "The text says the minimax theory for this setting had been open for over two decades, so the rates fill a known gap in statistical theory. Its claimed link to a wider class of spectral estimation problems is stated by the authors, and the text does not show how far that reaches beyond FPCA.",
+    "background": "- Functional data: each subject gives a whole curve (e.g., a growth trajectory), observed only at scattered time points with noise.\n- Principal components: the main modes of variation in the data, here extended to functions; eigenfunctions are these modes and eigenvalues measure their importance.\n- Minimax rate: the best worst-case error any estimator can achieve; matching it means the method is essentially optimal.\n- Sparse vs. dense design: few vs. many observation points per curve, which changes how much information is available.\n- Sieve method: approximating unknown functions by a growing family of simple basis functions.\n- Functional linear regression: predicting a scalar outcome from a whole curve, here via its principal components.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Functional principal component analysis (FPCA) plays a central role as a dimension-reduction and representation tool in functional data analysis, but its minimax theory for diverging spectral indices under noisy discrete observation has remained open for over two decades. To fill this gap, we consider a sieve-based FPCA framework that pools discrete measurements across subjects and accommodates sampling frequencies ranging from sparse to dense under random designs. We begin by establishing new minimax rates for covariance estimation over general bivariate function classes beyond tensor-product low-complexity structures, thereby identifying the intrinsically two-dimensional optimal rate. Our central theoretical contribution is to establish minimax optimal rates for both individually labelled eigenfunctions with diverging indices and leading principal subspaces of increasing dimensions, under explicit growth and regularity conditions. To establish these results, we develop a general framework for sharp minimax analysis of FPCA under discrete observation, separating spectral approximation from stochastic perturbations and exploiting their distinct structures, thereby offering a new approach to a broad class of nonparametric spectral estimation problems. For both spectral targets, the optimal rates reveal two distinct statistical mechanisms, spectral identification and nonparametric reconstruction, whose interplay gives rise to either four or two sampling regimes. This yields, for the first time, a precise characterization of the impact of discrete sampling across the full range from sparse to dense designs. Finally, as a downstream application, we analyze FPCA-based functional linear regression and show that the FPCA-based estimator attains the minimax-optimal rates.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23551",
+   "title": "Federated Differential Privacy with Batch Contamination",
+   "url": "https://arxiv.org/abs/2611.23551v1",
+   "authors": [
+    "Jason K. C. Ng",
+    "Thomas B. Berrett",
+    "Yi Yu"
+   ],
+   "label": "arXiv:2611.23551v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper gives minimax rates for private mean estimation across federated batches where some batches may be adversarially contaminated, covering homogeneous and heterogeneous batch sizes and privacy budgets, and an adaptive Lepski-type extension for unknown contamination in the Gaussian case.",
+    "plain": "The paper studies how to estimate an average value from data split across several servers, when each server must protect individual privacy and some of the servers' data may be corrupted. The authors find that, when all servers look alike, the error caused by privacy and the error caused by corruption can be separated, and they identify a threshold where the corruption cost changes behavior. They also propose a two-stage method that reaches the best achievable rate up to logarithmic factors.",
+    "why": "The result of a phase transition in the cost of batch contamination is presented as the first of its kind in the literature, which makes it of interest to researchers in robust and private statistics. Its practical reach beyond this theoretical setting is not addressed in the text.",
+    "background": "- Differential privacy: a guarantee that an output reveals little about any single person's record, usually achieved by adding carefully calibrated noise.\n- Federated learning: data stays on separate servers or devices; only summaries or privatised results are shared.\n- Batch contamination: a fraction of the batches (groups of samples held by one server) may be corrupted or unrepresentative.\n- Mean estimation under heavy tails: the data may have a finite v-th moment only, so extreme values can occur more often than in a bell curve.\n- Minimax rate: the best worst-case error any method can achieve; \"up to poly-logarithmic factors\" means accurate apart from log-sized terms.\n- Lepski-type method: a data-driven way to choose tuning parameters without knowing the unknown contamination level.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study mean estimation under federated differential privacy (FDP) constraints and batch contamination, considering both Gaussian and heavy-tailed distributions. In the homogeneous setting, where sample sizes and privacy budgets are constant across servers, we show that the costs of privacy and contamination disentangle. Under a bounded $v$th moment condition, with $v \\in (1, \\infty)$, the cost of batch contamination is of order $(\\varepsilon/n)^{2-2/v}\\vee \\varepsilon^2/n$, where $\\varepsilon$ is the contamination level and $n$ is the per-batch sample size. This reveals a phase transition at $\\varepsilon\\asymp n^{1-v/2}$, for $v > 2$, which is the first of its kind in the literature. We develop a two-stage procedure that achieves the minimax rate up to poly-logarithmic factors. A key component is a private smoothed voting procedure tailored to the FDP setting that provides optimal sensitivity control. For heterogeneous batch sample sizes and privacy budgets, we introduce a batch partitioning framework that groups batches with comparable per-batch sample sizes and privacy budgets. Surprisingly, the minimax rate is determined, up to poly-logarithmic factors, by the most informative group of batches. Consequently, in some regimes, it is minimax optimal to use only an arbitrarily small proportion of the data set. Heterogeneity also introduces interactions between the costs of privacy and contamination, in contrast to their disentanglement in the homogeneous setting. For unknown contamination level, we propose an adaptive, near-minimax optimal Lepski-type extension for the heterogeneous Gaussian setting, designed specifically to prevent privacy leakage by ensuring no repeated use of data points.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22477",
+   "title": "Anytime-valid inference for conditional hazard and survival functions with streaming data",
+   "url": "https://arxiv.org/abs/2611.22477v1",
+   "authors": [
+    "Eni Musta",
+    "Valentin Patilea"
+   ],
+   "label": "arXiv:2611.22477v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper builds asymptotic confidence band sequences, uniform in time and sample size, for the nonparametric conditional hazard, cumulative hazard and survival functions of time-to-event data observed as a stream under censoring, truncation or a cure fraction, using one-pass recursive estimators.",
+    "plain": "The paper is about estimating how likely an event (such as failure, relapse or death) is to happen next, given that it has not happened yet, when the data arrive continuously and some cases are incomplete, for example because they were cut off early or some subjects will never have the event. The authors use estimators that process each observation once and never revisit it, and they produce bands that can be checked at any time and stopped at a data-dependent moment. In simulations, a standard fixed-sample band checked repeatedly failed in about half of the streams, while the recommended bands kept errors near or below the intended level.",
+    "why": "Many monitoring settings, such as clinical trials, reliability tests or online services, look at data repeatedly and stop when a result looks clear, which inflates false alarms for ordinary intervals. The paper's sequential bands are meant to remain valid under that kind of peeking, and the text reports simulations supporting this, though it does not show real-world applications here.",
+    "background": "- Hazard function: the instantaneous risk of the event at a given time, given survival up to then.\n- Survival function: the probability of still being event-free at a given time; the cumulative hazard is the running total of risk.\n- Censoring and truncation: some event times are only partly observed (cut off, or only recorded if they fall in a window).\n- Cure fraction: a share of subjects who will never experience the event.\n- Nonparametric estimation: estimating the curve without assuming a fixed formula for it.\n- Confidence band: a range around an estimated curve that should contain the true curve with a stated probability.\n- Anytime-valid (sequential) inference: intervals that stay valid when checked repeatedly and at data-dependent stopping times.\n- Uniform rate with logarithmic factor: the band width shrinks at the best possible speed, up to a slowly growing log term.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We consider the nonparametric estimation of the conditional hazard, cumulative hazard and survival functions of a time-to-event variable from streaming data subject to censoring, truncation, or a cure fraction. A time-to-event model is a map from the distribution of the latent variables to that of the observed ones. For a large class of models this map has an explicit inverse, and the conditional hazard is the ratio of the density of the exactly observed durations to an at-risk function. Both are estimated by one-pass learners, in which each observation contributes once and is never revised, such as recursive kernel, series and histogram estimators. Our main result is an asymptotic confidence band sequence for the conditional hazard at a fixed covariate value, uniform in time and in the sample size, which allows monitoring after a burn-in, and stopping at a data-dependent time. The band can shrink at the optimal uniform rate up to a logarithmic factor. Bands for the cumulative hazard and the survival function follow. In simulations, a fixed-sample band inspected repeatedly fails in about half of the streams, while the miscoverage of the recommended bands stays below, or close to, the nominal level.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20052",
+   "title": "Weighted conformal prediction under covariate shift: process limits, estimated weights and efficiency",
+   "url": "https://arxiv.org/abs/2611.20052v1",
+   "authors": [
+    "Mehrdad Pournaderi"
+   ],
+   "label": "arXiv:2611.20052v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Asymptotic theory for weighted split conformal prediction under covariate shift, covering the limit law of the weighted empirical CDF, estimated weights, semiparametric efficiency, and a heavy-tailed regime where the chi-square divergence is infinite.",
+    "plain": "Conformal prediction is a way to attach guaranteed-style error bars to predictions, and covariate shift means the data used to test a model come from a different mix of inputs than the data used to build it. This paper studies how reliable those error bars are when the correction for that mix is applied by reweighting the calibration data. The authors derive the limiting random behaviour of the reweighted coverage across all confidence levels and examine what happens when the reweighting itself is estimated from data.",
+    "why": "Reweighting for distribution shift is common in applied prediction work, so the precise conditions under which its coverage behaves well matter for practice. The text reports that the limit holds exactly when a chi-square divergence between the two distributions is finite, and gives a separate heavy-tailed result when it is infinite; I have not checked the proofs, so the strength of these claims rests on the paper itself.",
+    "background": "- Conformal prediction: a method that builds prediction intervals from past calibration errors, with coverage guarantees.\n- Covariate shift: the input distribution changes between calibration and test, while the relationship between inputs and outputs is assumed to stay the same.\n- Likelihood ratio (density ratio): how much more likely an input is under the test distribution than under the calibration distribution; used here as weights.\n- Empirical distribution function: the fraction of observed values below a threshold, here weighted.\n- Gaussian process limit: the random fluctuations of a statistic, scaled by sample size, converge to a smooth random curve.\n- Chi-square divergence: a measure of how different two distributions are; here it controls whether the weighted limit holds.\n- Heavy tails and regular variation: extreme values decay slowly like a power law; the index p in (1,2) describes how heavy.\n- Semiparametric efficiency: the best achievable precision when some parts of the model are unknown.\n- Bootstrap: resampling to estimate sampling variability.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Weighted split conformal prediction handles covariate shift by reweighting calibration scores with the likelihood ratio $v=dQ_X/dP_X$; its training-conditional coverage is a functional of the self-normalized weighted empirical distribution function $\\hat F_m$, and we study the process $\\sqrt m(\\hat F_m-F_Q)$. It converges in $\\ell^\\infty$ to the Gaussian process $W(G(t))-F_Q(t)W(K^2)$, with $G(t)=\\mathbb{E}_Q[v\\mathbf{1}\\{S\\le t\\}]$ and $K^2=1+χ^2(Q\\|P)$, if and only if $χ^2(Q\\|P)<\\infty$ (for non-degenerate scores); $\\sup v$ plays no role. The limit gives the joint law of the coverage across levels, consistent bootstraps, inflations asymptotically exact uniformly in the level, and Berry-Esseen-type rates. With estimated ratios, a uniform expansion remains valid when the estimate uses the calibration covariates; the estimation error enters through a covariance term that can reduce the variance below the oracle's, and a pairs bootstrap reproduces it. When the ratio is known, the weighted conformal threshold is semiparametrically efficient if and only if the ratio and the coverage indicator are uncorrelated under the test distribution, with an explicit efficient correction otherwise. When $χ^2(Q\\|P)=\\infty$, the ratio has a regularly varying tail of index $p\\in(1,2)$ and the score decouples from it in the far tail, the finite-dimensional limits are $p$-stable at the rate $m^{1-1/p}$ up to a slowly varying factor.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19347",
+   "title": "Nonparametric Classification under Adversarial Attacks: Decision-Boundary Geometry and Optimal Rates",
+   "url": "https://arxiv.org/abs/2611.19347v1",
+   "authors": [
+    "Yanhang Zhang",
+    "Jingfu Peng",
+    "Yuhong Yang"
+   ],
+   "label": "arXiv:2611.19347v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Minimax rates for adversarial excess classification risk under anisotropic smoothness and margin conditions, showing how decision-boundary geometry drives a phase transition in the attack-radius dependence, plus an adaptive classifier and a trade-off with ordinary excess risk.",
+    "plain": "This paper studies how well a classifier can still label data correctly when someone nudges each input by a small, deliberate amount designed to flip its label. The authors ask how much extra error this adds beyond the best error possible without attacks, and how that extra error depends on how the true boundary between classes is shaped. They find that the extra cost follows a formula with a few regimes, shifting from a fractional power of the attack size to linear growth, with a logarithmic correction at a boundary case, and they build a classifier that adapts to unknown smoothness and margin settings.",
+    "why": "Adversarial robustness is a practical concern for machine learning systems, and this work gives precise theoretical rates that separate the role of boundary geometry from ordinary statistical difficulty. The text also reports that, in some attack regimes, the classifier that is optimal for ordinary accuracy is suboptimal for adversarial accuracy, which is a substantive trade-off; its real-world significance beyond this theoretical setting is not addressed in the text.",
+    "background": "- Classification: predicting a discrete label (e.g., class A vs. B) from inputs.\n- Bayes risk: the lowest achievable error rate if the true data distribution were known; excess risk is how much worse a method is than that.\n- Adversarial attack: a small, worst-case perturbation of an input, within a radius, chosen to cause a misclassification.\n- Decision boundary: the surface separating predicted classes; perturbations crossing it flip labels.\n- Smoothness: how gently the underlying probability of each label changes across inputs; anisotropic means smoothness differs by direction.\n- Margin condition: assumes few inputs lie very close to the decision boundary; the exponent controls how few.\n- Minimax rate: the best worst-case error rate any method can guarantee, as sample size grows.\n- Harmonic mean: a kind of average that is dominated by the smallest values, here of the smoothness levels.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Unlike in continuous regression, a small input perturbation in classification can move an input across a decision boundary and flip the predicted label. Decision-boundary geometry is therefore essential to understanding adversarial classification risk. Under anisotropic smoothness and margin conditions, we quantify this geometric contribution and establish sharp minimax rates for adversarial excess risk relative to the ordinary Bayes risk. These rates comprise a statistical term governed by the harmonic mean smoothness and a geometric cost of adversarial perturbations governed by the least smooth direction. As smoothness and the margin exponent vary, the adversarial term exhibits a phase transition from a fractional power of the attack radius to linear scaling, with a logarithmic correction in a critical regime. In addition, we construct an adaptive classifier that attains these rates over a range of smoothness and margin classes. We further characterize the minimax rate for adversarial excess risk under a budget on ordinary excess risk, yielding an explicit trade-off curve. The curve identifies attack regimes where ordinary minimax optimality entails a suboptimal adversarial rate. Finally, numerical experiments support the theoretical findings.",
    "source": "arxiv"
   }
  ]

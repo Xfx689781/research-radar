@@ -1,6 +1,6 @@
 {
  "slug": "ai4math",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26172",
@@ -15,14 +15,14 @@
    ],
    "label": "arXiv:2611.26172v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Reasoning models often become more accurate when they can generate longer answers at test time.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper reports \"budget internalization\": RL with verifiable rewards trained under a fixed rollout-length cap makes reasoning models accurate near that cap but leaves them worse than the base model at larger inference budgets, with ablations and SFT tests locating the cause in length-censored training rather than an RL-specific term.",
+    "plain": "Reasoning AI models often do better when they are allowed to write longer answers before responding. This paper studies what happens when a model is trained with a fixed maximum length, and finds that the cap changes the model itself: after training, it stays near that length and stops gaining from longer thinking, even ending up less accurate than the original model when given more room. The authors say this holds across several small models and across math, science and coding tasks.",
+    "why": "Length limits are a routine and practical choice in training, so if they quietly cap how well a model can scale its reasoning later, that matters for how these models are built and evaluated. The text suggests the effect comes from training on truncated examples rather than from reinforcement learning specifically, since supervised fine-tuning on artificially truncated traces reproduces it, though the broader implications are not spelled out.",
+    "background": "- Test-time scaling: a model gets better when allowed to produce more reasoning tokens (words or sub-word pieces) at inference.\n- RL with verifiable rewards (RLVR): training a model by rewarding answers that a checker can confirm as correct, such as math results.\n- Rollout cap: the maximum length of a generated attempt during training; attempts that run past it are cut off (truncated).\n- Base model: the model before the extra training step, used as the comparison point.\n- KL regularization: a penalty that keeps the trained model close to the base model's behavior.\n- SFT (supervised fine-tuning): training on fixed example outputs rather than on rewards.\n- In-budget vs. out-of-budget: accuracy at lengths the model was trained for versus longer lengths.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Reasoning models often become more accurate when they can generate longer answers at test time. This behavior is known as test-time scaling. However, RL with verifiable rewards (RLVR) usually trains them with a fixed rollout cap. We find that this cap changes model behavior, not only training cost. After training, models use few additional tokens beyond the training budget. They outperform the base models near that budget, but their accuracy stops improving and falls below the base model at larger budgets. The rollout cap thus becomes a learned constraint, that limits model's test-time scaling. We call this effect budget internalization. We observe it across Qwen3.5-4B, Gemma4-E2B, and Nemotron-3-Nano-4B and two reasoning training tasks: mathematical reasoning and diverse, procedurally generated problems. This effect also transfers from math training to science and coding tasks. Training-objective level ablations on Qwen3.5-4B show that most changes recover little test-time scaling. Stronger KL regularization and lower training-data truncation preserve more scaling, but stronger KL reduces in-budget accuracy. Forcing an answer on truncated training rollouts largely removes budget internalization, but also removes most of the in-budget gain. SFT on artificially truncated traces reproduces budget internalization, whereas SFT on naturally short traces does not, which shows that the effect is not specific to RL. This result links budget internalization to length-censored post-training rather than to an RL-specific objective term. Thus, a rollout cap does not only control training cost. It can trade low-budget gains for lower performance when additional inference compute is available.",
    "source": "arxiv"
@@ -39,16 +39,162 @@
    ],
    "label": "arXiv:2611.25763v1",
    "primary_category": "cs.CL",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Diffusion language models offer an architectural route to low-budget generation by updating multiple tokens in parallel, which can reduce the number of sequential decoding steps relative to token-by-token autoregressive decoding.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "CaRR is a training-free add-on for an editable masked diffusion language model (ME-DLM) that uses updated-context refilling of committed tokens (TCR) and trajectory-based recovery of supported candidates (SCR) to improve answer quality under low inference budgets on code generation and math reasoning.",
+    "plain": "Language models that write text one word at a time are slow, so some newer models instead fill in many words at once over a few rounds of cleanup. This paper addresses the problem that these faster models lose quality when given only a few cleanup rounds. The authors propose CaRR, a method that reuses the model's existing editing passes without retraining: it reopens some already-chosen words so they can be refilled with more context, and it looks back through the editing history to recover good candidate answers when the final output fails a task's format requirements.",
+    "why": "The reported gains are largest when the compute budget is tightest, which matters for anyone wanting cheaper generation. The text reports results only on code generation and math reasoning benchmarks, with one example of a 7.44 percentage-point average gain at one-eighth of the full budget, so how far it generalizes is not established here.",
+    "background": "- Autoregressive models generate one token (roughly a word piece) at a time; diffusion language models instead start from masked placeholders and fill or edit many positions in parallel over several steps.\n- An \"inference budget\" is the amount of computation spent per answer, here measured as the number of scheduled forward passes through the network.\n- \"Editable\" diffusion models can revise already-written tokens, not just fill blanks once.\n- Training-free means the method changes only how the existing model is run, not its weights.\n- MBPP and MBPP+ are Python programming benchmarks; \"pp\" means percentage points.\n- The paper's results are reported as average accuracy over six metrics across four budgets.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Diffusion language models offer an architectural route to low-budget generation by updating multiple tokens in parallel, which can reduce the number of sequential decoding steps relative to token-by-token autoregressive decoding. However, realizing this advantage at low budgets is challenging, as generation quality often declines when the number of denoising and refinement steps is reduced. Editable diffusion models address this quality loss through post-draft refinement, but useful intermediate results may still be lost before final submission. We introduce CaRR (Commitment-aware Refinement and Recovery), a training-free framework which improves submission quality from a fixed editable checkpoint through updated-context refill and trajectory-based recovery within its existing forward schedule. Token Commitment Remasking (TCR) remasks selected native pure replacements and refills them on the next scheduled edit forward using the updated context. Submission Commitment Recovery (SCR) uses the resulting refinement trajectory to recover supported candidates when the final response does not satisfy task-specific output requirements. Both modules operate within the native mask/edit schedule without additional backbone forwards. Experiments on code generation and mathematical reasoning show consistent gains in average accuracy over native ME-DLM across four inference budgets, with the largest gains under tight budgets. At one-eighth of the full scheduled forward budget, CaRR improves the six-metric average accuracy by 7.44 pp, including gains of 11.37 and 10.05 on MBPP and MBPP+.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24846",
+   "title": "Atomic MathReasoner: Instance-Level Composition of Atomic Reasoning Skills for Mathematical LLMs",
+   "url": "https://arxiv.org/abs/2611.24846v1",
+   "authors": [
+    "Jiashu Li",
+    "Tianyu Gao",
+    "Qinglong Liu",
+    "Jinping Wang",
+    "Ye Wei",
+    "Zhiqiang Gao"
+   ],
+   "label": "arXiv:2611.24846v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Atomic MathReasoner trains a set of skill-specific LoRA experts for LLMs and uses a lightweight router, distilled from pseudo-labels derived from reference-solution likelihoods, to pick a per-problem composition of those experts on the AtomicMath benchmark.",
+    "plain": "Large language models often handle math as one general ability, even though different problems need different kinds of reasoning. This paper splits math reasoning into smaller \"atomic\" skills, trains a separate small add-on module for each, and teaches a small router to choose which combination to use for each individual problem. On the AtomicMath benchmark, the authors report gains for a math-specialized 7B model, for example average field accuracy rising from 64.4% to 68.1% at Level 1.",
+    "why": "Routing each problem to a tailored mix of skills is a modular alternative to making one model do everything, and it avoids expensive per-problem optimization at inference time. The text reports consistent gains but only on one benchmark and a few model families, so how well it generalizes beyond these experiments is unclear from the text alone.",
+    "background": "- LLM: a large language model trained on text, here applied to math problems.\n- Mathematical reasoning benchmark: a standard test set used to measure how accurately a model solves problems.\n- LoRA (low-rank adaptation): a small add-on set of trainable weights that specializes a large model for a task without retraining all of it.\n- Expert/router: in this setting, the LoRA add-ons are \"experts\" and a router decides which to activate or how to combine them.\n- Negative log-likelihood: a measure of how surprised a model is by a reference answer; lower means the model finds it more likely.\n- Pseudo-label: an automatically generated label used as training target when no human label exists.\n- Gradient-free optimization: searching for good settings by trying candidates rather than using gradient-based training.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Most existing approaches enhance mathematical reasoning in large language models (LLMs) as a monolithic capability, despite the fact that different mathematical problems require different reasoning skills. Recent work has explored a more fine-grained perspective by decomposing mathematical reasoning into atomic skills and developing specialized modules for individual capabilities. However, how to effectively utilize these atomic abilities remains underexplored. To address this challenge, we propose Atomic MathReasoner (AMR), an instance-level framework for composing atomic reasoning skills. AMR first trains a library of capability-specific LoRA experts and performs gradient-free optimization over held-out validation subsets to discover a diverse set of low-loss composition prototypes. It evaluates the preference of each prototype using the token-level negative log-likelihood of reference solutions, filters ambiguous assignments through a confidence margin, and distills the resulting pseudo-labels into a lightweight router. During inference, the router selects an appropriate composition prototype for each problem, enabling problem-specific utilization of atomic skills without costly online optimization. Experiments on the AtomicMath benchmark across general and mathematics-specialized LLMs demonstrate consistent improvements. On Qwen2.5-Math-Instruct-7B, AMR increases average field accuracy from 64.4% to 68.1% at Level 1 and from 59.3% to 63.7% at Level 2, while improving average logical reasoning performance from 39.4% to 46.8%. These results demonstrate that effectively composing specialized atomic skills provides a promising approach to strengthening mathematical reasoning in LLMs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24788",
+   "title": "Isabelle Pool Server: a pooled verification service for prover training and multi-agent proving",
+   "url": "https://arxiv.org/abs/2611.24788v1",
+   "authors": [
+    "Xuanwei Ren",
+    "Wenda Li"
+   ],
+   "label": "arXiv:2611.24788v1",
+   "primary_category": "cs.LO",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper presents Isabelle Pool Server, an HTTP service that manages a pool of pre-started headless Isabelle proof sessions for step-wise, block-level and whole-theory verification, with admission control, time budgets, and checkpoints for branching and backtracking.",
+    "plain": "Isabelle is a computer system where mathematical proofs are written and checked by machine. This paper describes a server that keeps a pool of ready-to-use proof-checking sessions, so that programs (including AI agents) can ask it to check proof steps or whole proofs without waiting for a fresh start each time. The authors report that it handles many parallel requests on one machine and refuses new work rather than crashing existing sessions when memory runs low.",
+    "why": "Automated provers used to train or guide AI systems need to check many candidate proofs quickly, so shared infrastructure of this kind may matter for that work. The text itself gives only the authors' own measurements, and it does not show how it performs on real training or proving tasks beyond those tests.",
+    "background": "- Isabelle: a proof assistant, software that checks formal mathematical proofs step by step.\n- Headless session: a proof-checking process running without a graphical interface, which can be controlled by a program.\n- Warm pool: sessions started in advance so requests do not pay the startup cost.\n- HTTP API: a standard way for programs to send requests to a server over the web.\n- Admission control: deciding whether to accept new work based on available memory.\n- Checkpoint and backtracking: saving a proof state so one can try alternatives and return to it.\n- MCP server: a connector that lets AI agents call external tools.\n- Multi-agent proving: several AI programs attempting proofs at the same time.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Isabelle Pool Server (IPS), a verification service with a pool of warm headless Isabelle sessions behind an HTTP API, with session leasing and reclamation, memory-aware admission control, and a time budget on every call. Its verification interface spans single-step execution, block-level proof checking and whole-theory builds, with checkpoints for cheap branching and backtracking, and a build from scratch as the final arbiter. The service runs as a single container with monitoring and is accessible via a Python client, two MCP servers and a raw HTTP API. In our measurements IPS is level with PIDE MCP, a PIDE frontend for agents, at one worker and ahead of it at eight, at its commit of October 2026 (the tool is now PIDE AI). Once its sessions are up it scales to 32 concurrent workers on one host at 24 times the single-worker rate, and under memory pressure it refuses new sessions rather than losing existing ones. IPS is free software and publicly available at https://github.com/Deep-LCF/Isabelle-Pool-Server",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22103",
+   "title": "From Sorry to QED: Refining LLM Math Proofs via Angelic Execution",
+   "url": "https://arxiv.org/abs/2611.22103v1",
+   "authors": [
+    "Yanju Chen",
+    "Hanzhi Liu",
+    "Ruizhe Qian",
+    "Jiaming Shan",
+    "Xu Yang",
+    "Yufei Ding",
+    "Osbert Bastani",
+    "Yu Feng"
+   ],
+   "label": "arXiv:2611.22103v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "MathEye is a framework that repairs imperfect LLM-generated Lean proof scripts by using optimistic \"angelic\" checking to isolate unproven obligations, then uses dependence-graph analysis and MaxSAT to ask a mathematician only the minimal set of questions needed to finish the proof.",
+    "plain": "Large language models can draft the outline of a formal math proof, but the drafts often break on hard theorems because of one missing condition or misused lemma. This paper describes MathEye, which temporarily stands in placeholders for the broken steps so the rest of the proof can still be checked, then asks a human mathematician only the few questions that matter and rebuilds a complete verified proof from the answers. On 30 benchmark problems in analysis and algebra, the text reports it solved 93.3% and cut required user interactions by 55%.",
+    "why": "It targets a practical bottleneck in using AI for formal mathematics: a nearly right proof is often thrown away entirely, and the text shows a way to reuse it with less human effort. The reported gains come from a small benchmark of 30 problems, so how well they carry over to harder or larger settings is not established by this text.",
+    "background": "- Formal proof assistant (Lean): software that checks each step of a math proof mechanically, so a proof either passes or fails.\n- Proof script / tactic: the sequence of commands that builds a Lean proof; a \"sorry\" is a placeholder meaning \"not proved yet.\"\n- Lemma: a smaller, previously established result used as a building block in a larger proof.\n- Obligation: a specific claim left unproven that the proof still needs.\n- Dependence graph: a map showing which parts of a proof rely on which other parts.\n- MaxSAT: an optimization method that finds the cheapest set of choices satisfying a set of logical constraints.\n- Residual analysis: working out what remains unresolved after the verified parts are set aside.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large language models (LLMs) can now generate Lean proof scripts that capture the high-level structure of many mathematical arguments. However, these scripts frequently fail on complex theorems: a single missing side condition or misapplied lemma can cause the prover to abort early and discard an otherwise viable proof outline. This paper presents MathEye, a framework that converts imperfect LLM-generated proof scripts into fully verified Lean proofs by combining symbolic reasoning with minimal human interaction. At the core of MathEye is angelic proof checking, an optimistic execution model that replaces failing proof fragments with placeholders while preserving the overall structure of the argument. This optimistic check produces an angelic proof that isolates the exact proof obligations that the LLM fails to discharge. Because these unresolved obligations are often logically interdependent, asking a mathematician to address every placeholder directly is inefficient. To minimize human effort, MathEye performs residual analysis over a proof dependence graph that captures symbol-level data flow in the angelic proof. By formulating obligation selection as a MaxSAT optimization problem, MathEye selects a minimal-cost set of essential obligations whose resolution suffices to complete the entire proof. MathEye presents these essential obligations to the mathematician in ordinary mathematical language and uses the mathematician's answers to automatically reconstruct the complete Lean proof. Experiments on 30 real-world benchmarks across analysis and algebra show that MathEye solves 93.3% of the problems while reducing the number of required user interactions by 55%.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22523",
+   "title": "Path Abstraction for Markov Reward Models: An Isabelle Formalisation in a Free Monoid View",
+   "url": "https://arxiv.org/abs/2611.22523v1",
+   "authors": [
+    "Arnd Hartmanns",
+    "Robert Modderman"
+   ],
+   "label": "arXiv:2611.22523v1",
+   "primary_category": "cs.LO",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper extends a free-monoid view of discrete-time Markov chains and reward models to cumulative rewards, and mechanises the path abstraction algorithm and its correctness properties in Isabelle/HOL.",
+    "plain": "This work is about checking, with a computer proof assistant, that a method for simplifying random step-by-step systems gives correct answers. Such systems are modelled as Markov chains, where each step has a probability, and reward models, which also attach a score to steps. The authors rewrite the model so that it works directly on sequences of states (paths) rather than on pairs of states, and they prove in Isabelle that the simplification keeps reachability probabilities and expected rewards intact.",
+    "why": "Formally verified tools for probabilistic model checking matter when results must be trusted, for example in safety analysis of systems with randomness. The text does not claim wider impact; its stated goal is a verified foundation that could later be refined into efficient executable code and linked to probabilistic model checkers.",
+    "background": "- Markov chain: a system that moves between states with fixed probabilities, where the next step depends only on the current state.\n- Reward model: a Markov chain where steps also accumulate a numeric reward or cost.\n- Reachability probability: the chance of eventually reaching a target set of states.\n- Expected reward: the average total reward gathered before stopping.\n- Free monoid on a set: all finite sequences (words) over that set, with concatenation as the operation; here, paths through the state space.\n- Path abstraction: grouping or simplifying many paths into fewer ones while preserving the quantities of interest.\n- Isabelle/HOL: an interactive theorem prover used to write and machine-check mathematical proofs.\n- Measure-theoretic semantics: the standard, more abstract probability framework that the paper contrasts with its lighter path-based approach.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The classical definition of discrete-time Markov chains maps pairs of states to transition probabilities. An alternative, proposed in the context of path abstraction in probabilistic counterexample refinement, is to view them as a transition kernel on the free monoid on the state space, mapping paths directly to path probabilities. In this paper, we first extend the free monoid view and path abstraction algorithm to cumulative rewards on Markov reward models. We then use Isabelle/HOL to formalise Markov chains and reward models in this view, exploiting the discrete finite-prefix semantics to work with Isabelle's standard HOL-Analysis library. We mechanise the path abstraction algorithm and its key correctness properties of well-definedness and monotonic absorption, establishing the preservation of reachability probabilities and expected rewards. Proving the convergence of these quantities on relevant path sets is aided by our use of the lightweight free monoid semantics in place of the standard measure-theoretic one used in established Isabelle formalisations of Markov models. We obtain a verified abstract implementation of path abstraction in Isabelle/HOL, providing a foundation for refinement to efficient executable code and integration with probabilistic model checkers.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18494",
+   "title": "ARCHER: From Rationale Imitation to Executable Reasoning in Small Language Models",
+   "url": "https://arxiv.org/abs/2611.18494v1",
+   "authors": [
+    "Dhruv Dixit",
+    "Khushi Patel",
+    "Congcong Xu",
+    "Min Song"
+   ],
+   "label": "arXiv:2611.18494v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "ARCHER trains small language models (under 10B parameters) to solve math problems by turning free-form reasoning into typed action traces with calculator calls and verification steps, then refining them with asymmetric hierarchical reinforcement learning and multi-part trajectory rewards.",
+    "plain": "Small AI language models are cheap to run on a laptop or privately, but they often make mistakes on math. This paper proposes a two-step training method: first, written step-by-step explanations are converted into structured recipes that include reasoning steps, calculator calls, checks, and a final answer; second, the model is further trained with rewards for correct answers, proper calculator use, disciplined steps, and consistency with those recipes. The authors report gains over the strongest tool-using baseline on several math benchmarks.",
+    "why": "It offers a concrete way to make small, local models more reliable and auditable on math by having them call exact tools instead of doing arithmetic in their heads. The reported gains are measured on the authors' own benchmark runs as described in the text, so the size of the benefit in practice is not yet independently checked.",
+    "background": "- Language model: an AI system trained to predict and generate text; \"small\" here means under about 10 billion parameters.\n- Chain-of-thought: a model writing out its reasoning in prose before giving an answer.\n- Tool use / calculator call: the model invokes an external program for exact computation instead of estimating it.\n- Reinforcement learning: training by rewarding good outputs and penalizing bad ones, rather than only copying examples.\n- Trajectory reward: a score for an entire sequence of steps, not just the final answer.\n- Benchmarks such as MATH-500 and AIME: standard sets of competition-style math problems used to compare models.\n- Percentage points: the absolute difference between two accuracy scores.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Small language models are attractive for local, low-cost, and privacy-sensitive deployment, but they remain unreliable on mathematical reasoning tasks that require decomposition, exact computation, tool use, and verification. We introduce \\textbf{ARCHER}: \\textbf{A}ction-trace \\textbf{R}einforcement for \\textbf{C}alculator-grounded \\textbf{H}ierarchical \\textbf{E}xecutable \\textbf{R}easoning, a two-stage framework for training small language models (SLMs) to produce executable and auditable reasoning trajectories. In the first stage, ARCHER compiles free-form chain-of-thought rationales into typed action traces containing reasoning steps, calculator calls, deterministic runtime observations, verification actions, and final answers. This shifts the supervision target from imitating explanatory text to learning a tool-grounded reasoning policy. In the second stage, ARCHER refines this policy through asymmetric hierarchical reinforcement learning, using grouped and conditionally gated trajectory rewards for answer correctness, tool grounding, process discipline, and trace alignment. Across five standard sub-10B backbones, ARCHER improves over the strongest tool-augmented baseline by 5.51 percentage points on macro-average across benchmark accuracies, including gains of 8.95 points on MATH-500 and 5.33 and 5.34 points on AIME-2024 and AIME-2025. Evaluations on two additional reasoning-specialized 7B backbones further show that executable grounding remains beneficial after reasoning-focused reinforcement learning or distillation. These results demonstrate that executable supervision and reward-guided behavioral refinement provide a general and effective training paradigm for compact mathematical reasoners.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19122",
+   "title": "Agent-Guided Process Verification for Mathematical Self-Correction",
+   "url": "https://arxiv.org/abs/2611.19122v1",
+   "authors": [
+    "Rui Zou",
+    "Mengqi Wei",
+    "Xin Zhao",
+    "Ji-Rong Wen"
+   ],
+   "label": "arXiv:2611.19122v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "AGPV is a process-level verify-and-repair framework for LLM math solutions that checks ordered key claims, stops at the first error, has a correction agent re-derive from that point, and reports 63.8% average accuracy across five datasets and four models.",
+    "plain": "Large language models often make a mistake early in a long math solution and then keep building on it. This paper proposes a method that checks a solution step by step, stops at the first wrong claim, writes up what went wrong, and has the model redo the solution from that point. The authors report an average accuracy of 63.8% on five hard math datasets, which they say beats the best baseline they tested (50.3%) by 13.5 points.",
+    "why": "Self-correction is a central question for making AI reasoning more reliable, and this work targets two specific weaknesses: locating the exact error and checking whether a solution misses necessary cases. The text does not show how well the gains hold beyond the reported benchmarks, and the correctness guarantee is stated only under assumptions (sufficient claim coverage and reliable local checks).",
+    "background": "- Large language model (LLM): an AI system trained on text that can generate step-by-step answers.\n- Multi-step reasoning: solving a problem through a chain of intermediate claims, where one wrong link can spoil the rest.\n- Self-correction: having the model review and fix its own output.\n- Process verification vs. outcome verification: checking each intermediate step versus only checking the final answer.\n- Agent: here, a separate model call given a specific role (verifying, summarizing, or correcting).\n- Toolbox: external helper functions (for example, symbolic computation) that the verifier can call to check a claim.\n- Completeness: whether a solution covers all necessary cases, not just whether its answer fits the conditions.\n- Benchmark accuracy: the share of problems answered correctly on fixed test sets.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large language models have made substantial progress in mathematical reasoning, yet in complex multi-step reasoning, an error at any step may propagate along an incorrect path, and the resulting solution may omit necessary branches. Existing natural-language reflection methods often struggle to locate critical errors precisely, while outcome verification typically checks only whether the available candidate answers satisfy the problem conditions and can therefore overlook necessary branches. To address these limitations, we propose Agent-Guided Process Verification (AGPV) for mathematical self-correction. AGPV decomposes the current solution into an ordered sequence of key claims, verifies them individually while invoking a shared mathematical toolbox when needed, and stops upon detecting the first error. A summarization agent converts the failure evidence into a diagnosis that guides a correction agent to re-derive the subsequent solution from that point; AGPV then adapts the next verification iteration to the revised solution. AGPV also verifies solution completeness. We further prove that AGPV guarantees solution correctness and completeness when key claims provide sufficient coverage and local verification is reliable, provided that all key claims pass verification. The implementation compresses long working contexts and reuses successful tool results within each problem. We evaluate AGPV on five challenging mathematical reasoning datasets with four models from DeepSeek, Qwen, and GPT. AGPV achieves an average accuracy of 63.8%, outperforming the strongest among the representative baselines evaluated (50.3%) by 13.5 percentage points, with higher repair coverage than the programmatic-verification baselines.",
    "source": "arxiv"
   }
  ]

@@ -1,7 +1,67 @@
 {
  "slug": "exoplanets",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.27082",
+   "title": "IGRINS-2 Reveals an Oxygen-rich Dayside Atmosphere of WASP-12 b: Resolving the C/O Controversy",
+   "url": "https://arxiv.org/abs/2611.27082v1",
+   "authors": [
+    "Changwoo Kye",
+    "Yeon-Ho Choi",
+    "Krishna Kanumalla",
+    "Michael Line",
+    "Jae-Joon Lee",
+    "Stefan Pelletier",
+    "Peter Smith",
+    "Vatsal Panwar",
+    "Yuya Hayashi",
+    "Jae-Rim Koo",
+    "Swaetha Ramkumar",
+    "Sung-Chul Yoon"
+   ],
+   "label": "arXiv:2611.27082v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "High-resolution near-infrared dayside emission spectroscopy of the ultra-hot Jupiter WASP-12 b with IGRINS-2 detects H2O, CO, and tentative OH and refractory signals, and a chemically consistent retrieval gives C/O = 0.72 (+0.08/−0.10), favoring an oxygen-rich dayside.",
+    "plain": "This paper studies the atmosphere of WASP-12 b, a very hot gas giant planet orbiting a star, which has been disputed for its carbon-to-oxygen balance. The authors used a high-resolution infrared spectrograph on the Gemini North telescope to capture light from the planet's day side after it passes behind its star. They report that the light carries fingerprints of water and carbon monoxide, and their modeling favors an oxygen-rich atmosphere.",
+    "why": "The carbon-to-oxygen ratio is a clue to where a planet's gas came from during formation, so settling a long-running disagreement about this planet matters for planet-formation theory. The text reports that the result disfavors carbon-rich solutions at greater than 5 sigma, but the signals for OH and refractories are only tentative, and the sample of similar planets is small, so the broader implications remain uncertain.",
+    "background": "- Hot Jupiter: a gas giant planet orbiting very close to its star, with a surface hot enough to glow.\n- Ultra-hot Jupiter: a hotter class of these planets, often above about 2,000 K.\n- Dayside emission spectroscopy: splitting the light from the planet's sunlit side, measured when it is hidden behind its star, into colors to see which molecules are present.\n- Cross-correlation: a method that searches the noisy spectrum for the known pattern of a specific molecule, summing many lines to boost a faint signal.\n- C/O ratio: the relative amount of carbon and oxygen in the atmosphere; it hints at where the planet's building material formed.\n- R/V ratio: refractory (rock-forming, hard-to-vaporize elements) compared with volatile material; here reported relative to the host star.\n- Thermal inversion: a layer where temperature rises with altitude, so emission lines appear rather than absorption lines.\n- Bayesian retrieval: fitting a physical atmosphere model to data while tracking uncertainties in its parameters.\n- Sigma (σ): a measure of how unlikely a result is by chance; higher means more confident.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Recent studies have shown that measurements of hot-Jupiter atmospheric composition, including carbon-to-oxygen (C/O) and refractory-to-volatile (R/V) abundance ratios, provide powerful diagnostics of the chemistry and formation of gas giant planets. Important questions remain about the atmospheric composition of the ultra-hot Jupiter WASP-12 b: its dayside C/O ratio remains under debate, and its R/V ratio is not yet well constrained. We present high-resolution (R $\\sim$ 45,000) near-infrared dayside emission spectroscopy of the ultra-hot Jupiter WASP-12 b with IGRINS-2 on Gemini North during post-eclipse phases. Cross-correlation analysis reveals volatile molecular signals of H$_2$O and CO together with tentative signals of OH and gas-phase refractories in the planetary atmosphere. The planetary signals appear in emission, indicating a thermal inversion in the dayside atmosphere. A chemically consistent Bayesian retrieval yields C/O $=0.72^{+0.08}_{-0.10}$, disfavoring carbon-rich dayside solutions with C/O $>1$ at greater than $5σ$. This independent, line-resolved measurement supports an oxygen-rich atmosphere, providing a new constraint on the long-standing C/O controversy surrounding WASP-12 b. Our retrieval also yields a host-star-normalized R/V ratio, $[\\mathrm{R/V}]_{*}=0.17^{+0.22}_{-0.23}$, which is consistent with those of other ultra-hot Jupiters similarly characterized with IGRINS/IGRINS-2. Although the sample remains small, this consistency suggests a shared atmospheric chemistry among these planets, potentially reflecting similar proportions of accreted volatile and refractory material.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27006",
+   "title": "Physics-Guided Recursive Self-Improvement of Amortized Bayesian Inference Across Physics",
+   "url": "https://arxiv.org/abs/2611.27006v1",
+   "authors": [
+    "Bo Liang",
+    "Mingtao Chen",
+    "Minghui Du",
+    "Ziren Luo",
+    "Guohua Wang",
+    "Peng Xu",
+    "Zhichao Hu",
+    "Maxm Pan"
+   ],
+   "label": "arXiv:2611.27006v1",
+   "primary_category": "physics.comp-ph",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "PhyRSI uses an AI agent tied to physics simulators to repeatedly rewrite amortized Bayesian inference code for six fields, with each version scored by importance-weighted exact likelihoods because the true posterior is unknown.",
+    "plain": "Scientists often infer hidden physical parameters, such as an exoplanet's orbit or a neutron star's internal matter, from noisy measurements, and the standard computer methods for this can be very slow. This paper describes an AI system that writes and revises its own fast inference method for each field, and the physics itself is used to check whether the results are right. Once trained on simulations, the networks return posteriors (the range of likely parameter values) for 36 real observations in seconds.",
+    "why": "The text reports that the fast posteriors, after reweighting by the likelihood, agree with converged Markov chains about as well as two independent chains agree with each other, which is a useful benchmark for speed-versus-accuracy claims. It suggests possible uses in real-time control of thin-film growth and patch-clamp experiments, following X-ray transients, and updating neutron-star equation-of-state constraints, but these applications are proposed in the text rather than demonstrated, and the broader significance is not yet established.",
+    "background": "- Bayesian inference: estimating the probability distribution of unknown parameters given data (the \"posterior\").\n- Posterior: the set of plausible parameter values, with their relative likelihoods.\n- Likelihood: how probable the observed data are under a given set of parameters.\n- Markov chain Monte Carlo (MCMC): a standard, often slow, sampling method for posteriors; \"converged chains\" means runs that have settled into reliable sampling.\n- Amortized inference: a neural network is trained once on simulations so that later posteriors for new data come almost instantly.\n- Importance weights: correction factors that reweight approximate samples to match the exact likelihood.\n- Equation of state: the relation between pressure and density in dense matter such as neutron-star interiors.\n- Recursive self-improvement: an AI system iteratively revising its own methods based on feedback.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Across physics, from the orbits of imaged exoplanets and the matter inside neutron stars to thin films at synchrotrons and cortical neurons, conservation laws, interference, and compensating currents compress the posteriors of precise data into tiny, curved regions where Markov chains need minutes to days. We introduce PhyRSI (physics-guided recursive self-improvement), in which an AI agent coupled to the simulator writes and revises an amortized Bayesian inference algorithm for each field, scored by the importance weights of the exact likelihood because the true posterior is unknown. It evolves coordinates, symmetries, and factorizations matched to the physics: orbital elements at the best-measured epoch, Fresnel-normalized reflectivity with a chart for each of its multiple solutions, coordinates along which Na+ and K+ currents compensate, a shared neutron-star equation of state that factorizes a 32-dimensional joint analysis, and the time-rescaling symmetry of predator-prey dynamics. In six fields, networks trained once on simulations return 36 posteriors of real observations in seconds, reweighted by the likelihood and agreeing with converged Markov chains about as closely as two independent chains agree with each other. Such posteriors could steer synchrotron film growth and patch-clamp recordings as they run, follow X-ray transients while they are bright, update the dense-matter equation of state as neutron stars are added, and compare physical models across catalogs. Inference can thus be evolved and checked by the physics itself rather than designed by hand for each problem.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.25602",
    "title": "Dependence of Dust Growth on Magnetic field Strength in Protoplanetary Disks",
@@ -13,42 +73,211 @@
    ],
    "label": "arXiv:2611.25602v1",
    "primary_category": "astro-ph.EP",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We performed one-dimensional calculations to investigate how the magnetorotational instability (MRI) affects dust growth in protoplanetary disks.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A one-dimensional study coupling dust coagulation and fragmentation with the evolution of a vertical magnetic field, including ambipolar diffusion and Ohmic dissipation, to test how magnetorotational-instability-driven turbulence sets dust growth in protoplanetary disks.",
+    "plain": "This paper looks at how the magnetic field inside a young, gas-and-dust disk around a newborn star affects how small dust grains clump into larger particles, the raw material for planets. The authors ran computer simulations in which the dust sizes and the magnetic field evolve together, and the turbulence the field stirs up is calculated from the field's own strength. They found that a stronger magnetic field (a lower \"plasma beta,\" a measure of how much gas pressure compares with magnetic pressure) makes the turbulence stronger, which helps dust grow in the regions where it is active.",
+    "why": "The result suggests that magnetic turbulence matters for dust growth mainly in the outer disk, while inward radial drift (dust spiraling toward the star) still limits the maximum grain size over most of the disk. This is relevant to understanding how planetary building blocks form, though the text describes only a one-dimensional model, so its broader applicability is uncertain.",
+    "background": "- Protoplanetary disk: a rotating disk of gas and dust around a young star, where planets form.\n- Dust growth: tiny grains stick together (coagulation) or shatter on collisions (fragmentation).\n- Radial drift: gas pressure makes dust slowly spiral inward toward the star, capping how large grains can get.\n- Magnetorotational instability (MRI): a process in which a weakly magnetized, rotating gas becomes turbulent, which transports angular momentum and stirs dust.\n- Plasma beta: ratio of gas pressure to magnetic pressure; a smaller value means a stronger field relative to gas pressure.\n- Non-ideal magnetohydrodynamics: effects (ambipolar diffusion, Ohmic dissipation) by which weakly ionized gas lets magnetic fields drift or decay.\n- One-dimensional calculation: the model varies along only one coordinate (here, distance from the disk midplane or radius, as simplified in the model), not a full 3D simulation.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We performed one-dimensional calculations to investigate how the magnetorotational instability (MRI) affects dust growth in protoplanetary disks. We simultaneously solved the evolution of the dust size distribution and the vertical magnetic field. The dust size distribution is evolved taking into ac- count coagulation and fragmentation. For the magnetic field evolution, we considered both ambipolar diffusion and Ohmic dissipation. The MRI-driven turbulent viscosity was estimated self-consistently from the local magnetic field strength and non-ideal magnetohydrodynamics diffusivities. We found that MRI-driven turbulence becomes stronger for smaller initial plasma beta, and the enhanced tur- bulence promotes dust growth in MRI-active regions. However, dust growth is ultimately limited by radial drift, and the dependence of dust size on the magnetic field strength is significant only in the outer regions of the disk. In other words, over most of the disk, radial drift remains the dominant factor controlling the maximum dust size, and the magnetic field strength plays only a minor role in determining the overall dust size distribution.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26548",
-   "title": "Demographic inference in exoplanet chemistry is shaped by retrieval assumptions",
-   "url": "https://arxiv.org/abs/2611.26548v1",
+   "uid": "arxiv:2611.26804",
+   "title": "The Effect of Dust Grain Growth and Stellar Metallicity on Gas Giant Planet Formation by Disk Instability",
+   "url": "https://arxiv.org/abs/2611.26804v1",
    "authors": [
-    "Dwaipayan Dubey",
-    "Karan Molaverdikhani",
-    "Barbara Ercolano",
-    "Surya Shivaprasad",
-    "Fabian Grübel",
-    "Rosa Arenales-Lope"
+    "Alan P. Boss"
    ],
-   "label": "arXiv:2611.26548v1",
+   "label": "arXiv:2611.26804v1",
    "primary_category": "astro-ph.EP",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Understanding the chemical diversity of exoplanet atmospheres is crucial for linking atmospheric composition to planetary formation history.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "Three-dimensional radiative hydrodynamics simulations test how lower dust opacity (from grain growth or sub-solar metallicity) affects gas giant planet formation by gravitational fragmentation of protoplanetary disks around solar-mass stars.",
+    "plain": "This paper asks how giant planets can form quickly from the gas around a young star by the disk breaking into clumps under its own gravity. Such clumps need the gas to cool fast enough, and cooling depends on how much the tiny dust grains in the gas block heat from escaping. The authors ran computer simulations with standard dust opacity and with opacity reduced by factors of 10 and 100, and found that lower opacity produced more fragmentation, but all cases formed clumps of similar mass and distance.",
+    "why": "It links grain growth and star chemistry (metallicity) to whether disk instability can make giant planets, a question of how planets like those seen in exoplanet surveys form. The text suggests the effect may matter most around metal-rich stars, but this is a modelling study of early clump evolution only, so its broader implications remain uncertain.",
+    "background": "- Protoplanetary disk: a rotating disk of gas and dust around a young star, where planets form.\n- Gravitational instability: when a disk's self-gravity overcomes its internal pressure and forms dense clumps that can contract into planets.\n- Toomre criterion: a stability measure for rotating disks; lower values mean the disk is more prone to clumping.\n- Opacity: how strongly material blocks radiation; dust grains raise opacity, slowing cooling.\n- Grain growth: small dust particles clumping into larger ones, which changes opacity.\n- Metallicity: the fraction of elements heavier than helium in a star; solar metallicity is the Sun's value.\n- Jupiter mass (M_Jup) and astronomical unit (au): units for planet mass and orbital distance.",
+    "difficulty": "research-level",
+    "ai": true
    },
-   "abstract": "Understanding the chemical diversity of exoplanet atmospheres is crucial for linking atmospheric composition to planetary formation history. Atmospheric C/O can provide clues about where and how planets form, particularly through the accretion of gas and solids across disk snowlines. Since planetary migration can change orbital distances and hence equilibrium temperatures ($T_{eq}$), investigating C/O across different planetary populations may provide insights into their formation and evolution. As observational precision improves with the JWST, the limits of standard atmospheric retrieval methods that assume altitude-independent molecular abundances have become apparent. We present atmospheric retrievals for 20 transiting planets with published JWST transmission spectra, including complementary HST spectra for targets where such data are available, spanning gas giants, warm Neptunes, and temperate/warm sub-Neptunes, to test how population-level chemical inferences depend on retrieval assumptions. Free-chemistry retrievals show a visually non-monotonic C/O-$T_{eq}$ distribution, but this apparent pattern is not statistically robust and is sensitive to sample composition. When molecular abundances are constrained by a grid of disequilibrium models, the inferred C/O distribution becomes more restricted, showing that demographic chemical trends can depend strongly on the adopted retrieval parameterization. Several hot Jupiters converge to low C/O ($\\leq$ 0.05), whereas colder, cloudy planets retain broad posteriors that reflect limited information content of their spectra. Our results suggest that population-level chemical trends inferred from free-chemistry retrievals should be interpreted with caution unless sample selection, residual structure, prior sensitivity, and chemical assumptions are explicitly tested.",
+   "abstract": "The formation of gas giant planets by the gas disk gravitational instability (GDGI) mechanism depends sensitively on the thermodynamics of the protoplanetary disk gas: disk gas must be able to cool on orbital timescales for dense clumps to become gravitationally unstable and contract to form protoplanets. Since disk cooling is regulated by the opacity of the dust grains embedded in the gas, the properties of these dust grains are critical for the GDGI mechanism. Grain growth to larger sizes than assumed in traditional opacity models for solar metallicity, as well as protostars with sub-solar metallicity, should have lower opacity disks that are more conducive to planet formation by GDGI. Here we use a three dimensional radiative hydrodynamics and gravitation code to compute the evolution of the GDGI in $0.091 M_\\odot$ disks with varied initial minimum values (1.3 to 2.7) of the Toomre criterion orbiting solar-mass protostars. Three sets of eight models are computed: one with the standard opacity, and two more with the opacity reduced by arbitrary factors of 10 or 100. As expected, the reduced opacity models result in enhanced disk fragmentation by the GDGI and the production of more self-gravitating clumps than the standard opacity models. Nevertheless, all three opacities form similar self-gravitating clumps at this early phase of clump evolution, with masses of 0.2 to 0.7 $M_{Jup}$ and semimajor axes between 6 and 13 au. Significant dust grain growth should enhance the ability of the GDGI to form protoplanets around super-solar metallicity protostars.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25255",
+   "title": "Transition Zone from ExoEarth to ExoVenus: Critical Insight from Planets on the Edge",
+   "url": "https://arxiv.org/abs/2611.25255v1",
+   "authors": [
+    "Lisa Kaltenegger",
+    "Abigail Bohl",
+    "Connor Novak",
+    "Gillis Lowry"
+   ],
+   "label": "arXiv:2611.25255v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper builds a target list of 23 rocky exoplanets in an \"Earth-to-Venus Transition Zone\" (plus 2 in the Venus Evolution Zone), using NASA Exoplanet Archive data updated with Gaia DR3, and assesses their demographics and follow-up observing potential.",
+    "plain": "Earth and Venus are similar in size and mass but ended up with very different climates, and scientists want to know why. This paper proposes studying rocky planets around other stars that sit between the zone where Earth-like water can persist and the zone where Venus-like conditions likely occur. The authors compiled a list of 23 such planets, plus 2 in the Venus zone, to help astronomers choose which ones to observe.",
+    "why": "Such planets could test how starlight strength affects whether a planet keeps its surface water, and could offer evidence about Venus's past that complements future Venus missions. The text presents this as a planning and target-selection tool; whether these observations will settle the Earth–Venus question is not shown here.",
+    "background": "- Habitable Zone: the range of distances from a star where liquid surface water can in principle exist.\n- Venus Zone / Venus Evolution Zone: closer-in orbits where a planet is more likely to lose its water and develop a runaway greenhouse climate.\n- Transition Zone: the overlap between these two, where planets may be either Earth-like or Venus-like.\n- Exoplanet Archive: a NASA catalogue of confirmed planets around other stars; Gaia DR3 is a European Space Agency star-mapping data release used to refine stellar properties.\n- JWST: the James Webb Space Telescope, which can analyse planetary atmospheres.\n- Exo-Venus / exo-Earth: planets around other stars that resemble Venus or Earth.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Venus and Earth, planets with similar masses and radii, provide astonishingly different environments, raising the question of why these two rocky worlds evolved so differently. Explaining this divergence is a central challenge in comparative planetology and astrobiology. Now, atmospheric studies of exoplanets can explore the possibilities of terrestrial planet evolution, especially in the era of JWST; however, we have not yet realized the critical insights rocky exoplanets in the Transition Zone (TZ) can provide. These TZ planets in the overlap between the Habitable Zone and Venus Zone can test how incident stellar irradiation affects surface water retention and habitability. Observations of exoplanets in the TZ can probe not only the emergence and decline of exoplanet habitability but also test hypotheses about Venus' past, complementing upcoming Venus flagship missions. Here, we analyze NASA's Exoplanet Archive, updated with Gaia DR3 data, and provide a target list of 23 rocky exoplanets in the Earth-to-Venus Transition Zone, along with 2 planets in the Venus Evolution Zone (EV). We examine their demographics and quantify their potential for follow-up observations. This list of rocky TZ and EV planets allows observers to optimize target selection and observing strategy for specific instruments. Characterizing exoplanets in the Transition Zone will be critical to investigating open questions about the emergence and decline of habitability on rocky worlds, the evolution from an exo-Earth to an exo-Venus, and Earth's future.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23818",
+   "title": "NEXONN: Advancing the NEXOTRANS Exoplanet Atmospheric Retrieval Framework with Transformer-Based Neural Posterior Estimation for JWST Transmission Spectroscopy of WASP-39b",
+   "url": "https://arxiv.org/abs/2611.23818v1",
+   "authors": [
+    "Tasneem Basra Khan",
+    "Liton Majumdar",
+    "Mithun Patra",
+    "Tonmoy Deka",
+    "Swastik Dewan",
+    "Priyankush Ghosh",
+    "Vishal Meena"
+   ],
+   "label": "arXiv:2611.23818v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "NEXONN applies a transformer-conditioned normalizing-flow neural posterior estimator within the NEXOTRANS retrieval framework to infer WASP-39b's atmospheric properties from JWST transmission spectra, benchmarked against PyMultiNest.",
+    "plain": "Astronomers try to work out what a distant planet's atmosphere is made of by analysing the faint dimming of starlight as the planet passes in front of its star. The standard method of doing this is slow, so this paper builds a machine-learning tool that gives similar answers in seconds. The authors test it on simulated data and on real James Webb Space Telescope observations of the planet WASP-39b.",
+    "why": "Faster analysis could make it practical to study many planets at once, which is needed to understand how planets form and change over time. The text reports close agreement with the standard method on most parameters but also notes some parameter-dependent differences, so the tool's reliability is still being assessed rather than settled.",
+    "background": "- Transmission spectroscopy: measuring how much starlight passes through a planet's atmosphere at different wavelengths, which reveals its chemistry.\n- Atmospheric retrieval: working backwards from a measured spectrum to the most likely atmospheric composition and temperature, with uncertainties.\n- Bayesian posterior: the range of plausible parameter values, with probabilities, consistent with the data.\n- C/O ratio: the balance of carbon to oxygen in the atmosphere, relevant to how the planet formed.\n- [M/H]: a measure of how metal-rich the atmosphere is compared with the Sun.\n- Neural posterior estimation: training a neural network on simulations so it can produce these probability ranges quickly once trained.\n- Normalizing flow and transformer: types of neural network architectures used for this task.\n- JWST instruments (NIRISS, NIRSpec, MIRI): infrared instruments aboard the telescope that cover different wavelength ranges.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The James Webb Space Telescope is delivering unprecedented constraints on exoplanet atmospheres, but computationally intensive Bayesian retrievals challenge the transition from individual planets to population-level studies of planetary formation and evolution. We introduce NEXONN, a transformer-conditioned normalizing-flow framework within NEXOTRANS that enables rapid atmospheric posterior estimation with uncertainty quantification. Incorporating PandExo-based JWST noise, we benchmark NEXONN against PyMultiNest using simulated spectra and JWST observations of WASP-39 b (0.6-12 microns). For simulated MIRI/LRS data, eight posteriors achieve a mean overlap of 80.32%. Retrievals of combined NIRISS, NIRSpec, and MIRI observations yield consistent atmospheric properties. For the full dataset, NEXONN infers C/O = 0.82 (+0.01/-0.02) and [M/H] = 1.13 (+0.04/-0.04), compared with PyMultiNest values of 0.80 (+0.03/-0.01) and 1.19 (+0.05/-0.03). Divergence metrics, Wasserstein distances, posterior overlaps, and coverage tests assess posterior fidelity and uncertainty calibration, revealing parameter-dependent differences. Once trained, NEXONN performs posterior inference within seconds, enabling scalable population studies of exoplanet atmospheric composition, formation, and evolution.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22913",
+   "title": "A novel method for dust evolution in protoplanetary disks and a new criterion for gap opening",
+   "url": "https://arxiv.org/abs/2611.22913v1",
+   "authors": [
+    "SM Gopika",
+    "Paul C. Duffell"
+   ],
+   "label": "arXiv:2611.22913v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper introduces the Grain Residence-Time Method, a particle-tracking shortcut that reconstructs steady-state radial dust profiles in protoplanetary disks, validates it against FARGO3D fluid simulations, and proposes an empirical criterion for dust gap opening as a function of planet-to-star mass ratio and Stokes number.",
+    "plain": "The paper is about how dust is distributed in the disks of gas and dust around young stars, where planets form. The authors built a faster computer method that tracks individual dust particles and works out how long they stay at each distance from the star, and then uses that to estimate the dust density profile without simulating the dust as a fluid. They report that it agrees very well with standard fluid simulations over a wide range of settings, and they use it to study when a forming planet carves a gap in the dust.",
+    "why": "Gaps in dust seen in ALMA images are often linked to planets, so a cheaper way to model them and a simple rule for when they open could help interpret observations. The abstract claims a new gap-opening regime for small grains and low planet masses, which may matter for those images, but the text given does not show how strongly this is supported beyond the authors' own parameter study.",
+    "background": "- Protoplanetary disk: a rotating disk of gas and dust around a young star, where planets form.\n- Dust gap: a ring-shaped region with little dust, often carved by a forming planet's gravity.\n- ALMA: a radio telescope array that images these disks in detail.\n- Stokes number (St): a measure of how strongly a dust grain is coupled to the gas; small St means small grains that move with the gas.\n- Planet-to-star mass ratio (q): planet mass divided by star mass, a dimensionless size measure.\n- Particle tracking vs. fluid modelling: following individual grains versus treating dust as a continuous fluid.\n- FARGO3D: a widely used fluid simulation code for disks, used here as the reference.\n- Residence time: how long a dust particle spends in a given region.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present the Grain Residence-Time Method (GRTM), a computationally efficient particle-tracking approach for studying dust evolution and trapping in protoplanetary disks. By reconstructing steady-state dust distributions from particle residence times, this method provides a way to obtain radial dust surface density profiles without directly evolving the dust as a fluid. We compare the GRTM with dust profiles computed via standard methods using the $\\texttt{FARGO3D}$ code, which models the dust as a pressureless fluid, and find very good agreement over a wide range of parameter space. Finally, we investigate how dust gap formation depends on the planet-to-star mass ratio ($q$) and Stokes number ($\\mathrm{St}$), through a parameter study, establishing an empirical criterion for dust gap opening. In doing so, we have discovered a new regime of gap opening for small grains with $St \\lesssim 10^{-2}$ and for planet mass well below Jupiter's, which is likely very relevant for gaps seen in ALMA images.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22952",
+   "title": "Observational diagnostics of external photoevaporation at millimetre wavelengths",
+   "url": "https://arxiv.org/abs/2611.22952v1",
+   "authors": [
+    "Luke Keyte",
+    "Thomas J. Haworth",
+    "Tyger Peake",
+    "Alvaro Ribas"
+   ],
+   "label": "arXiv:2611.22952v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Using a large grid of thermochemical disk models, this paper predicts millimetre-wavelength ALMA line fluxes under external FUV fields of 100 to 100,000 G0 and identifies 135 line-flux ratios that could help diagnose external photoevaporation in spatially unresolved protoplanetary disks.",
+    "plain": "Young stars are often surrounded by disks of gas and dust that can be stripped away by ultraviolet light from nearby massive stars, a process called external photoevaporation. This paper uses computer models to predict how the radio signals from 48 molecular transitions in these disks would change with the strength of that outside light. It finds that single line brightnesses are confused by differences in the star and disk themselves, so the authors instead propose comparing pairs of lines, of which they identify 135 that look promising.",
+    "why": "Knowing whether a disk is being eroded by its neighbours matters for how quickly planets can form there, and this gives observers a concrete set of line ratios to test with ALMA. The text is based on modelling only, so how well these ratios work on real observed disks remains to be shown.",
+    "background": "- Protoplanetary disks: rotating disks of gas and dust around young stars, where planets may form.\n- Photoevaporation: heating and blowing away disk gas by ultraviolet or X-ray light.\n- External photoevaporation: the stripping is driven by UV light from nearby massive stars, not by the host star.\n- FUV field (G0): far-ultraviolet light strength, measured relative to the average interstellar background (G0 = 1).\n- Molecular line emission: molecules such as CO, HCO+ and C2H emit radio light at specific frequencies when they change energy level; these are the \"transitions\" studied.\n- ALMA: a millimetre/submillimetre radio telescope array in Chile.\n- Thermochemical models: simulations that combine heating, cooling and chemistry to predict what molecules emit.\n- Flux ratio: dividing one line's brightness by another's, which can cancel out shared effects such as stellar mass.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "External photoevaporation is increasingly recognised as an important influence on protoplanetary disk evolution. However, there are no established molecular line diagnostics that can reliably distinguish external irradiation from variations in intrinsic stellar and disk properties. We use a large grid of thermochemical models to predict the fluxes of 48 transitions from eight species observable with ALMA, spanning a wide range of system properties and external FUV fields of 100 to 100,000 G0. At fixed stellar and disk properties, all transitions generally brighten with increasing FUV field strength. HCO+ and CO fluxes increase monotonically in virtually all disks, whereas lower-excitation lines, particularly those of C2H and N2H+, respond weakly and non-monotonically. However, variations in stellar mass and disk size introduce substantial degeneracies, limiting the usefulness of individual line fluxes as tracers of external irradiation. We therefore assess all pairwise line flux ratios, which can significantly reduce these degeneracies, evaluating their correlation with the external field, the magnitude of their change across the FUV range, and predicted ALMA detectability. We identify 135 promising ratios, including several combining strong FUV sensitivity and high detectability with efficient single-tuning ALMA observations. The strongest diagnostics either contrast high- and low-excitation lines of the same or co-spatial species (e.g. CO J=8-7/J=1-0), probing different regions of the photoevaporative wind, or pair an FUV-sensitive wind tracer with comparatively insensitive emission arising closer to the disk (e.g. HCO+ J=3-2/C2H N=3-2). Our results provide a framework for identifying externally photoevaporating systems from spatially unresolved emission and constraining their incident FUV field strengths.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21786",
+   "title": "Connecting Calcium Depletion and Dust Evolution in the Rapid Accretor T28",
+   "url": "https://arxiv.org/abs/2611.21786v1",
+   "authors": [
+    "Eylul Galimidi",
+    "Nuria Calvet",
+    "Marbely Micolta",
+    "Antonio Frasca",
+    "Ezequiel Manzo-Martinez",
+    "Cesar Briceno"
+   ],
+   "label": "arXiv:2611.21786v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A multi-wavelength study of the young star T28 in Chamaeleon I combines new MIKE optical spectra with archival infrared data to link its calcium depletion in accretion flows to its dust disk structure, which is modeled as a pre-transitional disk with a gap extending to 16 au.",
+    "plain": "This paper looks at a young star called T28 that is still pulling gas from a surrounding disk where planets may form. The authors found that the gas falling onto the star is unusually poor in calcium, and that the dust disk seems to have a gap that current telescope images would not resolve. They suggest this calcium shortage may be tied to how fast the star is feeding and to early giant planet formation, though the link is a proposal rather than a demonstrated result.",
+    "why": "Calcium depletion in accreting gas is a possible chemical fingerprint of planets locking up rocky material before it reaches the star, so the proposed link between accretion rate, disk mass, and early giant planet growth is worth watching. The authors present this as a possible explanation for a trend seen in their sample, and the single-object nature of the case study means it is a suggestive rather than settled connection.",
+    "background": "- T28 is a young star (a protostar still forming) in the Chamaeleon I star-forming cloud.\n- Protoplanetary disk: a rotating disk of gas and dust around a young star, where planets form.\n- Mass accretion rate: how fast the star pulls in gas from its disk.\n- Calcium depletion: calcium is less abundant in the infalling gas than in the star's expected composition, likely because dust grains containing it were removed.\n- Refractory material: rock-forming elements that condense at high temperatures and stick to dust.\n- Pre-transitional disk: a disk with a gap separating an inner and outer ring of dust, often read as a sign of forming planets.\n- Spectrograph and infrared excess: instruments that split light into colors; extra infrared light reveals warm dust around the star.\n- Au (astronomical unit): the Earth–Sun distance.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a multi-wavelength case study of the star T28 in the Chamaeleon I star-forming region and investigate the dust evolution of its highly Ca-depleted protoplanetary disk. We combine new observations from the MIKE spectrograph on the Magellan Clay Telescope with archival IRS spectrum and photometry. We constrain the optical extinction using the hydrogen column density of the region, and apply ROTFIT to obtain stellar parameters. We estimate the mass accretion rate by fitting the excess flux above the photosphere with an accretion shock model. We model the line profiles of Ca II K and H$α$ with magnetospheric accretion models to infer Ca/H abundance, while the infrared excess is modeled with irradiated accretion disk models to get disk properties. We find that T28 is a high accretor with significant Ca depletion in its accretion flows. We find that the disk is best fit with a pre-transitional model with a disk mass of 0.12 $M_{\\odot}$, where two optically thick disks are separated by a gap filled with optically thin dust extending to 16 au. This gap would not be resolved in the existing observations. T28 follows the trend of increasing depletion with increasing mass accretion rate. This trend can potentially be explained by preferential and early giant planet formation in massive disks, as suggested by recent planet formation simulations, leading to enhanced capture of refractory material in the massive disks of high accretors and thus depletion in the material reaching the star.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20617",
+   "title": "Complex Interplay between Outer Disk Dynamics and Inner Water Reservoir",
+   "url": "https://arxiv.org/abs/2611.20617v1",
+   "authors": [
+    "Feng Long",
+    "Ilaria Pascucci",
+    "Paola Pinilla",
+    "Andrea Banzatti",
+    "Adrien Houge",
+    "Sean M. Andrews",
+    "Doug Johnstone",
+    "Gregory J. Herczeg",
+    "Joan Najita",
+    "Klaus M. Pontoppidan",
+    "Joe Williams",
+    "Ke Zhang",
+    "Geoffrey A. Blake",
+    "Maria Jose Colmenares",
+    "Giovanni Rosotti",
+    "Enrico Ragusa",
+    "Colette Salyk",
+    "Chengyan Xie",
+    "Tayt Armitage",
+    "Xue-Ning Bai",
+    "Daniel Harsono",
+    "Till Kaeufer",
+    "Sebastiaan Krijt",
+    "Giuseppe Lodato",
+    "Yao Liu",
+    "Carlo F. Manara",
+    "Francois Menard",
+    "Mayank Narang",
+    "Miguel Vioque",
+    "David J. Wilner",
+    "the JDISCS Collaboration"
+   ],
+   "label": "arXiv:2611.20617v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A homogeneous survey of outer-disk dust and gas sizes and substructures for 51 protoplanetary disks, linked to JWST/MIRI inner-disk water diagnostics, finds no global correlation between cold-to-hot water flux ratio and single outer-disk parameters, but compact structureless disks show signs of unimpeded pebble drift.",
+    "plain": "This study looks at young planet-forming disks of gas and dust around stars and asks whether the outer part of each disk controls how much water reaches the inner, rocky-planet zone. The authors combined new radio observations (ALMA) with archived data for 51 disks, and matched them to infrared measurements of water from the JWST telescope. They found no simple overall link, but three small, smooth disks with very extended gas show the pattern expected if icy pebbles drift freely inward.",
+    "why": "Water delivered by drifting pebbles is one proposed route for putting water into forming planets, so tying it to measurable disk structure matters for planet-formation models. The text only supports a tentative link: it reports a few compact disks with a pattern consistent with pebble drift, and states that structured disks vary widely, so a clean rule is not established.",
+    "background": "- Protoplanetary disk: a rotating disk of gas and dust around a young star, where planets form.\n- Snowline: the distance from the star beyond which water freezes into ice.\n- Pebble drift: larger dust grains lose orbital energy and spiral inward, carrying ice with them.\n- ALMA: a radio telescope array that measures millimetre-wavelength dust emission and gas (CO) emission.\n- JWST/MIRI: the James Webb Space Telescope's mid-infrared instrument, used here to detect water vapour in the inner disk.\n- Visibility fitting (frank): a way of modelling radio interferometer data directly to find ring and gap features.\n- Astronomical unit (au): the Earth–Sun distance.\n- Gap leakiness, grain size and thermal history: other factors the authors say also control inner-disk water.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a homogeneous characterization of outer disk dust and gas properties for 51 protoplanetary disks from the JWST/MIRI Cycle 1 programs, combining new ALMA observations with archival data. Visibility fitting with frank recovers more and higher-contrast substructures in the mm continuum than image-plane analysis, placing the innermost features of several disks at 4-5 au and leaving only three disks featureless at the current resolution. CO gas disk sizes span $\\sim$60-1000 au and correlate strongly with mm continuum sizes, with $R_{\\rm CO}/R_{\\rm mm}$ ranging from 1.4 to 9.7 (median 2.95). We then connect these outer disk properties to JWST/MIRI inner disk water diagnostics. We find no global correlation between the cold-to-hot water flux ratio ($F_{\\rm cold}/F_{\\rm hot}$), a proposed proxy of cold water enrichment by pebble transport, and any single outer disk parameter, including $R_{\\rm mm}$, $R_{\\rm CO}/R_{\\rm mm}$, and innermost substructure location. Three compact ($R_{\\rm mm}<30$ au), structureless disks with $R_{\\rm CO}/R_{\\rm mm}>4$ show both elevated $F_{\\rm cold}/F_{\\rm hot}$ and cold water emission near the snowline temperature, consistent with unimpeded inward drift of icy pebbles. For structured disks, the water properties instead vary widely at fixed gap location, reflecting the sensitivity of the inner disk water content to multiple factors, including gap leakiness, grain size, and thermal history. Linking outer disk dust evolution to inner disk water content thus requires carefully selected samples with detailed constraints on these additional parameters.",
    "source": "arxiv"
   }
  ]

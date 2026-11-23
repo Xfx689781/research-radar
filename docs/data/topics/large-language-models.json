@@ -1,54 +1,5 @@
 {
  "slug": "large-language-models",
- "updated": "2026-11-22",
- "papers": [
-  {
-   "uid": "arxiv:2611.25643",
-   "title": "TRAC: Efficient Diffusion Language Models for Machine Translation via Length-Aware Decoding",
-   "url": "https://arxiv.org/abs/2611.25643v1",
-   "authors": [
-    "Tianyuan Li",
-    "Xihan Yang",
-    "Chenglong Wang",
-    "Yuzhang Wu",
-    "Jingbo Zhu",
-    "Tong Xiao"
-   ],
-   "label": "arXiv:2611.25643v1",
-   "primary_category": "cs.CL",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "Machine translation with large language models requires both high translation quality and low generation latency.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "Machine translation with large language models requires both high translation quality and low generation latency. Accelerating translation while preserving quality is therefore essential for practical deployment. Diffusion large language models (dLLMs) can generate tokens at arbitrary target positions through iterative denoising, offering a new paradigm for parallel translation beyond sequential autoregressive decoding. However, existing methods still incur redundant computation: fixed target generation lengths waste computation on unused positions, while confidence-only commitment delays medium-confidence tokens whose predictions have largely stabilized. To address these issues, we propose TRAC, a training-free adaptive decoding method for diffusion machine translation. TRAC adapts the target generation length using source length and translation direction, with a conservative fallback to the maximum length for empty or unusually short outputs. It preserves high-confidence commitment while identifying temporally stable medium-confidence tokens for early commitment using cross-step top-1 persistence and approximate Jensen-Shannon divergence over Top-$K$ distributions. On bidirectional Chinese-English translation across FLORES-200, WMT23, and NTREX-128, TRAC reduces model forward calls by 24.9% to 36.8% and achieves sentence-level generation speedups of 1.91 to 2.19 times over Fast-dLLM, with only a 0.02-point decrease in macro-average COMET. These results demonstrate that adaptive generation lengths and stability-aware token commitment improve the efficiency of diffusion machine translation.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25808",
-   "title": "Language models represent more about emphasis than they can tell you",
-   "url": "https://arxiv.org/abs/2611.25808v1",
-   "authors": [
-    "Aarne Talman",
-    "Stergios Chatzikyriakidis"
-   ],
-   "label": "arXiv:2611.25808v1",
-   "primary_category": "cs.CL",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "The paper tests how much word-level prominence (which word is emphasized in speech) can be recovered from text alone by frozen or fine-tuned text models, prompted LLMs, and speech models, and finds that LLM representations hold more of this information than prompting elicits.",
-    "plain": "When people speak, some words get more emphasis than others, and this depends partly on the words and partly on how the speaker chooses to read them. The authors asked how much of this emphasis a language model can work out from written text, whether it can say so when asked, and how much extra a recording of speech adds. Text models and prompted chatbots did about as well as a simple 'pick the usually-stressed word' baseline, while a linear probe (a small readout trained on the model's internal numbers) found more, and speech models did best.",
-    "why": "It shows a gap between what a model's internal representations contain and what it reports when prompted, which matters for anyone relying on prompting to read out model knowledge. The abstract does not say how far the finding extends beyond this task, so its wider significance is uncertain.",
-    "background": "['Prosodic prominence: the perceived emphasis on a word in speech, shown through pitch, loudness and length.', 'Three-way task: labelling each word into one of three prominence classes; 68.8% is the best text-model accuracy reported.', 'Word-majority baseline: always guessing the most common label for each word, a simple reference point.', 'Frozen vs. fine-tuned models: frozen models keep their original weights; fine-tuned models have been further trained on the task.', 'Prompting: asking a model a question in natural language, without changing its weights.', \"Linear probe: a simple linear classifier trained on a model's internal activations to test what information they contain.\", 'Representation vs. report: a model can encode information internally without it appearing in its answers.']",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Prosodic prominence can largely be predicted from the words of a sentence, but part of it depends on how the speaker reads it. We study how much of prominence language models recover from text, whether they can report it when asked, and what the speech signal adds. On read English speech labelled for word-level prominence, we compare frozen and fine-tuned text models, prompted large language models (LLMs) and speech models on the same words. All text models end within about one point of each other, at best 68.8% on the 3-way task, and largely make the same errors. With the prompts we tested, LLMs do no better than a word-majority baseline, even with 500 examples. Linear probes find more in their representations. Speech models reach 84.7%. We argue that text determines only part of prominence, and that the rest has to be heard. LLMs encode what the text determines, but prompting does not bring it out: they represent more about where the emphasis falls than they tell you.",
-   "source": "arxiv"
-  }
- ]
+ "updated": "2026-11-23",
+ "papers": []
 }

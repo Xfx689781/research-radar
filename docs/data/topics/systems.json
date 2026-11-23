@@ -1,6 +1,6 @@
 {
  "slug": "systems",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25947",
@@ -20,14 +20,14 @@
    ],
    "label": "arXiv:2611.25947v1",
    "primary_category": "cs.DC",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Embedded computing demands high performance and energy efficiency across workloads with widely different computational characteristics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A controlled comparison, all in 12 nm technology on a common benchmark suite, of three RISC-V parallel accelerator designs (PULP scalar multicore, Snitch streaming multicore, Spatz vector) for energy-efficient embedded workloads.",
+    "plain": "Small chips inside devices like sensors and wearables often need to do heavy number crunching while using very little power. This paper compares three different ways of organizing the processing cores on such chips, using open-source designs built on the same manufacturing technology and tested on the same set of benchmark programs. The authors find that no single design wins everywhere: one is best for regular, number-heavy tasks, another for tasks with little parallel work, and a third for irregular, control-heavy tasks.",
+    "why": "Choosing the right processor design for a given job can change both speed and battery use considerably, so these measured trade-offs are useful for anyone designing embedded hardware. The text reports peak gains but does not give the full benchmark breakdown, so the headline numbers should be read as best cases rather than typical results.",
+    "background": "- Embedded computing: processors built into everyday devices, where power use and chip area matter as much as speed.\n- Multicore: several processing cores working in parallel on one chip.\n- Vector processing: one instruction operates on a whole row of numbers at once, which suits regular, repetitive math.\n- Streaming access: the hardware fetches data in predictable sequences ahead of time, so the processor waits less for memory.\n- RISC-V: an open, free instruction set that anyone can build chips around.\n- PULP, Snitch, Spatz: three open-source RISC-V accelerator designs, each representing one of the execution models above.\n- 12 nm: a chip manufacturing process size, used here so the three designs are compared on equal footing.\n- Energy efficiency: how much useful work is done per unit of energy consumed.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Embedded computing demands high performance and energy efficiency across workloads with widely different computational characteristics. Choosing the most suitable execution model therefore requires a quantitative understanding of how each model maps to different workload classes. In this paper, we compare three execution models for energy-efficient embedded computing: scalar multicore, stream ing multicore, and vector processing. We use three open-source RISC-V accelerators as representative implementations: the PULP Cluster, the Snitch Cluster, and Spatz, respectively. Their open-source hardware and software stacks enable a controlled comparison based on implementations in the same 12 nm technology and a common benchmark suite. Our results reveal that no single execution model performs best across all workload classes. Spatz delivers the greatest benefits for regular and highly vectorizable compute-intensive applications, achieving up to 4.29x higher performance and 5.17x greater energy efficiency than the other architectures. However, its effectiveness strongly depends on the availability of data-level parallelism and regular computation and memory-access patterns, making it the most sensitive to workload characteristics. The Snitch Cluster performs particularly well on applications with limited parallelism and streamable memory-access patterns, providing up to 5.53x higher performance and 1.45x greater energy efficiency. Conversely, the PULP Cluster is most effective on irregular and control-dominated applications, achieving improvements of up to 5.66x in performance and 2.80x in energy efficiency. Compared with Spatz, however, the greater flexibility offered by PULP and Snitch comes at a non-negligible cost in terms of both area and power.",
    "source": "arxiv"
@@ -48,16 +48,162 @@
    ],
    "label": "arXiv:2611.26517v1",
    "primary_category": "cs.AR",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Improving microprocessor performance while meeting ASIC implementation constraints like area and frequency is a complex and labor-intensive task that requires expertise across computer architecture, hardware design, and performance analysis and profiling.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "MiracleGro is an LLM-agent system that autonomously analyzes cycle-level RTL behavior and synthesis results of the open-source BOOM out-of-order RISC-V core, then implements architectural changes that the paper reports as improving IPC, clock frequency and wall-clock time on SPEC CPU2017 in SkyWater 130nm.",
+    "plain": "Designing a faster computer chip takes teams of experts many months of work. This paper describes an AI system that tries to do much of that work on its own: it looks at how a chip design behaves cycle by cycle and at synthesis reports, spots slow spots, and writes new hardware code to fix them. The authors report that the resulting modified processor ran a large standard benchmark suite about 2.34 times faster in wall-clock time than the original human-designed version.",
+    "why": "It is a concrete attempt to use frontier AI models for hardware design, a task that usually needs large engineering teams, so small research groups could potentially benefit. The text does not show how general the gains are beyond this one core, one process technology and one benchmark suite, so the wider impact remains to be seen.",
+    "background": "- Processor core: the central computing block of a CPU that executes instructions.\n- Out-of-order superscalar: a design that runs several instructions at once and reorders them to keep hardware busy.\n- BOOM: the Berkeley Out-of-Order Machine, an open-source processor design written in hardware description code.\n- RTL (register-transfer level): the code that describes what hardware does each clock cycle.\n- Synthesis and ASIC: converting that code into a physical chip layout; the reports give area and critical-path (maximum clock speed) estimates.\n- IPC (instructions per cycle): a measure of how much work a core completes per clock tick.\n- SkyWater 130nm: an older, open chip manufacturing process used for the evaluation.\n- SPEC CPU2017: a standard benchmark suite of real programs; wall-clock time combines IPC and clock frequency.\n- LLM agent: a language model that plans and carries out multi-step tasks with tools.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Improving microprocessor performance while meeting ASIC implementation constraints like area and frequency is a complex and labor-intensive task that requires expertise across computer architecture, hardware design, and performance analysis and profiling. While large teams in industry can afford the engineering resources to target this problem across performance modeling, RTL design, and ASIC implementations, small teams of researchers and engineers cannot take on this huge engineering burden while keeping up with the pace of advancement in processor microarchitecture. Recent advancements in large language model (LLM) agents present a promising substrate to accelerate this traditionally human-intensive process. In this work, we build and evaluate MiracleGro, an agentic AI-based system that, without human intervention, analyzes cycle-level RTL behavior and synthesis results, identifies performance bottlenecks, and translates architectural ideas into RTL implementation in a leading open-source out-of-order superscalar application core, the Berkeley Out-of-Order Machine (BOOM). Taking into account cycle-exact performance, area, and critical path, MiracleGro automatically produces improved BOOM designs that drastically increase the human-optimized BOOM's performance on substantial workload suites such as SPEC CPU2017 with full reference inputs. MiracleGro achieves an 85% IPC speedup and a frequency improvement of 27% in SkyWater 130nm, resulting in a 2.34x wall-clock time speedup on the full SPEC CPU2017 intspeed benchmarks (30 trillion instructions). This result demonstrates the enormous opportunity to harness frontier models to improve state-of-the-art RTL-driven platforms for implementation-grounded microarchitecture research across hardware designs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24460",
+   "title": "TechReport: Implementing CHERI in gem5",
+   "url": "https://arxiv.org/abs/2611.24460v1",
+   "authors": [
+    "Philipp Schmitz",
+    "Vishwas Vasuki Gautam",
+    "Tobias Jauch",
+    "Anna Lena Duque Antón",
+    "Johannes Müller",
+    "Dominik Stoffel",
+    "Wolfgang Kunz"
+   ],
+   "label": "arXiv:2611.24460v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper presents gem5-CHERI, an extension of the gem5 microarchitectural simulator that adds CHERI capability-based memory protection and can boot the CheriBSD operating system and run custom workloads, with the code released open-source on GitHub.",
+    "plain": "Software often fails because programs read or write memory they should not touch, and many security bugs come from this. The authors describe CHERI, a hardware design approach that tags memory references with built-in limits, and they add it to gem5, a widely used computer simulator, so designers can test how such protection behaves in detailed models of processors. The text says the simulator can boot a CHERI-enabled version of FreeBSD (CheriBSD) and run custom programs.",
+    "why": "Before this, there was no detailed simulator for CHERI designs, so the speed cost of this protection was described as understudied. A tool like this could let researchers measure that cost and explore design choices, though the text does not report any performance results.",
+    "background": "- Memory safety: preventing programs from accessing memory beyond what they are meant to use, a common source of security flaws.\n- CHERI (Capability Hardware Enhanced RISC Instructions): a processor extension where pointers carry hardware-checked permissions and bounds, called capabilities.\n- ISA (instruction set architecture): the set of basic instructions a processor understands; simulators model these.\n- gem5: an open-source simulator that models processor hardware in detail, used for architecture research.\n- Microarchitecture: the internal organization of a processor (pipelines, caches) that determines speed.\n- CheriBSD: a version of the FreeBSD operating system adapted for CHERI.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Despite countless mitigation efforts, memory safety issues still prevail. The recently discovered security issues in PHP underline this fact. One of the most promising approaches to solving this problem is the concept of Capability Hardware Enhanced RISC Instructions (CHERI). There is a well-developed ecosystem of ISA simulators, compilers, operating systems, and hardware designs that support CHERI. However, the lack of a simulator modeling microarchitectural detail hinders efficient and fast design space exploration for CHERI-enhanced designs means the performance impact of CHERI remains understudied. Therefore, we present gem5-CHERI: a CHERI-enhanced adaptation of the gem5 simulator that can boot the CheriBSD operating system and run custom workloads. The simulator is available open-source on GitHub.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23644",
+   "title": "Polymorph: Operating System Kernel Optimization Through Artificial Intelligence",
+   "url": "https://arxiv.org/abs/2611.23644v1",
+   "authors": [
+    "Dean Sysman",
+    "Georgios Liargkovas",
+    "Tal Zussman",
+    "Hasan Zengin",
+    "Petra Hedesiu",
+    "Hubertus Franke",
+    "Tamar Eilam",
+    "Kostis Kaffes",
+    "Asaf Cidon"
+   ],
+   "label": "arXiv:2611.23644v1",
+   "primary_category": "cs.OS",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Polymorph uses an AI agent to write a generalized eBPF/sched_ext policy for the Linux page cache and process scheduler once, then lets a user-space tuner adjust its parameters online without an LLM in the loop.",
+    "plain": "Modern operating systems like Linux let developers plug in custom rules for how the computer manages memory caching and deciding which task runs next, without rebuilding the whole system. This paper asks whether an AI system can write those rules automatically. The authors report that their approach, Polymorph, gives a modest throughput gain for the page cache on data it was not trained on, and a larger speedup for the scheduler across six test workloads, at a lower AI cost than prior search methods.",
+    "why": "Choosing the right kernel policy for each workload is a practical problem for anyone running large servers, so automating it could matter. The text reports specific numbers (8.4% on unseen data, 2.75x versus 2.27x for the best fixed scheduler policy), but these come from the authors' own evaluation, and I cannot judge from the abstract alone how broadly they hold.",
+    "background": "- Kernel: the core software that manages a computer's hardware, memory and running programs.\n- Page cache: memory the system uses to keep recently read disk data ready, so it doesn't have to be re-read from disk.\n- LRU (least recently used): a simple rule that evicts the data that has gone unused the longest.\n- Process scheduler: the part of the OS that decides which program gets the processor next.\n- eBPF and sched_ext: mechanisms that let user-written code extend parts of the Linux kernel safely without recompiling it.\n- Tokens: units of text processed by an AI model; the paper uses token counts as a proxy for AI cost.\n- Throughput: how much work gets completed per unit time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "While popular operating systems such as Linux and Windows were originally designed as monolithic kernels, an increasing number of kernel subsystems have become extensible using eBPF. Users can now define custom policies for essential kernel mechanisms, such as the process scheduler, page cache, and network stack, without recompiling the kernel. These mechanisms give developers significant freedom to fit the kernel to their applications' workloads, but the question of which policy to deploy remains open. We study how to use agentic AI to automate kernel policy development, selection, and deployment, focusing on the page cache and the process scheduler as two representative subsystems. We show that existing approaches fall short: evolutionary and agentic search runs offline, is relatively expensive, and often fails to generalize to online workloads, while online knob tuners are encumbered by the knobs' lack of expressivity. In contrast, we propose Polymorph, which learns online: an AI agent writes a generalized, granular policy once, and a user mode tuner adjusts its parameters during runtime, with no LLM in the loop. For the page cache, Polymorph improves throughput over Linux's LRU by 8.4% on unseen data, nearly twice the gain of the best existing policy, while adapting to workload changes at runtime and costing only 16M tokens once, versus 125-240M tokens per workload for agentic offline search. For the process scheduler, it improves on Linux's default by 2.75x across six workloads, versus 2.27x for the best fixed sched_ext policy.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22744",
+   "title": "On Traffic Characterization in Time-Sensitive Networking and Deterministic Networking",
+   "url": "https://arxiv.org/abs/2611.22744v1",
+   "authors": [
+    "Yuming Jiang"
+   ],
+   "label": "arXiv:2611.22744v1",
+   "primary_category": "cs.NI",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper gives an equivalent traffic characterization for the TSN TSpec, derives how a flow's TSpec changes after passing through a bounded-delay system, characterizes aggregates of TSN flows, and links TSN traffic descriptions to token-bucket bounds for backlog and delay.",
+    "plain": "Time-sensitive networks carry audio, video and control data with strict timing, and each stream is described by a short set of numbers: a time window, a maximum packet size, and a maximum packet count within that window. This paper asks what happens to that description after a stream passes through a network device, how to describe several streams merged together, and how the description can be used to bound queue lengths and delays. The authors report a set of results that together form a calculus for these descriptions, but the text provided does not include their proofs or any measured performance.",
+    "why": "Engineers building TSN and DetNet networks need guaranteed worst-case delays for industrial, automotive and audio-video systems, so a sound way to track traffic descriptions through devices and aggregates matters for those guarantees. The work is theoretical, and the text does not show how it performs in practice or in any deployed system.",
+    "background": "- Time-Sensitive Networking (TSN): IEEE Ethernet extensions that give certain streams guaranteed low, predictable delay.\n- Deterministic Networking (DetNet): an IETF effort with similar goals for routed networks.\n- TSpec (traffic specification): the short description of a stream's burst pattern, here as (time window, max packet size, max packet count).\n- Traffic characterization: a rule that bounds how much data a stream can send over any time span.\n- Token-bucket model: a standard way to bound bursts, where a bucket fills at a steady rate up to a maximum size.\n- Backlog and delay bounds: worst-case amount of queued data and worst-case waiting time in a device.\n- Aggregate: several flows combined and treated as one stream.\n- Bounded-delay system: a device guaranteed to forward data within some maximum delay.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The traffic of an audio/video stream in IEEE Time-Sensitive Networking (TSN) or an asynchronous traffic flow in IETF Deterministic Networking is specified by three parameters: an observation time interval, a maximum packet size, and a maximum number of packets in the interval. This traffic specification (TSpec) triggers three fundamental questions for TSN and DetNet: (1) if and how the traffic of a flow can be specified by these parameters after it traverses a system, (2) how to specify the traffic of a flow aggregate using the three parameters, and (3) how to use it in performance guarantee analysis. Among them, the literature has focused on (3), leaving the other two little investigated and largely open. This paper is intended to bridge the gap. Specifically, we introduce an equivalent traffic characterization for TSN TSpec, which is simple in representation and simplifies analytical development. Based on this result, we establish an output characterization property for (1) and show that the output of a TSN flow traversing a bounded-delay system can be characterized by the TSN TSpec with updated parameters. For (2) we study the superposition of TSN flows and derive TSN traffic characterizations for the aggregate of multiple TSN flows. For (3), based on a relationship between the TSN traffic characterization and the well-known token-bucket traffic characterization, backlog and delay bounds are derived. Together, these results form a calculus for TSN traffic characterization.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22483",
+   "title": "Manufacturing Differential Sparsity: Planner-Hardware Co-Design for Efficient World Model Planning",
+   "url": "https://arxiv.org/abs/2611.22483v1",
+   "authors": [
+    "Wenbo Zhu",
+    "Paul Yi-Chia Chen",
+    "Yuanhan Li",
+    "Zishen Wan",
+    "Christopher Torng"
+   ],
+   "label": "arXiv:2611.22483v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A planner-hardware co-design that makes sampling-based model predictive control over JEPA-style latent world models cheaper by having the planner group candidate action sequences around shared roots, which increases differential bit-level sparsity that a bit-sparse accelerator then exploits.",
+    "plain": "Robots and other embodied agents often imagine possible futures with a learned \"world model\" before choosing an action, but this imagining is so repetitive that one planning step can take tens of seconds even on a high-end GPU. The paper's approach is to have the planning step itself group similar candidate action sequences together, so the calculations for neighbouring candidates overlap and can be skipped or reused in custom hardware. The authors report that on three such models, their combined planner and chip design runs 1.28-1.80x faster than a dense accelerator and 1.22-1.58x faster than a prior bit-sparse design, using 16-36% less energy than that prior design, with the same chip area.",
+    "why": "Real-time planning is a practical bottleneck for robots that must reason about new goals, and this work shows that software and hardware can be designed together rather than separately. Whether the speedups hold beyond the three tested models and on real robots is not shown in the text.",
+    "background": "- World model: a learned model that predicts how the environment will change in response to actions.\n- JEPA-style latent world model: a predictor that works in a compressed internal representation (\"latent\" space) rather than raw pixels.\n- Model predictive control (MPC): choosing actions by repeatedly simulating many candidate action sequences with the model and picking the best one.\n- Quantization: storing numbers with fewer bits to save computation and memory.\n- Bit-level sparsity: many bits in the numbers are zero, and hardware can skip work on those zero bits.\n- Differential sparsity: sparsity that appears in the difference between a value and a nearby reference value, so similar inputs yield mostly-zero differences.\n- Dense accelerator: a chip that performs every multiply without skipping zeros.\n- Co-design: designing the algorithm and the hardware together so each shapes the other.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "JEPA-style latent world models let embodied agents plan toward new goals with model predictive control, but they are still too slow for real-life embodied control: sampling-based MPC repeats predictor inference tens of thousands of times per plan, and even on high-end GPUs one planning step can take tens of seconds. We observe substantial latent locality in this repeated-inference workload: the predictor maps close actions to close latents, and inside a quantized predictor this closeness takes a form that hardware can exploit, differential bit-level sparsity. Unlike an input stream, whose temporal similarity is given, a planner itself decides which candidates it evaluates together, so the planner can choose its own references and, with reference forest sampling, manufacture more sparsity: it couples the sampled action sequences of each group to a shared root, with competitive planning quality. We build the accelerator on the insights of the rich line of bit-level sparsity accelerators and design it and the planner tightly coupled as a single co-design: the planner increases sparsity and exposes structure for hardware scheduling, and the bit-exact hardware effectively uses the sparsity that the planner creates. On three JEPA world models, our co-design is 1.28-1.80x faster than a dense accelerator and uses 38-52% less energy, and it is 1.22-1.58x faster than prior bit-sparse design and uses 16-36% less energy, with the same area. To our knowledge, our planner is the first planner that manufactures differential bit-level sparsity across its candidates and exposes its structure for hardware scheduling, and our co-design is the first algorithm-hardware co-design for JEPA-style world-model planning.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20618",
+   "title": "One Mean Can't Rule Them All",
+   "url": "https://arxiv.org/abs/2611.20618v1",
+   "authors": [
+    "Ahmed Nematallah"
+   ],
+   "label": "arXiv:2611.20618v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A short article proposing a systematic way to pick the right mean (such as arithmetic, geometric, or harmonic) for summarizing computer performance results.",
+    "plain": "Computer researchers often disagree about how to boil many benchmark timings or speed measurements into a single average. This paper, based only on its opening summary, sets out a systematic method for choosing which kind of average to use, with the stated aim of settling the question. The text provided is only the abstract-level introduction, so the specific method and its results are not described here.",
+    "why": "Choosing the wrong average can make one computer system look faster than another when the comparison is actually misleading, so the question affects how performance claims are judged. The text does not show how widely the proposed approach has been adopted or tested, so its practical impact is uncertain.",
+    "background": "- A \"mean\" is a single number that summarizes a set of values; common types include the arithmetic mean (ordinary average), geometric mean (multiplies values and takes a root, suited to ratios), and harmonic mean (suited to rates).\n- A \"benchmark\" is a standard test program used to measure how fast a computer runs typical work.\n- Performance summaries across many benchmarks often combine speedup ratios, and the choice of mean can change which system appears better.\n- The article is a short position-style piece; only its introduction is available here.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "There has been extensive debate on how to summarize performance results, especially within the computer architecture community. This article presents a systematic approach to choosing the correct mean, aiming to answer this question for all computer scientists once and for all.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20780",
+   "title": "Top-Level Operational Equilibrium: When is the response of a distributed system predictable from its own telemetry?",
+   "url": "https://arxiv.org/abs/2611.20780v1",
+   "authors": [
+    "Víctor Casamayor Pujol",
+    "Nefeli-Marina Rouska",
+    "Boris Sedlak"
+   ],
+   "label": "arXiv:2611.20780v1",
+   "primary_category": "cs.DC",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper defines top-level operational equilibrium (TLOE) for running distributed systems, with stationarity, sufficiency and time-reversibility conditions, and uses a fluctuation-response identity to predict small responses to control changes from passive telemetry, tested only on reference models.",
+    "plain": "Cloud and edge systems are constantly rescaled and rerouted, and each change assumes the system will respond in a predictable way. The paper asks when that response can be read from the telemetry operators already collect, and gives a set of conditions under which it can. On simple reference models, the authors report that the prediction works for load changes in one class of queueing chain, fails for capacity changes at the first or last stage, and needs specific window lengths of data.",
+    "why": "Operators adjust systems without a reliable way to know whether the system's reaction is predictable, so a telemetry-based test would be useful if it holds up. The results are only on reference models and simulated data, and real telemetry is explicitly left to future work, so practical value is not yet shown.",
+    "background": "- Distributed system: many servers or services working together, often across edge devices and cloud data centres.\n- Telemetry: the measurements a system already logs, such as queue lengths and throughput.\n- Equilibrium / stationarity: statistical behaviour that does not drift over time.\n- Time-reversibility: the statistics look the same when the time sequence is run backwards.\n- Sufficient statistic: a summary that keeps all the information needed about a quantity.\n- Fluctuation-response identity: a physics-style result relating how a system's random ups and downs predict how it reacts to a small push.\n- Queueing terms: a stage is a server with a waiting line; throughput is how much work finishes per unit time; work in progress is the total items inside the system.\n- Hysteretic autoscaler: a scaling rule that changes behaviour depending on recent history, so it does not respond the same way twice.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Distributed systems deployed across the edge-cloud continuum are adapted continuously: scaled, re-routed, given more or less capacity. Each adaptation rests on an expectation of how the system will respond, yet operators cannot tell from the telemetry they already collect whether that response is predictable. We define top-level operational equilibrium (TLOE), a notion of equilibrium for a running system, stated relative to the controls its operator declares. TLOE has three conditions: stationarity with time-scale separation, sufficiency of a top-level aggregate for the controls, and time-reversibility of that aggregate. We prove that an aggregate satisfying the last two exists if and only if the minimal sufficient statistic of the controls is time-reversible, so the coarsest admissible aggregate is derived rather than chosen. Under the first two conditions, the response to a small control change follows from passive telemetry through the steady-state fluctuation-response identity, with a conjugate observable fixed by the type of control: the total work in progress for a change of load, the occupancy of a stage for a change of its capacity. For chains of exponential single-server stages with Poisson input, TLOE holds exactly for load control at every stable throughput, but never for a control on the capacity of the first or last stage. On reference models, a per-stage conjugate overestimates the early response about threefold, blocking between stages breaks both conditions weakly, and a hysteretic autoscaler leaves no admissible aggregate at any reaction time computed. We specify a test for each condition, show that a static sufficiency test with an estimated top-level conjugate has no power, and quantify on simulated telemetry the window lengths the prediction and the reversibility test need. The evidence is on reference models; real telemetry is left to future work.",
    "source": "arxiv"
   }
  ]

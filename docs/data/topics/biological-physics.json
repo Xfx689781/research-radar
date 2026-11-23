@@ -1,6 +1,6 @@
 {
  "slug": "biological-physics",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25520",
@@ -14,16 +14,154 @@
    ],
    "label": "arXiv:2611.25520v1",
    "primary_category": "physics.bio-ph",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The authors reconstruct spatially resolved spectral reflectance of samples from several ordinary photographs taken under known different illuminants, using an optimization that fits pixel values while penalizing rough reflectance spectra.",
-    "plain": "Color patterns on animals and objects carry information, but a normal camera records only three broad color channels, while a spectrometer measures full spectra at only one spot at a time. The authors photograph the same sample under several known light sources and computationally combine the images into a map of how much light each point reflects at each wavelength. The abstract reports high accuracy and that the method can predict how different visual systems would see the sample, though it gives no specific figures in the summary provided.",
-    "why": "Objective measurement of color patterns matters for studies of animal signaling, camouflage, and imaging applications, and a cheap camera-based route to full spectral maps could make such work easier. The abstract does not give quantitative accuracy results or comparisons, so the strength of the claim can't be judged from it alone.",
-    "background": "['Spectral reflectance: the fraction of light a surface reflects at each wavelength, which defines its color independent of who is looking.', 'Hyperspectral imaging: capturing a full spectrum at every pixel of an image, rather than a few color channels.', 'RGB cameras: standard cameras record only three broad bands (red, green, blue), which loses much spectral detail.', 'Illuminant spectral irradiance: the known distribution of light power across wavelengths emitted by each light source; knowing it is needed to convert camera readings back to reflectance.', 'Regularization: adding a penalty, here for non-smooth spectra, so that an underdetermined inverse problem has a sensible solution.', 'Visual systems: different animals have different photoreceptors, so the same reflectance can look different to them; the method is meant to model this.']",
+    "one_liner": "A method that reconstructs spatially resolved spectral reflectance from several digital photographs taken under different known illuminants, using a pixel-error minimization with a smoothness regularizer on the spectrum.",
+    "plain": "Scientists studying animal or plant coloration often need to know exactly what colors a surface reflects, not just how it looks to a camera. This paper describes a way to get that detailed color information across an entire sample by taking several ordinary digital photos of it under different known lights and combining them mathematically. The authors report that the approach was accurate on existing reflectance datasets and on their own photos taken in a custom photo box.",
+    "why": "Objective color measurement matters for studies of how colorful patterns look to different animal visual systems, and a low-cost camera-based method could make such measurements easier. The text does not give a comparison against other methods in detail, so its advantage over existing tools is claimed by the authors rather than shown in the summary here.",
+    "background": "- Spectral reflectance: the fraction of each wavelength of light a surface bounces back; it describes color objectively.\n- Hyperspectral imaging: capturing reflectance at many wavelengths for each point of an image, rather than just red, green and blue.\n- Digital cameras record only three broad color channels per pixel, so much spectral detail is lost.\n- Spectrometer probes measure detail at one small spot at a time, so they are slow for whole surfaces.\n- Illuminant: a light source with a known spectrum; using several known lights gives the method more information to work with.\n- Regularization: a mathematical constraint that favors smooth spectra, helping the solution stay realistic when data are limited.\n- Visual system: different animals perceive the same reflectance differently, which the method is said to help infer.",
     "difficulty": "intermediate",
     "ai": true
    },
    "abstract": "Quantitative measurement of complex coloration patterns is essential for many biological studies and practical applications. Although color perception depends on the observer's visual system, an objective characterization is possible by measuring the spectral reflectance across the sample surface. Traditional methods for measuring spectral reflectance are either limited in spatial resolution, as with spectrometer probes, or limited in spectral detail, as with digital cameras. We present a method for reconstructing spatially resolved spectral reflectance of samples from multiple images taken under different illuminants with known spectral irradiance. Using an optimization scheme that minimizes pixel-value error while regularizing for the smoothness of the reflectance spectrum, our method generates high-resolution hyperspectral images. We tested our method using both existing spectral reflectance datasets and original multi-illumination images taken in a custom photo-box, demonstrating high accuracy and simple implementation of the method, as well as the ability to infer how samples are perceived by different visual systems. Our method can be a useful tool for objective quantification of complex visual patterns in color-related biological research and imaging applications.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23921",
+   "title": "A structure-based model of the bacterial chemosensory array reveals how the scaffolding protein CheW tunes sensory responses",
+   "url": "https://arxiv.org/abs/2611.23921v1",
+   "authors": [
+    "David Hathcock",
+    "Yingxin Zheng",
+    "Yuhai Tu"
+   ],
+   "label": "arXiv:2611.23921v1",
+   "primary_category": "physics.bio-ph",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A structure-based Ising lattice model of the bacterial chemosensory array shows how the scaffolding protein CheW, via its hexameric-ring placement, sharpens and tunes signaling cooperativity, and predicts CheW-dependent crossovers in activity fluctuations and oscillations.",
+    "plain": "Bacteria sense their surroundings with large protein clusters that switch between \"on\" and \"off\" states, and a helper protein called CheW helps hold these clusters together. This paper builds a computer model, based on the known cryo-electron microscopy structure, of how these switches are coupled and how CheW's placement changes them. The authors report that their model reproduces experimental trends for both non-adapting and adapting cells, and that CheW's arrangement also changes how the cluster's activity fluctuates over time, including a shift from settling quietly to oscillating.",
+    "why": "The work offers a testable explanation for how a scaffolding protein tunes a signaling system's sensitivity, and the predicted oscillations could be checked with single-cell measurements. Its relevance beyond bacterial chemotaxis is suggested by the authors as a general approach for large protein complexes, but that wider application is not demonstrated in the text.",
+    "background": "- Chemosensory array: a large, ordered cluster of proteins in bacteria (such as E. coli) that detects chemicals and steers the cell.\n- CheW: a scaffolding protein that links the array's components and can form hexameric (six-part) rings.\n- Ising model: a simple statistical model in which units switch between two states and neighbors influence each other; widely used in physics to study collective behavior.\n- Cooperativity: how strongly units switch together rather than independently; higher cooperativity gives sharper responses.\n- Mean-field theory: an approximation that replaces each unit's neighbors with an average effect, used to get analytic insight.\n- Adaptation: the process by which a cell resets its response after a sustained signal, so it can keep sensing changes.\n- Cryo-EM: an imaging method that reveals protein structures at near-atomic detail.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce a structure-based Ising model of the bacterial chemosensory array to investigate how the scaffolding protein CheW tunes signaling responses. The model couples the activity states of core signaling units and of CheW subunits within hexameric rings on a lattice with the structure observed in cryoEM experiments. Recent experiments show that increasing CheW participation in hexameric rings raises response cooperativity in non-adapting cells and sensitivity in adaptation-proficient cells. Our lattice model quantitatively reproduces both effects, while mean-field theory shows that CheW increases the effective coupling between core units, sharpening the response in both cell types. The statistics of CheW placement (complete hexameric rings versus random distribution) substantially alter how responses vary with CheW abundance. Moreover, different coupling strengths can yield the same static response yet markedly different activity fluctuations and dynamics. CheW abundance further controls a crossover from relaxational to oscillatory fluctuations, whose location depends on the spatial distribution of CheW. These dynamical signatures, including oscillations predicted near native CheW levels, are testable by single-cell dynamics measurements. Combined with CheW titration and our modeling results, these measurements can probe the array's assembly dynamics and allosteric couplings. Beyond the chemosensory array, our approach can generalize to other large protein complexes, providing a framework to study the functional role of scaffolding proteins and allosteric interfaces in signal processing.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24513",
+   "title": "Electrostatic interactions drive the self-assembly of secondary coat-protein layers around wild-type MS2 particles",
+   "url": "https://arxiv.org/abs/2611.24513v1",
+   "authors": [
+    "LaNell A. Williams",
+    "Amelia W. Paine",
+    "Kellianne Kornick",
+    "Rees F. Garmann",
+    "Vinothan N. Manoharan"
+   ],
+   "label": "arXiv:2611.24513v1",
+   "primary_category": "physics.bio-ph",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Coat-protein dimers of bacteriophage MS2 form extra capsid layers around intact wild-type virus particles, and the authors attribute this to electrostatic attraction and a heterogeneous nucleation-and-growth pathway, with elastic strain limiting full encapsulation.",
+    "plain": "This study looks at a simple virus, bacteriophage MS2, which infects bacteria and builds its protein shell from many identical copies of one coat protein. The researchers found that extra protein layers can form on the outside of complete, ordinary virus particles even without free genetic material present. They suggest that electrical charge attraction between the positively charged proteins and the negatively charged shell helps drive this growth.",
+    "why": "Viral shells are a model for how protein structures assemble, and the finding that electrostatics matters even in a system known for specific RNA-protein binding is of interest to people studying self-assembly. The text does not say how this applies beyond MS2 and related viruses, so wider relevance is uncertain.",
+    "background": "- Bacteriophage (phage): a virus that infects bacteria.\n- Capsid: the protein shell that encloses a virus's genetic material.\n- Coat protein dimer: a pair of identical protein units that serve as the building blocks of the shell.\n- Self-assembly: parts organizing into a structure without outside direction.\n- Electrostatics: attraction or repulsion between electrically charged parts.\n- Nucleation and growth: a structure first forms a small seed, then grows by adding units.\n- Elastic energy: stored strain in a bent or stretched structure, which can resist further growth.\n- Methods named in the text: transmission electron microscopy (imaging), gel electrophoresis (separating molecules by size), dynamic light scattering (measuring particle size in solution).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The protein capsids of many icosahedral RNA viruses can self-assemble in vitro in the absence of any host cell factors. For bacteriophage MS2 and related viruses, previous studies have focused on the role of specific RNA-protein interactions in driving the assembly process. However, the contribution of electrostatics remains unclear. We show that MS2 coat protein dimers can assemble into additional capsid layers around intact wild-type MS2 particles, even in the absence of free RNA. We characterize the size and morphology of the particles through transmission electron microscopy, gel electrophoresis, and dynamic light scattering, and we use binding and infectivity assays to determine how the maturation protein affects layer formation. Our results are consistent with a heterogeneous nucleation-and-growth assembly pathway, in which the nucleation barrier is controlled by the protein concentration, and electrostatic attraction between the positively charged coat proteins and negatively charged capsid drives growth. Interestingly, the secondary layers rarely fully encapsulate the wild-type particles, suggesting that elastic energy may limit their growth. These results highlight the importance of electrostatics in the assembly of protein shells, even in systems such as MS2 that are known for their strong, specific RNA-protein interactions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22311",
+   "title": "Stability of Homochiral Peptides in Capillary Environments: Implications for the Origin of Biological Homochirality",
+   "url": "https://arxiv.org/abs/2611.22311v1",
+   "authors": [
+    "Søren Toxvaerd"
+   ],
+   "label": "arXiv:2611.22311v1",
+   "primary_category": "physics.bio-ph",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A theoretical proposal that homochiral peptides (chains of single-handed amino acids) could have formed from racemic amino acids in capillary environments in Earth's crust, with stability tested only as a hypothesis.",
+    "plain": "Living proteins are built from amino acids that all have the same \"handedness,\" and this order slowly decays over time. The paper asks how that handedness first arose before life, and proposes that short chains of one-handed peptides could have formed and persisted in tiny water-filled cracks in rocks deep in the Earth's crust.",
+    "why": "The origin of biological handedness is a long-standing open question in origin-of-life research, so a mechanism tied to specific geological settings is of interest. The text is a short hypothesis based on thermodynamic arguments; it presents no experimental data, so its support is currently limited.",
+    "background": "- Chirality: a molecule is chiral if it cannot be superimposed on its mirror image, like left and right hands.\n- Homochirality: living organisms use only one handedness of amino acids (proteins) and sugars.\n- Racemic: an equal mix of left- and right-handed forms, as expected from non-biological chemistry.\n- Peptides and proteins: chains of amino acids; secondary structure refers to local folding patterns such as helices.\n- Frank synthesis: a named idea, after Frank's 1953 proposal, that an autocatalytic process could amplify one handedness from a mixture; here the text uses the term for a proposed route.\n- Water activity: a measure of how much water is available in a system, affecting molecular stability.\n- Capillary environment: narrow pores or cracks where water is held and surfaces strongly influence chemistry.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "The homochiral proteins in living organisms are rather stable, but they tend to lose their secondary conformations and homochiral order over time. This instability is found in all living organisms, from bacteria to humans. The aging of living organisms, with the destruction of their vital homochiral order, raises the questions about the emergence of homochirality and how the homochiral order in the building molecules was ensured in prebiotic times before life evolved. Based on thermodynamic arguments, we propose that the homochiral order was achieved by a ``Frank-synthesis'' of homochiral peptides from racemic amino acids and in a capillary environment in the vents in the Earth's crust, perhaps at crystalline chiral surfaces, and that the peptides are stable over long times in such an environment. The $hypothesis$ can be confirmed by experimental analysis of the stability of the secondary structures in proteins as a function of water activity and in a capillary environment.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22902",
+   "title": "A free-energy approach for stochastic reaction-drift-diffusion lattice simulations of crowded biological systems",
+   "url": "https://arxiv.org/abs/2611.22902v1",
+   "authors": [
+    "R. M. Acda",
+    "A. Parvez",
+    "A. T. Apsley",
+    "H. Youk",
+    "Z. Luthey-Schulten"
+   ],
+   "label": "arXiv:2611.22902v1",
+   "primary_category": "physics.bio-ph",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A lattice-based stochastic reaction-drift-diffusion framework that encodes volume exclusion among mixed-size particles as a local free-energy functional per voxel, validated against off-lattice interacting-particle simulations and applied to crowding, segregation, and motor-protein traffic on a microtubule-like track.",
+    "plain": "Molecules inside cells are packed so tightly that their size changes where they sit, how fast they move, and how often they react. Simulating every molecule's exact position is very expensive, so this paper builds a faster grid-based method that accounts for crowding through a free-energy term in each grid cell, without tracking each particle's position. The authors compare it with more detailed particle simulations and report that it better captures how particles are distributed and where reactions settle, as well as crowding-driven slowdown and motor-protein traffic jams.",
+    "why": "Crowding is known to affect biochemical reactions and transport inside cells, so a cheaper way to include it in large stochastic simulations could be useful for modeling cell biology. The text does not show how broadly the method performs beyond the cases it tests, so its wider usefulness remains to be seen.",
+    "background": "- Reaction-diffusion simulation: tracking molecules that move randomly (diffuse), drift, and react, often on a grid of small cells (voxels).\n- Stochastic simulation: randomness is modeled explicitly, which matters when only a few molecules are present.\n- Volume exclusion: two objects cannot occupy the same space, so crowded larger particles limit where smaller ones can go.\n- Free energy: a measure of how favorable a configuration is; here it is used to penalize crowded voxels and alter move and reaction rates.\n- Point-particle versus finite-size models: point models treat molecules as having no size; this work accounts for size.\n- Operator splitting: a numerical technique that handles diffusion, drift and reaction in separate steps.\n- Motor proteins and microtubules: molecular walkers that move along filament tracks inside cells; \"traffic jams\" occur when they crowd each other.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Molecular size alters spatial distributions, reaction equilibria, and transport in crowded mixtures, but resolving individual particle encounters can make large stochastic simulations computationally costly. We developed a lattice-based framework for simulating reaction-drift-diffusion systems with volume exclusion captured as a free energy functional in each voxel. Changes in this free energy, together with external one-body potentials, modify diffusion and reaction propensities. Our framework accommodates mixtures of particle sizes without resolving each particle's position within a voxel. We implemented our framework in an operator splitting scheme and compared our predictions with off-lattice interacting-particle simulations. Inclusion of the local free energy functional improved spatial occupancies and shifts in reaction equilibria relative to point-particle simulations. With separate approximations for larger spheres and polymers, we simulated crowding-induced slowing and spatial segregation. We then modeled motor proteins' traffic jams on a structured track representing a microtubule. Our results demonstrate how local composition can inform stochastic reaction and transport rates without resolving individual encounters.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18808",
+   "title": "Interaction between fluids and Helfrich membranes",
+   "url": "https://arxiv.org/abs/2611.18808v1",
+   "authors": [
+    "Dennis Wörthmüller",
+    "Pierre Sens",
+    "Michele Castellana"
+   ],
+   "label": "arXiv:2611.18808v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A partitioned finite-element scheme couples a fluid to a Helfrich-elastic membrane, validated on air-driven bulging of an elastomer sheet and analyzed for added-mass instability.",
+    "plain": "This paper studies what happens when a fluid pushes on a thin flexible sheet, such as air blown against a stretchy membrane that bulges outward. The authors built a computer method that tracks the fluid, the membrane, and the shape of the mesh used for calculation, solving each in turn. They tested it on a large-scale elastomer membrane inflated by injected air and used it to explain why the bulge forms.",
+    "why": "The method handles large membrane deformations that simpler small-deformation (perturbative) approaches cannot, and the authors also report a stability limit of their scheme, which matters for anyone building similar simulations. The text does not establish links to specific biological systems, so any connection to cell or tissue mechanics would be speculative.",
+    "background": "- Fluid-structure interaction: computing how a moving fluid and a deforming solid affect each other.\n- Finite-element method: splitting a shape into small pieces (a mesh) and solving equations on them numerically.\n- Helfrich free energy: a standard model of the bending energy of thin membranes, originally developed for lipid bilayers.\n- Partitioned approach: solving the fluid and the solid in separate alternating steps rather than all at once.\n- Added-mass instability: a numerical problem where the simulation becomes unstable when the fluid's inertia is strongly tied to a light structure.\n- Perturbative methods: approximations that assume deformations are small.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We propose a finite-element method to determine the dynamics of a fluid interacting with a membrane---a fluid layer equipped with a Helfrich elastic free energy [W. Helfrich, Z. Naturforschung C, 28, 693, (1973)]. Our analysis is based on a partitioned approach, where the state of the fluid, of the membrane, and of the mesh, are solved for at staggered steps. We show the predicting capabilities of the method by considering a macroscopic example of an elastomer membrane, which bulges as it interacts with air injected through a channel. We demonstrate that our method allows for describing large membrane deformations which are not accessible by perturbative methods. We discuss the limitations of our method, by characterizing its added-mass instability. Finally, we show how our analysis allows for understanding the physical mechanism of bulge formation, which is due to a combination of elastic stresses and membrane boundary conditions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18062",
+   "title": "Exact stochastic theory of post-transcriptional gene autoregulation mediated by RNA-binding proteins",
+   "url": "https://arxiv.org/abs/2611.18062v1",
+   "authors": [
+    "Chen Jia"
+   ],
+   "label": "arXiv:2611.18062v1",
+   "primary_category": "q-bio.MN",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper derives an exact stochastic solution for a gene whose protein product autoregulates itself post-transcriptionally by reversibly binding its own mRNA, affecting both translation and mRNA stability, and compares this with transcriptional feedback.",
+    "plain": "Cells control how much protein they make, and the amount fluctuates randomly from moment to moment. This paper studies a control loop in which a protein sticks to its own messenger RNA, the molecule that carries the blueprint for making it, and thereby changes both how fast the protein is made and how long the messenger survives. The authors work out the exact mathematical description of these random fluctuations rather than relying on approximations.</plain>\n<parameter name=\"why\">Post-transcriptional feedback has been much harder to analyse exactly than transcriptional feedback, so an exact result is a useful reference point. The reported contrast, that negative feedback suits post-transcriptional control for suppressing noise while positive feedback suits transcriptional control, could inform how cells balance steady expression against fast responses; the text does not show how directly this applies to specific biological systems.</plain>\n<parameter name=\"background\">Gene expression: DNA is transcribed into messenger RNA (mRNA), which is translated into protein. Transcriptional regulation acts on mRNA production; post-transcriptional regulation acts after that, on translation or mRNA decay. Feedback: a protein that influences its own production, either negatively (dampening it) or positively (boosting it). Stochastic noise: random fluctuations in molecule counts, which are significant when numbers are small. Poissonian vs sub-Poissonian: a Poisson distribution has variance equal to its mean; sub-Poissonian means less variable than that baseline, i.e. more regular. Burst size: the number of proteins produced from one mRNA molecule before it degrades. Confluent Heun functions: a family of special mathematical functions used here to write the exact solution.</background>\n<parameter name=\"difficulty\">research-level",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "While analytical theories of transcriptional feedback loops have been well established, exact stochastic analyses of post-transcriptional feedback loops remain relatively scarce and are notoriously challenging. Here, we develop an exact theory of post-transcriptional gene autoregulation, in which reversible protein-mRNA binding modulates both translation and mRNA stability. We derive the state-dependent protein burst-size distribution, the steady-state protein number distribution in terms of confluent Heun functions, and an exact criterion for sub-Poissonian fluctuations. By comparing transcriptional and post-transcriptional networks, we reveal a reversal in their relative advantages in noise suppression and rhythm transmission: negative feedback favors post-transcriptional regulation, whereas positive feedback favors transcriptional regulation. Our results reveal how the regulatory pattern fundamentally shapes gene expression fluctuations and dynamic responses.",
    "source": "arxiv"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "slug": "optimization-control",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26171",
@@ -19,14 +19,14 @@
    ],
    "label": "arXiv:2611.26171v1",
    "primary_category": "cs.AI",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Operations research (OR) relies on algorithms that experts tailor to each problem: a new routing, scheduling or network design problem can take weeks of specialist work before it is solved well at scale.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A proposed competition (the FrontierOR Challenge) asks teams to build LLM-agent workflows that automatically design and improve algorithms for many operations research problems, scored in two tracks against a frozen reference solution.",
+    "plain": "Operations research is the field of solving practical planning problems such as routing trucks, scheduling jobs, or designing networks. Today, expert specialists often need weeks to build a good method for each new problem. This text describes a challenge that asks teams to build AI agents that write, test, and improve such solution methods on their own, across many problems at once.",
+    "why": "The text reports that even the strongest model in the FrontierOR benchmark's one-shot test matched the commercial solver Gurobi on only 39% of large instances, so the challenge is a way to measure whether AI agents can handle realistic problem sizes. Whether this leads to practical gains is not shown in the text.",
+    "background": "- Operations research (OR): mathematical methods for making good decisions under constraints, such as routing or scheduling.\n- Optimization: finding the best option (lowest cost or highest value) among many feasible ones.\n- Solver (e.g., Gurobi): widely used commercial software that solves optimization problems; serves here as the baseline.\n- LLM agent: a large language model that writes code, runs it, checks results, and iterates.\n- Benchmark: a fixed set of test problems used to compare methods.\n- Feasibility: a solution must satisfy all the problem's rules; infeasible answers are not counted.\n- Objective ratio: the solution's cost or value divided by a fixed reference value, averaged over hidden test instances.\n- Sandbox: an isolated computing environment with no network access, used to run submitted code safely.",
+    "difficulty": "intermediate",
+    "ai": true
    },
    "abstract": "Operations research (OR) relies on algorithms that experts tailor to each problem: a new routing, scheduling or network design problem can take weeks of specialist work before it is solved well at scale. Large language model (LLM) agents now write, test and improve code, but whether they can design algorithms that scale to realistic instances is open: in the FrontierOR benchmark's one-shot evaluation, the strongest model matches Gurobi, with an objective within 1% of Gurobi's and no slower, on only 39% of the large instances. The FrontierOR Challenge asks teams to build agentic workflows that design, test, and improve algorithms for many optimization problems at once. Stage 1 releases 60 of the benchmark's 180 audited problems, spanning six application categories and five formulation types, in weekly rounds of 15; Stage 2 introduces new problems outside the benchmark, with unseen instances. Two tracks are ranked separately: in the Main track we run the submitted algorithms in a network-isolated sandbox with open-source dependencies only; in the Self-hosted track teams solve the instances on their own machines, with any software, within a timed window. Every solution is checked for feasibility, and a feasible solution scores the ratio of its objective to a frozen known reference, averaged over hidden instances.",
    "source": "arxiv"
@@ -43,16 +43,152 @@
    ],
    "label": "arXiv:2611.26295v1",
    "primary_category": "math.OC",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper replaces the infinite-dimensional belief-space HJB equation for partially observed continuous-time control with a finite-dimensional optimization over parametrized Hamiltonian potentials, uses Gaussian belief updates with adjoint gradients, smooths switching-control Hamiltonians, and certifies policies with a primal-dual information-relaxation bound.",
-    "plain": "Controlling a system when you can only see noisy, partial measurements of it is hard, because the controller must reason about its own uncertainty as well as the system's state. The authors propose a way to design controllers by tuning a small set of adjustable functions of the current state and past measurements, rather than solving an intractable equation over all possible beliefs. They test this on standard textbook-style problems, including cases where the controller also chooses when to take measurements, and pair each policy with a computed lower bound so its quality can be checked.",
-    "why": "The approach trades an intractable exact formulation for a finite, gradient-trainable one, and the primal-dual bound gives a way to judge how close a policy is to optimal. Its relevance to wider practice depends on how well the numerical experiments, which the abstract describes only at a high level, hold up on harder problems; I am not sure how it compares with existing approximate methods.",
-    "background": "['Stochastic optimal control: choosing actions over time to minimize expected cost when the system is driven by random noise.', 'Partial observation: the controller sees only noisy measurements, so it must track a belief (a probability distribution) over the hidden state.', 'Hamilton-Jacobi-Bellman (HJB) equation: the partial differential equation whose solution gives optimal cost; in belief space it is infinite-dimensional and generally unsolvable directly.', 'Hamiltonian: a function combining cost and dynamics whose minimizer gives the control action at each moment.', 'Linear-quadratic-Gaussian (LQG) problems: linear dynamics, quadratic costs and Gaussian noise, a standard benchmark with known solutions.', 'Gaussian belief: a belief summarized by a mean and covariance, as in Kalman filtering.', 'Adjoint method: a backward sweep that computes gradients of a cost with respect to parameters efficiently.', 'Information relaxation: a technique that gives lower bounds on optimal cost by relaxing the requirement that decisions depend only on available information, plus a penalty term.', 'Primal-dual gap: the difference between an achievable policy cost (primal) and a lower bound (dual) certifies how suboptimal the policy can be.']",
-    "difficulty": "research-level",
+    "one_liner": "The paper proposes a finite-dimensional Hamiltonian potential optimization method, with gradients from forward simulation and a backward discrete adjoint sweep, for partially observed continuous-time stochastic optimal control with controlled sensing, using Gaussian beliefs and belief-space information-relaxation lower bounds.",
+    "plain": "The paper studies how to steer a system whose true state is hidden and only seen through noisy, periodic measurements, and where the controller can also decide when and how to measure. Instead of solving an intractable equation over all possible beliefs about the hidden state, the authors optimize a small set of parameterized functions of the current state and observation history. They test this on linear-quadratic-Gaussian examples, controlled sensing with and without bounds, an obstacle penalty, and a discontinuous control switch that they smooth so gradient methods can be used.</plain>\n<parameter name=\"why\">Partially observed control with sensing decisions is hard because the belief-space equation is infinite-dimensional, so a tractable finite-dimensional route with a computable performance check is of practical interest for estimation-and-control problems. The text does not establish how the method compares with existing approaches or how well it scales beyond the listed examples.</why>\n<parameter name=\"background\">- Stochastic optimal control: choosing actions over time under random disturbances to minimize expected cost.\n- Partial observation: the true state is not directly seen; one maintains a \"belief,\" a probability distribution over possible states, updated by noisy measurements.\n- Hamilton-Jacobi-Bellman equation: the partial differential equation whose solution gives the optimal cost; over beliefs it is infinite-dimensional.\n- Hamiltonian: a function combining cost and dynamics whose minimizer gives the control action.\n- Controlled sensing: the controller also chooses when or how to take measurements, which may carry a cost.\n- Linear-quadratic-Gaussian (LQG) problems: linear dynamics, quadratic costs, Gaussian noise; a standard benchmark with known solutions.\n- Gaussian belief: a bell-shaped uncertainty described by a mean and covariance.\n- Adjoint method: a way to compute gradients of a cost with respect to parameters by running a sweep backward in time.\n- Information relaxation: a technique that gives a lower bound on the best achievable cost by giving the controller extra information and penalizing that advantage.\n- Primal-dual gap: the difference between an achievable policy cost and a lower bound, used to certify how close a policy is to optimal.</background>\n<parameter name=\"difficulty\">research-level",
+    "why": "",
+    "background": "",
+    "difficulty": "",
     "ai": true
    },
    "abstract": "We develop a Hamiltonian potential optimization method for partially observed stochastic optimal control with continuous-time state dynamics and discrete-time noisy observations, including controlled sensing. Rather than solving the infinite-dimensional belief-space Hamilton-Jacobi-Bellman equation, we optimize over parametrized potentials depending on the state variable and the available observation history. The associated Hamiltonian minimizers induce admissible continuous controls and, when observations are controlled, sensing decisions. An extended Hamiltonian incorporating a cost multiplier provides a common representation of the induced belief dynamics and running and observation costs. This construction yields a finite-dimensional optimization problem, with gradients computed by a forward simulation and a backward discrete adjoint sweep. The numerical implementation uses Gaussian beliefs represented by conditional means and covariances. For nonsmooth Hamiltonians arising from switching controls, we introduce smooth Hamiltonian approximations to enable gradient-based optimization. To assess the resulting policies, we develop belief-space information relaxation lower bounds. A separate optimization of the dual test functional provides a lower bound which, paired with the admissible policy cost, yields an a posteriori primal-dual diagnostic. Numerical experiments investigate scalar and multidimensional linear-quadratic-Gaussian problems, controlled sensing with and without control bounds, a nonquadratic obstacle penalty, and Hamiltonian smoothing for a discontinuous control selector.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24151",
+   "title": "Nearly Tight Almost Sure Convergence Rates for the Last iterate of SGD",
+   "url": "https://arxiv.org/abs/2611.24151v1",
+   "authors": [
+    "Weiming Ou",
+    "Andrea Paudice",
+    "Xiao Wang"
+   ],
+   "label": "arXiv:2611.24151v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "This paper proves almost sure last-iterate convergence rates for SGD on convex objectives, with rates of k^{-1/3} for smooth problems with a stationary minimizer and k^{-1/4} otherwise (up to polylog factors), extends the latter to nonsmooth convex problems, and gives matching lower bounds for the exponents.",
+    "plain": "The paper studies a standard method for finding the lowest point of a function when only noisy estimates of its slope are available, as in training many machine learning models. It asks how close the final point produced by the method gets to the best possible answer, and how that gap shrinks as the number of steps grows. The authors show the gap shrinks at specific speeds, about k to the power -1/3 for smooth problems and -1/4 in other cases (ignoring logarithmic factors), and they show these speeds cannot be improved in general.",
+    "why": "Results of this kind pin down how many steps a noisy optimizer needs, and the matching lower bounds indicate the rates are tight rather than just proven upper bounds. The text does not discuss specific applications, so its practical impact is unclear from the abstract alone.",
+    "background": "- Gradient descent: repeatedly nudging a guess downhill along the slope of a function to find its minimum.\n- Stochastic gradient descent (SGD): the same method using noisy slope estimates, typical in machine learning training.\n- Convex function: a bowl-shaped function with one overall low region, which makes minimization well-behaved.\n- Smooth vs. nonsmooth: smooth functions have no sharp corners or kinks; nonsmooth ones do.\n- Last iterate: the final point the algorithm outputs, as opposed to an average over the run.\n- Almost sure convergence: convergence that holds for essentially every random run, not just on average.\n- Convergence rate and exponent: how fast the error shrinks as steps k grow; k^{-1/3} means error scales like one over the cube root of k.\n- Polylogarithmic factors: extra slowly growing log terms ignored in the rate.\n- Lower bound: a proof that no method can do better than a given rate on a problem class.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the almost sure convergence of the last-iterate optimization error of Stochastic (sub)Gradient Descent (SGD) for convex objectives. For smooth objectives, we establish convergence rates of order $k^{-1/3}$ when a stationary minimizer exists, and $k^{-1/4}$ otherwise, up to polylogarithmic factors, where $k$ denotes the iteration counter. We further show that the latter rate extends to nonsmooth convex objectives. All these rates are achieved by deterministic, anytime stepsize policies. Finally, we establish matching lower bounds showing that the exponents $-1/3$ and $-1/4$ are optimal, up to polylogarithmic factors, for the corresponding problem classes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24454",
+   "title": "Conditional Mean-Field Type Linear Quadratic Optimal Control Problem for Regime-Switching Diffusions with Indefinite Coefficients",
+   "url": "https://arxiv.org/abs/2611.24454v1",
+   "authors": [
+    "Zhongbin Guo",
+    "Guangchen Wang",
+    "Shupeng Wang"
+   ],
+   "label": "arXiv:2611.24454v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper solves a conditional mean-field type linear-quadratic optimal control problem for regime-switching diffusions with indefinite weights, using an equivalent-cost-functional transformation and coupled Riccati and backward SDE systems, and applies it to conditional mean-variance portfolio selection with exogenous liability.",
+    "plain": "The paper studies how to steer a randomly evolving system, whose dynamics switch between regimes according to a hidden Markov chain, so that a cost tied to averages of the state and control is minimized. Under standard conditions the authors show the best strategy exists, is unique, and can be written as a feedback rule. For cases where the cost weights are \"indefinite\" (not all of one sign), they use a change of cost function to reduce the problem to the standard case.",
+    "why": "The method is offered as a way to establish solvability of coupled forward-backward equations that fail certain monotonicity conditions, which the text presents as the main technical gain. The worked application to portfolio selection with a liability suggests relevance to finance and insurance, though the text does not report numerical examples or comparisons with other methods.",
+    "background": "- Optimal control: choosing a decision rule over time to minimize a cost.\n- Linear-quadratic problem: linear dynamics and a cost that is quadratic (squared-error-like) in state and control.\n- Regime-switching: the system's parameters change depending on a hidden Markov chain that jumps between discrete states.\n- Mean-field type: the dynamics and cost depend on averages (expectations) of the state and control, here conditioned on the chain's history.\n- Riccati equations: matrix equations that give the optimal feedback gain.\n- Backward stochastic differential equations: equations solved backward in time from a terminal condition, used to describe optimal adjoint variables.\n- Indefinite weights: cost weights that are not all positive or all negative, which breaks standard convexity arguments.\n- Mean-variance portfolio: an investment problem balancing expected return against variance of wealth.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study a conditional mean-field type linear quadratic optimal control problem for regime-switching diffusions with indefinite weights. The dynamics and cost depend on conditional expectations of the state and control given the history of the Markov chain. Under standard definiteness conditions, we establish the existence and uniqueness of the optimal control and derive its feedback representation and optimal cost through two sets of coupled Riccati equations and a linear backward stochastic differential equation driven by the Markov chain. To treat the case of indefinite weights, we extend the equivalent cost functional approach to this setting using regime-dependent quadratic adjustments for the conditional mean of the state and its deviation from that mean. When the transformed weights in the equivalent cost functional satisfy standard definiteness conditions, this construction yields unique solvability of the original Hamiltonian system and a feedback representation of the unique optimal control. The proposed results also provide an effective method for establishing the solvability of fully coupled linear conditional mean-field forward-backward stochastic differential equations that do not satisfy certain existing monotonicity conditions. We further apply the results to conditional mean-variance portfolio selection with exogenous liability in an incomplete regime-switching market and derive the optimal investment strategy.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23098",
+   "title": "Sparse optimal control for a class of infinite-dimensional bilinear systems: optimality conditions and uniqueness",
+   "url": "https://arxiv.org/abs/2611.23098v1",
+   "authors": [
+    "Redouane El Mezegueldy",
+    "Zakarya Dardour"
+   ],
+   "label": "arXiv:2611.23098v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Existence, first- and second-order optimality conditions, and a uniqueness result for L1-sparse (in time) optimal controls of infinite-dimensional bilinear evolution equations, with a bilinear heat equation as the numerical test case.",
+    "plain": "The paper studies how to steer a system that evolves over time, such as a heat distribution, by switching a single control strength up and down, while using as few switching moments as possible. The authors prove that an optimal control exists and characterize it: it takes the form of a thresholded \"switching function,\" whose behavior is tied to a commutator of the system's operators. They also show that the sparsity-promoting penalty helps guarantee uniqueness of the optimal control, and test the results on a bilinear heat equation.",
+    "why": "Sparse control, which aims to act only at a few times, is useful when each action is costly, and the paper gives a structural result (no temporally sparse controls for commuting problems with terminal cost) and a uniqueness statement that the text presents as new for stable problems steered to zero. The text does not indicate specific applications beyond the heat-equation experiments, so broader impact is uncertain.",
+    "background": "- Optimal control: choosing an input over time to minimize a cost that trades off tracking a target against control effort.\n- Evolution equation / C_0-semigroup: a partial differential equation viewed as a system that moves a state forward in time in an infinite-dimensional space (e.g., a temperature profile).\n- Bilinear control: the control multiplies the state, so its effect depends on the current state.\n- L1 penalty: a cost proportional to the total size of the control, which tends to make the control exactly zero on long stretches (sparsity in time).\n- Switching function and thresholding: a derived signal whose sign or size determines when the optimal control is zero or active.\n- Commutator: a measure of how much the order of two operations matters; zero for commuting operations.\n- Second-order sufficient conditions: tests using curvature information that confirm a candidate solution is a genuine local minimum.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study optimal control of an evolution equation in which a scalar control multiplies a bounded operator acting on the state, with free dynamics given by a $C_0$-semigroup. The cost combines tracking terms, a quadratic control cost and an $L^1$ term promoting sparsity in time. We prove existence, derive optimality conditions, and show that optimal controls are thresholded functions of a switching function whose derivative is governed by the commutator of the drift and control operators. Consequently, commuting problems with a terminal cost admit no temporally sparse controls. The $L^1$ term also matters for uniqueness: two distinct controls satisfying the optimality conditions differ on a set of measure bounded from below, contained in the union of their supports, which yields, for the first time, uniqueness for every horizon in stable problems steered to zero. Second-order sufficient conditions and experiments on a bilinear heat equation complete the study.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23221",
+   "title": "An inexact stochastic variance-reduced gradient method for constrained convex finite-sum optimization",
+   "url": "https://arxiv.org/abs/2611.23221v1",
+   "authors": [
+    "Zhaosong Lu",
+    "Yifeng Xiao"
+   ],
+   "label": "arXiv:2611.23221v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "An inexact stochastic variance-reduced gradient method is proposed for constrained convex finite-sum problems, targeting ε-surely feasible stochastic optimal solutions (constraint violation deterministically bounded by ε, expected optimality gap at most ε) with lower first-order oracle complexity than a prior penalty-based method.",
+    "plain": "This paper looks at optimization problems where many objective terms are averaged together and some rules must be strictly obeyed, such as limits in engineering design. The authors aim for an answer that always stays within those rules to a tolerance ε, while being near-optimal in expectation. They propose a new method based on variance-reduced gradient steps that needs fewer gradient evaluations than a recent comparable approach, according to the stated complexity bounds.",
+    "why": "Requiring that constraints hold for every returned answer, not just on average, matters in settings where violations are costly. The paper also states that, for a single objective, the method becomes a deterministic first-order method for convex conic problems that can be cheaper when constraint gradients and cone projections are cheap; the text gives only preliminary numerical results, so practical impact is not yet established.",
+    "background": "- Convex optimization: minimizing a bowl-shaped (convex) function, where local search finds the global best.\n- Finite-sum objective: the function is an average of many smaller functions, as in machine learning training on a dataset.\n- Stochastic gradient methods: algorithms that take steps using gradients estimated from random samples of the terms.\n- Variance reduction (SVRG): a technique that corrects noisy sampled gradients so the steps become more accurate over time.\n- Penalty method: a way to handle constraints by adding a cost for violating them.\n- First-order oracle complexity: the number of gradient (slope) evaluations needed to reach a target accuracy.\n- Conic optimization: problems with constraints that require a solution to lie inside a cone-shaped set.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we study a class of constrained convex finite-sum optimization problems. In many practical applications, all or some of the constraints are hard constraints that represent imperative requirements. Consequently, any desirable approximate solution must (nearly) satisfy these constraints. Motivated by this, we focus on computing an $ε$-$surely\\ feasible\\ stochastic\\ optimal$ ($ε$-SFSO) solution, in which the constraint violation is deterministically bounded by $ε$, and the expected optimality gap is at most $ε$. While a recently proposed stochastic variance-reduced first-order penalty method can compute an $ε$-SFSO solution, there remains a significant gap between its first-order oracle complexity for computing an $ε$-SFSO solution and that for computing an $ε$-$expected\\ feasible\\ stochastic\\ optimal$ solution, where both the expected constraint violation and the expected optimality gap are bounded by $ε$. To narrow this gap, we propose an inexact stochastic variance-reduced gradient (SVRG) method that significantly improves the previously best-known first-order oracle complexity for computing an $ε$-SFSO solution. Furthermore, when the objective consists of a single function, the proposed method reduces to a novel deterministic first-order method for solving standard convex conic optimization. It achieves a significantly lower gradient evaluation complexity with respect to the objective function compared to existing methods, and can outperform them when computing constraint gradients and projections onto the associated cone is cheaper than evaluating the objective gradient. Preliminary numerical results are presented to illustrate the performance of the proposed method.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21611",
+   "title": "Limited-Memory First-Order Methods: Identification, Reconstruction, $H$-Duality and Application to Optimized Methods",
+   "url": "https://arxiv.org/abs/2611.21611v1",
+   "authors": [
+    "Pierre Vernimmen",
+    "François Glineur",
+    "Baptiste Goujaud",
+    "Adrien B. Taylor"
+   ],
+   "label": "arXiv:2611.21611v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper characterizes the minimum memory (number of running sums) needed to implement fixed-coefficient linear-span first-order methods for smooth strongly convex minimization, gives a reconstruction algorithm, studies the H-duality operation on such methods, and applies these tools to derive two memory-efficient optimal methods, TMM-GD and ITEM-GG.",
+    "plain": "Gradient methods are recipes for finding the lowest point of a smooth landscape by repeatedly stepping along slope information. Many such recipes look like they need to remember every past slope, but the paper asks how few stored summary vectors are really needed. It shows the minimum number of stored running totals equals a rank quantity of the method's coefficient table, and uses this to rebuild two known optimized methods using only one stored vector.",
+    "why": "Reducing the memory a method needs matters for large problems where storing all past gradients is costly, and the results give a precise test of how much memory a method truly requires. The text claims TMM-GD is minimax optimal at every horizon and ITEM-GG is the unique optimal nonadaptive method for the final gradient norm, but the stated results are as summarized here and I have not checked the proofs.",
+    "background": "- First-order method: an iterative algorithm that uses only gradients (slopes) of a function, not second derivatives.\n- Linear-span method: each new step is a fixed weighted combination of the starting point and all gradients seen so far.\n- Coefficient matrix: a lower-triangular table listing those weights; its structure determines the method.\n- Running sum / auxiliary vector: a stored summary that lets a method update without keeping every past gradient.\n- Matrix rank: the number of independent rows or columns; here it sets the minimum memory.\n- Smooth strongly convex functions: a standard test class with bounded curvature and a unique lowest point.\n- Minimax optimal: the method has the best worst-case guarantee over the function class for a given number of steps.\n- Horizon: the fixed number of iterations the method is designed for.\n- H-dual: a transformation reflecting the coefficient table across its anti-diagonal, which preserves memory.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In general, linear-span first-order methods add at every iteration a combination of all observed gradients to the previous iterate. However, many methods of interest can be implemented in a way that requires storing only a few auxiliary vectors, instead of all past gradients. We call such methods limited-memory first-order methods. A given fixed-coefficient first-order method can be described by a lower triangular coefficient matrix, which expresses each step as a combination of previous gradients. We show that the minimum number of running sums required to implement a method is equal to the minimum rank of a completion of the strict lower triangular part of its coefficient matrix, and propose a reconstruction algorithm. Moreover, taking the $H$-dual of a method, which reflects the coefficient matrix across its anti-diagonal, preserves its memory and translates into a permutation and time-reversal on the coefficients of the running sum recurrences. We apply our results to two optimized first-order methods for smooth strongly convex functions. First, our reconstruction applied to a method numerically designed by Shu and Wang reveals a recurrence with one auxiliary vector, which is related to the Triple Momentum Method (TMM) of Van Scoy, Freeman and Lynch with a particular initialization. We prove that the reconstructed method, called TMM-GD, is minimax optimal at every horizon for the final distance to the minimizer relative to the initial gradient norm. Second, the Information-Theoretic Exact Method (ITEM) of Taylor and Drori, optimal for the final distance relative to the initial one, is known to be memory one. We give an explicit recurrence with one auxiliary vector for its $H$-dual, called ITEM-GG, and prove that ITEM-GG is the unique minimax optimal nonadaptive linear-span method for the final gradient norm relative to the initial one.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.17736",
+   "title": "High-probability convergence of adaptive, proximal, and clipped Adam-type methods for nonconvex stochastic optimization",
+   "url": "https://arxiv.org/abs/2611.17736v1",
+   "authors": [
+    "Xiaopeng Zhu",
+    "Zhongyi Huang"
+   ],
+   "label": "arXiv:2611.17736v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A high-probability convergence analysis for adaptive, proximal, and clipped Adam-type stochastic gradient methods on smooth nonconvex problems, including Polyak-Lojasiewicz objectives, heavy-tailed noise via truncation, and an application to stochastic inverse problems in elasticity.",
+    "plain": "This paper studies the standard training recipes used to fit models when the gradient signal is noisy, such as Adam-style methods that rescale each step. It proves guarantees that hold with high probability, not just on average, and extends them to projected, proximal, and clipped variants and to noise with heavy tails. The authors also check the predicted scaling in numerical experiments, including an elasticity inverse problem.",
+    "why": "Guarantees that hold with high probability tell you how reliable a single run is, which matters when methods are used once rather than averaged over many runs. The text does not show how large the practical impact will be, and its application is limited to one class of inverse problems.",
+    "background": "- Stochastic gradient descent: an iterative method that updates parameters using noisy estimates of the slope of the objective.\n- Nonconvex objective: a function with many local minima and saddle points, so the goal is to reach a stationary point rather than a guaranteed global minimum.\n- Adam-type methods: gradient methods that adapt the step size per coordinate using running averages of past gradients and their squares.\n- Clipping and normalization: limiting the size of each update to control the effect of rare, very large gradient errors.\n- High-probability bound: a guarantee that the error is small except with a small failure probability delta, with the dependence on delta quantified (here logarithmic in 1/delta).\n- Sub-Gaussian and heavy-tailed noise: noise whose tails decay fast (sub-Gaussian) versus slowly (heavy-tailed), which is harder to control.\n- Concentration inequalities (Freedman, Bernstein): tools that bound how far sums of random terms stray from their expected value.\n- Polyak-Lojasiewicz condition: a gradient-size condition that guarantees convergence to a global minimum without convexity.\n- Proximal and projected updates: steps that handle constraints or non-smooth penalty terms.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper develops a unified high-probability analysis of adaptive, proximal, and clipped first-order methods for nonconvex stochastic optimization. For a smooth objective whose stochastic gradient error has sub-Gaussian norm, the normalized adaptive gradient method attains the standard stochastic nonconvex complexity of the square root of the number of iterations, with an additional logarithmic dependence on the inverse confidence level that is inversely proportional to the number of iterations. The proof uses an adaptive descent decomposition together with Freedman and Bernstein concentration inequalities. The same guarantee is established for the full adaptive moment method under an explicit momentum-alignment condition. The analysis is extended to projected and proximal updates through a stationarity measure based on the subdifferential distance, to objectives satisfying the Polyak-Lojasiewicz condition, and to heavy-tailed noise through truncation. The framework is applied to stochastic inverse problems in elasticity, and numerical experiments illustrate the theoretical scaling and the practical behavior of the methods.",
    "source": "arxiv"
   }
  ]

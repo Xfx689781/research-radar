@@ -1,50 +1,5 @@
 {
  "slug": "differential-geometry",
- "updated": "2026-11-22",
- "papers": [
-  {
-   "uid": "arxiv:2611.26238",
-   "title": "Willmore stability of minimal surfaces in the n-sphere",
-   "url": "https://arxiv.org/abs/2611.26238v1",
-   "authors": [
-    "Rob Kusner",
-    "Peng Wang"
-   ],
-   "label": "arXiv:2611.26238v1",
-   "primary_category": "math.DG",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We prove that the Lawson minimal surface $ξ_{g,1}$ in $S^3$ is strongly stable for the Willmore bending energy $W$ and remains strongly $W$-stable in $S^n$ for every $n \\geq4$; our proof starts with a new lower bound on the area-index of $ξ_{m,k}$ for $m\\geq k>1$.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We prove that the Lawson minimal surface $ξ_{g,1}$ in $S^3$ is strongly stable for the Willmore bending energy $W$ and remains strongly $W$-stable in $S^n$ for every $n \\geq4$; our proof starts with a new lower bound on the area-index of $ξ_{m,k}$ for $m\\geq k>1$. Next we observe that each of the $ξ_{m,k}$ and the Karcher-Pinkall-Sterling minimal surfaces in $S^3$, as well as the equilateral minimal torus in $S^5$, is the unique $W$-minimizer in its conformal class, up to Möbius transformations of $S^n$. Finally, we show that although the equilateral minimal torus is $W$-stable in $S^n$ for every $n \\geq5$, it is neither strongly $W$-stable nor a local $W$-minimizer: it has a 2-dimensional space of $W$-Jacobi fields on which almost everywhere the third-variation of $W$ is nonzero.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25699",
-   "title": "Displaceability of monotone Lagrangians in $\\mathbb{C}P^3(\\sqrt{2})$ and $Q^4(\\sqrt{2})$",
-   "url": "https://arxiv.org/abs/2611.25699v1",
-   "authors": [
-    "Han Lou",
-    "Shuo Zhang"
-   ],
-   "label": "arXiv:2611.25699v1",
-   "primary_category": "math.SG",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We show that the generalized Polterovich submanifold $L_{0, 2}^P$ in $\\mathbb{C}P^3(\\sqrt{2})$ and the Chekanov-Oakley-Usher Lagrangian $L_{1, 2}^{Q, \\mathrm{Ch}}$ in the quadric $Q^4(\\sqrt{2})$ are displaceable.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We show that the generalized Polterovich submanifold $L_{0, 2}^P$ in $\\mathbb{C}P^3(\\sqrt{2})$ and the Chekanov-Oakley-Usher Lagrangian $L_{1, 2}^{Q, \\mathrm{Ch}}$ in the quadric $Q^4(\\sqrt{2})$ are displaceable. Since $L_{0, 2}^P$ and $L_{1, 2}^{Q, \\mathrm{Ch}}$ are in the zero level set of the moment maps of the $\\mathrm{SO}(3)$-actions on $\\mathbb{C}P^3(\\sqrt{2})$ and $Q^4(\\sqrt{2})$, the main idea is to construct Hamiltonian diffeomorphisms mapping $L_{0, 2}^P$ and $L_{1, 2}^{Q, \\mathrm{Ch}}$ to nonzero level sets of the moment maps.",
-   "source": "arxiv"
-  }
- ]
+ "updated": "2026-11-23",
+ "papers": []
 }

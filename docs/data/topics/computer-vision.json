@@ -1,6 +1,6 @@
 {
  "slug": "computer-vision",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26262",
@@ -13,14 +13,14 @@
    ],
    "label": "arXiv:2611.26262v1",
    "primary_category": "cs.CV",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Analogue gauges remain prevalent in manufacturing industries for measuring physical quantities, yet manual monitoring by operators introduces human error and operational inefficiency.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper compares three hybrid pipelines (OpenCV with Scikit-Image, OpenCV with ResNet18, OpenCV with VGG19) for automatically reading 0-10 BAR pressure gauges from images, using a 1,848-image dataset built from web scraping, synthetic generation, and augmentation.",
+    "plain": "Many factories still use dial-style pressure gauges that people read by eye, which is slow and prone to mistakes. This paper tests whether a computer can read these dials from photos, comparing three methods on a set of pressure gauge images. The reported result is that a deep learning model called ResNet18 reached 97.3% accuracy, while the other two methods reached about 64%.",
+    "why": "Automatic reading of old analogue instruments could let factories monitor equipment without retrofitting new sensors, which is a practical concern for industrial automation. The text does not say how the accuracy was measured, how the images were split for testing, or how well the results hold for real plant gauges, so the size of the gain should be treated as provisional.",
+    "background": "- Analogue gauge: a dial with a needle that shows a measured value, such as pressure in BAR (a unit of pressure).\n- Computer vision: methods that let computers extract information from images.\n- OpenCV and Scikit-Image: standard software libraries for image processing; here they are used for traditional, hand-designed steps.\n- Deep learning: training a neural network on many examples instead of writing rules by hand.\n- ResNet18 and VGG19: two named neural network designs; ResNet uses \"residual\" shortcut connections, which the authors credit for their result.\n- Data augmentation: creating extra training images by altering existing ones (rotating, adjusting brightness, etc.).\n- Industry 5.0: a term for factory strategies that combine automation with human-centred goals.",
+    "difficulty": "intermediate",
+    "ai": true
    },
    "abstract": "Analogue gauges remain prevalent in manufacturing industries for measuring physical quantities, yet manual monitoring by operators introduces human error and operational inefficiency. This research developed and evaluated an automated gauge reading system using computer vision and deep learning techniques. Three hybrid approaches were implemented and compared: OpenCV with Scikit-Image (traditional computer vision), OpenCV with ResNet18, and OpenCV with VGG19 (deep learning approaches). A comprehensive dataset of 1,848 pressure gauge images (0-10 BAR range) was curated through web scraping, synthetic generation, and augmentation techniques. The experimental results demonstrate that ResNet18 significantly outperforms the alternatives, achieving an accuracy of 97.3%, compared to VGG19's 64.4% and Scikit-Image's 63.8%. The study validates the effectiveness of residual learning architectures for industrial gauge digitization, providing a robust foundation for Industry 5.0 automation applications.",
    "source": "arxiv"
@@ -39,16 +39,119 @@
    ],
    "label": "arXiv:2611.25847v1",
    "primary_category": "cs.CV",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "TrajCal is a training-free method that uses scatter search to find one fixed timestep schedule for few-step flow-matching samplers, selected by how closely the few-step output matches a many-step reference, and reuses it across new inputs and image styles.",
-    "plain": "Modern image and video generators build their output through many small refinement steps, and each step runs a large neural network, which is slow. Faster versions take fewer steps but can distort the result compared with the slow, full version. The authors propose TrajCal, which searches for a good fixed schedule of step timings, scored by how well the quick output matches the slow reference, and reports better agreement at low step budgets while keeping visual quality competitive.",
-    "why": "Cutting the cost of generation without retraining the model is a practical goal for image and video tools. The abstract does not give the baselines, metrics, or budgets in detail, so its scale of gain is hard to judge from this text alone; the method may also be relevant to other few-step samplers, but the abstract does not claim that.",
-    "background": "['Flow matching: a generative method that turns noise into an image by following a learned velocity field over a sequence of steps.', 'Sampling steps and schedules: the number and timing of steps set the trade-off between speed and output quality; a schedule is the list of those timings.', 'Few-step sampling: generating with far fewer network evaluations than the standard many-step process, which can introduce errors.', 'Reference fidelity: how closely a fast output matches the output of a slow many-step reference run on the same input.', 'Scatter search: a population-based metaheuristic that combines and modifies candidate solutions to explore hard optimization problems.', 'Training-free: the method adjusts how sampling is done and does not retrain the generative model.']",
+    "one_liner": "TrajCal is a training-free method that uses scatter search to find one fixed time schedule for few-step flow-matching sampling, chosen to keep outputs closer to a many-step reference for image and video generation.",
+    "plain": "Modern AI image and video generators build their output by taking many small steps, and each step runs a large neural network, which is slow. This paper looks at how to take fewer steps without the result drifting away from what the slow, full-length process would produce. The authors search for a good fixed set of step timings, reuse it on new inputs, and report higher fidelity to the reference at low step budgets.",
+    "why": "Faster generation at similar quality matters for making these models cheaper to run. The text reports gains against baselines, but only in the abstract, so the size and consistency of those gains are not yet clear from this summary alone.",
+    "background": "- Flow matching: a way of training generative models that turns noise into an image or video by following a learned path over time.\n- Sampling steps: generation solves this path in many small increments; each increment needs a full neural network pass, so fewer steps means less compute.\n- Time schedule: the list of time points at which the steps are taken; changing it changes the result without retraining.\n- Few-step sampling: generating with a small number of steps, which is fast but can distort the output.\n- Scatter search: a general optimization method that combines and refines a population of candidate solutions.\n- Fidelity to a reference: how closely the fast output matches the output of a slow, many-step run.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Flow matching enables high-quality image and video generation, but its iterative sampling process requires repeated evaluations of large neural networks. Existing few-step methods can distort the output and reduce its agreement with a many-step reference. We propose TrajCal, a training-free calibration framework for few-step sampling. Based on scatter search, a well-established metaheuristic for difficult optimization problems, TrajCal starts with diverse seed schedules, deforms and combines these candidates, and selects one fixed schedule by final output fidelity for reuse on new inputs. For both image and video generation, TrajCal achieves higher reference fidelity than all compared baselines at low evaluation budgets while maintaining competitive visual quality. The search is effective even with randomly generated seeds, while trajectory-based seeds further improve fidelity. For cross-style generalization, photography-calibrated schedules also improve fidelity on unseen image styles.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24184",
+   "title": "VideoACE: Benchmarking Agentic Video Understanding through High-Frame-Rate Actions",
+   "url": "https://arxiv.org/abs/2611.24184v1",
+   "authors": [
+    "Luoyuan Zhang",
+    "Xuanyu Zheng",
+    "Yancheng Long",
+    "Haoyang Xu",
+    "Bin Wen",
+    "Tingting Gao"
+   ],
+   "label": "arXiv:2611.24184v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "VideoACE is a benchmark of 1,000 multiple-choice questions on fine-grained high-frame-rate action videos, designed to test whether video models improve when they can actively inspect clips, adjust sampling, and revise answers under simulated user feedback.",
+    "plain": "Most video AI systems are tested by watching a clip once and answering a question. This paper proposes a test where the model can instead go back, zoom in on particular moments, look at finer detail, and change its answer after hints from a simulated user. The authors tested five models under three setups (one pass, using tools on its own, and using tools with user feedback) to see how each one gathers evidence and whether it makes use of the extra chances to look again.",
+    "why": "It shifts video evaluation from a fixed one-time view toward measuring how well a model uses interaction, which matters as video AI is increasingly deployed in agent-like roles. The text reports patterns across five models but gives no summary of how large the differences were, so its practical weight is still for specialists to judge.",
+    "background": "- Agentic video understanding: a model that can take actions, such as replaying or zooming into a video, instead of only reading it once.\n- Frame rate: how many still images per second make up a video; high-frame-rate footage has fast, subtle motion.\n- Benchmark: a standard test set used to compare models.\n- Temporal evidence annotations: labels marking which moments in the video show the answer.\n- User simulator: a scripted stand-in for a human who gives hints or feedback.\n- Answer leakage: when a hint accidentally gives away the correct answer; the authors say their hints were screened for this.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Agentic video understanding requires models to actively interact with video environments to gather evidence and form judgments. Evaluating this capability therefore requires assessing whether models can translate opportunities for interaction into better understanding. We introduce VideoACE, a benchmark for assessing video understanding under conditions that support sustained interaction. We focus on high-frame-rate action videos, where rapid, subtle changes make targeted observation especially valuable. The benchmark comprises 1,000 multiple-choice questions spanning six categories of fine-grained action understanding, accompanied by temporal evidence annotations and user hints screened for answer leakage. Its evaluation environment combines video inspection tools with a user simulator, allowing models to adjust temporal coverage, sampling density, and spatial detail, and to revisit evidence and revise their judgments under simulated user feedback. We evaluate single-pass observation, autonomous tool use, and tool use combined with user feedback to examine how effectively models exploit these opportunities. Evaluation of five models reveals distinct patterns in how they acquire evidence and respond to opportunities for further interaction. These findings establish VideoACE as a testbed for examining agentic video understanding beyond performance under a fixed observation setting.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23954",
+   "title": "SimplePro: A Simple Baseline for Proactive Video Understanding",
+   "url": "https://arxiv.org/abs/2611.23954v1",
+   "authors": [
+    "Yilin Wang",
+    "Xiangxi Zheng",
+    "Dongxing Mao",
+    "Linjie Li",
+    "Zhengyuan Yang",
+    "Alex Jinpeng Wang"
+   ],
+   "label": "arXiv:2611.23954v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "SimplePro is a training-free baseline that prompts a frozen 4B vision-language model with explicit reporting rules, recent high-resolution frames, bounded history, and prior answers to decide when to respond in streaming video, reporting gains over specialized proactive systems on three benchmarks.",
+    "plain": "The paper looks at AI systems that watch a video as it unfolds and must decide on their own when to say something and when to stay quiet. The authors show that a general-purpose vision-language model, used without any retraining, can do this well if it is given clear rules about when to report and a structured memory of what it has already seen and said. They call the resulting method SimplePro and report that it beats more specialized systems on three test suites.",
+    "why": "Most proactive video systems rely on task-specific training or extra trigger modules, so a strong no-training baseline is useful for judging whether those added parts are needed. Its relevance beyond these benchmarks, such as to live assistants or monitoring tools, is not addressed in the text.",
+    "background": "- Vision-language model (VLM): an AI model that takes images or video frames plus text and produces text.\n- Proactive video understanding: the model must choose when to speak during a live video, not only answer when asked.\n- Streaming setting: video arrives frame by frame, so the model cannot see the future.\n- Training-free / frozen model: the model's weights are not updated; only the prompting and context handling are designed.\n- Benchmarks named: OVO-Bench, StreamingBench-PO, ProactiveVideoQA (evaluation suites for this task).\n- Backbone size: the number of parameters in the underlying model (2B to 32B here).\n- Duplicate filtering: repeated identical answers are suppressed while raw outputs remain as context.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Proactive video understanding requires vision-language models (VLMs) to decide not only what to answer as a video unfolds, but also when newly arrived evidence warrants a response and when to remain silent. Although modern VLMs excel at offline long-video understanding, they struggle in proactive streaming settings, leading prior work to introduce task-specific reinforcement learning or auxiliary triggering modules. We find that explicit reporting rules and structured streaming context substantially improve a frozen VLM's proactive response performance. We exploit this observation to build SIMPLEPRO, a training-free baseline for proactive video understanding. At each decision step, the model combines recent high-resolution frames, bounded historical observations, and prior answer records to determine whether new information warrants a response and, when needed, generate a concise answer. The system then filters consecutive duplicate answers while retaining the raw outputs as context for subsequent decisions. Without any parameter updates or auxiliary triggers, SIMPLEPRO with a 4B backbone consistently outperforms specialized proactive systems across OVO-Bench, StreamingBench-PO, and ProactiveVideoQA. SIMPLEPRO shows overall performance gains as backbone size increases from 2B to 32B. We hope this simple yet effective method will serve as a strong baseline for proactive video understanding, and we will release our code and inference pipeline to support future research.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23007",
+   "title": "Tracking Ethological Behaviors of Broiler Chickens Through Computer Vision (YoloV11) Using an Android Mobile Device",
+   "url": "https://arxiv.org/abs/2611.23007v1",
+   "authors": [
+    "Ryan Davi Oliveira de Meneses",
+    "Glauber da Rocha Balthazar"
+   ],
+   "label": "arXiv:2611.23007v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A YOLOv11 object-detection model was trained on annotated public videos to classify broiler chicken postures (sitting, standing, feeding) and deployed in an Android app via TFLite conversion, with per-class accuracy reported on unseen images.",
+    "plain": "Farmers need to know how chickens are behaving, since changes in posture or eating can signal welfare problems, but watching thousands of birds by eye is impractical. This paper describes training a computer vision model to recognize three behaviors from videos (sitting, standing, and feeding) and running it on a phone. The model did well on sitting, moderately on standing, and worst on feeding, which is the most movement-based behavior.",
+    "why": "Automated, low-cost monitoring of animal behavior could support earlier welfare checks on farms, which is the stated motivation. The text is limited, though: it reports per-class scores and small-sample accuracies but gives little detail on dataset size, test conditions, or how well results would hold on commercial farms, so the practical value is still unproven.",
+    "background": "- Object detection models (such as YOLO) find and label objects in images or video frames.\n- AP (average precision) and precision/recall are standard scores: precision is how often a detection is correct, recall is how many true cases are found.\n- Annotation means humans labeling example images so the model can learn from them.\n- TFLite is a format that lets trained models run on phones.\n- Ethology is the scientific study of animal behavior; broiler chickens are meat-production birds.\n- Precision farming uses sensors and data to manage livestock and crops more finely.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "This study developed and evaluated a computer vision model for automated ethological behavior classification of broiler chickens in climate-controlled poultry houses. Using publicly available videos preprocessed and manually annotated into three classes (sitting, standing, and feeding), the YOLOv11 model was trained and deployed on an Android application via TFLite conversion. Exploratory analysis ensured dataset consistency and visual quality, while evaluation showed class-dependent performance: higher robustness for static postures (sitting, AP=0.531; precision=100%) and lower accuracy for dynamic behaviors (feeding, AP=0.292; recall=0.20). Tests with unseen images demonstrated significant improvements, achieving accuracies of 98.04% for sitting, 83.33% for standing, and 67.65% for feeding. The model showed effective generalization in real farm environments, supporting its potential for continuous behavioral monitoring, early welfare assessments, and decision-making in precision poultry farming. These findings establish a technical foundation for future mobile-based applications at commercial scale, reinforcing the role of computer vision in automated animal welfare evaluation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22815",
+   "title": "Visual Harness Scales General VLMs to Medical Images",
+   "url": "https://arxiv.org/abs/2611.22815v2",
+   "authors": [
+    "Shaowen Wan",
+    "Hanqi Jiang",
+    "Zihao Wu",
+    "Junhao Chen",
+    "Weihang You",
+    "Ruiyu Yan",
+    "Bowen Chen",
+    "Tianming Liu",
+    "Lin Zhao"
+   ],
+   "label": "arXiv:2611.22815v2",
+   "primary_category": "cs.CV",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "VERA is a medical \"visual harness\" that wraps general vision-language models in interactive image tools and an evidence memory, and reports gains across 11 medical imaging tasks.",
+    "plain": "General AI models that read both pictures and text often struggle with medical scans. This paper proposes a wrapper, called VERA, that lets such a model zoom in, take measurements, and keep notes on what it has found. It then reviews its own answer and goes back to look again until it has enough evidence.",
+    "why": "The paper reports large gains on some tasks, such as detecting pulmonary nodules (small spots in the lung), for both an open model and a commercial API model. It suggests that the surrounding tooling around a model may matter as much as the model itself, though the text gives no independent validation or clinical testing.",
+    "background": "- Vision-language model (VLM): an AI system that takes images and text as input and answers in text.\n- Agentic loop: the model repeatedly acts (for example, inspects an image), checks results, and revises its answer.\n- Harness: the software scaffolding around a model that supplies tools, memory, and feedback, without changing the model's weights.\n- Lossless memory: a store that keeps all gathered findings intact for later use.\n- Medical imaging modalities: the types of scans, such as CT or X-ray; the paper covers four.\n- Benchmarks are reported as percentage accuracy; the text does not describe the datasets in detail.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "We show that an appropriate visual harness can substantially improve the performance of general vision-language models (VLMs) across diverse medical imaging tasks. We introduce VERA, a medical visual harness that equips general VLMs with interactive visual tools and systematic diagnostic evidence management. With VERA, general VLMs interactively explore medical images and progressively acquire diagnostic evidence, which is preserved in a lossless memory for subsequent retrieval and use. After submitting an initial answer, the VLM receives an assessment of potential omissions and the reliability of identified findings. This assessment guides further image inspection and measurement, followed by answer revision in an iterative agentic loop until sufficient evidence is obtained. Across 11 tasks and four imaging modalities, VERA improves performance on all tasks with Qwen3.8-27B, with notable gains in spleen measurement (63.3% to 98.3%), renal search (57.5% to 71.2%), and pulmonary nodule detection (0.0% to 28.2%). High-capability API-based VLMs achieve even higher performance with VERA. For example, GPT-6.1 Sol improves pulmonary nodule detection from 10.8% to 69.2% with VERA, demonstrating the complementary benefits of stronger model capabilities and an effective medical visual harness. Our results highlight the potential of visual harnesses as a new paradigm for scaling general VLMs to medical imaging tasks.",
    "source": "arxiv"
   }
  ]

@@ -1,7 +1,60 @@
 {
  "slug": "audio-speech",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.26958",
+   "title": "A Novel Dataset and Framework for Schenkerian Optical Music Recognition",
+   "url": "https://arxiv.org/abs/2611.26958v1",
+   "authors": [
+    "Yixuan Huang",
+    "Xiao Yun",
+    "Jiayin Zheng",
+    "Simon Mak",
+    "Yue Jiang",
+    "Cynthia Rudin",
+    "Stephen Ni-Hahn"
+   ],
+   "label": "arXiv:2611.26958v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "The paper proposes an optical music recognition framework for handwritten Schenkerian analysis graphs and common Western notation, combining a cropping-based model ensemble, a topological neural network for assembling notation, a new labeled dataset of handwritten Schenkerian analyses, and an algorithm that converts semantic graphs into typeset output.",
+    "plain": "Music theorists often sketch Schenkerian analysis, a way of diagramming the underlying structure of a piece, by hand, then re-enter it into music software one symbol at a time. This paper describes software that reads scanned handwritten versions of these diagrams and turns them into clean, typeset digital graphs. The authors also built a new collection of labeled handwritten analyses and a method for converting the recognized structure into a standard print format.",
+    "why": "Handwriting-to-digital tools for music notation are a practical aid for teaching and scholarship, and the text notes that existing systems miss large symbols like phrase slurs and Schenkerian markings. The released dataset and conversion algorithm may be useful to others working on this niche, though the text does not report how well the system performs.",
+    "background": "- Optical music recognition (OMR): software that reads images of sheet music and recovers the notes and symbols.\n- Common Western music notation (CWMN): standard printed staff notation.\n- Schenkerian analysis: a method that reduces a piece to layers of harmonic and voice-leading structure, shown as graphs with slurs and other markings.\n- Ensemble model: several models combined so their outputs are merged for better results.\n- Hypergraph / topological neural network: a network that links groups of symbols together rather than only pairs, so it can model how symbols belong together.\n- Message passing: a process where nodes in a network exchange information with neighbors to refine their predictions.\n- MuNG Studio: annotation software used to label OMR data.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Music theory enables performers, composers, and listeners to engage more deeply with music. Schenkerian analysis (SchA) is a particularly illustrative and widely used approach for modeling tonal structure, organizing music into hierarchical layers of harmonic and voice-leading relationships. Despite its importance in pedagogy and scholarship, producing well-formatted Schenkerian graphs remains difficult. A typical workflow might involve writing the Schenkerian analysis on paper, and then manually, painstakingly, entering each symbol by hand into music software, exporting to vector graphics, and manually refining layouts in graphical editors. Existing optical music recognition (OMR) systems for handwritten common western music notation (CWMN) can be leveraged for their ability to recognize small-scale symbols common to those in SchA. However, CWMN OMR models generally fail to recognize large symbols such as phrase slurs, struggle with dense notation, and do not recognize Schenkerian analysis markings. Thus, these models do not extend well to digitizing SchA. This paper introduces a novel framework for optical music recognition of both CWMN and SchA. Our novel contributions include (1) an ensemble model in which each individual model follows a different image-cropping scheme for improved object detection, (2) a topological neural network architecture for notation assembly, where candidate hyperedges attend to one another and perform hierarchical message passing, (3) the first dataset of labeled handwritten SchAs, gathered with novel model integration to the OMR-annotation software, MuNG Studio, and (4) the first algorithm for converting semantic Schenkerian graphs into typeset format.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26796",
+   "title": "Efficient Conversational Multi-Talker ASR with Predicted Speaker-Agnostic Activity Streams",
+   "url": "https://arxiv.org/abs/2611.26796v1",
+   "authors": [
+    "Xiluo He",
+    "Magdalena Rybicka",
+    "Laureano Moro-Velazquez",
+    "Jesús Villalba",
+    "Thomas Thebaud",
+    "Najim Dehak"
+   ],
+   "label": "arXiv:2611.26796v1",
+   "primary_category": "eess.AS",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "The paper proposes merging multiple speakers' voice-activity timings into two speaker-agnostic streams, predicted directly from audio in one pass, to condition a single-speaker ASR model so that recognition cost no longer grows with the number of talkers.",
+    "plain": "Speech recognition systems that handle several people talking at once usually need to separate who is speaking when, then run a full recognition pass for each speaker, so the cost rises with the number of participants. This paper instead groups everyone's speaking times into just two anonymous streams, predicted directly from the audio in a single step, so the recognizer only runs twice regardless of how many people are present.",
+    "why": "Meetings and conversations often have many speakers, and a method whose cost stays flat as the group grows could make multi-talker transcription cheaper to run. The text reports speedups and small-to-moderate accuracy losses on two meeting corpora (AMI and ICSI), but it is a single preprint and its claims rest on those datasets.",
+    "background": "- Automatic speech recognition (ASR): software that turns audio into text.\n- Diarization: working out who spoke when in a recording.\n- Speaker activity: a frame-by-frame yes/no record of whether each speaker is talking.\n- Conditioning: feeding extra information (here, activity signals) into a model so it focuses on a particular target.\n- Word error rate (WER): the share of words transcribed wrongly; \"relative\" degradation means the change compared with the original error rate.\n- Permutation-invariant training: a way to train a model that outputs several labelled streams without caring about their order.\n- Speedup and efficiency: here, how much faster the system runs compared with a baseline.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Multi-talker automatic speech recognition (ASR) can be performed by conditioning a single-speaker recognizer on frame-level speaker activity. However, this approach requires a complete diarization pass to obtain the conditioning signals and one ASR pass per speaker, making both the frontend and recognition costs dependent on the number of speakers. We reduce these costs by using Heuristic Error Assignment Training (HEAT) to merge the activities of an arbitrary number of speakers into two speaker-agnostic streams. Conditioning on these streams limits recognition to two ASR passes regardless of the number of participants. Through an analysis of the resulting encoder representations, we show that under a stream-assignment heuristic suited to conversational speech, the recognizer represents a stream target much as it does a speaker target. Because the streams do not encode persistent speaker identities, we further replace the conventional sliding-window diarization and clustering frontend with a model that predicts both activity streams directly from the audio in a single pass. A combination of arrival-order and permutation-invariant training objectives over the two-stream powerset labels prevents the predictor from collapsing to identical streams. We also investigate post-hoc speaker attribution by matching decoded utterances to speaker activities within their assigned streams. Experiments on corpora with diverse conversational dynamics demonstrate a favorable efficiency--accuracy tradeoff. On AMI and ICSI, two-stream conditioning is respectively 44\\% and 87\\% faster than per-speaker conditioning using the same diarization frontend, with less than 2\\% relative WER degradation. Direct activity prediction increases these speedups to 79\\% and 132\\%, with relative WER degradations of 10\\% and 21\\%, respectively.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.25503",
    "title": "Joint Language Modeling for In-the-Wild Speech-Scene Generation with Distinct Token Representations",
@@ -15,12 +68,12 @@
    ],
    "label": "arXiv:2611.25503v1",
    "primary_category": "eess.AS",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper proposes an LLM-based system that jointly generates separate speech and environmental-sound token streams, extracted from mixed recordings by a source-aware neural audio codec, so that speech and background audio form one coherent acoustic scene, including for real-world recordings without isolated sources.",
-    "plain": "The task is to produce a realistic audio scene in which someone speaks clearly and the surrounding sounds, such as traffic or a room's ambience, fit with that setting. The authors treat speech and background sound as two separate sequences of compressed audio codes and have a language model generate both, interleaved, from a text description of the scene and the words to be spoken. Because the training data comes directly from mixed real recordings rather than artificially layered clips, the approach can be adapted to messy, in-the-wild audio; the abstract reports gains in intelligibility, scene relevance and audio quality over existing methods, but gives no specific figures here.",
-    "why": "Generating speech and its environment together, rather than as a simulated mix, could matter for audio content creation, dubbing, and training data for speech systems that must cope with noisy settings. The abstract does not show how large the improvements are or how well they hold beyond the authors' tests, so the practical significance is not yet clear.",
-    "background": "['Neural audio codec: a model that compresses audio into a short sequence of discrete tokens and can reconstruct sound from them.', 'Language model generation over tokens: large language models can be trained to predict audio tokens, as they predict words in text.', 'Interleaved generation: producing two token streams alternately, so each can take the other into account as it is built.', 'Speech-scene generation: creating a full soundscape with clear speech plus background sounds that match a scene description.', 'Simulated versus in-the-wild data: simulated scenes mix separately recorded sources, while in-the-wild recordings are natural and cannot be cleanly separated, which is why extracting sources from mixtures matters.', 'Intelligibility and scene relevance: standard goals in evaluating generated speech (can it be understood) and generated scenes (do they match the description).']",
+    "one_liner": "A large-language-model framework that generates speech and background environmental sound as two separate, time-aligned token streams, using a source-aware neural audio codec and training on in-the-wild mixed recordings rather than simulated mixtures.",
+    "plain": "This paper is about making computers produce a realistic sound scene in which someone is talking and the surrounding environment can be heard at the same time. The authors split the audio into two parallel streams, one for speech and one for the surroundings, and use a language model to generate both, guided by a text description of the scene and the words to be spoken. They report gains in speech clarity, fit to the scene description, and audio quality over earlier methods.",
+    "why": "Most earlier scene-generation work mixed separately recorded sounds together, which does not match how speech and surroundings actually co-occur in real recordings. Training on real mixed recordings may make such systems more practical for film, games, and assistive audio, though the text alone does not establish how far these gains extend beyond the reported experiments.",
+    "background": "- Speech-scene generation: producing a single audio clip containing intelligible speech plus ambient sounds (e.g., a street, a room).\n- Neural audio codec: a model that compresses audio into a short sequence of discrete tokens and can reconstruct sound from them.\n- Token stream: a sequence of these discrete codes; here, separate streams for speech and for environment.\n- Large language model (LLM): a model originally built for text that is here pretrained and repurposed to predict audio tokens.\n- Interleaved generation: producing the two token streams alternately within one shared sequence so each can inform the other.\n- In-the-wild audio: real recordings, as opposed to clean studio sources mixed together artificially.\n- Intelligibility: how easily the speech can be understood.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -28,26 +81,151 @@
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.25569",
-   "title": "UMelCodec: An Ultra-Low-Bitrate and Lightweight Mel-Domain Neural Speech Codec",
-   "url": "https://arxiv.org/abs/2611.25569v1",
+   "uid": "arxiv:2611.23768",
+   "title": "Beyond Intelligibility: Fine-Grained Perceptual Assessment of Dysarthric Speech with Auditory Large Language Models",
+   "url": "https://arxiv.org/abs/2611.23768v1",
    "authors": [
-    "Hui-Peng Du",
-    "Yang Ai",
-    "Zhen-Hua Ling"
+    "Haotian Wei",
+    "Can Long",
+    "Wen Xian Jim",
+    "Guangzhi Sun",
+    "Zengrui Jin",
+    "Chao Zhang"
    ],
-   "label": "arXiv:2611.25569v1",
+   "label": "arXiv:2611.23768v1",
    "primary_category": "eess.AS",
-   "date": "2026-11-22",
+   "date": "2026-11-19",
    "summary": {
-    "one_liner": "Ultra-low-bitrate speech coding is crucial for bandwidth-constrained communication and compact storage, but preserving intelligibility, naturalness, and fine-grained acoustic details at bitrates of only a few hundred bps remains challenging.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "Benchmarks four auditory large language models (ALLMs) on five clinical perceptual dimensions of dysarthric speech from the Speech Accessibility Project, using a prompt-conditioned setup with two-stage (out-of-domain then in-domain) training.",
+    "plain": "This paper looks at whether AI models that can listen to audio and answer questions about it can judge the speech of people with dysarthria, a condition where muscle control makes speech hard to understand or unnaturally flat. The authors tested four such models on five things clinicians listen for, such as how natural the speech sounds, whether pitch is flat, how clear it is, whether consonants are imprecise, and whether there are inappropriate pauses. They report that the leading models pick up these fine-grained differences and that each model has different strengths across the prosody (rhythm and pitch) and articulation (sound formation) measures.",
+    "why": "Clinicians currently rely on slow, subjective listening, and most automated tools only score one thing or use generic quality measures, so a single model that rates several clinical traits could be useful for diagnosis and rehabilitation tracking. The text does not show clinical trials or validation against clinicians' outcomes, so its practical value is still unproven.",
+    "background": "- Dysarthria: a speech disorder caused by weakness or poor coordination of the muscles used for speaking, often after neurological conditions.\n- Perceptual assessment: expert listeners rating speech on traits like clarity and naturalness.\n- Auditory large language model (ALLM): a large AI model that takes audio as input and responds in text, guided by written prompts.\n- Speech Accessibility Project (SAP): a dataset effort collecting speech from people with speech differences.\n- Two-stage training: first train on broad, related data (out-of-domain), then fine-tune on the target clinical data (in-domain).\n- Multi-task transfer: whether learning one rating task helps with the others.",
+    "difficulty": "intermediate",
+    "ai": true
    },
-   "abstract": "Ultra-low-bitrate speech coding is crucial for bandwidth-constrained communication and compact storage, but preserving intelligibility, naturalness, and fine-grained acoustic details at bitrates of only a few hundred bps remains challenging. Existing purely acoustic codecs generally operate at relatively high bitrates, whereas incorporating semantic representations can reduce the bitrate, but at the cost of increased complexity. Therefore, we propose UMelCodec, a purely acoustic neural speech codec operating in the mel domain at an ultra-low bitrate of 325 bps with a lightweight architecture. UMelCodec consists of two stages. In the first mel-domain coding stage, alias-free Snake-ConvNeXt (AF-SC) encoder-decoder backbones model temporal and harmonic structures, a factorized single-codebook vector quantizer (VQ) enables ultra-low-bitrate quantization, and a multi-scale mel-spectrogram discriminator (MSMD) improves mel-spectrogram reconstruction. In the second waveform synthesis stage, a lightweight modified discrete cosine transform (MDCT)-based neural vocoder predicts the MDCT spectrum from the reconstructed mel spectrogram and recovers the waveform through inverse MDCT. Experiments on LibriTTS dataset demonstrate that UMelCodec outperforms strong baselines across most objective reconstruction metrics while maintaining competitive subjective naturalness. In terms of model complexity and inference efficiency, UMelCodec has only 19.67 M parameters, requires 1.93 G MACs, and supports real-time inference on both GPU and CPU platforms.",
+   "abstract": "Accurate assessment of dysarthric speech is vital for clinical diagnosis and rehabilitation, yet existing automated methods rely heavily on isolated, single-task models or generic speech quality metrics that fail to disentangle heterogeneous neuromotor deficits. This work presents the first systematic investigation into adapting auditory large language models (ALLMs) for multi-dimensional dysarthric speech assessment under a unified, prompt-conditioned framework. Four representative ALLMs are benchmarked across five clinical perceptual dimensions from the Speech Accessibility Project (SAP): naturalness, monopitch, intelligibility, imprecise consonants, and inappropriate silences. To bridge generic perceptual quality and clinical evaluation, a two-stage training paradigm is explored, leveraging out-of-domain pre-training followed by in-domain clinical adaptation. Experimental results demonstrate that leading ALLMs reliably capture fine-grained pathological variations, exhibiting distinct and complementary strengths across prosodic and articulatory attributes. These findings establish ALLMs as a scalable foundation for clinical speech evaluation and provide practical insights into model selection and multi-task transfer potential.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24453",
+   "title": "Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models",
+   "url": "https://arxiv.org/abs/2611.24453v1",
+   "authors": [
+    "Ruiji Yu",
+    "Gus Xia"
+   ],
+   "label": "arXiv:2611.24453v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper uses circuit discovery (extracting a sparse sub-network via the Auto-Emergence algorithm) to locate the part of two symbolic music generative models, ChatMusician and MuPT, that predicts the closing tonic in a I…V→I chord progression, and checks it with causal interventions.",
+    "plain": "Researchers studied two computer models that generate music written as symbols, and asked which internal parts of the model handle a basic music rule: after a chord moves from the home chord to the dominant and back, the model should land on the home chord again. They pulled out a small, sparse subset of the network that seems to carry this behavior, and reported that switching that subset off or changing it disrupts the harmonic pattern, according to the text's causal-intervention check.",
+    "why": "Most interpretability work on circuits has been done on language models, so applying it to music is a new direction, and the authors say it is the first systematic circuit-discovery study in music. Its wider relevance is uncertain from this text alone, since it covers two models and one chord pattern.",
+    "background": "- Mechanistic interpretability: reverse-engineering what the parts of a neural network compute.\n- Circuit discovery: finding the subset of connections that carries out a specific behavior.\n- Symbolic music: music represented as text-like tokens (notes, chords) rather than audio.\n- Tonic/dominant: the home chord (I) and the chord a step away from it (V) that tends to lead back home.\n- Causal intervention: altering or disabling parts of the model to test whether they really drive the behavior.\n- Sparse sub-network: a small fraction of the model's components that the method selects.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Mechanistic Interpretability (MI) seeks to decode neural network computations into human-understandable logic. A core methodology in MI is circuit discovery: identifying the information flow in sub-networks that drive specific model behaviors. While circuit discovery has matured within Natural Language Processing (NLP), the interpretable circuits in music models remain largely unexplored. In this work, we identify a music-functional circuit within two symbolic music generative models: ChatMusician and MuPT. The music function we consider is the prediction of the terminal tonic root in a classical harmonic progression pattern $I \\ldots V \\rightarrow I$. We use the Auto-Emergence algorithm to extract a principal sparse sub-network as the identified circuit. Validation via causal intervention confirms that this identified circuit is a primary driver of harmonic progression behaviors in the symbolic music models. To our knowledge, this represents the first systematic circuit-discovery study conducted within the music domain. Our demo page is available at: https://ukiyo23rui.github.io/auto-emergence-demo/.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22593",
+   "title": "High-Fidelity Binarized Neural Vocoder",
+   "url": "https://arxiv.org/abs/2611.22593v1",
+   "authors": [
+    "Andong Li",
+    "Tong Lei",
+    "Xiaodong Li",
+    "Chengshi Zheng"
+   ],
+   "label": "arXiv:2611.22593v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "BiVoC is a binary neural network (1-bit weights and activations) time-frequency vocoder that adapts a prior full-precision framework (RNDVoC) and uses a mixed-precision design to keep quality-sensitive parts at full precision.",
+    "plain": "Neural vocoders are programs that turn compact speech representations into audio waveforms, but the best ones are large and costly to run. This paper tries to shrink them by storing and computing with just one bit per value, a technique called binarization, which is harder because it throws away a lot of information. The authors report that their model, BiVoC, does much better than simply binarizing existing vocoders and gets close to several standard full-precision ones at much lower theoretical computing cost.",
+    "why": "Making high-quality speech synthesis cheap enough for small devices is a practical goal, and the text suggests binary networks could be useful in audio generation more broadly. The text reports only objective and subjective listening results on LibriTTS and some out-of-distribution sets, and \"lower cost\" is a theoretical figure, not a measured speed or energy saving, so real-device benefit is not established.",
+    "background": "- Vocoder: the model that generates the audio waveform from an intermediate speech representation (such as a spectrogram).\n- Full-precision network: a neural network whose weights and activations use ordinary floating-point numbers (many bits each).\n- Binary neural network (BNN): a network that stores and processes values as 1 bit, greatly reducing memory and arithmetic cost, but losing information.\n- Mixed-precision: keeping some parts of a network at higher precision while binarizing the rest.\n- Time-frequency modeling: processing sound as a grid of frequency content over time.\n- Inverse problem / range-null decomposition: a way of framing waveform reconstruction as recovering a signal from partial information, split into the parts the input determines and the parts it leaves open.\n- LibriTTS: a public English speech dataset; out-of-distribution tests use data unlike the training set.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Neural vocoders have achieved remarkable progress in high-fidelity waveform generation in recent years, but most existing methods still rely on full-precision operators, leading to non-negligible storage and computational costs during inference. Binary neural networks (BNNs) provide an alternative direction by quantizing weights and activations to 1 bit. However, directly applying binarization to neural vocoders is rather challenging as it inherently incurs severe information loss. To this end, we propose BiVoC, a BNN-oriented time-frequency neural vocoder for high-fidelity waveform generation. Building on our previous full-precision RNDVoC framework, BiVoC adapts the inverse-problem formulation, range-null decomposition, and fineto-coarse non-uniform subband modeling to the 1-bit setting. Specifically, we develop a simple binarized convolutional unit to provide stable time-frequency feature modeling under binary representations. Furthermore, we analyze the quality-complexity sensitivity of different modules and propose a mixed-precision design to retain quality-sensitive components in full precision while binarizing computation-dominant parts. Extensive experiments are conducted on LibriTTS and multiple out-of-distribution benchmarks. Both objective and subjective results demonstrate that BiVoC substantially outperforms BNN variants obtained by directly binarizing existing vocoders, while achieving competitive performance against several mainstream full-precision vocoder baselines under much lower theoretical computational cost. These results demonstrate the promising potential of BNNs in the audio generation field. Codes and pre-trained weights are available at https://github.com/Andong-Li-speech/BiVoC.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22627",
+   "title": "Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts",
+   "url": "https://arxiv.org/abs/2611.22627v1",
+   "authors": [
+    "Yunrui Cai",
+    "Dingdong Wang",
+    "Lingwei Meng",
+    "Xixin Wu",
+    "Zhiyong Wu",
+    "Helen Meng"
+   ],
+   "label": "arXiv:2611.22627v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A two-stage training approach for speech-language models that transcribes overlapping multi-speaker audio with speaker labels and timestamps, when the number of speakers is unknown, using chain-of-thought supervised fine-tuning followed by GRPO reinforcement learning with a constraint-aware reward.",
+    "plain": "The paper looks at the task of writing down what several people say at once in a recording, including who said what and when, without being told how many people are talking. The authors report that standard supervised training of a speech-language model is fragile when speech overlaps heavily, producing made-up text and broken speaker or timestamp tags. They add a step where the model first estimates the speaker count, then use a reinforcement-learning method that rewards correct output and penalizes malformed structure.",
+    "why": "Transcribing overlapping speakers with reliable labels is a hard problem for meeting transcription and similar tools, and the reported gains come from a specific training recipe. The text reports results on two test sets (Libri3Mix and a dynamic 2+3 speaker mix) but gives no comparison to other published systems, so how much it advances the field is unclear.",
+    "background": "- ASR (automatic speech recognition): software that turns speech into text.\n- Diarization: working out who spoke when.\n- Multi-talker / overlapping speech: several people talking at the same time.\n- SpeechLLM: a large language model extended to take audio as input.\n- SFT (supervised fine-tuning): training a model on example input-output pairs.\n- Chain-of-thought (CoT): having the model write intermediate reasoning steps before its answer.\n- GRPO (group relative policy optimization): a reinforcement-learning method that scores several sampled outputs against each other and favors the better ones.\n- cpWER (concatenated minimum-permutation word error rate): a transcription error rate that allows speaker labels to be matched in any order; lower is better.\n- WDER (word diarization error rate): the share of words assigned to the wrong speaker; lower is better.\n- Reward: a score that tells the training process how good an output is.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Joint multi-talker ASR with speaker attribution and timestamps is particularly challenging when the speaker count is unknown and the output must follow a strict structure. We observe that Supervised Fine-Tuning (SFT)-only alignment of SpeechLLMs is brittle under dense overlaps, often leading to burst hallucinations and malformed speaker/timestamp tags. We propose a unified two-stage generative framework: (i) CoT-augmented SFT that infers the global speaker count before transcription, and (ii) GRPO-based constrained exploration guided by a Multi-dimensional Constraint-Aware Reward (MCAR) that directly optimizes permutation-invariant accuracy while enforcing counting, temporal, and structural constraints. On Libri3Mix and a Dynamic-Mix (2+3) set (speaker count unknown at test time), our model achieves 14.52%/9.24% cpWER and 1.95%/1.12% WDER, respectively, with GRPO yielding a 35%/54% relative cpWER reduction over SFT+CoT.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19844",
+   "title": "A Speech-LLM Framework for Enrollment-Free Wake-Word-Guided Target-Speaker Recognition in Complex Noisy Scenarios for Seamless Human-Machine Interaction",
+   "url": "https://arxiv.org/abs/2611.19844v1",
+   "authors": [
+    "Yuxiang Mei",
+    "Dongxing Xu",
+    "Yanhua Long"
+   ],
+   "label": "arXiv:2611.19844v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "An enrollment-free Speech-LLM that uses the wake-word text as a lexical cue to transcribe commands from the target speaker while rejecting non-target speakers, trained with a large synthetic noisy-speech pipeline and a four-stage curriculum.",
+    "plain": "Voice assistants often struggle when several people talk at once or when there is background noise, and they usually need a recorded sample of the owner's voice to know whom to listen to. This paper proposes a system that instead uses the wake word itself (such as a spoken trigger phrase) as a clue to pick out the speaker who said it, then transcribes that person's following command while ignoring others. The authors report a command character error rate of 16.15%, a rejection rate of 91.56% for non-target speakers, and a combined score of 87.70%, compared with 71.70% for the best enrollment-free baseline they tested.",
+    "why": "Removing the need for a voice enrollment step could make speech interfaces simpler to use in noisy homes, cars, or workplaces. The reported gains are over the authors' own baselines in the text, so how well they hold on other data or real devices is not shown here.",
+    "background": "- Target-speaker ASR: transcribing only one chosen person's speech when others talk too.\n- Speaker enrollment: recording a sample of a person's voice in advance so a system can recognize them.\n- Wake word: a trigger phrase (e.g., a device's name) that starts a voice assistant listening.\n- Speech-LLM: a large language model that receives audio features and outputs text, generating words one at a time.\n- Cross-attention: a mechanism that lets one stream of information (here, the wake-word text) guide how another (the audio encoder) weighs its inputs.\n- Character error rate: the share of characters transcribed incorrectly; lower is better.\n- Synthetic data pipeline: generating training audio by mixing and simulating speech and noise, since large labeled real datasets are costly.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Target-speaker automatic speech recognition (TS-ASR) is essential for reliable human-machine interaction in complex acoustic environments, where overlapping speech and background noise make it difficult to identify and recognize the intended speaker. Existing approaches typically rely on speaker enrollment or cascaded processing pipelines, limiting their flexibility in practical applications. To address these limitations, we propose an enrollment-free Speech-LLM framework that leverages wake-word text as a lexical cue to guide target-speaker recognition. Specifically, a text-cue encoder extracts lexical representations from the wake word, which are integrated into a pretrained speech encoder through cross-attention to establish an implicit association between the wake-word occurrence and the target speaker. This enables the model to selectively recognize subsequent commands from the target speaker without requiring enrollment speech or explicit wake-word boundaries. Furthermore, a large language model (LLM) unifies command transcription and non-target speaker rejection within a single autoregressive framework. To improve robustness against complex acoustic interference, we develop a large-scale speech synthesis and simulation pipeline with a progressive four-stage training strategy. Experimental results demonstrate that the proposed framework achieves a command character error rate of 16.15% and a non-target speaker rejection rate of 91.56%, yielding a unified score of 87.70%, compared with 71.70% for the strongest enrollment-free baseline. These results demonstrate the effectiveness of wake-word-guided speaker selection and highlight the potential of integrating target-speaker recognition and rejection within a unified Speech-LLM framework for robust human-machine interaction.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20436",
+   "title": "Learning from Distribution: Rethinking One-Hot Supervision for ASR and QA in Speech Language Models",
+   "url": "https://arxiv.org/abs/2611.20436v1",
+   "authors": [
+    "Yujie Guo",
+    "Hongjie Chen",
+    "Jiaming Zhou",
+    "Jian Kang",
+    "Jie Li",
+    "Yongxiang Li",
+    "Yong Qin"
+   ],
+   "label": "arXiv:2611.20436v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proposes Learning from Distribution (LFD), which trains a speech language model's ASR outputs to match a pretrained text LLM's full output distribution rather than a single one-hot transcript, to reduce the spoken QA degradation caused by ASR-only training.",
+    "plain": "Speech language models can transcribe speech and also answer questions about it, but training them only to transcribe tends to make them worse at answering questions. The authors argue this happens because transcription has one fixed correct answer, which pushes the model toward rigid, transcript-only behavior. They propose a training method that instead nudges the model's predictions toward the spread of plausible outputs a text language model would give, and report that this improves both transcription and question answering.",
+    "why": "Many speech systems are tuned for one narrow task, and this work points to a training-signal issue that may affect how general-purpose voice assistants balance skills. The text gives only the abstract-level claims, so the size of the gains and how well they generalize are not clear from this summary alone.",
+    "background": "- Speech language model (SLM): a large AI model that takes audio as input and produces text, often built on a text LLM.\n- ASR (automatic speech recognition): converting spoken audio into written text.\n- Spoken QA: answering questions about what was said in an audio clip.\n- One-hot supervision: training labels that mark a single correct answer with certainty, as opposed to a spread of acceptable answers.\n- Output distribution: the probabilities a model assigns to all possible next words, not just the top choice.\n- Fine-tuning: further training a pretrained model on a specific task.\n- Chain-of-thought (CoT): having a model write out intermediate reasoning steps before its final answer.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Speech language models (SLMs) exhibit strong capabilities in automatic speech recognition (ASR) and general-purpose speech understanding, yet ASR-specific training often degrades spoken question answering (QA) performance. We revisit this conflict from the perspective of task-specific input--output mappings and one-hot supervision. Our findings reveal pronounced task-asymmetric effects: ASR-only training severely limits QA capability, whereas QA-only training retains reasonable ASR performance. We hypothesize that the relatively deterministic mapping of ASR, combined with single-reference supervision, biases models toward transcription-specific behavior. Motivated by this perspective, we advocate broadening ASR learning objectives while preserving recognition accuracy. We propose Learning from Distribution (LFD), which aligns speech-conditioned predictions with the conditional output distributions of a pretrained text LLM. Extensive experiments demonstrate that LFD improves both ASR and QA performance, exhibits superior data efficiency, and remains effective under full-parameter fine-tuning. CoT-ASR further supports the broader applicability of our proposed supervision principle.",
    "source": "arxiv"
   }
  ]

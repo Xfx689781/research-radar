@@ -1,50 +1,5 @@
 {
  "slug": "algebra",
- "updated": "2026-11-22",
- "papers": [
-  {
-   "uid": "arxiv:2611.25886",
-   "title": "Finite groups with a fixed-point-free automorphism satisfying an irreducible identity",
-   "url": "https://arxiv.org/abs/2611.25886v1",
-   "authors": [
-    "Dietrich Burde",
-    "Wolfgang Alexander Moens"
-   ],
-   "label": "arXiv:2611.25886v1",
-   "primary_category": "math.GR",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "For any given irreducible polynomial $f(x)=a_0+a_1\\cdot x+\\cdots+a_d\\cdot x^d\\in\\mathbb{Z}[x]$, we study the structure of finite groups $(G,\\cdot)$ that have a fixed-point-free-automorphism $α$ satisfying the condition \\[ \\{g^{a_0}\\cdotα(g)^{a_1}\\cdotsα^d(g)^{a_d}\\mid g\\in G\\}=\\{1\\}.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "For any given irreducible polynomial $f(x)=a_0+a_1\\cdot x+\\cdots+a_d\\cdot x^d\\in\\mathbb{Z}[x]$, we study the structure of finite groups $(G,\\cdot)$ that have a fixed-point-free-automorphism $α$ satisfying the condition \\[ \\{g^{a_0}\\cdotα(g)^{a_1}\\cdotsα^d(g)^{a_d}\\mid g\\in G\\}=\\{1\\}. \\] We show that such a group $G$ is nilpotent of class at most $d^{2^d}$, provided that $|G|$ is coprime to an explicit, non-zero, integer invariant $ι(f(x))$ of $f(x)$. We do this by extending the solutions of the Frobenius conjecture. We also extend the solution of the restricted Burnside problem in prime exponent and the classification of the $n$-abelian groups.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.25766",
-   "title": "Nonsolvable critical groups with the spectrum of $S_{10}$",
-   "url": "https://arxiv.org/abs/2611.25766v1",
-   "authors": [
-    "D. V. Lytkina",
-    "V. D. Mazurov"
-   ],
-   "label": "arXiv:2611.25766v1",
-   "primary_category": "math.GR",
-   "date": "2026-11-22",
-   "summary": {
-    "one_liner": "We classify the nonsolvable finite groups that are critical with respect to the spectrum of the symmetric group $S_{10}$.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
-   },
-   "abstract": "We classify the nonsolvable finite groups that are critical with respect to the spectrum of the symmetric group $S_{10}$. Up to isomorphism, there are exactly two such groups: $S_{10}$ and $(A_9\\times C_3)\\rtimes C_2$, where the involution acts on $A_9$ by conjugation by a transposition and on $C_3$ by inversion. The quotient of any nonsolvable group with this spectrum by its solvable radical is almost simple. All possible simple socles are treated without assuming that the radical is nilpotent. The final cases, $L_3(4)$ and $A_6$, are excluded using the canonical subgroup $K=[R(G)\\cap G^\\infty,G^\\infty]$, actions on chief factors, and the required element orders $9,20,30$. In the $A_6$ case, the final contradiction is the existence of an element of order $16$. Reproducible certificates accompany the character-table and matrix calculations.",
-   "source": "arxiv"
-  }
- ]
+ "updated": "2026-11-23",
+ "papers": []
 }

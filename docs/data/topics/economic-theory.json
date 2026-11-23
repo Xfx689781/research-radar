@@ -1,5 +1,180 @@
 {
  "slug": "economic-theory",
- "updated": "2026-11-22",
- "papers": []
+ "updated": "2026-11-23",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25748",
+   "title": "A Simple Proof of Koray's Theorem",
+   "url": "https://arxiv.org/abs/2611.25748v1",
+   "authors": [
+    "Héctor Hermida-Rivera"
+   ],
+   "label": "arXiv:2611.25748v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A short note giving a direct, self-contained proof of Koray's (2000) result that a neutral, unanimous social choice function is universally self-selective if and only if it is dictatorial.",
+    "plain": "This note is about how groups make collective choices, such as picking one option from a set when each member has their own ranking. The author re-proves a known result: if a group's choice rule treats all options equally, respects unanimous agreement, and has the property that the chosen option is always picked again when the menu shrinks (self-selection), then the rule must be dictatorial, meaning one fixed voter's ranking always decides. The new proof builds a special arrangement of voter rankings and shows that the voter who ranks the chosen option first must be the dictator.",
+    "why": "It offers a shorter route to an existing impossibility result, avoiding the earlier proof's reliance on several older theorems. The text does not claim wider consequences, so its value is mainly as a cleaner argument for specialists in social choice theory.",
+    "background": "- Social choice function: a rule that takes each voter's ranking of options and picks a winner from any menu of options.\n- Neutrality: the rule does not favor any option by its label.\n- Unanimity (Pareto): if every voter ranks one option above another, the rule does not choose the lower one.\n- Self-selection: the chosen option from a menu stays chosen when the menu is narrowed to include it.\n- Dictatorship: one specific voter's ranking alone determines the outcome.\n- Arrow's impossibility theorem: a classic result showing that no ranking-based voting rule with basic fairness properties avoids dictatorship when there are three or more options.\n- Cyclic preferences: rankings that loop, such as A above B, B above C, and C above A.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this note, I provide a direct and self-contained proof of Koray's (2000) theorem, by which a neutral and unanimous social choice function is universally self-selective if and only if it is dictatorial. Koray's (2000) original proof relies on results by Sen (1970) and Houthakker (1950) to construct a social welfare function for each alternative set. He then shows that these functions are Paretian and independent of irrelevant alternatives, allowing him to apply Arrow's (1950, 1951) impossibility theorem. Instead, I construct a cyclic preference profile and show that the voter who ranks the chosen alternative first is the dictator on every finite nonempty alternative set.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26452",
+   "title": "Entry Deterrence with Public Signals: Revisiting the Chain-Store Paradox",
+   "url": "https://arxiv.org/abs/2611.26452v1",
+   "authors": [
+    "Francesc Dilmé",
+    "Aaron Kolb"
+   ],
+   "label": "arXiv:2611.26452v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "This paper extends the chain-store reputation game to a finite horizon with exogenous public signals about the incumbent's private type, characterizing perfect Bayesian equilibria via increasing reputation cutoffs and identifying when full deterrence arises in the limit.",
+    "plain": "The paper studies a standard story about a dominant firm that faces a series of potential competitors and wants to look tough so newcomers stay out. It adds a twist: public news about the firm arrives over time, independent of what the firm does. The authors work out how firms and entrants should behave in this setting and find that this steady flow of news weakens the firm's incentive to build a tough reputation.",
+    "why": "The chain-store paradox is a well-known benchmark for how reputation can deter entry, so showing that outside information can undercut that reputation effect is a useful refinement. The text does not indicate applications beyond this theoretical setting, so its wider relevance is unclear from the excerpt alone.",
+    "background": "- Chain-store paradox: a monopolist facing a sequence of entrants may fight early entrants to build a reputation for toughness, a result that seems paradoxical under strict backward-induction logic.\n- Incumbent's private type: the incumbent knows whether it is a \"normal\" (profit-driven) or a \"tough\" (always-fight) type; entrants only know the probabilities.\n- Perfect Bayesian equilibrium: a solution concept in which each player best-responds to beliefs that are updated correctly from observed play.\n- Reputation cutoff: a threshold belief about the incumbent's toughness above which the incumbent fights and below which entry is accepted.\n- Mixing: randomizing between actions (here, fighting or not) with set probabilities.\n- Finite horizon and patience: the game has a fixed number of periods, and patience measures how much the incumbent values future payoffs.\n- Full deterrence: entry is never attempted in equilibrium.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We revisit the classic chain-store paradox by introducing exogenous public signals about the incumbent's private type that arrive each period over a finite horizon. We fully characterize perfect Bayesian equilibria in terms of sequences of reputation cutoffs that increase over time: entrants enter below their cutoff, while the normal incumbent mixes below its cutoff and fights above it. The equilibrium outcome is generically unique. Information arrival dampens the incentive to build a reputation, so full deterrence need not emerge as the horizon grows arbitrarily long, even when the incumbent is very patient. We characterize exactly when there is full deterrence in the limit, along with the limiting equilibrium when there is not.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25280",
+   "title": "Folk Theorems for Social Learning",
+   "url": "https://arxiv.org/abs/2611.25280v1",
+   "authors": [
+    "Daniel Luo",
+    "Alex Wolitzky"
+   ],
+   "label": "arXiv:2611.25280v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper proves folk-theorem-style results for repeated social learning games with purely informational externalities, showing that both information-aggregating and non-aggregating equilibria can exist when there are many, patient players.",
+    "plain": "The paper studies a group of people who each get one private clue about an unknown state of the world, then make repeated public choices that others can see. It asks whether, if the players care about the long run and are patient, they can coordinate so that everyone's combined clues are effectively pooled, or alternatively so that they end up no better off than if each acted alone.",
+    "why": "The result matters for understanding when groups learn well from observing each other's actions, and it suggests that the outcome depends heavily on how forward-looking agents expect others to behave. The text does not indicate applications beyond this theoretical setting, so the wider relevance is uncertain.",
+    "background": "- Repeated games: the same interaction happens many times, so players can reward or punish past behaviour.\n- Folk theorem: a family of results saying that many payoff outcomes can be sustained as equilibria when players are patient enough.\n- Conditionally independent signal: each player's private clue is independent of others' clues once the true state is known.\n- Informational externality: a player's action affects what others learn, but not their own payoff directly.\n- Autarky: the payoff from acting alone with only your own information, without learning from others.\n- Myopic play: each player only optimizes the current period, ignoring future effects.\n- Full-information payoff: the payoff if everyone's information were pooled.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study repeated games with purely informational externalities. Each player observes a single conditionally independent signal and then repeatedly takes publicly observed actions to maximize their expected discounted payoff, which depends only on the state and their own action. We show that, when there are sufficiently many players and they are sufficiently patient, there exist equilibria where information is aggregated: the players' payoffs approximate the full-information payoff. This holds even if actions are uninformative under myopic play. Conversely, even if myopic play reveals the state, there also exist equilibria where information is not aggregated: payoffs approximate those under autarky. Our results speak to the range of possible outcomes of social learning games with forward-looking agents.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24614",
+   "title": "On the equilibrium lattice of supermodular games",
+   "url": "https://arxiv.org/abs/2611.24614v1",
+   "authors": [
+    "Philip R. Neary"
+   ],
+   "label": "arXiv:2611.24614v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper constructs the meet and join of any two equilibria in a supermodular game using two one-directional best-response processes (\"contagion up\" and \"contagion down\") and studies the resulting equilibrium envelope.",
+    "plain": "This paper is about games where several players each choose an action and want to respond to what the others do, and where the stable outcomes (equilibria) form a structured family. The author shows how to build two particular stable outcomes, the lowest and highest, from any starting point by repeatedly letting players adjust their actions in one direction only. The endpoints of this construction can only move closer together as players keep revising their actions.",
+    "why": "Knowing how equilibria relate to one another tells us how a strategic system might settle, and which outcomes are reachable through gradual adjustment. The text does not say what applications it may have beyond the theory itself, so its wider relevance is unclear from this passage alone.",
+    "background": "- Game theory: a game is a set of players, each choosing an action to best respond to others' actions.\n- Equilibrium: a set of actions where no player wants to change unilaterally.\n- Supermodular game: a game where players' actions are complements, so raising one player's action tends to raise others' incentives to raise theirs.\n- Lattice: a partially ordered set in which any two elements have a greatest lower bound (meet) and least upper bound (join); here the equilibria form such a structure.\n- Best-response dynamics: a process where players repeatedly switch to their best reply to current play; \"asynchronous\" means players update one at a time, in any order.\n- Fixed-point and order theory (e.g. Tarski's theorem) is helpful background but not required for the main idea.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper shows how the meet and join of any pair of equilibria in a super- modular game can be constructed. The method relies on two one-directional best-response processes that I call contagion up and contagion down. Starting from any action profile, applying this pair of processes in opposite orders produces two equilibria that define its equilibrium envelope. The endpoints of the envelope are precisely the least and greatest equilibria reachable through arbitrary asynchronous best-response dynamics, and can only move closer together as players revise their actions. These and other results show how appending one-directional adjustment processes to the familiar equilibrium lattice structure allows us to explore the relationships between equilibria further.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22216",
+   "title": "Settling the Time and Structural Complexity of Bertrand Networks",
+   "url": "https://arxiv.org/abs/2611.22216v1",
+   "authors": [
+    "MohammadTaghi Hajiaghayi",
+    "Suho Shin"
+   ],
+   "label": "arXiv:2611.22216v1",
+   "primary_category": "cs.GT",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper shows that computing approximate Nash equilibria in Bertrand network pricing games on general graphs is PPAD-complete, and that exact equilibria always admit a finite (though possibly exponentially large) description of price intervals, with a matching lower bound.",
+    "plain": "The paper studies a model where sellers on a network each pick one price, and that price applies both to customers who only buy from them and to shared markets with neighboring sellers. It asks whether the stable pricing outcome (an equilibrium) can be found efficiently, and whether it can be described in a finite way. The authors report that finding an approximate equilibrium is computationally hard in general, and that exact equilibria can always be described with a finite number of price intervals, though that number can grow exponentially with the number of sellers.",
+    "why": "Earlier work had found equilibria and efficient algorithms only for tree-shaped networks, so this result marks where general efficient methods are unlikely to exist. It bears on the broader study of how computationally hard it is to find equilibria in games, which is a central topic in algorithmic game theory; the text does not discuss practical applications beyond this.",
+    "background": "- Bertrand competition: sellers compete by setting prices; here each seller posts one price for all its markets.\n- Network game: sellers are nodes, and edges join sellers who share a market.\n- Nash equilibrium: a set of strategies where no seller gains by changing its price alone; an approximate equilibrium allows a small slack.\n- Mixed strategies: because exact equilibria require randomizing prices over continuous intervals, a seller's behavior is a probability distribution over prices.\n- PPAD: a complexity class containing problems (like finding Nash equilibria) believed to be hard but not known to be NP-hard; PPAD-completeness is the usual evidence that a problem has no known efficient algorithm.\n- EPTAS: an efficient approximation scheme whose running time is polynomial for each fixed accuracy, with the exponent fixed by parameters.\n- Structural complexity: how many price intervals are needed to describe an equilibrium.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In the seminal Bertrand network game introduced by Babaioff et al. (2013), each seller posts a single price to captive buyers and to the markets it shares with neighboring sellers, where sellers cannot price discriminate across the markets. Although the existence of equilibria and polynomial-time algorithms to compute them in trees (Babaioff et al. (2013)) have been known, it has been a major open problem whether there exist efficient algorithms to compute them for general graphs. In this paper, we resolve this open question negatively by proving that computing any constant-error approximate Nash equilibrium in a Bertrand network is $\\PPAD$-complete. This hardness holds even on sparse bipartite graphs of maximum degree five with constant integer market weights. Complementing our hardness result, we design an efficient polynomial-time approximation scheme (EPTAS) when both the maximum degree and the number of sellers with captive buyers are bounded. Beyond time complexity, since exact equilibria require randomizing prices over continuous intervals, another fundamental question left open by Babaioff et al. (2013) is whether an exact equilibrium can always be represented with a finite number of price intervals, \\ie whether its structural complexity is finite. We resolve this question affirmatively by proving that every achievable equilibrium revenue profile can be realized by an equilibrium with structural complexity $O(2^n)$, which leads to an exact algorithm running in doubly exponential time. We further show that this bound is tight: there exist instances for which the unique equilibrium realizing target revenue profiles has structural complexity $Ω(2^n)$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22116",
+   "title": "Reserve Systems in Dynamic Settings: Account Design and Inherited Rights",
+   "url": "https://arxiv.org/abs/2611.22116v1",
+   "authors": [
+    "Tayfun Sönmez",
+    "M. Utku Ünver"
+   ],
+   "label": "arXiv:2611.22116v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper studies reserve systems (affirmative-action-style category quotas) in dynamic settings where positions arrive in batches, separating the ledger, account, and choice rule, and proposes cumulative implementation and retain-reassign-boost (RRB) choice rules that keep incumbents' appointments while allowing their categories to change.",
+    "plain": "The paper is about how institutions that give reserved seats to groups, such as school places or public jobs, should handle seats that open up over time in batches rather than all at once. The authors separate three pieces: a record of past allocations, a rule that turns that record into the current problem, and the rule that picks the outcome. They show that with the simplest way of tracking past decisions, two reserve policies can end up choosing nearly the same people as batches shrink, and they propose a different accounting method that avoids this.",
+    "why": "Many real waiting lists and recruitment processes fill places in stages, so how past decisions are carried forward matters for fairness and for whether people already admitted keep their places. The text presents this as a conceptual and theoretical contribution; its practical impact and any empirical evidence are not described in the excerpt.",
+    "background": "- Reserve system: a rule that sets aside some places for members of particular categories (e.g., a minimum number for a group).\n- Over-and-above vs. minimum guarantee: two reserve policies; the first is more generous in how it counts reserved seats, the second is more conservative.\n- Deferred acceptance: a standard matching algorithm where applicants propose to institutions and institutions tentatively hold the best offers; it is strategy-proof, meaning truthful reporting is optimal.\n- Strategy-proof: no participant gains by misreporting their preferences.\n- Incumbent: someone already assigned a place in an earlier batch.\n- Ledger / account / choice rule: the record of past allocations, the step that builds the current problem from it, and the step that selects outcomes.\n- Resource-release invariance: the paper's property for cumulative implementation, roughly that freeing up resources is handled consistently; the excerpt does not define it precisely.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Research on reserve systems mainly considers static settings, formulating and studying choice rules for a given allocation problem. Dynamic settings are different in that the problem is not given. Over time, more positions become available, and each time the institution must build the current problem from its past. We distinguish the ledger, which stores information about earlier allocations, the account, which transforms these data into the current problem, and the choice rule, which selects an outcome for that problem. The same choice rule can implement very different policies under different accounts. If each new batch is assigned while holding earlier recipients and their categories fixed, then as batches shrink, over-and-above, the most generous reserve policy we study, can select nearly the same recipients as minimum guarantee, the most conservative one. Cumulative implementation uses a different account, which reconsiders the categories of earlier recipients, and prevents this compression. We characterize it by resource-release invariance. With arrivals or changes in priorities, the ordinary choice rule might reject an earlier recipient whose appointment has to be honored. We introduce and characterize retain, reassign, and boost (RRB) choice rules, under which every incumbent retains her appointment and can have her category changed. Combining RRB with individual-proposing deferred acceptance gives a strategy-proof mechanism under which each incumbent keeps her appointment or receives one she prefers. Applications include waiting lists in school and university admissions, public recruitment, and court-ordered corrections.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18468",
+   "title": "Disenfranchisement in Spatial Voting Games",
+   "url": "https://arxiv.org/abs/2611.18468v1",
+   "authors": [
+    "Vincent Lageschulte",
+    "Joel Nishimura"
+   ],
+   "label": "arXiv:2611.18468v1",
+   "primary_category": "cs.GT",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper introduces \"franchise elections,\" in which group members vote on who counts as a member, and shows in two-dimensional ideological space that these votes can produce complex dynamics, including cycles, under any social choice function and, for the Yolk rule, that new issue axes can lead to disenfranchisement.",
+    "plain": "The paper studies a self-referential problem: the people who already have voting rights are the ones who decide who gets them. It models this as a series of votes in which members choose which group composition they want, based on how each choice would shift the outcome for them when views are spread across two issue dimensions. The authors report that these votes can behave in complicated ways, and that under the Yolk voting rule, people who try to add a new issue axis at right angles to an existing left-right divide risk losing their vote unless they side with one end of the existing spectrum.",
+    "why": "Questions about who may vote, who belongs to a group, and what speech is acceptable all involve groups deciding their own boundaries, so a formal model of that loop may be useful for thinking about such disputes. The text does not show how well the model matches real political or organizational behavior, so its practical relevance is uncertain.",
+    "background": "- Spatial voting: voters and candidates are placed as points in an ideological space, often a left-right line or a two-dimensional plane.\n- Social choice function: a rule that turns individual preferences into a collective outcome, such as a majority or median rule.\n- Yolk: a voting-theory concept, roughly the smallest circle that intersects every majority-winning line through the ideal points; it is used as a way to summarize where majority-based outcomes are likely to fall.\n- Cycling: a situation where majority votes can go in a loop, with no stable winner.\n- Disenfranchisement: losing the right to vote or to be counted as a member.\n- Recursive stability: a system where the rules for membership are set by the members themselves, so changing rules can change who decides.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The questions of voting rights, group membership, and the boundaries of acceptable discourse all involve a recursive, self-stability issue, wherein the voters, group members, and acceptable commentators are often the ultimate arbiters of their own rules for inclusion and exclusion. In order to understand how ideological or issue diversity may impact the stability of such inclusion and exclusion, we introduce franchise elections, where voting members of a group vote to change the electorate. In particular, when agents are positioned inside an ideological or issue space, a social choice function that aggregates agent viewpoints induces a preference for agents over group composition, where agents prefer groups that improve the social choice function outcome for them. We demonstrate that when ideological space is two-dimensional, these franchise elections can generate complex behavior and that this complexity exists for any social choice function. Using the Yolk social choice function from voting theory, we illustrate that franchise elections can predict that agents attempting to introduce a new ideological axis perpendicular to an existing left-right spectrum risk disenfranchisement unless they ally with either side of the spectrum, and that franchise elections can cycle with any period.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19417",
+   "title": "Are Revealed Preferences All You Need for AI Alignment?",
+   "url": "https://arxiv.org/abs/2611.19417v1",
+   "authors": [
+    "Joshua S. Gans",
+    "Richard T. Holden"
+   ],
+   "label": "arXiv:2611.19417v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper gives a criterion for when observing a principal's decisions, across every belief an AI might hold, is enough to act for them, and shows that for choosing costless evidence the same test requires the same evidence to be best in every block of actions.",
+    "plain": "The question is how an AI system can learn what its user or overseer wants just by watching what that person chooses. The paper sets out a test for when those observed choices are enough for the AI to act correctly. When they are not, the AI can act as its principal would but still gather the wrong information, and a more capable AI can turn that mistake into wrong actions.",
+    "why": "The AI alignment problem of inferring human goals from behaviour is central to safety work, and this paper frames it with economic revealed-preference reasoning. The text is only an abstract, so its wider relevance to real AI systems is not something I can judge from it.",
+    "background": "- Revealed preferences: an economic idea that a person's wants can be inferred from the choices they make.\n- AI alignment: the effort to make AI systems act in line with what people actually want.\n- Principal: the person or party an AI acts on behalf of.\n- Belief: the AI's current estimate of what the principal wants, which it updates as it learns.\n- Blocks: groups of the principal's possible actions that the AI treats as similar, such as all actions that amount to deferring.\n- Costless evidence: information the AI can gather without any cost, so the question is only which information to gather.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "AI agents learn what principals want from what principals choose. We offer a criterion for when a principal's decisions, at every belief an AI might hold, are all the AI needs. For acting, they are. Cautious actions, such as deferring to a person, typically divide the principal's actions into blocks, and for choosing costless evidence, decisions are enough exactly when the same evidence is best in every block. Otherwise, the AI acts as its principal would yet can gather the wrong evidence, and greater capability can turn that error into incorrect actions. Choices between two mistakes reveal what decisions miss.",
+   "source": "arxiv"
+  }
+ ]
 }

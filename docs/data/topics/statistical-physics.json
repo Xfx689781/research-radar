@@ -1,6 +1,6 @@
 {
  "slug": "statistical-physics",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26394",
@@ -11,12 +11,12 @@
    ],
    "label": "arXiv:2611.26394v1",
    "primary_category": "cond-mat.stat-mech",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "These are introductory lecture notes that present core concepts and mathematical techniques of classical nonequilibrium statistical mechanics, assuming prior knowledge of equilibrium statistical mechanics.",
-    "plain": "Statistical mechanics explains how the behavior of huge collections of particles relates to averages and probabilities, and most of its textbook tools assume the system has settled into equilibrium. These lecture notes gather the basic ideas and mathematical methods for the harder case of systems that are not settled, such as systems driven by flows of energy or matter. The author says the material is a synthesis and presentation of existing ideas, not new results, and notes that the same tools are used in biology, ecology, economics and sociology. The abstract does not state specific findings.",
-    "why": "It is a teaching resource for readers who want an entry point into nonequilibrium methods used across complex-systems fields; the abstract itself makes no claims of new results, so its value lies in pedagogy rather than discovery. I cannot tell from the abstract which specific cross-field applications the notes cover.",
-    "background": "['Equilibrium statistical mechanics: how microscopic states give rise to macroscopic quantities like temperature and pressure', 'Basic probability and averages over ensembles of states', 'The general idea of a system being driven away from equilibrium, for example by a temperature or energy gradient', 'Basic calculus and differential equations']",
+    "one_liner": "Informal lecture notes introducing core concepts and mathematical tools of classical nonequilibrium statistical mechanics, assuming prior knowledge of equilibrium statistical mechanics.",
+    "plain": "These are lecture notes about the physics of systems that are not settled into a steady, balanced state, such as systems that are still changing or are being driven by outside forces. The author says they aim to explain basic ideas and techniques used in this area, and to show how the same tools are applied beyond physics, in fields like biology, ecology, economics, and sociology. The author states that the material is a selection and presentation of known work, with no claim of originality.",
+    "why": "The text suggests the methods are being used as a common language for complex systems outside physics, which is why the notes may be useful to readers in those fields. The text does not give specific results or examples, so the actual reach of these tools in other fields cannot be judged from this excerpt alone.",
+    "background": "- Equilibrium: a state where a system's large-scale properties no longer change over time, as with a cup of coffee reaching room temperature.\n- Statistical mechanics: explaining large-scale behavior by averaging over the huge number of tiny particles involved.\n- Nonequilibrium: any situation not in such a balanced state, including systems that flow, are driven, or are still relaxing.\n- Familiarity with equilibrium statistical mechanics is assumed by the notes.",
     "difficulty": "intermediate",
     "ai": true
    },
@@ -34,16 +34,163 @@
    ],
    "label": "arXiv:2611.26228v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Attention heads specialize into distinct functions during training, often emerging in stages together with sharp changes in model behavior.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper studies how attention heads in transformers come to specialize as a function of training-set size rather than training time, showing in a solvable high-dimensional multi-head attention model that specialization appears as a genuine phase transition in sample complexity.",
+    "plain": "Large language models contain many \"attention heads,\" each of which can end up handling a different job, such as tracking grammar relations. Most prior work has looked at how this specialization unfolds over training time; this paper asks how it depends on how much data the model sees. The authors report that in BERT, heads specialized to syntactic relations appear as the dataset grows, and that in a simplified mathematical model the change is sharp, like a phase change in physics.",
+    "why": "It reframes head specialization as something governed by how much data is available, not only by training duration, which could inform how much data is needed before internal structure forms. The text does not establish how far these simplified-model results carry over to large real models, so that link remains open.",
+    "background": "- Attention head: a component of a transformer network that learns which other parts of the input to focus on.\n- BERT: a widely used pretrained language model based on transformers.\n- Phase transition: an abrupt qualitative change in behavior at a critical point, as with water freezing; here, a sudden change as data increases.\n- Sample complexity: how much training data is needed to learn something reliably.\n- Non-analyticity: a mathematical kink or jump in a smooth curve, which signals a phase transition.\n- High-dimensional solvable model: a simplified mathematical model with many parameters whose behavior can be computed exactly in a limit.\n- Simplicity bias: a tendency to learn simple features first and more complex ones later.\n- Online learning: training on data one example at a time as it arrives.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Attention heads specialize into distinct functions during training, often emerging in stages together with sharp changes in model behavior. While this phenomenon has mostly been studied as a function of training time, we ask how head specialization depends on the amount of available training data. Empirically, we find that heads specialized to syntactic relations in BERT emerge as the dataset size increases. We then study this phenomenon in a solvable high-dimensional model of multi-head attention and establish that, in this model, head specialization is a genuine phase transition in sample complexity, corresponding to a non-analyticity in the test error and other observables. Depending on data structure and regularization, specialization can follow uninformative head differentiation or occur through a cascade of phase transitions that progressively recover weaker latent features, providing a statistical form of simplicity bias. Finally, we relate these statistical transitions to the stagewise emergence of specialized heads during online learning, disentangling statistical from dynamical origins of head specialization.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25178",
+   "title": "The phase diagram of fluid hydrogen near melting from machine-learned interatomic potentials trained on quantum Monte Carlo",
+   "url": "https://arxiv.org/abs/2611.25178v1",
+   "authors": [
+    "Shubhang Goswami",
+    "Hongwei Niu",
+    "Ilnur Saitov",
+    "Mathieu Istas",
+    "Yubo Yang",
+    "Scott Jensen",
+    "Markus Holzmann",
+    "Carlo Pierleoni",
+    "David Ceperley"
+   ],
+   "label": "arXiv:2611.25178v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Classical and quantum path-integral molecular dynamics with two machine-learned interatomic potentials trained on quantum Monte Carlo data map the liquid phase diagram of dense hydrogen near melting, reporting a molecular-to-atomic liquid transition, its critical points, and triple points.",
+    "plain": "This paper studies how hydrogen changes when it is squeezed and heated near its melting point, specifically whether its molecules (pairs of atoms) break apart in a sudden jump or gradually. The authors ran computer simulations using machine-learned models that were trained on very accurate quantum calculations. They report that both models show a sudden, first-order change from molecular liquid to atomic liquid, which ends at critical points, and that triple points lie where this change meets the melting curve.",
+    "why": "Dense hydrogen matters for planetary interiors such as those of giant planets, and the paper says its predicted triple points should produce clear signatures in ramp-compression experiments. The text does not go further, so the link to specific experiments or planetary models is something a reader should check in the full paper.",
+    "background": "- Hydrogen molecules are pairs of atoms; at high pressure and temperature they can dissociate into single atoms.\n- A first-order phase transition is an abrupt change, like ice melting, with a jump in density; it ends at a critical point where the distinction between the two phases disappears.\n- A triple point is where three phases (here, two liquids and a solid) coexist.\n- Molecular dynamics simulates how atoms move over time; path-integral methods include quantum effects of light nuclei.\n- Machine-learned interatomic potentials are fitted models that predict forces between atoms much faster than direct quantum calculations.\n- Quantum Monte Carlo is a high-accuracy numerical method for solving the quantum many-body problem; finite-size scaling is a way to locate critical points from simulations of different system sizes.\n- Ramp compression is an experimental technique that compresses a sample smoothly over time to high pressure.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Dissociation of molecular hydrogen increasing temperature or pressure may either occur gradually or abruptly, via a phase transition. Despite considerable experimental and theoretical efforts, the phase diagram of dense hydrogen at temperatures above solid melting is not precisely known. Here, we perform classical and quantum Path Integral molecular dynamics simulations of dense hydrogen using two machine-learned interatomic potentials both trained on quantum Monte Carlo energies and forces. The resulting phase diagram is constructed using state-of-the-art techniques. Both models show a first-order phase transition from the molecular to the atomic liquid terminating in critical points whose locations were determined using finite-size scaling techniques. Triple points, located at the highest temperature of the melting curve, are found at the intersection of the liquid-liquid lines with the melting curve and should lead to clear signatures in ramp compression experiments.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24560",
+   "title": "A Monte Carlo study of closely packed two-patch particles with frustrated interactions",
+   "url": "https://arxiv.org/abs/2611.24560v1",
+   "authors": [
+    "Rui Ding",
+    "Yan-Wei Li",
+    "Hao Hu"
+   ],
+   "label": "arXiv:2611.24560v1",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A Monte Carlo study of closely packed two-patch particles in 2D, showing that competing (frustrated) patch and nonpatch interactions lead to disordered orientational ground states with exponentially decaying correlations.",
+    "plain": "This paper looks at tiny particles with two sticky spots (\"patches\") packed tightly on a flat surface, and asks how their orientations arrange themselves. The authors set up interaction rules that pull in competing directions, so the particles cannot satisfy all of them at once. They then used a computer simulation with a special update method to search for the lowest-energy arrangements and found that these arrangements are disordered, with the orientation links fading quickly with distance.",
+    "why": "It suggests that designing patchy particles could be a way to build orientationally disordered two-dimensional materials, which is a state that is otherwise hard to engineer. The text does not show how far this extends beyond the specific model studied, so its wider relevance is uncertain.",
+    "background": "- Patchy particles: particles with localized attractive or repulsive regions (patches) that control how they bond.\n- Close packing: particles arranged so that they nearly touch with little empty space, here in two dimensions.\n- Frustration: when interactions conflict so no single arrangement can satisfy all of them, often leaving many near-equal lowest-energy states.\n- Ground state: the lowest-energy configuration of a system, here found by simulation rather than exact solution.\n- Monte Carlo simulation: a computer method that makes random trial changes and accepts them by probabilistic rules to sample configurations.\n- Orientational order and nematic order parameter: measures of how aligned particle directions are; disorder means no preferred alignment.\n- BKT (Berezinskii–Kosterlitz–Thouless) transition: a two-dimensional phase transition involving vortex-like defects, referenced from an earlier paper.\n- Correlation decay: how quickly the orientation of one particle stops influencing distant ones; exponential decay means a short correlation length.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Recently it was found that closely packed two-patch particles exhibit rich orientational ordering behaviors, e.g., nonmonotonic changes of the nematic order parameter and double BKT phase transitions [arXiv:2509.03981]. In this work, we show that, with repulsive patch-patch, attractive patch-nonpatch and intermediate nonpatch-nonpatch interactions, there exist frustrations in the system of closely packed two-patch particles. To investigate the ground states of the system, we design a Markov Chain Monte Carlo algorithm with single-defect propagation. The simulation results show that the ground states are disordered and the correlation functions decay exponentially with the distance. These results demonstrate that in 2D close packing one could design patchy particles to explore orientationally disordered systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23586",
+   "title": "Topological signatures of criticality: the Ising case",
+   "url": "https://arxiv.org/abs/2611.23586v2",
+   "authors": [
+    "Tak-Shing Chan",
+    "Paweł Dłotko",
+    "Jacek Gulgowski",
+    "Biagio Lucini",
+    "Mateusz Masłowski",
+    "Davide Vadacchino"
+   ],
+   "label": "arXiv:2611.23586v2",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A study of the 2D Ising model on square and triangular lattices that defines a spin-odd Euler-characteristic observable from the cell complexes of positive and negative spin domains, relates it to standard Ising quantities, disproves a conjectured lower bound, and uses finite-size scaling to locate the ferromagnetic transition.",
+    "plain": "This paper looks at a simple magnet model (the Ising model, where tiny spins point up or down on a grid) and asks whether a purely geometric \"shape count\" of the up-spin and down-spin regions can signal when the magnet loses its ordering as it heats up. The authors build such a count, the Euler characteristic, from the difference between the two kinds of regions, and simulate the model on a computer to test it. They report that this count behaves like an order parameter near the transition and gives estimates of the transition temperature that approach the known value on both grid types.",
+    "why": "The work tests whether topology, which ignores exact measurements and looks only at connectivity and holes, can locate a phase transition as well as conventional measures. The authors suggest it may help in systems where no standard order parameter can be written down, but the text does not show this beyond the Ising model, and the critical-exponent estimate on the square lattice is reported as sensitive to the fitting range.",
+    "background": "- Ising model: a grid of spins, each up or down, with neighbours preferring to align; it has a known ordering transition (ferromagnetic transition) at a specific temperature.\n- Order parameter: a quantity, such as net magnetization, that is zero in the disordered phase and nonzero in the ordered phase.\n- Euler characteristic: a whole number describing a shape's topology (roughly, number of connected pieces minus number of holes), computed here for cell complexes built from spin regions.\n- Monte Carlo simulation with multihistogram reweighting: a computer sampling method that estimates behaviour across nearby temperatures from a set of runs.\n- Finite-size scaling: studying systems of different sizes to extract critical temperature and critical exponents, which describe how quantities diverge near the transition.\n- Susceptibility: how strongly a quantity responds to a small change in field or temperature; it peaks near a transition.\n- Pseudocritical temperature: the finite-size location of such a peak, which approaches the true critical temperature as size grows.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Topological properties of microscopic configurations may provide additional insight into phase transitions beyond conventional thermodynamic observables. We investigate this idea in the two-dimensional Ising model on square and triangular lattices by associating cell complexes with the positive and negative spin domains and constructing an Euler-characteristic observable from their difference. We provide the expression relating this quantity to conventional observables of the Ising model. This derivation allows us to understand its expected behavior physically. As a byproduct, we show that at any finite positive temperature the expectation of the Euler characteristic exceeds a positive, lattice-size-independent bound, hence disproving a previously suggested conjecture. Monte Carlo simulations combined with multihistogram reweighting show that this spin-odd topological observable exhibits order-parameter-like behavior near the ferromagnetic transition. Finite-size scaling of its susceptibility yields pseudocritical temperatures that converge to the known critical temperature for both lattice geometries. On the square lattice, the leading-order estimate of the critical exponent obtained from the topological observable depends more strongly on the fitting range than the magnetization estimate. This behavior is consistent with stronger subleading finite-size corrections, as supported by fits including an additional correction term. On the triangular lattice, the corresponding estimate remains consistent with the theoretical Ising value. Our study suggests that topologically defined quantities such as the Euler characteristic can provide an alternative way to locate order-disorder phase transitions in the systems considered here. Since the definition of these observables is purely geometrical, they can provide useful insights in cases in which order parameters cannot be constructed.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23092",
+   "title": "Memory kernel and closure for systems driven by intermittent forcing with power-law waiting times",
+   "url": "https://arxiv.org/abs/2611.23092v1",
+   "authors": [
+    "Marco Bianucci",
+    "Riccardo Mannella"
+   ],
+   "label": "arXiv:2611.23092v1",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper derives an exact decomposition of the memory kernel (G-cumulant coefficients) for a controlled variable driven by intermittent random forcing with general renewal waiting times, and studies closure approximations for power-law waiting times with finite mean.",
+    "plain": "The paper studies systems that are pushed by a signal that changes value only at random moments, holding each value for a random stretch of time. It writes down the exact way past pushes continue to influence the system's future, and shows how this memory simplifies when the waiting times between changes follow a power-law distribution. The authors also give a closed-form approximate equation for the system and test it on a solvable model.",
+    "why": "Intermittent, switching forcing appears in many physical and control settings, so a clean way to handle its memory could be useful there. The text does not show how widely the results apply beyond the model studied, so the broader significance is uncertain.",
+    "background": "- Memory kernel: a term in an equation describing how the system's past influences its present.\n- Cumulants and moments: statistical summaries of a random quantity; G-cumulants are a specific ordered version used here.\n- Boolean cumulants: a particular cumulant type that arises for Poisson (memoryless) switching.\n- Renewal process: a sequence of events where waiting times between them are independent and identically distributed.\n- Power-law distribution: waiting times with a heavy tail, so very long intervals are not rare; a finite mean means the average waiting time is finite.\n- Closure: an approximation that truncates an infinite hierarchy of terms, here at second order.\n- Telegraphic process: a signal that switches between two values.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Many systems are controlled by intermittent control variables that take on a random value for a random time interval. In the presence of such noise at update steps, the main equation for the controlled variables has a memory kernel whose coefficients are the cumulants, also known as $G$-cumulants, of the noise, which are fully ordered in time. In the case of Poisson switching, these correspond to the Boolean cumulants of the jump distribution, and the kernel can be summed exactly. We derive an exact decomposition of these coefficients for any waiting-time distribution with independent amplitudes and durations, which separates the jump statistics from the renewal statistics. In the case of waiting times that follow a power-law distribution with a finite mean, it is highly probable that a long time interval will be covered by a single period, and we have shown that, as a result, the coefficients for long delays intersect in all orders, from Boolean cumulants to the usual moments of the jump law. The long-lag kernel thus becomes a superposition of frozen deterministic flux kernels, weighted by the expression $ξ^2p(ξ)$, and from this the corresponding main equation in closed form follows. For $2<μ<3$, where the noise correlation time is infinite, the second-order closure retains a finite error even in the presence of slow dynamics, whereas the main equation of the frozen flows in this limit yields an exact stationary mean value. The telegraphic process is the only case of noise with renewal steps for which second-order conclusions are exact. An exactly solvable model with additive and correlated multiplicative noise confirms these predictions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19328",
+   "title": "When the Boundary Changes the Bulk: Topological Edge Modes in Dynamical Quantum Phase Transitions",
+   "url": "https://arxiv.org/abs/2611.19328v1",
+   "authors": [
+    "N. Sedlmayr",
+    "J. Sirker"
+   ],
+   "label": "arXiv:2611.19328v1",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper shows that edge modes of the non-Hermitian Loschmidt matrix in open-chain dynamical quantum phase transitions are protected by Z and Z2 topological indices (classes A, BDI, AIII, D), with K-splitting theorems giving the bulk-boundary correspondence.",
+    "plain": "When a quantum system is suddenly switched from one setup to another, its behavior over time can show sharp transitions. In open chains, edge effects at the ends can shift the overall rate at which the system's state \"returns\" to its starting point. The paper argues that the responsible edge modes are protected by the topology of the non-Hermitian Loschmidt matrix itself, not by the topology of the starting and ending Hamiltonians, and it says these modes can appear even when both Hamiltonians are topologically trivial.",
+    "why": "It revises the earlier explanation of why boundaries affect bulk behavior in these quench transitions, by moving the source of protection to a different mathematical object. The text does not establish links to applications beyond the theory, and the claims rest on the authors' analysis and numerical data for all four classes.",
+    "background": "- Quantum quench: suddenly changing a system's Hamiltonian (its energy rulebook) and watching it evolve.\n- Loschmidt amplitude: the overlap between the evolving state and its starting state; its decay rate measures how quickly the system \"forgets\" its start.\n- Dynamical quantum phase transition (DQPT): non-analytic kinks in the return rate at certain times, analogous to phase transitions but in time.\n- Open chain: a finite one-dimensional chain with ends, where edge modes can localize near the boundary.\n- Non-Hermitian matrix: a matrix not equal to its own conjugate transpose; it can have complex eigenvalues and is used here for the Loschmidt matrix.\n- Topological classes (A, BDI, AIII, D): the Altland-Zirnbauer tenfold classification of symmetry types; the Z and Z2 labels are integer and parity-type topological invariants.\n- Toeplitz operator and K-theory: mathematical tools for counting edge states and index invariants.\n- Winding number: a count of how many times a phase rotates around a loop, here in momentum and time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "For dynamical quantum phase transitions (DQPTs) in open chains it has been noted that the boundary can change the bulk: in time windows bounded by DQPTs, exponentially localized edge modes of the Loschmidt matrix produce a finite change in the intensive return rate. These modes have been attributed to topological properties of the initial and final Hamiltonians. Here we show that it is not the topology of the Hamiltonians but rather that of the non-Hermitian Loschmidt matrix which protects these edge modes. In particular, we show that topological edge modes can exist in class A, where both Hamiltonians are topologically trivial. For classes A, BDI, and AIII we show that these modes are protected by $\\mathbb{Z}$ indices of a Toeplitz operator and that K-splitting theorems provide a precise bulk-boundary correspondence. In class D, they are protected instead by a $\\mathbb{Z}_2$ index that records whether the quench has flipped the fermion parity at the edge. The bulk invariant for class D can be formulated either as a ratio of the Loschmidt amplitudes for periodic and anti-periodic boundary conditions or as a winding number that counts phase vortices in momentum and time. We discuss examples and provide numerical data for all four topological classes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19848",
+   "title": "A phase diagram for training and inference in language models",
+   "url": "https://arxiv.org/abs/2611.19848v1",
+   "authors": [
+    "Zhuo-Yang Song",
+    "Zeyu Li",
+    "Qing-Hong Cao",
+    "Ming-xing Luo",
+    "Hua Xing Zhu"
+   ],
+   "label": "arXiv:2611.19848v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper maps how a language model's internal representation geometry evolves across layers, using two collective coordinates (document distinguishability and document dimension) on a phase diagram, and compares untrained and trained models via a discrete Langevin-style dynamical description.",
+    "plain": "The paper asks how the hidden internal geometry of a language model, the shape its representations take as text passes through successive layers, relates to how the model actually behaves. The authors summarize each document at each layer with two numbers and plot the path of each document through a \"phase diagram,\" which is a map of regions with different qualitative behavior. They report that untrained models mostly drift toward collapsed or noisy regions, while trained models stay in a central region.",
+    "why": "It offers a geometric, physics-style way to compare trained and untrained language models, which could help explain why training changes behavior. The text reports only a limited set of models (156 untrained runs, 8 trained models from 5 architecture families, and one case study on Pythia-1.4B), so how far the framing generalizes beyond these is unclear from the text alone.",
+    "background": "- Language models are neural networks built from stacked layers (a \"Transformer\"); each layer produces an internal representation of the input text.\n- \"Representation geometry\" refers to the arrangement of these internal vectors in high-dimensional space, such as how spread out or distinguishable they are.\n- \"Initialization scale\" is the size of the random starting weights before training.\n- A \"phase diagram\" is a map showing which regimes a system falls into under different conditions, borrowed from physics.\n- A \"phase transition\" is a sudden qualitative change in a system's behavior, like water freezing.\n- A Langevin equation describes motion under a deterministic push plus random noise; \"saddle\" and \"stable node\" are types of fixed points describing how trajectories settle or pass by.\n- Pythia is a family of openly released language models of different sizes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A language model is a complex system whose behavior is determined jointly by the Transformer and the corpus, yet how the representation geometry in the Transformer relates to the actual behavior of language models remains open. We analyze how the representation geometry changes along the forward propagation of actual language models and characterize the representation geometry of a document at a given layer by two collective coordinates, document distinguishability and document dimension. On the phase diagram spanned by these collective coordinates, inference is represented as a flow along depth. We find that, for untrained models, depending on their initialization scale, most of the 156 inference flows move toward the collapse and noise regions of the phase diagram. By contrast, the inference flows of 8 trained models from 5 architecture families all enter and reside in the central region of the phase diagram. Describing the evolution of the flows with a discrete Langevin equation, we find that the difference between the inference flows of untrained runs and those of trained models reduces to whether the effective force on the flows in this region is of saddle or stable-node type. On Pythia-1.4B, we interpret the training process as a phase transition. These results give a unified gateway to the relation between representation geometry and language-model behavior.",
    "source": "arxiv"
   }
  ]

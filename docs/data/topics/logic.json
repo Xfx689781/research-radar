@@ -1,6 +1,6 @@
 {
  "slug": "logic",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26244",
@@ -11,16 +11,59 @@
    ],
    "label": "arXiv:2611.26244v1",
    "primary_category": "cs.LO",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "This contribution focuses on bisimulation invariance as the hallmark of modal model theory and of modal modelling.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A survey-style overview of bisimulation invariance in modal logic, covering variant bisimulation notions, matching modalities beyond Kripke structures, and expressive completeness results in the style of van Benthem–Rosen and Lindström theorems.",
+    "plain": "This is a survey-style paper about when a formal language for describing systems (modal logic) can only tell apart situations that are \"the same\" under a particular kind of matching between them, called bisimulation. It reviews classical results and newer extensions, including variants of that matching and settings where the usual tools of finite model theory are hard to apply. The main theme is expressive completeness: showing that a logic captures exactly the properties that respect this matching, and that it is maximal in a suitable sense.",
+    "why": "The text is an abstract-level description, so the specific results are not shown here. It may matter to researchers in logic and computer science who use modal logic to model systems, since expressiveness limits tell you what a language can and cannot say about them.",
+    "background": "- Modal logic: a logic with \"necessarily\" and \"possibly\" operators, read over graphs of states and transitions (Kripke structures).\n- Bisimulation: a back-and-forth matching between two state graphs such that matched states agree on their local facts and can mirror each other's moves; the two are then indistinguishable in the logic.\n- Bisimulation invariance: a property of a formula or query whose truth is unchanged by such matchings.\n- Expressive completeness: the claim that a logic can define every property of a given kind that has the relevant invariance.\n- van Benthem–Rosen characterisation: the theorem that, on finite structures, modal logic is exactly the bisimulation-invariant fragment of first-order logic.\n- Lindström theorem: a result saying a logic is maximal among logics satisfying certain abstract criteria.\n- Finite model theory: the study of logic restricted to finite structures, where many standard tools fail.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "This contribution focuses on bisimulation invariance as the hallmark of modal model theory and of modal modelling. It exemplifies traditional as well as more recent ramifications \\&\\ extensions of classical results -- involving variant modes of bisimulation equivalence and matching modalities also beyond plain Kripke structures, and emphasising especially the technical challenges in finite model theory and other non-elementary settings. Main results to be discussed revolve about the theme of expressive completeness phenomena: beside expressive completeness under bisimulation invariance in relation to first-order background logics, in the style of van Benthem--Rosen characterisations, this also concerns maximality results under criteria form abstract model theory, in the style of Lindstroem theorems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25799",
+   "title": "Computational trust as intuitionistic knowledge",
+   "url": "https://arxiv.org/abs/2611.25799v1",
+   "authors": [
+    "Ivo Pezlar"
+   ],
+   "label": "arXiv:2611.25799v1",
+   "primary_category": "cs.LO",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "The paper argues that computational trust can be modeled as fallible intuitionistic knowledge grounded in verification, and gives a simple constructive modal logic with a trust modality, specified inferentially via proofs-as-programs.",
+    "plain": "The paper asks what it means to trust a computer program. Its answer is that trust can be treated as a kind of knowledge that rests on having verified the program, but that is open to being wrong. The authors build a small formal logic to capture this idea.",
+    "why": "The logic is designed so that verification leads to trust, but trust does not automatically lead to verification, which matches the everyday idea that one can rely on a program on good grounds and still be let down. The abstract does not say how this connects to practical software assurance or other applications, so that link is unclear from the text.",
+    "background": "- Intuitionistic logic: a version of logic in which a claim counts as known only when you have a constructive proof of it, not merely because its denial leads to contradiction.\n- Modal logic: an extension of ordinary logic with operators such as \"it is necessary that\" or, here, \"one trusts that.\"\n- Proofs-as-programs correspondence: the idea that a formal proof can be read as a program, and a program as a proof of its specification.\n- Verification: checking, by formal reasoning or testing, that a program meets its specification.\n- Fallible knowledge: knowledge that can turn out to be false, unlike infallible knowledge.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we will argue that the notion of computational trust can be understood as a form of fallible intuitionistic knowledge grounded in verification. This approach naturally captures a key aspect of trust: it involves vulnerability. Specifically, it validates the principle that verification leads to trust but does not validate the opposite principle that trust leads to verification. Thus, we can trust on good grounds that some program will perform according to its specification but the program might still fail. We present a simple logic for capturing this notion of computational trust based on constructive modal propositional logic extended with a trust modality, which will be specified in an inferential fashion and by utilizing the proofs-as-programs correspondence.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23713",
+   "title": "Preserving Ramsey ultrafilters with tree forcings",
+   "url": "https://arxiv.org/abs/2611.23713v1",
+   "authors": [
+    "Diego A. Mejía",
+    "Ulises Ariet Ramos-García"
+   ],
+   "label": "arXiv:2611.23713v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper defines normed-tree forcings, a broad class of tree-shaped set-theoretic forcing notions (including fat-tree forcings), shows they can preserve Ramsey ultrafilters, and uses this to establish the ZFC consistency of d = u = aleph_1 < minLc = c = aleph_2.",
+    "plain": "This is a paper in set theory, the branch of mathematics that studies infinity and its different sizes. The authors study a family of ways of enlarging the universe of sets, built from tree-shaped structures, and show that these enlargements keep a special kind of large collection of sets (a Ramsey ultrafilter) intact. They use this to show that a certain arrangement of infinite sizes of several mathematical quantities is consistent with the standard axioms.",
+    "why": "The work settles open questions about how several classical cardinal characteristics relate to one another, in particular whether the ultrafilter number can be strictly smaller than certain localization and evasion-type cardinals. The text does not indicate further applications beyond these relations, so its wider significance is best judged by specialists.",
+    "background": "- Cardinal characteristics: numerical invariants measuring the size of infinite collections, such as the dominating number d and the ultrafilter number u.\n- ZFC: the standard axioms of set theory (Zermelo-Fraenkel with Choice); a consistency result shows a statement cannot be ruled out from these axioms.\n- Forcing: a technique for extending a model of set theory by adding new sets, used to build models where chosen statements hold.\n- Ultrafilter: a maximal family of subsets of the natural numbers that is closed under finite intersections and supersets; a Ramsey ultrafilter is a special, well-behaved kind.\n- Preservation: showing a forcing extension keeps a given ultrafilter from being destroyed, which controls how cardinals relate.\n- Aleph notation: aleph_1 and aleph_2 denote the first and second infinite cardinals.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We define a wide class of tree forcings that we call $\\textit{normed-tree forcings}$ and prove that they can preserve Ramsey ultrafilters. These include $\\textit{fat-tree forcings}$ as particular cases. As an application, we prove the consistency with $\\mathsf{ZFC}$ of $\\mathfrak{d}=\\mathfrak{u}=\\aleph_1 < \\mathsf{minLc}=\\mathfrak{c}=\\aleph_2$, where $\\mathfrak{d}$ denotes the dominating number, $\\mathfrak{u}$ the ultrafilter number, and $\\mathsf{minLc}$ the minimum localization cardinal. This solves some open questions about pairs of classical cardinal characteristics, such as the consistency of both $\\mathfrak{e}_{\\mathsf{ubd}}$ and its dual strictly larger than $\\mathfrak{u}$.",
    "source": "arxiv"
   },
   {
@@ -33,16 +76,83 @@
    ],
    "label": "arXiv:2611.25303v1",
    "primary_category": "cs.LO",
-   "date": "2026-11-22",
+   "date": "2026-11-19",
    "summary": {
-    "one_liner": "The paper defines a proof format and a Lean4-based proof checker that certify Taylor-model reachability bounds for polynomial ODEs as proofs in differential dynamic logic (dL), and proves that such proofs can always be generated when the underlying approximation is correct.",
-    "plain": "Computer programs that predict where a system governed by continuous-change equations (like a moving robot or a physical process) will end up often give numerical answers that could be wrong by rounding or approximation errors. This paper asks how to independently check those answers: the authors design a format for writing down a formal proof of each predicted range, and a checker that verifies the proof with a computer proof assistant. They prove that whenever the original approximation was correct, a matching proof of this kind can be produced and checked. The checker is reported to verify benchmark problems from the ARCH competition, though the abstract gives few details beyond that.",
-    "why": "Trusting numerical tools for safety-critical claims is a real problem, and this work tries to close the gap by making their outputs independently checkable, similar to how SAT solvers' unsatisfiability answers are certified. The connection to formal verification of cyber-physical systems is clear, but the abstract does not indicate how broadly the approach scales beyond the benchmarks.",
-    "background": "['Ordinary differential equations (ODEs): equations describing how quantities change continuously over time.', 'Reachability: determining the set of states a system can reach from given starting conditions.', 'Taylor models: a way of representing a function as a polynomial plus a rigorous error bound, used to get guaranteed enclosures of ODE solutions.', 'Differential dynamic logic (dL): a logic for stating and proving properties of hybrid and continuous systems, supported by the KeYmaera X theorem prover.', 'Proof certificates: a result checked by a small trusted program, so the complex solver need not be trusted.', 'Lean4: a proof assistant used here to implement the checker with formal guarantees.', 'Completeness of a proof format: the guarantee that every correct computation has a corresponding checkable proof.']",
+    "one_liner": "The paper introduces a proof format and a Lean 4 proof checker that certify Taylor-model reachability computations for ODEs with polynomial vector fields, expressed as proofs in differential dynamic logic (dL) and checkable in KeYmaera X, and proves that such proofs can be generated whenever a correct approximation exists.",
+    "plain": "Computer programs that predict where a system governed by continuous change (such as a moving machine or physical process) will end up often use numerical approximations that can be wrong without anyone noticing. This paper designs a way for such a program to output a formal proof of its answer, and a separate checker that verifies that proof. The authors show that if an approximation was computed correctly, a matching proof can always be generated and checked, and they report that the checker verifies benchmarks from the ARCH competition.",
+    "why": "Certifying results from untrusted numerical software matters for safety verification of cyber-physical systems, where a wrong prediction could hide a dangerous state. The approach is modeled on proof checking for SAT solvers, which is a useful precedent, though the text alone does not show how widely it will be adopted.",
+    "background": "- Ordinary differential equations (ODEs): equations describing how quantities change continuously over time.\n- Reachability: determining which states a system can reach from a set of starting states.\n- Taylor models: a way of representing a function as a polynomial plus a rigorously bounded error term, giving guaranteed bounds on numerical answers.\n- Polynomial vector fields: rules of change where the rates are polynomial expressions in the variables.\n- Differential dynamic logic (dL): a formal logic for stating and proving properties of hybrid systems, with KeYmaera X as its prover.\n- Proof checking: independently re-verifying a proof produced by a solver, so the solver need not be trusted; the SAT/UNSAT proof analogy is the model here.\n- Lean 4: a proof assistant and programming language used to implement the checker.\n- ARCH competition: a community benchmark contest for verifying continuous and hybrid systems.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "This paper introduces a proof format and proof checker for certifying reachability computations of ordinary differential equations (ODEs) with polynomial vector fields. Establishing a proof checking framework for certifying ODE reachability is similar to the checking of UNSAT proofs for propositional satisfiability solving, but it is even more important due to the challenges inherent in dealing with ODEs, and even more challenging due to the numerical nature of ODE reachability algorithms. The proofs are expressed in differential dynamic logic (dL), and can be independently verified with symbolic theorem provers for dL (e.g. KeYmaeraX). Such proofs are naturally generated by reachability algorithms based on Taylor models, a popular technique to obtain rigorous bounds on approximations of ODEs. This paper proves the completeness of such proofs - if an approximation was correctly computed by some (possibly untrusted) reachability algorithm via Taylor models, then a corresponding proof in dL can be automatically generated and checked to be correct in dL's proof calculus. A dedicated proof checker is implemented in Lean4 for improved performance, which is capable of formally verifying benchmarks in the ARCH competition.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22871",
+   "title": "Relative computability and definability for nonregular oracles",
+   "url": "https://arxiv.org/abs/2611.22871v1",
+   "authors": [
+    "Yong Liu",
+    "Cheng Peng",
+    "Mengzhou Sun"
+   ],
+   "label": "arXiv:2611.22871v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "In nonstandard models of true arithmetic, the classical equivalence between computability and \"both the set and its complement are c.e. relative to an oracle\" is shown to fail for general (nonregular) oracles, with the regular case still holding over ISigma_1.",
+    "plain": "This paper works in logic about what can be computed from a given body of information (an \"oracle\"). The authors build a countable nonstandard model of arithmetic in which a set A and its complement can both be listed by a procedure using oracle X, yet A cannot be obtained from X by a standard step-by-step reduction. The result is a counterexample, and the authors also prove that the usual equivalence does hold for regular oracles.",
+    "why": "It shows that a classical equivalence in computability theory depends on the kind of oracle used, which clarifies the boundaries of a basic principle. The text does not say what further applications it may have, so its wider connections are unclear from the given material.",
+    "background": "- Computable set: one where a procedure can decide membership for any input.\n- Computably enumerable (c.e.): one whose members can be listed by a procedure, though non-members may never be confirmed.\n- Oracle: extra information handed to a procedure for free; \"relative to X\" means computing with X as the oracle.\n- Turing reducibility: A is Turing reducible to X if X-powered procedures can decide A.\n- Pointwise vs. strong reducibility: two variants of the reduction notion that can differ.\n- Nonstandard model of arithmetic: a model of the arithmetic truths that contains extra, non-standard numbers; true arithmetic is the set of all sentences true in the standard integers.\n- ISigma_1: a fragment of induction axioms restricted to simple formulas, used to say how much arithmetic is assumed.\n- Delta_1 set: one that is both c.e. and co-c.e. (so decidable in the simple sense).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Classically, a set is computable from an oracle if both the set and its complement are computably enumerable (c.e.) relative to that oracle. We construct a countable nonstandard model of true arithmetic with sets A and X such that both A and its complement are c.e. relative to X, yet A is not pointwise Turing reducible to X. The Turing functionals used here are single-valued at every oracle. For regular oracles, we prove that the classical equivalence holds over ISigma_1. Two further phenomena, each known from earlier work, are realized with the same oracle X that witnesses our main separation. Strong and pointwise Turing reducibility differ for this X, and some Delta_1^X set is not X-c.e.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21390",
+   "title": "Exactly Proper Forcing",
+   "url": "https://arxiv.org/abs/2611.21390v1",
+   "authors": [
+    "Monroe Eskew",
+    "Curial Gallart"
+   ],
+   "label": "arXiv:2611.21390v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Introduces \"exact properness,\" a strengthened form of properness for forcing over uncountable models of set theory, proves iteration theorems, and shows consistency of forcing axioms for this class.",
+    "plain": "This paper is about a technical tool in set theory, the branch of mathematics that studies infinity and what can and cannot be proved about it. Set theorists build new mathematical universes by \"forcing,\" a method for adding objects to a model while controlling what changes. The author introduces a stricter version of a known safety condition, called exact properness, and shows that the approach works when applied repeatedly and that certain general principles, called forcing axioms, can be consistently assumed for this class.",
+    "why": "Forcing axioms are central tools for settling questions that the standard axioms of set theory leave open, so a new class of well-behaved forcings that supports them may matter to specialists. The text is short and gives only the abstract, so I cannot judge how far the results reach beyond what is stated.",
+    "background": "- Set theory: the foundation of mathematics built on sets, with the axioms of ZFC as the usual standard.\n- Forcing: a technique for extending a model of set theory by adding new sets, used to show that statements are independent of the axioms.\n- Properness: a property of forcing notions that ensures countable structures are preserved, allowing iterated constructions.\n- Uncountable models: models whose underlying collection is larger than the natural numbers, where properness alone may not suffice.\n- Forcing axioms: strong consistency principles (such as Martin's Axiom or Proper Forcing Axiom) asserting that certain forcing extensions already contain the needed objects.\n- Iteration theorem: a result saying that a sequence of such forcings, taken in stages, still has the desired property.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce the notion of exact properness, a strong form of properness for uncountable models, and prove iteration theorems and the consistency of forcing axioms for this class. We discuss examples of posets in the class and give some applications of the forcing axioms.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20299",
+   "title": "On cover exacting cardinals",
+   "url": "https://arxiv.org/abs/2611.20299v1",
+   "authors": [
+    "Philipp Lücke",
+    "Alejandro Poveda"
+   ],
+   "label": "arXiv:2611.20299v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper answers a question of Goldberg by showing that, if κ is ω_1-strongly compact, no cardinal λ > κ is γ-cover exacting for any cardinal γ.",
+    "plain": "This is a set-theory paper about very large infinite numbers called cardinals, which are used to measure how strong the basic axioms of mathematics can be. The author answers an open question posed by Goldberg about a particular large-cardinal property called \"cover exacting.\" The result shows that a certain kind of large cardinal (an ω_1-strongly compact one) rules out any larger cardinal having that property.",
+    "why": "It settles a specific open question raised by another researcher, which narrows down which large-cardinal properties can coexist. The text itself does not say how far the result reaches beyond this question, so its wider significance is unclear from the excerpt alone.",
+    "background": "- Cardinals: infinite \"sizes\" of sets; large cardinals are very big ones whose existence cannot be proved from the standard axioms of set theory.\n- Strongly compact cardinal: a large cardinal with a strong covering property for families of sets; ω_1-strongly compact is a weaker, countably-complete version of this.\n- Cover exacting (γ-cover exacting): a property of a cardinal λ relative to a cardinal γ, defined in the literature the paper cites; the excerpt does not define it.\n- Open question of Goldberg: the paper responds to a question in Goldberg's earlier work, which the excerpt does not describe.\n- Background in forcing or inner-model theory is helpful but not needed for the headline claim.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We answer a question of Goldberg about cover exacting cardinals. Concretely, we show that if $κ$ is $ω_1$-strongly compact, then no cardinal $λ>κ$ is $γ$-cover exacting for some cardinal $γ$.",
    "source": "arxiv"
   }
  ]

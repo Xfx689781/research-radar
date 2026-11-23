@@ -1,6 +1,6 @@
 {
  "slug": "embodied-ai",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25980",
@@ -13,14 +13,14 @@
    ],
    "label": "arXiv:2611.25980v1",
    "primary_category": "cs.RO",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "World models aim to predict environment dynamics under actions, enabling the prediction of action consequences without executing them in the real world.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "AFFECT is an auxiliary training objective that teaches action-conditioned video world models to respond to small, temporally correlated action perturbations the way real recorded outcomes do, improving rollout fidelity on OGBench, DROID and ALOHA-2.",
+    "plain": "Robot \"world models\" are systems that predict what a camera will see after a robot takes an action, so the action can be tested without running it on hardware. This paper points out that these models can look realistic while still missing how a slightly different action changes the outcome. The authors add a training objective that adds noise to a robot policy's actions, then teaches the model to react to that noise the way real recorded videos do.",
+    "why": "Reliable predictions of small action differences matter for judging robot policies without running them and for planning. The text reports that on DROID, the correlation between simulated and real policy success rates rose from 0.47 to 0.79, and that planning with these models improved task success by up to 8.3%; the wider significance beyond these benchmarks is not established by the text.",
+    "background": "- World model: a learned model that predicts future observations (here, video frames) given actions.\n- Policy: the rule a robot uses to choose actions from what it sees.\n- Teleoperation: a human controlling a robot remotely, used here to collect training data.\n- Action perturbation: small changes added to actions to see how outcomes shift.\n- Pearson correlation: a score from -1 to 1 for how closely two sets of numbers move together; here it compares success rates in simulation and on the real robot.\n- FVD (Fréchet Video Distance): a score for how close generated videos are to real ones; lower is better.\n- Model-based planning: choosing actions by simulating their outcomes with a model first.\n- Benchmarks named: OGBench (simulation), DROID and ALOHA-2 (real robot setups).",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "World models aim to predict environment dynamics under actions, enabling the prediction of action consequences without executing them in the real world. Yet despite producing increasingly realistic videos, current world models often fail to capture how small action changes affect future observations. This limits their use in tasks such as robotic policy evaluation and model-based planning, where nearly identical actions can lead to qualitatively different outcomes. To address this, we propose AFFECT, an auxiliary training objective for learning the distribution of visual changes induced by action perturbations. Specifically, we inject temporally correlated noise into the actions of a policy trained on task-agnostic human teleoperation. We then train the world model so that its generated videos respond to this noise as the recorded videos do, without requiring repeated executions from the same initial state. Across OGBench simulation and real-world DROID and ALOHA-2 setups, AFFECT makes world-model rollouts more faithful to real outcomes. On DROID, the Pearson correlation between policy success rates in the world model and on the real robot rises from 0.47 to 0.79, alongside up to 23% lower FVD. These gains carry over to planning, where selecting actions with AFFECT-trained world models improves task success by up to 8.3%.",
    "source": "arxiv"
@@ -39,16 +39,177 @@
    ],
    "label": "arXiv:2611.25336v1",
    "primary_category": "cs.RO",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "MoRE is a 3D world model for robots that uses a mixture of motion experts, one each for rigid, deformable, and prehensile (grasping) dynamics, and plugs into model predictive control for manipulation.",
-    "plain": "A robot that plans its moves needs a model of how objects will move in response to its actions, but objects behave very differently: a rigid block, a squishy cloth, and a held object each follow different physics. The authors split these cases into separate 'expert' sub-models inside one network, so each type of motion gets its own specialized treatment. They report that this improves prediction accuracy across these regimes and gives better results when the model is used to control a real robot.",
-    "why": "Robots that must handle many kinds of objects need predictive models that do not blur together different physical behaviors, so this design choice is relevant to manipulation research. The abstract gives only a high-level summary, so the size of the gains and how broadly they hold are unclear without the full paper.",
-    "background": "['World model: a learned model that predicts how the environment will change after an action, used by robots to imagine outcomes before acting.', \"Mixture of experts: a neural network design where a gating mechanism routes inputs to specialized sub-networks ('experts') rather than using one network for everything.\", 'Rigid vs. deformable dynamics: rigid objects keep their shape when pushed, while deformable ones (cloth, dough, rope) bend and change shape, which needs different modeling.', \"Prehensile manipulation: actions where the robot grasps and holds an object, so the object's motion is tied to the gripper.\", 'Model Predictive Control (MPC): a planning method that repeatedly simulates candidate action sequences with a model, picks the best one, executes the first step, and replans.', 'Sim-to-real data: training on a mix of simulated and real-world recordings to cover more cases than real data alone provides.']",
+    "one_liner": "MoRE is a 3D robotic world model that routes predictions through a mixture of motion experts specialized for rigid, deformable, and prehensile (grasping) dynamics, and is used with model predictive control for manipulation.",
+    "plain": "Robots need to predict how objects will move when they push, squeeze, or grab them, and those physical behaviors differ a lot from one case to another. This paper proposes MoRE, a single predictive model that splits these interactions into three kinds of physical behavior and hands each to a specialized sub-model. The authors report that this improves prediction accuracy across these cases and gives better results when the model is used to plan robot actions on real hardware.",
+    "why": "Predicting object motion is a core step for robots that plan their own actions, so better predictions across varied materials could matter for manipulation. The text does not say how large the gains are or how it compares with other methods beyond the stated improvements, so its wider significance is unclear.",
+    "background": "- World model: a learned model that predicts how a scene will change in response to an action.\n- Mixture of experts: a design where several sub-networks each handle a subset of cases, and a gating step chooses or weights them.\n- Rigid, deformable, prehensile dynamics: motion of solid objects that keep their shape, soft objects that bend or deform, and objects being grasped or held.\n- Model Predictive Control (MPC): a planning method that repeatedly predicts outcomes of candidate actions and picks the best one, then replans.\n- Sim-to-real: training partly on simulated data and testing on physical robots.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "A robotic world model should predict how objects evolve under robot actions and physical dynamics. While recent 3D world models have shown strong predictive capabilities, they still struggle with the heterogeneous dynamics arising from diverse object interactions. To address this in a unified framework, we decompose robotic interactions into distinct physical regimes and assign each to a specialized motion expert. We introduce MoRE, a 3D world model with a mixture of motion experts organized around rigid, deformable, and prehensile dynamics. This design enables a single model to capture diverse physical behaviors while preserving regime-specific priors. Trained on mixed simulation and real-world data, MoRE integrates with Model Predictive Control (MPC) to support diverse manipulation tasks. Experiments show that MoRE improves prediction accuracy across physics regimes, leading to stronger real-world MPC performance. Code, data, and project website are available at https://alwaysleepy.github.io/MoRE-WM-site/.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23961",
+   "title": "3DTouch: A Tactile-aware VLA Model with 3D Geometric Relations for Dexterous Manipulation",
+   "url": "https://arxiv.org/abs/2611.23961v1",
+   "authors": [
+    "Xin Zhang",
+    "Shiqi Zhang",
+    "Siyuan Cao",
+    "Juncheng Cai",
+    "Yedong Shen",
+    "Yuxuan Gao",
+    "Dianlong Wen",
+    "Kaixue Long",
+    "Lu Zhang",
+    "Yao Li",
+    "Jiajun Deng",
+    "Yanyong Zhang"
+   ],
+   "label": "arXiv:2611.23961v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "3DTouch conditions a vision-language-action robot policy on a shared 3D representation of RGB-D scene points and dense five-finger tactile readings, plus hand-object and object-object geometric relations, for contact-rich dexterous manipulation.",
+    "plain": "Robot hands often grasp things in ways the cameras cannot fully see, because the fingers and objects block the view. This paper proposes giving a robot's AI controller both 3D camera geometry and touch-sensor readings, placed in the same coordinate frame, so it knows where contact happens and how hard. The authors report testing this on five real-world hand tasks with a robot arm and a dexterous hand.",
+    "why": "Combining touch and 3D geometry in one spatial representation is a plausible route to more reliable robot hand skills, since vision alone can miss contact details. The text reports a 42-point average success-rate gain over the base model and 20 points over the strongest alternative, but the summary provides no task details or variance, so the size of the benefit is hard to judge from this text alone.</ahem>\n<parameter name=\"background\">[\"VLA (vision-language-action) model: a large AI model that takes camera images and a language instruction and outputs robot motor actions.\", \"Dexterous hand: a multi-fingered robot hand, here a five-finger XHand, with many joints for fine manipulation.\", \"Tactile sensing (taxel): touch sensors made of many small pressure cells; each reports where and how strongly it is pressed.\", \"RGB-D: a camera that records color plus depth (distance) for each pixel, giving 3D points.\", \"Robot-base frame: a single fixed coordinate system centered on the robot arm's base, used to put all sensor data in one spatial reference.\", \"Ablation study: tests that remove one component at a time to see how much each part contributes.\"]",
+    "background": "",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In contact-rich dexterous manipulation, occlusion by the fingers and interacting objects obscures local geometry, preventing visual observations from fully capturing contact locations. Visually similar scenes may also differ subtly in the relative positions of interacting objects, leading to different contact states. We propose 3DTouch, a tactile-geometric conditioning approach for vision-language-action (VLA) models. 3DTouch constructs a shared 3D visuo-tactile representation by expressing RGB-D scene points and dense five-finger tactile measurements in the robot-base frame, preserving each taxel's spatial location and force vector. Hand-object and object-object relations derived from hand landmarks and pose-aligned reconstructed surfaces explicitly describe the relative arrangement of interacting entities. Together, these representations condition the VLA action expert on spatially localized contact forces and relative surface geometry, providing explicit cues for contact adjustment and object alignment. We evaluate 3DTouch on five real-world contact-rich dexterous manipulation tasks using a UR7e robot arm equipped with an XHand dexterous hand. 3DTouch improves the average success rate by 42 percentage points over the corresponding VLA baseline and by 20 percentage points over the strongest evaluated alternative. Ablation studies reveal the complementary benefits of scene geometry and spatial tactile feedback, with further gains from shared spatial grounding and explicit geometric relations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25243",
+   "title": "Verify2Act: Critic-Guided Latent World Models for Verifying Language-Conditioned Manipulation Plans",
+   "url": "https://arxiv.org/abs/2611.25243v1",
+   "authors": [
+    "Chrisantus Eze",
+    "Christopher Crick"
+   ],
+   "label": "arXiv:2611.25243v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Verify2Act checks language-model-proposed robot manipulation plans by imagining their outcomes in a latent (feature-space) flow-matching world model, scored by a dual-head critic before execution.",
+    "plain": "Robots that take spoken or written instructions often use a language model to suggest a sequence of steps, but the language model has no real sense of how the scene will change. This paper adds a checking stage: each proposed plan is first \"imagined\" by a predictive model working on compact visual features rather than raw pixels, and a critic judges whether the imagined outcome is consistent and reaches the goal. Only plans that pass are run on a low-cost robot arm.",
+    "why": "The reported gains on a real arm (83.3% task success versus 53.3% for the language model alone) and the claim of fewer costly model calls suggest that checking plans in a compact imagined space is a practical route to more reliable robot planning. The results come from one lab's six-task setup and a simulation benchmark, so how far they generalize is not yet clear.",
+    "background": "- Vision-Language Model (VLM): a model that reads images and text and can propose step-by-step plans, but does not simulate physics.\n- World model: a learned model that predicts how a scene will change after an action.\n- Latent space / DINOv2 features: a compressed numerical description of images produced by a pretrained vision network, used instead of raw pixels.\n- Flow matching: a training method for generative models that learns to transform noise into plausible predictions; here it predicts future scene features.\n- Critic: a learned scorer that rates imagined rollouts on temporal consistency and goal satisfaction.\n- Digital twin: a simulated copy of the real robot and workspace used to generate training data.\n- CALVIN: a public benchmark of long-horizon, language-instructed robot tasks; \"five-task chain success\" means completing five tasks in a row.\n- Pixel-diffusion world model: a slower predictive model that generates full images, used here as a comparison.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Vision-Language Models (VLMs) can propose multi-step manipulation plans, but they have no grounded model of how a scene will change, and the pixel-level world models that could check those plans are slow and drift over long horizons. We present Verify2Act, a modular verification framework that separates semantic action proposal from latent physical verification. A VLM proposes candidate plans, a latent world model (V2A-WM) imagines each of them in the DINOv2 feature space, and a dual-head critic checks the imagined rollouts for temporal consistency and goal satisfaction before anything is executed. V2A-WM extends recent flow-matching world models with cross-attention action grounding and a causal temporal history window. We deploy the full system on a low-cost robot arm, training the world model and critic only on data generated in a digital twin. Across six language-conditioned tasks, Verify2Act reaches 83.3\\% task success, compared with 61.7\\% for a latent world model without our architectural changes, 53.3\\% for the VLM alone, and 46.7\\% for a pixel-diffusion world model. It verified every plan it executed and incurred no planning-induced failures: all of its failed episodes were caused by low-level grasp or placement slips. In simulation, Verify2Act obtains the highest five-task chain success on CALVIN among the compared baselines with 30$\\times$ fewer reflective VLM calls than pixel-diffusion verification, and the highest success on cluttered nut assembly.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22691",
+   "title": "Making the World React Realistically: A Closed-Loop Interactive World Model for Autonomous Driving",
+   "url": "https://arxiv.org/abs/2611.22691v1",
+   "authors": [
+    "Jia Hu",
+    "Yang Chang",
+    "Panqu Wang",
+    "Zhijun Fu",
+    "Chang Liu",
+    "Changjian Yu",
+    "Jintao Lai"
+   ],
+   "label": "arXiv:2611.22691v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A closed-loop interactive world model for driving that co-trains background-vehicle behavior (via multi-agent RL against an end-to-end ego planner) and per-Gaussian 3D vehicle rendering, including rendered turn-signal and brake-light states tied to driving intent.",
+    "plain": "Self-driving cars are tested on simulated traffic, and this paper tries to make that simulated traffic act and look realistic. Other cars are first taught to drive by copying recorded human driving, then refined so they react to the car being tested, and their 3D appearance is repaired from the viewpoints actually seen. The authors also render vehicle signal lights according to what each car intends to do.",
+    "why": "Realistic simulation of other road users is a bottleneck for testing autonomous driving on rare, dangerous situations, so this is a relevant direction. The paper reports an 85% reduction in behavioral divergence from real logs and a 2.0 dB PSNR gain on novel views over the prior state of the art on long-tail scenarios; these are the authors' own results and I have not checked them against other evaluations.",
+    "background": "- World model: a learned simulator that generates what a sensor would see and how other agents move, given the ego car's actions.\n- Closed loop: the simulated traffic responds to the car being tested, and that car reacts to the simulation in turn.\n- Imitation learning and reinforcement learning: copying recorded behavior versus learning by trial and reward; multi-agent RL means several simulated cars learn together.\n- End-to-end planner: a driving model that maps camera images directly to steering and speed.\n- 3D Gaussian splatting: a way of representing objects as many small colored blobs that can be rendered from new viewpoints.\n- View-dependent color: appearance that changes with viewing angle (reflections, shading); under-observed parts are unreliable.\n- PSNR (peak signal-to-noise ratio): a standard image-quality score in decibels; higher is closer to the reference image.\n- Long-tail scenario: a rare situation that seldom appears in recorded driving data.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "World models (WMs) generate driving scenarios beyond recorded logs, enabling the training and evaluation of autonomous driving systems in unseen interactions. However, existing WMs struggle to ensure both behavioral realism and visual fidelity, since they overlook the relationship between vehicle interactions and the ego visual observations. We propose a closed-loop interactive WM that couples behavior modeling and visual rendering. First, imitation-learned background-vehicle (BV) policies are fine-tuned with multi-agent reinforcement learning in the closed loop against an end-to-end ego planner that reacts to the rendered images, so that their interaction behaviors match those in real logs. Second, the viewpoints exposed by these interactions guide a per-Gaussian diagnosis of each 3D Gaussian vehicle asset, which attenuates view-dependent colors on under-observed Gaussians and fills never-observed surfaces with generated Gaussians, while preserving the observed appearance. Third, signal lights are rendered according to the driving intentions of the vehicles, by an editor that learns the light states unobserved for a vehicle through counterfactual fine-tuning with a light-state classifier. On long-tail closed-loop scenarios, our method reduces the divergence from real-world interaction behaviors by 85% and improves novel-view vehicle PSNR by 2.0dB over the state-of-the-art WM. The significance of BV light signaling in WMs is shown, as the rendered signal lights conveying BV driving intentions indirectly impact ego driving behaviors in a quarter of the scenarios.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22445",
+   "title": "Autonomous Track Racing with a Commercially Available Humanoid: System Design and Real-World Deployment",
+   "url": "https://arxiv.org/abs/2611.22445v1",
+   "authors": [
+    "Koki Inami",
+    "Takashi Sato",
+    "Hiroyuki Oka",
+    "Shota Takizawa",
+    "Yuya Takahashi",
+    "Amon Suzuki",
+    "Hayato Ono",
+    "Kohtaro Ihara",
+    "Yuki Noka",
+    "Shohei Matsugu"
+   ],
+   "label": "arXiv:2611.22445v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A complete autonomous running system for a commercially available humanoid (Unitree G1), combining vision-based lane tracking, an RL-trained running policy with a human motion prior, and temperature-aware pacing, deployed in 100 m, 400 m, and 1500 m races at the World Humanoid Robot Games 2026.",
+    "plain": "The paper describes a small humanoid robot that ran races on a track by itself, staying in its lane and finishing without help. The team built the full system and reports how it did: 13th of 74 in the 100 m, 10th of 44 in the 400 m first round (then a fall in the semifinal), and seventh of 35 in the 1500 m. The main limit it found was overheating motors, which set the pace in every event, and the one fall was traced to a lane-detection error.",
+    "why": "Few reports describe a complete autonomous humanoid system operating in an actual competition, so this is a useful real-world record of what currently limits robot running, especially heat in the motors. It is a single deployment on one robot model, so the findings may not generalize widely beyond that setting.",
+    "background": "- Humanoid robot: a human-shaped walking/running robot; the Unitree G1 is a commercially sold general-purpose model.\n- Reinforcement learning (RL): training a control policy by trial and error in simulation or on hardware, rewarded for good behavior.\n- Human motion prior: reference data from human movement that guides the robot toward natural-looking gaits.\n- IMU (inertial measurement unit): a motion sensor measuring acceleration and rotation; here used with leg odometry to estimate position during flight phases when no foot touches the ground.\n- Head-camera stabilization: correcting camera images for the body's bouncing motion so lane detection works.\n- Motor heating and torque: motors that work hard get hot, and hot motors must be slowed down; the paper penalizes hip torque during training to reduce this.\n- Temperature-based speed limiting: the controller caps speed as motors heat up, and sets pacing per race distance.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Learning-based methods now let humanoids run robustly, and they have begun to compete in athletic events. Yet few reports describe a complete autonomous humanoid running system in an actual race, where the robot must follow a lane at a new venue, pace itself within hardware limits, and finish without intervention. We report such a system deployed on the Unitree G1, a commercially available general-purpose humanoid, in the 100 m, 400 m, and 1500 m events of the World Humanoid Robot Games 2026. The system integrates vision-based lane perception, path tracking, and a running policy trained by reinforcement learning with a human motion prior. To address the challenges of humanoid running, we stabilize head-camera images against body motion and use IMU-assisted leg odometry to bridge flight phases. To manage motor heating, we penalize hip-pitch torque during training, add heat-dissipation plates, and apply temperature-based speed limiting with event-specific pacing. The robot placed 13th of 74 in the 100 m, 10th of 44 in the 400 m first round before falling in the semifinal, and seventh of 35 in the 1500 m. In this deployment, thermal margin set the pace in every event, and the semifinal fall followed a lane-detection error.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19775",
+   "title": "Recovery-Guided Model-Based Diffusion for Safety-Critical Legged Locomotion",
+   "url": "https://arxiv.org/abs/2611.19775v1",
+   "authors": [
+    "Lei Zheng",
+    "Shivam Sood",
+    "Mithun Vanniasinghe",
+    "Guillaume Sartoretti",
+    "Armin Lederer"
+   ],
+   "label": "arXiv:2611.19775v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A recovery-guided model-based diffusion planner adds a learned terminal recovery critic and feasibility-guided refinement to short-horizon trajectory optimization for safety-critical high-speed legged locomotion on a Unitree Go2.",
+    "plain": "The paper looks at how a four-legged robot can move quickly while avoiding obstacles without crashing. Planning far into the future is expensive to compute, but planning only a short way ahead can miss dangers. The authors add a learned estimate of how safe the robot will be at the end of a short plan, assuming it then switches to a fallback recovery behavior.",
+    "why": "Robots that move fast near obstacles need safety checks that are both reliable and quick enough to run in real time. The text reports zero collisions and 98% strict-clearance success over 50 paired randomized Go2 trials, with less computation than long-horizon baselines, but these are results from the authors' own experiments and the text does not show how well they transfer to other robots or settings.",
+    "background": "- Legged locomotion: robots that walk or run on legs, here a Unitree Go2 quadruped.\n- Trajectory optimization: computing a planned path of movements that satisfies goals and constraints.\n- Model-based diffusion (MBD): a sampling method that refines many candidate trajectories step by step, borrowing the idea behind image-generating diffusion models.\n- Prediction horizon: how many steps ahead the planner simulates; longer horizons see more danger but cost more computation.\n- Recovery policy and critic: a fallback controller, and a learned model that estimates how safe the robot is after following it.\n- Clearance margin: the distance between the robot and obstacles; strict clearance means keeping a required minimum gap.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Safety-critical high-speed legged locomotion requires motion planners to balance safety foresight with online computational efficiency. Although short prediction horizons reduce rollout costs, they provide limited safety foresight, and strict safety constraints severely restrict the feasible trajectory space. We propose a recovery-guided model-based diffusion (MBD) framework for safety-critical legged locomotion. It incorporates a learned terminal recovery critic into short-horizon trajectory optimization. Specifically, the critic approximates the worst-case future clearance margin along rollouts of a designated recovery policy. We introduce a feasibility-guided refinement strategy that combines within-horizon constraints and terminal recoverability at each sampling stage, while retaining feasible elites to mitigate sampling-support loss. Across 50 paired randomized Unitree Go2 obstacle-avoidance trials, our approach achieves zero collisions and 98% strict-clearance success, while requiring substantially less computation than long-horizon MBD baselines. A project page is available at https://zack4417.github.io/rg-mbd/.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18305",
+   "title": "PROOF: Perceptive Robustness via Out-of-Distribution Fallback for Legged Locomotion",
+   "url": "https://arxiv.org/abs/2611.18305v1",
+   "authors": [
+    "Siyuan Wang",
+    "Dongjie Zhu",
+    "Jinxuan Lu",
+    "Wenjun Xu",
+    "Jiankun Wang"
+   ],
+   "label": "arXiv:2611.18305v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "PROOF is a two-stage teacher-student framework that lets a vision-based quadruped locomotion policy estimate the reliability of its camera-derived terrain features and fall back to proprioceptive (body-sensing) control when those features are out-of-distribution.",
+    "plain": "Legged robots that use cameras or depth sensors to plan their steps can fall badly when the view is blocked, reflective, or badly lit. This paper describes a method that teaches a four-legged robot to notice when its vision is unreliable and to rely more on its sense of its own body instead. The authors report that a Unitree Go2 robot with a depth camera did high-energy parkour moves such as crossing gaps and balance beams under normal vision, and kept moving stably under heavy occlusion and strong lighting changes.",
+    "why": "Robots that work only when their sensors are perfect are hard to trust outside the lab, so a controller that knows when to discount its vision addresses a real failure mode. The text is a short abstract, so the size of the improvement over existing methods and the range of test conditions are not known from it.",
+    "background": "- Perceptive locomotion: a robot uses sensors such as depth cameras to see terrain and plan foot placement.\n- Proprioception: sensing one's own body state (joint angles, motion, contact), without looking outside.\n- Teacher-student learning: a stronger \"teacher\" policy, often trained with privileged simulation information, is used to train a simpler \"student\" that runs on real sensors.\n- Out-of-distribution input: data unlike anything seen in training, which a system may handle poorly.\n- Uncertainty estimation: the model outputs how confident it is, so it can down-weight unreliable inputs.\n- Sim-to-real: training in simulation and deploying on physical hardware.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Vision-based perceptive locomotion has enabled legged robots to achieve agile and terrain-aware locomotion across complex environments. However, the reliability of such systems heavily depends on visual observations, which are inherently susceptible to occlusion, reflective surfaces, and illumination variations, often resulting in catastrophic locomotion failures under degraded perception conditions. In this paper, we present PROOF (Perceptive Robustness via Out-of-Distribution Fallback for Legged Locomotion), a perceptive locomotion framework that enables robust locomotion under severe visual disturbances. Our method adopts a two-stage teacher-student learning paradigm that explicitly models perception reliability: the teacher learns both perception-driven and proprioceptive fallback behaviors, while the student predicts exteroceptive features with uncertainty and suppresses them under out-of-distribution inputs. We evaluate our method on a Unitree Go2 quadruped equipped with a RealSense D435 depth camera in real-world settings. Under normal visual conditions, our method enables the robot to successfully perform high-dynamic parkour maneuvers, including traversing large gaps, elevated platforms, and narrow beam terrains. Under severe visual degradation, such as heavy occlusion and strong illumination changes, the robot continues to maintain stable and robust locomotion performance.",
    "source": "arxiv"
   }
  ]

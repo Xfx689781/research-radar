@@ -1,6 +1,6 @@
 {
  "slug": "statistical-methods",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25464",
@@ -13,14 +13,14 @@
    ],
    "label": "arXiv:2611.25464v1",
    "primary_category": "stat.ME",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Synthetic data has emerged as a powerful tool for data sharing, clinical trial simulation, and digital twin development, with growing applications in biomedical research and drug development.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proposes a two-stage generative model (TSGSurv) for synthetic censored time-to-event data, proves a distributional convergence rate for it, and studies when Cox proportional hazards inference on synthetic survival data is valid and how to correct it.",
+    "plain": "The paper is about creating artificial patient records that mimic real survival data, meaning how long until an event such as death or relapse happens, where some cases are only partly observed (censored). The authors build a two-step generator that produces observed times and covariates together, and they claim theoretical guarantees on how closely the fake data match the real distribution. They also show that standard statistical analysis run on synthetic data can be misleading, and they describe a variance correction and a distribution calibration step to recover valid conclusions about the original data.",
+    "why": "Synthetic patient data is increasingly used for data sharing, trial simulation and digital twins, so whether analyses on such data are trustworthy matters for medical research. The text does not say how the methods compare with existing approaches beyond the reported simulations and two real-data applications, so its practical reach is uncertain from the abstract alone.",
+    "background": "- Time-to-event (survival) data: measurements of how long until something happens, such as relapse or death.\n- Censoring: some subjects are not followed until the event, so only a lower bound on their time is known.\n- Cox proportional hazards model: a standard regression model that relates covariates to the risk of an event over time.\n- Generative model: a method that learns a data distribution and produces new samples resembling it.\n- Distributional fidelity: how closely synthetic data follow the statistical pattern of real data.\n- Consistency and variance correction: an estimator is consistent if it converges to the true value with more data; variance correction adjusts estimated uncertainty so confidence statements are valid.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Synthetic data has emerged as a powerful tool for data sharing, clinical trial simulation, and digital twin development, with growing applications in biomedical research and drug development. However, limited attention has been devoted to synthetic time-to-event data, which are central to clinical trials and survival analysis. In particular, theoretical guarantees for the distributional fidelity of synthetic survival data remain largely unexplored. More importantly, even when a generator achieves distributional fidelity, it remains unclear whether the downstream statistical analysis is reliable. To address these gaps, we propose a general two-stage generative framework for survival data (TSGSurv) that jointly generates observed times and covariates conditional on event status, and establish its distributional convergence rate. Focusing on the widely used Cox proportional hazards model, we establish conditions under which generator fidelity guarantees consistency of model coefficient estimates. We further characterize the limitations of naive inference based on synthetic data, and develop a variance correction and a distribution calibration procedure to recover valid inference of original data. We demonstrate the effectiveness of the proposed generative and inferential framework with extensive simulations and two real data applications.",
    "source": "arxiv"
@@ -37,16 +37,155 @@
    ],
    "label": "arXiv:2611.26426v1",
    "primary_category": "stat.ML",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper introduces CF-Prop, a sampling-free way to propagate uncertainty through a Bayesian ReLU layer by working with characteristic functions, which lets the variational training objective be computed in closed form for non-Gaussian likelihoods and yields the CF-VI training algorithm.",
-    "plain": "Neural networks can be built to report how unsure they are, but the usual way of estimating that uncertainty relies on repeatedly running random samples, which is slow. Earlier fast methods assumed the output uncertainty follows a bell-shaped (Gaussian) curve, which can be wrong for real problems. The authors use a mathematical transform, the characteristic function, to track the exact shape of the output uncertainty without sampling, and they report that this gives better calibration on CIFAR-100 and better tail estimates on a heavy-tailed insurance claims dataset.",
-    "why": "It targets a practical gap: fast uncertainty estimates that do not assume the output is bell-shaped, which matters for skewed or heavy-tailed data such as insurance losses. The abstract reports the results but not the full experimental details, so the size and generality of the gains are best checked in the full paper; the link to other fields is mainly through risk modelling and calibrated prediction.",
-    "background": "['Bayesian neural network: a network whose weights are probability distributions rather than fixed numbers, so predictions come with uncertainty.', 'Variational inference: training by fitting a simpler distribution to the true posterior, by maximising a score called the evidence lower bound (ELBO).', 'Monte Carlo sampling: estimating quantities by averaging many random draws; accurate but costly.', 'ReLU layer: a standard network layer that outputs the positive part of its input (zero otherwise).', 'Characteristic function: a transform that fully describes a probability distribution, similar in spirit to a Fourier transform.', 'Likelihood: the assumed distribution of observed outcomes given the model, here Gaussian, Poisson or Gamma.', \"Calibration error: how far a model's stated confidence is from how often it is actually right.\"]",
+    "one_liner": "CF-Prop propagates characteristic functions through a Bayesian ReLU layer to get the exact output distribution without sampling, enabling a closed-form evidence lower bound for non-Gaussian likelihoods (CF-VI).",
+    "plain": "Bayesian neural networks give predictions with honest uncertainty, but estimating that uncertainty usually means running many random samples, which is slow. This paper proposes a way to track the full shape of the uncertainty through a network layer directly, without sampling, and to train with it even when the data are not bell-shaped, such as counts or heavy-tailed insurance claims.",
+    "why": "Many sampling-free methods assume the output uncertainty is Gaussian, which the authors note can be inaccurate in applied problems. The reported results (lowest calibration error on CIFAR-100, and better capture of tail uncertainty on an insurance claims dataset) suggest the approach may matter for applied uncertainty estimation, though the text alone does not show how broadly it generalizes.",
+    "background": "- Bayesian neural network: a neural network whose weights are uncertain, so predictions come with uncertainty estimates.\n- Variational inference: training by fitting a simpler approximate distribution, optimizing a score called the evidence lower bound (ELBO).\n- Monte Carlo sampling: estimating quantities by averaging many random draws; accurate but costly.\n- Sampling-free propagation: computing how uncertainty moves through a layer analytically instead of by drawing samples.\n- ReLU: a common layer function that outputs zero for negative inputs and the input itself otherwise.\n- Characteristic function: a mathematical transform that uniquely describes a probability distribution, similar in role to a fingerprint.\n- Likelihood: the assumed probability model for the observed data (e.g., Gaussian, Poisson, Gamma).\n- Calibration error: how far a model's stated confidence differs from how often it is actually right.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Bayesian neural networks provide principled uncertainty estimates, but training them with Monte Carlo sampling can be expensive. Sampling-free variational inference algorithms make training Bayesian neural networks feasible, but existing approaches assume a Gaussian output distribution, which can be inaccurate in applied problems. Here, we introduce CF-Prop, an uncertainty propagation method that uses characteristic functions to compute the exact output distribution of a Bayesian ReLU layer, without any sampling, even in non-Gaussian settings. Because CF-Prop propagates characteristic functions, the evidence lower bound---the objective of variational training---can be computed in closed form for a broad class of likelihoods, including the Gaussian, Poisson, and Gamma. This allows to implement an efficient resulting variational inference algorithm, CF-VI. On CIFAR-100, CF-VI achieves the lowest calibration error of any tested method, improving on the next best method by about 35%. On a heavy-tailed insurance claim dataset, CF-VI accurately captures tail uncertainty that is severely underestimated by both other sampling-free methods and Monte Carlo methods.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24143",
+   "title": "Fill-Distance-Guided Active Learning for Causal Function Recovery under Network Interference",
+   "url": "https://arxiv.org/abs/2611.24143v1",
+   "authors": [
+    "Peiyao Liu",
+    "Hongtao Zhu",
+    "Sizhe Zhang",
+    "Yang Su",
+    "Zhenyu Zhao",
+    "Nan Chen"
+   ],
+   "label": "arXiv:2611.24143v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "FANCI uses fill-distance-guided active learning with treatment-specific Gaussian processes to recover the full exposure-dependent population-average response function under network interference, with uniform error bounds and a target-screening approximation analysis.",
+    "plain": "When people in a network influence each other, one person's outcome depends on their own treatment and on their neighbors' treatments. This paper asks how to run a limited number of experiments so that the whole curve of outcomes across these neighborhood exposure patterns can be learned, rather than just one or two comparisons. The authors propose a method that chooses new experiments in regions where the data is sparse, and they report simulations and an online-game experiment where it recovers nonlinear effects better.",
+    "why": "Most causal methods focus on specific contrasts or on how precisely they are estimated, so learning the whole response shape under interference is a less-explored goal. The approach may be relevant to platform experiments, public health, and social-network interventions, though the text alone does not show how broadly it transfers.",
+    "background": "- Causal inference: estimating how outcomes would change under different interventions.\n- Network interference (spillovers): one unit's outcome depends on others' treatments, so the treatment effect depends on the neighborhood exposure pattern.\n- Response function: the curve or surface giving the average outcome for each exposure pattern.\n- Active learning: choosing the next data points adaptively to learn a function efficiently under a limited budget.\n- Gaussian processes: flexible statistical models for unknown nonlinear functions that also give uncertainty estimates.\n- Fill distance: a measure of the largest gap between data points in a space; small fill distance means the space is well covered.\n- Uniform error bounds: guarantees on estimation error holding across the whole domain, not only at selected points.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Causal inference seeks to learn how outcomes change under alternative interventions, but network interactions complicate this task. Under network interference, outcomes depend on both own treatment and neighbors' treatments, making causal effects functions of neighborhood exposure rather than single treatment contrasts. Existing methods primarily target prespecified causal contrasts or their estimation precision, leaving global response-function recovery largely unexplored. We study sequential experimentation under a limited experimental budget, with the goal of recovering the full exposure-dependent population-average response function. To this end, we propose FANCI (Fill-Distance-Guided Active Learning for Network-Interference Causal Inference). For function learning, treatment-specific Gaussian processes flexibly model nonlinear conditional response surfaces. For experimental design, we formulate global response-function recovery as a coverage problem and propose a fill-distance criterion that guides new experiments toward poorly covered regions. To account for network constraints on attainable exposure patterns, we develop full-network and target-screened strategies for selecting feasible network--assignment pairs. Theoretically, we derive uniform error bounds linking fill distance to response-function estimation and characterize the approximation loss from target screening. Simulations and an online-game experiment show that FANCI improves recovery of nonlinear exposure-dependent effects and reveals treatment patterns obscured when network interference is ignored.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24335",
+   "title": "Global sensitivity analysis of transient regimes in non-Newtonian dam-break flows applied in rheometry",
+   "url": "https://arxiv.org/abs/2611.24335v1",
+   "authors": [
+    "Yuri Taglieri Sáo",
+    "João Batista Pereira",
+    "Geraldo de Freitas Maciel"
+   ],
+   "label": "arXiv:2611.24335v1",
+   "primary_category": "physics.flu-dyn",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A global sensitivity analysis adapted for time-series outputs, applied to ANSYS Fluent simulations, that maps how lifting velocity, viscosity and initial sample geometry influence the time-evolving dynamics of non-Newtonian dam-break flows used in rheometry.",
+    "plain": "When a container holding a thick, paste-like material is lifted, the material spreads out, and how it spreads depends on how fast the container is lifted and on the material's properties. This paper uses computer simulations of that spreading and a statistical method to measure how much each input (mainly lifting speed) matters at different stages. It finds three phases, and the lifting speed matters most in the first two.",
+    "why": "Simple field tests such as the slump test and Bostwick consistometer test estimate a material's flow properties from how it spreads, so unwanted effects from lifting the container could bias those estimates. The paper's time-resolved sensitivity curves give a way to see when those effects matter, though the text itself does not report how far the findings transfer to real test equipment.",
+    "background": "- Non-Newtonian fluid: a material whose resistance to flow changes with how it is pushed (e.g., paste, concrete, some foods), unlike water.\n- Dam-break flow: what happens when a retaining barrier is removed and the fluid collapses and spreads.\n- Rheometry: the measurement of how a material flows and deforms.\n- Yield stress: the minimum push needed before the material starts to flow.\n- Slump test / Bostwick consistometer: simple empirical tests that measure how far a sample spreads under its own weight.\n- Global sensitivity analysis: a statistical way to rank how much each input variable contributes to output variation across its full range; here adapted to outputs that change over time.\n- High-fidelity simulation: detailed computer modelling, here done with ANSYS Fluent software.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Non-Newtonian dam-break flows are a classical problem with numerous engineering applications. These flows are particularly important in alternative rheometry, where they are used to rapidly and affordably estimate rheological properties, such as in the slump test and Bostwick consistometer test. However, the lifting dynamics of the containing obstacle introduce inertial effects that can compromise the accurate estimation of these properties. These effects are influenced by the lifting velocity, the fluid's viscosity, and the initial geometry of the sample. This study aims to quantify the influence of lifting velocity and to provide physical insights into how inertial effects influence the flow. A global sensitivity analysis (GSA) framework adapted for functional outputs (e.g., time series) is employed, using data generated from high-fidelity simulations with ANSYS Fluent. The GSA produces sensitivity curves that track the evolving importance of each input parameter over time. Three distinct flow regimes are identified, namely mobilization, transition and viscous regimes, each governed by different dominant factors. The first two regimes are significantly affected by the lifting velocity, revealing the influence of inertial effects, whereas the viscous regime is dominated by fluid rheology and shows a increasing importance of the yield stress. These results are contextualized in terms of traditional rheometry tests.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22339",
+   "title": "Small Area Causal Inference",
+   "url": "https://arxiv.org/abs/2611.22339v1",
+   "authors": [
+    "Yilin Li",
+    "Jiangshan Zhang",
+    "Jiming Jiang"
+   ],
+   "label": "arXiv:2611.22339v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proposes an empirical best prediction (EBP) framework for estimating area-specific causal effects in small areas, using a linear mixed model, with theory on estimator consistency, asymptotic normality, MSPE optimality, and prediction intervals, compared against doubly robust estimation in simulations and a real agricultural-genetics example.",
+    "plain": "The paper looks at how to estimate the effect of a treatment or intervention separately for small geographic or group areas, where there are only a few observations per area. The authors propose a method, called empirical best prediction, that balances bias against the noise in small samples rather than focusing mainly on bias as the traditional doubly robust approach does. In their simulations it gave more accurate predictions and prediction intervals with better coverage than the comparison methods, and they also apply it to a farm-animal genetics dataset.",
+    "why": "Estimating causal effects for small subgroups is hard because each subgroup has little data, so noise often dominates error. The paper's claim that variance, not just bias, drives most of the error is a reasonable point for small-area work, but the advantage is shown only in the authors' simulations and one real example, so its broader practical reach is not yet established.",
+    "background": "- Causal inference: estimating what would have happened to the same units with and without a treatment.\n- Small area estimation: producing reliable estimates for subgroups (regions, farms, clinics) that have few observations.\n- Doubly robust (DR) estimation: a standard causal method that stays valid if either of two underlying models is correctly specified; it is mainly judged by bias.\n- Linear mixed model: a regression model with fixed effects plus random effects that let each area borrow strength from the others.\n- Empirical best prediction (EBP): predicting an area's value using estimated model parameters, chosen to minimise expected squared prediction error.\n- Mean squared prediction error (MSPE): the average squared gap between prediction and truth; lower is better.\n- Asymptotic results (consistency, normality, optimality): statements about how estimators behave as sample size grows large, not guarantees for small samples.\n- Prediction interval and coverage: a range meant to contain the true value, and the share of cases where it actually does.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop a framework for small area causal inference (SACI). Unlike the traditional doubly robust (DR) estimation approach, the new framework is based on the empirical best prediction (EBP) method. EBP takes into consideration not only the bias but also the variance factor, which is often a more dominant component in the mean squared prediction error (MSPE). Under a linear mixed model for SACI, we establish consistency and asymptotic normality of the maximum likelihood estimator of the model parameters. More relevant to our main objective, we establish asymptotic optimality of the EBP in terms of minimizing the MSPE of the area-specific causal-effect (ASCE) predictor. Moreover, in view of the traditional interest in causal inference, we establish asymptotic normality of the EBP of the ASCE , which is used to construct prediction intervals for the ASCEs. We carry out extensive simulation studies to investigate finite-sample performance of the proposed EBP and its comparison with the traditional DR and other existing methods. Our simulation results show that the proposed EBP method has significant advantage over the comparing methods in terms of MSPE and coverage probability and length of the resulting prediction interval. A real-data example from agricultural-animal genetics is discussed.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22422",
+   "title": "Distributional change point analysis: high dimensionality, nonstationary dependence, and computational constraints",
+   "url": "https://arxiv.org/abs/2611.22422v1",
+   "authors": [
+    "Leheng Cai",
+    "Moshu Xu",
+    "Zhou Zhou"
+   ],
+   "label": "arXiv:2611.22422v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A method for detecting and locating distributional change points in high-dimensional, nonstationary time series, using sparse random projections of characteristic functions and a Gaussian multiplier bootstrap for inference.",
+    "plain": "The paper addresses a common problem: spotting the moments when the overall pattern of a long, many-variable data stream shifts, such as when the way neurons fire changes. The authors propose a procedure that compresses the many variables into a small number of random summaries, which keeps computation cheap and limits noise from irrelevant variables. They report theoretical guarantees on false alarms and on how precisely change times are located, and show simulations and an application to neural recordings.",
+    "why": "Many real data streams have dozens or hundreds of variables and dependence that changes over time, which breaks many standard change detection tools. The paper's main claims are theoretical guarantees under these conditions, plus a Gaussian approximation result for high-dimensional sparse time series that the authors say is of independent interest. The text alone does not show how it compares with existing methods in practice, so its practical reach is uncertain.</research-level>\n<parameter name=\"background\">- Change point: a time at which the statistical behavior of a data sequence changes.\n- Distribution: the full pattern of how likely each value is, which is broader than just the average.\n- Characteristic function: a mathematical fingerprint of a distribution, used here to compare distributions via a set of numbers.\n- High-dimensional: many variables measured at once, so the number of variables may be large relative to the sample.\n- Random projection: multiplying data by random weights to compress many variables into fewer summaries.\n- Nonstationary dependence: the way observations relate to their neighbors in time changes over time.\n- Gaussian multiplier bootstrap: a resampling technique that uses random normal weights to approximate the distribution of a test statistic, giving thresholds for false alarms.\n- Asymptotic: describes behavior as the amount of data grows large.",
+    "background": "",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study general distributional change point analysis for high-dimensional time series under nonstationary temporal dependence and limited computational resources. To mitigate noise accumulation from irrelevant coordinates and reduce the computational cost, we propose a sparse random projection procedure based on characteristic functions. We quantify the computational complexity of the random projections and show that the required number of projections grows polynomially with the ambient dimension. To accommodate nonstationary temporal dependence, a Gaussian multiplier bootstrap based on contrasts of local empirical characteristic functions is developed. We establish asymptotic false detection control and simultaneous guarantees for estimating the number and locations of multiple change points, with a near-parametric uniform localization rate up to logarithmic factors. A key technical innovation is a Gaussian approximation for high-dimensional multi-scale sparse time series, which is of independent interest. Simulation studies demonstrate the effectiveness of the proposed procedure in detecting and localizing distributional changes under various temporal dependence structures. An application to neural recordings further illustrates the practical utility of the proposed method in detecting diverse distributional changes in neural activity.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21327",
+   "title": "tsspiral: An R Package to Create Circular Versions of Time Series Plots",
+   "url": "https://arxiv.org/abs/2611.21327v1",
+   "authors": [
+    "Thiyanga S. Talagala"
+   ],
+   "label": "arXiv:2611.21327v1",
+   "primary_category": "stat.CO",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "tsspiral is an open-source R package that adds polar-coordinate \"spiral\" plots for time series to the ggplot2 grammar of graphics, with each year drawn as a ring and day of year as angle.",
+    "plain": "Time series are measurements taken over time, such as daily temperatures or sales. This paper presents a software tool that draws these measurements around circles, so each year becomes a ring and the position within the year becomes the angle, like the face of a clock. The authors say this makes repeating yearly or seasonal patterns easier to spot, especially in long records.",
+    "why": "Long records with repeating cycles are common in many fields, and a plot that shows those cycles clearly can help analysts and communicators. The text presents this as a practical tool rather than a new finding, and it does not report any tests showing it works better than standard plots.",
+    "background": "- A time series is a sequence of values recorded at regular times, such as daily or monthly readings.\n- Seasonality means a pattern that repeats on a fixed cycle, such as every year.\n- Polar coordinates locate points by distance from a centre and an angle, instead of by x and y positions.\n- R is a programming language widely used for statistics; ggplot2 is a plotting package for R built on a \"grammar of graphics\", a system for building charts from layered parts.\n- A spiral plot here means a circular plot in which successive years stack outward as concentric rings.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "`tsspiral` is an open-source R package that introduces a circular approach to time series visualisation using polar coordinates. We refer to this circular representation of time series data as a spiral. `tsspiral` provides a collection of `ggplot2` geometries for creating a spiral representation of time series data. In our approach, we arrange observations around a circle. Each year is represented by a circle, with the angular position corresponding to the day of the year, and successive years appear as concentric rings. This arrangement facilitates the exploration of periodicity, seasonality, and recurring temporal patterns, particularly in long time series. The package also supports temporal hierarchical visualisations to compare patterns across time scales. By bringing polar-coordinate-based visualisation into routine time series analysis, `tsspiral` offers a practical tool for exploring temporal patterns and communicating complex time-dependent structures. Rather than treating spiral plots as standalone graphics, our approach brings them into the grammar of graphics framework, enabling users to explore temporal patterns through a broader range of visual encodings.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21939",
+   "title": "A δ-adjusted Method for Tipping Point Sensitivity Analysis for a Binary Outcome with Missing Values",
+   "url": "https://arxiv.org/abs/2611.21939v1",
+   "authors": [
+    "Mallikarjuna Rettiganti",
+    "Yipeng Wang",
+    "Yongming Qu"
+   ],
+   "label": "arXiv:2611.21939v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proposes a delta-adjusted tipping point sensitivity analysis for binary outcomes with missing data, by adding a shift on the logit scale to the estimated response probability, and applies it to a tirzepatide clinical trial with a composite binary endpoint.",
+    "plain": "Clinical trials often lose some participants' results partway through, and statisticians need to check whether the conclusion would change if the missing results were different from what was assumed. This paper offers such a check for yes/no outcomes (such as whether a patient met a combined health goal), where earlier versions of the check existed only for measured numbers. The authors apply the method to a trial comparing two doses of tirzepatide, a diabetes and weight-loss drug.",
+    "why": "Missing data can change trial conclusions, so a standard way to test how fragile a result is matters for regulatory and clinical decisions. The text suggests the method is meant for broad use in trials with binary endpoints, but its practical value beyond this example is not shown in the text provided.",
+    "background": "- Missing data: outcomes not observed for some trial participants, for example after they drop out.\n- Sensitivity analysis: re-running the analysis under alternative assumptions about the missing values to see whether conclusions hold.\n- Delta-adjustment: adding a fixed sensitivity value to the imputed (filled-in) outcomes for one or both treatment groups, representing how much worse or better missing participants might have fared.\n- Tipping point: the smallest such adjustment at which a statistically significant result stops being significant.\n- Binary outcome: a result with only two possible values, such as success or failure.\n- Logit: a mathematical transformation that maps probabilities (between 0 and 1) onto an unbounded scale, where the sensitivity shift is applied.\n- Composite endpoint: a single outcome that counts several different events together as one.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Missing data remain a persistent challenge in clinical trials despite preventive efforts. Handling missing data in clinical trials requires not only a primary analysis but also sensitivity analyses, as the underlying missingness assumptions are difficult to verify. The δ-adjusted analysis, which assesses the robustness of primary results by adding a sensitivity parameter δ for one or both treatment groups, has been widely used for continuous outcomes. Then, a set of tipping points which flip the significance of the primary analysis can be identified. However, there is no corresponding δ-adjusted method for binary variables. In this article, we propose a δ-adjusted method for binary variables that addresses this gap. This method assesses robustness by adding a sensitivity parameter to the logit function of the estimated response probability under the primary imputation approach and shares the same property as the δ-adjusted method for continuous variables. We applied this method to a clinical trial evaluating the treatment effect of tirzepatide 15 mg versus 5 mg on a composite binary endpoint. This method provides a principled sensitivity analysis framework for binary endpoints with broad applicability in clinical trials.",
    "source": "arxiv"
   }
  ]

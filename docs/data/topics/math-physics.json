@@ -1,6 +1,6 @@
 {
  "slug": "math-physics",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26285",
@@ -15,40 +15,172 @@
    ],
    "label": "arXiv:2611.26285v1",
    "primary_category": "hep-th",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The one-loop dilatation operator of a superconformal planar gauge theory can be written as a sum of local generators.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper derives the algebra of the one-loop dilatation operator of SU(2)-like bosonic sectors directly from Feynman diagrams, recovering the Temperley-Lieb algebra for N=4 SYM and obtaining dynamical (colour-dependent) Temperley-Lieb generalisations for orbifolded N=2 quiver gauge theories.",
+    "plain": "The paper studies a family of quantum field theories whose particles interact in a structured way, described by a \"quiver\" diagram of interacting groups. The authors show that a set of algebraic rules governing how the interaction acts on particle states can be read straight from Feynman diagrams, a standard pictorial bookkeeping for particle interactions. Applied to two kinds of quiver theories, this gives two new families of algebras, one of which has a twist that links it to a known algebra.",
+    "why": "Temperley-Lieb algebras appear in statistical mechanics, knot theory and spin chains, so a graphical, diagram-based route to their colour-dependent generalisations may help in finding the spectrum and the associated loop models. The text does not show how far these structures extend beyond the cases treated, so the wider significance is uncertain.",
+    "background": "- Gauge theory: a physical theory of forces in which particles are described by fields that transform under a symmetry group (here SU(2)).\n- Superconformal / N=4 and N=2 theories: highly symmetric supersymmetric theories; N=4 SYM is the most symmetric case.\n- Quiver theory: a theory whose gauge groups are arranged as nodes of a graph, with \"bifundamental\" fields as links between nodes; orbifolding is a way of building such theories from simpler ones.\n- Dilatation operator: the operator that generates how quantum corrections change the scaling of operators; at one loop it acts locally on neighbouring fields, like a spin chain Hamiltonian.\n- Temperley-Lieb algebra: an algebra with generators satisfying a quadratic and cubic relation, with a loop fugacity parameter; it underlies the XXZ spin chain and loop models.\n- Dynamical algebra, Drinfeld twist: relations whose constants depend on a label (here the quiver node colour), and a change of basis used to relate algebras.\n- Spin chain: a row of quantum spins with nearest-neighbour interactions, a model for the spectrum of the gauge theory.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "The one-loop dilatation operator of a superconformal planar gauge theory can be written as a sum of local generators. The algebra these generators satisfy is a powerful organising principle for the spectrum. For SU(2)-like bosonic subsectors we show that this algebra can be read off directly from Feynman diagrams, which we identify as a natural graphical language for it. For N=4 super Yang-Mills this simply reproduces the Temperley-Lieb (TL) algebra of the XXX spin chain. After orbifolding and marginally deforming to N=2 superconformal quiver theories, the same recipe yields dynamical generalisations of the TL algebra. In these theories, the faces of the diagrams are coloured according to the quiver nodes, and separated by domain walls corresponding to bifundamental fields. There are two inequivalent SU(2)-like subsectors, which lead to two different TL algebras. One sector is built from the two bifundamental scalars and (in the simplest case) gives a dynamical TL algebra with a colour-dependent loop fugacity in its quadratic relation. The other sector is built from one bifundamental and one adjoint scalar, and (always) gives a novel algebra, in which the cubic TL relation becomes dynamical. In this latter case, we show that each generator of this new algebra is related to a standard XXZ TL generator by a colour-dependent twist. This twist is local and not an algebra homomorphism, and can be written as a dynamical Drinfeld twist. In both sectors, the TL structure provides a natural graphical approach to the spectral problem, as well as clarifying the structure of the irreducible representations of these chains. Finally, we give a preliminary description of the loop models associated to these algebras.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26554",
-   "title": "Twisting Spinning Particles with Superghost Backgrounds",
-   "url": "https://arxiv.org/abs/2611.26554v1",
+   "uid": "arxiv:2611.26136",
+   "title": "Perturbation Algorithm and Iterative Realization of a Four-Layer Semi-Discrete Scheme for an Evolutionary Problem with a Variable Operator",
+   "url": "https://arxiv.org/abs/2611.26136v1",
    "authors": [
-    "Erik Fink",
-    "Jingqian Gou",
-    "Niklas Holbach",
-    "Ondrej Hulik"
+    "David Gulua",
+    "Jemal Rogava",
+    "Zurab Vashakidze"
    ],
-   "label": "arXiv:2611.26554v1",
-   "primary_category": "hep-th",
-   "date": "2026-11-22",
+   "label": "arXiv:2611.26136v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We construct twists of spinning particles in the classical BV formalism by giving constant backgrounds to the bosonic ghosts of local worldline supersymmetry, in analogy with Costello and Li's twist of supergravity, which gives a nonzero background to the ghost of local spacetime supersymmetry.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper builds and analyzes a purely implicit four-layer, third-order semi-discrete time-stepping scheme for an abstract evolution equation with a self-adjoint positive definite operator plus a time-dependent bounded perturbation, using a perturbation algorithm that splits it into two-layer schemes solved by geometric-convergence iterations.",
+    "plain": "This is a mathematical study of how to compute approximate solutions to a equation that describes something changing over time, where the rule governing the change itself shifts with time. The authors split a multi-step time-stepping method into simpler pieces, and each piece is solved by repeated refinement that converges quickly, so only one fixed, time-independent operator needs to be inverted. The text reports a proof that the error shrinks like the cube of the time step, under an assumption about certain difference quotients on the early steps, and says numerical experiments illustrate the results.",
+    "why": "Numerical schemes that are accurate to third order while avoiding repeated inversion of time-dependent operators can reduce computing cost for evolution problems in mathematical physics. The text does not discuss specific applications, so the practical reach beyond the stated setting is unclear.",
+    "background": "- Cauchy problem: an equation giving how a quantity evolves forward in time from a starting state.\n- Hilbert space: a complete space of functions with a notion of length and angle, used to treat the unknown as a single abstract object.\n- Self-adjoint positive definite operator: a well-behaved linear operator (like a symmetric matrix with positive eigenvalues) acting on that space.\n- Bounded operator depending on time: a perturbation of limited size whose form changes with time.\n- Semi-discrete scheme: time is discretized into steps while space is left abstract.\n- Multi-layer (multistep) scheme: each new time step uses several previous steps; the three-step backward differentiation formula is one example.\n- Order of approximation: how fast the error shrinks as the step size tau goes to zero; order tau cubed means error scales as tau^3.\n- Gronwall's lemma: a standard inequality used to bound a quantity that grows at most in proportion to its own accumulated past.",
+    "difficulty": "research-level",
+    "ai": true
    },
-   "abstract": "We construct twists of spinning particles in the classical BV formalism by giving constant backgrounds to the bosonic ghosts of local worldline supersymmetry, in analogy with Costello and Li's twist of supergravity, which gives a nonzero background to the ghost of local spacetime supersymmetry. We represent the superghosts on polynomial states and gauge selected worldline R symmetries, imposing the shifted R constraints absolutely and the unshifted ones relatively. On flat targets, the N=2 particle, its N=4 extension on a complex target and an N=8 particle with two fermion flavors give the de Rham, Dolbeault and polynomial linear BCOV complexes. The last two are the linearized field content of the open and closed B-model target-space theories. Pairings and interactions require target-space input beyond the reduced worldline differentials.",
+   "abstract": "In a Hilbert space, we consider the Cauchy problem for an evolutionary equation with the operator $A+B(t)$, where $A$ is a self-adjoint positive definite operator and $B(t)$ is a bounded operator depending on time. By means of the perturbation algorithm, the purely implicit four-layer semi-discrete scheme of the third order of approximation (the three-step backward differentiation formula) is reduced to three two-layer schemes, whose solutions are used to construct an approximate solution of the original problem. In each two-layer scheme, the term containing $B(t)$ is moved to the right-hand side, and the resulting equation is solved by an iterative method, so that only the time-independent operator $I+τA$ has to be inverted; the convergence of the iterations at the rate of a geometric progression with a ratio of order $τ$ is proved. A priori estimates for the two-layer and four-layer schemes are obtained by means of a discrete analogue of Gronwall's lemma. An estimate of order $τ^3$ for the error of the approximate solution is proved under an assumption on the difference quotients of the computed grid functions on the first layers. The results are illustrated by numerical experiments.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25017",
+   "title": "Quiver-Invariant Triality between Brane Brick Models",
+   "url": "https://arxiv.org/abs/2611.25017v1",
+   "authors": [
+    "Dongwook Ghim",
+    "Juno Kwon",
+    "Rak-Kyeong Seong"
+   ],
+   "label": "arXiv:2611.25017v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper studies quiver-invariant triality, a set of mutations relating two 2d (0,2) gauge theories encoded by brane brick models on toric Calabi-Yau 4-folds that share gauge groups, fields and E-terms but differ in J-terms, and links it to orbifold reduction of quiver-invariant brane tilings.</one_liner>\n<parameter name=\"plain\">The paper is about a family of physics theories that can be drawn as diagrams (called quivers) and described by geometric objects called brane brick models. The authors give a concrete pair of such models that look the same in their diagram and particle content but differ in their interaction rules, and show a specific sequence of \"triality\" moves that turns one into the other while leaving the diagram unchanged.",
+    "plain": "",
+    "why": "Dualities that keep the underlying diagram fixed while changing the hidden interaction rules help map out which physical theories are truly equivalent. The text says it also connects this idea to orbifold reduction of brane tilings, a related construction, but the abstract does not show how far that connection extends.",
+    "background": "- Quiver: a diagram whose nodes are gauge groups and arrows are matter fields, used to encode a gauge theory.\n- Gauge theory: a physics theory whose interactions are fixed by symmetry groups; here it lives in 2 spacetime dimensions with (0,2) supersymmetry.\n- Supersymmetry: a symmetry pairing particles of different spin; \"(0,2)\" describes how it acts in 2 dimensions.\n- Calabi-Yau 4-fold: a higher-dimensional special geometric space from string theory; \"toric\" means it is built from polygon-like combinatorial data.\n- Brane brick model: a 3D-tiling-style combinatorial object encoding a gauge theory from branes wrapped on such a space.\n- E-terms and J-terms: the two kinds of superpotential constraints that define the interactions in these theories.\n- Triality: a three-way symmetry-type relation among these theories, realized by a sequence of mutations (local rewiring operations).\n- Orbifold reduction: a construction that relates a theory to a simpler one by quotienting a symmetry.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study quiver-invariant triality between 2d (0,2) supersymmetric gauge theories described by brane brick models associated with toric Calabi-Yau 4-folds. The dual theories share the same gauge groups, field content and E-terms but have distinct J-terms. We present an explicit pair of such brane brick models and identify the sequence of triality mutations relating them. This sequence returns the quiver to its original form while transforming the J- and E-terms. We explain the relation between quiver-invariant triality and the orbifold reduction of quiver-invariant brane tilings.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24725",
+   "title": "An Atiyah--Hirzebruch to Adams map and the hastened Adams spectral sequence for supercohomology",
+   "url": "https://arxiv.org/abs/2611.24725v1",
+   "authors": [
+    "Arun Debray",
+    "Weicheng Ye",
+    "Matthew Yu"
+   ],
+   "label": "arXiv:2611.24725v1",
+   "primary_category": "math.AT",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper builds a map from the Atiyah–Hirzebruch spectral sequence to the Baker–Lazarev Adams spectral sequence for a ko-module, uses it with a Bruner–Rognes theorem to define a \"hastened\" Adams spectral sequence for truncations of ko and the connective Adams summand, and applies it to supercohomology.</one_liner>\n<parameter name=\"plain\">This is a research paper in algebraic topology, a branch of mathematics that studies shapes using tools that compute \"layered\" invariants. The authors introduce a new computational method, the hastened Adams spectral sequence, for a particular family of invariants called supercohomology, which arise in physics. According to the text, in the examples of interest this method is easier to calculate with than two existing methods, and the paper includes a user's guide, worked examples, and charts.",
+    "plain": "",
+    "why": "The text motivates the work by questions in quantum field theory, topological phases of matter, and tensor category theory, which is where supercohomology appears. The stated advantage is computational ease in examples, so its wider usefulness is something the abstract only suggests rather than establishes.",
+    "background": "- Spectral sequence: a systematic bookkeeping device that computes complicated invariants in successive approximation layers.\n- Atiyah–Hirzebruch and Adams spectral sequences: two standard such tools in stable homotopy theory, the branch of topology studying generalized cohomology theories.\n- ko and the Adams summand: specific spectra (generalized homology objects) from topology, with connective ko being the usual real K-theory variant.\n- Supercohomology: a cohomology theory used in physics to classify certain topological phases of matter, including fermionic ones.\n- Modules over the Steenrod subalgebra A(1): algebraic objects that encode the input data for Adams-type computations.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We construct a map of filtered spectra inducing a map from the Atiyah--Hirzebruch spectral sequence (AHSS) to the Baker--Lazarev Adams spectral sequence of a $\\mathit{ko}$-module $M$. Using this and a theorem of Bruner--Rognes, we construct a hastened Adams spectral sequence (HASS) for the Postnikov truncations of $\\mathit{ko}$ and the connective Adams summand. Then, motivated by questions in quantum field theory, topological phases of matter, and tensor category theory, we apply the HASS to supercohomology, the cohomology theory $I_{\\mathbb{C}^\\times}(τ_{\\le 2}\\mathit{ko})$, and observe that in examples of interest it is easier to calculate with than either the AHSS or the usual Adams spectral sequence. We include a User's Guide to the HASS and several worked examples, as well as hastened Adams charts for many commonly encountered $\\mathcal{A}(1)$-modules.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23032",
+   "title": "On the $φ^4_2$ theory on $\\mathbb R\\times S$",
+   "url": "https://arxiv.org/abs/2611.23032v1",
+   "authors": [
+    "Azam Jahandideh"
+   ],
+   "label": "arXiv:2611.23032v1",
+   "primary_category": "math-ph",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Constructs the Euclidean two-dimensional φ^4 quantum field theory on the infinite cylinder R×S via parabolic stochastic quantization, building finite-volume measures on tori and taking a limit where the torus degenerates into a cylinder, with uniform renormalization and stochastic estimates across varying complex structure.",
+    "plain": "This paper is about building a mathematically rigorous version of a simple quantum field theory, the two-dimensional φ^4 model, on an infinitely long cylinder. The authors approach it by first defining the theory on a family of donut-shaped surfaces (tori) with varying shape, then letting these surfaces stretch into an infinite cylinder. The text says they also check that the resulting theory satisfies the Osterwalder-Schrader axioms, which are the standard consistency conditions that connect Euclidean (imaginary-time) theories to ordinary quantum theories.",
+    "why": "The work is motivated by one-loop scattering amplitudes in string theory, which involve integrating over tori of varying shape, so the construction may be a step toward making such string calculations rigorous. The text does not show how far this connection goes, so the link to string theory should be treated as a motivation rather than an established result.",
+    "background": "- Quantum field theory: a framework where particles and forces are described by random-like fields spread over space and time.\n- φ^4 model: a standard toy model with a quartic self-interaction; in two dimensions it is one of the best-understood interacting models.\n- Euclidean theory: the same theory written with imaginary time, which turns quantum problems into probability problems.\n- Stochastic quantization: a way of constructing the measure by evolving the field under a random noise-driven equation until it settles into equilibrium.\n- Renormalization: removing infinities that appear in these models by subtracting carefully chosen terms.\n- Torus and cylinder: a torus is a surface shaped like a donut; a cylinder is what a torus becomes when one loop is made infinitely long.\n- Osterwalder-Schrader axioms: conditions that ensure a Euclidean theory can be converted back into a physical quantum theory.\n- Complex structure: a parameter describing the shape of a torus.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a construction of the Euclidean two-dimensional $φ^4$ quantum field theory model on $\\mathbb R\\times S$ using parabolic stochastic quantization and discuss the Osterwalder-Schrader axioms. Motivated by one-loop string scattering amplitudes, we first construct finite-volume measures on a family of tori with varying geometry. To construct an infinite-volume measure on the cylinder, we establish uniform renormalization and stochastic estimates as the complex structure varies, including the degenerating regime in which the torus approaches an infinite cylinder.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23515",
+   "title": "A multipurpose system of ordinary differential equations with exponential nonlinearity",
+   "url": "https://arxiv.org/abs/2611.23515v1",
+   "authors": [
+    "Piotr P. Goldstein"
+   ],
+   "label": "arXiv:2611.23515v1",
+   "primary_category": "nlin.SI",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A study of a family of nonlinear ODE systems with exponential terms governed by a symmetric matrix M, showing a two-parameter exact solution family that is unstable for general n and that the only completely integrable cases are equivalent to Toda-lattice-type systems with extra non-nearest-neighbour couplings.",
+    "plain": "The paper looks at a set of coupled equations describing how several quantities change over time, where each rate of change depends on exponentials of the others, with the pattern of coupling set by a grid of numbers (a matrix). The authors find an exact family of solutions with two free settings, but show these solutions are unstable when the number of quantities is general. They also use a known result to argue that the only cases that can be solved fully are close relatives of the Toda lattice, a classic model of particles in a chain.",
+    "why": "Systems of this kind, related to the Toda lattice, appear in integrable systems theory, and classifying which cases are fully solvable is a central question there. The text does not indicate specific applications beyond a few special cases it mentions, so its wider significance is unclear from this summary alone.",
+    "background": "- Ordinary differential equation (ODE): an equation giving how quantities change in time, here second derivatives set by exponentials of the variables.\n- Symmetric matrix: a square grid of numbers that equals its own transpose; M sets how the equations are coupled.\n- Nonsingular: the matrix can be inverted (no degenerate coupling).\n- Exact solution: a closed-form formula that solves the equations exactly.\n- Unstable solution: a solution that drifts away when slightly disturbed.\n- Completely integrable: enough conserved quantities exist that the system can be solved in principle by exact methods.\n- Toda lattice: a classic model of particles on a line with exponential interactions, known to be integrable.\n- Nearest-neighbour interaction: coupling only between adjacent particles; the paper concerns extra longer-range couplings.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A system of ordinary differential equations (ODE) $\\ddot{y}_k=\\sum_{l=1}^n M_{kl}\\exp y_l,~k=1,...,n$, where $M$ is an $n\\times n$ nonsingular symmetric matrix, is discussed in detail. A two-parameter family of exact solutions is found and proved to be unstable for general $n$. A result of Adler and Moerbeke is shown to apply to our systems; it states that the only completely integrable cases of this system are equivalent to the Toda lattice with included non-nearest neighbour interactions. A few interesting applications are shown for some special $n$'s.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19246",
+   "title": "On the Power-Law Duality in Wigner-Yang Quantum Mechanics",
+   "url": "https://arxiv.org/abs/2611.19246v1",
+   "authors": [
+    "Georg Junker",
+    "Hassan Hassanabadi"
+   ],
+   "label": "arXiv:2611.19246v1",
+   "primary_category": "math-ph",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper extends the Hooke-Newton power-law duality, which maps eigenvalue problems between power-law potentials in classical and standard quantum mechanics, to the deformed Wigner-Yang quantum mechanics built on Dunkl's differential-difference operators, including harmonic and Coulomb-like potentials.",
+    "plain": "The paper studies a mathematical correspondence between two families of physical systems, each governed by a force law that follows a power of distance. It revisits a known trick that maps the solution of one such system onto another with a different power, then applies that trick to a modified version of quantum mechanics called Wigner-Yang quantum mechanics. The authors report that the trick still works there, so one hard problem can be solved by converting it into an easier one.",
+    "why": "The duality lets known solutions for one potential be reused for another, which is useful for solving quantum eigenvalue problems. The text does not say how far the approach reaches beyond the cases studied, so its broader significance is uncertain from this abstract alone.",
+    "background": "- Potential: an energy landscape that sets the force on a particle; a power-law potential scales as distance raised to some power (harmonic is the square, Coulomb-like is an inverse distance).\n- Eigenvalue problem: finding the allowed energy levels and states of a quantum system, which is the core task of quantum mechanics.\n- Hooke-Newton duality: a known correspondence that swaps the roles of the power in the potential and the energy, linking different systems.\n- Heisenberg-Schrödinger quantum mechanics: the standard formulation of quantum mechanics that the paper modifies.\n- Wigner-Yang quantum mechanics: a deformed version on the real line, related to Dunkl's operators, which add a reflection (sign-flip) term to ordinary derivatives.\n- Langer modification: a standard adjustment to angular momentum terms in radial equations, which the paper compares with its deformed case.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this work we first revisit the Hooke-Newton duality and its generalisation to arbitrary power laws in classical and quantum mechanics. We then consider Wigner-Yang quantum mechanics on the real line, which is a deformation of standard Heisenberg-Schrödinger quantum mechanics closely related to Dunkl's differential-difference operator formalism. We consider the corresponding eigenvalue problem for the harmonic potential and a Coulomb-like potential. We observe that the Hooke-Newton duality is also applicable to these deformed quantum systems allowing us to solve the eigenvalue problem of one by mapping it onto the other system. This approach is then generalised to arbitrary power-law potentials in Wigner-Yang quantum mechanics. Whereas in standard quantum mechanics the classical re-scaling of angular momenta has to be applied to Langer-modified quantum angular momenta, Wigner-Yang quantum mechanics requires a rescaling of deformation parameters similar to the Langer-type modification but involving the reflection operator. The energy coupling-constant exchange, however, remains the same in all three cases, classical mechanics, quantum mechanics and Wigner-Yang quantum mechanics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18237",
+   "title": "Link invariants in nilpotent group gauge theories",
+   "url": "https://arxiv.org/abs/2611.18237v1",
+   "authors": [
+    "Thomas Nicosanti",
+    "Pavel Putrov",
+    "Johann Quenta-Raygada"
+   ],
+   "label": "arXiv:2611.18237v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper shows that 3D untwisted Dijkgraaf-Witten theories with a finite gauge group G detect Brunnian links up to a given number of components exactly when G is n-step nilpotent, relates their link expectation values to Milnor invariants, and conjectures (via the Lazard correspondence) a link between line-operator expectation values in finite and continuous nilpotent Chern-Simons theories.",
+    "plain": "The paper studies a family of idealised 3D physics models whose quantities depend only on how curves (loops) are tangled together, not on their exact shape. It asks which tangled loop arrangements, called links, these models can tell apart, depending on how \"nilpotent\" the underlying symmetry group is, where nilpotent roughly means it is built from layers that commute in a limited, step-by-step way. The authors state that the answer is an exact match: the models detect Brunnian links (links that fall apart if any one loop is removed) with up to n+1 components precisely when the group has n steps, and the values they produce are determined by Milnor invariants, classical numerical tangle measures.",
+    "why": "It connects group theory, knot and link invariants, and quantum field theory in a precise way, and it gives a conjectured bridge between finite-group and continuous-group versions of the same theory. The text does not show how far the conjecture has been tested beyond the examples mentioned, so its wider significance is uncertain.",
+    "background": "- Topological quantum field theory: physical models whose predictions depend only on global shape (such as how loops are linked), not on distances or local geometry.\n- Link: a collection of closed loops tangled in 3D space; a Brunnian link is one where removing any single loop frees the rest.\n- Gauge group: the symmetry group that labels how a field is twisted as it moves along a loop; a finite gauge group gives a Dijkgraaf-Witten theory, a continuous (Lie) group gives Chern-Simons theory.\n- Abelian vs nilpotent groups: abelian groups have fully commuting elements; nilpotent groups are a controlled step beyond this, measured by the number of steps n.\n- Milnor invariants: numerical measures of how link components wind around each other.\n- Lazard correspondence: a dictionary between certain finite nilpotent groups and certain nilpotent Lie algebras, used to compare the two theories.\n- Line operator expectation value: the average value a physical model assigns to a loop-shaped observable.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We consider 3-dimensional topological gauge theories with nilpotent gauge groups, both finite, that is Dijkgraaf-Witten theories, and continuous, that is Chern-Simons theories. Abelian topological quantum field theories are exactly those which do not detect the Borromean rings, and nilpotent gauge groups provide the natural next steps beyond the abelian case. We show that the untwisted Dijkgraaf-Witten theory with gauge group $G$ detects Brunnian links with up to $n+1$ components, but no Brunnian links with more components, if and only if $G$ is $n$-step nilpotent. Moreover, the expectation values of such links are determined by their Milnor invariants. We also study the properties of Chern-Simons theories with nilpotent Lie groups and draw parallels with those of the Dijkgraaf-Witten theories. Finally, we conjecture, using the Lazard correspondence, a relation between expectation values of line operators in the two types of theories, and test it in examples.",
    "source": "arxiv"
   }
  ]

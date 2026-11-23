@@ -1,7 +1,55 @@
 {
  "slug": "plant-biology",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.767051",
+   "title": "Candidate gene mining of a fragmented Tipularia discolor Pursh (Nutt.) genome assembly reveals genes putatively associated with specialized metabolite production.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767051v1",
+   "authors": [
+    "Watkinson, J. I."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.767051 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A fragmented draft genome of the North American terrestrial orchid Tipularia discolor, mined with a candidate-gene pipeline, yields 68 contigs for sugar, terpenoid and phenylpropanoid genes, including two bibenzyl synthase homologs that cluster with known orchid bibenzyl synthases.",
+    "plain": "Orchids are a huge plant family, but only a tiny fraction of their species have had their genetic blueprint (genome) sequenced, and nearly all of those come from Asia. This study tried to sequence the genome of a North American orchid, Tipularia discolor. The genome came out broken into many pieces, so it is not complete, but the researchers could still search the pieces for specific genes and found 68 fragments linked to sugar, plant-chemical and pigment-type pathways.",
+    "why": "Two candidate genes resemble enzymes that make bibenzyls, a distinct class of plant chemicals, which suggests this orchid can make them too, as some related orchids do. The fragmented assembly is a foundation for later lab testing of these genes and for a better genome, but the text does not show any practical application yet.",
+    "background": "- Genome: the full set of an organism's DNA; sequencing it is often done by stitching short reads into longer pieces called contigs.\n- Fragmented assembly: a genome reconstruction broken into many unlinked pieces, so whole genes or their arrangement may be missing.\n- K-mer analysis: a counting method that estimates genome size from repeated short DNA strings, without assembling the full genome.\n- Repetitive sequences: DNA that appears many times over, which makes assembly harder.\n- Specialized (secondary) metabolites: plant chemicals not needed for basic growth, such as those in flavors, defenses or medicines.\n- Phenylpropanoids and bibenzyls: a chemical family and a subclass produced by plant enzymes like chalcone synthase (CHS) and bibenzyl synthase (BBS).\n- Phylogeny: a family tree built from sequence similarity; \"clustered with\" means the genes are closely related in that tree.\n- Homolog: a gene in one species that descends from a similar gene in another.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Orchids are a large and diverse group of plants with unique adaptations that have enabled the utilization of many different environmental habitats across almost all continents. These adaptations are mediated by an as-yet-underexplored genetic resource. Nearly all sequenced orchid genomes are of Asian origin and represent less than 0.1% of all orchid species, limiting the ability to explore and mine the gene space of this complex plant family. Greater representation of orchids in genome databases could provide important insights into the genes responsible for adaptive phenotypes, which could be useful for targeted crop improvement and in orchid conservation efforts. To begin to expand the palette of orchid genomes, an effort was undertaken to sequence the genome of a North American terrestrial orchid, Tipularia discolor. K-mer analysis estimated a haploid genome size of approximately 1.7 Gb, with a high proportion of repetitive sequences. Although a complete genome was not obtained, the implementation of a conservative gene mining approach and the generation of a candidate gene mining pipeline led to the identification of 68 consensus contig objects containing whole or partial genes related to sucrose, trehalose, terpenoid, and phenylpropanoid metabolism. Of note, two bibenzyl synthase homologs were identified with high confidence and clustered with characterized orchid bibenzyl synthases in a CHS/BBS phylogeny, indicating that T. discolor, like its Asian and South American relatives, has the capacity to produce this distinct class of phenylpropanoids. Thus, despite substantial fragmentation, the T. discolor assembly contains sufficient gene space representation for targeted candidate gene discovery. This works lays the foundation for functional characterization of selected candidates and development of a more complete genome assembly for comparative genomic studies.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767369",
+   "title": "Resistance-Breaking Root-knot Nematode Isolates Across California Tomato Fields Show Virulence Differences on Rotation Crops and Genomic Polymorphisms",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767369v1",
+   "authors": [
+    "Blundell, A. C.",
+    "Latina, R.",
+    "Dai, D.",
+    "Lazicki, P.",
+    "Aegerter, B.",
+    "Williamson, V. M.",
+    "Siddique, S."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767369 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "Survey of root-knot nematode isolates from 14 California processing tomato fields, testing species identity, SNP-based genetic diversity, and reproduction of wild-type and Mi-1 resistance-breaking M. incognita on rotation crops in greenhouse assays.",
+    "plain": "Microscopic worms that live in plant roots, called root-knot nematodes, are a major problem for tomato growers. Tomato varieties carry a resistance gene, Mi-1, that normally keeps them in check, but some worm populations have adapted to overcome it. This study sampled 14 California tomato fields, identified the worm species, and tested how well each population reproduced on crops that farmers might rotate into the field.",
+    "why": "Resistance that fails under heavy use is a recurring problem in farming, and this work suggests that rotation choices may need to be tailored to each field's worm population rather than applied as one general rule. The text does not describe effects on yields or on field-scale outcomes, so the practical impact is not established here.",
+    "background": "- Root-knot nematodes are tiny roundworms that infect plant roots and cause galls, reducing crop yield.\n- Mi-1 is a plant resistance gene bred into most processing tomatoes to block these worms.\n- \"Resistance-breaking\" means a worm population can reproduce on Mi-1 tomatoes despite the gene.\n- Crop rotation means planting non-host or poor-host crops between tomato seasons to lower worm numbers.\n- M. incognita is one of the most common root-knot nematode species.\n- SNP (single-nucleotide polymorphism) analysis compares small DNA differences between samples to estimate how related they are.\n- Greenhouse assays test reproduction under controlled conditions, which may not match field results.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Root-knot nematodes (RKNs) are a major concern for tomato growers worldwide. Management relies heavily on the plant resistance gene Mi-1, which has been bred into most processing tomato cultivars. However, repeated use of Mi-1 has placed strong selection pressure on nematode populations, promoting the emergence of resistance-breaking isolates. Despite the growing impact of resistance-breaking RKNs, their frequency, distribution, and species identity across California remain poorly understood. In this study, we isolated RKN isolates from processing tomato fields at 14 sites across California, identified them to species, and evaluated their reproduction on current rotation crops to determine whether crop rotation could suppress these populations. All 14 sites yielded resistance-breaking populations, and most isolates were M. incognita. A SNP-based principal component analysis revealed substantial genetic diversity among several isolates, suggesting that resistance-breaking emerged independently in multiple fields rather than all spreading from a single population. In greenhouse assays, alfalfa displayed the lowest reproduction of both wild-type and resistance-breaking M. incognita, whereas reproduction on other rotation crops varied by isolate. Together, these results show that rotation decisions should be guided by local RKN population identity and host compatibility rather than generalized strategies across fields.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.18.767486",
    "title": "The intracellular respiratory burst of plant immunity signaling",
@@ -40,14 +88,14 @@
    ],
    "label": "bioRxiv doi:10.64898/2026.11.18.767486 v1",
    "primary_category": "plant biology",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Pattern-triggered immunity (PTI) is classically associated with an extracellular respiratory burst generated by plasma membrane-localized NADPH oxidases (RBOHs).",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper reports an RBOH-independent, intracellular respiratory burst in plant pattern-triggered immunity, in which glycolysis-driven NADH buildup boosts mitochondrial respiration and mitochondrial ROS that activate ANAC017-dependent retrograde signaling.",
+    "plain": "Plants fight off microbes partly by releasing a quick burst of reactive oxygen molecules, which is usually attributed to enzymes on the cell surface. This paper describes a second, internal burst: when immune receptors are switched on, the cell rapidly breaks down sugar, and the energy-producing power plants inside the cell (mitochondria) then use more oxygen and make reactive oxygen signals that switch on defense genes. The authors used biosensors inside living plants to track these changes.",
+    "why": "It challenges the standard picture of the plant immune burst as purely a surface-enzyme event and links cellular sugar and energy status directly to immune activation. The text also suggests a parallel with metabolic shifts in mammalian immune cells, but how far that parallel holds is not established in this summary.",
+    "background": "- Pattern-triggered immunity (PTI): the plant's first-line immune response, switched on when cell-surface receptors detect microbial molecules.\n- Respiratory burst: a rapid release of reactive oxygen species (ROS), molecules that act as signals and can damage microbes.\n- RBOHs: plasma-membrane enzymes that produce the classic surface burst.\n- Glycolysis: the cell's breakdown of sugar into smaller molecules, producing energy carriers.\n- NAD pool: a shared set of molecules that carry electrons; its \"reduced\" form stores energy and electrons.\n- Mitochondria: organelles that generate cellular energy through respiration, which consumes oxygen.\n- Retrograde signaling: messages sent from organelles back to the nucleus to change gene expression.\n- ANAC017: a plant transcription factor involved in stress and mitochondrial signaling.\n- Biosensors: genetically encoded probes that report metabolite or redox levels in living cells.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Pattern-triggered immunity (PTI) is classically associated with an extracellular respiratory burst generated by plasma membrane-localized NADPH oxidases (RBOHs). Here, we identify an ancient RBOH-independent intracellular respiratory burst driven by central carbon metabolism. Using in vivo biosensors, we demonstrate that receptor activation rapidly triggers sugar catabolism via glycolysis, shifting the NAD pool toward its reduced state. This redox pressure drives a burst in mitochondrial respiratory flux and oxygen consumption. Consequent mitochondrial reactive oxygen species (ROS) production activates ANAC017-mediated retrograde signaling to induce broader PTI gene expression. This intracellular respiratory burst represents a conserved early hallmark of immunity across land plants and links cellular carbon status to immune activation. It reveals functional parallels between plant immune metabolism and metabolic reprogramming during mammalian immune-cell activation.",
    "source": "biorxiv"
@@ -62,16 +110,185 @@
    ],
    "label": "bioRxiv doi:10.64898/2026.11.18.767528 v1",
    "primary_category": "plant biology",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The plant nucleotide-binding leucine-rich repeat (NLR) immune receptors are known to play a crucial role in plant host defence against a variety of biotic stresses.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A computational comparison of an ANK-NLR-WRKY immune receptor (TaADNR1) and its orthologues across diploid, tetraploid and hexaploid wheat, using sequence, phylogenetic and AlphaFold2 structural analysis.",
+    "plain": "Wheat plants defend themselves against disease-causing microbes and pests using immune proteins called NLRs. This paper looks at one such protein, TaADNR1, and its matching versions in wild and cultivated wheat relatives. The authors used computer tools to compare the gene sequences, trace evolutionary relationships, and predict the 3D shapes of the proteins, finding that the versions are highly similar, especially in the WRKY part.",
+    "why": "Immune receptors like these help determine which pathogens a crop can resist, so understanding how they are conserved across wheat species may matter for breeding. The text is a computational study only and does not test disease resistance directly, so any link to real-world crop protection is still an open question.",
+    "background": "- NLR proteins: plant immune receptors that detect signals from invading pathogens and trigger defence.\n- Integrated domain (NLR-ID): an extra protein region added to an NLR that may bind pathogen molecules; here ANK (ankyrin) and WRKY domains.\n- Orthologues: versions of the same gene in different species that descend from a common ancestor.\n- Wheat ploidy: diploid (two sets of chromosomes), tetraploid (four) and hexaploid (six); T. urartu, T. dicoccoides and T. aestivum are the diploid, tetraploid and hexaploid examples.\n- Phylogenetic analysis: comparing sequences to infer evolutionary family trees.\n- AlphaFold2: an AI tool that predicts a protein's 3D structure from its sequence.\n- YrU1: a known, well-characterised orthologue from T. urartu that provides a reference point.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "The plant nucleotide-binding leucine-rich repeat (NLR) immune receptors are known to play a crucial role in plant host defence against a variety of biotic stresses. Several NLR proteins contain integrated domains (NLR-ID) like ankyrin (ANK) and WRKY transcription factor domains and are important evolutionary adaptations in plant immunity. They are responsible for the perception of effector molecules from invading pathogens and pests and subsequent activation of plant immune responses. However, the functional roles these ANK-NLR-WRKY proteins play in wheat (Triticum aestivum) against various pathogens and pests remain poorly understood. Computational tools employed for comparative sequence and phylogenetic analyses revealed that TaAdnr1 is highly conserved across diploid (T. urartu), tetraploid (T. dicoccoides), and hexaploid (T. aestivum) wheat species, including its well characterised orthologue YrU1 from T. urartu. Three-dimensional (3D) protein structural modelling using AlphaFold2 supported strong conservation in the multiple domains of these NLR orthologues, more specifically within the integrated WRKY domain. This conservation may suggest a strong evolutionary maintenance of TaADNR1. Furthermore, this may also suggest TaADNR1 reflects specificity in effector recognition and regulation. Therefore, the integration of functional genomics studies, sequence analysis, evolutionary analysis and structural modelling possesses the potential to provide new insights into the pleiotropic roles of integrated domain NLRs in wheat.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.766973",
+   "title": "2-Cys peroxiredoxins facilitate phosphatidylglycerol unsaturation and contribute to PSII recovery from high-light photoinhibition",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.766973v1",
+   "authors": [
+    "Hernandez, M. L.",
+    "Jimenez-Lopez, J.",
+    "Rodriguez-Marin, F.",
+    "Ojeda, V.",
+    "Galvez-Ramirez, A.",
+    "Cejudo, F. J.",
+    "Perez-Ruiz, J. M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.766973 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "In Arabidopsis, chloroplast 2-Cys peroxiredoxins are shown to promote trienoic fatty acid synthesis in thylakoid lipids, especially phosphatidylglycerol, via interaction with the FAD7/FAD8 omega-3 desaturases, and to help PSII recover from high-light damage, without a classical cysteine redox switch on the desaturases.",
+    "plain": "Plants build the fatty oils in their light-harvesting membranes, and how many double bonds these oils carry affects how well plants cope with stress. This study looked at a family of plant enzymes called 2-Cys peroxiredoxins and found that they help make one of these membrane fats, phosphatidylglycerol, more highly unsaturated. Plants lacking both these enzymes and the fat-making enzymes recovered poorly after being hit with too much bright light.",
+    "why": "It links two processes usually studied separately: membrane fat composition and the repair of the light-capturing machinery after strong sunlight. The text suggests the enzymes may act as helpers or scaffolds rather than through the usual redox switch, but this is a proposal the authors raise, not something established here.",
+    "background": "- Chloroplasts are the organelles where photosynthesis happens; thylakoids are their internal membranes.\n- Unsaturated fats have one or more carbon-carbon double bonds; more double bonds (trienoic = three) make membranes more fluid, which matters in cold and stress.\n- Desaturases (FAD7, FAD8) are enzymes that add these double bonds.\n- Phosphatidylglycerol (PG) is a lipid making up part of thylakoid membranes.\n- Peroxiredoxins are enzymes that neutralise peroxides and help regulate cell redox (electron-balance) signals, typically via cysteine amino acids.\n- Photosystem II (PSII) is the light-driven protein complex that splits water; high light damages it and it must be repaired.\n- Arabidopsis thaliana is a small model plant; mutants lacking specific genes are used to test function.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The level of fatty acid unsaturation of chloroplast lipids is a key determinant of plant acclimation to different environmental stresses. Though the enzymes catalysing fatty acid desaturation are well known, the regulatory mechanisms linking their activity to environmental signals remain poorly understood. In this work, we have addressed the role of chloroplast 2-Cys peroxiredoxins (Prxs), thiol peroxidases that play a central role in redox regulation, in {omega}-3 fatty acid desaturation in lipids of the organelle, and their contribution to plant acclimation to environmental stress. Genetic and lipidomic analyses of Arabidopsis (Arabidopsis thaliana) mutants lacking 2-Cys Prxs and/or the chloroplast {omega}-3 fatty acid desaturases FAD7 and FAD8 revealed that 2-Cys Prxs are required for the efficient synthesis of trienoic fatty acids in thylakoid membrane lipids, particularly in phosphatidylglycerol (PG). Different approaches show the in vivo interaction of 2-Cys Prxs with FAD7 and FAD8. However, no redox changes of these desaturases were observed regardless the contents of 2-Cys Prxs, thus indicating a regulatory mechanism independent of the classical cysteine-based redox switch. The combined absence of 2-Cys Prxs and chloroplast {omega}-3 desaturases severely compromised recovery from high-light photoinhibition, indicating that both systems act concertedly to maintain photosystem II (PSII) function under stress. Together, our results uncover a novel role of 2-Cys Prxs controlling the level of chloroplast PG cis-unsaturation and raise the possibility that the chaperone/scaffold activity of these enzymes links membrane lipid remodelling to photosynthetic stress response.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.766952",
+   "title": "L-Phenylalanine acts as a broad-spectrum plant growth biostimulator for both dicotyledonous and monocotyledonous crops",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.766952v1",
+   "authors": [
+    "Elad, Y.",
+    "Rav-David, D.",
+    "Oren-Shamir, M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.766952 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Field trials in net-houses show that weekly drench or foliar sprays of L-phenylalanine at or above 4 mM enhance vegetative and reproductive growth in cucumber, tomato, lettuce and wheat, with the authors attributing the effect to physiological biostimulation rather than added nutrition.",
+    "plain": "Farmers and researchers often use substances that help plants grow without fertilizing them directly. This study tested whether one common amino acid, L-phenylalanine, sprayed on or poured around plants, could make several crops grow bigger and yield more. In the reported trials, concentrations of 4 mM or higher gave clear gains in height, leaves, flowers, fruit and wheat tillers, while weaker doses were inconsistent.",
+    "why": "",
+    "background": "- Amino acids are the building blocks of proteins; phenylalanine is one of them and is also a precursor for many plant defense and signaling compounds.\n- A biostimulator is a substance that improves plant growth or yield through physiological effects, not by supplying nutrients or killing pests.\n- Dicots (like cucumber, tomato, lettuce) and monocots (like wheat) are the two main groups of flowering plants; they differ in leaf and stem structure.\n- A net-house is a mesh-walled growing structure that protects crops while allowing near-field conditions.\n- Fertigation means delivering fertilizer dissolved in irrigation water; here nitrogen was supplied at 150 mg/L throughout.\n- mM (millimolar) is a unit of concentration; 4 mM is a fixed amount of the compound per liter of solution.\n- Previous work reportedly linked phenylalanine at higher concentrations to pathogen resistance; this study examined growth effects in the absence of disease pressure.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "L-phenylalanine (Phe), an aromatic amino acid known to induce plant pathogen resistance at concentrations >4 mM, also functions as a broad-spectrum plant growth biostimulator in the total absence of biotic stress. To evaluate its biostimulatory potential, drench and foliar spray applications of Phe (1-16 mM) were tested on dicotyledonous (cucumber, tomato, lettuce) and monocotyledonous (wheat) crops grown under commercial-like net-house conditions with full NPK fertigation (150 mg/ L N). Weekly applications significantly enhanced vegetative growth across all species, increasing plant height by [&ge;]22-26%, node numbers by [&ge;]23-40%, and leaf/leaflet area by [&ge;]36-48% in cucumber and tomato, as well as expanding leaf area in lettuce. In reproductive stages, Phe treatments increased flower initiation, set fruits ([&ge;]23-27%), total fruit number ([&ge;]31%), and fruit yield per plant ([&ge;]30-36%) in cucumber and tomato. In wheat, Phe increased tiller formation, total spike counts by [&ge;]36%, and fresh/dry plant biomass. Growth enhancement required a strict concentration threshold of [&ge;]4 mM; lower concentrations (1-2 mM) were inconsistent, and applying 2 mM twice weekly failed to replicate the significant gains of a single 4 mM weekly treatment. Because background fertigation provided a continuous and ample nitrogen supply, periodic trace applications of Phe contributed negligible amounts of nutritional N or C. This supports the conclusion that Phe acts through concentration-dependent physiological and metabolic biostimulation rather than nutrient supplementation.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.766386",
+   "title": "Integrated multi-omics reveals organ-specific jasmonate signaling in Arabidopsis under combined heat and phosphate starvation",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.766386v1",
+   "authors": [
+    "Baca-Gonzalez, V.",
+    "Blasio, F.",
+    "Lanza, M.",
+    "Lozano-Enguita, A.",
+    "Torregrosa Gomez-Meana, I.",
+    "Sabater, A.",
+    "Navarro-Neila, S.",
+    "Garcia-Mina, J. M.",
+    "Zamarreno, A. M.",
+    "Garnica-Ochoa, M.",
+    "CARO, E.",
+    "del Pozo, J. C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.766386 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "In Arabidopsis, combined phosphate starvation and heat applied through a root-zone temperature gradient produced a distinct response, with jasmonate hormone levels shifting in opposite directions in roots and shoots and jasmonate-signaling mutants showing altered transcription, growth and leaf temperature.",
+    "plain": "Plants often face low phosphate in the soil while the weather is hot, and the two stresses hit different parts of the plant: the heat reaches the leaves, while the soil keeps the roots cooler. This study grew the plant model Arabidopsis with its roots and shoots at different temperatures and measured minerals, plant hormones and gene activity in each organ. The authors report that the combined stress caused a response that was not just the sum of the two stresses alone, and that the plant hormone jasmonate changed in opposite directions in roots and shoots.",
+    "why": "Crops in a warming climate may face low soil phosphate and heat together, so understanding how organs coordinate these signals could inform future breeding or management. The text only shows effects in one model plant under controlled conditions, so how far it carries over to field crops is not established here.",
+    "background": "- Phosphate (Pi) is an essential nutrient plants take up from soil; shortage limits growth.\n- Heat stress means temperatures above what a plant normally tolerates, which can damage growth and cooling.\n- Root-zone temperature gradient: an experimental setup in which roots and shoots are kept at different temperatures, mimicking soil buffering air temperature.\n- Phytohormones are signaling chemicals (here jasmonates) that coordinate growth and stress responses.\n- JA and JA-Ile are two forms of jasmonate; jar1-1 and jazQ are Arabidopsis mutants with reduced or constitutive jasmonate signaling.\n- Multi-omics means measuring many molecule types at once (ions, hormones, transcripts).\n- Transcriptomics: measuring which genes are switched on or off.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Phosphate (Pi) limitation is a major constraint on plant productivity and is aggravated by heat stress. In nature, soil buffers air temperature, creating a vertical thermal gradient that shields roots from extreme heat; thus, heat and Pi starvation, although often co-occurring, are perceived mainly by different organs, shoots and roots respectively. How plants integrate these organ-specific stresses into a coordinated response remains poorly understood. Here, we investigated how Arabidopsis responds to combined Pi deficiency and elevated temperature, using a root-zone temperature gradient and an integrated analysis of ion accumulation, phytohormone levels and transcriptomic profiles in roots and shoots. The combined stress elicited a distinct response that cannot be explained by the addition of individual stress effects. Jasmonate levels changed in an organ-specific manner, with JA-Ile accumulating in roots and JA declining in shoots, and mutants with reduced (jar1-1) or constitutive (jazQ) JA signaling showed altered transcriptional, growth and leaf-temperature responses. These results identify jasmonic acid (JA) as a modulator of the balance between acclimation and growth under combined nutritional and thermal limitation, advancing our understanding of how plants cope with the multi-stress scenarios driven by climate change.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.15.766785",
+   "title": "Plant growth, biomass, and nitrogen utilization are impacted by mutations in C4 PEPCK1 in maize",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.15.766785v1",
+   "authors": [
+    "Arp, J. J.",
+    "Lingwan, M.",
+    "Murphy, K. M.",
+    "Zhou, J.",
+    "Ellsworth, P.",
+    "Studer, A.",
+    "Kambhampati, S.",
+    "Chu, K. L.",
+    "Moore, L.",
+    "Weissmann, S.",
+    "Kumar, I.",
+    "Brutnell, T. P.",
+    "Cousins, A. B.",
+    "Mockler, T. C.",
+    "Moose, S. P.",
+    "Allen, D. K."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.15.766785 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Transposon knockout mutants of the C4 isoform PEPCK1 in maize show that aspartate-shuttled carbon can be decarboxylated via PEPCK as a secondary route alongside NADP-ME, with field-grown mutants producing more biomass and grain under varying nitrogen levels.",
+    "plain": "Maize is one of the world's most important food crops, and it captures carbon from the air using a multi-step chemical route. This paper asks whether a second, minor route, run by an enzyme called PEPCK, really helps, by knocking out the gene for one version of that enzyme. The mutant plants built up a related chemical (aspartate) in their leaves, and in field trials over several seasons they grew more leaf and grain material, whether the soil was short of nitrogen or not.",
+    "why": "It gives genetic evidence, rather than only indirect evidence, that maize uses two carbon-concentrating routes instead of one, which matters for understanding how a major crop photosynthesizes. The yield result is interesting for low-fertilizer farming, but the text does not show how large or consistent the gain is, or whether it would transfer to other crops.",
+    "background": "- Photosynthesis: plants fix carbon dioxide into sugars; many crops, including maize, use the \"C4\" pathway, which first concentrates CO2 in special cells to boost efficiency.\n- Maize mainly uses the NADP-malic enzyme (NADP-ME) route to release the concentrated CO2; PEPCK is a second enzyme thought to play a smaller role.\n- Aspartate is an amino acid-like intermediate that can carry carbon between cell compartments in this pathway.\n- Transposon mutagenesis: using mobile DNA elements to disrupt a gene so its function can be studied; \"knock-down\" means the gene's activity is reduced, not removed entirely.\n- Nitrogen (N) is a key nutrient that often limits crop yield; the study compares plants grown with limited and sufficient soil nitrogen.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Efficient photosynthesis is crucial to agricultural productivity and can be constrained by the plant carbon-nitrogen balance, offering an opportunity for genetic improvement. Furthermore, soil N availability limits grain yields, and crops require substantial N fertilizer to be productive. In C4 plants, carbon-concentrating mechanisms respond to decreased soil nitrogen and share molecular intermediates with N metabolism. Maize, one of the most widely grown crops globally, uses a combination of two C4 photosynthetic pathways. Most carbon fixation occurs through the NADP-malic enzyme (NADP-ME) pathway, yet some fixation is also thought to occur via phosphoenolpyruvate carboxykinase (PEPCK). However, genetic evidence for the contribution of PEPCK is lacking. Here, we used a transposon-based mutagenesis approach to study the function of the C4 isoform of PEPCK1 in maize. The C4 pathway intermediate aspartate accumulated to high concentrations in the leaves of the pepck1-2::Ds knock-down mutant, providing genetic support for the PEPCK secondary pathway as a complement to the dominant NADP-ME shuttle in maize. Field experiments over multiple seasons in either N-limiting or N-sufficient soils demonstrated the pepck1::Ds mutants produced higher vegetative and grain biomass without changes in leaf photosynthetic rates or parameters. This study confirms that PEPCK1 catalyzes the decarboxylation of carbon shuttled as aspartate, as an alternative route to decarboxylation by NADP-ME in a nominally NADP-ME subtype C4 species maize, providing clear genetic support for two-pathway operation. Further, the greater resilience and N-responsiveness of mutant plants are valuable traits for sustainable and subsistence farming in the future.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.12.766148",
+   "title": "Thermopriming prewires orchestrated regulatory programs to enhance heat stress adaptability",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766148v1",
+   "authors": [
+    "Nair, A. U.",
+    "Vishwakarma, S.",
+    "Kadumuri, R. V.",
+    "Fritschi, F. B.",
+    "Chavali, S.",
+    "Allu, A. D."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.12.766148 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "In five-day-old rice seedlings, a brief mild heat pre-exposure (\"thermopriming\") yields a more restrained, more regulated transcriptional response to later severe heat, associated with retained H3K27me3 repressive marks and accumulation of memory chaperone transcripts that speed protein increases.",
+    "plain": "Plants can \"remember\" an earlier stress and handle a stronger one better later. This study looked at rice seedlings that were first given a mild heat exposure and then a severe heat stress, comparing them with seedlings that got only the severe stress. The primed seedlings reacted in a calmer, more orderly way, with fewer controlling switches involved, and they kept a chemical tag on their DNA that helps keep genes quiet.",
+    "why": "Heat extremes are becoming more common with climate change, and understanding how crops store a stress memory could inform efforts to breed or engineer more heat-resilient crops. The text itself frames these as implications; it does not show that the findings translate to field crops.",
+    "background": "- Priming: an earlier mild stress that makes a plant better prepared for a later, harsher one.\n- Transcriptome: the set of gene copies (transcripts) a cell is actively making at a given time; measuring it shows which genes are switched on.\n- Transcription factors: proteins that switch groups of genes on or off; a \"regulon\" is the set of genes one such factor controls.\n- Entropy (here): a measure of how spread out or disordered a response is; a \"lower-entropy\" response is more focused and orderly.\n- Epigenome and H3K27me3: chemical marks on the packaging of DNA that can keep genes repressed; the study tracked whether these marks were kept or lost.\n- Chaperone proteins: helpers that keep other proteins folded correctly, especially under heat stress.\n- Post-translational regulation: controlling protein activity or levels after the protein is made.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "- Plants can remember earlier stress exposures (priming), which improves tolerance to later, more severe stress. How this stress memory is organised in crops remains largely unresolved. - We studied five-day-old rice seedlings subjected to severe heat stress with or without thermopriming, combining phenotyping, time-resolved transcriptomic and epigenomic profiling with systems biology approaches and targeted molecular experiments. - Compared with unprimed seedlings, primed seedlings showed a restrained, lower-entropy transcriptional response spanning diverse biological processes. This response was driven by fewer transcription factors that modulate regulons for both stress response and growth, together contributing to better adaptability to severe stress. - Primed seedlings maintained global H3K27me3 levels, which declined in unprimed seedlings, linking retention rather than removal of this mark to the restrained response. - Priming led to the accumulation of memory chaperone transcripts, enabling a rapid rise in protein abundance under severe stress. This supports better post-translational regulation, alongside the coordinated transcriptional response. Overall, thermopriming establishes pre-wired programmes that enhance adaptability through regulatory order and speed, not amplitude, and repressive-mark retention, not removal, during early development. These findings have implications for (i) understanding heat stress memory in addressing climate change driven heat extremes, and (ii) engineering climate-resilient crops.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.12.766257",
+   "title": "Cabbage1 and Cabbage2 encode CYP90A orthologs that function redundantly to regulate plant development in maize",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766257v1",
+   "authors": [
+    "Zebosi, B.",
+    "Vollbrecht, E.",
+    "Unger-Wallace, E.",
+    "Ssengo, J.",
+    "Best, N. B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.12.766257 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Maize Cabbage1 and Cabbage2 genes, orthologs of Arabidopsis CYP90A1/CPD brassinosteroid biosynthesis enzymes, act redundantly in shoot development, and cbg1;cbg2 double mutants show dwarfing, erect leaves, and a cabbage-like shoot head with reduced fertility.",
+    "plain": "This study looks at two related maize genes that help build a plant's hormone signals controlling height and leaf shape. Each gene alone made no visible difference, but plants missing both became very short, with small upright leaves bunched into a tight head that blocked the tassel and ear from emerging, which reduced fertility. Adding a chemical that blocks this hormone's production in normal seedlings produced a similar look, and adding the finished hormone alone did not fully rescue the mutants' early stem growth.",
+    "why": "Plant architecture affects how many plants can be grown per area and how much light the leaves capture, so hormone pathways that shape it are of interest for crop yield. The text supports the link to brassinosteroid biosynthesis for these mutants, but it does not show direct yield effects in field conditions.",
+    "background": "- Brassinosteroids (BRs) are plant hormones that influence growth, height, and leaf angle.\n- CYP90A (CPD in Arabidopsis) is an enzyme in the pathway that makes BRs.\n- Orthologs are genes in different species that descend from a common ancestral gene and often share function.\n- Redundant genes: two genes that can each cover for the other, so losing one has no obvious effect but losing both does.\n- Mutant alleles: versions of a gene with a disrupting change; here they came from UniformMu transposon stocks.\n- Mesocotyl: the early stem segment between seed and soil surface in seedlings, whose elongation depends on BRs.\n- Propiconazole (PCZ) is a chemical that inhibits BR biosynthesis; brassinolide (BL) is an active BR.\n- Tassel and ear are the male and female flower structures of maize.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Ideal plant architecture improves grain yield per unit area in maize fields by promoting upright leaves which support high planting densities, improving light interception and enhancing photosynthetic efficiency. Shoot architecture is defined by plant height, leaf morphology, and branching pattern, which are regulated by a complex network of plant hormones and environmental factors. Brassinosteroids (BRs) are among the classic plant hormones that regulate plant architecture. Here, we investigated the functions of Cabbage (Cbg) genes in maize which are orthologs of Arabidopsis CYP90A1/CPD and encode CYP90A, a key BR biosynthetic enzyme. Using reverse genetics, we identified and characterized cbg1 and cbg2 mutant alleles recovered from UniformMu transposon stocks. Our genetic mutant analysis indicated that Cabbage genes function collectively; each single mutant (cbg1 and cbg2) was indistinguishable from its wild-type siblings. In contrast, cbg1;cbg2 double mutants exhibited severe developmental defects including dwarf stature, fewer tassel branches, and smaller, erect leaves. These defects lead to shoots with tightly wrapped leaves forming a cabbage-like head that restricts inflorescence (tassel and ear) emergence and results in loss of fertility. Consistent with impaired BR biosynthesis, cbg1;cbg2 double mutants had significantly reduced levels of downstream BR metabolites. Treatment of wild-type and single mutant germinating seedlings with the BR biosynthetic inhibitor, Propiconazole (PCZ), phenocopied untreated cbg1;cbg2 double mutants, particularly in mesocotyl elongation. Supplementation with exogenous brassinolide (BL) alone was not adequate to restore mesocotyl elongation in the double mutants. These mutant phenotypes are consistent with impaired BR biosynthesis and demonstrate that Cabbage genes (Cbg1 and Cbg2) function redundantly to regulate plant development. Overall, these findings on Cabbage genes highlight the potential of BRs for crop improvement.",
    "source": "biorxiv"
   }
  ]

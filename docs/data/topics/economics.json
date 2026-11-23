@@ -1,5 +1,186 @@
 {
  "slug": "economics",
- "updated": "2026-11-22",
- "papers": []
+ "updated": "2026-11-23",
+ "papers": [
+  {
+   "uid": "arxiv:2611.26338",
+   "title": "Structural economic change under the digital transformation",
+   "url": "https://arxiv.org/abs/2611.26338v1",
+   "authors": [
+    "Marco Dueñas",
+    "Antoine Mandel"
+   ],
+   "label": "arXiv:2611.26338v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A calibrated agent-based model of the global economy compares two ways digital inputs can enter production after a common productivity gain in digital-supplier industries, tracing effects on output, value added, utility, and sectoral labour reallocation.",
+    "plain": "The paper asks what happens to whole economies if the industries that supply digital goods and services become much more productive. It simulates this in a computer model of the global economy under two scenarios that differ in how digital inputs are used by other industries. Gross output, household well-being, and GDP rise in both cases, but value added gains are smaller and uneven across sectors, and workers may struggle to move into growing industries.",
+    "why": "It addresses how technology gains spread through supply chains and labour markets, a question relevant to policy on automation and job transitions. The text does not show how well the model's assumptions match real data, so its quantitative conclusions should be read cautiously.",
+    "background": "- Agent-based model: a simulation where many interacting units (here, industries and households) follow rules, and aggregate outcomes emerge from their interactions.\n- Calibrated: parameters are set so the model reproduces observed economic data.\n- Intermediate inputs: goods and services one industry buys from another to make its own output.\n- Value added: output minus intermediate inputs; roughly the income created at each stage, closely tied to GDP.\n- Embeddedness: how deeply digital inputs are woven into production, here either as ordinary purchased inputs (low) or combined directly with labour and capital (high).\n- Upstream/downstream: positions in a supply chain, closer to raw inputs or to final consumers.\n- Labour reallocation: workers moving between industries as demand and productivity shift.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Productivity improvements in digital industries could massively reshape the structure of production networks and drive significant labour reallocation across sectors. We examine these adjustments using a calibrated agent-based model of the global economy. We consider two scenarios with the same cumulative increase in digital-supplier productivity, which differ in how digital inputs in exposed industries are incorporated into production. The key difference is whether digital inputs enter as standard intermediate inputs (low embeddedness) or are combined directly with primary factors (high embeddedness). Across economies, both scenarios generate gains in gross output, household utility, and GDP, although value-added gains are more modest and unevenly distributed across sectors. High embeddedness generally amplifies production responses, particularly in industries highly exposed to digital inputs. Structurally, as digital industries become central in the production network and attract labour from other activities, other industries move further upstream and downstream. Persistent labour reallocation pressures also indicate potential unemployment risks where workers cannot move to expanding industries. These findings stress that, beyond productivity gains derived from advances in digital technologies, economic and social consequences depend on how digital inputs integrate into production and on workers' possibilities to adapt to structural change.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25420",
+   "title": "Structural Fine-Tuning under Economic Restrictions",
+   "url": "https://arxiv.org/abs/2611.25420v1",
+   "authors": [
+    "Yi Niu",
+    "Yuecheng Su",
+    "Ethan Yang"
+   ],
+   "label": "arXiv:2611.25420v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "The paper proposes \"structural fine-tuning,\" which adapts a pretrained predictor to a new economic setting by imposing economic restrictions (ranging from simple assumptions to workhorse models) during fine-tuning, and reports theory plus a simulation of a credit-limit decision.",
+    "plain": "The paper asks how a prediction model trained on past data should be adjusted when a new environment or task has only a few new observations. The authors suggest adding rules drawn from economic knowledge, such as who is eligible or how cash flows work, to guide that adjustment. They test this in a simulated case where a credit issuer sets credit limits after a change resembling a Medicaid-style expansion of medical payments.",
+    "why": "Adapting models with little new data is a common practical problem in economic forecasting and policy evaluation, so combining model-adaptation methods with economic knowledge is worth attention. The reported gains come from a simulation rather than real data, so how far they carry to actual credit markets is an open question the text does not settle.",
+    "background": "- Pretrained predictor: a model fit on historical data, then reused.\n- Fine-tuning: updating a trained model on a smaller new dataset.\n- LoRA and neuron gating: lightweight fine-tuning methods that change only a small part of the model.\n- Root mean squared error (RMSE): a standard measure of prediction error; lower is better.\n- Policy regret: the loss a decision-maker incurs compared with the best possible decision.\n- Economic restrictions: constraints derived from economic theory or institutional rules that the adapted model must respect.\n- Simulation exercise: results come from synthetic data built to mimic a setting, not from observed outcomes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "How should a predictor trained on historical data be adapted to a new economic environment or task when few target observations are available? We propose structural fine-tuning, a framework that introduces economic restrictions to guide the adaptation of pretrained predictors. The framework does not require a complete structural model; instead, it utilizes constraints based on economic knowledge, ranging from simple, ubiquitous assumptions to particular workhorse models. Theoretically, we characterize conditions when economic restrictions improve prediction over the original model and ordinary fine-tuning. Then, we illustrate the framework through a simulation exercise of a credit issuer's credit-limit decision following a Medicaid-style expansion in medical payments. Imposing restrictions based on eligibility, outstanding medical bills, cash flows, and group-level risk bounds, our framework lowers the root mean squared error of predicted risk by 28 to 39 percent and the issuer's policy regret by 3 to 10 percent relative to ordinary neuron gating, LoRA, and full fine-tuning.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25222",
+   "title": "Network-Adaptive Instrumental Variables",
+   "url": "https://arxiv.org/abs/2611.25222v1",
+   "authors": [
+    "Yi Niu",
+    "Zhengyan Xu"
+   ],
+   "label": "arXiv:2611.25222v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper constructs network-adaptive instrumental variables for a spatial autoregressive model with endogenous covariates and unknown network weights, and develops GMM estimation and inference for the resulting coefficients and spillover parameters.",
+    "plain": "When people or units influence one another through a network, a standard regression can give misleading answers because the variables are tangled together. This paper proposes a way to build helpful \"instrument\" variables that work even when the true pattern of who influences whom is not known. The authors show the model's key parameters can be identified under stated conditions, and they test their estimation method with computer simulations.",
+    "why": "Network interference shows up in many applied settings, such as peer effects, spillovers between regions, and contagion, so estimators that do not require the network to be known could be useful there. The text supports the theoretical claims and simulation tests, but it does not report how the method performs on real data, so its practical reach is still unclear.",
+    "background": "- Endogeneity: when an explanatory variable is correlated with the error term, so ordinary regression is biased.\n- Instrumental variable (IV): an outside variable that affects the outcome only through the explanatory variable, used to isolate clean variation.\n- Interference / spillovers: one unit's outcome depends on other units' outcomes or characteristics, often via a network.\n- Spatial autoregressive (SAR) model: a regression where each unit's outcome depends on a weighted average of its neighbours' outcomes, with weights given by a network matrix.\n- Network weights: numbers describing how strongly each unit is connected to each other unit; here they are unknown and must be estimated.\n- GMM (generalized method of moments): an estimation method that chooses parameters so that sample averages of chosen moment conditions are close to zero.\n- Identification: whether parameters can be uniquely recovered from the data under the assumptions.\n- Consistency and asymptotic normality: estimates converge to the truth as data grow, and their spread is approximately bell-shaped, which justifies standard confidence intervals.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Three mechanisms generate endogeneity in regressions under interference. We address them by constructing network-adaptive instrumental variables (NIV) for a spatial autoregressive (SAR) model with endogenous covariates and unknown network weights. Under network-conditional exclusion and information equivalence, the resulting instruments yield valid moments without knowing the true network. We establish joint identification of the structural mean coefficients and the network parameters, providing two sufficient routes. Then under additional covariance restrictions, we identify the disturbance spillover coefficient and the innovation variance. We develop NIV-GMM estimation, establish consistency and asymptotic normality, and give feasible inference and a test for mean network spillovers. Monte Carlo simulations examine their finite-sample performance.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24402",
+   "title": "Design-Based Inference for Fuzzy Difference-in-Differences",
+   "url": "https://arxiv.org/abs/2611.24402v1",
+   "authors": [
+    "Pedro Picchetti"
+   ],
+   "label": "arXiv:2611.24402v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper develops design-based inference for fuzzy difference-in-differences (where a policy is assigned at random but take-up is not), deriving when the Wald-DiD estimand has a causal reading, proposing an Anderson–Rubin-type test with a conservative Neyman variance valid under weak first stages, a sensitivity analysis for the complier effect, and estimators for known assignment probabilities, illustrated with the Oregon Health Insurance Experiment.",
+    "plain": "The paper looks at studies where a policy or program is offered to some people at random, but not everyone who is offered it signs up, and outcomes are compared before and after across groups. The author treats the people and their choices as fixed and only the random offer as the source of chance, and asks when the usual comparison-based estimate still means what we want it to mean. The paper gives conditions for that, proposes statistical tests and a sensitivity check, and applies the methods to the Oregon Health Insurance Experiment.",
+    "why": "Difference-in-differences is one of the most widely used tools for judging policy effects, and this work states its assumptions in a way that is weaker than the usual parallel-trends requirement. The Oregon experiment is a well-known health policy study, so the application makes the ideas concrete; the broader practical impact is not established by the text provided.",
+    "background": "- Difference-in-differences: comparing the change over time in a treated group with the change in a comparison group.\n- Parallel trends: the usual assumption that, without treatment, both groups would have changed at the same rate.\n- Fuzzy design: assignment is random (for example, a lottery), but actual treatment uptake may differ from assignment.\n- Wald estimator: the ratio of the outcome difference to the take-up difference, which recovers the effect for \"compliers\" (people whose uptake follows the assignment).\n- Design-based inference: randomness comes only from the random assignment, not from sampling people from a larger population.\n- Weak first stage: when assignment barely changes take-up, making estimates unstable and tests unreliable.\n- Anderson–Rubin test: a test for effects that stays valid even when the first stage is weak.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "I study fuzzy difference-in-differences designs from a design-based perspective, in which potential outcomes and treatment decisions are fixed and only the assignment of a policy is random, with heterogeneous and possibly unknown assignment probabilities. The Wald-DiD design estimand equals an assignment-weighted complier effect plus contamination from switchers, from changes in always-takers' effects and from trends in untreated outcomes. I derive the conditions under which the estimand holds a clear causal interpretation. The conditions are weaker than parallel trends in both outcomes and treatments. We propose an Anderson--Rubin-type test with a conservative Neyman variance that remains valid under weak first stages, a sensitivity analysis for the complier effect, and estimators for designs with known assignment probabilities. An application to the Oregon Health Insurance Experiment illustrates the results.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22984",
+   "title": "Long-Term Quantile Treatment Effects with Combined Experimental and Observational Data",
+   "url": "https://arxiv.org/abs/2611.22984v1",
+   "authors": [
+    "Nan Liu",
+    "Yanbo Liu",
+    "Yuya Sasaki",
+    "Yichong Zhang"
+   ],
+   "label": "arXiv:2611.22984v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper identifies, estimates, and performs uniform inference on long-term quantile treatment effects by combining short-term experimental data with long-term observational data under a latent unconfoundedness assumption, using efficient influence functions and a multiplier bootstrap for simultaneous confidence bands.",
+    "plain": "Researchers often want to know how a policy or treatment affects outcomes years later, but experiments that run long enough to measure those outcomes are rare. This paper asks how to estimate the effect on the whole distribution of long-term outcomes (not just the average) by pairing a short experiment with long-term observational records. The authors state an estimation method and a way to draw confidence bands across many quantile levels at once.",
+    "why": "Policy evaluation frequently needs long-run effects that short trials cannot observe directly, so methods that combine data sources could matter for fields such as labor economics and program evaluation. The text itself does not report empirical applications or comparisons, so the practical reach of the method is not shown here.",
+    "background": "- Treatment effect: the difference in outcomes caused by an intervention, compared with not receiving it.\n- Quantile treatment effect: the effect at a given rank in the outcome distribution, such as the median or the 90th percentile, rather than the average.\n- Experimental vs. observational data: randomized experiments assign treatment by chance; observational data record what happened without such assignment.\n- Unconfoundedness: the assumption that, after accounting for observed characteristics, treatment is as good as random.\n- Latent unconfoundedness: a version of this assumption that works through unobserved (latent) variables linking the short-term and long-term data.\n- Efficient influence function: a tool that describes the most precise possible estimator for a quantity and underlies its variance.\n- Multiplier bootstrap and simultaneous confidence bands: resampling methods that produce a band covering the whole curve of effects across quantiles with a stated probability.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper studies the identification, estimation, and inference of long-term quantile treatment effects (LTQTEs) when short-term experimental data are supplemented with long-term observational data. Under a latent unconfoundedness framework, we establish identification of the LTQTE curve and derive the corresponding efficient influence functions. Building on these influence functions, we propose a semiparametrically efficient estimation procedure and develop a multiplier bootstrap method for uniform inference on the LTQTE curve, yielding valid simultaneous confidence bands over a continuum of quantile indices.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22793",
+   "title": "Does the AI Reviewer Alleviate or Aggravate the Maintenance Burden? Evidence from GitHub Copilot Reviewer",
+   "url": "https://arxiv.org/abs/2611.22793v1",
+   "authors": [
+    "Feiyang",
+    "Xu",
+    "Poonacha K. Medappa",
+    "Murat M. Tunc"
+   ],
+   "label": "arXiv:2611.22793v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A natural-experiment study of how the 2025 rollout of GitHub Copilot Reviewer, an AI code-review tool, changed pull-request volume, maintainer review workload, and review speed in open-source projects.",
+    "plain": "Open-source software is built by volunteers and companies who submit proposed code changes, called pull requests, which project maintainers must check before accepting. This paper looks at what happened when GitHub added an AI tool, Copilot Reviewer, that automatically reviews these changes. The authors use the tool's 2025 introduction as a natural experiment to compare how projects changed afterward.",
+    "why": "Maintainer time is a real bottleneck for open-source work, and AI tools are being pushed as a fix, so evidence on whether they reduce or increase that load matters for software practice and for how we think about automation in volunteer communities. The text does not show the size of the effects or the statistical details, so the strength of the conclusions cannot be judged from it alone.",
+    "background": "- Open-source software: publicly shared code that anyone can view, use, or contribute to, often maintained by unpaid volunteers.\n- Pull request (PR): a proposed code change submitted for review before it is merged into a project.\n- Maintainer: a person who reviews, accepts, and looks after a project.\n- Bot: an automated account that submits or handles changes without a human writing them.\n- Natural experiment: a real-world event (here, a product launch) that changes conditions for some users but not others, letting researchers study its effects without running a controlled trial.\n- Survival analysis: a statistical method for how long until an event happens, here how long until a PR is reviewed or merged; it is used here to compare review speed.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "This study examines how AI-based code reviewers reshape contribution behavior and maintenance dynamics in open-source software (OSS) communities. AI reviewers provide scalable, fast, and standardized evaluations. They reshape contributions as well as maintainers' workload. Leveraging the introduction of GitHub Copilot Reviewer on GitHub as a natural experiment in 2025, we investigate how AI review affects maintainers' workload and review efficiency as well as contribution behavior. We find that repository maintainers initially face a sharp increase in PR submissions and a higher review workload after the adoption of the AI reviewer. Over time, human contributions decline while the increase in bot-generated PRs is sustained. Interestingly, survival analysis reveals that AI reviewers increase review efficiency for human PR contributions, whereas bot PRs take longer to review and merge. Our findings suggest that while AI reviewers increase review efficiency, they aggravate the maintenance burden by encouraging more code contributions via humans and bots.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19662",
+   "title": "Identifying Time Preference Shocks: Stated and Revealed Preferences after an Italian Earthquake",
+   "url": "https://arxiv.org/abs/2611.19662v1",
+   "authors": [
+    "Krisztina Molnar",
+    "Concetta Rondinelli",
+    "Po Yin Wong"
+   ],
+   "label": "arXiv:2611.19662v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper uses joint stated and revealed preference evidence, in a difference-in-differences design around the 2009 L'Aquila earthquake, to separate true time preference shocks from the confounding effect of tighter financial resources.",
+    "plain": "The paper asks whether a disaster makes people more impatient for rewards now, or simply poorer. It looks at households hit by the 2009 L'Aquila earthquake in Italy and compares undamaged households that felt the quake with similarly distant households that did not. Treated households reported being more impatient and increased their spending on non-durable goods (things like food and everyday items) by about 11 percent relative to controls.",
+    "why": "Time preference, or how much people discount future rewards, is a core input to economic models of saving and policy, and survey answers about it are hard to interpret when shocks also change income or wealth. The authors' argument that comparing stated answers with actual spending can separate these effects is a useful methodological point, though the text alone does not show how well it generalizes beyond this one event.",
+    "background": "- Time preference: how strongly people prefer rewards now over later; higher impatience means a stronger preference for the present.\n- Stated preference: what people say in a survey about their patience or choices.\n- Revealed preference: what people actually do, here measured through consumption spending.\n- Difference-in-differences: comparing the change over time in a treated group against the change in a control group, to isolate an event's effect.\n- Liquid wealth: money that is quickly available, such as savings or cash, used as a buffer against shocks.\n- Non-durable consumption: spending on goods used up quickly, such as food and services.\n- Psychological stress channel: the idea that trauma itself changes behavior, apart from any loss of money.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Identifying time preference shocks is challenging: shocks large enough to shift survey-elicited stated impatience also tighten financial resources, confounding the interpretation of stated time preference. Jointly examining stated and revealed preferences resolves this identification problem: impatience shocks and reductions in financial resources generate opposite consumption responses, even though both raise stated impatience. Applying our identification framework to the 2009 L'Aquila earthquake, we combine panel data with spatially granular seismic and damage data in a difference-in-differences design that compares undamaged households that experienced the earthquake with a spatial control group at similar distances from the epicenter. Treated households report greater impatience and increase nondurable consumption by 11 percent relative to controls. Effects are consistent with a psychological stress channel, concentrated among the most vulnerable to stress, and persist as households deplete their liquid wealth buffer over time.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19690",
+   "title": "Comparing Two-Sample IV Estimators under Weak Instruments",
+   "url": "https://arxiv.org/abs/2611.19690v1",
+   "authors": [
+    "Jeffrey Tse"
+   ],
+   "label": "arXiv:2611.19690v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper compares the asymptotic variance formulas of three two-sample summary-data IV estimators (IVW, debiased IVW, and the profile score estimator) for fixed and diverging numbers of instruments, under weak instruments.",
+    "plain": "The paper looks at three statistical recipes for estimating a cause-and-effect strength when the data come from two separate studies and each genetic or other instrument is weak. It compares how precise each recipe is in large samples, using theoretical formulas rather than simulations or real data. The main finding is that the three recipes are close in precision, with differences that shrink as the instruments get stronger, and the paper states these are comparisons of formulas, not of finite-sample performance.",
+    "why": "Two-sample Mendelian randomisation is a widely used way to estimate causal effects from published summary statistics, so clarifying how the standard estimators compare when instruments are weak bears on applied practice. The text does not say how these results will be used in practice, and it does not establish finite-sample performance.",
+    "background": "- Instrumental variables (IV): a way to estimate a cause's effect using a factor that influences the outcome only through that cause.\n- Weak instruments: instruments that are only loosely related to the cause, which makes standard estimates unreliable or biased.\n- Two-sample design: the instrument-exposure and instrument-outcome associations come from two independent samples.\n- Summary data: only per-instrument estimates and standard errors are used, not individual-level records.\n- Inverse-variance weighting (IVW): a precision-weighted average of per-instrument ratio estimates; the debiased version corrects a bias from weak instruments.\n- Profile score (PS) estimator: a likelihood-based alternative.\n- Asymptotic variance: the approximate spread of an estimator in large samples; the paper contrasts fixed numbers of instruments with numbers that grow with sample size.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We compare three estimators in a two-sample summary-data instrumental variables (IV) model: inverse-variance weighting (IVW), debiased inverse-variance weighting (dIVW), and the profile score (PS) estimator. The framework assumes independent samples and instrument-specific summary estimates, with two-sample Mendelian randomisation as a leading application. We compare existing fixed- and many-weak-instrument results and the sufficient conditions for the three estimators. Under the variance scaling used in the profile-score literature, the principal collective-strength conditions for PS and dIVW are equivalent, although their additional restrictions on instrument concentration and growth differ. We then compare their asymptotic variance formulae for fixed and diverging numbers of instruments. For fixed $L$, IVW and dIVW have the same first-order asymptotic variance. Under a common variance-ratio condition, the PS variance formula exceeds the IVW variance by a positive term of order $n^{-2}$, compared with the order-$n^{-1}$ leading variance. For diverging $L$, we establish variance orders across instrument-strength regimes and the exact ordering $\\mathsf{V}_{\\mathtt{IVW}} < V_{\\mathtt{PS}} \\leq \\mathsf{V}_{\\mathtt{dIVW}}$ under the same variance-ratio condition. Absolute variance gaps vanish when $\\sqrt{L}κ\\to\\infty$, whereas relative equivalence holds if and only if $κ\\to\\infty$. These comparisons concern asymptotic variance formulae rather than finite-sample efficiency or mean squared error.",
+   "source": "arxiv"
+  }
+ ]
 }

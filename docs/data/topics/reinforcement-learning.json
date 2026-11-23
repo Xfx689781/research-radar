@@ -1,6 +1,6 @@
 {
  "slug": "reinforcement-learning",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25597",
@@ -12,12 +12,12 @@
    ],
    "label": "arXiv:2611.25597v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper post-trains LLMs to produce optimization parameters by using negative downstream decision regret as the RL reward, with two reward-cost reduction schemes (heuristic warm-starting and randomized reward correction) for when exact evaluation is expensive.",
-    "plain": "An AI model that forecasts things, like demand, is usually trained to be accurate, but a forecast that is accurate on average can still lead to poor decisions when someone plans around it. The authors train a language model to make forecasts judged by the cost of the decisions they lead to, using a reward signal that penalizes extra cost compared with the best possible decision. On three synthetic problems and a knapsack task, they report gains over methods trained only on prediction error; on an inventory planning task using H&M sales and product descriptions, they report regret reductions of 31.4% versus a supervised fine-tuning baseline and 12.4% versus the strongest conventional forecasting baseline they tested.",
-    "why": "It targets the gap between prediction accuracy and decision quality, a theme in the 'predict-then-optimize' literature, and applies it to LLM post-training, where text context is used for forecasts. The abstract does not show how far the results generalize beyond the tested tasks, so the broader significance is uncertain.",
-    "background": "['Post-training of LLMs: fine-tuning a pretrained model with supervised examples and then with reinforcement learning.', 'Reinforcement learning basics: a policy is updated to increase expected reward, often via policy gradients.', 'Predict-then-optimize: a model forecasts parameters, which feed a downstream optimization problem that chooses a decision.', 'Decision regret: the extra cost of a decision made from a forecast compared with the decision made with perfect information.', 'Prediction loss versus decision cost: a forecast can have low error yet still produce a costly decision.', 'Reward approximation: exact reward evaluation requires solving the optimization problem, which can be expensive, so cheaper estimates are used.']",
+    "one_liner": "The paper proposes decision-focused reinforcement learning (DFRL), which post-trains LLMs to produce optimization parameters by rewarding them with negative downstream decision regret, and introduces two ways to cut the cost of exact reward evaluation.",
+    "plain": "Language models are often used to make forecasts, but a more accurate forecast does not always lead to a cheaper decision when that forecast feeds into an optimization problem, such as planning inventory. This paper trains a language model with reinforcement learning so that it is scored on the cost of the resulting decision rather than on how close its forecast is. On an inventory planning task using H&M transaction data and product descriptions, the authors report that their best setup, where the model reasons before predicting, cut regret by 31.4% relative to a supervised fine-tuning baseline and by 12.4% relative to the strongest conventional forecasting baseline they tested.",
+    "why": "It targets a real gap: forecasts judged only by accuracy can still lead to poor decisions, and training against decision cost directly addresses that. Its relevance beyond the tested problems (synthetic tasks, a knapsack task, and one inventory setting) is not established by the text, so the reach of the approach is still open.",
+    "background": "- Large language model (LLM): a neural network trained on text that can also be used to output numbers or predictions.\n- Post-training: extra training applied after a model's initial training, here to shape its predictions.\n- Reinforcement learning (RL): training by giving a model a score (reward) for its outputs and adjusting it to earn higher scores.\n- Supervised fine-tuning (SFT): training a model further on labeled examples, used here as a baseline.\n- Optimization problem: choosing the best action under constraints, such as how much stock to order given predicted demand.\n- Decision regret: the extra cost incurred because a decision was based on a prediction, compared with the best decision possible with perfect information.\n- Knapsack problem: a classic problem of picking items to maximize value within a weight limit.\n- Policy gradient: a standard RL method for adjusting a model's behavior using its reward signal.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -37,16 +37,160 @@
    ],
    "label": "arXiv:2611.25742v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Exploration remains a major challenge for reinforcement learning (RL) agents in Craftax-style environments due to sparse rewards and long horizons.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper fine-tunes a vision-language model on a goal-preference dataset (CCGP-2M) from Craftax-Classic, using a new preference-optimization method (KLTDPO), so that it can propose exploration goals that guide a reinforcement learning agent.",
+    "plain": "Game-playing AI agents often struggle to explore because rewards are rare and tasks are long. This paper uses a model that understands both images and text to suggest high-level goals for the agent, after first training it on a dataset of which goals people or systems preferred in a Craftax-style game. The authors report that their approach collected diamonds earlier than the baselines they compared against and scored highest on score, reward, and most achievement success rates.",
+    "why": "It is a concrete attempt to make language-and-vision models useful for guiding exploration in sparse-reward games, rather than relying on hand-written prompts. The text reports results only on Craftax-Classic, so how well it transfers to other environments or real tasks is not shown here.",
+    "background": "- Reinforcement learning (RL): an agent learns by trying actions and getting rewards or penalties.\n- Sparse rewards: rewards arrive rarely, so the agent struggles to learn what to do.\n- Exploration: trying new things to discover useful situations.\n- Craftax-Classic: a grid-based survival and crafting game used as a test environment for RL agents.\n- Vision-language model (VLM): an AI model that takes both images and text as input.\n- Fine-tuning: further training a pretrained model on a specific dataset.\n- Direct Preference Optimization (DPO): training a model to prefer outputs that people or labels ranked higher, without a separate reward model.\n- KL regularization: a penalty that keeps the trained model close to its original behavior.\n- Distributionally robust reweighting: adjusting training weights so the model performs acceptably across uncertain or varied conditions.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Exploration remains a major challenge for reinforcement learning (RL) agents in Craftax-style environments due to sparse rewards and long horizons. Large language models (LLMs) can guide exploration by generating high-level goals, but methods using models without explicit task adaptation often rely on carefully designed prompts and may produce inconsistent or contextually inappropriate goals. We introduce CCGP-2M, a multimodal goal-preference dataset constructed from interaction trajectories in Craftax-Classic, and propose a vision-language model (VLM)-guided RL framework that learns environment-specific goal guidance from this dataset. The framework consists of two stages: offline VLM fine-tuning and online goal-guided RL. In the offline stage, we align the VLM with goal preferences using Kullback-Leibler Token-level Direct Preference Optimization (KLTDPO), which combines token-level KL regularization with distributionally robust reweighting. Experiments on Craftax-Classic show that our method collects diamonds earlier than state-of-the-art baselines, achieves the highest score and reward, and attains the highest success rates on most achievements.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24059",
+   "title": "Replay, Don't Resample: Off-Policy Consolidation of Long-Horizon RL Experts",
+   "url": "https://arxiv.org/abs/2611.24059v1",
+   "authors": [
+    "Zhenrui Yue",
+    "Gongxiaohui Chen",
+    "Huimin Zeng",
+    "Honglei Zhuang",
+    "Jiashuo Sun",
+    "Zhen Han",
+    "Dong Wang"
+   ],
+   "label": "arXiv:2611.24059v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "MRPD consolidates several RL-trained domain experts into one student by replaying the experts' logged training rollouts, in the order the experts saw them, instead of sampling new data with on-policy multi-teacher distillation (MOPD).",
+    "plain": "Training AI models today often means first training separate \"expert\" versions, each good at one task, and then merging them into a single model. The usual merging step is expensive because it generates fresh practice attempts and has teachers score them again. This paper proposes reusing the record of what the experts already did during their own training, replaying it in the same order to train one combined model.",
+    "why": "The paper reports that the replay approach matches or beats the standard merging method at a fraction of its cost, on three multi-step tasks (reasoning, search and SQL). It also claims the order of the training records matters more than their size or reward values, which, if it holds up, would suggest those logs are better treated as a learning sequence than as a data pile; the text alone does not show how general this is.",
+    "background": "- Reinforcement learning (RL): training by trying actions and receiving rewards for good outcomes.\n- Expert model: a version trained for one specific domain.\n- Distillation: training a student model to imitate the output probabilities of one or more teacher models.\n- On-policy vs. off-policy: on-policy learns from the model's own current attempts; off-policy learns from attempts generated by some other process, such as logged earlier runs.\n- Rollout: one complete attempt at a task, recorded with its actions, probabilities and reward.\n- Policy gradient: the update rule that nudges a model toward actions that led to higher reward.\n- Clip range: a limit on how far each update can change the model, for stability.\n- Long-horizon agentic task: a multi-step task where the model acts over many turns, such as searching or writing SQL queries.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Frontier post-training follows a common recipe: train one expert per domain with reinforcement learning (RL), then consolidate the experts into one model via multi-teacher on-policy distillation (MOPD). Such consolidation is expensive: the student samples in every environment again, an expert scores every sampled token, and the student inherits the drift of the final experts. Yet we argue that the experts' RL runs have already produced what consolidation needs: rollouts with their sampling probabilities and rewards, in the order the experts learned from them. We propose multi-expert replay policy distillation (MRPD), which replays these training logs through the student in the experts' order. At each step, the policy gradient is recomputed on these scored trajectories, and the final experts' distributions are distilled at the logged prefixes. Following the experts' own trajectory reduces the training-inference mismatch and keeps the student within the clip range, so the replay is off-policy in origin but quasi-on-policy throughout consolidation. MRPD samples nothing and calls no environment or reward model: the trainer is the sole process, and consolidating the experts costs only about a seventh of the compute used to train them. On three long-horizon agentic domains (reasoning, search and SQL), MRPD yields the best student model, substantially outperforming online RL baselines, and surpassing MOPD from the same experts at a fraction of MOPD's cost. Our analysis on the same logs shows that the replayed trajectories carry most of the gain, and that both the policy gradient and the distillation term add to it. Most interestingly, the order of the logs matters more than their amount or rewards, suggesting that expert training logs are a curriculum, not a data mixture.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24988",
+   "title": "Variance-Adaptive Upper Confidence Bounds for Multi-Armed Bandits with Kaplan--Meier Survival Estimation",
+   "url": "https://arxiv.org/abs/2611.24988v1",
+   "authors": [
+    "Yangfan Cui",
+    "Andrew Papanicolaou"
+   ],
+   "label": "arXiv:2611.24988v1",
+   "primary_category": "stat.ML",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper proposes KM-UCB, a variance-adaptive upper-confidence bandit policy for right-censored survival rewards, using a fixed-cohort empirical Bernstein bound built on Greenwood's variance formula and a Kaplan-Meier estimator, with a logarithmic regret claim under catch-up reporting.",
+    "plain": "The paper looks at choosing between several treatment options when the result for each is whether a patient survives to a set time, but some patients leave a study before that time, so their outcome is only partly known. The authors build a decision rule that adjusts how much it explores based on how uncertain each option's survival estimate is, and they test it in simulations and on replayed breast cancer trial data. The text describes both the method and its theoretical guarantee, and also mentions a separate paired-simulation check of a correction.",
+    "why": "Adaptive allocation of patients to treatments under censored outcomes is a practical problem in clinical trial design, so the work may matter there. How much it helps in real trials is not established by the text, which describes simulations and one retrospective replay.",
+    "background": "- Multi-armed bandit: a setting where an algorithm repeatedly picks one of several options (arms) and learns their average payoff only from what it picks.\n- Upper confidence bound (UCB): a rule that favours options whose payoff estimate could still be high given uncertainty.\n- Right-censoring: the event of interest (e.g., death) has not been observed by the end of follow-up, so the record only says it happened after some time.\n- Kaplan-Meier estimator: a standard method for estimating survival curves despite censored records.\n- Greenwood's formula: a standard estimate of the variance (spread of uncertainty) of a Kaplan-Meier survival estimate.\n- Empirical Bernstein bound: a confidence bound that uses the observed variance, so it can be tighter when outcomes are less variable.\n- Regret: how much reward is lost compared with always picking the best option; logarithmic regret grows slowly with the number of rounds.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the stochastic multi-armed bandit problem in which the reward associated with each arm is the survival probability at a pre-specified time horizon, and the observed outcome is a right-censored time-to-event variable. Standard bandit algorithms face delayed and partial observations in this setting. Prior adaptations for the Kaplan--Meier (KM) estimator rely on Hoeffding-type bounds that ignore the inherent heteroscedasticity of continuous survival processes. To bridge this gap, we propose KM-UCB, a variance-adaptive policy that unites continuous-time survival analysis with discrete sequential decision-making. By leveraging martingale theory and continuous influence functions, we derive a fixed-cohort empirical Bernstein bound parameterized by Greenwood's variance formula. For realtime allocation, we retain the Greenwood index and use a survival bound from completed records to review the recommended arm. Under catch-up reporting, the policy has logarithmic expected regret with an arm-specific variance term in the exploration bound. We evaluate the original policy in a dual-layer delayed simulation and a retrospective replay of breast cancer trial data, and evaluate the correction in a separate paired simulation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23633",
+   "title": "Option-GRPO: Hierarchical RL Against AI Slop in Code Generation for Unseen SDKs",
+   "url": "https://arxiv.org/abs/2611.23633v1",
+   "authors": [
+    "Prashank Kadam"
+   ],
+   "label": "arXiv:2611.23633v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Option-GRPO applies hierarchical reinforcement learning, using reusable code patterns extracted from SDK source code as options and a curriculum, to adapt a 32B code LLM to unseen SDKs while rewarding both functional correctness and concise, idiomatic code.",
+    "plain": "AI coding models often write code that works but is bloated, repetitive, and unidiomatic, and this gets worse for software libraries released after the model was trained. This paper proposes a training method that teaches a model a new library using only its source code, without hand-written examples or tests, by breaking the library into reusable building blocks and training step by step. The authors report that on 12 unseen libraries their method solved 61.4% of tasks on the first try and produced programs with about 35% fewer API calls than a standard baseline.",
+    "why": "Verbose, redundant generated code is a practical cost for software teams, so cutting it while keeping correctness is a relevant goal. The results are self-reported on the authors' own benchmark, and the theoretical claims rest on stated assumptions, so the gains should be checked by independent evaluation before weighing them heavily.",
+    "background": "- Large language model (LLM): a neural network trained on text, including code, that generates new text or code.\n- Reinforcement learning (RL): training by trial and error, where the model gets a reward signal for good outcomes.\n- GRPO (Group Relative Policy Optimization): an RL method that scores several sampled answers against each other to decide which to reinforce.\n- Pass@1: the fraction of tasks solved correctly on the first attempt.\n- SDK (software development kit): a set of libraries and functions a programmer uses to build software for a platform.\n- API call: a single request to a library function; fewer calls usually means more efficient code.\n- Semi-Markov decision process: a decision model where actions can last multiple steps, used here for multi-step code-building options.\n- Curriculum: training ordered from simpler to harder tasks.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large language models increasingly produce AI slop in generated code: verbose, redundant, non-idiomatic implementations that pass functional checks but bloat codebases. The problem compounds on SDKs released after the model's training cutoff, where the model has neither idiomatic priors nor compositional understanding. We present Option-GRPO, a hierarchical reinforcement learning framework that adapts a code LLM to an unseen SDK from its source code alone, without human-written usage examples or test cases, and that explicitly optimizes for both functional correctness and code elegance. Our key insight is that SDK source code contains compositional structure that defines a hierarchy of reusable code patterns (code options) which simultaneously serve as the building blocks of a curriculum and the action space for efficient policy optimization. We show that code options induce a valid semi-Markov decision process, give conditional bounds under which shorter option description length implies more concise and, in expectation, more API-efficient programs, and analyze under stated assumptions how the option hierarchy improves credit assignment by a factor of $\\sqrt{T/K}$. Using Group Relative Policy Optimization (GRPO) with execution-based rewards at each curriculum level, Option-GRPO discovers SDK idioms, composes them into patterns, and assembles patterns into complete programs. Experiments on 12 unseen SDKs with a 32B-parameter base model demonstrate 61.4% pass@1, outperforming flat GRPO by 8.7 points, ExploraCoder by 11.2 points, and ReCode by 6.3 points. Option-GRPO produces solutions that use 34.7% fewer API calls and are 27% shorter than flat-GRPO outputs while maintaining higher correctness, directly attacking the slop problem.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22172",
+   "title": "Towards Optimism-Pessimism Trade-off in Model-based Offline-to-Online Reinforcement Learning",
+   "url": "https://arxiv.org/abs/2611.22172v1",
+   "authors": [
+    "Guochen Zhou",
+    "Yijun Yang",
+    "Qiqi Duan",
+    "Qing Su",
+    "Weiming Ou",
+    "Li Shen",
+    "Shihao Ji",
+    "Yuhui Shi",
+    "Zhisong Zhang"
+   ],
+   "label": "arXiv:2611.22172v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A model-based offline-to-online RL method that trains a Pareto pool of optimistic-to-pessimistic policies offline (via a multi-objective soft actor-critic, MOSAIC) and uses a hierarchical contextual bandit to pick among them during online fine-tuning (HiP3).",
+    "plain": "Robots and game-playing agents are often first trained on a fixed batch of past data and then keep learning while acting in the real setting. This paper addresses the problem that the switch from the old data to new experience can make learning worse. Instead of committing to one cautious-or-bold setting during the first stage, the authors train a set of policies spanning that trade-off and let the agent choose among them as it goes.",
+    "why": "The core idea is that the best level of caution depends on the new task, so deferring that choice to online fine-tuning may avoid costly tuning. The text reports the strongest aggregate performance across same and novel online tasks, but gives no further detail here, so the size and generality of the gain should be checked in the full paper. It may be of interest to people working on sample-efficient adaptation of learned controllers.",
+    "background": "- Reinforcement learning (RL): an agent learns by trying actions and receiving rewards.\n- Offline RL: learning only from a fixed dataset collected earlier, with no new interaction.\n- Online fine-tuning: continuing to improve the learned policy through live interaction.\n- Model-based RL: the agent learns a model of how the environment behaves and plans with it.\n- Optimism vs. pessimism: optimism favors uncertain actions that might pay off; pessimism avoids them. Both are used to handle uncertainty from limited data.\n- Pareto front: a set of solutions where improving one objective requires worsening another.\n- Soft actor-critic: a common RL algorithm that rewards both task success and action randomness.\n- Contextual bandit: a simple method for choosing among options based on observed context and feedback.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Model-based offline-to-online reinforcement learning (RL) enables sample-efficient adaptation by leveraging offline pre-training for online fine-tuning. However, the distribution shifts between offline and online stages often hinder fine-tuning performance. Many existing methods encode the optimism-pessimism trade-off through a single-objective formulation. Selecting its trade-off coefficient through online fine-tuning can require costly bi-level optimization. We identify the balance established during offline training as a key challenge: in our motivating experiments, optimistic policies adapt better to novel tasks, whereas pessimistic policies perform better on the same online tasks. To address this challenge, we propose a bi-objective formulation that captures this trade-off, yielding a Pareto policy pool during offline training. This policy pool enables adaptive selection during online fine-tuning across diverse online tasks. To generate the pool, we introduce Multi-Objective Soft Actor-critIC (MOSAIC), which solves bi-objective problems and constructs diverse Pareto policies. After offline training, a contextual bandit algorithm hierarchically selects the most suitable policy for fine-tuning at each online interaction step. Empirically, our pipeline, Hierarchical Pareto Policy Pool (HiP3), achieves the strongest aggregate performance across both same and novel online tasks and maintains its advantage under stronger distribution shifts. Comprehensive ablations further clarify the roles of the policy pool, MOSAIC-based pool construction, and the online selection mechanism.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20635",
+   "title": "Contrastive Activation-Guided Zeroth-Order Preference Optimisation for Memory-Efficient LLM Alignment",
+   "url": "https://arxiv.org/abs/2611.20635v1",
+   "authors": [
+    "Weiyun Huang",
+    "Alessio Galatolo"
+   ],
+   "label": "arXiv:2611.20635v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "CA-ZODPO is a zeroth-order (backpropagation-free) preference-optimisation method for aligning LLMs that builds a low-rank search subspace from the activation difference between chosen and rejected responses, with momentum kept in that subspace.",
+    "plain": "Training large language models to match human preferences usually needs a lot of computer memory, because the standard training method stores intermediate results for every layer. This paper proposes a way to train with much less memory by estimating improvements from guessed nudges to the model rather than computing exact gradients, and by aiming those nudges at the directions where good and bad answers differ. On a 1.5-billion-parameter Qwen2.5 model and the Anthropic HH-RLHF dataset, the authors report it beats common zeroth-order baselines, stays competitive with standard first-order DPO in pairwise preference tests, and cuts peak GPU memory by about 59% at sequence length 2048.",
+    "why": "Reducing the memory cost of preference alignment could make fine-tuning feasible on smaller hardware, which matters for wider access to aligned models. The text reports results on a single model and dataset only, so how well the gains hold at other scales or tasks is not shown here.",
+    "background": "- Reinforcement learning from human feedback (RLHF): training a model to prefer answers people rate highly.\n- Direct Preference Optimisation (DPO): a simpler RLHF variant that learns directly from pairs of chosen and rejected responses.\n- Backpropagation: the standard method for computing how to adjust each weight; it requires storing activations, which uses a lot of memory.\n- Zeroth-order optimisation: estimating improvement by trying random small changes to the model and measuring the effect, with no gradient calculation.\n- Isotropic perturbation: random nudges spread equally in all directions; the paper argues these are noisy for preference objectives.\n- Low-rank subspace: a small set of directions that captures most of the useful variation, used here to focus the nudges.\n- Activations: the intermediate values inside a neural network for a given input.\n- Peak GPU memory and sequence length: how much graphics-card memory training needs at its maximum, and how long each input text is in tokens.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Direct Preference Optimisation (DPO) simplifies reinforcement learning from human feedback, but still relies on traditional backpropagation and its associated activation-memory cost. Zeroth-order (ZO) optimisation avoids backpropagation, yet isotropic perturbations can produce noisy updates for preference objectives defined by differences between chosen and rejected responses. We introduce Contrastive Activation-guided Zeroth-Order Direct Preference Optimisation (CA-ZODPO), which constructs a low-rank search subspace from the activation discrepancy between the chosen and rejected responses in each preference pair. Perturbations are restricted to this subspace, while momentum is maintained in low-rank coordinates to preserve the memory advantages of ZO training. On Qwen2.5-1.5B with Anthropic HH-RLHF, CA-ZODPO outperforms common ZO baselines and remains competitive with first-order DPO in pairwise preference evaluation. It also reduces peak GPU memory by about 59\\% at a sequence length of 2048 while retaining the sequence-length scaling behaviour of zeroth-order training.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19681",
+   "title": "RIFT: Reward Improvement Field Transfer for Cross-Domain Offline RL",
+   "url": "https://arxiv.org/abs/2611.19681v1",
+   "authors": [
+    "Jinhee Won",
+    "Mardavij Roozbehani",
+    "Munther Dahleh"
+   ],
+   "label": "arXiv:2611.19681v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "RIFT transfers learned low-to-high reward improvement directions from abundant source-domain transitions to augment scarce target-domain offline RL data, using optimal-transport pairing and an affine displacement field in a shared latent space.",
+    "plain": "Robots and simulated agents often have little data from the environment they actually need to control, but plenty from a related environment with different physics. This paper proposes a way to borrow from that other environment: instead of copying its experiences directly, it learns how moving from poor outcomes to good outcomes looks in the source data, then applies that same kind of shift to poor examples in the target data to create new training examples. The authors report improved overall performance over existing baselines on locomotion tasks where gravity, body shape, or friction changes.",
+    "why": "Reusing data across differing environments is a practical bottleneck for offline learning, where an agent must learn from a fixed dataset without trying new actions. The paper's theoretical claims (an error bound, conditions for when target anchoring beats direct transplanting, and a link to downstream return) are the parts most worth checking, though the text gives only a summary of these results and does not show their details.",
+    "background": "- Offline reinforcement learning: learning a control policy from a fixed log of past experience, with no new interaction.\n- Transition: one step of experience (state, action, next state, reward).\n- Dynamics shift: the same actions lead to different outcomes in a different environment (e.g., different gravity or friction).\n- Optimal transport: a way of matching points between two sets with minimal total movement; here it pairs low- and high-reward transitions.\n- Affine field: a simple linear map (scaling plus shifting) fitted to the displacements between paired points.\n- Latent space: a compressed representation in which source and target data are encoded together.\n- Data augmentation: creating extra synthetic training examples to enlarge a dataset.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Learning from limited target data is a central challenge in cross-domain offline reinforcement learning. Abundant source data can help, but dynamics differences can make direct transition reuse unreliable. We propose Reward Improvement Field Transfer (RIFT), which instead learns how low- and high-reward source transitions differ. RIFT encodes source and target transitions in a shared latent space, pairs low- and high-reward source transitions using optimal transport, and fits an affine field to their displacements. It applies this field to low-reward target anchors and decodes the results to augment the target dataset. The approach builds on the hypothesis that related domains can share useful low-to-high reward structure despite different dynamics. We bound synthesis error under shared class geometry, identify conditions favoring target anchoring over source-high transplant, and derive a conditional connection to downstream return. Experiments on dense-reward locomotion tasks under gravity, morphology, and friction shifts show improved aggregate performance over existing baselines.",
    "source": "arxiv"
   }
  ]

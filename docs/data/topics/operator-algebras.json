@@ -1,6 +1,6 @@
 {
  "slug": "operator-algebras",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26479",
@@ -13,14 +13,14 @@
    ],
    "label": "arXiv:2611.26479v1",
    "primary_category": "math.AP",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We consider vector-valued magnetic Schrödinger operators $-Δ_{a} +V$ with magnetic potential ${a}\\in C^2(\\mathbb{R}^d;\\mathbb{R}^d)$ and electric potential $V$ given by a symmetric and positive semidefinite $m\\times m$ matrix-valued function whose entries belong to $L^1_{\\rm loc}(\\mathbb{R}^d)$.",
+    "one_liner": "The paper gives necessary and sufficient conditions for discrete spectrum, plus eigenvalue asymptotics and exponential eigenfunction decay, for matrix-valued magnetic Schrödinger operators whose electric potential is only assumed locally integrable and whose combined magnetic-curl and potential term satisfies a matrix reverse Hölder condition.</one_liner>\n<parameter name=\"plain\">The paper studies a standard model from quantum physics: a particle with several internal states that moves under a magnetic field and an electric potential. The question is when the allowed energy levels form a discrete list rather than a continuum, and how those levels and the associated wave functions behave. The text indicates the authors identify exact conditions for discreteness and study how the energy levels grow and how the wave functions decay at large distances.",
     "plain": "",
-    "why": "",
+    "why": "Discreteness of the spectrum and the rate at which eigenvalues grow are basic questions for Schrödinger operators, and the setting (vector-valued, with only locally integrable potentials) is more general than the usual scalar, smooth case. The abstract does not say how the results compare with earlier work or what applications they have, so the wider significance is unclear from this text alone.</why>\n<parameter name=\"background\">- Schrödinger operator: the energy operator of quantum mechanics, here \"kinetic energy\" (the Laplacian) plus a potential.\n- Magnetic potential a: a vector field describing a magnetic field; the curl of a measures the field's strength and direction.\n- Matrix-valued (vector-valued) potential V: an m-by-m array of functions, so the particle has m internal states that can interact.\n- Spectrum and eigenvalues: the set of allowed energy levels; \"discrete\" means they form an isolated list that can be counted.\n- Eigenvalue asymptotics: how the counted energy levels grow as the level index increases.\n- Locally integrable (L^1_loc): functions whose integral is finite on bounded regions, allowing fairly rough potentials.\n- Reverse Hölder class: a technical regularity condition on how a function's averages behave across scales.\n- Exponential decay: wave functions fall off rapidly, like exp(-c|x|), far from the origin.</background>\n<parameter name=\"difficulty\">research-level",
     "background": "",
     "difficulty": "",
-    "ai": false
+    "ai": true
    },
    "abstract": "We consider vector-valued magnetic Schrödinger operators $-Δ_{a} +V$ with magnetic potential ${a}\\in C^2(\\mathbb{R}^d;\\mathbb{R}^d)$ and electric potential $V$ given by a symmetric and positive semidefinite $m\\times m$ matrix-valued function whose entries belong to $L^1_{\\rm loc}(\\mathbb{R}^d)$. Assuming that $\\|\\operatorname{curl} {a}(\\cdot)\\|\\operatorname{Id}_{\\mathbb{R}^m} + V$ belongs to a certain matrix reverse Hölder class, we characterize necessary and sufficient conditions under which the spectrum of $-Δ_{a} +V$ is discrete, and study the eigenvalue asymptotics and exponential decay of eigenfunctions.",
    "source": "arxiv"
@@ -35,16 +35,148 @@
    ],
    "label": "arXiv:2611.26462v1",
    "primary_category": "math.FA",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We prove that every unital surjective complex-linear spectral isometry between complex unital semisimple Banach algebras is a Jordan isomorphism, thereby giving an affirmative answer to the spectrum-preserving form of Kaplansky's conjecture.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves that unital surjective complex-linear spectral isometries between unital semisimple Banach algebras are Jordan isomorphisms (answering a spectrum-preserving form of Kaplansky's conjecture), and characterizes surjective linear maps preserving invertibility, spectral inclusion, or spectral radius, with an application to Fredholm essential spectra.",
+    "plain": "This paper studies structure-preserving maps between algebras of operator-like objects, where the key question is whether a map that keeps each object's \"spectrum\" (the set of numbers that describe when it can be inverted or fails to be invertible) intact must respect the algebra's multiplication. The authors show that, under the stated conditions, such maps are essentially the familiar kind that respect products in a symmetrized way (Jordan isomorphisms). They also find that for certain maps, preserving invertibility in one direction already forces preserving it in both directions.",
+    "why": "It settles, in the spectrum-preserving setting, a long-standing question associated with Kaplansky's conjecture about isometries of operator algebras, so it is of interest to specialists in the area. The abstract does not say how the results are used beyond the stated application to Fredholm essential spectra, so their wider impact is unclear from the text alone.",
+    "background": "- Banach algebra: a complete normed space of operators (or functions) that can be multiplied, such as bounded operators on a Hilbert space.\n- Spectrum: the set of complex numbers λ for which (a − λ·1) is not invertible; it generalizes eigenvalues.\n- Spectral radius: the largest absolute value in the spectrum; a measure of the \"size\" of an element's powers.\n- Semisimple / unital: semisimple means no nonzero part is \"invisible\" to the spectrum; unital means the algebra has a multiplicative identity.\n- Jordan isomorphism: a bijection that preserves the symmetrized product ab+ba and squares, a weaker form of multiplicative preservation than a full algebra isomorphism.\n- Kaplansky's conjecture: a question on whether isometries between such algebras must be Jordan-type maps; the paper addresses a spectrum-preserving version.\n- Fredholm essential spectrum: a refined spectrum that ignores finite-dimensional perturbations, used in operator theory.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We prove that every unital surjective complex-linear spectral isometry between complex unital semisimple Banach algebras is a Jordan isomorphism, thereby giving an affirmative answer to the spectrum-preserving form of Kaplansky's conjecture. We also characterize surjective complex-linear maps between arbitrary unital Banach algebras that preserve invertibility in either direction, satisfy either spectral inclusion, or preserve the spectral radius. In particular, for a complex-linear bijection between semisimple Banach algebras, preservation of invertibility in either direction implies preservation in both directions, and either spectral inclusion implies equality of spectra, even without assuming unitality. As an application, we study preservers of the Fredholm essential spectrum and essential spectral radius.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24787",
+   "title": "A Poisson boundary solution to Connes' bicentralizer conjecture and Kadison's problem on MASA",
+   "url": "https://arxiv.org/abs/2611.24787v1",
+   "authors": [
+    "Shuoxing Zhou"
+   ],
+   "label": "arXiv:2611.24787v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper proves that continuous cores of inclusions of countably decomposable von Neumann algebras have the weak Dixmier property, which yields new proofs of Connes' bicentralizer conjecture and Marrakchi's relative version, and a new route to Kadison's problem on maximal abelian subalgebras, via a Poisson boundary theory for general von Neumann algebras.",
+    "plain": "This is research in the theory of operator algebras, which are infinite-dimensional analogues of matrix algebras used to describe quantum systems. The paper addresses two long-standing open questions in that area: Connes' bicentralizer conjecture and Kadison's problem about maximal abelian subalgebras. The authors build a general \"Poisson boundary\" framework, extending an existing theory for finite algebras, and use it to give new, shorter proofs of both results under the stated hypotheses.",
+    "why": "",
+    "background": "- Von Neumann algebra: an algebra of bounded operators on a Hilbert space, closed under taking limits; a basic object of quantum mechanics and operator theory.\n- Inclusion M ⊂ P: one such algebra sitting inside a larger one.\n- Conditional expectation: a projection-like map from the larger algebra onto the smaller one that preserves its structure.\n- Factor types (I, II, III): a classification of von Neumann algebras; type III_1 is a particularly subtle case.\n- Continuous core: a construction that turns an algebra with a state-like weight into a new algebra with a canonical action.\n- Weak Dixmier property: a property of an inclusion describing how the algebra's elements can be approximated by averages of unitaries, a tool for structure results.\n- Maximal abelian subalgebra (MASA): a commutative subalgebra not contained in any larger commutative one.\n- Poisson boundary: a measure-theoretic object associated with a random walk or group action, used here in a non-commutative setting.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that, for every inclusion $M\\subset P$ of countably decomposable von Neumann algebras with a normal faithful conditional expectation, $M\\subset c(P)$ has the weak Dixmier property, where $c(P)$ is the continuous core of $P$. By Haagerup's characterization, we have a completely new proof of Connes' bicentralizer conjecture, independent of the recent proof of Houdayer--Marrakchi. By Marrakchi's characterization, we also prove his relative bicentralizer conjecture. We also give a new solution to Kadison's problem after Popa and Marrakchi: further assuming that $M$ and $P$ have separable preduals and $M'\\cap P=\\mathcal Z(M)$, then there is a maximal abelian subalgebra of $M$ that is also maximal abelian in $P$. The proofs are based on a Poisson boundary theory for general von Neumann algebras, developed here as an extension of the theory of Das--Peterson for finite von Neumann algebras. Once this theory is established, the proofs for Connes' bicentralizer conjecture and Kadison's problem are short (around 7 pages each) and self-contained, relying only on results established by 1990. In both proofs, no separate treatment is needed for the type $\\mathrm{III}_1$ case.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24299",
+   "title": "Boundaries of groups with compact-by-amenable decomposition",
+   "url": "https://arxiv.org/abs/2611.24299v1",
+   "authors": [
+    "Hannes Wendt",
+    "Makoto Yamashita"
+   ],
+   "label": "arXiv:2611.24299v1",
+   "primary_category": "math.GR",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper studies the Liouville property (no non-constant bounded harmonic functions) for topological groups relative to a compact subgroup, shows Gelfand pairs have it, characterises it via a product decomposition G = KS with S amenable, and identifies Poisson and Furstenberg boundaries, with application to reductive algebraic groups over local fields.",
+    "plain": "The paper asks when a group that contains a compact piece behaves in a \"rigid\" way when you random-walk on it: specifically, whether every bounded function that stays balanced under averaging must be constant. The authors show this holds for Gelfand pairs, and that it holds exactly when the group can be written as a product of a compact subgroup and a amenable subgroup. They also identify the boundaries that random walks converge to, and note this covers reductive algebraic groups over local fields.",
+    "why": "Boundaries of groups describe where random walks end up, and they connect harmonic analysis, probability and geometry of groups. The text gives a clean if/only if criterion, but its wider significance beyond this setting is not stated in the text, so I cannot say more.",
+    "background": "- Group: a set with a consistent way of combining elements (e.g. rotations).\n- Topological group: a group where nearby elements are well defined, so it can be studied continuously.\n- Compact subgroup: a subgroup that is closed and bounded in a suitable sense, like a rotation group of a sphere.\n- Amenable group: one that admits averaging rules, roughly \"no paradoxical decomposition\"; a standard notion in analysis.\n- Harmonic function: a function equal to the average of its neighbours under a random step rule.\n- Liouville property: every bounded harmonic function is constant.\n- Poisson and Furstenberg boundaries: the spaces where random walks on the group settle down.\n- Gelfand pair: a pair of groups where a certain averaging algebra is commutative.\n- Reductive algebraic group over a local field: matrix-type groups over fields like the p-adic numbers or real numbers.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We look at the Liouville property (triviality of harmonic functions) of topological groups G relative to a compact subgroup K. We show that Gelfand pairs have this property. Furthermore, we show that this property holds if and only if G admits a product decomposition G = K S for an amenable subgroup S. We identify the Poisson and Furstenberg boundaries of these groups. This applies in particular to reductive algebraic groups over local fields.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22269",
+   "title": "Precise Eigenvalue Asymptotics for Electrostatic Layer Potential Operators",
+   "url": "https://arxiv.org/abs/2611.22269v1",
+   "authors": [
+    "Yong-Gwan Ji",
+    "Daisuke Kawagoe",
+    "Yoshihisa Miyanishi"
+   ],
+   "label": "arXiv:2611.22269v1",
+   "primary_category": "math.SP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper derives precise asymptotics for the eigenvalues of single-layer potential and Neumann–Poincaré operators tied to the Laplace equation on smooth bounded domains in 2D and 3D, with remainder estimates that improve under nonperiodicity assumptions on Hamiltonian flows.",
+    "plain": "The paper studies a family of operators that describe how electric charge spread over the boundary of a region produces electrostatic potential. It looks at how the eigenvalues of these operators behave as their index grows large, in two and three dimensions. The authors give asymptotic formulas for these eigenvalues, with error terms that are very small in 2D and, in 3D, become smaller still under extra conditions on the geometry's motion.",
+    "why": "Knowing how these eigenvalues grow or shrink gives sharp information about the spectrum of boundary integral operators used in potential theory and numerical methods. The text does not discuss applications, so any wider connections are unclear from this summary alone.",
+    "background": "- Laplace equation: the basic equation for steady electric or heat fields with no sources inside a region.\n- Layer potential: a way of computing a field produced by charge or density spread over a boundary surface rather than a volume.\n- Single-layer and Neumann–Poincaré operators: operators built from layer potentials whose eigenvalues encode geometric and spectral information about the boundary.\n- Eigenvalue asymptotics: formulas describing how the j-th eigenvalue behaves as j becomes large, usually with an error term.\n- Hamiltonian flow and periodicity: the motion of points along geodesic-like paths on the boundary; whether these paths return periodically affects the size of the error term.\n- Gaussian curvature: a measure of how strongly a surface bends at a point.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the eigenvalue asymptotics of electrostatic layer potential operators associated with the Laplace equation on smooth bounded domains in two and three dimensions. In two dimensions, we establish precise eigenvalue asymptotics for the single-layer potential operator, up to a remainder of order $O(j^{-\\infty})$. In three dimensions, we obtain refined eigenvalue asymptotics for the single-layer potential operator on arbitrary smooth surfaces and for the Neumann--Poincaré operator on smooth surfaces with everywhere positive Gaussian curvature. Under suitable nonperiodicity assumptions on the associated Hamiltonian flows, the remainder estimates in three dimensions improve to $o(j^{-1})$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23122",
+   "title": "The Bessis Moussa Villani conjecture in finite von Neumann algebras",
+   "url": "https://arxiv.org/abs/2611.23122v1",
+   "authors": [
+    "Liviu Paunescu",
+    "Florin Radulescu",
+    "Andreas Thom"
+   ],
+   "label": "arXiv:2611.23122v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proves the Bessis–Moussa–Villani conjecture for bounded operators in a finite von Neumann algebra with a faithful normal tracial state, extending a known matrix-algebra result via a tracial joint spectral measure on the punctured plane.",
+    "plain": "The paper concerns a long-standing guess about how the trace (a kind of total \"size\" measure) of certain mathematical expressions behaves when the objects involved are not just grids of numbers but more general operators. The guess was already known to hold for ordinary matrices, and the authors show it holds in a much broader setting. They do this by building a measure on the plane from a pair of positive operators and deriving the needed positivity from it.",
+    "why": "The conjecture is a question about the trace exponential, a quantity that appears in statistical mechanics and quantum information, so a proof in the general setting settles a question for those areas. The text does not say what applications follow, so the wider significance beyond the mathematics is unclear from this text alone.",
+    "background": "- Operators: linear maps on a space, generalizing matrices; \"bounded\" means they do not blow up.\n- Von Neumann algebra: a large, closed collection of operators, the usual setting for quantum systems with infinitely many degrees of freedom.\n- Trace and tracial state: a consistent way of assigning a number to operators, here normalized and faithful (it detects every nonzero positive operator).\n- Positive operator: an operator that behaves like a non-negative number.\n- Joint spectral measure: a way of spreading a pair of commuting-type quantities over the plane, analogous to a probability distribution.\n- Moments and Laplace representation: averages of powers of a quantity, and a way of rebuilding a function from them.\n- Conjecture: a claim believed true but unproven until this work.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove the Bessis--Moussa--Villani conjecture, which is known for matrix algebras, for bounded operators in a finite von Neumann algebra with a faithful normal tracial state. Following the approach of Heinavaara, for a pair of positive operators, we construct a tracial joint spectral measure on the punctured plane whose moments are the traces of symmetrized words. We construct a scalar measure by holomorphic spectral selection and a Lyapunov identity. An integral identity for its moments then gives positivity of two coordinate-weighted distributions. From these we obtain the planar measure and the Laplace representation of the trace exponential.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21776",
+   "title": "Actions of quantum groups: the standard implementation and relatively invariant weights",
+   "url": "https://arxiv.org/abs/2611.21776v1",
+   "authors": [
+    "Jacek Krajczok"
+   ],
+   "label": "arXiv:2611.21776v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper characterises the standard implementation of locally compact quantum group actions on von Neumann algebras, extending results of Daws-Skalski-Viselter and Haagerup, shows it respects quantum group morphisms, and proves equivalence of several conditions for relative ρ-invariance of n.s.f. weights.",
+    "plain": "This is a research paper in pure mathematics about \"quantum symmetries\": ways that abstract quantum versions of groups can act on collections of operators, which generalise the algebra of ordinary measurements. The authors give a new description of a canonical way to turn such an action into a standard form, and show that this canonical form behaves well when you map one quantum group to another. They also show that several different-looking conditions describing when a certain kind of weight (a generalised way of measuring size) is preserved in a relative sense are in fact equivalent.",
+    "why": "The text states the results as extensions of earlier work by Daws, Skalski and Viselter and by Haagerup, so it is a technical step within an established line of research. Its relevance beyond operator algebra specialists is not discussed in the text, so wider impact is unclear from this abstract alone.",
+    "background": "- Von Neumann algebras: algebras of bounded operators on a Hilbert space, the mathematical setting for quantum measurements.\n- Locally compact quantum groups: a noncommutative generalisation of locally compact groups, where symmetry is described by algebra rather than by points.\n- Actions of quantum groups: ways a quantum group can \"act\" on a von Neumann algebra, analogous to a group acting on a space.\n- Standard implementation: a canonical representation of an action on a Hilbert space, used to make the action concrete.\n- Weights (n.s.f. weights): generalised, possibly infinite, ways of assigning sizes to positive elements of an algebra; \"relative ρ-invariance\" means the weight transforms in a controlled way under the action.\n- Morphisms: structure-preserving maps between quantum groups.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We establish a characterisation of the standard implementation for actions of locally compact quantum groups on von Neumann algebras, extending results of Daws-Skalski-Viselter and Haagerup. As a consequence, we prove that taking the standard implementation respects morphisms of quantum groups. We also prove that several natural conditions expressing relative $ρ$-invariance for n.s.f. weights are equivalent.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19855",
+   "title": "Scaling Fourier Inequalities for Locally Compact Quantum Groups",
+   "url": "https://arxiv.org/abs/2611.19855v1",
+   "authors": [
+    "Jinsong Wu",
+    "Fulin Yang"
+   ],
+   "label": "arXiv:2611.19855v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper extends scaling Fourier and Young-type convolution inequalities from classical groups to locally compact quantum groups, using the scaling group, and analyses norms for the real quantum az+b group.",
+    "plain": "This paper is about a family of inequalities that limit how large a transformed signal can be compared with the original, set in a generalized, non-commutative version of symmetry groups. The authors study a parameterised family of Fourier-type transforms and the norms that measure them, and they show one such norm is below 1 for a specific example (the real quantum \"az+b\" group) under certain parameter ranges. They also build a scaling version of convolution, a way of combining two functions, and derive a corresponding Young-type inequality in four regions of parameters.",
+    "why": "Sharp constants and extremal sequences in Fourier and Young inequalities are classical tools in analysis, and extending them to quantum groups is a natural step in that programme. The text does not indicate applications beyond this theory, so its wider significance is unclear from the excerpt alone.",
+    "background": "- Group: a set with a consistent way of combining elements, such as rotations or shifts; a locally compact group is one where one can do calculus and integration.\n- Fourier transform: rewrites a function in terms of frequencies; norms of this transform measure how it changes sizes between function spaces.\n- Convolution: a way of blending two functions into a third; Young's inequality bounds the size of this blend.\n- Quantum group: a non-commutative generalisation of a group, where the order of operations matters, studied within operator algebras.\n- Scaling group: a family of symmetries that stretches or shrinks the structure, here used to define the parameterised transforms.\n- Norm and strict inequality: a size measure; \"norm one\" means the bound is attained, while \"strict\" means it is never attained at other points.\n- The \"az+b\" group: the group of affine maps x ↦ ax+b, a standard non-commutative example.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we study Fourier and convolution inequalities on locally compact quantum groups in the presence of the scaling group. For $1\\le p\\le 2$, we investigate a family of scaling Fourier transforms and the associated norms $H_{p,θ}(\\mathbb G)$, and we show that $H_{p,θ}(\\mathbb G)<1$ for the real quantum $az+b$ group and $0<θ<1$, $1<p<2$. We also investigate scaling convolution for locally compact quantum groups and, by extending the ordinary convolution, obtain the corresponding scaling Young inequality in four different regions. In Young Region~II, under $1<p,s<2$ and $2\\leq r<\\infty$, we construct sequences proving norm one at every effective vertex and prove strict inequality at every other effective point.",
    "source": "arxiv"
   }
  ]

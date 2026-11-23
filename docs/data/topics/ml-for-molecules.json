@@ -1,7 +1,88 @@
 {
  "slug": "ml-for-molecules",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.27015",
+   "title": "Ruby: State-of-the-Art Potency Prediction across Discovery Regimes Using Learned Structural Representations",
+   "url": "https://arxiv.org/abs/2611.27015v1",
+   "authors": [
+    "Michael Atkin",
+    "Dominique Beaini",
+    "Jules Berman",
+    "Rebecca Boiarsky",
+    "Jamin Chen",
+    "Alejandro Dobles",
+    "Sergey Edunov",
+    "Evan Feinberg",
+    "Nate Gruver",
+    "Will Harvey",
+    "Deidre Johns",
+    "Nina Jovic",
+    "Steven Kearnes",
+    "Allison Keys",
+    "Rohit Kundu",
+    "Ken Leidal",
+    "Gerald Lelais",
+    "Michael V. Levine",
+    "Indrawan McAlpine",
+    "Gabriel Monteiro da Silva",
+    "Igor Morozov",
+    "Pranav Murugan",
+    "Adi Nagle",
+    "Frank Pickard",
+    "Wesley Qian",
+    "Gianluca Scarpellini",
+    "Ansh Sharma",
+    "Richard Strong Bowen",
+    "Wojtek Swiderski",
+    "Laura Tapias",
+    "Carl Tilbury",
+    "Cyr Vetcher",
+    "Han Wang",
+    "William Wang",
+    "David Charles Williams",
+    "Drausin Wulsin",
+    "Han Yoon"
+   ],
+   "label": "arXiv:2611.27015v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "Ruby is a binding-affinity (potency) predictor that reuses intermediate features from the structural foundation model Pearl, avoids needing an explicit docked pose per compound, and is evaluated across hit-identification and lead-optimization regimes, alongside a new audited public potency dataset (GenesisPotency-2026).",
+    "plain": "Drug discovery teams test many candidate molecules and need to guess which ones will bind a disease target most strongly before spending money on lab work. This paper presents Ruby, a computer model for making that guess, and reports that it ranked candidates best among the methods the authors compared on several public tests and on eight assays from the authors' own ongoing programs. The authors also released a public training dataset with information on where each data point came from.",
+    "why": "Better potency prediction could reduce the number of compounds that must be synthesized and tested, which matters for the cost of early drug discovery. The results are the authors' own reported benchmarks, and the text does not show independent replication, so how well they carry over to other projects is still open.",
+    "background": "- Potency: how strongly a molecule binds its target, often reported as an affinity value.\n- Design-make-test-analyze cycle: the iterative loop in which chemists design, synthesize, test, and review compounds.\n- Hit identification vs. lead optimization: early screening for any active molecule versus refining a promising one.\n- Enrichment: how well a method puts truly active molecules at the top of a ranked list.\n- Foundation model: a large model trained on broad data and then reused for specific tasks; here, Pearl provides the structural features.\n- Binding pose: the 3D position a molecule takes inside its target protein; Ruby does not require this for each compound.\n- Zero-shot prediction: predicting on new assays without any training on that assay's data; recalibration uses earlier measurements from the same assay.\n- Correlation: a measure of how closely predicted and measured values track each other.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Small-molecule drug discovery proceeds through repeated design-make-test-analyze cycles. The goal is often to maximize potency while keeping other properties within the ranges required for a viable therapeutic candidate. Compound prioritization places different demands on computational methods as drug discovery progresses from hit identification through hit-to-lead and lead optimization, with changing computational budgets and increasing amounts of on-target experimental data. We introduce Ruby, a Robust Universal Binding affinitY predictor that uses intermediate representations from the structural foundation model Pearl without requiring an explicit binding pose for every compound. Ruby is trained on proprietary data plus GenesisPotency-2026, an audited public-source potency training dataset released for academic and commercial use under a CC BY-SA 4.0 license with row-level provenance and audit annotations. Ruby achieves the highest aggregate early enrichment across seven public hit-identification targets among evaluated methods, with adjustable inference effort trading off enrichment and computational cost over more than two orders of magnitude. Ruby achieves the highest average correlations across four public benchmarks: OpenFE, CASP16, FEP+ 4, and OpenBind. Ruby significantly outperforms other methods in zero-shot prediction across eight biochemical and cellular assays from five ongoing Genesis-Incyte programs, widening its performance advantage relative to the public benchmarks. Ruby continues to improve more than other methods when all are given the opportunity to recalibrate using earlier assay measurements. Together, these contributions provide an annotated training resource for the field and a state-of-the-art potency predictor for broad screening, prioritization within related chemical series, and assay-specific prediction as experimental measurements accumulate.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27188",
+   "title": "Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model",
+   "url": "https://arxiv.org/abs/2611.27188v1",
+   "authors": [
+    "Kazuya Miyamoto",
+    "Ibuki Okuda",
+    "Izumi Takahara",
+    "Teruyasu Mizoguchi"
+   ],
+   "label": "arXiv:2611.27188v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A symmetry-constrained diffusion model, built on MatterGen, generates periodic cells whose two grain boundaries are symmetry-equivalent, conditioned on machine-learning-potential GB energy, and is tested on the Σ5(210)[001] tilt boundary in Al.",
+    "plain": "Metal crystals are made of many grains, and the seams between them, called grain boundaries, strongly affect how the metal behaves. This paper describes an AI model that proposes atomic arrangements for such a seam, aiming for a chosen energy level. The model was built so that the two seams in its simulation box are mirror-related copies, which makes the energy a clean property of one seam.",
+    "why": "Making the boundary structure itself a design target could help engineers tailor metal properties, and the authors report generated structures that differ from the training examples. The text reports results for one boundary type in aluminum only, and the study does not show that the approach works for other materials or that the new structures are real metastable states, so its wider significance is still unclear.",
+    "background": "- Polycrystalline materials are made of grains; grain boundaries are the interfaces where grains with different orientations meet.\n- Diffusion models are AI generators that start from noise and refine it step by step into a structure; MatterGen is an existing crystal generator.\n- Periodic cells are small repeating simulation boxes; this setup places two boundaries in one box, so they must be equivalent for the energy to describe a single boundary.\n- Symmetry projection means forcing one part of the structure to be a mirror or rotated copy of another at each generation step.\n- Machine-learning interatomic potentials are fast learned models that estimate atomic energies in place of expensive quantum calculations.\n- Σ5(210)[001] names one specific tilt boundary geometry in a cubic crystal; J/m² is energy per unit area.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Grain boundaries (GBs) govern many properties of polycrystalline materials, and inverse design would make the GB structure itself a design variable. Crystal generative models such as MatterGen operate on periodic cells, which contain two GBs. The cell energy defines a single GB only when the two are equivalent, but existing models do not enforce this equivalence. Building on MatterGen, we developed a symmetry-constrained diffusion model in which the two GBs are related by a symmetry operation: atoms near one GB are generated, and those near the other are reconstructed through a symmetry projection applied at every denoising step. We applied it to the $Σ5(210)[001]$ symmetric tilt GB in Al, conditioning generation on the GB energy from a machine-learning interatomic potential (MLIP). All 350 generated structures kept a geometrically equivalent GB pair after relaxation. Given a target GB energy, the model generated structures at that energy: for the three in-range targets with many nearby training structures, 44% to 70% fell within $\\pm 0.1$ J/m$^2$ of the target. Tracking weakened at higher energies and failed outside the training range. Of the 91 near-target structures, 90 matched no training structure under the adopted geometric criterion, indicating that the model can propose configurations near the target energy that are distinct from the training structures, a capability that could help identify unknown metastable GB structures observed in experiments. Building GB-pair equivalence into generation thus makes GB properties well-defined design targets, enabling inverse design of GB structures.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26369",
    "title": "From Benchmarks to the Bench: Preference, Correspondence and Selectivity in Bidirectional Drug-Target Screening",
@@ -13,43 +94,208 @@
    ],
    "label": "arXiv:2611.26369v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Identifying active molecules for known targets and potential targets for existing drugs is central to drug discovery and repurposing.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A bidirectional benchmark of 13 published drug-target interaction models on FDA-approved drugs and human proteins finds that their top-ranked recommendations often disagree sharply, and that some models' hit rates depend on matching, while retraining with different random seeds changes top-10 lists substantially.",
+    "plain": "Computer models are used to guess which drugs might act on which proteins, so that scientists know what to test in the lab. This paper compares 13 such released models on about 711 approved drugs and 614 human proteins, and asks whether their suggestions are consistent and useful. The authors found that the models often gave very different top-10 lists, and that some models found more active compounds against kinases (a family of proteins) than others, though not all of them held up when the drugs or targets were swapped.",
+    "why": "Drug-repurposing and target-finding pipelines depend on these rankings, and the paper suggests that good scores on standard benchmarks do not guarantee that the top picks are reliable for real lab decisions. The text is a preprint-style summary, so the scope of its conclusions is limited to the datasets and models it tested.",
+    "background": "- Drug-target interaction (DTI) model: software that predicts how strongly a drug molecule will bind a protein.\n- Benchmark performance: a model's accuracy score on a fixed test dataset; it may not reflect real-world usefulness.\n- Top-10 overlap: how many of the 10 highest-ranked candidates two models share; low overlap means they disagree.\n- Kinases: a protein family often used as drug targets; inhibition measurements show whether a molecule blocks them.\n- Random seed: a starting number for training a model; changing it can yield a different model even with identical data and settings.\n- Bidirectional screening: asking both which proteins suit a given drug and which drugs suit a given protein.",
+    "difficulty": "intermediate",
+    "ai": true
    },
    "abstract": "Identifying active molecules for known targets and potential targets for existing drugs is central to drug discovery and repurposing. Drug-target interaction (DTI) models can rank vast numbers of drug-target pairs, but limited experimental capacity restricts testing to a small number of candidates. We compared the bidirectional recommendations of 13 released systems across 711 molecular structures of FDA-approved drugs and 614 human proteins. For the same target or drug, pairs of models produced completely disjoint Top-10 molecule and protein lists in 77.8% and 70.1% of comparisons, respectively. Even where recommendations overlapped, agreement between some systems largely reflected recurring preferences for the same candidates. Published inhibition measurements for 79 molecules and 65 kinases revealed that some systems enriched active candidates, yet their hit yields changed little when recommendations were matched to different drugs or targets, whereas other systems lost substantially more hits. Some of the former systems also rarely ranked both molecules and kinases correctly when two drugs favoured different kinases. We further retrained the same architecture on the same data, with the training objective fixed and random seeds varied. Despite similar test performance, mean pairwise Top-10 overlap on a separate screening catalogue was about two candidates. Our study moves DTI model evaluation beyond benchmark performance to assess whether model predictions can guide meaningful experimental decisions in drug discovery and target identification.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26533",
-   "title": "Emergent Fatigue Dynamics from Foundational Interatomic Potentials",
-   "url": "https://arxiv.org/abs/2611.26533v1",
+   "uid": "arxiv:2611.26765",
+   "title": "Pharos: Learning to Control Rare Events at Scale",
+   "url": "https://arxiv.org/abs/2611.26765v1",
    "authors": [
-    "Jingye Tan",
-    "Benjamin A. Jasperson",
-    "Eric Rothchild",
-    "Anders Johansson",
-    "Rèmi Dingreville",
-    "Krishna Garikipati",
-    "Mitchell A. Wood"
+    "Jiajun He",
+    "Jacky Chen",
+    "Weiliang Luo",
+    "Heather Kulik",
+    "David R. Koes",
+    "Carles Domingo-Enrich",
+    "Yuanqi Du"
    ],
-   "label": "arXiv:2611.26533v1",
-   "primary_category": "cond-mat.mtrl-sci",
-   "date": "2026-11-22",
+   "label": "arXiv:2611.26765v1",
+   "primary_category": "physics.chem-ph",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Foundational machine-learned interatomic potentials are trained on large, diverse DFT datasets, but their validation rests on equilibrium states, which does not guarantee correct emergent behavior in large-scale molecular dynamics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "Pharos uses stochastic optimal control to learn both the probability of completing a rare molecular transition and how to bias simulations toward it, aiming for faster and quantitatively accurate rate estimates under physical dynamics.",
+    "plain": "The paper deals with rare events, such as a molecule changing shape or two molecules binding, which happen so seldom that ordinary computer simulations almost never see them. The authors built a method, called Pharos, that learns how to nudge a simulation toward these events while still estimating how often they happen. The abstract reports faster convergence on biomolecular test cases and applications to ion assembly, host-guest binding and chemical reactions, though the abstract gives only limited detail on these results.",
+    "why": "Estimating how fast rare events occur is a long-standing bottleneck in chemistry, biology and materials design, so a faster route to accurate rates would matter if it holds up. The abstract's claims of an order-of-magnitude speedup and use with a machine learning interatomic potential are reported by the authors and are not independently checked here; the stated goal of \"foundation models\" for rare events is an aspiration rather than a demonstrated result.",
+    "background": "- Rare event: a change that happens very infrequently relative to the time step of a simulation, such as a protein folding or a drug molecule binding.\n- Molecular dynamics: computer simulation of how atoms move under physical forces over time.\n- Transition rate / kinetics: how often an event occurs per unit time; the quantity this work aims to estimate accurately.\n- Stochastic optimal control: a mathematical framework for choosing how to steer a random process (here, a simulation) to reach a target at low cost.\n- Machine learning interatomic potential: a learned model that approximates the energy and forces between atoms, cheaper than quantum calculations but still costly to run.\n- Host-guest binding: one molecule (guest) fitting into a larger molecule (host), a standard test system for binding kinetics.",
+    "difficulty": "research-level",
+    "ai": true
    },
-   "abstract": "Foundational machine-learned interatomic potentials are trained on large, diverse DFT datasets, but their validation rests on equilibrium states, which does not guarantee correct emergent behavior in large-scale molecular dynamics. Where no direct experimental validation is available, comparisons to physically motivated potentials are valuable for drawing insight. We distinguish static properties, which are thermally accessible, from emergent properties, which require work from an external fatigue stress to drive rare events, and compare the potentials on both. An EAM potential and the NequIP foundational potential both agree closely with reference data for many near-equilibrium properties, but NequIP predicts an anomalously low intrinsic stacking fault energy ($\\sim7$ times lower than EAM) and thus predicts far more plastic deformation under fatigue cycling of a nanoscale flaw modeled after the classical Griffith crack problem. Per-atom energy distributions after loading show that the two potentials differ most at energies far above what is thermally accessible. We also document memory-related crashes and silent extrapolation as practical concerns for practitioners of these foundational model forms.",
+   "abstract": "Rare events drive transformations across physics, chemistry and biology, yet predicting their mechanisms and rates remains a fundamental challenge. Here we introduce Pharos, a framework that learns to make rare transitions accessible while predicting how frequently they occur under physical dynamics. Through stochastic optimal control, Pharos jointly learns the probability of completing a transition and how to steer simulations toward it, allowing sampling and learning to improve one another. Across biomolecular benchmarks, Pharos learns accurate transition probabilities with order-of-magnitude gains in convergence speed over previous algorithms. It transfers across ion assembly systems in explicit solvent while maintaining accurate reaction rate predictions, scales to host-guest binding systems that span millisecond timescales, and enables chemical reaction studies with a computationally demanding machine learning interatomic potential. By combining efficient sampling, quantitative kinetics, and transferability, Pharos opens a route toward foundation models of rare event mechanisms and rates across molecular systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24901",
+   "title": "Toward high-throughput, low-latency structural biology using light, Part I: Protein-ligand pose determination",
+   "url": "https://arxiv.org/abs/2611.24901v1",
+   "authors": [
+    "Brian K. Petkov",
+    "David R. Klug"
+   ],
+   "label": "arXiv:2611.24901v1",
+   "primary_category": "physics.chem-ph",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A computational study showing that simulated electron-vibration-vibration two-dimensional infrared (EVV 2DIR) spectra of 92 protein-ligand complexes can distinguish correct from incorrect hydrogen-bonding patterns in predicted drug-binding poses.",
+    "plain": "The paper asks whether a laser-based optical method could help work out how a drug molecule sits inside a protein, which is usually done with slow and demanding X-ray crystallography. The authors used quantum-mechanical calculations to predict the light spectra for 92 drug-protein pairs, using both known crystal structures and computer-generated guesses at binding positions. They report that the spectral features linked to binding were consistent for each binding mode and differed for each distinct hydrogen-bonding arrangement.",
+    "why": "If the approach holds up experimentally, it could make checking drug-binding shapes much faster and less demanding on sample material, which matters for drug discovery. The text is only a computational preview; the authors say experimental follow-up is planned in forthcoming manuscripts, so the practical claims remain unverified here.",
+    "background": "- Drug discovery often depends on knowing the 3D shape of how a drug binds its protein target.\n- Crystallography, the standard method, needs crystals, which many proteins do not form easily.\n- Infrared spectroscopy measures how molecules absorb infrared light at vibration frequencies that act as fingerprints of their chemical bonds.\n- Two-dimensional infrared (2DIR) spectroscopy spreads these signals across two frequency axes, revealing couplings between vibrations.\n- Hydrogen bonds are weak attractions between atoms that help hold a drug in place; their pattern defines the binding geometry.\n- Docking and cofolding are computer methods that predict how a ligand fits into a protein.\n- Quantum-mechanical calculations predict spectra from first principles, without fitting to experiments.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We demonstrate for the first time that an optical spectroscopy - electron-vibration-vibration two-dimensional infrared spectroscopy (EVV 2DIR) - has sufficient structural competence to enable the reconstruction of the three-dimensional geometries of drug-protein binding at the level needed for practical drug discovery applications. Klug et al. previously demonstrated experimental detection of drug binding to a kinase using EVV 2DIR. Here we use a quantum mechanical approach to calculate and assign elements of EVV 2DIR spectra for the spectral region 1200-1800 cm$^{-1}$ / 1100-1800 cm$^{-1}$ of 92 protein-ligand complexes. This dataset includes ligand-target poses drawn from existing crystal structures and ligand-target poses created by docking and cofolding models. We find that binding-dependent spectral features are robust, interpretable, and consistent across poses in a given binding mode, and distinct for each unique hydrogen bonding geometry. We construct a spectral distance metric to distinguish poses that conform to the ligand-target hydrogen-bonding pattern of the crystal structure from those that do not. These results show that, given a set of predicted ligand-target poses containing the correct geometry, the hydrogen-bonding pattern of the valid pose may be rapidly identified by comparing simulated and experimental EVV 2DIR spectra. Finally, we discuss the practical implications for a new, high throughput structural biology for drug discovery that will be the subject of forthcoming manuscripts, noting that the base technologies to perform EVV 2DIR quickly and efficiently already exist and will enable a novel structure to be determined in only minutes for each sample. Moreover, this can be achieved without the need for crystallization, isotopic labeling, or low temperatures, non-destructively using picogram quantities of material.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24148",
+   "title": "Machine learning interatomic potentials and orientational defects in polymers",
+   "url": "https://arxiv.org/abs/2611.24148v1",
+   "authors": [
+    "Arnold Kiv",
+    "Volodymyr Soloviev",
+    "Andrii Tuzhykov",
+    "Andrii Bielinskyi",
+    "Taras Kavetskyy",
+    "Nataliia Hoivanovych",
+    "Ondrej Šauša",
+    "Jaroslav Rusnák",
+    "Helena Švajdlenková",
+    "Jolita Ostrauskaite",
+    "Mykola Slusarenko"
+   ],
+   "label": "arXiv:2611.24148v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Dielectric measurements during UV photopolymerization of an acrylated epoxidized soybean oil mixture are analysed with entropy and correlation-integral methods, and the resulting localized orientational defects are energetically benchmarked against DFT using the MACE-OFF23 machine learning potential.",
+    "plain": "This work studies how a bio-based plant-oil resin hardens when UV light starts a chain reaction that turns liquid into a network. The authors recorded the material's electrical response while the light was switched on and off, and found that early light pulses cause coordinated molecular motion that fades as the network forms, leaving only small local twists of molecular groups. They then used a machine learning model to estimate how much energy it takes for those groups to rotate, and it roughly matched quantum-chemistry reference calculations in shape and ranking, though it tended to underestimate the energy barriers by 3 to 20%.",
+    "why": "It links a measurable electrical signal during curing to specific molecular rotations and checks a fast machine learning potential against expensive quantum calculations for this kind of soft material. The text does not show how far the approach generalizes beyond this one resin and fragment, so its wider significance is uncertain.",
+    "background": "- Photopolymerization: UV light triggers a free-radical chain reaction that links small molecules into a solid network.\n- Dielectric permittivity: a measure of how a material responds electrically; shifts over time can reveal molecular motion.\n- Shannon entropy and Grassberger-Procaccia correlation integral: statistical tools that measure how random or how coordinated a time series is.\n- Orientational defect: a local molecular group that rotates between orientations, here treated as a source of relaxation.\n- Dihedral scan: calculating the energy as a bond rotates step by step, giving an energy barrier.\n- DFT (density functional theory): a quantum-mechanical method used as the accurate reference.\n- Machine learning interatomic potential (MACE-OFF23): a trained model that predicts atomic energies much faster than DFT.\n- Arrhenius estimate: a simple formula relating an energy barrier to the rate of a process at a given temperature.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Photopolymerization of acrylated epoxidized soybean oil (AESO) is a convenient model of a self-organizing process in a soft, bio-based material: ultraviolet light starts a free-radical chain reaction, the growing network releases heat, and the mobility of molecular groups changes on several time scales at once. We follow this process from two sides. Experimentally, the real and imaginary parts of the dielectric permittivity of an AESO:VDM (1:0.5) mixture with 3 mol% of the photoinitiator DMPA were recorded at 500-5000 Hz under an intermittent on/off illumination protocol, and the resulting time series were analysed with a sliding-window Shannon entropy and the Grassberger-Procaccia correlation integral. Both measures show that short light pulses at the start of curing trigger strongly correlated, collective relaxation, which fades as the network forms, leaving only localized reorientations active. We describe these reorientations as orientational defects and quantify their energetics with the MACE-OFF23 machine learning interatomic potential, using relaxed dihedral scans of five rotational modes ($α$, $α/β$, $β$, $γ$, $δ$) of an AESO fragment. Compared with density functional theory (DFT) reference profiles, MACE reproduces the shape of all five profiles (Pearson $r=0.95$-$0.98$) and the hierarchy of barriers - from 2.9 eV for the constrained main-chain rotation, through 0.54-0.81 eV for the acrylate rotations, to 0.16-0.18 eV for the methyl and 0.06 eV for the hydroxyl rotation - while underestimating the barrier heights by 3-20%. A simple Arrhenius estimate shows that the acrylate rotations are the modes closest to the frequency window of the dielectric measurement.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22444",
+   "title": "Efficient Machine Learning Interatomic Potentials",
+   "url": "https://arxiv.org/abs/2611.22444v1",
+   "authors": [
+    "Yury Lysogorskiy",
+    "Anton Bochkarev",
+    "Ralf Drautz"
+   ],
+   "label": "arXiv:2611.22444v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A review that uses the Atomic Cluster Expansion (ACE) and its graph generalization (GRACE) as a common framework to compare the computational efficiency and accuracy of machine learning interatomic potentials, including Matbench Discovery results.",
+    "plain": "Machine learning interatomic potentials are fast stand-ins for quantum calculations of how atoms push and pull on each other, and this review asks which design choices make them efficient. The authors put many different models into one shared mathematical form so they can be compared on equal terms. They report that much of the variety among these models comes from how they handle non-linearity, layers, and optimization rather than from the physical interactions they can capture.",
+    "why": "Simulating materials at useful scales depends on how cheaply these potentials can be run, so a systematic comparison of cost against accuracy could guide which models researchers choose. The text is a review and does not show that its framing will change practice; its specific benchmark claims are limited to what the abstract states.",
+    "background": "- Interatomic potential: a formula giving the energy of a group of atoms from their positions; used to run molecular simulations.\n- Quantum mechanical reference calculations: expensive first-principles computations (e.g., density functional theory) that MLIPs are trained to imitate.\n- Basis expansion: writing a complicated function as a weighted sum of simpler building blocks.\n- Equivariant model: one whose predictions rotate consistently with the molecule's orientation.\n- Embedded-atom method: a classical, hand-designed interatomic potential.\n- Matbench Discovery: a public leaderboard that ranks models for predicting material stability.\n- Pareto front: the set of options where you cannot improve accuracy without increasing cost, or vice versa.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Machine learning interatomic potentials (MLIPs) reach an accuracy close to quantum mechanical reference calculations at a small fraction of the cost. Efficiency is the purpose of MLIPs, yet strategies for efficient MLIPs have not been reviewed systematically. This review takes efficiency as its guideline. To compare MLIPs on a common footing, we represent them in a complete basis expansion, the Atomic Cluster Expansion (ACE) and its graph generalization (GRACE). The expansion is canonical, built from products of single-particle functions. Classical interatomic potentials, such as the embedded-atom method, and many modern MLIPs, including equivariant transformers, can be represented within this expansion. Much of the apparent diversity of MLIP architectures therefore reflects how non-linearity, layer coupling and optimization are handled rather than which interactions the models can represent. We show how the cost of an MLIP becomes linear in system size and, at fixed rank of the tensor decomposition, in model complexity, and we discuss the role of machine learning, which provides non-linear parameterizations and optimization. Because efficiency is meaningful only at a given accuracy, we also compare accuracy and cost. On the Matbench Discovery leaderboard, models with three to five layers approach the accuracy of deeper models, and one basis, truncated along the Pareto front of error and speed, spans more than two orders of magnitude in cost. Ultimately, training data determine the quality of any MLIP.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22230",
+   "title": "Discovery of new antiviral agents through artificial intelligence: in vitro and in vivo results",
+   "url": "https://arxiv.org/abs/2611.22230v1",
+   "authors": [
+    "Roza Izmailyan",
+    "Mher Matevosyan",
+    "Hamlet Khachatryan",
+    "Anastasiya Shavina",
+    "Smbat Gevorgyan",
+    "Artur Ghazaryan",
+    "Irina Tirosyan",
+    "Yeva Gabrielyan",
+    "Marusya Ayvazyan",
+    "Boris Martirosyan",
+    "Vardan Harutyunyan",
+    "Hovakim Zakaryan"
+   ],
+   "label": "arXiv:2611.22230v1",
+   "primary_category": "q-bio.BM",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A deep reinforcement learning molecule-design platform generated candidate compounds against influenza neuraminidase, and two non-sialic-acid compounds were tested in vitro, in cells, and in mice.",
+    "plain": "Researchers used an AI system that learns by trial and reward to invent new small molecules that might stop influenza viruses. Out of tens of thousands of generated molecules, nine were picked for lab tests, and two of them blocked the flu enzyme neuraminidase in both influenza A and B, including a drug-resistant variant. In mice, these two compounds protected a substantial share of animals from infection (65% to 100%, depending on compound and virus).",
+    "why": "It is an early test of whether AI-generated molecules can reach real antiviral activity in living animals, which matters for faster drug discovery. The text reports only a small number of compounds and mouse experiments, so it is too early to judge whether these compounds would work as medicines.",
+    "background": "- Influenza has types A and B; neuraminidase is a viral enzyme that helps new virus particles leave infected cells. Oseltamivir (Tamiflu) is an existing drug that targets it.\n- Reinforcement learning is a machine learning approach where a system improves by receiving rewards for good outputs, here for generating molecules with desirable properties.\n- In vitro means in test tubes or lab dishes; in vivo means in living animals.\n- EC50 is the concentration needed to reduce viral activity by half; lower means more potent. Micromolar means millionths of a mole per liter.\n- H275Y is a mutation that makes some flu strains resistant to oseltamivir.\n- Molecular dynamics simulations are computer models of how molecules move and bind to a target.\n- The text gives no details on the AI model's architecture, the mouse study design, or comparison statistics.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this research, we employed a deep reinforcement learning (RL)-based molecule design platform to generate a diverse set of compounds targeting the neuraminidase (NA) of influenza A and B viruses. A total of 60291 compounds were generated, of which 86.5% displayed superior physicochemical properties compared to oseltamivir. After narrowing down the selection through computational filters, nine compounds with non-sialic acid-like structures were selected for in vitro experiments. We identified two compounds, DS-22-inf-009 and DS-22-inf-021 that effectively inhibited the NAs of both influenza A and B viruses (IAV and IBV), including H275Y mutant strains at low micromolar concentrations. Molecular dynamics simulations revealed a similar pattern of interaction with amino acid residues as oseltamivir. In cell-based assays, DS-22-inf-009 and DS-22-inf-021 inhibited IAV and IBV in a dose-dependent manner with EC50 values ranging from 0.29 uM to 2.31 uM. Furthermore, animal experiments showed that both DS-22-inf-009 and DS-22-inf-021 exerted antiviral activity in mice, conferring 65% and 85% protection from IAV (H1N1 pdm09), and 65% and 100% protection from IBV (Yamagata lineage), respectively. Thus, these findings demonstrate the potential of RL to generate compounds with promising antiviral properties.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19072",
+   "title": "Nahual: A Sequence Model for Language and Atoms",
+   "url": "https://arxiv.org/abs/2611.19072v1",
+   "authors": [
+    "Austin H. Cheng",
+    "Marcel Müller",
+    "Andreas Burger",
+    "Yeonghun Kang",
+    "Tsz Wai Ko",
+    "Marta Skreta",
+    "Luka Mucko",
+    "Ella Miray Rajaonson",
+    "Cher Tian Ser",
+    "Jérôme F. Gonthier",
+    "Alex Zook",
+    "Varinia Bernales",
+    "Alán Aspuru-Guzik"
+   ],
+   "label": "arXiv:2611.19072v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Nahual is a decoder-only autoregressive diffusion model that jointly handles text and 3D molecular coordinates, using a next-token diffusion scheme to generate continuous atomic positions, and is trained on twelve chemistry tasks.",
+    "plain": "Chemists design and simulate molecules in 3D, and language models are good at taking flexible text instructions but handle lists of 3D atom positions poorly. This paper proposes Nahual, a single model that reads and writes both text and 3D molecular structures in one sequence. The authors train it on twelve chemistry tasks and report that one set of weights performs all of them.",
+    "why": "The paper claims one trained model can match or beat specialist models on crystal structure prediction and property-conditioned molecule generation, which would be useful if it holds up under independent testing. It is also a test of whether general-purpose sequence models can extend to scientific data beyond text. The abstract gives only summary claims, so the size of the gains and the robustness of the comparisons cannot be judged from this text alone.",
+    "background": "- Generative model: a model that produces new examples (text, images, molecules) after learning from data.\n- Autoregressive: generating output one piece at a time, each piece conditioned on the earlier ones, as large language models do.\n- Diffusion model: a model that creates data by starting from noise and gradually removing it; here it is applied to each token.\n- Decoder-only transformer: the architecture behind most chatbots, which predicts the next item in a sequence.\n- Token: a unit of input, such as a word or here a text piece or an atom's 3D position.\n- Crystal structure prediction: working out how atoms arrange themselves in a solid crystal.\n- Conformer search: finding plausible 3D shapes a flexible molecule can adopt.\n- Microsolvation and adsorption on metal surfaces: small numbers of solvent molecules clustering around a solute, and molecules sticking to a metal surface.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Generative models play a rapidly growing role in the design and simulation of molecules. The most widely used applications of generative models are in large language models (LLMs), owing to the natural flexibility of language for specifying and answering queries. However, generalist LLMs do not effectively handle large sets of 3D coordinates, whereas specialist generative models of 3D molecules cannot reach the controllability afforded by language. To bridge these capabilities, we propose Nahual, a decoder-only autoregressive diffusion model for any sequence of text and 3D molecules. To enable expressive autoregression on continuous coordinates, we propose next-token diffusion, whereby a causal transformer denoises each token while attending to the clean tokens before it, without increasing context size. We train Nahual on a curated set of twelve 3D chemistry tasks ranging from microsolvation to molecular conformer search to adsorption on metal surfaces, with associated evaluation metrics and baselines. The result is a single set of end-to-end-trained weights that simultaneously performs all tasks and surpasses state-of-the-art models specialized for crystal structure prediction and property-conditional molecule generation. Our results demonstrate the viability of scaling generalist decoder-only models for native multimodal understanding and generation across language and chemistry. Code is available at https://github.com/the-matter-lab/nahual.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.17679",
+   "title": "Electric Fields Turn Vacancy-trapping Grain Boundaries into Li-Ion Pathways in Li2O",
+   "url": "https://arxiv.org/abs/2611.17679v1",
+   "authors": [
+    "Youjeong Choi",
+    "Po-yen Chem",
+    "Tasuku Sugiura",
+    "Teruyasu Mizoguchi"
+   ],
+   "label": "arXiv:2611.17679v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Using machine-learning-potential molecular dynamics with a Bader charge model, the paper shows that an applied electric field makes Li diffusion in cubic Li2O orientation-dependent and changes how Li vacancies move through grain boundaries, depending on the angle between the field and the grains' diffusion pathways.",
+    "plain": "Batteries work because electric fields push ions through solid materials, but most models of how ions move in solids assume no field. This paper asks whether ions moving under a field behave the same way as in a field-free solid, using simulations of lithium oxide (Li2O), a material found in battery interfaces. The authors found that a field makes lithium movement depend on direction, and at grain boundaries (the seams between crystal grains) a boundary that holds onto lithium gaps can release them under a field, while a less responsive boundary keeps them.",
+    "why": "It suggests that grain-boundary behavior in battery materials may depend on the field direction relative to the crystal grains, not only on static energetics, which could matter for how such materials are designed. The text is limited to simulations of one material, so how far these results carry to real batteries is unclear.",
+    "background": "- Ion diffusion: random hopping of ions through a solid, usually studied with no electric field.\n- Electric-field molecular dynamics: computer simulation of atoms moving under an applied field.\n- Machine learning interatomic potential: a fast, learned stand-in for quantum calculations of the forces between atoms.\n- Bader charge: a way of assigning partial electrical charge to atoms from electron density.\n- Vacancy: a missing ion in a crystal lattice; these gaps carry ion transport.\n- Grain boundary: the interface where two differently oriented crystal grains meet; often acts as a trap for defects.\n- Li2O: lithium oxide, a simple lithium compound relevant to battery interphases.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Ion transport in solids has conventionally been understood from equilibrium diffusion, yet ions in batteries are driven by electric fields. Does field-driven ion transport follow equilibrium behavior? We examined this question in bulk Li2O and at its grain boundaries (GBs) using electric-field molecular dynamics combining a machine learning interatomic potential with a Bader charge prediction model. Although Li diffusion in cubic Li2O is isotropic at zero field, an electric field renders it orientation dependent because Li hops along a limited set of crystallographic pathways that the field biases unequally. At GBs, this anisotropy becomes a qualitative difference: a GB that strongly traps Li vacancies but exhibits a strong field response releases them under a field, whereas a weakly responsive GB retains them despite weaker vacancy trapping. These results show that field-driven GB transport is governed not by static thermodynamics alone but by the angle between the electric field and the diffusion pathways of the constituent grains.",
    "source": "arxiv"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "slug": "pde",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26580",
@@ -12,14 +12,14 @@
    ],
    "label": "arXiv:2611.26580v1",
    "primary_category": "math.PR",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\\frac{1}{4}$.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves existence and uniqueness of mild solutions to a stochastic partial differential equation driven by fractional Brownian motion with Hurst index H > 1/4.",
+    "plain": "The paper studies equations that describe how a quantity changes over space and time when it is also pushed around by random noise. The noise here is a special kind of random motion (fractional Brownian motion) whose smoothness is set by a number called the Hurst index. The authors show that, when that index is above 1/4, the Cauchy problem (an equation with a given starting state) has one well-defined solution in the mild sense.",
+    "why": "Noise with memory, like fractional Brownian motion, appears in models of physics, finance and networks, where ordinary random noise is too simple. The text itself is short and gives only the main statement, so its wider impact is not clear from it alone.",
+    "background": "- Partial differential equation: an equation relating a function of space and time to its rates of change.\n- Stochastic (random) forcing: a term in the equation that is driven by randomness.\n- Brownian motion: the random jittery path of a particle; fractional Brownian motion generalises it with a memory parameter.\n- Hurst index H: a number in (0,1) controlling how rough the noise path is; larger H means smoother paths.\n- Mild solution: a solution written through an integral formula involving the equation's semigroup (the operator that propagates the system forward in time), rather than requiring classical derivatives.\n- Existence and uniqueness: showing a solution exists and that only one such solution exists.\n- Cauchy problem: the equation together with an initial condition at time zero.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\\frac{1}{4}$.",
    "source": "arxiv"
@@ -33,16 +33,150 @@
    ],
    "label": "arXiv:2611.25345v1",
    "primary_category": "math.AP",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper sharpens the regularity theory for Hölder-continuous stationary solutions of free boundary problems that are harmonic off their zero set, obtaining a √log-Lipschitz bound for a generalized phase-variable class (including the two-phase problem), a full Lipschitz bound in the one-phase case, and showing that a Lipschitz assumption in Kriventsov–Weiss's variational class can be weakened to any positive Hölder exponent.",
-    "plain": "Free boundary problems describe shapes where two regions (for example, a region with a substance and one without, or two different materials) meet along an interface whose position is part of the answer. This note asks how smooth the solutions must be when they are stationary, meaning they are balanced against small deformations of the domain. The authors show that a weaker starting assumption on smoothness suffices than was previously required, and they get a slightly weaker or stronger smoothness conclusion depending on whether there is one phase or two.",
-    "why": "Getting by with a weaker smoothness assumption makes the regularity result apply to a broader class of solutions, which matters for free boundary theory in general. I can only judge the significance from the abstract, so the wider impact is uncertain; the connections it may have to variational and geometric questions are not spelled out there.",
-    "background": "['Partial differential equations: equations relating a function to its rates of change in several variables.', 'Free boundary problem: a problem in which the region where the solution is nonzero (or where phases differ) is itself unknown and must be determined.', 'Hölder continuity: a measure of smoothness, where an exponent between 0 and 1 controls how closely nearby values must match; Lipschitz is the case of bounded slope.', \"Harmonic function: a solution of Laplace's equation, the classic smooth 'equilibrium' function.\", 'Stationary solution with inner variations: a solution that does not change to first order under small reparametrizations of the domain, i.e. a critical point of an energy.', 'One-phase versus two-phase problems: whether the solution is zero on one side of the interface or takes two distinct nonzero regimes.', 'Regularity: how smooth a solution is guaranteed to be; here, how its gradient or continuity is controlled.']",
+    "one_liner": "The paper sharpens regularity results for Hölder continuous stationary solutions of free boundary problems that are harmonic off their zero set, obtaining sqrt(log)-Lipschitz estimates for a class with a generalized phase variable (including the two-phase problem) and full Lipschitz regularity in the one-phase case, which lets the initial Lipschitz assumption in Kriventsov–Weiss's variational class be weakened to any positive Hölder exponent.",
+    "plain": "This is a mathematical note about \"free boundary problems,\" where a solution to an equation has to be found together with the unknown edge that separates two regions (for example, a boundary between two phases of a material). The author asks how smooth such solutions must be when they are stationary, meaning they are balanced against small deformations of the shape. The text reports that the smoothness can be improved: the solutions are shown to be Lipschitz, which means they cannot change too steeply, up to a mild logarithmic correction in the two-phase case, and fully Lipschitz in the one-phase case.",
+    "why": "Regularity results like these decide whether the boundary between regions is well behaved enough for further analysis, so they matter for the theory of such problems. The text itself only states the improvement over an earlier assumption from Kriventsov and Weiss; it does not claim wider applications, and I have not checked how it fits into the broader literature.",
+    "background": "- Partial differential equation (PDE): an equation relating a function to its rates of change in space.\n- Free boundary problem: a problem where the region where the solution is nonzero (or the interface between regions) is itself unknown and must be solved for.\n- Stationary solution: a configuration that does not change under small allowed deformations, as in an energy-minimizing state.\n- Hölder continuity: a measure of smoothness weaker than differentiability; the exponent indicates how regular the function is.\n- Lipschitz continuity: a stronger smoothness condition meaning the function's slope is bounded.\n- Harmonic function: a function whose Laplacian is zero, the basic smooth \"balanced\" function in PDE theory.\n- Two-phase vs one-phase problem: whether the setting has two competing states or one state against a background of zero.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "In this note, we improve the regularity of Hölder continuous stationary solutions with respect to inner variations which are harmonic outside their zero set. We obtain a $\\sqrt{\\log}$-Lipschitz estimate for a class of solutions allowing a generalized phase variable and including the two-phase problem. In the case of the one-phase problem, we can improve to Lipschitz regularity. In particular, we show that the initial Lipschitz assumption in the class of variational solutions considered by Kriventsov and Weiss can be replaced by any positive Hölder exponent",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24246",
+   "title": "Quadratic Convexity for Closed and Free Boundary High Codimension Mean Curvature Flow",
+   "url": "https://arxiv.org/abs/2611.24246v1",
+   "authors": [
+    "Huy The Nguyen",
+    "Artemis A. Vogiatzi"
+   ],
+   "label": "arXiv:2611.24246v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper introduces a \"quadratic convexity\" condition for mean curvature flow of high-codimension submanifolds and uses it to prove finite-time convergence to round points (closed case, n≥5 with extra pinching for 5≤n≤7) and to round hemispheres (spherical free boundary case, n≥4).",
+    "plain": "The paper studies how a curved, multi-dimensional shape evolves when it is allowed to shrink under its own curvature, a process called mean curvature flow. It defines a new convexity-type condition that controls the curvature in more directions than earlier criteria, and shows that shapes satisfying it stay that way and eventually become round. The authors state that, for shapes with a spherical free boundary, this is the first such convergence result in arbitrary codimension, and that some dimension ranges need an extra assumption.",
+    "why": "Convergence of shrinking shapes to round ones is a central question in geometric analysis, and the high-codimension setting is much harder than the hypersurface case. The paper's new inequality also covers some curvature tensors that the classical Andrews-Baker pinching condition does not, which may matter for future work on this flow; the text does not say more about applications.",
+    "background": "- Mean curvature flow: a family of shapes moving in the direction that reduces their area, with normal speed given by mean curvature.\n- Codimension: how many extra dimensions a submanifold has beyond its own dimension; high codimension means the shape sits in a space with many extra directions.\n- Second fundamental form: the object measuring how a surface bends in each direction; \"pinching\" means bounding it relative to the mean curvature.\n- Round point: a point where the shape looks like a perfect sphere after rescaling, the typical end state of the flow.\n- Free boundary: the submanifold has its edge lying on a fixed sphere and meets it at right angles; the limit is a round hemisphere.\n- Finite-time convergence: the shape reaches its limiting round form in a finite amount of time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce quadratic convexity for mean curvature flow in high codimension. It combines quantitative convexity in the mean curvature direction with control of the full second fundamental form. Strict Andrews-Baker quadratic pinching implies quadratic convexity, while the new inequality also admits curvature tensors beyond the critical quadratic ratio. For compact connected closed submanifolds of dimension $n\\geq5$, we prove preservation of quadratic convexity and convergence in finite time to a round point. For compact connected submanifolds of dimension $n\\geq4$ with spherical free boundary, we prove preservation and convergence to a round hemisphere in a uniquely determined $(n+1)$-plane. To our knowledge, this is the first such convergence theorem for spherical free boundary MCF in arbitrary codimension. The closed theorem requires additional quadratic pinching for $5\\leq n\\leq7$, and the free boundary theorem for $4\\leq n\\leq7$. For $n\\geq8$, the necessary quadratic bound follows from quadratic convexity. We also establish preservation of ordinary quadratic pinching $|A|^2\\leq c|H|^2$ under spherical free boundary flow for $n\\ge2$ and $\\frac{9}{8n}\\leq c\\leq\\frac{4}{3n}$, including both endpoints.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23741",
+   "title": "Nonradial threshold scattering for the planar cubic--quintic NLS",
+   "url": "https://arxiv.org/abs/2611.23741v1",
+   "authors": [
+    "Bo Yang",
+    "Lei Zhang",
+    "Bin Liu"
+   ],
+   "label": "arXiv:2611.23741v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Proves scattering in both time directions for nonradial H^1 solutions of the planar cubic–quintic NLS at exactly the mass of the focusing cubic ground state, answering a question posed by Murphy (2021).",
+    "plain": "This paper studies a wave-like equation that describes how a light beam or wave packet spreads and interacts with itself in a two-dimensional medium. The question is whether solutions with a given amount of \"mass\" (total intensity) eventually disperse into free-flowing waves rather than staying bunched together. The authors show that at one specific threshold mass, every solution with no special symmetry disperses in both time directions.",
+    "why": "The text says this closes an open problem from Murphy's 2021 paper and, together with earlier results, pins down the exact mass range where every finite-energy solution scatters. This is a precise mathematical classification rather than a practical application; the text does not claim any physical or engineering consequences.",
+    "background": "- Nonlinear Schrödinger equation (NLS): a model for waves whose behaviour depends on their own amplitude, used in optics, plasma and condensed matter.\n- Cubic–quintic term: the equation has a nonlinear term of power 3 (|u|^2 u) with a focusing sign and a higher-order term of power 5 (|u|^4 u) that changes the long-run behaviour.\n- Mass: the total squared size of the wave, conserved over time.\n- Ground state / standing wave: a special stationary solution that holds its shape; the threshold is set by the mass of this shape.\n- Scattering: the solution eventually behaves like a free wave, with its nonlinear self-interaction fading away over time.\n- Nonradial: solutions are not assumed to be symmetric around a central point, which makes the analysis harder.\n- H^1: the space of functions with finite energy and finite mass; the natural class of solutions.\n- Morawetz estimates: integral inequalities that control how waves spread out, used as a key tool.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the planar cubic--quintic nonlinear Schrödinger equation \\[ i\\partial_tu+Δu=-|u|^2u+|u|^4u, \\qquad (t,x)\\in\\mathbb R\\times\\mathbb R^2, \\] with initial data $u_0\\in H^1_x(\\mathbb R^2)$. We prove scattering in both time directions when the mass of \\(u_0\\) equals the mass of the ground state for the focusing cubic equation. This resolves the nonradial threshold scattering problem posed by Murphy [\\emph{Comm.\\ Partial Differential Equations} \\textbf{46} (2021), 2213--2234]. Together with the known subthreshold scattering theory and the existence of standing waves at every larger mass, this identifies the sharp mass range in which every $H^1$ solution scatters. The proof combines localized interaction Morawetz estimates with propagation estimates on moving halfspaces to control exterior kinetic energy.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22127",
+   "title": "Heat-wave semigroup estimates and the compressible Navier-Stokes Equations",
+   "url": "https://arxiv.org/abs/2611.22127v1",
+   "authors": [
+    "Rongshan Chen",
+    "Zihua Guo"
+   ],
+   "label": "arXiv:2611.22127v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper links space-time estimates for the heat-wave semigroup, derived from local smoothing for wave equations, to global well-posedness of the compressible Navier-Stokes equations in optimal critical Besov spaces, using a new iteration framework.",
+    "plain": "This paper is about the equations that describe how a compressible fluid, such as a gas, flows and changes density. The authors show that these equations have both a diffusion-like (heat-like) and a wave-like side, and they use newer tools from harmonic analysis to handle both. The result is a proof that solutions exist and stay well-behaved over all time for the relevant class of starting conditions.",
+    "why": "Showing that a fluid model has well-behaved solutions for all time, under the sharpest natural assumptions on the starting data, is a core question in the mathematics of fluids. The text does not say how far the method extends beyond this specific system, so its wider reach is uncertain.",
+    "background": "- Partial differential equations: equations relating a function to its rates of change in space and time.\n- Compressible Navier-Stokes equations: the standard model of a gas or fluid whose density can change, with viscosity (internal friction).\n- Heat semigroup: a family of operators describing how heat-type diffusion smooths out a function over time; the wave analogue describes oscillating, propagating disturbances.\n- Local smoothing: a harmonic-analysis result stating that wave solutions become smoother when averaged over space and time.\n- Besov spaces: a scale of function spaces that measure smoothness and size at many frequency levels; \"critical\" means the space matches the equation's natural scaling.\n- Global well-posedness: solutions exist, are unique, and depend continuously on the data for all time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the connection between the heat-wave semigroup and the compressible Navier-Stokes (CNS) equations. On one hand, the parabolic-hyperbolic nature of the CNS motivated the study of space-time estimates for the heat-wave semigroup by using recent harmonic analysis development, in particular, the local smoothing estimates for the wave equations; on the other hand, we apply the new estimates to obtain global well-posedness for CNS in the optimal critical Besov spaces. For the latter purpose, we introduce a new iteration framework for CNS that exploits some intrinsic structures of the equations, so that we can successfully apply these estimates.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22860",
+   "title": "Global strong solutions and large-time behavior for the two-dimensional Navier--Stokes--Poisson system with general bulk viscosity",
+   "url": "https://arxiv.org/abs/2611.22860v1",
+   "authors": [
+    "Jing Han",
+    "Yanfang Peng"
+   ],
+   "label": "arXiv:2611.22860v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Proves global existence and uniqueness of strong solutions, including vacuum regions, for the two-dimensional repulsive Navier–Stokes–Poisson system with general density-dependent bulk viscosity, with exponential relaxation on the torus and qualitative convergence in the whole space.",
+    "plain": "This paper studies a mathematical model of a compressible fluid, such as a gas or plasma, whose particles also repel each other through an electric-type force. It shows that, in two dimensions, solutions exist for all time and are unique for arbitrarily large starting conditions, even where the fluid is absent (vacuum). It also describes how the fluid settles toward equilibrium over time.",
+    "why": "The result covers a broad class of how the fluid resists compression (bulk viscosity), so it applies to many power-law and near-linear cases rather than one special form. The text also notes that the density-gradient blow-up at vacuum points is a limit on the result; how it connects to applications beyond the model is not stated in the text.",
+    "background": "- Navier–Stokes equations: standard equations describing viscous fluid flow; here extended to compressible fluids where density changes.\n- Poisson coupling: the fluid's density generates an electric potential that pushes particles apart (the \"repulsive\" case).\n- Bulk viscosity: the fluid's resistance to being compressed or expanded, here allowed to depend on density.\n- Strong solution: a solution smooth enough that its derivatives make sense and it is uniquely determined by its starting data.\n- Vacuum: regions where the density is zero; these make the equations degenerate and hard to analyze.\n- Torus vs. whole space: periodic domain (a box with edges wrapped around) versus unbounded space; the latter needs extra decay assumptions.\n- Global existence and large-time behavior: the solution does not break down in finite time, and its long-term behavior is studied.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The global existence and uniqueness of strong solutions to the two-dimensional repulsive Navier--Stokes--Poisson system with general density-dependent bulk viscosity is established for arbitrarily large initial data allowing vacuum. The periodic problem and the Cauchy problem with a positive constant background are treated under a common growth condition on the viscosity primitive. The coefficient class includes every superlinear power law and near-linear laws with logarithmic gains. A density upper bound and low-order estimates, uniform in time and independent of a positive density lower bound, are obtained without an initial acceleration compatibility condition. Exponential relaxation is proved on the torus, and qualitative convergence to equilibrium is established in the whole space under a finite electric energy condition and without spatial moment assumptions. If the initial density vanishes at a point, the vacuum persists and density gradients become unbounded as time tends to infinity.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19817",
+   "title": "Optimal first order global regularity for fractional harmonic maps into spheres",
+   "url": "https://arxiv.org/abs/2611.19817v1",
+   "authors": [
+    "Yu He",
+    "Chang-Lin Xiang",
+    "Gao-Feng Zheng"
+   ],
+   "label": "arXiv:2611.19817v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper extends quantitative stratification (a Naber-Valtorta technique) to sphere-valued fractional harmonic maps, yielding optimal first-order global regularity and rectifiable structure of the singular sets.",
+    "plain": "The paper studies \"maps\" that assign a point on a sphere to each point of a space, chosen to minimise a fractional energy, a version of the usual smoothness-favouring energy with a long-range twist. Such maps can develop singularities, meaning places where they stop being smooth. The authors adapt a powerful technique for classifying how singular a map can be, and use it to show how regular these maps are globally and how the singular set is structured.",
+    "why": "Regularity results say when solutions of these equations stay smooth, which is the core question for this kind of geometric variational problem. The text presents this as a continuation of the authors' earlier work and does not claim wider consequences, so its reach beyond this model setting is unclear from the text alone.",
+    "background": "- Harmonic map: a map between spaces that minimises a Dirichlet-type energy, a geometric analogue of a smooth, stretch-minimising deformation.\n- Fractional harmonic map: the same idea with a nonlocal energy, so each point's behaviour depends on distant points too.\n- Sphere-valued: the map's outputs always lie on a sphere, a common constraint in geometry and physics.\n- Regularity: whether solutions are smooth or only smooth away from a small singular set.\n- Quantitative stratification: sorting singular points by how much the map looks like a lower-dimensional symmetric object at each scale.\n- Rectifiable set: a set that is, up to small error, made of pieces of smooth surfaces, so it has a well-defined size and shape.\n- First-order regularity: control of the map's first derivatives (its rate of change).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper is a continuation of our previous work on global regularity theory for the sphere-valued fractional harmonic maps which was initialized by several authors such as Millot-Pegon-Schikorra and Millot-Sire. By adapting the powerful quantitative stratification approach developed by Naber-Valtorta on harmonic mappings, we establish a corresponding stratification theory for fractional harmonic maps, from which an optimal first order global regularity theory and the rectifiable structure of singular sets follow.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20870",
+   "title": "On Hamilton-Jacobi equations and perceptron models",
+   "url": "https://arxiv.org/abs/2611.20870v1",
+   "authors": [
+    "Hong-Bin Chen",
+    "Jean-Christophe Mourrat"
+   ],
+   "label": "arXiv:2611.20870v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper identifies a third class of finite-dimensional Hamilton-Jacobi equations (split variables, scalar-product nonlinearity, convex-plus-Lipschitz initial data) that admits a variational representation, and applies it to limit free energies of perceptron and bipartite spin-glass models.",
+    "plain": "The paper studies a type of equation that describes how a quantity changes over time or space, and asks when its solution can be written as an optimization (\"best choice\") formula. It finds a new family of cases where this works, beyond the two classical ones. The authors show the family matches the equations that give the limiting free energy of certain neural-network-like \"perceptron\" models.",
+    "why": "Perceptron models are simple versions of neural networks studied in statistical physics and learning theory, so a closed-form variational solution for their limiting behaviour is useful for theory. The text does not claim wider impact, and its extensions to other models are described only as possibilities.",
+    "background": "- Hamilton-Jacobi equation: a first-order PDE whose solution can often be found by optimizing over paths (a variational formula).\n- Classical cases: Hopf-Lax formula (convex or concave nonlinearity) and Hopf formula (convex or concave initial condition).\n- Lipschitz function: a function whose steepness is bounded.\n- Perceptron: a simple one-layer neural network model; \"free energy\" here is a statistical-physics quantity describing its typical behaviour in the large-size limit.\n- Spin glass: a disordered magnetic system with random interactions, used as a model for complex systems.\n- Ising spin: a variable taking values ±1; soft spin: a continuous variable in a bounded range.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The solution to a finite-dimensional Hamilton-Jacobi equation is classically known to admit a variational representation in two situations: when the nonlinearity is convex or concave, by the Hopf-Lax formula; and when the initial condition is convex or concave, by the Hopf formula. We identify a third situation: the space variable is split into two groups of coordinates, the nonlinearity is the scalar product of the two corresponding partial gradients, and the initial condition is the sum of a convex function of the first group of coordinates and of an arbitrary Lipschitz function of the second group. This structure is precisely that of the Hamilton-Jacobi equations describing the limit free energy of perceptron models. We illustrate this point by identifying the limit free energy of a class of perceptron models that can be rewritten as bipartite spin glasses, with Ising spins in one layer and bounded soft spins in the other. We also discuss how to extend the approach to several other classes of models, including general Ising and spherical perceptrons, possibly with labelled patterns.",
    "source": "arxiv"
   }
  ]

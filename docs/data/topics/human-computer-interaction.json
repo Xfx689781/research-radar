@@ -1,6 +1,6 @@
 {
  "slug": "human-computer-interaction",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26396",
@@ -14,12 +14,12 @@
    ],
    "label": "arXiv:2611.26396v1",
    "primary_category": "cs.HC",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "This paper reframes existing findings on how differential privacy noise affects charts through the lens of visual channels (position, color, size and similar mark properties), and proposes a channel-read-mechanism hypothesis for when privacy-protected visualizations stay useful.",
-    "plain": "Differential privacy adds carefully calibrated random noise to data so that individuals cannot be picked out, but the noise can make charts harder to read. The authors argue that earlier studies of this effect were tied to specific chart types, so they look at the problem through 'visual channels', the properties such as position, length or color that encode data values. They synthesize prior work, rather than running new experiments, to suggest that a chart's usefulness under noise depends on both which channels carry the data and which privacy mechanism is used.",
-    "why": "It offers a common vocabulary for comparing privacy-preserving charts across chart types and points to gaps in how these tools are evaluated, which matters for anyone designing or judging privacy-protected dashboards. Because the paper is a synthesis from the abstract alone, the strength of its hypothesis rests on how well the cited prior studies support it, which I cannot check here.",
-    "background": "[\"Differential privacy (DP): a mathematical guarantee that results reveal little about any single person's record, achieved by adding random noise to data or outputs.\", 'Visual channels: the visual properties of marks (position, length, color, size, shape) that encode data values in a chart.', 'Perceptual effectiveness: how accurately and quickly people read values from different channels; some channels are easier to read than others without noise.', 'Utility: how useful a visualization remains for its intended task after privacy noise is added.', 'Task-relevant reads: the specific judgments a viewer needs to make from a chart, such as comparing values or spotting a trend.']",
+    "one_liner": "A position-style synthesis that reframes prior findings on differentially private (DP) visualization through the lens of visual channels (position, color, size, etc.), proposing a channel-read-mechanism hypothesis and identifying gaps in evaluation research.",
+    "plain": "Protecting private data often means adding random noise to it before it is charted, and that noise can make charts harder to read. This paper looks across earlier studies of how this noise affects different charts and argues that the way information is visually encoded, such as by position, length, or color, matters as much as the privacy method used. It proposes a working hypothesis for this and points to gaps in how these charts are currently tested.",
+    "why": "As more organizations publish charts built from sensitive data, knowing which visual designs stay readable under privacy noise helps both designers and privacy engineers. The text is a synthesis and hypothesis rather than a set of new experiments, so its claims are proposals to be tested, not established results.",
+    "background": "- Differential privacy (DP): a method that adds carefully calibrated random noise to data or results so that no single person's record can be identified, at a cost to accuracy.\n- Visualization: turning data into charts or graphics for people to read.\n- Visual channels: the visual properties that carry data values, such as position, length, angle, area, or color.\n- Utility: how useful or accurate a privatized output remains for the reader's task.\n- Perceptual effectiveness: how reliably people read a given visual property accurately.\n- Channel-read-mechanism hypothesis (from the paper): the idea that usefulness depends jointly on which reading a chart makes easy and on which DP mechanism adds the noise.",
     "difficulty": "intermediate",
     "ai": true
    },
@@ -38,16 +38,162 @@
    ],
    "label": "arXiv:2611.25377v1",
    "primary_category": "cs.HC",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "VideoTrail is a browser extension that replaces a plain video timeline with an AI-generated hierarchical map of segments, using semantic and structural cues as information scent to support goal-directed video navigation, evaluated in a 16-person user study.",
-    "plain": "People often have to watch long videos or scrub back and forth along a progress bar to find one specific moment, which is slow and hit-or-miss. VideoTrail is a browser add-on that uses AI to break a video into a nested outline of sections, with cues such as topics and on-screen text, so viewers can head toward the part they want. The authors report that in a study with 16 participants, it helped people find key moments more efficiently than a traditional timeline and allowed new ways of navigating, though the abstract gives no detailed figures.",
-    "why": "It applies a well-known idea from information foraging theory, where people follow scent cues toward likely targets, to the everyday problem of searching video, which may matter for education, lecture review and tutorial use. The abstract is thin on measured results, so how large or robust the benefit is remains unclear from this summary alone.",
-    "background": "[\"Scrubbing: dragging the playhead along a video's progress bar to skip ahead or review.\", \"Information foraging theory: a model from HCI saying people navigate information by following cues ('scent') that suggest where useful content lies.\", 'Hierarchical visualization: showing information as nested levels, such as chapters containing sections, rather than one flat list.', 'Semantic cues: meaning-based signals such as topics or transcript text; structural cues: layout signals such as scene or section boundaries.', 'Multimodal: using more than one type of input, here visual frames and text.', 'Browser extension: a small add-on that adds features to a web browser without changing the video site itself.']",
+    "one_liner": "VideoTrail is a browser extension that uses a hierarchical, multimodal visualization, framed through information foraging theory, to help users navigate and locate information in videos, evaluated in a 16-person user study against standard timelines.",
+    "plain": "People often watch videos to find a specific piece of information, but scrubbing through a progress bar is slow and hit-or-miss. This paper presents VideoTrail, a browser add-on that builds a map of a video's sections, with labels and structural cues, so viewers can jump toward the parts most likely to matter. In a study with 16 participants, the authors report that it helped them find key moments more efficiently than a traditional timeline and supported new ways of navigating.",
+    "why": "Video is a common but hard-to-search medium, and better navigation tools matter for learning, research, and everyday viewing. The work is a small-sample user study, so its findings are preliminary, but it connects human-computer interaction design with ideas about how people forage for information.",
+    "background": "- Information foraging theory: a model from HCI that treats information seeking like animals hunting for food, following \"scent\" (cues that suggest where useful content lies).\n- Scrubbing: dragging the playback bar to skip around a video.\n- Hierarchical visualization: showing content at multiple levels of detail, such as broad sections that break down into smaller segments.\n- Multimodal: using more than one kind of signal, here visual and text content.\n- User study: an experiment where people perform tasks with a system, compared against a baseline; N=16 means 16 participants, a small sample.",
     "difficulty": "intermediate",
     "ai": true
    },
    "abstract": "People often watch videos to find information, but locating relevant moments can be difficult and time-consuming. Existing strategies like scrubbing rely primarily on visual scanning and linear search, providing limited support for goal-directed navigation. We present VideoTrail, an AI-powered browser extension that supports information seeking in videos through a hierarchical visualization. Inspired by information foraging theory, VideoTrail surfaces semantic and structural cues as information scent, creating an explorable roadmap of segments. The system is multimodal and adaptive, prioritizing visual or textual scent based on the video's content. In a user study (N=16), VideoTrail helped participants efficiently locate key moments and enabled new navigation strategies compared to traditional timelines, highlighting how exposing an adaptive video structure can enhance goal-directed viewing.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25263",
+   "title": "AI Deactivation Reduces Loneliness and Increases Social Interaction",
+   "url": "https://arxiv.org/abs/2611.25263v1",
+   "authors": [
+    "Dora Zhao",
+    "Grace Wang",
+    "Yutong Zhang",
+    "Lujain Ibrahim",
+    "Robert E. Kraut",
+    "Diyi Yang"
+   ],
+   "label": "arXiv:2611.25263v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A randomized longitudinal deactivation experiment (N=625 active ChatGPT users) finds that a two-week break from general-purpose AI assistants, mostly used for instrumental tasks, reduced self-reported loneliness and increased in-person social interaction relative to a one-day control.",
+    "plain": "Many people now use AI chatbots like ChatGPT mainly for everyday work tasks rather than for companionship. This study asked whether giving those tools up for two weeks changes how lonely people feel and how much they socialize. Participants were randomly assigned to go without AI for either two weeks or one day, and the two-week group reported less loneliness and more in-person contact.",
+    "why": "Most research on AI and social life has looked at people using AI explicitly as companions, so this suggests that ordinary productivity use may also matter for connection. It is a single study as described in this text, and the authors' interpretation that AI may \"inadvertently\" reduce social contact is one reading of the data rather than a settled finding.",
+    "background": "- Deactivation experiment: participants are asked to stop using a tool for a set period, and outcomes are compared with a group that stops for less time (here, one day).\n- Longitudinal: measurements taken over time, here including a follow-up two weeks after people resumed AI use.\n- Loneliness and social interaction are measured through self-report and participants' descriptions of their time, as described in the text.\n- β (beta) is a regression coefficient: the estimated size and direction of the effect. p-values indicate how likely a result this large would be by chance under the study's assumptions.\n- Instrumental use means using a tool to get a practical job done, such as writing, planning, or research, as opposed to social or emotional use.\n- Open-ended responses are free-text answers, used here to describe what people did instead of using AI, such as asking other people for help.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "General-purpose artificial intelligence (AI) assistants are increasingly embedded in everyday life, transforming how people accomplish tasks and potentially reshaping how they interact with others. Prior research has focused on how using AI for explicitly social purposes affects users' psychological well-being and social lives. Yet such uses account for only a small portion of interactions with general-purpose AI assistants. Whether using AI for everyday, instrumental tasks affects users' psychological well-being and social behavior remains unclear. Here we investigate these effects through a longitudinal deactivation experiment with active ChatGPT users (N=625), in which participants were randomly assigned to abstain from using AI assistants for either fourteen days (treatment) or one day (control). Participants used AI predominantly for instrumental purposes, with 84.7% reporting productivity as their most frequent use case. Two weeks of deactivation significantly reduced loneliness relative to the control group ($β= -0.10$, $p=0.03$), with reductions persisting two weeks after participants resumed using AI ($β= -0.16$, $p=0.02$). Deactivation also significantly increased the number of people participants interacted with in person and the time they spent socializing over the intervention period. Open-ended responses indicate that during the deactivation period participants sought help from others for tasks they otherwise would have delegated to AI and redirected attention toward social interaction. Overall, our findings suggest that even when AI is used primarily to accomplish instrumental tasks, it may inadvertently reduce opportunities for social interaction and connection.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23825",
+   "title": "Learning Martial Arts Motion Skills for Animating Opponents in VR Sparring Games",
+   "url": "https://arxiv.org/abs/2611.23825v1",
+   "authors": [
+    "Jiqing Wen",
+    "Qixuan Shi",
+    "Robert LiKamWa",
+    "Pavan Turaga"
+   ],
+   "label": "arXiv:2611.23825v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A reinforcement-learning framework that pretrains a reusable repertoire of martial arts motion skills from motion-capture data and adapts them with task rewards to animate VR sparring opponents, evaluated by a user study and a Meta Quest prototype.",
+    "plain": "The paper looks at how to make computer-controlled fighters in virtual reality move like real martial artists, instead of relying only on hand-made animation clips. The authors recorded motion-capture data of Tang Soo Do techniques, learned a set of reusable movement skills from it, and then tuned those skills so the character can aim strikes at a target and dodge threats. Participants rated the resulting motions, and the team built a small VR sparring demo.",
+    "why": "Game opponents that move more varied and believable could reduce the labor of hand-authoring animations and make VR training or sparring feel more natural. The text reports a user study and a working prototype, but it does not give the study's results or sample size, so how strong the gains are cannot be judged from this text alone.",
+    "background": "- Character animation: making virtual figures move; games often use pre-recorded clips and state machines (rules for switching between clips).\n- Motion capture: recording a real person's movements with sensors or cameras to use as reference data.\n- Reinforcement learning (RL): training a program by rewarding behavior that achieves a goal; here a simulated character learns to move.\n- Adversarial style rewards: a learned judge that rewards movements looking like the captured human motion.\n- Task-specific rewards: extra scoring for goals such as hitting a target or evading an attack.\n- Meta Quest: a consumer VR headset; the prototype runs on it.\n- Tang Soo Do: a Korean martial art whose techniques informed the dataset.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Animating virtual opponents is an important yet challenging task in game development. In martial arts games, opponent motions must not only be physically plausible but also exhibit appropriate technique, timing, transitions, and target-directed intent. Traditional game animations often rely on handcrafted clips, state machine transitions, and procedural adjustments, which can be labor-intensive and may limit the behavioral diversity of non-player characters. This paper presents a martial arts motion skills learning framework for character animation in virtual sparring games. Inspired by Tang Soo Do, we collected a martial arts motion capture dataset containing isolated attacking and defending techniques, technique combinations and transitions, and contextual sparring variations. We first pretrained a reusable repertoire of martial arts motion skills from the captured data using reinforcement learning (RL) with adversarial style rewards, and then adapted these skills with task-specific rewards for target-directed striking and threat-aware evasion. We evaluated the motions generated by the learned policy through a user study, in which participants assessed their physical plausibility, smoothness, and martial arts form. To demonstrate their applicability to interactive gameplay, we developed a VR sparring prototype for Meta Quest headsets. The prototype combines policy-generated motion clips with lightweight state-based control to support interactive opponent behavior. Together, these findings support the feasibility of using a learned martial arts skill repertoire as a motion foundation for animating opponents in VR sparring games.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23147",
+   "title": "AI Companions for Young Adult Caregivers: Practical Advice, Emotional Depth, and the Limits of Metric Evaluation",
+   "url": "https://arxiv.org/abs/2611.23147v1",
+   "authors": [
+    "Trizal Garg",
+    "Xuelong Fu",
+    "Dhruv Shah",
+    "Jin Huang",
+    "Shrigopal Maheshwari",
+    "Atiksh Aggarwal",
+    "Yash Sinha",
+    "Dhruv Kumar",
+    "Siddharth Mehrotra"
+   ],
+   "label": "arXiv:2611.23147v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "This paper presents Carebot, a fine-tuned open-weight language model (Gemma 3-27B) for young adult caregivers aged 18 to 25, and reports a 90-participant user study showing that automated judge scores and user perceptions of its emotional versus practical tone diverged.",
+    "plain": "Many people aged 18 to 25 look after a sick family member, partner, or friend, and this paper asks whether an AI chat companion can help them. The authors built a version of an AI model tuned on conversations with these caregivers and a psychologist. Experts and an automated judge preferred it, but when 90 real caregivers tried it, they found it too practical and short on emotional support.",
+    "why": "It shows that a tool that scores well on automated tests can still feel wrong to the people it is meant to help, which matters for anyone evaluating AI support tools. The text does not show how well the findings would generalize beyond this one group and setup.",
+    "background": "- Young adult caregivers (YACs): people aged 18 to 25 looking after a chronically ill person.\n- Large language model (LLM): an AI system that generates text, here built on Gemma 3-27B, an openly released model.\n- Fine-tuning: further training a model on a specific dataset so it behaves in a targeted way.\n- Retrieval-augmented generation (RAG): the model looks up reference material before answering.\n- LLM judge: another AI model used to automatically compare and score responses.\n- Metric evaluation vs. user perception: automated scores versus what real people actually experience.\n- Well-being experts: the paper's human reviewers who first chose the fine-tuned version.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Young adult caregivers (YACs) are individuals aged 18 to 25 currently taking care of a family member, partner, or friend facing chronic illness. AI companions designed specifically for YACs remain underexplored in prior works. We present Carebot, it uses an open-weight LLM (Gemma 3-27B) as its base model, on which we compared fine-tuning, retrieval-augmented generation (RAG), and a combination of both. The fine-tuning was performed based on an existing dataset of conversations with YACs and a psychologist. Three well-being experts evaluated these configurations and preferred the fine-tuned model for the warmth of its responses and its actionable advice tailored to YACs. Based on their choice, we adopted the fine-tuned model as Carebot's final configuration and used it for all subsequent evaluations. An LLM judge preferred this Carebot's responses over the base model's in 85% of evaluated pairs. We then conducted a user study with 90 YACs, half of whom interacted with the base model and half with Carebot. The user study revealed a discrepancy between metric evaluation and actual user perception. Participants who used Carebot were more likely to characterize its replies as overly practical and brief, noting that it favored advice over emotional support. Conversely, participants who used the base model indicated that its responses were more emotionally oriented than practical. Although, fine-tuning made Carebot's replies more practical, but they were not emotionally supportive for users. We argue that support tools for YACs require situation-sensitive emotional depth and aligned evaluation frameworks to study their effectiveness.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22885",
+   "title": "The Whole Warps the Parts: Attentional Certainty Modulates Ensemble-Induced Bias in Visualizations",
+   "url": "https://arxiv.org/abs/2611.22885v1",
+   "authors": [
+    "Jennifer E. Corbett",
+    "Brian W. Anthony"
+   ],
+   "label": "arXiv:2611.22885v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A visualization-perception study showing that whether a viewer knows in advance which item to judge within an ensemble of marks flips the direction of ensemble-induced bias from repulsion to attraction, with identification precision falling as target cues are removed.",
+    "plain": "When people look at a crowd of similar shapes, such as a group of circles on a chart, the overall average size of the group can pull their judgment of one circle away from or toward that average. This paper asks why earlier studies found opposite effects, and reports that the answer seems to be how certain the viewer is about which item to attend to. When the target circle was named beforehand, the group tended to push judgments away from the average; when no target was specified, the bias reversed and pulled judgments toward it.",
+    "why": "Charts and dashboards routinely ask people to read both group summaries and single values, so knowing when context distorts individual readings matters for design. The authors also extend the idea from precision alone to how attention-directing choices set which bias a viewer is subject to; the text does not show how far this generalizes beyond the tested displays.",
+    "background": "- Ensemble statistics: summary properties (such as average size) computed across a set of similar objects.\n- Ensemble-induced bias: an individual item's perceived value being shifted toward or away from the group average.\n- Repulsion vs. attraction: repulsion means the item is judged further from the average; attraction means it is judged closer to it.\n- Identification vs. discrimination: identification asks for the item's size directly; discrimination asks which of two sizes is larger.\n- Pre-cue / post-cue / no-cue: whether the viewer is told which item to judge before or after seeing the group, or not told at all.\n- Attentional certainty: how sure the viewer is about where to direct attention.\n- Study 2 uses charts of startup valuations and precinct vote contributions as applied examples.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Data visualizations often require viewers to extract both ensemble statistics and individual values from collections of graphical marks. Yet individual items embedded within an ensemble can be systematically biased by that context. Prior studies have reported both repulsion away from and attraction toward ensemble statistics, but these effects have been observed across different conditions. We test whether task or attentional certainty explains these opposing forms of ensemble-induced bias. In Study 1, observers briefly viewed ensembles of differently sized circles and then judged the size of an individual circle embedded within the ensemble. Using a common stimulus generation framework, we tested both identification and discrimination when the target was specified before or after the ensemble, and an additional no-cue identification condition without a specified target. Under the shared cued conditions, effects were predominantly repulsive or near zero in both identification and discrimination. In contrast, eliminating target-specific information reversed ensemble-induced bias from repulsion to attraction. Identification precision also decreased systematically from pre-cue to post-cue to no-cue conditions. Study 2 replicated this cue-dependent pattern in graphical displays of startup valuations and precinct vote contributions. Our findings isolate attentional certainty as a key determinant of whether ensemble context repels or attracts individual-item representations, extending the design question beyond precision to how attention directing choices determine which bias the viewer will be operating under.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21073",
+   "title": "Semantic Validity vs. Graphical Arrangement in Visualization Grammars",
+   "url": "https://arxiv.org/abs/2611.21073v1",
+   "authors": [
+    "Cynthia A. Huang",
+    "Matthew Kay"
+   ],
+   "label": "arXiv:2611.21073v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proposes three contribution types (Semantic Validity Theories, Semantic Visualization Systems, and Graphical Arrangement Systems) to clarify the trade-off between enforcing statistical or data correctness and allowing graphical flexibility in Grammar of Graphics-inspired visualization tools.",
+    "plain": "Software tools for making charts often describe a picture in layers and parts, following a framework called the Grammar of Graphics. This paper argues that these tools differ a lot: some strictly check that a chart makes statistical sense, while others give the user free rein over how things look. The authors propose three categories to label such work so that researchers from data-visualization and statistics communities can compare and combine their efforts more easily.",
+    "why": "Charting software is used widely in science and business, and the choice between strict checking and creative freedom affects what users can do and how mistakes are caught. The text is a conceptual framing; it does not report measured outcomes, so its practical impact is uncertain and would depend on how the categories are adopted by the field.",
+    "background": "- Grammar of Graphics: Leland Wilkinson's idea that a chart can be built from separate parts (data, transformations, marks, coordinates), much like a sentence is built from grammar rules.\n- Visualization grammar: a software system that lets users specify charts declaratively, by describing what they want rather than drawing each element.\n- Statistical graphics vs. information visualization (InfoVis): two research communities; the first emphasizes statistical correctness, the second often emphasizes expressive design.\n- Semantic validity: whether a chart's transformations and encodings are correct for the data's meaning and the statistics involved.\n- Expressivity vs. validity: the more freely a user can arrange graphics, the more easily a meaningless chart can be produced.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Systems for modular, declarative and compositional specification for data visualizations, otherwise known as visualization grammars, often claim Wilkinson's Grammar of Graphics as motivation, inspiration or foundation. However, despite the shared intellectual lineage, visualization grammars can vary greatly in design scope and focus. In particular, systems that strongly adhere to domain-specific notions of correctness must trade-off expressivity for validity. This trade-off between semantics and graphical flexibility is currently under-articulated, leading to difficulty integrating various GoG-inspired visualization contributions, especially between InfoVis and Statistical Graphics. We propose three new types of visualization contributions to support such integration: Semantic Validity Theories, Semantic Visualization Systems and Graphical Arrangement Systems. The first two prioritize the adherence of data visualizations to correctness conditions, such as statistical or mathematical transformations and data semantics, whilst the third largely leave validity concerns to the user. We illustrate these new contribution types using examples from two recent grammar of graphics inspired papers, and show how they supported more nuanced notions of expressivity and usability in evaluation and design of visualization systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20190",
+   "title": "A Line is Not Just a Line: Visualizing Harmonious Complex Line Sets",
+   "url": "https://arxiv.org/abs/2611.20190v1",
+   "authors": [
+    "Francesca Samsel",
+    "Daniel F. Keefe",
+    "Gregory Abram"
+   ],
+   "label": "arXiv:2611.20190v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A portfolio of visual design studies that explores how varying the character of lines (quality, weight, and style) in 3D scientific visualizations, especially climate data, can improve clarity and add a handcrafted feel.",
+    "plain": "Computer pictures of science, such as 3D charts of climate data, often draw every line the same plain way, so the lines carry little meaning beyond showing a path or edge. This portfolio presents a set of design experiments and lessons learned showing how varying the look of lines, much as artists do by hand, can make such images clearer and more human. The text describes the designs and lessons but does not report measured results from user testing.",
+    "why": "Scientific visualizations are used to communicate issues like climate change, so clearer and more engaging pictures could matter for public understanding. The text does not show whether these designs actually improve comprehension, so its practical impact remains to be tested.",
+    "background": "- Visualization: turning data into images so patterns can be seen.\n- 3D computer graphics: software that renders objects and scenes in three dimensions.\n- Line quality: variations in a line's thickness, texture, edge, or style, which artists use to suggest form and mood.\n- Portfolio paper: a collection of design examples with reflections, rather than a controlled experiment.\n- Human-computer interaction: the field that studies how people design and use computer systems and images.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Line is a foundational building block in visual design for traditional media and computer graphics. Controlled variation in line quality can be used to define form, create abstractions, distinguish categories, control affect, and more. Yet, when it comes to computer graphics visualizations of science, particularly those built upon 3D computer graphics, too often a line is just a line. This portfolio presents a series of visual design studies and lessons learned that explore the diverse character of line that might be useful for 3D visualizations. The imagery begins to show how more sophisticated use of this powerful visual building block could increase the clarity of data visualizations while also bringing a human, handcrafted aesthetic that reinforces the people and impacts behind scientific climate data.",
    "source": "arxiv"
   }
  ]

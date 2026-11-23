@@ -1,7 +1,65 @@
 {
  "slug": "public-health",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.18.26368445",
+   "title": "Predicting county-level opioid overdose mortality in Ohio through multimodal data: A spatiotemporal study using toxicology and EMS indicators, 2020-2024",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.18.26368445v1",
+   "authors": [
+    "Kim, J.",
+    "Myers, J. V.",
+    "Marks, C.",
+    "Slover, B.",
+    "Whitley, P.",
+    "Chen, X.",
+    "Yin, C.",
+    "Zhang, P.",
+    "Thomas, N.",
+    "Huerta, T.",
+    "Dawson, E.",
+    "Fareed, N.",
+    "Fernandez, S."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.18.26368445 v1",
+   "primary_category": "public and global health",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A Bayesian spatiotemporal INLA model for Ohio counties, 2020–2024, that uses urine drug test fentanyl positivity and EMS naloxone events as real-time covariates to predict quarterly opioid overdose deaths, with a two-year training window and random-walk temporal and structured spatial effects.",
+    "plain": "Official overdose death counts often arrive months after the fact, which makes it hard for health officials to respond in time. This study builds a statistical model for Ohio's counties that uses faster signals, such as drug test results from patients and emergency medical calls where naloxone (an overdose reversal drug) was given, to estimate overdose deaths each quarter. The authors report that adding these faster signals improved predictions, especially during sudden spikes like the early 2020 COVID-19 surge, and that predictions were reliable in large urban counties but weaker in small ones with less data.",
+    "why": "Reporting lags are a real obstacle to timely response in the overdose crisis, so a method that gives near-real-time estimates could help local planning. The text does not show how well the approach would work in other states or in practice, so its usefulness beyond Ohio remains to be tested.",
+    "background": "- Opioid overdose deaths: the leading cause of overdose death in the US; fentanyl is a major driver.\n- Reporting lag: official death certificates and final counts take months to be finalized.\n- Urine drug test (UDT) positivity: the share of tested urine samples that show a drug, here fentanyl.\n- EMS naloxone events: emergency medical service calls where naloxone, a drug that reverses opioid overdoses, was given.\n- Bayesian hierarchical spatiotemporal model: a statistical model that borrows information across neighboring areas (space) and across time periods, and expresses uncertainty as probabilities.\n- INLA (Integrated Nested Laplace Approximation): a fast computational method for fitting such Bayesian models.\n- Rolling training window: the model is refit using the most recent years of data, moving forward over time, to test predictions.\n- Random walk and structured spatial effects: model components that assume each period (or area) is similar to the one before (or next to it).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Background The opioid crisis is the leading driver of overdose mortality in the United States. While overdose deaths have decreased in recent years, the reporting lag in official overdose deaths presents a hurdle in implementing public health interventions to combat the crisis. Objective To address these data-reporting delays and improve prediction during highly volatile periods, we developed a Bayesian hierarchical spatiotemporal model using real-time drug overdose data sources to predict quarterly overdose deaths across Ohio counties from 2020 to 2024. Methods We implemented a Bayesian spatiotemporal model using Integrated Nested Laplace Approximation (INLA). Rapid-reporting surveillance metrics, specifically urine drug test (UDT) positivity rates and Emergency Medical Services (EMS) naloxone administration events, were incorporated as fixed covariates. Models were constructed stepwise by first optimizing the spatiotemporal random effect structure and then sequentially adding fixed effects to minimize prediction error. A rolling training window was implemented and evaluated across different training window sizes. Results were assessed overall and stratified by county population size. Results We found that the optimal predictive model structure consists of a two-year training window, a random walk temporal effect, a structured spatial effect, and fentanyl UDT positivity and EMS naloxone events. Incorporating these UDT and EMS data significantly enhanced predictive performance, with the most pronounced accuracy gains occurring during the unprecedented overdose increase associated with the COVID-19 pandemic in the second quarter of 2020. While predictive performance was highly robust in large, urban counties, predictive capability in smaller counties was limited by low data availability. Conclusion Our spatiotemporal prediction model successfully bridges the administrative reporting lags and offers near-real-time quarterly overdose prediction. The study also showed that integration of real-time data sources is especially beneficial for capturing sudden, volatile spikes in overdose deaths.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.20.26368008",
+   "title": "Unmet needs of Polish patients with cystic fibrosis seen through the lens of crowdfunding",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.20.26368008v1",
+   "authors": [
+    "Kaminski, M.",
+    "Nowak, J. K.",
+    "Karp, Z.",
+    "Borys, A.",
+    "Walkowiak, J."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.20.26368008 v1",
+   "primary_category": "public and global health",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A descriptive analysis of 96 Polish crowdfunding campaigns (out of 2,656 individual medical campaigns, 2009–2017) for people with cystic fibrosis, examining campaign goals, outcomes, and factors associated with reaching the funding target.",
+    "plain": "People with cystic fibrosis, a inherited lung and digestive disease, in Poland sometimes raise money through public online fundraising pages to pay for things the national health system does not cover. This study looked at 96 such campaigns from a major Polish crowdfunding site between 2009 and 2017. About two-thirds reached their goal, and the funds mostly went to treatment costs, medical equipment, and some non-medical needs such as entertainment.",
+    "why": "The study suggests that crowdfunding records can show gaps in what public healthcare covers for a specific patient group. The authors report that smaller funding targets were linked to success, while the links for city residence and inhaler purchases were only slightly above the threshold of statistical significance, so these should be treated as tentative.",
+    "background": "- Cystic fibrosis (CF): an inherited condition that causes thick mucus in the lungs and digestion, requiring lifelong treatment.\n- Medical crowdfunding: people raise money from the public online for health costs, often because public insurance does not pay for them.\n- Unmet needs: health-related costs or services that patients must pay for themselves or go without.\n- Statistical significance: a rough test of whether a pattern is likely more than chance; \"slightly above the threshold\" means the evidence is weak.\n- Descriptive study: it reports what happened in the data and does not test cause and effect.\n- Campaigns come from one website, so the results may not represent all Polish patients or all fundraising.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Medical crowdfunding allows for funding for needs not covered by the local healthcare system. We aimed to characterize the crowdfunding campaigns for the needs of Polish individuals with cystic fibrosis (CF). In our study, we analyzed data from a leading medical crowdfunding webpage in Poland, focusing on campaigns for individual medical needs initiated between 2009 and 2017. We characterized the features of individuals with CF and the declared goals for which the funds from the online campaigns were intended. Of all 2,656 campaigns, 96 (3.6%) were related to individuals with CF. Approximately two-thirds of these campaigns reached their target amount. Individuals with CF primarily raised funds to cover treatment costs, medical equipment, and entertainment. The successful collection had a significantly lower financial target than unsuccessful campaigns. If the receivers were living in a city or fundraising to gather funds for an inhaler, these were also associated with the campaign's success. However, these associations were slightly above the threshold of statistical significance. Crowdfunding campaigns can be an effective funding source for the needs of patients with CF that are not covered by the public healthcare system. Analyzing crowdfunding efforts for specific patient groups can help reveal their unmet health needs.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.16.26368245",
    "title": "Does educational attainment change the association between meat intake and obesity? A case-study from urban Brazil.",
@@ -13,14 +71,14 @@
    ],
    "label": "medRxiv doi:10.64898/2026.11.16.26368245 v1",
    "primary_category": "health economics",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Brazil is one of the higher meat producer and consumer worldwide.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A cross-sectional study of household surveys from 27 Brazilian state capitals (2018–2023) examining whether education level modifies the association between previous-day meat intake and BMI/obesity, with meat-substitution patterns as a possible explanation.",
+    "plain": "Brazil eats and produces a lot of meat, and some policymakers want to cut meat production and consumption for climate and health reasons. This study asks whether such cuts would help or hurt health across different groups, using yearly household surveys from Brazil's capital cities. The authors report that among better-educated people, not eating meat the day before was linked to lower body weight and obesity risk, while among less-educated people, eating meat was linked to lower weight gain, with meat more often replaced by sweets and ready-to-eat meals in that group.",
+    "why": "It bears on whether market or dietary regulation aimed at health and climate has uneven effects across income and education groups. The text is a single observational study, so its associations do not establish that meat causes lower obesity, and the authors' policy conclusion is a suggestion rather than a tested result.",
+    "background": "- Cross-sectional survey: data collected from many households at one point in each year, showing associations rather than cause and effect.\n- Body mass index (BMI): a weight-to-height measure used to classify obesity.\n- Multivariate estimates: statistical models that adjust for other factors (such as age or income) at the same time.\n- Effect modification: when the link between two things (meat intake and obesity) differs depending on a third factor (education).\n- Meat substitution: what people eat instead of meat, here sweets and ready-to-eat meals.\n- Ultra-processed/ready-to-eat foods: packaged, convenience foods that are often high in fat, sugar, or salt.\n- Middle-income country: a nation with moderate average income but large gaps between rich and poor.",
+    "difficulty": "intermediate",
+    "ai": true
    },
    "abstract": "Brazil is one of the higher meat producer and consumer worldwide. Recently, the sustainability of the meat market is questioned on regard to its high contribution to climate change and public health concerns such as obesity. Hence, further public policies are likely to regulate the meat market and simultaneously reduce meat production and consumption. However, in the context of middle-income countries marked by strong inequalities such as Brazil, the nutritional effect of such market regulation is uncertain. Indeed, one can hypothesize that meat intake plays a protective role against poor nutritious food intake and weight gain among underprivileged settings. To test this hypothesis, this study analyzes household cross-sectional yearly surveys collected from 2018 to 2023 in the 27 Brazilian State capitals. As expected, multivariate estimates show education-specific associations between meat intake and obesity. Among the most educated individuals, declaring not consuming any meat the previous day before the survey is associated with lower body mass index (BMI) and obesity risk, as observed in previous epidemiological studies. By contrast, declaring consuming meat the previous day before the survey appears to be protective against weight gain among poorly educated individuals. We also observe education-specific meat substitution behaviors that help explain these findings. In facts, meat is more likely to be replaced by sweets and ready-to-eat meals among poorly educated individuals compared to more educated ones. We conclude that, everything being equals, meat market regulation policy might worsen public health concerns for under-privileged individuals. Important investments in the education sector and anti-poverty programs are thus needed to limit the raise of nutritional inequalities.",
    "source": "medrxiv"
@@ -36,16 +94,110 @@
    ],
    "label": "medRxiv doi:10.64898/2026.11.17.26368197 v1",
    "primary_category": "public and global health",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Background: Tuberculosis Diagnosis delays among tuberculosis patients can worsen infection transmission, disease severity, and mortality risk.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "An unmatched case-control study of 210 tuberculosis patients in Metekel Zone, Northwest Ethiopia (2023 data collection), identifying factors associated with delayed TB diagnosis: longer travel distance, rural residence, prior visits to holy water or traditional medicine, and poor TB knowledge.",
+    "plain": "Tuberculosis (TB) is a lung infection that spreads through the air, and it is harder to control when people are diagnosed late. This study looked at 210 TB patients at public clinics in one zone of Ethiopia to find out what made diagnosis take longer. It found that living in a rural area, travelling more than 10 km to a health facility, going first to holy water or traditional healers, and having poor knowledge about TB were each linked with a longer delay.",
+    "why": "Diagnosis delay keeps TB spreading and raises the risk of severe illness and death, so knowing which barriers matter can guide local services. The study is a single small local survey, and its findings are associations rather than proof of cause, so they should be read as pointers for local action rather than settled results.",
+    "background": "- Tuberculosis (TB): a bacterial infection, mainly of the lungs, that spreads through coughing and breathing.\n- Diagnosis delay: time between first symptoms and the start of proper TB diagnosis; the paper's exact cut-off for \"delay\" is not stated in the text provided.\n- Case-control study: compares people with an outcome (cases, here delayed diagnosis) with people without it (controls) and looks back at what differed between the groups.\n- Unmatched: cases and controls were chosen without pairing them on specific traits.\n- Logistic regression: a statistical method that estimates how strongly each factor is linked to the outcome; \"AOR\" (adjusted odds ratio) above 1 means higher odds of delay after accounting for other factors; the 95% CI gives the range of uncertainty.\n- Metekel Zone: an administrative area in Northwest Ethiopia.",
+    "difficulty": "intermediate",
+    "ai": true
    },
    "abstract": "Background: Tuberculosis Diagnosis delays among tuberculosis patients can worsen infection transmission, disease severity, and mortality risk. Identifying factors influencing delays is crucial due to its persistence across healthcare levels and communities. The study identify determinants of tuberculosis diagnosis delay among patients attending public health facility of Metekel zone, Northwest Ethiopia:2023 Methods: An unmatched case-control study was conducted in Metekel zone health facilities from March to April 2023, involving 210 tuberculosis patients (103 cases, 107 controls) selected through systematic sampling. Data collected through structured questionnaires and STATA used for analysis, including bi-variable and multi-variable logistic regressions. Variables with p-value < 0.25 in bi-variable analysis were included in the final model after checking model fitness and multicollinearity. Results: Overall, 210 tuberculosis patients were included in the study. The following independent variables were associated diagnosis delay of tuberculosis: TB patients who travel greater than 10km (AOR: 2.941, (95 % CI: 1.509, 5.731); TB patients who are living at rural area (AOR: 4.135, 95 % CI :1.759, 9.723); TB patients who prior visit in holly-water and traditional medicine [AOR: 2.978, (95% CI: 1.292, 6.863); poor knowledge about TB [AOR: 2.826, (95% CI: 1.404, 5.687)]. Conclusion: Tuberculosis diagnosis delay is a major challenge to eliminate tuberculosis by breaking the chain of transmission. This study can be attributed to factors including place of residence being rural, poor knowledge about tuberculosis, non-health facility initial actions upon symptom onset, and far distance to health institutions. Recognizing these determinants helps in identifying and addressing barriers inhibiting early diagnosis, potentially improving healthcare access and promoting more timely diagnosis and treatment for tuberculosis patients.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.15.26368139",
+   "title": "Public Acceptability of Self-Payment for Community Pharmacists' Services: A National Online Survey",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26368139v1",
+   "authors": [
+    "Pesaturo, K.",
+    "Pezzuto, J.-H.",
+    "Mattison, M.",
+    "Pezzuto, J. M."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.15.26368139 v1",
+   "primary_category": "health economics",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A 2026 non-probability online survey of 1,069 U.S. adults tests whether the public would accept out-of-pocket fees for 27 community pharmacist services, with a randomized comparison of a stated $20 price versus an unspecified \"any amount\" fee.",
+    "plain": "U.S. community pharmacies have traditionally earned most of their income from selling products, and many pharmacist services are free to patients. This study asked over a thousand American adults whether they would find it acceptable to pay out of pocket for various pharmacist services. Acceptance was higher for some services, such as osteoporosis screening, and much lower for others, such as antibiotic-use consultations.",
+    "why": "Pharmacies face thin profit margins, so whether patients will pay for services is a practical question for how these businesses might stay open. The findings are based on a non-probability online sample, so they show stated attitudes in one survey rather than measured willingness to pay in real life.",
+    "background": "- Community pharmacy: a retail drugstore where pharmacists dispense medicines and provide health services.\n- Fee-for-service: a model where each service is paid for separately, rather than through product sales.\n- Out-of-pocket payment: money a patient pays directly, not through insurance.\n- Non-probability sampling: participants are recruited, not randomly selected from the whole population, so results may not represent all U.S. adults exactly. The sample was quota-matched to population characteristics.\n- Between-subjects randomized framing: different groups of respondents saw different versions of the fee question, so their answers can be compared fairly.\n- Stated-price vs. any-payment condition: one group was told a specific $20 fee; the other was asked about paying \"any amount.\"\n- Trust constructs: survey measures of how much respondents trust pharmacists.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "BackgroundThe traditional business model for sustaining United States (U.S.) community pharmacies has relied on income generated by product sales. A fee-for-service model could help alleviate insufficient profit by monetizing conventionally free pharmacy services if patients are willing to pay out-of-pocket. ObjectivesThis study evaluated public acceptability of out-of-pocket payment for community pharmacist-provided services, variation in payment acceptability across services, and assessed whether payment acceptability differed by respondent characteristics and trust constructs. MethodsThis study represents a cross-sectional online survey of U.S. adults conducted during spring 2026 using a non-probability sampling approach. Primary outcomes were binary stated payment-acceptability judgments for a variety of pharmacist and health services. The survey used a between-subjects randomized payment-framing design, where participants were assigned to either a stated-price condition or an any-payment condition. Secondary outcomes included trust designations and participant demographic characteristics. ResultsA total of 1069 respondents completed the survey. A $20 fee was viewed more favorably than a general \"any amount of money\" fee. In the $20 stated-price condition, agreement was highest for osteoporosis screening (75.8%) and travel-related vaccines (69.0%), and lowest for antibiotic use consultation (23.9%) and wound care (32.1%). Older respondents and Hispanic respondents were less likely to view payment as acceptable, whereas men and respondents with greater pharmacist trust were more likely to view payment as acceptable. ConclusionAlthough patients historically have received many community pharmacy services at no cost, this study demonstrates that the concept of self-payment ifor certain services is considered acceptable, especially for services not typically provided. Key pointsO_LIIn a quota-matched survey of 1,069 U.S. adults, this study evaluated public acceptability of direct out-of-pocket payment for 27 community pharmacist-provided clinical services. C_LIO_LIPublic acceptability of a $20 out-of-pocket payment varied substantially by service, ranging from 23.9% for antibiotic-use consultation to 75.8% for osteoporosis screening. Higher acceptability was observed for discrete or specialized services, including travel-related vaccines and pharmacogenomic result review. C_LIO_LIPayment acceptability was associated with respondent characteristics and trust in pharmacists. Older respondents and Hispanic respondents were less likely to view payment as acceptable, whereas men and respondents with greater pharmacist trust were more likely to view payment as acceptable. C_LI",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.13.26367926",
+   "title": "Determinants of prices of commercial electric breast pumps sold in Germany: a cross-sectional analysis",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.13.26367926v1",
+   "authors": [
+    "Gencel-Augusto, J.",
+    "Okanmelu, E.",
+    "Strobl, F.",
+    "Ziebart, M.",
+    "Theurich, M."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.13.26367926 v1",
+   "primary_category": "health economics",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A cross-sectional survey of 282 commercial electric breast pump models from 108 brands sold on German online marketplaces (March 2025 to May 2026) that examines which pump features are associated with higher prices.",
+    "plain": "Breast pumps are covered by German health insurance only when a doctor prescribes one for a medical reason, so many parents returning to work must buy one themselves. The authors looked at pumps sold on major German online shopping sites and recorded their prices and features. They found a wide price range, from about 20 to about 660 euros, with a median near 73 euros.",
+    "why": "Out-of-pocket costs for breast pumps may be a barrier to continuing breastfeeding, which links to health equity and consumer safety. The paper is a descriptive price survey, so it shows associations rather than causes, and its findings are most relevant to German policy on reimbursement.",
+    "background": "- Breast pumps: devices that extract milk from the breast; electric ones run on power from mains or batteries.\n- Statutory health insurance: Germany's public insurance; it covers pumps only with a medical indication and prescription.\n- Flange: the funnel-shaped part that fits over the nipple and areola; sizes vary, and a poor fit can reduce comfort and milk output.\n- Cross-sectional study: a snapshot of many items at one point in time, which can show associations but not cause and effect.\n- Interquartile range (IQR): the spread of the middle half of prices; the median is the middle value.\n- Health technology assessment: a systematic review of whether a medical device is safe, effective and worth paying for.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "In Germany, statutory health insurance covers the rental or purchase of breast pumps when a medical indication is present for the mother or infant, and a physician has issued a prescription. However, parents must pay out of pocket for commercially available breast pumps for returning to work or personal circumstances. High indirect costs for continuation of breastfeeding and direct costs for breast pumps and related equipment may pose substantial barriers to breastfeeding families, an issue relevant for health equity. To our knowledge, no studies have assessed the direct financial costs associated with the purchase of commercially available breast pumps. In this cross-sectional study, we examined digital marketplaces in Germany for commercial electric breast pumps between March 2025 and May 2026, across major online platforms. Our objective was to explore pump features that predict price. We identified 282 commercial electric pump models from 108 brands. Basic information was unavailable for half of surveyed breast pump brands. The median price for surveyed commercial electric pumps was {euro}72.70 (IQR: {euro}82.70), with costs ranging widely from {euro}19.99 to {euro}659.57. Prices varied by marketplace, manufacturer location, accessories, pump system type, power source, battery capacity, flange sizes, availability of instruction manuals, and \"single user\" claims; predicting significantly higher costs. Half of pumps surveyed offered only one flange size, signaling additional expenses for mothers needing alternative sizes. These findings highlight important considerations for maternal health and consumer safety. Health technology assessments and a review of current health policy on reimbursement for commercial electric breast pumps is needed. Key messagesO_LITo our knowledge, there have been no published empirical studies on direct costs for commercial electric breast pumps C_LIO_LIBasic information was unavailable for half of the surveyed breast pump brands on digital marketplaces in Germany C_LIO_LIThe median cost for a commercial electric breast pump in our survey was {euro}72,70 (IQR: {euro}82,70), with a very wide price range ({euro}19,99 - {euro}659,57) C_LIO_LIPrices varied significantly by marketplace, manufacturer location, accessories, pump system type, power source, battery capacity, number of flange sizes, availability of instruction manuals, and \"single user\" claims, which all positively correlated with prices. C_LIO_LIThere is a sparsity of flange sizes sold outside of the mid-range (24 mm), signaling ancillary costs for flanges with appropriate fit C_LIO_LIHealth technology assessments for commercial electric breast pumps and a review of health policy related to breast pump reimbursement in Germany are warranted C_LI",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.12.26367972",
+   "title": "A multicountry trial-based and model-based economic evaluation of youth mental health interventions: a protocol for assessing the short- and long-term societal impacts of YOUTHreach interventions",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.12.26367972v1",
+   "authors": [
+    "Yaylali, A.",
+    "Maas, L.",
+    "McDaid, D.",
+    "Evers, S.",
+    "Park, A.-L.",
+    "van Amelsvoort, T.",
+    "Leijdesdorff, S.",
+    "Broome, M. R.",
+    "Reininghaus, U.",
+    "Lekadir, K.",
+    "Bechdolf, A.",
+    "Diaz-Caneja, C. M.",
+    "de Girolamo, G.",
+    "Oidermaa, A.-K.",
+    "Bulgheroni, M.",
+    "Donohoe, G.",
+    "McGorry, P.",
+    "Alvarez-Jimenez, M.",
+    "Popma, A.",
+    "Griffiths, S. L.",
+    "Schick, A.",
+    "Boehnke, J. R.",
+    "Struijs, S.",
+    "van Mastrigt, G. A. P. G.",
+    "YOUTHreach Consortium,"
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.12.26367972 v1",
+   "primary_category": "health economics",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A study protocol describing harmonised trial-based and model-based economic evaluations of three youth mental health interventions (YEAH, SELFIE, MOST) against care as usual, with a shared multicountry resource-use measurement instrument.",
+    "plain": "This is a plan for measuring whether three programmes designed to help young people with mental health problems are good value for money, looking at costs well beyond the healthcare system, such as missed school, lost work, and unpaid family care. The researchers describe how they will follow participants for 12 months and then project costs and outcomes out to 10 years, using data pooled across several countries. The text is a protocol, so it reports no results.",
+    "why": "Youth mental health costs society well beyond clinics, so an evaluation that counts education, productivity and informal care over longer periods may better show what early support is worth. The shared measurement tool could also help future multicountry studies compare results on a like-for-like basis.",
+    "background": "- Cost-effectiveness analysis compares the costs of an intervention with the health gains it produces, often expressed per unit of quality-adjusted life.\n- Trial-based evaluation uses costs and outcomes collected alongside a randomised or controlled trial; model-based evaluation uses mathematical projections to estimate longer-term effects.\n- \"Care as usual\" is the standard support people would receive without the new intervention.\n- Societal perspective counts costs to the whole of society, not just the health budget, including lost productivity and unpaid care by family members.\n- A resource use measurement instrument is a questionnaire used to record the services and time people use.\n- A reference country is a chosen country whose prices and methods are used as the base case so that pooled multicountry results are consistent.\n- Health technology assessment is the process bodies use to decide whether to fund a health intervention.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "BackgroundMental health problems among young people impose a burden extending beyond healthcare, including impaired health-related quality of life and high societal costs from disrupted education, lost productivity, and informal care. Youth-friendly interventions may reduce this burden by providing early support and preventing escalation. However, their broader societal economic impact remains insufficiently explored. Evaluations incorporating consequences beyond healthcare and longer time horizons can better capture their societal value. MethodsThis protocol outlines harmonised trial-based and model-based economic evaluations of YEAH, SELFIE, and MOST, three mental health interventions for young people aged 12-25. Each intervention will be compared separately against care as usual over 12 months, with longer-term costs and outcomes projected at 2, 3, 5, and 10 years. Multicountry participant data will be pooled, using a prespecified reference country for base-case costing and methodological guidance. A harmonised, context-specific Resource Use Measurement instrument was developed to capture healthcare and broader societal resource use consistently across participating countries and to support evaluation of the economic impact of youth mental health interventions from a multicountry perspective. Uncertainty will be assessed through sensitivity and scenario analyses. DiscussionThe proposed harmonised methodological framework will support consistent estimation of the short- and long-term cost-effectiveness of three youth-friendly mental health interventions. It will enable comparison of intervention-specific results generated using different trial designs and support consistent estimation of costs and outcomes across the three interventions. The context-specific Resource Use Measurement instrument will further support consistent measurement of healthcare utilisation, productivity losses, and informal care across the economic evaluations. ConclusionBy integrating trial-based evidence with long-term modelling and standardised measurement of resource use, this study aims to generate robust, policy-relevant evidence to inform health technology assessment and decision-making for youth mental health interventions. The context-specific Resource Use Measurement instrument is also intended to support future economic evaluations of mental health interventions conducted across multiple countries.",
    "source": "medrxiv"
   }
  ]

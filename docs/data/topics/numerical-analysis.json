@@ -1,6 +1,6 @@
 {
  "slug": "numerical-analysis",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25515",
@@ -11,12 +11,12 @@
    ],
    "label": "arXiv:2611.25515v1",
    "primary_category": "math.NA",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper derives stability estimates for PINN losses with and without integral constraints on several PDEs, showing that in certain parameter regimes the standard loss gives only weak control over some error components while the integral constraints restore uniform control, and supports this with numerical experiments.",
-    "plain": "Physics-informed neural networks learn approximate solutions to equations describing physical systems by penalizing mistakes in the equation during training. Some researchers have found that adding extra conditions obtained by summing or integrating the equation over a region helps accuracy, but the reason was not well understood. The authors compare error bounds with and without these integral conditions for several equations, and report that in some parameter settings the usual training loss barely controls certain kinds of error, while the integral conditions restore control; their experiments match this, though the abstract does not give details of the specific equations or error sizes.",
-    "why": "It offers a mathematical explanation for a practical training trick that people have used in scientific machine learning, which helps decide when the trick is worth adding. Whether the reasoning carries over to other equations or network designs is not stated in the abstract and would need the full paper to judge.",
-    "background": "['Partial differential equation (PDE): an equation relating a function to its rates of change in several variables, used to model heat, waves, fluid flow and similar physics.', 'Neural network as a function approximator: a model with adjustable weights that is trained to fit data or satisfy equations.', 'Physics-informed neural network (PINN): a network trained by minimizing the residual of the PDE (and boundary/initial conditions) at sample points, so the loss measures how well the physics is satisfied.', 'Loss function: the single number the training algorithm tries to make small.', 'Integral constraint: a condition obtained by integrating the governing equation over a domain, added as an extra term in the loss.', 'Stability estimate: a mathematical bound showing how much the output error can grow relative to the size of the loss, indicating how well the loss controls the error.']",
+    "one_liner": "The paper derives stability estimates for physics-informed neural network (PINN) losses with and without integral constraints for several PDEs, showing when integral constraints restore uniform control over certain error components, and checks this with numerical experiments.",
+    "plain": "Neural networks can be trained to approximate solutions of physics equations, such as heat or fluid flow equations, by penalizing them when they break those equations. Some researchers have found that also adding rules obtained by summing the equation over a region improves accuracy, but the reason was not well understood. This paper works out mathematically when that extra rule helps and shows that experiments agree with the explanation.",
+    "why": "It gives a theoretical reason for a practical training trick that has been reported to help in several applications, so users can predict when it is worth the effort. The text does not say how broadly the results extend beyond the PDEs studied, so that wider reach is uncertain.",
+    "background": "- PDE (partial differential equation): an equation relating a function to its rates of change in several variables, used to model physical processes like heat or flow.\n- PINN (physics-informed neural network): a neural network trained with a loss function that penalizes violations of the governing equation.\n- Loss function: a score measuring how wrong the network is; training pushes it down.\n- Integral constraint: an extra condition obtained by integrating (summing over space or time) the governing equation, added to the loss.\n- Stability estimate: a mathematical bound showing that small errors in the loss cannot produce arbitrarily large errors in the solution.\n- Error components: separate parts of the total error; the paper argues the standard loss controls some of these weakly.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -36,16 +36,151 @@
    ],
    "label": "arXiv:2611.25313v1",
    "primary_category": "math.NA",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper builds structure-preserving variational time-stepping schemes for time-dependent Lagrangian systems evolving on Lie groups (such as rotations in SO(3)), proves their symplectic and momentum-preserving properties, gives a second-order error bound for a midpoint-Cayley variant, and analyzes long-time near-conservation via backward error analysis with an extended-phase-space formulation.",
-    "plain": "Many physical systems, such as spinning bodies or networks of orientations, have states that are rotations rather than ordinary numbers, and their laws can change with time. Computer simulations of these systems tend to drift away from the true behavior over long runs, so the authors design step-by-step computational rules that are derived from the system's variational (least-action) principle so they keep key physical quantities in line. They show the schemes preserve geometric structure and momentum, prove the method is second-order accurate, and argue that energy stays nearly constant over exponentially long times under stated assumptions. Numerical tests on a rotating rigid body and a rotation network are reported to match these predictions.",
-    "why": "Geometry-preserving integrators matter for long simulations in robotics, spacecraft attitude control, and multi-agent synchronization, where drift can accumulate into wrong answers. The paper's combination of time-dependence, Lie-group structure, and consensus stability may interest researchers in geometric numerical integration and control, though the practical reach beyond the stated assumptions is not established by the abstract.",
-    "background": "['Lagrangian mechanics: motion obtained from a least-action principle and the Euler-Lagrange equations.', 'Lie groups: smooth groups of transformations such as rotations SO(3); their tangent and cotangent spaces underlie the dynamics.', 'Symplectic maps: transformations that preserve the geometric area structure of phase space, which in turn controls long-run energy behavior.', \"Noether's theorem: each continuous symmetry of the Lagrangian gives a conserved quantity, such as momentum.\", 'Variational integrators: discrete-time schemes obtained by discretizing the action rather than the equations of motion.', 'Backward error analysis: interpreting a numerical method as the exact flow of a slightly modified equation to explain long-time accuracy.', 'Consensus dynamics: networked agents whose states are driven toward a common value, here rotations.']",
+    "one_liner": "The paper builds fixed-step variational integrators for time-dependent Lagrangian systems on Lie groups, analyzes their reduced dynamics, backward error, and long-time behavior, and proves stability and momentum-preservation results for an attitude consensus network on SO(3)^N.",
+    "plain": "The paper studies how to simulate on a computer the motion of rotating or orientation-like systems whose governing rules change over time, such as a spinning body or a group of coupled orientations. The authors design step-by-step numerical schemes built from a \"discrete action\" principle, which is meant to keep the simulation faithful to the underlying physics. They report that the schemes preserve key geometric structures, that the midpoint-Cayley version is second-order accurate, and that an extended energy quantity is nearly conserved over exponentially long times under stated assumptions.",
+    "why": "Structure-preserving integrators matter when simulations must run for long times without drifting away from physical laws, and the paper links this to attitude synchronization among coupled rotating bodies. The text does not show how widely these methods would be adopted, so their practical reach beyond the stated examples is uncertain.",
+    "background": "- Lagrangian mechanics: motion is derived from an action (integral of kinetic minus potential energy) whose stationary paths give the equations of motion.\n- Lie group: a smooth space with a compatible group multiplication, such as rotations SO(3); a Lie group is used to describe orientations.\n- Variational integrator: a discrete-time scheme obtained by applying the action principle to a discretized action, which tends to inherit conservation laws.\n- Symplectic map and Hamiltonian/momentum: geometric structure of phase space that conserved quantities (energy, momentum) respect.\n- Noether's theorem: each continuous symmetry gives a conserved quantity.\n- Backward error analysis: interprets a numerical scheme as the exact flow of a nearby \"modified\" system, explaining long-time accuracy.\n- Consensus/synchronization: coupled agents reaching a common state; \"local asymptotic stability\" means nearby states converge back to that state.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "We develop fixed-step variational integrators for time-dependent Lagrangian systems on Lie groups, derive their reduced dynamics, and analyze their long-time behavior by backward error analysis. We derive the continuous Euler-Lagrange equations, energy balance, and Noether conservation laws, and construct time-indexed discrete Lagrangians using retractions, with the midpoint-Cayley scheme treated explicitly. On their regularity domains, the resulting phase-space maps are symplectic. For left-invariant discrete Lagrangians, they reduce to Lie-Poisson maps that preserve coadjoint orbits and, when $G$ is connected, every Casimir function. A variational error analysis establishes second-order accuracy of the midpoint-Cayley method. We also construct an exactly symplectic, projectable extension on $T^*(\\mathbb R\\times G)$ whose formal modified Hamiltonian is affine in the momentum conjugate to time and admits symmetry reduction. Under uniform analyticity, coefficient bounds, and domain-containment assumptions, optimal truncation yields exponentially accurate interpolation and near-conservation of the modified extended Hamiltonian over exponentially long intervals. For a connected attitude network on $SO(3)^N$ with damping and uniformly positive, non-increasing coupling weights, we prove local asymptotic stability of the static consensus set for the continuous dynamics and exact preservation of total spatial momentum by the discrete scheme. Numerical experiments on the network and on a time-dependent rigid body on $SO(3)$ illustrate second-order convergence and the extended energy balance.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24355",
+   "title": "Stable admissible neural classes and convergent physics-informed neural networks",
+   "url": "https://arxiv.org/abs/2611.24355v1",
+   "authors": [
+    "Leevan Ling",
+    "Shu Ma",
+    "Yizhong Sun"
+   ],
+   "label": "arXiv:2611.24355v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper extends the convergence theory of least-squares kernel collocation (Kansa) to neural trial classes for linear elliptic Dirichlet problems, establishing conditions under which tanh-MLP-based PINNs provably converge.",
+    "plain": "Neural-network methods such as PINNs solve equations describing physical systems by training a network to make the equation's residual small at sample points. This paper asks when that kind of training actually guarantees the network is close to the true solution, and it answers using tools from elliptic regularity (how smooth solutions of steady-state equations behave), discrete stability and consistency. It proves convergence for a constrained version using tanh networks, and gives a conditional result for the standard unconstrained PINN form under joint network and sampling refinement.",
+    "why": "Practitioners use PINNs widely but often without guarantees that a small training loss means a small solution error. The paper's framework may help clarify when such methods can be trusted, though the text alone does not show how well the conditions hold in practice.",
+    "background": "- PDE (partial differential equation): an equation relating a function to its rates of change in space, used to model physical systems such as heat or elasticity.\n- Elliptic Dirichlet problem: a steady-state PDE with prescribed values on the boundary of the domain.\n- Residual: how far a candidate solution is from satisfying the equation, evaluated at sample points.\n- Least-squares loss: a training objective that sums squared residuals over points.\n- Kansa collocation: a classical meshfree method that uses kernel functions and point-wise residuals, with an established convergence theory.\n- Trial class: the family of functions (here neural networks) the approximate solution is searched within.\n- Tanh-MLP: a multilayer perceptron, a standard feedforward neural network, using the tanh activation function.\n- Stability and consistency: the two properties needed so that small discrete error implies small true error.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Residual-based methods, including physics-informed neural networks (PINNs), physics-informed Kolmogorov--Arnold networks, and some physics-informed neural operator architectures, approximate PDE solutions by minimizing a discrete least-squares loss formed from the PDE and boundary residuals over a prescribed trial class. This structure is shared by classical least-squares Kansa collocation, whose kernel trial spaces admit an established convergence theory. For neural trial classes, approximation power alone does not ensure that discrete residuals control the continuous solution error. For linear elliptic Dirichlet problems, we extend the kernel-based collocation framework to neural trial classes through elliptic regularity, discrete stability, and consistency. Elliptic regularity supplies the PDE estimate relating solution error to continuous residuals. Discrete stability identifies admissible trial subclasses in which continuous residuals are controlled by a computable discrete loss. This step also quantifies the required number of collocation points. Furthermore, the stability analysis naturally demands a scale-dependent, physics-balanced boundary weight. For the constrained problem, consistency requires accurate comparison functions within the same admissible subclass, a requirement not supplied by neural approximation estimates alone. Specializing to multilayer perceptrons with tanh activations (tanh-MLPs), we construct admissible comparison networks and establish convergence for the constrained residual minimization problem. We further obtain conditional convergence of unconstrained physics-balanced PINNs based on tanh-MLPs under joint network and sampling refinement.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23901",
+   "title": "On global error estimates of a local discontinuous Galerkin method of the Boussinesq system of equations",
+   "url": "https://arxiv.org/abs/2611.23901v1",
+   "authors": [
+    "Debendra K. Swain",
+    "Saumya Bajpai",
+    "Deepjyoti Goswami"
+   ],
+   "label": "arXiv:2611.23901v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper analyzes a local discontinuous Galerkin finite element scheme with upwind treatment of convective terms for the Boussinesq system, proving optimal a priori error estimates (including time-uniform bounds under smallness assumptions) for velocity, pressure and temperature, plus fully discrete backward Euler estimates.",
+    "plain": "The paper studies a numerical method for simulating the Boussinesq equations, a standard model of fluid flow where temperature differences drive motion, such as warm air rising in a room. The authors build a computational scheme that splits the domain into pieces and allows solutions to jump across their edges, then prove how close its approximate velocity, pressure and temperature stay to the true values. They also add a time-stepping version and report numerical experiments that the authors say support the theory.",
+    "why": "Mathematical guarantees on accuracy tell engineers and scientists how far to trust simulations of heat-driven flows, such as weather or industrial convection models. The text does not indicate how the results compare with existing methods beyond the stated analysis, so the practical reach is best judged by specialists.",
+    "background": "- Boussinesq system: a set of partial differential equations coupling fluid velocity, pressure and temperature, used for buoyancy-driven flow.\n- Finite element method: approximating a continuous problem by piecewise simple functions on a mesh.\n- Discontinuous Galerkin (DG): a finite element variant that lets approximate functions jump between mesh cells, with \"local\" (LDG) referring to a specific way of handling derivatives.\n- Upwind scheme: a stabilization that takes flow direction into account when computing transport terms.\n- A priori error estimate: a bound on the approximation error derived before computing, in terms of mesh size and time step.\n- Backward Euler: a simple implicit method for stepping forward in time.\n- Uniform in time: the error bound stays controlled over arbitrarily long times, not just over a fixed interval.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we develop and analyze a local discontinuous Galerkin (LDG) finite element method for the Boussinesq system of equations, and employ an upwind scheme to effectively manage the nonlinear convective terms, thereby ensuring stability and accuracy. Our analysis establishes new \\emph{a priori} regularity estimates for the semidiscrete LDG approximations. We establish optimal \\emph{a priori} error estimates for the velocity approximation in $\\bL^2$--norm, the pressure approximation in $L^2$--norm and for temperature in $L^2$--norm for all $t>0$. Our proof relies on the standard elliptic and parabolic duality arguments and modified Stokes operators defined on appropriate broken Sobolev spaces. Under suitable smallness assumptions on the given data, we further establish error estimates that remain uniform in time. Furthermore, the backward Euler scheme is considered for a full discretization, and optimal fully discrete error estimates are derived. Finally, we carry out numerical experiments to substantiate our theoretical findings.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23036",
+   "title": "Finite element nonlinear nudging for the Navier-Stokes equations",
+   "url": "https://arxiv.org/abs/2611.23036v1",
+   "authors": [
+    "Elizabeth Carlson",
+    "Rui Fang",
+    "Ali Pakzad"
+   ],
+   "label": "arXiv:2611.23036v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper analyzes an implicit-explicit finite element scheme for nonlinear nudging (data assimilation with a feedback term that grows stronger as the error shrinks) applied to the 3D incompressible Navier-Stokes equations, proving long-time stability and finite-time error convergence for the spatially semi-discrete scheme, with a mesh-resolution condition χ = O(H^{-1}) and numerical tests in 2D.",
+    "plain": "The paper studies how to pull a computer simulation of fluid flow (such as air or water moving around an object) onto the real flow, using sparse measurements taken from the actual flow. The authors use a correction term whose strength increases as the mismatch shrinks, which they report makes the simulation lock onto the true flow faster than the standard correction. The text reports that the method is proven stable and accurate under conditions on mesh size, and that tests on three 2D flows show faster synchronization, including when measurements cover only part of the region.",
+    "why": "Fluid flow prediction from partial, noisy observations matters for weather, ocean, and engineering modeling, and this work gives a finite element method (a standard tool for complex shapes and boundaries) with stated proofs for the nonlinear version. Its practical relevance beyond these test cases is not established by the text alone.",
+    "background": "- Navier-Stokes equations: the standard equations describing how viscous fluids such as air and water move.\n- Data assimilation / nudging: adding a term to a simulation that pushes it toward real measurements, so the model tracks the actual system.\n- Linear vs nonlinear nudging: linear nudging corrects in proportion to the error; the nonlinear version uses a stronger, nonlinear correction as the error gets smaller.\n- Finite element method: a way of splitting a domain into small pieces (a mesh) to approximate solutions of differential equations, well suited to irregular shapes.\n- Mesh size: the spacing of the grid; finer meshes give more accurate results but cost more computation.\n- Implicit-explicit (IMEX) scheme: a time-stepping method that treats some terms implicitly for stability and others explicitly for speed.\n- Inf-sup stability: a mathematical condition on the pairing of velocity and pressure approximations that prevents spurious numerical results.\n- Super-exponential convergence: error shrinking faster than any simple exponential decay.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Nonlinear nudging augments the classical linear nudging (continuous data as- similation) term with a nonlinear feedback that strengthens as the observed error decreases, and yields super-exponential convergence to the true state. In this paper, we study nonlinear nudging for the 3-dimensional incompressible Navier-Stokes equations with the finite element method, which allows complex geometries and physical boundary conditions. We propose an implicit-explicit (IMEX) finite element scheme with inf-sup stable elements, prove its unconditional long-time stability, and show for the spatially semi-discrete scheme that the error reaches a prescribed tolerance in finite time. Our analysis also suggests that the non- linear nudging term requires the mesh resolution to be fine enough (${χ= O(H^{-1})}$, where $χ$ is the nonlinear nudging intensity and ${H}$ is the observation mesh size). Further, our error estimates suggest that a larger nonlinear exponent $γ$ requires finer observational resolution, which is confirmed by numerical tests. Numerical experiments, including two-dimensional forced viscous flow in a periodic box, flow past a cylinder, and flow over a flat plate, show that nonlinear nudging synchronizes with the true solution considerably faster than linear nudging. We also show that observations in a subregion suffice to synchronize the whole flow",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22066",
+   "title": "Finite volume neural networks for singularly perturbed boundary value problems",
+   "url": "https://arxiv.org/abs/2611.22066v1",
+   "authors": [
+    "Gung-Min Gie",
+    "Junghwa Kim"
+   ],
+   "label": "arXiv:2611.22066v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proposes sl-FVNN, a finite volume neural network augmented with analytically derived boundary-layer correctors, to solve singularly perturbed boundary value problems and compares it with singular-layer PINNs on reaction-diffusion and Burgers-type equations.",
+    "plain": "The paper looks at equations where a tiny parameter makes the solution change very sharply in a thin strip near the edge of the domain. The authors build a neural-network solver that enforces conservation of quantities over small cells, and adds known mathematical correction terms for those thin edge regions. Their tests cover very small parameter values, from 10^-4 down to 10^-12, and they report more uniform accuracy and better convergence than a conventional version of the method.",
+    "why": "Sharp, thin-layer behavior is hard for standard solvers, including neural ones, so a method that handles it stably is of practical interest for multiscale modeling. The text claims comparable accuracy to an existing physics-informed approach on some problems and better convergence on convection-dominated nonlinear ones; the evidence is limited to the abstract, so these claims are not independently checked here.",
+    "background": "- Boundary value problem: an equation solved on a region with values fixed at its edges.\n- Singular perturbation: a small parameter multiplies the highest-order derivative, so the solution changes abruptly in a thin boundary layer.\n- Boundary-layer corrector: an added term that captures the rapid change near the edge.\n- Finite volume method: a numerical method that enforces conservation by balancing fluxes across the faces of small cells.\n- Physics-informed neural network (PINN): a neural network trained to satisfy the governing equation and boundary conditions.\n- Convection-dominated / Burgers-type problems: transport-heavy equations where shocks or steep fronts can form.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop a singular-layer enhanced Finite Volume Neural Network (sl-FVNN) methodology for solving singularly perturbed boundary value problems. The proposed framework combines flux-conserving finite volume residuals with analytically derived boundary layer correctors, enabling stable and efficient approximation of sharp boundary variations induced by small perturbation parameters. Numerical experiments over a broad range of small perturbation parameters ($10^{-4}$ to $10^{-12}$), demonstrate that the sl-FVNN yields uniformly accurate predicted solutions and significantly improved convergence behavior compared to conventional FVNN methods. Further comparisons with sl-PINNs from (Gie, Hong, Jung, Appl. Anal. 2024) show that our sl-FVNNs attain comparable accuracy for reaction--diffusion and Burgers equations, while achieving significantly improved convergence for convection-dominated nonlinear problems. These results highlight the effectiveness of incorporating asymptotic layer structures into finite volume based neural networks, offering a practical and scalable framework for multiscale PDE learning in stiff regimes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21820",
+   "title": "Direct Element-Level Mass Matrix Inversion",
+   "url": "https://arxiv.org/abs/2611.21820v1",
+   "authors": [
+    "Eli Hanukah"
+   ],
+   "label": "arXiv:2611.21820v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper derives a systematic, closed-form way to invert element-level mixed (lumped plus consistent) mass matrices for isoparametric solid elements of arbitrary order, with an explicit inverse given for the eight-node hexahedral element, for use in explicit transient dynamics.",
+    "plain": "Engineers simulating fast-moving solids, such as impacts or crashes, often use a simplified way of representing mass that makes each time step cheap to compute. This paper looks at when that simplification is too crude, especially for more detailed element shapes and poor-quality meshes. It presents a method for computing the exact inverse of a blended mass description directly at the level of each element, and works this out explicitly for a common eight-corner brick-shaped element.",
+    "why": "The text suggests that better inertia modelling could widen the use of higher-order elements in explicit simulations while keeping their speed. The text does not report test results or timings, so how much accuracy or speed is gained is not shown here.",
+    "background": "- Finite element method: splitting a solid object into small connected pieces (elements) and solving equations for each piece.\n- Mass matrix: a table describing how the element's mass is spread across its corner points (nodes); it sets how the element resists acceleration.\n- Lumped mass: a simplified version that puts all mass on the nodes, giving a diagonal table that is trivial to invert.\n- Consistent mass: a fuller version that spreads mass between nodes, which needs a system of equations to solve.\n- Explicit time integration: a stepping scheme that advances the simulation without solving a large global system at each step, valued for speed.\n- Isoparametric and higher-order elements: elements with curved edges or extra mid-side nodes, giving more accurate shapes and fields.\n- Element-by-element: a computing approach that works on one element at a time rather than assembling a global matrix.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Explicit finite element methods for transient solid dynamics commonly use lumped mass matrices to avoid solving systems of equations for nodal accelerations at each time step. However, diagonal mass matrices may inadequately represent inertia, particularly for higher-order elements and coarse or distorted meshes. This has limited the use of higher-order elements in explicit dynamic analyses. This paper presents a systematic method for directly evaluating the inverse of non-diagonal element-level mass matrices for solid isoparametric elements of arbitrary interpolation order. The method applies to mixed mass matrices defined as linear combinations of lumped and consistent mass matrices, with a weighting parameter controlling the transition between diagonal, consistent, and intermediate formulations. It therefore provides a framework for incorporating non-diagonal mass formulations, including those for quadratic elements, into explicit finite element algorithms. The approach is demonstrated by deriving an explicit inverse formula for the mixed mass matrix of the eight-node hexahedral element. This formula enables efficient element-level inversion without solving a global system. The proposed method can improve inertial representation in transient dynamic analyses while retaining the computational advantages of explicit time integration and is suitable for element-by-element implementations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.20833",
+   "title": "Maximum principle preserving approximation of scalar conservation equations with a fractional Laplacian",
+   "url": "https://arxiv.org/abs/2611.20833v1",
+   "authors": [
+    "Andrea Bonito",
+    "Jean-Luc Guermond",
+    "Murtazo Nazarov"
+   ],
+   "label": "arXiv:2611.20833v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A continuous finite element method for scalar conservation laws with a fractional diffusion term of order s in (0,1), using sinc-quadrature resolvents, graph viscosity, and convex limiting to preserve the maximum principle and reach second-order accuracy.",
+    "plain": "The paper concerns computer simulation of equations describing how a quantity such as concentration or temperature is carried by a flow and also spreads out in a long-range way, rather than only locally. The authors build a numerical method that keeps the computed values within their physically allowed range (for example, staying nonnegative) and conserves the total amount. They report a first-order version that provably has this property under a time-step limit, and a higher-order version that keeps the property while being second-order accurate in tests.",
+    "why": "Keeping simulated values physically plausible while using higher-order accuracy is a standard concern in numerical modelling of transport. The text says the method is tested on the Surface Quasi-Geostrophic equation, a model used in geophysical fluid dynamics, and on unstructured meshes; wider impact beyond these tests is not shown in the text.",
+    "background": "- Scalar conservation law: an equation saying a quantity is moved around by a flow without being created or destroyed.\n- Fractional Laplacian (order s between 0 and 1): a long-range diffusion operator, a spreading process where distant points interact, unlike ordinary local diffusion.\n- Finite element method: approximating a solution by simple pieces over a mesh of the domain.\n- Maximum principle: the numerical solution stays between its smallest and largest starting values.\n- Sinc quadrature: a numerical technique for approximating an integral-based operator by a sum of simpler terms.\n- Graph viscosity and convex limiting: artificial damping added to suppress spurious oscillations while keeping accuracy where the solution is smooth.\n- Strong stability preserving Runge–Kutta: a class of time-stepping schemes designed not to create new extremes.\n- CFL condition: a limit on time-step size relative to mesh size needed for stability.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we propose a maximum principle preserving continuous finite element method for scalar conservation laws augmented with a fractional diffusion operator of order $s\\in (0,1)$. Conservation laws with fractional diffusion operators arise in a variety of physical models involving anomalous transport and nonlocal regularization, including geophysical flows, plasma physics, and nonlinear acoustics. The fractional Laplacian is approximated using a sinc-quadrature representation, yielding a resolvent-based formulation compatible with continuous finite elements and explicit strong stability preserving Runge--Kutta time integration. A first-order monotone scheme is constructed using graph viscosity and is shown to satisfy a discrete maximum principle under an explicit CFL condition. A high-order extension is obtained via entropy-consistent corrections and convex limiting, achieving second-order accuracy while preserving the maximum principle, and hence positivity, as well as mass conservation in the periodic setting. Numerical experiments, including applications to the Surface Quasi-Geostrophic equation, confirm the second-order accuracy and the robustness of the proposed method on unstructured meshes.",
    "source": "arxiv"
   }
  ]

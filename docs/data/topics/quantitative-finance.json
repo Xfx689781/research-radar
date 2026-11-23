@@ -1,5 +1,186 @@
 {
  "slug": "quantitative-finance",
- "updated": "2026-11-22",
- "papers": []
+ "updated": "2026-11-23",
+ "papers": [
+  {
+   "uid": "arxiv:2611.25344",
+   "title": "Quantum Calibration of Local-Volatility Surfaces from Sparse Option Quotes",
+   "url": "https://arxiv.org/abs/2611.25344v1",
+   "authors": [
+    "Kentaro Hoshisashi"
+   ],
+   "label": "arXiv:2611.25344v1",
+   "primary_category": "q-fin.CP",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A hybrid quantum-classical calibration of Dupire local-volatility surfaces from sparse option quotes, using positive-coefficient parametrisation, linear combinations of Hamiltonian simulations for pricing evolution, and measurement-based objective values fed to a classical optimiser, evaluated in a logical gate simulator against classical solvers and alternative surface models.",
+    "plain": "Traders infer a hidden \"volatility\" map from the prices of options (contracts that bet on future stock prices) that are only available at a few strikes and expiry dates. This paper tries to do that fitting step with a quantum computer, alternating between a quantum circuit that prices options and a classical optimiser that adjusts the map. The text reports a simulated version on synthetic multi-maturity data, plus a small circuit experiment that tests the full measured loop.",
+    "why": "Calibration must re-price options many times as parameters change, so it is a plausible candidate for quantum speed-up, which makes the cost analysis (gate counts and sampling budgets) relevant to whether that is practical. The text does not establish any quantum advantage, and the evidence is limited to simulation and a small circuit experiment.",
+    "background": "- Option: a contract whose price depends on future stock price and a strike level; option quotes at several strikes and maturities are the data.\n- Implied volatility smile/skew: the pattern in which option-implied volatility varies with strike; a model must reproduce it.\n- Local-volatility model (Dupire): a model where volatility is a function of asset price and time, fitted so it matches observed option prices.\n- Calibration (inverse problem): finding model parameters that reproduce observed prices; it needs many repeated pricing solves.\n- Pricing equation: a partial differential equation whose solution gives option values; its evolution can be simulated as a quantum Hamiltonian process.\n- Quantum circuit and measurement: a quantum computer's outputs are random samples; the sample frequencies estimate the objective value, so precision depends on how many samples are taken.\n- Logical gate simulator: software that simulates an idealised quantum circuit, not run on noisy hardware.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Calibrating a volatility surface from sparse option prices requires repeated solutions of a pricing equation as the volatility parameters change. We implement a hybrid quantum and classical method for this inverse problem using the Dupire local-volatility model. A positive coefficient representation specifies the local variance, and linear combinations of Hamiltonian simulations approximate the associated pricing evolution. The circuit propagates through successive maturity intervals and evaluates discrepancies at the observed strikes. Measurement counts provide the objective values used by a classical optimiser to update the volatility coefficients. We implement this calibration cycle in a logical gate simulator and assess it alongside classical pricing solvers and alternative surface models. Multiple-maturity synthetic examples illustrate the reconstruction of smiles and skews, while a separate small circuit experiment tests the complete measured calibration. The comparisons quantify the effects of model flexibility, pricing approximation and measurement precision. Recorded gate counts and sampling budgets identify the main computational costs of the implementation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26673",
+   "title": "Error analysis for the numerical approximation of the quantile hedging problem",
+   "url": "https://arxiv.org/abs/2611.26673v1",
+   "authors": [
+    "Cyril Bénézet",
+    "Cyril Nefzaoui-Blanchard",
+    "Sergio Pulido"
+   ],
+   "label": "arXiv:2611.26673v1",
+   "primary_category": "q-fin.CP",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "The paper gives error bounds for numerical schemes that solve quantile hedging in complete linear Markovian diffusion markets, treating the hedge probability as a controlled state variable constrained to [0,1], with a neural-network implementation and a state-dependent control bound to reduce projection bias.",
+    "plain": "The paper looks at how to compute a trading strategy that tries to cover a financial payoff with a chosen probability, rather than always covering it fully. The authors turn this into a control problem with a probability value that must stay between 0 and 1, and they prove how accurate their numerical approximations are. They also build a neural-network version, find that forcing the probability back into [0,1] at grid points introduces a pricing bias, and reduce that bias with a state-dependent bound.",
+    "why": "Quantile hedging is a standard way to trade off hedging cost against the chance of success, so precise error rates for its numerical solution matter for pricing tools. The text reports exponents close to 1/8 with state constraints and close to 1/4 for bounded controls, which it compares with an earlier result; I cannot judge from the text alone how much these rates improve practice.",
+    "background": "- Hedging: trading an asset to offset the risk of a derivative payoff.\n- Quantile hedging: choosing a strategy that maximises the probability of covering the payoff for a given budget, instead of covering it always.\n- Markovian diffusion: a random process whose future depends only on its current state, moving continuously like a jittery price path.\n- Stochastic control: choosing actions over time to optimise an expected outcome, solved via dynamic programming.\n- Complete market: every payoff can be replicated exactly by trading, so prices are unique.\n- Error exponent: how fast the numerical error shrinks as the time step or grid gets finer (error ~ step^exponent).\n- Neural-network controls: using a neural network to represent the trading rule.\n- Local-volatility model: a price model where volatility depends on the asset price and time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We analyse numerical approximations of quantile hedging in complete linear markets with Markovian diffusion dynamics. The problem is formulated as stochastic control for an augmented state $(X,P)$, where the probability martingale $P$ is constrained to $[0,1]$ and controlled through an unbounded volatility coefficient. We combine control truncation with piecewise-constant policy time-stepping (PCPT), stopping controls continuously upon boundary hitting to preserve the state constraint. Using one-step dynamic programming principles and regularisation, we derive a generator inequality and explicit value-function error bounds. Under standard coefficient regularity and a Lipschitz payoff, optimising the truncation and regularisation parameters yields an error exponent arbitrarily close to $1/8$ from below, uniformly in the probability variable. For controls bounded from the outset, we obtain exponents arbitrarily close to $1/4$ from below, approaching the exponent established by Jakobsen, Picarelli and Reisinger without state constraints. We also implement a fully discrete scheme with neural-network controls. Grid-time projection onto $[0,1]$ introduces a martingale defect and a pricing bias. We quantify this bias in a toy problem and mitigate it using a state-dependent control bound. Experiments in Black--Scholes and Lipschitz local-volatility models illustrate the correction and the decrease in pricing errors under grid refinement.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25047",
+   "title": "A joint framework for SPX, VIX and VXX",
+   "url": "https://arxiv.org/abs/2611.25047v1",
+   "authors": [
+    "Martino Grasselli",
+    "Andrea Stanghellini",
+    "Sara Svaluto-Ferro"
+   ],
+   "label": "arXiv:2611.25047v1",
+   "primary_category": "q-fin.MF",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper builds one stochastic-volatility model that jointly fits S&P 500 index options, VIX options and VXX options, using truncated signatures of polynomial diffusions to make the VIX-to-SPX variance recovery tractable, plus a regularized variant with quantified proxy pricing errors.",
+    "plain": "Traders price options on a stock index (SPX), on its fear gauge (the VIX), and on an exchange-traded note (VXX) that tracks VIX futures. The paper proposes one mathematical model that prices all three consistently: it starts from the VIX, then works backward to the index's instantaneous variance. The authors report that the resulting calculations reduce to finite-dimensional linear algebra, and that their approximation errors, estimated by simulation, are smaller than typical quoted bid-ask spreads.",
+    "why": "Calibrating one model to equity, volatility-index and volatility-product markets at once is a standard practical problem in derivatives pricing, and the text claims the approach gives explicit access to the VXX underlying futures. Whether it proves more accurate or easier to use than existing methods is not shown in the text provided.",
+    "background": "- Implied volatility: the market's forecast of future price swings, backed out from option prices.\n- Variance: the square of volatility; a stochastic-volatility model lets this quantity itself move randomly.\n- Risk-neutral measure: the pricing-world probability convention used to value derivatives, not real-world forecasts.\n- VIX: a published index of expected 30-day S&P 500 volatility, derived from SPX option prices.\n- VIX futures and VXX: futures contracts on the VIX, and an exchange-traded note whose value follows a rolling position in them.\n- Calibration: adjusting model parameters so model prices match observed market prices.\n- Signatures: a way of encoding the history of a random path as a sequence of numbers, truncated here to finitely many terms.\n- Bid-ask spread: the gap between the price a buyer offers and a seller asks; a natural yardstick for acceptable pricing error.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Options on VXX bring the dynamics of the VIX futures curve into the joint SPX-VIX calibration problem. We construct a common model by specifying the VIX and then recovering instantaneous SPX variance from the requirement that its risk-neutral conditional expected average over the next thirty days equals the squared VIX. With truncated signatures of time-extended polynomial diffusions, this recovery reduces to finite-dimensional linear algebra and gives explicit access to the futures underlying VXX. The same specification therefore governs equity variance and rolling volatility exposure. To accommodate flexible specifications while respecting variance nonnegativity, we develop a regularized model and quantify the pricing errors of its tractable VIX and VXX proxies. Applications to short-dated option smiles illustrate joint calibration across the three markets, with Monte Carlo estimates of the proxy error bounds well below quoted bid-ask spreads.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24028",
+   "title": "Algorithmic Market Making Can Lead to Rough Volatility Through the Order Book",
+   "url": "https://arxiv.org/abs/2611.24028v1",
+   "authors": [
+    "Sai Niranjan Ramachandran"
+   ],
+   "label": "arXiv:2611.24028v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A model in which market makers adjust their order distances by stochastic gradient descent, with asynchronous information-driven noise, yields a Dean–Kawasaki-type conservative SPDE for order-book volume and, via power-law memory in order flow, rough volatility; checked on simulations and six months of Binance order data.",
+    "plain": "The paper asks whether the jagged, rough price moves seen in some markets can come from the way automated market makers place their orders. The authors model each market maker as a desk that repeatedly nudges its order distances from the mid price toward target distances it cannot observe directly, reacting only when new information arrives. They report that this setup produces the rough volatility seen in theory, and say the predictions match simulated agents and about 790 million Binance orders over six months.",
+    "why": "Rough volatility has been a productive idea in mathematical finance, but its microstructure origin was unclear; this paper proposes a concrete mechanism linking it to how market makers update orders. It may matter for modelling order books and market-maker behaviour, though the text alone does not show how general the result is beyond the liquid perpetual futures market studied.",
+    "background": "- Volatility: how much a price moves over time. \"Rough\" means the price path is more jagged than standard Brownian motion (the random walk model of particles).\n- Order book: the list of buy and sell orders waiting at different prices; the mid price is halfway between best bid and best ask.\n- Market maker: a participant, often algorithmic, that continuously posts buy and sell orders to provide liquidity.\n- Gradient descent: a standard optimisation method that repeatedly moves a parameter a small step toward a better value; stochastic version uses noisy estimates.\n- Power-law memory: influence of past events that fades slowly, like a heavy-tailed decay rather than an exponential one.\n- Stochastic PDE: a differential equation with random forcing, here describing how order-book volume spreads and fluctuates over prices.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Existing work suggests that markets can show volatility with paths rougher than those of Brownian motion. In theory this can happen when the order flow is close to instability with memory that decays as a power law. However, it is not fully clear how such order flow could arise from the predominantly algorithmic market making that characterizes order book dynamics. We show one such consistent mechanism. We treat each market maker as a desk that uses a first-order gradient rule to move the distances of its orders from the mid price toward target distances provided by an unknown oracle. We assume that distinct desks do not act synchronously in time but act whenever new information relevant to their respective oracles arrives, which each desk samples over its own characteristic lookback horizon. Across all desks the rule therefore takes the form of stochastic gradient descent (SGD) with information-driven (mini-batch) noise. In the continuum limit this update rule makes the volume of the order book follow a conservative stochastic partial differential equation (the Dean--Kawasaki equation) whose fluctuations drive the order flow. The distinct horizons of the desks further induce a persistent memory in the order flow that decays as a power law. Standard scaling arguments then lead to rough volatility. We confirm the key predictions of the model on simulated agents and on six months of Binance data with about 790 million orders. In liquid markets governed mainly by market makers, such as the perpetual futures of Binance, the order books are consistent with how our desks change the book.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22119",
+   "title": "An axiomatic foundation for optimized certainty equivalents",
+   "url": "https://arxiv.org/abs/2611.22119v1",
+   "authors": [
+    "Christopher Blier-Wong",
+    "Jean-Gabriel Lauzier",
+    "Zachary Van Oosten"
+   ],
+   "label": "arXiv:2611.22119v1",
+   "primary_category": "q-fin.RM",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper gives economic axioms (including a new Fair-Coin Compensation axiom) that characterize Optimized Certainty Equivalent risk measures, and shows which extra axioms single out Expected Shortfall, the Entropic Risk Measure, and Mean-Variance.",
+    "plain": "The paper asks how to justify a family of tools used to measure financial risk, called Optimized Certainty Equivalents, by listing simple rules of fair behavior that any such measure should follow. The authors add a new rule, Fair-Coin Compensation, based on a thought experiment where two people's losses are assigned by a coin toss and a transfer between them can cancel the extra risk the coin creates. Adding further rules narrows the family down to specific well-known measures.",
+    "why": "Economic axioms give a principled reason for choosing one risk measure over another, which matters for portfolio optimization and regulation. The text does not discuss applications or practical uptake, so its wider significance is uncertain.",
+    "background": "- Risk measure: a rule that assigns a single number to an uncertain loss, indicating how risky it is.\n- Certainty equivalent: the sure amount that a person would regard as equally good as an uncertain prospect.\n- Axiom: a basic rule or property that a measure is assumed to satisfy; a characterization shows that the axioms pick out exactly one family.\n- Examples named in the text: Mean-Variance (balances average loss and its spread), Expected Shortfall (average of the worst losses), Entropic Risk Measure (an exponential-weighted average of losses).\n- Positive homogeneity: scaling losses by a factor scales the risk by the same factor.\n- Monotonicity: a uniformly larger loss never gets a lower risk score.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Optimized Certainty Equivalents (OCEs) are an important class of risk measures for optimization and risk management that includes the Mean--Variance criterion, Expected Shortfall, the Entropic Risk Measure, and expectation. Despite their importance, economic axioms have not characterized OCEs. We propose a new axiom called Fair-Coin Compensation, which characterizes OCEs together with Strong Risk Aversion and Normalization. We interpret Fair-Coin Compensation through the fair assignment of two losses by a coin toss: transfers between two participants can remove the additional risk created by the random assignment. Adding further axioms yields sharper characterizations. Monotonicity yields standard OCEs; Positive Homogeneity, together with Prudence, yields Expected Shortfall; and Fair-Coin Independence yields the Entropic Risk Measure. We also axiomatize the Mean--Variance criterion using our novel axiom of Equal-Mean Randomization, which states that random assignment of two losses with the same expected value does not produce a risk measure above the average of their risk measures.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23495",
+   "title": "Total Positivity Properties of American Options",
+   "url": "https://arxiv.org/abs/2611.23495v1",
+   "authors": [
+    "Paul Glasserman",
+    "Mike Li",
+    "Dan Pirjol"
+   ],
+   "label": "arXiv:2611.23495v1",
+   "primary_category": "q-fin.MF",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proves that total positivity (TP2) monotonicity properties of call and put prices, previously known for European options, also hold for American options under a log-concave log-return density assumption, and tests these properties empirically.",
+    "plain": "Option prices are contracts whose value depends on a chosen price level (the strike) and how long until the contract expires. The paper asks whether a particular ordering pattern in these prices, called total positivity of order 2, holds for American-style options, which can be exercised at any time before expiry. The authors show it holds under a mild shape condition on the distribution of returns, and that it holds more broadly for American options than for European ones. They also report that violations in real market data are rare, small, and quickly corrected.",
+    "why": "The result extends a known theoretical property from European to American options, which are the more common type traded in many markets, and it is supported by market data. The text does not say what practical trading or pricing consequences follow beyond the reported hit rates for bets against violations, so the broader importance is uncertain.</why>\n<parameter name=\"background\">- Call option: the right to buy an asset at a fixed strike price; put option: the right to sell at a strike.\n- European option: exercisable only at expiry. American option: exercisable at any time up to expiry.\n- Time-to-expiration: how many days or years remain before the contract ends.\n- Log return: the logarithm of the ratio of an asset's price at two times; it measures percentage change.\n- Log-concave density: a probability distribution whose log has a concave (bowl-down) shape; the Gaussian (bell curve) is a standard example.\n- Total positivity of order 2 (TP2): a sign-consistency condition on a two-by-two grid of values. Here it means the ratio of a higher-strike to lower-strike option price rises as expiry gets further away.\n- Arbitrage-free pricing: prices that do not allow riskless profit; violations of monotonic patterns can signal mispricing.\n- Hit rate: the share of trades that profit when betting against a violation.</background>\n<parameter name=\"difficulty\">research-level",
+    "background": "",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "Call option prices, viewed as functions of strike and time-to-expiration, are totally positive of order 2 (TP2) if the ratio of the price of a higher-strike call to a lower-strike call increases with time-to-expiration. A corresponding property applies to put option prices. Prior work has developed conditions for these properties to hold for European options; here we establish these properties for American options. The key condition we require is that log returns on the underlying asset have a log-concave density. Gaussian densities provide an important special case. Within our framework, we show that total positivity properties hold more broadly for American than European options. Empirically, we find that violations of TP2 properties are infrequent, typically small, and reverse quickly. Trades that bet against violations achieve high hit rates. Violations are more frequent among European than American options, a pattern that is qualitatively consistent with our theoretical results.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18214",
+   "title": "Local Stochastic Volatility Iterations",
+   "url": "https://arxiv.org/abs/2611.18214v1",
+   "authors": [
+    "Christian Bayer",
+    "Denis Belomestny",
+    "Paul P. Hager",
+    "John Schoenmakers"
+   ],
+   "label": "arXiv:2611.18214v1",
+   "primary_category": "q-fin.CP",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper calibrates a local stochastic volatility option-pricing model by fixed-point iteration, using a regression of conditional stochastic variance on time and spot to update a smooth leverage factor, then refines it against S&P 500 option quotes.",
+    "plain": "The paper concerns how to set the parameters of a model used to price stock index options, so that its predicted option prices match market prices. The authors repeatedly simulate the model, estimate from the simulations how volatility (the size of price swings) tends to vary with the index level and time, and feed that estimate back in until it stops changing. They apply this to S&P 500 options on the day of an interest rate announcement.",
+    "why": "Matching a whole surface of option prices is a core practical task in derivatives pricing and risk management, and the method is designed to be fast and to need relatively few parameters. The text does not say how it compares with existing calibration methods beyond reporting its own fit results, so its wider significance is best judged by specialists.",
+    "background": "- Option: a contract whose payoff depends on a future asset price; its quoted price implies a volatility.\n- Implied volatility surface: implied volatilities across strikes and maturities, the usual way option prices are compared.\n- Stochastic volatility: a model in which volatility itself moves randomly over time.\n- Local volatility / leverage factor: a model where the volatility depends on the current price and time, scaled by a factor that the paper solves for.\n- Calibration: adjusting model parameters so model prices match market quotes.\n- Fixed-point iteration: repeating a computation, feeding each output back as the next input, until the result stabilises.\n- Regression and quasi-likelihood: standard statistical tools for estimating an average relationship from simulated data.\n- Bid-ask interval: the range between the price a buyer offers and the price a seller asks; a fit inside it is within observed trading spreads.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We propose a calibration method for local stochastic volatility models that determines the leverage factor by a fixed-point iteration. Each iteration simulates the model with the current leverage factor and approximates the conditional expectation of the stochastic variance given the spot by a single regression in time and state, with a quasi-likelihood loss for positive responses. The resulting leverage factor is a smooth function of time and spot with relatively few parameters, which can in addition be refined directly against option quotes. We recalibrate the leverage factor to S&P 500 index options on the day of an interest rate announcement, keeping the parameters of a two-factor Bergomi model calibrated four weeks earlier. After five iterations, leverage factors with 63 and 143 coefficients reproduce the implied volatility surface fitted to the quotes within a few basis points over the quoted strikes, the smaller one except in the left wing, and further iterations change them little. A few regularized Gauss-Newton steps against the quotes then bring 87% and 95% of the liquid quotes inside their bid-ask intervals.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18937",
+   "title": "Implied volatility models without static arbitrage",
+   "url": "https://arxiv.org/abs/2611.18937v1",
+   "authors": [
+    "Michał Barski",
+    "Maciej Wiśniewolski"
+   ],
+   "label": "arXiv:2611.18937v1",
+   "primary_category": "q-fin.MF",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper studies when stochastic models of implied volatility surfaces avoid static arbitrage, deriving arbitrage probabilities for Gaussian factor models and deterministic conditions for bounded-factor models, and applies this to an arbitrage-free version of the Cont and Vuletić model using Jacobi diffusions.",
+    "plain": "Option prices on a stock imply a \"volatility surface,\" a map of how much market uncertainty is priced in across different strikes and expiry dates. Some mathematical models of how this surface moves over time can produce impossible shapes that would let a trader make riskless profit with no initial outlay. The paper examines when such models are free of this flaw, and shows how to modify one published model so that it is.",
+    "why": "Models that generate arbitrage-violating surfaces can misprice options and hedges, so a model that is guaranteed free of this flaw is practically useful. The text reports that the simple Gaussian models it studies have strictly positive chances of arbitrage under mild conditions, which is a reason to build in constraints. Its practical reach beyond the authors' own example is not shown in the text.",
+    "background": "- Implied volatility: the volatility value that, plugged into a standard option pricing formula, reproduces the observed market price of an option.\n- Volatility surface: implied volatility plotted against strike price and time to expiry.\n- Static arbitrage: a riskless profit available from prices at a single moment, using only options (e.g. calendar spread, call spread, butterfly combinations), without trading over time.\n- Gaussian factor model: a model where random drivers follow normal-distribution-type noise; these can take unbounded values.\n- Jacobi diffusion: a random process confined to a bounded interval, a common tool for keeping quantities within limits.\n- Cont and Vuletić model: an existing stochastic model for the evolution of implied volatility surfaces, which the paper modifies.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the absence of static arbitrage in models describing the stochastic evolution of implied volatility surfaces. For Gaussian factor models, we derive explicit formulas for the probabilities of calendar spread, call spread and butterfly arbitrage, showing that these probabilities are strictly positive under suitable non-degeneracy conditions. We then develop a framework based on bounded stochastic factors and establish deterministic necessary and sufficient conditions for the absence of static arbitrage, together with simpler sufficient conditions. As an application, we construct an arbitrage free modification of the Cont and Vuletić model using Jacobi diffusions, preserving its main empirical features while eliminating static arbitrage.",
+   "source": "arxiv"
+  }
+ ]
 }

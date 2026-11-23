@@ -1,6 +1,6 @@
 {
  "slug": "information-theory",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25859",
@@ -14,14 +14,14 @@
    ],
    "label": "arXiv:2611.25859v1",
    "primary_category": "cs.IT",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Quantum locally recoverable codes with $(r,δ)$-locality ($(r,δ)$-qLRCs) are quantum error-correcting codes in which $δ-1$ erased qudits can be recovered by accessing only $r$ other qudits.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper builds quantum locally recoverable codes with disjoint recovering sets from nested generalized monomial-Cartesian CSS code pairs, obtaining four infinite families that are optimal under the GKT Singleton-like bound and determining their minimum localities.",
+    "plain": "This paper is about quantum error-correcting codes, which protect quantum information by spreading it across many storage units (qudits) so that lost units can be rebuilt. The authors design a family of such codes where a missing unit can be restored by reading only a small number r of other units, with the goal of recovering as many lost units as possible at once. They report four infinite families of codes that meet a known theoretical limit (the GKT bound) and work out, for each allowed level of protection, the smallest such r and which units to read.",
+    "why": "Locality, meaning how few other units must be read to repair a loss, matters for storage and distributed systems where reading data is costly, and the paper gives exact answers rather than only bounds. The text does not indicate applications beyond coding theory, so the practical reach is unclear from the abstract alone.",
+    "background": "- Error-correcting codes: adding redundancy so that erased or corrupted symbols can be recovered.\n- Erasure and qudit: a qudit is a quantum unit with d levels (a generalization of a qubit); an erasure is a known loss of such a unit.\n- Locality (r, δ): any δ−1 erased units can be recovered by reading only r others; the minimum locality is the smallest such r.\n- Recovering sets: groups of units that can be used together to repair a loss; disjoint sets mean the groups do not overlap.\n- CSS codes: a construction of quantum codes built from two classical linear codes, here a nested pair C and its relative.\n- Singleton-like bound: a theoretical upper limit on how good a code can be; GKT-optimal means a code meets this limit.\n- Monomial-Cartesian codes: algebraic evaluation codes built from polynomial monomials on a grid.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Quantum locally recoverable codes with $(r,δ)$-locality ($(r,δ)$-qLRCs) are quantum error-correcting codes in which $δ-1$ erased qudits can be recovered by accessing only $r$ other qudits. The minimum locality of a qLRC is the least $r$ such that it has $(r,δ)$-locality. This paper aims to construct optimal impure $(r,δ)$-qLRCs with disjoint recovering sets and explicit minimum localities, where the optimality is measured by the Singleton-like bound of Guruswami, Kshirsagar, and Trivedi (GKT-optimal). Such qLRCs have particular advantages in recovering as many quantum erasures as possible while operating in parallel and with minimal qudit access overhead. We first characterize the recovering sets and the minimum locality of any CSS code by local relative distances, which are relative minimum distances of punctured codes with respect to shortened codes. We then construct impure qLRCs as CSS codes from nested pairs of generalized monomial-Cartesian codes. Grouping the monomials by their degree in the last variable, we reduce both their minimum distances and their local recovery to nested pairs of codes in the remaining variables, and the coordinates with the same values of these variables form disjoint recovering sets. In this way, we obtain four infinite families of GKT-optimal impure $(r,δ)$-qLRCs with disjoint recovering sets, and determine their minimum localities and the recovering sets attaining them for every admissible $δ$, except for a partial range of $δ$ in one family. These minimum localities need not be monotone in $δ$. In particular, two of the families contain GKT-optimal impure subfamilies of CSS codes CSS$(\\mathcal{C},\\mathcal{C})$ with $(r,δ)$-locality for some $r<n-δ+1$ at values of $δ$ for which $\\mathcal{C}$ has no classical $(r',δ)$-locality for any $0<r'<n$, where $n$ is the length of $\\mathcal{C}$.",
    "source": "arxiv"
@@ -35,16 +35,161 @@
    ],
    "label": "arXiv:2611.25496v1",
    "primary_category": "quant-ph",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "How many independent quantum systems does it take to hide one system that is correlated with a reference?",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proves one-shot quantum convex-split bounds via binary hypothesis testing, and applies them to private communication, one-way secret key distillation, and a position-based key protocol with a log n loss term.",
+    "plain": "The paper asks how many separate quantum systems are needed to hide one system that is linked to a reference system, so that an observer measuring all of them cannot tell the hidden one apart from an unrelated pair. The authors turn this into a set of simple yes-or-no tests and derive bounds on how many systems suffice. They then use these bounds to estimate how many secret bits can be sent or shared, including what an eavesdropper might learn publicly.",
+    "why": "The results give explicit one-shot bounds for private communication and key distillation, which connects quantum information theory to practical secret-key questions. The text does not show how these bounds compare with other methods in practice, so their practical reach is unclear.",
+    "background": "- Quantum state: a mathematical description of a quantum system, written as a density operator.\n- Reference system: a second system whose correlation with the hidden system is what the observer tries to detect.\n- Trace distance: a measure of how distinguishable two quantum states are (0 means identical, 1 means perfectly distinguishable).\n- Convex split lemma: a statement that a mixture of correlated states can be made close to a product of independent copies, given enough copies.\n- Binary hypothesis testing: deciding between two possible states using one measurement with two outcomes; relative entropy here measures how hard this is.\n- Secret key distillation: turning correlated, partly eavesdropped randomness into shared secret bits.\n- Asymptotic repetitions and log terms: results for n independent uses, where the leftover loss grows like log n.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "How many independent quantum systems does it take to hide one system that is correlated with a reference? An observer can measure all the systems together with the reference to detect the correlation. We turn any such measurement into binary tests on a single system and the reference. For each test we bound the probability of declaring a signal when an independent pair was prepared. Averaging the largest signal acceptance probabilities allowed by these bounds controls the normalized trace distance in the convex-split lemma. A second bound gives a sufficient number of systems by minimizing the hypothesis-testing relative entropy over the state of the reference. Both bounds hold for density operators on separable Hilbert spaces. Comparing two distributions for the location of the hidden system gives one-shot bounds for private communication and one-way secret key distillation, including the public information available to an eavesdropper. For a fixed finite-alphabet model with separable quantum outputs and positive information advantage and variances, we recover the known Gaussian corrections to the attainable number of private or key bits from $n$ independent repetitions and bound the remaining loss by $\\log_2 n+O(1)$ at fixed errors. The position-based key distillation protocol attains this bound with $O(n)$ public bits.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23794",
+   "title": "Benchmarking Traditional and Learning-Based Reference-Free Compressors for Long-Read Sequencing Data",
+   "url": "https://arxiv.org/abs/2611.23794v1",
+   "authors": [
+    "Huidong Ma",
+    "Hui Sun",
+    "Xinyan Shi",
+    "Cheng Zhong",
+    "Xiaoguang Liu",
+    "Gang Wang"
+   ],
+   "label": "arXiv:2611.23794v1",
+   "primary_category": "cs.IT",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A benchmark and survey of 35 reference-free lossless compressors (traditional and learning-based) evaluated on 16 real Oxford Nanopore and PacBio long-read sequencing datasets, comparing compression ratio, runtime, memory, and robustness.",
+    "plain": "Modern DNA sequencing machines produce very large files, which are costly to store and send. This paper tests many software tools that shrink these files without needing a reference genome (a standard DNA text to compare against). The authors ran 35 such tools on 16 real datasets and compared how much they shrink the data, how fast they run, how much memory they use, and how consistent they are.</plain>\n<parameter name=\"why\">Storage and transfer costs are a practical bottleneck for long-read sequencing, so knowing which tools work best without a reference is useful to labs. The text reports that CoLoRd gave the best overall compression in these tests, but the results only cover the datasets and settings the authors used.</plain>\n<parameter name=\"background\">- Lossless compression: shrinking a file so it can be restored exactly, bit for bit.\n- Compression ratio: original size divided by compressed size; higher means smaller output.\n- Long-read sequencing: technology (Oxford Nanopore, PacBio) that reads DNA in long pieces, producing large files.\n- Reference-based vs reference-free: reference-based tools compress by comparing to a known genome; reference-free tools do not need one, which matters when no suitable genome exists.\n- Learning-based compressors: tools that use machine-learning models to predict the data, usually slower and more costly to run.\n- Multithreading: running parts of a program on several processor cores at once to speed it up.",
+    "why": "",
+    "background": "",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Long-read sequencing technologies generate large volumes of data, creating substantial storage and transmission demands. Although reference-based compressors can achieve high compression, their reliance on an appropriate reference genome limits their use. We present LRCBench, a benchmark and survey of reference-free lossless compressors for long-read sequencing data. We review traditional and learning-based general-purpose and sequencing-specific methods, then evaluate 35 compressors on 16 real-world datasets from Oxford Nanopore and PacBio platforms. We compare compression ratio, storage savings, runtime, peak memory use, and robustness across datasets. Learning-based compressors are evaluated on six MinION datasets because of their high computational costs. CoLoRd achieves the best overall compression ratios in our experiments, while other methods offer trade-offs in speed, memory use, and robustness. We also examine multithreaded speedup and discuss future directions in parallel acceleration, privacy protection, adaptive parameter tuning, and hardware-algorithm co-design.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25124",
+   "title": "Learning Integer Winding Evolution Times in Quantum Phase Estimation",
+   "url": "https://arxiv.org/abs/2611.25124v1",
+   "authors": [
+    "Elijah Pelofske",
+    "Stephan Eidenbenz"
+   ],
+   "label": "arXiv:2611.25124v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper proposes learning the Hamiltonian evolution time in Quantum Phase Estimation (QPE) by minimizing the Shannon entropy of the measured phase distribution, reporting improved minimum-eigenvalue accuracy on quantum magnet models.",
+    "plain": "Quantum Phase Estimation is a quantum-computing procedure for finding the lowest energy of a physical system, and its accuracy is normally limited by how finely the answer can be encoded in qubits. This paper adds an optimization loop that tunes the evolution time so the measured results are less spread out (lower Shannon entropy, a measure of how unpredictable a set of outcomes is). The authors report that this improves the estimate of the minimum energy in numerical tests on quantum magnet models.",
+    "why": "If the approach holds up, it could make QPE useful on near-term quantum hardware by allowing shorter, shallower circuits for physics problems. The text gives only a brief summary and numerical tests on magnet models, so its broader significance and how it compares with other methods are not established here.",
+    "background": "- Quantum Phase Estimation (QPE): a quantum algorithm that reads out an eigenvalue (energy level) of an operator as a phase angle.\n- Hamiltonian: the operator describing a system's energy; evolving under it for a time t imprints phases tied to energies.\n- Eigenvalue / minimum eigenvalue: the lowest energy level, often the target of ground-state calculations.\n- Qubits and digitization error: the phase is stored in a finite number of binary digits, so precision is limited by the number of qubits.\n- Shannon entropy: a measure of spread or uncertainty in a probability distribution; low entropy means outcomes cluster tightly.\n- Quantum magnet models: standard test systems (spin lattices) used to benchmark quantum algorithms.\n- Near-term quantum computing: work targeting current noisy hardware where shallow circuits are needed.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Learning a Hamiltonian evolution time in Quantum Phase Estimation that produces phase distributions with low Shannon entropy circumvents the fundamental limit of digitization error of phase, independent of the number of phase qubits of accuracy. By introducing an optimization loop to minimize the Shannon entropy of measured eigenvalues produced by a QPE quantum circuit, minimum eigenvalue computation accuracy is greatly improved, which we show numerically on quantum magnet models. This technique works because standard QPE has a natural correspondence between entropy of the phase distribution and the analog accuracy of the minimum eigenvalue phase. This introduces for the first time a type of parameter learning to QPE, which makes near term practicality of QPE for fundamental sciences more feasible by using shorter depth QPE circuits.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22900",
+   "title": "blaris: Windowless Random-Access LZSS for Constrained Microcontrollers",
+   "url": "https://arxiv.org/abs/2611.22900v1",
+   "authors": [
+    "Ihor Lukianov"
+   ],
+   "label": "arXiv:2611.22900v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "blaris is a windowless LZSS decompressor for execute-in-place random access on RV32IMC microcontrollers, resolving back-references inside the compressed payload using bidirectional token streams with power-of-two checkpoints.",
+    "plain": "Tiny microcontroller chips often store data compressed to save space, but the usual decompression methods need a chunk of working memory that grows with how well the data is squeezed, and reading a small piece from the middle is slow. This paper presents blaris, a decompressor designed to avoid that working memory and to read small pieces of compressed data directly from flash storage. The authors report it fits in roughly 548 to 784 bytes of flash and 104 to 112 bytes of RAM on a RISC-V chip, and that small random reads are far faster than block-indexed versions of two existing decompressors at similar compression ratios.",
+    "why": "Memory is the main limit on very small devices, so a decompressor that needs almost no RAM and still supports fast random reads could matter for firmware and embedded data storage. The text gives benchmark figures but not the full test setup, so the size of the advantage should be checked against the full paper.",
+    "background": "- Compression: shrinking data by replacing repeated pieces with short references to earlier text.\n- LZ77 / LZSS: a family of compression methods that refers back to earlier output; LZSS marks each piece as either a literal or a back-reference.\n- Sliding window: the recent stretch of decoded data kept in RAM so back-references can be resolved; its size trades memory against compression.\n- Microcontroller: a small, low-power chip with very little RAM and flash storage.\n- Execute-in-place (XIP): running or reading code and data straight from flash without copying it into RAM first.\n- Random access: reading a chosen piece of data without decoding everything before it.\n- Checkpoints: stored markers that let a decoder jump to a known position in the stream.\n- Trusted payload: the compressed data is made on a computer ahead of time and assumed valid, so the device skips error checks to save code.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Embedded LZ77 decompressors (such as heatshrink and tamp) require an in-RAM sliding window that couples memory usage to compression ratio and incurs high latency on random-access reads. We present blaris, a lightweight, windowless LZSS decompressor for execute-in-place (XIP) random access on constrained microcontrollers. By partitioning tokens into bidirectionally traversable streams with power-of-two checkpoints, blaris resolves back-references directly in the compressed payload, achieving compression ratios comparable to high-window heatshrink and tamp configurations without allocating a RAM window. Targeting compress-on-host, decompress-on-device workflows, blaris assumes trusted build-time payloads and omits runtime error and bounds checks. On RV32IMC, it requires just 548-784 B of Flash and 104-112 B of total RAM, achieving orders-of-magnitude faster small-slice random reads than ratio-matched, block-indexed heatshrink and tamp.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23503",
+   "title": "Electromagnetic Channel Model and Sensing Performance for ISAC: The Case of a Single Cylindrical Scatterer",
+   "url": "https://arxiv.org/abs/2611.23503v1",
+   "authors": [
+    "Gabriele Gradoni",
+    "Ahmed Elzanaty",
+    "Yadong Yang",
+    "Mohsen Khalily",
+    "Mahmoud Shahabadi",
+    "Fan Wang",
+    "Peiying Zhu",
+    "Wen Tong",
+    "Rahim Tafazolli"
+   ],
+   "label": "arXiv:2611.23503v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proposes a physics-based, electromagnetic wireless channel model (an impedance channel transfer matrix from wave scattering theory with boundary conditions) for a single dielectric cylindrical target, valid in both near and far fields, and evaluates target localization accuracy via the Cramér-Rao lower bound for integrated sensing and communication (ISAC).",
+    "plain": "The paper builds a detailed physics model of how radio waves bounce off a single object, here idealized as a cylinder, so that a wireless system can work out where that object is. The model accounts for waves interacting with the object and with each other, and it is meant to work both close to the transmitter and far from it. The authors use it to estimate how precisely the object's position, size, and dielectric constant (how it responds to electric fields) could be measured, but the text does not report specific numerical results.",
+    "why": "Future wireless networks are expected to sense their surroundings as well as carry data, so channel models that capture real electromagnetic effects could matter for that work. The text also mentions possible extensions to extended targets and to 3GPP standard channel modeling, but how far this would carry into practical standards is not shown here.",
+    "background": "- Channel model: a mathematical description of how a signal travels from transmitter to receiver, including reflections.\n- ISAC (integrated sensing and communication): using one wireless system to both communicate and detect or locate objects.\n- Scattering: how waves are redirected when they hit an object.\n- Near field vs. far field: close to a source, where wave behavior is complex, versus far away, where it simplifies.\n- Permittivity / dielectric constant: how strongly a material responds to an electric field, which affects how it reflects waves.\n- Cramér-Rao lower bound: the best accuracy any unbiased estimator can achieve for a given measurement setup.\n- 3GPP: the standards body that defines cellular network specifications, including channel models.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We propose an electromagnetic wireless channel model for accurate target localization in radar-like sensing scenarios. The model employs a self-consistent method grounded in wave scattering theory and imposing boundary conditions, providing the (impedance) channel transfer matrix for a propagation channel with a single target modeled as a cylindrical scatterer. The model is: 1) physics-based, as it includes electromagnetic interactions between objects; 2) unified, as it is valid in both near- and far-field regions. Within the canonical two-dimensional and 2.5-dimensional configurations with line-source and dipole-source excitations, respectively, the model supports dielectric cylinders with frequency-dependent permittivity. Localization accuracy is assessed via the Cramer-Rao lower bound for a dielectric cylinder with variable position, radius, and dielectric constant. Provisions for future extensions to extended targets are discussed in the context of 3GPP channel modeling.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21395",
+   "title": "The Sample Complexity of Channel Coding",
+   "url": "https://arxiv.org/abs/2611.21395v1",
+   "authors": [
+    "Terence Viaud",
+    "Ioannis Kontoyiannis"
+   ],
+   "label": "arXiv:2611.21395v1",
+   "primary_category": "cs.IT",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Introduces a nonasymptotic \"sample complexity\" framework for channel coding, showing that for discrete memoryless channels the minimal blocklength is governed by the Augustin–Csiszár (equivalently cutoff rate and Sibson) capacity of order 1/2 rather than ordinary capacity, with a one-shot hypothesis-testing converse and explicit AWGN results.",
+    "plain": "This paper asks how long a message must be, in terms of the number of symbols sent, before a noisy communication channel can carry information reliably at a target rate and error level. Instead of the usual question of the best rate for very long messages, it studies the smallest workable block length directly, with explicit constants. The authors find that this length is set by a different quantity than the familiar channel capacity, namely a related measure of order 1/2 (the cutoff rate).",
+    "why": "The result shifts attention from asymptotic capacity to concrete finite-length behavior, which matters for practical codes with limited delay. The link to the cutoff rate, an older quantity from coding theory, is the notable connection, though the text alone does not show how practical this is for specific systems.",
+    "background": "- Channel coding: encoding messages with redundancy so they can be recovered after noise corrupts them.\n- Blocklength: the number of symbols in one coded message.\n- Error probability: the chance the receiver decodes the wrong message.\n- Channel capacity: the highest rate achievable with vanishing error for very long blocks (the asymptotic limit).\n- Rényi-type capacities of order α: generalized information measures, parameterized by α; order 1/2 is the case discussed here.\n- Cutoff rate: an older coding-theory benchmark for practical decoding effort.\n- Hypothesis testing: deciding between two possible distributions from data; used here as a tool for proving limits.\n- AWGN channel: a channel adding Gaussian noise, with a limit on transmit power.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce a new framework for the study and evaluation of the fundamental limits of channel coding, emphasizing genuinely nonasymptotic results. The {\\em channel coding sample complexity} $n^*({\\cal W},ε)$ of a channel ${\\cal W}$ is defined as the smallest blocklength at which it is possible to transmit information through that channel with error probability below $ε$ and at a rate at least as high as that given by an appropriate constraint also in terms of $ε$. This formulation follows analogous developments in statistics, computer science and, more recently, in lossless source coding. For any discrete memoryless channel we derive nonasymptotic bounds on the sample complexity, with explicit constants. These bounds show that the sample complexity is characterized not by the usual channel capacity, but by the channel's Augustin--Csiszár capacity of order $1/2$, which coincides with the cutoff rate as well as with the channel's Sibson capacity of order $1/2$. The proof is partly based on a new channel-coding one-shot converse in terms of hypothesis testing. We also examine extensions of the sample complexity framework to general target rates. Moreover, we derive corresponding results for the sample complexity of the additive white Gaussian noise channel with a quadratic power constraint. Their proof relies on new, explicit upper bounds on the best achievable error probability, which may be of independent interest.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18239",
+   "title": "Neural Classifiers as Error-Correcting Codes",
+   "url": "https://arxiv.org/abs/2611.18239v2",
+   "authors": [
+    "Sergey Salishev",
+    "Anton Makarov",
+    "Oleg Granichin",
+    "Renata Avros",
+    "Zeev Volkovich"
+   ],
+   "label": "arXiv:2611.18239v2",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proposes viewing supervised deep classifiers as Shannon-style error-correcting code decoders, claiming cross-entropy training aligns softmax outputs with maximum-likelihood decoding over class codewords, and extends this to Neural Collapse, LeJEPA and self-supervised encoders.",
+    "plain": "Neural networks that sort inputs into categories, such as recognizing images, are trained with a standard scoring rule. This paper argues that the same job can be seen as the problem of decoding a message sent through a noisy channel, where each category has a fixed codeword. From that view, the authors say the standard training rule, the shape of the learned representations, and some practical tools such as compression and distillation can be explained together.",
+    "why": "If the analogy holds, it could link deep learning training and representation geometry to a well-established body of coding theory, which may suggest new criteria for compression and regularization. The text itself gives only a high-level abstract, so how far the claims are supported by proofs or experiments cannot be judged from it; the authors' stated results should be checked in the full paper.",
+    "background": "- Error-correcting codes: a way to add structured redundancy to a message so a receiver can recover it despite noise.\n- Codeword: the fixed pattern assigned to each message or class.\n- Hamming distance: the number of positions in which two patterns differ.\n- Maximum-likelihood decoding: picking the codeword most likely to have produced what was received.\n- Softmax and cross-entropy: the standard output scoring and training loss for classifiers.\n- Neural Collapse: a late-training phenomenon where class representations form a symmetric, evenly spaced arrangement.\n- Knowledge distillation: training a smaller network to copy a larger one's outputs.\n- Self-supervised learning: training representations without labels.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A unified framework is proposed that characterizes supervised deep classification as the decoding of error-correcting codes in the Shannon sense. Cross-entropy optimization is shown to align softmax classifiers with maximum-likelihood decoding, where logits map to Hamming distances to class-specific codewords. This correspondence explains the emergence of standard divergence objectives (e.g., Kullback-Leibler, Jeffreys, Bregman) and provides a geometric basis for the stability of decision boundaries. Furthermore, the geometries of Neural Collapse and LeJEPA are identified as optimal constellations for decoding under isotropic noise. Unlike classical Error-Correcting Output Codes, deep networks are shown to learn effective codebooks in the feature space implicitly. This insight is leveraged to derive novel criteria for lossless quantization, improved knowledge distillation, and architectural regularization based on code redundancy. Finally, this perspective is extended to self-supervised encoders, offering a cohesive explanation for the geometry of latent representations in modern neural models.",
    "source": "arxiv"
   }
  ]

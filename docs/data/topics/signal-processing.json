@@ -1,7 +1,54 @@
 {
  "slug": "signal-processing",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.27185",
+   "title": "Hybrid-Field Interference Suppression for Low-Complexity Uplink Channel Estimation",
+   "url": "https://arxiv.org/abs/2611.27185v1",
+   "authors": [
+    "Zihan Zhou",
+    "Li Chen",
+    "Ang Chen",
+    "Weidong Wang",
+    "Changsheng You",
+    "Yunfei Chen"
+   ],
+   "label": "arXiv:2611.27185v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "The paper proposes a low-complexity method (PIN-OMP) that estimates and nulls strong near-field intra-site and far-field inter-site interference before reconstructing the desired uplink channel, and bounds the achievable channel reconstruction error with a conditional hybrid Cramér–Rao bound.",
+    "plain": "Wireless base stations receive signals from phones and devices, and a nearby interferer plus a distant one can corrupt the measurement of the channel a device is actually using. This paper describes a way to first estimate the pattern of the strongest interference, cancel it out, and then recover the wanted channel, without the heavy computation of searching over every possible position. The text reports that the approach is effective in numerical simulations, but the abstract alone does not give the size of the gains.",
+    "why": "Future large antenna arrays will create near-field conditions where the old far-field models break down, so cleaner channel estimates at lower computational cost matter for practical systems. Whether the method holds up in realistic deployments is not shown in the provided text.",
+    "background": "- Uplink channel estimation: measuring how a device's radio signal travels to a base station, needed to decode data.\n- Far-field vs. near-field: far-field assumes signals arrive as parallel waves (depends only on direction); near-field, typical of very large antenna arrays, also depends on distance to the source.\n- Intra-site vs. inter-site interference: unwanted signals from the same cell site versus from neighboring sites.\n- Sparse reconstruction / dictionary: representing a signal as a few terms chosen from a large table of candidate directions and distances; orthogonal matching pursuit (OMP) is a standard greedy search through that table.\n- Cramér–Rao bound: a theoretical lower limit on the error any unbiased estimator can achieve.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Uplink channel estimation can be severely degraded by hybrid-field interference, where strong near-field intra-site interference is coupled with far-field inter-site interference. Although a joint near-/far-field dictionary can capture this interference structure, it requires dense angle--distance matching that may incur high complexity and performance degradation. To address these challenges, this paper proposes a hybrid-field interference suppression framework for uplink channel estimation. First, we formulate a hybrid-field interference model and analyze its sparse reconstruction. Then, to avoid exhaustive near-field dictionary matching, we propose a low-complexity interference-parameter estimation method based on the angle--domain diffusion pattern of the dominant interference. Using the estimated parameters, the proposed parametric interference-nulling orthogonal matching pursuit (PIN-OMP) algorithm suppresses the dominant interference components and reconstructs the desired uplink channel from the interference-suppressed observation. Furthermore, a physical critical-distance bound is derived to characterize the feasible distance-inversion region, and a conditional hybrid Cram'er--Rao bound (HCRB) is established to quantify the desired channel reconstruction limit under a reconstructed interference basis. Finally, numerical results are provided to demonstrate the effectiveness of the proposed scheme.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27022",
+   "title": "On Pareto-Optimal Estimation-Information Limits-Achieving Distributions for Integrated Sensing and Communications",
+   "url": "https://arxiv.org/abs/2611.27022v1",
+   "authors": [
+    "Zi-Jie Wang"
+   ],
+   "label": "arXiv:2611.27022v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "The paper characterizes the optimal input waveform distributions along the full communication-rate versus Miller-Chang-type CRB sensing-distortion Pareto boundary for ISAC under general power, maximum amplitude, and constant modulus constraints, and gives numerical algorithms for the general-power and maximum-amplitude cases.",
+    "plain": "Integrated sensing and communications (ISAC) is about using one radio signal to both send data and detect objects in the environment. This paper studies the best possible trade-off between how well the signal can carry data and how accurately it can measure its surroundings, and what kind of signal power pattern achieves each trade-off. The authors find that the best sensing signals keep a fixed power level, while the best communication signals use a varied spread of power levels.",
+    "why": "The work gives a theoretical answer to a design question for future wireless systems that must both communicate and sense, and it links sensing and communication through a shared notion of waveform uncertainty. The text does not report practical system tests, so its direct impact on real deployments is unclear.",
+    "background": "- ISAC: one transmitted waveform serves both data delivery and radar-like sensing.\n- Achievable rate: the amount of data per second that can be reliably sent, a standard information-theory measure.\n- Cramér-Rao bound (CRB): a lower limit on the error of any unbiased estimate; here it measures sensing accuracy.\n- Pareto boundary: the set of designs where you cannot improve one goal (sensing or communication) without worsening the other.\n- Input distribution: the statistical pattern of signal values and power the transmitter uses.\n- Power constraints: general average power, a maximum amplitude cap, or constant modulus (fixed signal magnitude).\n- Gaussian and Gamma distributions: common probability patterns; the communication-optimal case under general power follows a Gamma pattern of power.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "ISAC systems enable simultaneous data transmission and environmental sensing using a common waveform. Characterizing their fundamental estimation-information performance limits is of core interest in information theory. In this paper, the achievable data rate for communications and the Miller-Chang-type CRB on sensing distortion are adopted as ISAC performance metrics, both of which are functionals of the ISAC waveform distribution. Our aim is to characterize the optimal input distributions across the entire CRB-rate Pareto boundary, corresponding to different sensing-communication tradeoff preferences. Three types of power constraint on input waveform are considered, namely, i) general power (GP), ii) maximum amplitude (MA), and iii) constant modulus (CM) constraints. Under these constraints, Pareto-optimal input distributions are shown to exhibit a common structural property: the directional component is uniformly distributed over the complex unit sphere; the power distribution is discrete (excluding the communication-optimal point under GP, where it follows a Gamma distribution induced by Gaussian inputs). We further investigate and characterize their Pareto-optimal sensing-communication preference dependent support structures. Finally, numerical algorithms are developed under GP and MA to trace their Pareto boundaries and determine corresponding optimal power distributions based on their respective support characteristics. From both analytical and numerical results, we conclude sensing prefers deterministic power while communication benefits from a richer distribution of power levels, thereby revealing the sensing-communication waveform uncertainty tradeoff in the fundamental power domain.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26442",
    "title": "Decision Fusion in Wireless Networks: A Tutorial and Survey of Classical and Learning-Based Methods",
@@ -15,14 +62,14 @@
    ],
    "label": "arXiv:2611.26442v1",
    "primary_category": "eess.SP",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Decision fusion combines local decisions from distributed sensors to support reliable detection of phenomena in wireless networks.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A tutorial and survey of decision-fusion methods, both classical statistical and learning-based, for combining local detection decisions from distributed sensors over wireless links, covering reporting strategies, advanced fusion schemes, and performance-complexity-energy-latency tradeoffs.",
+    "plain": "Many small sensors spread across an area each make their own best guess about whether something is happening, such as a fire or an intruder, and then send that guess to a central point over a wireless link. This paper is a review that explains the different ways those guesses can be combined into one reliable decision, and the trade-offs involved in each. It also looks at how these methods fit newer wireless settings such as drone-assisted networks and large-scale Internet of Things deployments.",
+    "why": "Networks of cheap sensors and drones increasingly need to reach reliable collective decisions under limited energy, bandwidth, and delay, so a consolidated comparison of methods is useful for both researchers and engineers. The text itself does not report new experimental results; its value is as an organized overview and a list of open research directions, such as robust learning under missing reports and changing channels.",
+    "background": "- Distributed sensing: many sensors each observe the environment and make a local yes/no or graded decision.\n- Fusion center: a central node that combines the reported decisions into a final decision.\n- Hard vs. soft vs. quantized reporting: sending only a yes/no bit, a confidence value, or a coarsely rounded value.\n- Detection performance: how often the system correctly spots an event versus raising false alarms.\n- Wireless reporting channel: the link that carries sensor reports, which can be noisy, faded, or lossy.\n- Machine learning in fusion: using trained models instead of fixed statistical rules to combine decisions; training and inference cost matters.\n- Relays and diversity: intermediate nodes that forward reports, and selecting the best of several links.",
+    "difficulty": "intermediate",
+    "ai": true
    },
    "abstract": "Decision fusion combines local decisions from distributed sensors to support reliable detection of phenomena in wireless networks. The effectiveness of decision fusion depends on sensing accuracy, reporting-channel reliability, and available communications and computation resources. This article surveys decision-fusion techniques for wireless sensor networks and emerging communication systems, bringing together their theoretical foundations and practical implementation requirements. We review network architectures and hard, soft, and quantized reporting strategies, and examine statistical, learning-based, game-theoretic, and heuristic fusion approaches. Advanced fusion techniques, including relay-aware combining, link-adaptive regeneration, branch selection, and likelihood approximations, are discussed with emphasis on their assumptions, information requirements, and limitations. The survey examines tradeoffs among detection performance, computational complexity, communications overhead, energy consumption, and latency. The tradeoffs are considered across representative sensing applications and emerging technologies, including massive machine-type communication, ultra-reliable low-latency communication, uncrewed aerial vehicle-assisted networks, and the massive Internet of Things. The reviewed literature highlights the importance of jointly considering sensing quality, reporting reliability, and fusion processing when selecting a suitable strategy. Finally, we identify research directions in resource-aware optimization, uncertainty calibration, and robust learning-based fusion under heterogeneous data, missing reports, and changing wireless conditions. Particular attention is given to convergence, generalization, and the costs of training and inference.",
    "source": "arxiv"
@@ -41,16 +88,155 @@
    ],
    "label": "arXiv:2611.26038v1",
    "primary_category": "eess.SP",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "This paper investigates the adaptive codebook design for task-oriented token communication over wireless networks with dynamic channels.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proposes a channel-aware codebook (CAC) that reorders the labels of a frozen 14-bit VQGAN codebook, via balanced prefix/suffix assignments optimized offline under a binary symmetric channel, to reduce perceptual distortion of task-oriented token communication without retraining.",
+    "plain": "When images are sent over a noisy wireless link as compact numeric codes, a flipped bit can turn one code into a different one and distort the picture. This paper keeps the existing codebook (the dictionary mapping codes to image pieces) but renumbers its labels so that likely bit errors land on codes that look similar. The authors report that at a 1% bit error rate this cuts a perceptual image-difference score (LPIPS) by 12.3% and raises COCO detection accuracy (AP) by 1.72 points, or 14.1%, relative to the original labels.",
+    "why": "Reordering labels is a low-cost way to make an existing learned codec more robust, since the decoder and payload size stay the same and the result is a static lookup table. It may matter for edge or semantic communication systems where channels fluctuate, though the text reports results only for a binary symmetric channel at one main error rate and I cannot judge how it generalizes to real radio links.",
+    "background": "- Token communication: sending short integer indices (tokens) that a receiver maps back to image pieces, instead of raw pixels.\n- Codebook / VQGAN: a learned dictionary of discrete codes used to represent images; a 14-bit codebook has 2^14 entries.\n- Bit error rate (BER) and binary symmetric channel: the chance each transmitted bit is flipped in transit; the simplest noise model.\n- Label reordering: changing which bit pattern represents which codeword, without changing the codewords themselves.\n- LPIPS: a learned perceptual distance where lower means images look more alike to people.\n- COCO AP: average precision, a standard score for object detection on the COCO image dataset.\n- Offline optimization: the assignment is searched ahead of time on a design set, then fixed.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "This paper investigates the adaptive codebook design for task-oriented token communication over wireless networks with dynamic channels. This paper proposes the channel-aware codebook (CAC), a joint channel- and reconstruction-driven framework that reorders the labels of a frozen 14-bit VQGAN codebook. In the considered framework, a balanced geometric partition forms prefix groups, a prefix bijection places the groups on the label hypercube, and bijective suffix assignments place the codewords within each group. The problem is formulated to minimize the expected full-image perceptual distortion of the frozen decoder under a binary symmetric channel, averaged over a design set of bit error rates (BERs) and retaining simultaneous token errors. An offline algorithm alternates prefix and suffix exchanges and screens and confirms candidates on paired batches under a fixed decoder-evaluation budget. The assignment preserves the error-free reconstruction and the payload and deploys as static lookup tables without retraining. Under the binary symmetric channel at BER $0.01$, it reduces LPIPS by $12.3\\%$ and improves COCO AP by $14.1\\%$ ($1.72$ points) relative to the native labels, and it lowers LPIPS by a further $4.5\\%$ relative to a related assignment adaptation at the same payload.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24064",
+   "title": "Toward Massive MIMO HAPS Networks: Antenna Architectures and Design",
+   "url": "https://arxiv.org/abs/2611.24064v1",
+   "authors": [
+    "Shasha Liu",
+    "Abla Kammoun",
+    "Mohamed Slim Alouini"
+   ],
+   "label": "arXiv:2611.24064v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A review of antenna array architectures for massive MIMO high-altitude platform stations (HAPS), comparing existing designs under a 3GPP non-terrestrial network channel model and proposing two new array architectures.",
+    "plain": "This paper looks at how to build the antennas for wireless base stations that fly in the stratosphere, roughly 20 km up, on balloons or aircraft. It surveys the main antenna layouts people have proposed and compares them in a common simulation setup. The authors also put forward two new antenna designs intended to point better at users on the ground and improve signal quality.",
+    "why": "Flying base stations could extend mobile coverage to remote or underserved areas as part of future 6G networks, and the antenna is a key limit on how well they perform. The text does not report the size of the gains from the two proposed designs in the excerpt provided, so their practical value is not yet clear from this summary alone.</why>\n<parameter name=\"background\">- HAPS: aircraft or balloons that hover in the stratosphere and act as wireless towers in the sky.\n- MIMO: using many antennas at once to send and receive several signal streams, improving speed and reliability; \"massive\" means very large numbers of antennas.\n- Antenna array: a grid or line of small antennas whose combined signal can be steered toward a target.\n- 6G: the next generation of cellular networks after 5G, still under development.\n- 3GPP NTN channel model: a standard mathematical model, from the mobile industry's standards body, of how radio signals behave between satellites or platforms and phones.\n- Antenna-user alignment: keeping the antenna's beam pointed at the right ground area as the platform moves.</background>\n<parameter name=\"difficulty\">intermediate",
+    "background": "",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "High-altitude platform stations (HAPS) are expected to become an important component of sixth-generation (6G) and beyond wireless networks by providing wide-area wireless connectivity through massive multiple-input multiple-output (mMIMO) technology. As the communication performance of HAPS systems is fundamentally determined by the antenna array architecture, efficient antenna design has become a critical research topic. Motivated by these considerations, this article provides a comprehensive overview of antenna array design for mMIMO-enabled HAPS systems and proposes two novel antenna architectures to improve antenna-user alignment and communication performance. Specifically, the representative applications of mMIMO-enabled HAPS are first introduced, followed by the key design requirements for HAPS antenna arrays. Representative antenna architectures are then systematically reviewed and compared under a unified simulation framework based on the 3GPP NTN channel model. Finally, several promising research directions are discussed to provide insights into the design of next-generation intelligent HAPS antenna systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24271",
+   "title": "Constellation Shaping for OFDM-ISAC Systems: A Systematic and Experimental Comparison",
+   "url": "https://arxiv.org/abs/2611.24271v1",
+   "authors": [
+    "Benedikt Geiger",
+    "Daniel Gil Gaviria",
+    "Christian Karle",
+    "Delcho Donev",
+    "Charlotte Muth",
+    "Thomas Zwick",
+    "Jürgen Becker",
+    "Benjamin Nuss",
+    "Laurent Schmalen"
+   ],
+   "label": "arXiv:2611.24271v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "This paper analyzes how constellation shaping (choosing the set and probabilities of transmitted symbols) interacts with three sensing channel estimators in monostatic OFDM integrated sensing and communications, using analytical derivations, autoencoder-based optimization, simulations, and hardware-in-the-loop experiments.",
+    "plain": "Wireless systems are being designed to both send data and sense their surroundings using the same radio signal, but the best way to shape the transmitted signal for communication can conflict with what sensing needs. This paper studies how to shape that signal and how it interacts with different sensing methods, using both mathematical analysis and tests on hardware. The authors report that the sensing result mainly depends on which sensing estimator is used, while data performance mainly depends on the shaping method, with one combination (Wiener filter with joint shaping) giving the best overall trade-off.",
+    "why": "As radio devices such as future mobile networks and vehicles try to combine communication and radar-like sensing on one signal, the choice of modulation affects both jobs at once, so this trade-off matters for practical design. The text reports both simulations and hardware experiments, but the summary given here does not show the size of the gains, so the practical impact is best judged from the full paper.",
+    "background": "- Integrated sensing and communications (ISAC): one radio signal used both to transmit data and to detect objects by their reflections, like radar.\n- Monostatic: the transmitter and receiver sit in the same place, so the device listens to echoes of its own signal.\n- OFDM: a modulation scheme that splits data across many narrow frequency subcarriers.\n- Constellation shaping: choosing which signal points (symbols) are used and how often each is sent, to improve performance.\n- Unit-modulus signal: a signal whose strength stays constant, which radar prefers.\n- Sensing channel estimators (matched, reciprocal, Wiener filters): methods for estimating the echo response from the transmitted and received signals.\n- Entropy and probabilistic amplitude shaping (PAS): measures of information content and a technique for sending some symbols more often than others.\n- Autoencoder: a neural network trained to compress and reconstruct data, here used to search for good constellations.\n- Hardware-in-the-loop: testing with real radio hardware connected to a simulated environment.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Emerging integrated sensing and communications (ISAC) systems reuse the communications signal for radar-like sensing to provide environmental awareness. However, this integrated design imposes conflicting constraints on the modulation format, as communications systems use higher-order modulation formats while sensing systems use unit-modulus signals, making constellation shaping a key performance driver in ISAC systems. This paper develops a unified analytical and experimental framework for constellation shaping in monostatic orthogonal frequency division multiplexing ISAC systems and systematically analyzes its interaction with the three canonical sensing channel estimators (SCEs): the matched filter, the reciprocal filter, and the Wiener filter (WF). We begin by deriving constellation-dependent image signal-to-interference-and-noise ratio (ISINR) expressions for the SCEs that account for practical effects such as windowing and multi target scenarios. Based on this, we derive the corresponding entropy-maximizing channel input distributions. We generalize an autoencoder framework to optimize geometric, probabilistic, including conventional and generalized low-complexity probabilistic amplitude shaping (PAS), and joint constellation shaping across all three SCEs. Extensive simulations and hardware-in-the-loop experiments validate the derived ISINR and show that sensing performance is governed by the SCE choice, while communications performance is dominated by the shaping method. Notably, the WF combined with joint shaping achieves the best ISAC trade-off. Low-complexity PAS variants closely approach this performance, offering a flexible trade-off and outperforming legacy modulation formats.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22559",
+   "title": "Least ln-cosh-based adaptive filtering algorithm for graph signal processing",
+   "url": "https://arxiv.org/abs/2611.22559v1",
+   "authors": [
+    "Chong Zhang",
+    "Haiquan Zhao"
+   ],
+   "label": "arXiv:2611.22559v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Proposes a least ln-cosh adaptive filter, and a variable step-size variant, for estimating signals defined on graphs under non-Gaussian noise, compared against existing graph sign, GMCC and LMP algorithms.",
+    "plain": "Many measurements now live on networks rather than on a regular time line or grid, such as sensors linked to each other or users linked in a social network. This paper presents a new computational method that estimates the true values of such network-based signals while noise is messy and not the usual bell-curve kind, including sudden large spikes. The authors report that their method stays accurate and stable across several noise types in both fixed and changing signal tests.",
+    "why": "Noise that is not well behaved is common in real sensor data, so a method that does not need advance knowledge of the noise type could be useful for network-based sensing. The text does not show real-world deployments, and its claims rest on the authors' own estimation experiments, so practical value is still unconfirmed.</why>\n<parameter name=\"background\">- Graph signal: data values attached to nodes of a network (e.g., sensors or users), where links show which nodes relate.\n- Adaptive filtering: a method that updates its estimate step by step as new data arrives, offline or online.\n- Non-Gaussian noise: noise that does not follow the familiar bell-shaped distribution; it can include rare, large outliers.\n- Impulse noise (Bernoulli-Gaussian model): occasional large disturbances on top of normal noise.\n- Alpha-stable, Cauchy, Laplace: named families of noise with heavier tails than the bell curve.\n- Step size: how big each update correction is; larger steps converge faster but can be less accurate.\n- Loss function: the rule measuring how wrong an estimate is; ln-cosh behaves like a squared error for small errors and like an absolute error for large ones, which limits the influence of outliers.</why>\n<parameter name=\"difficulty\">research-level",
+    "background": "",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "Currently, an increasing number of irregular signals are being defined within graph structures. This paper proposes a Least ln-cosh-based Adaptive Filtering for Graph Signal Processing (GSP LLAF) algorithm for offline/online graph signal estimation under various non-Gaussian noise conditions. Compared to the recently proposed Graph Adaptive Least Mean p-th Power (GSP LMP) algorithm, GSP LLAF eliminates the need for prior knowledge of the noise characteristics. Simultaneously, GSP LLAF addresses the limitation in estimation accuracy encountered by the Sign Algorithm for Graph Signal Processing (GSP Sign) and the Graph Signal Processing algorithm based on the Generalized Maximum Correntropy Criterion (GSP GMCC). Furthermore, the algorithm features low computational complexity and fast execution speed. To achieve a balance between convergence speed and estimation accuracy, a variable step-size variant, the Modified Variable Step-Size Least ln-cosh-based Adaptive Filtering Algorithm for Graph Signal Processing (GSP MVSS-LLAF), is proposed. In estimation experiments involving both static and time-varying graph signals, the proposed GSP LLAF and GSP MVSS-LLAF algorithms demonstrate fast, stable, and robust graph signal estimation performance under various non-Gaussian noise conditions, including Bernoulli-Gaussian (BG) modeled impulse noise, as well as alpha-stable, Cauchy, and Laplace distributions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23024",
+   "title": "Distributed Blind Source Separation from Compressed Mixtures",
+   "url": "https://arxiv.org/abs/2611.23024v1",
+   "authors": [
+    "Amir Weiss"
+   ],
+   "label": "arXiv:2611.23024v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper develops a framework for blind source separation when sensors send compressed (rate-limited, quantized) versions of their mixtures to a central fusion center, covering identifiability under compression, a Gaussian rate-distortion-based Cramér-Rao benchmark for interference-to-source ratio, and compression-aware separation using subtractively dithered quantization with debiasing.",
+    "plain": "Several remote sensors each measure mixtures of hidden signals, but they can only send a compressed version of their data to a central computer, which must still separate out the original signals. The paper asks whether those signals can still be told apart after compression, how much accuracy is lost at a given data rate, and how the separation method should change to account for the compression. The authors report a theoretical benchmark and separation methods that are tested in simulations showing the trade-off between communication rate and separation quality.",
+    "why": "Sensor networks and edge devices often face tight bandwidth and energy limits, so deciding how to compress before central inference matters in practice. The paper ties together information-theoretic limits and practical quantization-based estimators, though the text only describes simulations, so how well the gains hold in real deployments is not established here.",
+    "background": "- Blind source separation: recovering several unknown original signals from mixtures of them, without knowing the mixing process.\n- Fusion center: a central node that combines data gathered from many sensors.\n- Quantization: rounding measurements to a finite set of levels so they can be sent with fewer bits.\n- Subtractive dithering: adding a known pseudo-random noise before quantizing and removing it afterward, so the rounding error behaves like independent noise.\n- Debiasing: correcting the systematic bias that compression introduces into an estimate.\n- Rate-distortion theory: the minimum number of bits needed to describe a signal to a given level of accuracy.\n- Cramér-Rao lower bound: a theoretical floor on the error any unbiased estimator can achieve.\n- Fourth-order cumulants and second-order statistics: summary statistics of signals (higher-order and covariance-based) that many separation methods exploit.\n- Interference-to-source ratio: a measure of how much of one source leaks into the estimate of another; lower is better.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Blind source separation (BSS) is increasingly needed in sensing architectures where mixtures are acquired by multiple remote devices but the inference itself is carried out centrally. In such systems, the sensors often cannot transmit their raw observations since the communication links are rate-limited, energy-limited, or both. The fusion center therefore must recover the latent sources from compressed versions of the mixtures. This setting raises questions that classical BSS models do not address directly: whether source identifiability survives compression, how separation accuracy changes under a specified compression model, and how the separation procedure should be modified to account for the statistical model induced by the compression stage. In this work, we develop a framework for distributed BSS from compressed mixtures that addresses these issues at three levels. First, we formalize identifiability under compression and establish a data-processing viewpoint showing that compression cannot introduce distinguishability that is absent before compression. Second, for mixtures of Gaussian sources with general covariance structures, we derive an idealized Gaussian rate-distortion-based Cramér-Rao lower bound benchmark for the interference-to-source ratio. Third, we develop practical compression-aware separation schemes based on subtractively dithered quantization together with debiasing at the fusion center for both fourth-order-cumulant-based and second-order-statistics-based methods. Simulation experiments demonstrate the resulting tradeoffs between communication rate and separation performance and the gains obtained by compression-aware separation in representative distributed sensing scenarios.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18013",
+   "title": "Constant-Weight Sparse Vector Coded Augmented-AFDM",
+   "url": "https://arxiv.org/abs/2611.18013v1",
+   "authors": [
+    "Zhou Lu",
+    "Mohammed El-Hajjar",
+    "Lie-liang Yang"
+   ],
+   "label": "arXiv:2611.18013v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proposes a constant-weight sparse-vector-coded augmented AFDM scheme with a joint support-and-symbol detector, aimed at short-packet URLLC over doubly selective channels, and compares it against SVC/ESVC baselines and several channel codes (Hamming, BCH, RS, polar) for QAM protection.",
+    "plain": "Wireless systems that must send short messages very reliably struggle when the data rate goes up, because the usual sparse-vector encoding needs many more vectors and so more processing. This paper encodes information using a fixed-weight set of sparse vectors, which keeps the candidate set small, and pairs it with a newer waveform (AFDM) that handles fast-changing radio channels better than OFDM. According to the text, the scheme gives up to 14 dB better reliability than conventional SVC and ESVC schemes in simulations.",
+    "why": "Ultra-reliable low-latency links matter for applications such as control signals and vehicle or industrial communication, where both speed and dependability count. The work is based on simulation results only, so its practical value depends on hardware and real-channel tests that the summary does not mention.",
+    "background": "- Ultra-reliable low-latency communication (URLLC): wireless links for short messages that must rarely fail and arrive quickly.\n- Sparse vector coding: information is carried by which few positions of a vector are nonzero, not by the values alone.\n- Hamming weight: the number of nonzero positions in a vector; Hamming distance: how many positions differ between two vectors.\n- Constant-weight codes: codewords that all have the same number of nonzero positions, which keeps the candidate set small.\n- OFDM: a common multi-carrier waveform; it suffers when the channel changes quickly (Doppler spread), causing interference between carriers.\n- AFDM: a newer chirp-based multi-carrier waveform designed for doubly selective channels, but it still has high peak-to-average power ratio, as OFDM does.\n- Channel codes (Hamming, BCH, Reed-Solomon, polar): standard error-correcting codes used to protect the data.\n- QAM: a modulation scheme that encodes bits in signal amplitude and phase.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Sparse vector coding (SVC) and its variants convey information through sparse vectors (SVs), or sparse support patterns and detecting information by solving sparse recovery problems, making them attractive for short-packet ultra-reliable low-latency communications (URLLC). However, as the required information rate increases, conventional SVC schemes or the enhanced SVC (ESVC) schemes require a rapidly growing number of SVs, resulting in significant increase of complexity and receiver processing latency. On the other hand, when communicating in doubly selective channels, orthogonal frequency division multiplexing (OFDM) suffers from the Doppler spread induced inter-carrier interference, while affine frequency division multiplexing (AFDM) experiences the same peak-to-average power ratio (PAPR) problem as OFDM, although it allows diversity gain from channel's double selectivity. To address these issues, this paper proposes a constant-weight sparse vector coded augmented AFDM (CW-SVC/A$^2$FDM ) scheme, along with a corresponding joint support and symbol detection algorithm. In this scheme, SVs are represented by constant-weight codewords that feature a fixed Hamming weight and a large Hamming distance, resulting in relatively small SV sets. Simulation results compare various SVC/ESVC schemes and diverse coding schemes employed by the CW-SVC/A$^2$FDM, including Hamming, BCH, RS, and polar codes, for QAM symbol protection. The results demonstrate that the proposed scheme provides a distinct reliability advantage over conventional SVC/ESVC schemes, achieving a gain of up to 14 dB. Furthermore, the study indicates that the CWC's weight and minimum Hamming distance must be carefully selected to balance detection reliability, QAM modulation order, and sparse recovery feasibility, thereby maximizing the overall system's performance.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18039",
+   "title": "Recursive Semi-Blind Receivers for Wideband Array Processing",
+   "url": "https://arxiv.org/abs/2611.18039v1",
+   "authors": [
+    "Eleftherios Kofidis"
+   ],
+   "label": "arXiv:2611.18039v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper extends block-term tensor decomposition based semi-blind joint channel estimation and data detection for uniform rectangular arrays from narrowband to wideband sources, using recursive (on-the-fly) algorithms evaluated by simulation in time-varying channels.",
+    "plain": "Antenna arrays receive radio signals that bounce along several paths and arrive at slightly different times, which makes it hard to separate the channel from the transmitted symbols. This paper develops methods that keep updating their estimates as data arrives, so they can follow a changing channel and decode symbols after only a short initial training period. The authors compare these recursive methods with batch versions and with a training-only approach in simulations.",
+    "why": "Wireless receivers that need less pilot training and can track a moving channel could save bandwidth and improve reliability in large or wideband arrays. The text reports only simulation results, so its practical benefit in real hardware is not shown here.",
+    "background": "- Sensor array: a grid of antennas whose combined outputs are processed together.\n- Multipath: a radio signal reaching the receiver by several routes with different delays.\n- Narrowband vs wideband: whether signal delays across paths are small enough to ignore; wideband signals need them modeled.\n- Tensor decomposition: a way of factoring multi-dimensional data arrays into simpler parts; block-term decomposition is one such model.\n- Semi-blind joint channel estimation and data detection: estimating the channel and recovering transmitted symbols together, using a short known training sequence plus the unknown data.\n- Recursive vs batch algorithms: recursive ones update estimates sample by sample as data arrives; batch ones process a whole block at once.\n- Constellation size: the number of possible symbol values a transmitter can send (e.g., QPSK vs 16-QAM).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Using the commonly employed uniform rectangular array (URA) as an illustrative example, we have recently shown that the block-term tensor decomposition (BTD) model provides a natural representation for the output signal of a multi-dimensional separable sensor array structure in the presence of channel multipath. A palette of effective and efficient semi-blind joint channel estimation/data detection (JCD) algorithms for URA processing, which wed BTD modeling with existing JCD schemes, has thus been developed, and recently extended so as to be applicable in large-scale arrays and/or time-varying environments. However, both the model and the algorithms were based on the assumption of narrowband signals, arriving through paths of effectively the same delay. In this paper, recursive JCD algorithms for wideband sources are developed and evaluated through simulations in a time-varying setting and across different constellation sizes, in comparison with their batch counterparts and the training-only-based solution. They are seen to enjoy the ability to track channel variations and detect the transmitted symbols `on the fly', with the aid of only a short initial training stage.",
    "source": "arxiv"
   }
  ]

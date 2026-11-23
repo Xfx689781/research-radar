@@ -1,6 +1,6 @@
 {
  "slug": "theory-of-computation",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26080",
@@ -11,14 +11,14 @@
    ],
    "label": "arXiv:2611.26080v1",
    "primary_category": "cs.DS",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We revisit running-time lower bounds historically based on the Exponential Time Hypothesis.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper asks how much of the quantitative running-time lower bounds usually derived from the Exponential Time Hypothesis can instead be obtained from the weaker assumption FPT ≠ W[1], via reductions from clique with few-bit encodings, yielding twelve bounds for deterministic algorithms on graph, string, and integer feasibility problems.",
+    "plain": "Computer scientists often prove that certain problems cannot be solved faster than some speed limit, and they base these limits on a widely believed conjecture called the Exponential Time Hypothesis. This paper asks how many of those speed limits can still be proved using a different, more basic assumption, namely that a certain class of \"parameterized\" problems is not efficiently solvable. The authors do this by converting a search for a group of mutually connected nodes in a network into instances of other problems, and report twelve such lower bounds.",
+    "why": "It matters because it tests how far a standard family of hardness results can be carried under a different, arguably less specific assumption, which affects how confidently researchers can claim certain problems are hard. The text does not say how these results compare with the strength of the original conjecture-based bounds beyond the stated similarity in exponents, so the broader significance is uncertain.",
+    "background": "- Running-time lower bound: a proof that no algorithm for a problem can run faster than a given function of input size, under some assumption.\n- Clique: a set of nodes in a network where every pair is directly connected; deciding whether a clique of a given size exists is a classic hard problem.\n- Exponential Time Hypothesis (ETH): a belief that certain problems cannot be solved in subexponential time (time growing slower than any exponential).\n- Parameterized complexity: studies problems where one input quantity (the parameter) is kept small; FPT (fixed-parameter tractable) means solvable in time f(parameter) times a polynomial in input size.\n- W[1]: a harder-looking class of parameterized problems; FPT ≠ W[1] is the belief that these are not the same, i.e., W[1]-hard problems have no FPT algorithm.\n- Reduction: a method of transforming one problem into another so that a fast solver for the second yields a fast solver for the first.\n- Deterministic algorithm: one that always follows the same steps, with no random choices.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We revisit running-time lower bounds historically based on the Exponential Time Hypothesis. Our case study asks how much of their quantitative content can be recovered under the assumption FPT $\\neq$ W[1]. The reductions encode the choice of a clique in few bits and control the target parameter in terms of that encoding. This makes a sufficiently fast algorithm for the target problem yield a fixed-parameter algorithm for deciding whether a graph has a clique of the requested size. We obtain twelve lower bounds for deterministic algorithms across graph, string, and integer feasibility problems, including bounds that hold under structural restrictions. In several cases the same function of the parameter appears in the exponent as in the historical bound, with the additional requirement that the cutoff for any prescribed saving in the exponent be computable.",
    "source": "arxiv"
@@ -33,16 +33,151 @@
    ],
    "label": "arXiv:2611.26188v1",
    "primary_category": "cs.DS",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Asymmetric Multi-Path TSP is the generalization of the Asymmetric Traveling Salesperson Problem where we are looking for $k$ walks, each with prescribed start $s_i$ and prescribed end $t_i$, such that every vertex is visited by at least one of the walks.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper gives approximation algorithms for Asymmetric Multi-Path TSP, where k walks with fixed start and end points must jointly cover all vertices of a directed graph, minimizing total length, including an O(k)-approximation in time n^{O(k)} that answers an open question of Friggstad [2013].",
+    "plain": "This paper studies a route-planning puzzle: several travelers each have a set starting point and ending point, and together they must visit every location while keeping the total distance as short as possible. The one-way-street version of this problem is hard to solve exactly, and no good approximation is possible in general. The authors give methods that come within a factor proportional to the number of travelers, and they get stronger results for special cases where all travelers share starting and ending points.",
+    "why": "It settles an open question posed by Friggstad in 2013 and gives improved constant-factor results for related routing problems such as vehicle routing with regret bounds and unit-weight Path ATSP. The text does not say how these results compare with other recent work, so their wider significance is uncertain.",
+    "background": "- Traveling Salesperson Problem (TSP): find the shortest tour visiting every point.\n- Asymmetric: distances depend on direction (going A to B may cost differently than B to A), like one-way streets.\n- Approximation algorithm: a fast method that guarantees a answer within a known factor of the best possible, rather than the exact optimum.\n- NP-hard: a class of problems believed to have no fast exact solution in general.\n- O(k)-approximation: the cost is at most a constant times k (the number of walks) times the optimum.\n- Bicriteria approximation: the solution may use slightly more walks or budget than allowed, in exchange for a better cost guarantee.\n- Multi-depot: all walks start and end at the same depot.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Asymmetric Multi-Path TSP is the generalization of the Asymmetric Traveling Salesperson Problem where we are looking for $k$ walks, each with prescribed start $s_i$ and prescribed end $t_i$, such that every vertex is visited by at least one of the walks. The objective is to minimize the total length of all walks. In general, it is NP-hard to find any approximation for this problem in polynomial time (even if the approximation factor is allowed to depend on the number of vertices). We show that one can obtain an $O(k)$-approximation in time $n^{O(k)}$, answering an open question by Friggstad [2013]. For the special case where all tour start vertices $s_i$ are identical and all end vertices $t_i$ are identical, we obtain an $O(k)$-approximation in polynomial time, as well as an $(O(\\frac{1}ε), 1+ε)$-bicriteria approximation. For the multi-depot setting, where $s_i =t_i$ for all $i$, we obtain a constant-factor approximation in polynomial time. Finally, our results imply improved constant-factor approximation algorithms for Asymmetric Regret-Bounded Vehicle Routing and unit-weight Path ATSP.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24709",
+   "title": "The computational complexity of Undirected Vertex Geography with maximum height 3",
+   "url": "https://arxiv.org/abs/2611.24709v1",
+   "authors": [
+    "Craig Tennenhouse",
+    "Kanae Yoshiwatari"
+   ],
+   "label": "arXiv:2611.24709v1",
+   "primary_category": "cs.CC",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper settles the complexity of the impartial game Undirected Vertex Geography with maximum height 3 (UIR3) by reducing from Directed Vertex Geography, showing it remains hard on planar graphs of maximum degree 3, on bipartite graphs of maximum degree 4, and on bipartite graphs of maximum degree 5 with heights restricted to 1 and 3.",
+    "plain": "This is a theory paper about a two-player game played on a network of dots connected by lines, where a token is moved along the lines one step at a time. Each dot carries a height number that drops by one each time the token leaves it, and the question is how hard it is to work out who wins. The authors show that the height-3 version is hard to solve in general, even when the network is drawn flat or has special structure, by translating a known hard game into this one.",
+    "why": "The result closes an open question the authors identify: the difficulty of the height-3 case was unknown, sitting between a case known to be easy (height 2) and one known to be hard (height 4). It is mainly of interest to researchers in game complexity and computational complexity theory; the text does not claim applications beyond that.",
+    "background": "- Impartial game: both players have the same moves available, and the player who cannot move loses.\n- Vertex Geography: a game where a token moves along edges of a graph (dots and lines) to unvisited dots; the standard version is solvable in polynomial time.\n- Heights: a modification where each dot has a number that counts down with each move from it, limiting how often it can be used.\n- Polynomial time vs PSPACE-complete: \"easy to solve efficiently\" versus \"believed to need a very large amount of memory or time as the game grows.\"\n- Reduction: showing one problem is at least as hard as another by converting instances of the known hard problem into instances of the new one.\n- Planar graph: a network that can be drawn on a flat surface with no crossing lines. Bipartite: dots can be split into two groups with lines only between groups. Maximum degree: the largest number of lines meeting at one dot.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The impartial game Undirected Vertex Geography is known to be polynomial time solvable. The variant in which vertices are assigned heights with maximum value m that reduce by 1 whenever the token is moved from that vertex, denoted UIRm, is known to be polynomial time solvable when m=2 and PSPACE-complete when m=4. We solve the open question of the computational complexity of UIR3 by a reduction from Directed vertex geography, and show that the complexity holds when the underlying graph is planar and (a) has degree at most 3, (b) is bipartite with maximum degree 4, or (c) is bipartite with maximum degree 5 and only has heights of 1 and 3.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24526",
+   "title": "Two $(2+ε)$-Approximation Algorithms for Minimum Spanning Tree Interdiction",
+   "url": "https://arxiv.org/abs/2611.24526v1",
+   "authors": [
+    "Junjie Luo",
+    "Changjun Wang",
+    "Chenhao Wang",
+    "Wei Yu"
+   ],
+   "label": "arXiv:2611.24526v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper gives two deterministic (2+ε)-approximation algorithms for minimum spanning tree interdiction (improving a previous factor of 4), shows a matching (2−δ) hardness under the Small Set Expansion Hypothesis and P≠NP, and derives a (4+ε)-approximation for metric TSP interdiction.",
+    "plain": "The problem asks how to remove a limited number of connections from a network so that the cheapest way to connect all points, the minimum spanning tree, becomes as expensive as possible. The authors present two computer procedures that get within a factor of about two of the best possible damage, improving on a previous factor of four. They also argue, under standard but unproven complexity assumptions, that no efficient procedure can do much better than two.",
+    "why": "It narrows a gap between known upper and lower bounds for a well-defined optimization problem, and the hardness result is said to be tight up to an arbitrarily small constant. The text does not say how it affects practical applications, and the TSP result is only a consequence of the spanning tree guarantee.",
+    "background": "- Graph: points (vertices) joined by weighted links (edges).\n- Spanning tree: a set of links connecting all points with no loops; the minimum spanning tree (MST) is the one with the smallest total weight.\n- Interdiction: an adversary deletes edges within a budget to hurt the network; here the goal is to maximize the MST weight after deletions.\n- Approximation factor: an efficient algorithm guarantees a result within a stated multiple of the best possible value; (2+ε) means within about twice optimal, for any small ε>0.\n- Hardness assumptions: the Small Set Expansion Hypothesis and P≠NP are unproven conjectures; the lower bound holds only if they are true.\n- Metric TSP: the traveling salesman problem where distances satisfy the triangle inequality.\n- Lagrangian rounding: a standard technique that replaces a budget constraint with a penalty term and then rounds the solution.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Minimum spanning tree interdiction asks for edge deletions within a budget that maximize the weight of a remaining minimum spanning tree. We give two deterministic $(2+ε)$-approximation algorithms for every fixed $ε>0$, improving the previous best factor of $4$. Both algorithms respect the original budget and run in $N^{O(1/ε)}$ time for $0<ε\\le1$, where $N$ is the binary input size. The first algorithm uses two weight thresholds to choose initial deletions that force every remaining spanning tree to contain edges at or above these thresholds. It then uses the remaining budget to further increase the MST weight through Lagrangian rounding. The second algorithm achieves the same guarantee through a different decomposition: it enumerates vertex partitions and heavy trees connecting their parts, then approximates a bounded-weight interdiction problem within the parts. An objective-preserving reduction from Maximum Components shows that, assuming the Small Set Expansion Hypothesis and $\\mathsf P\\ne\\mathsf{NP}$, no deterministic polynomial-time $(2-δ)$-approximation exists for any fixed $0<δ<1$, even on simple graphs with weights in $\\{0,1\\}$. Thus, our approximation guarantee is conditionally tight up to an arbitrarily small additive constant. Finally, the MST guarantee yields a $(4+ε)$-approximation for metric-TSP interdiction.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22621",
+   "title": "Entanglement Lower Bounds for Symmetric Quantum Circuits",
+   "url": "https://arxiv.org/abs/2611.22621v1",
+   "authors": [
+    "Davi Castro-Silva",
+    "Ryan Dancy",
+    "Sergii Strelchuk"
+   ],
+   "label": "arXiv:2611.22621v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proves that polynomial-size symmetric quantum circuits on n-vertex graphs with entanglement width o(n/log n) cannot compute a certain classical-polynomial-time graph property, via a new quantum pebble game based on the partial trace.",
+    "plain": "The paper studies quantum circuits that must respect every symmetry of their input graph, and asks what they can compute when the amount of entanglement (quantum linkage between qubits) is limited. It finds a graph property that a classical polynomial-time algorithm can decide but that such restricted symmetric quantum circuits cannot compute at polynomial size. It also shows that without the entanglement limit, every graph property in BQP can be computed, and that with no entanglement at all, circuits can compute every property definable in fixed-point logic with counting.",
+    "why": "It gives unconditional lower bounds for a restricted quantum model, a kind of result that is rare in quantum computing, and it links quantum circuit size to entanglement. The text does not say how far the results reach beyond this model, so their wider significance is uncertain.",
+    "background": "- Quantum circuit: a sequence of gates acting on quantum bits (qubits).\n- Entanglement: a quantum correlation between qubits; \"entanglement width b\" means the state splits into pieces of at most b qubits after each layer.\n- Symmetric circuit: a circuit whose structure is unchanged by any relabeling (permutation) of the input graph's vertices.\n- Descriptive complexity: characterizing computational problems by the logic needed to express them.\n- Pebble game: a combinatorial game used to prove that certain algorithms cannot distinguish certain structures.\n- BQP: problems solvable efficiently by quantum computers; fixed-point logic with counting is a logic for polynomial-time graph properties.\n- Partial trace: an operation that discards some qubits from a quantum state.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Symmetric circuits require every symmetry of the input to extend to an automorphism of the circuit. In the classical setting, their connection to descriptive complexity yields strong unconditional lower bounds. We extend this approach to the quantum model of symmetric computation defined by Castro-Silva, Gur, and Strelchuk (ITCS 2026), proving a tradeoff between circuit size and entanglement width (the smallest $b$ such that, on every computational-basis input, the state after each layer factors into states on at most $b$ qubits each). Our main result identifies a graph property decidable in classical polynomial time that no polynomial-size family of symmetric quantum circuits on $n$-vertex graphs with entanglement width $o(n/\\log n)$ can compute. The bound holds for circuits with arbitrary one-qubit and two-qubit gates and unrestricted depth, and remains valid under the weaker notion of symmetry with respect to even permutations of vertices. Our proof is based on a new quantum pebble game based on the partial trace. The resulting indistinguishability theorem transfers classical pebble-game lower bounds to quantum circuits with restricted entanglement. By contrast, without entanglement restrictions, we show that every graph property in BQP can be computed by a uniform family of polynomial-size symmetric quantum circuits. Restricting to circuits with no entanglement at all, we show that polynomial-size symmetric quantum circuits with entanglement width 1 can compute every graph property definable in fixed-point logic with counting. Finally, we give an efficient symmetric implementation of QAOA for MAX 3XOR, providing a starting point for studying entanglement lower bounds in quantum optimization algorithms.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23541",
+   "title": "Depth Hierarchies for Symmetric Algebraic Circuits",
+   "url": "https://arxiv.org/abs/2611.23541v1",
+   "authors": [
+    "Anuj Dawar",
+    "Prateek Dwivedi",
+    "Benedikt Pago",
+    "Tim Seppelt"
+   ],
+   "label": "arXiv:2611.23541v1",
+   "primary_category": "cs.CC",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper studies depth as a complexity parameter for symmetric algebraic circuits, proving a depth-based size separation for a polynomial family, strict hierarchies for symmetric bounded-depth classes symVAC^k, and permanent completeness for a new symmetric class symVNP.",
+    "plain": "The paper is about how hard it is to compute certain polynomial formulas (sums and products of variables) when the computation is required to respect a built-in symmetry, and how the number of layers of computation, called depth, affects that cost. The authors show that for each fixed depth there are formulas that need a very large, super-polynomial size at that depth but can be built at polynomial size with a few more layers. They also show that allowing more depth, in a measured way, gives strictly more power.",
+    "why": "Proving that some problems are hard to compute is a central aim of algebraic complexity theory, and restricting the model (here, by symmetry) is a standard route toward such results. The depth hierarchies and the permanent's completeness for a new class place this work within a recent line of research on symmetric circuits; the text does not say how far these results reach beyond that setting.",
+    "background": "- Algebraic circuit: a network of addition and multiplication gates that computes a polynomial; size counts gates, depth counts layers.\n- Polynomial vs. super-polynomial size: polynomial size grows at a manageable rate in the input; n^{Omega(log n)} grows faster than any fixed power.\n- Permanent: a polynomial, like the determinant but without signs, believed hard to compute.\n- Symmetric circuit: a restricted circuit whose structure is required to respect symmetry under permuting variables.\n- Complexity classes VP, VNP, VF, VS, VAC^k: families of polynomials grouped by the circuit resources needed; VNP is the class of polynomials whose coefficients can be checked efficiently, and VAC^k are bounded-depth classes.\n- Hierarchy: a chain of classes where each is strictly contained in the next, showing more depth gives more power.\n- Completeness under projections: a problem is hardest for its class under a simple reduction.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Algebraic complexity studies the cost of computing families of polynomials by algebraic circuits, with the central goal of proving super-polynomial circuit lower bounds and separations between different models of algebraic computation. Since such lower bounds remain elusive for general circuits, a common strategy is to focus on restricted models. A recent line of work (ICALP 2020, ITCS & STOC 2026) introduces and studies symmetry as a syntactic circuit restriction, showing exponential symmetric lower bounds for the permanent, as well as separations between symmetric analogues of algebraic formulas ($\\mathsf{VF}$), skew circuits ($\\mathsf{VS}$), and circuits ($\\mathsf{VP}$). We investigate the role of depth as a complexity parameter in symmetric circuits. For every fixed $Δ\\geq 1$, we exhibit a family of polynomials computable by symmetric circuits of polynomial size and depth $2Δ+3$, but requiring size $n^{Ω(\\log n)}$ at depth $Δ$. We also define symmetric versions of the bounded-depth algebraic complexity classes $\\mathsf{VAC}^k$, for all $k \\in \\mathbb{N}$, that we call $\\mathsf{symVAC}^k$, and establish two strict hierarchies: Firstly, a hierarchy within $\\mathsf{symVAC}^0$, and secondly, a hierarchy of the form $\\mathsf{symVAC}^k \\subsetneq \\mathsf{symVAC}^{k+1}$ for all $k$. The latter shows that symmetric circuits of depth $(\\log n)^{k+1}$ are strictly more powerful than depth-$(\\log n)^k$ circuits. Moreover, we place the bounded-depth classes within the landscape of symmetric algebraic complexity developed by Dwivedi, Pago and Seppelt (STOC 2026). We complement this picture by introducing $\\mathsf{symVNP}$, a symmetric analogue of $\\mathsf{VNP}$, and establishing $\\mathsf{symVNP}$-completeness of the permanent under symmetric projections.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21453",
+   "title": "Reducing Asymmetric Path TSP to Asymmetric TSP",
+   "url": "https://arxiv.org/abs/2611.21453v1",
+   "authors": [
+    "Hong Li"
+   ],
+   "label": "arXiv:2611.21453v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper shows that any α-approximation for Asymmetric TSP gives an (α+ε)-approximation for Asymmetric Path TSP, improving the earlier Feige–Singh reduction factor of α(2+ε) and answering an open question of Traub and Vygen.",
+    "plain": "This paper is about a route-planning puzzle: find the shortest tour that visits every stop, where the cost of going from A to B can differ from going back from B to A. The \"path\" version fixes a start and an end point. The authors show that a good approximate solver for the tour version can be turned into an almost equally good solver for the path version, losing only a tiny extra amount.",
+    "why": "Mainly of interest to specialists in approximation algorithms, since it settles an open question posed by Traub and Vygen and tightens a known loss factor from about 2α to about α. The text does not claim wider practical consequences; its stated implication is that every constant-factor guarantee for the tour problem carries over to the path problem.",
+    "background": "- Traveling Salesman Problem (TSP): find the cheapest round trip visiting every point once.\n- Asymmetric: travel cost depends on direction (A to B may differ from B to A).\n- Path version: start and end points are fixed instead of returning to the start.\n- Approximation algorithm: a fast method guaranteed to return a solution within a known factor α of the best possible cost.\n- Approximation factor α (for example 2 means at most twice the optimal cost); ε is an arbitrarily small extra slack.\n- Triangle inequality: going directly between two points is never more expensive than going through a third.\n- Reduction: a method for converting a solver for one problem into a solver for another, with a known loss in quality.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In the Asymmetric Traveling Salesman Problem (Asymmetric TSP), we are given distances between $n$ vertices that satisfy the triangle inequality but need not be symmetric, and we seek a shortest tour through all vertices. In its path version, Asymmetric Path TSP, two vertices $s$ and $t$ are prescribed, and we seek a shortest path from $s$ to $t$ through all vertices. Both problems are equivalent to their versions with arbitrary nonnegative edge costs on a directed graph, in which vertices may be visited more than once. We show that for all constants $α\\ge1$ and $\\varepsilon>0$, any $α$-approximation algorithm for Asymmetric TSP yields an $(α+\\varepsilon)$-approximation algorithm for Asymmetric Path TSP. The best previous reduction of this kind, due to Feige and Singh, yields an $α(2+\\varepsilon)$-approximation algorithm. Our result answers an open question of Traub and Vygen. Consequently, every constant-factor approximation guarantee for Asymmetric TSP carries over to Asymmetric Path TSP up to an arbitrarily small additive error.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21994",
+   "title": "An alternate proof of the QMA lower bound for set-size estimation",
+   "url": "https://arxiv.org/abs/2611.21994v1",
+   "authors": [
+    "Chinmay Nirkhe"
+   ],
+   "label": "arXiv:2611.21994v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "This paper gives a new proof, via the polynomial method, of a known quantum-with-witness (QMA) query lower bound for set-size estimation, an alternative to the Laurent-polynomial proof of Aaronson, Kothari, Kretschmer and Thaler.",
+    "plain": "The paper concerns a puzzle about counting: given a long string of bits, decide whether more than a threshold B of them are ones, or at most A of them are. The question is how many times an algorithm must peek at the bits when it is also given a quantum \"witness\" (a hint carried in quantum states). The paper re-proves a known lower bound on how many peeks are needed, using a different mathematical route than the original.",
+    "why": "The result itself was already established, so the contribution is a second, different proof of the same bound rather than a new answer. It may be of interest to researchers who want to understand the limits of quantum algorithms with hints, and because the new route uses the more widely used polynomial method, it could be easier to adapt to related problems; the text does not say whether it does.",
+    "background": "- Query complexity: the cost of a problem measured by how many input bits an algorithm must read.\n- Hamming weight: the number of 1s in a bit string.\n- Approximate counting: distinguishing a count of at least 2A from at most A (the case B = 2A).\n- QMA: the quantum analogue of NP, where a yes-answer can be certified by a quantum witness.\n- Polynomial method: proving limits on query algorithms by showing their acceptance behaviour must be approximated by low-degree polynomials, which cannot do certain things.\n- Laurent polynomials: polynomials that allow negative powers; the original proof used them.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In the set-size estimation query task, a query algorithm decides whether an $N$-bit input has Hamming weight $\\ge B$ or $\\le A$ (with $\\ge B$ as the yes instances and $\\le A$ as the no instances). When $B = 2A$, this is sometimes called approximate counting. The query complexity for this problem with a quantum witness (i.e., $\\mathsf{QMA}$ query bounds) was resolved by Aaronson, Kothari, Kretschmer, and Thaler (CCC 2020) and proved using Laurent polynomials. Here we give a morally similar but distinct proof of the lower bound using the polynomial method.",
    "source": "arxiv"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "slug": "ml-theory",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25342",
@@ -12,14 +12,14 @@
    ],
    "label": "arXiv:2611.25342v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper evaluates class-conditional (Mondrian) conformal prediction as an uncertainty-aware accept/reject/retake layer on top of an ICAO face-image compliance analyser across 14 criteria in the synthetic TONO benchmark, using subject-disjoint splits and logistic classifiers.",
+    "plain": "Passport-style photos are checked against many rules (such as head position, lighting, and background), and an automatic checker says pass or fail for each rule without saying how sure it is. This paper adds a statistical layer that attaches a measure of confidence to those decisions, so that uncertain photos can be sent for a retake. The authors found that a version that treats each rule's failing cases separately kept coverage close to the target for rare failures, but it did not beat simple tuned abstention rules on false alarms, and checking all 14 rules together with a strict correction forced nearly every photo to be retaken.",
+    "why": "It addresses a practical gap: rule-based compliance checkers give hard verdicts with no uncertainty, and rare violation classes are where ordinary methods fail. The text reports trade-offs rather than a clear win, so its value is mainly as a worked case study of conformal prediction under class imbalance; wider relevance beyond this benchmark is not shown in the text.",
+    "background": "- Conformal prediction: a method that wraps any classifier and produces sets or flags with a guaranteed long-run coverage rate (e.g., about 90% of true labels contained).\n- Coverage: the share of cases where the true answer is inside the predicted set; \"under-covered\" means the guarantee fails for some groups.\n- Marginal vs. class-conditional (Mondrian) conformal: marginal applies one guarantee across all data; Mondrian applies it separately within each class, which helps rare classes.\n- Class imbalance: violations are rare compared with compliant photos, so overall averages can hide poor performance on the rare class.\n- False positive: a compliant photo wrongly flagged as a violation.\n- Abstention/retake: declining to decide and asking for a new photo.\n- Bonferroni correction: a strict adjustment for testing many criteria at once, which makes each criterion's threshold harsher.\n- Subject-disjoint split: training and test data use different people, avoiding leakage.\n- ICAO/ISO: international standards for passport photo requirements.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph. We investigate conformal prediction as a triage layer for BioGaze, evaluating 14 compliance criteria on the synthetic TONO benchmark. Without retraining the analyser, we fit per-criterion logistic classifiers and compare marginal and label-conditional (Mondrian) conformal prediction with conventional abstention rules using subject-disjoint splits. Marginal conformal prediction achieved approximately 0.90 overall coverage but substantially under-covered violations, with a ten-partition mean of 0.37 for one criterion. The corresponding Mondrian means ranged from 0.89 to 0.92 across criteria. However, most of the reduction in criterion-level false positives came from the logistic layer (0.145 to 0.048), while tuned abstention rules achieved lower false-positive rates than Mondrian at comparable retake rates. Bonferroni correction for joint coverage across 14 criteria required retaking nearly all images. These findings show that class-conditional conformal prediction can achieve near-target empirical coverage for minority violation classes and reveal trade-offs between statistical coverage, classification performance, and retake requirements in multi-criterion face-image compliance assessment.",
    "source": "arxiv"
@@ -36,16 +36,147 @@
    ],
    "label": "arXiv:2611.25624v1",
    "primary_category": "cs.LG",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The concentration and training-time constancy of the neural tangent kernel (NTK) depend on the interplay between network width, depth, and initialization.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "Numerical study of how joint depth-width scaling (ratio L/C of convolutional layers to channels) affects neural tangent kernel dispersion at initialization and kernel rotation during training in CNNs.",
+    "plain": "This paper looks at how a neural network's behavior drifts away from a simplified \"infinitely wide\" idealization as the network gets deeper relative to its width. The authors ran numerical experiments on convolutional networks and tracked how spread out the network's kernel is at the start and how much it rotates during training. They report that the spread grows with the ratio of depth to channel count in the critical and chaotic initialization regimes, stays small in the ordered regime, and that the kernel rotates more as the ratio grows.",
+    "why": "It offers a single ratio, L/C, as a candidate quantity governing when the simplified infinite-width picture stops being accurate for CNNs, which matters for anyone relying on that picture to understand training. The text does not show how far the finding generalizes beyond the experiments run, so its wider significance is unclear.",
+    "background": "- Neural network: a function built from layers of weighted sums and nonlinearities, trained by adjusting its weights.\n- Convolutional neural network (CNN): a network whose layers apply small sliding filters, common in image tasks.\n- Width and depth: width here is the number of channels per layer (C); depth is the number of layers (L).\n- Neural tangent kernel (NTK): a matrix describing how changing the weights affects outputs; in the infinite-width limit it stays fixed during training and is deterministic.\n- Dispersion: how much the kernel's values vary across random initializations; small dispersion means the kernel concentrates near a single value.\n- Initialization regimes: ordered, critical, and chaotic describe whether signals shrink, stay balanced, or blow up as they pass through layers at the start.\n- Kernel rotation: how much the kernel's direction changes during training.\n- Scaling collapse: when curves measured at different sizes fall onto one curve when plotted against a combined variable such as L/C.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "The concentration and training-time constancy of the neural tangent kernel (NTK) depend on the interplay between network width, depth, and initialization. While joint depth-width scaling has been studied in fully-connected, residual, and recurrent networks, its effects in convolutional neural networks (CNNs) remain less understood. We investigate these effects numerically in CNNs, examining NTK dispersion at initialization and kernel rotation during training. Let depth $L$ be the number of convolutional layers, and width $C$ the number of channels per layer. We find that NTK dispersion increases with $L/C$ in the critical and chaotic initialization regimes, but remains small in the ordered regime. At critical initialization, dispersion curves approximately collapse as a function of $L/C$, suggesting a nontrivial joint scaling regime. During training, kernel rotation generally increases with $L/C$, even in the ordered regime where initial dispersion is small. Together, these results suggest that $L/C$ may govern NTK deviations from the infinite-width limit in certain regimes, and that NTK concentration at initialization and stability during training exhibit different scaling behaviors.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24602",
+   "title": "Diffusion Models are Provably Efficient Priors for Sparse Recovery",
+   "url": "https://arxiv.org/abs/2611.24602v1",
+   "authors": [
+    "Ivan Lee",
+    "Xingyu Xu",
+    "Yuejie Chi"
+   ],
+   "label": "arXiv:2611.24602v1",
+   "primary_category": "stat.ML",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper proves that a pretrained diffusion model used as a prior, combined with a likelihood-guided annealed Langevin sampler, can provably recover sparse signals from few linear measurements in polynomial time with near-optimal sample complexity, and gives total variation guarantees for posterior sampling when the signal follows the assumed prior.",
+    "plain": "The paper studies how to reconstruct a signal that is mostly zeros from a small number of indirect measurements, a classic problem in compressed sensing. It asks whether a generative model trained to produce such signals (a diffusion model) can be used as a guide for this reconstruction, with a theoretical guarantee rather than only empirical success. The authors show that, under stated assumptions, the method recovers the signal efficiently and with a near-minimal number of measurements.",
+    "why": "Diffusion models are widely used as priors for imaging and sensing problems, but their theoretical behavior has been poorly understood, and prior guarantees were often asymptotic or computationally costly. This work offers finite, polynomial-time guarantees for a clean model problem, which may help explain when such solvers can be trusted; the extent to which the results carry over to real images is not established by the text.",
+    "background": "- Sparse signal: a vector where most entries are zero; compressed sensing recovers it from far fewer measurements than its length.\n- Linear measurements: each observation is a weighted sum of the unknown signal's entries.\n- Ill-posed inverse problem: many different signals could explain the same measurements, so a prior is needed to choose a plausible one.\n- Prior: a probability distribution over signals encoding what they typically look like; here a Bernoulli-Gaussian model (each entry is zero with some probability, otherwise Gaussian).\n- Diffusion model: a generative model that learns to turn noise into data by reversing a gradual noising process.\n- Langevin sampling: an iterative method that moves toward high-probability regions with added random noise, used to draw samples from a distribution.\n- Sample complexity: how many measurements are needed for recovery; \"near-optimal\" means close to the theoretical minimum.\n- Total variation distance: a measure of how different two probability distributions are.\n- Posterior sampling: drawing signals consistent with both the measurements and the prior.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Diffusion models have transformed generative modeling through their ability to capture and generate samples from complex data distributions. This success has spurred substantial interest in using pretrained diffusion models as expressive priors for highly ill-posed inverse problems in imaging and sensing. Despite strong empirical performance, theoretical understanding of this approach remains limited: existing guarantees are often asymptotic or entail prohibitive computational costs in the worst case. In this paper, we address this gap by studying sparse recovery from a small number of linear measurements, a classical problem in compressed sensing. We show that, given an accurate diffusion model capturing a sparsity-promoting Bernoulli-Gaussian prior, a likelihood-guided annealed Langevin sampler provably recovers the sparse signal in polynomial time with near-optimal sample complexity for a broad family of random and deterministic sensing matrices. When the signal is indeed drawn from the postulated prior, we further establish total variation guarantees for posterior sampling after a final denoising step. These results lay a theoretical foundation for statistically and computationally efficient inverse solvers with diffusion priors.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24329",
+   "title": "Distribution-Free Uncertainty Quantification for Weather Forecasting: Conformal Prediction Under Spatiotemporal Dependence",
+   "url": "https://arxiv.org/abs/2611.24329v1",
+   "authors": [
+    "Mariya"
+   ],
+   "label": "arXiv:2611.24329v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A benchmark of eight conformal prediction interval methods for gridded 2 m temperature forecasts (CNN and ECMWF HRES, ERA5 target), showing that near-nominal marginal coverage hides strong day-to-day and temporal clustering of misses, which is largely driven by days with large errors across much of the grid.",
+    "plain": "Weather forecasts often come with a \"plus or minus\" range meant to contain the true temperature a set share of the time. This paper checks whether those ranges are right not just on average over many places, but also within a single day across the whole map and across consecutive days. The authors find that the average coverage looks fine, yet on some days many places are missed together, and misses bunch up in time; a simple daily-scale correction helps only slightly.",
+    "why": "Calibrated uncertainty matters for anyone who acts on forecast ranges, and the paper suggests that a method can pass a standard average-coverage check while still failing on joint, day-level behaviour. The study is limited to one variable, one coarse grid, a reanalysis target and two forecasters, so its findings should be read as a case study rather than a general verdict.",
+    "background": "- Forecast interval: a range around a predicted value meant to contain the outcome a chosen share of the time (e.g. 90%).\n- Conformal prediction: a family of methods that builds such ranges from past errors, with guaranteed average coverage under exchangeability assumptions.\n- Marginal coverage: the long-run fraction of cases covered at one location, averaged over time.\n- Spatial and temporal dependence: nearby places and consecutive days tend to have correlated errors, which breaks the independence assumptions behind many standard statistics.\n- Overdispersion: variance larger than what independent cases would produce; here, the day-to-day spread in the fraction of the map covered.\n- ERA5 and HRES: a reanalysis dataset used as the \"truth\" and ECMWF's operational forecast model; a CNN is a small neural-network forecaster.\n- Interval score: a single number rewarding narrow intervals that still cover the outcome, penalising misses.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Conformal prediction gives finite-sample, distribution-free marginal coverage and has begun to be applied to gridded weather forecasts. Marginal coverage concerns the long-run fraction of covered points at a location, not how coverage behaves jointly across space and time on a given day. I benchmark eight interval-construction procedures (Gaussian, pooled and per-cell split conformal, per-season, adaptive conformal inference and rolling windows) for gridded 2 m temperature forecasts at eight lead times from 6 hours to 10 days, using ERA5 at 5.625 degree resolution, a deliberately modest convolutional forecaster and ECMWF's operational HRES, with calibration in 2017-2018 and testing in 2019-2021. Alongside coverage, width and interval score, I report dependence diagnostics: a spatial overdispersion index, quantiles of daily spatial coverage and miss persistence relative to a shuffled-days null. Per-cell methods reach near-nominal marginal coverage, yet the day-to-day variance of the fraction of cells covered is roughly 3 to 10 times what independent cells would give, and misses cluster in time; both effects grow with lead time for the CNN, also appear for HRES, and are shared by all methods. An oracle that divides each day's normalised errors by that day's mean removes 81 to 92 percent of the excess dispersion for the CNN and 93 to 98 percent for HRES, so days of large errors across much of the grid account for most of it. A day-scale predicted from seasonal terms and already-verified errors lowers the overdispersion index without widening intervals but improves interval score by at most 0.6 percent; on HRES from 12 hours to 3 days it has the lowest overdispersion index while ACI or season-conditional calibration has the best interval score, so no method is best on both. The study covers one variable, one coarse grid, a reanalysis target and two forecasters.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23630",
+   "title": "What Interpolators Store and What They Express: An Information-Theoretic Framework for Benign Overfitting and Label-Free Model Selection",
+   "url": "https://arxiv.org/abs/2611.23630v1",
+   "authors": [
+    "Nikolaos Nikolaou"
+   ],
+   "label": "arXiv:2611.23630v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper splits what an interpolating learner does with its training sample into storage (label information kept by the model) and expression (sample information reaching predictions at new inputs), and uses the expressed information V both to explain benign overfitting and as a label-free model-selection criterion.",
+    "plain": "Some machine learning models memorize noisy training labels perfectly and still predict well on new cases, which older theories struggle to explain. The paper separates what such a model stores about its training labels from what it actually passes on to its predictions, and argues that only the second part matters for how well it generalizes. The authors also propose a way to choose between models without setting aside labelled data for testing.",
+    "why": "It offers a new explanation for benign overfitting and a selection method that needs no held-out labels, which could matter for settings where labels are scarce. The reported gains (60% less regret than holdout validation at the same cost, comparable to 5-fold cross-validation at a quarter of the cost, on 15 noisy datasets) come from the authors' experiments; I have not verified them, and the approach is limited to cases where the authors say it fails under certain conditions.",
+    "background": "- Overfitting: a model fits training data too closely, including noise in the labels.\n- Interpolator: a model that gets every training example exactly right.\n- Benign overfitting: such a model still predicts new cases well.\n- Information theory and entropy: entropy measures how much uncertainty or information a variable carries, in bits.\n- Conditional mutual information (CMI): a standard information-theoretic measure of how much a model's output depends on one training example, used in generalization bounds.\n- Bias-variance decomposition: splits prediction error into error from systematic assumptions and error from sensitivity to the training sample.\n- Holdout validation and k-fold cross-validation: standard ways to estimate performance by reserving labelled data for testing.\n- Regret (in model selection): how much worse the chosen model is than the best model in the candidate set.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Overparameterized learners can fit noisy training labels perfectly and still predict well, which neither classical complexity measures nor information-theoretic generalization bounds explain. We develop an information-theoretic framework that separates two things an interpolating learner does with its sample: storage, the information the trained model retains about its training labels, and expression, the information about the sample that reaches its predictions at fresh inputs. We first characterize the ideal model: for a loss l, the least complex l-sufficient representation is the Bayes act, whose entropy is the minimal sufficient complexity; this generalizes, and corrects, an earlier \"lossless maximal compression\" view of boosting. We then show that every interpolator stores exactly nH(Y|X) bits of label noise, so storage, and bounds built on it (including CMI bounds), cannot tell interpolators apart. Expression can: excess risk is bounded above and below by the expressed information V, the entropy over training samples of the prediction at an input, plus a modal-bias term, exactly so for binary labels. Benign overfitting is therefore vanishing expression, a picture that covers nearest-neighbour rules, averaging, minimum-norm least squares and double descent, and that links V to classical bias-variance decompositions and to model disagreement. Finally, V gives a model-selection criterion that needs no held-out labels. Among overparameterized learners on 15 noisy datasets, V estimated from two disjoint halves has 60% less regret than holdout validation at the same cost and matches 5-fold cross-validation at a quarter of its cost; at matched cost it also beats selection by conditional mutual information. We characterize when it fails and give remedies. Code: https://github.com/nnikolaou/GLMC",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22646",
+   "title": "The Price of Hard Coverage Constraints in Online Conformal Prediction",
+   "url": "https://arxiv.org/abs/2611.22646v1",
+   "authors": [
+    "Mingrui Liu"
+   ],
+   "label": "arXiv:2611.22646v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper characterizes the unavoidable extra prediction-set size needed by online conformal prediction methods that must keep cumulative miscoverages within a hard budget over T rounds, showing the cost holds even with i.i.d. data and known score distribution.",
+    "plain": "The paper looks at a forecasting-with-safety-margin problem: a system makes a set of possible answers each round and must keep the number of times the true answer is missed under a fixed budget over the whole run. The authors show that enforcing this strict budget forces the sets to grow by a minimum amount, and they pin down how that minimum scales with the number of rounds. The extra cost depends on which kind of time horizon is being judged, growing like log T, T^(1/3), or the square root of T in different cases.",
+    "why": "Conformal prediction is widely used to attach reliability guarantees to predictions, so knowing the exact price of a strict, cumulative guarantee is useful for deployment decisions. The result is theoretical, and the text does not say how it would translate to specific practical systems.",
+    "background": "- Prediction set: instead of one guess, a method outputs a set of plausible outcomes; bigger sets are more likely to contain the truth but are less informative.\n- Miscoverage: an event where the true outcome falls outside the predicted set.\n- Coverage guarantee: a promise about how often the true outcome lands inside the set, typically on average.\n- Online setting: predictions are made one round at a time, with data arriving sequentially.\n- Hard (cumulative) budget: the total number of misses must stay under a limit at all times, not just on average.\n- Big-O / Theta notation: Theta(f(T)) means the cost grows at the same rate as f(T) up to constant factors.\n- Regularity conditions: mathematical assumptions the authors need for the exact rates to hold; the text says these are required but does not list them.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Conformal prediction provides distribution-free uncertainty quantification, but in sequential deployment, standard coverage guarantees can still allow substantial fluctuations in the number of miscoverages over time. We study an online setting in which prediction sets are produced one round at a time and the cumulative number of miscoverages must stay within a prescribed budget throughout deployment.Such a hard coverage guarantee can be enforced by enlarging prediction sets, but how much additional prediction-set size is fundamentally necessary remains unclear. We characterize this unavoidable efficiency cost over $T$ prediction rounds. Remarkably, the cost persists even with i.i.d.\\ data, a known score distribution, and perfect knowledge of the population-optimal prediction set. Under suitable regularity conditions relating coverage and prediction-set size, we determine the minimum cumulative excess prediction-set size required by any online method satisfying the hard coverage constraint. This minimum cost is $Θ(\\log T)$ for expected cost at a fixed time known in advance, $Θ(T^{1/3})$ for the largest expected cost over all fixed times up to $T$, and $Θ(\\sqrt{T})$ for the expected worst realized cost when the evaluation time is chosen in hindsight. We further show that these rates can be attained using past scores, without knowing the score distribution. Thus, even perfect statistical knowledge does not make sequential reliability free.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19566",
+   "title": "Bellman Residual Bracketing: Resolving the Sample Complexity of Discounted and Average-Reward RL",
+   "url": "https://arxiv.org/abs/2611.19566v1",
+   "authors": [
+    "Matthew Zurek",
+    "Yudong Chen"
+   ],
+   "label": "arXiv:2611.19566v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proves sample-complexity bounds for plug-in (empirical model-based) planning in discounted and average-reward reinforcement learning with a generative model, using a new Bellman residual bracketing technique, and claims these match lower bounds up to constant factors.",
+    "plain": "The paper studies how much experience a learning agent needs to find a nearly best strategy in a decision-making problem, assuming it can query a simulator for any state-action pair. The approach is \"plug-in\" planning: estimate the problem's rules from sampled data, then solve the estimated problem. The authors state upper bounds on how many samples this needs and say that, paired with earlier lower bounds, these settle the minimax sample complexity in the settings they cover.",
+    "why": "Sample complexity questions ask how much data is fundamentally required, so pinning down the exact rate is a useful theoretical milestone if the claims hold. The new analysis technique (bracketing the Bellman residual, a measure of how far a value estimate is from satisfying the optimality equation) is presented as a way to make earlier absorbing-MDP-based proofs more efficient. Whether this changes practice is unclear from the abstract alone.",
+    "background": "- Reinforcement learning (RL): an agent learns by acting in an environment and receiving rewards.\n- Generative model: a simulator the agent can query for any state and action to get a next state and reward.\n- Sample complexity: how many queries or data points are needed to reach a target accuracy.\n- Discount factor (gamma): how strongly future rewards are weighted against immediate ones; the effective horizon grows like 1/(1-gamma).\n- Average-reward setting: the goal is long-run reward per step, with no discounting.\n- Plug-in approach: estimate the transition and reward model from data, then solve that estimated model exactly.\n- Bellman residual: how much a value estimate violates the Bellman optimality equation.\n- Minimax rate: the best worst-case guarantee achievable by any method, matched by an upper and lower bound.\n- Span and diameter: measures of how spread out values or reachable states are in an average-reward problem.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the sample complexity of the empirical planning or plug-in approach for reinforcement learning (RL) with a generative model. We show the discounted plug-in approach finds an $\\varepsilon$-optimal policy with $O(SA (1-γ)^{-3} \\varepsilon^{-2} \\log(SA/δ))$ samples, where $S, A, γ, δ$ are the state and action sizes, discount factor, and failure probability, respectively. In the average-reward setting, we show that discounted plug-in and direct (undiscounted) plug-in achieve $O(SAH\\varepsilon^{-2}\\log(SA/δ))$ and $O(SAD\\varepsilon^{-2}\\log(SA/δ))$ complexities, respectively, where $H$ upper-bounds the optimal bias span and $D$ is the diameter. Combining with our lower bounds for nonadaptive generative models, these results resolve the minimax sample complexity of discounted RL and average-reward RL --- in both the span- and diameter-based classes --- up to constant factors. Our main technical contribution is a novel Bellman residual bracketing technique which improves the efficiency of prior absorbing-MDP-based concentration analyses.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21542",
+   "title": "The cost of enforcing long-run coverage: a phase transition in online conformal prediction",
+   "url": "https://arxiv.org/abs/2611.21542v1",
+   "authors": [
+    "Yu Gui",
+    "Rina Foygel Barber",
+    "Cong Ma"
+   ],
+   "label": "arXiv:2611.21542v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper characterizes, via a phase transition at exponent β = 1/2, when online conformal prediction can keep long-run coverage within O(T^-β) of the target in adversarial settings while matching split conformal prediction's per-step coverage in the i.i.d. case.",
+    "plain": "The paper looks at a forecasting task where a model must give a range of likely outcomes for each new data point, one after another. The usual guarantee for such ranges holds when data behave like repeated fair draws, but real streams can drift or change abruptly. The authors study how tightly one can control the average coverage over time without making the ranges jump around when the data are in fact well behaved.",
+    "why": "The result is a sharp threshold: tight long-run control is achievable at no cost up to a certain strictness, and beyond it a trade-off appears. This is a theoretical statement, and the text does not show practical experiments, so its impact on deployed systems is unclear from this text alone.",
+    "background": "- Prediction interval / prediction set: a range (or set of labels) that should contain the true outcome with a chosen probability, here 1 minus alpha.\n- Coverage: the fraction of times the true outcome actually falls inside the range.\n- Exchangeable / i.i.d. data: the order of observations does not matter statistically; i.i.d. means each is an independent draw from the same distribution.\n- Split conformal prediction: a standard method that builds valid prediction ranges from a held-out set of past residuals or scores.\n- Online and adversarial settings: data arrive one at a time and may be chosen by an opponent or shift over time, so no distributional assumption is made.\n- Long-run versus instantaneous coverage: average coverage over many steps versus coverage at each individual step conditional on the training data.\n- Phase transition: a sharp change in behavior when a parameter crosses a threshold; here, at beta = 1/2.\n- Big-O notation: O(T^-beta) means the deviation shrinks at roughly the rate T to the power minus beta as the horizon T grows.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Consider an online prediction setting, where at each time, we are given a new feature vector and asked to provide a prediction interval or prediction set that will likely contain the corresponding response. In this setting, if the data points are i.i.d. (or more generally, exchangeable), conformal prediction provides a mechanism for building valid prediction sets around the output of any trained model, offering coverage probability $\\geq 1-α$ at each time $t$. In practice, however, issues such as distribution drift, changepoints, or other challenges may cause violations of the i.i.d. assumption. In this adversarial setting, online conformal prediction methods can still offer guarantees on long-run empirical coverage. However, there is a trade-off between these two types of goals: enforcing tight constraints on long-run empirical coverage to protect against the adversarial setting can lead to unstable oscillations in the instantaneous training-conditional coverage in the i.i.d. setting. In this work, we seek best-of-both-worlds algorithms that aim to minimize cumulative error in instantaneous training-conditional coverage when in the i.i.d. setting, while also offering long-run empirical coverage guarantees in the adversarial setting. Specifically, consider a condition that requires long-run empirical coverage to deviate from the target level $1-α$ by at most $\\mathcal{O}(T^{-β})$, for some $β\\in[0,1]$. We prove that this family of conditions can be described with a phase transition. For $β\\in[0,\\frac{1}{2}]$, it is possible to construct algorithms satisfying such a constraint in the adversarial setting, while offering the same instantaneous coverage performance as split conformal prediction if the data is in fact i.i.d. On the other hand, for $β\\in(\\frac{1}{2},1]$, this type of condition comes at a cost, and does not achieve best-of-both-worlds behavior.",
    "source": "arxiv"
   }
  ]

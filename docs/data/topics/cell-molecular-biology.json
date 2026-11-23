@@ -1,29 +1,87 @@
 {
  "slug": "cell-molecular-biology",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.17.767246",
-   "title": "Modelling Maternal-to-Zygotic Transition Dynamics to Identify Common Gene Expression Baselines in Zebrafish Development.",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767246v1",
+   "uid": "biorxiv:10.64898/2026.11.18.763125",
+   "title": "Smyd1 regulates H3K4me3 to support adaptive fatty acid oxidation in the adult heart during lipid overload",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.763125v1",
    "authors": [
-    "grosse Holthaus, M.",
-    "Michaelis, P.",
-    "Schunck, F.",
-    "Focks, A."
+    "Mukai, R.",
+    "Oka, S.",
+    "Sung, E.-A.",
+    "Takayama, K.",
+    "Ikeda, S.",
+    "Matsushita, M.",
+    "Takada, T.",
+    "Sadoshima, J."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.17.767246 v1",
-   "primary_category": "molecular biology",
-   "date": "2026-11-22",
+   "label": "bioRxiv doi:10.64898/2026.11.18.763125 v1",
+   "primary_category": "cell biology",
+   "date": "2026-11-23",
    "summary": {
-    "one_liner": "We propose a semi-mechanistic ODE-based transcription model for zebrafish embryogenesis that captures common baseline expression dynamics by integrating the maternal-to-zygotic transition mechanism.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "In mice, the muscle-specific histone methyltransferase Smyd1 transiently rises in cardiomyocytes during early high-fat diet feeding, supports fatty acid oxidation gene expression via H3K4me3 and a Smyd1-PPAR-alpha interaction, and its partial loss worsens diet-induced heart dysfunction.",
+    "plain": "A high-fat diet can gradually weaken the heart's ability to burn fat for energy, which contributes to obesity-related heart disease. This study looked at a protein called Smyd1 that acts as a switch on genes, and found that in mice it temporarily increases in heart muscle cells early on the diet, helping the heart keep burning fat. Mice with only one working copy of the Smyd1 gene in the heart did worse on the diet, with weaker heart function, enlarged heart chambers, more scarring, and lower survival.",
+    "why": "It proposes a specific, early compensatory mechanism that could be relevant to preserving the heart's metabolic flexibility in obesity, which is a possible target for future treatments. The text is a summary of mouse work, so whether it applies to humans is not established here.",
+    "background": "- Fatty acid oxidation (FAO): the process by which heart cells break down fats to produce energy.\n- Lipid overload: an excess of fats in the diet or blood, as in high-fat diet feeding.\n- Cardiomyocytes: the muscle cells of the heart.\n- Histone methyltransferase: an enzyme that adds chemical tags (methyl groups) to histones, the proteins around which DNA is wrapped, changing how genes are switched on.\n- H3K4me3: a specific methyl tag on histone H3 that is generally linked to active genes.\n- PPAR-alpha: a nuclear receptor protein that switches on many genes for fat burning.\n- Heterozygous knockout: mice carrying one inactive copy of a gene, so about half the normal protein level.\n- Single-cell RNA sequencing: a method that measures gene activity in individual cells.\n- Co-immunoprecipitation: a lab method used to test whether two proteins physically bind each other.",
+    "difficulty": "research-level",
+    "ai": true
    },
-   "abstract": "We propose a semi-mechanistic ODE-based transcription model for zebrafish embryogenesis that captures common baseline expression dynamics by integrating the maternal-to-zygotic transition mechanism. We fitted this model to a time-course RNA-seq dataset of D. rerio spanning early developmental stages until 120 hpf. Using the inferred model parameters, we identified common gene expression pattern using fuzzy c-means clustering and compared these with clusters stemming from a shape-based approach using smooth trajectories. We show that the ODE-parameter-based approach improves to biological interpretability by linking clusters to underlying regulatory mechanism, such as the timing of zygotic genome activation, thereby generating more precise expression clusters. However, the results also revealed technical biases of the time-course data, originating from the poly(A) enrichment step.",
+   "abstract": "Obesity and metabolic syndrome are major risk factors for heart failure, and impaired fatty acid oxidation (FAO) is a key contributor to metabolic dysfunction in obesity-related cardiomyopathy. However, how the heart maintains FAO and adapts to chronic lipid overload remains poorly understood. Here, we identify SET and MYND domain-containing protein 1 (Smyd1), a muscle-specific histone methyltransferase, as an early compensatory regulator of cardiac metabolism in response to lipid overload. In wild-type mouse hearts, high-fat diet (HFD) feeding induced transient increases in Smyd1 expression and H3K4me3 levels during the early-to-mid phase of metabolic stress, both of which returned to baseline levels during prolonged HFD exposure. Single-cell RNA sequencing further revealed that this adaptive increase in Smyd1 expression occurred predominantly in cardiomyocytes. In contrast, cardiac-specific Smyd1 heterozygous knockout mice exhibited accelerated cardiac dysfunction, left ventricular dilation, increased myocardial fibrosis, and reduced survival following HFD feeding. Mechanistically, Smyd1 deficiency impaired the adaptive upregulation of key FAO-related genes and reduced cardiac FAO activity. Furthermore, co-immunoprecipitation analysis revealed an interaction between Smyd1 and peroxisome proliferator-activated receptor alpha (PPAR), suggesting a potential mechanism by which Smyd1 supports FAO gene expression. Taken together, these findings identify Smyd1 as an early compensatory regulator that supports FAO-dependent metabolic adaptation and protects the heart against lipid overload-induced cardiac dysfunction. This adaptive mechanism, involving H3K4me3 regulation and the Smyd1-PPAR interaction, may provide potential therapeutic targets for therapeutic strategies aimed at preserving cardiac metabolic flexibility in obesity-related cardiomyopathy.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.17.767399",
+   "title": "Syngeneic human iPSC Macrophages and Microglia possess distinct neuroinflammatory profiles, responses to HIV infection, and ART treatment",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767399v1",
+   "authors": [
+    "Oteju, O.",
+    "Daniali, M.",
+    "Kist, T.",
+    "Xu, X.",
+    "Emanuel, K.",
+    "Niu, M.",
+    "Dampier, W.",
+    "Fox, H.",
+    "Gaskill, P. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.17.767399 v1",
+   "primary_category": "cell biology",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "Using stem-cell-derived human microglia-like and border-macrophage-like cells from the same donor, the authors compare baseline inflammatory signaling, TLR2/TLR4-driven NF-κB responses, HIV infection, and cART suppression between the two CNS myeloid cell types.",
+    "plain": "Brain-resident immune cells can be grouped into two kinds: microglia, which live inside brain tissue, and border-zone macrophages, which sit at its edges. HIV persists in these cells even under treatment and may contribute to ongoing brain inflammation, but it has been hard to study the two cell types side by side. The researchers grew both cell types from the same human stem-cell line, so their genetic background matches, and compared how they respond to inflammatory signals, HIV, and antiviral drugs.",
+    "why": "Because the two cell types come from one genetic background, differences seen between them are more likely to reflect the cells themselves than donor variation. This may help future work on why HIV persists in the brain and why some cells resist treatment, though the text itself does not test those clinical links.",
+    "background": "- Macrophages: immune cells that engulf debris and pathogens and signal other immune cells.\n- Microglia: macrophage-like immune cells resident in the brain and spinal cord tissue.\n- CNS-associated macrophages (CAMs): macrophages at the brain's borders, such as around blood vessels and membranes.\n- Toll-like receptors (TLRs): sensors on immune cells that detect microbial molecules and trigger inflammation; TLR2 and TLR4 are named here.\n- NF-κB: a protein that switches on inflammatory genes after TLR signaling; its early response is measured here.\n- iPSCs (induced pluripotent stem cells): adult cells reprogrammed to an embryonic-like state, which can be turned into many cell types.\n- RNA sequencing: a method that measures which genes are active in cells.\n- cART (combined antiretroviral therapy): the standard drug regimen that suppresses HIV but does not fully clear it from reservoirs.\n- neuroHIV: HIV-related neurological problems that persist despite treatment.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Macrophages are innate immune cells that primarily function as professional phagocytes, playing essential roles throughout the body in host defense and maintaining homeostasis. The CNS is populated by two anatomically distinct macrophage populations; parenchymal microglia and border-resident CNS-associated macrophages (CAMs). These populations coordinate the neuroinflammatory response to pathogen-associated molecular patterns (PAMPs) through Toll-like receptor (TLR) signaling and are exposed to distinct microenvironmental cues that could shape their functions. CNS macrophages are also involved in infection with neurotropic viruses such as HIV, where the persistent infection contributes to chronic neuroinflammation and the constellation of other neurological symptoms collectively termed neuroHIV. Although antiretroviral therapy (cART) has transformed HIV care and lessened the severity of many neuroHIV symptoms, the persistence of CNS viral reservoirs and neurological deficits remains a major comorbidity and barrier to cure. Understanding specific contributions of microglia and CAMs to inflammation and neuroHIV has been challenging due to the lack of genetically matched human model systems enabling direct mechanistic comparison between of microglia and CAMs. To address this, we optimized the generation of syngeneic, human-induced pluripotent stem cell (iPSC) derived microglia-like (iMg) and CAM-like (iMacs) cells. These are generated simultaneously from a single donor line and have the same genetic background, enabling side-by-side characterization and functional analyses of inflammation and HIV infection. Transcriptomic profiling by RNA sequencing revealed substantial baseline differences in inflammatory and immune signaling pathways between iMg and iMacs. These intrinsic differences were also observed in TLR-specific NF-{kappa}B responses. Stimulation of TLR4 drove heightened response in iMg relative to iMac, correlating closely with morphological changes, while stimulating TLR2 had a contrasting effect, eliciting a stronger and more robust early NF-{kappa}B response in iMacs. In HIV infection studies, iMacs were more permissive to viral replication at baseline, whereas iMg showed a reduced susceptibility to infection. However, iMacs responded more robustly to cART, while iMg exhibited relative resistance to cART-mediated suppression. These findings delineate fundamental inflammatory and virologic differences between human microglia and CAMs and provide a robust foundation on which to further examine HIV infection, cART efficacy, and immune function in these distinct CNS myeloid populations.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767631",
+   "title": "Endogenous activation of multiple stress-response pathways during meiosis promotes gamete fitness",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767631v1",
+   "authors": [
+    "Bishop, A. L.",
+    "Spiri, S.",
+    "Yalcin, D.",
+    "Brar, G.",
+    "Unal, E."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767631 v1",
+   "primary_category": "molecular biology",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "In budding yeast, four stress-responsive transcription factors (Hsf1, Skn7, Msn2 and Msn4) are active during gametogenesis without any added stress, and depleting Msn2, Msn4 and Skn7 together lowers gamete fitness, with the antioxidant genes TSA1 and AHP1 identified as key targets.",
+    "plain": "When yeast cells make sex cells (gametes), they halve their chromosomes and reshape themselves in a major developmental process called meiosis. This paper asks whether the cell's built-in stress-defense switches also help that process succeed. The authors found that several of these switches turn on during meiosis even without any outside stress, and that turning off three of them at once makes the resulting gametes less fit. Two antioxidant genes, TSA1 and AHP1, appear to be the important downstream helpers.",
+    "why": "It suggests that the machinery cells use to cope with environmental damage is also part of normal development, not only an emergency response. This may matter for understanding how gametes stay healthy, though the text does not show how broadly the idea applies beyond yeast.",
+    "background": "- Transcription factors: proteins that switch genes on or off; they are the control switches this paper studies.\n- Meiosis: the cell division that produces haploid gametes (sperm, egg, or yeast spores) from diploid cells.\n- Gametogenesis: the full process of making gametes, including meiosis and the packaging of gametes.\n- Stress-response pathways: built-in cellular systems that respond to heat, oxidative damage and similar threats.\n- Antioxidant genes (TSA1, AHP1): genes whose products help neutralize reactive oxygen molecules that can damage cells.\n- Gamete fitness: how well a gamete survives and can contribute to the next generation; the text measures this only indirectly through yeast experiments.\n- Budding yeast: a single-celled fungus widely used as a model organism in cell biology.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Gametogenesis, the process of meiosis coupled to gamete formation, transforms diploid progenitor cells into haploid gametes through extensive cellular remodeling and rewiring of gene expression. Several stress-responsive transcription factors (TFs) are upregulated during gametogenesis, but whether the cellular mechanisms that handle environmental stress also support the success of this developmental process is largely unexplored. Here, we show that four stress-responsive TFs, Hsf1, Skn7, and the paralogs Msn2 and Msn4, are endogenously active during budding yeast gametogenesis in the absence of external stress and drive distinct gene expression programs. Simultaneous meiotic depletion of Msn2, Msn4, and Skn7 compromise the fitness of the resulting gametes. We identified just two TF-dependent targets, the antioxidant genes TSA1 and AHP1, as important for gamete fitness, directly connecting TF activity to the protection of meiotic progeny. Our results demonstrate that the activation of canonical stress-response regulators is built into the meiotic program and suggest that such pathways can be repurposed during development to safeguard cellular health.",
    "source": "biorxiv"
   },
   {
@@ -46,16 +104,226 @@
    ],
    "label": "bioRxiv doi:10.64898/2026.11.19.767433 v1",
    "primary_category": "developmental biology",
-   "date": "2026-11-22",
+   "date": "2026-11-21",
    "summary": {
-    "one_liner": "The vitreous, the largest intraocular tissue, provides a transparent light path and maintains the intraocular homeostasis.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The authors identify a fibroblast-rich \"growth edge\" in human and mouse vitreous development and use TGF-beta signaling to differentiate human pluripotent stem cells into centimeter-scale vitreous-like organoids that model a TTR-linked vitreous amyloidosis.",
+    "plain": "The vitreous is the clear, jelly-like filling of the eye that lets light reach the retina and helps keep the eye's pressure and shape stable. Scientists have not yet been able to rebuild it in the lab or repair it in the body. Here, the authors grew stem-cell-derived clumps of tissue that they call vitreous organoids, reaching about a centimeter in size, and report that they looked and behaved in ways similar to human vitreous.",
+    "why": "A lab model of the vitreous could help study how this tissue forms and how it fails, and may eventually inform repair strategies for eye diseases. The text reports that the organoids carried a disease-linked gene mutation and reproduced features of a patient condition, but whether this translates to treatment is not shown in the text, so its clinical reach remains uncertain.",
+    "background": "- The vitreous is the transparent gel that fills the large chamber behind the lens of the eye.\n- Organoids are small, three-dimensional tissue cultures grown from stem cells that mimic parts of an organ.\n- Pluripotent stem cells can develop into many cell types; here they are human cells made to form eye-like tissue.\n- Fibroblasts are connective-tissue cells that make structural proteins and scaffolding.\n- TGF-beta is a signaling protein that directs cell growth and specialization.\n- Transthyretin (TTR) is a protein that, when mutated, can misfold and build up as amyloid deposits; vitreous amyloidosis is a clouding of the vitreous caused by such deposits.\n- Mouse development data were used as a comparison, per the text.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "The vitreous, the largest intraocular tissue, provides a transparent light path and maintains the intraocular homeostasis. The reconstitution of the vitreous in vitro or in vivo remains an unsolved biomedical challenge. Here, we discovered a common feature, the \"growth edge\", constituted primarily of fibroblasts and their secreted proteins in human and mouse vitreous development. By leveraging the transforming growth factor beta signaling, we then generated centimeter-scale vitreous-like organoids (VOs) through stepwise differentiation from human pluripotent stem cells (hPSCs). The VOs exhibited striking similarity to human vitreous in terms of physical transparency, vitreoretinal interface, molecular composition, biological profiles and regenerative transplantability. Lines of evidence supported that fibroblasts are the key cell hub for vitreous development. Finally, VOs with a transthyretin (TTR) mutation recapitulated the vitreous phenotypes of human patients with vitreous amyloidosis. Together, vitreous organoid technology opens avenues for future studies of human vitreous development, disease modeling, and regenerative therapeutics for a broad spectrum of human vitreoretinal diseases.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.17.767246",
+   "title": "Modelling Maternal-to-Zygotic Transition Dynamics to Identify Common Gene Expression Baselines in Zebrafish Development.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767246v1",
+   "authors": [
+    "grosse Holthaus, M.",
+    "Michaelis, P.",
+    "Schunck, F.",
+    "Focks, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.17.767246 v1",
+   "primary_category": "molecular biology",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A semi-mechanistic ODE model of zebrafish maternal-to-zygotic transition is fitted to time-course RNA-seq data, and its inferred parameters are used with fuzzy c-means clustering to group genes by shared expression baselines, compared against a shape-based smooth-trajectory clustering.",
+    "plain": "Early zebrafish embryos first run on molecules supplied by the egg, then switch to making their own genetic instructions. This paper builds a mathematical model of that handover and fits it to measurements of gene activity in zebrafish from early stages up to 120 hours after fertilization. The authors then group genes by patterns the model predicts, and compare these groups with groups formed from the plain shape of each gene's activity curve.",
+    "why": "The authors report that grouping genes by model parameters gives clusters linked to the timing of zygotic genome activation, which they describe as more precise than shape-only grouping. The paper also reports that the data carry technical bias from the poly(A) enrichment step, a caveat that matters for anyone interpreting such time-course sequencing data. The text does not say how large or general these gains are.",
+    "background": "- Maternal-to-zygotic transition: early embryos rely on RNA and proteins deposited by the mother until their own genome switches on (zygotic genome activation).\n- RNA-seq: a method that counts how much of each gene's RNA is present in a sample, used here over a time course.\n- ODE (ordinary differential equation) model: a set of equations describing how quantities such as RNA levels change over time, with parameters fitted to data.\n- Clustering: sorting genes into groups with similar behaviour; fuzzy c-means allows a gene to partly belong to several groups.\n- Poly(A) enrichment: a lab step that selects messenger RNA by its tail; it can bias which transcripts are measured.\n- hpf: hours post fertilization, a standard embryo age unit.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We propose a semi-mechanistic ODE-based transcription model for zebrafish embryogenesis that captures common baseline expression dynamics by integrating the maternal-to-zygotic transition mechanism. We fitted this model to a time-course RNA-seq dataset of D. rerio spanning early developmental stages until 120 hpf. Using the inferred model parameters, we identified common gene expression pattern using fuzzy c-means clustering and compared these with clusters stemming from a shape-based approach using smooth trajectories. We show that the ODE-parameter-based approach improves to biological interpretability by linking clusters to underlying regulatory mechanism, such as the timing of zygotic genome activation, thereby generating more precise expression clusters. However, the results also revealed technical biases of the time-course data, originating from the poly(A) enrichment step.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.17.766015",
+   "title": "Mechanical canalization of chiral gut morphogenesis",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.766015v1",
+   "authors": [
+    "Romeo, N.",
+    "Anto, C.",
+    "Strok, A.",
+    "Hendricks, E. L.",
+    "Tamarina, N. A.",
+    "Fee, A.",
+    "Brauns, F.",
+    "Mitchell, N. P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.17.766015 v1",
+   "primary_category": "developmental biology",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "In the embryonic Drosophila midgut, handedness is set by Myosin 1C in the neighboring hindgut epithelium, relayed through longitudinal muscle precursors, and then amplified into a stereotyped coil by buckling and confinement during elongation.",
+    "plain": "Many organs in animal bodies are not symmetrical, and they twist into a consistent left-handed or right-handed shape. This paper studies the fruit fly embryo's gut, which coils into a looped shape with alternating handedness, even though no known left-right genes are switched on in it. The authors used multi-angle microscopy, 3D shape measurements, and physical models to trace the handedness back to a nearby organ, the hindgut, where the protein Myosin 1C is expressed.",
+    "why": "It shows how a tiny, early bias passed between neighboring tissues can be turned into a reliable large-scale body shape by physical forces alone. The text does not discuss implications beyond fly development, so any link to vertebrate left-right patterning or human organ malformations would be speculative.",
+    "background": "- Chirality (handedness): an object that cannot be superimposed on its mirror image, like a left vs. right hand.\n- Left-right asymmetry: normally, body organs are patterned to one side by specific genes; here the authors say no known asymmetric gene expression is involved in the gut.\n- Myosin 1C: a motor protein that helps cells generate and shape mechanical force.\n- Epithelium: a sheet of tightly joined cells that lines organs and tubes.\n- Longitudinal muscle: muscle fibers running along the length of the gut, built by migrating cells.\n- Buckling instability: the tendency of a stretched tube or rod to bend sideways under compression, like a bent straw pressed at its ends.\n- Light-sheet imaging: a microscopy method that illuminates a thin slice of a living sample to image it over time with little damage.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Chiral organs such as the gut develop complex, stereotyped shapes, despite variability in the molecular and cellular processes that build them. How cell activity specifies tissue-scale handedness and reproducibly shapes whole organs remains unclear. Here, we use the embryonic Drosophila midgut to understand how a symmetric tubular organ reliably coils into a complex loop of alternating handedness, without any known left-right asymmetric gene expression.Through multi-view light-sheet imaging, 3D geometric analysis, and physical modeling, we show that midgut handedness is specified by epithelial cells in a neighboring organ, relayed across all three germ layers, and finally amplified and canalized by the mechanics of confined gut elongation. Myosin 1C expression in the hindgut epithelium controls midgut handedness up to hundreds of microns away, transmitting chiral bias to the midgut through migratory cells that form the longitudinal muscle. As the midgut elongates, a buckling instability then amplifies early left-right asymmetric constrictions, and confinement funnels the organ into a stereotyped coil. Tissue mechanics thus canalizes organ shape into one of two chiral forms, selected by an inter-organ cellular relay.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.767081",
+   "title": "STL1267 alters HIF-1α and REV-ERBα localization and transcriptional responses in CoCl2-treated HeLa cells",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767081v1",
+   "authors": [
+    "Makhija, S.",
+    "Griffett, J. D.",
+    "Griffett, K."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.767081 v1",
+   "primary_category": "cell biology",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "In CoCl2-treated HeLa cells, the REV-ERB agonist STL1267 shifted HIF-1α and REV-ERBα protein localization and reshaped hypoxia-linked gene expression, notably inducing an ATF4-associated amino-acid and one-carbon metabolism program.",
+    "plain": "Cells often respond to low oxygen by switching which genes they use and how they process nutrients. This study used cobalt chloride, a chemical that mimics low oxygen, on cultured cervical cancer cells, and tested a drug-like compound (STL1267) that targets REV-ERB, a protein that helps control daily rhythms and metabolism. The researchers looked at where certain proteins sat inside the cells and measured which genes switched on or off.",
+    "why": "It suggests a possible link between where regulatory proteins sit inside a cell and how the cell copes with metabolic stress, which could matter for understanding how cells adapt to low oxygen, such as in tumors. The text is a small study in one cell line, so any wider significance is uncertain and would need follow-up work.",
+    "background": "- HIF-1α: a protein that accumulates when oxygen is low and switches on genes for adapting to hypoxia.\n- CoCl2 (cobalt chloride): a chemical used in labs to mimic low-oxygen conditions.\n- REV-ERB (REV-ERBα): a nuclear receptor, a protein that sits in the cell's nucleus and regulates gene activity, including circadian (daily) rhythm and metabolism.\n- Agonist: a molecule that activates a receptor; STL1267 is described as a REV-ERB agonist.\n- ATF4: a stress-response transcription factor that turns on amino-acid and one-carbon metabolism genes.\n- RNA sequencing: a method that measures how active each gene is by counting its RNA messages.\n- Immunofluorescence: staining proteins with fluorescent markers to see where they are in cells under a microscope.\n- False discovery rate (FDR): a statistical threshold used to limit false positives when testing thousands of genes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Background: REV-ERB nuclear receptors regulate gene expression and cellular metabolism, but their role in the response to hypoxia-associated stress remains unclear. We examined how the REV-ERB agonist STL1267 affects protein distribution and gene expression in HeLa cells exposed to cobalt chloride (CoCl2). Methods and Results: Immunofluorescence microscopy and RNA sequencing were used to compare vehicle-treated controls, cells exposed to CoCl2 plus vehicle, and cells exposed to CoCl2 plus STL1267. Representative images showed stronger nuclear HIF-1 staining after CoCl2 exposure. Nuclear staining was less pronounced with STL1267, while REV-ERB showed more extranuclear staining. CoCl2 exposure altered 267 genes, and STL1267 treatment during CoCl2 exposure altered 132 genes at a false discovery rate below 0.05. STL1267 increased ATF4 expression alongside genes involved in amino-acid synthesis and one-carbon metabolism, including ASNS, PHGDH, PSAT1, PSPH and MTHFD2. CTH and CHAC1 also increased, highlighting changes in sulfur-amino-acid metabolism and glutathione turnover. Among the genes induced by CoCl2, CA9, BNIP3 and LDHA decreased with STL1267, whereas HK2, PDK1 and VEGFA did not change significantly. Conclusions: STL1267 selectively reshapes hypoxia-associated gene expression and induces an ATF4-associated metabolic transcriptional program in CoCl2-treated HeLa cells, alongside qualitative changes in HIF-1 and REV-ERB distribution. These findings identify a potential connection between protein compartmentalization and metabolic stress responses, providing a basis for investigating how REV-ERB ligands influence cellular adaptation to oxygen limitation.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.766915",
+   "title": "Development of synthetic genetic arrays for studying interactions between the mitochondrial and nuclear genomes",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.766915v1",
+   "authors": [
+    "Schneider, K. L.",
+    "Braam, S.",
+    "Hao, X.",
+    "Hanzen, S.",
+    "Ott, M.",
+    "Cvijovic, M.",
+    "Nyström, T."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.766915 v1",
+   "primary_category": "cell biology",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The authors built a genome-wide yeast library of nuclear gene deletions and temperature-sensitive mutants carrying a superfolder-GFP reporter for mitochondrial COX2 expression, and used it to map nuclear genes that raise or lower mitochondrial gene expression.",
+    "plain": "Mitochondria are the cell's energy-producing compartments, and they carry a small set of their own genes alongside the many genes stored in the cell nucleus. This paper asks how those two sets of genes talk to each other. The authors used baker's yeast, where they could change the mitochondrial DNA, and tagged a mitochondrial gene (COX2) with a fluorescent glow marker so they could measure its activity across thousands of nuclear gene mutants.",
+    "why": "The screen points to nuclear processes that were not previously expected to affect mitochondrial gene expression, such as the Rim101 signaling pathway and vesicle trafficking. Because mitochondrial dysfunction is linked to aging and many diseases, a platform like this could help future studies, though the text itself does not show how these links apply outside yeast.",
+    "background": "- Mitochondria are organelles that produce cellular energy and have their own small genome, separate from the nuclear genome.\n- COX2 is a mitochondrial gene that encodes part of a respiratory enzyme; its expression serves as the readout here.\n- Yeast is a simple single-celled model organism widely used for genetic screens.\n- Genetic interaction: when a mutation in one gene changes the effect of a mutation in another, suggesting the two gene products work together or in related processes.\n- Homoplasmy means all copies of mitochondrial DNA in a cell are the same version.\n- Biolistic bombardment is a method of firing DNA-coated particles into cells to introduce changes to mitochondrial DNA.\n- Temperature-sensitive mutants work normally at one temperature but lose function at a higher one.\n- Superfolder GFP is a bright, fast-folding green fluorescent protein used as a reporter of gene activity.\n- Rim101 is a yeast signaling pathway that responds to environmental cues such as pH.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Mitochondria, the central axis of metabolism and energy transformation has emerged as a focal point for understanding the aging process and a plethora of human diseases. Yet, how the mitochondrial and nuclear genomes communicate is still unclear. This work aims to allow the analysis of such crosstalk by developing a genome-wide platform for studying genetic interactions between the mitochondrial and nuclear genomes. Using yeast as a model system in which mitochondrial homoplasmy and stable alterations in the mitochondrial genome can be generated by biolistic bombardment, we created a genome-wide library of yeast cells carrying nuclear deletions and temperature-sensitive mutations together with a superfolder-GFP reporter for the expression of the mitochondrial-encoded COX2 gene. Using this approach, we found links between nuclear-encoded processes and mitochondrial gene expression not previously anticipated, including a requirement for genes involved in MVB (multivesicular body) sorting/RIM signaling, vesicle trafficking/glycosylation, polarity, and peroxisome biogenesis, for maintaining mitochondrial COX2 expression. In contrast, defects in the autophagy machineries, ribosome biogenesis, and nuclear transcription and chromatin organization resulted in increased expression of COX2. While reduced COX2 expression correlated with a reduced expression of the nuclear-encoded TOM70 gene in mutants defect in mitochondrial functions, expression of the mitochondrial and nuclear genes responded differently to defects in cytoplasmic ribosome biogenesis and autophagy. When creating the COX2 expression library, we also found that cells devoid of mitochondrial DNA rely on the Rim101 signaling pathway, and many of its auxiliary regulatory factors, to maintain fitness. As mutations in the Rim101 signaling pathway also caused down-regulation of COX2 expression, it appears that Rim101 signaling is central for maintaining proper control of mitochondrial function. We believe the approach will allow for future genome-wide studies on how nuclear-encoded processes influence the translation, protein folding, and processing of mitochondria-encoded genes.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.15.766739",
+   "title": "Alkyladenine DNA glycosylase regulates TDG-mediated demethylation and neuronal gene expression by competitive substrate binding",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.15.766739v1",
+   "authors": [
+    "Aksu, E. M.",
+    "Grooms, K.",
+    "Gjosaether, A.",
+    "Ertresvaag Zachariadis, N.",
+    "Flatberg, A.",
+    "Schaich, M. A.",
+    "Dumaru, R.",
+    "Broberg Vagbo, C.",
+    "Bordin, D. L.",
+    "Saetrom, P.",
+    "Van Houten, B.",
+    "van Loon, B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.15.766739 v1",
+   "primary_category": "molecular biology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Mouse and human neuronal models show that the glycosylase AAG competes with TDG for oxidized methylcytosine substrates (notably 5fC), and this competition tunes active DNA demethylation, single-strand break formation, and neurodevelopmental gene expression.",
+    "plain": "Cells sometimes remove chemical tags from their DNA to switch genes on or off, and this process briefly leaves small cuts in the DNA strand. This paper asks whether a second repair enzyme, AAG, takes part in that process during brain cell development, alongside the enzyme TDG. The authors found that losing AAG disturbed the timing of neuron-related gene activity in developing mouse and human neurons, and that AAG and TDG compete for the same DNA targets.",
+    "why": "It suggests that the balance between two DNA-repair enzymes, rather than one enzyme alone, can set how finely genes are timed during neurodevelopment. The text does not link these findings to any disease, so any clinical relevance is unclear from this work alone.",
+    "background": "- DNA methylation: a chemical tag on DNA (mainly on cytosine) that usually silences genes.\n- Active demethylation: removing these tags through oxidized forms (such as 5fC) and repair enzymes, not just by passive dilution.\n- DNA glycosylases (TDG, AAG): enzymes that cut out damaged or modified bases as the first step of repair.\n- Single-strand break (SSB): a nick in one strand of the DNA backbone, which can be an intermediate of demethylation.\n- Neurospheres and induced neurons (iNs): lab-grown clusters of neural cells and neurons made from other cells, used as models of brain development.\n- Single-cell RNA sequencing: measuring which genes are active in individual cells.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Endogenous single-strand DNA breaks (SSBs) that arise during active DNA demethylation, regulate neurodevelopmental gene expression. Thymine (TDG) and alkyladenine (AAG) DNA glycosylases recognize oxidized methylcytosines. While TDG is required for excision, role of AAG in active demethylation and neurodevelopment remains unknown. Using mouse neurospheres, hippocampus, and human induced neurons (iNs), we show that AAG is needed for neurogenesis. Loss of AAG contributes to delayed neurodevelopmental and premature synaptic gene expression, evident from single-cell RNA sequencing of differentiating iNs. Synaptic gene expression is co-regulated by both AAG and TDG, with loss of single glycosylase inducing an opposing effect, implying competition. Single-molecule and biochemical assays directly demonstrate this competition, with AAG inhibiting TDG on 5fC. Without AAG, TDG has higher affinity, resulting in reduced global 5fC and increased SSB intermediates. In summary, AAG substrate competition plays an important role in fine tuning active demethylation, thereby regulating gene expression and DNA breaks during neurogenesis.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.766570",
+   "title": "ORGANOID- BASED ASSESSMENT OF ENHANCER ACTIVITY VIA RECOMBINATION-MEDIATED TRANGENESIS",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766570v1",
+   "authors": [
+    "Manes-Garcia, J.",
+    "Martin-Sanz, D.",
+    "Pajda-Szeligowska, E.",
+    "Marco-Ferreres, R.",
+    "Tabanera, N.",
+    "Zakirova, E.",
+    "Nicolis, S. K.",
+    "Bovolenta, P.",
+    "Beccari, L."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.766570 v1",
+   "primary_category": "developmental biology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper introduces RepoV, a PhiC31-mediated transgenesis vector that places single-copy enhancer reporters into human iPS cells, which are then used to test candidate neurodevelopmental enhancers (including POU3F2 and FOXG1 elements) in neural organoids.",
+    "plain": "Genes are switched on and off by short stretches of DNA called enhancers, and many disease-linked changes in human DNA sit in these regions. This paper describes a way to test such stretches in human stem cells that are grown into small brain-like tissue clumps (organoids), rather than only in mice or zebrafish. The authors report that the method reproduced the activity of enhancers already known to work, and that two FOXG1 enhancers behaved differently in zebrafish than in human organoids, with the organoid results matching the gene's real expression pattern and patient-linked findings.",
+    "why": "Many human genetic variants found in patients fall outside genes, and it is hard to tell whether they matter. A human-cell test that controls for how many copies of a construct are inserted and where it lands could make such tests more reliable. The text does not report the size of the study or statistical strength, so its general usefulness remains to be seen in wider testing.",
+    "background": "- Enhancer: a DNA segment that controls when and where a nearby gene is turned on.\n- Cis-regulatory element (CRE): a DNA sequence that regulates genes on the same chromosome; enhancers are one type.\n- Transgenesis: inserting an extra piece of engineered DNA into an organism or cell to study it.\n- Reporter construct: a DNA piece that makes a visible signal (such as a fluorescent protein) when the enhancer under test is active.\n- Copy number and position effects: random insertions can differ in how many copies they add and where they land, which can distort results.\n- PhiC31 recombinase: an enzyme that inserts DNA at a defined site in the genome, allowing controlled single-copy insertion.\n- iPS cells: adult cells reprogrammed into stem cells that can become many cell types.\n- Organoid: a small 3D tissue culture grown from stem cells, here modeling parts of the developing brain.\n- FOXG1 and POU3F2: transcription factor genes important in brain development.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Functional characterization of cis-regulatory elements (CREs) is essential for understanding developmental gene regulation and interpreting human noncoding variation. However, conventional transgenesis assays are limited by integration copy number variability and genomic position effects, while species-specific developmental differences constrain the study of human regulatory sequences in classical model organisms, demanding assays based on human-specific contexts. Here, we developed RepoV, a transgenesis vector enabling single-copy integration of enhancer reporter constructs in the genome of human iPS cells through PhiC31-mediated recombination. Transgenic iPSCs were subsequently used to assess candidate neurodevelopmental enhancers in neural organoids. RepoV recapitulated the expected activity of previously characterized regulatory elements and enabled the evaluation of candidate sequences associated with the neurodevelopmental genes POU3F2 and FOXG1. Notably, two FOXG1 enhancers displayed different activities in zebrafish larvae and human neural organoids. The organoid results were more consistent with endogenous the FOXG1 expression and the pathological phenotypes associated with disease-related regulatory variants identified in patients. Together, these findings establish RepoV transgenesis combined with human organoid cultures as a valuable platform for the functional evaluation of human developmental regulatory sequences.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.12.766297",
+   "title": "Force regulates mitotic entry timing during Drosophila gastrulation",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766297v1",
+   "authors": [
+    "Sherpa, M.",
+    "Evans, T.",
+    "Martin, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.12.766297 v1",
+   "primary_category": "developmental biology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "In Drosophila gastrulation, the authors test whether tissue-scale mechanical forces from mesoderm invagination and adherens-junction-dependent force transmission influence the timing of mitotic entry in stereotyped mitotic domains, with a suggested role for mesoderm invagination in mitotic domain 1 timing.",
+    "plain": "Early in fruit fly development, a sheet of cells folds inward and, at the same time, groups of cells in set regions start dividing. This short text asks whether the physical pulling and folding forces of that movement help set when those cells enter division. The authors disrupted the cell junctions that transmit force across the embryo, and examined mutants that fail to fold the mesoderm, then looked at when cells entered division; they report that the folding appears to matter for timing in one region.",
+    "why": "It asks whether mechanical forces, not only chemical signals, can set when cells divide during tissue shaping, a question relevant to how development stays coordinated. The text is only an abstract-level summary, so the strength of the link is not clear from it alone.",
+    "background": "- Gastrulation: the early embryo stage when a flat layer of cells folds and rearranges to form internal tissues.\n- Mesoderm invagination: the inward folding of a group of cells (mesoderm) that drives this shape change.\n- Mitotic entry: the point at which a cell commits to dividing, controlled by biochemical regulators of the cell cycle.\n- Mitotic domains: stereotyped patches of cells across the embryo that enter division in a coordinated pattern.\n- Adherens junctions: protein connections between neighbouring cells that transmit pulling forces across the tissue.\n- Contractility: the ability of cells to pull on their neighbours via internal molecular motors.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Cell division and cell shape changes drive tissue morphogenesis. Cell division is tightly regulated by biochemical factors that influence the cell cycle. Past work in our lab showed how contractility of mesoderm cells influences cell division orientation during Drosophila gastrulation. Whether contractile forces that drive morphogenetic folding influence the timing of coincident mitotic divisions is unknown. During Drosophila gastrulation, cell division is regulated by mitotic entry of cells in stereotypic regions across the embryo, termed mitotic domains. Here, we examine the role of morphogenesis in the timing of mitotic entry in the mitotic domains. To do this, we disrupted adherens junctions to globally disrupt force transmission across the embryo. In addition, we examined the timing of mitotic entry in mutants that affect mesoderm invagination. Our data suggests a role for mesoderm invagination in mitotic domain 1 timing.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.765723",
+   "title": "Accessibility-guided targeting of NRF2-responsive long noncoding RNA NMRAL2P alters a distinct gene expression program and reduces non-small cell lung cancer proliferation",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.765723v1",
+   "authors": [
+    "Bucknor, J. A.",
+    "Bowman, B. M.",
+    "Stein, S. L.",
+    "Weidmann, C. A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.765723 v1",
+   "primary_category": "molecular biology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "In lung cancer cells, the stress-response factor NRF2 drives expression of the nuclear pseudogene-derived lncRNA NMRAL2P, whose knockdown with SHAPE-MaP-guided antisense gapmers reduces proliferation, increases cisplatin sensitivity, and alters a restricted cell adhesion and MAPK gene program distinct from NRF2 loss.",
+    "plain": "Lung cancers that are overactive in a cell-protection pathway (NRF2) help tumor cells survive and resist treatment, but the full set of molecules they rely on is not well mapped. This paper studies a non-coding RNA, NMRAL2P, that NRF2 switches on and that stays in the cell nucleus. Reducing its levels with designed antisense molecules slowed lung cancer cell growth and made cells more sensitive to cisplatin, a chemotherapy drug.",
+    "why": "It suggests a possible target downstream of NRF2 that works beyond the well-known antioxidant role, which matters because NRF2-active tumors are hard to treat. The mechanism linking this RNA to cell adhesion and MAPK signaling is not yet worked out, so the link to a therapy is still speculative.",
+    "background": "- NRF2 is a transcription factor: a protein that switches genes on, mainly genes for antioxidant and detoxifying defenses.\n- Non-small cell lung cancer (NSCLC) is the most common type of lung cancer.\n- Long noncoding RNA (lncRNA) is an RNA molecule that is not translated into protein but can regulate other genes.\n- A pseudogene is a once-functional gene copy that has lost its ability to make protein; this one is derived from such a copy.\n- SHAPE-MaP is a chemical probing method that shows which parts of an RNA are folded or exposed, so researchers can pick accessible sites to target.\n- Antisense gapmers are short synthetic DNA-like strands that bind a target RNA and cause its breakdown.\n- MAPK signaling is a cell pathway relaying growth and stress signals; cell adhesion refers to how cells attach to each other and their surroundings.\n- Cisplatin is a chemotherapy drug that damages DNA.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Aberrant activation of the antioxidant transcription factor NRF2 promotes non-small cell lung cancer (NSCLC) survival and therapy resistance, but downstream effectors beyond redox regulation remain incompletely defined. Transcriptome profiling of lung and NSCLC cells identified the pseudogene-derived long noncoding RNA LOC344887/NMRAL2P as consistently associated with NRF2 activity. The NMRAL2P locus produces three predominant, nuclear-localized isoforms whose expression depends on NRF2 across normal lung, lung adenocarcinoma, and lung squamous carcinoma cells. In-cell SHAPE-MaP identified accessible regions within NMRAL2P transcripts, guiding antisense gapmer design. NMRAL2P depletion inhibited NSCLC cell proliferation and increased sensitivity to cisplatin. Transcriptome analysis revealed that NMRAL2P depletion altered a restricted gene expression program involving cell adhesion and MAPK signaling, with responses distinct from those observed following NRF2 depletion. Core NRF2 antioxidant target genes were largely unaffected by NMRAL2P depletion. These findings support a model in which NRF2 induces NMRAL2P to sustain a distinct gene expression program that contributes to NSCLC proliferation and survival. NMRAL2P represents an RNA effector downstream of NRF2 that links oncogenic NRF2 activity to cellular functions beyond canonical antioxidant responses, providing a potential point of intervention in NRF2-active lung cancers and motivating further investigation of the mechanisms connecting this nuclear RNA to signaling pathways.",
    "source": "biorxiv"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "slug": "condensed-matter",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26604",
@@ -13,14 +13,14 @@
    ],
    "label": "arXiv:2611.26604v1",
    "primary_category": "cond-mat.str-el",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Accurate simulations of strongly correlated electrons remain a central challenge in computational physics.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper introduces neural-network Gaussian projected entangled-pair states (NN-GPEPS), a tensor-network ansatz with exact contraction cost O(N^{3/2}) on 2D lattices, and applies it to the Hubbard model at U/t=8 and 1/8 hole doping on lattices up to 1024 sites.",
+    "plain": "Physicists want to predict how many interacting electrons behave inside a material, but exact calculations blow up quickly as the system grows. This paper proposes a new mathematical form for describing the electrons' quantum state that mixes neural networks with a simpler \"Gaussian\" building block. The authors report that it gives low-energy estimates on grids of up to 1024 sites for a standard model of electrons (the Hubbard model).",
+    "why": "Strongly correlated electrons underlie phenomena such as high-temperature superconductivity, which is why accurate simulations matter, though the text itself does not make that link. The reported scaling and the large system sizes suggest the method may be practical where many existing approaches struggle, but the text does not compare costs or accuracy against specific alternatives in enough detail to judge its importance.",
+    "background": "- Hubbard model: a simple lattice model of electrons that hop between sites and repel each other when two share a site; U is the repulsion and t the hopping strength.\n- Strongly correlated electrons: electrons whose interactions are too strong for simple single-particle pictures to work.\n- Hole doping: removing some electrons from a half-filled system, here 1/8 of the expected filling.\n- Variational energy: an upper bound on the ground-state energy from a trial quantum state; lower is better.\n- Tensor networks (PEPS): a way of compressing a many-particle quantum state into a grid of small linked arrays; contraction cost is the computing effort needed to evaluate it.\n- Gaussian states: quantum states whose correlations follow simple pairing rules, easy to compute with but limited in expressiveness.\n- Neural network quantum states: using a neural network as a trial wavefunction optimized numerically.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Accurate simulations of strongly correlated electrons remain a central challenge in computational physics. We introduce neural-network Gaussian projected entangled-pair states (NN-GPEPS), which exploit the locally-entangled subspace of Gaussian states to give an architecture more compatible with modern neural networks and an exact contraction cost of $O(N^{3/2})$ on two-dimensional lattices. For the Hubbard model at $U/t=8$ and $1/8$ hole doping, we obtain state-of-the-art variational energies in large lattices of up to 1024 sites. These results demonstrate an accurate approach to strongly correlated fermions by connecting neural networks with Gaussian tensor networks.",
    "source": "arxiv"
@@ -43,16 +43,167 @@
    ],
    "label": "arXiv:2611.26016v1",
    "primary_category": "cond-mat.mes-hall",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The scaling of multi-element quantized Hall array resistance standards necessitates rigorous validation that internal quantization has not broken down without relying on the verification of dissipationless edge state transport.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proposes a statistical reliability criterion, the Symmetric Precision Quantization Reliability (SPQR) criterion, that aims to verify quantum Hall array resistance standards using only outer-terminal measurements of Cn-symmetric device designs.",
+    "plain": "Quantum Hall devices are used as very precise electrical resistance references, and larger arrays of them are harder to check for hidden faults where the quantized behavior breaks down inside the device. This paper describes a mathematical framework that aims to give statistical assurance of such faults being unlikely by measuring only at the outer terminals, rather than relying on checking the edge-state currents directly.",
+    "why": "Precision resistance standards underpin electrical measurement, so a way to validate large arrays without invasive checks could matter for metrology. The text also suggests possible uses in quantum computing and semiconductor testing, but it does not show results for those areas, so that connection remains unverified.",
+    "background": "- Quantum Hall effect: in a two-dimensional electron system at low temperature and strong magnetic field, resistance takes exact, universally reproducible values set by fundamental constants.\n- Resistance array standard: many quantum Hall elements wired together to reach resistance values useful for calibration.\n- Quantization breakdown: a localized failure where the exact quantized value stops holding inside part of the device.\n- Edge states: conducting channels along the device boundary that carry current without loss; verifying them directly is the conventional check the paper aims to avoid.\n- Cn symmetry: a design with n-fold rotational symmetry, which the proposed criterion relies on.\n- Outer terminal measurements: electrical readings taken only at the device's external contacts.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "The scaling of multi-element quantized Hall array resistance standards necessitates rigorous validation that internal quantization has not broken down without relying on the verification of dissipationless edge state transport. One proposed solution is to use a Symmetric Precision Quantization Reliability criterion, a mathematical framework that statistically assures such validation strictly through outer terminal measurements of Cn-symmetric designs. This criterion essentially bounds the likelihood of hidden localized defects arising from quantum Hall breakdown and has potential uses in quantum computing and semiconductor testing but is presented in the context of its application toward quantum electrical standards.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.25051",
+   "title": "Quantum many-body scars and zero modes in the spin-1 Kitaev chain",
+   "url": "https://arxiv.org/abs/2611.25051v1",
+   "authors": [
+    "Ayush Sharma",
+    "Jay Pandey"
+   ],
+   "label": "arXiv:2611.25051v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper finds exponentially many exact zero-energy modes protected by chiral symmetry in the spin-1 Kitaev chain, and identifies an embedded tight-binding defect structure that gives PXP-like quantum many-body scars in several sectors, described by a universal forward-scattering approximation Hamiltonian.",
+    "plain": "This paper studies a chain of tiny quantum magnets (spin-1 particles) arranged in a line, with a specific pattern of interactions. The authors show the chain has a very large number of special states that do not change energy over time, and they find that some other special states keep returning to their starting pattern when the system is run forward. They explain much of this with a simple picture of defects moving between barriers.",
+    "why": "Quantum many-body scars are unusual states that resist the usual tendency of isolated quantum systems to scramble and heat up, which matters for quantum simulation and quantum computing. The text reports a counting result and an analytic construction, but its wider significance beyond this model is not established in the excerpt provided.",
+    "background": "- Quantum spin: a tiny magnetic degree of freedom; spin-1 means three possible states per site.\n- Kitaev chain: a one-dimensional model of interacting spins with direction-dependent couplings.\n- Zero modes: states with exactly zero energy; chiral symmetry is a mathematical symmetry that protects them.\n- Hilbert-space connectivity: which basis states can be reached from which others by the dynamics.\n- Quantum many-body scars: special non-thermal states that show slow, repeating dynamics instead of scrambling.\n- PXP model: a standard toy model in which scars were first studied; FSA is an approximation that maps the dynamics onto a simpler effective hopping problem.\n- Tight-binding: a simple model of particles hopping between neighbouring sites.\n- Jacobsthal number: an integer sequence; here it gives a lower bound on the zero-mode count.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the spin-1 Kitaev chain and, by analyzing its Hilbert-space connectivity in the Cartesian basis, show that it hosts an exponentially large number of exact zero-energy modes protected by chiral symmetry. For even-length periodic chains, their count is lower-bounded by the Jacobsthal number $(2^{L+1}+1)/3$, where $L$ is the chain length. We then construct an exponentially large number ($2^{L/2}$) of zero modes with an analytic expression that have a maximally mixed density matrix for a contiguous bipartition using the operator-state mapping. We further identify an embedded tight-binding structure governing defect dynamics that supports PXP-like quantum many-body scars (QMBS) in multiple sectors previously not reported. The associated forward-scattering approximation (FSA) Hamiltonian takes a universal form across the scarred sectors studied. A simple physical picture of defects propagating between walls provides an intuitive description of these dynamics and a structural guide to identifying sectors with fidelity revivals, while its limitations point to additional scarring mechanisms.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24935",
+   "title": "Exact Parent Hamiltonians for Partially Magnetized Chiral Spin Liquids",
+   "url": "https://arxiv.org/abs/2611.24935v1",
+   "authors": [
+    "Xin Shen",
+    "Guangyue Ji",
+    "Jie Wang"
+   ],
+   "label": "arXiv:2611.24935v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper constructs exact spin parent Hamiltonians for partially magnetized chiral spin liquids realizing bosonic topological orders, via a Hubbard-type parent Hamiltonian for bosonic lattice fractional quantum Hall states taken to infinite on-site repulsion and mapped onto spins.",
+    "plain": "The paper concerns a exotic magnetic state of matter called a chiral spin liquid, in which spins are strongly entangled and do not order, yet carry a built-in handedness. The authors write down simple, exactly solvable model rules (Hamiltonians) that have these states as their ground states, by starting from a known exactly solvable model of bosons in a lattice version of the fractional quantum Hall effect and translating it into spin language. They also outline how such spin models might be realized in electron systems with tailored hoppings and interactions, though the text presents these as derivations rather than experiments.",
+    "why": "Exact, solvable models are valuable benchmarks because they let researchers study topological order without approximations, and this work extends the classic Kalmeyer-Laughlin spin model to a wider family of bosonic states, including non-Abelian ones. Its relevance to real materials or quantum devices is not established by the text alone, so that connection should be treated as speculative.",
+    "background": "- Spin liquid: a magnet whose spins stay disordered and entangled even at very low temperature.\n- Chiral spin liquid: a spin liquid that breaks time-reversal symmetry, giving it a definite handedness.\n- Topological order: a kind of order described by global patterns of entanglement, not by local symmetry breaking; it can carry fractional excitations.\n- Fractional quantum Hall (FQH) states: electron or boson states in strong magnetic fields with fractionally charged excitations; \"Abelian\" and \"non-Abelian\" refer to how those excitations exchange statistics.\n- Parent Hamiltonian: an engineered local energy function whose exact ground state is a target wavefunction.\n- Kalmeyer-Laughlin state: the original chiral spin liquid model, which this work generalizes.\n- Hubbard model: a lattice model of particles hopping between sites with an on-site repulsion; the limit of infinite repulsion removes doubly occupied sites.\n- Superexchange: an effective spin-spin interaction arising at second order from virtual electron hopping.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Chiral spin liquids (CSLs) are paradigmatic fractionalized phases, yet simple exact parent Hamiltonians for them remain scarce. In this work, we construct exact spin parent Hamiltonians for partially magnetized CSLs realizing various bosonic topological orders. Our construction relies on an exact Hubbard-type parent Hamiltonian for bosonic lattice fractional quantum Hall (FQH) states, valid at arbitrary repulsive interaction strengths. Taking the on-site repulsion to infinity and applying local boson-spin mappings yields exact parent Hamiltonians for the CSLs. Our two-spin construction generalizes the Kalmeyer-Laughlin spin Hamiltonian to a broader class of bosonic FQH model states, including Abelian states and non-Abelian parton states. We derive controlled microscopic realizations of these two-spin Hamiltonians via second-order superexchange in generalized spinful Hofstadter-Hubbard models with tailored hoppings and interactions. With more general local constraints and interactions, boson-spin mappings yield exact higher-spin and multispin parent Hamiltonians for partially magnetized CSLs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22229",
+   "title": "Intrinsic second-order nonlinear Hall effect from perturbation theory",
+   "url": "https://arxiv.org/abs/2611.22229v1",
+   "authors": [
+    "Zhi-Hao Wei",
+    "Xiao-Bin Qiang",
+    "Renjie Tong",
+    "Hai-Zhou Lu",
+    "X. C. Xie"
+   ],
+   "label": "arXiv:2611.22229v1",
+   "primary_category": "cond-mat.mes-hall",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper derives the intrinsic second-order nonlinear Hall conductivity from a textbook-style perturbation expansion of the Bloch-state velocity and distribution function, and checks it against wavepacket-based theories.",
+    "plain": "The paper is about how electrons in a crystal carry current in a sideways (Hall) direction when the applied electric field is strong enough that the response is no longer simply proportional to the field. Instead of relying on more specialized wavepacket methods, the authors use a standard step-by-step (perturbation) calculation to work out this response. They report that the approach gives a well-defined result and that it is consistent with the existing wavepacket-based theories.",
+    "why": "The effect is described as independent of impurity scattering and tied to the quantum geometry of electron states, so it may serve as a probe of crystal symmetry and electronic structure. The text does not report new measured values, so its practical reach beyond clarifying the theory is unclear.",
+    "background": "- Hall effect: a sideways current or voltage produced by a field, classically from a magnetic field; the \"nonlinear\" version here arises without one, from the crystal's electronic structure.\n- Nonlinear response: the output is not proportional to the input; a second-order term scales with the field squared.\n- Bloch electrons: electrons in a periodic crystal, described by states labeled by momentum.\n- Quantum geometry: properties of electron states, such as Berry curvature, that depend on how states change with momentum.\n- Perturbation theory: solving a problem by expanding in powers of a small quantity (here the applied field) and solving order by order.\n- Distribution function: the statistical occupancy of electron states in momentum space.\n- Wavepacket theory: an alternative approach that treats electrons as localized packets of states.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Nonlinear transport provides an efficient probe of the electronic structure and symmetry of quantum materials. As a prominent example, the intrinsic nonlinear Hall effect has attracted considerable attention in recent years because it is independent of impurity scattering and directly reflects the quantum geometry of Bloch electrons. Here we establish a simple textbook-style perturbation theory for the intrinsic nonlinear conductivity. Based on the well-defined Bloch-state velocity, our formulation perturbatively determines the field-corrected velocity and distribution function, from which the conductivity follows directly. We further compare our approach with wavepacket-based theories and discuss their consistency.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24468",
+   "title": "Hidden topological signatures in a van der Waals ferromagnet revealed by spin-resolved circular-dichroic photoemission",
+   "url": "https://arxiv.org/abs/2611.24468v1",
+   "authors": [
+    "Jay R. Paudel",
+    "Federico Mazzola",
+    "Lidia A. Lapinski",
+    "Barun Ghosh",
+    "Valeria Rosa Rocha",
+    "Abigail M. Derrico",
+    "Nikola Maksimovic",
+    "Iulia Cojocariu",
+    "Daniel Baranowski",
+    "Christoph Klewe",
+    "Vitaliy Feyer",
+    "Ivana Vobornik",
+    "Claus M. Schneider",
+    "Giancarlo Panaccione",
+    "Arun Bansil",
+    "James G. Analytis",
+    "Alexander X. Gray"
+   ],
+   "label": "arXiv:2611.24468v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Spin- and angle-resolved photoemission, circular-dichroism measurements and density functional theory are used to map the spin-polarized electronic structure of the van der Waals ferromagnet Ni1/4TaSe2, reporting signs of broken time-reversal symmetry and a helicity-dependent spin response suggestive of local topological character.",
+    "plain": "This paper studies a layered magnetic material, Ni1/4TaSe2, which becomes ferromagnetic below about 58 K and sits close in composition to a superconducting version of the material. The authors used light shining on the surface to knock electrons out and measured their spin and momentum, and they compared the results with computer calculations. They report spin-polarized electrons near the energy level that controls electrical behavior, plus a response to light polarization that they interpret as a sign of topological character.",
+    "why": "The work links magnetism, electron spin and possible topology in one material, which the text suggests may bear on why superconductivity appears when nickel is depleted. That connection is stated as a motivation for future work; the text does not show it, so its relevance to superconductivity remains unconfirmed.",
+    "background": "- Van der Waals material: a crystal built from layers that are weakly bonded to each other, so thin flakes can be peeled off.\n- Ferromagnet: a material whose atomic magnetic moments align in one direction, below a transition temperature (here 58 K).\n- Photoemission: shining light on a surface to eject electrons; measuring their energy and direction reveals the electronic band structure.\n- Spin-resolved: also recording which way each ejected electron's spin points.\n- Circular dichroism: a difference in response to left- versus right-handed (circularly polarized) light.\n- Berry curvature and topology: mathematical properties of how electron states twist through momentum space; nonzero values are linked to topological effects.\n- Time-reversal symmetry: the symmetry broken when a material becomes magnetic; its breaking is one signature the paper looks for.\n- Density functional theory: a standard computer method for estimating electronic structure from first principles.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Layered ferromagnets with strongly correlated electrons provide a platform for exploring the interplay among magnetism, spin-orbit coupling, and nontrivial band topology. $\\mathrm{Ni}_{1/4}\\mathrm{TaSe}_2$ is a correlated van der Waals ferromagnet with a transition temperature of 58 K that lies close in composition to a superconducting phase that emerges upon Ni depletion. Here, we combine spin- and angle-resolved photoemission spectroscopy, circular-dichroism measurements, and density functional theory calculations to investigate its spin-resolved electronic structure. We observe spin-polarized states crossing the Fermi level and signatures of broken time-reversal symmetry in the ferromagnetic state. Spin-resolved circular-dichroism measurements further reveal a helicity-dependent spin response consistent with a finite spin Berry curvature and suggestive of local topological character. Together, these results establish an experimental connection between ferromagnetism, spin-polarized electronic states, and topological signatures in $\\mathrm{Ni}_{1/4}\\mathrm{TaSe}_2$, providing a foundation for investigating how these properties may relate to the emergence of superconductivity upon Ni depletion.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21720",
+   "title": "Constraints on the volume enclosed by Fermi surfaces",
+   "url": "https://arxiv.org/abs/2611.21720v1",
+   "authors": [
+    "Subir Sachdev"
+   ],
+   "label": "arXiv:2611.21720v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A review that extends Luttinger's proof of the Fermi-surface volume in ordinary Fermi liquids to fractionalized Fermi liquids (FL*) described by parton gauge theories, and discusses Oshikawa's flux-insertion arguments including gapless spin liquids.",
+    "plain": "The paper is about how many electrons' worth of states are enclosed by the boundary (Fermi surface) between filled and empty electron energies in a metal-like quantum material. In an ordinary metal the enclosed volume is fixed by the electron density alone. In a more exotic state, where electrons split into pieces called spinons, the same rule holds but with the density shifted by a fixed whole number, and the review works out why using a generalized version of an old proof.",
+    "why": "This sets out a precise counting rule that tells experimentalists and theorists what Fermi-surface size to expect in exotic quantum spin liquids, which can help test whether such a state is present. The text does not indicate specific experimental results or claims beyond the theory itself.",
+    "background": "- Fermi surface: the boundary in momentum space separating occupied from empty electron states; its enclosed volume can be measured in some experiments.\n- Fermi liquid: the standard model of metals, where electrons behave like weakly interacting particles.\n- Luttinger's theorem: the classic result that the Fermi-surface volume equals the electron density in a Fermi liquid.\n- Quantum spin liquid: a magnetic material whose spins do not freeze into order even at very low temperature, with fractional excitations called spinons.\n- Parton gauge theory: a method of writing electrons or spins as combinations of simpler particles tied together by an emergent gauge field.\n- Flux insertion (Oshikawa's argument): a thought experiment threading magnetic flux through a ring of material to constrain allowed states.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A fundamental property of a Fermi liquid (FL) is that the volume enclosed by the Fermi surface is determined by $ρ$, the total density of electrons. In a fractionalized Fermi liquid (FL*), the volume enclosed by the Fermi surface is determined by the same expression after $ρ$ has been shifted by a quantized amount, most commonly to $ρ-1$ (we assume spin rotation invariance, for simplicity). The FL* shift is related to the quantized symmetry fractionalization data of a quantum spin liquid, whose fractionalized spinon excitations are present alongside the Fermi surface quasiparticles. In this review article, we establish the FL* Fermi volume by generalizing the original Luttinger proof for FL to parton gauge theories of the quantum spin liquid and FL*. We also discuss Oshikawa's flux insertion arguments for FL, and their extension to FL*, including a discussion of gapless spin liquids.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18456",
+   "title": "Topological phase diagram of an extended Su-Schrieffer-Heeger model with negative coupling",
+   "url": "https://arxiv.org/abs/2611.18456v1",
+   "authors": [
+    "P. A. Grizzi",
+    "P. Roura-Bas",
+    "A. A. Aligia"
+   ],
+   "label": "arXiv:2611.18456v1",
+   "primary_category": "cond-mat.mes-hall",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "An analytic phase diagram for an extended Su-Schrieffer-Heeger chain with three atoms per unit cell and negative coupling, mapping seven regions with four topological phases via Zak phases of the three bands.",
+    "plain": "The paper studies a model of waves hopping along a chain of repeating units, a simplified description of a structure recently built from light-matter particles (exciton-polaritons) in perovskite micropillars. The authors work out, by calculation, how the system's topological character changes as two parameters are varied: the energy offset between sites and the ratio of hopping strengths between and within units. They report seven regions in this parameter plane, falling into four distinct topological phases.",
+    "why": "The text notes that the second and third bands swap topological character through a band crossing tied to a negative coupling, a feature specific to this experimental system. The phase diagram is meant to help interpret existing experiments and guide future ones, though the text does not report experimental comparisons itself.",
+    "background": "- Topological phase: a property of a system's band structure that stays the same under smooth changes, often linked to edge states at boundaries.\n- Su-Schrieffer-Heeger (SSH) model: a simple one-dimensional chain of sites with alternating hopping strengths, a standard textbook example of topology.\n- Unit cell: the repeating group of sites; here each contains three atoms (sites).\n- Bands and wave vector k: energy levels of waves in a periodic lattice, labeled by momentum k; the k=0 point is the centre of the Brillouin zone.\n- Zak phase: a number computed from a band's wavefunctions over the Brillouin zone that signals its topology in one dimension.\n- Exciton-polariton: a hybrid of light and matter excitations in a semiconductor microcavity.\n- Phase diagram: a map showing which topological phase occurs for each combination of parameters.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Recently, an extended Su-Schrieffer-Heeger model with three atoms per unit cell has been experimentally realized in perovskite exciton-polariton micropillars. A distinctive feature of this system is that the second and third bands undergo a topological transition through a band crossing at the wave vector $k=0$, associated with a negative coupling. In this work, we analytically determine the phase diagram of the model as a function of the on-site energy splitting and the ratio of intercell to intracell hopping amplitudes. We identify seven regions in this lane, with four distinct topological phases, characterized by different Zak phases of the three bands. Our results provide a useful theoretical framework for interpreting existing experiments and serve as a guide for future experimental investigations of this system.",
    "source": "arxiv"
   }
  ]

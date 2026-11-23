@@ -1,7 +1,55 @@
 {
  "slug": "epidemiology",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.15.26368133",
+   "title": "Elevated maternal hemoglobin levels during pregnancy are associated with autism spectrum disorder in the offspring: A population-based cohort study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26368133v1",
+   "authors": [
+    "Dichter, A.",
+    "Tzoref, A.",
+    "Meiri, G.",
+    "Menashe, I."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.15.26368133 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A large Israeli health-records cohort (303,234 singleton births, 2011–2021) found that high maternal hemoglobin in the first or second trimester was associated with higher odds of a later autism spectrum disorder (ASD) diagnosis in offspring, with the strongest signal for first-trimester values.",
+    "plain": "Researchers looked at whether a mother's blood hemoglobin level during pregnancy, the protein in red blood cells that carries oxygen, is linked to whether her child later receives an autism diagnosis. Using electronic medical records from one large Israeli health organization, they compared children whose mothers had unusually high hemoglobin readings with children whose mothers had typical readings. They found that high readings were associated with somewhat higher odds of an autism diagnosis, though this is an association and does not show that high hemoglobin causes autism.",
+    "why": "Most prenatal blood research has focused on low hemoglobin (anemia), so the question of whether unusually high levels matter is less explored. The result is worth following up, but it comes from one observational study, and the authors themselves call for replication and for clarifying the biological mechanisms.",
+    "background": "- Autism spectrum disorder (ASD): a neurodevelopmental condition affecting social communication and behavior; diagnosed from medical records here.\n- Hemoglobin (Hb): the oxygen-carrying protein in red blood cells; measured in routine prenatal blood tests.\n- Anemia: low hemoglobin; prior research links it to worse offspring neurodevelopment.\n- Trimesters: the three roughly three-month stages of pregnancy.\n- Cohort study: follows a defined group over time to see who develops an outcome.\n- Adjusted odds ratio (aOR): a measure of how much more likely an outcome is in one group versus a reference group, after accounting for other factors; 1.22 means about 22% higher odds.\n- Sibling-matched analysis: compares siblings from the same mother to reduce the influence of shared family factors.\n- Limitations noted by authors: no data on maternal smoking or detailed nutrition; population is Jewish mothers in one HMO.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Background Autism spectrum disorder (ASD) is an increasingly prevalent neurodevelopmental condition with multifactorial origins, including potential prenatal environmental contributions. Maternal anemia (decreased hemoglobin [Hb] levels) has long been associated with adverse offspring neurodevelopmental outcomes. Yet, evidence regarding elevated levels of antenatal hemoglobin levels, in relation to ASD risk remains limited. This study evaluated the association between maternal Hb levels during pregnancy and the risk of ASD diagnosis in offspring. Methods This large-scale, population-based retrospective cohort study used electronic health records from births of members of Clalit Health Services (CHS), the largest health maintenance organization in Israel, between 2011 and 2021. The study included 303,234 singleton live births to Jewish mothers who had at least one measured prenatal Hb value and were CHS members. Exclusion criteria were children with known genetic disorders and births <25 weeks of gestation. Maternal Hb, and red blood cells (RBC) levels during the first and second trimesters were categorized as low (<2.5th percentile), normal (reference), or high (>97.5th percentile). The main outcome was a diagnosis of ASD in the offspring, as recorded in medical files. Statistical analyses adjusted for maternal age, socioeconomic status, gestational diabetes, BMI, and other clinical and demographic factors. Results Among the 303,234 births, 8,106 (2.7%) children were diagnosed with ASD. High maternal Hb levels were associated with elevated odds of ASD diagnosis (aOR=1.22; 95% CI=1.08:1.37), with the strongest association observed for first-trimester measurements (aOR=1.31; 95% CI=1.14-1.49). This association persisted in the sibling-matched analysis (aOR=1.64; 95% CI=1.08-2.47) and was not modified by maternal RBC levels, suggesting that it was not explained by familial factors or RBC counts. The main limitations of this study include the lack of available data on maternal smoking, and the absence of detailed information on maternal nutritional status. Conclusions These findings suggest that elevated antenatal Hb levels may be relevant to offspring neurodevelopment. Further studies are needed to replicate these findings and clarify the biological mechanisms underlying this association.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.15.26368136",
+   "title": "Chronic Maternal White Blood Cell Elevation During Pregnancy and Offspring Autism",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26368136v1",
+   "authors": [
+    "Tzoref, A.",
+    "Dichter, A.",
+    "Meiri, G.",
+    "Menashe, I."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.15.26368136 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A retrospective Israeli cohort of 303,234 singleton births finds that elevated maternal white blood cell counts from routine first- and second-trimester tests are associated with higher odds of clinically diagnosed autism, with weaker support from sibling-matched and repeated-pregnancy analyses.",
+    "plain": "Autism is linked to the mother's immune system during pregnancy, but the specialized immune tests used in past studies are not part of routine care. This study checked whether ordinary blood counts (white blood cells, which fight infection) taken during pregnancy relate to a child's later autism diagnosis. It found that mothers with unusually high counts had somewhat higher odds of having an autistic child, and that this was most visible when the counts were high across several pregnancies.",
+    "why": "If routine blood counts carry a real signal, they could be used cheaply across whole populations to help flag pregnancies at higher risk, and they add support to the idea that maternal immune activation plays a role in autism. The text does not show that the counts cause autism, and most associations shrank in the sibling comparison, so the link is best treated as an association that needs confirmation.",
+    "background": "- Autism spectrum disorder (ASD): a neurodevelopmental condition diagnosed through clinical assessment; here, diagnoses recorded in health records.\n- Maternal immune activation hypothesis: the idea that immune activity in a pregnant woman can affect the developing brain of the fetus.\n- White blood cells (WBCs): immune cells in the blood; total counts and subtypes (neutrophils, lymphocytes, monocytes) are routinely measured in prenatal care.\n- Odds ratio (OR): how much the odds of an outcome change for an exposure; 1.59 means roughly 59% higher odds, not a 59% higher probability.\n- Retrospective cohort: following existing health records over time rather than enrolling and following participants forward.\n- Matched-sibling analysis: comparing siblings born to the same mother with different exposures, which helps control for shared family factors.\n- Chronicity analysis: checking whether the same mother had high counts across multiple pregnancies.\n- Percentiles: high and low exposures were defined as the top and bottom 2.5% of counts.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Background: Maternal immune activation is a robust risk factor for autism spectrum disorder (ASD). Current evidence relies on specialized immunological markers not routinely measured, limiting population-level risk identification. We investigated the association between maternal white blood cell (WBC) counts, a ubiquitous component of routine prenatal care during pregnancy, and offspring ASD risk. Methods: We conducted a retrospective population-based cohort study of 303,234 singleton live births (51% male) between 2011 and 2021 from Clalit Health Services in Israel. Exposures were maternal total and differential WBC counts from routine testing during the 1st and 2nd trimesters. High and low exposures were defined as >97.5th and <2.5th percentiles, respectively. The primary outcome was clinical ASD diagnosis. Analyses included multivariable logistic regressions, matched-sibling analyses (n=2,894 discordant pairs), and chronicity analyses in multiparous mothers (n=72,102). Results: Among 303,234 children, 8,106 (2.7%) were diagnosed with ASD. Elevated maternal total WBC counts were associated with increased odds of ASD (adjusted odds ratio [aOR]=1.59; 95% CI, 1.43-1.75), with the strongest association in the 1st trimester (aOR=1.64; 95% CI, 1.45-1.85). Similar associations were seen with elevated neutrophils, lymphocytes, and monocytes. While most associations were attenuated in matched-sibling analyses, chronicity analysis revealed increased ASD odds in offspring of mothers with persistently elevated WBC counts across multiple pregnancies (aOR=1.49; 95% CI, 1.08-2.01). Conclusions: Persistently elevated maternal WBC counts across pregnancies are associated with increased offspring ASD risk. These routinely collected hematologic markers support the maternal immune activation hypothesis and may contribute to future prenatal risk assessment models.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.18.26368387",
    "title": "Perinatal suicide risk factors: A network analysis",
@@ -17,40 +65,218 @@
    ],
    "label": "medRxiv doi:10.64898/2026.11.18.26368387 v1",
    "primary_category": "epidemiology",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Purpose Suicide during pregnancy or after birth (the perinatal period) represents a leading, preventable cause of United States maternal deaths.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A cross-sectional psychometric network analysis of 2003–2023 National Violent Death Reporting System suicide decedents (N=20,217) comparing 18 binary life-circumstance indicators between perinatal and non-perinatal women, with attention to bridge centrality and network stability.",
+    "plain": "This paper looks at women who died by suicide while pregnant or within the first year after giving birth, a period that is a leading preventable cause of maternal death in the United States. Using death records from 2003 to 2023, the researchers mapped how 18 everyday circumstances, such as relationship problems, health issues, money troubles, and known suicide risk factors, tend to occur together. They then compared that map for perinatal deaths (1,297 cases) with the map for all other deaths (18,920 cases).",
+    "why": "Maternal suicide is a preventable cause of death, and the paper suggests that prevention for women of childbearing age should look beyond pregnancy itself to health, partner relationships, and finances. The findings describe associations in death records, not causes, so they point to where prevention might focus rather than proving what works.",
+    "background": "- Perinatal period: pregnancy and the first year after birth.\n- National Violent Death Reporting System: a US database of details gathered from death investigations and records.\n- Cross-sectional study: a snapshot of many cases at one point in the data, which cannot establish cause and effect.\n- Network analysis: a method that treats each factor as a point and each statistical association as a line, showing which factors cluster together.\n- Bridge centrality: how strongly a factor links otherwise separate clusters of factors.\n- Network stability: whether the map holds up when the data are slightly resampled. The paper reports the overall network as stable and the perinatal network as only modestly stable, which means its details deserve more caution.\n- Binary indicator: a yes-or-no record of whether a circumstance was present.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Purpose Suicide during pregnancy or after birth (the perinatal period) represents a leading, preventable cause of United States maternal deaths. This study aimed to understand the complex relationship between perinatal status and life circumstances among perinatal suicide decedents in the United States and generate insights regarding suicide risk. Methods This cross-sectional study used decedent data from the 2003-2023 National Violent Death Reporting System suicide mortality registry (N=20,217). We applied psychometric network analysis using 18 binary life circumstances indicators representing four domains: relationships, health, socioeconomic status, and risk factors for suicide. We generated two networks for the overall sample and perinatal sample and assessed network structure, bridge centralities, and stability. Results The analytic sample included 1,297 perinatal and 18,920 non-perinatal decedents. The network of the overall sample was stable. Perinatal status did not appear at the center of the network but connected primarily with intimate partner problems. The network of the perinatal sample was modestly stable. Postpartum status was not at the center of the network but connected to depressed mood and mental health diagnoses. In both networks, depressed mood had the highest bridge betweenness, and there was a consistent link between physical health domains and socioeconomic domains. Conclusion Suicide prevention strategies targeting childbearing-aged women should incorporate factors beyond pregnancy, including physical health, intimate partner relationships, and socioeconomic challenges.",
    "source": "medrxiv"
   },
   {
-   "uid": "medrxiv:10.64898/2026.11.15.26368133",
-   "title": "Elevated maternal hemoglobin levels during pregnancy are associated with autism spectrum disorder in the offspring: A population-based cohort study",
-   "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26368133v1",
+   "uid": "medrxiv:10.64898/2026.11.17.26368306",
+   "title": "Moderate-to-vigorous physical activity, longitudinal blood pressure trajectories, and hypertension-related outcomes in older adults at high cardiovascular risk: a cohort study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.17.26368306v1",
    "authors": [
-    "Dichter, A.",
-    "Tzoref, A.",
-    "Meiri, G.",
-    "Menashe, I."
+    "Fornara, E.",
+    "Hernandez, M. H.",
+    "Goday, A.",
+    "Camps-Vilaro, A.",
+    "Toledo, E.",
+    "Salas-Salvado, J.",
+    "Estruch, R.",
+    "Ros, E.",
+    "Cueto-Galan, R.",
+    "Fiol, M.",
+    "Lapetra, J.",
+    "Timiraos, J.",
+    "Serra-Majem, L.",
+    "Pinto, X.",
+    "Ruiz-Canela, M.",
+    "Vazquez-Lorente, H.",
+    "Fito, M.",
+    "Hernaez, A."
    ],
-   "label": "medRxiv doi:10.64898/2026.11.15.26368133 v1",
+   "label": "medRxiv doi:10.64898/2026.11.17.26368306 v1",
    "primary_category": "epidemiology",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Background Autism spectrum disorder (ASD) is an increasingly prevalent neurodevelopmental condition with multifactorial origins, including potential prenatal environmental contributions.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "In a secondary analysis of the PREDIMED trial (5,254 adults aged 60-80 at high cardiovascular risk), higher moderate-to-vigorous leisure-time physical activity was not linked to clinically meaningful differences in blood pressure trajectories or new high blood pressure, but was associated with lower risk of starting antihypertensive drugs, with a possible sex difference.",
+    "plain": "This study asks whether being more physically active in your free time, such as brisk walking, cycling or sports at a moderate-to-vigorous effort, is linked to healthier blood pressure in older adults who already face high heart risk. The researchers followed over 5,000 people over time and tracked their blood pressure, new high blood pressure diagnoses, and when they began taking blood pressure medication. Activity did not change blood pressure readings in a meaningful way or the chance of new high blood pressure, but people who were more active were less likely to start blood pressure medicine.",
+    "why": "Starting blood pressure medication is a practical, clinically important event, so a link to activity suggests exercise may matter in day-to-day cardiovascular care. The sex difference was not clearly established (interaction p = 0.058), so it should be treated as a hint rather than a finding, and the study is observational, so it cannot prove activity caused the difference.",
+    "background": "- PREDIMED was a large Spanish trial testing Mediterranean-style diets in people at high cardiovascular risk; this paper analyses its data.\n- Blood pressure is reported as two numbers: systolic (pressure when the heart beats) and diastolic (pressure between beats). High blood pressure here means above 140 or 90 mmHg.\n- Physical activity was self-reported with a questionnaire and summarised as MET-minutes per day (MET is a unit of activity intensity); over 100 MET-minutes/day was labelled \"adequate\".\n- Mixed-effects models track repeated measurements in each person over time; Cox models estimate the relative rate of an event (hazard ratio, HR) over follow-up. An HR below 1 means a lower rate of the event.\n- Observational cohort findings show association, not cause.",
+    "difficulty": "research-level",
+    "ai": true
    },
-   "abstract": "Background Autism spectrum disorder (ASD) is an increasingly prevalent neurodevelopmental condition with multifactorial origins, including potential prenatal environmental contributions. Maternal anemia (decreased hemoglobin [Hb] levels) has long been associated with adverse offspring neurodevelopmental outcomes. Yet, evidence regarding elevated levels of antenatal hemoglobin levels, in relation to ASD risk remains limited. This study evaluated the association between maternal Hb levels during pregnancy and the risk of ASD diagnosis in offspring. Methods This large-scale, population-based retrospective cohort study used electronic health records from births of members of Clalit Health Services (CHS), the largest health maintenance organization in Israel, between 2011 and 2021. The study included 303,234 singleton live births to Jewish mothers who had at least one measured prenatal Hb value and were CHS members. Exclusion criteria were children with known genetic disorders and births <25 weeks of gestation. Maternal Hb, and red blood cells (RBC) levels during the first and second trimesters were categorized as low (<2.5th percentile), normal (reference), or high (>97.5th percentile). The main outcome was a diagnosis of ASD in the offspring, as recorded in medical files. Statistical analyses adjusted for maternal age, socioeconomic status, gestational diabetes, BMI, and other clinical and demographic factors. Results Among the 303,234 births, 8,106 (2.7%) children were diagnosed with ASD. High maternal Hb levels were associated with elevated odds of ASD diagnosis (aOR=1.22; 95% CI=1.08:1.37), with the strongest association observed for first-trimester measurements (aOR=1.31; 95% CI=1.14-1.49). This association persisted in the sibling-matched analysis (aOR=1.64; 95% CI=1.08-2.47) and was not modified by maternal RBC levels, suggesting that it was not explained by familial factors or RBC counts. The main limitations of this study include the lack of available data on maternal smoking, and the absence of detailed information on maternal nutritional status. Conclusions These findings suggest that elevated antenatal Hb levels may be relevant to offspring neurodevelopment. Further studies are needed to replicate these findings and clarify the biological mechanisms underlying this association.",
+   "abstract": "Background: We aimed to investigate the association between moderate-to-vigorous leisure-time physical activity (MVLTPA) and longitudinal trajectories of systolic (SBP) and diastolic (DBP) blood pressure, as well as the incidence of high blood pressure and antihypertensive drug initiation, in adults aged 60-80 years at high cardiovascular risk. Methods: In participants from the PREDIMED trial (61% women; 5,254 participants), MVLTPA was assessed using the Minnesota Leisure Time Physical Activity Questionnaire and expressed as cumulative average metabolic equivalent of task-minutes/day. SBP and DBP trajectories were modelled using mixed-effects models with cubic splines (>100 [adequate] vs <100 [insufficient] metabolic equivalent of task-minutes/day). First occurrence of high blood pressure (SBP >140 mmHg or DBP >90 mmHg) and antihypertensive drug initiation were assessed with Cox models (adequate vs insufficient, and continuous MVLTPA). Results: SBP and DBP declined with increasing age, with no clinically meaningful differences between MVLTPA groups. The association between adequate MVLTPA and incident high blood pressure was null (HR 1.11, 95% CI 0.94-1.32). However, adequate MVLTPA was associated with a 17% lower risk of antihypertensive drug initiation (HR 0.83, 95% CI 0.71-0.98). The association appeared stronger in women (HR 0.74, 95% CI 0.58-0.94) than in men (HR 0.98, 95% CI 0.78-1.22) (p-value for sex interaction = 0.058). A modest inverse linear dose-response association between MVLTPA and risk of antihypertensive drug initiation was also observed (per 25 metabolic equivalent of task-minutes/day: HR 0.99, 95% CI 0.97-1.00; p-value = 0.022). Conclusions: In older adults at high cardiovascular risk, MVLTPA was not associated with clinically meaningful differences in SBP or DBP trajectories or incident high blood pressure, but was associated with a lower risk of antihypertensive drug initiation. These findings support promoting habitual physical activity as part of cardiovascular risk management in older adults.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.16.26368157",
+   "title": "The plateau in liver disease mortality in Germany: contrasting trends by age, region and ICD-10 code, 2000-2024",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26368157v1",
+   "authors": [
+    "Kumpf, M.",
+    "Stambollxhiu, E.",
+    "Wende, E.",
+    "Lenhart, N.",
+    "Graf, M.",
+    "Ziegelmayer, S.",
+    "Makowski, M.",
+    "Bressem, K.",
+    "Adams, L."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.16.26368157 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A registry-based analysis of German and European liver disease mortality (2000–2024) by age, sex, federal state and detailed ICD-10 code, compared with Global Burden of Disease 2023 aetiology estimates, finds that Germany's cirrhosis mortality plateau reflects rising deaths at ages 65–74, concentrated in unspecified cirrhosis (K74.6) and in eastern Germany.",
+    "plain": "Germany's death rate from chronic liver disease has stopped falling while several neighbouring countries' rates have dropped. This paper looks at death certificates, hospital records and modelled global estimates to find where the plateau comes from. The authors report that deaths are still falling under age 65 but are rising among people aged 65 to 74, especially in the east, and that most of these cirrhosis deaths are recorded without a stated cause.",
+    "why": "The findings point to older cohorts with high past alcohol exposure as a possible driver, and suggest that older adults may need earlier detection and better treatment access. The authors also warn that global models assigning causes to cirrhosis deaths cannot be checked against routine death registration data, so those cause-specific figures should be read cautiously.",
+    "background": "- Cirrhosis: scarring of the liver, often found only when it causes complications (decompensation).\n- Age-standardised rate: a death rate adjusted to a standard age structure so populations can be compared fairly.\n- ICD-10: the international coding system doctors and registries use to classify causes of death; K70–K77 covers liver disease, K74.6 is \"unspecified cirrhosis.\"\n- Birth cohort: a group of people born in the same years; comparing cohorts helps separate lifetime exposures from calendar-year effects.\n- Global Burden of Disease (GBD) 2023: a modelled global estimate that assigns liver deaths to causes such as alcohol, viral hepatitis, and metabolic disease, partly using statistical models rather than recorded causes.\n- Case fatality: the share of hospitalised patients who die during that stay.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "BackgroundCirrhosis is often diagnosed only at decompensation, making identification of high-risk groups important for prevention and early detection. Chronic liver disease mortality has fallen in southern Europe and France since 2010, but not in Germany. Whether the German plateau reflects birth-cohort alcohol exposure, metabolic liver disease or certification practice is unknown. MethodsDeaths by ICD-10 code, sex and age group were extracted from the WHO Mortality Database for 16 European countries (2000-2022), with Eurostat rates (2011-2023), German state-level mortality (1998-2024) and hospital diagnoses (2000-2023). Registry and Global Burden of Disease Study (GBD) 2023 estimates were summarised for ages 45-64, 65-74 and 75 years and over, with registry rates standardised to the European Standard Population 2013. FindingsGermanys age-standardised chronic liver disease mortality was 16.6 per 100 000 in 2011 and 16.0 in 2023, against declines of 21-37% in France, Italy and Spain. Between 2010 and 2022, alcoholic liver disease mortality at ages 45-64 fell by 17% in men and 25% in women, whereas fibrosis and cirrhosis (K74) mortality at ages 65-74 rose by 27% and 28%, with larger K70-K77 mortality increases in eastern than western Germany. Hospitalisation rates showed similar age-specific patterns, while in-hospital case fatality declined. Fewer than 0.5% of liver deaths were certified as fatty liver. GBD 2023 showed a similar age-specific increase but attributed rising mortality to all five modelled aetiologies. InterpretationThe German plateau reflects continued decline below age 65 and rising mortality at ages 65-74, compatible with cohorts born 1945-59 reaching this age band, particularly in eastern Germany. Consumption records and surveys indicate differing regional patterns of alcohol exposure. Much of the cirrhosis in these cohorts is certified without aetiology, and GBDs aetiological estimates cannot be verified in registration data. FundingNone. Research in context Evidence before this studyPubMed was searched without language restriction from inception to October 15, 2026, for registry-based analyses of cirrhosis or chronic liver disease mortality in Germany or in European comparisons, and for comparisons of GBD estimates with vital registration, using combinations of the terms cirrhosis, liver disease, alcohol-related liver disease, mortality, Germany, Europe, age-period-cohort, Global Burden of Disease and vital registration. Registry analyses have documented an east-to-west gradient of cirrhosis mortality across Europe and, in Germany, period and birth-cohort effects on alcohol-related mortality, with lower risks in later-born cohorts. A nationwide hospital study reported rising admissions for cirrhosis with falling in-hospital mortality. GBD publications acknowledge that ICD coding cannot reliably distinguish cirrhosis aetiologies, which are assigned using statistical models. We found no previous study combining detailed ICD-10 mortality analyses, age-specific European comparison, German federal-state trends and comparison with GBD aetiological estimates. Added value of this studyWe compared GBD 2023 estimates with European mortality registration data and examined German mortality by detailed ICD-10 code, age, sex and federal state, alongside hospital diagnosis statistics. The German plateau reflects rising mortality at 65-74 years, especially in eastern Germany, while mortality continues to decline at 45-64 years. The increase was concentrated in deaths coded as unspecified cirrhosis (K74.6) and accompanied by rising cirrhosis hospitalisation rates. At the same time, in-hospital case fatality and admissions for chronic viral hepatitis declined. GBD identified a similar age-specific increase but estimated rising mortality for all five aetiological sub-causes despite their differing representation in routine data. Implications of all the available evidenceThe absence of a decline in cirrhosis mortality in Germany is consistent with older birth cohorts with high cumulative alcohol exposure, although the aetiology of cirrhosis is often unspecified. Differences in alcohol consumption patterns, obesity and conditions after reunification may contribute to higher mortality in parts of eastern Germany. The findings support earlier detection and improved treatment access for older adults, age-specific surveillance in Germany and other European countries, and cautious interpretation of modelled aetiological fractions in countries without multiple-cause mortality data.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.16.26367927",
+   "title": "Influenza activity in the United States during the 2025-26 influenza season",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26367927v1",
+   "authors": [
+    "Busbee, A. L.",
+    "Howa, A.",
+    "Zhou, Y.",
+    "Smith, R.",
+    "Dempster, N.",
+    "Daly, P.",
+    "Merced-Morales, A.",
+    "Colon, A.",
+    "Hawkins, D.",
+    "Moon, S.",
+    "Reinhart, K.",
+    "Huang, S.",
+    "Zhang, C.",
+    "Iuliano, A. D.",
+    "O'Halloran, A.",
+    "Habeck, J.",
+    "Ujamaa, D.",
+    "Bozio, C. H.",
+    "Mathis, S. M.",
+    "Nguyen, H. T.",
+    "Patel, M. C.",
+    "Gubareva, L.",
+    "Zheng, X.-Y.",
+    "Kondor, R.",
+    "Kniss, K.",
+    "Budd, A."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.16.26367927 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "CDC's season summary of U.S. influenza activity for 2025-26, covering timing, two epidemic waves, dominant A(H3N2) subclade K viruses, vaccine mismatch, age-specific severity, and pediatric deaths.",
+    "plain": "This is an official government report on how the flu season went in the United States from late September 2025 onward. It tracks lab test results, doctor and emergency room visits, hospital stays and deaths, then rates how severe the season was. The main findings are that flu peaked in late December 2025, earlier than the previous season, and that a strain called A(H3N2) subclade K dominated, with a smaller second wave of a B-type strain.",
+    "why": "The report flags that children had their highest cumulative flu hospitalization rate in 16 years and that most circulating viruses differed antigenically from the vaccine strains, which matters for vaccine planning and child health. The text itself concludes the season was within historic norms for timing and severity, so the child-specific findings are the main point of interest.",
+    "background": "- Influenza (flu) is a common respiratory virus; A and B are its main types for seasonal epidemics.\n- Subclades are finer genetic groupings within a flu type; H3N2 is a specific A-type subtype.\n- \"Antigenically drifted\" means the virus's surface proteins have changed enough that vaccine-induced immunity may match it less well.\n- Vaccines are chosen each year from reference strains predicted to match the upcoming season's viruses.\n- Surveillance means ongoing collection of case, hospital and death data to track disease.\n- The severity rating here uses CDC's established framework, which grades the season as low, moderate or high for each age group.\n- The text gives a data window ending October 3, 2026 and a pediatric death count as of October 29, 2026, which is inconsistent with a 2025-26 season report; readers should check these dates against the original source.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "BackgroundComprehensive influenza surveillance is conducted year-round in the United States to monitor changes in influenza activity. This report summarizes the 2025-26 U.S. influenza season. MethodsData from September 28, 2025 through October 3, 2026 were collected from national surveillance systems monitoring influenza through laboratory testing, outpatient and emergency department visits, hospitalizations, and mortality. Data modeled disease burden and assessed severity using established criteria. A subset of influenza positive specimens were genetically and antigenically characterized and assessed for antiviral susceptibility. ResultsInfluenza activity peaked during the week ending December 27, 2025, five weeks earlier than the 2024-25 season. There were two waves of influenza activity with influenza A(H3N2) subclade K viruses predominating the season overall and during the first wave followed by a smaller B/Victoria wave. The majority of circulating A(H3N2) and B/Victoria viruses were antigenically drifted from 2025-26 influenza vaccine reference strains. Season severity was classified as moderate overall, with children (0-17 years old) experiencing a high severity season and adults experiencing a moderate severity season. Children experienced the highest percent of influenza-associated outpatient and emergency department visits compared to other age groups. This seasons cumulative influenza-associated hospitalization rate in children is the highest hospitalization rate in the past 16 years. Additionally, there were 198 influenza-associated pediatric deaths reported to CDC as of October 29, 2026. ConclusionsAlthough antigenically drifted A(H3N2) viruses predominated, the 2025-26 U.S. influenza season occurred within historic norms for timing and severity. Year-round surveillance remains critical for detecting changes in influenza viruses and monitoring influenza-associated morbidity and mortality. Key PointsO_LICDCs severity assessment framework classified the 2025-26 U.S. influenza season as moderate across all age groups C_LIO_LINationally, peak influenza activity occurred in late December 2025 C_LIO_LIInfluenza A(H3N2) subclade K viruses predominated during the 2025-26 season C_LI",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.15.26368155",
+   "title": "Multidrug-Resistant Tuberculosis Rates Among High-Risk Populations in Brazil: An Analysis from 2001 to 2021",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26368155v1",
+   "authors": [
+    "Dailton Guedes de Oliveira Moraes, C.",
+    "Granato, A. E. C.",
+    "Santos de Marins, I.",
+    "Pinto Alves Ferreira, P. O.",
+    "Pinto Alves Ferreira, V. A.",
+    "Ribeiro Junior, C. A.",
+    "Armenara Namorato, H.",
+    "Edimar da Costa Junior, J.",
+    "Pinto, F. A."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.15.26368155 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A cross-sectional analysis of Brazilian DATASUS notifications (2001–2021) of multidrug-resistant tuberculosis across six high-risk groups, testing period differences with ANOVA and Tukey post-hoc tests.",
+    "plain": "This study looks at a hard-to-treat form of tuberculosis, a lung infection caused by bacteria that resist the standard drugs, in Brazil over 21 years. The researchers counted reported cases among groups considered especially vulnerable, such as people with HIV, smokers, drug users, health workers, people in prison, and people experiencing homelessness. They report that cases rose across all these groups, with the steepest growth between 2017 and 2021, by 294% to 574% depending on the group.",
+    "why": "Drug-resistant tuberculosis is harder and longer to treat, so rising case counts among high-risk groups matter for both patients and public health planning. The paper's authors link the rise to treatment abandonment, coinfection, social vulnerability and occupational exposure, but the text does not show how strongly each factor contributed.",
+    "background": "- Tuberculosis (TB) is a bacterial infection, mainly of the lungs, spread through the air.\n- Multidrug-resistant TB (MDR-TB) does not respond to at least two of the first-line antibiotics, so treatment is longer and harder.\n- DATASUS is Brazil's national public health information system, the source of the case counts.\n- Notifications are cases reported to health authorities, which depend on testing and reporting practices.\n- A cross-sectional study takes a snapshot of data at one point or across periods; it shows associations, not cause.\n- ANOVA and Tukey tests are standard statistical methods for comparing averages across groups.\n- Growth percentages describe change in reported counts and do not by themselves show a change in true rates.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Multidrug-Resistant Tuberculosis (MDR-TB) represents a global public health threat, with a rising prevalence, particularly among vulnerable populations. This cross-sectional study analyzed MDR-TB notifications in Brazil from 2001 to 2021, using data from DATASUS, and stratified by periods and risk groups (HIV-positive individuals, smokers, drug users, healthcare workers, incarcerated individuals, and people experiencing homelessness). Descriptive analyses and parametric statistical tests (ANOVA and Tukey, p<0.05) were applied. A significant increase in cases was observed across all groups, especially between 2017 and 2021, with growth ranging from 294% to 574% depending on the population. Factors such as treatment abandonment, coinfection, social vulnerability, and occupational exposure were key determinants for MDR-TB dissemination. The findings indicate that current public health policies are insufficient, highlighting the urgent need for targeted prevention strategies, therapeutic follow-up, and control measures for high-risk populations.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.12.26367979",
+   "title": "Aging, Structural, and Neighborhood-Environmental Correlates of Cardiovascular-Kidney-Metabolic Risk Factor Burden Across U.S. Census Tracts",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.12.26367979v1",
+   "authors": [
+    "Batobara, A.",
+    "Alfaraidhy, M.",
+    "Tanriover, B.",
+    "Liu, Y.",
+    "Damluji, A. A.",
+    "Vest, A. R.",
+    "Lim, C."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.12.26367979 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A Bayesian spatial analysis of a composite cardiovascular-kidney-metabolic (CKM) burden index built from CDC PLACES tract-level crude prevalences across 69,530 contiguous U.S. census tracts, examining clustering, aging and neighborhood correlates, and sensitivity to behavioral measures.",
+    "plain": "This paper maps how a combined load of heart, kidney and metabolic conditions (obesity, diabetes, high blood pressure, high cholesterol and chronic kidney disease) is spread across small neighborhood areas in the United States. The authors built a single burden score for each census tract from public survey estimates and checked it against a national health survey. They found the burden clusters geographically, is highest in the South, and rises with the share of older adults, with some differences in low-income, low-access areas.",
+    "why": "Area-level maps like this can help health agencies decide where to focus screening and prevention. The results are cross-sectional and rely on modeled survey estimates, so they point to where needs may be rather than predicting risk for any individual.",
+    "background": "- Census tract: a small neighborhood-sized area, roughly 1,200 to 8,000 people, used for U.S. statistics.\n- CDC PLACES: a CDC project that estimates local health measures for tracts from survey data, rather than measuring people directly.\n- Crude prevalence: the raw share of adults with a condition, not adjusted for age structure.\n- Cardiovascular-kidney-metabolic (CKM) syndrome: a 2023 American Heart Association framework linking heart disease, kidney disease, and obesity/diabetes/metabolic problems.\n- NHANES: a national health examination survey used here as a benchmark for comparison.\n- Bayesian spatial model (BYM2): a statistical model that accounts for neighboring areas being similar, and borrows strength across them.\n- Moran's I: a measure of spatial clustering; values near 1 indicate strong clustering, with 0.657 reported here.\n- Credible interval: the Bayesian counterpart of a confidence interval.\n- LILA tract: a low-income, low-access area, where many residents live far from a supermarket.\n- Machine learning importance: a score showing how much a predictor contributes to a descriptive model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "BackgroundThe American Heart Association defined Cardiovascular-Kidney-Metabolic (CKM) syndrome in 2023. Census-tract studies often examined one condition without spatial modeling. It is unclear where combined Stage 1-2 burden concentrates and how it relates to aging, environment, and socioeconomic conditions. MethodsWe built a CKM burden index for 70,336 tracts from five CDC PLACES crude prevalences (obesity, diabetes, hypertension, hypercholesterolemia, chronic kidney disease) and compared it with NHANES 2017-2020. In 69,530 contiguous-U.S. tracts, we fit Bayesian spatial (BYM2) models with demographic, socioeconomic, and environmental predictors and aging x environment interactions, plus descriptive machine learning. The primary model excluded behavioral measures sharing the outcomes BRFSS source; a second added them. Credible intervals (CrIs) are conditional on PLACES estimates. ResultsAgreement with NHANES was modest. Burden clustered spatially (Morans I = 0.657) and highest in the South. Behavioral measures had the largest machine-learning importance (52.6%), partly from shared sourcing. Each percentage-point increase in adults [&ge;]65 years was associated with 0.112 units higher burden (95% CrI 0.111-0.113) outside low-income, low-access (LILA) tracts. LILA tracts had 0.10-0.14 units higher burden from the 25th aging percentile but not consistently in the youngest decile. Aging and socioeconomic associations held across sensitivity analyses. The primary models residual Southern excess approached zero after adding behavioral measures, which may reflect shared measurement, real differences in these behaviors, or both. ConclusionsCKM burden is spatially clustered and highest in the South. LILA tracts had modestly higher burden above the youngest tracts. These cross-sectional estimates support area-level surveillance and needs assessment. Clinical PerspectiveO_ST_ABSWhat Is New?C_ST_ABSO_LIAcross 69,530 US census tracts, a combined cardiovascular-kidney-metabolic burden index built from CDC PLACES was clustered in space and highest across the South. C_LIO_LIEach 1-percentage-point higher share of adults aged [&ge;]65 years was associated with 0.112 units higher burden (crude prevalence, not age-standardized). C_LI What Are the Clinical Implications?O_LITract-level burden maps can help health systems and public health agencies direct cardiovascular-kidney-metabolic screening and prevention to high-burden areas, including the South, as area-level needs assessment rather than individual risk prediction. C_LI",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.13.26368055",
+   "title": "Multi-omics models for hypertension prediction using blood pressure PRS and omics scores",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.13.26368055v1",
+   "authors": [
+    "Wang, Z.",
+    "Hrytsenko, Y.",
+    "Almogy, S.",
+    "Spitzer, B. W.",
+    "Purushotham, Y.",
+    "Taylor, K.",
+    "Lin, H. J. J.",
+    "Tahir, U. A.",
+    "Raffield, L. M.",
+    "Rich, S.",
+    "Rotter, J.",
+    "Chen, Z. Z.",
+    "Sofer, T."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.13.26368055 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Elastic Net proteomic, metabolomic, and polygenic scores for blood pressure and hypertension were combined in XGBoost models, trained in MESA, externally validated and transfer-learned in the Jackson Heart Study, with Mendelian randomization used to prioritize proteins.",
+    "plain": "This study asks whether blood proteins, small-molecule metabolites, and inherited genetic risk scores can help predict who will develop high blood pressure before it is clearly detectable. The researchers built these scores in one large cohort (MESA), tested them in a second cohort (Jackson Heart Study), and found that protein-based scores performed best and transferred most reliably between the two groups. Measured blood pressure remained the strongest predictor overall.</plain>\n<parameter name=\"why\">Hypertension is a major modifiable driver of heart disease, so better early risk tools matter, and the protein-based signal may point to biological pathways worth studying. The text reports only modest discrimination without measured blood pressure (AUC about 0.62 to 0.69), so any clinical use is unproven.",
+    "why": "",
+    "background": "- Hypertension: persistently high blood pressure; systolic (SBP) is the pressure during heartbeats, diastolic (DBP) between beats.\n- Proteomic / metabolomic scores: summaries of measured blood proteins or metabolites that estimate a person's risk.\n- Polygenic risk score (PRS): a summary of many small inherited genetic variants linked to a trait.\n- Elastic Net: a regularized regression method that selects a limited set of predictors.\n- XGBoost: a machine-learning method that combines many decision trees.\n- AUC: area under the ROC curve; 0.5 is chance and 1.0 is perfect discrimination.\n- Transfer learning: adapting a model trained on one population to another.\n- Mendelian randomization: using genetic variants as natural experiments to probe whether a biomarker plausibly causes a trait.\n- Calibration: how well predicted risks match observed risks.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "BackgroundHypertension is a major modifiable risk factor for cardiovascular disease, yet the relative contributions of proteomic (ProtS), metabolomic (MetS), and polygenic risk scores (PRS) to incident hypertension risk remain incompletely characterized. MethodsWe developed ProtS and MetS for systolic (SBP) and diastolic blood pressure (DBP), and hypertension using Elastic Net regression in the Multi-Ethnic Study of Atherosclerosis (MESA). We incorporated these scores with previously developed BP PRSs into 5 incremental XGBoost models, with external validation in the Jackson Heart Study (JHS). We further applied transfer learning to adapt the MESA-derived models to JHS. Elastic Net selected proteins were prioritized using Mendelian randomization, colocalization, and functional analyses. ResultsIn MESA, model discrimination improved with the addition of omics scores, with the combined model achieving an area under the curve (AUC) of 0.72 compared with 0.63 for the clinical baseline model. In JHS, ProtS showed the highest AUC of 0.68 and the smallest cross-cohort performance decline, compared to MetS and PRS. Incorporating measured SBP and DBP substantially improved discrimination, with the PRS+BP model achieving an AUC of 0.80 in MESA and the baseline+BP model achieving an AUC of 0.74 in JHS. Among JHS participants with normal baseline BP, ProtS provided the strongest discrimination among models without measured BP (AUC = 0.62), while PRS+BP model achieved an AUC of 0.69. Leaf-weight refreshing consistently improved calibration in JHS while preserving discrimination. Mendelian randomization identified 77 proteins associated with BP traits or hypertension, involved in vascular, inflammatory, renal, and natriuretic pathways. ConclusionsProtS demonstrated superior predictive performance and cross-cohort transferability among the omics modalities evaluated, while measured BP remained the strongest predictors of incident hypertension. Proteomic and genetic information may provide complementary biological signals for identifying individuals at elevated hypertension risk, particularly before clinically elevated BP is detectable.",
    "source": "medrxiv"
   }
  ]

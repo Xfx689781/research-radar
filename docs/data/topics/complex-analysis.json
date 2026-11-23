@@ -1,6 +1,6 @@
 {
  "slug": "complex-analysis",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.25948",
@@ -13,12 +13,12 @@
    ],
    "label": "arXiv:2611.25948v1",
    "primary_category": "math.CV",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper settles Gundersen's 1992 question by proving that two non-constant meromorphic functions sharing three finite values IM and infinity CM must also share those three finite values CM, which upgrades the sharing relation without extra hypotheses.",
-    "plain": "The question concerns two functions of a complex variable that take the same specific values at the same points, either counting multiplicity or ignoring it. Gundersen asked in 1992 whether agreeing on three values loosely and a fourth value strictly forces agreement on all four strictly, and this has been open for decades. The authors show that, for the special case where the fourth value is infinity, the answer is yes: agreement on three values loosely plus infinity strictly implies agreement on the three values strictly as well.",
-    "why": "It closes a well-known open problem in value distribution theory, so it matters to specialists in that area. The abstract covers only the special case with infinity as the strict value, so it does not by itself settle the general form of Gundersen's question for an arbitrary fourth value; that scope should be kept in view.",
-    "background": "['Meromorphic function: a function of a complex variable that is holomorphic except for isolated poles, which are its only infinities.', \"Sharing a value: two functions share a value a if f(z)=a exactly when g(z)=a; 'IM' (ignoring multiplicity) only compares the points, while 'CM' (counting multiplicity) also matches how many times each point is hit.\", 'Nevanlinna value distribution theory: the study of how often a meromorphic function takes given values, measured by counting functions and characteristic functions.', \"Picard exceptional value: a value that a function omits entirely, or takes only finitely often in the sense of Picard's theorems.\", \"Cross ratio and Möbius transformation: the cross ratio is a four-point invariant of the Riemann sphere, and a Möbius transformation is a rational map of degree one that preserves it; these appear in Nevanlinna's classical four-value result.\", \"Gundersen's question: a 1992 open problem asking whether three values shared IM plus a fourth shared CM forces all four to be shared CM.\"]",
+    "one_liner": "The paper settles Gundersen's long-standing question (1992) on meromorphic functions sharing three values IM and a fourth CM, by proving that when f and g share three finite values IM and infinity CM, they also share the three finite values CM.",
+    "plain": "The paper concerns pairs of functions defined on the complex numbers that take the same values at the same points. Two functions \"share\" a value if they hit it at the same places, either with multiplicity counted (CM) or ignoring multiplicity (IM). The author proves that a known open question, whether sharing three values loosely and a fourth value tightly forces tight sharing of all four, has a positive answer in the case described.",
+    "why": "This question had been open since 1992 and sits at the core of Nevanlinna's value distribution theory, a classical area of mathematics. The text itself does not discuss applications beyond this theory, so its wider significance is uncertain to me.",
+    "background": "- Meromorphic function: a function of a complex variable that is analytic except for isolated poles (points where it blows up).\n- Sharing a value: f and g both take a given value a at the same points.\n- CM (counting multiplicity) versus IM (ignoring multiplicity): CM also requires the same order of contact at those points.\n- Infinity as a value: the point where a function has a pole, treated as a value in the extended complex plane.\n- Nevanlinna theory: the study of how often meromorphic functions take given values, from 1926 onward.\n- Gundersen's question (1992): whether sharing three values IM and a fourth CM forces sharing all four CM.\n- Only the abstract-level statement is given here; the proof details are not in the text provided.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -37,16 +37,152 @@
    ],
    "label": "arXiv:2611.26240v1",
    "primary_category": "math.FA",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "The paper studies matrix-valued interpolation for positive real (odd) functions on the right half-plane, in one variable and in noncommutative several variables, characterizing when solutions may or must have a pole at infinity and giving numerical algorithms.",
-    "plain": "The problem asks for a smooth rule-based function that takes prescribed matrix values at a chosen point and also stays 'positive' on a half of the complex plane, a constraint that often arises in engineering and systems theory. The authors work out, in the one-variable case, exactly when such a function is allowed or forced to blow up at infinity, and in the several-variable case (with matrices that do not commute) they handle the simpler situation where it does not blow up. Their results also come with numerical methods for actually computing a solution.",
-    "why": "Interpolation with positivity constraints underlies many problems in control, signal processing and system identification, so clear criteria for solvability and a computational route are useful. The noncommutative multivariable extension links the work to operator theory and realization theory, though the abstract does not show how far the results reach beyond this setting.",
-    "background": "['Interpolation: finding a function that matches given values at given points.', 'Matrix-valued functions: each output is a grid of numbers, and matrices need not commute when multiplied.', 'Positive real functions: functions whose real part is nonnegative on a region, common in circuit and control theory.', 'Right half-plane: the set of complex numbers with positive real part.', \"Pole at infinity: a point where the function's size grows without bound as the input goes far out; whether this is permitted determines which solutions exist.\", 'Noncommutative several variables: functions of several matrix-valued inputs where the order of multiplication matters.']",
+    "one_liner": "The paper studies matrix-point interpolation for positive real matrix-valued functions on the right half-plane, in both single-variable and noncommutative multivariable settings, with attention to when a pole at infinity can or must occur.",
+    "plain": "The paper looks at a problem of finding a smooth function with prescribed values at given points, where the function's outputs are grids of numbers (matrices) and the function must stay \"positive\" on a half of the complex plane. The authors analyse when the solution may or must blow up at infinity in the one-variable case. In the multivariable case, where the structure at infinity is more complicated, they restrict to solutions that do not blow up there.",
+    "why": "Problems of this kind arise in systems and control theory and in operator theory, where positive real functions describe passive systems. The text says the results also yield numerical algorithms for computing a solution, but it does not give details of those algorithms or their performance, so the practical reach is unclear from this text alone.",
+    "background": "- Complex analysis: functions of a complex variable, defined on the complex plane.\n- Right half-plane: the set of complex numbers with positive real part.\n- Positive real function: a function whose values have nonnegative real part on the half-plane; these model passive physical or electrical systems.\n- Interpolation: finding a function that takes prescribed values at prescribed points.\n- Matrix-valued function: outputs are grids of numbers rather than single numbers.\n- Pole at infinity: a point where the function's size grows without bound as the input goes to infinity.\n- Noncommutative multivariable setting: several inputs whose order of multiplication matters, as with matrices.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "We study the single matrix point interpolation problem for positive real matrix valued functions on the right half-plane, both in the single variable setting and in the noncommutative multivariable setting. In the single variable case, a careful analysis is done for when the solution may or must have a pole at infinity. In the multivariable setting, as the pole structure at infinity can be more complicated, we focus on the case when there is no pole at infinity. The results also yield numerical algorithms for finding a solution.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24922",
+   "title": "The Holomorphic Reduction of Pseudoconvex Homogeneous Manifolds",
+   "url": "https://arxiv.org/abs/2611.24922v1",
+   "authors": [
+    "Bruce Gilligan"
+   ],
+   "label": "arXiv:2611.24922v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "For a pseudoconvex homogeneous complex manifold G/H (G a connected complex Lie group, H a closed complex subgroup), the paper shows that the holomorphic reduction G/J is Stein and that the fibre J/H carries no non-constant holomorphic functions.",
+    "plain": "The paper studies a certain kind of smooth space built from a symmetry group acting on a complex space, where the space is \"pseudoconvex,\" a shape condition on how its boundary-like behaviour can be measured. It starts from a known result that such a space can be simplified by a canonical quotient, called the holomorphic reduction, which keeps all its complex-valued functions. The authors show that, under the pseudoconvexity assumption, this simplified quotient is a Stein space (a especially well-behaved type of complex space) and that the leftover piece has only constant complex functions.",
+    "why": "The result sharpens the general picture of how homogeneous complex spaces decompose, which is a structural question in complex geometry. The text itself does not describe applications beyond this classification-style statement, so its wider significance is unclear from the excerpt.",
+    "background": "- Complex manifold: a space that locally looks like complex-number coordinates, with holomorphic (complex-differentiable) functions on it.\n- Complex Lie group and homogeneous space G/H: a group of complex symmetries G acting transitively on the space, with H the stabiliser of a point.\n- Pseudoconvex: a shape condition, here defined by the existence of a continuous plurisubharmonic exhaustion function (a function that grows to infinity toward the edge and is \"convex\" in complex directions).\n- Holomorphic reduction: the largest quotient of the space that still separates its holomorphic functions, so that it has the same holomorphic functions as the original.\n- Stein space: a complex space that is holomorphically separable and has good cohomological properties; it is the complex analogue of an affine variety.\n- Holomorphically separable: any two distinct points can be told apart by some holomorphic function.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Suppose $G$ is a connected complex Lie group and $H$ is a closed complex subgroup. Then there exists a closed complex subgroup $J$ of $G$ containing $H$ such that the fibration $π:G/H \\to G/J$ is the holomorphic reduction of $G/H$, i.e., $G/J$ is holomorphically separable and ${\\mathcal O}(G/H) \\cong π^*{\\mathcal O}(G/J)$. In this paper we prove that if $G/H$ is pseudoconvex, i.e., if $G/H$ admits a continuous plurisubharmonic exhaustion function, then $G/J$ is Stein and $J/H$ has no non-constant holomorphic functions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24610",
+   "title": "Recent developments in stochastic systems with singular dynamics -- a brief survey --",
+   "url": "https://arxiv.org/abs/2611.24610v1",
+   "authors": [
+    "Sergio Andraus",
+    "Nicole Hufnagel",
+    "Jacek Małecki",
+    "Vlad Margarint"
+   ],
+   "label": "arXiv:2611.24610v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "An expository survey of stochastic differential equations with singular drifts, covering symmetric-polynomial methods and their links to multiple Schramm-Loewner evolutions, random matrices, and machine learning.",
+    "plain": "This is an overview paper about random motion of interacting particles whose governing equations blow up or behave badly at certain points, so standard mathematical tools do not directly apply. The author surveys several models and the methods used to study them, especially an approach based on symmetric polynomials. The text also points to connections with random curves, random matrices, and machine learning, though it is a survey rather than a report of new results.",
+    "why": "Particle systems with singular interactions show up in several areas of probability and mathematical physics, so a consolidated map of methods and links may help newcomers. The text does not state specific new theorems, so its value is mainly as an orientation guide, and I cannot judge from the abstract how complete the coverage is.",
+    "background": "- Stochastic differential equation: an equation describing motion with random noise, such as a particle jiggling while being pushed by a force (the \"drift\").\n- Singular drift: a force that becomes infinitely strong or undefined at certain points, so the usual smoothness assumptions fail.\n- Interacting particle system: many randomly moving objects whose motion depends on each other.\n- Symmetric polynomials: polynomials unchanged when variables are swapped; used here as a tool to handle the equations.\n- Loewner chain / Schramm-Loewner evolution: a family of growing random curves in the plane, used in modeling random shapes such as boundaries of random clusters.\n- Random matrices: matrices with random entries, whose eigenvalues often form interacting particle systems.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Diffusions with singular drifts appear naturally in the study of certain classes of interesting particle systems. Due to the singularities involved in the equations describing them, studying their dynamics is both interesting and challenging as they fall outside of the usual regularity assumptions on the vector fields in the literature. One needs to introduce and study them with different methods, with the use of symmetric polynomials being a particularly promising approach. In this expository work, we give an overview of some models and methods, and we further explore their interactions with the areas of Multiple Loewner chains (in particular, multiple Schramm-Loewner Evolutions), the new links with Random Matrices, and the novel area of Machine Learning for Singular Dynamics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22677",
+   "title": "A Quasiconformal Squeezing function and Fridman invariant and applications",
+   "url": "https://arxiv.org/abs/2611.22677v1",
+   "authors": [
+    "Diganta Borah",
+    "Steven G. Krantz",
+    "Prachi Mahajan",
+    "Kaushal Verma"
+   ],
+   "label": "arXiv:2611.22677v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper defines quasiconformal (angle-distorting, conformal-type) analogues of the squeezing function and Fridman invariant, studies their basic properties and boundary behaviour, relates them to each other, and proves variants of the Ferrand–Obata theorem for domains in R^n.",
+    "plain": "This paper is about shape measurements of regions in space, of the kind used in complex analysis. The authors build new versions of two existing measurements that work when you allow a controlled amount of distortion in the mapping rather than requiring perfect conformal (angle-preserving) maps. They then check how these new measures behave, show they are related to each other, and use them to state and prove versions of a known rigidity theorem for regions in ordinary n-dimensional space.",
+    "why": "The squeezing function and Fridman invariant are established tools for telling domains apart and for studying their boundaries, so extending them to quasiconformal maps widens that toolkit to settings beyond complex structure. The stated link between the Ferrand–Obata and Wong–Rosay theorems suggests a useful parallel, though the text alone does not show how far the results reach beyond the authors' own statements.",
+    "background": "- Domain: an open connected region in space (here, in the complex plane or in R^n).\n- Conformal map: a smooth map that preserves angles locally; quasiconformal maps are allowed to distort angles by a bounded amount K.\n- Biholomorphic invariant: a quantity unchanged by one-to-one holomorphic (complex-differentiable) maps between domains, used to classify domains.\n- Squeezing function: measures how well a domain can be mapped into the unit ball, giving a number between 0 and 1.\n- Fridman invariant: a related biholomorphic invariant built from the domain's geometry.\n- Spherically extreme point: a boundary point where the domain locally looks like a ball in a extremal sense; used to study boundary behaviour.\n- Ferrand–Obata and Wong–Rosay theorems: rigidity results saying that certain conformal or holomorphic maps are forced to be special (ball-like) when a boundary or invariant condition holds.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The squeezing function and Fridman invariant are two examples of biholomorphic invariants that have proved to be useful in exploring questions in complex geometry. Motivated by their construction, we define conformal analogues of these invariants by using suitable families of $K$-quasiconformal mappings, and study several basic properties such as continuity, domain dependence and boundary behaviour near spherically extreme points. It is also shown that these conformal invariants are explicitly related. As an application, we propose and prove variants of the Ferrand--Obata theorem in conformal geometry that apply to domains in $\\mbb R^n$. This highlights the close analogy that exists between the Ferrand--Obata and Wong--Rosay theorems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22516",
+   "title": "A Burns-Krantz theorem on convex domains",
+   "url": "https://arxiv.org/abs/2611.22516v1",
+   "authors": [
+    "Cheng Lou",
+    "Jianyong Qiao",
+    "Hongyu Wang",
+    "Yumin Zhong"
+   ],
+   "label": "arXiv:2611.22516v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper proves boundary rigidity theorems for holomorphic self-maps of bounded convex domains in C^n, showing that a self-map which agrees with the identity to high order at a boundary point must be the identity, and it proves a conjecture of Zimmer in the non-smooth case.",
+    "plain": "The paper studies maps that send a region of complex space back into itself in a smooth, complex-differentiable way. It asks: if such a map barely moves points near one point on the region's edge, is it forced to be the do-nothing map everywhere? The authors show that, under the stated conditions, the answer is yes.",
+    "why": "This is a sharpened version of a classical rigidity result (the Burns-Krantz theorem), and the non-smooth-boundary result is said in the text to prove a conjecture of Zimmer. The text does not say what wider applications it has, so its broader importance is unclear from this text alone.",
+    "background": "- Holomorphic map: a smooth map between complex spaces that respects complex structure; roughly, a complex-differentiable function applied to several complex variables.\n- Bounded convex domain: a bounded region of complex n-dimensional space with no dents in its boundary.\n- Self-map: a map sending the region into itself.\n- Identity map: the map that leaves every point fixed.\n- Boundary rigidity: the idea that behaviour at a single boundary point severely restricts the whole map.\n- Non-tangential approach region: a cone-shaped way of approaching a boundary point, not skimming along the boundary.\n- Tangent cone and sector angle: geometric measures of how sharply the boundary bends at a point.\n- Little-o and big-O notation: ways of saying one quantity is much smaller than, or bounded by a constant times, another as points approach a limit.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove two boundary rigidity theorems for holomorphic self-maps of bounded convex domains. Let $Ω\\subset\\C^n$, $n\\geq1$, and suppose that $\\partialΩ$ is $C^{1,α}$ near $p\\in\\partialΩ$ for some $0<α\\leq1$. If a holomorphic self-map $f$ satisfies $f(z)=z+o(|z-p|^3)$ as $z\\to p$ in one fixed non-tangential approach region at $p$, then $f=\\id_Ω$. We also prove a rigidity theorem for bounded convex domains $Ω$ without assuming boundary smoothness. If a holomorphic self-map $f$ of $Ω$ satisfies $f(z)-z=O(|z-p|^m)$ as $z\\to p\\in\\partialΩ$ for some $m>1+2π/θ_p$, where $θ_p$ is the supremum of sector angles in the open tangent cone at $p$, taken over complex lines through its vertex, then $f=\\id_Ω$, which proves a conjecture of Zimmer.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21505",
+   "title": "Singular sets of conformal curves are discrete",
+   "url": "https://arxiv.org/abs/2611.21505v1",
+   "authors": [
+    "Toni Ikonen"
+   ],
+   "label": "arXiv:2611.21505v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper shows that the differential of a non-constant conformal curve between Euclidean spaces has full rank outside a discrete set, with consequences for real-analyticity, fibers, and examples of associative, coassociative and Special Lagrangian conformal curves.",
+    "plain": "The paper studies \"conformal curves,\" maps between spaces of any dimension that preserve angles in a particular sense. It asks where such a map stops being well behaved (where it squashes space down instead of locally stretching it without collapse). The authors find that these bad points are isolated, forming a discrete set, rather than spread over large regions.",
+    "why": "Knowing that the troublesome points are isolated tells us conformal curves are, outside those points, as smooth and regular as the analysis allows. The text does not say how far the results reach beyond the examples it lists, so broader significance is uncertain.",
+    "background": "- Conformal map: a map that preserves angles locally (here, in the sense defined in the source paper, between Euclidean spaces).\n- Differential / full rank: the best linear approximation of the map at a point; full rank means it does not collapse any direction.\n- Singular set: the points where the differential fails to have full rank.\n- Discrete set: a set whose points are isolated from one another, with no clustering.\n- Real-analytic: locally expressible by convergent power series; very smooth.\n- Fibers: the sets of inputs that map to the same output.\n- Associative, coassociative and Special Lagrangian: special classes of submanifolds from geometric analysis, which the examples concern.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that the differential of a non-constant conformal curve between Euclidean spaces has full rank outside a discrete set. In particular, conformal curves are real-analytic outside a discrete set. We provide examples of entire associative and coassociative conformal curves with a non-empty singular set. We show that every non-constant Special Lagrangian conformal curve is a real-analytic conformal immersion. We also prove that a non-constant conformal curve has discrete fibers.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19268",
+   "title": "Multidimensional mixed Bohr radii for Banach space valued holomorphic functions",
+   "url": "https://arxiv.org/abs/2611.19268v1",
+   "authors": [
+    "Vasudevarao Allu",
+    "Raju Biswas"
+   ],
+   "label": "arXiv:2611.19268v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper defines multidimensional mixed Bohr radii for holomorphic functions on the unit ball of a finite-dimensional Minkowski sequence space with Banach-space values, and studies their positivity, asymptotics under cotype assumptions, and lower bounds for concave Banach lattices and summing operators.",
+    "plain": "The paper studies a generalized version of the Bohr radius, a classical quantity that measures how far a complex-valued function's power series can be bounded in size while its coefficients stay controlled. Here the functions take values in more general spaces of vectors or operators, and the domain is a higher-dimensional ball. The text reports results on when this radius is positive, how it behaves for large dimensions in spaces of finite cotype (a geometric property of the space), and some lower bounds for concave Banach lattices and summing operators.",
+    "why": "Bohr radii link complex analysis to coefficient estimates and to the geometry of the underlying space, so the paper's results on how the radius depends on dimension and space geometry may be of interest to specialists in the area. The abstract says the results are consistent with the classical Bohr radius and with sharp Defant–Frerick asymptotics, but I have not checked how these compare with other work in the field.",
+    "background": "- Holomorphic function: a complex-differentiable function, which can be written as a power series.\n- Bohr radius: the largest radius r such that a bounded holomorphic function's power series, evaluated inside that radius, stays bounded by the same bound; the classical result is about one-variable functions on the unit disc.\n- Banach space: a complete normed vector space; functions here take values in such spaces, not just in numbers.\n- Unit ball and Minkowski sequence space: the set of points of size at most one in a finite-dimensional space with a specified norm; the sequence space is the setting for the multidimensional version.\n- Bounded linear operator and norm: a structure-preserving map between spaces and a measure of its maximum stretching.\n- Cotype: a geometric measure of how \"spread out\" a Banach space is; finite cotype is a restriction on the space's geometry.\n- Banach lattice, concave Banach lattice, summing operator: ordered Banach spaces and a class of operators with good summation properties, used to state the lower bounds.\n- Asymptotic behavior: how a quantity behaves as the dimension grows large.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we introduce and study a generalized notion of multidimensional mixed Bohr radii for holomorphic functions defined on the unit ball of the finite-dimensional Minkowski sequence space with values in complex Banach spaces. We first prove that the multidimensional mixed Bohr radius is positive for every non-null bounded linear operator whose norm is sufficiently small relative to the scaling parameter. We then determine the exact asymptotic behavior of the multidimensional mixed Bohr radius for infinite-dimensional Banach spaces of finite cotype and we obtain analogous bounds for spaces without finite cotype. Finally, for concave Banach lattices and summing operators, we prove lower bounds that involve a logarithmic factor. These results connect classical scalar Bohr phenomena with operator-valued and Banach space valued settings, and highlight how the geometry of the spaces and the mapping properties of the operator influence coefficient estimates and their dependence on dimension. Several examples illustrate the consistency of our results with the classical Bohr radius and the sharp Defant--Frerick asymptotics.",
    "source": "arxiv"
   }
  ]

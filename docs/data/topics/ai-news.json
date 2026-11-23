@@ -1,0 +1,568 @@
+{
+ "slug": "ai-news",
+ "updated": "2026-11-23",
+ "papers": [
+  {
+   "uid": "news:de5cd1a6d51dc917",
+   "title": "Perplexity and Intelligence",
+   "url": "https://openai.com/index/perplexity-and-intelligence",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A short news piece arguing that perplexity, a standard language-model score, could serve as a shared yardstick for judging progress and emerging capabilities in AI models.",
+    "plain": "This piece looks at perplexity, a number that measures how well an AI language model predicts the next word in a text. It suggests the score could give developers a common way to compare models and track new abilities. The text provided is only a one-line summary, so it does not report specific experiments or results.",
+    "why": "Shared measurement methods matter because they let researchers and companies compare systems on the same terms. The text does not show how far this idea has been adopted, so its practical impact is unclear.",
+    "background": "- Language model: an AI system trained to predict likely next words in text.\n- Perplexity: a score where lower values mean the model is less \"surprised\" by real text, so it predicts better.\n- Evaluation benchmark: a standard test used to compare AI systems fairly.\n- Emerging capabilities: new skills that appear as models grow, which are hard to measure directly.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:74f939e081ec8d04",
+   "title": "Why data centers are at the center of the Big Tech backlash",
+   "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+   "authors": [
+    "Anthony Ha"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A short piece previewing journalist Paris Marx's new book \"Hyperscale,\" which frames data centers as a central target of the public backlash against Big Tech.",
+    "plain": "This piece is about the growing public pushback against Big Tech companies over the huge computer facilities that power online services and AI, called data centers. It introduces a new book by the journalist Paris Marx, \"Hyperscale,\" in which he explains his view of why these buildings have become a focus of that criticism. The text itself is only a brief introduction, so it does not spell out the book's specific findings or evidence.",
+    "why": "Data centers use large amounts of land, electricity and water, so local opposition to them can affect where AI and cloud services get built. The text is too thin to say how the book supports its claims, so treat it as a pointer to the author's argument rather than established evidence.",
+    "background": "- Data center: a large building full of servers that store data and run online services, including AI models.\n- Hyperscale: a term for the very largest data centers, run by a few giant cloud companies.\n- Big Tech: the largest technology companies, such as major cloud, social media and software firms.\n- Backlash: organized public or local opposition, often about costs, power use or environmental effects.\n- Paris Marx: a journalist and podcaster who writes critically about the tech industry.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+   "source": "rss"
+  },
+  {
+   "uid": "news:716c53fa8fcebb04",
+   "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+   "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+   "authors": [
+    "Anthony Ha"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A news piece reports on OpenAI's chief scientist's views on how AI development could be slowed, centering on the difficulty of first agreeing on a way to measure the pace of progress.",
+    "plain": "The article is about ideas for putting a \"speed limit\" on how fast artificial intelligence is built. Its only text is a single line arguing that such a limit first requires agreeing on how to measure speed. The provided text does not describe the specific proposals, measurements, or findings.",
+    "why": "Debates over whether and how to slow AI development matter to policy and industry, but the text is too thin to say what the chief scientist actually proposed. Readers should check the full article before drawing conclusions.",
+    "background": "- A \"chief scientist\" is a senior research leader at a company; this one works at OpenAI, an AI developer.\n- \"Speed limit\" here is a metaphor for a cap or pace control on how quickly AI systems are developed or made more capable.\n- Any such limit depends on a measurable quantity, such as compute used, capability benchmarks, or release frequency; the text does not say which one is meant.\n- The text provided is only the article's opening line, so the full argument is not available here.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "To establish a speed limit on AI development, you need to agree on how to measure speed.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:01945f6a907c7618",
+   "title": "Here are the top AI agents that can live in your text messages",
+   "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+   "authors": [
+    "Lauren Forristal"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "A news roundup listing notable AI agents that can be reached through text messaging, grouped into general assistants and agents aimed at families, travel, and work.",
+    "plain": "This article is a short list of AI tools you can talk to by sending text messages, much like messaging a contact on your phone. It groups them by purpose, such as general helpers, family organizers, travel planners, and work assistants. The text itself is only a brief introduction, so it does not describe how each agent performs or what they cost.",
+    "why": "It shows a growing trend of AI assistants moving into everyday messaging apps rather than separate websites or apps. Whether this becomes a lasting habit is not something the article can tell us.",
+    "background": "- An \"AI agent\" is a program that can carry out tasks for you, such as booking, reminders, or answering questions, rather than only chatting.\n- Text messaging here means SMS or messaging apps where you converse with the AI as you would with a person.\n- The article is a consumer-oriented list, not a research study or product review with testing.\n- Details such as specific product names, features, prices, and privacy terms are not included in the provided text.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:127326b87b53e7a9",
+   "title": "A tale of two Nvidias",
+   "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+   "authors": [
+    "Anthony Ha"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "A short opinion-style news piece contrasting Nvidia's latest earnings report with public calls from tech executives for Jensen Huang to return to a leadership role.",
+    "plain": "The article looks at Nvidia, the chipmaker that makes the processors used to train and run AI systems, and compares two signals about it. One is the company's recent financial earnings report, which describes how well the business performed. The other is a set of public statements from tech executives urging its co-founder and chief executive, Jensen Huang, to come back into a leading role.",
+    "why": "Nvidia is a central supplier in the AI boom, so questions about its leadership and financial health matter to investors and the wider industry. The text is very brief and does not give the specifics of the earnings numbers or the executives' reasons, so it is hard to judge how much weight the contrast deserves.",
+    "background": "- Nvidia makes graphics processors (GPUs), which are widely used to build and run AI models.\n- Jensen Huang is Nvidia's co-founder and long-serving chief executive.\n- An earnings report is a regular financial statement a public company releases with its sales, profit, and outlook.\n- \"Calling for someone's return\" suggests that person had stepped back from a role, but the article's text does not say in what capacity or why.\n- The piece is a short commentary; it gives no figures, quotes, or named executives.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "We got two very different pictures of Nvidia — the company’s latest earnings report vs. the tech executives loudly calling for Jensen Huang’s return.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:8f4728ffc5b95bfc",
+   "title": "Apple may be developing its own AI agent that runs your Mac",
+   "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+   "authors": [
+    "Lucas Ropek"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A short report says Apple may be building its own AI agent that could run tasks on a Mac, positioned against rival agents from Meta, Anthropic's Claude, and OpenAI.",
+    "plain": "Apple, the maker of the iPhone and Mac computers, appears to be working on software that acts as an \"AI agent,\" meaning a program that can carry out tasks on your computer for you instead of only answering questions. The article says this would put Apple in competition with similar agents from other large tech companies.",
+    "why": "If Apple ships a capable agent for its computers, it could change how many people use AI day to day, since it would reach a large existing user base. The text is thin, though, and gives no details on features, timing, or whether the project will ship at all.",
+    "background": "- An \"AI agent\" is software that takes actions on a user's behalf, such as opening apps or filling in forms, not just generating text.\n- Claude is an AI model made by Anthropic; OpenAI and Meta are also building AI products.\n- The article names \"Meta Muse,\" \"Instinct,\" and \"OpenAI Dots\" as rival agents, but it does not explain these products.\n- The article reports that Apple \"appears\" to be developing this, which signals the information is based on indirect evidence, not an official announcement.\n- Apple's Mac software is the platform the agent would run on.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:d15c45643214b444",
+   "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+   "url": "https://openai.com/business/customer-stories/hebbia",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "Hebbia reports prerelease evaluation results for GPT-6 Astra on financial research tasks, citing gains in source coverage, citation relevance, and presentation quality.",
+    "plain": "The article covers a company called Hebbia, which tested a new AI model named GPT-6 Astra on the work of researching finances. Before the model's public release, Hebbia's evaluations reportedly found it did better at gathering a wider range of sources, picking sources that fit the claims being made, and producing a cleaner final presentation.",
+    "why": "Financial analysts rely on finding and citing documents accurately, so a model that improves on those points could matter for how such work is done. The text is a short summary of a company's own testing, so the size and conditions of the gains are unclear.",
+    "background": "- GPT-6 Astra: a named AI language model from an AI developer, described here only as a prerelease version.\n- Prerelease evaluation: testing a model before it is released to the public, usually run by the developer or a partner.\n- Source coverage: how many of the relevant documents a tool finds and uses.\n- Citation relevance: whether the cited sources actually support the statements they are attached to.\n- Financial research: reading filings, reports and data to answer investment or business questions.\n- Note: the article is brief and reports the company's own findings; no figures, methods, or comparisons are given in the text.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:f4784c30400364a2",
+   "title": "Can AI help scientists identify promising drug candidates?",
+   "url": "https://openai.com/index/introducing-medchembench",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A short news item introducing MedChemBench, a benchmark for testing how well AI models read molecular structures, reason from experimental evidence, and pick compounds in early drug discovery.",
+    "plain": "The article covers a new evaluation tool called MedChemBench, which is meant to test whether AI systems can help scientists find promising candidate drugs at the earliest stage of development. It describes the tool's purpose: checking how well AI models understand the shapes of molecules, draw conclusions from lab evidence, and choose which compounds are worth pursuing. The text is brief and does not report detailed results.",
+    "why": "Drug discovery is slow and expensive, so tools that show whether AI can be trusted at the early screening stage matter to pharmaceutical research. The text does not say how well any model performed, so its significance is uncertain from this excerpt alone.",
+    "background": "- Drug discovery: the early phase where chemists look for small molecules that might treat a disease.\n- Molecular structure: how atoms are arranged in a compound, which largely determines how it behaves in the body.\n- Benchmark: a standard set of tasks used to compare AI systems on the same test.\n- Candidate compound: a molecule selected for further testing in the lab, before any clinical trials in people.\n- The article gives no details on methods, datasets, or scores, so it should be read as an announcement rather than a findings report.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:01449c61c8b86a22",
+   "title": "The most misunderstood graph in AI just got a major update",
+   "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+   "authors": [
+    "Grace Huckins"
+   ],
+   "label": "Artificial intelligence – MIT Technology Review",
+   "primary_category": "technologyreview.com",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "METR, an AI evaluation nonprofit, has updated its widely cited \"time horizon\" plot, reporting that some AI capabilities keep improving on an exponential trend while models lag behind humans on tasks requiring judgment compared with coding.",
+    "plain": "The article covers a new report from METR, a group that tests how capable AI systems are. The report updates a chart that tracks how long a task an AI can complete reliably, and it finds that some abilities are still growing very fast. It also finds that AI models are noticeably weaker at tasks needing judgment than at writing code.",
+    "why": "Charts like this shape how people forecast AI progress, so an update to a widely watched one matters for that debate. The text is a short excerpt, so it does not show the full method, and how much the judgment gap matters in practice is unclear from it alone.",
+    "background": "- METR is an independent nonprofit that measures AI capabilities.\n- A \"time horizon\" is roughly how long a task (measured by how long a human expert takes) an AI can finish with a given success rate.\n- An \"exponential trajectory\" means the measured quantity roughly doubles over a fixed period, rather than rising in a straight line.\n- Coding tasks have clear pass/fail checks, while judgment tasks are fuzzier, which may partly explain the gap.\n- The article is only the opening of the piece; the full report and its methods were not provided here.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to the organization’s time horizon plot, which was widely…",
+   "source": "rss"
+  },
+  {
+   "uid": "news:079373956374b3c3",
+   "title": "Chips can survive the space environment — can their financing?",
+   "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+   "authors": [
+    "Tim Fernholz"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A news piece asking whether AI chips that survive the radiation and harsh conditions of orbit can also be financed, given lenders' concerns about losing expensive hardware if it is launched into space for space-based data centers.",
+    "plain": "The article looks at a money problem tied to plans for data centers in orbit. Lenders who would fund the computer chips are reportedly wary of putting expensive equipment on rockets, since a failed launch or damage in space could mean losing the collateral, which is the asset a lender can claim if a loan is not repaid. The text is a short headline-and-lede style piece, so it raises the question more than it gives a full answer.",
+    "why": "Space-based data centers would be a new way to power and cool AI computing, and whether they can be financed is a practical test of whether the idea is workable beyond the engineering. The text does not give enough detail to judge how large or near-term this is.",
+    "background": "- Data centers are large facilities of computer servers that run AI models; they need lots of power and cooling.\n- Proposals exist to place such computing in orbit, where solar power is available, but this is still largely a plan.\n- \"Collateral\" means an asset pledged to secure a loan; lenders want assurance it can be recovered or insured.\n- Chips in space face radiation and temperature swings, which can cause errors or failures; the headline says chips can survive this, but the article's details are not included here.\n- SpaceX is a rocket and satellite company mentioned in the piece as a launch provider.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Lenders don't want SpaceX shooting their collateral into orbit. What does that mean for space data centers writ large?",
+   "source": "rss"
+  },
+  {
+   "uid": "news:2ad2190c7ade6b93",
+   "title": "Anthropic’s IPO could deliver $156B to charity",
+   "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+   "authors": [
+    "Tim Fernholz"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A news item reporting that, at a hypothetical $95 per-share price in an Anthropic IPO, the company's Public Benefit Foundation, employee donations, and a company donation match could total about $156 billion for charity.",
+    "plain": "Anthropic, an AI company, may go public by selling shares on a stock market. The article says that if the shares were priced at $95 each, money set aside for charity, including a foundation, employee gifts, and a company matching contribution, could add up to $156 billion. The text is only a single short line, so it gives no details on how these figures were calculated.",
+    "why": "The sum would be very large for charitable giving, which makes it notable if it happens. The text does not explain the assumptions behind the figure, so treat it as an estimate tied to a share price that is not confirmed, and watch for the actual IPO terms before drawing conclusions.",
+    "background": "- IPO (initial public offering): the first time a private company sells shares to the public on a stock exchange.\n- Share price: the value of one share; total wealth tied to shares rises or falls with it, so the $156B figure depends on the $95 assumption.\n- Public Benefit Foundation: a charitable foundation connected to the company; the article does not say how it is funded or governed.\n- Employee donations and company match: staff giving money to charity, with the company adding a matching amount; the article gives no rates or totals for each.\n- Public benefit corporation: a company structure that formally considers social good alongside profit; the article does not say whether Anthropic uses it.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:2919f418f3f51682",
+   "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
+   "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+   "authors": [
+    "Aisha Malik"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A report says Meta's internal AI agent, Muse, has been surfacing mixed-up user messages and personal details, including bank balances, raising possible privacy exposure, according to employee accounts.",
+    "plain": "The article reports that an AI assistant called Muse, built by Meta, sometimes shows people information that belongs to someone else. Employees described cases where it brought up childcare requests, career advice, product orders, and bank balances that the person had never asked for or did not own. The text is short and only relays these employee accounts, so the scale and cause are unclear.",
+    "why": "If an AI tool mixes up one person's private information with another's, that is a privacy and security concern, and it bears on how safely companies can let AI agents handle personal data. The text does not show how widespread the problem is or what Meta has done about it.",
+    "background": "- An \"AI agent\" is a program that carries out tasks for a user, such as reading messages or fetching information, rather than only answering questions.\n- Keeping each user's data separate is a basic requirement; if an agent crosses those boundaries, one person's details can appear in another's session.\n- The article is a news report based on employee statements, not on a published technical analysis or an official Meta explanation.\n- Details such as the number of incidents, which users were affected, and Meta's response are not given in the excerpt.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "In some of these instances, employees said Muse surfaced messages about childcare requests they never made, career advice they never asked for, product orders they never placed, and bank account balances that didn't belong to them.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:6f0f2d869f0fe635",
+   "title": "Meta’s new Muse Charm device may cost $300",
+   "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+   "authors": [
+    "Lucas Ropek"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A report says Meta's upcoming AI wearable, called Muse Charm, may cost about $300, and Meta has neither confirmed nor denied it.",
+    "plain": "Meta, the company that owns Facebook and Instagram, is working on a new AI-powered wearable device. A report from The Information suggests it could sell for around $300. Meta has not denied the report, but has only said it will have more to share soon.",
+    "why": "The text is brief and rests on a single report plus a non-denial, so the price is unconfirmed. It is worth watching because it hints at how big tech firms may price AI gadgets worn on the body, but the article alone does not show what the device does.",
+    "background": "- Wearable device: a gadget worn on the body, such as smart glasses or a watch.\n- AI wearable: a wearable that uses artificial intelligence to respond to voice or surroundings.\n- The Information: a tech-industry news outlet whose reporting is cited here.\n- A non-denial: the company did not say the report was false, which is not the same as confirming it.\n- The article gives no details on features, release date, or design.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:1054662f25c3d852",
+   "title": "Google gives Gemini the ability to use your Mac for you",
+   "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+   "authors": [
+    "Sarah Perez"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "Google's latest Gemini update adds a Mac desktop AI agent that can organize files, fill out forms, and carry out multistep workflows.",
+    "plain": "Google has updated its Gemini AI assistant so it can run on a Mac and act on the computer for the user, not just answer questions. According to the article's summary, the agent can sort files, fill in forms, and handle tasks made of several steps. The text is a short announcement-style piece and gives no detail on how well it works or how it was tested.",
+    "why": "AI tools that take actions on a personal computer, rather than only producing text, raise practical questions about convenience, reliability, and control over one's own files. The article is too brief to say how this compares with similar offerings from other companies.",
+    "background": "- Gemini is Google's family of AI models and assistant products.\n- An \"AI agent\" is a program that carries out a sequence of actions toward a goal, rather than only replying to a single prompt.\n- \"Multistep workflows\" means tasks made of several linked actions, such as gathering information, then filling in and submitting a form.\n- The article is a brief news item; it does not give technical specifics, performance data, or independent evaluation.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:f2dddf2ea7d8bc56",
+   "title": "These tech outages are giving Y2K, AI agent style",
+   "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+   "authors": [
+    "Dominic-Madori Davis"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "A news piece asks whether a recent cluster of outages across airline booking, banking, and productivity platforms reflects a shared underlying cause, with cybersecurity experts suggesting something deeper may be going on, possibly linked to AI agents.",
+    "plain": "The article looks at a run of recent service outages affecting airline booking systems, banks, and office software tools. It asks whether these failures are just bad luck or are connected, and says cybersecurity experts believe there may be a deeper cause. The text is short and does not give the specific causes, evidence, or details of what the experts found.",
+    "why": "Widespread outages in systems people rely on for travel, money, and work can be disruptive, so the question of whether they share a cause is worth following. The title links them to AI agents (software that takes actions on its own), but the text does not establish that connection, so it should be treated as an open question.",
+    "background": "- Y2K (the \"year 2000 problem\") was a fear that computers using two-digit years would fail at the turn of the century; the title uses it as a comparison for a worry about hidden, widespread failures.\n- An outage is a period when a service is unavailable or malfunctioning.\n- AI agents are AI programs that can carry out multi-step tasks, such as making bookings or changing settings, with limited human input.\n- Cybersecurity experts study how systems are attacked, misused, or fail, and whether failures have a common origin.\n- The article gives no details on the outages' dates, root causes, or any attack, so the claim of a shared cause remains unverified.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:679cee5ea1466f1f",
+   "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+   "url": "https://huggingface.co/blog/rumble-2-flash",
+   "authors": [],
+   "label": "Hugging Face - Blog",
+   "primary_category": "huggingface.co",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A news item titled \"Rumble-2-Flash: an open 0.5B speech model for 40+ languages\" announces a small, openly released speech model covering over 40 languages, but the article body is empty so its details cannot be verified.",
+    "plain": "The item is about a new computer program that deals with spoken language, described as a small model that works across more than 40 languages and is shared openly. The text provided contains no body, so there are no details on how it was built, how well it performs, or who made it. Only the title can be relied on.",
+    "why": "Small open speech models covering many languages could matter for people who use less common languages or need tools that run on modest hardware, but the text gives no evidence of how well this one works. Its connection to other tools is unknown from the information available.",
+    "background": "- A \"model\" in AI is a trained program that learns patterns from large amounts of data; here it is likely one that turns speech into text or handles spoken language.\n- \"0.5B\" means about 500 million adjustable settings (parameters); smaller models generally need less computing power, though often perform less well than larger ones.\n- \"Open\" usually means the model's files are publicly available for others to download and use, though licence terms vary.\n- \"40+ languages\" means it is claimed to handle more than forty languages; performance may differ widely across them.\n- Speech models are often judged by error rates on standard test sets, which this item does not provide.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:bf1424b145e4fc73",
+   "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+   "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+   "authors": [],
+   "label": "Hugging Face - Blog",
+   "primary_category": "huggingface.co",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A news piece titled \"Time-Series Models in the Streamhouse: A New Frontier and Use Cases\" that, as provided, has no body text, so its specific claims cannot be assessed.",
+    "plain": "This item is about using time-series models (software that learns from data recorded over time, such as readings taken every second) together with a \"streamhouse,\" which appears to mean a data system that handles live streams of data and stored data in one place. The text provided is empty, so I cannot tell what problems were addressed, what was tried, or what was found.",
+    "why": "The title suggests a topic of practical interest for companies that work with live data, such as monitoring or forecasting, but the lack of text means its importance and novelty cannot be judged. It may connect to wider work on real-time data infrastructure and forecasting, though I am not certain of that from the title alone.",
+    "background": "- Time-series data: measurements recorded in order over time, such as sensor readings, prices, or website traffic.\n- Time-series models: statistical or machine-learning methods that predict or analyze such data.\n- Streaming data: information that arrives continuously and is processed as it comes in, rather than in batches.\n- Streamhouse: a term that appears to combine streaming and data-warehouse systems; its exact meaning in this article is not confirmed by the text.\n- Note: the source text is missing, so this brief relies only on the title.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:9fa731b0ef6c1da9",
+   "title": "Research acceleration: The jagged frontier",
+   "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "An OpenAI news piece examining how AI coding agents are speeding up AI research, where their performance is inconsistent, and what that may suggest about recursive self-improvement.",
+    "plain": "The article looks at whether AI \"coding agents,\" programs that write and test software with little human help, are actually making the work of building AI faster. It reports that their usefulness is uneven: they do some tasks well and others poorly. The text is a short summary, so it does not give the specific tests or figures behind this.",
+    "why": "It matters because if AI systems can meaningfully speed up the research that produces better AI, progress could compound, which is why the idea of recursive self-improvement gets attention. The summary alone does not show how large the effect is, so treat its conclusions as provisional.",
+    "background": "- Coding agent: an AI system that writes, runs, and fixes code on its own across multiple steps.\n- AI research acceleration: using AI tools to make experiments and engineering faster.\n- Recursive self-improvement: the hypothetical case where AI improves the process that builds AI, and each gain speeds the next.\n- \"Jagged frontier\": a phrase for capability that is strong on some tasks and weak on similar-looking ones, rather than uniformly good.\n- The source is a short description; the full article likely contains the evidence.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:c7d3ecb006439a13",
+   "title": "Advancing chip design with OpenAI models",
+   "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A short news item reporting that OpenAI models were used to optimize circuits in the \"Jalapeño\" silicon and to improve RISC-V processor core designs, described as progress in AI-assisted chip design with \"GPT-6 Astra.\"",
+    "plain": "The article says OpenAI's AI models helped improve the layout of electronic circuits, including in a chip called Jalapeño and in designs for RISC-V processor cores (the basic computing engines inside chips). It is a brief announcement, so it gives no details on how much better the designs became or how the work was done.",
+    "why": "Using AI to help design the chips that run AI is a topic many people are watching, since faster chip design could speed up hardware progress. The text is too thin to show how large the gains were, so treat the claim as unverified until more detail is available.",
+    "background": "- Chip design: engineers lay out the circuits that make up a processor, a slow and expert-heavy process.\n- Circuit optimization: adjusting a design to make it faster, smaller, or use less power.\n- RISC-V: an open, freely available instruction set that defines how a processor core understands software commands.\n- Processor core: the central computing unit within a chip.\n- Silicon: the semiconductor material chips are built on; \"Jalapeño silicon\" refers to a specific chip named in the article.\n- \"GPT-6 Astra\" is named in the text but not explained; the article does not say what it is beyond being the model involved.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:bb3ee1cf50e29f40",
+   "title": "The AI Hype Index: AI is everywhere",
+   "url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+   "authors": [
+    "Amit Katwala"
+   ],
+   "label": "Artificial intelligence – MIT Technology Review",
+   "primary_category": "technologyreview.com",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A satirical-style news column that uses vivid everyday examples to argue that artificial intelligence products are showing up in almost every part of life, with the text available here covering only the opening lines.",
+    "plain": "This is a short opinion-style piece about how AI tools seem to be appearing everywhere, from search results to household robots. The excerpt we have is only the opening paragraph, so it does not show a full list of examples, data, or a firm conclusion. It reads as commentary rather than a report of a new study.",
+    "why": "It captures a common public feeling that AI is being pushed into products quickly, sometimes at a cost to users or companies. The excerpt alone does not show what evidence the author uses, so the strength of the argument cannot be judged from it.",
+    "background": "- \"AI Overviews\" are AI-written summaries that Google places at the top of some search results.\n- \"Hype\" means excitement or promotion that can run ahead of what technology actually delivers.\n- \"Advertising revenue\" is the money companies earn from showing ads; AI summaries may reduce clicks on ads.\n- \"Humanoid robot\" means a robot with a human-like body shape.\n- The text is an excerpt; the full article's examples and conclusions are not included here.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Like a nasty rash, AI seems to spread everywhere. Google crams AI Overviews down your throat even though it costs the company billions of dollars in lost ad revenue. Leave your apartment, and you might pass two people heaving an AI-powered humanoid robot up the stairs to clean someone’s rooms. Go to the supermarket, and…",
+   "source": "rss"
+  },
+  {
+   "uid": "news:86f07be892b022f0",
+   "title": "Research Reports",
+   "url": "https://www.technologyreview.com/2026/11/17/1148203/research-reports/",
+   "authors": [
+    "MIT Technology Review"
+   ],
+   "label": "Artificial intelligence – MIT Technology Review",
+   "primary_category": "technologyreview.com",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A listing page titled \"Research Reports\" that links to AI industry reports through clickable images, with no descriptive text about their contents.",
+    "plain": "This is a navigation page rather than an article. It says that you open a report by clicking an image, but it gives no titles, authors, dates, or summaries of the reports it points to. The text is too thin to say what any report found.",
+    "why": "Its value depends entirely on the reports behind the images, which are not included here, so its importance cannot be judged from this page alone. It may be worth a look if you want to find the underlying reports directly.",
+    "background": "- A \"research report\" is usually a document from a company, lab, or analyst group summarizing findings or market trends.\n- Clicking an image to open a report is a common web layout, but the image itself carries no text here.\n- Without the report titles or summaries, no claims, figures, or conclusions can be reported.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "To access a report, click on the corresponding image below.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:c6c361c53bc4ce2d",
+   "title": "Introducing ChatGPT for Sales",
+   "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "OpenAI announces a Sales plugin and more than 30 new or expanded partner plugins that let ChatGPT help sales teams research prospects, prepare pitches, update CRM records, and advance deals.",
+    "plain": "This is a short product announcement from OpenAI, the company behind ChatGPT. It describes a new add-on, called a \"plugin,\" that lets the chatbot work with sales tools. The text says salespeople can use it to look up potential customers, draft presentations, and keep their customer-tracking software up to date. The article is a brief overview and gives no detailed results or measurements.",
+    "why": "It shows AI chatbots being connected directly to business software, such as customer-relationship (CRM) systems, rather than only answering general questions. Whether this saves real time for sales teams is not shown in the text, so the practical impact is unclear.",
+    "background": "- ChatGPT: an AI chatbot from OpenAI that generates text in response to prompts.\n- Plugin: an add-on that lets the chatbot connect to outside apps or data sources.\n- CRM (customer relationship management): software that stores records of customers, contacts, and sales deals.\n- Partner plugins: add-ons built by other companies that integrate their own products with ChatGPT.\n- Sales pipeline: the stages a potential customer passes through before buying.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:58da9c66b1456ac9",
+   "title": "Introducing OpenAI for Chile",
+   "url": "https://openai.com/index/introducing-openai-for-chile",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "OpenAI and the government of Chile announce a partnership to promote responsible adoption of AI, build public-sector skills, and help local startups build AI applications.",
+    "plain": "OpenAI, the company behind ChatGPT, and the Chilean government say they will work together on using artificial intelligence more widely. The stated goals are to use AI responsibly, to train government workers in these tools, and to help small local companies build AI-based products. The text is a short announcement and gives no details on how this will be carried out.",
+    "why": "This is a company-government agreement, so it may show how AI firms are seeking public-sector partnerships in individual countries. The announcement alone does not say what the effects will be, and it is unclear how much funding or what concrete programs are involved.",
+    "background": "- OpenAI is a US artificial intelligence company that makes ChatGPT and related tools.\n- \"Responsible AI adoption\" generally means using AI in ways that are safe, fair, and well governed, though the text does not define it.\n- \"Public-sector skills\" means training people who work in government.\n- Startups are new small companies; \"AI applications\" are software products built on AI models.\n- The source is a brief company announcement, so its claims are the partners' own and have not been independently checked.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:853b24ff0d6ecd3f",
+   "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+   "url": "https://huggingface.co/blog/openrouter",
+   "authors": [],
+   "label": "Hugging Face - Blog",
+   "primary_category": "huggingface.co",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A news item titled \"Hugging Face and OpenRouter join forces to make open-weight models easy to run,\" but the article body is empty, so no details of the partnership can be confirmed.",
+    "plain": "The title says two AI companies, Hugging Face and OpenRouter, have teamed up to make \"open-weight\" AI models easier to use. The text of the article is not available, so I cannot say what the arrangement involves, what it costs, or how it works. Treat the headline as the only confirmed information.",
+    "why": "If accurate, it suggests a step toward making freely downloadable AI models simpler for ordinary developers to run without setting up their own servers. The actual significance is unclear because the article text is missing.",
+    "background": "- Open-weight model: an AI model whose trained parameters (\"weights\") are publicly released, so others can download and run it, unlike closed models accessed only through a company's service.\n- Hugging Face: a large online platform where AI models and datasets are shared and hosted.\n- OpenRouter: a service that gives one interface for reaching many different AI models, typically from a single access point.\n- Running a model: requires computing hardware and software setup, which is the difficulty the partnership reportedly targets.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:e3915f7e4cf071c4",
+   "title": "The King’s Trust and OpenAI launch £1m partnership",
+   "url": "https://openai.com/index/the-kings-trust-and-openai",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A £1m partnership between The King's Trust and OpenAI aims to give up to 25,000 young people in the UK practical AI skills for work.",
+    "plain": "The King's Trust, a UK youth charity, and OpenAI, the company behind ChatGPT, have announced a £1 million joint programme. It is meant to teach up to 25,000 young people across the UK useful artificial intelligence skills for jobs. The text is a short announcement and does not give details of the course content, schedule, or outcomes.",
+    "why": "It is a sign of AI companies and charities working together on training young people for the job market. Whether it changes employment outcomes is not shown in the text, so its impact is still unknown.",
+    "background": "- The King's Trust: a UK charity that supports young people who are out of work or education, often through training and employability programmes.\n- OpenAI: an AI company known for ChatGPT, a chatbot that generates text.\n- \"Practical AI skills\": everyday ability to use AI tools in work tasks, rather than building AI systems.\n- £1m: one million pounds, the stated funding figure for the partnership.\n- The text is a brief press-style announcement; no independent evaluation is included.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:91e58e2ea930c2fa",
+   "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+   "url": "https://openai.com/index/lvmh-media-division-partnership",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "LVMH's Media Division and OpenAI announce a partnership to use AI in journalism and make LVMH's publications more accessible through ChatGPT.",
+    "plain": "Luxury group LVMH's media arm has agreed a partnership with OpenAI, the company behind ChatGPT. The stated aim is to support journalism using AI and to make the group's publications easier to reach through the chatbot.",
+    "why": "It is a sign of media companies working directly with AI firms to get their content into chatbot answers. The text does not give terms, money, or details of how the publications will appear in ChatGPT, so its wider impact is unclear.",
+    "background": "- LVMH is a French luxury goods conglomerate (brands such as Louis Vuitton and Dior) that also runs a media division with publications.\n- OpenAI makes ChatGPT, a chatbot that answers questions in conversation form.\n- Publishers and AI firms increasingly make deals so that news content can be shown or linked in AI tools.\n- The announcement is brief; it gives no financial, technical, or contractual details.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:4b0fc5b701ffd77d",
+   "title": "Our new blog for science",
+   "url": "https://openai.com/index/our-new-blog-for-science",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "OpenAI announces a new blog dedicated to publishing findings, practical methods, and firsthand researcher accounts of using AI for scientific discovery.",
+    "plain": "OpenAI, the company that makes ChatGPT, has launched a blog about science. It says the blog will share new results, hands-on methods, and first-person stories from scientists who use AI tools in their own research. The text is a short announcement and does not describe any specific experiment or result.",
+    "why": "It signals that a major AI company is putting a dedicated channel behind its push into scientific research, which is worth watching as a sign of where AI firms are focusing. The text gives no examples or evidence of results, so how much real scientific value it delivers is unknown until posts appear.",
+    "background": "- OpenAI is a US AI company known for ChatGPT and its language models.\n- A \"blog\" here is a regularly updated website where authors post articles, often for a general or semi-technical audience.\n- \"AI for science\" generally means using machine learning to help with tasks like analyzing data, generating hypotheses, or speeding up experiments.\n- This announcement is a brief promotional statement; it reports no measured findings, so it should be read as a statement of intent.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:e6b37f5da94e2fd1",
+   "title": "Building AI that can work across the enterprise",
+   "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
+   "authors": [
+    "MIT Technology Review Insights"
+   ],
+   "label": "Artificial intelligence – MIT Technology Review",
+   "primary_category": "technologyreview.com",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A news piece arguing that enterprises are moving from isolated AI pilot projects toward AI agents and autonomous workflows, which requires rethinking data, business processes, and governance.",
+    "plain": "Large organizations have often tried AI in small, separate test projects. The article says that as AI \"agents\" (programs that can carry out multi-step tasks on their own) start to take part in the everyday work a company runs on, that piecemeal approach looks inadequate. The excerpt says the shift forces companies to rethink how their data, work processes, and oversight rules fit together.",
+    "why": "Businesses deciding how to deploy AI at scale face this problem directly, so it matters to managers, IT teams, and anyone affected by automated decisions at work. The excerpt is only an opening paragraph, so it does not show specific results, examples, or recommendations; the full article would be needed to judge its substance.",
+    "background": "- \"AI pilot\": a small, limited trial of a technology before wider rollout.\n- \"AI agent\": software that can plan and take actions toward a goal, not just answer a single question.\n- \"Autonomous workflow\": a sequence of business tasks that runs with little or no human step-by-step control.\n- \"Governance\": the rules, responsibilities, and checks that decide how a system is allowed to act and who is accountable.\n- \"Enterprise data\": the information a company stores across its systems, which AI tools need to be organized and accessible to use well.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a deeper challenge: rethinking how data, business processes, governance,…",
+   "source": "rss"
+  }
+ ]
+}

@@ -1,7 +1,172 @@
 {
  "slug": "genetics-genomics",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.767117",
+   "title": "Remarkable Biosynthetic Diversity in the Bionectriaceae: Uncovering the genomic basis of antipathogen bioactivity of cacao fungal endophytes Clonostachys rosea and Waltergamsia zeylanica.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767117v1",
+   "authors": [
+    "Atencio, L. A.",
+    "Castillo, H. E.",
+    "Barrios-Jaen, M.",
+    "Quintero, I.",
+    "Martinez, A.",
+    "Rodriguez, C.",
+    "Gutierrez, M.",
+    "Mejia, L. C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.767117 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "Genome sequencing and comparative biosynthetic gene cluster analysis of two cacao pod fungal endophytes (Clonostachys rosea TCF417 and Waltergamsia zeylanica TCF400) against 30 public Bionectriaceae genomes, with a test of verticillin D against cacao and citrus-associated pathogens.",
+    "plain": "Cacao farms in tropical countries suffer from fungal diseases, and two fungi living inside cacao pods were already known to slow the growth of one of the pathogens. This study sequenced the genomes of these two fungi to find the gene clusters that might make the chemicals behind that effect. The researchers also found one candidate compound, verticillin D, that inhibited the growth of the pathogens in a lab test.",
+    "why": "Cacao disease is a real economic problem, and fungi that compete with pathogens could in principle inform biological control, though the text does not show any field use. The large number of gene clusters with no known product suggests many chemicals remain uncharacterized, but this is a genomic survey plus one lab assay, so the link between verticillin D and the strains' overall antagonism is only a candidate.",
+    "background": "- Endophytes: fungi that live inside plant tissue without necessarily causing disease.\n- Biosynthetic gene cluster (BGC): a group of neighboring genes in a genome that together make a specific small molecule, often an antibiotic or toxin.\n- Gene cluster family (GCF): a set of similar gene clusters grouped across genomes by computer comparison (BiG-SCAPE).\n- Genome assembly: reconstructing a full DNA sequence from short sequencing reads; Oxford Nanopore and Illumina are two sequencing technologies.\n- Moniliophthora roreri and M. perniciosa: fungal pathogens of cacao (frosty pod rot and witches' broom).\n- Verticillin: a fungal compound class with reported antifungal activity.\n- Bionectriaceae: a family of fungi to which both endophytes belong.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Cacao (Theobroma cacao) production in tropical countries is threatened by fungal diseases caused by Moniliophthora roreri and M. perniciosa. Two cacao pod endophytes from Bionectriaceae, Clonostachys rosea TCF417 and Waltergamsia zeylanica TCF400, exhibit growth antagonism towards M. roreri; however, the genetic basis underlying the bioactivity of these strains has not been addressed. Here, we aimed to identify biosynthetic gene clusters (BGCs) potentially associated with the antifungal bioactivity of these two strains and performed a comparative analysis with 30 publicly available Bionectriaceae genomes using BiG-SCAPE. Whole-genome sequencing using Oxford Nanopore and Illumina technologies, resulted in assemblies of 52.9 Mb (C. rosea TCF417) and 31 Mb (W. zeylanica TCF400). Genome annotation was conducted using Funannotate, and secondary metabolite BGCs were predicted using antiSMASH. The two cacao endophytes harbored 92 BGCs (C. rosea: 67; W. zeylanica: 25), indicating remarkable biosynthetic diversity. Across all 32 genomes, 1,523 BGC-containing regions were identified, most belonging to T1PKS clusters. Network-based clustering revealed 209 gene cluster families (GCFs), of which 52 corresponded to previously characterized BGCs. Conserved BGCs for antifungal compounds, including sorbicillinoids and verticillins, were identified in cacao endophytes and across Bionectriaceae. Additionally, an antifungal assay conducted here demonstrated that verticillin D from C. rosea TCF417 exhibited growth inhibition of plant pathogens Moniliophthora roreri and Mycena citricolor. With about 75% of unassigned GCFs, our results reveal a largely untapped biosynthetic repertoire in the Bionectriaceae and identify verticillin D as a candidate contributor to the antagonism of C. rosea against plant pathogens.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768104",
+   "title": "Single-base 5mC and 5hmC profiling identifies a dynamic 5hmC-to-5mC transition at gene bodies and transcription end sites during neuronal differentiation of mouse embryonic stem cells.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768104v1",
+   "authors": [
+    "Evanich, D. J.",
+    "Blum, L. N.",
+    "Sen, S.",
+    "Campbell, M. A.",
+    "Williams, L.",
+    "Langhorst, B. W.",
+    "Ponnaluri, V. K. C.",
+    "Pradhan, S."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768104 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-22",
+   "summary": {
+    "one_liner": "The paper validates Enzymatic 5hmC-seq (E5hmC-seq) and combines it with EM-seq to map 5mC and 5hmC at single-base resolution during neuronal differentiation of mouse embryonic stem cells, linking shifts in these marks to gene expression.",
+    "plain": "Cells carry chemical tags on their DNA that help control which genes are switched on. This study tracked two of these tags, one called 5mC and a related one called 5hmC, as mouse stem cells turned into brain-type progenitor cells. The authors report that 5hmC fell and 5mC rose at the key early step, and that genes which were turned down tended to lose 5hmC and gain 5mC.",
+    "why": "Mapping these DNA tags precisely over time helps show how cell identity changes are wired to gene activity, which matters for developmental biology and for reading epigenetic data. The text reports correlations between modification changes and expression, so it does not by itself show that the tag changes cause the expression changes.",
+    "background": "- DNA is a chain of four letters; some C letters carry a methyl chemical tag (5mC).\n- 5hmC is a related tag made by oxidizing 5mC; it is thought to be an intermediate in removing or changing methylation.\n- Epigenetic marks are chemical changes that affect gene activity without altering the DNA sequence itself.\n- Single-base resolution means the method measures the tag at each individual C position, not in averaged blocks.\n- EM-seq is an enzyme-based sequencing method that distinguishes methylation marks; E5hmC-seq is a related enzyme-based method specific to 5hmC.\n- Embryonic stem cells can be guided to form embryoid bodies and then neural progenitor cells, which are early precursors of nerve cells.\n- Differentially hydroxymethylated regions (DhMRs) are DNA stretches where 5hmC levels differ between conditions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "5-methylcytosine (5mC) and 5-hydroxymethylcytosine (5hmC) are genome-wide epigenetic modifications involved in chromatin organization and transcriptional regulation. Although Enzymatic Methyl-seq (EM-seq) can enable the combined profiling of 5mC and 5hmC, Enzymatic 5hmC-seq (E5hmC-seq) can provide selective profiling of 5hmC at single-base resolution. In this context, we systematically validated E5hmC-seq using diverse genomic DNA samples. Next, we integrated E5hmC-seq with EM-seq to distinguish between 5mC and 5hmC landscapes during neuronal differentiation of mouse embryonic stem cells. First, we observed dynamic remodeling of both modifications throughout differentiation, with pronounced changes during the transition from embryoid bodies (EBs) to neural progenitor cells (NPCs), characterized by a global decrease in 5hmC accompanied by an increase in 5mC. Subsequently, differentially hydroxymethylated regions (DhMRs) exhibiting 5hmC depletion frequently showed a concurrent increase in 5mC, whereas regions gaining 5hmC displayed an opposing trend, reflecting the genome-wide relationship. Mapping these modifications to transcriptional profiles revealed an association between cytosine modification dynamics and gene expression, where transcriptional downregulation correlated with 5hmC depletion with concomitant 5mC enrichment. In summary, combined mapping of EM-seq and E5hmC-seq can decipher the dynamic interplay between 5mC and 5hmC at single-base resolution and provide insights into the relationships among cytosine modification dynamics, genomic context and transcriptional regulation during differentiation.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.766859",
+   "title": "Intragenic redistribution of RNA polymerase II licenses epigenetic silencing",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.766859v1",
+   "authors": [
+    "Song, X.",
+    "Liu, Y.",
+    "Yuan, L.",
+    "Hu, Y.",
+    "Li, J.",
+    "Zhong, Y.",
+    "Huo, H.",
+    "Huang, Y.",
+    "Zhang, Z.",
+    "Liang, Z.",
+    "Zhu, T.",
+    "Chen, C.",
+    "Li, C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.766859 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "In plants, elongating RNA polymerase II phosphorylated at Ser2 recruits and spatially positions the FLD-LD H3K4me1 demethylase complex near gene ends, and its redistribution into gene bodies during transcription perturbation or silencing cues triggers H3K4me1 erasure and gene silencing via an FLD-LD-RNAPII bridge.",
+    "plain": "Cells sometimes switch a gene off for good, a process called epigenetic silencing, and this paper asks how a gene that is currently being read out gets set up for that switch. The authors report that the molecular machine copying the gene (RNA polymerase II, in a form marked at Ser2) acts as a signal: it holds a demethylase complex (FLD-LD) near the end of the gene, away from the chemical tags it removes, and when the machine's marker shifts into the gene body, the complex moves there, removes a activating chemical mark (H3K4me1), and the gene goes quiet. Experiments described in the text link this to a physical bridge between the complex and the machine, which is needed for silencing.",
+    "why": "It offers a mechanistic answer to how active transcription can lead to stable silencing rather than only reinforcing activity, which is a question relevant to development and stress responses. The text reports this in a plant model, so how far it generalises to other organisms is not something the text establishes.",
+    "background": "- Gene transcription: a polymerase enzyme reads DNA to make RNA; its tail (CTD) carries chemical marks such as Ser2 phosphorylation that change along the gene.\n- Chromatin: DNA wrapped around proteins; chemical tags (methyl groups) on these proteins help switch genes on or off.\n- H3K4me1: a methyl tag on histone H3 associated with active genes; a demethylase removes it.\n- Epigenetic silencing: a stable, heritable switching-off of a gene without changing its DNA sequence.\n- Terminators and gene body: the gene's 3' end where transcription ends, and the body between start and end.\n- The paper's system is a plant (FLD is the Arabidopsis-type demethylase), so findings are from that model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Co-transcriptional chromatin regulation is widely recognized as a mechanism that reinforces active gene expression, yet transcriptionally active genes must also be able to transition into stable epigenetic silencing during developmental transitions and environmental responses. Whether and how ongoing transcription is coupled to the initiation of epigenetic silencing remains unclear. Here we show that elongating RNA polymerase II phosphorylated at Ser2 (RNAPII-Ser2P) functions as an instructive signal for epigenetic silencing initiation. At actively transcribed genes, RNAPII-Ser2P positions and spatially constrains the FLD-LD H3K4me1 demethylase complex near transcription termination regions, separating the complex from its gene-body H3K4me1 substrate. We found that both chemical perturbation of transcription and physiological silencing cues induce a redistribution of RNAPII-Ser2P into the gene body, accompanied by FLD relocalization and subsequent gene-body H3K4me1 erasure. FLD disengages from chromatin upon gene silencing, indicating that active transcription is required for its continued chromatin association. We further show that LD tethers FLD to RNAPII through an N-terminal HOX domain that binds the C-terminal region of FLD and an adjacent TFIIS domain that contacts the RNAPII CTD in a Ser2P-sensitive manner. This FLD-LD-RNAPII bridge is essential to promote H3K4me1 erasure and gene silencing. Together, these findings reveal a mechanism by which active transcription licenses the initiation of epigenetic silencing.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.767202",
+   "title": "The genetic architecture of lipoprotein(a): simplicity, complexity, and mutability",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767202v1",
+   "authors": [
+    "Mukamel, R. E.",
+    "Rubinacci, S.",
+    "Kamitaki, N.",
+    "Handsaker, R. E.",
+    "Hujoel, M. L. A.",
+    "Tang, D.",
+    "McCarroll, S. A.",
+    "Loh, P.-R."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.767202 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "A genome-wide study that computationally genotypes the size-variable KIV-2 repeat in LPA across UK Biobank and All of Us, modeling how repeat length and protein-altering variants shape lipoprotein(a) levels, estimating the repeat's mutation rate, and finding over 300 loci associated with LPA-adjusted Lp(a).",
+    "plain": "Lipoprotein(a) is a blood fat particle that raises the risk of heart and blood-vessel disease, and its level is mostly set by genes. The hard part is a repetitive stretch of the LPA gene that is difficult to measure, so researchers developed new computer methods to read it from whole-genome sequences of large population studies. They then used these methods to build a model that predicts Lp(a) levels across people of many ancestries and to show that many other genetic regions also contribute.",
+    "why": "Lp(a) is a known, hard-to-treat cardiovascular risk factor, so a more accurate genetic picture could inform risk prediction and future drug targets, though the text does not itself address clinical use. The finding that a mostly single-gene trait also has a large polygenic component may matter for how complex traits are studied more generally.",
+    "background": "- Lipoprotein(a), or Lp(a): a cholesterol-carrying particle in the blood; high levels are linked to heart disease.\n- LPA gene: the gene that mostly determines Lp(a) levels, with over 80% of variation attributed to it.\n- KIV-2 repeat: a segment of LPA that repeats a varying number of times; its length differs between people and is hard to measure with standard sequencing.\n- Genotyping: reading a person's genetic variants from their DNA.\n- Polygenic: influenced by many genes, each with a small effect.\n- Cis-epistasis: interactions between variants on the same chromosome copy that affect the trait together.\n- Whole-genome sequencing and biobanks (UK Biobank, All of Us): large databases of sequenced genomes linked to health data.\n- Mutation dynamics: how often the repeat length changes over generations; the text reports changes roughly every 500 generations.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "High levels of lipoprotein(a) (Lp(a)) increase risk of cardiovascular diseases. Lp(a) concentration is primarily determined (>80%) by genetic variation at LPA, particularly by its large, size-polymorphic kringle IV-2 (KIV-2) repeat. However, because variation of the KIV-2 repeat is difficult to measure, the precise ways that genetic variants at LPA and other loci determine Lp(a) levels have been unclear, especially in individuals of non-European ancestry. Here, we developed new computational techniques to accurately genotype KIV-2 variation in whole-genome-sequenced population cohorts. Applying these methods to UK Biobank (n=490,414) and All of Us (n=245,394) provided insights into the genetic determinants of Lp(a) and the mutational dynamics of the KIV-2 repeat, which we found expands or contracts intra-allelically once every [~]500 generations. Variation in Lp(a) levels among people of all genetic ancestries was accurately predicted by a single, transferable genetic model capturing cis-epistatic effects of KIV-2 length and protein-altering polymorphisms in LPA. Controlling for predicted effects of LPA alleles revealed an additional, highly polygenic contribution to Lp(a) variation: LPA-adjusted Lp(a) levels associated with genetic variation at over 300 loci (P<5x10-8), much like other blood lipids. These results elucidate the genetic architecture and mutational origins of Lp(a) variation, showing how detailed characterization of a largely monogenic trait can provide surprising insights for complex trait genetics.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767536",
+   "title": "Generation of a Public Dataset for Etiological Subtyping with the Genomic Cluster Engine",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767536v1",
+   "authors": [
+    "Kubica, J.",
+    "Moldes, M.",
+    "Busby, B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767536 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "This paper describes an optimized run of the Genomic Cluster Engine, a hash-based method that groups people by phased haploblock sequences, applied to 2,548 1000 Genomes individuals across 26 populations, and releases the resulting public dataset of haploblock boundaries, sequences, clusters and genomic hashes.",
+    "plain": "Genetic diseases are usually defined by their symptoms rather than by the specific gene variants behind them, and the surrounding DNA can change how a variant behaves. This paper reports on a computing pipeline that summarizes each stretch of inherited DNA as a compact code and groups people with similar stretches together. The authors ran it on 2,548 people from 26 populations in the 1000 Genomes Project and made the resulting data freely available.",
+    "why": "The main contribution is a public, reusable resource rather than a new biological finding, and the text does not report results from disease studies. It may be useful for researchers studying how a variant's effect depends on the genetic background it sits in, though the text does not show this being done yet.",
+    "background": "- Genome: the full set of DNA instructions in a person.\n- Variant: a difference in DNA sequence between people.\n- Haplotype: the set of variants inherited together on one copy of a chromosome.\n- Haploblock: a long stretch of DNA passed down largely intact between generations, because recombination (the shuffling of chromosomes during reproduction) rarely breaks it up.\n- Phased: sequence data where variants are assigned to the correct chromosome copy.\n- Hash: a fixed-length code computed from data, used here to make comparisons fast.\n- Penetrance: how often a genetic variant actually produces its associated trait or disease.\n- 1000 Genomes Project: a public catalogue of genomes from people across many populations.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Motivation: Genetic diseases are complex phenomena that are currently defined by their clinical symptoms, rather than by the combinations of variants that give rise to them. Incomplete penetrance and phenotypic variability indicate that the genomic background contributes to the effect of variants. Recent advancements in genomics have produced vast amounts of data and created new opportunities to study genetic diversity across human populations. Much of this variation is inherited as recombination-defined contiguous segments, called haploblocks. We previously introduced a novel methodology for genomic hash encoding, the Genomic Cluster Engine, which groups individuals into clusters using phased haploblock sequences. By encoding each haploblock sequence as a compact hash, the characterization of genomic backgrounds, the subtyping of etiologies and the inference of local ancestry become fast and scalable. Results: We have optimized the Genomic Cluster Engine pipeline for large genomic datasets through parallelization and improved memory management. We applied our pipeline to 2,548 individuals across 26 populations from the 1000 Genomes Project and produced a dataset of haploblock-based genomic hashes for the resulting clusters. The genomic hashes and clusters can be used for investigating variant effects in the context of their haplotype backgrounds or for genotype-phenotype association studies. This comprehensive dataset is now publicly available, providing a valuable resource for both academic and industry researchers worldwide. Availability: The haploblock boundaries, sequences, clusters and genomic hashes for the 1000 Genomes Project are available under the CC0 license at https://data.haploblocks.org and on the Registry of Open Data on AWS https://registry.opendata.aws.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767695",
+   "title": "Site-Specific and Diet-Dependent Genetic Architecture of Trabecular Bone in Male BXD Recombinant Inbred Mice",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767695v1",
+   "authors": [
+    "Chanpaisaeng, K.",
+    "Reyes-Fernandez, P.",
+    "Dilkes, B.",
+    "Quinlan, V.",
+    "Fleet, J. C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767695 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-20",
+   "summary": {
+    "one_liner": "In 51 BXD recombinant inbred mouse lines fed adequate or low dietary calcium, the authors mapped 127 QTL across 61 loci for L5 vertebral trabecular bone microarchitecture and its response to calcium restriction, finding little overlap with femoral QTL and strong diet dependence.",
+    "plain": "This study asks how genes and diet together shape the internal lattice of spongy bone in the lower back bones of mice, which relates to how easily vertebrae can fracture. Male mice from 51 related inbred strains were raised on normal or low-calcium food, their vertebrae were scanned in 3D, and the chromosome regions linked to each bone trait were mapped. The authors report that most of these regions differed from those previously found in the thigh bone, differed between the two diets, and that the response to low calcium had its own genetic pattern.",
+    "why": "Vertebral fractures are a major concern in bone disease, and the text suggests that genetic studies done in one bone may not carry over to another or to different diets. The paper identifies candidate genes at several high-priority loci, but the text does not show whether these hold up in humans, so the link to clinical bone health remains unestablished.",
+    "background": "- Trabecular bone: the spongy, porous inner part of bone, whose struts and spacing (microarchitecture) affect strength.\n- Micro-computed tomography (micro-CT): X-ray imaging that builds 3D pictures of bone structure at very fine scale.\n- BXD recombinant inbred lines: a fixed panel of mouse strains derived from crossing two parent strains, so each line has a stable, shared mix of their genes; this lets researchers link genetic regions to traits across repeated measurements.\n- QTL (quantitative trait locus): a chromosome region statistically associated with variation in a measurable trait.\n- Composite interval mapping: a statistical method for locating QTL while accounting for nearby QTL.\n- Expression QTL (eQTL): a genetic region that influences how much a nearby gene is switched on, used to narrow down candidate genes.\n- Response to calcium restriction (RCR): how much a bone trait changes when dietary calcium is lowered, computed per phenotype.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Vertebral fracture risk is influenced by trabecular bone (Tb) microarchitecture, a phenotype that is regulated by genetic and environmental factors. We examined the genetic architecture of Tb microarchitecture in the fifth lumbar vertebra (L5) and its modification by dietary calcium (Ca). Male mice from 51 BXD recombinant inbred lines were fed adequate (0.5%) or low (0.25%) Ca diets from 4 to 12 weeks of age. Micro-computed tomography (CT) was used to assess seven L5 Tb phenotypes, and the response to Ca restriction (RCR) was calculated for each phenotype. Quantitative trait loci (QTL) were identified by composite interval mapping and compared with previously reported femoral Tb QTL from the same mice. Genetic background significantly influenced all L5 phenotypes and their responses to Ca restriction. We identified 127 QTL distributed across 61 loci. First, very few L5 QTL overlapped those previously identified in the femur, providing strong evidence for skeletal site-specific genetic regulation of Tb microarchitecture. Second, QTL detection was strongly dependent on dietary Ca, with only 4 of 33 loci identified under adequate Ca intake also detected under low Ca intake. Third, QTL controlling the RCR were largely distinct from those controlling L5 phenotypes under either dietary condition. Many loci affected multiple phenotypes, suggesting shared genetic regulation of Tb characteristics. Integration of genetic variation, expression QTL, and existing functional evidence identified plausible candidate genes at several high-priority loci. Together, these findings demonstrate that genetic regulation of Tb microarchitecture is both skeletal site-specific and diet-dependent, and that adaptation to dietary Ca restriction has a distinct genetic component.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.17.767085",
    "title": "ChIMe-seq enables multimodal epigenetic profiling in single molecules and single cells",
@@ -23,14 +188,14 @@
    ],
    "label": "bioRxiv doi:10.64898/2026.11.17.767085 v1",
    "primary_category": "genomics",
-   "date": "2026-11-22",
+   "date": "2026-11-19",
    "summary": {
-    "one_liner": "Recent advances in single-cell and single-molecule sequencing have enabled high-resolution characterization of epigenetic states.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "ChIMe-seq is a method that uses an exogenous methyltransferase to tag histone-modification and nucleosome context on long DNA, allowing histone marks, DNA methylation and nucleosome positioning to be profiled together in single molecules and single cells.",
+    "plain": "Cells control which genes are active using several chemical layers that sit on or around DNA, such as tags on the histone proteins DNA wraps around and methyl marks on DNA itself. This paper describes a new lab method, ChIMe-seq, that reads several of these layers from the same DNA strand and from individual cells at once. The authors report that DNA methylation tracks how densely nucleosomes (DNA-packing spools) sit in a region, and that this relationship changes depending on nearby histone marks and cell type.",
+    "why": "Most existing methods measure only one epigenetic layer at a time, or chop DNA into short pieces that lose information about which marks occur together. Being able to see several layers on the same molecule may help explain how these controls coordinate, though the text does not show how broadly the method will be adopted or how it performs against existing tools.",
+    "background": "- Epigenetics: chemical marks that change how genes are read without altering the DNA sequence.\n- Nucleosome: a unit of DNA wound around histone proteins; its position affects gene access.\n- Histone modification: chemical tags on histone proteins that signal active or silent chromatin.\n- DNA methylation: addition of a methyl group to DNA, often linked to gene silencing.\n- Single-molecule and single-cell sequencing: reading the DNA of individual strands or cells rather than averaging over a mixed population.\n- Methyltransferase: an enzyme that adds methyl groups; here it is used to write marks onto DNA near histones as a readout.\n- Short-read vs long-read sequencing: short reads cover small DNA fragments; long reads cover much longer stretches, keeping more context.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Recent advances in single-cell and single-molecule sequencing have enabled high-resolution characterization of epigenetic states. However, methods that jointly measure multiple layers of epigenetic regulation within the same molecules and cells remain limited. Here, we developed Chromatin Immuno-Methylation sequencing (ChIMe-seq), a multimodal approach that simultaneously profiles histone modifications, DNA methylation, and nucleosome positioning genome-wide in single molecules and single cells. In contrast to recent approaches that rely on enzymatic fragmentation, ChIMe-seq preserves long DNA molecules by using a methyltransferase to deposit exogenous methylation marks that report on proximal histone modifications. This enables integration of multiple epigenetic features within individual molecules and supports short-read, long-read, and single-cell sequencing. These multimodal measurements are integrated into a novel mathematical framework that captures the coupling between nucleosome positioning, histone modifications, and DNA methylation. Both single-molecule and single-cell analyses reveal that DNA methylation is linked to nucleosome density in a manner modulated by local histone modifications, whilst differences in nucleosome:DNA structures are observed depending on epigenetic context and cell-type. Together, these results establish ChIMe-seq as a framework to investigate multifaceted epigenetic coordination across scales, from single-nucleotide resolution to long-range chromatin organization in single molecules and single cells.",
    "source": "biorxiv"
@@ -50,16 +215,122 @@
    ],
    "label": "bioRxiv doi:10.64898/2026.11.17.767299 v1",
    "primary_category": "genomics",
-   "date": "2026-11-22",
+   "date": "2026-11-19",
    "summary": {
-    "one_liner": "Gene regulation is commonly modeled at the gene level, yet genes express multiple isoforms from distinct transcription start sites whose regulatory architecture is not resolved by current approaches.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "FULL-seq is a single-cell method that jointly measures chromatin accessibility and full-length transcripts in the same cell, linking promoter/regulatory elements to alternative first-exon usage in multi-promoter genes, and applies this to colorectal cancer metastasis-associated CALB1 programs.",
+    "plain": "Many genes can be switched on from several different starting points, producing different versions of the same gene product. This paper introduces FULL-seq, a method that reads, in each individual cell, both which parts of the DNA are open for switching on and which full-length versions of the messages are being made. Applied to cancer cells, it found programs tied to specific starting points that the usual gene-level view misses, including ones linked to metastasis, and reducing one of them (CALB1) slowed cell migration in lab tests.",
+    "why": "Standard gene-level measurements can average out differences between versions of a gene that behave differently, so this approach may reveal regulatory control hidden from current tools. The link to metastasis and the CRISPRi migration experiment are a potential route to new mechanistic or therapeutic questions, but the text alone does not establish clinical relevance, and the cohort and cell-line evidence is limited in scope.",
+    "background": "- Gene regulation: cells control how much of each gene is made, often by switching chromatin (DNA packaged with proteins) between open and closed states.\n- Transcription start site (promoter): the position where a gene's copying into RNA begins.\n- Isoform: alternative versions of a gene's product, here produced by different starting points.\n- Alternative first exon (AFE): the first coding-region segment of an RNA, which differs depending on which promoter is used.\n- Single-cell multiomics: measuring two or more kinds of molecular data from the same individual cell.\n- Transcription factor: a protein that binds DNA to turn genes on or off.\n- CRISPRi: a gene-silencing technique that blocks gene activity without cutting DNA.\n- Metastasis: cancer spreading from its original site to other organs.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Gene regulation is commonly modeled at the gene level, yet genes express multiple isoforms from distinct transcription start sites whose regulatory architecture is not resolved by current approaches. Here we introduce FULL-seq, a scalable single-cell multiomic platform that jointly profiles chromatin accessibility and full-length transcript coverage from the same cell, enabling direct coupling of regulatory elements to alternative first exon (AFE) usage. FULL-seq achieves high sensitivity for both transcriptome and chromatin accessibility while providing transcript-wide coverage across mRNAs up to 15 kb with precise exon-level mapping. We uncover diverse promoter-AFE regulatory architectures, revealing distinct transcription factor programs across alternative first exons of the same gene, and show that gene-level annotation frameworks can obscure regulatory relationships in multi-promoter genes. Applying FULL-seq to human cancer cells further reveals metastasis-associated AFE programs that are not apparent from gene-level expression. These AFE programs were reproduced in independent colorectal cancer cell-line datasets, and CALB1 AFE activation was observed in a subset of liver metastases from an independent patient cohort. Furthermore, CRISPRi-mediated repression of metastasis-associated CALB1 AFEs reduced colorectal cancer cell migration. Together, our findings establish alternative promoter and first-exon usage as a functionally relevant layer of gene regulation and demonstrate that FULL-seq enables regulatory relationships and cellular phenotypes to be connected at the promoter-isoform level.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.14.766719",
+   "title": "Genome survival and descent in population pedigrees",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.14.766719v1",
+   "authors": [
+    "Thompson, E."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.14.766719 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A population-genetics study of how much of each founder's genome survives, and how many descendant copies it leaves, in a pedigree of a diploid dioecious population started from a small founder group, with variance and dependence among founders analysed.",
+    "plain": "This paper asks what happens to the DNA that a small group of founding animals passes into a population over many generations: how much of their genome segments survive, and how many copies end up in living descendants. The authors use a model of a random-mating population, such as 100 males and 100 females, and build on earlier methods for tracing the ancestry of a single genome. They report that the amount of surviving genome varies about as much from meiosis (the random shuffling when eggs and sperm form) as it does between different pedigrees, and that the first few generations matter most.",
+    "why": "The work is motivated by keeping genetic variation in a highly endangered species, where a small founder group may be all that remains, so it bears on how much diversity a managed population can hold. The text does not describe any applied conservation outcome, so its practical reach beyond the modelling is uncertain.",
+    "background": "- Diploid: organisms carry two copies of each chromosome, one from each parent.\n- Dioecious: species with separate males and females.\n- Founders: the original individuals whose genomes enter a population.\n- Pedigree: a family tree showing who descends from whom.\n- Meiosis: cell division that makes eggs and sperm, shuffling and splitting parental DNA.\n- Identity by descent: sharing a segment because both copies trace back to one ancestor.\n- Variance: how much a quantity fluctuates across repeated outcomes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Motivated by issues of the maintenance of genetic variation in a highly endangered species, we continue earlier studies into the population genetics ancestry and descent of genome segments. In this paper, we focus on the survival and descent of genome in a population pedigree of a diploid dioecious species. We consider a population potentially being maintained from a small founder base, taking the canonical example a random-mating population of 100 males and 100 females. We show how previous methods to examine the ancestry of a single genome in such a population can also be used to account the survival genetic lengths and number of descendant copies of founder genome segments, and explore the variance of these measures. We show the variance of the population distribution over realizations within a pedigree is scarcely smaller then the variance over pedigrees: variation is in meiosis rather than in pedigree. While all founders continue to lose genome over time, the very first generations are critical to determining the amount of surviving genome. Dependence among founders is slight, except for between the two genomes of a founder: however when monogamy is enforced this high dependence extends to founder mates. We briefly consider extensions of population size (both smaller and larger), of mating structure, and of variance in offspring number, including variance in male reproductive success.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.15.766459",
+   "title": "Deciphering the genetic bases of canine longevity",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.15.766459v1",
+   "authors": [
+    "Adiwal, D.",
+    "Mottier, S.",
+    "Houel, A.",
+    "Guyon, R.",
+    "Dufaure de Citres, C.",
+    "Sauvaget, F.",
+    "Brun, J.",
+    "Chevallier, L.",
+    "Coubertin, A.",
+    "Leroy, G.",
+    "Labadie, J.",
+    "Abadie, J.",
+    "Abitbol, M.",
+    "Andre, C.",
+    "Derrien, T.",
+    "Hedan, B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.15.766459 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "A genome-wide association study in 540 dogs from 27 breeds, with replication in 3,024 Golden Retrievers, separates genetic lifespan signals from breed body size and flags three candidate loci (CDH4, TSHZ3, TSC22D2) linked to individual lifespan.",
+    "plain": "Bigger dog breeds tend to die younger, but it has been unclear which genes cause this, partly because size and lifespan move together across breeds. The authors sampled 20 dogs from each of 27 breeds, scanned their genomes for DNA variants linked to body weight and age at death, and then checked promising hits in a much larger group of Golden Retrievers. They report three genetic regions linked to how long individual dogs live, beyond what body size alone explains.",
+    "why": "Dogs have large, well-recorded differences in size and lifespan, so they offer a useful route to finding genetic leads on ageing. Two of the three candidate genes, CDH4 and TSHZ3, have been linked to longevity in humans, and the third region has been associated with markers of biological ageing; these connections are suggestive, and the text does not show that the dog genes act the same way in people.",
+    "background": "- Genome-wide association study (GWAS): a scan of DNA across many individuals to find small genetic variants that statistically track with a trait.\n- Breed-level versus individual-level analysis: breed averages (weight, median lifespan) describe whole groups, while age at death describes each dog; the two can be confounded.\n- Low-pass sequencing and imputation: a cheap, partial genome read that is filled in statistically using reference data.\n- Replication cohort: a separate group used to check whether findings hold up.\n- Orthologous region: the stretch of DNA in another species that corresponds to the same gene region.\n- Loci: specific locations in the genome where variants are found.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Across dog breeds, the inverse correlation between body size and lifespan is well documented, but its genetic basis remains poorly understood, in part because size and lifespan are confounded at the breed level. Here, we assembled the Cani-DNA discovery cohort of 540 dogs from 27 breeds, with 20 dogs per breed, genotyped by low-pass whole-genome sequencing and imputation. We performed genome-wide association studies (GWAS) of breed-average body weight, breed-median lifespan and individual age at death, and tested the age-at-death loci for replication in the GRLS replication cohort of 3,024 Golden Retrievers. The GWAS of breed-average body weight recovered established body-size loci, confirming that the cohort could detect known associations. Of the 69 breed-weight loci, 30 were shared with breed-median lifespan, and at all of them the allele increasing body weight was associated with shorter lifespan. At the individual level, age at death, with breed-average body weight as a covariate, identified loci distinct from all breed-level loci. Three of them, the CDH4, TSHZ3 and TSC22D2 loci, replicated in the GRLS replication cohort. In humans, CDH4 and TSHZ3 have been implicated in longevity, and the region orthologous to the TSC22D2 locus has been associated with markers of biological ageing. Together, these results identify genetic variation associated with the lifespan of individual dogs beyond breed body size, and support the dog as a model in which genetic leads on ageing can be identified.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.12.766027",
+   "title": "Chromatin accessibility predictions reveal lineage-structured effects of noncoding variants across hematopoiesis",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766027v1",
+   "authors": [
+    "Kazemi, M.",
+    "Morris, J. A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.12.766027 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "ChromBPNet deep-learning models trained on 17 hematopoietic cell types score about 303,000 noncoding variants for predicted effects on chromatin accessibility, and the paper compares these predictions with GWAS fine-mapping and K562 CRISPRi target-gene data.",
+    "plain": "Most disease-linked changes in human DNA fall in noncoding regions that do not code for proteins, so it is often unclear what they do. This paper uses computer models trained to predict how DNA changes affect how open or accessible genome regions are in blood cell types. The authors found that predicted effects follow the family tree of blood cell types, and that these predictions point to different variants than standard statistical gene-mapping methods do.",
+    "why": "It offers a cell-type-specific way to guess where noncoding disease variants act, which matters because most GWAS hits are noncoding. The text also states that the predictions say little about which genes these variants regulate, which limits how far they can be used on their own; the public prediction resource may be useful to others.",
+    "background": "- GWAS (genome-wide association studies) find DNA variants statistically linked to traits or diseases; \"fine-mapping\" narrows these to the most likely causal variants.\n- Noncoding variants sit outside protein-coding genes but can still change gene regulation.\n- Chromatin accessibility: how tightly DNA is packed; open regions are usually where genes are switched on.\n- Sequence-to-function models: machine-learning models that predict molecular activity from DNA sequence.\n- Hematopoiesis: the process by which blood stem cells develop into mature blood cell types.\n- CRISPRi: a method that silences a DNA region to test which genes it controls; K562 is a common leukemia-derived cell line used for this.\n- CTCF motifs: short DNA sequences tied to the protein CTCF, which helps organize chromosome structure.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Background. Noncoding variants account for over 90% of genome-wide association study (GWAS) findings, but their mechanisms are often unclear. Sequence-to-function models provide one approach to variant interpretation by predicting the effects of genetic variation on molecular phenotypes. ChromBPNet predicts variant effects on chromatin accessibility, but how these predictions are organized across differentiation hierarchies and relate to orthogonal predictions remains unclear. Results. We trained ChromBPNet models for 17 hematopoietic cell types and scored 302,830 variants. Of 242,307 variants accessible in at least one cell type, 5.6% were predicted to alter chromatin accessibility. Variants active in more cell types had larger predicted effects. Predicted effects also reflected hematopoietic lineage structure, with sharing declining with lineage distance while effect direction was preserved in 99.6% of parent-child comparisons. ChromBPNet predictions agreed with GWAS fine-mapping but largely identified distinct variants. Fine-mapping-only variants were enriched for coding and transcript-associated variation, whereas ChromBPNet-only variants were enriched for regulatory elements, accessible chromatin, and trait-relevant activity. In K562 CRISPRi datasets, predicted accessibility gain showed limited association with target-gene validation. Regulatory elements containing CTCF motifs were less likely to have validated target genes, consistent with a role in chromatin organization rather than gene activation. Conclusions. ChromBPNet and fine-mapping provide complementary information about variant function. Predicted accessibility effects identify the cell types in which noncoding variants are likely to act and capture relationships across the hematopoietic hierarchy, but provide limited information about the genes they regulate. All predictions are available at: https://bloodnnet.ccbr.utoronto.ca/.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.766388",
+   "title": "Improved long-read sequencing technology reveals full genome architecture of Malian Plasmodium falciparum field isolates",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766388v1",
+   "authors": [
+    "Diaz-Terenti, B.",
+    "Diakite, M.",
+    "Ranford-Cartwright, L. C.",
+    "Pradhan, S.",
+    "Martos-Contreras, M. d. C.",
+    "Otto, T. D.",
+    "Gomez-Diaz, E."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.766388 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A de novo assembly strategy using PacBio HiFi long-read sequencing, applied to eight recently isolated and cloned Malian Plasmodium falciparum parasites, yields near-complete chromosomes and reveals variation in telomere and subtelomeric architecture and multicopy gene families.",
+    "plain": "Malaria parasites are hard to read genetically because their DNA is very rich in A and T letters and contains many repeated stretches, and most reference genomes come from lab-adapted strains that may not reflect parasites in the field. The authors tested a long-read sequencing method on eight parasites freshly collected from patients in Mali and found it could rebuild their genomes with few gaps, including the chromosome ends. The team reports that the chromosome ends and repeated gene families differed between these parasites.",
+    "why": "Better reference genomes from real field parasites can support studies of how malaria parasites vary and adapt across regions. The text reports a fourfold reduction in sequencing requirements, but its wider impact on malaria research is not established from this description alone.",
+    "background": "- Plasmodium falciparum is the parasite that causes the deadliest form of malaria.\n- A reference genome is a complete reference copy of an organism's DNA, which other studies compare against.\n- Long-read sequencing reads DNA in long pieces, which helps resolve repeated regions that short reads cannot place reliably.\n- PacBio HiFi is a long-read technology that produces highly accurate reads.\n- Contigs are continuous stretches of assembled DNA; fewer contigs means a more complete assembly.\n- Subtelomeric and telomeric regions sit at chromosome ends; multigene families are groups of similar, repeated genes.\n- Liftoff is a tool that transfers gene annotations (gene labels) from one genome to another.\n- Cloned isolates come from a single parasite lineage, which avoids mixed-strain infections.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Understanding genome plasticity in malaria parasites and the diversity of their repetitive gene families requires high-quality reference genomes derived from parasites recently isolated from patients. However, generating such genomes in Plasmodium falciparum remains challenging owing to the parasite's extreme AT content, extensive repetitive regions, and the frequent occurrence of multiclonal infections in endemic settings. As a result, most available reference genomes are derived from laboratory-adapted strains, that have experienced prolonged in vitro maintenance, and that incompletely represent natural parasite diversity. We developed and optimized a de novo assembly strategy based on PacBio HiFi long-read sequencing and applied it to eight recently-isolated and cloned P. falciparum parasites from Mali. HiFi sequencing enabled highly accurate genome reconstruction, yielding assemblies with a mean of 18 contigs, 301 pseudogenes, and a frameshift rate of 0.04% following Liftoff annotation. Assemblies showed high structural integrity and near-complete chromosomes, including improved recovery of subtelomeric regions and multigene families, without requiring short-read correction. Despite overall conservation of chromosome organization, substantial variation was observed in chromosome-end architecture, subtelomeric structure, and telomeric repeat content among parasite genomes. Our approach simplifies the generation of high-quality P. falciparum genomes and reduces sequencing requirements fourfold. The resulting assemblies enabled characterization of natural variation in telomere plasticity and multicopy gene family diversity in field isolates. These findings establish PacBio HiFi sequencing as an effective and scalable strategy for producing highly contiguous and accurate de novo assemblies of P. falciparum, supporting the development of geographically-diverse, field-relevant malaria parasite reference genomes.",
    "source": "biorxiv"
   }
  ]

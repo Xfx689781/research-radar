@@ -1,6 +1,6 @@
 {
  "slug": "quantum",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "arxiv:2611.26506",
@@ -15,14 +15,14 @@
    ],
    "label": "arXiv:2611.26506v1",
    "primary_category": "quant-ph",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Experimental demonstrations of quantum error correction often exhibit noise that varies across space and time, and attempting to characterize this disorder has been shown to substantially improve decoding performance.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper models quantum error-correcting surface codes decoded with incomplete or inaccurate knowledge of disordered, spatially and temporally varying physical error rates, and shows that the entropy and Bhattacharyya coefficients of the noise distribution govern threshold and sub-threshold performance.",
+    "plain": "Quantum computers make errors, and error correction tries to spot and fix them. Real hardware has error rates that differ from one component to another and drift over time, but theory usually assumes every component has the same, perfectly known error rate. This paper treats the error rates as random quantities and asks how well a decoder, the software that infers errors from measurements, can do when it only partly knows them.",
+    "why": "The authors argue that reporting the average entropy and Bhattacharyya coefficient of a device's error rates may be more useful than reporting mean or median rates, which is a practical suggestion for how hardware performance is described. The text does not show how widely this reporting practice would be adopted, so its impact remains to be seen.",
+    "background": "- Quantum error correction: encoding information across many physical qubits so errors can be detected and corrected.\n- Surface code: a common error-correcting layout of qubits arranged on a grid.\n- Decoder: an algorithm that takes error-detection measurements and infers which errors occurred.\n- Noise threshold: the physical error rate below which making the code larger reduces logical (encoded) errors.\n- Entropy (information-theoretic): a measure of uncertainty or spread; here it summarizes how spread out the error rates are.\n- Bhattacharyya coefficient: a number measuring how much two probability distributions overlap; here it bounds how quickly logical failures fall off at low noise.\n- Code-capacity, phenomenological, and circuit-level noise: increasingly realistic models that add measurement errors and gate errors.\n- Maximum-likelihood and minimum-weight decoding: two standard ways of choosing the most probable error explanation.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Experimental demonstrations of quantum error correction often exhibit noise that varies across space and time, and attempting to characterize this disorder has been shown to substantially improve decoding performance. However, theoretical studies of quantum error correction typically assume fixed, perfectly known, homogeneous noise. Here we model decoding with incomplete or inaccurate knowledge of disordered noise channels by treating physical error rates as random variables. We show that the decoding performance is set by a small number of information-theoretic functionals of the noise distribution: the entropy determines the threshold while Bhattacharyya coefficients bound the deep sub-threshold decay rate of logical failures. Furthermore, our results give a quantitative measure of the benefits of characterizing this noise. We numerically investigate both maximum-likelihood and minimum-weight-error decoding of surface codes, showing good agreement with theory across the code-capacity, phenomenological, and circuit-level noise settings, including with noise distributions seen in open-access superconducting devices. When it comes to error correction in realistic settings, reporting the average entropy and Bhattacharyya coefficient of noise distributions could therefore be more informative than the mean or median error rates of a device's components.",
    "source": "arxiv"
@@ -38,16 +38,164 @@
    ],
    "label": "arXiv:2611.25572v1",
    "primary_category": "quant-ph",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "We introduce a unified framework for sensing time-dependent fields through the lens of classical and quantum algorithms.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper proposes randomized, matched, and pooled pulse-sequence protocols for AC sensing and a quantum computational spectroscopy scheme that couples a quantum sensor to a quantum processor, claiming a beyond-Heisenberg-limit scaling that requires quantum computation and persists under aligned noise.",
+    "plain": "The paper is about using quantum devices to measure signals that change over time, such as weak oscillating magnetic or electric fields. The authors first show that changing only the pulse sequences used to control a sensor can beat a standard technique called dynamical decoupling. They then propose coupling the sensor to a quantum processor, which they argue can reach a precision limit that goes beyond the usual Heisenberg limit, although the text itself does not show experimental results.",
+    "why": "If the claims hold, this would suggest that quantum computation itself, not just entanglement or better control, can improve sensing precision, and it links sensing to the design of quantum algorithms. The text is an abstract only, so the strength of the claims, the assumptions behind them, and whether they survive realistic hardware cannot be judged from it.",
+    "background": "- Quantum sensor: a single quantum system (such as a spin or qubit) whose state changes when it is exposed to an external field.\n- AC sensing: measuring a field that oscillates over time, as opposed to a constant one.\n- Dynamical decoupling: a standard technique that repeatedly flips a sensor's state with pulses to protect it from noise while it senses a signal.\n- Heisenberg limit: the best precision scaling allowed by quantum mechanics for many sensing tasks; the paper claims to exceed it in this setting.\n- Standard quantum limit: the weaker precision scaling reachable without quantum entanglement or advanced control.\n- Quantum oracle and quantum algorithm: an oracle is a black-box operation that encodes information; a quantum algorithm is a procedure that processes such operations on a quantum computer.\n- Lindblad span conditions: mathematical constraints describing which noise patterns limit quantum advantage in open quantum systems.\n- Depolarization: a noise process that randomly scrambles a quantum state.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "We introduce a unified framework for sensing time-dependent fields through the lens of classical and quantum algorithms. First, we develop three pulse sequence protocols, namely randomized, matched, and pooled spectroscopy, which outperform established approaches such as dynamical decoupling across a wide range of tasks. These protocols attain the optimal sensitivity for linear and nonlinear AC sensing on conventional spin or qubit platforms, improving existing devices by changing only their pulse sequences. We then introduce quantum computational spectroscopy (QCS), which couples quantum sensors to a quantum processor. QCS combines two new primitives: a quantum computational frequency comb that coherently converts any classical signal into a quantum oracle, and a family of quantum algorithms that use the oracle to extract signal information in superposition. Variations can be implemented on current platforms with only one memory ancilla. We show that the ultimate limit imposed by quantum mechanics lies polynomially beyond the Heisenberg limit, and that QCS achieves it. Attaining this new limit requires quantum computation, establishing a fundamental separation between conventional and quantum computational sensing. Moreover, QCS retains beyond-Heisenberg scaling for broadband signals under constant-strength sensor depolarization, while we prove that the same noise limits any protocol lacking quantum computation to standard-quantum-limit scaling. Our result provides the first asymptotic, beyond-quadratic quantum advantage in AC metrology when noise is aligned with the signal, proving that Lindblad span conditions do not apply to broadband quantum sensing. Our work builds an algorithmic theory for designing sensing protocols and establishes quantum sensing as a new frontier for quantum algorithms, with quantum advantages that surpass the Heisenberg limit and that persist under noise.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24013",
+   "title": "Topological Quantum Reservoir Computing",
+   "url": "https://arxiv.org/abs/2611.24013v1",
+   "authors": [
+    "Zhi-Lei Zhang",
+    "Lianxiang Cui",
+    "C. P. Sun",
+    "Kohei Nakajima",
+    "Kazuyuki Aihara"
+   ],
+   "label": "arXiv:2611.24013v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "The paper proposes topological quantum reservoir computing, using protected Majorana edge modes of a one-dimensional Kitaev chain as memory and the bulk's fast dynamics as the processing step, and reports tradeoffs and improved performance on long-term temporal memory tasks.",
+    "plain": "Building large quantum computers is hard because the delicate quantum states that store information are easily disturbed. This paper proposes a way to use a special, well-protected part of a quantum system, the edge of a one-dimensional chain, as a long-lived memory, while the rest of the system handles fast processing of incoming signals. The authors work this out on a simple model and report that the arrangement helps with tasks that require remembering timing information for a long time.",
+    "why": "It suggests a way to make use of protected quantum states that are already being built, which could matter for near-term quantum machine learning. The text is a theoretical study on one model, so how far the idea carries to real hardware is not shown here.",
+    "background": "- Quantum reservoir computing: feeding a signal into a complex physical system and reading out its response, with only a simple final readout trained.\n- Qubit: the quantum version of a bit, and the basic unit of quantum information.\n- Majorana edge modes: special states that sit at the ends of certain superconducting wires and are unusually resistant to local noise; they are a candidate for protected storage.\n- Kitaev chain: a simple one-dimensional chain model that hosts Majorana edge modes.\n- Bulk versus edge: the bulk is the interior of the chain; the edge is its end, where the protected states live.\n- Fault tolerance: designing computation so that errors are corrected or suppressed faster than they accumulate.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Scaling universal quantum computation and implementing quantum machine learning with protected logical qubits remain challenging. To harness the computational potential of existing fault-tolerant quantum platforms, we introduce topological quantum reservoir computing, a novel approach using protected degrees of freedom for storage and the host system's intrinsic dynamics for information processing. Using a one-dimensional Kitaev chain, we show how long-lived Majorana edge modes and fast bulk responses support these complementary functions within the same many-body system. We identify the tradeoffs governing access to protected memory and show how matched interfaces enable programmable writing and interactions enable autonomous information consolidation from the bulk to the edge. These mechanisms improve performance on tasks requiring long-term retention of temporal information. Our results establish topology as a new resource for quantum reservoir computing and open a route toward near-term quantum computing and quantum machine learning.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24044",
+   "title": "Accelerating Quantum Error Correction Simulations under Coherent Noise with Compiled Clifford-Augmented Matrix Product States",
+   "url": "https://arxiv.org/abs/2611.24044v1",
+   "authors": [
+    "Jiale Huang",
+    "Yaojian Chen",
+    "Ke Liu",
+    "Dingshun Lv",
+    "Mingpu Qin"
+   ],
+   "label": "arXiv:2611.24044v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "A compiled Clifford-augmented matrix product state (CAMPS) simulator that reuses Clifford transformations across shots, recycles measured qubits, and fuses rotations to speed up sampling-based simulation of quantum error correction under coherent noise.",
+    "plain": "Quantum computers are fragile, and error-correction schemes protect them, but errors that add up coherently (as smooth, consistent tilts rather than random flips) are hard to simulate on a classical computer. This paper presents a faster classical simulation method for this kind of noise, tested on surface-code and a larger bivariate bicycle code. The authors report that their compiled version reaches accurate answers with smaller computing budgets and samples about ten times faster than the uncompiled version at the same settings.",
+    "why": "Coherent errors can behave differently from the random errors that most error-correction estimates assume, so better tools for checking their effect on logical performance matter for designing fault-tolerant hardware. The text reports agreement with a standard approximation (Pauli twirling) on the tested cases, but says nothing about hardware experiments or how far the method scales beyond the tested sizes.",
+    "background": "- Quantum error correction: encoding information across many physical qubits so that errors can be detected and fixed.\n- Coherent noise: systematic, phase-like errors where small rotations add up, unlike random bit flips.\n- Pauli twirling: a standard trick that converts coherent errors into simpler random errors for easier analysis.\n- Tensor networks / matrix product states: a compressed way to represent quantum states of many qubits, whose cost grows with \"bond dimension\" (a measure of how much entanglement can be captured).\n- Clifford circuits: a special class of quantum operations that can be simulated efficiently on classical computers.\n- Sampling / shots: repeating a simulated experiment many times to estimate error rates.\n- Surface code and bivariate bicycle code: two families of error-correcting codes; [[72,12,6]] denotes 72 physical qubits encoding 12 logical qubits with distance 6.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Reliable assessment of quantum error correction requires understanding how coherent errors affect logical performance. Although tensor networks naturally capture coherent interference, entanglement growth and large qubit counts make repeated sampling costly. Here we develop a compiled Clifford-Augmented Matrix Product State (CAMPS) framework that reuses Clifford transformations across shots, recycles qubits released by measurements, evolves a compressed residual state, and accelerates sampling through rotation fusion and compilation tailored to the MPS layout. Surface-code benchmarks under fixed-sign coherent noise yield accurate logical error estimates at small bond dimensions, while random-sign simulations up to distance $d=9$ and on the $[[72,12,6]]$ bivariate bicycle code match the Pauli-twirling approximation results. Compared with uncompiled CAMPS, compiled CAMPS converges at smaller bond dimensions and achieves order-of-magnitude sampling speedups at equal bond dimension, opening a scalable route to studying coherent error propagation in larger fault-tolerant circuits.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22389",
+   "title": "Nonlinear function regression using quantum ensemble learning",
+   "url": "https://arxiv.org/abs/2611.22389v1",
+   "authors": [
+    "Yueen Chen",
+    "Mohammad Sharifian",
+    "Abolfazl Bayat"
+   ],
+   "label": "arXiv:2611.22389v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper adapts classical ensemble methods (Bagging and AdaBoost) to variational quantum regressors, adds feature selection and repeated feature encoding, and reports improved accuracy on four nonlinear benchmark functions using only first- and second-order polynomial features.",
+    "plain": "The paper looks at how to get more reliable predictions from today's noisy quantum computers, which are too imperfect to do much alone. The authors combine several small quantum models into a group, using two well-known team-based strategies from classical machine learning: one trains the models independently, the other trains them one after another so each corrects the last. They test this on four mathematical functions of varying complexity.",
+    "why": "Reducing the impact of device imperfections is a central practical question for near-term quantum computing, so an ensemble approach is worth watching. The text reports that the sequential AdaBoost strategy predicts more accurately than the independent Bagging strategy, but the evidence shown is limited to four benchmark functions, so its relevance to real-world problems is unclear.",
+    "background": "- Machine learning regression: fitting a model that predicts a numerical output from inputs, such as estimating a curve.\n- Variational quantum circuit: a quantum circuit with adjustable settings, trained by a classical optimizer, that is used here as a predictor.\n- Ensemble learning: combining several models to make one prediction; Bagging trains models independently on resampled data, while AdaBoost trains them in sequence and upweights cases earlier models got wrong.\n- Feature selection: choosing which input quantities to feed the model.\n- Feature encoding: converting classical input numbers into the rotations applied to quantum bits (qubits); repeating encoding can let a small circuit represent more complex functions.\n- Nonlinear function: a relationship where output does not change in proportion to input, so simple straight-line fits fail.\n- Noisy near-term devices: current quantum hardware that is error-prone and lacks full error correction.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Recent advances in artificial intelligence and quantum technologies have driven the emergence of quantum machine learning, yet imperfections in near-term quantum devices remain a major obstacle for achieving practical quantum advantage. In the absence of fault-tolerant machines, ensemble learning, which combines multiple imperfect quantum devices, may unlock new quantum computing applications. Here, we introduce two ensemble-learning algorithms, namely Bagging and AdaBoost, for enhancing the accuracy of nonlinear regression problems. While Bagging trains variational quantum regressors independently, AdaBoost employs a sequential training strategy and achieves significantly better prediction accuracy. By incorporating systematic feature selection into our ensemble learning algorithms, we enhance their predictive power for highly nonlinear functions. We further improve prediction accuracy through a feature-to-qubit mapping strategy based on repeated feature encoding. The performance of our ensemble-based algorithms improves with both the number of regressors in the ensemble and the size of each regressor. We demonstrate the effectiveness of our approach using four benchmarking functions with varying degrees of nonlinearity by relying on a feature pool limited to first- and second-order polynomial terms.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22232",
+   "title": "MASQ: Measurement-Adaptive Sampling for Near-Clifford Quantum Error Correction Circuits",
+   "url": "https://arxiv.org/abs/2611.22232v2",
+   "authors": [
+    "Chaebin Jung",
+    "Sangmin Jeon",
+    "Kyeongwon Lee",
+    "Sechan Park",
+    "Woojoo Lee"
+   ],
+   "label": "arXiv:2611.22232v2",
+   "primary_category": "cs.ET",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "MASQ is an exact sampler for near-Clifford quantum error correction circuits that materializes only the non-Clifford rotations relevant to each measurement, using a shared circuit-dependent schedule, stabilizer-assisted elimination, and caching to shrink active width and speed up shot sampling.",
+    "plain": "Quantum error correction circuits are simulated on ordinary computers to check how well a planned protocol protects fragile quantum information, but catching rare failures means running huge numbers of simulated trials. This paper presents MASQ, a simulation method that only does the expensive bookkeeping for the parts of a circuit that affect the next measurement, and postpones the rest. The authors report that it cuts the peak number of active virtual qubits by up to 40 across 19 benchmark circuits and runs up to 8,098 times faster on CPU than the existing tool Clifft on multi-round circuits.",
+    "why": "Faster exact sampling of error-correction circuits would make it cheaper to estimate rare logical failure rates when designing fault-tolerant protocols. The text reports benchmark speedups only; it does not say how these gains carry over to hardware or to larger code sizes.",
+    "background": "- Quantum error correction (QEC): encoding information across many physical qubits so errors can be detected and fixed.\n- Clifford circuits: a restricted class of quantum operations that can be simulated efficiently on classical computers; \"near-Clifford\" means mostly such operations plus a few harder non-Clifford rotations.\n- Active width: the number of qubits that must be tracked at once in a simulation; cost grows exponentially with it.\n- Shot: one complete run of a circuit with random outcomes; rare failures need many shots.\n- Measurement record: the sequence of classical outcomes from measurements, which the sampler must reproduce with the correct probabilities.\n- Clifft: an existing simulator for this kind of circuit, used here as the baseline.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Classical sampling of quantum error correction (QEC) circuits supports fault-tolerant protocol evaluation, but estimating rare logical failures requires many independent shots. Frame-active-state simulators isolate non-stabilizer information in a dense active-state vector, yet dense-state processing remains exponential in the active width. This paper presents MASQ, an exact measurement-adaptive sampler for near-Clifford QEC circuits based on selective materialization of non-Clifford rotations. At each measurement boundary, MASQ materializes only rotations in a measurement-relevant closure capturing direct and indirect non-commuting dependencies, deferring the rest to limit active-state expansion. Stabilizer-assisted elimination further removes rotations certified to be invisible to all future measurements. A circuit-dependent schedule is computed once and shared across shots, while adaptive caching of conditional Born probabilities and batched execution reduce repeated sampling work while preserving the measurement-record distribution. Across 19 QEC benchmarks, MASQ reduces peak active width by up to 40 active virtual qubits and achieves up to 8,098-fold CPU throughput speedup over Clifft on multi-round circuits.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.21560",
+   "title": "Optimal Quantum Sensing Algorithms for Discrete-Frequency Spectroscopy",
+   "url": "https://arxiv.org/abs/2611.21560v2",
+   "authors": [
+    "Yu-Jie Liu",
+    "Richard R. Allen",
+    "Ruohan Shen",
+    "Bingtian Ye",
+    "Timothy T. Chang",
+    "Joonhee Choi",
+    "Soonwon Choi"
+   ],
+   "label": "arXiv:2611.21560v2",
+   "primary_category": "quant-ph",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper designs task-specific quantum sensing algorithms for detecting, searching, and learning time-varying signals whose frequencies come from a known set of N candidates, claiming a √N speedup over frequency scanning.",
+    "plain": "The paper looks at spectroscopy, the practice of identifying substances or signals by the frequencies they contain. It assumes the possible frequencies are already known from a list of N candidates, and asks how quantum sensors can answer three kinds of questions faster: is a signal present, which frequency is it, and what is its full structure. The authors report algorithms that they say achieve a speedup of about the square root of N over checking frequencies one at a time.",
+    "why": "Spectroscopy is used across science and industry, so a faster way to sense frequencies could matter if the gains hold in practice. The text reports simulations with experimental imperfections and a feasibility analysis for nitrogen-vacancy diamond sensors, but these are the authors' own predictions and have not been tested in a lab here.",
+    "background": "- Spectroscopy: identifying materials or signals by their characteristic frequencies.\n- Quantum sensor: a tiny quantum system (here a single qubit, a basic quantum bit) whose state changes when it interacts with an external signal.\n- Nitrogen-vacancy (NV) center: a defect in diamond that is used as a quantum sensor.\n- π-pulse control: a timed sequence of microwave pulses that flips the sensor's state to steer its response.\n- Speedup of √N: the number of measurements needed grows with the square root of the number of candidate frequencies, rather than linearly as in scanning.\n- Discrete-frequency spectroscopy: the setting where the signal's frequencies are restricted to a known list.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Spectroscopy is a versatile tool that drives scientific discovery and underpins modern technologies. Quantum sensing offers promising opportunities to advance spectroscopy through enhanced sensitivity and spectral and spatial resolution. However, existing approaches largely focus on improving general measurement capabilities, often overlooking the structure of specific sensing tasks and leaving potential performance gains untapped. Here, we develop an algorithmic approach to quantum sensing tailored to various spectroscopic tasks, providing new avenues for improvement. Specifically, we consider general time-varying signals supported on a known set of $N$ candidate frequencies, a setting we call discrete-frequency spectroscopy. We formulate three types of practically motivated sensing tasks---Detection, Search, and Learning---that require progressively more spectral information. For all tasks, we design optimal quantum sensing algorithms achieving a $\\sqrt{N}$ speedup over conventional frequency-scanning approaches. Optimal Detection and Search need only a single-qubit sensor under $π$-pulse control, whereas optimal Learning provably requires coherent processing with a quantum computer. End-to-end numerical simulations incorporating various experimental imperfections predict up to two-orders-of-magnitude speedup in Detection. As an example, we analyze the feasibility of our Detection and Search algorithms for real-world molecular screening based on state-of-the-art nitrogen-vacancy centers. We also show how quantum-computing-enhanced Learning enables wireless communication in a weak-signal regime where conventional methods fail. Our results establish a practical route toward realizing quantum advantages via designing task-specific sensing algorithms.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18082",
+   "title": "Hybrid Krotov gradient descent Optimization for Quantum Machine Learning",
+   "url": "https://arxiv.org/abs/2611.18082v1",
+   "authors": [
+    "Maximilian Fröhlich",
+    "Martin Eigel",
+    "Michael Hintermüller"
+   ],
+   "label": "arXiv:2611.18082v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper adapts the Krotov optimal-control update, with a discrete adjoint (backward-propagated sensitivity) and an online-to-batch schedule, to train parameterized quantum circuits, and reports convergence results and benchmarks on two small classifiers.",
+    "plain": "Training a quantum circuit means tuning its adjustable dials so it gives correct answers, and this is usually done with standard gradient-based methods. This paper borrows a technique from control engineering, Krotov's method, which updates settings by sweeping forward and backward through the circuit, and adapts it to step through the circuit's gates rather than through time. The authors report that, for a broad class of circuits and losses, their batch version gives the exact gradient of the training loss, and they compare it against other optimizers on two small test problems.",
+    "why": "Faster or more reliable training of small quantum circuits is a practical bottleneck for quantum machine learning, so a method that needs only first-order cost per iteration could matter if the claims hold. The text itself reports only two small benchmarks with three seeds per configuration, so its broader significance is unclear from this summary alone.",
+    "background": "- Parameterized quantum circuit: a sequence of quantum gates whose angles are tunable parameters, used like a neural network in quantum machine learning.\n- Gradient descent: repeatedly adjusting parameters in the direction that lowers a loss (error) measure.\n- Optimal control and Krotov's method: a technique from physics and engineering for steering a system over time, using forward and backward (adjoint) passes to compute updates.\n- Adjoint/costate: a backward-running auxiliary quantity that gives the sensitivity of the final loss to earlier steps.\n- Batch vs. online updates: batch uses the whole training set per update; online uses examples one at a time; a hybrid switches between them.\n- Baselines: L-BFGS-B is a quasi-Newton optimizer that uses more curvature information than first-order methods; PennyLane is a software library whose built-in optimizers were tuned here.\n- Convergence and smoothness: mathematical conditions under which an iterative method is guaranteed to settle toward a minimum.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce and study a Krotov-inspired discrete adjoint optimization scheme for quantum machine learning and focus on a hybrid online-to-batch schedule. The method transfers the forward/costate/local-update logic of continuous-time optimal control to parameterized quantum circuits by replacing time locality with gate-index locality. For a broad class of fixed-generator variational gates and terminal-state losses, we show that the batch Krotov direction coincides with the exact gradient of the empirical loss. Under standard smoothness assumptions, this yields monotonic descent and convergence of the batch method, and convergence of the tail of the hybrid method after a finite switch to the batch phase. Empirically, we benchmark hybrid Krotov against the tuned PennyLane optimizer suite and L-BFGS-B on a four-bit parity classifier and on the Pérez-Salinas data re-uploading classifier for the crown problem. Across matched hyperparameter sweeps with three seeds per configuration, hybrid Krotov dominates every tuned first-order baseline and matches the strongest structured PennyLane methods on parity, while approaching the accuracy of L-BFGS-B on Pérez-Salinas at first-order per-iteration cost.",
    "source": "arxiv"
   }
  ]

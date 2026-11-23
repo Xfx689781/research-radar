@@ -1,7 +1,29 @@
 {
  "slug": "financial-markets",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
+  {
+   "uid": "arxiv:2611.27020",
+   "title": "Trust and Lottery-Related Anomalies",
+   "url": "https://arxiv.org/abs/2611.27020v1",
+   "authors": [
+    "Reza Bradrania",
+    "Ya Gao"
+   ],
+   "label": "arXiv:2611.27020v1",
+   "primary_category": "q-fin.PR",
+   "date": "2026-11-21",
+   "summary": {
+    "one_liner": "Using 1996–2018 US firm data across 49 states, this paper tests whether regional social trust amplifies the mispricing of lottery-like stocks (proxied by MAX), with the MAX effect concentrated in high-trust regions.",
+    "plain": "Some stocks behave like lottery tickets: they rarely pay off but occasionally pay off enormously, and investors often overpay for them, which tends to be followed by weak returns. This paper asks whether the general level of trust among people in a region changes how strongly investors pay for such stocks. The authors find that the pattern appears mainly in high-trust regions and is weak or absent in low-trust ones.",
+    "why": "It suggests that a broad social attitude, trust, may shape how people form beliefs about risky, highly skewed investments, linking finance to social capital research. The text does not show how far the result generalizes beyond US states and the chosen proxies, so it should be read as evidence of an association rather than a settled cause.",
+    "background": "- Lottery-like stocks: shares whose returns are highly skewed, so most outcomes are poor but a few are very large.\n- MAX: a common measure of lottery-likeness, based on a stock's highest recent daily return in a period.\n- MAX effect: the tendency for stocks with high past MAX to earn lower later returns, often read as overpricing driven by demand for lottery-style payoffs.\n- Social trust: the general willingness of people in a community to believe others, often measured by survey responses aggregated to regions.\n- Overpricing and skepticism: investors who doubt optimistic news demand less of such stocks; the paper argues trust reduces that doubt.\n- Robustness checks: tests that repeat the analysis with different measures or assumptions to see whether results hold.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We examine whether social trust shapes the pricing of lottery-like stocks by influencing investors' beliefs regarding optimistic information associated with extreme future payoffs. We argue that higher social trust reduces investors' skepticism toward optimistic information associated with extreme future payoffs, increasing demand for lottery-type stocks and leading to overpricing and lower subsequent returns. Using a sample of 8,875 firms across 49 US states over the period 1996-2018 and MAX as a proxy for lottery-like characteristics, we show that the MAX effect is concentrated in regions with relatively high trust and is weak or absent in regions with relatively low trust. We further find that this trust conditioning is stronger in regions with lower education or income levels, consistent with social trust playing a relatively more important role when investors have more limited access to private information. The results are robust to alternative lottery proxies and a range of robustness checks. Our findings identify social trust as a novel determinant of the pricing of lottery-like stocks and provide evidence that social capital may amplify belief-driven mispricing in assets with highly skewed payoffs.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.25762",
    "title": "Trading Before a Committed Rebalance",
@@ -11,14 +33,14 @@
    ],
    "label": "arXiv:2611.25762v1",
    "primary_category": "q-fin.TR",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "An institution must complete a portfolio adjustment, but traders who prepare inventory for it can choose whether to participate.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "A Bayesian game-theoretic model of an institution's forced portfolio rebalance, where traders choose whether to pre-position inventory, studying how public forecasts change execution cost and when information helps or hurts.",
+    "plain": "The paper looks at a large investor that must complete a big portfolio trade, while other traders can choose whether to get ready for it in advance and profit from its price impact. It asks whether public forecasts about the size or direction of that trade make the investor's cost higher or lower. The authors find that more information usually lowers cost, but optional participation by traders can reverse that in some settings.",
+    "why": "The result matters for how markets react to public information about forced trades, a question relevant to index rebalancing and ETF trading. The text does not show how well the model matches real institutional costs, since it says activation and cost parameters are not identified from the data used.",
+    "background": "- Price impact: a large trade moves the price against the trader placing it.\n- Transient impact: the price pressure fades after the trade rather than being permanent.\n- Uniform-price auction: all units in a batch clear at one common price.\n- Bayesian game: players update beliefs from signals and choose strategies knowing others do the same.\n- Equilibrium: a set of strategies where no player gains by changing unilaterally.\n- Value of information: how much a public signal changes expected cost.\n- Posterior mean: the best updated estimate of an unknown quantity after seeing a signal.\n- Lognormal: a skewed distribution often used for positive quantities such as costs.\n- ETF: exchange-traded fund, a fund whose shares trade on an exchange through the day.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "An institution must complete a portfolio adjustment, but traders who prepare inventory for it can choose whether to participate. We study how public forecasts affect the institution's cost in a Bayesian execution game with optional activation, transient impact, and uniform-price terminal completion. The curvature of equilibrium cost as a function of the posterior target mean determines the value of information. In the scalar model, information benefits every fixed participation roster. Optional supply can reverse this ranking at entry, at full participation, and in a smooth interior with lognormal activation costs. For centered scalar targets, information weakly lowers cost relative to no information, strictly when the posterior mean is nonzero with positive probability. Centered Gaussian precision gains are always beneficial. An exact symmetric finite-population equilibrium identifies how information resolution and individual strategic size interact near entry. A portfolio extension gives a matrix criterion for the fixed-roster ranking, which can fail under general cross-impact. Even with isotropic execution, shared activation allows equally accurate signals about target magnitude and composition to have opposite execution values under one unchanged prior. Intraday ETF price data is used to characterize target uncertainty and trading conditions without identifying activation or institutional costs.",
    "source": "arxiv"
@@ -32,16 +54,136 @@
    ],
    "label": "arXiv:2611.26466v1",
    "primary_category": "q-fin.ST",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "This article extends the forward rate curve model of Baaquie and Bouchaud (2004) and Le Coz and Bouchaud (2024) to the multi-country setting of government bond markets.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "The paper extends a string model of forward rate curves to government bond yields across countries, using per-country time scales to reproduce asymmetric cross-country yield correlations at daily and intra-day frequencies.",
+    "plain": "The paper studies how interest rates on government bonds from different countries move together over time. The authors observed that the correlations between countries' yield changes depend on maturity in a lopsided way, and they built a model in which each country gets its own \"clock\" for how time between future dates is perceived. Calibrated on bonds from nine euro-zone countries, the model reproduces these cross-country patterns with a typical reconstruction error of 1.7%.",
+    "why": "Government bond yields underpin borrowing costs and pricing across the economy, so a compact model of how whole yield curves co-move across countries could be useful for risk and pricing work. The text does not show how it compares with other models or whether it performs well out of sample, so its practical value is unclear from this summary alone.",
+    "background": "- Bond yield: the interest rate a government bond pays, expressed as an annual percentage.\n- Maturity: how many years until a bond is repaid; the yields across maturities form a \"yield curve.\"\n- Forward rate curve: the implied future interest rates for each future date, from which yields can be derived.\n- Correlation matrix: a table of how strongly pairs of series (here, yield changes for different countries and maturities) move together, from -1 to +1.\n- Realized yield changes: the actual observed day-to-day (or intraday) changes in yields, as opposed to modeled ones.\n- Idiosyncratic time scale: a country-specific parameter describing how the model's notion of elapsed time depends on the calendar date.\n- Calibration and reconstruction error: fitting model parameters to data, then measuring the average gap between model output and actual data (here 1.7%).\n- Euro-zone: the group of European Union countries using the euro.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "This article extends the forward rate curve model of Baaquie and Bouchaud (2004) and Le Coz and Bouchaud (2024) to the multi-country setting of government bond markets. Cross-country blocks of correlation matrices of realized yield changes are found to display significant asymmetry between maturities. In the framework of the proposed model, this amounts to give to each country an idiosyncratic time scale. Each time scale describes how the perceived time between future dates depends on the dates themselves. The differences between these time scales structure the interactions between curves and reproduce the characteristic asymmetry of cross-country correlation matrices. The proposed model captures the full set of cross-curve correlations simultaneously at both daily and intra-day frequencies. When calibrated on government bonds issued by nine countries of the euro-zone, the typical reconstruction error is 1.7%.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.24845",
+   "title": "Vibe-Trading: Towards Agent-Native Trading",
+   "url": "https://arxiv.org/abs/2611.24845v1",
+   "authors": [
+    "Haozhe Wu",
+    "Zhonghang Li",
+    "Chao Huang"
+   ],
+   "label": "arXiv:2611.24845v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-19",
+   "summary": {
+    "one_liner": "Vibe-Trading is an all-in-one agent-native framework for financial trading that connects research results, evidence, run history, and an explicit authority gate between strategy research and live execution.",
+    "plain": "The paper describes a software workspace for building and testing AI agents that do financial trading work, such as researching markets, generating strategies, backtesting them on past data, and paper trading. Its main point is that each result is kept tied to where it came from, the time period it covers, its settings, and the run that produced it, so it can be checked and repeated later. It also separates testing a strategy from actually placing real trades, which only happens under explicit permission.",
+    "why": "Trading decisions depend heavily on timing and data, so a result that loses track of its context can be misleading; the paper targets this traceability problem for AI agents. The text is a system description and does not report measured performance, so its practical value is not established by what is given here.",
+    "background": "- AI agent: a program that uses language models to plan steps, call tools, and produce outputs over several stages.\n- Backtesting: running a trading strategy on historical prices to see how it would have performed.\n- Paper trading: simulating trades with fake money on live market data, with no real orders.\n- Broker execution: sending real buy and sell orders through a brokerage account.\n- Provenance / reproducibility: recording where data and results came from so others can rerun and verify them.\n- Authority gate: a control that decides which actions an agent is allowed to take, such as placing live trades.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Existing AI agents can retrieve information, call tools, run experiments, and produce multi-step outputs. Yet most are built around relatively static workflows and struggle to preserve reliable state as the environment changes. Financial trading makes this limitation especially consequential: prices, news, market conditions, portfolio positions, and available capital evolve continuously. A result is useful only when it remains tied to the correct time, data snapshot, and execution context. We present Vibe-Trading, a comprehensive agent-native trading framework and all-in-one workspace for building, evaluating, and evolving agents for financial trading. It unifies market research, financial data, strategy generation, backtesting, portfolio analysis, paper trading, multi-agent collaboration, and optional broker execution. Its central contribution is an architecture that keeps results, evidence, research history, and trading authority connected throughout the research-to-action process. Each result retains its source, temporal scope, configuration, and producing run. Shared evidence grounding enables verification, versioned research records support reproducible continuation, and an explicit authority gate separates strategy research from live execution. Together, these designs provide a practical foundation for trading agents whose results can be traced, reproduced, and acted on only under explicit authority.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.23057",
+   "title": "Integrating market sentiments for stock price prediction: A comparative study of Bi-LSTM and multilayer perceptions",
+   "url": "https://arxiv.org/abs/2611.23057v1",
+   "authors": [
+    "Ahmet Akusta"
+   ],
+   "label": "arXiv:2611.23057v1",
+   "primary_category": "q-fin.GN",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "The paper tests whether sentiment scores from Nvidia news headlines, produced by FinBERT and TextBlob, improve Bi-LSTM and MLP stock price forecasts across overall and market-phase periods.",
+    "plain": "Researchers tried to predict Nvidia's stock price movements using both past prices and the tone of financial news headlines about the company. They compared two kinds of prediction models and two tools that rate whether text sounds positive or negative. The reported findings are that the news tone helped mainly during flat (stagnant) market periods, and helped less during strong upward trends.",
+    "why": "It addresses a practical question in finance: whether news sentiment adds real predictive value beyond price history, and whether that value depends on market conditions. The text does not give enough detail to judge how large or reliable the gains are, so its significance should be considered tentative.",
+    "background": "- Stock price forecasting: predicting future prices or price moves from past data and other signals.\n- Sentiment analysis: software that scores text as positive, negative or neutral.\n- FinBERT: a language model trained specifically on financial text.\n- TextBlob: a general-purpose, simpler sentiment tool.\n- MLP (multilayer perceptron): a basic type of neural network.\n- Bi-LSTM (bidirectional long short-term memory): a neural network designed for sequences such as time series, reading data in both directions.\n- Market phases: the study splits the period into bullish (rising), stagnation (flat) and strong bullish (sharply rising) conditions.\n- The text gives only an abstract, so specific accuracy figures, data sizes and time spans are not available here.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "This study investigates the integration of sentiment analysis with machine learning models to forecast stock price movements using the Nvidia Corporation as a case study. Sentiment scores were derived from Nvidia-related financial news headlines using two sentiment analysis tools: FinBERT, a domain-specific tool, and TextBlob, a general-purpose tool. These scores were integrated into predictive frameworks based on bidirectional long short-term memory (Bi-LSTM) networks and multilayer perceptrons (MLPs) developed alongside historical stock price data. This study assesses the predictive performance over the entire observation period and across distinct market phases: bullish, stagnation, and strong bullish conditions. The findings indicate that sentiment features enhance predictive accuracy in specific contexts, particularly during stagnation phases, with TextBlob demonstrating superior performance to FinBERT in specific scenarios. In addition, Bi-LSTM models exhibit consistently superior performance in capturing temporal dependencies compared to MLPs. However, the impact of sentiment features diminished during strongly directional trends, such as those observed in strong bullish markets. The combination of FinBERT and TextBlob in the same dataset allows for a dual-perspective approach to sentiment analysis, thereby providing new insights into the dynamic relationship between market sentiment and stock price behavior. This research contributes to the existing literature on applying sentiment analysis to financial forecasting by advancing the integration of complementary sentiment tools and phase-specific evaluations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.22277",
+   "title": "Explaining Realized Returns: Roll's $R^2$ 40 Years Later",
+   "url": "https://arxiv.org/abs/2611.22277v1",
+   "authors": [
+    "Bryan Kelly",
+    "Yinan Su",
+    "Chao Zhang"
+   ],
+   "label": "arXiv:2611.22277v1",
+   "primary_category": "q-fin.GN",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Revisits Roll's 1988 finding that macro and firm variables explain little of monthly stock return variation, and tests whether reasons extracted from Wall Street Journal market summaries with generative AI explain more of realized daily and monthly returns out of sample.",
+    "plain": "Economists have long struggled to explain why stock prices move as they do, even after the fact. This paper revisits that question by checking how well standard economic indicators explain U.S. stock returns, then tests whether the reasons newspapers give for market moves, pulled out by an AI tool, do a better job. The authors report that the usual indicators explain under 10% of monthly return variation out of sample, while the AI-extracted reasons explain roughly 30-40% of daily and monthly variation.",
+    "why": "It bears on a long-standing puzzle in finance: why prices move so much more than fundamentals seem to justify. Using text explanations as a new source of data may be useful to researchers, though the summary only gives the abstract, so the robustness of the method is not yet clear.",
+    "background": "- Roll (1988) asked how much of stock return movement can be explained by public news and economic variables; his answer was \"not much.\"\n- R-squared (R²) is the share of variation in an outcome that a model accounts for; out-of-sample means tested on data not used to build the model.\n- Negative R² means a model predicts worse than simply using the average return.\n- Monthly and daily returns are the changes in stock prices over those periods.\n- Generative AI here is used to read news summaries and label the reasons they give for market moves, while ignoring language that merely describes price changes.\n- The Wall Street Journal market summaries are the text source.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Can we explain asset price movements even with hindsight? Reinterpreting Roll's (1988) AFA Presidential Address, \"$R^2$,\" as a modern empirical exercise, we show that conventional macroeconomic, cash-flow, expectations, and flow variables explain less than 10% (often with negative $R^2$) of monthly U.S. equity return variation out of sample and lack daily observations. We use generative AI to extract reasons stated in Wall Street Journal market summaries while filtering out price-related language. These reasons explain around 30-40% of daily and monthly return variation out of sample. Their content spans interpretable themes, including corporate news, macroeconomic conditions, monetary policy, sentiment, and geopolitics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.19937",
+   "title": "AllocFlow: End-to-End Portfolio Trading Action Generation from Raw Market Data",
+   "url": "https://arxiv.org/abs/2611.19937v1",
+   "authors": [
+    "Annan Wang",
+    "Yuchen Xie",
+    "Yu Cen",
+    "Leon Liangyu Chen",
+    "Qianyu Julie Zhu",
+    "Xin Li",
+    "Tianyi Wei",
+    "Weisi Lin"
+   ],
+   "label": "arXiv:2611.19937v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "AllocFlow is an end-to-end flow-matching model that generates joint, signed portfolio weights across multiple assets directly from raw market histories, trained by imitation of a teacher strategy followed by group-relative reinforcement learning on portfolio-level financial rewards.",
+    "plain": "The paper looks at how to turn messy price histories for several assets into a set of buy and sell positions that work together under a shared budget, rather than forecasting each asset separately and then combining them. The authors train a model in two steps: first it copies a reference trading strategy, then a reinforcement learning stage adjusts its decisions to improve portfolio-level returns. On hourly crypto perpetual futures, the reported net annualized return rises from 27.79% to 51.38% after this refinement, and the model keeps a similar risk-adjusted score on six months of 2026 data it was not retrained on.",
+    "why": "It argues that training the allocation step directly against financial outcomes can avoid mismatches that arise when forecasting and portfolio construction are built as separate stages. The results come from one market (hourly crypto perpetual futures) and a single backtest, so they show what the method did in that setting, not that it will work in live trading or other markets.",
+    "background": "- Portfolio allocation: deciding how much capital to hold in each asset; negative weights mean short positions (betting on a price fall).\n- Calmar ratio: annual return divided by maximum drawdown (the largest peak-to-trough loss); higher is better.\n- Perpetual futures: crypto derivatives with no expiry date, traded on margin.\n- Flow matching: a generative modeling technique that learns to transform random noise into structured outputs, here candidate portfolios.\n- Imitation learning: training a model to copy an existing strategy's decisions.\n- Reinforcement learning (RL): training by trial and reward; here the reward is portfolio profit-based.\n- Transformer: a neural network architecture that models relationships among many inputs, here across assets.\n- Backtest and out-of-sample test: evaluating a strategy on past data, and on later data it was not tuned on.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Real-world portfolio management requires converting noisy market observations into coordinated, simultaneous allocations across multiple assets under shared capital constraints. Advances in forecasting models and alpha discovery help identify opportunities. However, traditional pipelines often decouple signal forecasting from portfolio construction, potentially misaligning learning with allocation and execution objectives. We present AllocFlow, an end-to-end flow-matching framework that directly generates joint portfolio allocations from raw multi-asset market histories. To capture dependencies among portfolio positions, AllocFlow employs a cross-asset flow Transformer conditioned on temporal market representations to generate continuous, signed position weights across all instruments jointly. To address the sample inefficiency and instability of learning continuous allocation policies from scratch, we establish a two-stage training scheme: strategy-supervised imitation shapes a structured distribution of candidate portfolios, followed by group-relative reinforcement learning (RL) that refines joint decisions using portfolio-level financial rewards and a frozen policy reference. On hourly cryptocurrency perpetual futures, RL refinement raises the annualized net return of the imitation policy from $27.79\\%$ to $51.38\\%$ and its Calmar ratio from $0.955$ to $4.043$, surpassing the teacher strategy on every metric, and AllocFlow reaches a Calmar ratio of $4.90$ on six further months of unseen 2026 data without retraining.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.18150",
+   "title": "Who Should Be on the Panel? Task-Conditioned Persona Selection for LLM Trading Agents",
+   "url": "https://arxiv.org/abs/2611.18150v1",
+   "authors": [
+    "Boming Yang",
+    "Yuquan Wang",
+    "Jiaxian Guo",
+    "Yusuke Iwasawa",
+    "Yutaka Matsuo"
+   ],
+   "label": "arXiv:2611.18150v1",
+   "primary_category": "q-fin.TR",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "The paper proposes choosing which LLM trader personas form a multi-agent panel based on each stock's trading characteristics (task-conditioned persona selection), implemented as the FinPanel system and evaluated on eight US stocks in 2025.",
+    "plain": "The paper looks at how to set up a group of AI \"traders\" that work together to make stock trading decisions. Instead of always using the same fixed group of trader styles, the authors pick the group for each stock based on a statistical summary of how that stock tends to move. On eight US stocks over 2025, the selected panels did better than a fixed panel of the same size and than several earlier AI trading systems, and kept their results even when they had no past trading history to learn from.",
+    "why": "It suggests that deciding who is on an AI team may matter more than how the team is coordinated, which is relevant to anyone designing multi-agent LLM systems. The text reports results on only eight stocks over one year, so how far the finding generalizes is unclear.",
+    "background": "- LLM (large language model): an AI system trained on text that can reason and write, here used to role-play traders.\n- Multi-agent system: several AI components with different roles that each give input before a final decision.\n- Persona: a named trading style (for example, a particular approach to risk) assigned to one agent.\n- Buy-and-hold: a passive benchmark where you buy a stock and keep it; drawdown is the drop from a peak to a later low, a measure of risk.\n- Backtest on an out-of-sample year: testing on a period after the data used to design or train the system, so the system has not seen those results.\n- Reinforcement learning and predictive baselines: standard automated trading methods used for comparison.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Multi-agent LLM systems are built by fixing a cast of roles and then designing how the cast coordinates. Which agents should make up the group for a given task is left to the designer, and the same cast is reused for every task. Financial trading makes the cost of that choice visible: stocks trade differently, and the trading styles suited to one need not suit another. We study task-conditioned persona selection, composing the group from the characteristics of the task it will face, and instantiate it with FinPanel, an LLM multi-agent trading system in which a recruiter selects a panel of named trader personas for each stock from a direction-blind statistical sketch of how the stock trades, each persona gives an independent daily call in its own style, and a manager commits the trade after reading the panel's arguments and their desk-kept, hierarchical track records. Because nothing is returned to the traders, the panel stays the panel that was selected, and it can trade a new stock from an empty record. On eight US stocks over the out-of-knowledge year 2025, against three prior LLM trading agents re-implemented in the same framework and against rule-based, predictive and reinforcement-learning baselines, the selected panel is ahead of a fixed panel of the same size and of the prior agents run as their papers prescribe, with a shallower drawdown than buy-and-hold on every stock; it keeps its performance with no warm-up and with no record at all, whereas the memory-augmented agents' returns swing with their warm-up; and neither more seats nor the manager's reading of the arguments substitutes for selecting the right ones. Who is in the group is a design decision to be made per task, before how the group coordinates.",
    "source": "arxiv"
   }
  ]

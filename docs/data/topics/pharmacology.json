@@ -1,6 +1,6 @@
 {
  "slug": "pharmacology",
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "papers": [
   {
    "uid": "biorxiv:10.64898/2026.11.18.767627",
@@ -19,16 +19,123 @@
    ],
    "label": "bioRxiv doi:10.64898/2026.11.18.767627 v1",
    "primary_category": "pharmacology and toxicology",
-   "date": "2026-11-22",
+   "date": "2026-11-20",
    "summary": {
-    "one_liner": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the deadliest cancers, largely due to its poor response to chemotherapy and the development of drug resistance.",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": false
+    "one_liner": "Preassembled Cas13b ribonucleoproteins delivered in ionizable lipid nanoparticles silence BIRC5 (survivin) RNA transiently in pancreatic cancer cells and, in a PANC-1 xenograft model, combine with gemcitabine to slow tumor growth.",
+    "plain": "Pancreatic cancer is very hard to treat, partly because tumors stop responding to the chemotherapy drug gemcitabine. This study packaged a molecular \"scissors\" protein complex (Cas13b, which cuts a specific messenger RNA) inside fatty nanoparticles, then used it to switch down a survival gene called survivin. In lab cells and in mice with pancreatic tumors, switching down survivin together with gemcitabine slowed tumor growth more than either alone, according to the authors.",
+    "why": "Gemcitabine resistance is a central problem in pancreatic cancer, and the paper offers a proof-of-concept way to pair an RNA-targeting tool with chemotherapy. Because the silencing is meant to be transient, it may suit safer, temporary treatments, but the text is a single preclinical study in one xenograft model, so clinical relevance is unproven.",
+    "background": "- Gemcitabine: a standard chemotherapy drug for pancreatic cancer; tumor cells can become resistant to it.\n- Survivin (BIRC5): a protein that blocks programmed cell death (apoptosis); it is often overexpressed in pancreatic tumors.\n- RNA silencing: reducing how much of a specific protein a cell makes by destroying its messenger RNA.\n- Cas13b: a bacterial enzyme that can be guided to cut specific RNA molecules; \"ribonucleoprotein\" (RNP) means the enzyme is delivered pre-bound to its guide RNA.\n- Lipid nanoparticles (LNPs): tiny fat-based carriers that deliver molecules into cells; ionizable lipids help them load and release cargo.\n- Xenograft: human cancer cells grown as tumors in mice, used to test treatments before human trials.\n- Encapsulation efficiency: the share of the cargo that is successfully packed inside the particles.",
+    "difficulty": "research-level",
+    "ai": true
    },
    "abstract": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the deadliest cancers, largely due to its poor response to chemotherapy and the development of drug resistance. Survivin (BIRC5), an inhibitor of apoptosis frequently overexpressed in PDAC, contributes to tumor cell survival and gemcitabine resistance, making it an attractive therapeutic target. Here, we developed a lipid nanoparticle (LNP)-based platform for the delivery of preassembled spCas13b ribonucleoproteins (RNPs) to achieve transient and sequence-specific RNA silencing in pancreatic cancer cells. We optimized ionizable lipid formulations for Cas13b RNP encapsulation and identified a formulation achieving approximately 80% encapsulation efficiency, with sustained colloidal stability and gene-silencing activity during seven days of storage at 4{degrees}C. LNP-delivered Cas13b RNPs efficiently silenced endogenous BIRC5 in three pancreatic cancer cell lines, reducing survivin protein levels and inducing apoptosis. In gemcitabine-resistant PANC-1 cells, BIRC5 silencing synergistically enhanced the cytotoxic effect of gemcitabine in vitro. This therapeutic combination was further evaluated in a PANC-1 xenograft model, where only the combined administration of BIRC5-targeting Cas13b RNP-LNPs and gemcitabine significantly inhibited tumor growth, without apparent systemic toxicity. Intratumoral administration also restricted nanoparticle distribution to the injected tumors. These findings establish LNP-mediated delivery of Cas13b RNPs as a new strategy for transient RNA-targeted therapy and provide proof of concept for combining survivin silencing by Cas13b with chemotherapy to address gemcitabine resistance in pancreatic cancer.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.766943",
+   "title": "Native-like 3D colonoids reveal mechanisms of colonic drug disposition",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.766943v1",
+   "authors": [
+    "Hammar, R.",
+    "Lundquist, P.",
+    "Vo, D. S.",
+    "Tzioufa, F.",
+    "Eriksson, J.",
+    "Lopes, A. C. C.",
+    "Hammer, H. S.",
+    "Pötz, O.",
+    "Di Martino, M. L.",
+    "Graf, W.",
+    "Hubert, M.",
+    "Sundbom, M.",
+    "Sellin, M. E.",
+    "Artursson, P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.766943 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Establishes adult colonic stem-cell-derived 3D organoids (colonoids) as a more native-like model for studying how drugs are absorbed, metabolised and transported in the large intestine, and links microvillar surface architecture to intracellular drug availability.",
+    "plain": "Drug researchers have mostly studied how medicines pass through the small intestine using lab-grown mini-organs, and the large intestine (colon) has received much less attention. This paper grows colon mini-organs from adult stem cells and compares them with real colon tissue and with cells taken directly from it. The authors report that the cells taken from tissue were a better reference than the tissue itself, and that certain mini-organ setups matched that reference most closely.",
+    "why": "Colon drug handling matters for oral medicines and for predicting how drugs behave in the body, and better lab models could make such predictions more reliable. The finding that the shape of the cell surface (microvilli, the tiny finger-like projections) affects how drugs enter cells may be relevant to drug design, though the text alone does not show how far this extends to patients.",
+    "background": "- Organoids: small 3D clusters of cells grown in a dish from stem cells that mimic parts of an organ.\n- Colonoid: an organoid grown from colon tissue.\n- ADME-T: absorption, distribution, metabolism, excretion and toxicity, the body's handling of a drug.\n- Transporters (P-gp, BCRP) pump drugs in or out of cells; enzymes (CYP3A4, UGT1A, SULT1A) chemically modify drugs.\n- Apical vs basal-out: whether the cells' inner-facing or outer-facing surface is exposed to the liquid around them.\n- Microvilli: tiny projections on intestinal cells that greatly enlarge the absorbing surface.\n- Proteomics and lipidomics: measuring the sets of proteins and fats in cells.\n- HEK293: a standard, simpler human cell line used as a reference.\n- Fic: intracellular bioavailability, the fraction of a drug that is free to reach targets inside cells.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Intestinal organoid research in drug absorption, distribution, metabolism, excretion, and toxicity (ADME-T) has focused predominantly on small intestinal enteroids, leaving colonic drug handling comparatively unexplored. Here, we established and characterized adult colonic stem cell-based three-dimensional (3D) organoid (colonoid) models as physiologically relevant New Approach Methodologies (NAMs). Donor-matched mucosal tissue, isolated primary epithelial cells, and 3D colonoids were characterized using global and targeted proteomics, fixed and live-cell microscopy, functional ADME-T assays and targeted lipidomics. This complementary analysis identified isolated primary epithelial cells as a more representative native epithelial reference than excised mucosal tissue. Suspended differentiated apical- and basal-out colonoid configurations more closely matched this reference across the assessed characteristics. Together, these two configurations provided access to both apical and basolateral epithelial surfaces, enabling functional studies of key drug transporters (P-gp, BCRP) and metabolizing enzymes (CYP3A4, UGT1A, SULT1A) in a native-like setting. Measurement of intracellular bioavailability (Fic), reflecting drug availability to intracellular targets, revealed lipophilicity-dependent microvillar absorption mechanisms. Hydrophilic compounds exploited the enlarged membrane surface provided by microvilli, whereas highly permeable lipophilic compounds seemingly entered only at the microvillus tips. Compared with HEK293 cells, an established reference model for Fic measurements, colonoids combined native-like epithelial geometry with higher phospholipid content and generally stronger intracellular drug binding, highlighting the importance of both architecture and cellular composition for studying colonic drug disposition. These colonoid models provide a physiologically relevant platform for investigating colonic ADME-T and reveal how microvillar architecture shapes intracellular drug bioavailability.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.766960",
+   "title": "Pharmacolibrary: Interoperable executable models for PK, PD and PGx derived from published evidence",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.766960v1",
+   "authors": [
+    "Kulhanek, T.",
+    "Denil, S.",
+    "Izmirli, B.",
+    "Ertaylan, G."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.766960 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-18",
+   "summary": {
+    "one_liner": "Pharmacolibrary v26.11 is a source-traceable resource that uses a multi-agent LLM-plus-validation workflow to turn published pharmacokinetic, pharmacodynamic and pharmacogenomic evidence into executable models in several standard modelling formats.",
+    "plain": "Knowledge about how drugs move through and act on the body is scattered across journal papers, databases and existing computer models, which makes it hard to reuse or check. This paper describes a system that uses AI language models to pull drug parameters out of the published literature, checks them with fixed rules, records where each value came from, and turns them into runnable simulation models with browser-based demos. The authors report only preliminary tests, which suggested that splitting extraction into several steps worked better than a single pass, and that locally run open-source models performed at least comparably to leading commercial AI models.",
+    "why": "Automated, auditable curation of drug data could make pharmacological models easier to reuse, compare and reproduce across research, simulation and teaching. The evaluation is described only as preliminary, so the reliability of the extracted parameters at scale is not yet established by the text.",
+    "background": "- Pharmacokinetics (PK): what the body does to a drug, such as absorption, distribution and clearance.\n- Pharmacodynamics (PD): what the drug does to the body, such as its effect on a target.\n- Pharmacogenomics (PGx): how a person's genes change their response to drugs.\n- Executable model: a mathematical model written in software code that can be run to simulate outcomes.\n- Standard formats (Modelica, FMI, SBML, CellML, MATLAB): shared file types that let models be exchanged between tools.\n- Large language model (LLM): an AI system that reads and generates text; here used to extract numbers from papers.\n- Open-weight model: an AI model whose trained parameters are publicly released, so it can be run locally.\n- Provenance tracking: recording where each piece of data came from.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Published pharmacological knowledge is distributed across heterogeneous scientific literature, databases, and computational models, making systematic reuse, comparison, and reproducibility difficult. We present Pharmacolibrary v26.11, a source-traceable resource that connects pharmacokinetic (PK), pharmacodynamic (PD), and pharmacogenomic (PGx) knowledge with executable models, simulations, and interactive visualizations. A multi-agent workflow combines LLM-assisted literature retrieval and extraction with deterministic validation, ontology mapping, provenance tracking, automated model generation, and rule-based review. The system transforms published evidence and extracted parameters into executable models across Modelica, FMI, SBML, MATLAB, and CellML and provides browser-based simulations for research and education. Preliminary evaluation indicates that decomposing literature extraction into multiple stages improves parameter recovery compared with single-pass extraction and that locally deployed open-weight models can provide performance that is at least comparable with frontier commercial LLMs. Pharmacolibrary provides a foundation for scalable, auditable curation of pharmacological knowledge and for connecting published evidence to reusable computational models across research, simulation, and education.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.12.766260",
+   "title": "Nose-to-Brain Delivery of Cocaine in Mice: A Physiologically Based Pharmacokinetic Model Incorporating Olfactory Epithelial Transport, Mucociliary Clearance, and Blood-Brain Barrier Permeability",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766260v1",
+   "authors": [
+    "Ramirez, M. F.",
+    "Gour, A.",
+    "Watson, E. K.",
+    "Sharma, A.",
+    "Wesson, D. W."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.12.766260 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "A physiologically based pharmacokinetic (PBPK) model, fitted to mouse brain and plasma cocaine data after intranasal versus intravenous dosing, estimates how much cocaine reaches the brain via the olfactory epithelium rather than the bloodstream.",
+    "plain": "Snorted cocaine produces fast effects on the brain even though it leaves less cocaine in the blood than an injected dose. This paper asks how much of the brain's cocaine arrives directly through the nose, along the smell-sensing tissue, rather than through the blood. The authors measured cocaine levels in the brain and blood of awake mice given either route, then built a detailed mathematical model of the nose, blood, and brain to fit those measurements.",
+    "why": "The authors report that the olfactory route accounts for about half of the cocaine reaching the brain after intranasal dosing, which they suggest may explain how quickly nasal cocaine acts. This is a single animal study described only through its abstract, so the estimate depends on the model's assumptions, and its relevance to human drug use is not established by the text.",
+    "background": "- Intranasal (IN) dosing means drug is absorbed through the nose; intravenous (IV) means injected into a vein.\n- Pharmacokinetics describes how a drug is absorbed, distributed, and cleared by the body over time.\n- PBPK models are equations representing real body compartments (blood flow, tissue volumes, barriers) so that parameters have physical meaning.\n- The olfactory epithelium is the smell-sensing lining high in the nose, which has nerve connections to the brain and a route around the bloodstream.\n- The blood-brain barrier is a layer of cells that limits which substances pass from blood into brain tissue.\n- Mucociliary clearance is the nose's natural sweeping of mucus, which removes material from the nasal lining.\n- Plasma protein binding refers to drug molecules attached to blood proteins, which reduces the free drug available to move into tissues.\n- Tandem mass spectrometry is a lab method for measuring small amounts of a specific molecule in tissue or blood.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Intranasal (IN) cocaine produces rapid central nervous system (CNS) effects despite generating substantially lower plasma concentrations than equivalent intravenous (IV) doses, suggesting a direct nose-to-brain pathway. The olfactory epithelium provides anatomical continuity for cocaine to pass between the nasal cavity and the brain. Quantifying the relative contribution of this pathway to total brain cocaine exposure requires a physiologically-based pharmacokinetic (PBPK) model that explicitly accounts for nasal mucosal architecture, epithelial transport barriers, and blood-brain barrier (BBB) permeability. Here we used tandem mass spectrometry to collect cocaine concentration-time data from the brain and plasma of awake mice administered IV or IN cocaine and leveraged that data to generate such a framework. Our results provide evidence that following IN cocaine, the olfactory pathway accounts for approximately half of the cocaine that reaches the brain. The mechanistic PBPK framework developed here, incorporating anatomically grounded nasal compartment separation, blood-flow-scaled mucosal absorption, tissue diffusion resistance, mucociliary clearance, plasma protein binding, and BBB permeability-surface area transport, substantially improves upon empirical one-compartment absorption models and produces parameter estimates with physiological interpretability. The proportionate efficiency of the olfactory route relative to systemic absorption may provide a pharmacokinetic basis for the rapid onset of IN cocaines CNS effects and has direct implications for understanding the psychoactive effects of cocaine.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.12.766215",
+   "title": "The activation-deactivation cycle of human PIEZO1",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766215v1",
+   "authors": [
+    "Massa, J.",
+    "Frieg, B.",
+    "Tyrchan, C.",
+    "Koch, O."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.12.766215 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-17",
+   "summary": {
+    "one_liner": "Coarse-grained and atomistic simulations of human PIEZO1 in a curved, tension-controlled membrane reconstruct its gating cycle, linking a pore-lipid salt bridge, disease variants and the yoda1 binding pocket.",
+    "plain": "PIEZO1 is a protein channel in cell membranes that opens when the membrane is stretched or bent, letting ions pass. This paper uses computer simulations to replay the opening and closing of the channel at atomic detail, under controlled membrane tension and a physiological voltage. The authors report that the channel flattens as it activates, that the ion flow in their model matches the measured conductance of 36 pS, and that a single salt bridge helps explain two disease-linked variants.",
+    "why": "PIEZO1 is involved in inflammation and red blood cell volume control, so a structural account of how it switches on and off may matter for drug design. The text suggests the work offers a framework for structure-based design of modulators, but this is a simulation study and its predictions would need experimental testing.",
+    "background": "- PIEZO1 is a mechanically gated ion channel: physical force on the cell membrane opens it, letting positively charged ions flow.\n- Conductance (in picosiemens, pS) measures how easily current flows through an open channel.\n- Membrane tension and curvature are physical stresses on the cell membrane that influence channel opening.\n- Coarse-grained simulations use simplified particles for speed; atomistic simulations model every atom and are more detailed.\n- A salt bridge is an attraction between oppositely charged amino acid side chains that can hold parts of a protein together.\n- Yoda1 is a small molecule that activates PIEZO1; its binding site is the focus of the pharmacology claims.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "PIEZO1 is a cation channel that is primarily activated through mechanical force, and activation has been shown to be influenced by membrane curvature. PIEZO1 is ubiquitously expressed and plays critical roles in various patho-/physiological processes such as inflammatory diseases or red blood cell volume regulation. Here we combine coarse-grained and atomistic simulations in which human PIEZO1 is embedded in a curved membrane and subjected to simulations under controlled membrane tension and a physiological transmembrane potential, allowing the gating cycle to be reconstructed at atomic resolution. Systematic pressure adaptation identifies an activation regime in which the channel flattens progressively, and ion permeation quantitatively reproduces the experimental conductance of 36 pS. Furthermore, the R2456-E2117 salt bridge couples pore lipid retention to the anchor domain and disrupting it reproduces the phenotypes of the disease-associated R2456H and R2456C variants. PIEZO activation is transmitted through an interconnected network of contact rearrangements that ultimately reshapes the yoda1 binding pocket at the THU8/THU9 interface. This state-dependent remodelling rationalises the pharmacology of yoda1 and offers a framework for the structure-based design of PIEZO1 modulators.",
    "source": "biorxiv"
   }
  ]
