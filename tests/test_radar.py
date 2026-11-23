@@ -659,3 +659,51 @@ def test_http_handles_gzip_and_bom(monkeypatch):
 
     monkeypatch.setattr(http.urllib.request, "urlopen", lambda req, timeout: Resp())
     assert http.get_text("https://example.org/feed") == "<rss/>"
+
+
+# ---------------------------------------------------------------- Discord
+
+def _archive_with(tmp_path, papers, day=date(2026, 11, 22)):
+    from radar.archive import Archive
+    a = Archive(tmp_path / "a.jsonl")
+    ps = []
+    for i, p in enumerate(papers):
+        p.score = 1.0 - i / 100
+        p.summary = {"plain": f"plain {i}", "ai": True}
+        ps.append(p)
+    a.add({"ml-theory": ps[:4], "probability": ps[4:5], "ai-news": ps[5:]}, day)
+    return a
+
+
+def test_discord_highlights_one_per_topic_first(tmp_path, papers):
+    from radar.discord import pick_items
+    cfg = load_config(write_config(tmp_path))
+    a = _archive_with(tmp_path, papers)
+    items = pick_items(cfg, a, date(2026, 11, 22))
+    assert len({r["topic"] for r in items}) == len(items)     # no topic twice in highlights
+    cfg.discord_topics = ["probability", "ml-theory"]
+    items = pick_items(cfg, a, date(2026, 11, 22))
+    assert [r["topic"] for r in items] == ["probability"] + ["ml-theory"] * 4
+
+
+def test_discord_messages_and_posting(tmp_path, papers, monkeypatch):
+    import radar.discord as discord
+    cfg = load_config(write_config(tmp_path))
+    items = [{"title": f"T{i}", "url": f"https://x/{i}", "topic": "ml-theory", "label": "arXiv:1",
+              "summary": {"plain": "word " * 200}} for i in range(12)]
+    msgs = discord.build_messages(items, cfg, date(2026, 11, 22))
+    assert [len(m["embeds"]) for m in msgs] == [10, 2]
+    assert msgs[0]["content"].startswith("**Research Radar") and "content" not in msgs[1]
+    assert all(m["allowed_mentions"] == {"parse": []} for m in msgs)
+    assert len(msgs[0]["embeds"][0]["description"]) <= discord.DESCRIPTION_CHARS
+
+    posted = []
+    monkeypatch.setattr(discord, "_post", lambda url, payload: posted.append((url, payload)))
+    monkeypatch.setattr(discord.time, "sleep", lambda s: None)
+    monkeypatch.delenv("DISCORD_WEBHOOK_URL", raising=False)
+    a = _archive_with(tmp_path, papers)
+    assert discord.post_daily(cfg, a, date(2026, 11, 22)) == 0 and posted == []   # no secret: skip
+    monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
+    assert discord.post_daily(cfg, a, date(2026, 11, 22)) == 1
+    assert posted[0][0] == "https://discord.example/webhook"
+    assert discord.post_daily(cfg, a, date(2026, 11, 23)) == 0                    # nothing that day

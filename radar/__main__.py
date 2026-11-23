@@ -18,6 +18,7 @@ from pathlib import Path
 from . import sources
 from .config import load_config, load_presets
 from .digest import TopicStats, render
+from .discord import post_daily
 from .mailer import send_daily
 from .models import Paper
 from .rank import assign_unique, score_papers
@@ -222,6 +223,9 @@ def main() -> None:
     e = sub.add_parser("email", help="email today's papers to readers who turned on daily email")
     e.add_argument("--config", default="config.yaml")
     e.add_argument("--dry-run", action="store_true", help="list the emails without sending")
+    n = sub.add_parser("notify", help="send today's daily email and Discord post")
+    n.add_argument("--config", default="config.yaml")
+    n.add_argument("--dry-run", action="store_true", help="show what would be sent")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
@@ -230,9 +234,19 @@ def main() -> None:
         run(args)
     elif args.cmd == "presets":
         list_presets()
-    elif args.cmd == "email":
+    elif args.cmd in ("email", "notify"):
         cfg = load_config(args.config)
-        send_daily(cfg, Archive(cfg.archive_path), datetime.now(timezone.utc).date(), args.dry_run)
+        archive, today = Archive(cfg.archive_path), datetime.now(timezone.utc).date()
+        failed = False
+        channels = [send_daily] + ([post_daily] if args.cmd == "notify" else [])
+        for channel in channels:       # one channel failing must not stop the others
+            try:
+                channel(cfg, archive, today, args.dry_run)
+            except Exception as exc:
+                log.error("%s failed: %s", channel.__name__, exc)
+                failed = True
+        if failed:
+            raise SystemExit(1)
 
 
 if __name__ == "__main__":

@@ -58,8 +58,8 @@ jobs:
           git pull --rebase --autostash origin main
           git push
 
-      - name: Send daily email
-        # Does nothing until SUPABASE_SECRET_KEY and the SMTP secrets are set (see README).
+      - name: Send daily email and Discord post
+        # Each channel does nothing until its secrets are set (see README).
         continue-on-error: true   # an email problem must never block the site update
         env:
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
@@ -68,4 +68,5 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
-        run: python -m radar email
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python -m radar notify

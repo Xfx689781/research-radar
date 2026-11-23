@@ -35,6 +35,8 @@ archive_days: 90
 feed_days: 30                   # how far back each topic's feed goes on the website
 site_title: Research Radar
 site_url: https://xfx689781.github.io/research-radar/   # used in the daily email
+discord_highlights: 10   # daily Discord post: the day's top items across topics
+discord_topics: []       # or list topic slugs to post those topics in full, e.g. [ai-news, ml-theory]
 
 # Optional accounts (sign in by email, topic choices sync across devices).
 # Leave empty and the site still works: choices are saved in the browser.

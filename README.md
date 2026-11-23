@@ -59,7 +59,7 @@ Signed-in readers can tick **Email me these every morning**. To make the daily j
 
 1. **Database.** Run `supabase/schema.sql` again in Supabase's SQL Editor. It is safe to re-run; it adds the `email` and `email_daily` columns.
 2. **Supabase secret key.** In Supabase: **Project Settings → API Keys → Secret keys**, create or copy a secret key (`sb_secret_...`). Add it to GitHub as the Actions secret `SUPABASE_SECRET_KEY`. This key can read every reader's settings, so it must only ever live in GitHub Secrets.
-3. **An email account to send from.** Any SMTP account works. With Gmail: turn on 2-Step Verification for the Google account, then create an **App password** (Google Account → Security → App passwords). Add these GitHub Actions secrets:
+3. **An email account to send from.** Any SMTP account works. Without Gmail, [Brevo](https://www.brevo.com)'s free plan works too: `SMTP_HOST` `smtp-relay.brevo.com`, `SMTP_PORT` `587`, the SMTP login and SMTP key from Brevo's SMTP page, and a sender address you verified in Brevo as `MAIL_FROM`. With Gmail: turn on 2-Step Verification for the Google account, then create an **App password** (Google Account → Security → App passwords). Add these GitHub Actions secrets:
 
    | Secret | Value |
    |---|---|
@@ -70,6 +70,13 @@ Signed-in readers can tick **Email me these every morning**. To make the daily j
    | `MAIL_FROM` | optional, e.g. `Research Radar <you@gmail.com>` |
 
 The workflow's last step then emails each subscriber the day's items in their topics (nobody gets an empty email). Gmail allows a few hundred messages a day, plenty for a small group; for more readers, use a transactional email service's SMTP settings instead. Set `site_url` in `config.yaml` so the email links to your site.
+
+## Discord (optional)
+
+The workflow can post each day's items to a Discord channel. A channel is shared, so it gets one post for everyone: by default the day's top items across topics (`discord_highlights`, one per topic first), or every item of the topics you list in `discord_topics`.
+
+1. In Discord: open the channel's settings (gear icon) → **Integrations** → **Webhooks** → **New Webhook** → **Copy Webhook URL**.
+2. Add it to GitHub as the Actions secret `DISCORD_WEBHOOK_URL`. Treat it like a password: anyone with the URL can post to the channel.
 
 ## Choosing topics
 
@@ -167,6 +174,7 @@ radar/
   archive.py           every recommended paper with its summary (state/archive.jsonl)
   site.py              JSON data for the website
   mailer.py            daily email to subscribed readers
+  discord.py           daily post to a Discord channel
   presets.yaml         built-in topics
   i18n.py              English and Chinese text
 config.yaml            your topics and settings

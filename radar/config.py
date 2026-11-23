@@ -53,6 +53,8 @@ class Config:
     feed_days: int = 30                  # how far back each topic's feed goes on the website
     site_title: str = "Research Radar"
     site_url: str = ""                   # public address of the site, used in emails
+    discord_topics: list[str] = field(default_factory=list)  # post these topics in full to Discord
+    discord_highlights: int = 10         # otherwise post this many highlights
     supabase_url: str = ""               # optional login; see README "Accounts"
     supabase_anon_key: str = ""          # public by design; access is limited by row-level security
 
