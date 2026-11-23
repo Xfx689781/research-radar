@@ -64,6 +64,9 @@
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
   .topic { position: relative; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 12px 14px 12px 42px; color: var(--ink); }
   .topic:hover { border-color: var(--accent); }
+  .topic.locked { opacity: .55; cursor: not-allowed; }
+  .topic.locked:hover { border-color: var(--line); }
+  #storage-note { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
   .topic[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
   .topic .box { position: absolute; left: 14px; top: 14px; width: 18px; height: 18px; border: 1.5px solid var(--faint); border-radius: 5px; }
   .topic[aria-pressed="true"] .box { background: var(--accent); border-color: var(--accent); }
@@ -263,8 +266,9 @@ async function getJSON(path) {
 // ------------------------------------------------------------------ selection storage
 async function loadSelection() {
   const accounts = !!state.supabase;
-  if (accounts && !state.user) {           // signed out: always start from an empty picker
+  if (accounts && !state.user) {           // signed out: nothing selected, no leftovers
     state.emailDaily = false;
+    clearLocal();
     return [];
   }
   let list = null;
@@ -272,17 +276,15 @@ async function loadSelection() {
     const { data, error } = await state.supabase.from("preferences")
       .select("topics, email_daily").eq("user_id", state.user.id).maybeSingle();
     state.emailDaily = !!(data && data.email_daily);
-    if (!error && data && Array.isArray(data.topics) && data.topics.length) list = data.topics;
-    else if (!error) {                     // first sign-in: keep what was picked before signing in
-      const pending = readLocal();
-      if (pending && pending.length) { list = pending; await saveRemote(pending); }
-    }
+    if (!error && data && Array.isArray(data.topics)) list = data.topics;
     clearLocal();                          // signed-in choices live in the account, not the browser
   } else {
     list = readLocal();                    // site without accounts: remember in this browser
   }
   return (list || []).filter((s) => state.bySlug[s]);
 }
+function locked() { return !!state.supabase && !state.user; }
+function openSignIn() { $("signin-msg").hidden = true; $("signin").showModal(); }
 function clearLocal() {
   try { localStorage.removeItem(STORE_KEY); } catch { /* ignore */ }
 }
@@ -305,7 +307,7 @@ function renderEmailOption() {
     $("sub-title").textContent = "📬 Get your topics by email every morning";
     $("sub-detail").textContent = "Sign in with your email, then subscribe. One email a day; unsubscribe anytime.";
     actions.append(el("button", { class: "btn primary", type: "button",
-      onclick: () => { $("signin-msg").hidden = true; $("signin").showModal(); } }, "Sign in to subscribe"));
+      onclick: openSignIn }, "Sign in to subscribe"));
     $("email-note").hidden = true;
   } else if (!state.emailDaily) {
     $("sub-title").textContent = "📬 Get your topics by email every morning";
@@ -408,14 +410,18 @@ function showPicker(editing) {
   state.draft = new Set(state.selected);
   $("feed").hidden = true;
   $("picker").hidden = false;
-  $("savebar").hidden = false;
+  $("savebar").hidden = locked();
   $("cancel").hidden = !editing;
   $("picker-title").textContent = editing ? "Edit your topics" : "Choose your topics";
   const note = $("storage-note");
   note.hidden = !!state.user;
-  note.textContent = state.supabase
-    ? "Sign in to keep your topics and get them every day by email. Without signing in, your choice is not kept after you leave."
-    : "Your choices are saved in this browser.";
+  if (locked()) {
+    note.replaceChildren(
+      el("span", {}, "Sign in first to choose your topics. Your choices are saved to your account, and you can get them by email every morning. "),
+      el("button", { class: "btn primary", type: "button", onclick: openSignIn }, "Sign in"));
+  } else {
+    note.textContent = "Your choices are saved in this browser.";
+  }
   $("search").value = "";
   renderPicker();
   window.scrollTo(0, 0);
@@ -430,11 +436,15 @@ function renderPicker() {
     if (!items.length) continue;
     box.append(el("h2", { class: "field" }, field));
     box.append(el("div", { class: "grid" }, items.map((t) => {
-      const on = state.draft.has(t.slug);
+      const on = !locked() && state.draft.has(t.slug);
       const src = { arxiv: "arXiv", biorxiv: "bioRxiv", medrxiv: "medRxiv", rss: "News" }[t.source] || t.source;
       return el("button", {
-        class: "topic", type: "button", "aria-pressed": on ? "true" : "false",
-        onclick: () => { on ? state.draft.delete(t.slug) : state.draft.add(t.slug); renderPicker(); },
+        class: locked() ? "topic locked" : "topic", type: "button", "aria-pressed": on ? "true" : "false",
+        "aria-disabled": locked() ? "true" : null, title: locked() ? "Sign in to choose topics" : null,
+        onclick: () => {
+          if (locked()) { openSignIn(); return; }
+          on ? state.draft.delete(t.slug) : state.draft.add(t.slug); renderPicker();
+        },
       }, el("span", { class: "box", "aria-hidden": "true" }),
          el("span", { class: "name" }, t.name),
          el("span", { class: "desc" }, t.description),
@@ -448,6 +458,7 @@ function renderPicker() {
 }
 $("search").addEventListener("input", renderPicker);
 $("save").addEventListener("click", async () => {
+  if (locked()) { openSignIn(); return; }
   state.selected = new Set(state.draft);
   state.filter = null;
   await saveSelection([...state.selected]);
@@ -583,6 +594,7 @@ async function start() {
   if (state.selected.size) { await showFeed(); return; }
   showPicker(false);
   // a shared link like ?topics=probability,ai-news pre-ticks those topics in the picker
+  if (locked()) return;
   const fromUrl = (new URLSearchParams(location.search).get("topics") || "").split(",")
     .filter((s) => state.bySlug[s]);
   if (fromUrl.length) { state.draft = new Set(fromUrl); renderPicker(); }
