@@ -49,6 +49,7 @@ class Config:
     site_dir: str | None = "docs"        # the website; its data goes to <site_dir>/data
     state_path: str = "state/seen.json"
     archive_path: str = "state/archive.jsonl"
+    runs_path: str = "state/runs.json"   # which daily jobs are done today
     archive_days: int = 90               # how long recommended papers are kept
     feed_days: int = 30                  # how far back each topic's feed goes on the website
     site_title: str = "Research Radar"

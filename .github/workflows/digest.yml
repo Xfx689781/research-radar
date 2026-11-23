@@ -2,16 +2,25 @@ name: research-digest
 
 on:
   schedule:
-    # Every day. GitHub cron is in UTC: 12:51 UTC = 7:51 Toronto in winter (8:51 in summer),
-    # a few hours after arXiv's evening announcement. For a weekly digest use "51 12 * * 0"
+    # Every day, three tries. GitHub sometimes delays or skips scheduled runs, so the
+    # later times are backups: once a day's digest is built, they do nothing, and the
+    # email is never sent twice. Times are UTC: 12:51 / 15:51 / 18:51 UTC =
+    # 7:51 / 10:51 / 13:51 in Toronto in winter (an hour later in summer), after
+    # arXiv's evening announcement. For a weekly digest use "51 12 * * 0" (and so on)
     # and set days: 7 in config.yaml.
     - cron: "51 12 * * *"
-  workflow_dispatch:      # lets you click "Run workflow" by hand
+    - cron: "51 15 * * *"
+    - cron: "51 18 * * *"
+  workflow_dispatch:      # lets you click "Run workflow" by hand (always rebuilds)
     inputs:
       backfill_days:
         description: "Also fill the past N days (one-time, e.g. 7). Leave 0 for a normal run."
         default: "0"
         required: false
+      send_only:
+        description: "Only send today's email and Discord post again (no rebuild). Use to test sending."
+        type: boolean
+        default: false
 
 permissions:
   contents: write         # needed to commit the new digest back to the repo
@@ -39,6 +48,7 @@ jobs:
         run: pytest -q
 
       - name: Build digest
+        if: ${{ !inputs.send_only }}
         env:
           # Reads ANTHROPIC_API_KEY; XFX_API_KEY (this repository's original secret name) also works.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY || secrets.XFX_API_KEY }}
@@ -47,19 +57,15 @@ jobs:
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::warning::ANTHROPIC_API_KEY is not set, so the digest has no AI summaries. Add it under Settings > Secrets and variables > Actions."
           fi
-          python -m radar run --backfill "${BACKFILL:-0}" --max-minutes 95
-
-      - name: Commit digest
-        run: |
-          git config user.name "research-radar-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs state
-          git diff --cached --quiet || git commit -m "digest: $(date -u +%Y-%m-%d)"
-          git pull --rebase --autostash origin main
-          git push
+          EXTRA=""
+          if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            EXTRA="--skip-if-done"    # a backup run after a successful one does nothing
+          fi
+          python -m radar run --backfill "${BACKFILL:-0}" --max-minutes 95 $EXTRA
 
       - name: Send daily email and Discord post
-        # Each channel does nothing until its secrets are set (see README).
+        # Each channel does nothing until its secrets are set (see README), and sends at
+        # most once a day; a failed send is retried by the next run.
         continue-on-error: true   # an email problem must never block the site update
         env:
           # SUPABASE_API_KEY (this repository's secret name) also works.
@@ -70,4 +76,20 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python -m radar notify
+          SEND_ONLY: ${{ inputs.send_only || false }}
+        run: |
+          if [ "$SEND_ONLY" = "true" ]; then
+            python -m radar notify --force    # a test send, even if today's email already went out
+          else
+            python -m radar notify
+          fi
+
+      - name: Commit digest
+        # runs whenever the build succeeded; a failed send does not stop it (continue-on-error)
+        run: |
+          git config user.name "research-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs state
+          git diff --cached --quiet || git commit -m "digest: $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
+          git push

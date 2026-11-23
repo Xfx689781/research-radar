@@ -125,15 +125,16 @@ def build_email(topics: list[str], archive: Archive, cfg: Config, today: date,
     return subject, "\n".join(text), "".join(parts)
 
 
-def send_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False) -> int:
+def send_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False) -> int | None:
+    """Number of emails sent, or None when email is not set up."""
     key = os.environ.get("SUPABASE_SECRET_KEY", "").strip()
     smtp = SmtpSettings.from_env()
     if not (cfg.supabase_url and key):
         log.info("daily email skipped: SUPABASE_SECRET_KEY or supabase_url not set")
-        return 0
+        return None
     if not smtp and not dry_run:
         log.info("daily email skipped: SMTP settings not set")
-        return 0
+        return None
 
     if key.startswith(("sb_publishable_", "eyJ")) and "service_role" not in _jwt_role(key):
         log.warning("SUPABASE_SECRET_KEY looks like the public (publishable/anon) key, which "

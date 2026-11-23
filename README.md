@@ -32,7 +32,7 @@ Each paper gets:
 2. Edit `config.yaml`: keep or remove topics, or add your own (see below).
 3. **AI summaries.** Create an API key at [console.anthropic.com](https://console.anthropic.com) (it needs a small amount of prepaid credit), then in your repository go to **Settings → Secrets and variables → Actions → New repository secret**, name it `ANTHROPIC_API_KEY` and paste the key. Never put the key in a file. Without it, the site still works but shows only the first sentence of each abstract.
 4. **Website.** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main`, folder `/docs` → Save.** Your site will be at `https://<your-username>.github.io/<repository-name>/`.
-5. **First run.** **Actions → research-digest → Run workflow.** After that it runs every day by itself.
+5. **First run.** **Actions → research-digest → Run workflow.** After that it runs every day by itself. The schedule tries three times a day (GitHub sometimes skips scheduled runs); once the day's digest is built, the later tries do nothing, and emails are never sent twice. To test sending without rebuilding, run the workflow with **send_only** ticked.
 6. Optional: **accounts**, see below.
 
 If the commit step fails with a permission error, go to **Settings → Actions → General → Workflow permissions** and select **Read and write permissions**.
@@ -182,6 +182,7 @@ radar/
   archive.py           every recommended paper with its summary (state/archive.jsonl)
   site.py              JSON data for the website
   mailer.py            daily email to subscribed readers
+  runlog.py            which daily jobs are already done (state/runs.json)
   discord.py           daily post to a Discord channel
   presets.yaml         built-in topics
   i18n.py              English and Chinese text

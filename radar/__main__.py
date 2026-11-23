@@ -21,6 +21,7 @@ from .digest import TopicStats, render
 from .discord import post_daily
 from .mailer import send_daily
 from .models import Paper
+from .runlog import RunLog
 from .rank import assign_unique, score_papers
 from .archive import Archive, to_paper
 from .site import export_site
@@ -33,7 +34,7 @@ TOPIC_PAUSE = 5   # seconds between topics; arXiv rate-limits bursts
 HEAL_LIMIT = 150  # earlier items without AI summaries to retry per run
 
 
-def run(args: argparse.Namespace) -> Path:
+def run(args: argparse.Namespace) -> Path | None:
     cfg = load_config(args.config)
     if args.no_summary:
         cfg.summarize = False
@@ -42,6 +43,12 @@ def run(args: argparse.Namespace) -> Path:
         cfg.output_dir, cfg.site_dir = "offline-output/digests", "offline-output"
         cfg.state_path = "offline-output/seen.json"
         cfg.archive_path = "offline-output/archive.jsonl"
+        cfg.runs_path = "offline-output/runs.json"
+
+    runs = RunLog(cfg.runs_path)
+    if getattr(args, "skip_if_done", False) and runs.done("build", datetime.now(timezone.utc).date()):
+        log.info("today's digest is already built; nothing to do")
+        return None
 
     started = time.monotonic()
     budget = 60 * float(getattr(args, "max_minutes", 0) or 0)      # 0 = no limit
@@ -167,6 +174,7 @@ def run(args: argparse.Namespace) -> Path:
         state.prune(today)
         state.save()
         archive.save()
+        runs.mark("build", today)
     return out
 
 
@@ -193,6 +201,30 @@ def heal_archive(archive: Archive, cfg, name_of: dict[str, str], deadline: float
     return fixed
 
 
+def notify(args: argparse.Namespace) -> bool:
+    """Send today's email and Discord post, each at most once a day. False if one failed."""
+    cfg = load_config(args.config)
+    archive, today = Archive(cfg.archive_path), datetime.now(timezone.utc).date()
+    runs = RunLog(cfg.runs_path)
+    channels = [("email", send_daily)]
+    if args.cmd == "notify":
+        channels.append(("discord", post_daily))
+    ok = True
+    for job, channel in channels:      # one channel failing must not stop the others
+        if runs.done(job, today) and not getattr(args, "force", False):
+            log.info("%s: already sent today", job)
+            continue
+        try:
+            result = channel(cfg, archive, today, args.dry_run)
+        except Exception as exc:       # not marked as done, so a later run tries again
+            log.error("%s failed: %s", job, exc)
+            ok = False
+            continue
+        if result is not None and not args.dry_run:   # None: not set up yet
+            runs.mark(job, today)
+    return ok
+
+
 def list_presets() -> None:
     by_field: dict[str, list[tuple[str, dict]]] = {}
     for key, p in load_presets().items():
@@ -215,6 +247,8 @@ def main() -> None:
     r.add_argument("--offline", metavar="DIR",
                    help="read saved responses (arxiv.xml, biorxiv.json, medrxiv.json) from DIR")
     r.add_argument("--dry-run", action="store_true", help="do not update state/seen.json")
+    r.add_argument("--skip-if-done", action="store_true",
+                   help="do nothing if today's digest was already built (for scheduled runs)")
     r.add_argument("--max-minutes", type=float, default=0, metavar="M",
                    help="finish and save within about M minutes (0 = no limit)")
     r.add_argument("--backfill", type=int, default=0, metavar="N",
@@ -223,9 +257,11 @@ def main() -> None:
     e = sub.add_parser("email", help="email today's papers to readers who turned on daily email")
     e.add_argument("--config", default="config.yaml")
     e.add_argument("--dry-run", action="store_true", help="list the emails without sending")
+    e.add_argument("--force", action="store_true", help="send even if already sent today")
     n = sub.add_parser("notify", help="send today's daily email and Discord post")
     n.add_argument("--config", default="config.yaml")
     n.add_argument("--dry-run", action="store_true", help="show what would be sent")
+    n.add_argument("--force", action="store_true", help="send even if already sent today")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
@@ -235,19 +271,8 @@ def main() -> None:
     elif args.cmd == "presets":
         list_presets()
     elif args.cmd in ("email", "notify"):
-        cfg = load_config(args.config)
-        archive, today = Archive(cfg.archive_path), datetime.now(timezone.utc).date()
-        failed = False
-        channels = [send_daily] + ([post_daily] if args.cmd == "notify" else [])
-        for channel in channels:       # one channel failing must not stop the others
-            try:
-                channel(cfg, archive, today, args.dry_run)
-            except Exception as exc:
-                log.error("%s failed: %s", channel.__name__, exc)
-                failed = True
-        if failed:
+        if not notify(args):
             raise SystemExit(1)
-
 
 if __name__ == "__main__":
     main()

@@ -82,11 +82,12 @@ def _post(url: str, payload: dict) -> None:
         pass
 
 
-def post_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False) -> int:
+def post_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False) -> int | None:
+    """Number of messages posted, or None when Discord is not set up."""
     url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not url and not dry_run:
         log.info("Discord skipped: DISCORD_WEBHOOK_URL not set")
-        return 0
+        return None
     items = pick_items(cfg, archive, today)
     if not items:
         log.info("Discord: nothing new today")

@@ -11,7 +11,7 @@ import urllib.request
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "research-radar/0.7 (+https://github.com/Xfx689781/research-radar)"
+USER_AGENT = "research-radar/0.8 (+https://github.com/Xfx689781/research-radar)"
 RETRIES = 5
 SLOW_DOWN = (429, 503)       # "too many requests" / "try again later"
 

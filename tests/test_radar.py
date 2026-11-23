@@ -573,7 +573,7 @@ def test_send_daily_skips_without_secrets(tmp_path, monkeypatch):
     for k in ("SUPABASE_SECRET_KEY", "SMTP_HOST", "SMTP_USER", "SMTP_PASSWORD"):
         monkeypatch.delenv(k, raising=False)
     cfg = load_config(write_config(tmp_path))
-    assert mailer.send_daily(cfg, Archive(tmp_path / "x.jsonl"), date(2026, 11, 22)) == 0
+    assert mailer.send_daily(cfg, Archive(tmp_path / "x.jsonl"), date(2026, 11, 22)) is None
 
 
 # ---------------------------------------------------------------- time budget and healing
@@ -709,8 +709,47 @@ def test_discord_messages_and_posting(tmp_path, papers, monkeypatch):
     monkeypatch.setattr(discord.time, "sleep", lambda s: None)
     monkeypatch.delenv("DISCORD_WEBHOOK_URL", raising=False)
     a = _archive_with(tmp_path, papers)
-    assert discord.post_daily(cfg, a, date(2026, 11, 22)) == 0 and posted == []   # no secret: skip
+    assert discord.post_daily(cfg, a, date(2026, 11, 22)) is None and posted == []   # no secret: skip
     monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
     assert discord.post_daily(cfg, a, date(2026, 11, 22)) == 1
     assert posted[0][0] == "https://discord.example/webhook"
     assert discord.post_daily(cfg, a, date(2026, 11, 23)) == 0                    # nothing that day
+
+
+# ---------------------------------------------------------------- once-a-day guards
+
+def test_skip_if_done(tmp_path, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    cfg_path = write_config(tmp_path, runs_path=str(tmp_path / "state" / "runs.json"))
+    args = Namespace(config=str(cfg_path), no_summary=True, offline=str(FIXTURES), dry_run=False,
+                     keep_paths=True, skip_if_done=True)
+    assert run(args) is not None                 # first run of the day builds
+    assert run(args) is None                     # a later scheduled run skips
+    args.skip_if_done = False
+    assert run(args) is not None                 # a manual run still rebuilds
+
+
+def test_notify_sends_once_a_day_and_retries_failures(tmp_path, monkeypatch):
+    import radar.__main__ as main_mod
+    cfg_path = write_config(tmp_path, runs_path=str(tmp_path / "runs.json"))
+    calls = {"email": 0, "discord": 0}
+    outcome = {"email": "fail", "discord": None}
+
+    def fake_email(cfg, archive, today, dry_run):
+        calls["email"] += 1
+        if outcome["email"] == "fail":
+            raise RuntimeError("401")
+        return 1
+
+    def fake_discord(cfg, archive, today, dry_run):
+        calls["discord"] += 1
+        return outcome["discord"]
+
+    monkeypatch.setattr(main_mod, "send_daily", fake_email)
+    monkeypatch.setattr(main_mod, "post_daily", fake_discord)
+    args = Namespace(cmd="notify", config=str(cfg_path), dry_run=False, force=False)
+    assert main_mod.notify(args) is False        # email failed: not marked done
+    outcome["email"] = "ok"; outcome["discord"] = 2
+    assert main_mod.notify(args) is True         # retried; discord now set up
+    assert main_mod.notify(args) is True         # both done today: nothing sent again
+    assert calls == {"email": 2, "discord": 2}
