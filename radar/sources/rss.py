@@ -54,7 +54,11 @@ def _text(el: ET.Element | None) -> str:
 
 
 def parse_feed(xml_text: str, feed_url: str = "") -> list[Paper]:
-    root = ET.fromstring(xml_text)
+    text = xml_text.lstrip("\ufeff \r\n\t")
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as exc:
+        raise ValueError(f"{exc}; response starts {text[:80]!r}") from exc
     host = urlparse(feed_url).netloc.removeprefix("www.")
     items = []
     if root.tag == f"{ATOM}feed":                         # Atom

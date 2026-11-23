@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gzip
 import json
 import logging
 import time
@@ -10,7 +11,7 @@ import urllib.request
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "research-radar/0.6 (+https://github.com/Xfx689781/research-radar)"
+USER_AGENT = "research-radar/0.7 (+https://github.com/Xfx689781/research-radar)"
 RETRIES = 5
 SLOW_DOWN = (429, 503)       # "too many requests" / "try again later"
 
@@ -26,11 +27,15 @@ def wait_seconds(exc: Exception, attempt: int) -> float:
 
 
 def get_text(url: str, retries: int = RETRIES, timeout: int = 60) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT,
+                                              "Accept-Encoding": "gzip"})
     for attempt in range(1, retries + 1):
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return resp.read().decode("utf-8", errors="replace")
+                body = resp.read()
+                if resp.headers.get("Content-Encoding", "").lower() == "gzip" or body[:2] == b"\x1f\x8b":
+                    body = gzip.decompress(body)
+                return body.decode("utf-8-sig", errors="replace")
         except urllib.error.HTTPError as exc:
             if exc.code not in SLOW_DOWN and 400 <= exc.code < 500:
                 raise                     # a real client error will not fix itself

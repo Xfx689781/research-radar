@@ -11,7 +11,8 @@ import re
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 
 from ..models import Paper
 from .http import get_text
@@ -136,3 +137,70 @@ def fetch_by_ids(ids: list[str]) -> list[Paper]:
     time.sleep(DELAY)
     params = {"id_list": ",".join(ids), "max_results": len(ids)}
     return parse_feed(get_text(API_URL + "?" + urllib.parse.urlencode(params)))
+
+
+# ---------------------------------------------------------------- daily RSS listings
+#
+# arXiv's RSS feeds list one day's announcements, and one URL can combine many
+# categories (https://rss.arxiv.org/rss/math.PR+math.AP). For daily runs this
+# replaces one paged API query per topic with a handful of requests, which keeps
+# us clear of the API's rate limit. Feeds are empty on weekends.
+
+RSS_URL = "https://rss.arxiv.org/rss/"
+RSS_CHUNK = 15                 # categories per request
+DC = "{http://purl.org/dc/elements/1.1/}"
+ARXIV_NS = "{http://arxiv.org/schemas/atom}"
+_GUID_RE = re.compile(r"(?:oai:arXiv\.org:)?(?P<id>.+?)(?:v(?P<version>\d+))?$")
+NEW_TYPES = {"new", "cross"}   # skip "replace": an older paper's new version
+
+
+def parse_rss(xml_text: str) -> list[Paper]:
+    root = ET.fromstring(xml_text.lstrip("﻿ \r\n\t"))
+    channel = root.find("channel")
+    papers = []
+    for it in (channel.findall("item") if channel is not None else []):
+        kind = (it.findtext(f"{ARXIV_NS}announce_type") or "new").strip()
+        if kind not in NEW_TYPES:
+            continue
+        m = _GUID_RE.match((it.findtext("guid") or "").strip())
+        link = (it.findtext("link") or "").strip()
+        if not m or not link:
+            continue
+        arxiv_id, version = m.group("id"), int(m.group("version") or 1)
+        desc = " ".join((it.findtext("description") or "").split())
+        abstract = desc.split("Abstract:", 1)[1].strip() if "Abstract:" in desc else desc
+        categories = [c.text.strip() for c in it.findall("category") if c.text]
+        creators = (it.findtext(f"{DC}creator") or "").replace(" and ", ", ")
+        try:
+            published = parsedate_to_datetime(it.findtext("pubDate") or "")
+        except (TypeError, ValueError):
+            published = datetime.now(timezone.utc)
+        papers.append(Paper(
+            uid=f"arxiv:{arxiv_id}",
+            source="arxiv",
+            label=f"arXiv:{arxiv_id}v{version}",
+            title=" ".join((it.findtext("title") or "").split()),
+            authors=[a.strip() for a in creators.split(",") if a.strip()],
+            abstract=abstract,
+            primary_category=categories[0] if categories else "",
+            categories=categories,
+            published=published,
+            url=link.replace("http://", "https://", 1),
+            pdf_url=link.replace("http://", "https://", 1).replace("/abs/", "/pdf/"),
+            version=version,
+        ))
+    return papers
+
+
+def fetch_rss(categories: list[str]) -> list[Paper]:
+    """Today's new and cross-listed papers in these categories, de-duplicated."""
+    cats = sorted(set(categories))
+    out: dict[str, Paper] = {}
+    for i in range(0, len(cats), RSS_CHUNK):
+        if i:
+            time.sleep(DELAY)
+        chunk = cats[i:i + RSS_CHUNK]
+        for p in parse_rss(get_text(RSS_URL + "+".join(chunk))):
+            out.setdefault(p.uid, p)
+        log.info("  arXiv RSS %s…: %d papers so far", chunk[0], len(out))
+    return list(out.values())

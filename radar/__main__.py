@@ -65,6 +65,14 @@ def run(args: argparse.Namespace) -> Path:
     for d in days:
         state.forget_day(d)
     offline = sources.load_offline(args.offline) if args.offline else None
+    sources.clear_arxiv_today()
+    if offline is None and not backfill and cfg.arxiv_daily == "rss":
+        try:
+            n = sources.load_arxiv_today(cfg.topics)
+            log.info("arXiv: %d new papers in today's listings", n)
+        except Exception as exc:       # fall back to one API query per topic
+            log.warning("arXiv RSS failed (%s); using the API instead", exc)
+            sources.clear_arxiv_today()
 
     cands_by_topic: dict[str, list[Paper]] = {}
     seeds_by_topic: dict[str, list[str]] = {}
@@ -81,7 +89,7 @@ def run(args: argparse.Namespace) -> Path:
                 cands = sources.offline_candidates(topic, offline)
                 seeds: list[Paper] = []
             else:
-                if i:
+                if i and sources.uses_network(topic):
                     time.sleep(TOPIC_PAUSE)  # be polite to the APIs
                 log.info("[%s] fetching from %s", topic.slug, topic.source)
                 cands = sources.fetch(topic, start, now, cfg.max_per_topic)

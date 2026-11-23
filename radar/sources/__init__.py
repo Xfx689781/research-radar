@@ -12,8 +12,36 @@ from . import arxiv, biorxiv, rss
 SOURCES = ("arxiv", "biorxiv", "medrxiv", "rss")
 
 
+# Today's arXiv announcements from the RSS listings, shared by all arXiv topics
+# (see arxiv.fetch_rss). None means "not loaded": topics then use the API.
+_ARXIV_TODAY: list[Paper] | None = None
+
+
+def load_arxiv_today(topics) -> int:
+    """Fetch today's arXiv listings for every category any topic uses, in a few requests."""
+    global _ARXIV_TODAY
+    cats = sorted({c for t in topics if t.source == "arxiv" for c in t.categories})
+    _ARXIV_TODAY = arxiv.fetch_rss(cats) if cats else []
+    return len(_ARXIV_TODAY)
+
+
+def clear_arxiv_today() -> None:
+    global _ARXIV_TODAY
+    _ARXIV_TODAY = None
+
+
+def uses_network(topic) -> bool:
+    """False when the topic is served from data already loaded this run."""
+    return not (topic.source == "arxiv" and _ARXIV_TODAY is not None)
+
+
 def fetch(topic, start: datetime, end: datetime, max_results: int) -> list[Paper]:
     """All new papers for a topic between start and end."""
+    if topic.source == "arxiv" and _ARXIV_TODAY is not None:
+        papers = [p for p in _ARXIV_TODAY if set(p.categories) & set(topic.categories)]
+        if topic.keywords:
+            papers = [p for p in papers if matched_keywords(p, topic.keywords)]
+        return papers[:max_results]
     if topic.source == "arxiv":
         query = arxiv.build_query(topic.categories, topic.keywords, start, end)
         return arxiv.search(query, max_results=max_results)

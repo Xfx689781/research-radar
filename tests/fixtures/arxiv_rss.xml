@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEST DATA ONLY. Invented items in the format of arXiv's RSS listings; not real papers. -->
+<rss xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>math.PR, cs.LG updates on arXiv.org</title>
+    <item>
+      <title>[TEST] Mean-field limits of two-layer networks</title>
+      <link>https://arxiv.org/abs/2611.90001</link>
+      <description>arXiv:2611.90001v1 Announce Type: new 
+Abstract: We study the mean-field limit of two-layer networks and prove a convergence rate.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2611.90001v1</guid>
+      <category>math.PR</category>
+      <category>cs.LG</category>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:creator>Test Author A, Test Author B</dc:creator>
+    </item>
+    <item>
+      <title>[TEST] A cross-listed paper on image segmentation</title>
+      <link>https://arxiv.org/abs/2611.90002</link>
+      <description>arXiv:2611.90002v1 Announce Type: cross 
+Abstract: A fast segmentation network.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2611.90002v1</guid>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>cross</arxiv:announce_type>
+      <dc:creator>Test Author C</dc:creator>
+    </item>
+    <item>
+      <title>[TEST] An old paper's new version</title>
+      <link>https://arxiv.org/abs/2501.00001</link>
+      <description>arXiv:2501.00001v3 Announce Type: replace 
+Abstract: Revised.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2501.00001v3</guid>
+      <category>math.PR</category>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>replace</arxiv:announce_type>
+      <dc:creator>Test Author D</dc:creator>
+    </item>
+  </channel>
+</rss>

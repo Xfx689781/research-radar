@@ -608,3 +608,54 @@ def test_heal_archive_fills_missing_summaries(tmp_path, papers, monkeypatch):
     assert n == 1 and len(calls) == 1
     rec = next(r for r in a.records if r["uid"] == old.uid)
     assert rec["summary"]["ai"] and rec["summary"]["plain"] == "p"
+
+
+# ---------------------------------------------------------------- arXiv daily listings (RSS)
+
+def test_parse_arxiv_rss():
+    from radar.sources.arxiv import parse_rss
+    ps = parse_rss((FIXTURES / "arxiv_rss.xml").read_text(encoding="utf-8"))
+    assert [p.uid for p in ps] == ["arxiv:2611.90001", "arxiv:2611.90002"]   # "replace" skipped
+    p = ps[0]
+    assert p.label == "arXiv:2611.90001v1" and p.version == 1
+    assert p.abstract.startswith("We study the mean-field limit")
+    assert p.authors == ["Test Author A", "Test Author B"]
+    assert p.primary_category == "math.PR" and p.categories == ["math.PR", "cs.LG"]
+    assert p.pdf_url == "https://arxiv.org/pdf/2611.90001"
+
+
+def test_daily_arxiv_uses_few_requests(monkeypatch):
+    from radar.sources import arxiv
+    body = (FIXTURES / "arxiv_rss.xml").read_text(encoding="utf-8")
+    urls = []
+    monkeypatch.setattr(arxiv, "get_text", lambda url: urls.append(url) or body)
+    monkeypatch.setattr(arxiv, "DELAY", 0)
+    cfg = load_config(REPO / "config.yaml")
+    n = sources.load_arxiv_today(cfg.topics)
+    try:
+        cats = {c for t in cfg.topics if t.source == "arxiv" for c in t.categories}
+        assert len(urls) == -(-len(cats) // arxiv.RSS_CHUNK)          # ceil(categories / chunk)
+        assert all(u.startswith("https://rss.arxiv.org/rss/") for u in urls)
+        assert n == 2                                                  # de-duplicated across chunks
+        ml = next(t for t in cfg.topics if t.slug == "ml-theory")
+        prob = next(t for t in cfg.topics if t.slug == "probability")
+        assert not sources.uses_network(ml)
+        assert [p.uid for p in sources.fetch(ml, None, None, 600)] == ["arxiv:2611.90001"]  # keyword match
+        assert [p.uid for p in sources.fetch(prob, None, None, 600)] == ["arxiv:2611.90001"]
+    finally:
+        sources.clear_arxiv_today()
+    assert sources.uses_network(ml)
+
+
+def test_http_handles_gzip_and_bom(monkeypatch):
+    import gzip as _gzip
+    from radar.sources import http
+
+    class Resp:
+        headers = {"Content-Encoding": "gzip"}
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def read(self): return _gzip.compress("﻿<rss/>".encode("utf-8"))
+
+    monkeypatch.setattr(http.urllib.request, "urlopen", lambda req, timeout: Resp())
+    assert http.get_text("https://example.org/feed") == "<rss/>"

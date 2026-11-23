@@ -38,6 +38,7 @@ class Config:
     days: int = 7
     overlap_days: int = 3          # extra lookback so late-announced papers are not missed
     max_per_topic: int = 600       # cap on papers fetched per topic
+    arxiv_daily: str = "rss"       # "rss": today's listings in a few requests; "api": one query per topic
     min_score: float = 0.03        # below this, a paper is not worth recommending
     must_read: int = 3
     top_k_per_topic: int | None = None   # default papers per topic per day (a topic's own top_k wins)
