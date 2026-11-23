@@ -9,20 +9,21 @@ import yaml
 
 PRESETS_PATH = Path(__file__).with_name("presets.yaml")
 LANGUAGES = ("en", "zh")
-SOURCES = ("arxiv", "biorxiv", "medrxiv")
+SOURCES = ("arxiv", "biorxiv", "medrxiv", "rss")
 
 
 @dataclass
 class Topic:
     name: str                      # display name, e.g. "Probability"
     slug: str                      # short id, e.g. "probability"
-    categories: list[str]          # arXiv categories, or bioRxiv/medRxiv subject areas
     interest: str                  # free-text description used for ranking (English works best)
-    source: str = "arxiv"          # "arxiv", "biorxiv" or "medrxiv"
+    categories: list[str] = field(default_factory=list)  # arXiv categories / bioRxiv subject areas
+    source: str = "arxiv"          # "arxiv", "biorxiv", "medrxiv" or "rss"
+    feeds: list[str] = field(default_factory=list)       # RSS/Atom URLs, for source "rss"
     keywords: list[str] = field(default_factory=list)   # filter + ranking boost
     seed_ids: list[str] = field(default_factory=list)   # arXiv ids / bioRxiv DOIs you liked
     primary_only: bool = False     # arXiv: keep only papers whose primary category is listed
-    top_k: int = 3
+    top_k: int = 0                 # papers per day; 0 = use the config's top_k_per_topic
     name_zh: str = ""
     field: str = ""                # e.g. "Mathematics"; only used for documentation
 
@@ -39,7 +40,7 @@ class Config:
     max_per_topic: int = 600       # cap on papers fetched per topic
     min_score: float = 0.03        # below this, a paper is not worth recommending
     must_read: int = 3
-    top_k_per_topic: int | None = None   # if set, overrides every topic's top_k
+    top_k_per_topic: int | None = None   # default papers per topic per day (a topic's own top_k wins)
     include_revisions: bool = False      # bioRxiv/medRxiv: also show new versions of old preprints
     summarize: bool = True
     model: str = "claude-haiku-5-5"
@@ -50,6 +51,7 @@ class Config:
     archive_days: int = 90               # how long recommended papers are kept
     feed_days: int = 30                  # how far back each topic's feed goes on the website
     site_title: str = "Research Radar"
+    site_url: str = ""                   # public address of the site, used in emails
     supabase_url: str = ""               # optional login; see README "Accounts"
     supabase_anon_key: str = ""          # public by design; access is limited by row-level security
 
@@ -81,7 +83,9 @@ def resolve_topic(item, presets: dict[str, dict]) -> Topic:
     if unknown:
         raise ValueError(f"topic {data.get('slug', '?')!r}: unknown field(s) {sorted(unknown)}")
     topic = Topic(**data)
-    if not topic.categories:
+    if topic.source == "rss" and not topic.feeds:
+        raise ValueError(f"topic {topic.slug!r} uses source rss but lists no feeds")
+    if topic.source != "rss" and not topic.categories:
         raise ValueError(f"topic {topic.slug!r} has no categories")
     if topic.source not in SOURCES:
         raise ValueError(f"topic {topic.slug!r}: source must be one of {SOURCES}")
@@ -104,7 +108,6 @@ def load_config(path: str | Path) -> Config:
     cfg = Config(topics=topics, **raw)
     if cfg.language not in LANGUAGES:
         raise ValueError(f"language must be one of {LANGUAGES}")
-    if cfg.top_k_per_topic is not None:
-        for t in cfg.topics:
-            t.top_k = cfg.top_k_per_topic
+    for t in cfg.topics:            # a topic's own top_k wins over the global default
+        t.top_k = t.top_k or cfg.top_k_per_topic or 3
     return cfg

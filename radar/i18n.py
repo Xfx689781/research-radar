@@ -72,38 +72,44 @@ DIFFICULTIES = {
 }
 
 SYSTEM_PROMPT = {
-    "en": ("You write short briefs on new research papers for curious, educated readers who may "
-           "come from a different field. Explain jargon in everyday words when you must use it. "
-           "Write only from the given title and abstract: do not invent results, numbers, methods "
-           "or author details, and if the abstract is too thin, say so. Be measured; do not "
-           "overstate a paper's importance or call it a breakthrough unless the abstract shows why."),
-    "zh": ("你为好奇、受过良好教育、但可能来自其他领域的读者写新论文的简短介绍。必须用到术语时，用日常语言解释。"
-           "只根据给出的标题和摘要写，不要编造结论、数字、方法或作者信息；摘要信息不足时如实说明。"
-           "用中文写，专业术语第一次出现时附英文原词。语气克制，不要夸大论文的意义，除非摘要说明了理由，"
-           "不要称其为“突破”。"),
+    "en": ("You write short briefs on new research papers and AI news for curious, educated "
+           "readers who may come from a different field. Explain jargon in everyday words when "
+           "you must use it. Write only from the given title and text: do not invent results, "
+           "numbers, methods, people or companies' claims that are not in the text, and if the "
+           "text is too thin, say so. Be measured; do not overstate importance or call anything "
+           "a breakthrough unless the text shows why. Always answer by calling record_summary."),
+    "zh": ("你为好奇、受过良好教育、但可能来自其他领域的读者写新论文和 AI 新闻的简短介绍。必须用到术语时，用日常语言解释。"
+           "只根据给出的标题和正文写，不要编造正文里没有的结论、数字、方法或公司说法；信息不足时如实说明。"
+           "用中文写，专业术语第一次出现时附英文原词。语气克制，不要夸大意义，除非正文说明了理由，不要称其为“突破”。"
+           "务必通过调用 record_summary 作答。"),
 }
 
 USER_PROMPT = {
     "en": """Field: {topic}
+Kind: {kind}
 Title: {title}
-Abstract: {abstract}
+Text: {abstract}
 
-Reply with one JSON object and nothing else. Fields:
-- "one_liner": one sentence on what the paper does, for a specialist
-- "plain": 2-3 sentences for a reader from another field: what problem it tackles, what the authors did or found, in everyday words
-- "why": 1-2 sentences on why it is worth attention and what it may connect to (say so if unsure)
-- "background": what a reader needs to know to follow the core idea (short list)
-- "difficulty": one of "introductory", "intermediate", "research-level"
+Call record_summary with:
+- one_liner: one sentence on what this {kind} is about, for a specialist
+- plain: 2-3 sentences for a reader from another field: what problem or event it is about and what was done or found, in everyday words
+- why: 1-2 sentences on why it is worth attention and what it may connect to (say so if unsure)
+- background: what a reader needs to know to follow it (short list)
+- difficulty: introductory, intermediate or research-level
 """,
     "zh": """领域：{topic}
+类型：{kind}
 标题：{title}
-摘要：{abstract}
+正文：{abstract}
 
-只输出一个 JSON 对象，不要输出其他文字。字段：
-- "one_liner": 一句话说明这篇论文做了什么（给同行看）
-- "plain": 2 到 3 句，给其他领域的读者：它要解决什么问题，作者做了什么、发现了什么，用日常语言说
-- "why": 1 到 2 句，为什么值得关注、可能和哪些方向有联系（不确定就说不确定）
-- "background": 读懂核心思想需要知道什么（简短列举）
-- "difficulty": "入门"、"中等"、"研究级" 三者之一
+调用 record_summary，填写：
+- one_liner: 一句话说明这篇{kind}讲了什么（给同行看）
+- plain: 2 到 3 句，给其他领域的读者：它关于什么问题或事件，做了什么、发现了什么，用日常语言说
+- why: 1 到 2 句，为什么值得关注、可能和哪些方向有联系（不确定就说不确定）
+- background: 读懂它需要知道什么（简短列举）
+- difficulty: 入门、中等、研究级 三者之一
 """,
 }
+
+KIND = {"en": {"paper": "paper", "news": "news article"},
+        "zh": {"paper": "论文", "news": "新闻"}}

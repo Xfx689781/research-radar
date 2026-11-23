@@ -34,6 +34,7 @@ archive_path: state/archive.jsonl
 archive_days: 90
 feed_days: 30                   # how far back each topic's feed goes on the website
 site_title: Research Radar
+site_url: https://xfx689781.github.io/research-radar/   # used in the daily email
 
 # Optional accounts (sign in by email, topic choices sync across devices).
 # Leave empty and the site still works: choices are saved in the browser.
@@ -65,6 +66,8 @@ topics:
   - statistics-theory
   - statistical-methods
   # Computer science and AI
+  - ai-news
+  - model-architectures
   - ml-theory
   - large-language-models
   - computer-vision

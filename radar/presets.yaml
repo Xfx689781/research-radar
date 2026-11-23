@@ -1,7 +1,7 @@
 # Topic presets. In config.yaml, list a preset by its key (e.g. `- probability`)
 # or override fields (e.g. `- preset: probability` + `top_k: 5`).
 #
-# Fields: name, name_zh, field, source (arxiv | biorxiv | medrxiv), categories,
+# Fields: name, name_zh, field, source (arxiv | biorxiv | medrxiv | rss), categories or feeds,
 #         keywords (optional), primary_only (optional), interest, top_k.
 #   keywords      only fetch papers whose title or abstract contains one of them
 #   primary_only  arXiv: keep a paper only if its *primary* category is listed
@@ -225,6 +225,39 @@ ml-theory:
     implicit bias, benign overfitting and double descent, random matrix theory
     for high-dimensional learning, theory of diffusion models, conformal prediction,
     singular learning theory, information geometry.
+
+ai-news:
+  name: AI industry news
+  name_zh: AI 行业动态
+  field: Computer science and AI
+  source: rss
+  feeds:
+    - https://openai.com/news/rss.xml
+    - https://deepmind.google/blog/rss.xml
+    - https://research.google/blog/rss/
+    - https://huggingface.co/blog/feed.xml
+    - https://techcrunch.com/category/artificial-intelligence/feed/
+    - https://www.technologyreview.com/topic/artificial-intelligence/feed
+  interest: >
+    New AI models and releases, AI companies and labs, model launches, large language
+    models, open-weight models, AI products and agents, research announcements,
+    funding and partnerships, AI chips and compute, AI policy and regulation.
+  top_k: 5
+
+model-architectures:
+  name: Model architectures and training
+  name_zh: 模型架构与训练
+  field: Computer science and AI
+  categories: [cs.LG, cs.CL, cs.AI]
+  primary_only: true
+  keywords: [transformer, attention, mixture of experts, state space model, scaling law,
+             pretraining, tokenizer, long context, linear attention, distillation,
+             quantization, diffusion language model, architecture]
+  interest: >
+    New neural network architectures, transformers and attention variants, mixture of
+    experts, state space models and linear attention, scaling laws, pretraining recipes,
+    efficient training and inference, quantization and distillation, long-context models,
+    diffusion language models, multimodal model design.
 
 large-language-models:
   name: Large language models

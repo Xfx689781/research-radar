@@ -17,6 +17,7 @@ from pathlib import Path
 from . import sources
 from .config import load_config, load_presets
 from .digest import TopicStats, render
+from .mailer import send_daily
 from .models import Paper
 from .rank import assign_unique, score_papers
 from .archive import Archive
@@ -25,6 +26,8 @@ from .state import SeenState
 from .summarize import summarize_all
 
 log = logging.getLogger("radar")
+
+TOPIC_PAUSE = 5   # seconds between topics; arXiv rate-limits bursts
 
 
 def run(args: argparse.Namespace) -> Path:
@@ -38,17 +41,24 @@ def run(args: argparse.Namespace) -> Path:
         cfg.archive_path = "offline-output/archive.jsonl"
 
     now = datetime.now(timezone.utc)
+    today = now.date()
+    backfill = max(0, int(getattr(args, "backfill", 0) or 0))
+    # The days this run fills in: normally just today; with --backfill N, the last N days.
+    days = [today - timedelta(days=k) for k in range(max(backfill, 1) - 1, -1, -1)]
+
     # Look back a few extra days: arXiv and bioRxiv announce papers with a delay, so a
     # paper submitted just before the last run may only have appeared afterwards.
     # The seen-state makes sure nothing is recommended twice.
-    start = now - timedelta(days=cfg.days + cfg.overlap_days)
+    start = now - timedelta(days=max(cfg.days, backfill) + cfg.overlap_days)
     state = SeenState(cfg.state_path)
-    # A second run on the same day (say, after adding an API key) should redo today's
-    # selection, not skip today's papers as already seen.
-    state.forget_day(now.date())
+    # Re-running a day (say, after adding an API key) should redo that day's selection,
+    # not skip its papers as already seen.
+    for d in days:
+        state.forget_day(d)
     offline = sources.load_offline(args.offline) if args.offline else None
 
-    ranked: dict[str, list[Paper]] = {}
+    cands_by_topic: dict[str, list[Paper]] = {}
+    seeds_by_topic: dict[str, list[str]] = {}
     stats: dict[str, TopicStats] = {}
     for i, topic in enumerate(cfg.topics):
         st = stats[topic.slug] = TopicStats()
@@ -58,7 +68,7 @@ def run(args: argparse.Namespace) -> Path:
                 seeds: list[Paper] = []
             else:
                 if i:
-                    time.sleep(3)  # be polite to the APIs
+                    time.sleep(TOPIC_PAUSE)  # be polite to the APIs
                 log.info("[%s] fetching from %s", topic.slug, topic.source)
                 cands = sources.fetch(topic, start, now, cfg.max_per_topic)
                 seeds = sources.fetch_seeds(topic)
@@ -70,23 +80,40 @@ def run(args: argparse.Namespace) -> Path:
                 # by default only first versions count as new research
                 cands = [p for p in cands if p.source == "arxiv" or p.version <= 1]
             new = [p for p in cands if not state.is_seen(p.uid)]
-            ranked[topic.slug] = score_papers(new, topic, [s.text for s in seeds])
+            cands_by_topic[topic.slug] = new
+            seeds_by_topic[topic.slug] = [s.text for s in seeds]
             st.fetched, st.new = len(cands), len(new)
         except Exception as exc:  # one failing topic should not kill the digest
             log.error("[%s] failed: %s", topic.slug, exc)
             st.error = str(exc)
-            ranked[topic.slug] = []
+            cands_by_topic[topic.slug] = []
 
-    chosen = assign_unique(ranked, {t.slug: t.top_k for t in cfg.topics}, cfg.min_score)
+    def day_of(p: Paper):
+        """The morning a paper shows up in the feed: the day after it was posted."""
+        return min(today, max(days[0], p.published.date() + timedelta(days=1)))
+
+    top_k = {t.slug: t.top_k for t in cfg.topics}
+    chosen_by_day: dict = {}
+    for d in days:
+        ranked = {}
+        for t in cfg.topics:
+            pool = cands_by_topic.get(t.slug, [])
+            if backfill:
+                pool = [p for p in pool if day_of(p) == d]
+            ranked[t.slug] = score_papers(pool, t, seeds_by_topic.get(t.slug))
+        chosen_by_day[d] = assign_unique(ranked, top_k, cfg.min_score)
+
     name_of = {t.slug: t.display_name(cfg.language) for t in cfg.topics}
-    pairs = [(p, name_of[slug]) for slug, ps in chosen.items() for p in ps]
-    topic_of = {p.uid: name for p, name in pairs}
-
+    pairs = [(p, name_of[slug]) for chosen in chosen_by_day.values()
+             for slug, ps in chosen.items() for p in ps]
+    log.info("selected %d items over %d day(s)", len(pairs), len(days))
     summarize_all(pairs, enabled=cfg.summarize, model=cfg.model, language=cfg.language)
 
-    all_chosen = [p for p, _ in pairs]
+    chosen = chosen_by_day[today]
+    topic_of = {p.uid: name_of[slug] for slug, ps in chosen.items() for p in ps}
+    todays = [p for ps in chosen.values() for p in ps]
     # Highlights compare z-scores, because raw scores are higher in topics with keywords.
-    must_read = sorted(all_chosen, key=lambda p: p.zscore, reverse=True)[:cfg.must_read]
+    must_read = sorted(todays, key=lambda p: p.zscore, reverse=True)[:cfg.must_read]
     md = render(chosen, cfg.topics, must_read, stats,
                 (now - timedelta(days=cfg.days), now), topic_of, cfg.language)
 
@@ -95,18 +122,20 @@ def run(args: argparse.Namespace) -> Path:
     out = out_dir / f"{now:%Y-%m-%d}.md"
     out.write_text(md, encoding="utf-8")
     (out_dir / "latest.md").write_text(md, encoding="utf-8")
-    log.info("wrote %s (%d papers)", out, len(all_chosen))
+    log.info("wrote %s (%d items today)", out, len(todays))
 
     archive = Archive(cfg.archive_path)
-    archive.add(chosen, now.date())
-    archive.prune(now.date(), cfg.archive_days)
+    for d, ch in chosen_by_day.items():
+        archive.add(ch, d)
+    archive.prune(today, cfg.archive_days)
     if cfg.site_dir:
-        files = export_site(Path(cfg.site_dir), cfg, archive, now.date())
+        files = export_site(Path(cfg.site_dir), cfg, archive, today)
         log.info("wrote %d data files for the website", len(files))
 
     if not args.dry_run:
-        state.mark([p.uid for p in all_chosen], now.date())
-        state.prune(now.date())
+        for d, ch in chosen_by_day.items():
+            state.mark([p.uid for ps in ch.values() for p in ps], d)
+        state.prune(today)
         state.save()
         archive.save()
     return out
@@ -120,7 +149,8 @@ def list_presets() -> None:
         print(f"\n{fld}")
         for key, p in items:
             src = p.get("source", "arxiv")
-            print(f"  {key:<24} {p['name']}  [{src}: {', '.join(p['categories'])}]")
+            where = p.get("categories") or [u.split("/")[2] for u in p.get("feeds", [])]
+            print(f"  {key:<24} {p['name']}  [{src}: {', '.join(where)}]")
 
 
 def main() -> None:
@@ -133,7 +163,12 @@ def main() -> None:
     r.add_argument("--offline", metavar="DIR",
                    help="read saved responses (arxiv.xml, biorxiv.json, medrxiv.json) from DIR")
     r.add_argument("--dry-run", action="store_true", help="do not update state/seen.json")
+    r.add_argument("--backfill", type=int, default=0, metavar="N",
+                   help="also fill the website for the past N days (one-time, e.g. 7)")
     sub.add_parser("presets", help="list built-in topic presets")
+    e = sub.add_parser("email", help="email today's papers to readers who turned on daily email")
+    e.add_argument("--config", default="config.yaml")
+    e.add_argument("--dry-run", action="store_true", help="list the emails without sending")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
@@ -142,6 +177,9 @@ def main() -> None:
         run(args)
     elif args.cmd == "presets":
         list_presets()
+    elif args.cmd == "email":
+        cfg = load_config(args.config)
+        send_daily(cfg, Archive(cfg.archive_path), datetime.now(timezone.utc).date(), args.dry_run)
 
 
 if __name__ == "__main__":

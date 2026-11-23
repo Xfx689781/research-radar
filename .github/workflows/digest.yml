@@ -6,7 +6,12 @@ on:
     # a few hours after arXiv's evening announcement. For a weekly digest use "51 12 * * 0"
     # and set days: 7 in config.yaml.
     - cron: "51 12 * * *"
-  workflow_dispatch: {}   # lets you click "Run workflow" by hand
+  workflow_dispatch:      # lets you click "Run workflow" by hand
+    inputs:
+      backfill_days:
+        description: "Also fill the past N days (one-time, e.g. 7). Leave 0 for a normal run."
+        default: "0"
+        required: false
 
 permissions:
   contents: write         # needed to commit the new digest back to the repo
@@ -18,7 +23,7 @@ concurrency:
 jobs:
   digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v6
 
@@ -37,11 +42,12 @@ jobs:
         env:
           # Reads ANTHROPIC_API_KEY; XFX_API_KEY (this repository's original secret name) also works.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY || secrets.XFX_API_KEY }}
+          BACKFILL: ${{ inputs.backfill_days || '0' }}
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::warning::ANTHROPIC_API_KEY is not set, so the digest has no AI summaries. Add it under Settings > Secrets and variables > Actions."
           fi
-          python -m radar run
+          python -m radar run --backfill "${BACKFILL:-0}"
 
       - name: Commit digest
         run: |
@@ -51,3 +57,15 @@ jobs:
           git diff --cached --quiet || git commit -m "digest: $(date -u +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
+
+      - name: Send daily email
+        # Does nothing until SUPABASE_SECRET_KEY and the SMTP secrets are set (see README).
+        continue-on-error: true   # an email problem must never block the site update
+        env:
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+        run: python -m radar email

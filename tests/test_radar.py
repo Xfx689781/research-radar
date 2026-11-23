@@ -120,7 +120,7 @@ def test_presets_are_valid():
     presets = load_presets()
     for key in presets:
         t = resolve_topic(key, presets)
-        assert t.name and t.interest and t.categories and t.field
+        assert t.name and t.interest and (t.categories or t.feeds) and t.field
     fields = {p["field"] for p in presets.values()}
     assert {"Mathematics", "Statistics", "Computer science and AI", "Physics", "Astronomy",
             "Chemistry and materials", "Biology", "Medicine and health",
@@ -223,12 +223,13 @@ def test_summarize_with_fake_client(papers, monkeypatch):
     class FakeMessages:
         def create(self, **kw):
             seen.update(kw)
-            block = types.SimpleNamespace(text='{"one_liner": "A PAC-Bayes bound", "plain": "p", "why": "w", '
-                                               '"background": "probability", "difficulty": "intermediate"}')
-            return types.SimpleNamespace(content=[block])
+            block = types.SimpleNamespace(type="tool_use", name="record_summary", input={
+                "one_liner": "A PAC-Bayes bound", "plain": "p", "why": "w",
+                "background": "probability", "difficulty": "intermediate"})
+            return types.SimpleNamespace(content=[block], stop_reason="tool_use")
 
     fake = types.ModuleType("anthropic")
-    fake.Anthropic = lambda: types.SimpleNamespace(messages=FakeMessages())
+    fake.Anthropic = lambda **kw: types.SimpleNamespace(messages=FakeMessages())
     monkeypatch.setitem(sys.modules, "anthropic", fake)
     monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
 
@@ -236,6 +237,29 @@ def test_summarize_with_fake_client(papers, monkeypatch):
     summarize_all([(p, "ML theory")], enabled=True, model="test-model", language="en")
     assert p.summary["ai"] and p.summary["difficulty"] == "intermediate" and p.summary["plain"] == "p"
     assert "Field: ML theory" in seen["messages"][0]["content"]
+    assert seen["tool_choice"] == {"type": "tool", "name": "record_summary"}
+    assert seen["tools"][0]["input_schema"]["properties"]["difficulty"]["enum"][-1] == "research-level"
+
+
+def test_summarize_retries_then_falls_back(papers, monkeypatch):
+    calls = []
+
+    class Flaky:
+        def create(self, **kw):
+            calls.append(1)
+            if len(calls) < 2:
+                raise RuntimeError("overloaded")
+            return types.SimpleNamespace(content=[types.SimpleNamespace(type="text", text="sorry")],
+                                         stop_reason="end_turn")
+
+    fake = types.ModuleType("anthropic")
+    fake.Anthropic = lambda **kw: types.SimpleNamespace(messages=Flaky())
+    monkeypatch.setitem(sys.modules, "anthropic", fake)
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
+    monkeypatch.setattr("radar.summarize.time.sleep", lambda s: None)
+    p = by_uid(papers, "arxiv:2611.00002")
+    summarize_all([(p, "ML theory")], enabled=True, model="m")
+    assert len(calls) == 3 and p.summary["ai"] is False     # 3 attempts, then the fallback
 
 
 # ---------------------------------------------------------------- end to end
@@ -319,7 +343,7 @@ def test_zscores_are_standardized(papers):
 
 def test_top_k_per_topic_override(tmp_path):
     cfg = load_config(write_config(tmp_path, top_k_per_topic=1))
-    assert {t.top_k for t in cfg.topics} == {1}
+    assert {t.top_k for t in cfg.topics if t.slug != "ai-news"} == {1}
 
 
 def test_seen_papers_are_skipped_on_later_days(tmp_path, papers):
@@ -394,3 +418,152 @@ def test_biorxiv_falls_back_when_category_unknown(monkeypatch):
     out2 = biorxiv.search("medrxiv", ["oncology"], [], date(2026, 11, 15), date(2026, 11, 22))
     assert [p.uid for p in out2] == ["medrxiv:10.1/y"]
     assert sum("category=" not in u for u in calls) == 1     # the full scan happened only once
+
+
+# ---------------------------------------------------------------- news (RSS)
+
+def test_rss_parse_and_clean():
+    from radar.sources import rss
+    items = rss.parse_feed((FIXTURES / "rss.xml").read_text(encoding="utf-8"),
+                           "https://news.example.org/feed")
+    assert len(items) == 2                                     # the http:// item is skipped
+    first = items[0]
+    assert first.source == "rss" and first.uid.startswith("news:")
+    assert first.label == "Example AI News" and first.authors == ["Test Reporter"]
+    assert first.abstract == "The lab says the new model uses a mixture of experts & a longer context window."
+    assert first.published == datetime(2026, 11, 20, 10, tzinfo=timezone.utc)
+
+
+def test_atom_parse():
+    from radar.sources import rss
+    atom = """<feed xmlns="http://www.w3.org/2005/Atom"><title>Lab blog</title>
+      <entry><title>Hello</title><link href="https://lab.example.org/hello"/>
+      <published>2026-11-21T09:00:00Z</published><summary>Short teaser.</summary>
+      <author><name>A. Writer</name></author></entry></feed>"""
+    [p] = rss.parse_feed(atom, "https://lab.example.org/atom")
+    assert p.title == "Hello" and p.url == "https://lab.example.org/hello" and p.authors == ["A. Writer"]
+
+
+def test_rss_search_window_and_bad_feed(monkeypatch):
+    from radar.sources import rss
+    good = (FIXTURES / "rss.xml").read_text(encoding="utf-8")
+
+    def fake_get(url, retries=2):
+        if "broken" in url:
+            raise OSError("down")
+        return good
+
+    monkeypatch.setattr(rss, "get_text", fake_get)
+    out = rss.search(["https://broken.example.org/feed", "https://news.example.org/feed"], [],
+                     datetime(2026, 11, 20, tzinfo=timezone.utc), datetime(2026, 11, 22, tzinfo=timezone.utc))
+    assert [p.title for p in out] == ["[TEST] Example Lab releases an open-weight mixture-of-experts language model"]
+
+
+def test_ai_news_topic_in_offline_run(tmp_path, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    args = Namespace(config=str(write_config(tmp_path)), no_summary=True, offline=str(FIXTURES),
+                     dry_run=True, keep_paths=True)
+    md = run(args).read_text(encoding="utf-8")
+    news = md.split("## AI industry news")[1].split("\n## ")[0]
+    assert "mixture-of-experts" in news and "Example AI News" in news
+    data = json.loads((tmp_path / "docs" / "data" / "topics" / "ai-news.json").read_text())
+    assert data["papers"][0]["source"] == "rss"
+
+
+def test_topic_top_k_beats_global_default(tmp_path):
+    cfg = load_config(write_config(tmp_path, top_k_per_topic=2))
+    k = {t.slug: t.top_k for t in cfg.topics}
+    assert k["ai-news"] == 5 and k["probability"] == 2
+
+
+def test_rss_topic_needs_feeds():
+    with pytest.raises(ValueError, match="no feeds"):
+        resolve_topic({"name": "N", "slug": "n", "source": "rss", "interest": "x"}, load_presets())
+
+
+def test_rate_limit_waits_longer():
+    import urllib.error
+    from radar.sources.http import wait_seconds
+    e429 = urllib.error.HTTPError("u", 429, "Too Many", {}, None)
+    assert wait_seconds(e429, 1) == 20 and wait_seconds(e429, 3) == 60
+    assert wait_seconds(OSError("x"), 2) == 10
+
+
+# ---------------------------------------------------------------- backfill
+
+def test_backfill_spreads_papers_over_days(tmp_path, monkeypatch):
+    """With --backfill, each paper lands on the morning after it was posted."""
+    import radar.__main__ as main_mod
+
+    class FixedDate(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return datetime(2026, 11, 22, 13, 0, tzinfo=timezone.utc)
+
+    monkeypatch.setattr(main_mod, "datetime", FixedDate)
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    args = Namespace(config=str(write_config(tmp_path)), no_summary=True, offline=str(FIXTURES),
+                     dry_run=False, keep_paths=True, backfill=7)
+    run(args)
+    from radar.archive import Archive
+    a = Archive(tmp_path / "state" / "archive.jsonl")
+    day = {r["uid"]: r["date"] for r in a.records}
+    assert day["arxiv:2611.00001"] == "2026-11-18"     # posted Nov 17
+    assert day["arxiv:2611.00002"] == "2026-11-20"     # posted Nov 19
+    assert day["arxiv:2611.00006"] == "2026-11-22"     # posted Nov 21
+    assert len(set(day.values())) >= 3
+
+
+# ---------------------------------------------------------------- daily email
+
+def test_build_email(tmp_path, papers):
+    from radar.archive import Archive
+    from radar.mailer import build_email
+    cfg = load_config(write_config(tmp_path))
+    a = Archive(tmp_path / "a.jsonl")
+    p = by_uid(papers, "arxiv:2611.00002")
+    p.summary = {"plain": "Big networks <b>generalize</b>.", "ai": True}
+    a.add({"ml-theory": [p]}, date(2026, 11, 22))
+    subject, text, body = build_email(["ml-theory", "probability", "gone"], a, cfg,
+                                      date(2026, 11, 22), "https://site.example/")
+    assert "1 new" in subject and p.url in text
+    assert "&lt;b&gt;generalize&lt;/b&gt;" in body and "<b>generalize" not in body   # escaped
+    assert "MACHINE LEARNING THEORY" in text and "untick" in text
+    assert build_email(["probability"], a, cfg, date(2026, 11, 22), "x") is None
+
+
+def test_send_daily_with_fake_services(tmp_path, papers, monkeypatch):
+    import radar.mailer as mailer
+    from radar.archive import Archive
+    cfg = load_config(write_config(tmp_path, supabase_url="https://db.example.co"))
+    a = Archive(tmp_path / "a.jsonl")
+    a.add({"ml-theory": [by_uid(papers, "arxiv:2611.00002")]}, date(2026, 11, 22))
+
+    monkeypatch.setattr(mailer, "fetch_subscribers", lambda url, key: [
+        {"email": "a@example.org", "topics": ["ml-theory"]},
+        {"email": "b@example.org", "topics": ["probability"]}])          # nothing today for b
+    sent = []
+
+    class FakeSMTP:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def login(self, u, p): sent.append(("login", u))
+        def send_message(self, m): sent.append(("to", m["To"]))
+
+    monkeypatch.setattr(mailer.smtplib, "SMTP_SSL", FakeSMTP)
+    monkeypatch.setattr(mailer.time, "sleep", lambda s: None)
+    for k, v in {"SUPABASE_SECRET_KEY": "sb_secret_x", "SMTP_HOST": "smtp.example.org",
+                 "SMTP_USER": "me@example.org", "SMTP_PASSWORD": "pw"}.items():
+        monkeypatch.setenv(k, v)
+    assert mailer.send_daily(cfg, a, date(2026, 11, 22)) == 1
+    assert sent == [("login", "me@example.org"), ("to", "a@example.org")]
+
+
+def test_send_daily_skips_without_secrets(tmp_path, monkeypatch):
+    import radar.mailer as mailer
+    from radar.archive import Archive
+    for k in ("SUPABASE_SECRET_KEY", "SMTP_HOST", "SMTP_USER", "SMTP_PASSWORD"):
+        monkeypatch.delenv(k, raising=False)
+    cfg = load_config(write_config(tmp_path))
+    assert mailer.send_daily(cfg, Archive(tmp_path / "x.jsonl"), date(2026, 11, 22)) == 0

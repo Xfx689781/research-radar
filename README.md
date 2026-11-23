@@ -4,7 +4,7 @@ A daily research feed for curious readers. Readers open the website, choose the 
 
 **Open the site:** https://xfx689781.github.io/research-radar/
 
-Behind the site, a GitHub Actions job runs every morning: it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv** for 78 topics across mathematics, statistics, computer science and AI, physics, astronomy, chemistry and materials, biology, medicine, economics and finance, and engineering, picks the most relevant papers per topic, asks Claude for summaries, and publishes them.
+Behind the site, a GitHub Actions job runs every morning: it pulls new papers from **arXiv**, **bioRxiv** and **medRxiv**, plus AI news from the public feeds of AI labs and tech news sites, for 80 topics across mathematics, statistics, computer science and AI, physics, astronomy, chemistry and materials, biology, medicine, economics and finance, and engineering, picks the most relevant papers per topic, asks Claude for summaries, and publishes them.
 
 ```
 arXiv / bioRxiv / medRxiv ──► fetch per topic ──► skip papers already recommended
@@ -24,6 +24,7 @@ Each paper gets:
 1. Open the site and pick your topics.
 2. Come back any day; your feed shows the latest papers in your topics. Use the chips to look at one topic at a time, and **Edit topics** to change your choice.
 3. Your choice is saved in your browser. If the site has accounts turned on, **Sign in** with your email to keep your topics on every device.
+4. Signed in, tick **Email me these every morning** to get the day's papers in your topics by email. Untick it to stop.
 
 ## Run your own copy in 10 minutes
 
@@ -36,7 +37,7 @@ Each paper gets:
 
 If the commit step fails with a permission error, go to **Settings → Actions → General → Workflow permissions** and select **Read and write permissions**.
 
-**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper: with 78 topics and up to 2 papers each, at most about 156 short requests a day (fewer on quiet days and weekends). See Anthropic's pricing page for current rates, and set a spending limit in the console. Lower `top_k_per_topic` or remove topics to spend less. GitHub Actions and Pages are free for public repositories.
+**Cost.** Summaries use `claude-haiku-5-5` and only the abstract of each selected paper: with 80 topics and 2 papers each (5 for AI news), at most about 165 short requests a day (fewer on quiet days and weekends). See Anthropic's pricing page for current rates, and set a spending limit in the console. Lower `top_k_per_topic` or remove topics to spend less. GitHub Actions and Pages are free for public repositories.
 
 ## Accounts (optional)
 
@@ -52,6 +53,24 @@ The anon key is meant to be public; row-level security is what protects each rea
 
 Supabase's built-in email service only sends a few sign-in emails per hour, which is fine for a handful of readers. For more, connect your own SMTP provider under **Authentication → Emails**.
 
+## Daily email (optional)
+
+Signed-in readers can tick **Email me these every morning**. To make the daily job actually send those emails:
+
+1. **Database.** Run `supabase/schema.sql` again in Supabase's SQL Editor. It is safe to re-run; it adds the `email` and `email_daily` columns.
+2. **Supabase secret key.** In Supabase: **Project Settings → API Keys → Secret keys**, create or copy a secret key (`sb_secret_...`). Add it to GitHub as the Actions secret `SUPABASE_SECRET_KEY`. This key can read every reader's settings, so it must only ever live in GitHub Secrets.
+3. **An email account to send from.** Any SMTP account works. With Gmail: turn on 2-Step Verification for the Google account, then create an **App password** (Google Account → Security → App passwords). Add these GitHub Actions secrets:
+
+   | Secret | Value |
+   |---|---|
+   | `SMTP_HOST` | `smtp.gmail.com` |
+   | `SMTP_PORT` | `465` |
+   | `SMTP_USER` | the Gmail address |
+   | `SMTP_PASSWORD` | the 16-character app password |
+   | `MAIL_FROM` | optional, e.g. `Research Radar <you@gmail.com>` |
+
+The workflow's last step then emails each subscriber the day's items in their topics (nobody gets an empty email). Gmail allows a few hundred messages a day, plenty for a small group; for more readers, use a transactional email service's SMTP settings instead. Set `site_url` in `config.yaml` so the email links to your site.
+
 ## Choosing topics
 
 List the built-in presets:
@@ -64,7 +83,7 @@ python -m radar presets
 |---|---|
 | Mathematics (17) | Probability, Differential geometry, Partial differential equations, Harmonic analysis, Complex analysis, Operator algebras and spectral theory, Algebra, Representation theory, Number theory, Algebraic geometry, Topology, Dynamical systems, Combinatorics, Numerical analysis, Logic and foundations, Mathematical physics, Optimization and control |
 | Statistics (2) | Statistics theory, Statistical methods and applications |
-| Computer science and AI (14) | Machine learning theory, Large language models, Computer vision, Reinforcement learning, AI safety and alignment, Interpretability, AI for mathematics, Robotics and embodied AI, Security and cryptography, Algorithms and complexity, Programming languages and formal methods, Systems and networking, Human-computer interaction, Information theory |
+| Computer science and AI (16) | Machine learning theory, AI industry news, Model architectures and training, Large language models, Computer vision, Reinforcement learning, AI safety and alignment, Interpretability, AI for mathematics, Robotics and embodied AI, Security and cryptography, Algorithms and complexity, Programming languages and formal methods, Systems and networking, Human-computer interaction, Information theory |
 | Physics (10) | High-energy theory and gravity, Statistical physics, Condensed matter, Particle physics, Nuclear physics, Quantum information and computing, Optics and atomic physics, Fluids and plasma, Biological physics, Climate, atmosphere and Earth |
 | Astronomy (5) | Cosmology, Galaxies, Exoplanets and planetary science, High-energy astrophysics, Stars and the Sun |
 | Chemistry and materials (6) | Chemical physics, Materials science, Soft matter and polymers, AI for chemistry and materials, Biochemistry, Pharmacology and drug discovery |
@@ -96,6 +115,7 @@ topics:
 - `primary_only: true`: keep a paper only if its primary arXiv category is one of the topic's categories, which drops cross-listed papers from other fields.
 - `language`: `en` or `zh` for the digest text and AI summaries.
 - `top_k_per_topic`: papers per topic per day. `feed_days`: how far back the site shows papers.
+- **News topics** use `source: rss` and a list of `feeds` (RSS or Atom URLs) instead of `categories`. Only the headline, link, date and a short teaser are used; readers click through to the original article. See `ai-news` in `radar/presets.yaml`.
 - **Weekly instead of daily:** set `days: 7` and change the cron line in `.github/workflows/digest.yml` to `"51 12 * * 0"` (Sundays).
 
 ## Run locally
@@ -111,6 +131,8 @@ ANTHROPIC_API_KEY=... python -m radar run                     # real run with su
 ```
 
 A real run writes the site data (`docs/data/`), a Markdown digest of the day (`docs/digests/<date>.md`, handy for reading on GitHub) and the archive of recommended papers (`state/archive.jsonl`). It takes several minutes because the APIs ask clients to pause between requests.
+
+**Filling past days.** The site's "last 7 / 30 days" views fill up as the daily job runs. To fill the past week at once, run the workflow by hand with **backfill_days** set to `7` (or locally: `python -m radar run --backfill 7`). It fetches the whole period once and picks each day's papers by posting date. It makes roughly 7 days' worth of summary requests, so run it once, not daily.
 
 To look at the website locally: `python -m http.server -d docs 8000` and open http://localhost:8000.
 
@@ -138,11 +160,13 @@ Other details:
 radar/
   sources/arxiv.py     arXiv API query and Atom parsing (standard library only)
   sources/biorxiv.py   bioRxiv / medRxiv API
+  sources/rss.py       RSS / Atom news feeds
   rank.py              scoring and cross-topic de-duplication
   summarize.py         Claude summaries, with a fallback when no key is set
   digest.py            daily Markdown digest
   archive.py           every recommended paper with its summary (state/archive.jsonl)
   site.py              JSON data for the website
+  mailer.py            daily email to subscribed readers
   presets.yaml         built-in topics
   i18n.py              English and Chinese text
 config.yaml            your topics and settings
@@ -166,8 +190,8 @@ tests/                 unit tests and invented test data (not real papers)
 - [ ] Try sentence embeddings instead of TF-IDF, and compare precision@k.
 - [ ] Learn from feedback: add liked papers to `seed_ids` automatically.
 - [ ] More sources: ChemRxiv, NBER, Semantic Scholar citation signals.
-- [ ] A daily email to each signed-in reader with their topics.
 - [ ] RSS feed per topic.
+- [ ] Anthropic news (no public feed yet) and more AI labs.
 - [ ] Check AI summaries for numbers or claims that are not in the abstract.
 
 ## Acknowledgements

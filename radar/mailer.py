@@ -1,0 +1,155 @@
+"""Daily email: send each subscribed reader today's papers in their topics.
+
+Readers opt in on the website (signed in, "Email me these every morning"),
+which stores email_daily = true in the Supabase `preferences` table.
+
+This job needs, as GitHub Actions secrets (all optional; without them it does nothing):
+  SUPABASE_SECRET_KEY   Supabase secret key (or legacy service_role key), to read subscribers
+  SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD   any SMTP account, e.g. Gmail + app password
+  MAIL_FROM             optional sender, defaults to SMTP_USER
+"""
+
+from __future__ import annotations
+
+import html
+import json
+import logging
+import os
+import smtplib
+import ssl
+import time
+import urllib.parse
+import urllib.request
+from dataclasses import dataclass
+from datetime import date
+from email.message import EmailMessage
+
+from .archive import Archive
+from .config import Config
+
+log = logging.getLogger(__name__)
+
+
+@dataclass
+class SmtpSettings:
+    host: str
+    port: int
+    user: str
+    password: str
+    sender: str
+
+    @classmethod
+    def from_env(cls) -> "SmtpSettings | None":
+        host, user, pw = (os.environ.get(k, "").strip() for k in ("SMTP_HOST", "SMTP_USER", "SMTP_PASSWORD"))
+        if not (host and user and pw):
+            return None
+        port = int(os.environ.get("SMTP_PORT", "465") or 465)
+        return cls(host, port, user, pw, os.environ.get("MAIL_FROM", "").strip() or user)
+
+
+def fetch_subscribers(supabase_url: str, key: str) -> list[dict]:
+    """Rows with email_daily = true, read with the secret key (bypasses row-level security)."""
+    query = urllib.parse.urlencode({"select": "email,topics", "email_daily": "eq.true"})
+    headers = {"apikey": key, "Accept": "application/json"}
+    if not key.startswith("sb_"):          # legacy JWT keys also go in the Authorization header
+        headers["Authorization"] = f"Bearer {key}"
+    req = urllib.request.Request(f"{supabase_url.rstrip('/')}/rest/v1/preferences?{query}",
+                                 headers=headers)
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        rows = json.loads(resp.read().decode("utf-8"))
+    return [r for r in rows if r.get("email") and r.get("topics")]
+
+
+def build_email(topics: list[str], archive: Archive, cfg: Config, today: date,
+                site_url: str) -> tuple[str, str, str] | None:
+    """(subject, plain text, html) with today's items in these topics, or None if there are none."""
+    names = {t.slug: t.display_name(cfg.language) for t in cfg.topics}
+    sections = []
+    for slug in topics:
+        if slug not in names:
+            continue
+        items = [r for r in archive.for_topic(slug) if r["date"] == today.isoformat()]
+        if items:
+            sections.append((names[slug], items))
+    if not sections:
+        return None
+
+    n = sum(len(items) for _, items in sections)
+    subject = f"{cfg.site_title}: {n} new for you · {today:%b %d}"
+
+    text = [f"{cfg.site_title} · {today:%A, %B %d}", ""]
+    parts = [f'<div style="font-family:system-ui,Arial,sans-serif;max-width:640px;margin:auto;'
+             f'color:#1d1f22;line-height:1.5">'
+             f'<h1 style="font-family:Georgia,serif;font-size:22px;margin:0 0 4px">{html.escape(cfg.site_title)}</h1>'
+             f'<p style="color:#5d636b;margin:0 0 18px">{today:%A, %B %d} · {n} new in your topics</p>']
+    for name, items in sections:
+        text += [name.upper(), ""]
+        parts.append(f'<h2 style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;'
+                     f'color:#0f6b5c;margin:26px 0 8px">{html.escape(name)}</h2>')
+        for r in items:
+            s = r.get("summary") or {}
+            blurb = s.get("plain") or s.get("one_liner") or ""
+            text += [r["title"], r["url"], blurb, ""]
+            parts.append(
+                f'<div style="border:1px solid #e6e2da;border-radius:10px;padding:14px 16px;margin:0 0 10px">'
+                f'<a href="{html.escape(r["url"], quote=True)}" style="font-family:Georgia,serif;'
+                f'font-size:17px;color:#1d1f22;font-weight:600;text-decoration:none">{html.escape(r["title"])}</a>'
+                f'<div style="color:#8a9098;font-size:13px;margin:2px 0 8px">{html.escape(r.get("label") or "")}</div>'
+                f'<div>{html.escape(blurb)}</div></div>')
+    footer = (f"You get this email because you turned on the daily email at {site_url}. "
+              f"To stop it or change topics, open the site, sign in and untick "
+              f"\"Email me these every morning\". Summaries are written by AI and can be wrong.")
+    text += ["--", footer]
+    parts.append(f'<p style="color:#8a9098;font-size:12px;margin-top:26px">'
+                 f'<a href="{html.escape(site_url, quote=True)}" style="color:#0f6b5c">Open your feed</a><br>'
+                 f'{html.escape(footer)}</p></div>')
+    return subject, "\n".join(text), "".join(parts)
+
+
+def send_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False) -> int:
+    key = os.environ.get("SUPABASE_SECRET_KEY", "").strip()
+    smtp = SmtpSettings.from_env()
+    if not (cfg.supabase_url and key):
+        log.info("daily email skipped: SUPABASE_SECRET_KEY or supabase_url not set")
+        return 0
+    if not smtp and not dry_run:
+        log.info("daily email skipped: SMTP settings not set")
+        return 0
+
+    subscribers = fetch_subscribers(cfg.supabase_url, key)
+    log.info("daily email: %d subscriber(s)", len(subscribers))
+    messages = []
+    for sub in subscribers:
+        built = build_email(sub["topics"], archive, cfg, today, cfg.site_url)
+        if not built:
+            continue
+        subject, text, body = built
+        msg = EmailMessage()
+        msg["Subject"], msg["To"] = subject, sub["email"]
+        msg["From"] = smtp.sender if smtp else "dry-run@example.org"
+        msg.set_content(text)
+        msg.add_alternative(body, subtype="html")
+        messages.append(msg)
+
+    if dry_run:
+        for m in messages:
+            log.info("would send to %s: %s", m["To"], m["Subject"])
+        return len(messages)
+
+    sent = 0
+    context = ssl.create_default_context()
+    server = (smtplib.SMTP_SSL(smtp.host, smtp.port, context=context, timeout=60) if smtp.port == 465
+              else smtplib.SMTP(smtp.host, smtp.port, timeout=60))
+    with server:
+        if smtp.port != 465:
+            server.starttls(context=context)
+        server.login(smtp.user, smtp.password)
+        for m in messages:
+            try:
+                server.send_message(m)
+                sent += 1
+            except smtplib.SMTPException as exc:   # one bad address should not stop the rest
+                log.warning("could not email %s: %s", m["To"], exc)
+            time.sleep(1)                           # stay well under provider rate limits
+    log.info("daily email: sent %d of %d", sent, len(messages))
+    return sent

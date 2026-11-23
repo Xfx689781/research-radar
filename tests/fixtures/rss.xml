@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEST DATA ONLY. Invented news items for unit tests; not real articles. -->
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Example AI News</title>
+    <link>https://news.example.org</link>
+    <item>
+      <title>[TEST] Example Lab releases an open-weight mixture-of-experts language model</title>
+      <link>https://news.example.org/2026/11/moe-model</link>
+      <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Test Reporter</dc:creator>
+      <description><![CDATA[<p>The lab says the <b>new model</b> uses a mixture of experts &amp; a longer context window.</p><script>alert(1)</script>]]></description>
+    </item>
+    <item>
+      <title>[TEST] A startup raises funding for AI chips</title>
+      <link>https://news.example.org/2026/11/chips</link>
+      <pubDate>Thu, 19 Nov 2026 08:00:00 +0000</pubDate>
+      <description>The company designs accelerators for large language model inference.</description>
+    </item>
+    <item>
+      <title>[TEST] Item without a secure link is skipped</title>
+      <link>http://insecure.example.org/item</link>
+      <pubDate>Thu, 19 Nov 2026 08:00:00 +0000</pubDate>
+      <description>Skipped.</description>
+    </item>
+  </channel>
+</rss>
