@@ -401,8 +401,11 @@ $("signin-form").addEventListener("submit", async (ev) => {
     email, options: { emailRedirectTo: location.origin + location.pathname } });
   $("send-link").disabled = false;
   msg.hidden = false;
-  msg.textContent = error ? `Could not send the link: ${error.message}`
-                          : "Check your inbox and open the link on this device.";
+  const limited = error && /rate limit|too many/i.test(error.message || "");
+  msg.textContent = limited
+    ? "Too many sign-in emails were sent recently. Please wait a while (up to an hour) and try again."
+    : error ? `Could not send the link: ${error.message}`
+            : "Check your inbox (and the spam folder) and open the link on this device.";
 });
 
 // ------------------------------------------------------------------ topic picker
