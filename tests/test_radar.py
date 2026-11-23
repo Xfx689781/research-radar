@@ -753,3 +753,38 @@ def test_notify_sends_once_a_day_and_retries_failures(tmp_path, monkeypatch):
     assert main_mod.notify(args) is True         # retried; discord now set up
     assert main_mod.notify(args) is True         # both done today: nothing sent again
     assert calls == {"email": 2, "discord": 2}
+
+
+def test_fetch_subscribers_without_unsubscribe_column(monkeypatch):
+    import io
+    import urllib.error
+    import radar.mailer as mailer
+    seen = []
+
+    class Resp(io.BytesIO):
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+
+    def fake_urlopen(req, timeout):
+        seen.append(req.full_url)
+        if "unsubscribe_token" in req.full_url:
+            raise urllib.error.HTTPError(req.full_url, 400, "Bad Request", {}, io.BytesIO(
+                b'{"message":"column preferences.unsubscribe_token does not exist"}'))
+        return Resp(b'[{"email": "a@example.org", "topics": ["probability"]}, {"email": null, "topics": []}]')
+
+    monkeypatch.setattr(mailer.urllib.request, "urlopen", fake_urlopen)
+    rows = mailer.fetch_subscribers("https://db.example.co", "sb_secret_x")
+    assert rows == [{"email": "a@example.org", "topics": ["probability"]}] and len(seen) == 2
+
+
+def test_fetch_subscribers_reports_other_errors(monkeypatch):
+    import io
+    import urllib.error
+    import radar.mailer as mailer
+
+    def fake_urlopen(req, timeout):
+        raise urllib.error.HTTPError(req.full_url, 401, "Unauthorized", {}, io.BytesIO(b'{"message":"Invalid API key"}'))
+
+    monkeypatch.setattr(mailer.urllib.request, "urlopen", fake_urlopen)
+    with pytest.raises(RuntimeError, match="401.*Invalid API key"):
+        mailer.fetch_subscribers("https://db.example.co", "sb_secret_x")

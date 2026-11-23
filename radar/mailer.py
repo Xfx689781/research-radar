@@ -18,6 +18,7 @@ import os
 import smtplib
 import ssl
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
@@ -58,15 +59,34 @@ def _jwt_role(key: str) -> str:
 
 
 def fetch_subscribers(supabase_url: str, key: str) -> list[dict]:
-    """Rows with email_daily = true, read with the secret key (bypasses row-level security)."""
-    query = urllib.parse.urlencode({"select": "email,topics,unsubscribe_token", "email_daily": "eq.true"})
+    """Rows with email_daily = true, read with the secret key (bypasses row-level security).
+
+    If the database does not have the unsubscribe_token column yet (supabase/schema.sql
+    not re-run), the emails still go out, just without the one-click unsubscribe link.
+    """
     headers = {"apikey": key, "Accept": "application/json"}
     if not key.startswith("sb_"):          # legacy JWT keys also go in the Authorization header
         headers["Authorization"] = f"Bearer {key}"
-    req = urllib.request.Request(f"{supabase_url.rstrip('/')}/rest/v1/preferences?{query}",
-                                 headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        rows = json.loads(resp.read().decode("utf-8"))
+
+    def get(columns: str) -> list[dict]:
+        query = urllib.parse.urlencode({"select": columns, "email_daily": "eq.true"})
+        req = urllib.request.Request(f"{supabase_url.rstrip('/')}/rest/v1/preferences?{query}",
+                                     headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:      # say why, not just the status code
+            detail = exc.read().decode("utf-8", errors="replace")[:300]
+            raise RuntimeError(f"Supabase answered {exc.code}: {detail}") from exc
+
+    try:
+        rows = get("email,topics,unsubscribe_token")
+    except RuntimeError as exc:
+        if "unsubscribe_token" not in str(exc):
+            raise
+        log.warning("the database has no unsubscribe_token column yet; run supabase/schema.sql "
+                    "again to add one-click unsubscribe links. Sending without them for now.")
+        rows = get("email,topics")
     return [r for r in rows if r.get("email") and r.get("topics")]
 
 
