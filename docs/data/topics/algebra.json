@@ -1,5 +1,49 @@
 {
  "slug": "algebra",
  "updated": "2026-11-23",
- "papers": []
+ "papers": [
+  {
+   "uid": "arxiv:2611.27824",
+   "title": "On coherence of enveloping algebras of infinite-dimensional Lie algebras",
+   "url": "https://arxiv.org/abs/2611.27824",
+   "authors": [
+    "Susan J. Sierra",
+    "James Timmins"
+   ],
+   "label": "arXiv:2611.27824v1",
+   "primary_category": "math.RA",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "The paper determines when enveloping algebras of infinite-dimensional Lie algebras (loop algebras and Witt-type algebras in particular) are coherent, and shows related graded and filtered rings inherit coherence.",
+    "plain": "The paper studies a property called \"coherence\" for a family of algebraic structures built from infinite-dimensional symmetry objects (Lie algebras). Coherence roughly says that certain systems of equations behave nicely, so that the solutions form a well-controlled collection. The authors find that for loop algebras, coherence holds exactly when the underlying finite-dimensional algebra is nilpotent, and they report several related results.",
+    "why": "Coherence is a basic regularity property in ring theory, and the paper sharpens which infinite-dimensional algebras have it. The results also show that a homomorphic image of U(W), used in earlier work by the first author and Walton to prove non-Noetherianity, is not coherent. The text does not say more about wider applications.",
+    "background": "- Lie algebra: a vector space with a bracket operation, used to describe continuous symmetries.\n- Universal enveloping algebra U(g): a ring built from a Lie algebra g that encodes its representations.\n- Coherent ring: a ring in which finitely generated ideals have finitely presented syzygies (informally, the relations among relations are controlled).\n- Noetherian ring: every ideal is finitely generated; non-Noetherian means this fails.\n- Loop algebra: functions from a circle (or Laurent polynomials) with values in a finite-dimensional Lie algebra.\n- Nilpotent: repeated brackets eventually vanish.\n- Witt algebra: the algebra of derivations of Laurent polynomials in one variable.\n- Graded and filtered rings; Rees ring: standard tools for organizing a ring by degree or by a growing sequence of subspaces.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate when the universal enveloping algebra $U(\\mathfrak{g})$ of an infinite-dimensional Lie algebra $\\mathfrak{g}$ is coherent. We show that if $\\mathfrak{g}$ is the loop algebra of a finite-dimensional Lie algebra $\\mathfrak{h}$ then $U(\\mathfrak{g})$ is coherent exactly when $\\mathfrak{h}$ is nilpotent. As a consequence, we show that $U(\\mathfrak{g})$ is not coherent if $\\mathfrak{g}$ is complex, simple, $\\mathbb{Z}$-graded, of polynomially bounded growth, and not isomorphic to the Witt algebra $W = \\mathrm{Der} \\mathbb{C}[t,t^{-1}]$ or its one-sided version. We also demonstrate that the homomorphic image of $U(W)$ used to prove non-Noetherianity of $U(W)$ in previous work of the first author and Walton is not coherent. On the other hand, we establish that two closely related connected graded rings are graded coherent. Finally, we prove that any exhaustively filtered ring is coherent if its Rees ring is graded coherent.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27916",
+   "title": "Large orbits of $p$-groups on conjugacy classes of arbitrary finite groups",
+   "url": "https://arxiv.org/abs/2611.27916",
+   "authors": [
+    "Thomas Michael Keller"
+   ],
+   "label": "arXiv:2611.27916v1",
+   "primary_category": "math.GR",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "The paper removes the solvability hypothesis from a known result: for a p-group acting coprimely and faithfully on a finite group H, some conjugacy class of H has stabilizer of order at most |P|^(1/2), and the paper also gives nonsolvable examples where this bound is attained.",
+    "plain": "This is about symmetries of finite mathematical structures. A group of symmetries of a certain power-of-a-prime size acts on a finite group, and the question is how many of that group's pieces it can keep fixed. The paper shows that, even when the underlying group is not solvable, there is always a piece whose set of symmetries that fix it is small, no bigger than the square root of the symmetry group's size.",
+    "why": "A bound of this kind is a structural statement that tells mathematicians how large orbits must be, which matters for the representation theory of finite groups. The text does not indicate applications beyond this area, so its wider significance is unclear.",
+    "background": "- Finite group: a set of elements with a combining rule, finitely many elements.\n- p-group: a group whose size is a power of a prime p.\n- Acting coprimely and faithfully: a p-group acts by symmetries whose order is prime to the size of H, with no nontrivial element doing nothing.\n- Conjugacy class and stabilizer: the conjugacy class is the set of elements that are rearrangements of one another; the stabilizer is the set of group symmetries that leave a given class unchanged.\n- Solvable group: a group built up in a layered way from abelian (commutative) pieces; the paper removes this assumption.\n- Classification of finite simple groups: a complete list of the basic building blocks of finite groups, used in the proof.\n- Irreducible character: a basic building block of how a group can be represented by matrices.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $P$ be a $p$-group that acts faithfully and coprimely on a finite group $H$. In a previous paper it was shown that if $H$ is solvable, then there exists a conjugacy class $c$ of $H$ whose stabilizer in $P$ has order at most $|P|^{1/2}$, and that this bound is best possible. In this paper we remove the hypothesis that $H$ is solvable. As a consequence, there always exists an irreducible character of $H$ whose inertia group in $P$ has order at most $|P|^{1/2}$. The proof depends on the classification of finite simple groups. Its main new ingredient is a result on quasiprimitive linear actions of $p$-nilpotent groups which shows that the elements acting as field automorphisms can be ignored when one looks for vectors with small stabilizers. We also present a new family of examples, with nonsolvable $H$, in which the bound is attained.",
+   "source": "arxiv"
+  }
+ ]
 }

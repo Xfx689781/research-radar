@@ -1,5 +1,49 @@
 {
  "slug": "differential-geometry",
  "updated": "2026-11-23",
- "papers": []
+ "papers": [
+  {
+   "uid": "arxiv:2611.27723",
+   "title": "Projectively Flat Spherically Symmetric Sprays of Constant Curvature",
+   "url": "https://arxiv.org/abs/2611.27723",
+   "authors": [
+    "Yajing Gui",
+    "Benling Li"
+   ],
+   "label": "arXiv:2611.27723v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "The paper classifies projectively flat, spherically symmetric sprays of constant curvature by solving the equations that constant curvature imposes on the projective factor p(r,s), and shows that the spray cases from constant-flag-curvature Finsler metrics (K=0, -1, 1) fall within this classification.",
+    "plain": "The paper studies a family of geometric rules for how straight-line-like paths behave on curved, direction-dependent spaces (Finsler geometry). The authors work out the conditions that keep the curvature constant for these rules and solve them, sorting every possible case into four explicit families. They also check that the known examples with constant flag curvature of zero, negative, and positive values all appear among these four families.",
+    "why": "A complete classification is a clean, checkable result: it tells specialists exactly which spherically symmetric projectively flat sprays have constant curvature, and it confirms that the standard constant-flag-curvature examples are covered. The text does not describe applications beyond this geometric setting, so any wider connection is uncertain.",
+    "background": "- Finsler metric: a way of measuring length in which the length depends on both position and direction, generalizing Riemannian geometry.\n- Spray: a system of second-order equations describing geodesics (the natural 'straightest' paths) on a Finsler space.\n- Projectively flat: the paths can be matched to straight lines in some coordinates, up to reparametrization; the projective factor p(r,s) measures this deviation.\n- Spherically symmetric: the rules are unchanged under rotations about a point.\n- Flag curvature K: a generalization of sectional curvature; constant K means the same value everywhere and in every direction. K=0 is flat, K=1 is like a sphere, K=-1 is like a hyperbolic plane.\n- Classification: a complete list of all possible cases, here four explicit families of p(r,s).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we study projectively flat spherically symmetric sprays of constant curvature. We derive a system of equations that is equivalent to the constant-curvature condition for such sprays and solve it to obtain a complete classification of the projective factor \\(p(r,s)\\) into four explicit families. We further show that the sprays induced by projectively flat spherically symmetric Finsler metrics of constant flag curvature \\(K=0\\), \\(K=-1\\), and \\(K=1\\) are all special cases of our classification, thereby confirming that the sprays induced by these constant-flag-curvature Finsler metrics are fully contained in our framework.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27345",
+   "title": "A local symmetry forces positivity for projectively induced Kahler-Einstein metrics",
+   "url": "https://arxiv.org/abs/2611.27345",
+   "authors": [
+    "Filippo Salis"
+   ],
+   "label": "arXiv:2611.27345v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A projectively induced Kähler–Einstein metric is shown to have positive Einstein constant whenever it admits at least one nonzero local real-holomorphic Killing field, with no completeness or global group-action assumption, and the argument extends to a non-Einstein obstruction under uniformly negative Ricci curvature and to compact equivariant continuations.",
+    "plain": "The paper studies curved geometric shapes that sit inside a flat-style projective space in a way that respects a special kind of Kähler structure, and asks whether they must be \"positively curved\" in a certain sense. The authors show that if such a shape has even a local symmetry (a smooth flow that preserves the geometry in a neighbourhood, though not necessarily everywhere), then it must be positively curved. The proof works by extending this local symmetry to a global one on a continuation of the shape and then applying standard tools from analysis on curved spaces.",
+    "why": "The general question of whether Kähler–Einstein submanifolds of projective space must have positive curvature is open, and this gives a partial answer under a local symmetry hypothesis. The text does not indicate further applications beyond this setting, so its wider significance is best judged by specialists.",
+    "background": "- Kähler manifold: a complex-geometric space with a compatible metric and symplectic form, the natural setting for complex curvature.\n- Einstein metric: a metric whose Ricci curvature is a constant multiple of the metric; the constant's sign (positive, zero, negative) classifies the shape.\n- Projective space and submanifolds: complex projective space is the standard model of a positively curved complex space; a submanifold inherits a metric from it.\n- Killing field: an infinitesimal symmetry, a flow that preserves the metric; \"real-holomorphic\" means it also respects the complex structure.\n- Moment map and Hamiltonian potential: a function attached to a symmetry that measures how it acts; here it is bounded.\n- Maximum principle and Liouville theorem (Omori–Yau, Yau): analytic tools saying bounded solutions of certain equations on complete spaces must be constant, which rules out the sign cases.\n- Calabi rigidity: a result saying local symmetries of such metrics extend to projective-type symmetries.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that a projectively induced Kahler-Einstein metric has positive Einstein constant as soon as it admits one nonzero local real-holomorphic Killing field. Neither completeness nor a prescribed global group action is assumed. This gives a partial answer, under a local symmetry hypothesis, to the general positivity problem for Kahler-Einstein submanifolds of (finite-dimensional) projective space. The key observation is that, by Calabi rigidity, a local real-holomorphic Killing field is induced by a projective unitary vector field whose tangency propagates along any connected global Kahler immersion, without a simple-connectivity assumption. Applied to Hulin's complete continuation, this produces a global Killing field with a bounded Hamiltonian potential given by the ambient projective moment map. The resulting Laplace equation, the Omori--Yau maximum principle and Yau's Liouville theorem exclude both negative and zero Einstein curvature. We also prove a non-Einstein obstruction under uniformly negative Ricci curvature and obtain compact equivariant continuations.",
+   "source": "arxiv"
+  }
+ ]
 }

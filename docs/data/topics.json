@@ -23,7 +23,7 @@
    "categories": [
     "math.PR"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "differential-geometry",
@@ -35,7 +35,7 @@
     "math.DG",
     "math.SG"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "pde",
@@ -46,7 +46,7 @@
    "categories": [
     "math.AP"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "harmonic-analysis",
@@ -58,7 +58,7 @@
     "math.CA",
     "math.FA"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "complex-analysis",
@@ -69,7 +69,7 @@
    "categories": [
     "math.CV"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "operator-algebras",
@@ -81,7 +81,7 @@
     "math.OA",
     "math.SP"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "algebra",
@@ -94,7 +94,7 @@
     "math.AC",
     "math.GR"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "representation-theory",
@@ -106,7 +106,7 @@
     "math.RT",
     "math.QA"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "number-theory",
@@ -117,7 +117,7 @@
    "categories": [
     "math.NT"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "algebraic-geometry",
@@ -128,7 +128,7 @@
    "categories": [
     "math.AG"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "topology",
@@ -141,7 +141,7 @@
     "math.AT",
     "math.GN"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "dynamical-systems",
@@ -152,7 +152,7 @@
    "categories": [
     "math.DS"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "combinatorics",
@@ -163,7 +163,7 @@
    "categories": [
     "math.CO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "numerical-analysis",
@@ -174,7 +174,7 @@
    "categories": [
     "math.NA"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "logic",
@@ -185,7 +185,7 @@
    "categories": [
     "math.LO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "math-physics",
@@ -196,7 +196,7 @@
    "categories": [
     "math-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "optimization-control",
@@ -207,7 +207,7 @@
    "categories": [
     "math.OC"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "statistics-theory",
@@ -218,7 +218,7 @@
    "categories": [
     "math.ST"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "statistical-methods",
@@ -231,7 +231,7 @@
     "stat.AP",
     "stat.CO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "ai-news",
@@ -240,7 +240,7 @@
    "description": "New AI models and releases, AI companies and labs, model launches, large language models, open-weight models, AI products and agents, research announcements, funding and partnerships, AI chips and compute, AI policy and regulation.",
    "source": "rss",
    "categories": [],
-   "new_today": 3
+   "new_today": 5
   },
   {
    "slug": "model-architectures",
@@ -253,7 +253,7 @@
     "cs.CL",
     "cs.AI"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "ml-theory",
@@ -265,7 +265,7 @@
     "stat.ML",
     "cs.LG"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "large-language-models",
@@ -276,7 +276,7 @@
    "categories": [
     "cs.CL"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "computer-vision",
@@ -287,7 +287,7 @@
    "categories": [
     "cs.CV"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "reinforcement-learning",
@@ -300,7 +300,7 @@
     "cs.AI",
     "stat.ML"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "ai-safety",
@@ -314,7 +314,7 @@
     "cs.LG",
     "cs.CY"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "interpretability",
@@ -327,7 +327,7 @@
     "cs.CL",
     "cs.AI"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "ai4math",
@@ -342,7 +342,7 @@
     "cs.CL",
     "math.HO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "embodied-ai",
@@ -353,7 +353,7 @@
    "categories": [
     "cs.RO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "security-cryptography",
@@ -364,7 +364,7 @@
    "categories": [
     "cs.CR"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "theory-of-computation",
@@ -376,7 +376,7 @@
     "cs.DS",
     "cs.CC"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "programming-languages",
@@ -389,7 +389,7 @@
     "cs.LO",
     "cs.SE"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "systems",
@@ -403,7 +403,7 @@
     "cs.NI",
     "cs.AR"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "human-computer-interaction",
@@ -415,7 +415,7 @@
     "cs.HC",
     "cs.CY"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "information-theory",
@@ -426,7 +426,7 @@
    "categories": [
     "cs.IT"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "theoretical-physics",
@@ -438,7 +438,7 @@
     "hep-th",
     "gr-qc"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "statistical-physics",
@@ -450,7 +450,7 @@
     "cond-mat.stat-mech",
     "cond-mat.dis-nn"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "condensed-matter",
@@ -464,7 +464,7 @@
     "cond-mat.mes-hall",
     "cond-mat.quant-gas"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "particle-physics",
@@ -477,7 +477,7 @@
     "hep-ex",
     "hep-lat"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "nuclear-physics",
@@ -489,7 +489,7 @@
     "nucl-th",
     "nucl-ex"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "quantum",
@@ -500,7 +500,7 @@
    "categories": [
     "quant-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "optics-atomic",
@@ -512,7 +512,7 @@
     "physics.optics",
     "physics.atom-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "fluids-plasma",
@@ -524,7 +524,7 @@
     "physics.flu-dyn",
     "physics.plasm-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "biological-physics",
@@ -535,7 +535,7 @@
    "categories": [
     "physics.bio-ph"
    ],
-   "new_today": 0
+   "new_today": 1
   },
   {
    "slug": "climate-earth",
@@ -547,7 +547,7 @@
     "physics.ao-ph",
     "physics.geo-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "cosmology",
@@ -558,7 +558,7 @@
    "categories": [
     "astro-ph.CO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "galaxies",
@@ -569,7 +569,7 @@
    "categories": [
     "astro-ph.GA"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "exoplanets",
@@ -580,7 +580,7 @@
    "categories": [
     "astro-ph.EP"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "high-energy-astrophysics",
@@ -591,7 +591,7 @@
    "categories": [
     "astro-ph.HE"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "stars-sun",
@@ -602,7 +602,7 @@
    "categories": [
     "astro-ph.SR"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "chemistry",
@@ -613,7 +613,7 @@
    "categories": [
     "physics.chem-ph"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "materials-science",
@@ -624,7 +624,7 @@
    "categories": [
     "cond-mat.mtrl-sci"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "soft-matter",
@@ -635,7 +635,7 @@
    "categories": [
     "cond-mat.soft"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "ml-for-molecules",
@@ -649,7 +649,7 @@
     "q-bio.BM",
     "cs.LG"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "biochemistry",
@@ -660,7 +660,7 @@
    "categories": [
     "biochemistry"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "pharmacology",
@@ -684,7 +684,7 @@
     "systems biology",
     "biophysics"
    ],
-   "new_today": 1
+   "new_today": 2
   },
   {
    "slug": "neuroscience",
@@ -695,7 +695,7 @@
    "categories": [
     "neuroscience"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "genetics-genomics",
@@ -707,7 +707,7 @@
     "genetics",
     "genomics"
    ],
-   "new_today": 1
+   "new_today": 2
   },
   {
    "slug": "cell-molecular-biology",
@@ -732,7 +732,7 @@
     "immunology",
     "microbiology"
    ],
-   "new_today": 1
+   "new_today": 2
   },
   {
    "slug": "cancer-biology",
@@ -756,7 +756,7 @@
     "evolutionary biology",
     "animal behavior and cognition"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "plant-biology",
@@ -767,7 +767,7 @@
    "categories": [
     "plant biology"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "bioengineering",
@@ -779,7 +779,7 @@
     "bioengineering",
     "synthetic biology"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "quantitative-biology",
@@ -799,7 +799,7 @@
     "q-bio.SC",
     "q-bio.TO"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "epidemiology",
@@ -810,7 +810,7 @@
    "categories": [
     "epidemiology"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "infectious-diseases",
@@ -834,7 +834,7 @@
     "health policy",
     "health economics"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "mental-health",
@@ -846,7 +846,7 @@
     "psychiatry and clinical psychology",
     "neurology"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "oncology",
@@ -868,7 +868,7 @@
    "categories": [
     "health informatics"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "economics",
@@ -880,7 +880,7 @@
     "econ.EM",
     "econ.GN"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "economic-theory",
@@ -891,7 +891,7 @@
    "categories": [
     "econ.TH"
    ],
-   "new_today": 0
+   "new_today": 1
   },
   {
    "slug": "game-theory",
@@ -902,7 +902,7 @@
    "categories": [
     "cs.GT"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "quantitative-finance",
@@ -916,7 +916,7 @@
     "q-fin.CP",
     "q-fin.RM"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "financial-markets",
@@ -931,7 +931,7 @@
     "q-fin.GN",
     "q-fin.EC"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "signal-processing",
@@ -942,7 +942,7 @@
    "categories": [
     "eess.SP"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "audio-speech",
@@ -954,7 +954,7 @@
     "eess.AS",
     "cs.SD"
    ],
-   "new_today": 0
+   "new_today": 2
   },
   {
    "slug": "control-systems",
@@ -965,7 +965,7 @@
    "categories": [
     "eess.SY"
    ],
-   "new_today": 0
+   "new_today": 2
   }
  ]
 }

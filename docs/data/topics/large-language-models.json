@@ -1,5 +1,72 @@
 {
  "slug": "large-language-models",
  "updated": "2026-11-23",
- "papers": []
+ "papers": [
+  {
+   "uid": "arxiv:2611.26920",
+   "title": "Partially canonical axes in large language model representations",
+   "url": "https://arxiv.org/abs/2611.26920",
+   "authors": [
+    "Andrea Gregor de Varda",
+    "Ferdinando D'Elia",
+    "Greta Tuckute",
+    "Evelina Fedorenko",
+    "Meenakshi Khosla"
+   ],
+   "label": "arXiv:2611.26920v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "Across 12 LLMs from six model families, the native coordinate axes of hidden representations align better with other models, with human brain responses, and with interpretable linguistic features than randomly rotated axes do, though they fall short of the best achievable alignment.",
+    "plain": "Researchers asked whether the individual \"directions\" inside large language models carry meaning or are just arbitrary labels that could be swapped out without consequence. They compared each model's built-in axes with versions of the same data rotated to random angles. The built-in axes matched other models, human brain activity during language, and simple linguistic features better, but not as well as the best possible alignment.",
+    "why": "If single units in these networks partly track consistent, recognizable patterns, that bears on how much we can read meaning off individual neurons and on the claim that models and brains share representational structure. The text does not show how far these results generalize beyond the models and measures tested, so the implications remain unclear.",
+    "background": "- Hidden representation: the list of numbers a neural network produces internally for each word or token.\n- Coordinate axis: one of the individual numbers in that list, i.e., one \"unit\" or dimension.\n- Rotation: changing the axes of a space without changing the relative arrangement of points; a random rotation keeps the overall geometry but scrambles which axis is which.\n- Canonical vs. arbitrary axes: canonical means the axes are special and meaningful; arbitrary means any rotation would be equally valid.\n- Alignment with brain responses: measured by how well the model's activity predicts recorded human brain signals during language.\n- Interpretable linguistic features: properties such as part of speech or syntactic role that humans can name.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large language models (LLMs) develop rich internal representations of language, but whether their individual coordinate axes carry meaning, or whether meaning is encoded only in directions in representation space, is still an open question. A common assumption is that individual axes in LLMs are arbitrary. We here challenge this view: across 12 LLMs from six model families, the native axes are reliably more aligned with other models' representations, with human brain responses to language, and with interpretable linguistic features than randomly rotated axes that preserve the same geometry. The native axes nonetheless fall well short of the best achievable alignment, so LLM coordinates are not fully arbitrary but also not fully canonical: they are partially canonical. A theory of how LLMs represent language must explain both the population geometry they learn and why individual units acquire patterns of response profiles that recur across systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27211",
+   "title": "Explicit Style Extraction for Personalized Long-Form Text Generation",
+   "url": "https://arxiv.org/abs/2611.27211",
+   "authors": [
+    "Jenitha Reddy Patel",
+    "Sameeksha Kini",
+    "Amulya Rayasam",
+    "Anisa Dye",
+    "Abhinav Sharma",
+    "Sai Karthik Navuluru",
+    "Bo Ni",
+    "Li Li",
+    "Junda Wu",
+    "Tong Yu",
+    "Nedim Lipka",
+    "Xiaolei Huang",
+    "Tyler Derr",
+    "Yue Zhao",
+    "Zhengzhong Tu",
+    "Yu Wang",
+    "Hongjie Chen",
+    "Thien Huu Nguyen",
+    "Nesreen K. Ahmed",
+    "Franck Dernoncourt",
+    "Ryan A. Rossi"
+   ],
+   "label": "arXiv:2611.27211v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "SP-Refine makes style extraction an explicit inference-time step for personalized long-form generation, using a 28-aspect StylePrism taxonomy to build a user profile that guides drafting and two rounds of self-revision on LongLaMP tasks.",
+    "plain": "Language models asked to write in a specific person's voice usually just get a few of that person's past texts and must guess what matters about their style. This paper has the model first write down an explicit profile of the user's habits, using a fixed list of 28 style aspects, and then drafts and revises text against that profile. Across three long-form writing tasks and three models, the method beat the standard retrieval-based baseline in 25 of 27 ROUGE and METEOR comparisons, by 10.2% on average.",
+    "why": "Personal writing assistance depends on capturing how a person writes, and this shows that making the style profile explicit can help. The text does not establish how well the profiles generalize beyond the benchmark or to real users, so the practical reach is uncertain.",
+    "background": "- Retrieval-augmented generation: the model is given a few relevant past examples in its prompt before writing.\n- LongLaMP: a benchmark of personalized long-form writing tasks.\n- ROUGE and METEOR: automatic scores that measure word overlap between generated and reference text.\n- Inference-time method: improves output at the moment of writing, without retraining the model.\n- Ablation: a test that removes a component to see whether it matters.\n- Oracle variant: a version that peeks at the reference answer, used to find the upper limit of gains.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Personalized long-form generation asks a language model to write new text the way a specific user would. The standard recipe, retrieval-augmented generation, places a few of the user's past texts in the prompt but leaves the model to decide what to take from them. We introduce StylePrism, a taxonomy of 28 stylistic aspects in seven categories, and SP-Refine, an inference-time method that makes style extraction an explicit step: the model first fills StylePrism with the user's patterns, quoted evidence, and habits to avoid, then drafts from the user's samples and revises the draft twice against this profile, guided by its own style scores. On the three long-form tasks of LongLaMP with three LLMs, SP-Refine outperforms LongLaMP's retrieval-augmented baseline in 25 of 27 ROUGE and METEOR comparisons, by 10.2% on average and by up to 35.8%. Annotating users' own texts with the extracted profiles shows that StylePrism captures concrete, checkable habits, from the order of rhetorical moves to a reviewer's sign-off. Ablations show that the profile helps as revision guidance, not as a replacement for the samples: writing from the profile alone is worse in all 27 comparisons, while a single implicit-inference call is a cheaper alternative that comes close. Oracle variants that let the reviser see the reference, together with reference-free controls, show that larger refinement gains require information unavailable at inference time.",
+   "source": "arxiv"
+  }
+ ]
 }
