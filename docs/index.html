@@ -262,21 +262,29 @@ async function getJSON(path) {
 
 // ------------------------------------------------------------------ selection storage
 async function loadSelection() {
-  const fromUrl = new URLSearchParams(location.search).get("topics");
+  const accounts = !!state.supabase;
+  if (accounts && !state.user) {           // signed out: always start from an empty picker
+    state.emailDaily = false;
+    return [];
+  }
   let list = null;
-  if (state.user && state.supabase) {
+  if (accounts) {
     const { data, error } = await state.supabase.from("preferences")
       .select("topics, email_daily").eq("user_id", state.user.id).maybeSingle();
     state.emailDaily = !!(data && data.email_daily);
     if (!error && data && Array.isArray(data.topics) && data.topics.length) list = data.topics;
-    else if (!error) {                       // first sign-in: carry over this browser's choice
-      const local = readLocal();
-      if (local && local.length) { list = local; await saveRemote(local); }
+    else if (!error) {                     // first sign-in: keep what was picked before signing in
+      const pending = readLocal();
+      if (pending && pending.length) { list = pending; await saveRemote(pending); }
     }
+    clearLocal();                          // signed-in choices live in the account, not the browser
+  } else {
+    list = readLocal();                    // site without accounts: remember in this browser
   }
-  if (!list) list = readLocal();
-  if (!list && fromUrl) list = fromUrl.split(",");
   return (list || []).filter((s) => state.bySlug[s]);
+}
+function clearLocal() {
+  try { localStorage.removeItem(STORE_KEY); } catch { /* ignore */ }
 }
 async function saveRemote(list) {
   if (!(state.user && state.supabase)) return;
@@ -346,8 +354,8 @@ async function handleUnsubscribeLink() {
   if (!error && data && state.user) { state.emailDaily = false; renderEmailOption(); }
 }
 async function saveSelection(list) {
-  writeLocal(list);
-  await saveRemote(list);
+  if (state.user && state.supabase) await saveRemote(list);
+  else writeLocal(list);   // no account: remembered for this browser, or until the first sign-in
 }
 
 // ------------------------------------------------------------------ accounts (optional)
@@ -361,6 +369,7 @@ async function initAuth(site) {
     state.supabase.auth.onAuthStateChange(async (_event, session) => {
       const before = state.user && state.user.id;
       state.user = session ? session.user : null;
+      if (before && !state.user) clearLocal();     // signing out leaves nothing behind
       renderAccount();
       if ((state.user && state.user.id) !== before) await start();
     });
@@ -405,7 +414,7 @@ function showPicker(editing) {
   const note = $("storage-note");
   note.hidden = !!state.user;
   note.textContent = state.supabase
-    ? "Your choices are saved in this browser. Sign in to keep them on every device."
+    ? "Sign in to keep your topics and get them every day by email. Without signing in, your choice is not kept after you leave."
     : "Your choices are saved in this browser.";
   $("search").value = "";
   renderPicker();
@@ -569,8 +578,14 @@ $("range").addEventListener("change", renderPapers);
 // ------------------------------------------------------------------ start
 async function start() {
   state.selected = new Set(await loadSelection());
+  state.filter = null;
   renderAccount();
-  if (state.selected.size) await showFeed(); else showPicker(false);
+  if (state.selected.size) { await showFeed(); return; }
+  showPicker(false);
+  // a shared link like ?topics=probability,ai-news pre-ticks those topics in the picker
+  const fromUrl = (new URLSearchParams(location.search).get("topics") || "").split(",")
+    .filter((s) => state.bySlug[s]);
+  if (fromUrl.length) { state.draft = new Set(fromUrl); renderPicker(); }
 }
 (async function init() {
   try {
