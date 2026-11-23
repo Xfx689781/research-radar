@@ -265,6 +265,7 @@ async function saveRemote(list) {
     .upsert({ user_id: state.user.id, email: state.user.email || null, topics: list,
               email_daily: state.emailDaily, updated_at: new Date().toISOString() });
   if (error) console.warn("could not save to account:", error.message);
+  state.lastSaveError = error ? (error.message || String(error)) : "";
   return !error;
 }
 function renderEmailOption() {
@@ -278,7 +279,7 @@ $("email-daily").addEventListener("change", async (ev) => {
   const ok = await saveRemote([...state.selected]);
   const note = $("email-note");
   note.hidden = false;
-  note.textContent = !ok ? "Could not save this setting. Please try again."
+  note.textContent = !ok ? `Could not save this setting (${state.lastSaveError}). Please try again.`
     : state.emailDaily ? `Done. Each morning we will email ${state.user.email} the new papers in your topics.`
                        : "Daily email turned off.";
 });
