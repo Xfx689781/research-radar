@@ -47,7 +47,7 @@ jobs:
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::warning::ANTHROPIC_API_KEY is not set, so the digest has no AI summaries. Add it under Settings > Secrets and variables > Actions."
           fi
-          python -m radar run --backfill "${BACKFILL:-0}"
+          python -m radar run --backfill "${BACKFILL:-0}" --max-minutes 95
 
       - name: Commit digest
         run: |

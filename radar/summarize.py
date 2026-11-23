@@ -84,8 +84,13 @@ def summary_from_message(msg, language: str) -> dict:
 
 
 def summarize_all(papers_with_topic: list[tuple[Paper, str]], enabled: bool, model: str,
-                  language: str = "en") -> None:
-    """Fill paper.summary for each (paper, topic_name) pair, in place."""
+                  language: str = "en", deadline: float | None = None) -> None:
+    """Fill paper.summary for each (paper, topic_name) pair, in place.
+
+    deadline is a time.monotonic() value: once it passes, the remaining items get the
+    plain fallback instead of an AI summary, so the run always finishes and saves its
+    work. Items without an AI summary are picked up again by later runs.
+    """
     client = None
     if enabled and os.environ.get("ANTHROPIC_API_KEY"):
         try:
@@ -104,6 +109,9 @@ def summarize_all(papers_with_topic: list[tuple[Paper, str]], enabled: bool, mod
     tool = tool_spec(language)
 
     def one(paper: Paper, topic_name: str) -> None:
+        if deadline is not None and time.monotonic() > deadline:
+            paper.summary = fallback_summary(paper)
+            return
         kind = KIND[language]["news" if paper.source == "rss" else "paper"]
         prompt = USER_PROMPT[language].format(topic=topic_name, kind=kind, title=paper.title,
                                               abstract=paper.abstract or "(no text available)")

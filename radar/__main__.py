@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -20,7 +21,7 @@ from .digest import TopicStats, render
 from .mailer import send_daily
 from .models import Paper
 from .rank import assign_unique, score_papers
-from .archive import Archive
+from .archive import Archive, to_paper
 from .site import export_site
 from .state import SeenState
 from .summarize import summarize_all
@@ -28,6 +29,7 @@ from .summarize import summarize_all
 log = logging.getLogger("radar")
 
 TOPIC_PAUSE = 5   # seconds between topics; arXiv rate-limits bursts
+HEAL_LIMIT = 150  # earlier items without AI summaries to retry per run
 
 
 def run(args: argparse.Namespace) -> Path:
@@ -39,6 +41,13 @@ def run(args: argparse.Namespace) -> Path:
         cfg.output_dir, cfg.site_dir = "offline-output/digests", "offline-output"
         cfg.state_path = "offline-output/seen.json"
         cfg.archive_path = "offline-output/archive.jsonl"
+
+    started = time.monotonic()
+    budget = 60 * float(getattr(args, "max_minutes", 0) or 0)      # 0 = no limit
+    deadline = started + budget if budget else None
+
+    def left() -> float:
+        return (deadline - time.monotonic()) if deadline else float("inf")
 
     now = datetime.now(timezone.utc)
     today = now.date()
@@ -62,6 +71,11 @@ def run(args: argparse.Namespace) -> Path:
     stats: dict[str, TopicStats] = {}
     for i, topic in enumerate(cfg.topics):
         st = stats[topic.slug] = TopicStats()
+        if deadline and left() < 0.4 * budget:
+            # keep most of the time for summaries; skipped topics are fetched tomorrow
+            st.error = "skipped this run to stay within the time limit"
+            cands_by_topic[topic.slug] = []
+            continue
         try:
             if offline is not None:
                 cands = sources.offline_candidates(topic, offline)
@@ -103,11 +117,15 @@ def run(args: argparse.Namespace) -> Path:
             ranked[t.slug] = score_papers(pool, t, seeds_by_topic.get(t.slug))
         chosen_by_day[d] = assign_unique(ranked, top_k, cfg.min_score)
 
+    log.info("fetching took %.0f min", (time.monotonic() - started) / 60)
     name_of = {t.slug: t.display_name(cfg.language) for t in cfg.topics}
-    pairs = [(p, name_of[slug]) for chosen in chosen_by_day.values()
-             for slug, ps in chosen.items() for p in ps]
+    # newest day first, so today's items get their summaries before older ones
+    pairs = [(p, name_of[slug]) for d in reversed(days)
+             for slug, ps in chosen_by_day[d].items() for p in ps]
     log.info("selected %d items over %d day(s)", len(pairs), len(days))
-    summarize_all(pairs, enabled=cfg.summarize, model=cfg.model, language=cfg.language)
+    margin = 5 * 60                      # time kept for writing files and committing
+    summarize_all(pairs, enabled=cfg.summarize, model=cfg.model, language=cfg.language,
+                  deadline=(deadline - margin) if deadline else None)
 
     chosen = chosen_by_day[today]
     topic_of = {p.uid: name_of[slug] for slug, ps in chosen.items() for p in ps}
@@ -128,6 +146,8 @@ def run(args: argparse.Namespace) -> Path:
     for d, ch in chosen_by_day.items():
         archive.add(ch, d)
     archive.prune(today, cfg.archive_days)
+    heal_archive(archive, cfg, name_of, deadline=(deadline - margin) if deadline else None)
+    log.info("total run time %.0f min", (time.monotonic() - started) / 60)
     if cfg.site_dir:
         files = export_site(Path(cfg.site_dir), cfg, archive, today)
         log.info("wrote %d data files for the website", len(files))
@@ -139,6 +159,29 @@ def run(args: argparse.Namespace) -> Path:
         state.save()
         archive.save()
     return out
+
+
+def heal_archive(archive: Archive, cfg, name_of: dict[str, str], deadline: float | None,
+                 limit: int = HEAL_LIMIT) -> int:
+    """Give AI summaries to earlier items that ran out of time (newest first)."""
+    if not (cfg.summarize and os.environ.get("ANTHROPIC_API_KEY")):
+        return 0
+    if deadline is not None and time.monotonic() > deadline:
+        return 0
+    todo = [r for r in sorted(archive.records, key=lambda r: r["date"], reverse=True)
+            if not (r.get("summary") or {}).get("ai") and r["topic"] in name_of][:limit]
+    if not todo:
+        return 0
+    papers = [to_paper(r) for r in todo]
+    summarize_all([(p, name_of[r["topic"]]) for p, r in zip(papers, todo)], enabled=True,
+                  model=cfg.model, language=cfg.language, deadline=deadline)
+    fixed = 0
+    for p, r in zip(papers, todo):
+        if p.summary.get("ai"):
+            r["summary"] = p.summary
+            fixed += 1
+    log.info("filled in %d earlier summaries", fixed)
+    return fixed
 
 
 def list_presets() -> None:
@@ -163,6 +206,8 @@ def main() -> None:
     r.add_argument("--offline", metavar="DIR",
                    help="read saved responses (arxiv.xml, biorxiv.json, medrxiv.json) from DIR")
     r.add_argument("--dry-run", action="store_true", help="do not update state/seen.json")
+    r.add_argument("--max-minutes", type=float, default=0, metavar="M",
+                   help="finish and save within about M minutes (0 = no limit)")
     r.add_argument("--backfill", type=int, default=0, metavar="N",
                    help="also fill the website for the past N days (one-time, e.g. 7)")
     sub.add_parser("presets", help="list built-in topic presets")

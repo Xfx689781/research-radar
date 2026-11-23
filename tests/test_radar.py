@@ -567,3 +567,44 @@ def test_send_daily_skips_without_secrets(tmp_path, monkeypatch):
         monkeypatch.delenv(k, raising=False)
     cfg = load_config(write_config(tmp_path))
     assert mailer.send_daily(cfg, Archive(tmp_path / "x.jsonl"), date(2026, 11, 22)) == 0
+
+
+# ---------------------------------------------------------------- time budget and healing
+
+def fake_anthropic(monkeypatch, calls):
+    class M:
+        def create(self, **kw):
+            calls.append(kw["messages"][0]["content"])
+            return types.SimpleNamespace(stop_reason="tool_use", content=[types.SimpleNamespace(
+                type="tool_use", input={"one_liner": "o", "plain": "p", "why": "w",
+                                        "background": "b", "difficulty": "intermediate"})])
+    fake = types.ModuleType("anthropic")
+    fake.Anthropic = lambda **kw: types.SimpleNamespace(messages=M())
+    monkeypatch.setitem(sys.modules, "anthropic", fake)
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
+
+
+def test_deadline_stops_new_summaries(papers, monkeypatch):
+    import time as _time
+    calls = []
+    fake_anthropic(monkeypatch, calls)
+    summarize_all([(p, "T") for p in papers[:3]], enabled=True, model="m",
+                  deadline=_time.monotonic() - 1)                  # already past
+    assert calls == [] and all(not p.summary["ai"] for p in papers[:3])
+
+
+def test_heal_archive_fills_missing_summaries(tmp_path, papers, monkeypatch):
+    from radar.__main__ import heal_archive
+    from radar.archive import Archive
+    calls = []
+    fake_anthropic(monkeypatch, calls)
+    cfg = load_config(write_config(tmp_path))
+    a = Archive(tmp_path / "a.jsonl")
+    old, done = papers[0], papers[1]
+    old.summary = {"one_liner": "x", "ai": False}
+    done.summary = {"one_liner": "y", "ai": True}
+    a.add({"probability": [old], "ml-theory": [done]}, date(2026, 11, 20))
+    n = heal_archive(a, cfg, {"probability": "Probability", "ml-theory": "ML"}, deadline=None)
+    assert n == 1 and len(calls) == 1
+    rec = next(r for r in a.records if r["uid"] == old.uid)
+    assert rec["summary"]["ai"] and rec["summary"]["plain"] == "p"
