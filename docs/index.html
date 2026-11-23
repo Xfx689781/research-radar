@@ -69,7 +69,9 @@
   .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 12px; font-size: .88rem; }
   .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .controls-right { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-  .email-opt { display: inline-flex; gap: 6px; align-items: center; font-size: .9rem; cursor: pointer; }
+  .email-opt { display: inline-flex; gap: 8px; align-items: center; font-size: .9rem; cursor: pointer;
+               border: 1.5px solid var(--accent); color: var(--accent); background: var(--accent-soft);
+               border-radius: 999px; padding: 6px 14px; font-weight: 600; }
   .email-opt input { width: 16px; height: 16px; accent-color: var(--accent); }
   .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
   select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
@@ -93,6 +95,23 @@
   dialog input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; margin: 10px 0 14px; }
   footer { color: var(--faint); font-size: .82rem; padding: 30px 0; border-top: 1px solid var(--line); }
   @media (max-width: 520px) { .updated { display: none; } h1 { font-size: 1.6rem; } }
+  details.topic-group { margin: 0 0 14px; }
+  details.topic-group > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+    font: 600 1rem/1.3 var(--sans); color: var(--ink); padding: 8px 2px; }
+  details.topic-group > summary::-webkit-details-marker { display: none; }
+  details.topic-group > summary::before { content: "▸"; color: var(--faint); transition: transform .15s; }
+  details.topic-group[open] > summary::before { transform: rotate(90deg); }
+  details.topic-group .count { color: var(--faint); font-weight: 500; font-size: .85rem; }
+  details.topic-group .tag { display: none; }
+  .compact article.paper { padding: 12px 16px; margin-bottom: 8px; }
+  .compact article h3 { font-size: 1.02rem; }
+  .compact .byline { margin-bottom: 4px; }
+  .compact .plain { font-size: .94rem; margin: 0; display: -webkit-box; -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical; overflow: hidden; }
+  .compact .extra { display: none; }
+  .compact article.open .plain { display: block; -webkit-line-clamp: unset; }
+  .compact article.open .extra { display: block; }
+  .more { border: none; background: none; color: var(--accent); padding: 4px 0 0; font-size: .85rem; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -126,19 +145,21 @@
     <div class="controls">
       <label class="muted">Show
         <select id="range">
-          <option value="1">latest day</option>
-          <option value="7" selected>last 7 days</option>
+          <option value="1" selected>latest papers</option>
+          <option value="7">last 7 days</option>
           <option value="30">last 30 days</option>
         </select>
       </label>
       <span class="controls-right">
-        <label class="muted email-opt" id="email-opt" hidden>
-          <input type="checkbox" id="email-daily"> Email me these every morning
+        <button class="btn" id="view-toggle" type="button" aria-pressed="false">Show full details</button>
+        <label class="email-opt" id="email-opt" hidden>
+          <input type="checkbox" id="email-daily"> 📬 Email me these every morning
         </label>
         <button class="btn" id="edit-topics">Edit topics</button>
       </span>
     </div>
     <p class="notice" id="email-note" hidden></p>
+    <p class="notice" id="stale-note" hidden></p>
     <div id="papers" aria-live="polite"></div>
   </section>
 </main>
@@ -174,6 +195,7 @@
 const STORE_KEY = "research-radar.topics.v1";
 const $ = (id) => document.getElementById(id);
 const state = { topics: [], fields: [], bySlug: {}, selected: new Set(), draft: new Set(), emailDaily: false,
+                compact: (() => { try { return localStorage.getItem("research-radar.compact") !== "0"; } catch { return true; } })(),
                 cache: {}, filter: null, user: null, supabase: null, updated: "" };
 
 // ------------------------------------------------------------------ helpers
@@ -394,22 +416,42 @@ function paperCard(p, topicName) {
   const who = authors.length > 3 ? authors.slice(0, 3).join(sep) + " et al." : authors.join(sep);
   const link = safeUrl(p.url);
   const news = p.source === "rss";
-  return el("article", { class: "paper" },
+  const lead = s.plain || (s.one_liner && !s.plain ? s.one_liner : "");
+  const card = el("article", { class: "paper" },
     el("span", { class: "tag" }, news ? `${topicName} · News` : topicName),
     el("h3", {}, link ? el("a", { href: link, target: "_blank", rel: "noopener" }, p.title) : p.title),
     el("div", { class: "byline" }, (news ? [p.label, who] : [who, p.label, p.primary_category])
       .filter(Boolean).join(" · ")),
-    s.plain ? el("p", { class: "plain" }, s.plain) : null,
-    s.one_liner ? el("div", { class: "row" }, el("b", {}, s.ai ? "In one sentence: " : (news ? "From the article: " : "From the abstract: ")),
-      el("span", { class: "muted" }, s.one_liner)) : null,
-    s.why ? el("div", { class: "row" }, el("b", {}, "Why it matters: "), s.why) : null,
-    (s.background || s.difficulty) ? el("div", { class: "row muted" },
-      s.background ? `Background: ${s.background}` : "", s.background && s.difficulty ? " · " : "",
-      s.difficulty ? `Level: ${s.difficulty}` : "") : null,
-    p.abstract ? el("details", {}, el("summary", {}, news ? "Article teaser" : "Original abstract"), el("p", {}, p.abstract)) : null);
+    lead ? el("p", { class: "plain" }, lead) : null,
+    el("div", { class: "extra" },
+      s.plain && s.one_liner ? el("div", { class: "row" }, el("b", {}, "In one sentence: "),
+        el("span", { class: "muted" }, s.one_liner)) : null,
+      !s.plain && s.one_liner ? el("div", { class: "row muted" },
+        news ? "From the article (AI summary not available yet)" : "From the abstract (AI summary not available yet)") : null,
+      s.why ? el("div", { class: "row" }, el("b", {}, "Why it matters: "), s.why) : null,
+      (s.background || s.difficulty) ? el("div", { class: "row muted" },
+        s.background ? `Background: ${s.background}` : "", s.background && s.difficulty ? " · " : "",
+        s.difficulty ? `Level: ${s.difficulty}` : "") : null,
+      p.abstract ? el("details", {}, el("summary", {}, news ? "Article teaser" : "Original abstract"),
+        el("p", {}, p.abstract)) : null));
+  const more = el("button", { class: "more", type: "button", onclick: () => {
+    const open = card.classList.toggle("open");
+    more.textContent = open ? "Less" : "More";
+  } }, "More");
+  card.append(more);
+  return card;
+}
+function dayLabel(iso) {
+  const ref = state.updated;
+  const diff = ref ? daysBetween(ref, iso) : 99;
+  const prefix = diff === 0 ? "Today · " : diff === 1 ? "Yesterday · " : "";
+  return prefix + fmtDay(iso);
 }
 async function renderPapers() {
   const box = $("papers");
+  box.classList.toggle("compact", state.compact);
+  $("view-toggle").textContent = state.compact ? "Show full details" : "Show compact list";
+  $("view-toggle").setAttribute("aria-pressed", state.compact ? "false" : "true");
   box.replaceChildren(el("p", { class: "empty" }, "Loading papers…"));
   const slugs = state.filter ? [state.filter] : [...state.selected];
   const files = await Promise.all(slugs.map(loadTopic));
@@ -418,8 +460,14 @@ async function renderPapers() {
   const latest = papers.reduce((m, p) => (p.date > m ? p.date : m), "");
   const range = Number($("range").value);
   papers = papers.filter((p) => latest && daysBetween(latest, p.date) < range);
-  papers.sort((a, b) => (b.date.localeCompare(a.date)) ||
-    (slugs.indexOf(a._topic) - slugs.indexOf(b._topic)));
+
+  const stale = $("stale-note");
+  stale.hidden = !(latest && state.updated && latest < state.updated);
+  if (!stale.hidden) {
+    stale.textContent = `Nothing new in ${state.filter ? "this topic" : "your topics"} today. ` +
+      `The newest papers are from ${fmtDay(latest)}. arXiv does not announce new papers on weekends, ` +
+      `so maths and physics topics are quiet then.`;
+  }
 
   box.replaceChildren();
   if (!papers.length) {
@@ -427,16 +475,32 @@ async function renderPapers() {
       "No new papers for these topics in this period. Try a longer period or add more topics."));
     return;
   }
-  let day = "";
-  for (const p of papers) {
-    if (p.date !== day) {
-      day = p.date;
-      box.append(el("h2", { class: "day" }, fmtDay(day)));
+  const days = [...new Set(papers.map((p) => p.date))].sort().reverse();
+  for (const [di, day] of days.entries()) {
+    box.append(el("h2", { class: "day" }, dayLabel(day)));
+    const ofDay = papers.filter((p) => p.date === day);
+    if (state.filter) {                       // one topic: a plain list
+      ofDay.forEach((p) => box.append(paperCard(p, state.bySlug[p._topic].name)));
+      continue;
     }
-    box.append(paperCard(p, state.bySlug[p._topic].name));
+    for (const slug of slugs) {               // several topics: one foldable group each
+      const items = ofDay.filter((p) => p._topic === slug);
+      if (!items.length) continue;
+      const name = state.bySlug[slug].name;
+      // the newest day starts unfolded; older days stay folded until clicked
+      const group = el("details", { class: "topic-group", open: di === 0 },
+        el("summary", {}, name, el("span", { class: "count" }, `${items.length}`)));
+      items.forEach((p) => group.append(paperCard(p, name)));
+      box.append(group);
+    }
   }
   renderMath(box);
 }
+$("view-toggle").addEventListener("click", () => {
+  state.compact = !state.compact;
+  try { localStorage.setItem("research-radar.compact", state.compact ? "1" : "0"); } catch { /* ignore */ }
+  renderPapers();
+});
 $("range").addEventListener("change", renderPapers);
 
 // ------------------------------------------------------------------ start
