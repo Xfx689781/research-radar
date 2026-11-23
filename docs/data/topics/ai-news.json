@@ -11,10 +11,10 @@
    "primary_category": "openai.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A short piece arguing that perplexity, a standard language-model metric, could give developers a shared way to measure emerging AI capabilities.",
-    "plain": "The article looks at perplexity, a score that shows how well an AI language model predicts the next word in a text. It describes how this score can track progress in AI models and suggests it might help developers agree on a common way to judge new abilities. The text is brief and only gives this overview, so it does not report detailed experiments or specific results.",
-    "why": "Developers and researchers often disagree about how to compare AI systems, so a shared measure could make progress easier to discuss. Whether perplexity is suitable for judging newer abilities is an open question that the short text does not settle.",
-    "background": "- Language model: an AI system trained to predict likely next words in text.\n- Perplexity: a number where lower values mean the model is less \"surprised\" by real text, so it predicts better.\n- Emerging capabilities: new skills that appear as models grow, such as reasoning or following instructions, which are harder to measure.\n- Evaluation: the process of testing and scoring AI systems so they can be compared.\n- Limitation: the text is a brief overview with no data, so details of its argument are unclear.",
+    "one_liner": "A news piece that discusses perplexity, a standard language-model metric, as a possible common yardstick for judging progress and emerging capabilities in AI models.",
+    "plain": "This article looks at a score called \"perplexity,\" which measures how well an AI language model predicts the next word in a piece of text. It argues that this score could give developers a shared way to compare models and track new abilities as they appear. The text provided is only a one-sentence summary, so it does not show the specific results or examples behind the argument.",
+    "why": "Agreeing on how to measure AI progress matters for comparing systems and judging what they can do. The provided text is too thin to say how strong the argument is, so its practical impact is unclear.",
+    "background": "- Language model: an AI system trained to predict and generate text one word at a time.\n- Perplexity: a score where lower usually means the model finds the text less surprising, i.e. predicts it better.\n- Evaluation/benchmark: a standard test used to compare systems on the same terms.\n- Emerging capabilities: abilities that appear as models grow larger, which are hard to forecast.",
     "difficulty": "intermediate",
     "ai": true
    },
@@ -30,11 +30,11 @@
    "primary_category": "deepmind.google",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A news piece describing the use of AI agent teams together with formal verification (machine-checked proofs of correctness) to improve quantum algorithms aimed at fusion energy and chemistry problems.",
-    "plain": "The article is about using teams of AI agents to find faster methods for running calculations on quantum computers, with applications in fusion energy and chemistry. The text is very short, so it only says that agent teams and formal verification were used to improve these algorithms; it does not describe the specific methods or the size of any improvement.",
-    "why": "Faster quantum algorithms could matter for simulating molecules and plasmas, which are hard for ordinary computers, but the text gives no results to judge how large the gain is. It may connect to wider efforts to use AI to speed up scientific software, though the article alone does not establish that.",
-    "background": "- Quantum algorithm: a set of steps designed to run on a quantum computer, which uses quantum physics to process information differently from ordinary computers.\n- Fusion energy: producing power by joining atomic nuclei, the process that powers the sun; simulating it is computationally demanding.\n- Quantum chemistry: using computers to predict how molecules behave, useful for drug and materials design.\n- Formal verification: using mathematical proof tools to show that a program or method is correct, rather than relying only on testing.\n- AI agents: AI systems that carry out multi-step tasks, such as writing and checking code, with limited human direction.\n- The article is brief and gives no numbers or technical details, so treat its claims as unverified until the original work is read.",
-    "difficulty": "intermediate",
+    "one_liner": "A news piece describing the use of AI agent teams and formal verification to improve quantum algorithms aimed at fusion energy and chemistry simulations.",
+    "plain": "The article covers work on making quantum computer programs faster for two hard scientific problems: modeling fusion energy and simulating chemistry. It says AI \"agent teams\" and formal verification (a method of using logic to mathematically prove that a program does what it should) were used to improve these algorithms. The text is only a short summary, so it does not give details of the specific improvements or how large they were.",
+    "why": "Faster quantum algorithms could matter for hard simulations in energy and materials research, but the summary gives no measured results, so the practical impact is unclear. It is also a sign of interest in using AI systems to help design and check scientific software.",
+    "background": "- Quantum algorithm: a set of steps meant to run on a quantum computer, which uses quantum physics rather than ordinary bits.\n- Fusion energy: generating power by fusing atomic nuclei, the process that powers the sun, which requires detailed simulations.\n- Quantum chemistry simulation: using computers to model how molecules behave, a task that is very hard for classical machines.\n- AI agents: software systems that carry out multistep tasks with some autonomy, here working as a team.\n- Formal verification: mathematically proving that a program meets its specification, rather than only testing it.",
+    "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
@@ -51,10 +51,10 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Amazon is reportedly acquiring AI optimization technology and the research team of Decart for a reported $7.5 billion, as it prepares to sell its Trainium chips.",
-    "plain": "Amazon is reportedly buying a company called Decart, including its technology for making AI systems run more efficiently and the people who built it. The reported price is $7.5 billion. The article is short and gives few details beyond the deal itself and the headline's mention of Amazon's Trainium chips.",
-    "why": "Large acquisitions of AI efficiency talent and technology can signal where big cloud companies are investing to lower the cost of running AI. The article does not say how the technology will be used, so any link to Amazon's chip plans is only suggested by the headline.",
-    "background": "- AI \"optimization\" means making models faster or cheaper to run, for example by using less computing power.\n- Trainium is Amazon's own custom chip designed for training and running AI models, as an alternative to chips from other suppliers.\n- An acquisition means one company buys another; \"reported\" means the price comes from press reports, not necessarily an official announcement.\n- The article gives only a summary; details of the deal terms and the technology are not in the text.",
+    "one_liner": "Amazon is reported to be acquiring the AI optimization technology and research team of Decart for about $7.5 billion, as it prepares to sell its Trainium AI chips.",
+    "plain": "Amazon is reportedly buying a startup called Decart, including its technology for making AI systems run more efficiently and the researchers who built it. The reported price is about $7.5 billion. The article is short and gives few details beyond the deal itself and the mention of Amazon's Trainium chips.",
+    "why": "Large acquisitions of AI efficiency teams can signal where big cloud companies are investing to cut the cost of running AI. The link to Amazon's Trainium chips suggests a possible connection to its chip business, but the text does not explain how the two are related.",
+    "background": "- Decart: the company being acquired, per the headline and text; the article gives no further description of its work.\n- AI optimization: techniques that make AI models faster or cheaper to run, for example by using less computing power.\n- Trainium: Amazon's custom chips designed for training and running AI models, as an alternative to chips from other suppliers.\n- \"Reported\" deal: the $7.5 billion figure comes from reports, not necessarily from an official announcement in this text.\n- Acqui-hire: buying a company partly to bring its staff on board, which the phrase \"research team\" hints at.",
     "difficulty": "introductory",
     "ai": true
    },
@@ -62,45 +62,43 @@
    "source": "rss"
   },
   {
-   "uid": "news:74f939e081ec8d04",
-   "title": "Why data centers are at the center of the Big Tech backlash",
-   "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+   "uid": "news:9d1f6a725104cec1",
+   "title": "Megaspeed, the company at the center of the Jensen Huang scandal, appears headed for a US blacklist",
+   "url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/",
    "authors": [
-    "Anthony Ha"
+    "Lucas Ropek"
    ],
    "label": "AI News & Artificial Intelligence | TechCrunch",
    "primary_category": "techcrunch.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A short piece previewing journalist Paris Marx's book \"Hyperscale,\" which examines the public backlash against large tech companies' data centers.",
-    "plain": "This article is about growing public frustration with the huge computer facilities that power online services and AI, often called data centers. It introduces a new book by journalist Paris Marx, \"Hyperscale,\" that digs into why these sites have become a flashpoint for criticism of Big Tech. The text itself is brief and does not spell out the specific arguments or evidence in detail.",
-    "why": "Data centers draw attention because they use large amounts of electricity and water and are being built quickly to support AI, so local and political pushback is plausible as a continuing issue. The text is too thin to say how strong the backlash is or what the book concludes.",
-    "background": "- Data center: a large building full of servers that store data and run online services and AI models.\n- Hyperscale: the term for the very largest data centers, built and run by a handful of major cloud companies.\n- Big Tech: the largest technology firms, such as the major cloud and social media companies.\n- Backlash: organized public opposition, which can involve local zoning fights, utility costs, or environmental concerns.\n- Paris Marx: a tech writer and podcaster who critically examines the technology industry.",
+    "one_liner": "A news report says Megaspeed, a company previously led by Alice Huang, appears headed for a U.S. blacklist that would bar American companies from doing business with it unless they obtain a special federal license.",
+    "plain": "The article reports that a company called Megaspeed seems likely to be placed on a U.S. government blacklist. If that happens, American businesses would generally not be allowed to work with it unless they first get a special permit from the federal government. The text is a short summary, so it does not explain the reasons for the listing or the wider dispute its headline refers to.",
+    "why": "Blacklists like this are a common tool for controlling which firms can buy US technology, and the headline links the company to a \"Jensen Huang scandal,\" which may connect it to the AI chip supply business. The text is too thin to say what the scandal involves or how serious the listing will be, so treat the connection as unconfirmed.",
+    "background": "- Blacklist (in this context): a government list of companies that U.S. firms may not trade with without special approval.\n- Special license: a formal permission from a government agency that allows a restricted transaction.\n- Jensen Huang: chief executive of Nvidia, a major maker of AI chips; the headline ties him to a scandal, but the article text does not describe it.\n- Alice Huang: former leader of Megaspeed, per the article; the text does not say whether she is related to Jensen Huang.\n- The article appears to be based on reporting of a planned or likely action, not a finalized one.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+   "abstract": "Megaspeed, which was previously led by Alice Huang, would be barred from doing business with U.S. companies unless those companies attained a special license from the federal government.",
    "source": "rss"
   },
   {
-   "uid": "news:d6a5b08e3fa8b3f0",
-   "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
-   "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
-   "authors": [
-    "Ivan Mehta"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
+   "uid": "news:680b35173b971311",
+   "title": "Richpanel helps companies automate 50% of support in 30 days",
+   "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Sierra, a customer-experience AI startup co-founded by former Salesforce co-CEO Bret Taylor, reportedly raised $1.75 billion in a Series F round, reaching a $30 billion valuation.",
-    "plain": "A company called Sierra, which builds AI tools for businesses to handle customer service and similar interactions, announced it has raised $1.75 billion from investors. The news says its valuation, the estimated total worth of the company, has doubled to $30 billion within about six months. The article attributes this to strong demand for AI in customer experience.",
-    "why": "It is a sign of how strongly investors are backing AI tools for customer service, a large commercial market. The article is brief and reports the company's own announcement, so the figures and reasons for demand are not independently verified here.",
-    "background": "- Series F: a late-stage funding round, usually after several earlier rounds, typically for a company that is already well established.\n- Valuation: the estimated value of a company, often set by the price investors pay for shares; it is not the same as cash or profit.\n- Customer experience (CX): all the interactions a customer has with a company, such as support chats, calls and help pages.\n- Bret Taylor: former co-CEO of Salesforce, a large business software company, who co-founded Sierra.\n- The article is a short news item with no details on products, customers, revenue or investors.",
+    "one_liner": "A short vendor-style news item says Richpanel uses several OpenAI-named models (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna) to run AI customer-support agents that it claims can automate 50% of support within 30 days.",
+    "plain": "This item is about Richpanel, a company that sells customer-support software. It says its AI support agents are built on several language models: one set equips the agents with tools and step-by-step procedures, and another handles the actual back-and-forth conversations with customers. The headline claims companies can automate half of their support work within 30 days.",
+    "why": "It is a small example of how businesses are packaging AI models into customer-service products, which matters to support teams and to anyone judging such claims. The text gives only the headline figure and the model names, so it does not show how the 50% was measured or how well the agents perform; treat it as a company claim rather than a verified result.",
+    "background": "- Language models are AI systems that generate and understand text; companies usually license them from a model provider and build products on top.\n- \"Automating support\" means an AI handles customer requests that would otherwise need a human agent, often measured as a share of tickets.\n- The model names given (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna) are the labels used in the article; the text does not explain how they differ beyond their assigned roles.\n- \"Tools and procedures\" refers to actions the AI can take (such as looking up an order) and fixed workflows it must follow.\n- The article is brief and promotional in tone, and it gives no independent data, methods, or customer results.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
+   "abstract": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
    "source": "rss"
   },
   {
