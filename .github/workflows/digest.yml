@@ -62,7 +62,8 @@ jobs:
         # Each channel does nothing until its secrets are set (see README).
         continue-on-error: true   # an email problem must never block the site update
         env:
-          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          # SUPABASE_API_KEY (this repository's secret name) also works.
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY || secrets.SUPABASE_API_KEY }}
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
           SMTP_USER: ${{ secrets.SMTP_USER }}

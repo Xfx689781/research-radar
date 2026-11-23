@@ -47,6 +47,16 @@ class SmtpSettings:
         return cls(host, port, user, pw, os.environ.get("MAIL_FROM", "").strip() or user)
 
 
+def _jwt_role(key: str) -> str:
+    """The role inside a legacy JWT key ('anon' or 'service_role'); '' if not a JWT."""
+    try:
+        import base64
+        part = key.split(".")[1]
+        return json.loads(base64.urlsafe_b64decode(part + "=" * (-len(part) % 4))).get("role", "")
+    except Exception:
+        return ""
+
+
 def fetch_subscribers(supabase_url: str, key: str) -> list[dict]:
     """Rows with email_daily = true, read with the secret key (bypasses row-level security)."""
     query = urllib.parse.urlencode({"select": "email,topics", "email_daily": "eq.true"})
@@ -116,6 +126,9 @@ def send_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False
         log.info("daily email skipped: SMTP settings not set")
         return 0
 
+    if key.startswith(("sb_publishable_", "eyJ")) and "service_role" not in _jwt_role(key):
+        log.warning("SUPABASE_SECRET_KEY looks like the public (publishable/anon) key, which "
+                    "cannot read other readers' settings. Use the secret key (sb_secret_...).")
     subscribers = fetch_subscribers(cfg.supabase_url, key)
     log.info("daily email: %d subscriber(s)", len(subscribers))
     messages = []
