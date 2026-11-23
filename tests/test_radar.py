@@ -304,6 +304,8 @@ def test_offline_run_english(tmp_path, monkeypatch):
     assert [p["uid"] for p in ml["papers"]][0] == "arxiv:2611.00002"
     assert ml["papers"][0]["summary"]["one_liner"].startswith("We derive")
     assert next(t for t in index["topics"] if t["slug"] == "ml-theory")["new_today"] == len(ml["papers"])
+    sitemap = (tmp_path / "docs" / "sitemap.xml").read_text(encoding="utf-8")
+    assert "<loc>https://xfx689781.github.io/research-radar/</loc>" in sitemap
     site = json.loads((data / "site.json").read_text(encoding="utf-8"))
     assert site["title"] == "Research Radar" and set(site) == {"title", "supabase_url", "supabase_anon_key"}
 
@@ -528,7 +530,10 @@ def test_build_email(tmp_path, papers):
                                       date(2026, 11, 22), "https://site.example/")
     assert "1 new" in subject and p.url in text
     assert "&lt;b&gt;generalize&lt;/b&gt;" in body and "<b>generalize" not in body   # escaped
-    assert "MACHINE LEARNING THEORY" in text and "untick" in text
+    assert "MACHINE LEARNING THEORY" in text and "Unsubscribe" not in text   # no token, no link
+    _, text2, body2 = build_email(["ml-theory"], a, cfg, date(2026, 11, 22), "https://site.example/",
+                                  "https://site.example/?unsubscribe=abc")
+    assert "Unsubscribe: https://site.example/?unsubscribe=abc" in text2 and "?unsubscribe=abc" in body2
     assert build_email(["probability"], a, cfg, date(2026, 11, 22), "x") is None
 
 
@@ -540,7 +545,7 @@ def test_send_daily_with_fake_services(tmp_path, papers, monkeypatch):
     a.add({"ml-theory": [by_uid(papers, "arxiv:2611.00002")]}, date(2026, 11, 22))
 
     monkeypatch.setattr(mailer, "fetch_subscribers", lambda url, key: [
-        {"email": "a@example.org", "topics": ["ml-theory"]},
+        {"email": "a@example.org", "topics": ["ml-theory"], "unsubscribe_token": "tok-1"},
         {"email": "b@example.org", "topics": ["probability"]}])          # nothing today for b
     sent = []
 
@@ -549,7 +554,9 @@ def test_send_daily_with_fake_services(tmp_path, papers, monkeypatch):
         def __enter__(self): return self
         def __exit__(self, *a): return False
         def login(self, u, p): sent.append(("login", u))
-        def send_message(self, m): sent.append(("to", m["To"]))
+        def send_message(self, m):
+            sent.append(("to", m["To"]))
+            assert "unsubscribe=tok-1" in m["List-Unsubscribe"] and "mailto:me@example.org" in m["List-Unsubscribe"]
 
     monkeypatch.setattr(mailer.smtplib, "SMTP_SSL", FakeSMTP)
     monkeypatch.setattr(mailer.time, "sleep", lambda s: None)

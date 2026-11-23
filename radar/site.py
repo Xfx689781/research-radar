@@ -13,6 +13,7 @@ files of the topics they picked.
 from __future__ import annotations
 
 import json
+from xml.sax.saxutils import escape
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -57,6 +58,14 @@ def export_site(site_dir: Path, cfg: Config, archive: Archive, today: date) -> l
     index = data_dir / "topics.json"
     _write(index, {"updated": today.isoformat(), "language": cfg.language,
                    "fields": fields, "topics": topics})
+    if cfg.site_url:                   # helps search engines find the site
+        sitemap = site_dir / "sitemap.xml"
+        sitemap.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'  <url><loc>{escape(cfg.site_url)}</loc><lastmod>{today.isoformat()}</lastmod>'
+            '<changefreq>daily</changefreq></url>\n</urlset>\n', encoding="utf-8")
+        written.append(sitemap)
     settings = data_dir / "site.json"
     _write(settings, {"title": cfg.site_title,
                       "supabase_url": cfg.supabase_url,

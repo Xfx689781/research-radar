@@ -12,6 +12,20 @@ create table if not exists public.preferences (
 alter table public.preferences add column if not exists email text;
 alter table public.preferences add column if not exists email_daily boolean not null default false;
 
+-- Added in v0.8: a secret per reader for the one-click unsubscribe link in emails.
+alter table public.preferences add column if not exists unsubscribe_token uuid not null default gen_random_uuid();
+
+-- Unsubscribe without signing in: the website calls this with the token from the
+-- email link. It can only switch the daily email off, and only for that one token.
+create or replace function public.unsubscribe(token uuid) returns boolean
+language sql security definer set search_path = public as $$
+  update public.preferences set email_daily = false, updated_at = now()
+  where unsubscribe_token = token and email_daily
+  returning true;
+$$;
+revoke all on function public.unsubscribe(uuid) from public;
+grant execute on function public.unsubscribe(uuid) to anon, authenticated;
+
 -- Table access. Newer Supabase projects do not open tables created in SQL to the
 -- Data API, so grant it explicitly: signed-in readers may read and write (rows are
 -- still limited to their own by the policies below); the daily email job, using the

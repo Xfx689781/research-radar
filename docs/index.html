@@ -3,8 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research Radar</title>
-<meta name="description" content="New research papers in the fields you choose, explained in plain words, every day.">
+<title>Research Radar · Daily plain-language summaries of new research papers</title>
+<meta name="description" content="Research Radar: pick your fields and get the newest papers from arXiv, bioRxiv and medRxiv, plus AI news, explained in plain words every day. Free, with an optional daily email.">
+<meta name="keywords" content="Research Radar, arXiv digest, daily research papers, paper summaries, AI news, mathematics, physics, machine learning, biology, economics">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Research Radar">
+<meta property="og:title" content="Research Radar · new research, explained daily">
+<meta property="og:description" content="Pick your fields and read the newest papers and AI news in plain words, every day.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Research Radar",
+ "description": "Daily plain-language summaries of new research papers from arXiv, bioRxiv and medRxiv, plus AI news, in 80 topics."}
+</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
@@ -69,10 +79,11 @@
   .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 12px; font-size: .88rem; }
   .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .controls-right { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-  .email-opt { display: inline-flex; gap: 8px; align-items: center; font-size: .9rem; cursor: pointer;
-               border: 1.5px solid var(--accent); color: var(--accent); background: var(--accent-soft);
-               border-radius: 999px; padding: 6px 14px; font-weight: 600; }
-  .email-opt input { width: 16px; height: 16px; accent-color: var(--accent); }
+  .subscribe { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+               border: 1.5px solid var(--accent); background: var(--accent-soft); border-radius: var(--radius);
+               padding: 14px 18px; margin: 4px 0 18px; }
+  .subscribe .sub-text { display: flex; flex-direction: column; gap: 2px; max-width: 60ch; }
+  .subscribe .sub-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
   select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
   h2.day { font: 600 1.05rem/1.3 var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: 34px 0 12px; font-size: .8rem; }
@@ -152,11 +163,15 @@
       </label>
       <span class="controls-right">
         <button class="btn" id="view-toggle" type="button" aria-pressed="false">Show full details</button>
-        <label class="email-opt" id="email-opt" hidden>
-          <input type="checkbox" id="email-daily"> 📬 Email me these every morning
-        </label>
         <button class="btn" id="edit-topics">Edit topics</button>
       </span>
+    </div>
+    <div class="subscribe" id="subscribe" hidden>
+      <div class="sub-text">
+        <strong id="sub-title">📬 Get your topics by email every morning</strong>
+        <span class="muted" id="sub-detail">One email a day with the new papers in the topics above. Unsubscribe anytime.</span>
+      </div>
+      <div class="sub-actions" id="sub-actions"></div>
     </div>
     <p class="notice" id="email-note" hidden></p>
     <p class="notice" id="stale-note" hidden></p>
@@ -187,6 +202,10 @@
 </dialog>
 
 <footer class="wrap">
+  <p style="margin:0 0 10px"><strong>About Research Radar.</strong> A free daily digest of new research for curious readers.
+  Choose any of 80 topics across mathematics, statistics, computer science and AI, physics, astronomy, chemistry,
+  biology, medicine, economics and engineering; every morning the newest papers in those topics appear here,
+  each explained in plain words, and you can get them by email.</p>
   Papers come from arXiv, bioRxiv and medRxiv; AI news from the public feeds of AI labs and news sites, linked to the original articles. Summaries are written by AI from each abstract and can be wrong; open the paper before relying on them. Thank you to arXiv for use of its open access interoperability.
   <a href="https://github.com/Xfx689781/research-radar">Source on GitHub</a>.
 </footer>
@@ -269,20 +288,63 @@ async function saveRemote(list) {
   return !error;
 }
 function renderEmailOption() {
-  const signedIn = !!(state.user && state.supabase);
-  $("email-opt").hidden = !signedIn;
-  $("email-daily").checked = state.emailDaily;
-  if (!signedIn) $("email-note").hidden = true;
+  const card = $("subscribe"), actions = $("sub-actions");
+  card.hidden = !state.supabase;                 // accounts not set up on this site
+  if (card.hidden) return;
+  actions.replaceChildren();
+  const signedIn = !!state.user;
+  if (!signedIn) {
+    $("sub-title").textContent = "📬 Get your topics by email every morning";
+    $("sub-detail").textContent = "Sign in with your email, then subscribe. One email a day; unsubscribe anytime.";
+    actions.append(el("button", { class: "btn primary", type: "button",
+      onclick: () => { $("signin-msg").hidden = true; $("signin").showModal(); } }, "Sign in to subscribe"));
+    $("email-note").hidden = true;
+  } else if (!state.emailDaily) {
+    $("sub-title").textContent = "📬 Get your topics by email every morning";
+    $("sub-detail").textContent = `One email a day to ${state.user.email} with the new papers in your topics. Unsubscribe anytime.`;
+    actions.append(el("button", { class: "btn primary", type: "button", onclick: () => setEmail(true) }, "Subscribe"));
+  } else {
+    $("sub-title").textContent = "📬 You're subscribed";
+    $("sub-detail").textContent = `Each morning we email ${state.user.email} the new papers in your topics.`;
+    actions.append(el("button", { class: "btn link", type: "button", onclick: askUnsubscribe }, "Unsubscribe"));
+  }
 }
-$("email-daily").addEventListener("change", async (ev) => {
-  state.emailDaily = ev.target.checked;
+function askUnsubscribe() {
+  const actions = $("sub-actions");
+  actions.replaceChildren(
+    el("span", { class: "muted" }, "Stop the daily email?"),
+    el("button", { class: "btn", type: "button", onclick: () => setEmail(false) }, "Yes, unsubscribe"),
+    el("button", { class: "btn primary", type: "button", onclick: renderEmailOption }, "Keep it"));
+}
+async function setEmail(on) {
+  const before = state.emailDaily;
+  state.emailDaily = on;
   const ok = await saveRemote([...state.selected]);
+  if (!ok) state.emailDaily = before;
   const note = $("email-note");
   note.hidden = false;
   note.textContent = !ok ? `Could not save this setting (${state.lastSaveError}). Please try again.`
-    : state.emailDaily ? `Done. Each morning we will email ${state.user.email} the new papers in your topics.`
-                       : "Daily email turned off.";
-});
+    : on ? `Subscribed. The first email arrives tomorrow morning. If you don't see it, check your spam folder.`
+         : "Unsubscribed. You will not get the daily email any more.";
+  renderEmailOption();
+}
+
+// One-click unsubscribe from the link in each email: ?unsubscribe=<token>
+async function handleUnsubscribeLink() {
+  const params = new URLSearchParams(location.search);
+  const token = params.get("unsubscribe");
+  if (!token) return;
+  params.delete("unsubscribe");
+  history.replaceState(null, "", location.pathname + (params.toString() ? "?" + params : ""));
+  const box = $("load-error");
+  box.hidden = false;
+  if (!state.supabase) { box.textContent = "Unsubscribing is not available right now. Please try again later."; return; }
+  const { data, error } = await state.supabase.rpc("unsubscribe", { token });
+  box.textContent = error ? `Could not unsubscribe (${error.message}). Please try again or sign in and unsubscribe there.`
+    : data ? "You are unsubscribed. You will not get the daily email any more."
+           : "This unsubscribe link is not valid any more; you may already be unsubscribed.";
+  if (!error && data && state.user) { state.emailDaily = false; renderEmailOption(); }
+}
 async function saveSelection(list) {
   writeLocal(list);
   await saveRemote(list);
@@ -516,10 +578,11 @@ async function start() {
       getJSON("data/site.json").catch(() => ({})), getJSON("data/topics.json")]);
     state.topics = index.topics; state.fields = index.fields; state.updated = index.updated;
     state.bySlug = Object.fromEntries(index.topics.map((t) => [t.slug, t]));
-    if (site.title) { document.title = site.title; $("brand").textContent = site.title; }
+    if (site.title) $("brand").textContent = site.title;
     $("updated").textContent = index.updated ? `Updated ${fmtDay(index.updated)}` : "";
     await initAuth(site);
     await start();
+    await handleUnsubscribeLink();
   } catch (e) {
     const box = $("load-error");
     box.hidden = false;

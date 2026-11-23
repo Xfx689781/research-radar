@@ -59,7 +59,7 @@ def _jwt_role(key: str) -> str:
 
 def fetch_subscribers(supabase_url: str, key: str) -> list[dict]:
     """Rows with email_daily = true, read with the secret key (bypasses row-level security)."""
-    query = urllib.parse.urlencode({"select": "email,topics", "email_daily": "eq.true"})
+    query = urllib.parse.urlencode({"select": "email,topics,unsubscribe_token", "email_daily": "eq.true"})
     headers = {"apikey": key, "Accept": "application/json"}
     if not key.startswith("sb_"):          # legacy JWT keys also go in the Authorization header
         headers["Authorization"] = f"Bearer {key}"
@@ -70,8 +70,14 @@ def fetch_subscribers(supabase_url: str, key: str) -> list[dict]:
     return [r for r in rows if r.get("email") and r.get("topics")]
 
 
+def unsubscribe_url(site_url: str, token: str | None) -> str:
+    if not (site_url and token):
+        return ""
+    return f"{site_url.rstrip('/')}/?unsubscribe={urllib.parse.quote(str(token))}"
+
+
 def build_email(topics: list[str], archive: Archive, cfg: Config, today: date,
-                site_url: str) -> tuple[str, str, str] | None:
+                site_url: str, unsubscribe: str = "") -> tuple[str, str, str] | None:
     """(subject, plain text, html) with today's items in these topics, or None if there are none."""
     names = {t.slug: t.display_name(cfg.language) for t in cfg.topics}
     sections = []
@@ -106,12 +112,15 @@ def build_email(topics: list[str], archive: Archive, cfg: Config, today: date,
                 f'font-size:17px;color:#1d1f22;font-weight:600;text-decoration:none">{html.escape(r["title"])}</a>'
                 f'<div style="color:#8a9098;font-size:13px;margin:2px 0 8px">{html.escape(r.get("label") or "")}</div>'
                 f'<div>{html.escape(blurb)}</div></div>')
-    footer = (f"You get this email because you turned on the daily email at {site_url}. "
-              f"To stop it or change topics, open the site, sign in and untick "
-              f"\"Email me these every morning\". Summaries are written by AI and can be wrong.")
+    footer = (f"You get this email because you subscribed at {site_url}. "
+              f"Change your topics there. Summaries are written by AI and can be wrong.")
     text += ["--", footer]
+    if unsubscribe:
+        text.append(f"Unsubscribe: {unsubscribe}")
+    unsub_html = (f' · <a href="{html.escape(unsubscribe, quote=True)}" style="color:#0f6b5c">Unsubscribe</a>'
+                  if unsubscribe else "")
     parts.append(f'<p style="color:#8a9098;font-size:12px;margin-top:26px">'
-                 f'<a href="{html.escape(site_url, quote=True)}" style="color:#0f6b5c">Open your feed</a><br>'
+                 f'<a href="{html.escape(site_url, quote=True)}" style="color:#0f6b5c">Open your feed</a>{unsub_html}<br>'
                  f'{html.escape(footer)}</p></div>')
     return subject, "\n".join(text), "".join(parts)
 
@@ -133,13 +142,18 @@ def send_daily(cfg: Config, archive: Archive, today: date, dry_run: bool = False
     log.info("daily email: %d subscriber(s)", len(subscribers))
     messages = []
     for sub in subscribers:
-        built = build_email(sub["topics"], archive, cfg, today, cfg.site_url)
+        unsub = unsubscribe_url(cfg.site_url, sub.get("unsubscribe_token"))
+        built = build_email(sub["topics"], archive, cfg, today, cfg.site_url, unsub)
         if not built:
             continue
         subject, text, body = built
         msg = EmailMessage()
         msg["Subject"], msg["To"] = subject, sub["email"]
         msg["From"] = smtp.sender if smtp else "dry-run@example.org"
+        if unsub:                       # mail apps show an "Unsubscribe" button for this
+            sender = smtp.sender if smtp else "dry-run@example.org"
+            addr = sender.split("<")[-1].rstrip(">").strip()
+            msg["List-Unsubscribe"] = f"<{unsub}>, <mailto:{addr}?subject=unsubscribe>"
         msg.set_content(text)
         msg.add_alternative(body, subtype="html")
         messages.append(msg)

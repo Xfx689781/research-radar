@@ -24,7 +24,7 @@ Each paper gets:
 1. Open the site and pick your topics.
 2. Come back any day; your feed shows the latest papers in your topics. Use the chips to look at one topic at a time, and **Edit topics** to change your choice.
 3. Your choice is saved in your browser. If the site has accounts turned on, **Sign in** with your email to keep your topics on every device.
-4. Signed in, tick **Email me these every morning** to get the day's papers in your topics by email. Untick it to stop.
+4. Signed in, press **Subscribe** to get the day's papers in your topics by email every morning. Every email has a one-click unsubscribe link; you can also unsubscribe on the site.
 
 ## Run your own copy in 10 minutes
 
@@ -57,7 +57,7 @@ Supabase's built-in email service only sends a few sign-in emails per hour, whic
 
 Signed-in readers can tick **Email me these every morning**. To make the daily job actually send those emails:
 
-1. **Database.** Run `supabase/schema.sql` again in Supabase's SQL Editor. It is safe to re-run; it adds the `email` and `email_daily` columns.
+1. **Database.** Run `supabase/schema.sql` again in Supabase's SQL Editor. It is safe to re-run; it adds the email columns, the unsubscribe token and function, and the table permissions.
 2. **Supabase secret key.** In Supabase: **Project Settings → API Keys → Secret keys**, create or copy a secret key (`sb_secret_...`). Add it to GitHub as the Actions secret `SUPABASE_SECRET_KEY`. This key can read every reader's settings, so it must only ever live in GitHub Secrets.
 3. **An email account to send from.** Any SMTP account works. Without Gmail, [Brevo](https://www.brevo.com)'s free plan works too: `SMTP_HOST` `smtp-relay.brevo.com`, `SMTP_PORT` `587`, the SMTP login and SMTP key from Brevo's SMTP page, and a sender address you verified in Brevo as `MAIL_FROM`. With Gmail: turn on 2-Step Verification for the Google account, then create an **App password** (Google Account → Security → App passwords). Add these GitHub Actions secrets:
 
@@ -70,6 +70,14 @@ Signed-in readers can tick **Email me these every morning**. To make the daily j
    | `MAIL_FROM` | optional, e.g. `Research Radar <you@gmail.com>` |
 
 The workflow's last step then emails each subscriber the day's items in their topics (nobody gets an empty email). Gmail allows a few hundred messages a day, plenty for a small group; for more readers, use a transactional email service's SMTP settings instead. Set `site_url` in `config.yaml` so the email links to your site.
+
+## Being found on Google (optional)
+
+The page has a descriptive title, description and about text, and each run writes `docs/sitemap.xml` from `site_url`. To get indexed:
+
+1. Open [Google Search Console](https://search.google.com/search-console), add a **URL prefix** property with your site address, and verify it with the **HTML tag** method: put the `<meta name="google-site-verification" ...>` tag into the `<head>` of `docs/index.html`.
+2. In Search Console, **Sitemaps** → submit `sitemap.xml`.
+3. Link to the site from places people see (the repository description, your profiles). Indexing takes days to weeks, and a generic name competes with others that share it.
 
 ## Discord (optional)
 
