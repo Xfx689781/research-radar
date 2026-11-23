@@ -11,14 +11,54 @@
    "primary_category": "openai.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A news piece arguing that perplexity, a standard language-model metric, could give developers a shared yardstick for judging emerging AI capabilities.",
-    "plain": "This short article looks at perplexity, a score used to measure how well an AI language model predicts text. It suggests the score might help developers agree on a common way to judge what new AI systems can do. The text provided is only a one-line summary, so it does not show specific experiments, numbers, or results.",
-    "why": "Agreeing on how to measure AI abilities matters for comparing models and tracking progress. The text does not say whether this idea has been adopted, so its practical impact is unclear.",
-    "background": "- Language model: an AI system trained to predict the next word in a piece of text.\n- Perplexity: a score for how \"surprised\" a model is by real text; lower usually means better prediction.\n- Evaluation benchmark: a standard test used to compare AI systems fairly.\n- Emerging capabilities: new skills that appear as models grow larger or are trained differently.",
+    "one_liner": "A short piece arguing that perplexity, a standard language-model metric, could give developers a shared way to measure emerging AI capabilities.",
+    "plain": "The article looks at perplexity, a score that shows how well an AI language model predicts the next word in a text. It describes how this score can track progress in AI models and suggests it might help developers agree on a common way to judge new abilities. The text is brief and only gives this overview, so it does not report detailed experiments or specific results.",
+    "why": "Developers and researchers often disagree about how to compare AI systems, so a shared measure could make progress easier to discuss. Whether perplexity is suitable for judging newer abilities is an open question that the short text does not settle.",
+    "background": "- Language model: an AI system trained to predict likely next words in text.\n- Perplexity: a number where lower values mean the model is less \"surprised\" by real text, so it predicts better.\n- Emerging capabilities: new skills that appear as models grow, such as reasoning or following instructions, which are harder to measure.\n- Evaluation: the process of testing and scoring AI systems so they can be compared.\n- Limitation: the text is a brief overview with no data, so details of its argument are unclear.",
     "difficulty": "intermediate",
     "ai": true
    },
    "abstract": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:9dddeb89e408dae0",
+   "title": "Finding faster quantum algorithms with agents and formal verification",
+   "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+   "authors": [],
+   "label": "Google DeepMind News",
+   "primary_category": "deepmind.google",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A news piece describing the use of AI agent teams together with formal verification (machine-checked proofs of correctness) to improve quantum algorithms aimed at fusion energy and chemistry problems.",
+    "plain": "The article is about using teams of AI agents to find faster methods for running calculations on quantum computers, with applications in fusion energy and chemistry. The text is very short, so it only says that agent teams and formal verification were used to improve these algorithms; it does not describe the specific methods or the size of any improvement.",
+    "why": "Faster quantum algorithms could matter for simulating molecules and plasmas, which are hard for ordinary computers, but the text gives no results to judge how large the gain is. It may connect to wider efforts to use AI to speed up scientific software, though the article alone does not establish that.",
+    "background": "- Quantum algorithm: a set of steps designed to run on a quantum computer, which uses quantum physics to process information differently from ordinary computers.\n- Fusion energy: producing power by joining atomic nuclei, the process that powers the sun; simulating it is computationally demanding.\n- Quantum chemistry: using computers to predict how molecules behave, useful for drug and materials design.\n- Formal verification: using mathematical proof tools to show that a program or method is correct, rather than relying only on testing.\n- AI agents: AI systems that carry out multi-step tasks, such as writing and checking code, with limited human direction.\n- The article is brief and gives no numbers or technical details, so treat its claims as unverified until the original work is read.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:6a7990e1ad10d3b0",
+   "title": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+   "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+   "authors": [
+    "Rebecca Bellan"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "Amazon is reportedly acquiring AI optimization technology and the research team of Decart for a reported $7.5 billion, as it prepares to sell its Trainium chips.",
+    "plain": "Amazon is reportedly buying a company called Decart, including its technology for making AI systems run more efficiently and the people who built it. The reported price is $7.5 billion. The article is short and gives few details beyond the deal itself and the headline's mention of Amazon's Trainium chips.",
+    "why": "Large acquisitions of AI efficiency talent and technology can signal where big cloud companies are investing to lower the cost of running AI. The article does not say how the technology will be used, so any link to Amazon's chip plans is only suggested by the headline.",
+    "background": "- AI \"optimization\" means making models faster or cheaper to run, for example by using less computing power.\n- Trainium is Amazon's own custom chip designed for training and running AI models, as an alternative to chips from other suppliers.\n- An acquisition means one company buys another; \"reported\" means the price comes from press reports, not necessarily an official announcement.\n- The article gives only a summary; details of the deal terms and the technology are not in the text.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Amazon is acquiring Decart’s AI optimization technology and research team in a reported $7.5 billion deal.",
    "source": "rss"
   },
   {
@@ -32,10 +72,10 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A short piece previewing journalist Paris Marx's book \"Hyperscale,\" which examines the growing public pushback against Big Tech and the data centers that power it.",
-    "plain": "This article looks at why huge computer facilities called data centers have become a focus of anger toward large technology companies. It introduces journalist Paris Marx's new book, \"Hyperscale,\" in which he discusses the topic. The text is brief and mainly describes the book rather than reporting new facts or findings.",
-    "why": "Data centers are the physical base for AI and cloud services, so local and political reactions to them may affect where and how that infrastructure gets built. The text gives only a short preview, so it does not show the specific arguments or evidence the book makes.",
-    "background": "- Data center: a large building full of servers that store and process internet, cloud, and AI computing.\n- Hyperscale: a term for the very largest data centers, run by a few giant cloud companies such as Amazon, Microsoft, and Google.\n- Big Tech backlash: public criticism of large technology companies over issues like power use, land, jobs, and their influence.\n- Paris Marx: a journalist and host of a technology-critique podcast, known for writing about the business side of tech.\n- The article is a short author preview; the full book's claims are not described in the text.",
+    "one_liner": "A short piece previewing journalist Paris Marx's book \"Hyperscale,\" which examines the public backlash against large tech companies' data centers.",
+    "plain": "This article is about growing public frustration with the huge computer facilities that power online services and AI, often called data centers. It introduces a new book by journalist Paris Marx, \"Hyperscale,\" that digs into why these sites have become a flashpoint for criticism of Big Tech. The text itself is brief and does not spell out the specific arguments or evidence in detail.",
+    "why": "Data centers draw attention because they use large amounts of electricity and water and are being built quickly to support AI, so local and political pushback is plausible as a continuing issue. The text is too thin to say how strong the backlash is or what the book concludes.",
+    "background": "- Data center: a large building full of servers that store data and run online services and AI models.\n- Hyperscale: the term for the very largest data centers, built and run by a handful of major cloud companies.\n- Big Tech: the largest technology firms, such as the major cloud and social media companies.\n- Backlash: organized public opposition, which can involve local zoning fights, utility costs, or environmental concerns.\n- Paris Marx: a tech writer and podcaster who critically examines the technology industry.",
     "difficulty": "introductory",
     "ai": true
    },
@@ -43,64 +83,24 @@
    "source": "rss"
   },
   {
-   "uid": "news:f1dd0bea0b97e4ab",
-   "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
-   "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+   "uid": "news:d6a5b08e3fa8b3f0",
+   "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+   "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
    "authors": [
-    "Julie Bort"
+    "Ivan Mehta"
    ],
    "label": "AI News & Artificial Intelligence | TechCrunch",
    "primary_category": "techcrunch.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A short news item reporting that Anthropic's seven founders each received about $280 million at an upgraded $83-per-share IPO price, which the company says raised nearly $105 billion.",
-    "plain": "This is a news item about Anthropic, an AI company, going public by selling shares on the stock market (an IPO, or initial public offering). The article says the founders each made about $280 million from selling shares at the raised price of $83 per share, and that the company itself took in nearly $105 billion.",
-    "why": "It is a notable financial event for the AI industry, since the reported sums are very large. The text gives only the headline figures, so it says nothing about the company's products, research, or future earnings.",
-    "background": "- An IPO is when a private company first sells its shares to the public on a stock exchange.\n- Shares are units of ownership; the price per share times the number sold sets the total raised.\n- Founders often sell some of their own shares at an IPO, which is what \"cashed out\" means here.\n- The article gives only the per-founder amount, the price, and the total raised; it does not explain the share count, lock-up rules, or valuation.\n- Figures come from the article itself and have not been checked against filings.",
+    "one_liner": "Sierra, a customer-experience AI startup co-founded by former Salesforce co-CEO Bret Taylor, reportedly raised $1.75 billion in a Series F round, reaching a $30 billion valuation.",
+    "plain": "A company called Sierra, which builds AI tools for businesses to handle customer service and similar interactions, announced it has raised $1.75 billion from investors. The news says its valuation, the estimated total worth of the company, has doubled to $30 billion within about six months. The article attributes this to strong demand for AI in customer experience.",
+    "why": "It is a sign of how strongly investors are backing AI tools for customer service, a large commercial market. The article is brief and reports the company's own announcement, so the figures and reasons for demand are not independently verified here.",
+    "background": "- Series F: a late-stage funding round, usually after several earlier rounds, typically for a company that is already well established.\n- Valuation: the estimated value of a company, often set by the price investors pay for shares; it is not the same as cash or profit.\n- Customer experience (CX): all the interactions a customer has with a company, such as support chats, calls and help pages.\n- Bret Taylor: former co-CEO of Salesforce, a large business software company, who co-founded Sierra.\n- The article is a short news item with no details on products, customers, revenue or investors.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
-   "source": "rss"
-  },
-  {
-   "uid": "news:211fbe8009a45ecd",
-   "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
-   "url": "https://huggingface.co/blog/harness-adapters-at-scale",
-   "authors": [],
-   "label": "Hugging Face - Blog",
-   "primary_category": "huggingface.co",
-   "date": "2026-11-23",
-   "summary": {
-    "one_liner": "A news item announcing \"harness adapters,\" a method for tuning a chosen AI model to work with a specific surrounding software setup (the \"harness\") with the stated aim of better performance and lower cost.",
-    "plain": "The article is about a way to make an AI model fit better into the software wrapper that runs it, which is often called a harness. The title says the goal is better results and lower running costs, but the article body is empty, so I cannot say what was built, how it works, or how well it performed.",
-    "why": "Getting an AI model to work well inside its surrounding tools is a practical issue for anyone building AI products, since cost and reliability depend on it. Without the article text, I cannot confirm any results or claims beyond the title.",
-    "background": "- AI model: a large program trained on data that generates text or takes actions in response to input.\n- Harness: the surrounding software that feeds a model prompts, tools, and data and collects its outputs.\n- Adapter: a small add-on that adjusts a model so it works with a particular setup, without retraining the whole model.\n- Performance and cost: how accurately or usefully the system works, and how much computing it consumes to do so.\n- Note: the source text is missing, so this brief relies only on the title.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "",
-   "source": "rss"
-  },
-  {
-   "uid": "news:92c1cc867c014247",
-   "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
-   "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
-   "authors": [
-    "Theresa Loconsolo, Anthony Ha, Kirsten Korosec, Tim De Chant"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
-   "date": "2026-11-23",
-   "summary": {
-    "one_liner": "A news piece reporting that Nvidia, despite turmoil after it reportedly ousted CEO Jensen Huang, posted healthy earnings growth, will stop selling its H200 chips in China, and dismissed some unspecified calls to act.",
-    "plain": "The article covers Nvidia, the company that makes the chips used to train and run AI systems. It says the company is dealing with the fallout from removing its long-time chief executive, Jensen Huang, yet still reported strong growth in its latest earnings report. It also says Nvidia will stop selling its H200 chips in China.",
-    "why": "Nvidia is a central supplier of AI hardware, so changes in its leadership and its China sales can affect the wider AI industry. The text is short and cut off, so it does not explain why Huang was ousted, what the calls were, or the reasons for the China decision; those details would be needed to judge the impact.",
-    "background": "- Nvidia designs graphics processors (GPUs) that are the main hardware for building and running AI models.\n- Jensen Huang co-founded Nvidia and has led it as chief executive for decades; the article says he was ousted.\n- An earnings report is the company's regular public summary of revenue and profit for a period.\n- H200 is a specific Nvidia AI chip; export rules limit which advanced chips can be sold to China.\n- The article is a brief excerpt, so many claims are not explained and should be checked against fuller coverage.",
-    "difficulty": "introductory",
-    "ai": true
-   },
-   "abstract": "In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings report this week, with healthy growth and promises that the good times will continue. At the same time, the chipmaker said it will stop selling its H200 chips in China, and it dismissed calls to […]",
+   "abstract": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
    "source": "rss"
   },
   {

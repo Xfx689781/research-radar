@@ -3,51 +3,56 @@
  "updated": "2026-11-23",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.17.767434",
-   "title": "Nonheme Fe Enzyme-Catalyzed Enantioselective and Regiodivergent C(sp3)-H Amidation: Biocatalytic Asymmetric Synthesis of 1,2- and 1,3-Diamine Derivatives",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767434v1",
+   "uid": "biorxiv:10.64898/2026.11.20.767675",
+   "title": "RUBRIC: rapid quality assessment tool for RNA 3D structures",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.767675v1",
    "authors": [
-    "Chen, H.",
-    "Liu, H.",
-    "Zhao, L.-P.",
-    "Lin, K.",
-    "Yang, Y."
+    "Dewan, K. J.",
+    "Yesselman, J. D."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.17.767434 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.20.767675 v1",
    "primary_category": "biochemistry",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Directed evolution of the plant nonheme iron enzyme ACCO yields biocatalysts that perform enantioselective, regiodivergent C(sp3)-H amidation of N-(benzoyloxy)urea substrates to give cyclic ureas, precursors to 1,2- and 1,3-diamines.",
-    "plain": "Chemists want to add nitrogen-containing groups onto specific carbon-hydrogen bonds in organic molecules, and to do it with control over which hydrogen is replaced and which mirror-image form (enantiomer) results. This paper reports that a plant enzyme, 1-aminocyclopropane-1-carboxylic acid oxidase (ACCO), was reshaped by repeated rounds of laboratory evolution so it does this reaction on a range of carbon sites, producing cyclic ureas that can be converted into diamine building blocks. The authors also report that the evolved enzymes can be used at gram scale in whole cells.",
-    "why": "Selective, mirror-image-controlled C-H functionalization is hard to do with ordinary chemical catalysts, so an enzyme route that can switch between 1,2- and 1,3-diamine products from the same starting material is of interest to synthetic chemists. The text does not show how widely these methods will transfer to other molecules or to industrial use.",
-    "background": "- C-H bond: a carbon-hydrogen bond; converting these directly into other bonds avoids extra synthesis steps.\n- Nonheme iron enzyme: an iron-containing protein that is not built around the heme ring; it can activate oxygen-based reagents to break C-H bonds.\n- Directed evolution: repeatedly mutating an enzyme and keeping the best variants, mimicking natural selection in the lab.\n- Enantioselectivity: preferentially making one of two mirror-image molecular forms, which matters for drug-like compounds.\n- Regiodivergent: the same starting material can be steered to different reaction sites by changing the catalyst.\n- Hydrogen atom transfer (HAT): a step where a hydrogen atom moves from carbon to another species, leaving a carbon-centered radical (a reactive carbon with an unpaired electron).\n- Diamine: a molecule with two amine (nitrogen) groups; cyclic ureas here are related protected forms.\n- Turnover number: how many product molecules one enzyme molecule makes before it stops working.",
+    "one_liner": "RUBRIC is an open-source program that annotates RNA base pairs and checks their geometry, ribose sugar puckers and backbone conformations in 3D structures, including flagging geometrically ambiguous pairs.",
+    "plain": "Scientists use cryo-electron microscopy to build three-dimensional models of RNA molecules, but the checking tools have not kept up, so deposited models can contain distorted parts. This paper presents RUBRIC, a fast free program that checks the pairing, sugar shape and backbone shape of each piece of an RNA model and points out problem spots. The authors report that it analyzes a whole human ribosome in under a second and that the problems it flags tend to shrink in better or re-refined models.",
+    "why": "Many RNA structures in the Protein Data Bank, and the datasets used to train structure-prediction methods, may contain errors, so a quick validation tool could help improve them before they are reused. The text does not show how widely RUBRIC will be adopted, so its practical impact remains to be seen.",
+    "background": "- RNA is a chain-like molecule; its building blocks (bases) pair up to form a folded 3D shape.\n- Cryo-electron microscopy (cryo-EM): a method that images frozen molecules to reconstruct their 3D structure.\n- Base pair: two RNA bases that hydrogen-bond together; Leontis-Westhof classes describe how the pair is oriented.\n- Ribose pucker: the sugar ring in each RNA unit can adopt a few characteristic puckered shapes; wrong puckers signal a bad model.\n- Backbone suite: the chain's local twist pattern between neighboring units, which takes known conformations.\n- Torsion angles: rotation angles along bonds that define local shape.\n- Protein Data Bank (PDB): the public archive where deposited 3D structures are stored.\n- Model refinement: adjusting a model to better fit the experimental data and chemical rules.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Nonheme Fe enzyme-catalyzed asymmetric, site-selective C-H amidation remains underexplored. Here we report the repurposing and directed evolution of the plant-derived nonheme Fe enzyme 1-aminocyclopropane-1-carboxylic acid oxidase (ACCO) into a family of biocatalysts for highly regio- and enantioselective C(sp3)-H amidation. Engineered ACCO variants catalyzed the asymmetric synthesis of cyclic ureas from N-(benzoyloxy)urea substrates, which are readily prepared from aliphatic amines, through the activation of benzylic, allylic, propargylic, and unactivated aliphatic C(sp3)-H bonds, including enantioconvergent amidation of racemic tertiary C(sp3)-H substrates. Directed evolution further generated complementary enzymes that selectively promoted either 1,5- or 1,6-hydrogen atom transfer, enabling catalyst-controlled, regiodivergent enantioselective synthesis of both 1,2- and 1,3-diamine derivatives from common precursors. The evolved biocatalysts exhibited total turnover numbers of up to 4,500 and were readily applicable to gram-scale whole-cell biotransformations. Mechanistic investigations supported a stepwise mechanism involving a carbon-centered radical intermediate. Kinetic isotope effect and isotopically labeled substrate studies indicated C(sp3)-H bond cleavage as the rate-limiting step, while stereochemical analyses revealed that the overall enantioselectivity is determined by the C-N bond-forming radical rebound rather than hydrogen atom transfer. These results established nonheme Fe enzymes as a versatile platform for selective C-H amidation and further expanded the scope of new-to-nature nonheme Fe biocatalysis for asymmetric C-H functionalization.",
+   "abstract": "Cryo-electron microscopy has transformed RNA structural biology, revealing increasingly large and complex structures at an unprecedented pace. However, validation methods have lagged behind, and deposited models can contain distorted base pairs, incorrect ribose puckers and backbone conformational outliers. Here, we introduce Rapid Unified Base-pair, Ribose and backbone Integrity Check (RUBRIC), an open-source program that combines RNA structural annotation with local validation of base pairs, sugars, and backbones. RUBRIC assigns Leontis-Westhof classes and identifies geometrically ambiguous pairs that cannot be confidently assigned to a single class. It scores unambiguous pairs against reference geometries for each type and class, identifying the parameters responsible for low scores. It also assigns backbone suites to known conformers, suggests target torsions for unassigned suites and flags incorrect ribose puckers. RUBRIC analyzes a complete human ribosome in under a second, with base-pair detection and classification consistent with leading annotation programs. These programs disagreed significantly more often on pairs RUBRIC flagged as ambiguous than on unambiguous pairs. The geometric problems flagged by RUBRIC were reduced in higher-resolution models of the same RNA or after refinement targeting the affected geometry, indicating that these problems are correctable. A PyMOL plug-in and machine-readable output support model building, correction before deposition and assessment of deposited structures before reuse. RUBRIC can therefore help improve RNA structures in the PDB and the datasets used to train and evaluate RNA structure prediction methods.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.18.767499",
-   "title": "Synthesis of Cellulose Nanofiber Hydrogel Beads from Typha angustifolia for the Immobilization of Protease",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767499v1",
+   "uid": "biorxiv:10.64898/2026.11.19.767920",
+   "title": "A cytochrome P450 is essential for cardenolide biosynthesis in Chrysolina beetles",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767920v1",
    "authors": [
-    "Ameh, B. E.",
-    "Egwim, E. C.",
-    "Ossamulu, F. i."
+    "Xu, H.",
+    "Stathaki, A.",
+    "Florean, M.",
+    "Wu, S.",
+    "Luck, K.",
+    "Vogel, H.",
+    "Fischer, M. L.",
+    "Nakamura, Y.",
+    "Kaltenpoth, M.",
+    "Koellner, T.",
+    "O'Connor, S. E."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.18.767499 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.19.767920 v1",
    "primary_category": "biochemistry",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Cellulose nanofibers extracted from invasive Typha angustifolia are formed into aldehyde-modified, PVA-blended, glutaraldehyde-crosslinked hydrogel beads that covalently immobilize crude protease, raising its specific activity and shifting its thermal and pH optima.",
-    "plain": "Cattail-like water plants of the species Typha angustifolia spread aggressively and cause problems for wetlands and irrigation channels. This study turned their plant fiber into small, water-swollen gel beads that hold an enzyme (a protein that speeds up chemical reactions), and the researchers measured how well the enzyme still worked when attached.",
-    "why": "Reusing an invasive plant as a biodegradable support for industrial enzymes could add value to weed removal, and attaching enzymes to a solid support is a common way to make them easier to recover and reuse. The text reports only lab measurements on one enzyme preparation, so its practical value for industry is not yet shown.",
-    "background": "- Cellulose: the main structural fiber in plant cell walls; cellulose nanofibers are very thin strands of it.\n- Hydrogel: a soft, water-filled gel network; here, formed into beads.\n- Immobilization: fixing an enzyme onto a solid carrier so it stays in place and can be reused.\n- Protease: an enzyme that breaks down proteins.\n- Specific activity: enzyme activity per milligram of protein (U/mg); higher means more active.\n- Crosslinking with glutaraldehyde: chemically linking polymer chains together to strengthen the gel; aldehyde groups from periodate oxidation provide sites where the enzyme attaches.\n- Optimum temperature and pH: the conditions where the enzyme works best; the paper reports these shifting upward for the immobilized form.\n- Half-life: the time over which the enzyme keeps half its activity under operating conditions.",
-    "difficulty": "intermediate",
+    "one_liner": "A cytochrome P450 enzyme from the leaf beetle Chrysolina coerulans, CcCYP9Z273, converts pregnenolone to caraumbellogenin via C14-hydroxylation, an early step in beetle cardenolide biosynthesis, with one active-site residue controlling C14 versus C15 selectivity.",
+    "plain": "Cardenolides are chemical defense compounds, found in some plants and in certain beetles, and they are also the basis of heart medicines such as digitoxin. Plants make these compounds in a well-studied way, but how insects make them was not known. This paper identifies an enzyme in a leaf beetle that performs an early step of the process, and shows that silencing the gene reduces the beetle's cardenolide production.",
+    "why": "It shows that beetles and plants appear to have recruited different enzyme families to build the same shared intermediate, which is a useful piece of evolutionary and biosynthetic understanding. The text does not say whether this could be used to produce medicinal cardenolides, so any such application remains speculative.",
+    "background": "- Cardenolides: steroid-like natural compounds that act as defense chemicals and include heart drugs such as digitoxin.\n- Steroid precursor: pregnenolone is a basic steroid building block that the enzyme modifies.\n- Cytochrome P450: a large family of enzymes that add oxygen to molecules, often at specific carbon positions.\n- Hydroxylation: adding an –OH group to a carbon atom; here at position C14 (or C15 as a competing outcome).\n- Gene silencing: switching off a gene to see what happens to the organism's chemistry.\n- Isotope tracing: feeding labelled molecules to track which compounds are true intermediates in a pathway.\n- Biosynthetic intermediate: a compound made along the way to the final product.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Typha angustifolia, an invasive aquatic macrophyte, poses a persistent challenge to wetland and irrigation management, yet its cellulose-rich biomass represents an underexploited feedstock for value-added biomaterials. This study reports the synthesis of cellulose nanofiber (CNF) hydrogel beads from T. angustifolia and evaluates their performance as a support matrix for protease immobilization. Cellulose was isolated by chlorite delignification and alkaline treatment, oxidized with sodium periodate to introduce aldehyde functional groups, blended with polyvinyl alcohol (PVA), and crosslinked with glutaraldehyde to form hydrogel beads. The beads exhibited a high water-absorption capacity of 399.67 {plus minus} 0.53% and a mechanical strength of 1.27 MPa. Covalent immobilization of crude protease onto the beads increased specific activity nearly threefold, from 24.56 {plus minus} 0.39 U/mg for the free enzyme to 59.20 {plus minus} 1.06 U/mg for the immobilized enzyme, corresponding to a loading efficiency of 50.61%. The immobilized enzyme also displayed broadened thermal and pH optima, shifting from 40 {degree sign}C to 50 {degree sign}C and from pH 8.0 to 9.0, respectively, and an extended operational half-life from 4.40 h to 11.37 h. These findings support the valorization of invasive Typha biomass into a robust, biodegradable support system with potential application in industrial biocatalysis.",
+   "abstract": "Cardenolides are naturally occurring steroidal derivatives that function as chemical defense compounds. These natural products are also widely used in medicine, as exemplified by the use of digitoxin in treating cardiac disease. Although cardenolides are most widely known as plant-derived natural products, these compounds are also produced in certain beetle species. However, while the biosynthesis of cardenolides has been well-studied in plants, it is not known how insects produce these compounds. Here we report the identification of a cardenolide biosynthetic enzyme from the leaf beetle Chrysolina coerulans. This cytochrome P450, CcCYP9Z273, catalyzes an array of steroid oxidations, including the conversion of pregnenolone into caraumbellogenin through C14-hydroxylation. Gene silencing suggests that CcCYP9Z273 is essential for beetle cardenolide formation and isotope tracing experiments support caraumbellogenin as an on-pathway biosynthetic intermediate. Mutagenesis of CcCYP9Z273 identifies an active-site residue that controls the enzyme product selectivity between C14- and C15-hydroxylation. These findings establish an early step in beetle cardenolide biosynthesis and highlight how distinct enzyme families have been recruited in insects and plants to generate a shared intermediate in the biosynthesis of these important metabolites.",
    "source": "biorxiv"
   },
   {

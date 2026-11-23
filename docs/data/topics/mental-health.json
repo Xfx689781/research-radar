@@ -3,6 +3,32 @@
  "updated": "2026-11-23",
  "papers": [
   {
+   "uid": "medrxiv:10.64898/2026.11.19.26368528",
+   "title": "Cycle-based neurostimulation for control of circadian brain network dynamics in human epilepsy",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368528v1",
+   "authors": [
+    "Saboo, K. V.",
+    "Fan, J. M.",
+    "Tadayon, E.",
+    "Chang, E. F.",
+    "Rao, V. R.",
+    "Khambhati, A. N."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.19.26368528 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "Longitudinal ECoG study in bitemporal epilepsy reporting that circadian alignment of hippocampal connectivity rhythms predicts responsive neurostimulation seizure reduction, modeled with a nonlinear Kuramoto oscillator and in-silico stimulation timing optimization.",
+    "plain": "This paper looks at whether the body's daily clock affects how well brain stimulation works for epilepsy. The researchers recorded brain activity over months from people with seizures starting in both temporal lobes, and found that when the daily activity rhythms of the left and right hippocampus lined up more closely, patients had more seizure reduction. They also report that the timing of stimulation during the day relates to how these rhythms changed over months, and that a computer model suggested adjusting stimulation timing could improve that alignment.",
+    "why": "Most brain stimulation treatments ignore time of day, so showing that daily rhythms carry information about treatment response could matter for personalizing therapy. The text only supports this as a possible direction: the results come from a small clinical recording setting and a computer model, and the authors frame the wider applications (other neurological and psychiatric disorders) as opportunities rather than demonstrated results.",
+    "background": "- Epilepsy: a condition with recurrent seizures; here it originates in the temporal lobes on both sides.\n- Responsive neurostimulation: a device that senses brain activity and delivers electrical pulses when it detects a seizure risk.\n- Electrocorticography (ECoG): recording electrical activity from electrodes placed on or in the brain, used clinically.\n- Hippocampus: a brain region important for memory and involved in seizure spread; the paper compares left and right sides.\n- Circadian rhythm: roughly 24-hour biological cycle, such as sleep-wake timing.\n- Connectivity: how strongly different brain regions' activity is coordinated over time.\n- Kuramoto oscillator model: a mathematical model of many rhythmic units that drift toward or away from synchrony; used here to describe coupled rhythms.\n- Control theory: the field of steering a system's behavior by choosing inputs, here stimulation timing.\n- In silico: performed by computer simulation rather than in patients.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Biological rhythms modulate symptoms of brain disorders, yet brain stimulation therapies largely overlook the temporal organization of pathological brain states. Harnessing these rhythms could improve therapeutic efficacy. Here, we show that circadian coordination of hippocampal network connectivity is a biomarker of therapeutic response to responsive neurostimulation in epilepsy. Using longitudinal electrocorticography from individuals with bitemporal epilepsy, we find that alignment of circadian connectivity rhythms between the left and right hippocampus predicts seizure reduction. The daily distribution of stimulation also predicts how these rhythms evolve over months. We capture these dynamics using a nonlinear Kuramoto oscillator model and demonstrate that optimizing stimulation timing in silico can improve predicted circadian network alignment. Our findings establish a cycle-based, control-theoretic framework for modelling and potentially reshaping brain network rhythms, offering new opportunities for personalized neurostimulation in epilepsy and other neurological and psychiatric disorders.",
+   "source": "medrxiv"
+  },
+  {
    "uid": "medrxiv:10.64898/2026.11.17.26368361",
    "title": "Carotid Artery Stenosis is Associated with Restless Legs Syndrome in the Absence of Stroke",
    "url": "https://www.medrxiv.org/content/10.64898/2026.11.17.26368361v1",
@@ -15,53 +41,14 @@
    "primary_category": "neurology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A TriNetX retrospective propensity-matched case-control study (58,382 per arm) finds bilateral internal carotid artery stenosis/occlusion (ICD-10 I65.23) is associated with a small increase in restless legs syndrome diagnosis (G25.81), adjusted OR 1.09 (95% CI 1.002-1.186), after excluding prior stroke/TIA.",
-    "plain": "This study asks whether narrowing of the large arteries in the neck that supply the brain is linked to restless legs syndrome, an urge to move the legs that is often worse at night. Using a large database of health records, the researchers compared people with severe narrowing or blockage of both neck arteries against similar people with hardening of the arteries but no such narrowing. People with the neck-artery problem were slightly more likely to have a restless legs diagnosis, though the difference was small.</plain>\n<parameter name=\"why>Restless legs syndrome is common and its causes are not fully understood, so a possible vascular link is worth checking. The effect is small, and the text does not show whether the link is causal; the authors themselves say prospective studies are needed to test causality and whether treating the arteries changes the risk.",
-    "why": "",
-    "background": "- Restless legs syndrome (RLS): a neurological condition causing an uncomfortable urge to move the legs, often at rest or at night, usually diagnosed from symptoms.\n- Internal carotid artery stenosis (CAS): narrowing of the main arteries on each side of the neck that carry blood to the brain; \"occlusion\" means fully blocked.\n- Atherosclerosis: build-up of fatty plaque that hardens and narrows arteries.\n- Hypoperfusion: reduced blood flow to tissue; microemboli: tiny clots or debris traveling in the blood.\n- Basal ganglia dopaminergic pathways: brain circuits using dopamine, a chemical messenger, that are thought to be involved in RLS.\n- Retrospective case-control with propensity score matching: comparing existing records of two groups matched on many traits to reduce confounding; it shows association, not cause.\n- Odds ratio (OR): a measure of how much more likely an outcome is in one group; 1.09 means about 9% higher odds.\n- ICD-10 codes: standard diagnosis codes used in medical records.",
+    "one_liner": "A TriNetX retrospective propensity-matched case-control study (58,382 per arm) finds bilateral internal carotid artery stenosis/occlusion (ICD-10 I65.23) associated with a small increase in restless legs syndrome diagnosis (G25.81) versus atherosclerosis without carotid stenosis (adjusted OR 1.09, 95% CI 1.002-1.186).",
+    "plain": "Restless legs syndrome is a condition that causes an urge to move the legs, often at night. This study asked whether people with severe narrowing or blockage of the large arteries in the neck that supply the brain are more likely to receive that diagnosis, even without having had a stroke. Among about 58,000 matched pairs in a large health-records database, the narrowed-artery group had a slightly higher rate of the diagnosis (1.98% vs 1.82%).",
+    "why": "If a reduced blood supply to brain movement circuits contributes to restless legs, this could point to a vascular cause for some cases, but the effect is very small and the study cannot show cause. It is worth attention mainly as a hypothesis to test in prospective studies, including whether treating the arteries changes symptoms.",
+    "background": "- Restless legs syndrome (RLS): a common neurological condition with an uncomfortable urge to move the legs, often worse at rest or at night.\n- Internal carotid artery stenosis (CAS): narrowing of the main arteries in the neck that carry blood to the brain; ICD-10 codes are standard diagnosis labels used in medical records.\n- Atherosclerosis: hardening and narrowing of arteries from fatty plaque buildup.\n- Retrospective case-control study: looks back at existing records, comparing people with and without a condition.\n- Propensity score matching: pairs patients with similar characteristics so groups are more comparable, though unmeasured differences can remain.\n- Odds ratio (OR): a measure of how much more likely an outcome is in one group; 1.09 means roughly 9% higher odds, a small effect.\n- Confidence interval: the range of values consistent with the data; here the lower bound sits very close to 1.\n- Dopaminergic pathways: brain circuits using dopamine, thought to be involved in RLS.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Background: Restless legs syndrome (RLS) is a common neurological disorder with established links to atherosclerotic disease and secondary causes such as ischemic stroke. Hypothesizing that internal carotid artery stenosis (CAS) could induce secondary RLS through chronic hypoperfusion or microemboli to dopaminergic subcortical structures, even without overt stroke, we investigated the association between bilateral CAS and RLS. Methods: A retrospective propensity score-matched case-control study was conducted using the TriNetX Global Health Research Network. Cases (n=58,382) had bilateral CAS/occlusion (ICD-10-CM I65.23); controls (n=58,382) had atherosclerosis without CAS. Patients were excluded for prior stroke/TIA, iron deficiency, antipsychotic use, and other secondary RLS causes. Cases and controls were 1:1 matched on age, race/ethnicity, chronic kidney disease, peripheral neuropathy, peripheral artery disease, Parkinson's disease, and SSRI use. The outcome was RLS diagnosis (G25.81), assessed via conditional logistic regression. Results: RLS was diagnosed in 1,154 (1.977%) patients with bilateral CAS/occlusion versus 1,060 (1.816%) controls, yielding an absolute risk difference of 0.161% (95% CI 0.005-0.317%; p=0.0437). The adjusted odds ratio was 1.09 (95% CI 1.002-1.186), indicating a modest but significant association. Conclusion: Severe bilateral CAS/occlusion is associated with a small but statistically significant increase in RLS risk, independently of overt cerebrovascular events and known confounders. These findings support a potential vascular contribution to RLS pathogenesis, possibly through subclinical hypoperfusion affecting basal ganglia dopaminergic pathways. Prospective studies are needed to explore causality, dose-dependency, and the impact of carotid revascularization.",
-   "source": "medrxiv"
-  },
-  {
-   "uid": "medrxiv:10.64898/2026.11.17.26368292",
-   "title": "Targeting Frontostriatal Reward System Connectivity and Anhedonia in Youth Depression using Continuous Theta Burst Stimulation Plus Positive Affect Training: Preliminary Evidence and Reward Network Engagement from an Open-Label Trial",
-   "url": "https://www.medrxiv.org/content/10.64898/2026.11.17.26368292v1",
-   "authors": [
-    "Karim, H. T.",
-    "Ryan, N. D.",
-    "Jones, N. P.",
-    "Craske, M.",
-    "Eckstrand, K. L.",
-    "Price, R. B.",
-    "Tripathy, K.",
-    "Lenniger, C. J.",
-    "Rengasamy, M.",
-    "Geramita, M.",
-    "Vanderschelden, B.",
-    "Diaz, J.",
-    "Brodnick, Z.",
-    "Dour, H.",
-    "Pogue, A.",
-    "Medich, C.",
-    "Julien, M. M.",
-    "Rogers, D.",
-    "Forbes, E."
-   ],
-   "label": "medRxiv doi:10.64898/2026.11.17.26368292 v1",
-   "primary_category": "psychiatry and clinical psychology",
-   "date": "2026-11-23",
-   "summary": {
-    "one_liner": "Open-label trial of 10 days of personalized cTBS to the dmPFC plus positive affect training in 50 depressed youth, testing whether changes in dmPFC–nucleus accumbens resting connectivity track changes in anhedonia.",
-    "plain": "Anhedonia, the loss of interest or pleasure, is a core feature of depression, and it is linked to an overly strong connection between a brain area near the front of the head (dmPFC) and a reward-related area (nucleus accumbens). In this open-label study with 50 young people with depression, researchers gave magnetic pulses to the frontal target twice a day for 10 days, combined with exercises meant to boost positive feelings. About 42% responded, and mood, anhedonia and anxiety scores improved, though the brain connection did not change on average.",
-    "why": "It is a small, uncontrolled trial, so it cannot show the treatment caused the improvements, but it links a specific brain-circuit change to symptom change, which is useful for designing future controlled studies. The authors also suggest that accurately aiming the stimulation at the intended network matters for results.",
-    "background": "- Anhedonia: reduced ability to feel pleasure or interest; a key symptom of depression.\n- dmPFC (dorsomedial prefrontal cortex): a region in the front of the brain involved in regulating thoughts and emotions.\n- Nucleus accumbens (NAcc): a deep brain hub in the reward system.\n- Functional connectivity (FC): how strongly two brain regions' activity rises and falls together, measured here with resting-state fMRI (brain scanning while at rest).\n- cTBS (continuous theta burst stimulation): a brief, patterned form of transcranial magnetic stimulation that uses magnetic pulses through the scalp to modulate nearby brain activity; it is typically used to dampen activity.\n- Open-label: no placebo or blinded control group; everyone knew they were treated.\n- Responder: a participant whose symptoms improved by a predefined amount.\n- Electric field modeling: a computer estimate of where the magnetic stimulation actually reaches in the brain.\n- Mutual information: a statistical measure of how much two patterns share.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Anhedonia is a hallmark of depression, involves disrupted positive affect (PA), and has been linked to hyperconnectivity between the dorsomedial prefrontal cortex (dmPFC) and nucleus accumbens (NAcc). In previous work, a single session of continuous theta burst stimulation (cTBS) to the dmPFC reduced NAcc-dmPFC functional connectivity (FC), with corresponding improvement in PA. We investigated whether cTBS to dmPFC plus PA-enhancing training is associated with decreased anhedonia, depression, and NAcc-dmPFC FC, and whether FC change corresponds to anhedonia improvement. Fifty youth (15-25 years) with current depression received cTBS (2x/day, 10 days, personalized dmPFC target) plus intersession PA training. Resting-state fMRI and symptom severity were collected pre/post cTBS+PA. In all, 42% of participants responded, and depression, anhedonia, and anxiety improved. Participants with greater decrease in FC experienced more improvement in anhedonia, although NAcc-dmPFC FC remained unchanged on average. Responders exhibited greater improvement than non-responders in anhedonia and anxiety but not FC. Additionally, mutual information modeling revealed that those with greater similarity between the actual target network (based on electrical field modeling) and the intended reward network exhibited a greater decrease in FC. cTBS+PA shows some promise as an intervention for anhedonic depression in youth, with individual differences in FC change relevant to clinical outcomes and precise network targeting a critical issue for modulating the intended network and achieving clinical improvement. Clinicaltrials.gov: NCT05487885",
    "source": "medrxiv"
   },
   {

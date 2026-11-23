@@ -3,6 +3,29 @@
  "updated": "2026-11-23",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.20.768136",
+   "title": "Population-level learning of non-additive effects enables accurate and efficient prediction of combinatorial perturbation responses",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768136v1",
+   "authors": [
+    "An, s.",
+    "Gong, Q.",
+    "Cao, K."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768136 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "GAIN is a lightweight population-level model that predicts the pseudobulk response to a pair of perturbations as the sum of their single-perturbation responses plus a learned interaction term, benchmarked against additive and cell-level methods on combinatorial genetic and drug screens.",
+    "plain": "Scientists often want to know what happens when two genes are switched off together or when two drugs are combined, but there are too many possible pairs to test them all. This paper proposes GAIN, a simple model that starts from the measured effects of each perturbation on its own, adds them up, and then learns only the correction for how the pair departs from simply adding up. On three single-cell datasets, the authors report that it predicted combination responses more accurately than a plain additive baseline and than cell-level methods, while training much faster.",
+    "why": "Predicting combination effects could help choose which gene pairs or drug combinations to test in the lab, which matters when screens are expensive. The text reports that complex deep-learning and foundation models often fail to beat a simple additive baseline, so a lightweight alternative that does better is of interest, though its broader value depends on results beyond the three datasets described.",
+    "background": "- Combinatorial perturbation: deliberately disrupting two or more genes or treatments together to see their joint effect.\n- Additive baseline: the naive prediction that a pair's effect equals the sum of each single effect.\n- Non-additive effect (epistasis or synergy): when the combined effect differs from that sum, either stronger (synergy) or weaker (dampening).\n- Single-cell data: measurements taken cell by cell; \"pseudobulk\" means averaging these cells into one profile per condition.\n- CRISPR screen: a method that uses gene-editing tools to switch genes off across many cells and see which changes matter.\n- Generalization settings: testing whether predictions hold for combinations or conditions not seen during training.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Combinatorial perturbations are widely used to study genetic interactions and to develop drug combinations, but the number of possible combinations grows quadratically with the number of perturbations, and only a small fraction can be measured in a screen experiment. Despite their growing sophistication, deep-learning and foundation models often fail to outperform a simple additive baseline based on measured single-perturbation responses. This suggests a simpler approach that builds on these measurements and directly learns deviations from additivity at the population level. We therefore developed GAIN, a lightweight model that implements these principles by predicting the pseudobulk response to a combination as the sum of its two single-perturbation responses and a learned interaction term. Across three single-cell datasets of genetic and drug combinations, GAIN corrected deviations from additivity and outperformed the additive model and cell-level methods across generalization settings and metrics, while training 3- to 64-fold faster. Applied to a combinatorial CRISPR screen of leukemia differentiation regulators, GAIN revealed synergy between key regulators of the differentiation block and genes that restrain differentiation but have little effect alone. It also revealed dampening by the histone chaperone FACT, which supports the induction of differentiation genes. These results establish population-level modeling of the deviation from additivity as a simple, accurate and scalable approach to predicting combination responses.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.19.767942",
    "title": "Single-cell study of the FCG rat model and cross-species comparison reveal stronger gene regulation by sex chromosome complement in the medial septum",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767942v1",
@@ -28,46 +51,14 @@
    "primary_category": "genomics",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Single-cell transcriptomic study of the medial septum in a new four-core-genotype (FCG) rat model, compared with the FCG mouse, finding that sex chromosome complement (XX vs. XY) dominates sex-biased gene regulation, with gonadal effects acting in concert.",
-    "plain": "Men and women differ in many brain-related conditions, but it is hard to tell whether this comes from sex chromosomes or from sex hormones made by the gonads. This study used a specially bred rat model that separates these two sources and measured gene activity in individual cell types of the medial septum, a brain region involved in anxiety, memory, and related functions. The authors report that the chromosome makeup had a stronger effect on gene activity than the gonads, and that this pattern was broadly shared with a mouse version of the model, even though the specific genes differed between species.",
-    "why": "It challenges the common view that gonadal hormones mainly drive sex differences in the brain, which matters for how sex differences are studied in brain disease. The authors link the sex-biased genes and networks to conditions such as anxiety, Alzheimer's disease, epilepsy, and schizophrenia, but the text does not show whether these links translate into treatments.",
-    "background": "- Sex chromosomes: typically XX (female) or XY (male); genes on them can act differently from hormones.\n- Gonads: ovaries or testes, which produce sex hormones.\n- Four core genotypes (FCG) model: animals whose sex chromosomes and gonads are varied independently, so the two effects can be separated.\n- Medial septum: a small brain region linked to anxiety, memory, and behavior.\n- Single-cell gene expression analysis: measuring which genes are active in each individual cell, then grouping cells by type.\n- Gene regulatory networks and transcription factors: sets of genes controlled together by shared switch-like proteins.\n- Cross-species comparison: checking whether a finding in one animal also holds in another.",
+    "one_liner": "Single-cell transcriptomic analysis of the medial septum in the four core genotypes (FCG) rat model, compared with the FCG mouse, finds that sex chromosome complement (XX vs. XY) dominates sex-biased gene regulation alongside gonadal effects, though individual sex-biased genes differ between species.",
+    "plain": "Male and female brains differ in many diseases, and it is hard to tell whether this comes from the sex organs (ovaries or testes) or from the chromosomes themselves (XX or XY). This study used a special rat model that separates these two influences and measured gene activity in individual brain cells of the medial septum, a region near the center of the brain involved in mood and memory. The authors report that the chromosomes had a stronger effect on gene activity than the gonads, and that this pattern was broadly similar to what they saw in the mouse version of the model.",
+    "why": "The result challenges the common view that sex hormones from the gonads mainly drive sex differences in the brain, which matters for how sex differences in conditions like anxiety, epilepsy, and Alzheimer's disease are studied. The paper also links the affected genes to these diseases and suggests possible drug candidates, but the text does not show whether those candidates have been tested, so their clinical relevance remains unclear.",
+    "background": "- Sex differences in brain disease can come from sex hormones made by the gonads (ovaries or testes) or from sex chromosomes (XX vs. XY).\n- The four core genotypes (FCG) model is a set of animals where chromosome type and gonad type are varied separately, so their effects can be told apart.\n- Single-cell gene expression profiling measures which genes are active in each individual cell, grouping cells by type.\n- Gene regulatory network and transcription factor analyses try to identify the master switches that control groups of genes.\n- Cross-species comparison asks whether a finding in one animal (mouse) also holds in another (rat).\n- The medial septum is a small brain region that helps regulate anxiety, memory, and rhythm of brain activity.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Sex differences are prominent in neuropsychiatric, neurological, and neurodegenerative conditions. While both gonads (ovaries vs. testes) and sex chromosome complement (SCC; XX vs. XY) contribute to sex differences, these effects are hard to differentiate in humans and gonadal contributions have been considered dominant in the brain. The four core genotypes (FCG) mouse model distinguishes between SCC and gonadal effects but whether findings are conserved across species remains unclear. Here, we present the first application of the novel FCG-derived rat model to explore cell-type-specific sex differences in the medial septum (MS), which shows robust structural sex differences, and convergence/divergence between species. Differential gene expression, pathway, transcription factor, and gene regulatory network analyses show dominant SCC effects and concordant gonadal effects on gene and network regulation in rat MS cell types. Comparison between the FCG rat and mouse models find convergence across species on the dominance of the SCC in regulating gene expression in concert with gonadal effects in the MS, despite divergence in individual sex-biased genes. In both species, the sex-biased, cell-type-specific MS genes and networks are associated with diverse diseases relevant to MS functions, such as anxiety, Alzheimers Disease, epilepsy, and schizophrenia, that can be targeted by proposed therapeutic candidates. Our cross-species investigation identifies a conserved dominance of SCC effects in sex-biased gene expression in the MS, thereby challenging the classical gonad-centric view of sexual differentiation in the brain and highlighting the MS as an important region for the study of sex differences driven by the sex chromosome complement.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.19.767928",
-   "title": "A genetic toolkit of visible mutants for Caenorhabditis briggsae",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767928v1",
-   "authors": [
-    "Johnsen, R.",
-    "Mah, A.",
-    "Thillainathan, B.",
-    "Inoue, T.",
-    "Ailion, M.",
-    "Gharib, S.",
-    "Nagagireesh, B.",
-    "Sarma, D.",
-    "Tejpal, A.",
-    "Baillie, D.",
-    "Sternberg, P. W.",
-    "Gupta, B. P."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.19.767928 v1",
-   "primary_category": "genetics",
-   "date": "2026-11-23",
-   "summary": {
-    "one_liner": "This paper reports 183 visible mutants of the nematode Caenorhabditis briggsae, mapped to six linkage groups, with 23 loci matched to C. elegans orthologs and several genes confirmed by rescue or sequence evidence.",
-    "plain": "Researchers studying a small roundworm, Caenorhabditis briggsae, built a collection of 183 mutant strains that show easy-to-spot changes in appearance or behavior, such as body shape or movement. They worked out where many of these mutations sit on the worm's chromosomes, using crosses between strains and genetic markers. The collection and its supporting data are offered as a shared tool for comparing this worm with its close relative C. elegans.",
-    "why": "Visible mutants are the basic tools geneticists use to link a gene to a trait, so a documented collection makes a less-studied relative of a major model organism easier to work with. The paper also corrects some earlier gene assignments and ties several genes to their known counterparts in C. elegans, which may help comparative studies of how genes evolve; the text does not describe broader applications.",
-    "background": "- Caenorhabditis elegans is a tiny roundworm that is a major model in biology; C. briggsae is a closely related species used for comparison.\n- A \"mutant\" is an organism with a changed gene, here producing a visible change in shape, movement or similar traits.\n- EMS is a chemical that randomly causes mutations in the worm's DNA; screens look for the resulting visible changes.\n- \"Linkage groups\" are sets of genes that sit on the same chromosome and tend to be inherited together; mapping them uses crosses and genetic markers.\n- \"Complementation tests\" check whether two mutations affect the same gene; \"orthologs\" are genes in different species that descend from a common ancestor.\n- Transgene rescue means inserting a working copy of a gene to see if it reverses the mutant trait, which confirms the gene's identity.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Caenorhabditis briggsae is a widely used model for comparative genetic studies involving C. elegans. Genetic analysis in C. briggsae depends on mutations with clear, easily recognizable phenotypes, yet most mutants reported so far have been mentioned only as names and linkage groups, without underlying experimental data. This study reports 183 C. briggsae mutants belonging to 11 phenotypic classes, which represent the most comprehensive collection to date. Almost all mutants were recovered in EMS screens of the reference strain AF16. Our analysis revealed that 121 mutations define 55 loci and 62 remain unassigned. A combination of complementation tests, linkage tests, two- and three-factor crosses, and polymorphism-based mappings helped place 51 loci and 15 further mutations to the six linkage groups. We report the supporting data, map distances, linkage groups, and corrections to several earlier assignments. Twenty-three loci correspond to molecularly identified orthologs of C. elegans genes, including six for which we report genetic, rescue, or sequence evidence here. The levamisole-resistant mutants fall into at least three complementation groups, two of which correspond to Cbr-unc-38 and Cbr-unc-29 (levamisole-sensitive nicotinic acetylcholine receptor a and non-a subunit, respectively). Transgene rescue experiments identify Cbr-dpy-1 (mucin-like), Cbr-sma-6 (TGFb type receptor kinase), and Cbr-unc-4 (homeodomain transcription factor), genes that have long been in use as genetic markers. In all cases, molecularly identified genes are located on the same chromosome as their C. elegans orthologs, although gene order within chromosomes differs. The strains, map, and underlying data provide a resource for genetic and comparative studies in Caenorhabditis nematodes.",
    "source": "biorxiv"
   },
   {

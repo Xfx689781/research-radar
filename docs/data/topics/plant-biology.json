@@ -3,60 +3,53 @@
  "updated": "2026-11-23",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.17.767326",
-   "title": "Inhibition of carbon fixation activates ROS-linked autophagy in the single-celled green alga Chlamydomonas reinhardtii",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.17.767326v1",
+   "uid": "biorxiv:10.64898/2026.11.19.767892",
+   "title": "Circadian clock components CCA1 and LHY shape heat responses across regulatory layers",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767892v1",
    "authors": [
-    "Gamez-Arcas, S.",
-    "Mallen-Ponce, M. J.",
-    "Munoz-Palacios, I.",
-    "Heredia-Martinez, L. G.",
-    "Quintero-Moreno, A. M.",
-    "Crozet, P.",
-    "Schroda, M.",
-    "Remacle, C.",
-    "Lemaire, S.",
-    "Crespo, J. L.",
-    "Perez-Perez, M. E."
+    "Strout, R. I.",
+    "Grubb, L. E.",
+    "Uhrig, R. G.",
+    "Nagel, D. H."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.17.767326 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.19.767892 v1",
    "primary_category": "plant biology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "In the green alga Chlamydomonas reinhardtii, blocking the Calvin-Benson-Bassham enzyme PRK triggers light-dependent ROS accumulation and autophagic flux, and loss of ATG8 worsens ROS, photosynthetic dysfunction and cell death under carbon-fixation inhibition.",
-    "plain": "Plants and algae use sunlight to turn carbon dioxide into sugar, and they also recycle their own cell parts through a process called autophagy. This paper asks how these two systems connect in a single-celled green alga. The authors blocked a key enzyme of carbon fixation (PRK), either with a drug or by genetic knockout, and found that this caused harmful reactive oxygen species to build up in light and switched on autophagy.",
-    "why": "The work suggests autophagy helps protect photosynthetic cells when carbon fixation stalls, and that it aids recovery after prolonged stress. This links energy capture, cellular \"rust\" (oxidative) signaling and self-recycling, which may matter for understanding how crops and algae cope with light stress, though the text does not establish applications.",
-    "background": "- Photosynthesis: light energy is used to fix CO2 into sugars via the Calvin-Benson-Bassham (CBB) cycle inside chloroplasts.\n- PRK (phosphoribulokinase): an enzyme in the CBB cycle; blocking it stops carbon fixation.\n- Reactive oxygen species (ROS): chemically reactive oxygen molecules that can damage cells at high levels but also act as signals.\n- Autophagy: a cellular recycling system that packages damaged or unneeded components for breakdown. ATG8 is a protein essential to this process, so an atg8 knockout cannot perform normal autophagy.\n- Autophagic flux: the rate at which material moves through the autophagy pathway, not just how many autophagy structures are present.\n- Chlamydomonas reinhardtii: a single-celled green alga widely used as a lab model organism.",
+    "one_liner": "Time-resolved transcriptome, proteome and metabolome profiling of Arabidopsis clock mutants with altered CCA1/LHY expression after short heat stress, mapping shared and distinct clock-linked heat responses across gene regulation layers.",
+    "plain": "Heat hurts crop yields, and it hurts more when it arrives at night. This study asks how the plant's internal daily clock decides which heat responses happen at which time of day. The researchers used Arabidopsis (a small model plant) with altered levels of two clock genes, CCA1 and LHY, and measured genes, proteins and metabolites over time after a short heat stress.",
+    "why": "Understanding how the clock gates heat responses could eventually inform breeding or engineering crops that cope with hot nights, though the text itself only describes candidate connections and does not show direct crop benefits. The paper suggests sulfur assimilation, ROS scavenging and starch degradation as possible contributors to time-of-day thermotolerance, which are leads to test rather than established mechanisms.",
+    "background": "- The circadian clock is an internal roughly 24-hour timing system that controls when many genes are switched on.\n- CCA1 and LHY are closely related clock genes; altering their levels changes the clock's output.\n- Transcriptome, proteome and metabolome mean the full sets of gene transcripts (RNA), proteins and small molecules measured in a sample.\n- Heat stress here means a short exposure to high temperature, which triggers changes in gene activity.\n- ROS (reactive oxygen species) are reactive molecules that rise under stress; plants use scavenging systems to limit damage.\n- Starch degradation is the breakdown of stored sugar polymer, which supplies energy at night.\n- Post-translational regulation means control of proteins after they are made, such as modification or stability changes.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Autophagy is a central mechanism that promotes stress acclimation and nutrient recycling, thereby contributing to metabolic homeostasis. However, how photosynthetic carbon assimilation is integrated with autophagy remains poorly understood. Here, we establish a functional link between carbon fixation, redox signaling, and autophagy in the green microalga Chlamydomonas reinhardtii. Pharmacological inhibition of phosphoribulokinase (PRK), a key enzyme of the Calvin-Benson-Bassham cycle, induced chloroplast stress, reactive oxygen species (ROS) accumulation, and autophagic flux specifically in the light. Consistently, genetic loss of PRK caused light-dependent ROS accumulation and autophagy activation, which was enhanced by carbon limitation and attenuated by ROS scavenging. To determine the physiological relevance of this response, we generated an atg8 knockout mutant and an atg8 prk double mutant. Loss of ATG8 increased ROS accumulation, photosynthetic dysfunction, and cell death when carbon fixation was inhibited, supporting a protective role for autophagy against light-driven metabolic stress. Although both prk and atg8 prk cells were unable to grow under high light, only prk cells resumed growth after transfer to permissive conditions, indicating that autophagy contributes to recovery from prolonged impairment of photosynthetic carbon metabolism. Our findings identify autophagy as a component of the regulatory network linking photosynthetic carbon assimilation with redox homeostasis and cellular acclimation to light stress.",
+   "abstract": "High temperatures reprogram gene regulatory responses and are particularly deleterious for crop yield, especially when these events occur at night. This emphasizes that partitioning of heat responses is based on time of day. Coordination between time of day and environmental responses relies on the circadian clock. However, the precise regulatory mechanism of how the clock achieves this partitioning at different levels of gene regulation is poorly understood. Using circadian clock mutants with altered CCA1 and LHY expression, we generated a time-resolved transcriptome, proteome, and metabolome following a short-term heat stress in Arabidopsis. We identified regulatory connections specific to CCA1 and LHY, as well as those shared with other clock components linked to heat stress responses. Additionally, new connections between CCA1 and LHY and non-cycling genes highlight a broader role for the clock in regulating heat responsive gene expression. CCA1 and LHY regulated processes, such as sulfur assimilation and ROS scavenging, may contribute to time-of-day specific thermotolerance. Overall, heat responses were dampened in both the transcriptome and proteome in cca1lhy, suggesting both transcriptional and post-translational circadian-regulated processes are important for heat responses. Lastly, we identified differences in metabolic responses in cca1lhy and suggest a role for circadian regulation of starch degradation in thermotolerance. This study generates and utilizes data across levels of gene regulation to identify heat responses in the transcriptome and proteome regulated by CCA1 and LHY. These findings establish shared and distinct regulatory mechanisms of clock components in response to heat stress and provide new candidates for network integration and a foundation to engineer plants more tolerant to high temperatures depending on time of day.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.18.767598",
-   "title": "A trade-off shaping leaf mesophyll architecture emerges from a stochastic geometry model",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767598v1",
+   "uid": "biorxiv:10.64898/2026.11.19.767829",
+   "title": "Auxin regulates the proportions, but not the initiation, of Hibiscus trionum bullseyes",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767829v1",
    "authors": [
-    "Rahimi-Majd, M.",
-    "M. Borsuk, A.",
-    "Masoomy, H.",
-    "C. Walker, N.",
-    "R. Brodersen, C.",
-    "Nikoloski, Z."
+    "Salvi, E.",
+    "Gatti, S.",
+    "Yeo, M. T. S.",
+    "Riglet, L.",
+    "Doody, E.",
+    "Moyroud, E."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.18.767598 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.19.767829 v1",
    "primary_category": "plant biology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A computational stochastic-tessellation framework reconstructs 2D paradermal slices of spongy mesophyll from 40 vascular plant species using leaf porosity, cell-arm length and cell-arm diameter, and a stochastic-geometry model links porosity and cell-arm statistics to cell wall construction cost.",
-    "plain": "Leaves contain a spongy inner layer of cells with air gaps between them, and its layout affects how well a plant can take in carbon dioxide for photosynthesis. The authors built a computer model that generates realistic-looking slices of this spongy layer for 40 plant species, using three measured quantities. They also wrote a mathematical model that matches these simulations and suggests how much cell wall material the layer needs, depending mainly on how porous the leaf is.",
-    "why": "The work offers a simple, few-parameter way to describe leaf internal structure and its material cost, which could help people reason about designing leaves that balance carbon uptake against building cost. The text does not show any direct application yet, so its usefulness for crops or other plant work remains to be tested.",
-    "background": "- Mesophyll: the photosynthetic tissue inside a leaf, here the spongy layer with air spaces.\n- Porosity: the fraction of the leaf slice that is air rather than cell material.\n- Paradermal slice: a flat, two-dimensional cross-section taken parallel to the leaf surface.\n- Stochastic tessellation: dividing a space into cell-like regions using random processes, a standard tool in geometry.\n- Cell arms: the branch-like extensions of spongy cells that connect to neighbors; their number (one to three) and shape are modeled.\n- Cell wall construction cost: the material and energy a plant spends building cell walls, modeled here as a geometric quantity.",
+    "one_liner": "In the Hibiscus trionum flower, auxin does not initiate the bullseye boundary during pre-patterning, but auxin signalling is needed to maintain distal-region cell behaviour and preserve bullseye proportions set in young petal primordia.",
+    "plain": "Many flowers have coloured patterns, such as a dark central \"bullseye,\" that help attract pollinators. This paper asks whether the plant hormone auxin helps set up where those pattern regions begin in the petal of the Hibiscus trionum flower. The authors found that auxin does not start the boundary, but it is needed to keep the size ratio of the bullseye regions as the petal grows.",
+    "why": "The text suggests auxin could act as a \"pattern modifier\" that changes bullseye size over evolution by altering how fast different petal regions grow, which may help explain how flower patterns vary between species. This is an inference from the abstract alone, and the details of the experiments are not given here, so the strength of the claim is hard to judge.",
+    "background": "- Auxin: a plant hormone that controls growth and cell behaviour in many tissues.\n- Petal bullseye: a ring-like colour pattern with distinct central and outer zones on the petal surface.\n- Pre-patterning: the early stage when regions of a developing organ first become different from one another, before visible pattern forms.\n- Petal primordium: the very young petal tissue, before it has grown into its final shape.\n- Distal region: the part of the petal farthest from the flower's base.\n- Transcription factor: a protein that switches genes on or off; the abstract mentions these as known players in pigment and cell-shape control.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Leaf mesophyll architecture has a great impact on plant functions, including photosynthesis. Yet, understanding the principles governing growth, stability, and interspecific variation of leaf mesophyll architecture remains elusive. Here, we develop a computational framework based on stochastic space tessellation to simulate two-dimensional paradermal slices of leaf spongy mesophyll across 40 vascular plant species using three data-derived parameters: leaf porosity, cell arm length, and cell arm diameter. The framework successfully reconstructs leaf slices while preserving six biological, topological, and cell-level traits, with one- to three-armed cell geometries generally outperforming circular cells. Importantly, we further develop a theoretical model based on stochastic geometry that closely agrees with the simulations and reveals that leaf porosity strongly influences cell wall construction cost, while cell-arm statistics shape this relationship. Our parsimoniously parameterized model provides a basis for optimizing leaf architecture to maximize carbon dioxide uptake while minimizing cell wall construction costs.",
+   "abstract": "Colourful motifs on the surface of flower petals fulfill important ecological functions, mediating pollination and providing protection against environmental stressors. These patterns form when epidermis cells in different subdomains of the petal acquire contrasting chemical and structural features. While some of the enzymes and transcription factors involved in specifying the production of different pigments, cell shapes and textures have been identified, the signalling events and upstream processes that divide the petal surface in distinct regions are not yet understood. Plant hormones play key roles in orchestrating all aspects of plant development but whether and how they contribute to the establishment of petal patterns remain to be tested. Here, we investigate the roles of auxin during bullseye pattern development in Hibiscus trionum. We found that auxin does not initiate bullseye boundary formation during the pre-patterning phase. Instead, auxin signalling is essential for regulating cell behaviour in the distal region and preserving the bullseye proportions established in young petal primordia. Therefore, auxin could act as a pattern modifier over evolutionary timescales, shifting bullseye dimensions by modulating the relative growth of different petal regions.",
    "source": "biorxiv"
   },
   {

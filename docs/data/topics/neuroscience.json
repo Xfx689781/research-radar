@@ -23,10 +23,10 @@
    "primary_category": "neuroscience",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "In rats, chemogenetic activation of distinct spinal astrocyte GPCR pathways produced sex-dependent nociceptive synaptic plasticity, gated by gonadal hormones and perineuronal extracellular matrix.",
-    "plain": "This study looks at why pain signaling in the spinal cord may respond differently in males and females. Researchers used genetically engineered control of support cells called astrocytes in rats and found that, in males, activating certain pathways weakened or strengthened pain-relay connections, while in females the same activation did not produce a measurable change. Females still developed mechanical hypersensitivity similar to males, so changes in connection strength and pain behavior were not tied together in a simple way.",
-    "why": "It suggests that sex, sex hormones, and the surrounding scaffolding of the nerve tissue (the extracellular matrix) can change whether spinal circuits undergo astrocyte-driven plasticity, which may matter for sex differences in pain research. The text does not establish how these findings translate to human pain, so that link remains unclear.",
-    "background": "- Nociception: the nervous system's detection and signaling of potentially harmful stimuli, which underlies pain.\n- Synaptic plasticity: long-lasting strengthening or weakening of connections between nerve cells; a proposed basis for learning and for pain sensitization.\n- Astrocytes: star-shaped glial (support) cells in the nervous system that influence nearby synapses.\n- GPCRs (G-protein-coupled receptors): cell-surface receptors that relay signals inside cells; Gq is one such signaling pathway.\n- Chemogenetics: a method using engineered receptors switched on by a designed drug, letting researchers activate specific cells on demand.\n- Gonadectomy / ovariectomy: surgical removal of the gonads (testes or ovaries), used to study hormone effects; testosterone treatment tests hormone replacement.\n- Perineuronal nets: specialized extracellular matrix structures wrapping some neurons, which can limit plasticity.\n- Mechanical hypersensitivity: increased pain response to touch or pressure, measured behaviorally in animals.",
+    "one_liner": "In rats, chemogenetic activation of distinct spinal astrocyte G-protein-coupled receptor pathways produced sex-dependent synaptic depression or potentiation at nociceptive synapses, with hormones and extracellular matrix organization gating whether plasticity occurs in females.",
+    "plain": "This study looks at how support cells in the spinal cord, called astrocytes, can change the strength of pain-signaling connections. In male rats, switching on specific astrocyte signaling pathways strengthened or weakened these connections, but in female rats the same activation produced no detectable change. Females still developed mechanical hypersensitivity similar to males, so the change in connection strength and the pain behavior did not line up.",
+    "why": "Sex differences in pain are well documented but their cellular causes are not well understood, so a sex-dependent control point in spinal circuits is relevant to pain research. The text suggests hormones and the surrounding extracellular matrix may set how susceptible these circuits are, though how this translates to human pain is not shown here.",
+    "background": "- Astrocytes: star-shaped glial cells that support and modulate neurons, not only the neurons themselves.\n- Nociception: the nervous system's detection and signaling of potentially harmful stimuli.\n- Synaptic plasticity: lasting strengthening or weakening of connections between nerve cells, thought to underlie learning and some chronic pain.\n- Chemogenetics: engineering cells to respond to a designed drug so researchers can switch their activity on or off.\n- G-protein-coupled receptors (Gq and related pathways): cell-surface receptors that relay signals inside cells.\n- Gonadectomy and ovariectomy: surgical removal of gonads, used to study the role of sex hormones; testosterone treatment tests hormone effects.\n- Perineuronal nets: mesh-like extracellular matrix layers around neurons that can limit plasticity.\n- Mechanical hypersensitivity: increased pain response to light touch or pressure.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -34,27 +34,33 @@
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.18.767733",
-   "title": "Common organization of collective dynamics across divergent self-organized neural architectures",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767733v1",
+   "uid": "biorxiv:10.64898/2026.11.21.765465",
+   "title": "Concurrent neuronal activity gates persistent dendritic spine shrinkage during mGluR-induced long-term depression",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.765465v1",
    "authors": [
-    "Zhao, Z.",
-    "Yang, L.",
-    "Nemenman, I.",
-    "Levchenko, A."
+    "Rojo-Francas, E.",
+    "Sanchez-Rodriguez, N.",
+    "Santuy, A.",
+    "Hörpudottir, K.",
+    "Flores, J. C.",
+    "Parcerisas, A.",
+    "Soriano, E.",
+    "Ranson, A.",
+    "Zito, K.",
+    "Bosch, M."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.18.767733 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.21.765465 v1",
    "primary_category": "neuroscience",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Using brain organoids and cluster-and-cable neuronal networks, the authors show that burst-like population activity in both self-organized architectures comprises several collective patterns, with recurrent sequences capturing only part of a conserved, broader organization that persists under increased network activity.",
-    "plain": "Researchers grew two different kinds of lab-made neural tissue: layered, cortex-like organoids and networks of cell clusters linked by long fibre-like cables. They recorded the group activity of the cells and found that bursts of firing in both tissues were made up of several repeating group patterns, not one fixed script. Although the specific patterns differed between the two tissues, their overall organization was similar, and it did not change when the networks were pushed to be more active with drugs.",
-    "why": "It suggests that the way neurons coordinate as a group may follow shared principles even when the tissue's wiring is built very differently, which is useful for thinking about how brain-like networks organize themselves. The text does not establish links to specific brain function or disease, so any such connection remains uncertain.",
-    "background": "- Brain organoids: small 3D tissue cultures grown from stem cells that partly mimic brain tissue.\n- Self-organization: cells build their own structure and connections without being explicitly designed.\n- Bursts: brief, synchronized waves of firing across many neurons.\n- Activation sequences: neurons that tend to fire in a reproducible order.\n- Graded participation: neurons join such sequences to different degrees rather than all-or-nothing.\n- Pharmacological manipulation: using drugs to change how active the network is.",
+    "one_liner": "In rat hippocampal slice cultures, mGluR1/5-induced LTD produces persistent dendritic spine shrinkage only when neuronal activity coincides with mGluR activation, a process the authors call MIND-sLTD that depends on mGluR1/5 and de novo protein synthesis but not NMDARs.",
+    "plain": "Brain cells strengthen or weaken their connections, and the tiny bumps on their branches (spines) grow or shrink along with that change. This paper asks whether weakening caused by a particular chemical signal (mGluR activation) also makes spines shrink, since earlier reports disagreed. The authors found that spines shrink for good only when the brain tissue is also highly active at the same moment, and this also held for single spines stimulated with a laser.",
+    "why": "The work offers a possible explanation for conflicting earlier reports on whether this form of weakening changes spine structure, by pointing to timing and activity as a condition. The text does not show how far the finding generalizes beyond these slice cultures and this specific drug-based protocol, so its wider significance is still to be tested.",
+    "background": "- Dendritic spines: small protrusions on nerve cell branches where most excitatory synapses sit; their size is linked to synaptic strength.\n- LTP / LTD: long-lasting strengthening / weakening of synapses, thought to underlie learning and memory.\n- mGluR and NMDAR: two types of receptors for the brain's main excitatory signal, glutamate; NMDARs are a separate class from mGluRs.\n- DHPG: a drug that activates mGluR1/5 receptors and is used to trigger this form of LTD experimentally.\n- Organotypic slice culture: a thin slice of rat hippocampus kept alive in a dish, used as a model of brain tissue.\n- Calcium imaging (GCaMP6) and two-photon glutamate uncaging: methods for watching calcium signals in cells and for releasing glutamate at single spines with a laser.\n- Protein synthesis: making new proteins, here shown to be needed for the lasting change.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Brain organoids and other model neuronal networks build synaptic circuits through self-organization, and different protocols yield markedly different architectures, letting us test how collective dynamics depend on large-scale organization. We compared organoids of layered cortical-like structure against networks of cell-body clusters joined by axonal cables, quantifying the reproducible patterns of population activity in each. Bursts occurred in both architectures and comprised several collective patterns in each, so no single recurring template describes them. Recurrent activation sequences capture only part of this organization, sequence participation is graded, and neurons that rarely join a sequence still contribute to the shared dynamics. The patterns also pick out overlapping neuronal groups with propagation-like spatial order. Although the patterns differed between tissue models, their organization was conserved, and remained unchanged under pharmacological increases in network activity. Recurrent sequences therefore represent one manifestation of a broader collective organization that emerges across distinct self-organized neural architectures.",
+   "abstract": "Synaptic plasticity is a fundamental mechanism underlying learning and memory. Most excitatory synapses reside on dendritic spines, which undergo both functional and structural changes. These two forms of plasticity are typically tightly coupled: spines enlarge during synaptic strengthening (long-term potentiation, LTP) and shrink during synaptic weakening (long-term depression, LTD). While this coupling is well established for NMDA receptor (NMDAR)-dependent LTD, there are conflicting reports concerning whether spine shrinkage is coupled with metabotropic glutamate receptor (mGluR)-dependent LTD. To investigate the source of these conflicting results, we induced mGluR-LTD with the mGluR1/5 agonist DHPG in organotypic rat hippocampal slice cultures and monitored changes in spine morphology and calcium transients in CA1 pyramidal neurons expressing DsRed2 and GCaMP6. We found that mGluR activation is accompanied by long-term spine shrinkage only under conditions of elevated hippocampal neuronal activity. This form of plasticity, mGluR-induced neuronal activity-dependent structural LTD (MIND-sLTD), requires mGluR1/5 activation and de novo protein synthesis, but not NMDAR signaling. Persistent structural changes occur only when neuronal activity coincides temporally with mGluR activation. MIND-sLTD also occurs at individual synapses: mGluR activation induces persistent single-spine shrinkage only when synchronized with two-photon glutamate uncaging, independently of NMDARs. These findings identify a novel form of structural plasticity and suggest a coincidence-detection mechanism that integrates mGluR signaling with synaptic activity to consolidate long-term spine remodeling.",
    "source": "biorxiv"
   },
   {

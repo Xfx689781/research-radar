@@ -3,6 +3,30 @@
  "updated": "2026-11-23",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.06.764605",
+   "title": "Evaluation of sources of variability in a TEER (trans-epithelial/endothelial electrical resistance) system",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.06.764605v1",
+   "authors": [
+    "Gutierrez, R.",
+    "Lund, S.",
+    "Reipa, V.",
+    "Petersen, E. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.06.764605 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A case study of a chamber-based TEER (electrical resistance across cell layers) system used with a gut co-culture model, partitioning within-run versus run-to-run variability using Bayesian analysis and correlations with control inserts over 23 experiments.",
+    "plain": "Scientists grow cells in a thin layer on a porous insert and measure how electrically resistant that layer is, which shows whether it forms a tight barrier. This paper asks where the noise in those measurements comes from. The authors analyzed 23 experiments and found that differences between separate runs mattered much more than differences within a single run.",
+    "why": "Barrier measurements like this are used in drug testing and gut models, so knowing how much of the scatter is run-to-run noise affects how results should be analyzed and compared. The text reports that control inserts (KCl and blank) were only weakly or not correlated with the gut model values, which the authors note was unexpected; the broader lessons are presented as applicable to other TEER methods, though the text does not test that directly.",
+    "background": "- TEER: electrical resistance measured across a cell layer; higher values generally indicate a tighter barrier.\n- Inserts: small porous cups on which cells are grown, with measurements taken across the membrane.\n- Co-culture / gut model: a lab model that grows more than one cell type together to imitate the intestinal lining.\n- KCl and blank inserts: control measurements (a potassium chloride solution, and an insert with no cells) used to check the instrument.\n- Run-to-run vs within-run variability: differences between separate measurement sessions versus differences among plates measured in one session.\n- Bayesian analysis: a statistical method that estimates how much each source of variation contributes, with uncertainty.\n- Correlational analysis: checks whether control deviations move together with gut model deviations.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Trans-epithelial/endothelial electrical resistance (TEER) measurements are a key nondestructive measurement of the barrier integrity of cells grown on inserts. To support the use of TEER measurements in bioassays, we have evaluated the sources of variability in a case study involving a chamber-based TEER system to assess a gut co-culture model. Data from 23 separate experiments, each lasting 22 d, were evaluated. Multiple lines of evidence suggested minimal variability within a run, a period during which several plates were analyzed sequentially. In contrast, run-to-run variability was substantially larger, even when two runs were performed several hours apart on the same day. Bayesian analysis of both KCl and blank insert data revealed that run-to-run variability was among the largest sources of variability, with relative uncertainty values of 3 % to 6 % of the mean value. Correlational analysis investigated whether deviations of KCl or blank insert TEER values within a run compared to long-term median values were correlated with deviations of the biculture gut model values within that same run from their long-term median values. Unexpectedly, the KCl values were not correlated, while the blank insert values had a weak correlation. We also evaluated the information gained from different control measurements. The findings from this study can influence how statistical analyses are performed on TEER results and can inform the design of robust TEER methods. For example, the approaches described here can be used to characterize variability within and among runs in TEER measurements for other methods.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.18.767627",
    "title": "Lipid nanoparticle-delivered Cas13b ribonucleoproteins targeting survivin overcome gemcitabine resistance in pancreatic cancer",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767627v1",

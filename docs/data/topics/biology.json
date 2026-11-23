@@ -3,59 +3,51 @@
  "updated": "2026-11-23",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.18.767672",
-   "title": "Koopman Analysis Reveals Collective Modes Governing Cellular Dynamics",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767672v1",
+   "uid": "biorxiv:10.64898/2026.11.20.768082",
+   "title": "Integrating CRISPRi perturbation responses and transcription-factor binding priors for regulatory network inference in triple-negative breast cancer",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768082v1",
    "authors": [
-    "Dutta, S.",
-    "Yu, W.",
-    "Zheng, Z.",
-    "Giri, A.",
-    "Xing, J."
+    "Faroque, O.",
+    "Jannaty, M. H.",
+    "Abir, S. H.",
+    "Biswas, S."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.18.767672 v1",
-   "primary_category": "biophysics",
+   "label": "bioRxiv doi:10.64898/2026.11.20.768082 v1",
+   "primary_category": "bioinformatics",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper applies Koopman operator theory to whole-cell dynamical models to identify collective, slow and fast modes that govern cell-cycle and cell-state transition dynamics and relate them to gene regulatory structure and cell-cycle processes.",
-    "plain": "Living cells change their behavior over time in complicated, non-linear ways that are hard to analyze with standard tools. This paper uses a mathematical method called Koopman analysis, which rewrites such a system so it behaves linearly across its whole range, and applies it to computer models of whole cells. The authors report that the resulting patterns of coordinated gene behavior (\"modes\") map onto processes such as mitosis, the spindle checkpoint, and DNA replication and repair.",
-    "why": "The work offers a way to describe a very high-dimensional cell model with a few dominant slow modes, which may help simplify models of cell division and cell-state change. Its broader value depends on how well these modes hold up beyond the models studied, and the text alone does not show that.",
-    "background": "- Nonlinear system: one where outputs do not change in proportion to inputs, so simple prediction fails.\n- Linearization: approximating or rewriting a system so it can be analyzed with linear math; most methods only work near a single point, whereas Koopman theory aims to work globally.\n- Koopman operator: a mathematical tool that tracks how measurements of a system evolve, turning nonlinear motion into linear motion in a larger function space.\n- Normal modes: independent patterns of collective motion in physical systems such as vibrating molecules or crystals.\n- Slow manifold: a low-dimensional space where a system's long-term behavior settles.\n- Gene regulatory network: the web of genes that switch each other on or off.\n- Cell cycle: the sequence of stages a cell goes through to divide, including mitosis and DNA replication.",
+    "one_liner": "An interventional gene regulatory network framework that combines single-cell CRISPRi Perturb-seq data with ENCODE transcription-factor binding priors to infer regulators driving triple-negative breast cancer (MDA-MB-231) programs, benchmarked against GENIE3 and co-expression baselines.",
+    "plain": "Cancer cells are controlled by networks of switch-like proteins that turn genes on and off. This paper tries to map which switches control which genes in a hard-to-treat breast cancer type, by deliberately silencing genes one at a time and watching what changes, rather than only looking at which genes move together. The authors report that their method predicted held-out silencing results more accurately than two standard comparison methods and flagged several candidate master regulators.",
+    "why": "Triple-negative breast cancer has few drug targets, so better maps of its control circuits could point to candidate targets. The text is a computational study whose predictions still need laboratory validation, and the survival and simulation results are reported only as summary figures in the abstract, so the practical reach is uncertain.",
+    "background": "- Gene regulatory network: a map of which regulators (transcription factors) switch which genes on or off.\n- CRISPRi: a method that uses a modified CRISPR system to reduce activity of a specific gene, used here as a controlled \"intervention.\"\n- Perturb-seq: pairing CRISPR interventions with single-cell RNA sequencing to measure each perturbation's effect across many thousands of cells.\n- ChIP-seq and ENCODE: lab methods and a public database showing where transcription factors physically bind DNA.\n- Enhancer: a DNA region that boosts nearby gene activity.\n- Co-expression and GENIE3: baseline approaches that infer networks from correlations in gene activity, without intervention data.\n- AUROC / AUPRC / FDR: standard accuracy and false-discovery measures for predicted network edges.\n- SHAP: a method for explaining which inputs drive a machine-learning model's predictions.\n- Triple-negative breast cancer: a subtype lacking the hormone and HER2 receptors that common targeted drugs act on.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Living systems are complex nonlinear systems that operate far from thermodynamic equilibrium, and this nonlinearity makes their dynamics difficult to analyze. Several linearization techniques have been developed to address this problem, but most are local. Koopman operator theory is a powerful alternative that linearizes a system globally. Here we show that it not only achieves global linearization but also reveals collective modes that govern the dynamics of complex, out-of-equilibrium nonlinear systems. Applying the approach to whole-cell dynamical models, we find that these collective modes have physical and biological significance and relate to distinct processes in the cell cycle and in cell-state transitions. Collective and normal modes are widespread in many-body systems, particularly in condensed matter (e.g., magnons, phonons, hydrodynamic modes) and in macromolecular dynamics (e.g., normal mode analysis). By demonstrating that such modes also exist in cell-state transition dynamics, and in non-equilibrium nonlinear systems more generally, we offer a new theoretical-physics perspective on these systems. The collective modes separate into slow and fast modes. Long-term dynamics are governed by a few dominant slow modes that form a slow manifold of much lower dimension than the original state space. Thus, although the cell is a very high-dimensional system, its cell-cycle dynamics ultimately reduce to a low-dimensional space. Each mode comprises the coordinated behavior of groups of genes and reflects the structure of the underlying gene regulatory network. The modes can also be decomposed into terms that behave like damped harmonic oscillators, drawing an analogy between the modes of a nonlinear system and the normal modes of many-body systems. Finally, our analysis suggests that the dominant modes are closely associated with biological processes in the cell cycle, including mitosis, spindle checkpoint signaling, and DNA replication and repair.",
+   "abstract": "Triple-Negative Breast Cancer (TNBC) represents an aggressive breast cancer subtype that lacks actionable cell-surface receptors, restricting frontline systemic management to cytotoxic chemotherapy. While recent functional epigenomics shows that TNBC progression is governed by non-coding regulatory remodeling at distal super-enhancers, conventional Gene Regulatory Network (GRN) inference methods rely on observational transcriptomic co-expression, which suffers from technical dropouts and confounding correlations that inflate false discoveries (>30%). Here, we present an interventional network inference framework that integrates large-scale single-cell CRISPR-interference perturbation sequencing (Perturb-seq; GSE224986, 95,678 cells across 11,975 sgRNAs) with ENCODE Factorbook ChIP-seq physical transcription factor binding priors across 819 somatic mutation-associated enhancer loci in human TNBC (MDA-MB-231). Our pipeline reconstructed a tripartite network yielding 5,935 physical TF-enhancer edges, 383,757 functional enhancer-gene edges, and 542,760 unique TF-target gene functional pairs across 372 active enhancers. Topological centrality prioritized master transcriptional drivers governing TNBC oncogenic signaling, including CTCF, POLR2A, EP300, JUND, MYC, and FOS, which regulate Hallmark programs for Epithelial-Mesenchymal Transition (p = 1.2 x 10-9) and cell cycle progression. Explainable machine learning (SHAP TreeExplainer) revealed non-linear, thresholded transactivation dynamics for AP-1 and MYC. Quantitative benchmarking against held-out CRISPRi ground truth demonstrated strong discriminatory accuracy (AUROC = 0.8999, AUPRC = 0.8745, Precision = 90.13%, FDR = 9.87%), substantially outperforming GENIE3 (AUPRC = 0.6323, FDR = 35.73%) and co-expression correlation (AUPRC = 0.6814). In silico-simulated driver feature silencing correlated with experimental responses (R2 = 0.473, p < 10-122), and master driver signatures significantly stratified overall survival in the METABRIC (n = 320) and TCGA-BRCA (n = 160; p [&le;] 0.019) cohorts. Finally, in silico perturbation modeling indicated that multi-target epigenetic combinations achieved 93% topological disruption of oncogenic regulatory connectivity, nominating prioritized candidate circuits for experimental validation.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.16.767119",
-   "title": "Microbiome complexity shapes host transcriptional networks across the ileum-liver axis",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767119v1",
+   "uid": "biorxiv:10.64898/2026.11.20.768078",
+   "title": "Predicted templates improve the prediction of antibody-antigen structures by AlphaFold 3 and Boltz-2",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768078v1",
    "authors": [
-    "Halkhoree, A. C.",
-    "Grannell, A.",
-    "Pearson, C.",
-    "Araujo, E.",
-    "Jeffery, R.",
-    "Jones, K.",
-    "Rot, G.",
-    "Galvez, E.",
-    "Powrie, F.",
-    "Scepanovic, P.",
-    "Ilott, N. E."
+    "Ziaee, O.",
+    "Lazou, M.",
+    "Joseph-McCarthy, D.",
+    "Vajda, S."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.16.767119 v1",
-   "primary_category": "systems biology",
+   "label": "bioRxiv doi:10.64898/2026.11.20.768078 v1",
+   "primary_category": "bioinformatics",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A transcriptomic survey of mouse terminal ileum across germ-free, defined 12-strain microbiota (MM12), and specific-pathogen-free conditions, examining how microbiome complexity shapes host gene co-expression networks along the ileum-liver axis.",
-    "plain": "This study asks how the community of microbes living in the gut changes the way genes switch on and off in the lower part of the small intestine, the ileum, and possibly in the liver connected to it. The researchers compared mice with no microbes, mice with a simple set of 12 known bacterial strains, and mice with a normal, full microbial community. The text provided describes the setup and goal; it does not include the results.",
-    "why": "Gut microbes are known to affect nutrient absorption, bile acid handling and immunity, and the gut and liver are linked, so how microbial complexity tunes gene activity in the ileum may matter for understanding gut-liver health. The excerpt gives only the aims and design, so the size or meaning of any effect cannot be judged from it.",
-    "background": "- Transcriptome: the full set of gene activity readings in a tissue sample, used to see which genes are active.\n- Co-expression network: a map of genes that rise and fall together, suggesting they work in the same process.\n- Germ-free (GF) mice: raised without any microbes, used as a baseline to see what microbes do.\n- MM12 (Oligo-Mouse-Microbiota-12): mice colonised with a defined set of 12 bacterial strains, a simplified community.\n- Specific pathogen free (SPF): mice with a standard, controlled microbiome that excludes known pathogens.\n- Ileum: the final section of the small intestine, where nutrients and bile acids are absorbed.\n- Bile acids: digestive molecules made by the liver and modified by gut bacteria.",
+    "one_liner": "Adding rigid-body docking-generated templates from PIPER to AlphaFold 3 and Boltz-2 raises the success rate for predicting antibody-antigen complex structures on a leakage-free benchmark.",
+    "plain": "Antibodies bind to foreign molecules (antigens), and predicting the 3D shape of that pair is still hard for AI structure-prediction tools. The authors used a cheaper, older physics-style docking program, PIPER, to produce rough guesses of how the two molecules fit together, and fed those guesses to AlphaFold 3 and Boltz-2 as templates. On their benchmark, this raised the share of cases where the top prediction was acceptable or better from 56.2% to 63.4% for AlphaFold 3.",
+    "why": "Antibody-antigen structures matter for drug and vaccine design, and the approach is a modest, measured improvement on one benchmark rather than a general solution. It suggests traditional docking can complement machine-learning predictors where training data and evolutionary information are scarce, though the text does not test broader settings.",
+    "background": "- Protein structure prediction: AI tools estimate a molecule's 3D shape from its sequence.\n- Antibody-antigen complex: an antibody physically bound to the target molecule it recognizes.\n- Rigid-body docking: computing how two fixed 3D shapes can fit together, ranking many positions by a score.\n- Templates: known or approximate structures given to a predictor as a starting hint.\n- Success rate here means the share of complexes where the top model is at least \"acceptable\" quality.\n- Random seeds: different starting points for the AI sampling; 1000 seeds means 1000 attempts.\n- \"Leakage-free\" means the benchmark excludes structures the AI may have seen during training.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The microbiome plays an increasingly recognised role in development, metabolism and immunity across all segments of the small and large intestine, as well as more distant organs such as the liver. In the terminal ileum - a key site of nutrient absorption - the presence of microbes dictates the development of secondary lymphoid structures (Peyers patches), mediates bile acid metabolism, and impacts absorption. In part, coordinated regulatory networks in the gut impact liver function and immunity through gut-liver connectivity and the movement of immune cells and bioactive small molecules that includes bile acids and other bacterial metabolites. We aimed to examine the extent of microbiome involvement in ileal transcription, where subtle changes in co-expression networks can be tuned by microbiome diversity, composition and function. We surveyed ileal transcriptomes across mouse models which vary in microbiome complexity ranging from germ-free (GF, n = 15), the Oligo-Mouse-Microbiota-12 (MM12, n = 15), and specific pathogen free (SPF, n = 15).",
+   "abstract": "Motivation: In spite of the much improved protein structure prediction methods, the success rate remains low for antibody-antigen complexes. While this can be improved by computationally demanding massive sampling, results are still much poorer than for most other types of protein-protein interactions. In principle, improvement can be achieved by using templates that are close enough to the native structure of the complex, but these are generally not available for antibody-antigen complexes. Results: We explore the use of templates, generated by the computationally inexpensive rigid body docking program PIPER. Applied to a leakage-free antibody-antigen benchmark set, standard AlphaFold 3 with 1000 random seeds yields acceptable or better models as the top predictions for 56.2% of complexes. Adding the PIPER generated templates in the unmasked version of AlphaFold 3 either increases the success rate to 63.4%, or reaches the same 56.2% success rate in about 200 runs. The template-based approach similarly improves antibody-antigen prediction by Boltz-2. This result demonstrates that the space explored by the ML based approach can be expanded by adding templates prepared by traditional docking, compensating for the lack of evolutionary relationship and the limited availability of training data. Availability and Implementation: The ClusPro server (https://cluspro.bu.edu/login.php) containing the PIPER program is free for non-commercial applications and the program is available by request (https://www.vajdalab.org/). All other study data are included in the article and/or supporting information.",
    "source": "biorxiv"
   },
   {

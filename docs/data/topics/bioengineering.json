@@ -3,6 +3,36 @@
  "updated": "2026-11-23",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.20.768013",
+   "title": "Internalizing-peptide engineering converts blocking anti-EGFR antibodies into EGFR lysosomal targeting degraders",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768013v1",
+   "authors": [
+    "Petrov, P. D.",
+    "Vinueza-Gavilanes, R.",
+    "Vicente, A. P.",
+    "Kaur, M.",
+    "Simon-Extremera, P.",
+    "Carabelli, J.",
+    "Padilla, L.",
+    "Montuenga, L. M.",
+    "Calvo, A.",
+    "Ruiz, J. S."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768013 v1",
+   "primary_category": "bioengineering",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "Engineering full-length anti-EGFR antibodies (cetuximab and the LEI antibody) with cell-penetrating arginine-rich peptides converts receptor-blocking antibodies into degraders that reduce total EGFR levels in NSCLC models, including 3D spheroids, alone and with EGFR kinase inhibitors.",
+    "plain": "Some cancer drugs that target the EGFR protein only block its signal, while the protein stays on the cell surface. This study attaches short peptides that help cells take in molecules to anti-EGFR antibodies, so the antibody pulls the receptor into the cell where it is broken down. In lung cancer cell lines and 3D cell clusters, the engineered antibody lowered EGFR levels and, combined with kinase inhibitor drugs, slowed growth more than the drugs alone in some tests.</plain>\n<parameter name=\"why\">Reducing the amount of a receptor rather than only blocking it is a different strategy from standard EGFR inhibitors, and the text reports gains in combination with osimertinib and gefitinib in lab models. The text is limited to in vitro and 3D cell-culture work, so it does not show whether this helps in animals or patients; it may connect to antibody-based protein degradation approaches more broadly.</plain>\n<parameter name=\"background\">- EGFR (epidermal growth factor receptor) is a cell-surface protein that drives growth signals; it is a target in lung cancer.\n- Cetuximab and LEI are antibodies that bind EGFR and block its activity.\n- Tyrosine kinase inhibitors (TKIs) such as gefitinib and osimertinib block EGFR's internal signaling switch.\n- Cell-penetrating peptides (here polyarginine, R12) are short chains that help molecules enter cells.\n- Endocytosis and lysosomes: cells engulf surface proteins and break them down in acidic compartments; bafilomycin A1 blocks this acidification, used here as a control.\n- Recombinant fusion protein: an antibody and peptide made together as one engineered molecule.\n- 3D spheroids: clusters of cancer cells grown in culture that mimic some features of tumors.\n- LDH release is a standard marker of cell membrane damage.",
+    "why": "",
+    "background": "",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Conventional antibodies targeting the epidermal growth factor receptor (EGFR) primarily inhibit receptor activation rather than efficiently eliminating the receptor from tumor cells. Here, we investigated whether engineering full-length anti-EGFR antibodies with internalizing peptides could promote receptor degradation, enhance their biological activity and enable the development of recombinant receptor-depleting antibodies. Chemical conjugation of cetuximab (CTX) to the polyarginine peptide R12 enhanced intracellular uptake, reduced surface-accessible EGFR and decreased total receptor abundance in vitro. CTX-R12 conjugate also enhanced inhibition of wound repopulation in non-small cell lung cancer (NSCLC) cell lines, an effect reproduced using the R12 variant LINC18, and transferred to the independent blocking anti-EGFR antibody LEI. Incorporation of LINC19, a variant of LINC18, into recombinant full-length antibody fusion proteins preserved their activity. The LEI-LINC19 fusion (LEIP), reduced surface-accessible and total EGFR, with bafilomycin A1 reversing receptor loss and supporting an acidification-dependent endolysosomal component of degradation. Functional studies indicated that the antibody-peptide reduced DNA synthesis rate. Furthermore, siRNA-mediated EGFR depletion increased TKI-associated reductions in cellular biomass in PC9 cells and increased gefitinib responsiveness in H1975 cells. Consistently, combining LEIP with either osimertinib or gefitinib produced greater inhibition of H1975 wound repopulation than the corresponding individual treatments. LDH analysis revealed increased membrane-damage-associated LDH release following LEIP-gefitinib treatment but no additional increase with LEIP-osimertinib relative to osimertinib alone. These effects extended to 3D NSCLC models. CTX-R12 inhibited PC9 3D colony development, whereas LEIP restricted expansion of established PC9 colonies and reduced the projected area of H1975 spheroids. In H1975 spheroids initiated with 1,000 or 5,000 cells per well, LEIP-containing combinations with osimertinib or gefitinib produced greater inhibition of the spheroid size than the corresponding TKI-only treatments. Nuclear Green DCS1 staining revealed no detectable baseline core necrosis in untreated H1975 spheroids, whereas LEIP treatment was associated with DNA-positive material within and surrounding the spheroids. Moreover, LEIP-treated H1975 spheroids exhibited markedly reduced EGFR immunofluorescence compared with control and parental LEI-treated spheroids. Together, these findings demonstrate that internalizing-peptide engineering of blocking anti- EGFR antibodies can generate full-length EGFR-depleting fusion proteins with enhanced biological activity. The recombinant LEIP format and its activity in 3D in vitro NSCLC tumor models support further investigation of fusion antibody-mediated EGFR degradation as a complementary strategy to EGFR kinase inhibition.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.18.767535",
    "title": "Dual photoresponsive hydrogel surfaces enabling integrated single-cell analysis of morphology and gene expression",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767535v1",
@@ -24,48 +54,14 @@
    "primary_category": "bioengineering",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A dual light-responsive hydrogel surface traps single cells at uniform density, tracks their shape changes over time, and releases chosen cells by localized light-triggered degradation for downstream single-cell gene expression analysis.",
-    "plain": "Cells in the body and in the lab differ from one another, and it is hard to watch how a single cell changes its shape over time and then check which genes it is using. This paper describes a gel-based surface that holds individual cells in place with light, lets researchers film them, and then frees only the cells they picked by shining light on a small spot to dissolve the gel there. The authors used this to link changing cell shapes to gene activity, and to look at gene changes linked to invasive cancer cell behavior.",
-    "why": "Being able to connect what a cell looks like over time with what genes it is running could help explain why some cells in a tumor behave differently from others. The provided text describes the workflow and its demonstration on invasive cancer cells but does not give quantitative results, so the strength of the findings cannot be judged from this summary alone.",
-    "background": "- Hydrogel: a water-swollen, soft polymer network, similar to gel used in contact lenses, that can hold cells.\n- Photoactivatable / photodegradable material: a material that changes behavior (sticks cells down, or dissolves) when hit with light of a specific wavelength.\n- Single-cell gene expression analysis: measuring which genes a single cell is actively switching on, usually by reading its RNA.\n- Morphological dynamics: changes in a cell's shape and size over time, which can be observed by microscopy.\n- Invasive cancer cell behavior: cancer cells that move through surrounding tissue, a key step in metastasis.\n- Real-time image processing: software that automatically analyzes microscope images as they are captured.",
+    "one_liner": "A dual photoresponsive hydrogel surface that uses light to trap individual cells in a uniform array, track their shape changes over time, and selectively release chosen cells for single-cell gene expression analysis.",
+    "plain": "Scientists want to watch how individual cells change shape over time and then check which genes those cells are switching on, but it is hard to do both on the same cell. This paper describes a gel-coated surface that holds cells in place using one kind of light, lets researchers film them, and then uses a second kind of light to melt the gel under chosen cells so those cells can be collected. The authors report using this to link cell shape changes to gene activity, including in invasive cancer cells.",
+    "why": "Connecting what a cell looks like over time with what genes it is using is a long-standing gap in single-cell research, so a workflow that does both on the same selected cells may be useful for studying cell variability. The text is only an abstract, so the strength of the results, the number of cells, and how well the method compares with existing tools cannot be judged from it.",
+    "background": "- Single-cell analysis: studying cells one at a time, since cells in the same sample can behave quite differently.\n- Gene expression: how actively a cell is turning its genes into products; often measured by sequencing the cell's RNA.\n- Hydrogel: a water-swollen, jelly-like polymer network that can be used as a cell-friendly surface or scaffold.\n- Photoactivatable / photodegradable: chemical groups that change or break apart when hit with light, letting researchers control the material with a light beam.\n- Morphological dynamics: changes in a cell's shape and size over time, usually tracked by microscope imaging.\n- Invasive cancer cell behavior: the tendency of cancer cells to move into surrounding tissue, a key feature of metastasis.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Integrated single-cell analysis linking time-resolved cellular phenotypic dynamics with gene expression is essential for understanding cellular heterogeneity but remains technically challenging. Here, we report a dual photoresponsive hydrogel that combines a photoactivatable cell-trapping material with a photodegradable hydrogel, enabling light-directed single-cell capture, time-resolved imaging, and the on-demand release of selected cells for downstream gene expression analysis. This approach allows cells to be arrayed at a high density with uniform spacing, facilitating high-throughput monitoring of morphological dynamics. Cells exhibiting phenotypes of interest can be precisely retrieved by localized hydrogel degradation induced by secondary light irradiation and subsequently subjected to single-cell gene expression analysis. Using this workflow in combination with high-throughput real-time image processing technology, we directly link dynamic morphological features to gene expression and demonstrated the ability of the workflow to examine transcriptional alterations associated with invasive cancer cell behavior.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.20.768134",
-   "title": "Enhancing the Efficacy of Oncolytic Viruses by Engineering Virus Host Interactions Using CRISPR Cas13d",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768134v1",
-   "authors": [
-    "Ameil, Z.",
-    "Kooshki Zamani, N.",
-    "Khalid, Z.",
-    "Rezaei, R.",
-    "St-Laurent, G.",
-    "Khani khouzani, L.",
-    "Cormier, R.",
-    "Anh Nguyen, P.",
-    "Abdollahpour, P.",
-    "Solorza Reyes, M. F.",
-    "Cheung, G.",
-    "Taslimi, S.",
-    "Jafari, K.",
-    "Azad, T."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.20.768134 v1",
-   "primary_category": "synthetic biology",
-   "date": "2026-11-23",
-   "summary": {
-    "one_liner": "The paper builds a doxycycline-inducible CRISPR Cas13d system carried inside an oncolytic herpes simplex virus 1 (oHSV1) to switch off tumor-cell antiviral genes during infection, and tests guide RNA library effects in three mouse and human tumor cell lines.",
-    "plain": "Oncolytic viruses are viruses engineered to infect and kill cancer cells, but tumor cells can fight back with their own antiviral defenses. This work describes a way to temporarily switch off selected host antiviral genes using a gene-editing-style tool, controlled by a drug (doxycycline) that turns the system on. The authors report that the approach works in reporter tests and shows guide-dependent differences in fluorescence across several tumor cell lines.",
-    "why": "Enhancing how well oncolytic viruses replicate in tumors is a practical goal for cancer therapy, and a controllable, programmable way to probe host-virus interactions could help researchers test which defenses matter. The text reports only lab cell-culture results, with no animal or clinical outcomes, so its relevance to treatment is still unknown.",
-    "background": "- Oncolytic virus: a virus engineered to replicate in and destroy cancer cells.\n- HSV1 (herpes simplex virus type 1): the virus used as the backbone here.\n- CRISPR Cas13d: a programmable enzyme that is guided by RNA to cut other RNA molecules, lowering the amount of a target protein; it is different from DNA-editing CRISPR.\n- Guide RNA (gRNA): a short RNA sequence that tells the enzyme which target to cut.\n- Tet On / Tet Off: genetic switches that turn gene activity on or off in the presence of doxycycline, an antibiotic-derived drug.\n- Antiviral factors: host proteins that block viral replication.\n- Reporter assay: a test that uses a glowing or measurable marker to show whether a genetic element is working.\n- Cell lines named: EMT6 and CT26 (mouse tumor lines), 786-O (human kidney cancer line).",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Oncolytic herpes simplex virus type 1 (oHSV1) is a promising cancer therapy, but tumor cell antiviral responses can restrict viral replication. Strategies for temporally controlled targeting of antiviral factors remain limited. Here, we developed an inducible CRISPR Cas13d platform to modulate host responses during HSV1 infection. We screened 13 pharmacological inhibitors across tumor models to identify pathways associated with restricted infection. Reporter assays identified Cas13d as the preferred effector over Cas13b, while endogenous-target experiments demonstrated Cas13d mediated reductions in target protein abundance. We optimized guide RNA expression using RNA polymerase III promoters, selected p7SK, and established doxycycline-responsive Tet On and Tet Off systems. The platform was incorporated into HSV1 to generate a gRNA library targeting 15 host antiviral genes, together with two non-targeting controls. Doxycycline-dependent reporter readouts demonstrated inducible activity. Evaluation in EMT6, CT26, and 786 O cells revealed guide-dependent differences in fluorescence. These findings establish a programmable framework for investigating virus host interactions during oncolytic HSV infection.",
    "source": "biorxiv"
   },
   {

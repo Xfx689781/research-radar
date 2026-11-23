@@ -3,6 +3,71 @@
  "updated": "2026-11-23",
  "papers": [
   {
+   "uid": "medrxiv:10.64898/2026.11.19.26368513",
+   "title": "Panel-agnostic tumour-only diagnosis of mismatch repair deficiency",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368513v1",
+   "authors": [
+    "Garcia-Lopez, D.",
+    "Hernando, B.",
+    "Chaves-Urbano, B.",
+    "Escobar-Rey, M.",
+    "Gomez-Sanchez, D.",
+    "Cadiz, A.",
+    "Gallego, A.",
+    "Mendiola, M.",
+    "Berjon, A.",
+    "Caleiras, E.",
+    "Garcia, J. F.",
+    "Hardisson, D.",
+    "Toledo, G.",
+    "Redondo, A.",
+    "Garcia, M. J.",
+    "Macintyre, G."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.19.26368513 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A tumour-only classifier (captureMMRd) that infers mismatch repair deficiency from mutational signatures in somatic variant calls that targeted panels already produce, validated against IHC and MSI-PCR across 7,514 samples from 16 cohorts.",
+    "plain": "Some cancers lose a DNA repair system called mismatch repair, and those tumours often respond to immunotherapy, so finding them matters. This paper describes a computer method that spots this loss using only the tumour's own mutation data, the kind of data that routine gene-panel tests already generate, without needing a matched healthy sample. In a pooled set of 7,514 samples, the authors report it agreed with standard lab tests in most cases, with pooled sensitivity of 94.36% and specificity of 99.02%.",
+    "why": "Many hospitals test tumours with targeted gene panels that lack the extra information older methods need, so a method that works on existing data could widen access to immunotherapy decisions. The text reports the accuracy figures and a minimum panel size, but the clinical impact has not been tested in the paper itself.",
+    "background": "- Mismatch repair (MMR) is a cell system that fixes copying errors in DNA; when it fails (MMRd), mutations pile up.\n- MMRd tumours can qualify for immunotherapy, so detecting them guides treatment.\n- Standard confirmatory tests are immunohistochemistry (IHC, staining for repair proteins) and MSI-PCR (checking unstable short repeated DNA sequences).\n- Targeted panels sequence only a selected set of genes; \"tumour-only\" means no matched normal tissue from the same patient is sequenced.\n- Mutational signatures are patterns in the types of mutations a tumour carries, used here as the classifier's input.\n- Sensitivity is the share of true cases detected; specificity is the share of non-cases correctly ruled out.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A diagnosis of mismatch repair deficiency (MMRd) can unlock immunotherapy treatment for a patient. However, existing sequencing-based detection methods require matched normal samples, panel-specific baselines or dedicated microsatellite loci, none of which are available to the tumour-only targeted panels that dominate routine clinical practice. Here we present captureMMRd, an open-source classifier that diagnoses MMRd using mutational signatures computed from the somatic variant calls any panel already produces. Applying a single locked model to 7,514 samples from 16 independent cohorts, spanning whole-exome, whole-genome, targeted panel and plasma cfDNA sequencing, captureMMRd achieved a pooled sensitivity of 94.36% and specificity of 99.02% against orthogonal MMR IHC and MSI-PCR testing, and outperformed microsatellite-based callers on panels with limited microsatellite content. We demonstrate that as few as 3 indels and 44 single-base substitutions are sufficient for reliable diagnosis, defining a minimum panel footprint that most clinically deployed assays already exceed. Our findings extend clinically actionable MMRd detection to the sequencing workflows of routine precision oncology, with the potential to broaden patient access to immunotherapy without new assays, baselines or matched normal samples.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.20.26368610",
+   "title": "Baseline Prognosis and Treatment Benefit From First-Line Immunotherapy Strategies: Target Trial Emulations Across Advanced Solid Tumors",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.20.26368610v1",
+   "authors": [
+    "Orcutt, X.",
+    "Nimgaonkar, V.",
+    "Chen, K.",
+    "Riaz, I.",
+    "Cohen, A.",
+    "Mamtani, R.",
+    "Gomes, M.",
+    "Long, Q.",
+    "Parikh, R. B."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.20.26368610 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-23",
+   "summary": {
+    "one_liner": "A target-trial emulation using Flatiron Health electronic records (8,688 patients, 2011–2023) tests whether baseline prognosis, estimated by machine learning 6-month survival models, modifies the benefit of first-line immunotherapy-based strategies across five advanced solid tumor comparisons.",
+    "plain": "Immunotherapy drugs are often chosen for frail cancer patients because they seem gentler, yet some trials have shown more early deaths with them than with chemotherapy-based regimens. This study used routine hospital records from US patients to ask whether the better treatment choice depends on how sick a patient is at the start. It found that for poorer-prognosis patients in head and neck, bladder (urothelial), and possibly lung cancer, adding chemotherapy gave more benefit, while immunotherapy-based treatment helped across risk levels in colorectal cancer and melanoma.",
+    "why": "Trials often under-enroll patients with poor prognosis, so this suggests treatment comparisons from trials may not transfer to these patients, and that baseline risk could complement tumor biomarkers such as PD-L1 when choosing therapy. Because it is an observational emulation, the findings are associations that need confirmation, and the lung cancer result was less certain (confidence interval crossing zero).",
+    "background": "- Immune checkpoint inhibitors (ICIs): drugs that release the immune system's brake so it attacks cancer; pembrolizumab and nivolumab/ipilimumab are examples.\n- Target trial emulation: analyzing observational patient records as if they were a randomized trial, to reduce bias.\n- Flatiron Health: a US database of electronic health records from oncology clinics.\n- PD-L1 (CPS/TPS): lab markers of tumor immune activity used to guide immunotherapy use.\n- Restricted mean survival time (RMST): average survival time over a fixed window (here 2 years), expressed in days in this paper.\n- Interaction test: checks whether a treatment effect differs across patient groups or risk levels.\n- Overlap weighting and pseudo-observations: statistical methods to balance comparison groups and model survival outcomes.\n- dMMR/MSI-H: tumors with defects in DNA mismatch repair, often responsive to immunotherapy.\n- BRAF/MEK inhibitors: targeted pills for melanoma with a BRAF mutation.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Background In randomized trials, first-line immune checkpoint inhibitor (ICI)-based therapy has shown excess early mortality versus chemotherapy- or targeted therapy-containing regimens. ICI monotherapy is often chosen for frail patients because it is perceived as less toxic. Whether treatment benefit varies with baseline prognosis is unknown, as poor-prognosis patients are underrepresented in trials. Methods Using the US Flatiron Health electronic health record-derived database, we emulated target trials among 8,688 patients initiating first-line therapy during 2011-2023 across five comparisons: pembrolizumab plus chemotherapy versus pembrolizumab in head and neck squamous cell carcinoma (HNSCC; PD-L1 CPS [&ge;] 1 or unknown) and non-small cell lung cancer (NSCLC; PD-L1 TPS [&ge;] 50%); carboplatin plus gemcitabine versus pembrolizumab in urothelial carcinoma; pembrolizumab versus chemotherapy in dMMR/MSI-H colorectal cancer; and ipilimumab plus nivolumab versus BRAF/MEK inhibition in BRAF-mutant melanoma. Baseline prognosis was estimated with machine learning models predicting 6-month survival. Overlap-weighted pseudo-observation regression evaluated whether differences in 2-year restricted mean survival time (RMST) varied with predicted survival. Results In HNSCC, adding chemotherapy to pembrolizumab did not clearly improve RMST overall (11.5 days; 95% CI, -18.4 to 41.1), but benefit was 102.4 days greater at the 10th versus 90th percentile of predicted survival (95% CI, 40.5 to 164.3; interaction P=.001). Similar gradients favored carboplatin plus gemcitabine over pembrolizumab in urothelial carcinoma (10th-90th percentile difference, 51.4 days; 95% CI, 4.8 to 98.1; P=.03) and, less certainly, adding chemotherapy to pembrolizumab in NSCLC (73.7 days; 95% CI, -3.7 to 151.2; P=.06). Higher-risk patients in these cohorts were more often trial-ineligible. ICI-based therapy improved overall RMST in colorectal cancer (difference, 79.7 days; 95% CI, 49.5 to 107.0) and melanoma (68.3 days; 95% CI, 33.9 to 101.9), without clear variation by predicted survival (interaction P=.32 and P=.91). Conclusions Among patients with poorer prognosis, chemotherapy-containing regimens were associated with greater benefit than ICI monotherapy in HNSCC and urothelial carcinoma, and possibly NSCLC. ICI-based therapy appeared beneficial across prognosis in dMMR/MSI-H colorectal cancer and BRAF-mutant melanoma. Baseline prognosis may complement tumor biomarkers when selecting first-line immunotherapy strategies.",
+   "source": "medrxiv"
+  },
+  {
    "uid": "medrxiv:10.64898/2026.11.18.26368446",
    "title": "LCatlas: A Point-Of-Care Tool for Predicting Immunotherapy Outcomes in Non-Small Cell Lung Cancer",
    "url": "https://www.medrxiv.org/content/10.64898/2026.11.18.26368446v1",

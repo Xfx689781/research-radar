@@ -3,51 +3,52 @@
  "updated": "2026-11-23",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.19.766513",
-   "title": "From individual movement to ecosystem response: how landscape structure shapes herbivore impacts",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.766513v1",
+   "uid": "biorxiv:10.64898/2026.11.20.768031",
+   "title": "Biotic interactions buffer the effects of biodiversity loss on ecosystem functioning",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768031v1",
    "authors": [
-    "Suarez, D. L.",
-    "Guisoni, N.",
-    "Laguna, M. F."
+    "Vidiella, B.",
+    "Montoya, J. M."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.19.766513 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.20.768031 v1",
    "primary_category": "ecology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A spatially explicit stochastic individual-based model of two herbivore populations with different movement and foraging strategies, sharing renewable resources across heterogeneous landscapes, examined with Monte Carlo simulations to see how movement and landscape structure shape resource depletion and population dynamics.",
-    "plain": "This paper asks how individual animals moving around a landscape add up to changes in the plants they eat across the whole area. The authors built a computer simulation with two kinds of grazing animals that move and feed differently, on land where food is unevenly spread, and ran many randomised trials. They report that movement mainly sets where plants get depleted, and that more productive land can sometimes lead to a larger relative loss of plant biomass.",
-    "why": "The findings suggest that more food does not automatically protect an ecosystem from grazing, and that plant biomass can fall well before visible loss of vegetation cover, which matters for reading early warning signs in rangelands. The text is a model study only, with no field data mentioned, so its relevance to real landscapes is untested from the given text alone.",
-    "background": "- Individual-based model: a simulation that tracks each animal separately and lets patterns emerge from their local behaviour.\n- Stochastic: includes random chance, so outcomes vary between runs.\n- Monte Carlo simulation: running the model many times with random inputs to see the range of likely outcomes.\n- Consumer–resource dynamics: how grazers (consumers) and plants (resources) affect each other's numbers.\n- Heterogeneous landscape: an environment where food and conditions vary from place to place.\n- Refuge: a place where prey can hide from predators, which here affects herbivore survival.\n- Biomass vs. occupancy: total plant mass versus how much ground the plants cover.",
+    "one_liner": "A theoretical model of species interaction networks predicts that the effect of losing species on ecosystem functions such as primary production and carbon retention depends on how many and how strong the trophic links are.",
+    "plain": "Losing species from an ecosystem often weakens things like plant growth and carbon storage, but it is hard to say when the damage will be large. This paper proposes a theory suggesting that the web of feeding relationships between species decides how much harm each extinction causes. When many or strong feeding links exist, the remaining species can make up for lost ones through other paths, so the damage is smaller; when links are fewer or weaker, the ecosystem is far more sensitive to each loss.",
+    "why": "It offers a way to explain why biodiversity loss hits ecosystem functions unevenly across settings, and it names \"interaction erosion\" as a possible hidden part of the biodiversity crisis. The text gives only the abstract-level claim, so how well the theory fits real ecosystems is not shown here.",
+    "background": "- Biodiversity: the variety of species in an area.\n- Ecosystem functioning: processes such as primary production (plants making biomass from sunlight) and carbon retention (storing carbon rather than releasing it).\n- Biotic interactions: relationships between living organisms, such as predation, herbivory or competition.\n- Trophic links: feeding connections in a food web, showing who eats whom.\n- Species interaction network: a map of all these connections in a community, treated mathematically.\n- Extinction sensitivity: how much a function drops when a given species disappears.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Understanding how local interactions generate large-scale ecological dynamics is a central challenge in ecology. In heterogeneous environments, consumer movement links resource distribution with exploitation, producing responses that may not be predicted from consumer abundance or resource availability alone. Here, we develop a spatially explicit stochastic individual-based model of two herbivore populations with contrasting movement and foraging strategies that share renewable resources. The model incorporates heterogeneous resources, consumer movement and feeding, resource regeneration, predation, and refuge availability. Using Monte Carlo simulations, we examine how herbivore pressure and landscape structure shape population dynamics and resource depletion. Movement strongly determines the spatial pattern of depletion, while resource vulnerability depends on the overlap between resource distribution and consumer activity. Counterintuitively, increasing the extent of a productive region increases initial resource biomass but can also increase relative resource loss. Additional resources sustain consumer activity where herbivores concentrate, showing that greater resource availability does not necessarily buffer ecosystems against herbivory. Resource biomass can also decline substantially before major reductions in vegetation occupancy become apparent. These results demonstrate how individual behaviour and landscape structure jointly shape ecosystem responses. The model provides a framework for investigating how spatially coupled consumer-resource interactions generate ecological dynamics.",
+   "abstract": "Biodiversity loss generally impairs functions on which nature and societies depend upon. Yet, it is difficult to predict under which conditions losing biodiversity has larger effects on functions such as primary production or carbon retention. We present a theory that demonstrates that biotic interactions mediate the intensity of these effects. In species interaction networks with many or strong trophic links, biodiversity loss has weaker effects on functioning because alternative interaction pathways allow surviving species to compensate for species loss. In contrast, in networks with fewer or weaker links, ecosystem functioning is very sensitive to the extinction of species. Here, we identify interaction erosion as a hidden dimension of the biodiversity crisis that provides a unifying explanation for functional consequences of biodiversity loss across ecological contexts.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.18.767713",
-   "title": "Synchronized Seasonal Shifts in the Climate, Diet, and Gut Microbiome of a Rainforest Lemur (Eulemur rufifrons)",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767713v1",
+   "uid": "biorxiv:10.64898/2026.11.20.768032",
+   "title": "Resistance evolution in a single species reorganizes community responses across a resource-antibiotic landscape",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768032v1",
    "authors": [
-    "Stephens, J. N.",
-    "Weisrock, D. W.",
-    "Raheimanjato, J. P.",
-    "Wright, P. C.",
-    "Donohue, M. E."
+    "Aapalampi, I.-K.",
+    "Bischofberger, A. M.",
+    "Kiciatovas, D.",
+    "Kivikoski, M.",
+    "Mustonen, V.",
+    "Hiltunen, T.",
+    "Cairns, J."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.18.767713 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.20.768032 v1",
    "primary_category": "ecology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A 10-month field study of wild red-fronted brown lemurs in Ranomafana National Park links monthly rainfall, temperature and diet diversity to shifts in gut bacterial communities, including trade-offs between carbohydrate- and fiber-degrading bacteria.",
-    "plain": "Wild lemurs in a Madagascar rainforest face large seasonal changes in weather and food. The researchers followed one lemur species for ten months and tracked its gut bacteria alongside local rain, temperature and what the animals ate. They report that the gut bacteria changed together with the climate and diet, which may help the animals cope with lean periods.",
-    "why": "It offers a field-based look at whether gut microbes can help wild animals adjust to environmental stress such as climate change, a question relevant to endangered species. The text does not show how far these patterns hold beyond this one species and site, so the broader conclusions remain tentative.",
-    "background": "- The gut microbiome is the community of bacteria living in the digestive tract, which helps break down food.\n- Phenotypic plasticity means an organism can change its traits in response to its environment without genetic change.\n- Frugivory means eating mostly fruit; folivory means eating mostly leaves, which are high in fiber and harder to digest.\n- Carbohydrate- and fiber-metabolizing bacteria are microbes that break down sugars and plant fiber, respectively.\n- Madagascar's wet and dry seasons drive large swings in rainfall, temperature and fruit supply.\n- The abstract alone gives no sample sizes or statistical details, so the strength of the findings cannot be judged from this text.",
-    "difficulty": "intermediate",
+    "one_liner": "Mapping how antibiotic resistance evolving in one bacterial species (Aeromonas caviae) reshapes 3- and 16-species community states, diversity and dominance across a grid of resource and antibiotic levels.",
+    "plain": "This study asks what happens to a whole group of bacterial species when one of them evolves resistance to an antibiotic. The researchers tested 64 combinations of food availability and antibiotic dose, using small communities of three and sixteen species. They found that the same resistance change could raise diversity in some conditions and lower it in others, and that it could reverse which of two dominant species won.",
+    "why": "It shows that the community-wide effects of one species evolving can depend strongly on the surrounding environment, which matters for predicting outcomes in medicine and microbial ecology. The text does not show how far these patterns extend beyond these laboratory communities, so broader claims should be treated cautiously.",
+    "background": "- Community: a set of different species living together and competing for the same resources.\n- Rapid evolution: genetic change within a species over a short time, here driven by antibiotic exposure.\n- Antibiotic resistance: a heritable ability of bacteria to survive a drug that would normally kill or stop them.\n- Inhibitory concentration: the antibiotic dose high enough to stop growth; below it, the drug alters growth more subtly.\n- Community-state boundary: a threshold in environmental conditions where the community's composition shifts from one pattern to another.\n- Dominance: which species makes up the largest share of the community.\n- Diversity: how many species are present and how evenly they are represented.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Gut microbiome (GM) flexibility extends the adaptive potential of host species in the face of rapid ecological change. Madagascar's endemic primates offer a powerful natural system to study GM plasticity as the island experiences substantial environmental change throughout the year. This is especially true in the eastern rainforests, which experience marked variation in temperature, rainfall, and fruit availability between the wet and dry seasons. To elucidate interactions between climate, diet, and the GM, we conducted a 10-month study of the ecologically flexible red-fronted brown lemur (Eulemur rufifrons) in Ranomafana National Park. We detected significant shifts in gut microbial communities correlated with monthly rainfall, temperature, and dietary diversity. Trade-offs between abundances of carbohydrate- and fiber-metabolizing bacteria reflected shifts between frugivory and folivory, suggesting that the GM buffers energetic and/or nutritional imbalances when resources are scarce. Finally, we observed synchronized shifts in climate and the GM despite deviation from normal seasonal patterns, demonstrating the GM's rapid response to environmental cues. Our results suggest that the GM contributes to phenotypic plasticity across seasons, enabling endangered primates to better cope with environmental stressors like climate change.",
+   "abstract": "Rapid evolution in one species can restructure ecological communities, but how its effects vary across environmental conditions remains poorly understood. Here we mapped the consequences of antibiotic resistance evolution in Aeromonas caviae across 64 combinations of resource availability and antibiotic stress in three- and 16-species bacterial communities. Resistance evolution changed where community-state boundaries were located, with boundaries lost or gained depending on resource availability. The same evolutionary change increased diversity in some environments but decreased it in others. Species success was partly explained by growth traits at zero or low antibiotic concentrations and by intrinsic resistance at inhibitory concentrations. Resistance evolution reversed dominance between the two dominant species and changed which traits mattered. It also altered other species' responses below inhibitory concentrations, mostly between closely related species. Our findings show that the consequences of evolution depend on environmental context but can be partly explained by species traits.",
    "source": "biorxiv"
   },
   {
