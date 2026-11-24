@@ -3,46 +3,49 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27295",
-   "title": "Consecutive Supersymmetric Quantum Mechanical Algorithms for Resolving the Spectra of Legendre-type Differential Operators",
-   "url": "https://arxiv.org/abs/2611.27295",
+   "uid": "arxiv:2611.31050",
+   "title": "Gradient formula from the sphere for perturbative RG flows near critical dimensions",
+   "url": "https://arxiv.org/abs/2611.31050",
    "authors": [
-    "Tianchun Zhou"
+    "Marten Reehorst"
    ],
-   "label": "arXiv:2611.27295v1",
-   "primary_category": "quant-ph",
+   "label": "arXiv:2611.31050v1",
+   "primary_category": "hep-th",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes iterative algorithms built from consecutive supersymmetric quantum mechanics (SUSYQM) to compute the eigenspectra of the Legendre operator and related operators in various coordinate systems, using supersymmetry and shape invariance as guiding principles.",
-    "plain": "The paper concerns a standard class of equations from mathematical physics (Legendre-type differential operators) whose solutions describe quantities such as allowed energy levels. The authors build step-by-step computational procedures that find these allowed values by repeatedly applying a hidden pairing symmetry, without relying on the traditional power-series method. The abstract claims the procedures are simple, efficient and independent of the older methods, but the excerpt itself gives no worked examples or numerical comparisons.",
-    "why": "The work offers an alternative route to well-known spectra, and the authors suggest some of these algorithms could replace the popular power-series approach. Whether that holds in practice cannot be judged from the abstract alone, since the text provides no results or benchmarks.",
-    "background": "- Differential operator: an equation-level rule (here, a Legendre-type equation) whose solutions are special functions used across physics.\n- Eigenspectrum: the set of allowed values (such as energy levels) for which the equation has well-behaved solutions.\n- Supersymmetric quantum mechanics: a method that pairs a problem with a related \"partner\" problem so that their energy levels are linked, allowing solutions to be built step by step.\n- Shape invariance: a property where partner problems share the same mathematical form with shifted parameters, which makes the chain of steps solvable.\n- Power series approach: the traditional method of solving such equations by writing the solution as an infinite sum of powers.",
+    "one_liner": "The paper derives a gradient formula for perturbative renormalisation group flows near critical dimensions, built from a renormalised functional on the sphere S^d, and checks its properties in several specific field theories in d = d_c − ε.",
+    "plain": "Physicists describe how a quantum field theory changes with the scale at which you look at it, and this flow is often described by a \"beta function\". The paper studies when such flows behave like the downhill motion of a ball on a landscape, which is the gradient property. The authors put the theory on a round sphere, derive a formula of this kind, and show that its potential at fixed points is related to the sphere free energy, for several example theories in dimensions just below a critical value.",
+    "why": "A gradient structure would give a general way to organise which scale-dependent theories can flow to which fixed points, and it links the flow to a sphere free energy that is a known quantity. The text does not show how far these results reach beyond the listed theories; for interacting gauge theories the authors state the properties only as assumptions.",
+    "background": "- Renormalisation group (RG): the systematic way physicists track how a theory's couplings change with energy or length scale.\n- Beta function: the rate of change of a coupling along the RG flow; fixed points are where it vanishes.\n- Critical dimension d_c and ε: the paper works in a spacetime dimension d = d_c − ε, expanding in the small number ε.\n- Weyl anomaly: a scaling symmetry that fails to hold exactly once quantum effects are included.\n- Sphere free energy F̃: a scheme-independent number attached to a conformal theory placed on a sphere; it is used as a measure of degrees of freedom.\n- Gradient flow: a flow that follows the downhill direction of a scalar potential under a metric.\n- Two-point function: the correlation between field values at two points, here on the sphere.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Quite comprehensive iterative algorithms based on consecutive supersymmetric quantum mechanics (SUSYQM) have been constructed heuristically, for resolving the eigenspectra of the Legendre operator and its associates parametrized in various coordinates, \\emph{without receiving any input from traditional analytical methods}. On building these algorithms, the two symmetries \\text{--} supersymmetry and shape invariance symmetry \\text{--} hidden in these operators are brought to the fore as the only two governing principles, with the aids of the newly devised algebraic techniques such as the \\emph{active supersymmetrization transformations}, \\emph{momentum operator maps} as well as plain and \\emph{higher-order spin matrix maps}. In view of their algebraic simplicity and elegance, high efficiency, as well as independence of traditional methods, some of these algorithms become the promising candidates to supplant the popular power series approach to the eigenspectra of Legendre-type operators.",
+   "abstract": "We study the gradient property of perturbative renormalisation group flows in $d=d_c-\\varepsilon$, with a potential and a metric regular at $\\varepsilon=0$ up to logarithms of gauge couplings. We state properties of the renormalised functional with local couplings on the sphere $S^d$: finiteness, a local Weyl anomaly, the Ward identity of a conformal Killing vector, rotation properties and statements on the free theory. From them we derive a Ward identity without anomaly for a combination of the functional and its anomaly. Its first variation is a gradient formula whose symmetric metric contains the two-point function on the sphere and whose potential at fixed points is, in an extended form of the properties, proportional to the sphere free energy $\\tilde F$ up to a constant. Sources of relevant operators enter through their Weyl variation, and in a scheme which we construct the gradient formula persists, with a nondegenerate metric if a matrix of the free theory is invertible. For multiscalar $\\phi^4$ theory and for scalars and Dirac fermions with Yukawa and quartic couplings in $d=4-\\varepsilon$, for sextic scalars in $d=3-\\varepsilon$ and for cubic scalars in $d=6-\\varepsilon$, we derive all these properties from a finiteness hypothesis. The gradient formula then holds to all orders for the beta function defined on the sphere. For interacting gauge theories the properties remain assumptions.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27912",
-   "title": "Submanifolds, restriction of differential operators and Schouten-Nijenhuis bracket",
-   "url": "https://arxiv.org/abs/2611.27912",
+   "uid": "arxiv:2611.29543",
+   "title": "$\\mu$- and $q$-extension of special functions in quantum field theory",
+   "url": "https://arxiv.org/abs/2611.29543",
    "authors": [
-    "J. Queva",
-    "J. Renaud"
+    "J. Bl\\\"umlein",
+    "A. M. Gavrilik",
+    "U. Y. Lunha",
+    "O. Mykhailiv",
+    "C. Schneider"
    ],
-   "label": "arXiv:2611.27912v1",
-   "primary_category": "math.DG",
+   "label": "arXiv:2611.29543v1",
+   "primary_category": "math-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper gives new, compact formulas for restricting the Hodge star, the codifferential and the Hodge Laplacian (operators on differential forms) to a submanifold, using the Schouten-Nijenhuis bracket and the generalized interior product.",
-    "plain": "The paper is about a technical question in geometry: if you have a rule for measuring or transforming shapes and fields in a space, how do you apply that rule when you only look at a smaller surface or curve sitting inside it? The authors write down new, shorter formulas for doing this for three standard operators. They say the formulas are concise and make explicit calculations easier in practice.",
-    "why": "Restricting these operators to a submanifold comes up when studying fields and waves on surfaces embedded in a larger space, so cleaner formulas can save effort in such calculations. The provided text is only the abstract, so I cannot say how widely the formulas apply or how they compare with existing approaches.",
-    "background": "- Submanifold: a smaller curved surface or curve sitting inside a larger space, such as a sphere inside three-dimensional space.\n- Differential forms: a general language for describing quantities like flux, area and volume, which can be integrated over shapes.\n- Hodge operator (Hodge star): a rule that converts a form into its \"complementary\" form, linked to the geometry of the space.\n- Codifferential and Hodge Laplacian: operators built from the Hodge star and differentiation; the Laplacian generalizes the familiar second-derivative operator that appears in heat and wave equations.\n- Restriction: evaluating an operator only on the submanifold, using only information available there.\n- Schouten-Nijenhuis bracket: an algebraic operation on multivector fields used as a bookkeeping tool here.\n- Generalized interior product: a way of contracting a form with a vector-like object, used to simplify the formulas.",
+    "one_liner": "The paper constructs μ- and q-extended versions of the special functions and nested sums (harmonic sums, polylogarithms, cyclotomic and root-valued objects) that arise in perturbative quantum field theory loop calculations.",
+    "plain": "Calculations in particle physics often produce a family of named mathematical functions and sums. This paper builds generalized versions of these functions, each with an extra parameter (called μ or q) that deforms the usual algebra. The abstract reports that the μ-versions mostly keep the same classes of functions, except for the case involving roots, while the q-versions produce new, higher-level functions.",
+    "why": "These deformed functions are said to be expected in loop calculations in theories modified by changed commutation rules, so the work is a mathematical groundwork for that possibility. Whether it connects to physical predictions is not shown in the text provided, so that link remains unclear.",
+    "background": "- Perturbative quantum field theory: approximating particle interactions as a series of terms, each computed as a loop integral.\n- Polylogarithms and harmonic sums: standard families of special functions and sums that appear in these integrals.\n- Mellin transform: a mathematical change of variables that links integrals to sums.\n- q- and μ-extensions: deformations of ordinary algebra (q-numbers, or commutation rules modified by a parameter) used to generalize these functions.\n- Transcendental functions: functions that cannot be expressed as roots of polynomials with simple coefficients; \"higher\" means more complex in this classification.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this article, we present new formulas for restricting the Hodge operator, the codifferential and the Hodge Laplacian to a submanifold. These formulas are concise, thanks to the use of tools for differential forms (Schouten-Nijenhuis bracket and generalized interior product). They also facilitate explicit calculations for practical applications.",
+   "abstract": "Analytic calculations up to single-scale quantities in perturbative quantum field theory result into special numbers and functions, which are generalizations as iterative integrals over special alphabets. In this way one obtains polylogarithms, Nielsen integrals, the iterated integrals over linear denominator terms, cyclotomic letters, letters induced by quadratic forms, and square-root valued letters. The inverse Mellin transform relates special nested sums to these quantities, which are harmonic sums, generalized harmonic sums, nested sums implied by quadratic forms, cyclotomic harmonic sums, and nested sums containing central binomials. We construct the $\\mu$- and $q$-extensions of all these special functions. They are expected to occur in loop calculations within $\\mu$- and $q$-extended quantum field theories via modified (anti)commutation relations. The $\\mu$-extended special functions are quite different form the corresponding $q$-extended functions. While in the former case one observes class-preservation characterized by the polynomial $\\mu$-parameter, except for the case of root-valued letters. In the latter case new higher transcendental functions are obtained.",
    "source": "arxiv"
   },
   {

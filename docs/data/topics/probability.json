@@ -3,49 +3,50 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26946",
-   "title": "A Stochastic Tamed-Regularized Random Batch Method for Uncertain Particle Systems with Singularities",
-   "url": "https://arxiv.org/abs/2611.26946",
+   "uid": "arxiv:2611.28254",
+   "title": "Epidemic random model under vaccination regime and non-permanent immunity driven by time-changed Levy noise",
+   "url": "https://arxiv.org/abs/2611.28254",
    "authors": [
-    "Wenyi Wang",
-    "Lei Li",
-    "Yiwen Lin"
+    "Giulia Di Nunno",
+    "Jasmina Djordjevic",
+    "Nenad Suvak"
    ],
-   "label": "arXiv:2611.26946v1",
-   "primary_category": "math.NA",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "The paper proposes a stochastic tamed-regularized random batch (str-RB) scheme that combines an exponential regularization of singular diffusion coefficients, stochastic Galerkin projection for random coefficients, and random batch sampling to simulate uncertain interacting particle systems with singularities.",
-    "plain": "Many models describe large groups of interacting particles whose rules are only partly known, and some of the forces or noise strengths blow up when particles get close. Standard numerical solvers can produce runaway, meaningless values in these cases. The authors modify the calculation by smoothing the singular noise term with an exponential regularization and by computing only random subsets of particle interactions at each step to save work.",
-    "why": "The text reports that the method shows weak convergence, lower errors than several major existing methods on singular test cases, and stability over a wider range of singular settings, which matters for simulating uncertain many-body dynamics. The text does not give details of the test systems, so the size of the improvement and its relevance to particular applications are unclear from this summary alone.",
-    "background": "- Particle system: many interacting objects (particles) whose motion depends on pairwise forces, here with random noise.\n- Drift and diffusion: the deterministic push and the random-noise strength in a stochastic differential equation.\n- Singularity: a point where a coefficient becomes infinite, e.g. when two particles nearly coincide.\n- Numerical blow-up: a simulation producing unbounded, unphysical values.\n- Taming / regularization: modifying a singular term so it stays finite while keeping the main behaviour.\n- Stochastic Galerkin (sG) method: representing randomness in model coefficients as a series of known basis functions.\n- Random batch method: updating only a small random subset of pairwise interactions per step to cut computing cost.\n- Weak convergence: the accuracy of statistics (averages) of the solution, not of individual random paths.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The coefficients of particle systems often exhibit uncertainties due to incomplete knowledge. For particle systems with uncertainties and singularities in the drift and diffusion terms, existing methods may encounter numerical blow-up. In this paper, we propose a novel stochastic tamed-regularized Random Batch (str-RB) method for such uncertain particle systems with singularities. Specifically, since singularities in the diffusion term are more challenging than those in the drift term, building on a tamed scheme, we design an exponential regularization strategy that more effectively mitigates singularities in the diffusion term. This strategy ensures that the stochastic Galerkin (sG) projection coefficients remain finite even when the corresponding integrals for the original singular diffusion coefficient diverge. The sG method is applied to handle the random coefficients, and a random batch approach is then employed to reduce the computational complexity of large-scale simulations. Several theoretical properties of the proposed algorithm are established. Numerical tests demonstrate that the str-RB algorithm exhibits weak convergence, achieves lower errors than major existing methods across singular tests, and remains stable in a wider range of singular regimes. This work provides a robust and accurate approach for uncertain particle systems with singularities, laying a foundation for high-performance solvers in uncertain many-body dynamics.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.27843",
-   "title": "How communities help epidemics persist",
-   "url": "https://arxiv.org/abs/2611.27843",
-   "authors": [
-    "J\\'ulia Komj\\'athy",
-    "Marco Seiler",
-    "Daniel Valesin"
-   ],
-   "label": "arXiv:2611.27843v1",
+   "label": "arXiv:2611.28254v1",
    "primary_category": "math.PR",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper studies the contact process (SIS epidemic model) on random intersection graphs and their local weak limit, a tree of overlapping complete-graph communities, and gives survival-versus-extinction criteria based on the tails of the membership and community-size distributions.",
-    "plain": "This paper asks how infections spread through a population whose contacts happen inside overlapping groups such as households and workplaces. The authors model each person as belonging to a random number of groups, each group having a random size, and everyone in a group being in contact with everyone else. They show that whether an infection dies out or lingers depends on how heavy the tails of those group-count and group-size distributions are: when the tails are heavy, the infection persists for a very long time with high probability, while under certain lighter-tail conditions and a small transmission rate it dies out in the limiting tree-like model.",
-    "why": "Empirical studies cited in the paper indicate that community structure strongly affects how long infections last, so a mathematical account of this effect is relevant to disease modelling. The paper's comparison with \"community-free\" random graphs with similar degree patterns is meant to isolate the role of communities; the text does not claim direct applications beyond this.",
-    "background": "- Contact process (SIS model): individuals are either infected or healthy; infected ones recover at rate 1 and infect each neighbour at rate lambda, and can be reinfected.\n- Survival vs. extinction: whether the infection persists forever or dies out; \"exponentially long\" survival means the time to die out grows exponentially with population size.\n- Random graph: a network generated by a random rule; a random intersection graph links people who share a group.\n- Complete graph: a group where every member is connected to every other member.\n- Local weak limit: the tree-like picture of what a typical neighbourhood in a very large random network looks like.\n- Moment generating function / exponential moments (E[e^{cM}]): a measure of how heavy the upper tail of a random quantity is.",
+    "one_liner": "A stochastic SIRV epidemic model with waning (non-permanent) immunity and variable population size, where the contact rate is a random process driven by time-changed Lévy noise, is shown to have a unique positive global solution, a random basic reproduction number, and sufficient conditions for disease extinction and persistence in mean.",
+    "plain": "This paper studies how a contagious disease might spread in a population when the rate of contact between people fluctuates unpredictably over time. The model splits people into groups (susceptible, infected, recovered, and vaccinated), and immunity from infection or vaccination can wear off. The authors prove the model has a sensible, always-nonnegative solution and give conditions under which the disease dies out or lingers on average, expressed in terms of the model's parameters and two long-run measures.",
+    "why": "Real contact rates are rarely constant, so models that let them fluctuate randomly are a more realistic way to ask whether an outbreak will fade out. The text does not say how the results compare with data or other models, so their practical use is unclear from the summary alone.",
+    "background": "- Compartmental epidemic models: populations split into Susceptible, Infected, Recovered, Vaccinated groups, linked by differential equations.\n- Basic reproduction number: the average number of new infections caused by one case in a fully susceptible population; above a threshold the disease can spread.\n- Non-permanent immunity: recovered or vaccinated people can become susceptible again after immunity wears off.\n- Stochastic differential equations: equations with a random noise term, used for quantities that fluctuate unpredictably.\n- Lévy noise: random fluctuations that can include both smooth wiggles (Brownian motion) and sudden jumps (Poisson-type events).\n- Time change: running the randomness on a random clock, so activity can speed up or slow down.\n- Extinction vs. persistence in mean: whether the disease dies out, or its average level stays above zero over the long run.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Empirical studies show that communities such as households and workplaces strongly influence how an infection spreads and how long it persists in a population. To understand this effect, we study the contact process (SIS epidemic model) on random intersection graphs and their local weak limit. In the contact process, infected vertices recover with rate $1$ and transmit the infection to each of their neighbours with rate $\\lambda$. The random intersection graph is defined on a finite population; each individual belongs to a random number of communities (captured by a membership distribution), and each community has a random size (captured by a community size distribution). Communities are all taken to be complete graphs. The local weak limit of the random intersection graph, called the branching community tree, has complete graphs arranged in a tree structure. Letting $M$ have the membership distribution and $K$ have the community size distribution, we prove that if either $\\mathbb E[e^{cM}]=\\infty$ for all $c > 0$ or $\\mathbb E[e^{cK\\log K}] = \\infty$ for all $c > 0$, then for all $\\lambda > 0$, the infection on the finite graph survives for exponentially long with high probability, and on the local limit graph, it survives forever with positive probability. On the other hand, if for some $c > 0$ both $\\mathbb E[e^{cM}]<\\infty$ and $\\mathbb E[e^{K\\log(cK)}]<\\infty$ hold, then the process with small $\\lambda$ dies out in the local limit graph. We compare these findings with known results on the behaviour of the contact process on a \"community-free\" random graph with similar degree distributions, to highlight the impact of communities.",
+   "abstract": "A random version of the Susceptible-Infected-Recovered-Vaccinated (SIRV) epidemic model with non-permanent immunity and a population of non-constant size is studied. The compartments satisfy a system of differential equations in which the contact rate is a random coefficient, and the contact rate itself is driven by a stochastic differential equation with time-changed Levy noise. This noise is constructed from a conditional Brownian motion and a doubly stochastic Poisson random field, both governed by a stochastic clock. When the clock is independent of the Brownian and Poisson components, the two parts of the noise are a time-changed Brownian motion and a time-changed Poisson random measure. The equation for the contact rate decouples from the compartment equations and enters them as a random parameter, which allows the compartments to be treated pathwise. The existence, uniqueness, and positivity of the global solution are proven, and the basic reproduction number of the model is shown to be random. Furthermore, sufficient conditions for extinction and persistence in mean of the disease are derived. The conditions are expressed in terms of the parameters of the model and two long-run characteristics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29406",
+   "title": "Regularity of invariant measures of solutions for fractional stochastic partial differential equations with memory and nonlinear noise",
+   "url": "https://arxiv.org/abs/2611.29406",
+   "authors": [
+    "Ran Li",
+    "Jiaohui Xu",
+    "Dingshi Li",
+    "Tomas Caraballo"
+   ],
+   "label": "arXiv:2611.29406v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Proves existence and regularity of invariant measures for stochastic fractional PDEs with memory and nonlinear multiplicative noise, using a Dafermos-type past-history variable to restore a Markov structure.",
+    "plain": "This paper studies random evolution equations that depend on both their past and random disturbances, the kind used to model materials or processes with memory. The authors recast the problem using a new variable that sums up the past history, which makes the system behave Markov-style, meaning the future depends only on the present state. Using that device, they show that long-run statistical equilibria (invariant measures) exist and that these equilibria have additional smoothness.",
+    "why": "Long-term behaviour of random systems with memory is hard to analyse because the usual Markov tools fail, so a workable reformulation is of interest to specialists in stochastic PDEs. The text does not discuss applications, so any connection to particular physical or engineering models is not stated here.",
+    "background": "- Stochastic PDE: a partial differential equation driven by random noise.\n- Fractional operator: a generalised derivative of non-integer order, used to model nonlocal or anomalous behaviour.\n- Memory (non-Markovian) effect: the current evolution depends on the whole past, not just the present state.\n- Multiplicative noise: the random disturbance's strength depends on the current state.\n- Markov semigroup and invariant measure: the probability distribution a random system settles into and keeps over time.\n- Dafermos method: a standard trick that replaces the past history with an auxiliary variable to remove memory.\n- Galerkin approximation and Minty's technique: standard tools for proving well-posedness of nonlinear equations.\n- Krylov-Bogoliubov approach: a classical way to construct invariant measures from time averages.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We are concerned with stochastic fractional partial differential equations involving memory and nonlinear multiplicative noise. Based on the well-known Dafermos method, a suitable variable defined by the integrated past history is introduced. This transformation not only overcomes the non-Markovianity of the original problem which prevents us from analyzing invariant measures for the associated Markov semigroup, but also facilitates the analysis of the well-posedness together with the Faedo-Galerkin approximations and Minty's technique. Moreover, we prove the existence of invariant measures by the classical Krylov-Bogoliubov approach, and further establish the regularity of invariant measures by virtue of a control argument.",
    "source": "arxiv"
   },
   {

@@ -3,48 +3,53 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2610.41969",
-   "title": "Tensor cluster expansion as an efficient surrogate for multi-ACE",
-   "url": "https://arxiv.org/abs/2610.41969",
+   "uid": "arxiv:2611.29414",
+   "title": "Nonempirical Determination of the Optimal TAO-DFT Fictitious Temperature for Molecular Systems in the Lowest Singlet State",
+   "url": "https://arxiv.org/abs/2611.29414",
    "authors": [
-    "Jacob Jeffries",
-    "Enrique Martinez",
-    "Eva Zarkadoula"
+    "Bing-Ying Li",
+    "Jeng-Da Chai"
    ],
-   "label": "arXiv:2610.41969v2",
-   "primary_category": "cond-mat.mtrl-sci",
+   "label": "arXiv:2611.29414v1",
+   "primary_category": "physics.chem-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper generalizes an on-lattice tensor cluster expansion (TCE) to arbitrary correlation order, shows its features span a subspace of MACE features, and uses maximum-entropy subset sampling so cheaper TCE features can pre-screen chemically diverse configurations for fine-tuning a MACE potential on alloyed transition metal dichalcogenide monolayers.",
-    "plain": "Researchers want computer models that predict how mixed-element thin materials behave at room and higher temperatures, but the accurate machine-learned models are expensive to train. This work uses a cheaper, simpler description of atomic arrangements to pick out a small, varied set of example configurations, and then trains the expensive model only on those. The authors report that this selection recovers the chemical variety found in the full description and supports predictions of temperature-dependent vibrations in alloyed monolayers.",
-    "why": "Making fine-tuning of accurate atomic-scale models cheaper could make finite-temperature alloy studies feasible on modest hardware. The text supports this as a computational efficiency claim for one class of materials; its wider applicability beyond these TMD monolayers is not shown here.",
-    "background": "- Alloy: a mixture of two or more elements arranged on a crystal lattice.\n- Transition metal dichalcogenide (TMD) monolayer: a single atomic layer of a metal bonded to sulfur, selenium or tellurium, used as a thin semiconductor.\n- Cluster expansion: a way to describe a configuration by summing contributions from groups of nearby atoms (pairs, triplets, and so on).\n- Correlation order: how many atoms are grouped together in each term of that sum.\n- Machine-learned interatomic potential (MACE, ACE): a learned model that estimates the energy and forces between atoms, far cheaper than quantum calculations but costly to train.\n- Fine-tuning: adjusting a pretrained model using new data.\n- Maximum-entropy subset sampling: a way to choose a small subset of examples that covers the variety in the full set.\n- Finite-temperature thermodynamics and vibrational properties: how a material's energy and atomic vibrations change with heat.",
+    "one_liner": "The paper proposes a nonempirical, system-dependent way to choose the fictitious temperature in TAO-DFT, based on restoring spin symmetry, for molecules in their lowest singlet state.",
+    "plain": "Computer models of molecules often struggle when electrons are strongly tangled up, as happens when chemical bonds are stretched or broken. This paper tunes a built-in \"fictitious temperature\" in a particular method (TAO-DFT) so that it is chosen for each molecule rather than fixed in advance. The authors report that this per-molecule choice works better overall than a single fixed setting on the test cases they chose.",
+    "why": "Better handling of strongly tangled electrons matters for predicting how molecules break apart and react, which underlies chemistry and materials design. The text reports benchmarks only on a small set of diatomic molecules and one twisted ethylene case, so its wider usefulness is not yet shown.",
+    "background": "- Density functional theory (DFT): a common computer method for estimating molecular electron distributions and energies, usually cheap but not always accurate.\n- Single-reference vs. multi-reference systems: some molecules are well described by one simple electron arrangement; others need a mix of several, which standard DFT handles poorly.\n- Static correlation: the electron effect that appears when several arrangements have similar energy, typical of bond breaking.\n- Fictitious temperature (TAO-DFT): a mathematical smearing parameter that lets electrons occupy several orbitals partially; higher values capture more multi-reference character but can overcorrect simple molecules.\n- Spin-symmetry restoration: enforcing the correct spin pattern of electrons as a physical consistency check used here to pick the temperature.\n- Singlet state: a molecular state in which all electron spins are paired.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this work, we generalize an on-lattice tensor cluster expansion (TCE) framework to an arbitrary correlation order. We show that these generalized tensor cluster expansion features span a subspace of MACE features, suggesting that TCE features can sufficiently pre-screen MACE features for chemical diversity in alloyed transition metal dichalcogenide (TMD) monolayers. We show that, using maximum-entropy subset sampling, we can empirically recover chemical diversity from MACE features using a cheaper TCE representation. We then fine-tune a multi-ACE (MACE) potential with both subsets, and use this potential to predict temperature-dependent vibrational properties in alloyed TMD monolayers with varying chemical ordering. In our approach, TCE features can be used as cheap surrogate features for pre-screening chemically rich configurations using MACE features, allowing for the more efficient finetuning of atomic cluster expansion (ACE) potentials, thus achieving a tractable prediction of finite-temperature alloy thermodynamics on modest hardware.",
+   "abstract": "Thermally-assisted-occupation density functional theory (TAO-DFT) [J.-D. Chai, J. Chem. Phys., 2012, ${\\bf 136}$, 154104] has been developed to investigate the ground-state properties of large electronic systems exhibiting varying multi-reference (MR) character. As a central parameter in TAO-DFT, the fictitious temperature $\\theta$ is closely linked to the degree of static correlation in an electronic system. While the conventional system-independent $\\theta$-scheme is computationally efficient and broadly applicable, a fixed, preassigned $\\theta$ can be overly large for single-reference (SR) systems yet too small for strongly MR systems. To overcome this limitation, we propose a nonempirical scheme based on spin-symmetry restoration to determine the optimal system-dependent fictitious temperature $\\theta^{*}$ for molecular systems in their lowest singlet states. Across benchmark tests encompassing both MR systems (the bond dissociation of H$_{2}$, N$_{2}$, Li$_{2}$, and LiH, as well as the torsional rotation of twisted ethylene) and pure SR systems (the dissociation of He$_{2}$ and Ne$_{2}$), our nonempirical approach demonstrates superior overall accuracy compared with the conventional fixed-$\\theta$ scheme. Furthermore, relative to standard Kohn-Sham density functional theory (TAO-DFT with $\\theta = 0$), TAO-DFT employing $\\theta^{*}$ yields substantial improvements for MR systems while preserving comparable accuracy in SR systems.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27163",
-   "title": "Power Law Transients in Perovskite Photoluminescence",
-   "url": "https://arxiv.org/abs/2611.27163",
+   "uid": "arxiv:2611.29902",
+   "title": "Autonomous Multireference Quantum Chemistry with Artificial Intelligence Agents",
+   "url": "https://arxiv.org/abs/2611.29902",
    "authors": [
-    "Anas M. M.",
-    "Pradeep R. Nair"
+    "Younghwan Kim",
+    "Ming-Hsiu Hsieh",
+    "Ankit Mathanker",
+    "Arpan Choudhury",
+    "Joshua Zhou",
+    "Qiaohong Wang",
+    "Matthew R. Hermes",
+    "Laura Gagliardi"
    ],
-   "label": "arXiv:2611.27163v1",
-   "primary_category": "cond-mat.mtrl-sci",
+   "label": "arXiv:2611.29902v1",
+   "primary_category": "physics.chem-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper shows that transient photoluminescence decays in perovskite thin films often follow power laws in time rather than sums of exponentials, links the power-law exponents to trap-state distributions, and reports that a t^-2 decay can arise even under dominant monomolecular recombination, which existing theory ties only to bimolecular recombination.",
-    "plain": "Solar-cell materials called perovskites glow after being hit with a light pulse, and the way that glow fades over time reveals how charges are lost inside the material. The authors point out that many published fading curves follow a simple power law (a steady slope on a log-log plot) rather than the usual sum of exponential decays, and that current theory does not explain this well. They develop an analysis that connects these power-law slopes to how traps are distributed in the material.",
-    "why": "Decay curves are routinely used to judge how efficient perovskite devices can become, so misreading their shape could mislead material design. The text suggests the work also marks the limits of the \"differential lifetime\" concept, but its broader impact beyond this model system is not established in the text.",
-    "background": "- Photoluminescence (PL): light a material emits after being excited by a short pulse; its fading over time tracks charge carriers (electrons and holes) being lost.\n- Transient PL: measuring that fading curve over time.\n- Exponential decay: fading at a rate proportional to what remains, giving a single characteristic lifetime; multi-exponentials are sums of several such terms.\n- Power law: intensity proportional to time raised to a fixed exponent (e.g., t^-2), which has no single characteristic lifetime and appears as a straight line on log-log axes.\n- Recombination: electrons and holes annihilating each other. Monomolecular means one carrier type decays alone (often at defects or traps); bimolecular means an electron and hole meet and recombine.\n- Trap states: defect sites in the crystal that capture carriers and hold them, delaying or altering recombination.\n- Differential lifetime: an effective, time-dependent lifetime derived from the decay curve.",
+    "one_liner": "CASPER is an AI-agent workflow that automates the choice of active orbital spaces for multireference quantum chemistry calculations along transition-metal reaction pathways, with independent assessment checks.",
+    "plain": "Computer simulations of chemical reactions can go wrong when electrons are tangled together, as happens when bonds are breaking and forming, especially with metal atoms. Getting these simulations right normally takes expert judgment about which electrons and orbitals to include. The authors built an AI-agent workflow, called CASPER, that makes these choices itself, checks its own results, and tracks the same setup along a reaction path.",
+    "why": "Reliable calculations of hard reaction chemistry are slow and expert-dependent, so automating them could help generate high-quality data at scale. The paper's main evidence is a demonstration on five transition-metal reactions, and it reports that in two cases CASPER caught problems that a separate, unstructured Claude session missed; the broader claim about future value is the authors' outlook rather than something the text establishes.",
+    "background": "- Electronic structure: the quantum-mechanical description of electrons in molecules, used to predict energies and reaction paths.\n- Strongly correlated electrons: electrons whose behavior cannot be captured by a single simple picture, common in bond breaking and transition-metal chemistry.\n- Multireference methods: calculations that combine several electronic configurations; they need a chosen \"active space\" of orbitals and electrons.\n- Active space: the subset of orbitals and electrons treated in detail; choosing it well is the hard, expert-driven step.\n- Potential energy profile: how a molecule's energy changes as a reaction proceeds, used to find barriers and intermediates.\n- Electronic-state crossing: where two electronic states swap in energy, which can change the reaction pathway.\n- AI agent / language model workflow: a system where a large language model plans and runs calculations in steps, with checks at each stage.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Carrier dynamics and recombination in perovskite thin films are often explored through transient photoluminescence (PL) measurements and subsequent analysis based on single/multi-exponentials. In contrast, here we show that several experimental PL transients reported in literature vary as power laws with time and are not multi-exponentials. Puzzlingly, the existing theoretical methods are ill-equipped to explain the origin and implications of such power law trends. Our analysis resolves this puzzle and correlates the power law exponents with the trap distributions. Curiously, we show that PL transients could vary as $t^{-2}$ even in the presence of dominant monomolecular recombination while the existing theory associates this unique trend exclusively with dominant bimolecular recombination. These findings identify the limits of applicability of concepts such as differential lifetime and highlight the need for predictive modeling synergistic with insightful data analysis towards performance optimization of perovskite optoelectronic devices.",
+   "abstract": "Accurately describing chemical reactions that involve strongly correlated electrons remains a major challenge in computational chemistry. Multireference electronic structure methods can address this challenge, but their application requires expert decisions that are di!cult to automate, particularly when the electronic structure changes as chemical bonds form and break. Here we introduce CASPER, an autonomously agentic workflow that performs multireference calculations along chemical reaction pathways. CASPER combines chemical knowledge, electronic structure calculations, and iterative assessment to identify chemically meaningful active spaces and maintain their consistency as bonds form and break. We demonstrate its capabilities on five transition-metal reactions, for which CASPER generates consistent multireference potential energy profiles with minimal human intervention. Importantly, in two reactions, CASPER identifies critical electronic-structure problems that an independent Claude session fails to recognize without the structured workflow. These include an electronic-state crossing and the exclusion of an orbital involved in bond breaking. Our results show the importance of combining language models with chemical knowledge and independent assessment of computational results. Beyond automating calculations, such agents have the potential to help researchers better understand the underlying physics and chemistry and open new opportunities for investigating complex chemical reactivity and generating high-quality quantum chemical data at scale.",
    "source": "arxiv"
   },
   {

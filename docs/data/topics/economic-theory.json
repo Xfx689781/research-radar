@@ -3,6 +3,52 @@
  "updated": "2026-11-24",
  "papers": [
   {
+   "uid": "arxiv:2611.28457",
+   "title": "Decision Theory with Degree of Membership in the State Space",
+   "url": "https://arxiv.org/abs/2611.28457",
+   "authors": [
+    "Jeff Dominitz",
+    "Charles F. Manski"
+   ],
+   "label": "arXiv:2611.28457v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper generalizes classical decision theory by letting each candidate state of the world have a degree of membership between 0 and 1 in the state space, rather than a yes-or-no possibility, and extends three standard decision criteria (subjective expected welfare, minimax regret, maximin) to this setting.",
+    "plain": "Standard decision theory assumes a decision maker lists the possible states of the world and treats each one as either possible or not. This paper relaxes that rule so that each possible state can count partially, with a number from 0 to 1 expressing how much it belongs in the set of states the decision maker is considering. The author then adapts three common rules for choosing under uncertainty to this more flexible setup.</plain>\n<parameter name=\"why\">The text is a theoretical framework and does not report empirical results, so its practical importance is unclear from the text alone. It may matter for researchers who want to model uncertainty about what the set of possible states even is, a question that ordinary probability over a fixed state space does not directly address.</plain>\n<parameter name=\"background\">- Decision theory: choosing an action by comparing how well each action does across possible states of the world.\n- State space: the list of states the decision maker considers possible.\n- Welfare/objective function: a score for how good an action is in a given state.\n- Subjective probability (Bayesian approach): a personal belief distribution over states, which must add up to one.\n- Fuzzy sets: a way of letting membership in a set be a matter of degree instead of yes or no.\n- Minimax regret and maximin: rules for choosing under uncertainty that focus on the worst-case loss or worst-case payoff.",
+    "why": "",
+    "background": "",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Classical decision theory considers a decision maker (DM) who faces a choice set C and believes that the true state of nature s* lies in a state space S. An objective function w(., .): C x S -> R1 maps actions and states into welfare. The DM wants to maximize w(., s*) but does not know s*. The state space specifies a labeled set of possible states. Possibility is binary: every state in S is possible and no state outside of S is possible. Thinking that this binary perspective on possibility is too rigid, we generalize the classical theory. We begin with a universe of labeled states U and a residual unlabeled state r. Classical theory associates a binary possibility indicator mu(s) with each s in (U, r). The residual state r is not possible, so mu(r) = 0. The state space is S = [s in U: mu(s) = 1]. We expand the range of mu to be the interval [0, 1]. Thus, mu is now a real number measuring degree of membership, a term we adopt from fuzzy set theory. The membership function mu(.): (U, r) -> [0, 1] differs substantively from but is consistent with the subjective probability distributions of Bayesian decision theory. Bayesian theory places a subjective distribution on the elements of a classical state space, each of whose members has degree of membership one. Degree of membership expresses the distinct idea that a DM may want to quantitatively express uncertainty regarding the composition of the state space. A mathematical distinction between subjective probabilities and degrees of membership is that the former must sum to one, but the latter need not. After formalizing basic ideas, we extend three prominent classical decision criteria--maximization of subjective expected welfare, minimax regret, and maximin--to our generalization of classical decision theory.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30620",
+   "title": "Large Economies with Social Types",
+   "url": "https://arxiv.org/abs/2611.30620",
+   "authors": [
+    "Wei He",
+    "Yeneng Sun",
+    "Bin Wu",
+    "Nicholas C. Yannelis"
+   ],
+   "label": "arXiv:2611.30620v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper builds a general equilibrium framework for large economies with social externalities, where social types define reference groups, and shows that a competitive equilibrium exists for every admissible economy exactly when social anonymity holds, extending the result to incomplete preferences, indivisible goods, and production via conditional convexification.",
+    "plain": "This paper studies markets in which what a person wants depends on the people around them, such as neighbors, peers, or others of similar status. It asks when a market settling into a stable outcome (a competitive equilibrium, where prices make supply match demand) is guaranteed. The authors find that such an outcome always exists exactly when observable social groups do not fully pin down each individual within any sizeable part of the economy.",
+    "why": "Standard market theory assumes people do not affect each other through their social circles, so this work addresses a gap in that assumption. The extension to non-convex preferences, indivisible goods, and production may matter for applied questions like peer effects and social comparison, though the text alone does not show how far these results carry into practice.",
+    "background": "- General equilibrium: a model of a whole economy where prices adjust until markets clear.\n- Competitive equilibrium: a set of prices and choices where each person does their best and total demand equals total supply.\n- Large economy: a model with a continuum of agents, where each individual is negligible and a \"subeconomy\" is a non-negligible group of them.\n- Social externalities: one person's well-being or choices affect others, such as through envy, imitation, or status.\n- Social type: an observable category (neighborhood, peer group, status class) that defines whom a person is compared with; distinct from an individual's name or identity.\n- Social anonymity: the condition that social types do not uniquely identify people within a sizeable group.\n- Convexity: the assumption that preferences or choice sets have no \"dents\" that favor mixing; non-convexity breaks standard existence proofs.\n- Convexification: a proof technique that averages choices to restore convexity; the paper replaces the usual aggregate version with a conditional one.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper develops a new general equilibrium framework for large economies with social externalities, where agents have names as well as social types. Social types define the reference groups (neighborhoods, peers, or status classes) through which externalities operate, and are primitives of the market structure. We establish that every admissible economy admits a competitive equilibrium if and only if social anonymity holds. This condition requires that observable social types do not fully identify individuals within any non-negligible subeconomy. The framework extends to generalized large economies with incomplete preferences, indivisible goods, and production, and thus accommodates nonconvexity in preferences and consumption sets. Our proof replaces the standard aggregate convexification argument with conditional convexification. Applications include peer effects, social comparison, and risk sharing with local social benchmarks.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.27684",
    "title": "Exchange rights and vacancy priorities",
    "url": "https://arxiv.org/abs/2611.27684",

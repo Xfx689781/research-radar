@@ -3,49 +3,46 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27948",
-   "title": "Minkowski Correlation Functions (MCF): Long-range, robust shape descriptors for point patterns",
-   "url": "https://arxiv.org/abs/2611.27948",
+   "uid": "arxiv:2611.30245",
+   "title": "Growing Knot Embeddings into Spherical Graphs",
+   "url": "https://arxiv.org/abs/2611.30245",
    "authors": [
-    "Dominik Pabst",
-    "Michael A. Klatt",
-    "Klaus Mecke"
-   ],
-   "label": "arXiv:2611.27948v1",
-   "primary_category": "cond-mat.dis-nn",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "The paper introduces ring-based Minkowski correlation functions, which describe disordered planar point patterns by placing a spherical shell around each point and tracking the Minkowski functionals (covered area, boundary length, Euler characteristic) of the resulting two-phase morphology as a function of the outer ring radius.",
-    "plain": "Researchers wanted a better way to describe how scattered dots are arranged, such as particles, trees, or galaxies. They put a ring around each dot, measured the shape of the combined covered region as the ring grows, and used this to build a summary of the pattern. The text reports that the method is exact, fast, and tolerant of noise, and that it shows consistent differences from purely random arrangements in three test systems.",
-    "why": "Standard shape measures of point patterns stop being informative at larger distances, while standard correlation functions are not additive, which limits how they combine. The ring-based approach is presented as covering longer length scales while keeping useful shape information, but the text alone does not show how it compares with other established methods in practice.",
-    "background": "- Point pattern: a set of locations (e.g., particle centres, tree positions, galaxies) in a plane.\n- Homogeneous Poisson reference: a completely random arrangement with no clustering or regularity, used as a baseline.\n- Minkowski functionals: three shape numbers for a region, namely its area, its boundary length, and its Euler characteristic (a count of connected pieces minus holes).\n- Correlation function: a statistic describing how likely points are to sit at a given distance from each other.\n- Structure factor: a related description of spatial arrangement, often used in soft matter and scattering.\n- Additive descriptor: a measure whose value for a union of regions can be obtained by adding values of the parts.\n- Quincke rollers: self-propelled microscopic particles driven by an electric field, used as model active matter.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "A morphometric analysis of point patterns using Minkowski functionals is short-sighted, whereas correlation functions do not provide robust, i.e., additive shape descriptors. To combine the advantages of both standard techniques and to overcome their weaknesses, we introduce ring-based Minkowski correlation functions (MCFs) as robust and sensitive descriptors of disordered point patterns. By assigning to each point a spherical shell and quantifying the resulting two-phase morphology via Minkowski functionals, MCFs capture structural information across multiple length scales, remain sensitive at radii where conventional disk-based Minkowski functionals have saturated, and implicitly encode higher-order correlations beyond the pair correlation and structure factor. We present an exact and efficient algorithm for planar patterns extending the established disk-based morphological approach to long ranges. Applications across scales -- active colloids (Quincke rollers), longleaf pine trees, and the Hubble Ultra Deep Field -- demonstrate clear and systematic deviations from homogeneous Poisson references, with distinct responses of covered area, boundary length, and Euler characteristic. The approach combines short computation times, robustness to noise, and straightforward edge handling with clear interpretability as low-dimensional functions of the outer ring radius.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.27818",
-   "title": "Corrections to the Fick-Jacobs Description of Diffusion across Pickering Droplet Interfaces",
-   "url": "https://arxiv.org/abs/2611.27818",
-   "authors": [
-    "Rohit Khandoori",
-    "Wim Thielemans",
+    "Eren G\\\"ulmez",
     "Joost de Graaf"
    ],
-   "label": "arXiv:2611.27818v1",
+   "label": "arXiv:2611.30245v1",
    "primary_category": "cond-mat.soft",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper compares the standard Fick-Jacobs approximation for diffusion through varying cross-sections against fully resolved 2D simulations of Pickering droplets, and finds the approximation's errors grow with interfacial particle crowding and can be fixed with a simple geometric correction.",
-    "plain": "Some liquid droplets are coated with tiny solid particles that form a porous skin, and molecules move through that skin at rates that matter for encapsulation. This paper checks a common shortcut used to predict how fast molecules pass through such narrowing and widening passages, against detailed computer simulations of 2D droplets. The shortcut becomes less accurate as the particles pack more densely, and the authors say the needed correction can be understood from simple geometry.",
-    "why": "Predicting transport through particle-coated interfaces matters for designing encapsulation and controlled-release materials such as bijels. The geometric correction may also inform diffusion in other complex geometries, though the text is limited to 2D droplets and does not show how far it extends.",
-    "background": "- Pickering droplets: emulsion droplets stabilized by solid particles sitting at the liquid-liquid interface rather than by surfactant molecules.\n- Bijels: bicontinuous interfacially jammed emulsion gels, where two interpenetrating liquids are held apart by a jammed layer of particles.\n- Diffusion: random molecular motion that carries substances from high to low concentration.\n- Fick-Jacobs formalism: a reduced one-dimensional description of diffusion through a channel whose width changes slowly along its length; it assumes the molecules quickly equilibrate across the channel width.\n- Higher-order geometric derivatives: mathematical measures of how sharply the channel width changes; corrections built from them are the usual way to extend the approximation.\n- Fully resolved simulation: a computer model that tracks the geometry in full detail rather than averaging it away.",
+    "one_liner": "The paper introduces a growth-and-relaxation construction that turns a 3D knot embedding into a graph on the sphere, compares these growth graphs with standard Tait graphs for prime knots up to seven crossings, and tests whether they are knot invariants using non-minimal diagrams and connected sums.",
+    "plain": "The paper looks at knots, the tangled loops familiar from string, and asks whether a knot's shape can be captured as a network drawn on a sphere. The authors grow the knot outward and let the surface settle under interfacial energy, which is the same force that makes soap films and droplets smooth, and read a graph from the resulting regions. For simple prime knots with at most seven crossings, the resulting graphs generally differ from the standard Tait graphs, and the authors describe an empirical rule for building them.",
+    "why": "Knotted structures matter in soft matter and biology, where tangles can affect how polymers relax and organize, so a way to encode knot shape as a graph could be a useful tool. The text shows that these graphs are not knot invariants, and that some prime-factor features may survive in connected sums, but it leaves open whether they reveal anything invariant under isotopy (smooth deformation without cutting), so their long-term value is uncertain.",
+    "background": "- Knot: a closed loop in 3D space that cannot be untangled without cutting it.\n- Knot diagram: a 2D drawing of a knot showing where strands cross over or under each other.\n- Crossings: the points where the drawing overlaps itself; the count is a rough measure of complexity.\n- Prime knot: a knot that cannot be split into simpler knots joined together; a connected sum is the join of two knots.\n- Tait graph: a standard graph built from a knot diagram's regions, used in knot theory.\n- Knot invariant: a property that stays the same under any smooth deformation of the knot (isotopy).\n- Interfacial energy: the surface-tension-like energy that drives soft materials such as films and droplets toward smooth shapes.\n- Graph embedded on the sphere: a network of nodes and edges drawn on the surface of a ball without crossings.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Particle-laden interfaces give rise to important classes of multiphase materials, including Pickering-Ramsden systems and bicontinuous interfacially jammed emulsion gels (bijels). In these systems, colloidal particles adsorb at fluid-fluid interfaces and form semipermeable layers that provide structural stability and controlled diffusive transport. These properties make them attractive for encapsulation applications and motivate understanding transport across particle-laden interfaces. Diffusion through geometries with varying cross-section, including those found at particle-laden interfaces, is commonly described using the Fick-Jacobs formalism. However, this approach relies on the assumptions of slowly varying geometries and rapid equilibration in the transverse direction. Subsequent studies have developed corrections based on higher-order geometric derivatives, but an elegant closed-form description remains elusive. Here, we compare predictions of the Fick-Jacobs model with fully resolved simulations of 2D Pickering droplets. We find that discrepancies in model predictions increase with interfacial particle crowding, revealing the limits of the Fick-Jacobs approximation. We show that the required correction can be understood through simple geometrical arguments. Our results provide an effective framework for describing transport across particle-laden interfaces and lay the foundation for a more general description of diffusion in complex geometries.",
+   "abstract": "Knotted structures occur throughout soft matter and biology, where topological constraints can shape relaxation and spatial organization. Here, we introduce a computational construction that maps a specific 3D knot embedding to a graph embedded on the sphere through growth and interfacial-energy relaxation. For standard 3D embeddings of prime knots with at most seven crossings, we obtain a family of growth-based graphs that generally differ from the corresponding Tait graphs. We further identify an empirical growth-graph reconstruction rule based on polygonal regions with alternating crossing structure in a knot diagram. Non-minimal diagrams demonstrate that these graphs are not knot invariants, while selected connected sums suggest that graph features associated with their prime factors can remain recognizable. Determining how these graphs transform under isotopy may reveal invariant features, which we leave for future study.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29649",
+   "title": "Geometry Reorganizes Nonequilibrium States that Gate Topological Switching in an Active Polymer",
+   "url": "https://arxiv.org/abs/2611.29649",
+   "authors": [
+    "Shiqi Zhou"
+   ],
+   "label": "arXiv:2611.29649v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "In a confined, partially active polymer, the same unknotted starting configurations are shown to differ in their later chance of knotting, and a pore-radius change can reverse which starting states are more susceptible.",
+    "plain": "The paper studies when a long chain-like molecule that is pushed around and squeezed through a narrow opening will tie itself into a knot. Starting from configurations that all look unknotted, the authors find that some are more likely than others to knot later, and that changing the size of the opening can flip which group is more likely to knot.",
+    "why": "It suggests that a system's present mechanical arrangement, not only the outside conditions, can decide how it will later change, which matters for understanding rare transitions in driven systems. The text does not show how far this extends beyond this polymer model, so broader applications remain unclear.",
+    "background": "- Polymer: a long chain of repeated units, here simulated on a computer.\n- Knot (topological state): a tangle that cannot be undone by moving the chain without cutting it; \"unknotted\" means no such tangle yet.\n- Confinement and pore: the chain is pushed through a narrow opening whose radius is a controllable parameter.\n- Partially active polymer: some segments are driven by a self-propelled, out-of-equilibrium force, so the system is not in thermal equilibrium.\n- Langevin noise: random thermal kicks used in simulations to model molecular jiggling.\n- Replicas and branches: independent copies of the simulation, and new simulated runs launched from saved configurations to test their future.\n- Classifier: a rule that predicts which starting states are more susceptible to knotting; here it was fixed on separate data before the test.\n- Susceptibility ordering: which group is more likely to knot; \"reversal\" means the ranking flips.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Even under identical external conditions, a driven system can occupy distinct long-lived states with different susceptibilities to the same rare transition. We demonstrate this in a confined partially active polymer, where independent unknotted replicas occupy distinct mechanical states with different topological futures. Matched-control and event-resolved analyses reveal a susceptible reservoir and a short threading precursor. We test this state dependence prospectively by launching 2272 Langevin-noise branches from 71 preserved unknotted phase-space states using a classifier prespecified from independent data. Most strikingly, the same classifier strongly separates finite-time knotting at one pore radius, yet reverses its susceptibility ordering at a neighboring radius. Thus geometry does not merely shift an average knotting rate; it selects among long-lived nonequilibrium states and reorganizes the mapping between a pre-existing mechanical coordinate and future topological fate.",
    "source": "arxiv"
   },
   {

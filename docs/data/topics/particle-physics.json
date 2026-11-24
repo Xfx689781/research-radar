@@ -3,49 +3,53 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27549",
-   "title": "nuSTORM: a unique GeV electron-(anti)neutrino machine",
-   "url": "https://arxiv.org/abs/2611.27549",
+   "uid": "arxiv:2611.30321",
+   "title": "Dark matter mass fraction in axion stars",
+   "url": "https://arxiv.org/abs/2611.30321",
    "authors": [
-    "Xianguo Lu"
+    "A. S. Dmitriev",
+    "D. G. Levkov",
+    "A. G. Panin",
+    "I. I. Tkachev"
    ],
-   "label": "arXiv:2611.27549v1",
-   "primary_category": "physics.acc-ph",
+   "label": "arXiv:2611.30321v1",
+   "primary_category": "astro-ph.CO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A conference review arguing that the nuSTORM concept, a neutrino beam produced from a muon storage ring, could supply well-characterised electron-(anti)neutrino beams needed for cross-section inputs to Dirac CP phase measurements.",
-    "plain": "This is a short conference write-up about tiny, nearly massless particles called neutrinos. It reviews current experiments that study how neutrinos change type, which may help explain why matter dominates over antimatter in the universe. The author argues that a proposed facility, nuSTORM, could produce especially clean beams of one neutrino type that would help other measurements.",
-    "why": "Better measurements of how neutrinos interact could reduce uncertainty in experiments that look for differences between neutrinos and antineutrinos, which bear on the matter-antimatter puzzle. The text is a position argument from a conference talk and does not show results from an actual facility, so its practical impact is uncertain.",
-    "background": "- Neutrinos are very light, electrically neutral particles that rarely interact with matter.\n- Neutrinos come in types (electron, muon, tau), and they can switch between types as they travel, called oscillation.\n- The Dirac CP phase (δCP) is a parameter describing a possible difference in how neutrinos and antineutrinos oscillate; a nonzero value would mean a CP violation.\n- Accelerator experiments send beams of neutrinos over long distances and compare what arrives with what was sent.\n- Cross sections measure how likely a particle is to interact with a target; they must be known precisely to interpret oscillation data.\n- A muon storage ring is a circular magnet loop that holds muons, which decay to produce neutrino beams with known composition.",
+    "one_liner": "Using an recently derived analytic solution for how Bose stars grow inside QCD axion miniclusters, this paper estimates the present-day fraction of dark matter bound in Bose stars and their resulting mass function.",
+    "plain": "The paper looks at a proposed form of dark matter made of very light particles called axions. In this picture, the dark matter clumps into small, dense blobs, and inside those blobs it may condense into compact \"Bose stars,\" which are like giant quantum clouds. The authors use a previously published mathematical solution for how these stars grow to work out how much of today's dark matter ends up locked in them and how their sizes are distributed.",
+    "why": "If dark matter is largely in these compact stars, that would change predictions for how it clusters and for any signals from detectors or astrophysical observations. The text does not state the actual fraction or mass values, so the size of the effect is not clear from the abstract alone, and its link to observations is not described here.",
+    "background": "- Dark matter: unseen matter that makes up most of the mass of galaxies, detected only through gravity.\n- QCD axion: a hypothetical very light particle proposed to solve a puzzle in the strong nuclear force; a candidate for dark matter.\n- Minicluster: a small, dense clump of axion dark matter formed early in the universe.\n- Bose-Einstein condensation: a state where many identical light particles all occupy the same quantum state, acting like one big wave.\n- Bose star: a gravitationally bound, self-gravitating blob of such a condensate.\n- Mass fraction and mass function: the share of total dark matter in these stars, and how many stars exist at each mass.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this conference contribution, I briefly review current experimental programmes measuring the Dirac CP phase {\\delta}CP using accelerator neutrinos. I argue that the nuSTORM concept---neutrino beams from a muon storage ring---could provide high-quality electron-(anti)neutrino beams needed for the cross-section inputs to {\\delta}CP measurements.",
+   "abstract": "QCD axion dark matter is fragmented into small mass miniclusters of high density. With the natural parameters of miniclusters, the time for Bose-Einstein condensation is less than the age of the Universe, which leads to the formation of Bose stars inside these structures. Recently, the problem of the subsequent growth of Bose stars was solved analytically (Dmitriev et al, Phys. Rev. Lett. 132, 091001 (2024)). We use this solution to determine present day mass fraction of dark matter in Bose stars and their mass function.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26854",
-   "title": "Optimized solver algorithms for computing $\\mathrm{Tr}(A^{-1})$",
-   "url": "https://arxiv.org/abs/2611.26854",
+   "uid": "arxiv:2611.28223",
+   "title": "Scotogenic dark matter from gauged $L_\\mu+L_\\tau$",
+   "url": "https://arxiv.org/abs/2611.28223",
    "authors": [
-    "Benjamin Luke",
-    "Sudip Shiwakoti",
-    "Shayan Nadeem",
-    "Ronald Morgan",
-    "Walter Wilcox"
+    "J. Echeverria-Puentes",
+    "Sergey Kovalenko",
+    "Pablo San Martin Sartori",
+    "Carlos A. Vaquera-Araujo",
+    "Yoxara Villamizar",
+    "Jilberto Zamora Saa"
    ],
-   "label": "arXiv:2611.26854v1",
-   "primary_category": "hep-lat",
+   "label": "arXiv:2611.28223v1",
+   "primary_category": "hep-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes \"Twin\" Krylov solvers (Twin-BiCG and Twin-BiCGStab) that build the solver's polynomial once and reuse it across noise vectors, plus a polynomial approximation and singular-value deflation scheme, to speed up Hutchinson-style estimation of Tr(A^{-1}) for lattice QCD quark matrices.",
-    "plain": "Physicists studying the strong force on a computer grid often need the trace of the inverse of a huge matrix, which is a single summary number that is expensive to get exactly. The standard shortcut uses many random noise vectors, and each one requires solving a large system of equations. This paper introduces solver methods that reuse work from one solve on the others, and a cheaper scheme that handles most noise vectors with an approximation, reporting a 17-fold speedup over the standard method in the authors' tests.</plain>\n<parameter name=\"why\">Lattice QCD calculations are computationally expensive, so a sizeable reduction in the cost of this trace step could matter for them. The text reports the speedup only from the authors' own tests, and does not show how it carries over to other problems or hardware.</plain>\n<parameter name=\"background\">- Matrix inverse and trace: the trace is the sum of diagonal entries; the inverse of a matrix A is the matrix that undoes A.\n- Linear system Ax = b: solving for x is the core computational cost.\n- Hutchinson's method: estimates a trace by averaging over random noise vectors b.\n- Krylov solvers (BiCG, BiCGStab): iterative algorithms that solve Ax = b by building up a sequence of vectors and a polynomial.\n- Lattice QCD: a numerical simulation of quarks and gluons on a discrete space-time grid, which produces very large sparse matrices.\n- Singular value deflation: removing the few directions where the matrix is most ill-conditioned so the rest converges faster.",
-    "why": "",
-    "background": "",
+    "one_liner": "A proposed \"scotogenic\" extension of the Standard Model, built on a gauged L_mu + L_tau lepton-number symmetry, that generates small Majorana neutrino masses at one loop and provides a weakly interacting dark matter candidate stabilized by a remnant matter parity, with analysis of its scalar dark matter, Z' boson, and collider constraints.",
+    "plain": "The paper proposes a theoretical model in which the tiny masses of neutrinos and the invisible dark matter in the universe share a common origin. A new force carrier (Z') linked to the difference between muon-type and tau-type lepton numbers is introduced, and its symmetry breaking leaves behind a leftover \"parity\" that keeps the lightest new particle from decaying. The authors study which parameter choices give a dark matter abundance matching observations, and check the model against precision electroweak measurements, existing searches for leptophilic gauge bosons, and possible collider signals.",
+    "why": "It offers a single framework that links two open problems, neutrino mass and dark matter, through a new gauge boson that could be tested in experiments. The text does not show how strongly the model is favored over alternatives, so its relevance to real data remains to be judged by further work.",
+    "background": "- Standard Model: the established theory of known particles and forces.\n- Neutrino mass: neutrinos have very small masses; Majorana nature means a neutrino is its own antiparticle.\n- Scotogenic model: a scheme where neutrino masses arise from a loop of new particles, with a dark matter candidate in that loop.\n- Gauged symmetry: a conserved quantity promoted to a force carrier, here L_mu + L_tau (muon and tau lepton numbers), whose boson is the Z'.\n- Matter parity: a leftover symmetry (like a sign ±1 for particles) that makes the lightest odd particle stable.\n- WIMP: weakly interacting massive particle, a common dark matter candidate with a thermal relic abundance.\n- Kinetic mixing: a small coupling between the new force's field and the ordinary photon field, parameterized by epsilon.\n- Electroweak precision constraints: high-precision measurements of W, Z and related quantities that limit new physics.\n- Leptophilic: a particle that couples mainly to leptons.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Estimating the trace of the inverse of a large quark matrix is a longstanding problem in lattice QCD. The standard approach is Hutchinson's method, which uses random noise vectors to estimate the trace to a desired statistical tolerance. Each noise vector $b$ requires solving a system of linear equations $Ax = b$. In this work, we introduce a new class of Krylov solvers for this task, called Twin methods. Twin methods generate the Krylov polynomial once then reuse it on all other right-hand sides. This reduces the number of basic linear algebra operations in the algorithm and therefore lowers the trace computation time. We apply the Twin approach to BiCG and BiCGStab and test them on lattice QCD matrices of varying size and in a range of computing contexts. We also present a more economical estimation of $\\mathrm{Tr}(A^{-1})$ which implements a polynomial approximation of $A^{-1}$ and a singular value deflation. In this scheme, the solvers are applied to only a few noise vectors, and the remainder are treated by the polynomial and the deflation. In our tests, the polynomial approximation combined with the deflation yield a 17-fold speedup in the time required to compute the trace over standard Hutchinson's method.",
+   "abstract": "In this work, we introduce the first scotogenic model based on a gauged $L_{\\mu} + L_{\\tau}$ symmetry whose spontaneous breaking by two units leaves a remnant matter parity $M_P$. The resulting light active neutrinos are of Majorana nature and the lightest electrically neutral state mediating the scotogenic loop is stabilized by $M_P$ and can be identified as a weakly interacting massive particle dark matter candidate. We analyze the phenomenology of a predominantly singlet-like CP-even scalar dark matter candidate and the representative regions of parameter space compatible with the observed thermal relic abundance. The $Z'$ boson is compatible with a broad range of parameters relevant for dark matter. In particular, electroweak precision constraints do not lead to significant tensions for kinetic mixing values up to $\\epsilon\\sim 10^{-2}$. We discuss the implications of existing searches for leptophilic gauge bosons and the conditions under which visible and invisible collider signatures become relevant.",
    "source": "arxiv"
   },
   {

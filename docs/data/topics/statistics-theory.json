@@ -3,46 +3,49 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26886",
-   "title": "Estimating contextual networks via Fisher-scoring surrogate likelihood",
-   "url": "https://arxiv.org/abs/2611.26886",
+   "uid": "arxiv:2611.28953",
+   "title": "Nonparametric estimation of a common marginal hazard function under censoring and spatio-temporal dependence",
+   "url": "https://arxiv.org/abs/2611.28953",
    "authors": [
-    "Myung Jin Lee",
-    "Fangzheng Xie"
+    "Ibrahim Loudy",
+    "Kowir Pambo Bello",
+    "St\\'ephane Bouka",
+    "Guy Martial Nkiet"
    ],
-   "label": "arXiv:2611.26886v1",
-   "primary_category": "stat.ME",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "A tuning-free likelihood method, using a smooth surrogate likelihood and Fisher scoring, estimates latent positions in contextual generalized random dot product graphs with high-dimensional low-rank vertex covariates, with consistency and asymptotic normality established for the estimator.",
-    "plain": "The paper looks at networks, where data points are linked in pairs (such as people who know each other), and each point also carries a list of measured attributes. The authors propose a way to place each point at a hidden location that accounts for both the links and the attributes, without needing extra settings that depend on how sparse the network is. They report that the estimator is consistent and asymptotically normal, and they apply it to real data as a demonstration.",
-    "why": "Many real networks come with attributes for each node, and combining the two sources of information is a common need. The paper argues that existing spectral methods can be suboptimal and require tuning parameters that depend on unobservable quantities, so a tuning-free likelihood approach is of interest to people working on network and covariate data; the text does not show how it compares to these methods beyond these claims.",
-    "background": "- A network (graph) is a set of nodes joined by edges; here, a model places each node at a hidden \"latent position\" and the chance of an edge depends on those positions.\n- Vertex covariates are measured attributes attached to each node.\n- Random dot product graphs are a model where edge probability is given by the inner product of latent position vectors.\n- Spectral methods estimate positions using eigenvectors of a matrix, usually needing a tuning parameter.\n- Likelihood-based estimation picks the parameter values that make the observed data most probable; Fisher scoring is an iterative numerical way to find that maximum.\n- Consistency means estimates converge to the true values as data grow; asymptotic normality means their errors are approximately bell-curve distributed in large samples.\n- Tuning parameters are settings the user must choose by hand.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "When networks are accompanied by vertex-level covariates, effectively integrating and aligning the information underlying both data sources becomes a natural yet critical task. Current spectral approaches, despite their popularity, may yield suboptimal results and necessitate the specification of additional tuning parameters that are contingent upon unobservable signal-to-noise ratios. We propose a tuning-free, likelihood-based learning framework for estimating latent positions in contextual generalized random dot product graphs in the presence of high-dimensional vertex covariates with a low-rank structure. Our method constructs a smooth surrogate likelihood and implements a Fisher-scoring algorithm to iteratively estimate latent positions without introducing additional tuning parameters that depend on the network sparsity. We establish the consistency and asymptotic normality of the Fisher-scoring estimator. Application to real-world data further demonstrates the method's practical utility, offering a principled and scalable alternative to spectral approaches for analyzing contextual networks in high-dimensional settings.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.27683",
-   "title": "On the Role of Fisher Information, Variance and Asymptotics in Statistical Inference",
-   "url": "https://arxiv.org/abs/2611.27683",
-   "authors": [
-    "Paul W. Vos"
-   ],
-   "label": "arXiv:2611.27683v1",
+   "label": "arXiv:2611.28953v1",
    "primary_category": "math.ST",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A reading of Bahadur's asymptotics chapter (MLE normality, Fisher's bound, Hodges's counterexample, local asymptotic normality) that replaces point estimators with a continuum of significance tests assessed by Fisher information, which yields an exact bound that differs geometrically from the Cramér–Rao bound.",
-    "plain": "This paper is about the mathematical limits on how precisely a quantity can be estimated from data, which statisticians have long described using approximations for large samples. The author revisits the standard large-sample results and re-describes them in terms of a family of significance tests rather than a single estimate, measuring the information they carry. The text reports that, under this view, the statements hold exactly at every sample size, and it gives an example where a t-test family keeps about half an observation's worth of the information in the sample mean.",
-    "why": "It offers a reframing of classical results like Fisher's bound and Hodges's counterexample, which are central to how statisticians think about efficiency. The connection to other fields is not described in the text, so its wider relevance is unclear.",
-    "background": "- Maximum likelihood estimator: the value of a parameter that makes observed data most probable.\n- Fisher information: a measure of how much data reveal about an unknown parameter, based on how sensitive the likelihood is to it.\n- Variance and mean square error: measures of how spread out or inaccurate an estimate is.\n- Cramér–Rao bound: a lower limit on the variance of an unbiased estimator, given by inverse Fisher information.\n- Superefficiency and Hodges's estimator: a known counterexample where an estimator beats the usual limit at one parameter value.\n- Asymptotic normality: the approximation that estimates behave like a bell curve as sample size grows.\n- Significance test: a procedure for judging whether data are consistent with a hypothesis.\n- Companion paper: the author's earlier work applying the same reframing to the preceding chapters.",
+    "one_liner": "Proposes Nadaraya-Watson and k-nearest-neighbor estimators for a pooled marginal hazard function from right-censored, spatially and temporally dependent durations, with pointwise and uniform convergence rates and a simulation comparison.",
+    "plain": "The paper studies how long until an event happens (such as a patient relapsing or a city service request being closed) when the observations are linked by where and when they occur, and some cases are only partly observed because the study ended first. The authors build two statistical tools for estimating the underlying rate at which the event happens over time, one based on local weighted averaging and one based on the k nearest neighbors in space and time. They test both on simulated data and on two real datasets: a multicenter clinical trial and 1,746 geolocated requests to New York City's 311 service.",
+    "why": "Durations that are censored and also clustered in space and time are common in medicine, public services and other fields, and standard methods often assume independence that does not hold. The text reports theoretical convergence rates and empirical results on two applications, but the abstract alone does not show how the methods compare with existing alternatives in practice.",
+    "background": "- Hazard function: the instantaneous rate at which an event occurs, given that it has not yet occurred.\n- Right censoring: some durations are only known to exceed a recorded time, e.g. the study ended or the case was still open.\n- Nonparametric estimation: estimating a curve from data without assuming a fixed formula for it.\n- Nadaraya-Watson estimator: a local averaging method that weights nearby observations more heavily.\n- k-nearest-neighbor (k-NN) estimator: averages over the k observations closest in the chosen distance measure.\n- Spatio-temporal dependence: observations close in place or time tend to be related, which violates the independence assumed by many standard methods.\n- Convergence rate: how quickly the estimate approaches the true function as the sample grows.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Bahadur's \\emph{Lectures on the Theory of Estimation} close with a chapter on asymptotics: asymptotic normality of the maximum likelihood estimator, Fisher's bound on its asymptotic variance with Hodges's counterexample, and local asymptotic normality. A companion paper read the earlier lectures with one modification, replacing the point estimator by a generalized estimator---Fisher's continuum of significance tests---assessed by information rather than variance. This paper reads Chapter 8 the same way. At each of its three parts the classical statement is an approximation about a point estimator, while the corresponding statement about the score is exact at every sample size. Superefficiency does not arise, because information is bounded by the Fisher information at every $n$; Hodges's estimator, computed exactly, is fully efficient at the origin and loses information only where its mean square error is worst. The information of a generalized estimator is argued to be Fisher information: the mean rate at which a continuum of tests responds to the parameter, standardized by its variance. The resulting Fisher upper bound differs geometrically, not merely algebraically, from the Cram\\'er--Rao lower bound. The extension is not empty: the $t$-test continuum loses about half an observation's worth of the information in $\\bar X$ at every $n$.",
+   "abstract": "This article investigates the nonparametric estimation of a common pooled marginal hazard function from right-censored durations exhibiting spatio-temporal dependence. We propose two estimators based respectively on the Nadaraya-Watson method and the (k)-nearest neighbors (k)-NN) approach. Under assumptions of stationarity, regularity, non-informative censoring, and weak spatio-temporal dependence, we establish their pointwise and uniform convergence rates as well as their optimal asymptotic order. A simulation study compares their finite-sample performance. Two real-data applications with right censoring are considered: a multicenter clinical trial with 53.8 percent censoring and 1,746 geolocated and time-stamped requests submitted to New York City's 311 municipal service, of which 35.5 percent are censored. The empirical results illustrate the relevance of the proposed methods in the presence of spatial and temporal dependence.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30006",
+   "title": "Sequential Selection against an Adaptive Opponent",
+   "url": "https://arxiv.org/abs/2611.30006",
+   "authors": [
+    "Zhongyuan Lyu",
+    "Xiaocong Xu"
+   ],
+   "label": "arXiv:2611.30006v1",
+   "primary_category": "stat.ML",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper studies sequential strategy selection against an adaptive opponent, proposing SPAR for a single strategy (with privately randomized stopping and a rate inversely proportional to the error tolerance) and Screen-then-SPAR for choosing among several candidates, with simulations and two real-data studies.",
+    "plain": "The paper looks at how a player can pick a good strategy by testing it in practice games against an opponent that may change its behavior in response. The goal is to choose a strategy that meets a target win rate while rarely choosing one that has already dropped below that rate. The authors propose a stopping rule (SPAR) that builds up evidence from the games and stops using a randomly drawn threshold, and they extend it to screen several candidates before choosing one.",
+    "why": "Testing AI systems against opponents that adapt, such as in red-teaming or safety evaluations, is a practical problem where a strategy that looked good earlier may no longer work. The text reports that the sample-size rate is optimal even when the opponent does not adapt, and it tests the methods on coding-agent attack records and human rock-paper-scissors play; how far these results carry to other settings is not something the text establishes.",
+    "background": "- Sequential testing: deciding when to stop collecting data based on what has been seen so far.\n- Likelihood ratio: a measure of how much the data favor one hypothesis over another; \"capped\" means its contribution is limited.\n- Error tolerance: the allowed chance of making a wrong selection.\n- Minimax rate: the best worst-case rate, over all possible methods, at which the number of games needed can shrink as the tolerance is tightened.\n- Randomized stopping: a rule that uses a random threshold drawn in advance, which the paper argues is necessary here.\n- Adaptive opponent: one whose behavior changes in response to what it has observed.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Selecting a strategy by testing it against an opponent is common in game-playing AI, red-teaming of language models, and safety evaluations of AI agents. In many of these settings, the opponent adapts to what it observes, so a strategy that keeps winning in practice may already have stopped working by the time it is used. Motivated by these settings, we study a player who tries strategies in practice games against an adaptive opponent, decides when to stop, and then either selects one strategy for the next game or abstains. The goal is to select a strategy that meets a target win probability while rarely selecting one that has already fallen below it. For a single strategy, we propose the Sequential Private Accumulated-excess Rule (SPAR), which accumulates evidence through a capped likelihood ratio and selects the strategy once this evidence reaches a privately drawn uniform threshold. We show that the stopping time must involve such private randomness. The number of games SPAR needs is inversely proportional to the error tolerance, and this rate is optimal even when the opponent happens not to adapt. To select among multiple strategies, we introduce Screen-then-SPAR, which screens candidates in stages before applying SPAR. The procedure adapts to the best strategy's unknown initial margin above the target and achieves the minimax rate up to logarithmic factors. The performance of Screen-then-SPAR is demonstrated through simulations and two real-data studies, one using recorded coding-agent attacks from MonitoringBench and the other using rock-paper-scissors matches between human players and an adaptive bot.",
    "source": "arxiv"
   },
   {

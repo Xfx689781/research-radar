@@ -3,6 +3,48 @@
  "updated": "2026-11-24",
  "papers": [
   {
+   "uid": "medrxiv:10.64898/2026.11.19.26368501",
+   "title": "Pre-conception PfSPZ Vaccine administration to Malian women prevents malaria in their offspring during infancy",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368501v1",
+   "authors": [
+    "Diawara, H.",
+    "Healy, S. A.",
+    "Wang, J.",
+    "Hu, Z.",
+    "Issiaka, D.",
+    "Traore, S.",
+    "Soumbounou, I. H.",
+    "Gaoussou, S.",
+    "Mahamar, A.",
+    "Attaher, O.",
+    "Diarra, I.",
+    "KC, N.",
+    "Murshedkar, T.",
+    "Doan, V.",
+    "Diallo, A.",
+    "Morrison, R. D.",
+    "Doritchamou, J. Y. A.",
+    "Lee Sim, B. K.",
+    "Richie, T. L.",
+    "Hoffman, S. L.",
+    "Dicko, A.",
+    "Duffy, P. E."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.19.26368501 v1",
+   "primary_category": "infectious diseases",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A randomized, placebo-controlled trial in Mali testing whether pre-conception PfSPZ malaria vaccination of women reduces parasitemia and clinical malaria in their infants during the first year of life.",
+    "plain": "Malaria is especially dangerous for babies and pregnant women, and protecting infants is hard. In this trial in Mali, healthy women were given either a malaria vaccine (at one of two doses) or saline before they became pregnant, and their babies were then tracked for malaria during the first year of life. In the lower-dose vaccine group, far fewer infants had malaria parasites in their blood or clinical malaria than in the saline group, while the higher-dose group did not show a significant effect.",
+    "why": "Protecting infants through a vaccine given to mothers before pregnancy would be a new approach if it holds up, which is why it merits attention. The sample is small (104 infants, with wide confidence intervals), and the higher-dose group did not show a significant benefit, so the result should be read as promising rather than settled.",
+    "background": "- Malaria is caused by Plasmodium parasites, spread by mosquitoes; Plasmodium falciparum is the most dangerous species.\n- PfSPZ Vaccine is made of live but attenuated (weakened) parasite sporozoites, the stage that enters the body from a mosquito bite.\n- \"Pre-conception\" means given before pregnancy begins.\n- \"Parasitemia\" means malaria parasites detected in the blood, often via a blood smear under a microscope.\n- \"Vaccine efficacy (VE)\" is the percentage reduction in cases among vaccinated versus control groups; a wide confidence interval (CI) means the estimate is uncertain.\n- Placebo-controlled and double-blind means neither participants nor researchers knew who got the real vaccine.\n- PfCSP antibodies are immune proteins against the parasite's circumsporozoite protein, measured as a sign of immune response.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Background: Preconception administration of Plasmodium falciparum sporozoite (PfSPZ) Vaccine is safe and prevents malaria during pregnancies identified within 21 months post-vaccination. We evaluated pre-conception PfSPZ Vaccine effects on malaria risk in offspring during the first year of life. Methods: In a randomized, double-blind, placebo-controlled trial in Ouelessebougou, Mali, 300 healthy 18-38-year-old women were allocated 1:1:1 to receive 9x10^5 PfSPZ or 1.8x10^6 PfSPZ of PfSPZ Vaccine or normal saline on days 1-8-29, and followed up to 21 months for malaria endpoints and pregnancies. 104 infants from 103 pregnancies identified first year post-vaccination [9x10^5 PfSPZ (n=38); 1.8x10^6 PfSPZ (n=40); normal saline (n=26)] were seen every two months and during illnesses. Primary endpoints were blood-smear parasitemia and clinical malaria. Safety outcomes included newborn baseline characteristics and infant adverse events (AEs). Findings: Newborn baseline characteristics and infant AEs did not differ between arms; AEs were common but predominantly mild (91.9-96% Grade 1). Vaccine efficacy of 9x10^5 PfSPZ was 75.1% (95% CI 20.6-92.2) against parasitemia (10.5% parasitemic infants versus 38.5% of placebo) and 94.2% (54.9-99.3) against clinical malaria (2.6% malarious infants versus 38.5% of placebo). VE of 1.8x10^6 PfSPZ group was 40.3% (-43.6-75.2) against parasitemia and 36.3% (-50.3-73.0) against clinical malaria, both non-significant. At 6 and 12 months of age, PfCSP antibodies were similar in offspring of vaccinated and control mothers. Interpretation: Pre-conception PfSPZ Vaccine was safe and reduced Pf infection and clinical malaria during infancy in 9x10^5 PfSPZ group. Further development of preconception PfSPZ vaccines is warranted to protect mother-infant dyads.",
+   "source": "medrxiv"
+  },
+  {
    "uid": "medrxiv:10.64898/2026.11.16.26367676",
    "title": "Proteome-wide antibody responses to PfSPZ Vaccine include cross-reactive antibodies that correlate with protection from malaria",
    "url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26367676v1",

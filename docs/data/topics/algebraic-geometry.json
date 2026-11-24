@@ -3,46 +3,47 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26947",
-   "title": "Tensor products of additive groups as reciprocity sheaves",
-   "url": "https://arxiv.org/abs/2611.26947",
+   "uid": "arxiv:2611.30760",
+   "title": "Categorical Torelli theorem for quintic threefolds",
+   "url": "https://arxiv.org/abs/2611.30760",
    "authors": [
-    "Toshiro Hiranouchi",
-    "Rin Sugiyama"
+    "Genki Ouchi"
    ],
-   "label": "arXiv:2611.26947v1",
+   "label": "arXiv:2611.30760v1",
    "primary_category": "math.AG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper computes the Nisnevich reciprocity sheaves attached to tensor products of cube-invariant objects built from the additive and multiplicative groups (with at least one additive factor), showing over perfect fields of characteristic not two that they split into sums of absolute Kähler differential sheaves with binomial multiplicities, and applies this to the Hochschild homology of the additive object.</one_liner>\n<parameter name=\"plain\">This is a technical paper in algebraic geometry, a field that studies solutions of polynomial equations using geometric tools. The authors study a family of mathematical objects built by combining two basic building blocks, the additive group and the multiplicative group, and they work out exactly what these objects look like. They find that, over suitable number systems, each one breaks apart into simpler pieces of a known type, and they use this to describe a related construction called Hochschild homology.",
-    "plain": "",
-    "why": "The text gives only the abstract, so the wider significance is unclear from it alone. It is likely of interest to specialists working on reciprocity sheaves and motivic or cohomological methods, where explicit decompositions of this kind can be useful for computations.",
-    "background": "- Algebraic geometry: the study of geometric shapes defined by polynomial equations.\n- Sheaf: a bookkeeping device that assigns data to open pieces of a space consistently.\n- Reciprocity sheaf: a sheaf with extra structure (from Kahn, Saito and Yamazaki) that tracks how data behaves under maps of curves; used in motivic homotopy theory.\n- Additive and multiplicative groups: the line with addition, and the nonzero numbers with multiplication, viewed as geometric objects.\n- Tensor product: a way of combining two algebraic objects into one.\n- Kähler differentials: an algebraic notion of \"infinitesimal change\" of functions.\n- Hochschild homology: an invariant measuring the structure of an algebra, here applied to geometric objects.\n- Perfect field of characteristic not two: a base number system with well-behaved arithmetic, excluding the case where 1+1=0.",
+    "one_liner": "The paper proves a categorical Torelli theorem for smooth quintic threefolds over the complex numbers: equivalence of bounded derived categories of coherent sheaves implies isomorphism of the varieties.",
+    "plain": "The paper studies a particular kind of shape studied in algebraic geometry: smooth quintic threefolds, which are high-dimensional surfaces cut out by fifth-degree polynomial equations. It asks whether the bookkeeping of sheaves on such a shape (a structured record of how functions and data sit on it) is enough to recover the shape itself. The authors show that if two such shapes have equivalent categories of sheaves, then the shapes are in fact the same up to isomorphism.",
+    "why": "This is a rigidity result: the algebraic data determines the geometry, which is a clean answer to a question of the form \"how much of a shape does its derived category remember?\" The text gives only the statement, so its wider significance and methods cannot be judged from it here.",
+    "background": "- Complex numbers and algebraic varieties: solution sets of polynomial equations over the complex numbers.\n- Quintic threefold: a smooth variety of complex dimension three in projective space, defined by one degree-five polynomial.\n- Coherent sheaves: a standard way to attach algebraic data (like functions or vector bundles) to a variety.\n- Derived category: a larger organized category built from complexes of sheaves, encoding homological information.\n- Equivalence of categories: a structure-preserving correspondence; here, two varieties having equivalent derived categories.\n- Torelli theorem: the general type of result that a geometric object is determined by associated data (originally for curves and Hodge structures).",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We compute the Nisnevich reciprocity sheaves associated with tensor products of the cube-invariant objects for the additive and multiplicative groups, with at least one additive factor. Over a perfect field of characteristic different from two, these sheaves decompose into direct sums of absolute K$\\\"a$hler differential sheaves with binomial multiplicities. As an application, we compute the associated reciprocity sheaves of the Hochschild homology of the additive object.",
+   "abstract": "We prove that two smooth quintic threefolds over $\\mathbb{C}$ are isomorphic if their bounded derived categories of coherent sheaves are equivalent.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27025",
-   "title": "Constructing toric diagonal modules with short linear resolutions",
-   "url": "https://arxiv.org/abs/2611.27025",
+   "uid": "arxiv:2611.31111",
+   "title": "Holomorphic Foliations with a Single Singularity on Orbifold Projective Surfaces",
+   "url": "https://arxiv.org/abs/2611.31111",
    "authors": [
-    "Jay Yang"
+    "Ruben Lizarbe",
+    "Liliana Puchuri",
+    "Rudy Rosas"
    ],
-   "label": "arXiv:2611.27025v1",
-   "primary_category": "math.AC",
+   "label": "arXiv:2611.31111v1",
+   "primary_category": "math.AG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "For a complete simplicial toric variety, the paper constructs Cohen–Macaulay modules with linear resolutions whose associated sheaf is the diagonal, and relates the Favero–Huang and Hanlon–Hicks–Lazarev constructions as dual approaches starting from a compatible Z^n-stratification.",
-    "plain": "This paper works in algebraic geometry, the study of shapes defined by polynomial equations. It looks at a special family of geometric spaces called toric varieties and builds, for each one, a collection of algebraic objects (modules) that have especially simple step-by-step \"resolutions,\" which are ways of approximating a given object by a chain of simpler ones. These objects are tied to the diagonal, the natural copy of a space sitting inside the product of the space with itself. The authors also say that two existing methods for building such resolutions turn out to be dual to each other.</plain>\n<parameter name=\"why\">The text gives the construction and the duality claim, but not the detailed results or their applications, so its wider significance is hard to judge from this excerpt. It may matter for researchers who use resolutions of the diagonal as a tool in homological algebra and geometry.",
-    "why": "",
-    "background": "- Toric variety: a geometric space built from combinatorial data (cones and fans), often studied through polytopes.\n- Simplicial: the underlying cones have a simple, triangle-like shape, which makes computations tractable.\n- Sheaf: a tool for keeping track of local data (like functions) across a space.\n- Diagonal: the subspace of pairs (x, x) inside the product space; its associated sheaf encodes how the space relates to itself.\n- Cohen–Macaulay module: an algebraic object with good depth properties, meaning it behaves well under taking slices.\n- Linear resolution: a chain of free modules whose maps are given by linear equations, the simplest kind of resolution.\n- Z^n-stratification: splitting a space into pieces indexed by integer lattice points, used to organize the construction.",
+    "one_liner": "The paper studies holomorphic foliations on orbifold projective surfaces with cyclic divisor class group that have a single singular point of algebraic multiplicity one, and shows that when the normal degree is large enough there is no invariant algebraic curve, with examples showing the bound is sharp.",
+    "plain": "This is about a way of splitting a surface with mild \"cone-like\" points into smooth flowing paths, called a foliation, which has only one special point where the paths meet. The authors ask whether such a splitting can be built around a fixed algebraic curve, and show that once a certain numerical measure of the foliation is large enough, it cannot. They also give examples showing that their threshold cannot be lowered.",
+    "why": "Results of this type classify which geometric structures are possible on a space, a central theme in algebraic geometry. The text does not say how it connects to other areas, so wider significance is unclear from this abstract alone.",
+    "background": "- Projective surface: a two-dimensional space described by polynomial equations, the complex analogue of a sphere or plane.\n- Orbifold point: a point where the surface looks like a quotient by a finite symmetry group, a mild kind of singularity.\n- Holomorphic foliation: a decomposition of the surface into a family of non-crossing curves (leaves), like parallel threads, defined by complex-smooth rules.\n- Singularity of a foliation: a point where the leaves fail to form a smooth family; here there is exactly one, with algebraic multiplicity one (the simplest kind).\n- Invariant algebraic curve: a curve made of solutions of polynomial equations that the foliation preserves, i.e. each leaf-path that starts on it stays on it.\n- Normal degree: a number measuring how the foliation bends relative to the surface; larger means more complicated.\n- Divisor class group: a finite-type algebraic bookkeeping object for curves on the surface; cyclic means it is generated by one element.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "For a complete simplicial toric variety $X$, we construct a collection of Cohen--Macaulay modules with linear resolutions where the associated sheaf is the diagonal. Through this work, we see that the resolutions constructed by Favero--Huang from homotopy path algebras and those constructed by Hanlon--Hicks--Lazarev can be viewed as two dual methods to construct resolutions of the diagonal starting from a compatible $\\mathbb{Z}^n$-stratification.",
+   "abstract": "We investigate holomorphic foliations on orbifold projective surfaces with cyclic divisor class group, assuming that the foliation has a unique singular point of algebraic multiplicity one. If the normal degree of the foliation is sufficiently large, then we prove that it admits no invariant algebraic curve. Furthermore, we present several examples showing that the bound obtained is optimal.",
    "source": "arxiv"
   },
   {

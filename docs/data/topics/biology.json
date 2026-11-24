@@ -3,6 +3,31 @@
  "updated": "2026-11-24",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.23.768576",
+   "title": "APEs: Agentic Prediction of Epitopes to Guide Antibody-Antigen Structure Prediction",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768576v1",
+   "authors": [
+    "Kang, M.",
+    "Yoon, M. S.",
+    "Park, J.",
+    "Moon, B.",
+    "Baek, M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.23.768576 v1",
+   "primary_category": "bioinformatics",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "APEs is an LLM-agent system that retrieves pre-target public evidence to propose ranked residue-level epitope patches, which are then used to steer Protenix-v1 sampling and select antibody-antigen complex models evaluated on CASP16 and CASP17 targets.",
+    "plain": "Antibodies stick to specific spots on a target protein, called the epitope, and computer models often struggle to predict where those spots are and how the two proteins fit together. This paper describes a system that searches public sources for clues about the target, uses them to suggest likely contact spots, and then uses those suggestions to guide a structure-prediction model's sampling and choice of final models. On retrospective CASP test targets, the top suggested spot was at least 50% correct for nine of 14 targets, and the best selected models scored higher on average than the unguided top-ranked models.",
+    "why": "Predicting antibody-antigen structures is a hard, practically important problem for drug and vaccine design, and the paper shows that public, target-specific evidence can be used at inference time to guide predictions. The gains are reported on a small set of targets, and the prospective CASP17 release is still untested in the text, so the broader value is unclear.",
+    "background": "- Antibody: an immune protein that binds a specific target molecule (antigen).\n- Epitope: the patch of residues (amino acids) on the antigen that the antibody contacts.\n- Antibody-antigen complex: the 3D structure formed when the two proteins bind.\n- CASP: a community blind contest in which groups predict protein structures before experimental results are published.\n- DockQ: a 0-1 score for how accurately a predicted complex matches the true one.\n- ipSAE: a confidence score for interface quality, used here to pick among models.\n- Protenix-v1: a structure-prediction model; \"sampling\" means generating many candidate poses.\n- Retrospective evaluation: testing on past targets while restricting searches to information available before each target's release date.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Antibody-antigen complex prediction remains difficult because the surface recognized by a specific antibody is often uncertain, and model confidence may not distinguish alternative poses. We developed APEs (Agentic Prediction of Epitopes for Structure Prediction), an agentic system that retrieves public evidence, interprets predicted antibody and antigen structures, and produces ranked residue-level epitope hypotheses. For retrospective evaluation, web retrieval was restricted to sources released before each CASP target entry date. Across eight CASP16 and six released CASP17 targets, the top-ranked patch reached residue precision of at least 0.5 for nine of 14 targets. We then used the predicted epitopes to steer additional Protenix-v1 sampling and to compare steered finalists with the highest ipSAE unsteered model. The retrospective best selection across three independent router calls increased mean DockQ from 0.306 to 0.375; DockQ increased from 0.089 to 0.679 for H2321 and from 0.005 to 0.379 for H2346. These results show that publicly available evidence specific to the target antibody-antigen complex can serve as an inference-time signal for epitope localization, guided complex sampling, and model selection. We also release predictions for CASP17 targets whose experimental structures had not been released when the predictions were finalized, providing a prospective test of APEs (https://github.com/CSSB-SNU/ape).",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.18.767672",
    "title": "Koopman Analysis Reveals Collective Modes Governing Cellular Dynamics",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767672v1",
@@ -17,38 +42,14 @@
    "primary_category": "biophysics",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper applies Koopman operator theory to whole-cell dynamical models to identify global collective modes, including slow modes that govern cell-cycle dynamics and link to specific cell-cycle and cell-state transition processes.",
-    "plain": "The paper asks how a cell's complicated, constantly changing activity can be described more simply. The authors use a mathematical method called Koopman analysis on computer models of whole cells, which turns the tangled behavior into a small set of coordinated patterns. They report that a few slow patterns dominate the long-term cell-cycle behavior, and that these patterns line up with known steps such as cell division and DNA repair.",
-    "why": "It offers a global, rather than local, way to simplify nonlinear systems that are far from equilibrium, and it links that idea to physics concepts such as normal modes. Its practical value for biology is not established by this text alone; it rests on computational models, and the claims would need testing against real cell data.",
-    "background": "- Nonlinear system: one where outputs do not scale in proportion to inputs, so behavior is hard to predict by simple addition.\n- Linearization: approximating a complex system by simpler linear equations; most common versions only work near one point.\n- Koopman operator: a mathematical tool that re-describes a nonlinear system's evolution in a form where it behaves linearly, across the whole state space.\n- Normal modes: independent patterns of collective motion in a system, like vibration patterns in a drum or molecule.\n- Slow manifold: a low-dimensional surface that a system's long-term behavior settles onto.\n- Gene regulatory network: the web of genes that switch each other on and off.\n- Cell cycle: the sequence of events by which a cell grows, copies its DNA, and divides, including mitosis.",
+    "one_liner": "The paper applies Koopman operator theory to whole-cell dynamical models to extract globally defined collective modes, which separate into slow modes forming a low-dimensional manifold and are linked to cell-cycle and cell-state transition processes.",
+    "plain": "Living cells are very complicated systems whose behavior is hard to predict, especially when they are far from a steady state. This paper uses a mathematical tool called Koopman analysis to re-describe whole-cell computer models in a simpler form, looking for patterns that act across the whole system. The authors report that these patterns relate to specific cell-cycle processes such as mitosis and DNA replication.",
+    "why": "The approach aims to give a global, rather than only local, simplification of nonlinear biological dynamics, which is a long-standing difficulty. Its value depends on whether the reported links to biology hold up in other models and in experiments; the text alone does not show that.",
+    "background": "- Nonlinear system: outputs do not scale simply with inputs, so small changes can have large or unexpected effects.\n- Linearization: approximating a complicated system with simpler linear rules; most standard versions only work near one reference state.\n- Koopman operator: a method that tracks how measurements of a system evolve, allowing a nonlinear system to be described linearly over its whole state space.\n- Normal modes: independent patterns of collective motion in a system, familiar from vibrating molecules and crystals.\n- Slow manifold: the lower-dimensional set of states that a system settles onto over long times.\n- Gene regulatory network: the web of interactions by which genes switch each other on or off.\n- Whole-cell model: a computer simulation that represents many cellular processes together.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Living systems are complex nonlinear systems that operate far from thermodynamic equilibrium, and this nonlinearity makes their dynamics difficult to analyze. Several linearization techniques have been developed to address this problem, but most are local. Koopman operator theory is a powerful alternative that linearizes a system globally. Here we show that it not only achieves global linearization but also reveals collective modes that govern the dynamics of complex, out-of-equilibrium nonlinear systems. Applying the approach to whole-cell dynamical models, we find that these collective modes have physical and biological significance and relate to distinct processes in the cell cycle and in cell-state transitions. Collective and normal modes are widespread in many-body systems, particularly in condensed matter (e.g., magnons, phonons, hydrodynamic modes) and in macromolecular dynamics (e.g., normal mode analysis). By demonstrating that such modes also exist in cell-state transition dynamics, and in non-equilibrium nonlinear systems more generally, we offer a new theoretical-physics perspective on these systems. The collective modes separate into slow and fast modes. Long-term dynamics are governed by a few dominant slow modes that form a slow manifold of much lower dimension than the original state space. Thus, although the cell is a very high-dimensional system, its cell-cycle dynamics ultimately reduce to a low-dimensional space. Each mode comprises the coordinated behavior of groups of genes and reflects the structure of the underlying gene regulatory network. The modes can also be decomposed into terms that behave like damped harmonic oscillators, drawing an analogy between the modes of a nonlinear system and the normal modes of many-body systems. Finally, our analysis suggests that the dominant modes are closely associated with biological processes in the cell cycle, including mitosis, spindle checkpoint signaling, and DNA replication and repair.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.20.768148",
-   "title": "NanoHIV-DR: a Nextflow workflow for consensus and read level HIV-1 drug resistance profiling from Oxford Nanopore sequencing",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768148v1",
-   "authors": [
-    "Lule, D.",
-    "Ssemwanga, D.",
-    "Kaleebu, P.",
-    "Tully, D. C."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.20.768148 v1",
-   "primary_category": "bioinformatics",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "NanoHIV-DR is a Nextflow workflow that takes raw Oxford Nanopore HIV-1 sequencing data through basecalling, read cleaning, alignment and consensus building, then reports drug-resistance mutations both at the consensus level (via Sierra) and at the read level for minority variants.",
-    "plain": "HIV treatment can stop working when the virus carries mutations that resist specific drugs, so clinics test the virus's genetic code to guide treatment. This paper describes a software pipeline that handles the many computing steps needed to turn raw data from a portable DNA sequencer into a readable resistance report. The authors say it can also pick up mutations present in only a fraction of virus copies, which a standard consensus approach would miss.",
-    "why": "Portable long-read sequencing could make HIV drug-resistance testing faster and more accessible, especially where specialist bioinformatics staff are scarce. The text describes the workflow and its goals but gives no accuracy or validation results, so how well it performs in practice cannot be judged from this text alone.",
-    "background": "- HIV-1 drug resistance: viral mutations that reduce the effect of antiretroviral drugs; genotyping reads the viral genetic sequence to detect them.\n- Oxford Nanopore sequencing: a portable method that reads long DNA/RNA strands by measuring electrical signal changes as they pass through a pore; raw signal files (POD5) must be \"basecalled\" into letters.\n- Demultiplexing: separating pooled samples back into individual samples by their barcodes.\n- Read alignment and consensus: mapping short or long sequence reads onto a reference genome and combining them into one most-common sequence.\n- Minority variants: mutations found in only a subset of viral copies in a patient, which a consensus sequence can hide.\n- Nextflow: a workflow system that chains analysis steps so they run reproducibly on different computers.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Oxford Nanopore sequencing offers a rapid and portable approach for HIV-1 drug resistance (HIVDR) genotyping, but analysis of the resulting long-read data requires multiple bioinformatics steps and currently available nanopore workflows are limited. We developed NanoHIV-DR, a Nextflow-based workflow that streamlines the analysis of Oxford Nanopore sequencing data and generation of HIVDR reports. NanoHIV-DR processes raw POD5 files through basecalling, demultiplexing, host-read removal, quality filtering, read alignment and consensus generation, before identifying resistance-associated mutations and interpreting predicted drug susceptibility. The workflow provides two complementary approaches to HIVDR analysis: consensus-based resistance interpretation using Sierra and read-level detection of resistance-associated variants, enabling mutations below the consensus level to be identified and quantified. Outputs are integrated with clinical metadata to generate human-readable HIVDR reports. NanoHIV-DR provides a reproducible and accessible workflow for Nanopore-based HIVDR analysis with reduced bioinformatics expertise and manual processing for translating long-read sequencing data into interpretable resistance profiles.",
    "source": "biorxiv"
   },
   {

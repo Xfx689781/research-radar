@@ -3,49 +3,46 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27902",
-   "title": "Growth of subsolutions to fully nonlinear equations in halfspaces II",
-   "url": "https://arxiv.org/abs/2611.27902",
+   "uid": "arxiv:2611.28530",
+   "title": "Global well-posedness and scattering for the fractional inhomogeneous nonlinear Schrodinger equation with time-dependent damping",
+   "url": "https://arxiv.org/abs/2611.28530",
    "authors": [
-    "Fatma Gamze D\\\"uzg\\\"un",
-    "Niklas L. P. Lundstr\\\"om",
-    "Marcus Olofsson"
+    "Boyu Jiang",
+    "Kexue Li"
    ],
-   "label": "arXiv:2611.27902v1",
+   "label": "arXiv:2611.28530v1",
    "primary_category": "math.AP",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves sharp lower growth bounds for subsolutions of fully nonlinear elliptic equations posed in half-spaces, where the source term may depend on the solution itself, covering both growth at infinity and blow-up at a finite distance from the boundary, by extending an earlier ODE-based method.",
-    "plain": "This paper studies how certain functions that satisfy a type of mathematical inequality must grow when they live on one side of a flat boundary, such as a half-space. The authors show that these functions cannot stay small: they must grow at least at a certain rate far away, and they can blow up when approaching a finite distance from the boundary. The work extends a method that uses ordinary differential equations, a technique from an earlier paper by the same line of research.",
-    "why": "Estimates like these are the kind of tool used to rule out or classify solutions to nonlinear equations, which matter across geometry and physics models. The text is short and does not state specific applications, so any wider connection is uncertain from this description alone.",
-    "background": "- Elliptic partial differential equations: equations describing steady states, such as heat or potential distributions, where a function's value depends on its surroundings.\n- Subsolution: a function that satisfies an inequality version of the equation, roughly \"at most as curved as needed\" in a certain sense.\n- Fully nonlinear: the equation depends non-linearly on the second derivatives (how the function bends), not just linearly.\n- Half-space: the region on one side of a flat plane, used as a simple model domain with a boundary.\n- Growth estimate: a guaranteed lower bound on how fast a function must increase, often used to show solutions cannot be too small.\n- Blow-up: the function becomes unboundedly large at a finite location.\n- ODE method: reducing the problem to an ordinary differential equation in one variable to derive the bounds.",
+    "one_liner": "The paper proves global well-posedness and scattering for a fractional, inhomogeneous nonlinear Schrödinger equation with time-dependent damping, for radial initial data, using Strichartz estimates and mixed-norm bounds on the nonlinear term.",
+    "plain": "The paper studies a wave-type equation that describes how a quantum-style wave spreads out and can lose energy over time. It asks whether solutions exist for all time and eventually behave like free waves that no longer interact. The authors show this holds for solutions that are symmetric around a center (radial data), using a fairly direct argument.",
+    "why": "The result gives a rigorous guarantee that these damped equations are well behaved over infinite time, which matters for the mathematical theory of dispersive equations. The text does not say how the result might be applied outside pure mathematics, so its wider significance is uncertain.",
+    "background": "- Nonlinear Schrödinger equation: a model for waves whose evolution depends on their own strength, used in quantum physics and optics.\n- Fractional Laplacian: a generalized spreading operator that replaces the usual second-derivative term with a fractional power.\n- Inhomogeneous nonlinearity: the nonlinear term has a spatially varying or power-type coefficient, not a single uniform form.\n- Time-dependent damping: a friction-like term that drains energy at a rate that changes over time.\n- Global well-posedness: solutions exist, are unique, and depend continuously on the starting data, for all times.\n- Scattering: for large times, the solution looks like a free wave with no nonlinear effects.\n- Strichartz estimates: inequalities that control how dispersing waves decay in space and time.\n- Mixed-norm spaces: function spaces that measure size using different norms in space and time.\n- Radial data: starting conditions that depend only on distance from a center.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We establish sharp lower growth estimates for subsolutions of fully nonlinear elliptic equations in half-spaces, allowing source terms that depend explicitly on the solution. The estimates capture both growth at infinity and blow-up at a finite distance from the boundary. Our approach extends the ODE-based method introduced in [J. Differential Equations 320 (2022), 143--173].",
+   "abstract": "In this paper, we prove the global well-posedness and scattering of solutions for a nonlinear Schrodinger type equation with fractional Laplacian, inhomogeneous nonlinearity and time-dependent damping.We give an elementary proof based on Strichartz estimates combined with estimates of the nonlinear term in mixed-norm spaces. To avoid the loss of regularity in the Strichartz estimates, we consider the radial data.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26634",
-   "title": "Almost-sure quenched KAM tori for nonlinear wave equations with a spatial white-noise potential",
-   "url": "https://arxiv.org/abs/2611.26634",
+   "uid": "arxiv:2611.30302",
+   "title": "Sharp global well-posedness for the defocusing nonlinear wave equation outside a ball with radial data",
+   "url": "https://arxiv.org/abs/2611.30302",
    "authors": [
-    "Yingdu Dong",
-    "Wenwen Jian",
-    "Xiaoping Yuan"
+    "Guixiang Xu"
    ],
-   "label": "arXiv:2611.26634v1",
+   "label": "arXiv:2611.30302v1",
    "primary_category": "math.AP",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Constructs, for almost every path of a white-noise spatial potential, a Cantor family of small-amplitude invariant tori for a nonlinear wave equation with a random Schrödinger operator, via a partial Birkhoff normal form up to degree ten.",
-    "plain": "The paper studies a vibrating string whose stiffness varies randomly from point to point, modeled as white noise, and which also has a cubic-type nonlinearity. It shows that, for almost every realization of that randomness, the string's frequencies avoid a certain set of integer coincidences. Under that condition, it builds many quasi-periodic vibration patterns (invariant tori) that persist as small-amplitude motions.",
-    "why": "Persistent quasi-periodic motions in random media are hard to establish because the randomness can destroy the resonance structure that classical methods rely on. The result is a rigorous statement that such motions survive for almost every noise path, which may be of interest to researchers in KAM theory and random operators; the text does not discuss applications beyond this.",
-    "background": "- A wave equation u_tt + A u + f(u) = 0 describes vibrations; here A is a random operator (a second-derivative operator plus a noisy potential).\n- White noise is a random signal with no smooth structure; Brownian motion B is its integral, and its derivative is taken in a distributional (generalized) sense.\n- Eigenvalues/frequencies: the natural vibration rates of the operator; integer relations among them are \"resonances\" that can spoil persistence of motion.\n- Birkhoff normal form: a change of variables that simplifies a nonlinear Hamiltonian system so its long-term behavior is easier to read off.\n- KAM theory: a framework showing that most quasi-periodic motions survive small perturbations; invariant tori are the resulting closed quasi-periodic orbits.\n- Cantor family: a parameter set with many gaps but whose measure approaches full as the amplitude parameter goes to zero.\n- Normally elliptic vs. hyperbolic directions describe whether nearby motions stay bounded or drift apart.",
+    "one_liner": "The paper proves sharp global well-posedness for the defocusing nonlinear wave equation with Dirichlet boundary conditions outside a unit ball in R^3, for radial data in the critical homogeneous Sobolev space, for 3<p<5, improving a prior result by Xu, Yang and You (2025).",
+    "plain": "The paper studies how a wave-type equation that includes a nonlinear term evolves over all time, in the region of three-dimensional space outside a fixed sphere, with the boundary held at zero. It considers only initial conditions that are symmetric around the center, and the starting size of the data is set at the \"critical\" level where the equation is scale-balanced. The authors state they prove that solutions exist and are unique for all time in this setting, which they describe as sharp.",
+    "why": "The text itself is a short abstract, so its main value is as a sharpened result in a specialized area of PDE theory: it claims to extend a previous theorem to a sharper range of data. It is not clear from the text what wider applications, if any, it has; I cannot say how it connects to physical or engineering problems.",
+    "background": "- Wave equation: a PDE describing propagating disturbances, such as vibrations or waves.\n- Nonlinear term: the equation's behavior depends on the solution's size in a non-proportional way, which makes it harder to analyze.\n- Defocusing: the nonlinearity tends to spread energy out rather than concentrate it, which helps prevent blow-up.\n- Dirichlet boundary condition: the solution is fixed (here, zero) on the boundary of the region, here the sphere of radius 1.\n- Radial data: initial conditions depend only on distance from the center.\n- Global well-posedness: for any starting data in the class, a unique solution exists for all time and depends continuously on the data.\n- Critical space: a function space scaling-matched to the equation, where the problem is at the borderline between easy and hard.\n- Distorted Fourier transform: a generalized Fourier analysis adapted to a region with a boundary, rather than all of space.\n- Energy–Morawetz estimates: integral inequalities that control energy and spread of waves, used to rule out blow-up.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let \\[ A_\\omega=-\\partial_x^2+\\rho\\,\\partial_xB(x,\\omega), \\qquad \\rho\\ne0, \\] be the Dirichlet Schr\\\"odinger operator on $(0,\\pi)$ with a spatial Gaussian white-noise potential, realized pathwise via quasi-derivatives. Here $B$ is Brownian motion in the spatial variable $x$, and $\\partial_xB$ denotes its distributional derivative. We consider the nonlinear wave equation \\[ u_{tt}+A_\\omega u+f(u)=0, \\] where $f$ is odd and real analytic near zero, with $f(u)=\\kappa u^3+O(u^5)$ and $\\kappa\\ne0$. We show that, on a single event of probability one, no nontrivial finitely supported integer combination of the positive wave frequencies is an integer, and the quartic twist matrix is nonsingular for every finite tangential set of positive modes. After fixing a path in this event, we construct a partial Birkhoff normal form of the Hamiltonian up to degree ten. For every finite nonempty tangential set $J$ of cardinality $b$ associated with positive eigenvalues, we obtain a Cantor family of real-analytic, small-amplitude invariant $b$-tori in $H^1_0(0,\\pi;\\mathbb{R})\\times L^2(0,\\pi;\\mathbb{R})$. The family is parametrized by a Cantor subset of $[\\nu,2\\nu]^b$ whose relative measure tends to one as $\\nu\\to0$. The tori are normally elliptic when $A_\\omega$ is positive. Otherwise, they have $h$ stable and $h$ unstable normal directions, where $h$ is the number of negative eigenvalues of $A_\\omega$.",
+   "abstract": "Let $\\Omega=\\mathbb{R}^3\\setminus\\overline{B(0,1)}$ and $3<p<5$. We prove sharp global well-posedness of the defocusing Dirichlet boundary value problem of nonlinear wave equation with radial data in the critical space $\\dot H^{s_c}_{D,\\mathrm{rad}}(\\Omega)\\times \\dot H^{s_c-1}_{D,\\mathrm{rad}}(\\Omega)$, where $s_c=\\frac32-\\frac{2}{p-1}$, thereby improve the result in \\cite{XuYangYou2025}. The proof combines the distorted Fourier transform in \\cite{LiSZ:NLS,XuYang2024} with the energy--Morawetz estimate by Dodson in \\cite{DodsonCubic2018,Dodson2018}.",
    "source": "arxiv"
   },
   {

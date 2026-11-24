@@ -3,6 +3,54 @@
  "updated": "2026-11-24",
  "papers": [
   {
+   "uid": "arxiv:2611.30584",
+   "title": "Do Candlestick Charts Suffice? The Incremental Economic Value of Technical Indicators in Stock Return Prediction",
+   "url": "https://arxiv.org/abs/2611.30584",
+   "authors": [
+    "Peng Liu",
+    "Yanyan Zheng"
+   ],
+   "label": "arXiv:2611.30584v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Using 1,707 Chinese A-share stocks (2013–2025), the paper tests whether volume and seven manually built technical-indicator groups add economic value beyond raw OHLC candlestick charts for predicting returns, using a 2D CNN plus simpler models as checks.",
+    "plain": "Traders often use chart patterns and formulas (called technical indicators) to guess where stock prices are heading. This paper asks whether those hand-made formulas still help when a deep learning model can read the raw daily price bars (open, high, low, close) directly. The authors found that each kind of input on its own, including the price bars alone, showed positive returns in out-of-sample tests, but adding the indicators to the price bars did not consistently improve results.",
+    "why": "It speaks to a live question in finance and machine learning: whether engineered features are still needed once neural networks can learn from raw data. The evidence comes from one large market (China's A-share stocks), so whether it generalizes to other markets is not established by the text.",
+    "background": "- Candlestick chart (OHLC): daily open, high, low and close prices, drawn as bars.\n- Technical indicator: a formula computed from past prices or volume, such as a moving average, used to signal trades.\n- Convolutional neural network (CNN): a model that learns patterns from images; here the inputs are rendered as multi-channel images.\n- Decile portfolio: ranking stocks by predicted return and grouping them into ten bins; \"high-minus-low\" compares the top and bottom bins.\n- Sharpe ratio: return earned per unit of risk.\n- Fama–French alpha: the return left over after adjusting for common market risk factors.\n- Out-of-sample: testing on a later period (here 2021–2025) that the model did not see during training.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Although technical analysis remains widely used in practice, the need for manually constructed indicators is increasingly questioned as deep learning models can extract features directly from OHLC price data. This paper examines the standalone economic value of trading volume and manually constructed technical-indicator groups and whether adding these groups to OHLC candlestick charts provides incremental economic value. Using daily data for 1,707 Chinese A-share stocks from 2013 to 2025, we construct approximately 3.36 million stock-window samples and encode them as multi-channel images containing candlestick charts, trading volume, and seven widely used manually constructed technical indicators. The primary analysis uses a 2D CNN on these images; complementary tests apply a logistic regression, a 1D CNN, and an LSTM to numerical representations of the same samples. Out-of-sample performance from 2021 to 2025 is evaluated using decile portfolios, Sharpe ratios, Fama--French alphas, and formal pairwise tests. Our empirical results yield two central findings. First, specifications based separately on OHLC, trading volume, and each technical-indicator group produce significantly positive high-minus-low returns and factor-adjusted alphas, together with economically meaningful Sharpe ratios; the OHLC-only specifications generally perform best under the nonlinear models. Second, adding these technical-indicator groups to OHLC does not systematically improve any of these performance measures in our setting. Together, these results provide the first large-scale evidence from the Chinese A-share market on the standalone and incremental economic value of these technical-indicator groups across multiple representations and model architectures.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29281",
+   "title": "Project financing in vanishing forests: Do investors care about nature protection?",
+   "url": "https://arxiv.org/abs/2611.29281",
+   "authors": [
+    "Theodor Cojoianu",
+    "Mohammad Faour",
+    "Andreas Hoepner",
+    "Matthew Purslow",
+    "Khaladdin Rzayev",
+    "Ruoran Zhao"
+   ],
+   "label": "arXiv:2611.29281v1",
+   "primary_category": "q-fin.GN",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Using 9,037 project-loan pairs in 115 countries, the paper tests whether bank loan spreads and sponsor stock returns reflect a project's proximity to protected areas, nearby forest loss, and lenders' nature policies.",
+    "plain": "Large construction and energy projects, such as dams, mines or power plants, are often paid for with loans tied to one specific site. This study checks whether lenders charge higher interest when a project sits near protected nature or in areas where forest is disappearing. It finds that lenders charge more for protected-area proximity mainly when they also have explicit nature-risk policies, and the authors conclude that this pricing is not a strong push to stop serious harm to nature.",
+    "why": "Biodiversity loss is becoming a financial concern, and this paper ties it to specific physical sites rather than whole companies, which may matter for how banks and regulators think about nature risk. The text does not show how much this changes actual lending behaviour, so its practical reach is uncertain.",
+    "background": "- Project finance: loans repaid from the cash flow of one specific asset (for example, a plant or road), not the whole company.\n- Loan spread: the extra interest a borrower pays above a benchmark rate; a higher spread means the lender sees more risk.\n- Protected areas and forest loss: measures of how close a site is to legally protected land and how much forest has been cleared nearby.\n- Kunming-Montreal Global Biodiversity Framework: a 2022 international agreement setting nature-protection targets.\n- Abnormal returns: stock price moves beyond what would normally be expected, used here to see whether markets react to loan announcements.\n- Buffer zone: a distance band (here 1.5 km or 30 km) around a project used to define \"nearby\".",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Biodiversity risks are increasingly recognized by financial market participants, yet their measurement at the corporate-entity level obscures the locations and assets through which they arise. Project finance links identifiable physical assets to dedicated financing contracts, allowing us to examine this transmission more directly. By linking 9,037 project-loan pairs in 115 countries, we relate bank loan spreads to projects' proximity to protected areas, surrounding forest loss and lenders' nature policies. We find that lenders price proximity to protected areas only when they also have explicit nature risk policies and particularly within 1.5 km buffers from the project location. Realised forest loss around a project is priced more consistently than forest loss after the loan is signed, and risk pricing near protected areas strengthens after the Kunming-Montreal Global Biodiversity Framework. Listed company sponsors also experience negative, but short-lived, abnormal returns around loan signings for projects within 30 km of protected areas or in high-forest-loss landscapes. Our results suggest that while nature risk is partially priced in project finance, this is not a strong incentive to deter significant harm to nature.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.27274",
    "title": "Nonlinear Shrinkage for Higher Moments Estimation in Large Portfolios",
    "url": "https://arxiv.org/abs/2611.27274",

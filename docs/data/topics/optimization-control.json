@@ -3,46 +3,54 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27272",
-   "title": "Error-Corrected Physics-Informed Neural Operator for Optimal Control of Unmanned Aerial Vehicles under Uncertainty",
-   "url": "https://arxiv.org/abs/2611.27272",
+   "uid": "arxiv:2611.30376",
+   "title": "Low-Rank Tensor Representations for Efficient Multimarginal Optimal Transport",
+   "url": "https://arxiv.org/abs/2611.30376",
    "authors": [
-    "Oliver Lundqvist",
-    "Fabricio Oliveira"
+    "Johann Cl{\\'e}ment-Cottuz (UNIROUEN",
+    "LITIS",
+    "LITIS - App)",
+    "Gilles Gasso (INSA Rouen Normandie",
+    "LITIS",
+    "LITIS - App)",
+    "Maxime Berar (UNIROUEN",
+    "LITIS",
+    "LITIS - App)"
    ],
-   "label": "arXiv:2611.27272v1",
-   "primary_category": "math.OC",
+   "label": "arXiv:2611.30376v1",
+   "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A physics-informed DeepONet surrogate, trained only on the dynamics residual and corrected by one Newton step computed with a parallel scan, is used to solve open-loop optimal control of a fixed-wing UAV under parametric uncertainty across many scenarios at once.",
-    "plain": "The paper looks at how to plan flight paths for a drone when some of its physical settings are not known exactly. Instead of solving each possible case separately, it trains a neural network that predicts the drone's trajectories for all sampled cases in one go. A single mathematical correction step then tightens these predictions so the optimizer is not misled by small mistakes in the network.",
-    "why": "Planning under uncertainty usually means solving many similar problems, which is slow, so a faster way to do this could matter for robust vehicle control. The paper reports matching the accuracy of two standard solvers while running about 8 to 15 times faster on the benchmark it tested; the text does not show how well this carries over to other vehicles or real flights.",
-    "background": "- Optimal control: choosing inputs (e.g., control surfaces, throttle) over time to reach a goal at the lowest cost, subject to the laws of motion.\n- Parametric uncertainty: some model values (such as wind or mass) are unknown and are treated as a range of possible scenarios.\n- Neural operator (DeepONet): a neural network that learns a mapping from input functions or settings to whole solution curves, so it can be reused for new targets and time horizons.\n- Physics-informed training: the network is trained to satisfy the governing equations (the dynamics residual) rather than fitted to data from solved examples.\n- Newton step: one iteration of a classic root-finding method that nudges an approximate solution toward one that satisfies the equations.\n- Parallel scan: an algorithm that computes sequential time-step updates simultaneously on a GPU.\n- Adam and Ipopt: a gradient-based optimizer commonly used to train neural networks, and a standard nonlinear optimization solver, used here as baselines.",
+    "one_liner": "The paper proposes LRMOT, which restricts multimarginal optimal transport plans to tensors of bounded multilinear rank to cut the exponential cost of computing them, and reports approximation bounds and experiments showing faster runs with low transport cost.",
+    "plain": "Optimal transport is a way of finding the cheapest way to move a pile of material so it matches several target distributions at once. When many distributions are involved, the plan for moving things becomes a huge high-dimensional table whose size grows exponentially, so it quickly becomes too slow and memory-hungry. This paper restricts the plan to a compressed, structured form (low-rank tensors) that is much smaller to store and work with, and reports that the resulting algorithms run substantially faster while still giving low-cost solutions.",
+    "why": "Many problems that involve matching several probability distributions at once, such as combining multiple datasets or sensor views, run into this exponential cost. The text does not say how far the approach extends beyond the experiments it reports, so its wider reach is uncertain.",
+    "background": "- Optimal transport: finding the least-costly way to rearrange one distribution into another, given a cost for each move.\n- Marginals: the individual distributions a joint plan must match; multimarginal means more than two at once.\n- Transport plan: a table (tensor) saying how much mass moves between every combination of locations.\n- Tensor: a multi-dimensional array, a generalisation of a matrix to more than two indices.\n- Multilinear rank: a measure of how compressible a tensor is; low rank means it can be described by far fewer numbers.\n- Approximation bounds: guarantees on how close the restricted solution is to the true optimum.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We solve open-loop optimal control problems under parametric uncertainty using a physics-informed DeepONet that returns trajectories for all sampled scenarios in one evaluation. Trained only on the residual at generic controls, the operator is reused across targets and horizons. Because a gradient-based optimizer exploits surrogate errors, we correct the prediction by one Newton step on the dynamics, computed for all scenarios and times by one parallel scan. The corrected state has a second-order error bounded by the residual alone, and the corrected cost is honest for every control up to the sampling error. On a fixed-wing UAV benchmark, the corrected operator matches the accuracy of a batched Adam solver and an Ipopt solver at equal sample size and is 8 times faster than the Adam solver on the same GPU at a few hundred scenarios and 15 times faster than Ipopt on a CPU.",
+   "abstract": "Multimarginal Optimal Transport (MOT) suffers from exponential computational and memory costs in the number of marginals, as transport plans are represented by high-dimensional tensors. We introduce Low-Rank Multimarginal Optimal Transport (LRMOT), which restricts transport plans to tensors with bounded multilinear rank, providing a compact and structured representation of multimarginal couplings. This structure enables efficient algorithms with a low memory footprint. We establish approximation bounds for the resulting low-rank formulations and demonstrate experimentally that the proposed algorithms substantially reduce computational time while achieving solutions with low transport cost.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27484",
-   "title": "Boundary gradient asymptotics for superquadratic viscous Hamilton--Jacobi equations via optimal control",
-   "url": "https://arxiv.org/abs/2611.27484",
+   "uid": "arxiv:2611.30824",
+   "title": "On convergence rate bounds for Markovian push-sum algorithms",
+   "url": "https://arxiv.org/abs/2611.30824",
    "authors": [
-    "S. E. Nikitin"
+    "Bal\\'azs Gerencs\\'er",
+    "Mikl\\'os Kornyik"
    ],
-   "label": "arXiv:2611.27484v1",
-   "primary_category": "math.AP",
+   "label": "arXiv:2611.30824v1",
+   "primary_category": "math.OC",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper derives sharp boundary gradient asymptotics for maximal solutions of a superquadratic viscous Hamilton–Jacobi equation on arbitrary bounded C² domains, resolving a Lasry–Lions conjecture for bounded state-dependent terms and extending to singular terms, using stochastic optimal control and boundary blow-up analysis.</one_liner>\n<parameter name=\"plain\">The paper studies a equation that describes how a quantity u varies in space and how steeply it rises near the edge of a region, when the rise is driven by a power of the slope greater than 2. The authors find the precise way the slope grows as one approaches the boundary, for any smooth bounded region, and they also handle cases where the driving term becomes singular near the edge. They get these results by recasting the equation as a control problem where a random process is steered at lowest cost, and by studying how the solution blows up near the boundary.",
-    "plain": "",
-    "why": "The text says the result settles a conjecture of Lasry and Lions and removes the geometric restrictions that earlier boundary asymptotics needed, which matters for the theory of such equations. Its link to applications beyond this theory is not stated in the text, so I cannot say more.",
-    "background": "- Hamilton–Jacobi equation: a nonlinear partial differential equation describing optimal cost or value functions in control problems.\n- Viscous term (−Δu): a diffusion or noise term that smooths the solution; here the equation is elliptic.\n- Superquadratic gradient term |∇u|^p with p > 2: the nonlinearity grows faster than the square of the slope, which drives steep boundary behavior.\n- Maximal solution: the largest solution of the equation, which is the one that corresponds to the optimal control value.\n- Boundary gradient asymptotics: precise description of how the slope of the solution behaves as one approaches the boundary.\n- Stochastic optimal control: choosing controls for a randomly moving system to minimize an expected cost; dynamic programming is the standard tool for it.\n- Blow-up analysis: rescaling near a point where the solution becomes very large to extract a limiting profile.\n- Ergodic problem: a long-run average-cost version of the control problem.",
+    "one_liner": "The paper derives an almost sure upper bound on the convergence rate of push-sum averaging algorithms whose message-passing events follow a Markov chain or hidden Markov model, gives tools to make that bound cheap to compute, and proposes a transformation that provably improves the bound.",
+    "plain": "The paper studies distributed computing, where many connected devices each hold a number and try to agree on the average by passing messages to one another. Here the timing of who sends to whom follows a random pattern with memory (a Markov chain or hidden Markov model), and the authors work out a guaranteed bound on how fast the devices converge. They also give methods to compute that bound more cheaply and a way to modify the scheme so the bound gets better, with numerical experiments supporting all three parts.",
+    "why": "Reliable guarantees on how quickly distributed averaging converges matter for sensor networks and decentralized learning, where communication is unreliable or asymmetric. The text does not say how far the results extend beyond the numerical examples it reports, so the practical reach is unclear from the abstract alone.",
+    "background": "- Consensus / averaging: nodes in a network repeatedly combine their values so all converge to a common value, ideally the average.\n- Push-sum: a variant that works on directed networks where links are one-way, tracking an extra weight to correct for uneven sending.\n- Markov chain: a random process where the next state depends only on the current state; a hidden Markov model adds unobserved states that drive what is seen.\n- Almost sure convergence: convergence that holds with probability one, not just on average.\n- Convergence rate: how quickly the error shrinks over iterations, often expressed as an exponential decay bound.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study the boundary behavior of the maximal solution of \\[ -\\Delta u + |\\nabla u|^{p} + \\lambda u = f \\] on arbitrary bounded $C^{2}$ domains, where $p > 2$ and $\\lambda > 0$. For bounded state-dependent terms $f$, we resolve a conjecture of Lasry and Lions by establishing sharp boundary gradient asymptotics without geometric restrictions on the domain. Previously, such asymptotics were established only for certain classes of domains with additional restrictions on $p$ and $f$. We also extend the analysis to state-dependent terms that may be singular near the boundary and obtain sharp boundary profiles and gradient asymptotics. Our approach relies on stochastic optimal control and boundary blow-up analysis. Dynamic programming estimates and comparisons of near-optimal trajectories establish tangential invariance of boundary blow-up limits, leading to the identification of one-dimensional profiles and the asymptotic formulas. For the associated state-constrained control problem, we establish sharp asymptotics for the minimizing feedback and deduce its admissibility and optimality, with corresponding results for the ergodic problem.",
+   "abstract": "In this work we establish an upper bound on the almost sure convergence rate of a broad class of push-sum algorithms, more precisely for those where message passing events follow a Markovian dynamics, or a Hidden Markov Model. In this context, having a computationally accessible quantity at hand is of top priority; we thus formulate tools to cut down the complexity of obtaining the stated bound. Furthermore, we introduce a transformation to adjust a given push-sum scheme in a way that the bound on the rate provably improves -- and often so does the true convergence rate. Theoretical understanding is complemented by numerical results, where the quality of all three directions is demonstrated: for the bound on the rate, for the computational complexity and for the improvement strategy.",
    "source": "arxiv"
   },
   {

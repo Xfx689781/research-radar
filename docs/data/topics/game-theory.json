@@ -3,50 +3,49 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27545",
-   "title": "Epistemic Social Learning: Latent Behavioral Structure under Endogenous Multi-Agent Interaction",
-   "url": "https://arxiv.org/abs/2611.27545",
+   "uid": "arxiv:2611.28447",
+   "title": "Reimbursement as a Revenue Instrument in Costly Clock Auctions",
+   "url": "https://arxiv.org/abs/2611.28447",
    "authors": [
-    "Jainendra Shukla",
-    "Dhruv Jaiswal",
-    "Divyanshi Beniwal",
-    "Kiriti Kanjilal"
+    "Miriam Nelson (Independent Researcher)",
+    "Jack Stanick (Boston College)",
+    "Edwin Lock (King's College London)",
+    "Francisco Marmolejo-Coss\\'{\\i}o (Boston College",
+    "IOG)"
    ],
-   "label": "arXiv:2611.27545v1",
-   "primary_category": "cs.MA",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "Proposes Epistemic Social Learning (ESL), which couples fast per-interaction Bayesian beliefs about opponents with slower online learning of population-shared behavioral prototypes, and evaluates it on twelve synthetic 3x3 games against other online latent-adaptation methods.",
-    "plain": "When you play a repeated game against other agents, what you do changes what you get to see of them, so your picture of their behavior depends on your own choices. This paper proposes a learning method that keeps a quick, per-game guess about each opponent and also slowly learns a shared set of typical behavior patterns across a population. On twelve simulated small games, the authors report that it had the lowest total regret after opponents switched strategies, compared with the other online methods they tested.",
-    "why": "The paper makes a point that a model can predict observed behavior well yet still adapt poorly when opponents change, because the learner's own actions shape what it observes. This matters for any setting where learning and acting feed back on each other, such as multi-agent AI or economic modeling, though the evidence here is limited to synthetic games and its wider relevance is unclear.",
-    "background": "- Game theory: a small game (here 3x3) is a setting where each player picks one of three actions and payoffs depend on everyone's choices.\n- Regret: how much worse an approach did compared with the best fixed choice in hindsight; \"post-switch regret\" measures this after an opponent changes behavior.\n- Bayesian belief: a running probability estimate about hidden facts (here, an opponent's strategy), updated as new observations arrive.\n- Stochastic approximation: a standard mathematical framework for analyzing learning rules updated step by step with noisy data.\n- Endogenous interaction: the data a learner sees depends on the learner's own actions, which complicates standard learning analysis.\n- Prototypes: representative patterns summarizing typical behavior across many agents.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "In multi-agent interaction, a learner's actions shape the observations from which it infers other agents' behavior. A behavioral model may predict these observations well yet support poor adaptation when opponents change. We introduce Epistemic Social Learning (ESL), which couples fast, interaction-specific Bayesian beliefs with slower online learning of population-shared behavioral prototypes. Belief-conditioned decisions influence subsequent observations and, in turn, the representations learned from them. Under explicit regularity and averaging assumptions, we provide a conditional stochastic-approximation characterization of these coupled dynamics. Across twelve synthetic $3\\times3$ cooperative, coordination, and adversarial games, ESL achieves the lowest aggregate post-switch regret among the evaluated online latent-adaptation methods, including a switch-aware Bayesian filter. Additional experiments examine observation loss, noise, and asymmetric incentives. These findings illustrate how predictive fit can differ from decision-relevant adaptation under policy-dependent interaction.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26800",
-   "title": "Incentive Compatible Mechanisms for Sequential Fair Resource Allocation with Private Demands",
-   "url": "https://arxiv.org/abs/2611.26800",
-   "authors": [
-    "Ramtin Salamat",
-    "Sean R. Sinclair",
-    "Seyed M. R. Iravani"
-   ],
-   "label": "arXiv:2611.26800v1",
+   "label": "arXiv:2611.28447v1",
    "primary_category": "cs.GT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper studies a strategic version of online fair resource allocation where agents privately know their demands and may misreport them, characterizes incentive-compatible allocation rules, identifies conditions for a simple cap-structured optimal mechanism, and approximates the optimum via a longest-path reduction on a directed acyclic graph.",
-    "plain": "A planner has to hand out a divisible resource over several rounds to people whose needs only they know. Since no money changes hands, people may exaggerate or understate their needs to get more, so the paper designs allocation rules that make honest reporting the best choice. The authors find conditions under which the best such rule is a simple capped one, and they give a computational method to approximate the optimal rule.",
-    "why": "Many nonprofit and public allocation settings (food, housing, or aid distribution) rely on self-reported need and cannot use payments to enforce honesty. The numerical experiments suggest that ignoring strategic behavior can be substantially costlier than designing for it, though the text does not show how broadly this applies.",
-    "background": "- Fair allocation: splitting a shared, divisible resource among agents so that no one is treated unjustly.\n- Online/sequential problem: decisions are made stage by stage, without knowing future demands.\n- Mechanism design: designing the rules of a process so that participants' self-interest leads to a desired outcome.\n- Incentive compatibility (IC): a rule is IC if reporting your true demand is never worse for you than lying.\n- Monetary transfers unavailable: the planner cannot use payments to discourage misreporting, so the rule itself must do the work.\n- Dynamic programming: solving a multi-stage decision problem by working backward through possible states; here it is discretized.\n- Longest-path problem on a directed acyclic graph: a standard graph problem used here as a computational reformulation of the optimization.",
+    "one_liner": "The paper studies whether a seller in a clock (ascending-price) auction can raise net revenue by reimbursing bidders' per-round participation costs, such as blockchain transaction fees, and how those reimbursements should be timed, using a linear program for incentive-compatible payments plus two-bidder and four-bidder examples and learning-agent experiments.",
+    "plain": "In an auction where prices climb and bidders must actively confirm they are still in, each confirmation can cost the bidder something, such as a blockchain transaction fee. The paper asks whether the seller should pay some of these costs back, and when in the auction those payments should happen. In a two-bidder example, paying back only the final confirmation earned the seller the most net revenue among the schedules the authors checked, and in a four-bidder example, partial payments in earlier rounds did better.</plain>\n<parameter name=\"why\">Auctions that run on blockchains make per-bid fees a real design issue, so the question of whether a seller should subsidize them has practical weight. The findings are limited to the specific examples and schedules analyzed, so they show that the best timing can depend on the auction setting rather than giving a general rule.",
+    "why": "",
+    "background": "- Ascending (clock) auction: the price rises over rounds, and bidders drop out when it gets too high.\n- Participation cost: a small fee a bidder pays each time they confirm they are still bidding.\n- Reimbursement: the seller paying part or all of those fees back, which can encourage bidders to stay longer.\n- Net revenue: what the seller receives from the sale minus what the seller pays out in reimbursements.\n- Incentive compatibility: a design where bidders' best strategy is to bid honestly, so their behavior can be predicted.\n- Linear program: a standard optimization method for finding the cheapest payments that meet such constraints.\n- Learning bidders: simulated bidders that adjust their behavior from experience rather than solving the game in advance.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study a strategic variant of the canonical online fair allocation problem, where a planner must sequentially allocate a divisible resource to agents with privately known demands. At each stage, the planner announces an allocation rule, the agent reports their demand, and the planner allocates resources according to the rule and the reported demand. Unlike the standard model, we allow agents to strategically misreport their needs, as can arise in nonprofit settings where demand is self-reported and monetary transfers are unavailable. We characterize the structure of incentive-compatible (IC) allocation rules in this model, and use this to identify conditions under which the optimal mechanism has a simple cap structure. We then develop an approximation method for the optimal IC mechanism through a careful reduction of the discretized dynamic program to a longest-path problem on a directed acyclic graph. Numerical experiments show that ignoring strategic reporting can be substantially more costly than imposing incentive compatibility.",
+   "abstract": "Bidders in an ascending auction may incur a cost each time they choose to continue, for example when bidding requires a blockchain transaction. We therefore investigate whether a seller can increase net revenue by reimbursing these costs, and how reimbursements should be distributed across auction rounds. We study auctions in which bidders must actively confirm their participation as prices rise and the seller commits to reimbursements before bidding begins. We first show how a linear program can find the cheapest payments that keep bidders' strategies optimal when participation costs are introduced. Maximizing net revenue, however, can require changing those strategies. In a two-bidder example, we identify conditions under which reimbursing only the last scheduled decision earns the most net revenue among the schedules we analyze. This policy outperforms no reimbursement, full reimbursement, and the cheapest policy that maintains the original strategies. Some auctions end earlier than under full reimbursement, but the seller's savings exceed the resulting loss in sale receipts. Experiments with learning bidders reproduce these revenue comparisons. In a four-bidder example, they also identify a policy with partial reimbursements in earlier rounds that earns more than reimbursing only the final decision. These results show how the seller's preferred reimbursement timing can change across auction environments. Finally, we explain how requiring bidders to confirm continued participation limits the prices they can be charged when messages are missing, and discuss the requirements for implementing these auctions on a blockchain.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28974",
+   "title": "Stackelberg Games with Convex Risk Measures",
+   "url": "https://arxiv.org/abs/2611.28974",
+   "authors": [
+    "Arunesh Sinha"
+   ],
+   "label": "arXiv:2611.28974v1",
+   "primary_category": "cs.GT",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Studies finite Stackelberg (leader-follower) games where payoffs are random due to environmental uncertainty and each player scores outcomes with a convex monetary risk measure, covering follower response uniqueness, hardness, an MPEC reformulation, and a smoothed implicit-gradient method with an additive approximation guarantee.",
+    "plain": "This paper looks at a two-player \"leader and follower\" game where the outcome is uncertain because of the environment, and each player judges that uncertain outcome with a cautious, risk-aware scoring rule rather than a simple average. The authors give conditions under which the follower's best response is unique and well-behaved, show that even finding an approximate equilibrium is computationally hard, and propose a mathematical reformulation together with a practical iterative method. They report experiments on synthetic and real data.",
+    "why": "Leader-follower commitments under uncertainty, such as security or pricing decisions, are a natural setting for risk-aware evaluation, so the work connects game theory with risk management. The text does not indicate how the results would be used in practice, and the approximation guarantee is conditional on the gradient method reaching global optimality.",
+    "background": "- Stackelberg game: a leader commits to a strategy first, and a follower best-responds after seeing it.\n- Mixed strategy: a randomized choice over actions, described by probabilities.\n- Convex risk measure: a function that scores an uncertain reward, penalizing downside risk, with properties such as monotonicity and translation equivariance (adding a fixed amount to outcomes adds it to the score).\n- Optimistic equilibrium: a solution concept where the follower breaks ties in the leader's favor.\n- NP-hard: a class of problems believed to lack efficient exact algorithms in the worst case.\n- Mathematical program with equilibrium constraints (MPEC): an optimization problem whose constraints include another player's best-response condition.\n- Implicit gradient: a way to compute how a solution changes as parameters change, without solving the full inner problem explicitly.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Stackelberg games have important real-world applications in which reliable commitments require accounting for multiple sources of uncertainty. We study finite Stackelberg games in which environmental uncertainty makes each mixed strategy profile induce a random reward, and each player evaluates that reward with a convex monetary risk criterion. In reward form, it is a concave, monotone, translation-equivariant utility and also represented as penalized expected reward over distributions of environmental outcomes. We provide two conditions under which the follower has a unique continuous mixed response, which leads to inducible optimistic equilibrium. We show that even approximate equilibrium computation is NP Hard. We then derive an exact mathematical program with equilibrium constraints for the problem. We also develop an action entropy smoothed implicit-gradient method and prove an end-to-end additive approximation guarantee under the assumption that the gradient method reaches global optimality. We validate our scalability and other results with experiments on synthetic and real data.",
    "source": "arxiv"
   },
   {

@@ -3,53 +3,49 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26828",
-   "title": "Graph-XGB: A Hybrid GNN Framework for Outdoor-to-Indoor 5G Signal Reconstruction via Aerial-Only UAV RF Sensing",
-   "url": "https://arxiv.org/abs/2611.26828",
+   "uid": "arxiv:2611.30008",
+   "title": "SA-GLRT-D: Sidelobe-Aware GLRT-Based Detector for FMCW Radar",
+   "url": "https://arxiv.org/abs/2611.30008",
    "authors": [
-    "David Hason Rudd",
-    "Eunkwang Shin",
-    "Nithiwat Pattrapong",
-    "Huan Huo",
-    "Xiangmeng Wang"
+    "Jiachen Zhu",
+    "Fangjiong Chen",
+    "Jie Wu",
+    "Ming Xia"
    ],
-   "label": "arXiv:2611.26828v1",
-   "primary_category": "cs.LG",
+   "label": "arXiv:2611.30008v1",
+   "primary_category": "eess.SP",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Graph-XGB combines a modified graph neural network (SpiderGNN), PCA compression, and per-target XGBoost regressors to predict indoor 5G signal strength (RSSI, RSRP) from UAV measurements taken only outside a 10-floor building, with interference-dependent metrics (RSRQ, SNR, CQI) predicted less accurately.</one_liner>\n<parameter name=\"plain\">Mobile phone signals often weaken badly when they pass through building walls, so indoor coverage is hard to plan. This paper uses drones flying outside a building to estimate the signal strength inside it, without taking any indoor measurements as model inputs. The authors report that their method predicts two signal-strength measures (RSSI and RSRP) better than a simpler baseline, while predicting measures affected by interference less reliably.</plain>\n<why>Planning indoor 5G and future 6G coverage without sending people inside to measure is a practical problem for operators, and the paper's use of outdoor-only drone data is the distinctive part. The text reports results on one building's dataset of 613 nodes, so how well it generalizes to other buildings is not shown here.</why>\n<background>\n- Outdoor-to-indoor (O2I) attenuation: signal loss as radio waves pass through exterior walls, which grows at higher frequencies (mid-band, mmWave, sub-THz).\n- UAV (drone) RF sensing: using drones to carry radio receivers and record signal levels.\n- RSSI, RSRP, RSRQ, SNR, CQI: standard 5G/LTE signal-quality measures (received power, reference-signal power, reference-signal quality, signal-to-noise ratio, channel quality index).\n- Graph neural network (GNN): a model that passes information between connected points in a graph, here locations in a building.\n- PCA (principal component analysis): a method that compresses many features into fewer ones while keeping most of the variation.\n- XGBoost: a gradient-boosted decision-tree regression method.\n- R²: a score for how well predictions match measured values; 1 is perfect, 0 is no better than the average.\n</background>\n<difficulty>research-level</difficulty>\n</invoke>",
-    "plain": "",
-    "why": "",
+    "one_liner": "Proposes SA-GLRT-D, a generalized likelihood ratio test (GLRT) detector for FMCW radar that models the spectral leakage of the cell under test and extends single-cell detection to local-region detection, with a fast implementation and parameter initialization scheme.",
+    "plain": "Radar systems must decide whether a reflected signal means a real object is present, but nearby objects and the radar's own signal spreading can create false echoes that hide real targets. This paper proposes a detector that accounts for how the signal from the target being tested spreads into neighboring frequency bins, and makes the decision jointly with estimating that spreading and suppressing the resulting side-echoes. The authors report simulation and real-measurement results showing high detection accuracy with a steady false-alarm rate and reasonable computing cost.",
+    "why": "Reliable target detection in dense, multi-object scenes matters for automotive and other FMCW radar applications. The text does not give quantitative comparisons with existing methods, so the size of the improvement cannot be judged from the abstract alone.",
+    "background": "- FMCW radar: sends a frequency-swept signal and infers range and speed from the frequency of the returning echo.\n- Detection as hypothesis testing: decide between \"target present\" and \"only noise/clutter.\"\n- GLRT: a standard statistical test that replaces unknown parameters with their best estimates from the data.\n- CFAR (constant false alarm rate): a thresholding method that adapts to local noise so the rate of false alarms stays fixed.\n- Spectral leakage and sidelobes: a finite observation window spreads a strong echo's energy into neighboring frequency bins, which can mimic or mask other targets.\n- Reference cells: nearby bins used to estimate background level; contamination by other targets degrades this estimate.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper investigates adaptive detection for frequency-modulated continuous-wave (FMCW) radar in multi-target complex scenarios, where reference-cell contamination, spectral leakage from the cell under test (CUT), and the resulting sidelobe interference severely degrade detection performance. A sidelobe-aware detector based on the generalized likelihood ratio test (GLRT), termed SA-GLRT-D, is proposed. Unlike conventional filtering-then-constant false alarm rate (CFAR) schemes, the proposed method explicitly accounts for the non-ideal frequency-domain energy spreading of the CUT induced by the finite-window effect. Accordingly, conventional single-cell target detection is extended to local-region detection, and decision statistic construction, CUT-related parameter estimation, and sidelobe interference suppression are jointly accomplished within a unified hypothesis-testing framework. Furthermore, to reduce computational complexity, a fast implementation of SA-GLRT-D is developed, together with a dedicated parameter initialization strategy to enhance the stability of numerical optimization. Simulation and real-measurement results demonstrate that the proposed method achieves high-accuracy target detection while maintaining a constant false alarm rate, with favorable computational efficiency.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28813",
+   "title": "Beyond Raw IQ: Compact Semantic Representations for Task Oriented Automatic Modulation Classification",
+   "url": "https://arxiv.org/abs/2611.28813",
+   "authors": [
+    "Omm Swarup",
+    "Shrishail M. Hiremath"
+   ],
+   "label": "arXiv:2611.28813v1",
+   "primary_category": "cs.NI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper tests whether learned low-dimensional semantic representations (4 to 64 dimensions) can replace a 2048-dimensional raw IQ signal representation for automatic modulation classification under noise, with 16 dimensions reported as the best trade-off.",
+    "plain": "Wireless devices must figure out how a radio signal was encoded (its \"modulation\") before they can decode it. This paper asks whether the raw signal data, which is large, can be squeezed into a much smaller learned summary that still lets a classifier tell the modulation types apart, even when the signal is noisy. The authors report that a 16-number summary worked best overall, at 128 times compression, and kept classification accuracy at about 49% averaged over the tested noise levels.",
+    "why": "Smaller signal representations could reduce the cost of storing, processing and transmitting radio data, which matters for edge devices and networks. The text does not establish how this compares with the state of the art, and the accuracy figure is modest, so its practical value is still uncertain.</why>\n<parameter name=\"background\">- Modulation: the way information is encoded onto a radio carrier wave (for example, different digital schemes).\n- IQ data: a standard way of recording a radio signal as two numbers per sample (in-phase and quadrature components).\n- Automatic modulation classification (AMC): automatically identifying which modulation scheme a received signal uses.\n- Compression ratio and dimensionality reduction: representing data with fewer numbers; here 2048 numbers are reduced to 16.\n- Learned semantic representation: a compact summary produced by a trained model rather than the raw measurements.\n- SNR (signal-to-noise ratio): how strong the signal is compared with background noise; lower means noisier.\n- CNN (convolutional neural network): a common type of neural network for pattern recognition.\n- Macro-F1: an accuracy-style score that averages performance equally across signal classes.</background>\n<parameter name=\"difficulty\">intermediate",
     "background": "",
     "difficulty": "",
     "ai": true
    },
-   "abstract": "Delivering robust In-Building Coverage (IBC) is critically impeded by severe Outdoor-to-Indoor (O2I) attenuation, a constraint that intensifies as deployments move from 5G mid-band towards mmWave and prospective 6G sub-THz carriers, where losses of 60-80 dB have been reported across modern building envelopes. While Unmanned Aerial Vehicles (UAVs) offer scalable exterior RF sensing platforms, a fundamental inversion problem persists: interior 3D signal states cannot be directly sampled from constrained exterior flight paths. This paper proposes Graph-XGB, a hybrid inference framework that decouples spatial topology reasoning from non-linear signal regression to resolve this challenge. A modified SpiderGNN encoder, operating on a topology-aware graph constructed with a physically grounded Floor-Aware 3D Distance metric and Bridge Edge Guarantees, propagates UAV boundary measurements into 128-dimensional indoor embeddings. Principal Component Analysis (PCA) compresses these into a 10-dimensional manifold retaining 96.6% of embedding variance, fused with raw spatial features and decoded by independent, physics-tailored XGBoost regressors. This decoupling mitigates the optimization conflict between smoothly decaying path-loss signals and volatile interference-dependent metrics. Evaluated on a real-world 5G NR dataset of 613 verified nodes spanning the 10 floors of a single building, Graph-XGB attains the strongest accuracy among the architectures compared, with $R^2$ of 0.759 (RSSI) and 0.770 (RSRP), improvements of 35.5% and 64.9% over the SimpleGNN baseline, using no interior RF measurement as a model input; indoor observations enter only as training supervision, with evaluation on held-out internal nodes. Interference-dependent targets (RSRQ, SNR and CQI) remain bounded well below the path-loss metrics, delimiting the reach of purely spatial inference.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.27970",
-   "title": "On the Complete Feature Set for ADHD Classification in Children and Adolescents Based on EEG Signals",
-   "url": "https://arxiv.org/abs/2611.27970",
-   "authors": [
-    "Javier Sanchis",
-    "\\'Alvaro Navarro",
-    "Jorge Garc\\'ia-Carrasco",
-    "Tahar Kechadi",
-    "Juan Trujillo"
-   ],
-   "label": "arXiv:2611.27970v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "A curated, quality-documented EEG dataset from 156 children and adolescents with and without ADHD, released with 115 precomputed feature definitions across seven feature families on shared time windows, plus a descriptive participant-held-out classification example.",
-    "plain": "This paper describes a shared collection of brain-wave (EEG) recordings from young people, some of whom have ADHD, made while they did attention-related tasks. The authors cleaned and aligned the recordings so that different kinds of measurements can be compared fairly on the same time segments, and they noted the quality checks they made along the way. They also show a simple example of predicting group membership from the measurements, but say these results do not show that the tests can diagnose ADHD.",
-    "why": "Many EEG studies of ADHD use different preprocessing and time windows, which makes results hard to compare; a common, documented dataset could make those comparisons more consistent. Its value depends on how well the released files are used, and the text itself does not claim it will change clinical practice.",
-    "background": "- EEG (electroencephalography): recording electrical activity from the scalp using electrodes.\n- ADHD: a neurodevelopmental condition affecting attention, activity level and impulse control.\n- Feature: a numerical summary computed from a signal, such as power in a frequency band.\n- Feature family: a group of related measurement types (seven are compared here).\n- Preprocessing and artefacts: cleaning steps, and unwanted signals such as eye movement or muscle noise.\n- Participant-held-out evaluation: testing a model on people it never saw during training, so the same person does not appear in both sets.\n- XGBoost: a common machine-learning method that combines many decision trees.\n- Repeated measures: several recordings from the same person, which must be handled carefully in analysis.\n- Diagnostic validity: whether a test reliably identifies who has a condition; the paper states this is not established.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Attention-deficit/hyperactivity disorder is a neurodevelopmental condition that can affect attention, activity and impulse control. Electroencephalography (EEG) records brain activity as children and adolescents perform cognitive tasks. However, comparing features derived from these recordings requires consistent signal preparation, shared analysis windows and documented quality decisions. We curated 669 existing BALLADEER recordings from 156 participants across five task conditions so that researchers can compare seven EEG feature families on the same time intervals for each participant and task. The dataset links continuous signals to precomputed measurements from 115 feature definitions or templates and records the quality decisions made for each recording. Analyses must still account for repeated measurements within participants, residual artefacts and differences between acquisition systems. Technical validation covered signal integrity, numerical checks on feature estimators and completeness of the released files. In every task, the median proportion of recording time retained after preprocessing was 100%. To illustrate reuse, we report saved participant-held-out evaluations comparing XGBoost using all seven families on eight-second windows with a predictor based only on recruitment-group prevalence in the training fold. Recruitment-group discrimination was stronger in Robots than in the three Slackline conditions. These descriptive results from overlapping cohorts do not establish diagnostic validity. The dataset, curation software and aggregate results for the predictive example are publicly available.",
+   "abstract": "Automatic modulation classification (AMC) is an important component of modern wireless communication systems, but conventional signal representations can be expensive to store, process, and communicate, particularly under noisy channel conditions. This work investigates whether learned semantic representations can provide a compact alternative to high-dimensional in-phase and quadrature (IQ) representations while retaining robustness to noise. Starting from a 2048-dimensional IQ representation, we evaluate learned semantic representations with dimensions of 4, 8, 16, 32, and 64. Across the evaluated configurations, a 16-dimensional representation provides the strongest overall trade-off between classification performance, robustness, and representation size. The resulting representation achieves a 128x compression ratio and a 99.22% reduction in dimensionality. We further evaluate representation stability across signal-to-noise ratios (SNRs), compare semantic representations with a raw-IQ CNN, analyze per-class robustness, and perform five-seed validation. The five-seed evaluation produces an average accuracy of (49.22 +- 0.52)% and Macro-F1 of (49.27 +- 0.53)% across the evaluated SNR range. These results indicate that learned semantic compression can produce a substan- tially smaller representation while preserving useful classification information and improving geometric stability under noise.",
    "source": "arxiv"
   },
   {

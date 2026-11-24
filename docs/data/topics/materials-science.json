@@ -3,53 +3,53 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27938",
-   "title": "Group-III doping of the p-type oxide SnO",
-   "url": "https://arxiv.org/abs/2611.27938",
+   "uid": "arxiv:2611.29889",
+   "title": "Unveiling the Complex high-pressure phases of Sodium at the Melting Curve Minimum via Data-Drive Crystal Structure Prediction",
+   "url": "https://arxiv.org/abs/2611.29889",
    "authors": [
-    "Nicola Gutmann",
-    "Georg Hoffmann",
-    "Aidan Flynn Campbell",
-    "Jonas Laehnemann",
-    "Oliver Bierwagen"
+    "Zhenyu Wang",
+    "Chengqian Zhang",
+    "Xiaoyang Wang",
+    "Haiyang Niu",
+    "Jian Lv",
+    "Han Wang"
    ],
-   "label": "arXiv:2611.27938v1",
+   "label": "arXiv:2611.29889v1",
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Molecular-beam-epitaxy growth of Al-, Ga- and In-doped p-type SnO films, reporting Hall-measured hole concentrations, doping efficiencies, and an unexpected acceptor behavior for Al that contradicts a prior calculation.",
-    "plain": "Tin monoxide is a transparent oxide that conducts electricity by carrying positive charges (\"holes\"), and making it conduct well depends on adding small amounts of other elements. This paper grew thin films of tin monoxide with aluminium, gallium, or indium added, and measured how many holes each dopant produced. The hole counts stayed low, peaking around 10^19 to 3×10^19 per cubic centimetre, and aluminium behaved unexpectedly as a hole-making dopant, which the authors could not fully explain even after growing films in an oxidizing atmosphere.",
-    "why": "Good p-type oxides are scarce, so a clear picture of why SnO stops at modest hole densities matters for transparent electronics. The text suggests the limit may reflect basic defect chemistry in SnO, but the authors leave the explanation open, so this is a measured finding rather than a settled answer.",
-    "background": "- SnO (tin monoxide) is a transparent oxide semiconductor studied as a p-type (hole-conducting) material.\n- Dopants are small amounts of foreign atoms added to change conductivity; group-III elements (Al, Ga, In) are typically expected to act as acceptors in SnO, meaning they add holes.\n- Hall measurements determine the sign and density of charge carriers in a film.\n- Doping efficiency is the fraction of added dopant atoms that actually produce a carrier.\n- Molecular beam epitaxy is a method of growing thin films one atomic layer at a time under vacuum.\n- Oxidation state (e.g., Al1+ vs Al3+) describes how many electrons an atom has given up; the authors suspect a different charge state of Al explains its behavior.\n- The text gives only the abstract-level summary; full methods, error bars, and defect calculations are not included here.",
+    "one_liner": "Combines CALYPSO structure prediction with concurrent-learning Deep Potential models to search for candidate crystal structures of high-pressure sodium phases near its melting-curve minimum, and compares their enthalpy, Gibbs free energy, and solid-liquid coexistence behavior.",
+    "plain": "Sodium, a simple metal, forms many complicated crystal arrangements under pressure, and several of these observed in experiments have never had their atomic layouts worked out. The authors used computer searches over more than 1.6 million candidate configurations, guided by machine-learned interaction models, to propose atomic arrangements for these phases. They report that one known structure is recovered, and that several candidate structures are energetically close to one another and to established sodium phases near the melting minimum.",
+    "why": "Sodium's unusually many high-pressure phases are a known puzzle, and the paper offers specific structural models that experimentalists could test against measured diffraction data. The text reports that the candidates are close in stability and that the ranking depends on model accuracy, so the conclusions are provisional rather than settled.",
+    "background": "- Crystal structure: the repeating three-dimensional arrangement of atoms in a solid; phases are different such arrangements of the same material.\n- Melting curve: the line on a pressure-temperature plot showing where a solid melts; its minimum is where melting temperature is lowest.\n- Enthalpy and Gibbs free energy: energy-like measures used to judge which structure is most stable at given pressure and temperature (the lower, the more favored).\n- Crystal structure prediction: computer searches that generate and rank possible atomic arrangements without prior experimental structure.\n- Deep Potential models: machine-learned interatomic potentials that approximate quantum-mechanical forces much faster than direct calculation; concurrent learning means the training set is expanded iteratively during the search.\n- First-principles calculations: energy calculations from quantum mechanics without fitted parameters.\n- Solid-liquid coexistence simulations: simulations that find the temperature at which solid and liquid are in equilibrium.\n- Labels such as tI50 or oC120 denote crystal lattice type (tetragonal, orthorhombic, etc.) and the number of atoms in the unit cell.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Al-, Ga-, and In-doped tin monoxide (SnO) films were grown by molecular beam epitaxy. Hall measurements reveal acceptor character of all investigated group-III dopants in SnO, which correspond to theoretical calculations and previous experiments for Ga and In, but contradicts theoretical calculations predicting donor character for Al in SnO. Doping concentrations of 10e18-1e22 cm-3 were tested and maximum hole concentrations of 2e19, 3e19, and 1e19 cm-3 with doping efficiencies of 3 percent, 9 percent, and 1 percent were found for Al, Ga, and In, respectively. The observed doping limit in the mid e19 cm-3 aligns with the limits observed in literature for different dopants, hinting to fundamental aspects of the SnO defect chemistry. Due to the unexpected Al acceptor behavior, we hypothesized Al1+ being present instead of Al3+. To stabilize the higher Al3+ oxidation state, another sample series of Al-doped SnO was grown in an oxidizing atmosphere. Despite the oxidizing atmosphere, these samples showed p-type character. A more complex defect chemistry is thus expected to explain the Al acceptor character.",
+   "abstract": "Sodium exhibits a remarkable concentration of complex crystalline phases near its melting-curve minimum, yet the atomic arrangements of several experimentally observed phases remain unresolved. Here, we combine CALYPSO crystal structure prediction with Deep Potential models developed through concurrent learning to explore this structural landscape. Searches over more than 1.6 million configurations recover the previously reported $I4/m$ structure of $tI50$ and identify candidate atomic arrangements for $oC120$ and $aP90$, together with three additional low-enthalpy structures, $tI52$, $oP72$, and $oP92$. The proposed candidates reproduce key features of the experimentally indexed cell geometries. First-principles enthalpy calculations, Gibbs free-energy comparisons, and solid--liquid coexistence simulations reveal close competition among these structures and established sodium phases. Near the calculated reference melting minimum, $tI50$ is favored over $cI16$ and $oP8$, whereas $oC120$ and $aP90$ remain closely competitive, with their relative stability sensitive to model accuracy. These results provide testable structural models for unresolved experimental phases and reveal multiple closely competing low-enthalpy configurations near sodium's melting minimum",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27384",
-   "title": "Frustration-Stabilized Hexamerons and Their Topological Magnons in Janus MXene",
-   "url": "https://arxiv.org/abs/2611.27384",
+   "uid": "arxiv:2611.28201",
+   "title": "Defect Engineering of the Water-Carbon Interface: Insights from First-Principles Calculations",
+   "url": "https://arxiv.org/abs/2611.28201",
    "authors": [
-    "C. B. Subba",
-    "Z. Pachuau",
-    "Samy Brahimi",
-    "Samir Lounis",
-    "D. P. Rai"
+    "Peikun Zhang",
+    "Hongbo Zhang",
+    "Ying Xu",
+    "Zhuhua Zhang"
    ],
-   "label": "arXiv:2611.27384v1",
+   "label": "arXiv:2611.28201v1",
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "First-principles and atomistic spin simulations of the Janus MXene MnHf2C2FI predict a frustrated 120-degree Néel ground state with a metastable hexameron (six merons and antimerons) whose in-gap magnons carry Chern numbers and a sign-dependent thermal Hall response.",
-    "plain": "This paper studies a two-dimensional material in which the magnetic moments of manganese atoms are arranged in a triangular pattern that cannot all point in opposing directions at once, so they settle into a tilted, frustrated arrangement. The authors used computer calculations to find a metastable cluster of swirling spin patterns, called a hexameron, sitting on top of that arrangement. They report that this cluster traps specific wave-like spin excitations (magnons) and that, in an ordered array, these waves could carry heat sideways in a direction set by the cluster's handedness.",
-    "why": "",
-    "background": "- MXenes: a family of thin, layered two-dimensional materials built from metal, carbon or nitrogen layers.\n- Janus material: a layered material whose two outer faces differ chemically, so it lacks inversion symmetry (a mirror-like flip changes it).\n- Magnetic frustration: when neighbouring magnetic moments cannot all satisfy their preferred antialignment on a triangular lattice, forcing a compromise arrangement such as 120-degree order.\n- Dzyaloshinskii-Moriya interaction: a spin-orbit-driven coupling that twists neighbouring spins and favours swirling textures.\n- Merons and antimerons: half-units of a swirling spin texture, carrying topological charge of plus or minus one half; a hexameron is a six-unit bound cluster with zero net charge.\n- Magnons: quantized waves of spin disturbance in a magnet, analogous to phonons for lattice vibrations.\n- Chern number and Berry curvature: topological quantities describing how wave bands twist; they control edge-directed heat flow (thermal Hall effect).\n- Metastable: a state that is a local, not global, energy minimum and could persist but is not the lowest-energy state.",
+    "one_liner": "Using first-principles (quantum-mechanical, computer-based) calculations, this paper maps how topological, point, line, edge and doping defects in carbon materials change water-carbon interactions relevant to water splitting, evaporation-driven electricity, and catalysis.",
+    "plain": "Carbon materials that touch water are central to devices that turn evaporating water into electricity or split water to make hydrogen. Real carbon is full of small flaws, but how those flaws affect water has been poorly understood. The authors used computer simulations to test many kinds of flaws and reported how each one changes water splitting, charge transfer to evaporating water, and hydrogen formation.",
+    "why": "The text reports specific effects, such as edge defects lowering the water-dissociation energy barrier by up to 30 times and mono-vacancies boosting charge transfer by up to 12.4 times, which could guide the design of hydrovoltaic and catalytic devices. These are computed predictions from the abstract alone, so they still need experimental confirmation before any practical significance is clear.",
+    "background": "- Solid-liquid interfaces: the boundary where a solid surface meets water, where chemical reactions happen.\n- Hydrovoltaics: devices that generate electricity from water moving or evaporating across a material.\n- First-principles calculations: simulations that compute material behavior directly from the laws of quantum physics, without fitted experimental inputs.\n- Defects: imperfections in a material's atomic structure, such as missing atoms (vacancies), edges, or swapped-in foreign atoms (doping).\n- Energy barrier: the energy hill a reaction must climb; lower barriers mean faster reactions.\n- Gibbs free energy near zero for hydrogen evolution: a sign that a surface can bind and release hydrogen efficiently, which is favorable for making hydrogen.\n- Dangling bonds: unpaired chemical bonds at a broken edge that tend to be chemically reactive.\n- Charge transfer: movement of electrons between the material and water molecules, linked to electricity generation.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Frustrated magnets on triangular lattices favour noncollinear order, and when inversion symmetry is broken they can host localized topological textures on top of that order. Here we show that the Janus MXene MnHf2C2FI is such a system. Combining first-principles calculations with atomistic spin simulations, we find that magnetism is confined to the Mn layer, where a strong antiferromagnetic nearest-neighbor exchange together with a sizable Dzyaloshinskii-Moriya interaction stabilizes a frustrated 120 Neel ground state. On top of this ground state we identify a metastable hexameron: a composite of six merons and antimerons, one vortex-antivortex pair on each of the three sublattices, whose sublattice-resolved topological charges compensate. Linear spin-wave theory confirms that the hexameron is a local energy minimum, and its noncoplanar cores act as potential wells that bind discrete in-gap magnon modes below the bulk continuum. In a periodic hexameron array the magnon bands carry nonzero Chern numbers, and the resulting Berry curvature produces a magnon thermal Hall response whose sign depends on which of the two time-reversal partners of the hexameron is realized. Our results establish Janus MXenes as a two-dimensional platform in which frustration, broken inversion symmetry, and spin-orbit coupling combine to produce metastable antiferromagnetic solitons with distinct spectroscopic and transport fingerprints.",
+   "abstract": "Interactions at solid-liquid interfaces are fundamental to hydrovoltaic and catalytic technologies. While carbon nanomaterials have been extensively studied, the role of abundant defects in amorphous carbon remains poorly understood. Here, using first-principles calculations, we systematically investigate how various defects (topological, point, line, edge, and doping defects) modulate water-carbon interactions. We find that armchair-edge defects with dangling bonds reduce the energy barrier for water dissociation by up to 30 times compared with pristine carbon, while di-vacancies exhibit a near-zero Gibbs free energy for hydrogen evolution, enabling potential hydrogen evolution reaction activity on a purely carbon-based interface. Moreover, mono-vacancy defects, characterized by reduced electronic localization, enhance charge transfer to evaporating water molecules by up to 12.4 times, a key factor in evaporation-induced electricity generation. Crucially, we demonstrate that coupling distinct defects produces synergistic effects that outperform individual defects, revealing a promising strategy for designing multifunctional interfaces. These insights establish a defect-engineering framework for the rational design of high-efficiency hydrovoltaic and catalytic devices.",
    "source": "arxiv"
   },
   {

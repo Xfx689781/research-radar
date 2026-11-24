@@ -3,48 +3,46 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27036",
-   "title": "Nonlinear stability of periodic waves in the Benjamin-Ono equation",
-   "url": "https://arxiv.org/abs/2611.27036",
+   "uid": "arxiv:2611.29387",
+   "title": "A transitive $C^{1+\\alpha}$ surface diffeomorphism with positive entropy has at most one measure of maximal entropy",
+   "url": "https://arxiv.org/abs/2611.29387",
    "authors": [
-    "Jinbing Chen",
-    "Colin Grant",
-    "Dmitry E. Pelinovsky"
+    "Wanshan Lin",
+    "Xueting Tian"
    ],
-   "label": "arXiv:2611.27036v1",
-   "primary_category": "math.AP",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "The paper proves nonlinear orbital stability of periodic traveling waves of the Benjamin-Ono equation by building a Lyapunov functional from conserved quantities (momentum, energy, and a higher-order energy from integrability) and checking its second variation is positive.",
-    "plain": "The Benjamin-Ono equation is a mathematical model for waves in deep stratified fluids, such as internal waves in the ocean. This paper studies repeating wave shapes that keep travelling without changing form. The authors show that if you nudge such a wave a little, it stays close to its original shape over time.",
-    "why": "Showing that a wave pattern is stable under small disturbances is a basic question for whether such patterns can persist in real physical systems. The text does not say how far the result reaches beyond this equation, so its wider significance is uncertain.",
-    "background": "- Benjamin-Ono equation: a nonlinear partial differential equation describing one-directional waves in certain fluids.\n- Periodic wave: a wave shape that repeats in space, like a regular ripple, that travels at constant speed.\n- Orbital stability: a solution that stays close to the family of its shifted versions after small disturbances.\n- Conserved quantities: totals (such as momentum and energy) that do not change as the wave evolves; they are used to control the dynamics.\n- Lyapunov functional: a measure built from these quantities that cannot grow, used to prove stability.\n- Second variation: the curvature of that measure around the wave; positivity of it is the key check.\n- Integrability: a special structure that gives extra conserved quantities.\n- Sobolev space H^1: a function class measuring size and smoothness of disturbances.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We construct the Lyapunov functional for the periodic waves of the Benjamin-Ono equation based on the conservation of momentum, energy, and a higher-order energy, which exists due to integrability. Positivity of the second variation of the Lyapunov functional for perturbations in Sobolev space $H^1(\\mathbb{R})$ is established by utilizing the basis properties of eigenfunctions of the linearized Benjamin-Ono equation in $L^2(\\mathbb{R})$. Coercivity of the Lyapunov functional for co-periodic and multiple-periodic perturbations yields the nonlinear orbital stability of the periodic waves in the periodic domain.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.27557",
-   "title": "Real-analytic actions of higher-rank lattices preserving an ergodic volume",
-   "url": "https://arxiv.org/abs/2611.27557",
-   "authors": [
-    "Federico Rodriguez Hertz",
-    "Zhiren Wang"
-   ],
-   "label": "arXiv:2611.27557v1",
+   "label": "arXiv:2611.29387v1",
    "primary_category": "math.DS",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper classifies real-analytic actions of higher-rank lattices that preserve an ergodic smooth volume on a compact manifold, showing that on an open dense full-measure set they are analytically conjugate to affine actions on copies of a single double quotient, which is offered as the open homogeneous case of Zimmer's program.",
-    "plain": "The paper studies how a certain kind of discrete symmetry group (a lattice in a higher-rank Lie group) can act smoothly on a compact space, such as a manifold, while keeping a volume measure fixed. It reports that, for real-analytic actions preserving an ergodic volume, almost all of the space can be described by a simple standard model built from affine (linear-plus-shift) motions. The author states that this gives a classification of the open homogeneous case.",
-    "why": "The question sits in Zimmer's program, which asks how far rigid algebraic models control all actions of large symmetry groups on manifolds, so a full classification in the open homogeneous case would be a substantial structural statement. The text does not show how wide its consequences are beyond this setting, so its reach should be judged by specialists.",
-    "background": "- Lattice: a discrete subgroup of a Lie group, such as integer matrices inside a group of transformations.\n- Higher-rank: the Lie group has several independent directions of symmetry, which makes rigidity results much stronger.\n- Action: a way the group moves points of a space, here a compact manifold (a smooth curved space).\n- Real-analytic: smooth in a strong sense where functions are given by convergent power series.\n- Ergodic volume: a measure preserved by the action such that no invariant piece splits it non-trivially; the orbits spread through the space.\n- Conjugacy: an change of coordinates that turns one action into another, so they are essentially the same.\n- Affine action and double quotient: the standard model, built from linear-plus-shift motions on a quotient of a Lie group.\n- Zimmer's program: a research program on rigidity of group actions on manifolds.\n- Lyapunov manifolds and joinings: tools for tracking how nearby orbits separate and for comparing two actions.",
+    "one_liner": "For a topologically transitive C^{1+α} diffeomorphism of a closed surface with positive topological entropy, the measure of maximal entropy is shown to be unique (at most one exists).",
+    "plain": "This paper studies smooth rules for moving points around a closed surface, such as a sphere or torus, in a way that is chaotic but still follows a pattern. Such a rule can be described by many probability distributions over its long-run behaviour, and some are \"most chaotic\" in a precise sense. The paper shows that, under these conditions, there is at most one such most-chaotic distribution.",
+    "why": "Uniqueness of the maximal-entropy measure is a standard question in dynamical systems, because it tells you that the system's chaos has one canonical statistical description. The text itself gives only the statement, so its wider significance and links to other results are not established here.",
+    "background": "- Diffeomorphism: a smooth, invertible map of a surface onto itself, with a smooth inverse.\n- C^{1+α}: the map and its derivative are smooth enough, with a mild Hölder-type regularity condition (α between 0 and 1).\n- Topological entropy: a number measuring how fast the orbits of a map become complicated; positive means genuinely chaotic.\n- Topologically transitive: some orbit eventually comes arbitrarily close to every point of the space.\n- Invariant measure: a way of assigning probabilities to regions that the map leaves unchanged.\n- Measure of maximal entropy: an invariant measure whose entropy equals the topological entropy of the map.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We classify real-analytic actions of higher-rank lattices that preserve an ergodic smooth volume on a compact manifold. On an invariant open dense set of full volume, the action is analytically conjugate to the restriction of an affine action on finitely many copies of one double quotient. The conjugacy carries Haar probability to the given volume. Analytic germ superrigidity supplies local coordinates with measurable dependence on the center. The conditional measures on coarse Lyapunov manifolds determine the law of a displaced center. A two-point joining pairs charts whose evaluations agree there and gives the change of coordinates. The resulting analytic frame bundle carries a coframe whose vector fields integrate to the homogeneous model. This gives the open homogeneous classification in Zimmer's program.",
+   "abstract": "Let $0<\\alpha\\le 1$. On a closed surface, every topologically transitive $C^{1+\\alpha}$ diffeomorphism with positive topological entropy has at most one measure of maximal entropy.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30510",
+   "title": "Algorithms and topological invariants for dynamic systems. IV. Topological Equivalence of Functions and Hamiltonian Dynamical Systems",
+   "url": "https://arxiv.org/abs/2611.30510",
+   "authors": [
+    "Alexandr Prishlyak"
+   ],
+   "label": "arXiv:2611.30510v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "This fourth part of a series classifies smooth functions and Hamiltonian flows on surfaces up to topological equivalence using Reeb graphs and cell decompositions, with recursive counts and generating functions for simple cases on the disc and sphere.",
+    "plain": "The paper asks when two ways of describing motion or height on a curved surface, such as a landscape or a sphere, count as \"the same\" once you ignore smooth stretching and only keep the overall shape of how things rise, fall and flow. The authors use simple tree-like diagrams (Reeb graphs) and grid-like cell decompositions as fingerprints that capture this shape. They then count how many essentially different cases exist for a given number of saddle points.",
+    "why": "Counting topologically distinct flows and height functions gives a concrete, checkable way to organize a classical area of dynamical systems. The text does not say how these counts will be used beyond the paper itself, so its wider impact is unclear from this excerpt.",
+    "background": "- Topological equivalence: two systems are considered the same if one can be continuously deformed into the other without tearing, ignoring exact shape and speed.\n- Structural stability: a system whose overall behaviour survives small perturbations.\n- Morse function: a smooth height function whose critical points (peaks, pits, saddles) are non-degenerate.\n- Saddle point: a point where a surface is flat but rises in one direction and falls in another.\n- Reeb graph: a graph built by collapsing each level set of a function to a point, recording how components merge and split.\n- Cell decomposition: splitting a surface into simple pieces (points, edges, faces) for combinatorial bookkeeping.\n- Hamiltonian flow: the motion generated by an energy function in classical mechanics.\n- Generating function: a formal series whose coefficients are the counts of interest.\n- This is part IV of a series; earlier parts cover differential topology, discrete structures and manifold recognition algorithms.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This is the fourth part of a series on algorithms and topological invariants for dynamical systems. We study the topological equivalence of smooth functions and of Hamiltonian flows on surfaces, and the discrete invariants, Reeb graphs and cell decompositions, that classify them. We recall the notions of topological equivalence and structural stability, introduce two equivalences of functions (with and without the order of the critical values) and show that simple Morse functions on closed orientable surfaces are classified by their Reeb graphs with vertex odering, while simple Hamiltonian flows are classified by Reeb graphs with marked edges. For the disc and for the sphere we obtain a recursive description and a generating function for the numbers of such trees, and compute the numbers of topologically non-equivalent simple Morse functions and Hamiltonian flows with a given number of saddles. We also describe functions with isolated, possibly degenerate, critical points by cell decompositions, and give an algorithm and computational results for functions with three critical points. In the first part (arXiv:2501.15657) we discussed the basic concepts of differential topology. In the second part (arXiv:2502.00506) we discussed the discrete topological structures used in the topological theory of dynamical systems. In the third part (arXiv:2502.09958) we constructed algorithms that recognize $2$- and $3$-manifolds in simplicial complexes and regular CW-complexes and determine the topological type of a $2$-manifold (connectivity, orientability, genus, number of boundary components).",
    "source": "arxiv"
   },
   {

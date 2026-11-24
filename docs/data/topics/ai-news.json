@@ -3,9 +3,9 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "news:27065c561fbc5a7f",
-   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
-   "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+   "uid": "news:724878a26e68ea5b",
+   "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+   "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
    "authors": [
     "Sarah Perez"
    ],
@@ -13,98 +13,94 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Anthropic has announced developer tools (\"Claude Ship\") that let AI agents review, fix, and approve code changes, aimed at easing the review bottleneck created by growing volumes of AI-generated code.",
-    "plain": "Software teams increasingly use AI to write code, and the human step of checking and approving those changes is becoming a slowdown. Anthropic's new tools let AI agents take over some of the routine checking and sign-off work. The article is a short announcement; it does not report measured results.",
-    "why": "If AI agents can safely handle routine approvals, software teams could ship changes faster, which matters for how much human oversight stays in the loop. The text is too brief to say how well the tools work or what safeguards exist, so the practical impact is unclear.",
-    "background": "- \"Agent\": an AI system that carries out multi-step tasks on its own, not just answering a single question.\n- \"Code review\": a process where another engineer reads proposed software changes before they are accepted.\n- \"Bottleneck\": a stage in a process that slows everything downstream, here the human review step.\n- \"Pull request\" or \"merge\": the standard way a proposed code change is submitted to and accepted into a project.\n- The article gives no details on accuracy, testing, or how approvals are audited.",
+    "one_liner": "A funding announcement for Maple, a startup that says its encrypted AI architecture is built so the company itself cannot read users' private data.",
+    "plain": "A startup called Maple has raised $5.3 million to build AI products. The company says its design keeps users' private information locked up so that even Maple cannot see it. The article is short and gives only this high-level description, so the details of how it works are not clear from the text.",
+    "why": "Many AI tools require users to share personal data with the company running them, so a design that avoids this is of interest to people concerned about privacy. The text does not show how well the approach works in practice, so its value is still unproven.",
+    "background": "- AI products often send user data to company servers to process it.\n- \"Encrypted\" means data is scrambled so only holders of a secret key can read it.\n- Some privacy designs aim for \"zero-knowledge\" setups, where a service can run without seeing the content, but the article does not say whether Maple uses one.\n- Venture funding of $5.3 million is a modest seed-stage round.\n- The article is a brief company announcement with little technical detail.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+   "abstract": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data.",
    "source": "rss"
   },
   {
-   "uid": "news:0d63fb1e6c01db65",
-   "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
-   "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+   "uid": "news:6e5f032fb046721a",
+   "title": "Even the best AI agents struggle with everyday life",
+   "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
    "authors": [
-    "Sarah Perez"
+    "Rebecca Bellan"
    ],
    "label": "AI News & Artificial Intelligence | TechCrunch",
    "primary_category": "techcrunch.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A news item reports that startup Supertake raised $20M and offers AI agents that convert a user's market views into stock portfolios, though the text is only a short teaser with few details.",
-    "plain": "Supertake is a startup that says you can act on your own ideas about where the stock market is going without choosing individual stocks yourself. Its AI agents, which are software programs that act on a user's behalf, turn those predictions into a portfolio, meaning a bundle of investments. The article is very short, so it does not explain how this works in practice or how well it performs.",
-    "why": "It is a small example of AI being pitched as a way for ordinary people to invest on their own views, which may matter to debates about automated investing and financial advice. The text gives too little detail to judge whether the approach is sound or significant.",
-    "background": "- A \"startup\" is a young company, often funded by investors; \"raising $20M\" means it received $20 million in new investment.\n- A \"stock portfolio\" is a collection of shares in different companies held as one investment.\n- \"AI agents\" are AI programs that carry out multi-step tasks for a user, rather than only answering questions.\n- Turning a prediction into a portfolio means a system must choose which stocks to buy and in what amounts to reflect the user's view.\n- The article offers no information on fees, regulation, risk, or track record, so these remain unknown.",
+    "one_liner": "A news piece reporting that a new benchmark finds even leading AI models often fail to complete everyday tasks reliably and safely, sometimes creating new problems while trying.",
+    "plain": "Millions of people now use personal AI assistants, the kind that can act on your behalf. The article describes a new test, called a benchmark, which found that even the most advanced AI models often fail to finish ordinary tasks dependably and safely, and can cause new problems along the way.",
+    "why": "It points to a gap between how widely these assistants are being adopted and how reliable they are in routine use. The text does not give details of the tasks, scores, or the test design, so its broader significance is hard to judge from this piece alone.",
+    "background": "- AI agent: an AI system that does multi-step tasks for a user, such as booking, emailing, or browsing, rather than only answering questions.\n- Benchmark: a standard test set used to measure and compare how well AI systems perform.\n- Reliability and safety: whether the assistant gets tasks right consistently and avoids side effects, such as sending the wrong message or making an unwanted change.\n- The article is short and gives no specific figures, named tests, or named models, so it should be read as a summary of a claim rather than a full account.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.",
+   "abstract": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
    "source": "rss"
   },
   {
-   "uid": "news:d6a5b08e3fa8b3f0",
-   "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
-   "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+   "uid": "news:16565a3f5dc091b0",
+   "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+   "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+   "authors": [],
+   "label": "Hugging Face - Blog",
+   "primary_category": "huggingface.co",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A news item titled \"Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton\" describes a simulation-to-real-robot workflow for obstacle avoidance, but the body text is unavailable, so its specific methods and results cannot be confirmed.",
+    "plain": "This item is about teaching a small robot, called Microduck, to avoid obstacles by first training it in a computer simulation and then moving that training onto a real machine. The text provided is empty, so I cannot say what was built, how well it worked, or what results were reached.",
+    "why": "Moving robot skills from simulated training to physical hardware is a known challenge in robotics, so the topic may be of interest to people following robot learning. Beyond the title, I cannot judge its significance or what it connects to.",
+    "background": "- Simulation (sim): a computer model of a robot and its surroundings where it can practice safely and quickly.\n- Sim2Real (\"sim to real\"): the step of transferring a skill learned in simulation to a physical robot, which often behaves differently than the model predicted.\n- Obstacle avoidance: a robot sensing and steering around objects in its path.\n- Isaac Lab and Newton: software tools for robot simulation and training; the item's text does not explain their roles in detail.\n- Microduck: the name of the small robot in the title; no further details are given in the provided text.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:42cb577d7e7884cb",
+   "title": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+   "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
    "authors": [
-    "Ivan Mehta"
+    "Lauren Forristal"
    ],
    "label": "AI News & Artificial Intelligence | TechCrunch",
    "primary_category": "techcrunch.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Sierra, a customer-experience AI startup co-founded by former Salesforce co-CEO Bret Taylor, reportedly raised $1.75 billion in a Series F round, roughly doubling its valuation to $30 billion within six months.",
-    "plain": "Sierra is a company that builds AI tools for businesses to handle customer service and similar interactions. It announced on Monday that it has raised $1.75 billion from investors, a funding round that pushes its estimated company value to about $30 billion. The article presents this as a sign of strong demand for AI in customer experience.",
-    "why": "The article is a funding announcement, not a research result, so it mainly signals investor confidence in AI for customer service. Whether the demand it describes lasts is not shown in the text; the article gives no revenue or customer figures.",
-    "background": "- Series F: a late-stage round of private fundraising, typically after several earlier rounds (A, B, and so on).\n- Valuation: the estimated total worth of a company, often set by the price investors pay for shares. A doubling in six months is a fast rise.\n- Customer experience (CX): how a company's customers interact with it, including support chat, phone, and service.\n- Bret Taylor: former co-CEO of Salesforce, a large business software firm; he co-founded Sierra.\n- The article gives no details on Sierra's products, customers, revenue, or investors.",
+    "one_liner": "Walmart says customers can now shop its Black Friday deals through Muse, an AI agent built by Meta.",
+    "plain": "Walmart has added its Black Friday sale items to Muse, a Meta AI assistant. Shoppers can use the assistant to look for and buy these deals without leaving the chat. The text is a short announcement and does not say how the feature works in detail.",
+    "why": "It is a small example of retailers putting their products inside AI assistants, a trend that could change how people find and buy things online. The text gives no sales figures or user numbers, so its wider impact is uncertain.",
+    "background": "- An AI agent is a chatbot-style program that can carry out tasks for a user, such as searching for or buying products, not just answering questions.\n- Muse is described here as Meta's AI agent; the text does not explain its features or how widely it is available.\n- Black Friday is the November shopping day in the US when many retailers run large discounts.\n- Partnerships like this one usually mean a store's product listings are connected to an AI platform, but the text does not describe the terms or data arrangements.\n- The source is a brief news item, so the details of the deal are thin.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
+   "abstract": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
    "source": "rss"
   },
   {
-   "uid": "news:2475b067992dd4ab",
-   "title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
-   "url": "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/",
-   "authors": [
-    "Amanda Silberling"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
+   "uid": "news:3c6728c1bfd19879",
+   "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+   "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A short news piece reporting that Nvidia employees welcomed CEO Jensen Huang warmly on his return to the company's headquarters, with Huang saying he intends to be a better CEO \"the second time around.\"",
-    "plain": "This is a brief report about Nvidia, the chipmaker that makes the processors used to train and run many AI systems. Its co-founder and chief executive, Jensen Huang, came back to the company's headquarters and was greeted warmly by staff, and he told them he plans to be a better CEO this time. The text is only a single quoted line and a headline, so it does not say why he left or came back, or what changes he plans.",
-    "why": "Nvidia is one of the central companies in the AI hardware business, so changes in its leadership are followed closely by investors and the industry. The article alone does not explain the circumstances of his absence or return, so its wider significance is unclear.",
-    "background": "- Nvidia designs graphics and AI chips (GPUs) that are widely used to build and run AI models.\n- Jensen Huang is Nvidia's co-founder and long-serving chief executive.\n- \"CEO\" means chief executive officer, the top manager of a company.\n- The phrase \"the second time around\" suggests he had stepped away from the role or been absent before, but the text does not give details.\n- The source text is very thin: a headline and one quote, with no context, dates, or company statements.",
-    "difficulty": "introductory",
+    "one_liner": "A news item reports that GPT-6 models can design protein structures and sequences through reasoning and code, with lab tests reportedly finding evidence of binding across five targets.",
+    "plain": "The article says a new AI model called GPT-6 can help design proteins, the small molecular machines that make up much of living cells. According to the text, the AI reasoned its way to designs and wrote code to produce them, and lab tests found signs that these designs attached to five chosen targets. The text is very short, so it gives no details on how the tests were run or how strong the binding was.",
+    "why": "If accurate, AI that designs working proteins could speed up drug and biotech research, which is why it draws attention. The article is too brief to show how significant the result is, and it does not name a source, paper, or independent check, so the claim should be treated cautiously until more detail appears.",
+    "background": "- Proteins are chains of molecules that do most of the work in living cells; their shape determines their job.\n- \"Protein design\" means creating new protein sequences or shapes for a purpose, such as treating disease.\n- \"Binding\" means one molecule sticking to another, often a key step in how drugs act.\n- A \"target\" is the specific molecule a designed protein is meant to bind to.\n- \"Lab tests\" usually mean experiments in a physical lab, but the article gives no details of them.\n- \"GPT\" refers to a family of large language models; the article does not explain what GPT-6 is or who built it.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "\"I'm going to be a better CEO the second time around,\" Huang told employees.",
-   "source": "rss"
-  },
-  {
-   "uid": "news:74f939e081ec8d04",
-   "title": "Why data centers are at the center of the Big Tech backlash",
-   "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
-   "authors": [
-    "Anthony Ha"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "A news piece summarizing journalist Paris Marx's new book \"Hyperscale,\" which frames data centers as a focal point of growing public criticism of Big Tech.",
-    "plain": "This article is about the growing public pushback against Big Tech companies over the huge computer facilities, called data centers, that run online services and AI. It introduces journalist Paris Marx's new book, \"Hyperscale,\" which looks at why these facilities have become a point of conflict. The text provided is only a short teaser, so it does not report specific findings or details of the book's arguments.",
-    "why": "Data centers are where much of the computing for AI and cloud services happens, so local and political objections to them may affect how the industry expands. The text is too brief to say how strong the backlash is or what the book concludes.",
-    "background": "- Data center: a large building full of servers that store data and run online services and AI models.\n- Hyperscale: a term for the very largest data centers, typically run by a few major cloud companies.\n- Big Tech backlash: public criticism of large technology companies, covering issues such as power use, local impacts, and market power.\n- Paris Marx: a journalist and host who writes about technology and its political and economic effects.",
-    "difficulty": "introductory",
-    "ai": true
-   },
-   "abstract": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+   "abstract": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
    "source": "rss"
   },
   {

@@ -3,61 +3,48 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27533",
-   "title": "Standard-Anchored Delegation in Teachers' Use of Generative AI",
-   "url": "https://arxiv.org/abs/2611.27533",
+   "uid": "arxiv:2611.28011",
+   "title": "Neurosymbolic Human-AI Collaboration: Foundations, Conceptual Framework, and Applications",
+   "url": "https://arxiv.org/abs/2611.28011",
    "authors": [
-    "Muhammad Saleh Farooq",
-    "Muhammad Ahmad Khan",
-    "Muhammad Jon Raza"
+    "Vito Scaraggi",
+    "Andrea Passarella",
+    "Marco Conti"
    ],
-   "label": "arXiv:2611.27533v1",
+   "label": "arXiv:2611.28011v1",
    "primary_category": "cs.HC",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A qualitative mixed-methods study of 13 teachers (plus administrators and a student) in Punjab, Pakistan, proposes \"standard-anchored delegation,\" where teachers hand AI tasks when an outside standard such as a rubric or textbook defines a correct output they can check.",
-    "plain": "Teachers using generative AI have to decide which parts of their work to hand to the tool, even though they stay responsible for what students receive. The authors interviewed teachers in Pakistan and coded each teacher's stance on twelve teaching tasks. Teachers were comfortable using AI for lesson-planning help, but none accepted AI-written learning objectives, and most did not use it to encourage or emotionally support students.",
-    "why": "The paper gives a concrete account of when people are willing to delegate work to AI, and it names a check on output (an outside standard) as the key condition. Its suggestions, such as asking for the standard before generating and showing it beside the output, are design ideas the authors propose rather than tested results. The study covers one region and a small sample, so its wider reach is uncertain.",
-    "background": "- Generative AI: software that produces text, such as lesson plans or feedback, from a prompt.\n- Delegation: handing part of a task to someone or something else while keeping responsibility for the outcome.\n- Rubric or answer key: an outside standard that says what a correct or good answer looks like, which makes it possible to check AI output.\n- Qualitative, mixed-methods study: research based mainly on interviews and coding of what people say, sometimes with some counting added.\n- Verifiability: how easily a person can confirm that an output is correct.\n- Government vs. private schools: the paper reports that private schools gave teachers more support for checking AI output.",
+    "one_liner": "This paper proposes NeSy-HAIC, a conceptual framework that uses neurosymbolic AI (combining neural networks with symbolic reasoning) to give humans and AI a shared, human-readable interface for collaborating on tasks, illustrated with semi-autonomous driving and security alert prioritization.",
+    "plain": "Many workplaces now have people and AI systems working on the same tasks, but it is still hard for them to understand each other. This paper proposes a conceptual blueprint, called NeSy-HAIC, that mixes two styles of AI so the machine's internal workings can be expressed as concepts people already understand. The authors sketch how this could work in two example settings, self-driving cars that still need a human driver and ranking security alerts, but the text describes the framework rather than reporting tested results.",
+    "why": "Getting humans and AI to communicate clearly is a long-standing obstacle in human-AI collaboration, and the paper ties that problem to explainable AI and neurosymbolic methods. Because it is a framework proposal without reported experiments in the text, its practical value is still to be shown.",
+    "background": "- Human-AI collaboration (HAIC): people and AI sharing a task, each covering the other's weaknesses.\n- Machine learning: software that learns patterns from data, such as recognizing images or speech.\n- Explainable AI: methods that try to make a model's reasoning understandable to people.\n- Neurosymbolic AI: combining neural networks (pattern learning from data) with symbolic reasoning (explicit rules and concepts).\n- Semantic gap: the mismatch between how a machine represents information and how humans think about it.\n- Human-in-the-loop vs. human-on-the-loop: a person actively approves each AI decision versus a person supervising and intervening when needed.",
     "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Teachers who use generative AI must decide which parts of their work to hand over, while they remain accountable for what reaches students. We studied these decisions in Punjab, Pakistan, through a qualitatively driven mixed-methods study. We interviewed 13 teachers from government, private, NGO and vocational institutions, four administrators and one student, and coded each teacher's position on twelve educational tasks. Nine teachers accepted AI drafts or substantial assistance with lesson planning, but none accepted AI-drafted learning objectives, and eleven did not use AI to encourage or emotionally support students. Teachers who would accept AI marking required that the model be given a rubric or marking criteria. Building on assessment research and HCI work on verifiability, we call this pattern standard-anchored delegation: teachers handed a component of a task to AI when a standard outside the model, such as a textbook or rubric, defined a correct output and the teacher could apply that standard to the result. Having a standard was not always enough. Several government-school teachers did not use AI to mark quizzes even though the quizzes had answer keys, because they expected students to look for evidence of the teacher's effort. Checking AI output required subject knowledge and time, and private schools gave teachers more support for this than government schools did. Participants also read disclosure of AI use as a statement about whether the teacher had reviewed the work. We propose that teacher-facing AI tools ask for the relevant standard before generating and show each output beside it, and that schools account for the time that checking takes.",
+   "abstract": "The growing adoption of Artificial Intelligence (AI) across workplaces and industries, ranging from manufacturing plants to healthcare facilities, has paved the way to the design of systems in which humans and AI collaborate on shared tasks. The first developments of Human-AI Collaboration (HAIC) were driven by advances in Machine Learning (ML), which enabled the automation of numerous tasks, including large-scale data processing, image analysis, and speech recognition. However, ML automation have proven insufficient for certain applications due to methodological, safety, and ethical concerns. In such cases, researchers argue for integrating human expertise into operational workflows to improve performance, relying on the complementary skill sets of humans and AI. Despite long-standing research, the field of HAIC has not yet reached full maturity, largely due to the intrinsic difficulty of ensuring a seamless communication between humans and AI. This challenge is partially addressed by Explainable AI methods, which aim to make internal model reasoning more transparent through human-understandable explanations. Recognizing the need for a shared interface between humans and AI in collaborative settings, we propose a novel conceptual framework, NeSy-HAIC, that leverages Neurosymbolic AI (NeSy AI) to bridge the semantic gap between machine representations and human-understandable symbolic concepts. The framework builds on current research in NeSy AI and HAIC, supports multiple interaction paradigms, including Human-In-The-Loop and Human-On-The-Loop, and is characterized through its enabling methodologies and two illustrative use cases in semi-autonomous driving and security alert prioritization. We argue that the integration of data-driven learning and symbolic reasoning can substantially enhance human-AI interaction and mitigate limitations of collaborative systems.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27462",
-   "title": "On the Challenges of Using LLMs in High-Risk AI Recruitment: Guiding Questions for Legal Conformity with the AI Act",
-   "url": "https://arxiv.org/abs/2611.27462",
+   "uid": "arxiv:2611.29459",
+   "title": "Pharmacy stock and post-earthquake access to medicines in Tokyo: modeling choices that change recovery judgments",
+   "url": "https://arxiv.org/abs/2611.29459",
    "authors": [
-    "Clara Punzi",
-    "Stefano Tramacere",
-    "Andrea Fedele",
-    "Sezer Kutluk",
-    "Roberto Pellungrini",
-    "Gizem Gezici",
-    "Paolo Baracco",
-    "Laura Castello",
-    "Eleonora Cusin",
-    "Eduardo Costa",
-    "Amedeo Giacovelli",
-    "Mario D'Almo",
-    "Fosca Giannotti",
-    "Dino Pedreschi",
-    "Marzio Di Vece"
+    "Juanning Liang",
+    "Hiroki Baba"
    ],
-   "label": "arXiv:2611.27462v1",
+   "label": "arXiv:2611.29459v1",
    "primary_category": "cs.CY",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes a legal-by-design toolkit that translates the AI Act's conformity-assessment duties (Articles 9–15 and Annex IV) into technical requirements and guiding questions for AI recruitment tools built on third-party general-purpose AI models, and analyzes the information gaps along the supply chain.",
-    "plain": "The EU's AI Act sets detailed rules for \"high-risk\" AI, such as software that screens job applicants, but gives companies little practical guidance on how to meet them. This paper offers a toolkit of guiding questions that turns the legal duties into concrete technical requirements, and illustrates it with a simplified example. It also finds that when a recruitment tool is built on a general-purpose AI model made by another company, the builder often cannot get the technical details needed to prove compliance, which can weaken the employer's ability to oversee the tool.",
-    "why": "Hiring algorithms affect people's job prospects, and the AI Act's compliance rules are new, so practical translations of legal text matter for developers and regulators. The text does not report any tested results from using the toolkit, so its practical value is not yet shown.",
-    "background": "- EU AI Act: a European law that regulates AI systems by risk level; \"high-risk\" systems face the strictest duties.\n- Conformity assessment: the process of showing a system meets legal requirements before and during sale or use.\n- Articles 9–15 and Annex IV: the parts of the Act listing duties such as risk management, data quality, record-keeping, transparency, human oversight, and technical documentation.\n- General-purpose AI (GPAI) model: a broad AI model (like a large language model) that many products are built on top of.\n- Upstream vs. downstream providers: the company that makes the base model versus the company that builds a specific product on it.\n- Deployer: the organization that uses the AI system in practice, here an employer or recruiter.\n- \"Legal-by-design\": building compliance into the system from the start rather than adding it afterwards.",
-    "difficulty": "intermediate",
+    "one_liner": "A sensitivity study of a two-step floating catchment accessibility model for over-the-counter medicine access at Tokyo pharmacies after a scenario magnitude-7.3 earthquake, showing that stock-depletion assumptions, model type and floating-catchment method choices can change recovery verdicts.",
+    "plain": "After a major earthquake, people need nearby pharmacies to still be open, staffed and holding medicine. This paper simulates over-the-counter medicines at about 4,700 registered pharmacies in Tokyo's 23 wards during the first week after a scenario quake, and measures how walking access compares with pre-quake levels. The authors find that the answer to \"is access recovering?\" depends heavily on how one models pharmacies running low on stock, on the kind of model used, and on which method is chosen.",
+    "why": "Local decisions about where to prioritise pharmacy support may hinge on modelling choices that are rarely reported, so the paper argues for stating stock assumptions and worst-case (low-end) outcomes. The relevance beyond Tokyo is plausible but the text covers only one city and one scenario.",
+    "background": "- Accessibility model: estimates how easily people can reach a service on foot, based on distance and how many providers are nearby.\n- Floating catchment area method: a common accessibility calculation that assigns each location a supply-to-demand ratio using nearby providers and people; the paper compares four variants.\n- Retention: post-disaster accessibility divided by the same location's pre-disaster accessibility (1 means no loss).\n- Stock depletion: pharmacies run out of medicine over time, so their capacity to serve people falls even if the building is open.\n- Scenario earthquake: a hypothetical event used for planning and simulation, not a real event.\n- Rank correlation and Jaccard index: measures of how similar two rankings are overall, and how much two sets of \"lowest 10%\" areas overlap (0.56 means partial overlap).\n- Percentile: the 10th-percentile result is a low-end outcome, worse than most sampled cases.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The EU Artificial Intelligence Act (AI Act) imposes detailed obligations on providers of high-risk AI systems but offers limited operational guidance, particularly when these systems integrate third-party General-Purpose AI (GPAI) models. This paper introduces a toolkit that fosters the development of legal-by-design AI-assisted recruitment systems by translating the core legal obligations of the AI Act's conformity assessment---specifically Articles 9--15 and Annex IV---into techno-normative requirements and corresponding guiding questions. While recruitment pipelines may involve components with varying technical complexity and differing levels of algorithmic transparency, this paper focuses on the most challenging case: the integration of third-party GPAI models into critical stages of the selection process, including resume and job description parsing, applicant scoring, and shortlist generation. This scenario presents significant challenges for downstream providers of high-risk AI systems, as it underscores the difficulties in obtaining the technical information needed to demonstrate compliance with the AI Act's techno-normative requirements, both prior to and during market deployment. After introducing the toolkit and illustrating its application through a simplified example, the paper explores informational dependencies between upstream and downstream GPAI model providers. These dependencies may produce informational gaps across the AI supply chain, potentially hindering the collection of evidence necessary for the AI system provider to ensure legal compliance. The resulting lack of technical transparency negatively affects the deployer, who may struggle to maintain meaningful oversight of the system, and ultimately impacts the persons subject to the AI output.",
+   "abstract": "Community pharmacies sustain access to medicines after an earthquake only while open, staffed and stocked. Accessibility models rarely represent stock depletion, and the assumptions this requires may change conclusions about recovery. We examine these assumptions for over-the-counter (OTC) medicines supplied by 4,748 registered pharmacies in Tokyo's 23 wards during the first week after a magnitude-7.3 scenario earthquake. A two-step floating catchment area model computes walking accessibility for 2,651 grid cells (500 m) under 10,000 sampled combinations of stock duration, staffing, operation and demand. Results are expressed as Retention: post-disaster accessibility divided by the same cell's pre-disaster accessibility. First, the assumed link between stock and service, the supply a pharmacy can still provide, determines the recovery verdict. If service falls in proportion to remaining stock, mean Retention declines from 0.479 (days 2-3) to 0.273 (days 4-7). If service is maintained until stock falls below one quarter, the mean rises instead, although low-end (10th-percentile) outcomes still decline. Measuring at the start of each period rather than averaging over it also reverses the trend. Second, a simple model that rescales a fixed map by citywide supply and demand reproduces citywide patterns but cannot evaluate where pharmacies close or where capacity is added; a spatial model run once on average inputs can. Third, four floating catchment methods agree on overall rankings (rank correlation 0.81), but their lowest-ranked 10% of cells overlap only partially (Jaccard index 0.56). Disaster assessments should report stock assumptions and low-end outcomes, and treat local priority areas as method-dependent.",
    "source": "arxiv"
   },
   {

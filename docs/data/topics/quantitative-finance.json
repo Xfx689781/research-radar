@@ -3,48 +3,58 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27692",
-   "title": "Reconstructing risk preferences from data",
-   "url": "https://arxiv.org/abs/2611.27692",
+   "uid": "arxiv:2611.27990",
+   "title": "Quantum-Inspired Risk Portfolio Optimization via Exponential Tilting",
+   "url": "https://arxiv.org/abs/2611.27990",
    "authors": [
-    "Anastasis Kratsios",
-    "Silvana M. Pesenti",
-    "Philipp Zimmermann"
+    "Fabio Vitale",
+    "Francesca Cibrario",
+    "Davide Veronelli",
+    "Chiara Vercellino",
+    "Valeria Zaffaroni",
+    "Giacomo Vitali",
+    "Gregorio Antonio Polito",
+    "Emanuele Dri",
+    "Carla Monferrato",
+    "Olivier Terzo",
+    "Davide Corbelletto",
+    "Marco Bianchetti"
    ],
-   "label": "arXiv:2611.27692v1",
-   "primary_category": "q-fin.RM",
+   "label": "arXiv:2611.27990v1",
+   "primary_category": "q-fin.PM",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper gives necessary and sufficient conditions for a finite set of claim-price evaluations to come from a finite-valued, cash-additive, convex, Lipschitz risk measure, constructs a \"universal risk measure\" reconstruction for compatible data, extends this to monotone measures with sharp Lipschitz constants, and illustrates with Expected Shortfall and European options.",
-    "plain": "The paper asks how to infer a rule for measuring financial risk from a finite list of examples, where each example pairs a financial contract (a payoff that depends on an uncertain future) with the value someone assigned to it. It gives a test for when such a list could have come from a consistent risk rule, and a formula that builds one from the list when it could. The authors also show how the formula handles linear preferences and Expected Shortfall, and they close with a numerical example using European options.",
-    "why": "Regulators and firms often observe prices or capital requirements without knowing the rule behind them, so a principled way to recover that rule from data is of practical interest. The text does not indicate how the results have been applied outside the paper's own numerical example, so its broader impact is uncertain.",
-    "background": "- Risk measure: a function that assigns a number (a capital requirement or risk level) to an uncertain payoff.\n- Cash-additive: adding a sure amount of cash to a position changes its risk by exactly that amount.\n- Convex: diversifying or mixing positions never increases risk beyond the average of the parts.\n- Lipschitz continuous: small changes in the payoff cause only bounded, proportionally small changes in risk.\n- Monotone: a payoff that is never worse in any scenario is never assigned higher risk.\n- Contingent claim: a contract whose payoff depends on which scenario occurs, such as an option.\n- Expected Shortfall: the average loss in the worst fraction of scenarios, a standard risk measure.\n- Compatible dataset: a list of claims and values that could all be produced by one single risk measure.",
+    "one_liner": "The paper proposes an exponential-tilting, constant-absolute-risk-aversion certainty-equivalent objective for portfolio selection, reduces it via a second-order approximation to a quadratic problem solved with MIQP and QUBO (with constraints handled by Lagrangian relaxation and slack variables), and compares classical and quantum-inspired solvers on a trading portfolio.",
+    "plain": "Investment portfolios are often chosen using a simple rule that assumes gains and losses follow a smooth bell-shaped curve, but real profit-and-loss outcomes are lumpy and skewed. This paper uses a mathematical \"tilt\" that reweights the possible outcomes to emphasise different parts of the distribution, then turns the resulting problem into a form that standard optimisation software or quantum-style hardware can solve. The authors report that tuning the tilt shifts the balance between average return, spread of returns, and tail losses, and that their approach stays competitive with other methods on a realistic trading portfolio.",
+    "why": "Portfolio selection under realistic, non-Gaussian loss distributions is a practical concern for risk managers, and the paper ties a tunable risk parameter to standard tail-risk measures. The claim that the QUBO formulation scales better than MIQP is a relevant comparison, though the text only says this is based on performance analysis with classical solvers, so its generality is unclear.",
+    "background": "- Portfolio optimisation: choosing asset weights to balance expected return against risk.\n- Mean-variance framework: the classic approach that measures risk by standard deviation and assumes roughly bell-shaped returns.\n- Profit-and-loss (P&L) scenarios: a discrete list of possible gains and losses, each with a probability.\n- Exponential tilting: reweighting outcomes by an exponential factor, controlled by a tilt parameter.\n- Certainty equivalent under constant absolute risk aversion: a single number expressing the sure amount an investor would value equal to a risky outcome, given a fixed attitude to risk.\n- Value at Risk (VaR) and Conditional Value at Risk (CVaR): measures of how bad losses get in the worst fraction of cases.\n- Second-order approximation: replacing a complicated function with a quadratic (parabola-like) one that is accurate near a point.\n- MIQP and QUBO: standard formulations for optimisation problems with integer choices; QUBO problems use binary 0/1 variables and can run on quantum-inspired or quantum hardware.\n- Lagrangian relaxation and slack variables: techniques for folding constraints into the objective function.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We consider the problem of reconstructing risk preferences from data. Specifically, for a finite dataset consisting of contingent claims and their evaluations, we aim at reconstructing a risk measure that is finite-valued, cash-additive, convex, and Lipschitz continuous. Our first result establishes necessary and sufficient conditions for a dataset to be compatible with a risk measure, that is the evaluations are stemming from a risk measure applied to the contingent claims. Our second result provides a reconstruction formula for compatible datasets, which we term \\emph{universal risk measure}. We further extend the reconstruction to monotone risk measures and establish sharp Lipschitz constants for both general and monotone reconstructions. We further show that we explicitly reconstruct linear preferences and evaluations by the Expected Shortfall. We conclude with a numerical application to European options.",
+   "abstract": "Financial portfolio optimization is often framed through mean-variance objectives, yet real profit-and-loss (P&L) scenario distributions are typically discrete and non-Gaussian. To explore realistic P&L distributions, we propose an objective function based on exponential tilting and certainty equivalent under constant absolute risk aversion. We then derive a second-order approximation, recovering a quadratic optimization problem solvable through mixed integer quadratic programming (MIQP) and quadratic unconstrained binary optimization (QUBO). Constraints in the QUBO formulation are incorporated via Lagrangian relaxation and slack variable approaches, enabling a direct comparison between classical constrained MIQP and quantum-inspired methods. In order to study how exponential tilting affects mean, standard deviation, and tail-risk measures such as Value at Risk and Conditional Value at Risk, we design an experimental protocol based on scanning a grid of tilt parameters and solving the associated optimization problems. The results on a realistic trading portfolio show how the tilts can be tuned to optimize different risk-return profiles while remaining competitive with those found using other state-of-the-art approaches. Moreover, performance analysis suggests that, even using classical solvers, the QUBO formulation with Lagrangian relaxation scales better than the MIQP approach, providing the best constraint encoding strategy.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26700",
-   "title": "Held-to-Maturity Accounting: Hidden Losses and Systemic Fragility",
-   "url": "https://arxiv.org/abs/2611.26700",
+   "uid": "arxiv:2611.29565",
+   "title": "Marked INAR model and the rough Hawkes--Heston limit",
+   "url": "https://arxiv.org/abs/2611.29565",
    "authors": [
-    "Dongxu Li",
-    "Steve Y. Yang"
+    "Xiaoyu Wang",
+    "Yingli Wang",
+    "Lingjiong Zhu"
    ],
-   "label": "arXiv:2611.26700v1",
-   "primary_category": "q-fin.RM",
+   "label": "arXiv:2611.29565v1",
+   "primary_category": "q-fin.CP",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A theoretical model of how Held-to-Maturity accounting, which lets banks carry bonds at cost rather than market value, delays loss recognition and can amplify systemic risk through correlated asset exposures and interbank linkages.",
-    "plain": "The paper looks at what happens when banks are allowed to record their bonds at their original purchase price instead of today's market value, a practice called held-to-maturity accounting. This matters because rising interest rates pushed down the market value of many bonds, creating large unrecorded losses. The authors build a model in which banks are linked to each other through lending, and report that this accounting choice can let losses pile up hidden and then hit many banks at once when they are forced to sell under stress.",
-    "why": "The text suggests accounting rules are not neutral for financial stability, which bears on policy debates after the recent rise in bond-related losses at banks. The abstract gives only a qualitative account, so how large the effect is and how well it matches real data cannot be judged from this text alone.",
-    "background": "- Held-to-maturity (HTM) accounting: banks can record certain bonds at their original cost, not their current market price, as long as they plan to hold them to repayment.\n- Interest rate risk: when interest rates rise, existing bonds with lower fixed rates lose market value.\n- Unrealized losses: losses on paper that are not booked until an asset is sold.\n- Interbank network: the web of loans and obligations between banks, so one bank's failure can spread to others.\n- Systemic risk: the chance that trouble at some institutions spreads across the whole financial system.\n- Correlated exposures: many banks holding similar assets, so they are hit by the same shocks together.\n- Nonlinear: small changes in conditions can produce disproportionately large changes in outcomes.",
+    "one_liner": "The paper builds a discrete-time Monte Carlo scheme for the rough Hawkes-Heston stochastic volatility model using a nearly unstable marked integer-valued autoregressive process, proves its convergence to the continuous-time limit for several option payoffs, and reports FFT-based implementation and efficiency results.",
+    "plain": "Financial prices often move in bursts, and models of how volatility (the size of price swings) behaves try to capture this. This paper proposes a way to simulate such a model on a computer using a simple discrete counting process, where random \"events\" trigger further events. The authors prove that as the time steps get finer, the simulated prices, volatility and event records converge to the intended continuous model, and they test how accurately option prices come out.",
+    "why": "Simulating rough volatility models accurately and quickly is a practical problem for pricing options, since Monte Carlo methods are costly. The paper offers both a convergence proof and a computational speed-up claim, though the text does not establish how it compares with other existing simulation methods.",
+    "background": "- Stochastic volatility: asset volatility itself is modelled as a random process that changes over time.\n- Heston model: a standard, widely used stochastic volatility model with closed-form-style analysis.\n- Rough volatility: volatility paths that are far more jagged than classical models, with roughness measured by a parameter (here, four roughness levels are tested).\n- Hawkes process: a self-exciting random event process in which each event raises the chance of further events.\n- Integer-valued autoregression (INAR): a discrete-time model for counts, here used to approximate the Hawkes-type event process.\n- Monte Carlo simulation: estimating prices by averaging many simulated random paths.\n- Fast Fourier transform (FFT): a fast algorithm for computing convolutions, used here to cut the cost of the memory-dependent sum.\n- Convergence in law: the simulated distributions approach the limiting model's distributions as the grid is refined.\n- Implied volatility: the volatility value that makes a model's option price match the market-style price; smiles show how it varies with strike.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "This paper studies how accounting-induced opacity affects systemic risk in the banking system. Motivated by the buildup of unrealized losses during recent monetary tightening episodes, we develop a model in which banks hold correlated interest rate sensitive assets and are connected through an endogenous interbank network. We show that Held-To-Maturity (HTM) accounting amplifies systemic risk by delaying loss recognition, allowing losses to accumulate and become synchronized across institutions. When losses are realized under liquidity stress, the interaction of correlated exposures and network linkages generates nonlinear increases in defaults. These findings suggest that accounting regimes are not neutral from a financial stability perspective, as they influence both the buildup and propagation of systemic risk, particularly in environments with common asset exposures and strong interconnectedness.",
+   "abstract": "We develop a discrete-time Monte Carlo algorithm for the rough Hawkes-Heston model based on a nearly unstable marked integer-valued autoregressive (INAR) process. We implement the algorithm with a block fast Fourier transform (FFT) scheme that evaluates the excitation convolution in $O(N\\log^2 N)$ operations per path on an $N$-bin grid. We prove joint convergence in law of the spot variance, log price and common marked point measure to their rough Hawkes-Heston limits. We prove convergence of European call and put option prices, as well as convergence of arithmetic Asian and down-and-out put option prices to their continuously monitored values. For European options, the one-year implied volatility smiles computed from the grid transform approach the continuous affine reference across four roughness levels. Monte Carlo experiments on the same three grids compare arithmetic Asian and down-and-out put option prices with a finer-grid reference and demonstrate the efficiency of the proposed algorithm.",
    "source": "arxiv"
   },
   {

@@ -3,25 +3,49 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27798",
-   "title": "Rates of metastability for a generalization of the Halpern iteration",
-   "url": "https://arxiv.org/abs/2611.27798",
+   "uid": "arxiv:2611.29432",
+   "title": "$\\Sigma^1_3$ Gandy-Harrington Forcing",
+   "url": "https://arxiv.org/abs/2611.29432",
    "authors": [
-    "Nicoleta Dumitru",
-    "Laurentiu Leustean"
+    "William Chan",
+    "Sandra M\\\"uller",
+    "Farmer Schlutzenberg",
+    "Benjamin Siskind"
    ],
-   "label": "arXiv:2611.27798v1",
-   "primary_category": "math.OC",
+   "label": "arXiv:2611.29432v1",
+   "primary_category": "math.LO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper uses proof-mining techniques to derive uniform rates of metastability for a generalized Halpern iteration (studied by Kanzow and Shehu), recovering rates for the Halpern, modified Halpern and Tikhonov-Mann iterations as special cases.",
-    "plain": "This paper is about iterative methods: step-by-step procedures that repeatedly refine a guess until it settles near a solution. The authors study a general family of such procedures, and ask how many steps are needed before the iterates stop changing much, a quantity called a \"rate of metastability.\" They obtain such bounds for several known special cases and note that ordinary convergence results follow from these bounds.",
-    "why": "Knowing how quickly an iterative method settles gives a guarantee about how much computation is needed, not just that it eventually works. The text does not say what applications this has beyond the mathematical setting, so its wider significance is uncertain.",
-    "background": "- Iteration: repeatedly applying the same update rule, each step using the previous result.\n- Convergence: the sequence of iterates approaches a limit or solution.\n- Metastability: a finite-horizon, logic-style form of convergence. For every tolerance and every starting point of a window, there is a point after which the iterates vary less than the tolerance over that window. The \"rate\" is an explicit bound on how far one must look.\n- Uniform rate: a bound that depends only on the problem's general parameters, not on the particular starting point.\n- Proof mining: a research program (led by Kohlenbach and others) that extracts explicit, quantitative information from existing non-constructive convergence proofs.\n- Halpern iteration: a classical scheme for finding fixed points of nonexpansive (distance-non-increasing) maps, with several variants named in the text.\n- Tikhonov-Mann iteration: another named variant of these fixed-point schemes.",
+    "one_liner": "The paper builds a higher-level version of Gandy-Harrington forcing for the projective hierarchy under a local determinacy hypothesis, and uses it for a reverse mathematics result at the Δ^1_2-Determinacy level and an inner-model basis theorem for Σ^1_3 sets.",
+    "plain": "This is a paper in mathematical logic about the structure of \"definable\" sets of infinite sequences of whole numbers, which are the objects studied in descriptive set theory. The authors adapt a known proof technique, Gandy-Harrington forcing, to a more complex level of that hierarchy. The text says this new version lets them prove a result about which axioms are needed for certain determinacy statements, and a new basis theorem for a class of sets.",
+    "why": "The abstract points to two concrete outcomes: a reverse mathematics result (identifying the exact axioms needed for a statement) and a basis theorem for Σ^1_3 sets. Its significance rests on how well the new forcing generalises, which the short text does not show; the connections to wider logic are the authors' claims and I have not checked them.",
+    "background": "- Descriptive set theory: the study of definable sets of reals (infinite binary sequences) and their complexity, organised in the projective hierarchy (Σ, Π, Δ levels).\n- Forcing: a technique for building new models of set theory by adding generic objects; Gandy-Harrington forcing is a specific forcing that builds sets with prescribed definability.\n- Silver's dichotomy: a theorem saying that analytic equivalence relations have either countably many classes or a perfect set of inequivalent elements; Harrington's proof used this forcing.\n- Determinacy: the assertion that certain two-player infinite games have a winning strategy for one player; its strength is measured by level in the projective hierarchy.\n- Reverse mathematics: determining which axioms are logically necessary to prove a given theorem.\n- Inner models and basis theorems: results saying that definable sets have members constructible in a suitable inner model (a restricted universe of sets).",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We apply proof mining methods developed by Kohlenbach and the second author to compute uniform rates of metastability for a generalization of the Halpern iteration studied by Kanzow and Shehu. As special cases, we obtain rates of metastability for the Halpern and modified Halpern iterations, as well as for the Tikhonov-Mann iteration. Furthermore, convergence results are obtained as immediate consequences of our quantitative results.",
+   "abstract": "Gandy-Harrington forcing is an important tool in descriptive set theory, first developed by Gandy and later used by Harrington to give a simple proof of Silver's dichotomy theorem. In this paper, we develop a new version of Gandy-Harrington forcing higher up in the projective hierarchy, under an appropriate local determinacy hypothesis. Using this new forcing, we prove a reverse mathematics result at the level of $\\Delta^1_2$-Determinacy as well as new inner-model-theoretic basis theorem for $\\Sigma^1_3$ sets.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30821",
+   "title": "On Cohen Generic Sets in Supercompact Prikry Extensions",
+   "url": "https://arxiv.org/abs/2611.30821",
+   "authors": [
+    "Tom Benhamou",
+    "Gabriel Goldberg"
+   ],
+   "label": "arXiv:2611.30821v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Under a supercompactness assumption on κ and a diamond-type principle on stationary subsets of λ, the paper shows that small strategically closed forcings are projections of λ-supercompact Prikry forcing, and it studies limits on κ-distributive projections, including size-λ examples that fail to be projections.",
+    "plain": "This is set theory work on the forcing method, a way of extending the universe of sets by adding new objects. The paper asks which kinds of forcing notions can be reproduced, in a precise \"projection\" sense, by one particular forcing called supercompact Prikry forcing. The text reports that, under a set-theoretic guessing principle and a cardinal-size condition, the answer is yes for a broad class, while in some other cases the answer is shown to be independent of the usual axioms, and some specific examples are shown not to fit.",
+    "why": "It maps which forcing notions can be realized inside a single canonical model-building tool, which clarifies the structure of large-cardinal forcing extensions. The abstract gives no wider applications, so its significance beyond this area is unclear from the text alone.",
+    "background": "- Forcing: a method for adding new sets to a model of set theory, using a partially ordered set of finite approximations.\n- Cardinals and cofinality: the size of infinite sets and the length of cofinal sequences; \"singular\" cardinals are those that are not regular.\n- Large cardinals: κ being λ-supercompact is a strong infinity axiom about embeddings of the universe; it is a very strong consequence of set theory.\n- Prikry-type forcing: a forcing that changes the cofinality of a measurable-type cardinal without collapsing cardinals.\n- Projection: a map between forcings that preserves generic extensions, so one forcing is essentially a quotient of another.\n- Diamond principle (◇) on stationary sets: a combinatorial guessing principle that holds in some models and fails in others.\n- Strategic closure and distributivity: closure properties of forcings that limit the new sets they add.\n- Independence: a statement neither provable nor refutable from the standard axioms.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $\\kappa$ be $\\lambda$-supercompact for a regular $\\lambda>\\kappa$. We show that if $\\lambda$ is not the successor of a singular of cofinality below $\\kappa$, $\\diamondsuit(S^\\lambda_{\\geq\\kappa})$ implies that every ${<}\\kappa$-strategically closed forcing of size at most $\\lambda$ is a projection of the $\\lambda$-supercompact Prikry forcing. We show that the situation for successors of singulars of small cofinality is independent. Finally, we provide more limitations about the class of $\\kappa$-distributive projections of the $\\lambda$-supercompact Prikry forcing and give examples of $\\kappa$-distributive forcings of size $\\lambda$ which cannot be projections of this forcing.",
    "source": "arxiv"
   },
   {

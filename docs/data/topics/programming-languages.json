@@ -3,51 +3,54 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27106",
-   "title": "Schema-Validated LLM Workflows: A Benchmark Protocol and Comparative Evaluation Across Six Python Implementations",
-   "url": "https://arxiv.org/abs/2611.27106",
+   "uid": "arxiv:2611.28996",
+   "title": "\"What Should I Do?\" Guidelines for Responsibly Integrating AI in Software Engineering",
+   "url": "https://arxiv.org/abs/2611.28996",
    "authors": [
-    "Sidney Shapiro",
-    "Sanad Al-Khatib",
-    "Aurora Pinz\\'on Arzola",
-    "Emiliano Sebastian Gonzalez Venegas",
-    "Daniel Pearson"
+    "Rudrajit Choudhuri",
+    "Fatima A. Moussaoui",
+    "Carmen Badea",
+    "Christian Bird",
+    "Jenna L. Butler",
+    "Brian Houck",
+    "Margaret Burnett",
+    "Anita Sarma"
    ],
-   "label": "arXiv:2611.27106v1",
+   "label": "arXiv:2611.28996v1",
    "primary_category": "cs.SE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A benchmark protocol and live API evaluation that separates whether LLM outputs are structurally valid (parse against a schema) from whether they are task-correct, across five business workflow tasks and six Python implementations (PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference).",
-    "plain": "Companies increasingly use language models to pull data out of documents, write database queries, and route work, and the output has to fit a required format for software to use it. This paper argues that output which fits the format can still be wrong, and it measures both properties separately across six ways of wiring up the same model. In the reported confirmatory run, about 68% of outputs were schema-valid and the average automated quality score was about 0.64, with three setups keeping near-perfect format compliance and scoring roughly 0.91 to 0.94 on quality.",
-    "why": "It suggests that checking only whether an LLM's output parses is not enough to know if it does the job, which matters for anyone wiring models into business systems. The results are specific to one package and model configuration, and the authors say the contrasts describe system setups rather than causal effects of particular library features.",
-    "background": "- Large language model (LLM): an AI system that generates text from a prompt.\n- Structured output / schema: a required format (fields and types) that software can read automatically, like a fixed form.\n- Schema validity vs. task correctness: a output can fill the form correctly and still contain wrong content.\n- Python framework / library: prewritten code that helps build LLM applications; the paper compares several.\n- Benchmark protocol: a fixed, repeatable test design with pre-set analysis rules.\n- Holm-adjusted contrasts: statistical corrections for making many pairwise comparisons without inflating false positives.\n- Ablation: a test that removes or changes one component to see its effect.\n- Condition-by-task interaction: when the ranking of setups changes depending on the task.",
+    "one_liner": "A two-phase survey study of 1,118 developers at Microsoft, GitHub, and Pfizer that derives and then validates 35 guidelines for how software engineers should responsibly integrate AI into their work.",
+    "plain": "Software developers are now using AI tools in their daily work, but the advice on how to use them well is thin and sometimes contradictory. The researchers first surveyed 860 Microsoft developers about where they did and did not want AI help, and turned their answers into 35 practical guidelines. A year later, they checked those guidelines with 258 developers at Microsoft, GitHub, and the drug company Pfizer, and most said the guidelines were clear, relevant, and something they wanted to follow.",
+    "why": "As AI tools spread into software that people depend on, the question of who is accountable for AI-assisted code matters, and this paper offers practitioner-sourced guidance and shared terms teams could adopt. The text does not show how much the guidelines change actual outcomes, so their practical effect is still unclear.",
+    "background": "- Software engineering (SE): the work of designing, building, testing and maintaining software.\n- Generative AI coding assistants: tools that suggest or write code from natural-language prompts.\n- Survey study: collecting self-reported experiences from many people; results reflect what respondents say, not measured performance.\n- Validation phase: a second round where a new group rates whether the derived guidelines are clear and useful.\n- Delegation vs. judgment: the paper's framing of handing checkable tasks to AI while keeping decisions and responsibility with the human.\n- Relationship-centric work: SE tasks that depend on collaboration and interpersonal communication, where the paper reports more variation in endorsement.",
     "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Large language models are increasingly used to extract records, generate SQL, summarize reports, answer policy questions, and route operational work. At these software boundaries, parseable output is necessary but does not establish task correctness. We present a reproducible benchmark protocol, a public executable artifact, and a confirmatory live API evaluation that separate structural validity from task-specific correctness across five business workflow tasks and six Python implementation conditions: PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference. We hypothesize that (H1) schema validity and task quality are separable, (H2) structured-output binding paths are heterogeneous under a shared model and lowest-common-denominator contract, and (H3) condition-by-task interactions concentrate failures rather than shifting all tasks equally. Confirmatory analysis uses distinct task instances (100 extraction and 50 per other task, with three nested replicates) under a frozen analysis plan, yielding a 5400-row primary matrix with equivalence margins and Holm-adjusted contrasts against the SDK reference. In the eligible confirmatory run, overall schema validity was 0.684 and mean automated quality was 0.638. PydanticAI, LangGraph, and DSPy retained near-ceiling schema validity with mean quality 0.91-0.94, while the plain SDK, Agno, and CrewAI conditions were substantially lower in this package and model configuration. Schema-valid rows still produced many task-score flags, especially in extraction and compliance QA, and quality residuals show strong condition-by-task interactions (including a workflow collapse for CrewAI). Labelled ablations address retry budgets and feature-using mechanisms; primary contrasts remain system-configuration findings, not causal attributions to marketed library features.",
+   "abstract": "Speculations abound about the \"right\" ways for developers to integrate AI into their software engineering (SE) work, but the evidence that exists is sparse and contradictory. Yet, developers are held responsible for the products they ship with (or without) AI's help, so they need to integrate AI in responsible ways. To address this gap, we conducted a two-phase, large-scale investigation with 1,118 developers at Microsoft, GitHub, and Pfizer. In Phase 1, we surveyed 860 developers at Microsoft on where they sought and resisted AI support in their daily work, and from their accounts, synthesized 35 developer-facing guidelines: 29 across five categories of SE work and 6 cross-cutting ones. A year later, as AI capabilities and developers' experiences co-evolved, we validated them in Phase 2 with 258 developers in technology (Microsoft, GitHub) and biopharmaceutical (Pfizer) domains. Developers in our study found the guidelines clearly worded (92%) and relevant to their work (91%), and most wanted to adopt them in their own work (89%). We also report how developers described operationalizing these guidelines in practice: using AI to refine their craft and delegate verifiable work, while keeping judgment and accountability for themselves. For relationship-centric work, endorsement varied with developers' domain and their SE and AI experience. Overall, we offer concrete advice from in-the-trenches developers to other in-the-trenches developers, and a shared vocabulary that engineering teams can adopt to integrate AI well in their work.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26668",
-   "title": "How developers split roles among them and a coding agent and what \"collaboration\" means",
-   "url": "https://arxiv.org/abs/2611.26668",
+   "uid": "arxiv:2611.28957",
+   "title": "Micro Operational Robustness of LLMs on Code Generation",
+   "url": "https://arxiv.org/abs/2611.28957",
    "authors": [
-    "Linus Ververs",
-    "Helya Dadkhah",
-    "Lutz Prechelt"
+    "Debalina Ghosh Paul",
+    "Hong Zhu",
+    "Ian Bayley"
    ],
-   "label": "arXiv:2611.26668v1",
+   "label": "arXiv:2611.28957v1",
    "primary_category": "cs.SE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A mixed-methods study of how developers divide work between themselves and AI coding agents (such as Claude Code), comparing 2025 early-adopter blog posts with a 2026 practitioner survey, and characterizing what developers mean by \"collaboration\" with the agent.",
-    "plain": "Software developers are increasingly handing coding tasks to AI agents that can write and change code on their own. This paper asks how developers describe the split of work between themselves and such an agent, and what kind of collaboration they would ideally want. The authors read early adopters' 2025 blog posts, surveyed practitioners in 2026, and used an AI agent to help sort the survey's free-text answers.",
-    "why": "Teams are deciding in real time who does what when an AI agent writes code, so a clear picture of how developers think about this split is useful for planning and management. The paper suggests that differing views on collaboration may create friction within teams, though the text does not measure this directly.",
-    "background": "- A \"coding agent\" is an AI tool that can carry out multi-step programming tasks, not just suggest single lines of code.\n- \"Open coding\" is a qualitative research method where a researcher labels passages of text with descriptive categories, which are then grouped into themes.\n- A \"mixed-methods\" study combines qualitative (interpretive, text-based) and quantitative (counted, survey-based) approaches.\n- The paper reports that in 2025 agents were used only in supporting roles and humans were firmly accountable; in 2026 this is still largely true, but agents are taking on more involvement.\n- Collaboration, in the authors' findings, has three facets: clear human-only, agent-only, and shared work steps; personal preferences not justified by engineering needs; and a view that covers the whole development process.",
+    "one_liner": "The paper proposes \"scenario domain analysis,\" a method that searches for the smallest expected change in natural-language coding-task descriptions that causes an LLM to generate incorrect code, and uses it to compare four LLMs and several task types.",
+    "plain": "Developers increasingly ask AI language models to write program code from a short written description of a task. This paper asks how sensitive those models are to small changes in the wording of that description, and it introduces a way to measure that sensitivity. The authors report that they could rank four models from most to least robust, and that the models did worse on more complex tasks and on advanced topics such as multi-threading and data structures.",
+    "why": "Code generated by AI is only useful if it stays correct when people phrase their requests slightly differently, so measuring this sensitivity matters for trusting such tools. The text does not say how the method performs beyond the four models and tasks tested, so its broader reach is unclear.",
+    "background": "- Large language model (LLM): an AI system trained on large amounts of text, here used to write code from instructions.\n- Robustness: how much a system's output stays correct when its input is changed a little.\n- Natural-language (NL) description: the plain-English statement of what a program should do.\n- Discrete and sparse input space: the possible wordings are separate, countable options with large gaps between them, so ordinary tests for smooth changes do not apply.\n- Multi-threading: running several parts of a program at the same time.\n- Formal proof: a mathematical argument that a property always holds, which the authors say they provided for their method.",
     "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Background: Coding agents such as Claude Code become more and more competent, so that their role in the development process can grow. Objective: How do developers characterize the role-split between them and their agent? How would they ideally want to collaborate with their agent? Methods: We perform a 3-step, mixed-methods study. We apply qualitative open coding to 2025 early adopters' blog articles; perform a quantitative survey of 2026 practitioners; develop and apply a method for coding-agent-supported open coding of survey freetext responses. Results: The 2025 practitioners have the agent work in supporting roles only. Accountability was firmly human. In 2026, both are fundamentally still true. Gradually, however, the role-split is now different, with much more agent involvement. The developers' notion of collaboration has three facets: Predominantly a separation into human-only, agent-only, and collaborative work steps, with defined conditions and goals. Second, accommodating personal preferences without engineering justification. Third, a holistic view of collaboration covering the entire development process. Conclusions: Defining one's role relative to the agent will need to be a recurring activity. The different views on collaboration are likely a source of friction and conflict for teams; future work should find out how to cope with that.",
+   "abstract": "It is now common practice in software development for large language models (LLMs) to be used to generate program code. It is desirable to evaluate the robustness of LLMs for this usage. This paper is concerned in particular with how sensitive LLMs are to variations in descriptions of the coding tasks. However, existing techniques for evaluating this robustness are unsuitable for code generation because the input data space of natural language (NL) descriptions is discrete and sparse. To address this problem, we propose a robustness evaluation method called scenario domain analysis, which aims to find the expected minimal change in the NL descriptions of coding tasks that would cause the LLMs to produce incorrect outputs. We have formally proved the theoretical properties of the method and also conducted extensive experiments to evaluate the robustness of four state-of-the-art LLMs: Gemini-pro, Codex, Llamma2 and Falcon 7B, and have found that we are able to rank these with confidence from best to worst. Moreover, we have also studied how robustness varies in different scenarios, including the variations with the topic of the coding task and with the complexity of its sample solution, and found that robustness is lower for more complex tasks and also lower for more advanced topics, such as multi-threading and data structures.",
    "source": "arxiv"
   },
   {

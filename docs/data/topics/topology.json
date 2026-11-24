@@ -3,51 +3,45 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27879",
-   "title": "On the chromatic splitting conjecture in coheight $1$",
-   "url": "https://arxiv.org/abs/2611.27879",
+   "uid": "arxiv:2611.31031",
+   "title": "Tame homotopy theory and the Goodwillie tower of the identity",
+   "url": "https://arxiv.org/abs/2611.31031",
    "authors": [
-    "Tobias Barthel",
-    "Lucas Mann",
-    "Rin Ray",
-    "Tomer M. Schlank",
-    "Andrew Senger",
-    "Jared Weinstein",
-    "Xinyu Zhou"
+    "Nicolas Gu\\`es"
    ],
-   "label": "arXiv:2611.27879v1",
+   "label": "arXiv:2611.31031v1",
    "primary_category": "math.AT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves cases of Hopkins' chromatic splitting conjecture in coheight 1, showing a map between K(h-1)-local E-infinity rings has a retract (and is an isomorphism when h=2 and p is odd), using a new two-tower isomorphism and solid Lubin–Tate spectra.",
-    "plain": "This is research in stable homotopy theory, the study of the \"shapes\" that spaces and their symmetries leave behind when viewed through a generalized kind of counting. The authors look at a conjectured pattern (Hopkins' chromatic splitting conjecture) that relates layers of this structure, and they confirm it in a specific case, at a prime p and height h where h-1 is the relevant \"layer\". They prove the relevant map has a retract (a left inverse, in a loose sense) when p-1 does not divide h-1, and for h=2 with p odd they show the map is an isomorphism.",
-    "why": "The text claims a partial confirmation of a published prediction, which is of interest to specialists in chromatic homotopy theory. The abstract also introduces a new \"two-tower isomorphism\" and solid Lubin–Tate spectra, which may be useful tools beyond this paper, though the text does not say how far they reach.",
-    "background": "- Stable homotopy theory: a framework for studying topological spaces through homotopy invariants, organized by spectra.\n- Chromatic homotopy theory: studies these invariants by \"height\" h, layered by how they behave under certain prime-based localizations (K(h)-local objects).\n- Morava stabilizer group G_h: a profinite symmetry group attached to height h that acts on the Lubin–Tate spectrum E_h.\n- p-divisible groups: algebro-geometric objects (roughly, towers of p-power torsion) that classify the height-h data.\n- p-adic geometry: geometry over p-adic numbers and perfectoid spaces, where the paper's towers and Banach–Colmez spaces live.\n- Retract: a map with a left inverse, so the source contains the target as a summand.\n- Faltings' isomorphism: a known correspondence between the Lubin–Tate and Drinfeld towers, used here as an analogy.",
+    "one_liner": "The paper modernizes Dwyer's tame homotopy theory, extends it to non-simply connected spaces using Heuts's work on the Goodwillie tower of the identity, and builds spectral Lie algebraic models for Hess's r-mild homotopy theory.",
+    "plain": "This paper is about a way of describing the shape of spaces (such as surfaces or more abstract higher-dimensional objects) using algebraic structures, so that questions about shape become questions about algebra. The author revisits an existing approach by Dwyer, extends it to spaces that have loops which cannot be shrunk to a point, and links it to a series of increasingly refined approximations of shape called the Goodwillie tower. The text summarizes this as a set of constructions, and does not report further findings beyond these.",
+    "why": "The work tries to connect two existing lines of research, Dwyer's tame homotopy theory and Heuts's study of the Goodwillie tower, and to extend the first beyond simply connected spaces. Its significance for wider mathematics is not stated in the text, so readers should treat the value as provisional and check the full paper.",
+    "background": "- Homotopy theory: classifies spaces by when continuous deformations can be considered equivalent, ignoring rigid geometry.\n- Simply connected space: a space in which every loop can be shrunk to a point; the paper extends beyond this case.\n- Lie algebra: an algebraic structure (with a bracket operation) used here as a algebraic model of a space.\n- Goodwillie tower: a sequence of successively finer polynomial approximations to a functor, here applied to the identity functor on spaces.\n- Model (in this context): an algebraic object that encodes the homotopy type of a space, so that topology can be studied by algebra.\n- Spectral: refers to objects from stable homotopy theory (spectra), a more linear, additive setting.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "This article confirms predictions made by Hopkins' chromatic splitting conjecture in stable homotopy theory. A consequence of our main theorem is that a certain map of $K(h-1)$-local $\\mathbb{E}_\\infty$-rings $\\mathbb{S}_{K(h-1)}^{B\\mathbb{Z}}\\to L_{K(h-1)}\\mathbb{S}_{K(h)}$ admits a retract, so long as $p-1$ does not divide $h-1$. If $h=2$ and $p$ is odd, we show this map is an isomorphism. We use methods from the theory of $p$-divisible groups and $p$-adic geometry. Along the way we prove an entirely new kind of \"two-tower isomorphism,\" in analogy with Faltings' isomorphism between the Lubin--Tate and Drinfeld towers, which parametrizes $p$-divisible groups over characteristic $p$ perfectoid spaces with fixed generic fiber in terms of negative Banach--Colmez spaces. Using the two-tower isomorphism, we gain control over the continuous cohomology of the Morava stabilizer group $\\mathbb{G}_h$ with coefficients in $\\pi_*L_{K(h-1)}E_h$. To study the continuous action of $\\mathbb{G}_h$ on $L_{K(h-1)} E_h$, it was necessary to develop the theory of solid Lubin--Tate spectra. Adapting Lurie's constructions, we attach a solid Lubin--Tate spectrum to $p$-divisible groups over a broad class of solid rings in characteristic $p$.",
+   "abstract": "The purpose of this note is to provide a modern treatment of Dwyer's tame homotopy theory and extend it to non-simply connected spaces, exploiting a connection with the work of Heuts on the Goodwillie tower of the identity. As an application, we construct spectral Lie algebraic models for Hess's $r$-mild homotopy theory.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26905",
-   "title": "The Strong AJ Conjecture for Hyperbolic Prime Knots is False",
-   "url": "https://arxiv.org/abs/2611.26905",
+   "uid": "arxiv:2611.28292",
+   "title": "The M\\\"obius Homology Laplacian for Persistence Modules",
+   "url": "https://arxiv.org/abs/2611.28292",
    "authors": [
-    "RJ Acu\\~na"
+    "Tatum Rask"
    ],
-   "label": "arXiv:2611.26905v1",
-   "primary_category": "math.GT",
+   "label": "arXiv:2611.28292v1",
+   "primary_category": "math.AT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper shows that the strong AJ conjecture, which links the minimal annihilator of the colored Jones polynomial to the Cooper–Culler–Gillet–Long–Shalen A-polynomial, fails for hyperbolic prime knots, using the knot 8_11, and verifies Lê's P-hat = A-hat conjecture and the weak AJ conjecture for that knot.",
-    "plain": "This paper is about knots, the tangled loops studied in topology, and two mathematical \"fingerprints\" that can be computed for each knot. The authors check whether these fingerprints match, as a conjecture predicts, and find that for the knot 8_11 they do not: an extra factor appears that the conjecture did not allow. The work was partly done with AI assistance and partly checked in the Lean proof assistant.",
-    "why": "It matters because it shows a widely studied conjecture linking quantum-style knot invariants to classical geometry fails even for a prime hyperbolic knot, which narrows what the conjecture can be. The text does not say how far the counterexample reaches beyond 8_11, and it mentions a separate later report of counterexamples among non-hyperbolic knots, so the broader picture is still being worked out.",
-    "background": "- A knot is a closed loop tangled in 3D space; knot invariants are numbers or polynomials that tell knots apart.\n- The colored Jones polynomial is a family of knot invariants J(n) indexed by an integer n; its minimal annihilator is the simplest polynomial relation it satisfies.\n- The A-polynomial (Cooper, Culler, Gillet, Long, Shalen) is a two-variable polynomial that encodes the geometry of the knot's complement via representations of its fundamental group.\n- The AJ conjecture says these two objects should match after a specialization of variables; \"hyperbolic\" means the knot complement has a constant-curvature geometry.\n- Zhang previously found counterexamples among composite knots; Lê proposed the P-hat = A-hat conjecture and a weak AJ version.\n- The paper says it was AI assisted and partly formalized in Lean, a computer proof checker.",
+    "one_liner": "The paper defines a Laplace operator on the Möbius chain complex of persistence modules (the \"Möbius homology Laplacian\"), whose kernel gives canonical cycle representatives, and analyzes its spectrum for one-parameter modules and birth-death modules from simplicial filtrations.",
+    "plain": "The paper studies how shapes in data change as a parameter grows, a setting called persistent homology, which tracks when loops and holes appear and disappear. The authors build a matrix-style operator, analogous to the Laplacian used in graph and spectral analysis, on a structure that categorifies Möbius inversion, a counting tool from combinatorics. They report that for one-parameter modules they fully determine the eigenvalues of the degree-one version, and for birth-death modules the trace and determinant of the degree-zero version reflect the structure of the persistence diagram.",
+    "why": "It offers a way to attach analytic, spectral information to persistence modules, which standard persistence diagrams do not directly encode. Its connection to applications is not established in the text, so its practical reach is uncertain.",
+    "background": "- Persistent homology: tracking holes and loops in a growing family of spaces, summarized by a persistence diagram of birth and death times.\n- Persistence module: the algebraic object (vector spaces with maps linking stages of the filtration) that persistent homology studies.\n- Chain complex: a sequence of vector spaces with boundary maps, used to compute homology (cycles modulo boundaries).\n- Möbius inversion: a combinatorial rule for recovering values from cumulative data over a partially ordered set; \"categorifying\" it means replacing numbers with vector spaces and maps.\n- Laplace operator and spectrum: a matrix-like operator whose eigenvalues and kernel describe structure; its kernel gives harmonic representatives.\n- Simplicial complex and filtration: spaces built from vertices, edges, triangles, etc., added in stages.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $K$ be a knot in $S^3$. The strong AJ conjecture relates two of its invariants. The first is the minimal-order annihilator $\\widehat A$ of the $n$th colored Jones polynomial $J(n)$. The second is the two-variable $A$-polynomial of Cooper, Culler, Gillet, Long, and Shalen. The conjecture says that after specialization $\\varepsilon^*(\\widehat A)\\asymp A$. Zhang gave the first family of composite-knot counterexamples. For $8_{11}$ the specialization of $\\widehat A$ carries an extra trefoil factor $L+M^6$. We prove this by verifying L\\^e's $\\widehat P=\\widehat A$ conjecture. Zhang's corrected formulation of the AJ conjecture agrees with L\\^e's weak AJ conjecture, which we prove for $8_{11}$. Li, Li, and Sun have since reported counterexamples of the weak AJ conjecture among non-hyperbolic prime knots. This work was AI assisted, and parts of it have been formalized in Lean.",
+   "abstract": "Persistent homology provides a framework for studying the evolution of topological features across filtered spaces. While persistence diagrams give discrete invariants that record the birth and death of homological features, they do not directly encode analytic or geometric structure associated to persistence modules. This paper develops a spectral framework for persistent homology by introducing and studying a Laplace operator on the M\\\"obius chain complex, called the M\\\"obius homology Laplacian. M\\\"obius homology categorifies M\\\"obius inversion for persistence modules by replacing integer-valued data with vector-space-valued chain complexes. By equipping these chain complexes with inner products, we define a Laplace operator on the M\\\"obius chain complex whose kernel provides canonical cycle representatives for the associated M\\\"obius homology space. We analyze the spectral properties of this operator in two primary settings: one-parameter persistence modules and birth-death modules arising from filtrations of simplicial complexes. For one-parameter modules, we completely characterize the eigenvalues of the degree-one M\\\"obius homology Laplacian. For birth-death modules, we show that the trace and determinant of the degree-zero M\\\"obius homology Laplacian reflect the combinatorial structure of the persistence diagram.",
    "source": "arxiv"
   },
   {

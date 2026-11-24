@@ -3,6 +3,55 @@
  "updated": "2026-11-24",
  "papers": [
   {
+   "uid": "arxiv:2611.28357",
+   "title": "Competing climates of the present-day Earth: from Snowball to Hothouse",
+   "url": "https://arxiv.org/abs/2611.28357",
+   "authors": [
+    "Laure Moinat",
+    "John Marshall",
+    "Maura Brunetti"
+   ],
+   "label": "arXiv:2611.28357v1",
+   "primary_category": "physics.ao-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Using the BIG-MITgcm coupled climate model, which links atmosphere, ocean, ice sheets and vegetation over many millennia, the authors report five alternative stable climate states for present-day Earth's continents, solar output and pre-industrial CO2, and argue that ocean heat transport sets where the ice edge sits in each.",
+    "plain": "Earth's climate today is only one of several states it could settle into with the same continents, Sun output and carbon dioxide level. The authors ran a long-timescale computer model and found five such states, from a planet fully covered in ice (a \"Snowball\") to a much warmer one where the Atlantic's overturning ocean circulation has shut down. Each state is kept in place by its own balance of feedbacks, such as ice reflecting sunlight.",
+    "why": "If several climates are stable under today's conditions, the present one is not guaranteed, which bears on how past glacial-interglacial shifts happened and on the risk of crossing future tipping points. The text does not show how well the model captures real-world behaviour, so these links remain suggestions rather than established results.",
+    "background": "- Climate \"state\": a long-lasting pattern of temperature, ice cover and ocean circulation that a system can stay in.\n- Feedback: a process where a change amplifies or dampens the original change; for example, ice reflects sunlight, so more ice cools the planet further.\n- Snowball Earth: a hypothesised episode in which ice covers the whole planet, pole to pole.\n- Last Glacial Maximum: the peak of the most recent ice age, about 20,000 years ago.\n- Ocean heat transport: the movement of heat from warm regions to cold ones by ocean currents.\n- Atlantic overturning circulation: a large-scale current system that carries warm water north in the Atlantic and cold water south at depth.\n- Coupled model: a computer model that links several parts of the Earth system (air, ocean, ice, plants) so they affect one another.\n- Pre-industrial CO2: the atmospheric carbon dioxide level before the industrial era, used as a fixed reference.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Earth today has one climate, but it could have others. With the same continents, the same solar constant and the same pre-industrial CO2, our planet could settle into strikingly different ones. We explore this possibility with BIG-MITgcm, a model which couples atmosphere and ocean circulation with ice sheets and vegetation, and which can be integrated over many millennia. We find five different climates and describe them here. At one extreme is a Snowball, with ice from pole to pole. A Waterbelt also exists, in which sea ice reaches the tropics and only a thin equatorial ribbon of open ocean survives. There is a Cold world much like the Last Glacial Maximum, a Warm climate in which we live in today, and a Hot world in which the Atlantic overturning circulation has collapsed. Each state is held in place by its own balance of competing feedbacks. Ocean heat transport anchors each climate, holding the ice edge where that transport is weak. The familiar climate of the past 10 thousand years is perhaps just one of several possibilities. This has implications for glacial-interglacial transitions and the risk of crossing global tipping points in the future.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28315",
+   "title": "Stochastic climate emulation at reduced cost with ACE2.5-ERA5",
+   "url": "https://arxiv.org/abs/2611.28315",
+   "authors": [
+    "Jeremy McGibbon",
+    "Troy Arcomano",
+    "Spencer K. Clark",
+    "James P. C. Duncan",
+    "Brian Henn",
+    "Oliver Watt-Meyer"
+   ],
+   "label": "arXiv:2611.28315v1",
+   "primary_category": "physics.ao-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "ACE2.5-ERA5 is a stochastic, autoregressive AI emulator of ERA5 reanalysis that adds noise conditioning, a spectrally bottlenecked Spherical Fourier Neural Operator backbone, and a daily time step, yielding calibrated ensembles, improved small-scale precipitation spectra, and cheaper training and inference than its predecessor ACE2-ERA5.",
+    "plain": "This paper presents a new AI model that imitates the global weather and climate record (ERA5) and can produce many possible future weather paths, not just one. The authors report that its spread of possible outcomes matches its actual forecast errors well from about day 3 onward, that it keeps finer-scale rain patterns more faithfully than the previous version, and that it runs stably for 1000 simulated years. It is also smaller, faster, and cheaper to train, and the team released model checkpoints.",
+    "why": "Ensembles that are well calibrated, meaning their spread honestly reflects uncertainty, are central to useful weather and climate prediction, and cheaper emulators could make such experiments accessible to more groups. The text also notes that year-to-year variability of global mean temperature is not calibrated in either model, so the approach has a known limit. Broader impact is not established by the text alone.",
+    "background": "- Emulator: a fast statistical or AI model trained to reproduce a slower physics-based simulation or observed data record.\n- ERA5: a widely used global reanalysis dataset that combines past observations with a weather model to give a consistent history of the atmosphere.\n- Autoregressive: the model predicts the next time step from the current state and repeats, producing long simulations.\n- Ensemble: a set of runs from slightly different starting conditions or noise, used to express uncertainty.\n- Calibrated: the ensemble spread matches how large the real errors actually are.\n- CRPS (continuous ranked probability score): a loss function that rewards probabilistic forecasts that are both sharp and accurate.\n- Spectral power / wavenumber: how much variation sits at each spatial scale; higher wavenumbers mean finer detail.\n- ENSO: El Niño–Southern Oscillation, a recurring tropical Pacific climate pattern that affects rainfall worldwide.\n- Spherical Fourier Neural Operator: a neural network design that works on the sphere of the Earth using spherical harmonics.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce ACE2.5-ERA5 (Ai2 Climate Emulator of ERA5, version 2.5), a stochastic autoregressive weather-climate AI model that produces calibrated weather ensembles with realistic small-scale structure on timescales from days to centuries. Its deterministic predecessor, ACE2-ERA5, retains 36% of its ERA5 target's precipitation spectral power at total wavenumbers 100--179; ACE2.5-ERA5 retains 86%. In weather forecasts its ensemble spread matches its error to within 4% from day 3. Time-mean climate is on par with or better than ACE2-ERA5, the precipitation response to ENSO is improved, and the model is stable over 1000 years. Interannual variability of global mean surface temperature is shown not to be calibrated in either ACE2.5-ERA5 or its predecessor. ACE2.5-ERA5 differs from ACE2-ERA5 in three ways. Noise-conditioned layer normalization, trained with a combined CRPS and spectral energy score loss in place of mean squared error, makes it stochastic. Spectral bottlenecking with grouped convolutions cuts the Spherical Fourier Neural Operator's spectral filter parameters by more than two orders of magnitude and leaves a model a tenth the size of ACE2-ERA5. Its time step is daily rather than 6-hourly. ACE2.5-ERA5 has 3.2 times the inference throughput of ACE2-ERA5. A 6-hourly variant has weather prediction skill similar to ACE2-ERA5. A 4-degree variant reaches comparable climate skill at an order of magnitude lower training cost, enabling rapid iteration during development. We release 1-degree daily, 4-degree daily and 1-degree 6-hourly checkpoints.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.26908",
    "title": "Carbon dioxide responses shape estimates of Amazon forest vulnerability under solar geoengineering",
    "url": "https://arxiv.org/abs/2611.26908",

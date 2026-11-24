@@ -3,51 +3,49 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27631",
-   "title": "Learning Inside Types: Epistemic Typestates for Safe Multi-Agent Reinforcement Learning",
-   "url": "https://arxiv.org/abs/2611.27631",
+   "uid": "arxiv:2611.30200",
+   "title": "Adopting AI Technologies without Traps: A Multi-Agent Reinforcement Learning Framework",
+   "url": "https://arxiv.org/abs/2611.30200",
    "authors": [
-    "Lorenzo Bacchiani",
-    "Mario Bravetti",
-    "Giovanni Pau",
-    "Roberto Girau"
+    "Jitong Yang",
+    "Avinash Reddy Mudireddy",
+    "Ziqing Lu",
+    "Huan Cai",
+    "Weiyu Xu"
    ],
-   "label": "arXiv:2611.27631v1",
+   "label": "arXiv:2611.30200v1",
    "primary_category": "cs.AI",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes \"epistemic typestates,\" a type discipline in which each agent's type is a protocol over its beliefs about which worlds are still possible, permitting only actions safe in every such world, and reports soundness and team-safety proofs (mechanised in Rocq) plus benchmark results for safe multi-agent reinforcement learning.",
-    "plain": "The paper is about teaching groups of learning software agents to act safely while they learn together. The authors treat safety like a type rule in programming: each agent gets a type that limits which actions it may take, based on what it can rule out from its own observations, and each agent's type is built and checked separately without the agents talking to each other. Their tests on nine benchmarks report no safety violations from the typed learners, task performance comparable to two recent shielding methods, and fast type construction for ten agents.",
-    "why": "Safety guarantees that hold for every policy a learner might produce, rather than only for those tested, would matter for robots or systems where errors are costly. The text reports proofs and benchmark comparisons, but these are the authors' own results, and how well they transfer to real-world settings is not shown in the text.",
-    "background": "- Reinforcement learning: an agent learns by trial and error which actions earn rewards.\n- Multi-agent setting: several learners act in a shared environment, and each one's safety can depend on what the others do.\n- Type system: a rule set in programming that rejects code that could go wrong in specified ways before it runs.\n- Typestate: a type that tracks what state an object is in and which operations are allowed then.\n- Shield: a runtime filter that blocks unsafe actions chosen by a learner.\n- Lagrangian method: a common way to add safety limits to learning by penalising constraint violations, which can still allow violations during training.\n- Mechanised proof (Rocq): a mathematical proof checked by a computer proof assistant.",
+    "one_liner": "The paper proposes a general multi-agent Markov decision process (MARL) framework, covering human and AI agents, for finding long-term optimal strategies for adopting AI, and applies it to skill erosion from AI offloading, firm workforce structure, and labor/trading equilibria.",
+    "plain": "The paper asks how people and firms can adopt AI tools without falling into long-term traps, such as losing skills, losing jobs, or losing training opportunities. It builds a modeling framework in which human and AI agents make decisions over time, and negative effects appear as bad state changes or negative rewards. The authors apply this framework to three cases: skill erosion from handing tasks to AI, the best mix of human staff for a firm using AI, and the economic balance of trading and employment between humans and AI.",
+    "why": "Concerns about AI reducing human skills and jobs are widely discussed, and this paper offers a formal way to model those long-term effects using decision-making tools. The text is a framework description and does not show what the optimal strategies turn out to be in concrete numbers, so its practical value is not yet established from this excerpt alone.",
+    "background": "- Markov decision process (MDP): a standard way to model decisions over time, where an agent picks actions, the world moves to a new state, and the agent receives a reward.\n- Reinforcement learning (RL): a method where an agent learns which choices lead to the best long-term reward through trial and feedback.\n- Multi-agent RL (MARL): several learning agents interacting in the same environment, here both human and AI agents.\n- State transition: a change in the situation (for example, a worker's skill level) caused by an action.\n- Economic equilibrium: a stable point where no participant gains by changing behavior on their own.\n- Skill erosion: losing a capability through disuse, such as when a task is always done by a machine.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Type disciplines make programs safe by construction: components checked against each other's types compose into programs that cannot go wrong in the ways the types exclude. Types suit reinforcement learning: a type constrains what an agent may choose, not how it chooses, so the guarantee holds for every policy a learner produces. We introduce epistemic typestates, a type discipline for safe multi-agent reinforcement learning. An agent's type is a protocol whose states record its beliefs, the worlds it cannot rule out from its own observations and actions, and permits only actions that are safe in every world of the belief, whatever the others do within their public types. Agents learn inside their types, which are built and checked one agent at a time and run without communication. We prove type soundness and team safety, give a synthesis that is sound and complete, build types from guards when worlds are infinite, and show that shields are a special case. All proofs are mechanised in Rocq. On nine benchmarks, no typed learner causes a safety violation, and task performance does not differ significantly from that of two recent multi-agent shielding methods. Where a contract-based method fails at five and ten agents, types for ten agents are built in under a second. In the two continuous benchmarks, Lagrangian learners cause thousands of violations in every training run.",
+   "abstract": "AI technologies and AI agents play increasingly important roles in human society, including in education, economics, and research. Adopting AI technologies can bring immediate, and sometimes tremendous, rewards such as through productivity boost, but they can also bring negative effects including but not limited to losses of job and training opportunities, and cognitive capability declines. Thus, it is important to investigate the optimal ways of adopting AI technologies without different traps. In this paper, we develop a general multi-agent Markov decision process (MDP) based reinforcement learning (RL or MARL) modeling framework for determining and analyzing optimal adoption of AI technologies. This framework can model the long-term dynamic effects of AI adoption, and lead to finding the optimal AI adoption strategies. In our modeling framework, the negative effects of AI adoption are modeled by undesirable state transitions or negative rewards in the MDPs. The proposed multi-agent RL MDPs incorporate both human agents and AI agents. The key idea of our models is that incorporating AI technologies may not only increase the immediate rewards for AI agents but also alter the states of the involved human and AI agents. In particular, we apply this framework to analyzing AI offloading leading to skill erosion, to analyzing optimal human resource structures for a firm adopting AI, and to analyzing the economic equilibria in the trading/employment among human and AI agents. Since the multi-agent MDP based RL technique is from control, machine learning and AI, this research is essentially using an AI technique to determine the optimal ways of adopting or co-existing with AI without traps.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27865",
-   "title": "SLICR: Strategy Logic-Guided Multi-Agent Reinforcement Learning",
-   "url": "https://arxiv.org/abs/2611.27865",
+   "uid": "arxiv:2611.29303",
+   "title": "From Vanishing Gradients to Recursive Self-Improvement: Evaluating the Most Influential Papers in Large Language Model Evolution (1997-2026)",
+   "url": "https://arxiv.org/abs/2611.29303",
    "authors": [
-    "Arshia Rafieioskouie",
-    "Matthew Lucas",
-    "Tzu-Han Hsu",
-    "Borzoo Bonakdarpour"
+    "Saadh Jawwadh"
    ],
-   "label": "arXiv:2611.27865v1",
-   "primary_category": "cs.AI",
+   "label": "arXiv:2611.29303v1",
+   "primary_category": "cs.CL",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "SLICR uses Strategy Logic specifications (with LTL objectives and constraints) to shape rewards for multi-agent reinforcement learning under adversarial settings and partial observability, evaluated on Predator-Prey, Google Research Football, and an extended SMAC-HARD.",
-    "plain": "This paper is about teaching groups of software agents to act well when they compete against other agents and can only see part of what is happening. The authors write goals as formal logic rules, so the agents get rewarded for meeting them. They report testing the method on three standard game-like benchmarks and say it works, scales, and adapts to different opposing strategies.",
-    "why": "Writing goals as precise logical rules could make it easier to say exactly what an AI agent should do, including how it should respond to rivals. The text gives only the abstract, so the strength of the results and how they compare with existing methods cannot be judged from it; the \"paradigm shift\" wording is the authors' own framing.",
-    "background": "- Reinforcement learning: an agent learns by trying actions and getting rewards or penalties.\n- Multi-agent setting: several learning agents act at once, sometimes against each other.\n- Partial observability: each agent sees only part of the situation.\n- Specification-guided RL: formal rules describing desired behavior are turned into reward signals.\n- Linear temporal logic (LTL): a notation for rules about how things must unfold over time, such as \"eventually reach X and never do Y\".\n- Strategy Logic (SL): an extension that lets you state rules about the strategies agents choose, not just their single actions.\n- Benchmarks: standard test games (Predator-Prey, Google Research Football, StarCraft Multi-Agent Challenge) used to compare methods.",
-    "difficulty": "research-level",
+    "one_liner": "A review that walks through 22 influential publications on large language models (1997 to 2026), organized as a chronological cause-and-effect taxonomy, covering RNNs, LSTMs, Word2Vec, Transformers, scaling laws, RLHF, jailbreaks, and recent work on model collapse and self-improving agents.",
+    "plain": "This is a survey that tries to sort out which AI research results were real turning points and which were small refinements, by following one line of work from older neural networks through today's chatbots. It explains each step in everyday terms, such as a memory mechanism that decides what to keep, and then covers newer concerns like safety guardrails being easy to bypass and AI systems being trained on AI output. The text provided is a short abstract-style description, so it does not show the detailed evidence behind each claim.",
+    "why": "It offers a single narrative connecting early sequence models to current safety problems, which may help non-specialists see how the pieces relate. The abstract gives only the outline, though, so readers should check the cited papers themselves before relying on its judgments of which work mattered most.",
+    "background": "- Recurrent neural network (RNN): a model that reads text one word at a time and carries a running memory; it tends to lose early context.\n- Long Short-Term Memory (LSTM): an RNN variant with gates that control what is kept, updated, or output.\n- Word2Vec: a method that represents words as numerical vectors so that meaning relationships become arithmetic.\n- Transformer and attention: an architecture where every word can look at every other word; powerful but costly as text grows.\n- Scaling laws (Chinchilla): the finding that model size and training data should grow together.\n- RLHF: training a model using human preference ratings to make it behave more helpfully and safely.\n- Jailbreak: a crafted prompt that gets a model to ignore its safety training.\n- Model collapse: quality degradation when models are trained on output generated by other models.",
+    "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "Specification-guided reinforcement learning (RL) translates formal specifications of desired behavior of agents into shaped rewards. This paper introduces SLICR, a significant paradigm shift that advances the state of the art to specification-guided RL in adversarial settings under partial observability. We employ Strategy Logic (SL), which allows explicit quantification over agents' strategies and uses the linear temporal logic (LTL) to specify the agents' objectives and constraints. This enables reasoning not only about how agents should act to satisfy a specification, but also about how they should respond to the strategies and behaviors of other agents. We evaluate SLICR on three popular benchmarks: Predator-Prey, Google Research Football, and our home-grown extension of SMAC-HARD, demonstrating its effectiveness, scalability, and ability to adapt to diverse adversarial strategies.",
+   "abstract": "The rapid proliferation of Large Language Model (LLM) research makes it increasingly difficult to distinguish incremental refinements from true paradigm shifts. This review evaluates 22 of the most influential publications spanning nearly three decades (1997-2026), organized through a causal, chronologically anchored taxonomy centered on the author's birth year (1999). Beginning \"before 1999\" with how recurrent neural networks (RNNs) forgot earlier context (much like forgetting Chapter 1 by the time a reader reaches Chapter 9), we trace how Long Short-Term Memory (LSTM) networks introduced a \"bouncer\" mechanism of forget, input, and output gates to selectively preserve long-term memory. We then examine how Word2Vec turned language into vector mathematics (king - male + female ~ queen), why sequential RNNs hit a parallelization wall, and how the Transformer's all-to-all attention weights launched the modern LLM era alongside a quadratic bottleneck. Next, we analyze why scaling parameters alone leaves capacity under-trained unless data scales equally (Chinchilla), how Reinforcement Learning from Human Feedback (RLHF) left alignment superficial, and how that gap compounded into adversarial jailbreaks and single-direction refusal subspaces (J-space), where instructing a model not to think of a restricted concept surfaces it much like the human \"red ball\" paradox. Finally, we synthesize the current state of AI (2024-2026), encompassing recursive model collapse, autonomous reasoning-model jailbreak agents, machine-speed agentic intrusions, and closed-loop recursive self-improvement (AIDE^2).",
    "source": "arxiv"
   },
   {

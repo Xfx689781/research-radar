@@ -3,6 +3,51 @@
  "updated": "2026-11-24",
  "papers": [
   {
+   "uid": "arxiv:2611.30336",
+   "title": "Impact of Topology and Sequence Length on the Pressure-Dependent Collapsibility of Proteins",
+   "url": "https://arxiv.org/abs/2611.30336",
+   "authors": [
+    "Jiayi Wang",
+    "D. Thirumalai",
+    "Margaret S. Cheung",
+    "Andrei G. Gasic"
+   ],
+   "label": "arXiv:2611.30336v1",
+   "primary_category": "physics.bio-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A theoretical study extending the protein \"collapsibility\" framework with a pressure-dependent desolvation (water-release) term, showing that pressure-induced changes in water-mediated collapse depend on native-state topology and especially on the share of non-local contacts.",
+    "plain": "This paper asks how squeezing a protein with hydrostatic pressure, the same kind of uniform pressure felt deep in the ocean, changes how readily its chain folds into a compact ball. The authors add a pressure-dependent term for how water interacts with the chain to a simple model, and find that higher pressure destabilizes the fully folded shape while still favoring compact, water-mediated conformations. How strongly pressure shifts this tendency depends on the protein's overall structure, and proteins or domains with more non-local contacts (amino acids far apart in the chain that touch in the folded shape) tend to show a larger pressure-induced effect.",
+    "why": "Pressure is a physical perturbation that helps separate the forces holding proteins together, and linking it to native-state structure may clarify why different proteins respond differently to environmental stress. The text does not show direct experimental tests or practical applications, so the wider significance remains uncertain.",
+    "background": "- Protein folding: a chain of amino acids settles into a specific 3D shape, the \"native state.\"\n- Collapsibility: how strongly a sequence tends to pull into a compact blob, which is distinct from reaching the right final shape (foldability).\n- Hydrostatic pressure: uniform squeezing from all sides, such as at great ocean depths.\n- Desolvation: the cost or gain of stripping water away from chain surfaces when they come together.\n- Native contacts: pairs of amino acids that touch in the folded structure; non-local ones are far apart along the chain sequence.\n- Topology: the overall arrangement of secondary (local helices and sheets) and tertiary (global packing) structure.\n- The work is computational/theoretical; the abstract does not describe the specific model details or quantitative results.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Several physical and evolutionary factors, including temperature, pressure, solvent quality, and natural selection, influence how amino acid sequences adopt their native structures. Although protein folding has been extensively studied, the physical determinants of protein collapse and their relationship to native-state folding remain less understood. In particular, \"collapsibility\", the intrinsic propensity of a protein sequence to form compact conformations, is distinct from but closely related to \"foldability\", the ability to reach the native structure. Previous theoretical studies suggested that collapsibility is encoded in native-state topology, potentially reflecting evolutionary selection. However, the roles of solvent-mediated interactions and hydrostatic pressure remain unclear. Here, we extend the theoretical framework of protein collapsibility by incorporating a pressure-dependent desolvation potential to investigate how hydrostatic pressure influences protein collapse. We find that increasing pressure destabilizes the fully folded native state, but can still favor the compact, water-mediated conformations. Furthermore, the magnitude and direction of pressure-induced changes in collapsibility depend strongly on native-state topology, including secondary and tertiary structures. Proteins and domains with a higher proportion of non-local native contacts generally exhibit greater pressure-induced water-mediated collapsibility. These findings highlight the role of native-state topology in determining the pressure sensitivity of protein collapse and provide insights into the interplay among protein structure, solvent-mediated interactions, and environmental perturbations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29880",
+   "title": "Infrared Relaxation Modes and the Emergence of Collective Order in Neural Dynamics",
+   "url": "https://arxiv.org/abs/2611.29880",
+   "authors": [
+    "Byung Gyu Chae"
+   ],
+   "label": "arXiv:2611.29880v1",
+   "primary_category": "physics.bio-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes a microscopic field theory in which the quadratic kernel of an effective action, after integrating out individual neural degrees of freedom, sets the threshold for collective ordering, with spectral weight and relaxation rates linked to instability and memory, and checks this with numerical constructions and Transformer Jacobian spectra.",
+    "plain": "The paper asks when a network of interacting nonlinear units, such as neurons, starts to act together in a coordinated way, and how that coordination relates to how long the network keeps a memory. The authors build a mathematical framework that averages out the individual units to get a single effective description, then study how the timescales of the system's responses control when order appears. They report that stronger low-frequency (slow-timescale) spectral content lowers the coupling needed for order and produces longer-lasting memory, and they add some numerical and Transformer-model checks.",
+    "why": "Understanding the link between collective order and persistent memory in neural-like systems could matter for both neuroscience and the study of learning in artificial networks. The text, however, gives only an abstract-level account without the detailed derivations, data, or comparisons needed to judge how general the claims are, so their significance remains unclear.",
+    "background": "- Effective action: a compact mathematical function that summarizes a system after its individual parts have been averaged out.\n- Quadratic kernel: the simplest (second-order) part of that function; its sign or value indicates when a uniform state becomes unstable.\n- Landau expansion: a general way to describe an ordering transition (like a magnet forming or a liquid freezing) as a polynomial in an order parameter.\n- Critical coupling: the strength of interaction at which collective order first appears.\n- Spectral decomposition / relaxation rates: splitting a system's response into modes that decay at different speeds; slow modes dominate long-time memory.\n- Infrared spectral weight: in this context, the share of response carried by slow, long-wavelength or low-frequency modes.\n- Jacobian: a matrix of how small input changes propagate through a network; its spectrum describes how stable or sensitive the network's responses are.\n- Critical-like response: behavior resembling systems poised near a phase transition, where responses are unusually long-lived.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop a microscopic field theory of collective order formation in interacting nonlinear neural systems. Integrating out microscopic neural degrees of freedom yields an effective action whose quadratic kernel determines the ordering threshold, while higher-order connected responses govern nonlinear stabilization. Spectral decomposition reveals that relaxation rates and collective-mode overlaps control collective instability and memory dynamics. Enhanced infrared spectral weight lowers the critical coupling and generates long-time memory, revealing a common spectral origin of collective ordering and persistent dynamics. Controlled numerical constructions verify the spectral dependence of collective instability and response, while nonlinear mean-field scaling follows from the microscopic Landau expansion. Transformer Jacobian spectra further reveal learning-induced infrared organization and transient memory enhancement consistent with critical-like response. Our results establish a microscopic framework linking neural interactions, collective order, and long-time memory.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.27960",
    "title": "Receptor Abundance Alone Underpredicts Red Blood Cell Adhesion in Gaucher Disease",
    "url": "https://arxiv.org/abs/2611.27960",

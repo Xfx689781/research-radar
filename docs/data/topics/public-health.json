@@ -13,10 +13,10 @@
    "primary_category": "public and global health",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes a variance-partitioning method for hierarchical study designs, splitting lifespan inequality into between-region, between-country-within-region, and within-country components, and applies it to global healthy longevity data from 194 countries.",
-    "plain": "People differ in how long they live for two reasons: some groups have different death rates, and chance alone makes individuals in the same group die at different ages. This paper offers a way to split the total spread in lifespans into pieces that match how the data are nested, such as countries within regions. The authors apply it to healthy-longevity estimates for 194 countries and report that most of the spread lies within countries rather than between them.",
-    "why": "Health inequality is usually discussed as a gap between rich and poor countries, and this work suggests that most of the variation sits inside countries instead. The method may be useful for other nested datasets, such as regions within states, though the text does not show how it performs beyond this application.",
-    "background": "- Lifespan inequality: how widely individual ages at death vary, here measured by variance (a standard measure of spread).\n- Mixture distribution: treating a population as a blend of several subgroups, each with its own pattern of deaths.\n- Hierarchical design: data nested in layers, such as countries inside regions.\n- Partitioning variance: splitting total variation into separate parts that add up to the whole.\n- Healthy longevity: a measure of expected years lived in good health, here drawn from the Global Burden of Disease study.\n- Flat versus population-weighted mixing: whether each country counts equally or in proportion to its population when combining them.\n- The paper reports that within-country chance variation makes up 85% to 95% of total inequality; the text gives no further detail on how this was estimated.",
+    "one_liner": "The paper proposes a variance-partitioning method for hierarchical study designs, splitting lifespan inequality into between-region, between-country-within-region, and within-country components, and applies it to healthy longevity data for 194 countries from the Global Burden of Disease study.",
+    "plain": "Some people die at very different ages, and part of that spread comes from differences between groups (such as countries) and part from pure chance among people who face the same risks. This paper offers a way to split the total spread in lifespans into layers: differences between large regions, differences between countries within those regions, and chance variation within each country. The authors apply it to healthy-life data for 194 countries grouped by World Bank income category.",
+    "why": "It gives researchers a systematic way to say how much of global inequality in healthy longevity lies in regional gaps versus chance, which matters for judging where health policy can reduce differences. The text does not show how the method performs against alternatives, so its practical reach is best treated as a methods contribution pending further use.",
+    "background": "- Lifespan inequality: how much individuals' ages at death vary around the average.\n- Variance: a standard measure of spread; larger variance means more variation.\n- Mixture distribution: a population made of subgroups, each with its own rate, combined into one overall distribution.\n- Hierarchical design: data nested in layers, such as people within countries within regions.\n- Variance partitioning: splitting the total variance into parts attributable to each layer and to chance.\n- Global Burden of Disease (GBD): a large international database of health measures.\n- Healthy longevity: years lived in good health, as estimated in that database.\n- Flat vs. population-weighted mixing: whether each country counts equally or in proportion to its population when combining them.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -24,32 +24,29 @@
    "source": "medrxiv"
   },
   {
-   "uid": "medrxiv:10.64898/2026.11.19.26368514",
-   "title": "Monitoring SNAP and Food Insecurity After the One Big Beautiful Bill Act: Early Evidence from a National Longitudinal Cohort",
-   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368514v1",
+   "uid": "medrxiv:10.64898/2026.11.21.26368630",
+   "title": "Knowledge of antimicrobial Resistance in Bangladeshi Caregivers of School-going Children: A Cross-sectional study.",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.21.26368630v1",
    "authors": [
-    "Robertson, M.",
-    "Sanborn, J.",
-    "Penrose, K.",
-    "Nunez, J.",
-    "Arabadjis, S.",
-    "Silva, E.",
-    "Rane, M.",
-    "Parcesepe, A.",
-    "Nash, D."
+    "Chowdhury, R. T.",
+    "Asamoni, U. H.",
+    "Raiyan, R.",
+    "Hafsa, S.",
+    "Sajeeb, S. A. S. A.",
+    "Bhattacharjee, U."
    ],
-   "label": "medRxiv doi:10.64898/2026.11.19.26368514 v1",
-   "primary_category": "health policy",
+   "label": "medRxiv doi:10.64898/2026.11.21.26368630 v1",
+   "primary_category": "public and global health",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "An early longitudinal cohort study of 844 low-income U.S. adults (household income under 200% of the federal poverty guideline) tracking SNAP receipt and food insecurity from August 2025 to March 2026, comparing states that did and did not yet enforce the expanded work requirement under the One Big Beautiful Bill Act.",
-    "plain": "In July 2025, a new U.S. federal law tightened eligibility for the food assistance program SNAP (formerly called food stamps) and expanded its work requirements. This study followed a national group of lower-income adults from August 2025 to March 2026 to see how many still got SNAP and how many struggled to afford food. SNAP receipt dropped slightly, from 40.4% to 38.4%, while the share screening positive for food insecurity (not always having enough food) rose from 48.1% to 51.2%.",
-    "why": "It offers early, real-time evidence on what happens to people when food aid is cut back, at a time when the government is scaling back its own tracking of food insecurity. The authors report that people who left SNAP were about as food insecure as those who stayed, which suggests need did not disappear with the benefit. Because the study is early and its sample is modest, the findings should be read as preliminary.",
-    "background": "- SNAP: the U.S. federal program that helps low-income households buy food, often through an electronic benefit card.\n- Work requirement: a condition that certain adults work or train a set number of hours to keep benefits; the law expanded who must meet it.\n- Recertification: periodic re-checking of eligibility to keep receiving benefits.\n- Food insecurity: limited or uncertain access to enough food because of money or resource problems; \"screening positive\" means a short questionnaire flagged it.\n- Federal poverty guideline: the income threshold the government uses to define poverty; 200% means twice that amount.\n- Longitudinal cohort: the same group of people is surveyed repeatedly over time, so changes within individuals can be tracked.\n- Staggered state implementation: states started enforcing the new rule at different times, which the authors used as a comparison.",
-    "difficulty": "intermediate",
+    "one_liner": "A cross-sectional survey of 225 Bangladeshi caregivers of school-going children examining their knowledge of antimicrobial resistance, antibiotic use habits, and information sources, with socio-demographic differences in knowledge.",
+    "plain": "Antibiotics are medicines that fight bacteria, and overusing them lets bacteria evolve so the drugs stop working; this is called antimicrobial resistance (AMR). In this study, researchers asked 225 caregivers of school-age children in Bangladesh what they knew about AMR and how they use antibiotics. They found many gaps: for example, only 35% knew antibiotics do not work against viral infections, and 30% stopped antibiotic courses early.",
+    "why": "Misuse of antibiotics is one of the main drivers of drug resistance, which makes common infections harder to treat worldwide. The paper gives a snapshot of one group in one country, so it is best read as a local picture that may help shape education and prescribing policy rather than as a general measure of the problem.",
+    "background": "- Antibiotics kill bacteria but do not work against viruses (such as colds or flu).\n- Antimicrobial resistance (AMR): bacteria become able to survive drugs meant to kill them, so infections become harder to treat.\n- Self-medication: taking medicine without a doctor's prescription, often on a pharmacist's advice or from an old prescription.\n- Cross-sectional study: a one-time survey of a group at a single point in time; it shows associations, not cause and effect.\n- Socio-demographic factors: characteristics such as education, location (urban or rural), and household wealth.\n- p<0.05: a statistical threshold suggesting a difference is unlikely to be due to chance alone.\n- The text gives no details on how caregivers were chosen, the questionnaire itself, or the exact size of the group differences.",
+    "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "The One Big Beautiful Bill Act (OBBBA), signed in July 2025, restricted eligibility for the Supplemental Nutrition Assistance Program (SNAP) and expanded its work requirement, while federal tracking of food insecurity was scaled back. Using a national, community-based longitudinal cohort, we examined changes in SNAP receipt and food insecurity between August 2025 and March 2026 among 844 adults with household income below 200% of the federal poverty guideline, comparing participants in states that had and had not begun enforcing the expanded work requirement. SNAP receipt fell from 40.4% to 38.4%, and the share screening positive for food insecurity rose from 48.1% to 51.2%, with no detectable difference by state implementation timing. Adults who discontinued SNAP were as likely to be food insecure (71.1% in March 2026) and as worried about affording food, housing, and utilities as those who continued SNAP, and few had moved above 200% of the poverty guideline. These early findings suggest that need persisted after SNAP ended. As enforcement expands, policy makers should consider measures that keep benefits flowing to eligible people, such as extended certification periods and simplified recertification, and should support longitudinal monitoring of food insecurity.",
+   "abstract": "Antimicrobial resistance (AMR) is a critical global health threat exacerbated by inappropriate antibiotic use, yet evidence on caregivers' awareness and practices in Bangladesh remains limited. This cross-sectional study assessed AMR awareness, antibiotic use practices, and information sources among 225 caregivers using a structured questionnaire that also captured socio-demographic characteristics. Understanding of AMR was poor: although 78% recognized that antibiotics are effective against bacterial infections, only 35% acknowledged that they are ineffective against viral infections. Regarding practices, 30% discontinued antibiotic courses prematurely and 40% reported self-medication, primarily guided by pharmacy advice (45%) or previous prescriptions (30%). Healthcare professionals were the leading source of information (55%), followed by media (30%) and community programs (15%). Knowledge differed significantly across socio-demographic groups, with higher awareness among caregivers who were more educated, urban-dwelling, and from wealthier households (p<0.05). These findings reveal a substantial gap between AMR knowledge and antibiotic practices, particularly regarding misuse for viral infections, premature cessation, and self-medication. Targeted educational interventions, stronger enforcement of prescription regulations, and improved healthcare access are urgently needed, and behavioral interventions should address both knowledge deficits and practical barriers to help curb AMR in Bangladesh.",
    "source": "medrxiv"
   },
   {

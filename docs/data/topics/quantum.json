@@ -3,49 +3,56 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27660",
-   "title": "Detection of genuine multipartite entanglement by means of entanglement monotones",
-   "url": "https://arxiv.org/abs/2611.27660",
+   "uid": "arxiv:2611.30303",
+   "title": "Impact of structured noise on bosonic quantum error correction",
+   "url": "https://arxiv.org/abs/2611.30303",
    "authors": [
-    "Sylvain Carrozza",
-    "Johann Chevrier",
-    "Luca Lionni"
+    "Guoyu Shu",
+    "Ling Hu",
+    "Hongbo Wu",
+    "Zhongchu Ni",
+    "Yanyan Cai",
+    "Xiaowei Deng",
+    "Pan Zheng",
+    "Pengbo Li",
+    "Fei Yan",
+    "Song Liu",
+    "Dapeng Yu",
+    "Yuan Xu"
    ],
-   "label": "arXiv:2611.27660v1",
+   "label": "arXiv:2611.30303v1",
    "primary_category": "quant-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper looks for entanglement monotones (quantities that cannot increase under local operations) that certify \"irreducible\" genuine multipartite entanglement, proves a no-go result for combining LOCC-monotonicity with subadditivity, and shows a subfamily of the proposed monotones detects genuine tripartite entanglement in three-qubit systems.",
-    "plain": "The paper studies how to measure whether several quantum particles are entangled in a truly joint way, not just in pairs or as a product of smaller linked groups. The authors first show that one natural way of scoring this cannot satisfy two desirable rules at once. They then relax one rule and build a simple method for producing scores that do work, and report that a subset of these scores detects every form of genuine three-particle entanglement in three-qubit systems.",
-    "why": "Entanglement is a central resource for quantum computing and communication, and reliable ways to tell its genuinely multipartite forms apart are needed to characterise such resources. The text does not indicate applications beyond this theoretical characterisation, so its wider practical significance is unclear from the given material.",
-    "background": "- Entanglement: a correlation between quantum particles that has no classical counterpart.\n- Multipartite entanglement: entanglement shared among three or more particles (parties), as opposed to just two.\n- Irreducible entanglement (as defined here): an n-party state that cannot be written as a product of states each involving at most n-1 parties.\n- LOCC (local operations and classical communication): the operations each party can perform on its own particle while talking classically to the others; an entanglement measure should not increase under these.\n- LO-monotonicity: the weaker requirement that the measure does not increase under local operations alone, without classical communication.\n- Subadditivity: a rule that a combined quantity is at most the sum of its parts.\n- Entanglement monotone: a function of a quantum state that does not increase under the allowed operations, used as an entanglement score.\n- Three-qubit system: a set of three two-level quantum systems, the simplest case for genuine tripartite entanglement.",
+    "one_liner": "Experiments in a 3D superconducting circuit show that structured environmental noise makes single-photon loss depend on the photon-number state of a weakly nonlinear oscillator, deforming the error space assumed by bosonic quantum error correction, with transient dynamics matched by a second-order time-convolutionless theory.",
+    "plain": "Quantum computers can store information in microwave resonators, where photons are the carriers and sometimes leak out. The standard models assume every stored state leaks in the same simple way. This paper shows that when the surrounding environment is not flat in frequency, the leak rate can depend on how many photons are present, and that this changes which errors a correction scheme must handle.",
+    "why": "Bosonic error-correction schemes are designed around an idealized loss model, so a state-dependent leak could make them less effective than their design assumes. The text reports agreement between measurements and a theory for the transient behavior, and a demonstration with a logical qubit; its broader implications for hardware design are for the authors and readers to judge.",
+    "background": "- Bosonic mode: a resonator (here a microwave cavity) whose excitations are photons, counted by the number of photons, or Fock state.\n- Photon loss: photons leaking out of the cavity into its environment, the main error in these devices.\n- Quantum error correction: encoding information redundantly so that certain errors can be detected and undone.\n- Binomial code: a specific encoding of a logical qubit across several photon-number states.\n- Markovian vs non-Markovian: Markovian means the environment forgets quickly, so loss rates are constant; non-Markovian means memory effects shape the early dynamics.\n- Time-convolutionless theory: a mathematical method for describing open quantum systems with memory.\n- Circuit QED: superconducting circuits coupled to microwave resonators, used to build and probe such oscillators.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We look for pure state entanglement monotones that may serve as certificates of a strong form of genuine multipartite entanglement, that we refer to as irreducible entanglement: a $D$-partite state (with $D\\geq 3$) is irreducibly $D$-partite entangled if it cannot be decomposed as a product of states that are at most $(D-1)$-partite entangled. We start by establishing a no-go result proving that no reasonable genuine multipartite entanglement entropy can simultaneously obey LOCC-monotonicity and subadditivity. After relaxing the first condition to LO-monotonicity, we provide a simple method generating genuine multipartite entanglement monotones with the desired properties. Focusing on a subfamily of these monotones, we show that they are able to detect any form of genuine tripartite entanglement in three-qubit systems.",
+   "abstract": "Bosonic quantum error correction relies on an accurate description of single-photon loss dissipation using an ideal annihilation operator, under which correctable loss errors act equivalently on different logical code states. In realistic weakly nonlinear bosonic modes, however, coupling to a structured environment can render photon loss Fock-state dependent, thereby modifying the effective dissipation operator and deforming the associated error space. Here, we experimentally investigate this effect in a three-dimensional circuit quantum electrodynamics system. By injecting spectrally engineered environmental noise into a weakly nonlinear oscillator, we observe pronounced frequency selectivity in the measured Fock-state dynamics. While the long-time transition rates converge to the Markovian limit, the transient dynamics display distinctly non-Markovian behavior, in quantitative agreement with a second-order time-convolutionless theory. By applying narrowband noise to a binomially encoded logical qubit, we further demonstrate Fock-state-dependent dissipation channels that drive logical states beyond the nominally correctable error space. These results establish structured environmental noise as a mechanism for deforming photon-loss errors in weakly nonlinear bosonic systems and highlight the need to incorporate realistic, state-dependent dissipation into the design and characterization of bosonic quantum error correction.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26755",
-   "title": "Gravity-induced entanglement assisted by an additional interaction using magic angle calibration",
-   "url": "https://arxiv.org/abs/2611.26755",
+   "uid": "arxiv:2611.31000",
+   "title": "Quantum Approximation and Integration in Sobolev Spaces -- Low Smoothness",
+   "url": "https://arxiv.org/abs/2611.31000",
    "authors": [
-    "Daisuke Miki",
-    "Alfred Li",
-    "Yanbei Chen"
+    "Stefan Heinrich"
    ],
-   "label": "arXiv:2611.26755v1",
+   "label": "arXiv:2611.31000v1",
    "primary_category": "quant-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A proposed protocol for testing whether gravity alone can entangle two masses, using an added controllable coupling calibrated at a magic-angle null of the projected tidal coupling so that the protocol needs less absolute force-noise suppression than direct schemes.",
-    "plain": "The paper asks whether gravity can create quantum entanglement between two small masses, which would indicate that gravity is not just a classical force that works through local operations and classical communication. Gravity is so weak that direct attempts require extremely low force noise, so the authors propose adding a controllable extra interaction that sits just below the threshold where it could itself create entanglement. Gravity then only has to supply the small remaining part, and an angle-based null setting is used to calibrate the extra interaction and noise.",
-    "why": "The question bears on whether gravity must be quantized, a long-running open problem in physics. The text is a theoretical protocol only and reports no experimental result, so its practical feasibility is not shown here.",
-    "background": "- Entanglement: a quantum link between two objects whose states cannot be described independently.\n- LOCC (local operations and classical communication): the set of operations that cannot by themselves create entanglement; a classical-only description of gravity would respect this.\n- Gravity-induced entanglement: the idea that if gravity entangles two masses, gravity must have some quantum character.\n- Test masses and force noise: small objects whose motion is disturbed by unwanted random forces that must be kept small.\n- Tidal coupling: how the gravitational pull between two nearby masses varies with their relative position; the \"magic angle\" is a geometry where its projected effect vanishes.\n- Markovian model: an assumption that the environment has no memory of past effects.",
+    "one_liner": "The paper studies the query complexity of approximation and integration over Sobolev spaces in the quantum setting of information-based complexity, dropping a previously assumed embedding condition and using a quantum version of a stochastic discretization technique.",
+    "plain": "This paper is about how many questions a quantum computer needs to ask about a smooth function in order to estimate it or to compute its average (integral) to a given accuracy. The authors extend earlier results to functions with low smoothness, where a previously used condition no longer applies. They do this by adapting a random-sampling-based discretization method to the quantum setting.",
+    "why": "Work on the cost of approximating and integrating functions with quantum queries connects the theory of quantum algorithms to numerical analysis. The text given does not report specific results or bounds, so its significance beyond this extension cannot be judged from the excerpt.",
+    "background": "- Sobolev space: a family of functions with limited smoothness, measured by how many derivatives are square-integrable.\n- Information-based complexity (IBC): a field that asks how much information (number of function evaluations or queries) is needed to solve a continuous math problem to a target accuracy.\n- Quantum setting: the algorithm can query the function through quantum operations, which can allow different cost scaling than classical sampling.\n- Approximation vs. integration: approximation reconstructs the whole function; integration estimates its average value.\n- Embedding condition: a technical assumption relating the smoothness space to a function space with weaker requirements; the paper drops it.\n- Discretization: replacing a continuous function with a finite set of sampled or computed values.\n- Only the abstract-level description is available; no formulas or numerical results are included in the text.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Gravity-induced entanglement provides an operational test of whether gravitational dynamics are compatible with local operations and classical communication (LOCC), but the weakness of the gravitational interaction and the presence of force noise make direct entanglement generation extremely demanding. We introduce a controllable additional coherent interaction that biases two test masses close to, but within, a separability-preservation bound, so that the weak Newtonian coupling supplies only the remaining coherent contribution needed for entanglement. If the additional interaction alone is shown to be incapable of generating entanglement, while entanglement is observed when gravity is included, the gravitational interaction provides a non-LOCC contribution. Since gravity cannot be turned off, we use a magic-angle null of the projected tidal coupling to calibrate the additional interaction and force noise. If the additional dynamics is certified to preserve separability at the magic angle and entanglement is subsequently observed in a non-null configuration, the gravitational contribution is incompatible with an LOCC description within the Markovian model. The protocol trades the stringent absolute force-noise requirement of direct schemes for precision in controlling the additional coupling, its backaction, and angle-dependent systematics.",
+   "abstract": "We study the complexity of approximation and integration in Sobolev spaces in the quantum setting of information-based complexity theory (IBC). Previous results have been obtained under the assumption that the embedding condition holds. Here we drop this assumption and use a quantum version of a previously developed stochastic discretization technique.",
    "source": "arxiv"
   },
   {

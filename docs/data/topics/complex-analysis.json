@@ -3,45 +3,48 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27502",
-   "title": "Weighted fixed-bidegree subelliptic estimates for the \\(\\overline{\\partial}_f\\)-Neumann problem on Lipschitz pseudoconvex domain",
-   "url": "https://arxiv.org/abs/2611.27502",
+   "uid": "arxiv:2611.30403",
+   "title": "Quantum walks and conformal mappings",
+   "url": "https://arxiv.org/abs/2611.30403",
    "authors": [
-    "Ping'an Zhang"
+    "Fedor Kuyanov",
+    "Michael Drmota",
+    "Mikhail Skopenkov",
+    "Alexey Ustinov"
    ],
-   "label": "arXiv:2611.27502v1",
-   "primary_category": "math.CV",
+   "label": "arXiv:2611.30403v1",
+   "primary_category": "math-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves two types of a priori weighted subelliptic estimates, uniform in bidegree, for the twisted ∂̄_f-Neumann problem on bounded pseudoconvex domains with Lipschitz boundary satisfying an algebraic plurisubharmonic-type condition, with the twisting function holomorphic and having isolated critical points in the interior.",
-    "plain": "This paper is about a equation-solving problem in several complex variables, the kind that asks how smooth a solution must be when the domain has a rough, non-smooth edge. The authors prove estimates showing that solutions gain a limited amount of smoothness (a gain between 0 and 1/2) near the boundary, and that this holds consistently across the different types of forms involved. The result depends on a technical condition on how the boundary curves, and on a twisting function with controlled behavior.",
-    "why": "Estimates of this kind are the main tools for studying regularity of solutions to the ∂̄-Neumann problem, which connects complex geometry, partial differential equations and the theory of function spaces. The text does not say what specific applications follow, so beyond this field its wider significance is unclear from the text alone.",
-    "background": "- Complex analysis in several variables: functions of several complex numbers, and domains in complex space.\n- Pseudoconvexity: a geometric property of a domain's boundary, related to whether functions can be extended across it.\n- Plurisubharmonic function: a generalized convex-type function in complex space; its Hessian (matrix of second derivatives) measures its curvature.\n- ∂̄-Neumann problem: a boundary value problem for solving the complex analogue of the Cauchy-Riemann equations on a domain.\n- Subelliptic estimate: an inequality showing solutions are smoother than the equation alone guarantees, with a loss or gain measured by an exponent.\n- Lipschitz boundary: a boundary that is continuous and has bounded slope, but need not be smooth.\n- Twisted (weighted) problem: the problem modified by a weight e^{-f}, here with f holomorphic.\n- Bidegree: the type of differential form, indexed by how many holomorphic and antiholomorphic differentials it contains.",
+    "one_liner": "The paper derives uniform asymptotic formulas for the wave function of the discrete quantum walk (Feynman checkers, six-vertex model with special complex weights) across the whole space-time plane, using conformal mappings to handle Airy- and gamma-function transitions.",
+    "plain": "The paper studies a simple discrete model of a quantum particle, an electron hopping step by step along a line, and asks how its wave function behaves at every position and time. It finds the expected change between wavy and fading behaviour, described by the Airy function, and a second change near the speed of light, described by the gamma function. The authors prove two general theorems giving single formulas valid across these transitions, using a change of coordinates in the complex plane.",
+    "why": "Exact, uniform formulas that work across transition regions are useful tools for quantum walks, which appear in quantum computing and physics models, and the authors say the methods apply to other situations. The text does not establish wider impact beyond this, so its reach outside this setting is uncertain.",
+    "background": "- Quantum walk: the discrete, step-by-step analogue of a quantum particle moving randomly, with amplitudes rather than probabilities.\n- Wave function: a complex-valued function whose squared size gives the probability of finding the particle at a position.\n- Asymptotic formula: an approximation that becomes accurate for large distances or times.\n- Airy function: a special function describing the boundary between oscillating and exponentially decaying behaviour.\n- Gamma function: a standard special function generalising factorials, here governing behaviour near the maximal speed.\n- Conformal mapping: a smooth change of variables in the complex plane that preserves angles, used to simplify integrals.\n- Six-vertex model: a lattice model from statistical physics, here with special complex weights.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We establish two types of \\emph{a priori} subelliptic estimates for the twisted \\(\\overline{\\partial}_f\\)-Neumann problem on a bounded pseudoconvex domain with Lipschitz boundary. The estimates feature a subelliptic gain in \\((0, 1/2)\\) and are uniform with respect to the bidegree. The boundary is assumed to satisfy a plurisubharmonic-type condition, characterized by the local existence, near each boundary point, of a bounded plurisubharmonic function whose Hessian blows up algebraically near the boundary, with potentially different exponents at different points. The twisting function is holomorphic in a neighborhood of the domain, has bounded gradient, and its critical set inside the domain consists of isolated interior points with finite vanishing orders.",
+   "abstract": "We study the most elementary discrete model of an electron moving along a line, known as Feynman checkers, quantum walk, or the six-vertex model with special complex weights, and provide a uniform asymptotic formula for the wave function in the whole xt-plane. In addition to the well-known appearance of the Airy function that describes the transition between the oscillating and exponentially decaying regimes, we observe a second transition governed by the gamma function when the electron speed approaches the speed of light. We prove two general theorems producing uniform asymptotic formulae involving the Airy and gamma functions, using conformal mappings associated with the underlying integral representations. They are applicable in several other situations as well.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27925",
-   "title": "The Thurston algorithm for general entire maps on the complex plane: Existence and uniqueness",
-   "url": "https://arxiv.org/abs/2611.27925",
+   "uid": "arxiv:2611.31229",
+   "title": "Central limit theorem for energies of determinantal point processes on complex manifolds I",
+   "url": "https://arxiv.org/abs/2611.31229",
    "authors": [
-    "Sebastian van Strien"
+    "Hao Wu"
    ],
-   "label": "arXiv:2611.27925v1",
-   "primary_category": "math.DS",
+   "label": "arXiv:2611.31229v1",
+   "primary_category": "math.CV",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper gives an existence and uniqueness criterion (no Levy cycle relative to A and infinity) for realizing marked entire Thurston maps of stable parabolic type by postsingularly finite entire functions, and proves a Wolff–Denjoy type contraction estimate on Teichmüller space that supplies the foliation used in the existence proof.",
-    "plain": "The paper studies when an abstract map of the plane, one that records how a surface is wrapped onto itself, can be realized by an actual complex function of the form studied in complex dynamics. It states that this is possible exactly when there is no obstruction called a Levy cycle, and that in that case the function is unique up to affine change of coordinates. The authors also prove a result about repeatedly applied contractions on the space of surface shapes, using a fixed measure built from limits of rescaled pushforwards along a geometric ray.",
-    "why": "Thurston's characterization of rational maps via a no-obstruction condition is a central idea in complex dynamics, and extending it to transcendental entire functions is a natural and technically hard step. The text does not say how widely the result will be used, so its broader significance is uncertain from the abstract alone.",
-    "background": "- Entire function: a complex function defined and holomorphic on the whole complex plane (e.g. exp(z)); \"transcendental\" means it is not a polynomial.\n- Thurston map: a topological map of a sphere or plane that is locally like a complex map, with a finite set of special points (postsingular set) whose orbits are tracked.\n- Thurston equivalence: two maps are equivalent if a pair of homeomorphisms relates them compatibly; realizability asks whether such a map comes from an actual holomorphic function.\n- Levy cycle: a combinatorial obstruction (a cycle of nested curves with certain degree behavior) that prevents realization.\n- Teichmüller space: the space of shapes (complex structures) of a surface, with a natural distance; Thurston pullback acts on it.\n- Measured foliation and extremal length: tools measuring how \"long\" curve families are on a surface; used to quantify contraction.\n- Wolff–Denjoy theorem: a classical result that orbits of a non-expanding map on a disk/hyperbolic space converge to a boundary point; the paper proves an analogue on Teichmüller space.\n- Relation to other settings: real entire maps and exponential maps, which the authors compare with.",
+    "one_liner": "The paper proves a central limit theorem for the Green energy, and for the logarithmic energy, of Bergman determinantal point processes on compact Riemann surfaces and complex manifolds, using local Bergman kernel asymptotics and a cumulant expansion.",
+    "plain": "The paper studies random arrangements of N points on a curved complex surface, where the points are shaped by a probabilistic rule that discourages them from clustering. For a measure of how the points interact, called the Green energy, it gives the typical size of that quantity and its spread. It then shows that, once N is large, the fluctuations of this energy behave like the familiar bell-shaped (Gaussian) curve.",
+    "why": "Central limit theorems tell us when random fluctuations become predictable, which matters for understanding how well such random point models can be tested or simulated. The text does not say what wider applications it has, so its broader significance is uncertain from this excerpt alone.",
+    "background": "- Point process: a random collection of points, here N points on a surface.\n- Determinantal point process: a random point model where correlations are governed by a kernel (a function describing how strongly points relate), which tends to spread points apart.\n- Bergman kernel and positive line bundle: geometric objects on complex surfaces that define the point model.\n- Riemann surface: a one-dimensional complex surface, such as a sphere or torus.\n- Green function and energy: the Green function measures influence between two points; the energy sums this over all pairs of points.\n- U-statistic: an average over all pairs of sample points.\n- Cumulants: summary quantities of a random variable; a central limit theorem is shown by controlling them.\n- Central limit theorem: the statement that suitably normalized sums of random quantities approach a bell curve.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We prove that a marked topological entire Thurston map $(f,A)$ of stable parabolic type is Thurston equivalent relative to $A$ to a postsingularly finite entire function if and only if it has no Levy cycle relative to $A\\cup\\{\\infty\\}$. Here $A$ is a finite forward-invariant set containing the postsingular set. In the realizable case, the entire function is unique up to complex affine conjugacy, and every orbit of the Thurston pullback converges to its fixed point. We establish a Wolff--Denjoy type estimate for nonexpanding self-maps $T$ of the Teichm\\\"uller space of any connected orientable surface of finite type without boundary. If $T$ has an unbounded orbit, there are a nonzero measured foliation $G$ and a constant $C$ such that $\\operatorname{Ext}_{T^k x}(G)\\le C\\operatorname{Ext}_x(G)$ for every $x$ and $k\\ge0$. For a fixed-point-free transcendental Thurston pullback, this supplies the foliation used in the existence proof. A central tool is a fixed finite measure obtained as the total-variation limit of renormalized pushforward measures transported back along a Teichm\\\"uller ray. It allows us to select a cylinder at a late time and compare the mass of the same marked region at different times. If $G$ has a cylinder, a four-point extremal-length estimate and the Thurston matrix force a Levy cycle. Otherwise, in the absence of a Levy cycle, cluster rescaling shows that cylinders of large modulus carry almost all the fixed measure at all late times. Following a cylinder of definite mass until its modulus decreases gives a contradiction. We compare this geometric argument with the proofs for real entire maps and exponential maps.",
+   "abstract": "We study the Bergman determinantal point process associated with a positive line bundle on a compact Riemann surface. Consider the U-statistic given by the Green function, called the Green energy. For a configuration of $N$ points, the expectation of Green energy is $\\frac12 N\\log N+O(N)$, and the variance is $(\\log 2-\\pi^2/24)N+O(\\log^2 N)$. We prove a central limit theorem for the Green energy by combining local Bergman kernel asymptotics with an expansion for the cumulants. A central limit theorem also holds for the logarithmic energy of Bergman determinantal point process on complex manifolds.",
    "source": "arxiv"
   },
   {

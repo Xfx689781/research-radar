@@ -3,48 +3,45 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27085",
-   "title": "Stable phase retrieval from operator measurements",
-   "url": "https://arxiv.org/abs/2611.27085",
+   "uid": "arxiv:2611.29806",
+   "title": "On the Bourgain-Rudnick eigenfunction restriction conjecture in four dimensions",
+   "url": "https://arxiv.org/abs/2611.29806",
    "authors": [
-    "Deanna Needell",
-    "Yaniv Plan",
-    "Tomasz Szczepanski",
-    "\\\"Ozg\\\"ur Y{\\i}lmaz"
+    "Ciprian Demeter"
    ],
-   "label": "arXiv:2611.27085v1",
-   "primary_category": "math.FA",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "The paper studies stable phase retrieval from operator-valued quadratic measurements in Hilbert spaces, showing that stability fails for most exponents p in infinite dimensions, that p=4 admits stable examples built from rank-one or rank-two operators, and that stability can be tested on orthogonal pairs.",
-    "plain": "The problem is recovering a signal from measurements that lose its overall phase, such as measuring only the squared amplitudes of its components, while still requiring that small errors in the data cause only small errors in the reconstruction. The paper shows that in infinitely many dimensions this kind of stable recovery is impossible for most measurement settings, with one exponent (p = 4) as the exception. It then constructs specific measurement systems that work in that exceptional case and proves that, in finite dimensions, unique recovery automatically implies stable recovery.",
-    "why": "It extends a known negative result about frames to a broader class of measurements and identifies exactly where stability can still be achieved. The text mentions second-moment measurements in cryo-electron microscopy as motivation, but the text does not say how far the results carry over to that application.",
-    "background": "- Phase retrieval: recovering a signal (up to a global phase factor) from measurements that discard phase information.\n- Hilbert space: a generalized space of vectors, possibly infinite-dimensional, with lengths and angles.\n- Frame and Bessel system: a family of vectors (or operators) whose measurements are controlled in size; a p-Bessel system bounds the measurements in a chosen norm.\n- Stability: small changes in the measured data cause only small changes in the recovered signal.\n- Rank-one and rank-two operators: simple linear maps with image of dimension one or two; self-adjoint means the operator equals its own conjugate transpose.\n- Cryo-EM: an imaging technique that reconstructs 3D molecular structures from noisy 2D projections.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "A known result of Cahill, Casazza and Daubechies [Trans. Amer. Math. Soc. Ser. B3(2016), 63-76] states that no frame in an infinite-dimensional Hilbert space does stable phase retrieval. We show that stable recovery becomes possible for more general operator measurements, but only at a single exponent. Given a system of bounded operators $\\{A_j\\}_{j\\in J}$ on a real or complex Hilbert space $H$, we study recovery of $f\\in H$ up to a global phase from the quadratic measurements $\\langle A_j f,f\\rangle$ and from their phase preserving square roots. We consider $p$-Bessel systems ($2\\leq p<\\infty$) for which we measure the quadratic data in $\\ell_{p/2}$ and the square root data in $\\ell_p$. In infinite dimensions, we show that whenever $p\\neq 4$, no $p$-Bessel system of operators does stable phase retrieval. In the case of $p=4$, we show that stability still fails on any system of semidefinite operators. Nevertheless, we construct a system of rank-one operators, not all self-adjoint, for which stable recovery is possible. We also show that stability can be achieved on a system of self-adjoint operators of rank-two. For both types of measurements, we show that the stability can be tested on orthogonal pairs. This reduction preserves the optimal constant for quadratic measurements and, when the operators are semidefinite, for their phase preserving square roots. We deduce that in finite dimensions, uniqueness of recovery implies its stability. Finally, we show that whenever only the moduli of the measurements are retained, both the orthogonal reduction and the implication from uniqueness to stability can fail, already in dimension two. We also give second moment measurements in cryo-electron microscopy (cryo-EM) as a motivation for the quadratic model.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26769",
-   "title": "A rigorous Abel-summed Hardy-type identity for $p$-circle domains via regularized Poisson summation",
-   "url": "https://arxiv.org/abs/2611.26769",
-   "authors": [
-    "Masaya Kitajima"
-   ],
-   "label": "arXiv:2611.26769v1",
+   "label": "arXiv:2611.29806v1",
    "primary_category": "math.CA",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper rigorously justifies, via an anisotropic Abel-type regularization of Poisson summation, a generalized Hardy-type identity for astroid-type p-circle domains, with boundary corrections (weight 1/2 at smooth points, vanishing cusp contributions for 0<p<1) and recovery of the classical p=2 Hardy–Voronoï Bessel series.",
-    "plain": "The paper studies a identity relating the counting of whole-number lattice points inside a certain shape (a \"p-circle\" with star-like corners) to a series of special functions. An earlier formal derivation left open whether the series is justified, so the authors smooth the counting with a damping kernel and take a limit. They find that smooth edge points contribute half weight, while the sharp corners contribute nothing when 0 < p < 1.",
-    "why": "It puts a previously heuristic lattice-point identity on rigorous footing and reduces to the known classical Hardy–Voronoï series when p=2, so it links to a well-studied area of number theory. The text does not say the unregularized series converges, which the authors flag as a separate open problem, so the practical reach is currently limited.",
-    "background": "- Lattice points: integer coordinate points counted inside a region.\n- Poisson summation: a standard tool relating sums over lattice points to sums over the Fourier transform of the region's indicator function.\n- Abel summation: a way of assigning a finite value to a divergent or oscillating series by damping it with a parameter and taking a limit.\n- p-circle: the set |x|^p + |y|^p ≤ 1; p=2 is an ordinary circle, and other p give squarish or star-like shapes (astroids for small p).\n- Bessel functions: classical special functions that arise in wave and circle problems; the p-Bessel versions generalize them.\n- Hardy–Voronoï identity: a classical formula for lattice points in a circle, expressed as a Bessel series.\n- Cusp: a sharp corner of a boundary.",
+    "one_liner": "The paper proves a uniform L^2 upper bound for eigenfunctions of the four-dimensional flat torus restricted to the compact paraboloid, using Fourier restriction estimates and the Du–Zhang fractal restriction theorem applied on two-dimensional slices.",
+    "plain": "The paper studies the standing-wave patterns (eigenfunctions) that live on a four-dimensional flat, repeating space, and how much they can concentrate when measured on a curved surface inside that space. The authors prove an upper limit on that concentration, which is a version of a conjecture by Bourgain and Rudnick. Their method reinterprets counts of lattice points on spheres as a measure of how spread out certain points are, and then uses a known theorem about that spread.",
+    "why": "Bounds of this type control how large wave-like functions can get on a surface, a question that links number theory (lattice point counts) with analysis of waves. The text does not discuss applications beyond this setting, and it only mentions that further extensions are possible without specifying them.",
+    "background": "- Flat torus: a space with no curvature that wraps around like a video game screen, in which opposite edges are glued together.\n- Eigenfunction: a wave-like pattern that keeps its shape under the Laplace operator, roughly a standing wave with fixed frequency.\n- L^2 norm: a way of measuring the overall size of a function; bounds on it limit how strongly waves can focus.\n- Paraboloid: a curved bowl-shaped surface; here, a compact piece of it.\n- Lattice point statistics: how integer grid points are distributed on a sphere, which relates to eigenfunction sizes.\n- Fourier restriction: the study of how Fourier transforms behave when restricted to curved surfaces.\n- Fractal restriction theorem: a result (by Du and Zhang) about how restriction estimates hold for sets with fractal-like spread.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In our previous work, a generalized Hardy-type identity (GHI) for astroid-type $p$-circle domains was formally derived in terms of generalized $p$-Bessel functions. However, the direct application of the Poisson summation formula to the indicator functions of these domains leaves the convergence and rigorous justification of the resulting oscillatory series unresolved. In the present paper, we address this difficulty by introducing an anisotropic regularization based on convolution kernels with Fourier multipliers $e^{-t(|\\xi_{1}|^p+|\\xi_{2}|^{p})}$. We establish the corresponding regularized Poisson summation identity and rigorously justify the limiting process through uniform estimates for lattice-point sums. A key feature of our analysis is the determination of boundary contributions: smooth boundary points carry weight $1/2$, whereas the contributions from axial cusps vanish for $0<p<1$. These results lead to an Abel-summed GHI, expressed in terms of the distorted-angle-dependent $p$-Bessel functions introduced in our previous work, with explicit boundary corrections. In particular, for $p=2$, the identity recovers the Abel-summed form of the classical Hardy--Vorono\\\"i Bessel series. Our result provides a rigorous regularized counterpart of the previously proposed identity, while the convergence of the corresponding unregularized series remains a separate problem.",
+   "abstract": "We prove a uniform upper $L^2$ bound for eigenfunctions of the four-dimensional flat torus on the compact paraboloid $\\mathbb{P}^3$. The main novelty is the use of Fourier restriction estimates. We interpret spherical lattice point statistics as non-concentration inequalities of the strength needed to apply the Du--Zhang fractal restriction theorem. We apply their result on two-dimensional slices of $\\mathbb{P}^3$. Further possible extensions are also discussed.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30870",
+   "title": "The $T1$ theorem under Dini regularity",
+   "url": "https://arxiv.org/abs/2611.30870",
+   "authors": [
+    "Kangwei Li"
+   ],
+   "label": "arXiv:2611.30870v1",
+   "primary_category": "math.CA",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proves the T1 theorem for Calderón-Zygmund operators assuming only the classical Dini regularity condition on the kernel, which the authors describe as resolving a long-standing open problem in singular integral theory.",
+    "plain": "The paper is about a standard test in harmonic analysis: a rule for deciding when an operator that smooths and rearranges functions stays well-behaved (bounded) when measured in standard size norms. The authors show this test works under the Dini condition, a classical smoothness requirement on the operator's kernel. The text states that this answers a question that had been open for a long time.",
+    "why": "The T1 theorem is a central tool for checking boundedness of singular integrals, which underlie much of modern analysis and partial differential equations. The provided text gives only the abstract, so its precise scope and how it compares with earlier results cannot be judged from it.",
+    "background": "- Harmonic analysis: the study of how functions decompose into waves or frequencies and how operators act on them.\n- Singular integral operator: an averaging operator whose kernel blows up near the diagonal, so it needs careful treatment.\n- Calderón-Zygmund operator: a major class of singular integral operators with kernel size and smoothness estimates.\n- T1 theorem: a criterion saying such an operator is bounded if it is bounded on a test function like the constant 1 (plus related conditions).\n- Dini regularity: a slightly weaker-than-Hölder smoothness condition on a function, measured by an integral condition on its modulus of continuity.\n- Operator boundedness: the operator does not blow up the size of inputs beyond a fixed constant factor.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove the $T1$ theorem for Calder\\'on-Zygmund operators under the classical Dini regularity condition on the kernel, solving a longstanding open problem in singular integral theory.",
    "source": "arxiv"
   },
   {

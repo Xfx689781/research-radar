@@ -3,62 +3,47 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27249",
-   "title": "Baryon-Enhanced Strong Lensing Signatures of Self-Interacting Dark Matter Subhalos",
-   "url": "https://arxiv.org/abs/2611.27249",
+   "uid": "arxiv:2611.29776",
+   "title": "$w_0$ Is All You Need: Field-Level Matching of General Dark Energy Models to $w_0$CDM Simulations",
+   "url": "https://arxiv.org/abs/2611.29776",
    "authors": [
-    "Meiwen Yang",
-    "Daneng Yang",
-    "Siyuan Hou",
-    "Yi-Ying Wang",
-    "Yiping Shu",
-    "Yue-Lin Sming Tsai"
+    "Pavel Demidov",
+    "Carolina Cuesta-Lazaro",
+    "Peter L. Taylor"
    ],
-   "label": "arXiv:2611.27249v1",
+   "label": "arXiv:2611.29776v1",
    "primary_category": "astro-ph.CO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper argues that baryons (ordinary matter such as stars) can make self-interacting dark matter subhalos in galaxy clusters into more efficient gravitational lenses than cold dark matter subhalos, and that this could help explain an observed excess of galaxy-galaxy strong lensing.",
-    "plain": "Dark matter may be a little \"sticky,\" with its particles bumping into each other, and this paper asks how that stickiness changes the way small clumps of dark matter bend light around galaxies in clusters. The authors find that when compact stars sit at the centre of these clumps, the dark matter core does not puff out as expected, so the clumps can bend light more strongly than they would under ordinary cold dark matter. They then apply a simplified model to three of the most massive clusters in a large simulation and estimate that the lensing cross sections come out 1.4 to 2.7 times larger than in the standard model.",
-    "why": "Recent observations reportedly show more galaxy-galaxy strong lensing than standard cold dark matter predicts, and this work offers a possible explanation tied to self-interacting dark matter. It is a theoretical estimate from a parametric model rather than a direct simulation of the clumps, so the size of the effect should be treated as provisional until tested against data.",
-    "background": "- Dark matter: invisible matter that makes up most of the mass of galaxies and clusters, detected only through gravity.\n- Cold dark matter (CDM): the standard model in which dark matter particles barely interact apart from gravity.\n- Self-interacting dark matter (SIDM): a variant in which dark matter particles scatter off each other, reshaping the density profiles of halos.\n- Subhalo: a smaller dark matter clump orbiting inside a larger halo, such as a cluster.\n- Strong lensing: strong bending of background light by foreground mass, producing arcs and rings.\n- Galaxy-galaxy strong lensing (GGSL): lensing by individual galaxies or their subhalos, rather than the whole cluster.\n- Core formation and gravothermal collapse: the dark matter centre first flattens into a core, then can later contract to a dense state.\n- Baryons: ordinary matter such as gas and stars; here compact stars deepen the gravitational well at the centre.\n- TNG300-1: a large cosmological simulation whose clusters are used as test cases.",
+    "one_liner": "The paper proposes that clustering of matter in general dynamical dark energy models w(z) can be reproduced by a constant-w0 CDM simulation via spectral equivalence, matching comoving distance to the last scattering surface, and tests this with N-body runs including spline-based w(z).",
+    "plain": "Cosmologists simulate how matter clumps together in the universe, and the outcome depends on the unknown \"dark energy\" that drives cosmic expansion. This paper asks whether a simpler, constant-strength dark energy simulation can stand in for many more complicated versions. The authors report that, in their simulations, matter patterns from the more complicated models match the simple reference case closely, within a fraction of a percent for the measured statistics.",
+    "why": "If the matching holds, researchers could test many dark energy models against survey data without running a new set of expensive simulations for each one, which matters for upcoming large sky surveys. The text does not show how well this generalizes beyond the models and statistics tested, so the broader claim remains to be checked by others.",
+    "background": "- Dark energy: an unknown component thought to drive the accelerating expansion of the universe; its equation of state w describes how its pressure relates to its energy density.\n- w0CDM: a standard model where w is a single constant value today (w0).\n- w(z): a dark energy equation of state that changes with redshift (z, a measure of look-back time).\n- CPL parametrization: a common two-parameter form w0 + wa(1-a) for time-varying dark energy.\n- N-body simulation: a computer simulation that tracks many particles under gravity to model how cosmic structure forms.\n- Power spectrum and bispectrum: statistics measuring how strongly matter clusters at different scales (two-point and three-point correlations).\n- Wavelet scattering transform: a summary statistic for non-Gaussian patterns in a field.\n- Spectral equivalence: the idea that two models give nearly identical matter fields under a specific matching rule.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Self-interacting dark matter (SIDM) is generally expected to suppress subhalo strong lensing through core formation, with subsequent gravothermal collapse potentially enhancing it. We show that compact stars can make a viable population of galaxy-hosting SIDM subhalos more efficient lenses than their cold dark matter (CDM) counterparts. When the baryonic potential weakens or reverses the inner velocity-dispersion gradient, SIDM halos suppress or bypass core formation, allowing inner densities to grow from early times. The evolved SIDM subhalos produce larger deflection angles and tangential caustics than in CDM. Such galaxy-hosting subhalos also dominate the galaxy-galaxy strong-lensing (GGSL) budget in clusters, yet lie far below the resolution of cosmological simulations. We calibrate a baryonic parametric SIDM model to predict their effects in the three most massive TNG300-1 clusters, finding GGSL cross sections 1.4--2.7 times those in CDM, comparable to the excess inferred in recent analyses. Baryon-enhanced SIDM lensing can thus account for the observed GGSL excess and predicts stronger perturbations from luminous satellites, testable through resolved distortions of background arcs and rings.",
+   "abstract": "We show that clustering in general dynamical dark energy models $w(z)$ can be predicted with constant dark energy $w_0\\text{CDM}$ models at the field level via spectral equivalence. The prescription of this method requires equating comoving distances to the last scattering surface between predictor and target models, which is equivalent to requiring equal recent background expansion history averages. Dark energy models with the same distance thus form approximate equivalence classes, with nearly identical matter fields. To test the precision of spectral equivalence beyond the CPL parametrization, we run $N$-body simulations with various dynamical dark energy models, including spline-based $w(z)$, all matched to a single $w_0\\text{CDM}$ run. Our measurements show that the power spectra of all matched dark energies agree with the predictor within $0.2\\%$ up to $k = 0.5\\,h\\,{\\rm Mpc}^{-1}$ and within $0.6\\%$ up to $k = 1\\,h\\,{\\rm Mpc}^{-1}$. We also compare the non-Gaussian information contained in the simulated fields. Bispectra differ by at most $0.26\\%$ across all runs up to $k = 0.5\\,h\\,{\\rm Mpc}^{-1}$ and $1.75\\%$ up to $k = 1\\,h\\,{\\rm Mpc}^{-1}$, while wavelet scattering transform coefficients are all within $0.05\\%$. The decorrelation, $1 - r^2$, between each matched field and the predictor stays below $0.006\\%$ up to $k = 1\\,h\\,{\\rm Mpc}^{-1}$. We run a toy power spectrum analysis in the CPL parametrization demonstrating that a $w_0$-only emulator could produce the same posterior without any knowledge of the full $w_0w_a$ model. This matching prescription thus offers a new tool to constrain dynamical dark energy models with arbitrary equations of state at the field level, without running additional simulation suites.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.26785",
-   "title": "SciPIC-lite: A flexible Halo Occupation Distribution pipeline aimed at clustering observables",
-   "url": "https://arxiv.org/abs/2611.26785",
+   "uid": "arxiv:2611.30846",
+   "title": "Analytic $k$-essence Inflation",
+   "url": "https://arxiv.org/abs/2611.30846",
    "authors": [
-    "Gabriele Parimbelli",
-    "Martin Crocce",
-    "Giosu\\`e Gambardella",
-    "Alexander Eggemeier",
-    "Pablo Fosalba",
-    "Elizabeth J. Gonzalez",
-    "Sujatha Ramakrishnan",
-    "Isaac Tutusaus",
-    "Zahra Baghkhani",
-    "Jorge Carretero",
-    "Francisco Castander",
-    "Andrea Pezzotta",
-    "Pau Tallada-Cresp\\'i"
+    "V. K. Oikonomou"
    ],
-   "label": "arXiv:2611.26785v1",
-   "primary_category": "astro-ph.CO",
+   "label": "arXiv:2611.30846v1",
+   "primary_category": "gr-qc",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "SciPIC-lite is a public Python library for Halo Occupation Distribution (HOD) modelling that populates simulated dark matter haloes with galaxies, validated by fitting the two-point clustering of H-alpha-selected galaxies from the Flagship 2 simulation using AbacusSummit haloes.",
-    "plain": "Astronomers simulate the invisible dark matter structure of the universe, but galaxies are what we actually observe, so they need rules for where galaxies sit inside that structure. This paper presents a free, modular software tool that places galaxies into simulated dark matter clumps using such rules. The authors test it by matching how galaxies cluster in one large simulation, and they report that the best-fit results hold up across different rule choices.",
-    "why": "Surveys of galaxies on the sky will be large, and reliable mock catalogues made from simulations are needed to interpret them and check analysis methods. The paper's main claim is that the fitted results are not sensitive to which modelling choices are made, which is useful for trusting such mocks; the text does not show how widely the tool will be adopted.",
-    "background": "- Dark matter haloes: dense clumps of invisible matter in simulations where galaxies form.\n- Halo Occupation Distribution (HOD): a statistical recipe giving the probability and number of galaxies hosted by a halo of a given mass.\n- Two-point correlation function: a measure of how much more likely galaxy pairs are to be found at a given separation than random chance; it describes galaxy clustering.\n- Redshift: a measure of distance and look-back time, from the stretching of light as the universe expands; redshift bins split the data by cosmic epoch.\n- H-alpha-selected galaxies: galaxies identified by emission from hydrogen's H-alpha spectral line, a marker of star formation.\n- Extensions named in the text: assembly bias, velocity bias, conformity and halo profile rescaling, which are refinements to the basic recipe.\n- Reduced chi-squared: a standard goodness-of-fit score; values near a common value indicate similar fit quality.",
+    "one_liner": "The paper derives a fully analytic k-essence inflation model with kinetic term K(X)=X^n/X_s^(n-1) and a tracking condition, where constant sound speed avoids gradient instabilities and a pressure singularity after inflation is argued to be classically avoided once radiation and cold dark matter are included.",
+    "plain": "The paper studies a model of the very early universe in which a rapid expansion (inflation) is driven by a field whose energy depends on its motion in an unusual way, called k-essence. Earlier versions of such models needed approximations built into the equations; here the authors find solutions that can be written in closed form as functions of cosmic time. They report that the model fits the observational limits on inflation, but that its expansion develops a mathematical pressure singularity a few e-foldings after inflation ends. Using numerical arguments, they claim this singularity is avoided once ordinary matter (radiation and cold dark matter) is included.",
+    "why": "Analytic solutions are useful because they let researchers check predictions and stability without relying on numerical simulation or the slow-roll shortcut. The reported singularity and its possible resolution by ordinary matter are the points that a reader would need to weigh, since the claim rests on numerical arguments given in the text. Its connection to observations is limited to the statement that the inflation indices depend only on n and m.",
+    "background": "- Inflation: a brief period of very rapid, accelerating expansion of the early universe, thought to seed the large-scale structure we observe.\n- Scalar field: a hypothetical field whose value varies in space and time; inflation is often modeled with one.\n- k-essence: a generalization in which the field's energy depends on a kinetic term X (roughly, how fast the field changes) in a non-standard, nonlinear way.\n- Slow-roll assumption: the common approximation that the field changes slowly, used to simplify inflation equations.\n- Hubble rate: the expansion rate of the universe; e-folding: a factor of e (about 2.7) growth in the scale factor.\n- Sound speed of perturbations: the speed at which small density ripples propagate; if it is wrong, instabilities can arise.\n- Pressure singularity: a point where pressure blows up in the model's equations, a sign the model breaks down there.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The Halo Occupation Distribution (HOD) framework provides a flexible approach to modelling the galaxy--halo connection in cosmological simulations, encoding the statistical relationship between galaxies and their host dark matter haloes. We present SciPIC-lite, a new public Python library for fast, flexible, and user-friendly HOD modelling, designed to populate dark matter haloes extracted from cosmological simulations with galaxies and to provide a comprehensive suite of tools for their subsequent analysis. The library is built around a modular and extensible codebase that incorporates the full breadth of the HOD framework, from the core occupation functions to a wide range of physically motivated extensions, making it suitable for a broad spectrum of galaxy clustering applications. We validate and characterise the performance of SciPIC-lite by developing a pipeline to fit the two-point correlation functions of H$\\alpha$-selected galaxies from the Flagship~2 simulation across multiple redshift bins. To this end, we populate AbacusSummit dark matter haloes with galaxies according to a variety of HOD parametrisations. We assess the robustness of the fits with respect to the choice of HOD parametrisation and the inclusion of physically motivated extensions, including assembly bias, velocity bias, conformity, and halo profile rescaling. The best-fit models are found to be remarkably robust across different HOD parametrisations and fitting configurations, with reduced $\\chi^2$ values clustering tightly around a common value regardless of the model adopted. We exploit these results to generate new AbacusSummit-based galaxy mocks that accurately reproduce the clustering properties of the Flagship~2 H$\\alpha$ galaxy population.",
+   "abstract": "In this work we develop a fully analytic $k$-essence inflation solution which is compatible with the observational constraints on inflation, without the need for the slow-roll assumption being imposed dynamically in the field equations. The analytic solution is obtained for a kinetic scalar sector of the form $K(X)= \\frac{X^n}{X_s^{n-1}}$ and for the scalar field satisfying a tracking condition $\\dot{\\phi}^2=\\gamma H^{-m}$. For this class of theories, the sound speed of the primordial curvature perturbations is constant, so no gradient instabilities occur in the theory. The Hubble rate, the scale factor and the scalar field can be analytically expressed as functions of the cosmic time, and the observational indices of inflation depend solely on the parameters $n$ and $m$. The resulting evolution is inflationary and it develops a pressure singularity a few $e$-foldings after the end of inflation. However, using qualitative and quantitative numerical arguments, we show that the pressure singularity is classically avoided when the matter fluids of radiation and cold dark matter are taken into account.",
    "source": "arxiv"
   },
   {

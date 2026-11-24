@@ -3,54 +3,50 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26824",
-   "title": "A Unified Framework for Intelligent Cyber Attack Detection and Alert Correlation",
-   "url": "https://arxiv.org/abs/2611.26824",
+   "uid": "arxiv:2611.29188",
+   "title": "Ziv Meets Sumcheck: Zero-Knowledge Proofs of Floating-Point LLM Inference",
+   "url": "https://arxiv.org/abs/2611.29188",
    "authors": [
-    "Miguel Silva",
-    "Jo\\~ao Vitorino",
-    "Daniela Pinto",
-    "Eva Maia",
-    "Ivone Amorim",
-    "Isabel Pra\\c{c}a"
+    "Hassan Khodaiemehr",
+    "Khadijeh Bagheri",
+    "Chen Feng"
    ],
-   "label": "arXiv:2611.26824v1",
-   "primary_category": "cs.CR",
+   "label": "arXiv:2611.29188v1",
+   "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes a unified framework that combines signature rules, machine learning, and sequential pattern mining to classify network traffic and correlate alerts for multi-stage attacks in a Security Operations Center, evaluated in a controlled testbed.",
-    "plain": "Security teams that watch computer networks (called Security Operations Centers) are flooded with alerts, and real attacks that unfold in several steps can be missed among them. This paper describes a single system that sorts network traffic and links related alerts together so that a multi-step attack shows up as one story. The authors tested it on a controlled, simulated network that mimicked attacks such as malware, lateral movement, reconnaissance and data theft.",
-    "why": "Alert overload and missed multi-stage attacks are widely recognized problems for security teams, so a tool that ties alerts into attack sequences while keeping analysts in the loop is relevant to that practical concern. The text reports that the results show effectiveness, but gives no figures, comparisons or details on how well it works outside the testbed, so its real-world value remains unclear.",
-    "background": "- Security Operations Center (SOC): a team and facility that monitors an organization's networks for attacks.\n- Alert correlation: grouping separate warning alerts that likely belong to the same attack.\n- Signature rules: fixed patterns of known attack activity, like a wanted-poster description.\n- Machine learning: software that learns patterns from example data to flag unusual traffic.\n- Sequential pattern mining: finding recurring orders of events, such as scan then break-in then data copying.\n- Lateral movement: an attacker spreading from one compromised machine to others.\n- Exfiltration: stealing data out of a network.\n- Human-in-the-loop: a design where people review and decide on the automated system's output.\n- Testbed: a controlled lab network used for experiments instead of live systems.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "A Security Operations Center (SOC) plays a critical role in detecting, correlating, and responding to modern cyber threats. However, SOCs continue to face challenges related to alert overload, fragmented detection capabilities, and limited collaboration between analysts and automated systems. These issues often result in delayed incident response, analyst fatigue, and an increased risk of overlooking sophisticated, multi-stage attacks that unfold gradually across different layers of the network. To address these challenges, this paper proposes a unified framework for network traffic classification and alert correlation through the use of signature rules, machine learning, and sequential pattern mining algorithms. The solution was evaluated in a controlled testbed environment emulating realistic, multi-stage attack scenarios, including malware exploitation, lateral movement, reconnaissance, and data exfiltration. The obtained results demonstrate the effectiveness of the proposed framework in detecting and correlating complex attack behaviors, while providing analysts with actionable insights in line with a human-in-the-loop approach to SOC operations.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.26739",
-   "title": "Exploring Early Vulnerability Analysis via Automatic Identification of Vulnerability-Introducing Commits",
-   "url": "https://arxiv.org/abs/2611.26739",
-   "authors": [
-    "Weiliang Qi",
-    "Shu Wang",
-    "Youpeng Li",
-    "Ela Guo",
-    "Xinda Wang"
-   ],
-   "label": "arXiv:2611.26739v1",
-   "primary_category": "cs.CR",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "The paper builds manually annotated datasets of vulnerability-introducing commits (VICs) and proposes D-SZZ, a data-state-aware framework that traces security fixes back to the commits that first introduced the flaws, then evaluates detectors on early-stage vulnerable code.",
-    "plain": "Software bugs that create security holes often sit unnoticed in code for a long time before anyone fixes them. Most existing datasets only mark the code just before a fix as \"vulnerable,\" missing the earlier versions where the flaw first appeared. This paper builds new labeled datasets that point to the original introducing changes, and a tool, D-SZZ, that finds them automatically.",
-    "why": "Security tools that learn from current labeled data may be missing vulnerabilities in their early, hidden stages, which matters for catching flaws sooner. The paper also reports that its method corrected 16 inaccurate affected-version records in the NVD (the US National Vulnerability Database), which were officially confirmed, though the wider impact beyond these reported results is not established in the text.",
-    "background": "- Vulnerability: a flaw in software that could be exploited for an attack.\n- CVE: a public ID assigned to a specific known vulnerability.\n- Commit: a saved set of code changes recorded in a version-control system such as Git.\n- Vulnerability-fixing commit (VFC): a commit that repairs a security flaw.\n- SZZ algorithm: a classic method that traces a bug fix back to the earlier commit that introduced the bug, typically using the code changes and history.\n- Vulnerability detector: a tool, often machine-learning based, that flags likely vulnerable code.\n- NVD: the US government's database of vulnerability records, including which software versions are affected.\n- LLM: large language model, a type of AI text model used here as a baseline.",
+    "one_liner": "The paper gives an interactive zero-knowledge proof that a transformer language model's floating-point forward pass was computed correctly, by proving the correctly rounded result of each dot product, and reports a GPT-2 small instance.",
+    "plain": "The paper is about proving that an AI language model produced a specific output, without revealing the model's internal numbers. Existing methods mostly checked simplified integer versions of the model, not the decimal-style floating-point arithmetic models actually run on. The authors show a way to check the real floating-point computation by rounding each dot product (a sum of products) only once, which makes the result the same regardless of hardware.",
+    "why": "Being able to verify model outputs without access to the weights bears on trust in AI systems and on privacy of proprietary models. The text reports a full GPT-2 small forward pass proved in 19 minutes on two cores, with verification in 21 seconds, and 236 tested attacks rejected. These are the authors' own reported results, not independently checked, and the text does not show how this scales to larger models.",
+    "background": "- Zero-knowledge proof: a way to convince a verifier that a computation was done correctly without revealing its secret inputs, such as model weights.\n- Interactive proof: a protocol where a prover and verifier exchange messages, with the verifier checking random challenges.\n- Floating-point arithmetic: how computers store approximate real numbers; rounding after each operation makes results depend on the order of operations.\n- Dot product and matrix multiplication: the core repeated sum-of-products operation in neural networks.\n- Transformer and GPT-2: the neural network architecture behind modern language models; GPT-2 small is a small, older model used as a test case.\n- Sumcheck: a standard interactive-proof technique for checking large sums cheaply.\n- Quantization (16-bit inference): running models with lower-precision numbers to save compute.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Developing effective vulnerability analysis techniques requires high-quality datasets that capture how vulnerabilities appear and evolve in real software codebase. Existing datasets, however, typically label as vulnerable only the code immediately preceding vulnerability-fixing commits (VFCs), overlooking the earlier versions in which vulnerabilities were first introduced and subsequently evolved. This practice limits both dataset coverage and our understanding of whether current detectors can identify vulnerabilities during their early, latent stages. In this paper, we present three manually annotated datasets of vulnerability-introducing commits (VICs) based on recent CVEs and widely used open-source projects. We further propose D-SZZ, a data state-aware VIC identification framework that analyzes security-fixing patterns and performs vulnerability scope slicing to recover the semantics implied by a fix. Experimental results demonstrate that D-SZZ outperforms existing SZZ and LLM-based baselines in identifying VICs. In addition, we evaluate six representative vulnerability detectors and find that models trained only on pre-VFC code struggle with original vulnerabilities, while incorporating early-stage samples improves detection performance. We also show that D-SZZ improves downstream vulnerable-version identification, and use it to uncover 16 inaccurate affected-version records in the NVD, all of which were officially confirmed and updated.",
+   "abstract": "Zero-knowledge proofs can show that a neural network produced a given output without revealing the network, but current systems for language models prove integer approximations of the model rather than the floating-point arithmetic that is actually deployed. Proving floating-point matrix multiplication has been regarded as hard, because rounding after every addition makes the result depend on the order of the additions. We avoid this obstacle by proving the correctly rounded product, in which every dot product is computed exactly and rounded once. This result is independent of the hardware and at least as accurate as standard kernels. We give an interactive proof for this relation whose cost is close to that of integer matrix multiplication, with roughly a thousand times fewer committed values than per-operation floating-point circuits need constraints, extend it to every layer of a transformer, and give a privacy construction for the complete argument whose zero knowledge we prove under explicit hypotheses. We implement the system and prove the full forward pass of GPT-2 small, including all twelve blocks and the output over the whole vocabulary, in 19 minutes on two processor cores; verification takes 21 seconds. The verifier rejects all 236 attacks we tested, and the model's outputs agree with high-precision inference at least as closely as standard 16-bit inference does.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28790",
+   "title": "Reporting Differential Privacy Guarantees via Operationally Equivalent $\\varepsilon$: What Does $\\varepsilon=19.61$ Mean for the 2020 U.S. Census?",
+   "url": "https://arxiv.org/abs/2611.28790",
+   "authors": [
+    "Masayuki Terada",
+    "Shinsuke Ito",
+    "Takumasa Ishioka",
+    "Hidetoshi Matsui"
+   ],
+   "label": "arXiv:2611.28790v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper defines an alpha-operationally equivalent epsilon that re-expresses approximate differential privacy (ADP) or zCDP guarantees as the pure DP epsilon giving the same power bound at a chosen significance level, and applies it to the 2020 U.S. Census figure of epsilon = 19.61.",
+    "plain": "The 2020 U.S. Census reported a privacy number of 19.61, which many people found alarmingly large. This paper asks what that number actually limits: how well an attacker could tell whether a given person's data was included. It translates the official guarantee into a more interpretable form and reports that, at common significance levels, the guarantee constrains such attacks much more tightly than the single large number suggests.",
+    "why": "The 19.61 figure has drawn public doubt about Census privacy protection, so a way to read it in terms of concrete attack limits is directly relevant. The text does not establish how the method will be received by the Census Bureau or other researchers, so its wider impact is uncertain.",
+    "background": "- Differential privacy (DP): a guarantee that the output of a data release barely changes whether or not any one person's record is included.\n- Epsilon (ε): the DP parameter; smaller means stronger privacy. Large values are usually read as weak protection, but the meaning depends on how the value was obtained.\n- Approximate DP (ADP): a version with an extra small slack term δ (here 10^-10).\n- zCDP (zero-concentrated DP): an alternative privacy accounting method, which the Census used before converting to ADP.\n- Power / true positive rate: how often an attacker correctly identifies a real member when testing for membership.\n- Significance level α: the tolerated false alarm rate of that test (e.g., 1%, 5%, 10%).\n- Trade-off function / Gaussian DP: a richer way to describe the attacker's achievable power across all significance levels.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The large value $\\varepsilon=19.61$, reported as an approximate differential privacy (ADP) parameter for the 2020 U.S. Census, has prompted doubts about the adequacy of Census privacy protection. It was obtained by converting component zero-concentrated differential privacy (zCDP) guarantees to ADP at $\\delta=10^{-10}$. A single ADP pair can substantially loosen the original upper bound on the power (true positive rate) of a distinguishing test. At significance level $\\alpha$, we express the original bound as the smallest pure differential privacy (DP) parameter giving the same power bound. We call this the $\\alpha$-operationally equivalent $\\varepsilon$. The full curve represents the original bound exactly on $(0,1)$, even when the bound is nonconcave. For maximum-power curves and bounds derived from trade-off functions, we characterize the extrema of operationally equivalent $\\varepsilon$ over an interval of significance levels. When finite, they give the parameters of the pure DP bounds that enclose the original power bound on that interval. The mapping preserves the ordering of power bounds at each significance level. For Laplace and Gaussian mechanisms with equal noise variance, conversion to single ADP pairs or Gaussian DP envelopes can reverse this ordering. For the P.L. 94-171 redistricting data, we reproduce the reported $\\varepsilon=19.61$ as the sum of rounded component ADP values. The published zCDP guarantee yields operationally equivalent $\\varepsilon$ values of approximately 4.25, 2.94, and 3.18 at significance levels of 1%, 5%, and 10%, respectively. Converting the same guarantee to a single ADP pair at $\\delta=10^{-10}$ gives power bounds near 1 at all three levels. The pure DP scale thus clarifies constraints on distinguishing attacks that are difficult to discern from the reported $\\varepsilon=19.61$.",
    "source": "arxiv"
   },
   {

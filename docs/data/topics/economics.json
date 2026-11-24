@@ -3,24 +3,46 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26882",
-   "title": "The Rural Margin of Territorial Peace: Within-Municipality Evidence from Colombia",
-   "url": "https://arxiv.org/abs/2611.26882",
+   "uid": "arxiv:2611.28297",
+   "title": "Measuring Colombia's Informal Output: Relative Earnings and Identification in a Bayesian Two-Sector Model, 1993-2026",
+   "url": "https://arxiv.org/abs/2611.28297",
    "authors": [
-    "Hector Galindo-Silva"
+    "Jaime Vera-Jaramillo"
    ],
-   "label": "arXiv:2611.26882v1",
-   "primary_category": "econ.GN",
+   "label": "arXiv:2611.28297v1",
+   "primary_category": "econ.EM",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A triple-difference event study using repeated Social Capital Barometer waves finds that rural-urban engagement gaps narrowed in Colombian municipalities covered by both the peace agreement's participatory development programs and conflict-victim congressional seats, with the clearest evidence on coordination around shared problems.",
-    "plain": "After Colombia's 2016 peace agreement, the government added local participatory development programs and reserved congressional seats for conflict victims in rural areas. This paper asks whether people in rural parts of municipalities that got both reforms became more engaged in civic life, compared with rural parts of other municipalities and with urban areas. The author reports that rural engagement improved relative to urban engagement in the covered areas, most clearly in how well people coordinate around shared problems.",
-    "why": "Most work on post-conflict politics measures engagement through voting, so a change in civic life beyond the ballot is a useful addition. It may connect to research on how peace reforms and local participation can rebuild trust and organization in regions that suffered violence, though the text does not test those links directly.",
-    "background": "- Peace agreement: Colombia's 2016 accord between the government and the FARC guerrilla group, which included rural development and political inclusion measures.\n- Participatory development programs: local initiatives where residents help decide on public projects.\n- Congressional constituencies for conflict victims: seats set aside so that people affected by the armed conflict have representation.\n- Social Capital Barometer: a survey run in repeated waves, used here to track civic engagement over time.\n- Event study: compares outcomes before and after a policy, against areas that did not receive it.\n- Triple difference: adds a third comparison (here, rural versus urban) on top of a standard before-and-after, treated-versus-untreated comparison, to net out general trends.\n- Engagement index: a combined score of coordination, civic participation and party ties.",
+    "one_liner": "A Bayesian two-sector business-cycle model for Colombia that uses a new quarterly informal-to-formal earnings series to identify the size of the informal output share, 1993–2026.",
+    "plain": "The paper asks how much of Colombia's measured economic output comes from informal work, meaning jobs without formal contracts or social-security coverage. The authors argue that the share of workers who are informal cannot answer this, because informal jobs pay less and so produce less per worker. They estimate the informal output share from national accounts and household-survey data, and find it fell from about 30% of GDP in 1993 to about 20% in 2026Q2.",
+    "why": "Informal activity is hard to measure, and official output figures may miss or misstate it, which matters for tax policy and for reading growth and inflation. The paper's main methodological point, that relative earnings can identify the informal share where aggregate data cannot, may be useful to other countries with large informal sectors; the text does not show how well this carries over elsewhere.",
+    "background": "- Informality rate: the share of workers without formal employment protection or social-security coverage. It is a labor measure, not an output measure.\n- Two-sector model: a macroeconomic model with a formal sector (uses capital and labor) and an informal sector (uses labor only).\n- Bayesian estimation: combining prior assumptions with data to estimate model parameters, giving a range of plausible values rather than a single figure.\n- Identification: whether the data are rich enough to pin down a parameter; here, the paper says aggregate data alone cannot.\n- Steady state: the long-run equilibrium a model settles to when shocks stop; the paper reports the quarterly path is nearly unaffected by it from 2007.\n- Shadow-economy estimates: indirect statistical estimates (such as MIMIC models) of unrecorded economic activity; the paper compares its results to these.\n- Capital share: the portion of formal output paid to capital rather than labor.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Colombia's peace agreement introduced participatory development programs and congressional constituencies reserved for conflict victims with a rural electorate. I use repeated waves of the Social Capital Barometer and a triple-difference event study to compare changes in rural-urban engagement gaps in municipalities covered by both reforms with those elsewhere. Rural engagement evolved more favorably relative to urban engagement in the covered municipalities. The index captures coordination around shared problems, civic participation and party linkage, with coordination providing the clearest evidence. The result persists when the reference period precedes the agreement and the baseline wave is excluded. Program activity and organizational membership patterns are consistent with participatory investment and political mobilization. The findings document a change in engagement beyond voting under the joint territorial reforms.",
+   "abstract": "How much of Colombia's measured output is produced by informal work? The answer cannot be read from the labor-informality rate: Colombia combines an informality rate above 50% with a much smaller informal share of output, because informal work is less productive. We estimate a Bayesian two-sector business-cycle model on quarterly national accounts and on reconstructed employment and informality series for 1993-2026. Identification comes from a new quarterly series of informal-to-formal labor earnings built from household-survey microdata for 2007-2026. Formal production uses capital and labor, informal production is labor based, and an accounting relationship maps relative earnings, the informality rate and the formal capital share into the informal output share. We show that aggregate data alone cannot pin down the size of the informal sector, and that relative earnings identify its quarterly path: from 2007 the path is invariant, within 0.3 percentage points, to the model's steady state. The informal share declines from about 30% of GDP in 1993 to 20% in 2026Q2, while labor informality falls from about 69% to 54%. The estimates lie within the range of published shadow-economy series for Colombia, close to the enhanced MIMIC estimates of Asllani, Dell'Anno and Schneider for 2009-2020. Sensitivity analysis quantifies the role of the capital share and of non-wage labor costs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31083",
+   "title": "AI-Assisted Programming and Labor Demand",
+   "url": "https://arxiv.org/abs/2611.31083",
+   "authors": [
+    "Lindsey Raymond",
+    "Eleanor Wiske Dillon"
+   ],
+   "label": "arXiv:2611.31083v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A difference-in-differences style study of how adoption of the GitHub Copilot AI coding assistant across 5,414 multinational firms affected technical hiring, separations, headcount, vacancy duration, and the seniority mix of technical roles, using firms' predetermined software procurement cycles as a natural experiment.",
+    "plain": "This paper asks whether AI tools that write computer code are changing how many programmers companies hire. The authors track thousands of large firms that adopted GitHub Copilot, and use the timing of each firm's routine software purchasing cycle as a quasi-random source of when they adopted it. They report that, one year after adoption, quarterly technical hiring fell by 29% among firms that adopted because of a review, with no change in layoffs, total technical headcount, or how long jobs stayed open.",
+    "why": "It offers causal-style evidence on a question many people care about: whether generative AI reduces demand for workers doing the tasks it can perform. The effect appears concentrated in junior technical roles, and the paper suggests firms shift toward more experienced workers and roles that combine some coding with design work, though the text alone does not show how far these findings generalize beyond this sample.",
+    "background": "- Generative AI: software that produces text or code from prompts; GitHub Copilot is an AI assistant that suggests code inside a programmer's editor.\n- Natural experiment: a situation where something other than the researchers' choice (here, firms' scheduled software purchasing cycles) determines who gets a treatment, allowing cause-and-effect inference.\n- Difference-in-differences style comparison: comparing changes over time between adopting and non-adopting groups.\n- Labor demand: how many workers employers want to hire.\n- Separations: workers leaving a firm through quits, layoffs, or firings.\n- Vacancy duration: how long a job posting stays open before it is filled.\n- Junior vs. senior roles: entry-level versus experienced positions; the paper finds the hiring drop is concentrated in junior technical roles.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Generative AI has demonstrated human-level performance on technical work tasks, yet evidence on how these task-level capabilities are changing labor demand remains scarce. We study the firm-level adoption of GitHub Copilot, an AI coding assistant, across 5,414 multinational firms accounting for 38% of the U.S. programming workforce. To identify causal effects, we exploit a natural experiment generated by firms' predetermined software procurement cycles. Early AI-adopting firms hired more workers before the launch of GitHub Copilot and had larger, more technical, and older workforces. After one year, GitHub Copilot adoption reduces quarterly technical hiring by 29% among review-induced adopters, with no effect on separations, overall technical headcount, or vacancy duration. The hiring slowdown is concentrated in the subset of junior technical roles that involve the highest share of coding work. Overall, AI coding assistance causes firms to shift demand towards more experienced workers and roles that pair some coding with broader design responsibilities.",
    "source": "arxiv"
   },
   {

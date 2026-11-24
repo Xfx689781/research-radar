@@ -3,57 +3,55 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.19.767524",
-   "title": "Identification of SAMD4B as a Centrosome-Associated Regulator of the Sonic Hedgehog Signaling Pathway",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767524v1",
+   "uid": "biorxiv:10.64898/2026.11.20.768195",
+   "title": "Monolayer, Spheroid, and Organoid Formats Elicit Proteomic States that Couple Organelle Organization to Metabolic Vulnerabilities",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768195v1",
    "authors": [
-    "Bernatik, O.",
-    "Vyslouzil, D.",
-    "Paclikova, P.",
-    "Renzova, T.",
-    "Kovarikova, P.",
-    "Cajanek, L."
+    "Lum, K. K.",
+    "Pundel, O. J.",
+    "Hofstadter, W. A.",
+    "Muroski, J. M.",
+    "Johnson, I. A.",
+    "Neel, B. G.",
+    "Cristea, I. M."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.19.767524 v1",
-   "primary_category": "cell biology",
+   "label": "bioRxiv doi:10.64898/2026.11.20.768195 v1",
+   "primary_category": "molecular biology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Proximity-labeling screen under ciliogenesis-restrictive versus permissive conditions identifies SAMD4B, a centrosome-associated protein, as required for Shh signaling in NIH3T3 cells and eye development in zebrafish, possibly via ciliary recruitment of ARL13B and SMO.",
-    "plain": "Cells build tiny antenna-like structures called primary cilia that help them receive developmental signals, including the Sonic hedgehog (Shh) signal that guides how embryos form. This study used a labeling method that tags proteins near each other to find new factors involved in building or using these cilia. It found that a protein called SAMD4B, which sits near the cell's central organizing structure (the centrosome), is needed for Shh signaling in mouse cells and for normal eye development in zebrafish.",
-    "why": "Cilia defects are linked to many developmental disorders, so new regulators of Shh signaling are of interest. The paper suggests a link between SAMD4B, previously known for RNA condensates in the cytoplasm, and ciliary signaling; the text does not establish how general this role is or whether it matters in human disease.",
-    "background": "- Primary cilia: small hair-like projections on cells that act as signal-receiving hubs.\n- Sonic hedgehog (Shh): a signaling pathway essential for embryo development and tissue maintenance.\n- Centrosome: a cell structure that organizes microtubules (cell's internal scaffolding) and anchors cilia formation.\n- ARL13B and SMO: proteins that must move into the cilium for Shh signaling to work.\n- Proximity labeling: a method that marks proteins lying close to a target protein so their interactions can be mapped.\n- siRNA depletion: a way to switch off a gene temporarily to test its function.\n- NIH3T3 cells (mouse cell line) and zebrafish are the model systems used.\n- RNA condensates: droplet-like clusters of RNA and proteins inside the cell.",
+    "one_liner": "Proteomic comparison of matched monolayer, spheroid, and organoid cultures of mouse high-grade serous tubo-ovarian cancer models, showing that 3D architecture and media shape cell state, and linking the PPN genotype's mitochondria-ER contacts and lipid droplet clustering to higher murine cytomegalovirus permissiveness.",
+    "plain": "Scientists grow cells in flat dishes or in 3D clumps (spheroids and organoids) to better mimic tissue, but it is not well known how these forms differ at the molecular level. This study measured thousands of proteins in ovarian cancer models grown each way and found that both the shape of the culture and the growth medium change the cells' protein makeup. One genetic variant, with loss of Trp53, Pten and Nf1, showed more changes in fat droplets, energy-producing structures and their contacts with other cell parts, and these cells were more easily infected by mouse cytomegalovirus.",
+    "why": "The paper offers a protein dataset that researchers may use when choosing between flat and 3D culture systems, which matters for experimental design. The link between a cancer genotype, organelle contacts and viral infection is an interesting hypothesis, but the text alone does not show that these connections cause one another or that they apply to human disease.",
+    "background": "- Monolayer: cells grown as a flat sheet on a dish, the conventional lab format.\n- Spheroid and organoid: 3D cell clusters; organoids are derived from tissue and better preserve tissue structure.\n- Proteomics: large-scale measurement of the proteins present in cells.\n- High-grade serous tubo-ovarian cancer (HGSC): the most common and aggressive type of ovarian cancer.\n- Genotypes (PPN, PBM, P): mouse cell lines carrying specific gene losses or changes, named by the genes affected.\n- Mitochondria and endoplasmic reticulum (ER): energy-producing compartments and a membrane network; their physical contacts help exchange lipids and calcium.\n- Lipid droplets: storage units for fats inside cells.\n- Cytomegalovirus: a herpes-family virus; here studied in mouse cells.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Background: Many protein-protein interactions are required for the assembly and function of primary cilia, microtubule-based organelles critical for the Sonic hedgehog (Shh) signaling pathway and, in turn, for embryonic development and tissue homeostasis. However, our understanding of this complex process remains incomplete. Methods: To identify new regulators of primary cilia formation or function, we carried out proximity labeling experiments and compared interactomes under ciliogenesis-restrictive and permissive conditions. Using an unbiased strategy, we selected candidates that were tested functionally by siRNA-mediated depletion or gene editing, in combination with gene expression analysis and various microscopy techniques, using either vertebrate cell lines or zebrafish as model systems. Results: We demonstrate that one of our identified candidates, protein SAMD4B, is associated with the centrosome and is required for Shh signaling in NIH3T3 cells and eye development in zebrafish. Our data implicate defective ciliary recruitment of Shh pathway regulators ARL13B and SMO as a plausible mechanism underlying the SAMD4B-mediated regulation of Shh signaling. Conclusions: Together, our data identify a previously unrecognized link between SAMD4B, a protein known to be associated with cytoplasmic RNA condensates, and ciliary signaling.",
+   "abstract": "Three-dimensional (3D) cell culture systems are becoming more widely applied to model tissue organization, disease progression, and therapeutic response. Yet, the molecular characteristics that distinguish organoids and spheroids from conventional monolayer culture are incompletely defined. Here, using tumorigenic organoid models of high-grade serous tubo-ovarian cancer (HGSC), we establish a quantitative proteomic resource that reveals how cell architecture and media independently but jointly shape the cellular state in organoids, spheroids, and monolayers. We further pursue HGSC subtype-enriched features within this framework and identify that a poor prognosis-associated genotype with reported paclitaxel hypersensitivity, Trp53-/-;Pten-/-;Nf1-/- (PPN), is marked by increased microtubule-associated proteins, lipid-associated factors, and mitochondrial remodeling. PPN cells displayed clustered lipid droplets, whereby mitochondria-ER tethering increased. Relative to Trp53-/- (P) and a frequent HGSC genotype, Trp53-/-;Brca1+/-;MycOE (PBM), live-cell imaging showed that PPN exhibits the highest degree of stable mitochondria-ER encapsulations, coincident with fission-biased mitochondria and a high-flux respiratory state. Disruption of the mitochondria-ER contact protein PTPIP51 reduced lipid droplet clustering in the PPN state. Because cytomegalovirus is known to exploit host mitochondria remodeling, mitochondria-ER contacts, and metabolic output during infection, we tested whether this pre-existing host configuration is associated with cytomegalovirus permissiveness. PPN organoids exhibited greater murine cytomegalovirus infection and infectious output than matched monolayers or PBM. Together, these data define a resource of distinct protein characteristics between matched monolayer, spheroid, and organoid systems that should be considered for experimental design. We also uncover a mechanistic axis connecting 3D architecture, organelle contacts, metabolism, drug response, and viral permissiveness.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.18.763125",
-   "title": "Smyd1 regulates H3K4me3 to support adaptive fatty acid oxidation in the adult heart during lipid overload",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.763125v1",
+   "uid": "biorxiv:10.64898/2026.11.21.768271",
+   "title": "Phosphorylation of the ER-plasma membrane tether E-Syt2 facilitates the loss of contact sites in mitosis",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.768271v1",
    "authors": [
-    "Mukai, R.",
-    "Oka, S.",
-    "Sung, E.-A.",
-    "Takayama, K.",
-    "Ikeda, S.",
-    "Matsushita, M.",
-    "Takada, T.",
-    "Sadoshima, J."
+    "Machaca, K.",
+    "Al Hamaq, J.",
+    "Keyan, K. S.",
+    "Yu, F.",
+    "Zarif, L."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.18.763125 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.21.768271 v1",
    "primary_category": "cell biology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "In mice, high-fat diet transiently raises the histone methyltransferase Smyd1 and H3K4me3 in heart muscle cells, and cardiac Smyd1 heterozygous knockout worsens fatty acid oxidation gene responses, dysfunction and survival, with a Smyd1–PPARα interaction proposed as a mechanism.",
-    "plain": "Obesity can weaken the heart over time, partly because heart muscle cells stop burning fat efficiently. This study looked at a protein called Smyd1 that helps control gene activity, and found that in mice fed a high-fat diet it rises early on, which appears to help the heart keep burning fat. Mice with less Smyd1 in the heart did worse: their hearts weakened faster, enlarged, scarred more, and they were less likely to survive.",
-    "why": "It suggests a possible molecular route by which the heart adapts to fatty diets and where that adaptation could fail, which may matter for obesity-related heart disease. The findings are from mice, and the text does not show that the same mechanism operates in people or that targeting it would help.",
-    "background": "- Fatty acid oxidation (FAO): the process by which cells break down fats to produce energy; the heart relies on it heavily.\n- Obesity-related cardiomyopathy: weakening of the heart muscle linked to excess body fat.\n- Histone methylation: chemical tags on the protein spools that DNA wraps around, which change how genes are switched on; H3K4me3 is one such tag linked to active genes.\n- Smyd1: a histone methyltransferase, an enzyme that adds these tags, found mainly in muscle.\n- PPARα: a nuclear receptor (a gene-switching protein) that turns on fat-burning genes.\n- Co-immunoprecipitation: a lab method for testing whether two proteins physically bind together.\n- Single-cell RNA sequencing: a method that measures gene activity in individual cells.\n- Heterozygous knockout: a model where one of two working copies of a gene is removed.",
+    "one_liner": "Phosphorylation of the ER-plasma membrane tether E-Syt2 during mitosis is shown to promote the loss of ER-plasma membrane contact sites, and preventing that phosphorylation preserves the contacts and is linked to delayed growth and mitotic progression.",
+    "plain": "When a cell divides, its internal structures are reorganized so they can be shared between the two daughter cells. This paper looks at places where the cell's endoplasmic reticulum (an internal membrane network) touches the outer cell membrane, and at how those touching points disappear during division. The authors report that adding a chemical tag (phosphorylation) to a protein called E-Syt2 helps cause these contacts to break apart, and that stopping this tagging keeps the contacts in place.</plain>\n<parameter name=\"why>The work offers a specific molecular mechanism for a known but poorly explained loss of membrane contacts during cell division. The text also links persistent contacts to slower growth and slower passage through mitosis, suggesting the contacts' removal matters for timely division. The text does not say how broadly this applies beyond the cells studied.",
+    "why": "",
+    "background": "- Mitosis: the stage of cell division in which a cell's chromosomes are separated into two daughter cells.\n- Organelles: compartments inside a cell (such as the ER) that carry out specific jobs.\n- Endoplasmic reticulum (ER): an internal membrane network involved in making and transporting proteins and lipids.\n- Membrane contact sites: places where two different membranes are held very close together by tethering proteins, allowing exchange of molecules and signals.\n- Tether (E-Syt2): a protein that physically links the ER to the outer cell membrane.\n- Phosphorylation: the addition of a phosphate chemical group to a protein, often a switch that changes how the protein behaves.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Obesity and metabolic syndrome are major risk factors for heart failure, and impaired fatty acid oxidation (FAO) is a key contributor to metabolic dysfunction in obesity-related cardiomyopathy. However, how the heart maintains FAO and adapts to chronic lipid overload remains poorly understood. Here, we identify SET and MYND domain-containing protein 1 (Smyd1), a muscle-specific histone methyltransferase, as an early compensatory regulator of cardiac metabolism in response to lipid overload. In wild-type mouse hearts, high-fat diet (HFD) feeding induced transient increases in Smyd1 expression and H3K4me3 levels during the early-to-mid phase of metabolic stress, both of which returned to baseline levels during prolonged HFD exposure. Single-cell RNA sequencing further revealed that this adaptive increase in Smyd1 expression occurred predominantly in cardiomyocytes. In contrast, cardiac-specific Smyd1 heterozygous knockout mice exhibited accelerated cardiac dysfunction, left ventricular dilation, increased myocardial fibrosis, and reduced survival following HFD feeding. Mechanistically, Smyd1 deficiency impaired the adaptive upregulation of key FAO-related genes and reduced cardiac FAO activity. Furthermore, co-immunoprecipitation analysis revealed an interaction between Smyd1 and peroxisome proliferator-activated receptor alpha (PPAR), suggesting a potential mechanism by which Smyd1 supports FAO gene expression. Taken together, these findings identify Smyd1 as an early compensatory regulator that supports FAO-dependent metabolic adaptation and protects the heart against lipid overload-induced cardiac dysfunction. This adaptive mechanism, involving H3K4me3 regulation and the Smyd1-PPAR interaction, may provide potential therapeutic targets for therapeutic strategies aimed at preserving cardiac metabolic flexibility in obesity-related cardiomyopathy.",
+   "abstract": "Mitosis is associated with dramatic remodeling of intracellular organelles that supports their equal distribution between daughter cells. Recent investigations into membrane contact sites (MCS) show that they also remodel in mitosis with a significant loss of ER-plasma membrane CS (ERPMCS). However, the mechanisms governing this loss are unknown. Here we show that phosphorylation of the ERPMCS tether extended synaptotagmin 2 (E-Syt2) facilitates the loss of ERPMCS in mitosis. Preventing E-Syt2 phosphorylation in mitosis rescues the loss of ERPMCS. The persistence of ERPMCS is associated with delayed growth and progression through mitosis. This shows that E-Syt2 mitosis specific phosphorylation regulates its tethering potential and that the loss of ERPMCS is important for timely cell division.",
    "source": "biorxiv"
   },
   {

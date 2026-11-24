@@ -3,48 +3,53 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.26811",
-   "title": "Connectivity-Constrained Linear System Realization: Feasibility and Realizable Sets",
-   "url": "https://arxiv.org/abs/2611.26811",
+   "uid": "arxiv:2611.29857",
+   "title": "Context-Aware Proactive Self-Adaptation: A Two-Layer Model Predictive Control Approach",
+   "url": "https://arxiv.org/abs/2611.29857",
    "authors": [
-    "Yaozhi Du (Lisa)",
-    "Jing Shuang (Lisa)",
-    "Li"
+    "Zhengyin Chen",
+    "Jialong Li",
+    "Nianyu Li",
+    "Wenpin Jiao",
+    "Eunsuk Kang"
    ],
-   "label": "arXiv:2611.26811v1",
-   "primary_category": "eess.SY",
+   "label": "arXiv:2611.29857v1",
+   "primary_category": "cs.SE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper studies which state-space realizations of a given transfer function fit an arbitrary prescribed connectivity pattern (support), solving the realization problem exactly via polynomial equations and characterizing which transfer functions a given pattern can realize, using algebraic geometry.",
-    "plain": "The paper asks how to build a simple internal model of a linear system, with its internal parts wired together only in a specified pattern of allowed connections. It shows this can be turned into a system of polynomial equations and solved exactly, without approximation. It also asks the reverse question, which input-output behaviors a given wiring pattern can produce, and reports that a pattern can either realize nearly all behaviors or very few.",
-    "why": "Most prior work on this kind of problem concerns networked plants, whereas this paper targets arbitrary connection patterns, which the text says matter for modeling in sensorimotor neuroscience. The text does not show how far the results have been applied beyond the examples given, so its practical reach is uncertain.",
-    "background": "- Transfer function: a compact description of how a linear system turns inputs into outputs.\n- State-space realization: an internal model with explicit state variables that reproduces a given transfer function.\n- Connectivity pattern (support): which internal variables are allowed to influence which others; zeros in a matrix mean no connection.\n- Structured/distributed control: control design where the controller's structure or communication is restricted.\n- Multivariate polynomial equations: equations in several unknowns where each term is a product of powers of those unknowns.\n- Algebraic geometry: the branch of mathematics that studies solution sets of polynomial equations and their shapes.",
+    "one_liner": "The paper proposes a two-layer control scheme for self-adaptive software that uses a context-aware goal model to set priorities and feeds that into a model predictive controller, which plans adaptations ahead of time.",
+    "plain": "Software systems often need to change how they behave as their surroundings change, such as shifting load or conditions. This paper argues that the surrounding context should also change which goals the system treats as most important, and it builds a method that does this. The authors report that experiments in two scenarios showed better system performance, though the text gives no specific figures.",
+    "why": "It connects control theory with self-adaptive software engineering by treating goal priorities as part of the controller's objective, which may matter for systems that must anticipate change. The abstract does not show how large the gains were or how general the approach is, so its wider significance is uncertain.",
+    "background": "- Self-adaptive software: systems that monitor themselves and change their behaviour at run time.\n- Context: the conditions around the system, such as workload or environment.\n- Goal model: a diagram of what a system is meant to achieve and how goals relate.\n- Model predictive control (MPC): a control method that uses a model of the system to forecast its future and choose actions over a short horizon, repeating this at each step.\n- Proactive adaptation: acting on predicted future conditions rather than only reacting to current ones.\n- Two-layer control: one layer adapts the system, another adapts the controller itself, here by updating the controller's objective and constraints.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this paper, we first study the problem of finding a state-space realization of a given transfer function that adheres to a given connectivity pattern (i.e., support). While variants of this problem have been studied in distributed and structured control, existing work typically focuses on connectivity patterns relating to some networked plant. In contrast, we are interested in arbitrary connectivity patterns, which are relevant to modeling problems in sensorimotor neuroscience. We show that this problem is equivalent to solving a system of multivariate polynomial equations, and can be solved exactly without relaxation or approximation. We then study the reverse problem: given a connectivity pattern, what transfer functions have a state-space realization that adheres to this pattern? In other words, what transfer functions can this pattern realize? A surprising finding is that any given pattern can realize nearly all transfer functions, or very few transfer functions. We provide rigorous results and algorithms for both problems, leveraging technical machinery from algebraic geometry. The efficacy of our approach is demonstrated in examples at the end of the paper.",
+   "abstract": "In self-adaptive software systems, the role of context is paramount, especially for proactive self-adaptation. Current research, however, does not fully explore context's impact, for example on priorities of the requirements. To address this gap, we introduce a novel contextual goal model to capture these factors and their influence on the system. Using this, we propose a two-layer control mechanism with a context-aware model predictive control to achieve proactive adaptation for the software system and adaptation for the controller itself. By contextual prediction and a more accurate system model, our approach utilizes model predictive control to facilitate timely and efficient system adaptations, improving both performance and adaptability. Meanwhile, we perform requirement adaptation to update the contextual goal model, which in turn updates the objective function and constraints of the controller. Our experimental evaluations across two scenarios demonstrate the significant benefits of our approach in enhancing system performance.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27400",
-   "title": "Active Learning of Flows from Curve Observations using Gaussian Processes",
-   "url": "https://arxiv.org/abs/2611.27400",
+   "uid": "arxiv:2611.28200",
+   "title": "Control Barrier Functions in Motion Control",
+   "url": "https://arxiv.org/abs/2611.28200",
    "authors": [
-    "Konrad Reichel",
-    "Sandra Hirche"
+    "Stijn Hanegraaf (Maurice)",
+    "Giannis Delimpaltadakis (Maurice)",
+    "Hoang Chu (Maurice)",
+    "W. P. M. H. (Maurice)",
+    "Heemels"
    ],
-   "label": "arXiv:2611.27400v1",
+   "label": "arXiv:2611.28200v1",
    "primary_category": "eess.SY",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes a local optimization method, using a Gaussian process model of an unknown control system, that plans the trajectory whose observation most reduces uncertainty about the system's flow, and reformulates the planning problem as a fixed end time optimal control problem via time rescaling.",
-    "plain": "Engineers often need to learn how a machine or system behaves by running it under chosen inputs, but each run is costly. This paper describes a way to pick the most useful input sequence to try, so that the recorded motion teaches the most about how the system responds. The authors also account for the fact that the real system may drift away from the planned path, and they test their planners on a numerical example against benchmark methods.",
-    "why": "Choosing informative experiments automatically can reduce the time and wear needed to identify a system, which matters for robotics and other real-world control. The text itself does not report how large the gains are, so the practical value is not established from this description alone.",
-    "background": "- Control system: a system whose behavior (e.g., a robot arm) can be steered by inputs over time.\n- Flow: the rule describing how the system's state evolves from a starting point under given inputs.\n- Gaussian process: a statistical model that gives a predicted value plus an uncertainty estimate, learned from observed data.\n- Active learning: choosing which data to collect next, rather than collecting it at random.\n- Posterior kernel: the updated description of the model's uncertainty after data are observed.\n- Pontryagin-type necessary condition: a standard calculus-of-variations rule that an optimal input must satisfy.\n- Time rescaling: stretching or compressing time along a trajectory so a problem with variable duration becomes one with fixed duration.",
+    "one_liner": "The paper proposes control-barrier-function (CBF)-based motion controllers with continuous dynamics, specialized to integrator plants as CBF-HIGS, and compares them against projection-based controllers and the HIGS design via describing function analysis, simulations and experiments.",
+    "plain": "Precision machines such as positioning stages often use controllers that keep their response inside a chosen range, which helps them beat the limits of simple linear control. The catch is that the method used to do this makes the controller's underlying rules jump abruptly, which can stir up unwanted vibration-like behaviour in the machine. This paper borrows a safety-constraint idea from robotics and proposes a version whose rules change smoothly, and reports that in analysis, simulation and experiments it reduces this unwanted excitation while still improving disturbance rejection.",
+    "why": "Reducing unwanted high-frequency excitation in precision motion systems is a practical concern for manufacturing and instrumentation, and the paper claims to be the first to apply control barrier functions to this performance goal. The text does not establish how broadly the approach would transfer beyond the integrator case studied, so its wider significance is uncertain.",
+    "background": "- Control system: a feedback rule that adjusts an input (e.g. a motor force) based on measured output, to make a machine follow a desired motion.\n- Integrator: a basic dynamic element whose output accumulates its input over time; used here as a simple model of a motion plant.\n- Projection-based controller: a controller that forces its response into a specified sector (a bounded range of input-output behaviour); the projection makes its rules discontinuous.\n- Control barrier function (CBF): a mathematical tool, originating in safety-critical control, that keeps a system inside a safe set by enforcing a constraint on how its state evolves.\n- Describing function analysis: an approximation that treats a nonlinear element as a gain depending on signal amplitude, used to estimate phase lag and harmonic (overtone) distortion.\n- Harmonics: extra frequency components generated by nonlinearity; higher-order ones can excite unmodelled dynamics in hardware.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The active learning of real control systems requires informative roll-outs of controls. In this paper, we present a local optimization algorithm that finds the trajectory that most reduces uncertainty about the flow of a control system modeled by a Gaussian process. Therefore, we derive an approximation scheme for the posterior kernel of the Gaussian process after observing it on an entire continuous-time trajectory and establish a Pontryagin-type necessary condition for the optimizer. As the flow is unknown, the actual trajectory can deviate from the planned trajectory. We propose a trajectory planner that searches for the most informative control within a maximal allowed deviation horizon instead of a fixed time horizon. We show by trajectory-wise time rescaling that the underlying optimal control problem is equivalent to a fixed end time optimal control problem. Finally, we study both the fixed end time planner and the fixed maximum deviation planner in a numerical example and compare them with benchmarks.",
+   "abstract": "Projection-based controllers (PBCs) have significant engineering success in industrial high-precision motion systems by restricting their input-output behavior to performance-enhancing sector-sets thereby overcoming fundamental limitations of linear control. The projection results in continuous control signals, but their vector fields are discontinuous, potentially causing unwanted excitation of higher-order dynamics in the plant. Inspired by these projected controllers and the recent interest in control barrier functions (CBFs), we propose a new class of CBF-based motion controllers that (i) can mimic and exceed the performance benefits demonstrated by PBCs and (ii) have continuous dynamics thereby resulting in smooth control signals. We specialize our novel CBF-based control design to integrator dynamics, essentially connecting to a projected integrator, called Hybrid Integrator-Gain System (HIGS), thereby introducing CBF-HIGS. We analyze the CBF-HIGS's behavior using a describing function analysis, which reveals improved phase characteristics and a favorable trade-off in higher-order harmonic distortion compared to HIGS. Simulation and experimental results demonstrate that CBF-HIGS enhances disturbance attenuation and reduces the excitation of higher-order harmonics compared to HIGS due to its continuous vector field, without compromising robustness properties. The paper provides the first use of CBFs for performance improvement of mechatronic motion systems.",
    "source": "arxiv"
   },
   {

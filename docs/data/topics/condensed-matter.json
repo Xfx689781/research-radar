@@ -3,51 +3,55 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27819",
-   "title": "Magnetic-Field Response of a Hyperbolic Kitaev Spin Liquid",
-   "url": "https://arxiv.org/abs/2611.27819",
+   "uid": "arxiv:2611.28751",
+   "title": "Quantum Hall Effect in a 3D Cross-Dimensional Quantum Anomalous Hall System",
+   "url": "https://arxiv.org/abs/2611.28751",
    "authors": [
-    "Tao Yang",
-    "Baigeng Wang",
-    "Rui Wang",
-    "Z. Y. Xie"
+    "Liang-Liang Cheng",
+    "Ao-Long Li",
+    "Zhi-Qiang Zhang",
+    "Hua Jiang"
    ],
-   "label": "arXiv:2611.27819v1",
-   "primary_category": "cond-mat.str-el",
+   "label": "arXiv:2611.28751v1",
+   "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Using infinite tensor-network (iPEPS) simulations on a Kitaev honeycomb-type model placed on a hyperbolic {8,3} lattice, this paper compares how the fractionalized spin liquid responds to uniform versus staggered [111] magnetic fields.",
-    "plain": "The paper studies a quantum magnet whose spins are arranged on a lattice with negative curvature, like a saddle surface extended forever. Such magnets can host a \"spin liquid,\" a state where the spins stay disordered and their collective excitations behave like split-apart particles. The authors ask how this state reacts when a magnetic field is applied, and they find that a uniform field and a staggered field produce quite different responses.",
-    "why": "It connects the geometry of the lattice to the behaviour of an exactly solvable spin liquid under perturbations that break its conserved structure, which is useful for understanding how such states can be probed. The text does not establish broader implications beyond this model, so the wider significance is uncertain.",
-    "background": "- Spin liquid: a magnetic state with no ordered pattern even at low temperature, whose excitations can be fractionalized.\n- Kitaev model: an exactly solvable spin model whose spins split into emergent Majorana particles moving on a background of fixed \"flux\" values.\n- Hyperbolic lattice: a tiling of negatively curved space; {8,3} means eight-sided polygons with three meeting at each vertex.\n- Flux conservation: in the Kitaev model, the local flux through each plaquette (loop) is conserved unless a perturbation like a magnetic field breaks this.\n- Tensor network (iPEPS): a numerical method that represents an infinite quantum state compactly, used here to approximate ground states.\n- Effective Majorana model: a simplified description of the low-energy particles, here derived to third order in perturbation theory.",
+    "one_liner": "A theoretical study of how magnetic fields along three high-symmetry directions change Chern numbers, chiral edge-like modes, and multi-terminal Hall responses in a 3D system built by coupling two Weyl-semimetal Hamiltonians, reporting a breakdown of conventional Chern-number-based bulk-boundary correspondence.",
+    "plain": "This paper studies a three-dimensional material model that shows the quantum Hall effect, a precisely quantized electrical response usually seen in flat two-dimensional systems. The authors apply magnetic fields along three special directions and track how the topological counts (Chern numbers) and the paths electrons can travel along the surfaces change. They report that the usual rule linking the bulk count to the surface behavior does not fully hold here, and they check this with computer simulations of Hall transport.",
+    "why": "It challenges a standard rule that topological physicists use to predict edge behavior, which matters for interpreting Hall measurements in 3D materials. The text does not show experimental realization or applications, so its practical reach is unclear.",
+    "background": "- Quantum Hall effect: quantized electrical resistance in a material under a magnetic field, carried by one-way edge currents.\n- Chern number: an integer that counts topological twist in a material's electronic bands; it predicts how many one-way edge channels exist.\n- Bulk-boundary correspondence: the principle that the interior topology determines what happens at a material's surface or edge.\n- Weyl semimetal: a 3D material whose electrons behave like massless particles at points in momentum space, the building block here.\n- Quantum anomalous Hall effect: a quantized Hall response produced without an external magnetic field, through internal magnetism.\n- Multi-terminal transport: measuring currents and voltages at several electrical contacts to map how current flows.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Hyperbolic geometry can give rise to Kitaev spin liquids with distinct flux structures and Majorana spectra, raising the question of how these fractionalized states respond beyond exactly solvable limits. We address this question on the Kekul\\'e-colored hyperbolic {8,3} lattice by developing an infinite projected entangled-pair-state approach with flux-resolved loop-gas initialization and geometry-adapted tensor-network contraction. Under uniform and staggered [111] magnetic fields, we find markedly different many-body responses. The uniform field induces a sharp change between competing variational branches at weak field, whereas the polarization and mean plaquette flux evolve over a much broader field range under the staggered field. Exchange-energy competition helps explain the different response scales, while third-order effective Majorana models in a fixed-flux background exhibit contrasting low-energy spectra. Our results connect the geometry-dependent fractionalized structure of a solvable hyperbolic spin liquid to its many-body response under physical perturbations that break flux conservation.",
+   "abstract": "We systematically investigate cross-dimensional transport and the resulting quantum Hall effect in 3D quantum anomalous Hall effect systems, which are constructed by coupling two Weyl-semimetal Hamiltonians. Our study unveils that the system hosts highly anisotropic surface states and chiral modes, leading to rich quantum Hall responses. Crucially, we clarify how magnetic fields applied along three high-symmetry directions dictate the evolution of the Chern numbers, chiral modes, and Hall responses. We discover that chiral modes along different directions can originate from distinct mechanisms, giving rise to various magnetic modulation characteristics. Furthermore, we unveil the breakdown of the conventional Chern-number-based bulk-boundary correspondence under magnetic fields, where the Chern numbers alone fail to fully characterize the evolution of the chiral states. This anomalous behavior is attributed to the unique momentum-space distributions of surface bands. These insights are further validated numerically through multi-terminal Hall transport simulations. Our findings expand the understanding of magnetic-field-driven mechanisms in 3D topological systems and provide deeper insights into the interplay between quantized Hall effects and Chern numbers in 3D systems.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.27256",
-   "title": "Quantum-Chaos-Assisted Measure Synchronization in a Double-Well Ultracold Bose Gas",
-   "url": "https://arxiv.org/abs/2611.27256",
+   "uid": "arxiv:2611.28797",
+   "title": "Floquet-Induced Valley Polarization and Topological Phases in Twisted Bilayer Graphene Heterostructures",
+   "url": "https://arxiv.org/abs/2611.28797",
    "authors": [
-    "Xianchao Le",
-    "Jiaxin Peng",
-    "Weiping Zhang",
-    "Keye Zhang"
+    "A. Belayadi",
+    "I. A. Assi",
+    "A. Johansson",
+    "C. I. Osuala",
+    "H. Bahlouli",
+    "Udo Schwingenschl\\\"ogl",
+    "J. P. F. LeBlanc",
+    "A. Abbout"
    ],
-   "label": "arXiv:2611.27256v1",
-   "primary_category": "cond-mat.quant-gas",
+   "label": "arXiv:2611.28797v1",
+   "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A theoretical study of measure synchronization, and its speed-up by quantum chaos, in a two-component ultracold Bose gas trapped in a double-well potential modeled as a many-body bosonic Josephson junction.",
-    "plain": "This paper studies a question about how parts of a quantum system can fall into step with each other. The system is a cloud of ultracold atoms held in a trap with two wells, where atoms can slosh back and forth between them. The authors report that, in a certain chaotic regime found by looking at energy-level statistics, the system reaches this synchronization, and that chaos makes it happen faster while the quantum entanglement between parts moves toward what a random state would show.",
-    "why": "It links quantum chaos, synchronization, and entanglement in a closed (conservative) many-body system, which may guide later work on how chaos can help synchronization. The text does not show how broadly these findings apply beyond this specific model, so the wider significance is uncertain.",
-    "background": "- Measure synchronization: a form of synchrony in which the measured quantities of coupled subsystems fall into step, even when the full dynamics is not simply in lockstep.\n- Bosonic Josephson junction: two trapped clouds of bosons (particles that can pile into the same state) that exchange particles through a barrier, analogous to a superconducting Josephson junction.\n- Ultracold atoms: atomic gases cooled to temperatures near absolute zero and held by laser or magnetic fields.\n- Quantum chaos: signatures of chaotic behavior in quantum systems, often detected by statistics of energy levels (spectral statistics).\n- Entanglement entropy: a measure of how strongly quantum correlations link one part of a system to the rest; a \"random-state prediction\" is the value expected for a generic, scrambled state.\n- Conservative system: one with no energy loss to the environment.",
+    "one_liner": "A theoretical study of twisted bilayer graphene under circularly polarized light, with broken inversion symmetry from an out-of-plane electric field and insulating substrates, reporting Floquet-induced valley polarization, Chern-number phase transitions (C = -2, -1, 0), valley-polarized domain-wall channels, and spin-valley filtering via adjacent 2D ferromagnetic contacts.",
+    "plain": "This paper is a computer-based theory study of a stack of two sheets of carbon atoms (graphene) twisted relative to each other. Shining circularly polarized light on the stack, and tilting its symmetry with an electric field and surrounding materials, the authors find conditions where one of the two \"valleys\" (electron energy-momentum sites) stays conducting while the other opens an energy gap and goes quiet. The text reports that this setup can produce topological phase changes and channels that carry only one valley's electrons, and that nearby magnetic layers may allow filtering by spin and valley.",
+    "why": "It is a proposal for controlling electron valley and spin with light and fields in a tunable material, which may matter for future electronics concepts. The text is theoretical only and gives no experimental confirmation, so the practical relevance is uncertain.",
+    "background": "- Graphene: a one-atom-thick sheet of carbon; stacking two sheets with a small twist angle creates a \"moiré\" pattern that changes how electrons behave.\n- Valley: a distinct low-energy momentum point in the electron band structure; \"valley degree of freedom\" means electrons can carry information in which valley they occupy.\n- Dirac-like dispersion: electrons behaving like massless particles, with energy rising linearly with momentum; this gives conducting behavior.\n- Band gap: an energy range with no allowed electron states; a gapped valley is effectively switched off.\n- Floquet driving: treating a periodically oscillating light field as creating an effective, modified material during illumination.\n- Inversion symmetry: a symmetry where the structure looks the same when flipped through a central point; breaking it is needed for the valley effects.\n- Chern number: an integer describing the topological character of electron bands; changes signal topological phase transitions.\n- Domain-wall channel: a boundary between differently ordered regions that conducts electrons along it.\n- Spin-valley filtering: selecting electrons by spin and valley type.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "This paper investigates measure synchronization (MS) in a two-component ultracold atomic system confined in a double-well potential, which realizes a quantum many-body bosonic Josephson junction. Through spectral-statistics analysis, we identify the quantum chaotic parameter regime and confirm that the system achieves MS within this regime with weak dependence on the initial energy imbalance. We further show that chaotic dynamics not only significantly shortens the time scale for establishing synchronization but is also accompanied by entanglement entropy approaching the random-state prediction. These results reveal close connections among quantum chaos, MS, and quantum entanglement in conservative quantum many-body systems and may motivate further studies on the underlying mechanisms of chaos-assisted synchronization.",
+   "abstract": "We theoretically investigate twisted bilayer graphene (tTBG) heterostructures subjected to circularly polarized light. Inversion symmetry is broken through the combined application of an out-of-plane electric field and the incorporation of insulating substrates, enabling precise control of the valley degrees of freedom and associated topological phases. We identify a regime in which the valley degeneracy is lifted: one valley retains a gapless, linear Dirac-like dispersion, whereas the other develops a finite band gap and becomes electronically inactive. The interplay between Floquet driving and inversion-symmetry breaking induces topological phase transitions characterized by Chern numbers C = -2, C = -1, and C = 0, together with the emergence of perfectly valley-polarized domain-wall channels. Furthermore, magnetic asymmetry arising from proximity to adjacent two-dimensional ferromagnetic contacts enables spin-valley filtering. These findings establish the potential of graphene-based heterostructures as highly tunable systems for controlling spin and valley degrees of freedom.",
    "source": "arxiv"
   },
   {

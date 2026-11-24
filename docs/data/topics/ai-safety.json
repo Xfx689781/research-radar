@@ -3,49 +3,50 @@
  "updated": "2026-11-24",
  "papers": [
   {
-   "uid": "arxiv:2611.27424",
-   "title": "Jagged Robustness: Uneven Safety Transfer and Emerging Vulnerabilities under LLM Quantization",
-   "url": "https://arxiv.org/abs/2611.27424",
+   "uid": "arxiv:2611.29960",
+   "title": "Tracing Attacker Diversity Reduction in Adaptive LLM Red Teaming",
+   "url": "https://arxiv.org/abs/2611.29960",
    "authors": [
-    "Ramneek Agnihotri",
-    "Yingte Xu",
-    "Hans Vath"
+    "Chris Tava"
    ],
-   "label": "arXiv:2611.27424v1",
-   "primary_category": "cs.AI",
+   "label": "arXiv:2611.29960v1",
+   "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "An audit of how weight quantization (compressing a language model's parameters) affects safeguards, instruction-following, ethics/bias and truthfulness in Qwen3-4B, introducing the term \"Jagged Robustness\" for uneven transfer of these properties to compressed models.",
-    "plain": "Language models are often shrunk with a technique called quantization so they run faster and on cheaper hardware. This paper checks whether a shrunken model keeps the same behavior across different areas: some areas, like refusing unsafe requests and bias, got worse, while others, like truthfulness, stayed fairly steady. The authors also found that a specially crafted text suffix that does nothing harmful to the full model could push the compressed version into producing content it should refuse.",
-    "why": "Many people run compressed models in practice, so if safety behavior shifts after compression without anyone noticing, deployed systems could be less safe than their original tests suggest. The text reports results for one model (Qwen3-4B), so how far the pattern generalizes is not established from this text alone.",
-    "background": "- Quantization: storing a model's numbers (weights) at lower precision to save memory and speed up inference, with some loss of detail.\n- Safeguards / jailbreaks: training that makes a model refuse harmful requests; a jailbreak is an input that gets around that refusal.\n- Adversarial suffix: a string of seemingly random text appended to a prompt to steer the model's output.\n- Benchmarks: standard test sets used to score model behavior on tasks.\n- Qwen3-4B: a specific open-weight language model with about 4 billion parameters.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Quantization enables efficient inference in language models through model parameter compression. This work audits the impact of quantization on capability and safety domains including model safeguards, instruction-following, ethics and bias. Through benchmarks, we find that model safeguards and bias can degrade under quantization, while other capabilities such as truthfulness remain more stable in Qwen3-4B. We define this uneven transfer of LLM capabilities under quantization as Jagged Robustness. We find multiple factors driving Jagged Robustness: task complexity, evaluation method and generation coherence. Moreover, we verify the degradation of model safeguards by observing increased compliance with unsafe requests under quantization, and demonstrate universal adversarial suffix attacks that are benign for the full model but jailbreak quantized models. The findings indicate that it is risky to assume that the performance and robustness can transfer evenly across different capability domains from full models to quantized models.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.27260",
-   "title": "No Perfect Guardrail & No Perfect Guard: On the Decidability of Output Policies for Large Language Models",
-   "url": "https://arxiv.org/abs/2611.27260",
-   "authors": [
-    "Ahmed Amer",
-    "Loren Kinczel",
-    "Darrell D. E. Long"
-   ],
-   "label": "arXiv:2611.27260v1",
-   "primary_category": "cs.AI",
-   "date": "2026-11-24",
-   "summary": {
-    "one_liner": "The paper uses computability theory to show that a computable guard can exactly separate forbidden from permitted language-model outputs only when the output policy is decidable, and that undecidable policies force infinite misclassification.",
-    "plain": "The paper asks whether a safety filter (a \"guardrail\") can perfectly block forbidden text from an AI model while letting all allowed text through. It proves that this is possible only when the rule being enforced is one a computer can always settle yes or no, and that for harder rules any filter must make infinitely many mistakes. The authors also argue that treating guardrails as a guarantee of safety is an ethical failure, so people remain responsible for the rules themselves.",
-    "why": "It gives a formal limit on what automated output filtering can guarantee, which bears directly on how AI safety claims are made and evaluated. The text is a theoretical and philosophical argument; its practical reach for real deployed guardrails is not shown in the excerpt.",
-    "background": "- Guardrail: a filter or check placed on an AI system's outputs to block unwanted content.\n- Decidable policy: a rule for which a computer program can always correctly answer yes or no for every input, in finite time.\n- Undecidable problem: a question that provably no general algorithm can always answer correctly (the classic example is the halting problem).\n- Misclassification: wrongly blocking an allowed output or letting a forbidden one through.\n- Computable guard: a filter that some algorithm can actually run.\n- Execution monitor: a runtime checker that watches a program's behavior as it runs, distinct from a filter on finished outputs.\n- The paper's examples include arithmetic truth, program behavior, and harmful instructions.",
+    "one_liner": "A controlled study of reinforcement-learning-based automated red teaming finds that the attacker's diversity collapses over training, traces the narrowing to a success-only reward signal acting through the group-relative advantage, and reports winner-neighbor and common-opening effects.",
+    "plain": "Researchers use one AI model to generate attacks that try to make another AI model misbehave, and they train the attacker to get better at succeeding. This paper asks how the attacks become less varied over time, and where in that training loop the narrowing starts. Across three experiment setups over 24 training rounds, they found that a frozen defender narrowed diversity earlier than a co-trained one, that defender updates delayed but did not stop the narrowing, and that rewarding only successes appears to be the main source.",
+    "why": "If automated red teaming keeps producing a narrow set of attacks, safety testing may miss whole classes of failures, so the finding bears on how reliable such testing is. The text does not show how far these results generalize beyond the authors' setup, so the broader significance is uncertain.",
+    "background": "- Red teaming: deliberately trying to make an AI system fail, to find weaknesses before deployment.\n- Attacker, defender, judge: in this setup, one model writes attacks, another model responds, and a third model decides whether each attack succeeded.\n- Reinforcement learning: training by rewarding outcomes, here rewarding the attacker for successful attacks.\n- Group-relative advantage: a training signal that scores each attack against the average of its batch, so attacks are pushed up or down relative to their peers.\n- Attack diversity retention (ADR): a measure of how much variety remains among generated attacks; lower means narrower.\n- Winner-neighbor advantage: attacks similar to past successful ones succeed more often than those similar to past failures.\n- Percentage points: the difference between two success rates, e.g. going from 40% to 50% is 10 points.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Expecting guardrails to provide a general guarantee of safety fails to recognize the limits of computational enforcement and policy specification. We argue that promising such perfection is an ethical failure of precision, and that invoking it to abdicate responsibility is a moral failure. Guardrails can support responsible action, but cannot relieve researchers, developers, policymakers, or users of their obligations to examine what they claim, permit, and prevent. We establish a precise computational boundary. If every finite string is a possible output of a language model, a computable guard that blocks every forbidden output and passes every permitted one exists if and only if the policy is decidable. For an undecidable policy, every guard misclassifies infinitely many strings, and every guard that blocks all forbidden outputs excludes infinitely many permitted ones. We apply this characterization to arithmetic truth, program behavior, and harmful instructions to an idealized recipient. We distinguish guards from execution monitors, identify bounded and interceptable cases admitting exact enforcement, and explain why the results establish no positive lower bound on average error. Exact enforcement does not establish that a policy adequately captures safety. Conservative exclusion may withhold warnings, remedies, or challenges needed to recognize the policy's own defects. Human oversight cannot substitute for judgment: an apparent controller can become an instrument of purposes they have ceased to examine. Responsible governance requires continued critical challenge and the intellectual and moral humility to recognize possible flaws in our machines, rules, policies, and ourselves. The impossibility of a general assurance of perfection is a condition responsible practice must confront, not a responsibility that another guardrail - or another guard - can remove.",
+   "abstract": "Reinforcement learning can increase the success of automated red teaming but it also narrows the attack vector. This study asks where in the attacker-defender-judge learning loop does the narrowing begin and which mechanisms lead to a narrowing attack. Six mechanisms (defender adaptation, success edge, reward reinforcement, row cap, update size, and measurement) are tested across three experiment arms (co-trained, frozen defender, half learning rate) for twenty-four iterations. A frozen defender narrows attack diversity retention (ADR) earlier 0.496 relative to co-trained 0.891 at iteration twelve. Defender updates delay narrowing but dont prevent it. Successful attacks (\"winners\") have narrower attack diversity than the full set of generated attacks. Attacks closest to previous winners succeed 10-15 percentage points more often than those closest to previous failures. This winner-neighbor advantage holds after a defender update and for a fixed defender too. Attacks with a common opening have a common-opening advantage of 5-16 percentage points. The training row cap and update size account for little impact on ADR, and attack length accounts for only part of the ADR decrease. Narrowing appears to originate from the success only reward through the group-relative training advantage to the attacker update, with a persistent success edge setting the direction.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30672",
+   "title": "Uncovering Hidden Behaviours in Language Models via Limited-Parameter Finetuning",
+   "url": "https://arxiv.org/abs/2611.30672",
+   "authors": [
+    "Boyd Kane",
+    "Jo J. Jiao",
+    "Elizabeth Donoway",
+    "Bryce Woodworth",
+    "Alex Cloud",
+    "Alexander M. Turner"
+   ],
+   "label": "arXiv:2611.30672v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes limited-parameter finetuning (LPF), which trains a small fraction (3-25%) of LoRA parameters on examples of a target behaviour, as a way to reveal hidden behaviours in language models that standard behavioural evaluations miss.",
+    "plain": "AI models can sometimes act in unwanted ways, but only in situations that are hard to predict, so testers who check the model with ordinary questions may miss the problem. This paper tries a different check: it briefly retrains a small slice of the model on examples of the suspected behaviour and sees whether the hidden behaviour shows up. The authors report that this works on test models with planted hidden behaviours and on some naturally occurring ones in larger open models.",
+    "why": "Safety audits depend on what testers think to try, so a method that can detect hidden behaviour without needing the triggering context could be a useful addition to auditing toolkits for frontier models. The authors themselves say they have not compared it against other methods in a realistic auditing setting, so its practical value is still unclear.",
+    "background": "- Alignment audit: checking whether an AI model behaves in ways its developers did not intend.\n- Hidden behaviour: a model behaviour that appears only in rare or hard-to-anticipate contexts, so ordinary testing does not reveal it.\n- Finetuning: further training of an existing model on new examples to change or probe its behaviour.\n- LoRA: a method that adds small trainable adapter layers, so only a small share of the model's parameters are updated.\n- Model organism: a deliberately built test model with a known behaviour, used to check whether detection methods work.\n- Open-weight model: a model whose trained parameters are publicly downloadable.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large language models can have behaviours which only arise in hard-to-anticipate contexts. These hidden behaviours pose a challenge to alignment audits, which seek to uncover problematic model behaviour but are limited by the scenarios the auditor can anticipate. To address this challenge, we explore limited-parameter finetuning (LPF) on examples of a target behaviour. While training 3-25% of LoRA parameters, LPF reveals whether the model has a hidden behaviour, even when standard behavioural evaluations cannot. LPF succeeds on a suite of model organisms with hidden behaviours (8-14B parameters), and also surfaces naturally occurring hidden behaviours in open-weight models (27-35B parameters). LPF can thus distinguish between models which appear behaviourally identical to an auditor, and does not require the context in which the hidden behaviour surfaces. LPF provides a novel affordance that may be useful for auditing frontier AI models. However, we do not evaluate LPF against baselines in a realistic auditing setting, so further work is needed to determine its practicality.",
    "source": "arxiv"
   },
   {
