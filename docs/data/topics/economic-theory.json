@@ -1,6 +1,6 @@
 {
  "slug": "economic-theory",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
   {
    "uid": "arxiv:2611.27684",
@@ -14,12 +14,12 @@
    "primary_category": "econ.TH",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper studies strategy-proof, individually rational allocation rules for policies that combine permitted position exchanges with priority-based allocation of announced vacancies, showing when such rules exist, introducing the propose-and-trade rule, and characterizing it against classic deferred acceptance and top trading cycles.",
-    "plain": "The paper looks at institutions, such as school or job placement systems, where people already holding positions can swap them, and where open spots go to whoever has priority. It asks when a fair assignment rule can protect both the right to swap and the priority for open spots, so that nobody gains by misreporting their preferences. The authors find that such a rule exists exactly when the policy has no \"conflict cycles,\" and they propose a rule called propose-and-trade that works in those cases.",
-    "why": "Allocation systems that mix reassignment with vacancy filling are common, and the paper clarifies exactly which policy designs allow a manipulation-resistant rule. The text does not show practical adoption or empirical impact, so its significance beyond theory is unclear from the summary alone.",
+    "ai": true,
     "background": "- Strategy-proof rule: a matching procedure where reporting true preferences is always best, so no one gains by lying.\n- Individually rational: nobody is assigned something worse than what they already hold.\n- Priorities: rankings that decide who gets a vacant position first when several people want it.\n- Deferred acceptance and top trading cycles: two classic matching procedures in economic theory, used here as benchmarks.\n- Core allocation: an assignment that no group of participants could improve by trading among themselves.\n- Conflict cycle: a circular pattern of exchanges and vacancy claims that blocks a consistent rule.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies strategy-proof, individually rational allocation rules for policies that combine permitted position exchanges with priority-based allocation of announced vacancies, showing when such rules exist, introducing the propose-and-trade rule, and characterizing it against classic deferred acceptance and top trading cycles.",
+    "plain": "The paper looks at institutions, such as school or job placement systems, where people already holding positions can swap them, and where open spots go to whoever has priority. It asks when a fair assignment rule can protect both the right to swap and the priority for open spots, so that nobody gains by misreporting their preferences. The authors find that such a rule exists exactly when the policy has no \"conflict cycles,\" and they propose a rule called propose-and-trade that works in those cases.",
+    "why": "Allocation systems that mix reassignment with vacancy filling are common, and the paper clarifies exactly which policy designs allow a manipulation-resistant rule. The text does not show practical adoption or empirical impact, so its significance beyond theory is unclear from the summary alone."
    },
    "abstract": "Many institutions let incumbents exchange positions while allocating announced vacancies by priority, withdrawing positions released by vacancy recipients. A policy specifies permitted exchanges, vacancy eligibility, and priorities. A strategy-proof, individually rational rule protecting exchange rights and vacancy priorities exists precisely for policies without conflict cycles. Restricting protection to first choices does not enlarge this class. We introduce the propose-and-trade rule, which satisfies these properties and selects the applicant-optimal core allocation under every conflict-free policy. We identify when propose-and-trade is the unique strategy-proof, individually rational rule protecting first choices. These axioms characterize deferred acceptance and top trading cycles in their classic settings. Under a policy with a conflict cycle, propose-and-trade is manipulable but protects exchange rights and first-choice claims. Replacing it with any strategy-proof rule makes some applicant worse off at some profile. We show when priority reform alone can eliminate conflict cycles and when eligibility or exchange permissions must change.",
    "source": "arxiv"

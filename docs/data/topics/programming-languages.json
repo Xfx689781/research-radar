@@ -1,7 +1,55 @@
 {
  "slug": "programming-languages",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27106",
+   "title": "Schema-Validated LLM Workflows: A Benchmark Protocol and Comparative Evaluation Across Six Python Implementations",
+   "url": "https://arxiv.org/abs/2611.27106",
+   "authors": [
+    "Sidney Shapiro",
+    "Sanad Al-Khatib",
+    "Aurora Pinz\\'on Arzola",
+    "Emiliano Sebastian Gonzalez Venegas",
+    "Daniel Pearson"
+   ],
+   "label": "arXiv:2611.27106v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A benchmark protocol and live API evaluation that separates whether LLM outputs are structurally valid (parse against a schema) from whether they are task-correct, across five business workflow tasks and six Python implementations (PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference).",
+    "plain": "Companies increasingly use language models to pull data out of documents, write database queries, and route work, and the output has to fit a required format for software to use it. This paper argues that output which fits the format can still be wrong, and it measures both properties separately across six ways of wiring up the same model. In the reported confirmatory run, about 68% of outputs were schema-valid and the average automated quality score was about 0.64, with three setups keeping near-perfect format compliance and scoring roughly 0.91 to 0.94 on quality.",
+    "why": "It suggests that checking only whether an LLM's output parses is not enough to know if it does the job, which matters for anyone wiring models into business systems. The results are specific to one package and model configuration, and the authors say the contrasts describe system setups rather than causal effects of particular library features.",
+    "background": "- Large language model (LLM): an AI system that generates text from a prompt.\n- Structured output / schema: a required format (fields and types) that software can read automatically, like a fixed form.\n- Schema validity vs. task correctness: a output can fill the form correctly and still contain wrong content.\n- Python framework / library: prewritten code that helps build LLM applications; the paper compares several.\n- Benchmark protocol: a fixed, repeatable test design with pre-set analysis rules.\n- Holm-adjusted contrasts: statistical corrections for making many pairwise comparisons without inflating false positives.\n- Ablation: a test that removes or changes one component to see its effect.\n- Condition-by-task interaction: when the ranking of setups changes depending on the task.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Large language models are increasingly used to extract records, generate SQL, summarize reports, answer policy questions, and route operational work. At these software boundaries, parseable output is necessary but does not establish task correctness. We present a reproducible benchmark protocol, a public executable artifact, and a confirmatory live API evaluation that separate structural validity from task-specific correctness across five business workflow tasks and six Python implementation conditions: PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference. We hypothesize that (H1) schema validity and task quality are separable, (H2) structured-output binding paths are heterogeneous under a shared model and lowest-common-denominator contract, and (H3) condition-by-task interactions concentrate failures rather than shifting all tasks equally. Confirmatory analysis uses distinct task instances (100 extraction and 50 per other task, with three nested replicates) under a frozen analysis plan, yielding a 5400-row primary matrix with equivalence margins and Holm-adjusted contrasts against the SDK reference. In the eligible confirmatory run, overall schema validity was 0.684 and mean automated quality was 0.638. PydanticAI, LangGraph, and DSPy retained near-ceiling schema validity with mean quality 0.91-0.94, while the plain SDK, Agno, and CrewAI conditions were substantially lower in this package and model configuration. Schema-valid rows still produced many task-score flags, especially in extraction and compliance QA, and quality residuals show strong condition-by-task interactions (including a workflow collapse for CrewAI). Labelled ablations address retry budgets and feature-using mechanisms; primary contrasts remain system-configuration findings, not causal attributions to marketed library features.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26668",
+   "title": "How developers split roles among them and a coding agent and what \"collaboration\" means",
+   "url": "https://arxiv.org/abs/2611.26668",
+   "authors": [
+    "Linus Ververs",
+    "Helya Dadkhah",
+    "Lutz Prechelt"
+   ],
+   "label": "arXiv:2611.26668v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A mixed-methods study of how developers divide work between themselves and AI coding agents (such as Claude Code), comparing 2025 early-adopter blog posts with a 2026 practitioner survey, and characterizing what developers mean by \"collaboration\" with the agent.",
+    "plain": "Software developers are increasingly handing coding tasks to AI agents that can write and change code on their own. This paper asks how developers describe the split of work between themselves and such an agent, and what kind of collaboration they would ideally want. The authors read early adopters' 2025 blog posts, surveyed practitioners in 2026, and used an AI agent to help sort the survey's free-text answers.",
+    "why": "Teams are deciding in real time who does what when an AI agent writes code, so a clear picture of how developers think about this split is useful for planning and management. The paper suggests that differing views on collaboration may create friction within teams, though the text does not measure this directly.",
+    "background": "- A \"coding agent\" is an AI tool that can carry out multi-step programming tasks, not just suggest single lines of code.\n- \"Open coding\" is a qualitative research method where a researcher labels passages of text with descriptive categories, which are then grouped into themes.\n- A \"mixed-methods\" study combines qualitative (interpretive, text-based) and quantitative (counted, survey-based) approaches.\n- The paper reports that in 2025 agents were used only in supporting roles and humans were firmly accountable; in 2026 this is still largely true, but agents are taking on more involvement.\n- Collaboration, in the authors' findings, has three facets: clear human-only, agent-only, and shared work steps; personal preferences not justified by engineering needs; and a view that covers the whole development process.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Background: Coding agents such as Claude Code become more and more competent, so that their role in the development process can grow. Objective: How do developers characterize the role-split between them and their agent? How would they ideally want to collaborate with their agent? Methods: We perform a 3-step, mixed-methods study. We apply qualitative open coding to 2025 early adopters' blog articles; perform a quantitative survey of 2026 practitioners; develop and apply a method for coding-agent-supported open coding of survey freetext responses. Results: The 2025 practitioners have the agent work in supporting roles only. Accountability was firmly human. In 2026, both are fundamentally still true. Gradually, however, the role-split is now different, with much more agent involvement. The developers' notion of collaboration has three facets: Predominantly a separation into human-only, agent-only, and collaborative work steps, with defined conditions and goals. Second, accommodating personal preferences without engineering justification. Third, a holistic view of collaboration covering the entire development process. Conclusions: Defining one's role relative to the agent will need to be a recurring activity. The different views on collaboration are likely a source of friction and conflict for teams; future work should find out how to cope with that.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27947",
    "title": "Perceived Differences in Activity and Experience Between Developing Software With and Without AI",
@@ -15,12 +63,12 @@
    "primary_category": "cs.SE",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A study of how software engineers perceive their activities and experience differ when developing with generative AI tools versus traditional methods, and how those differences vary with years of programming experience.",
-    "plain": "This paper looks at how programmers feel their daily work has changed now that they use AI tools to write software. Based on what engineers report, they talk less with peers about technical problems, break work down less, search documentation less, and use debuggers less, while switching between tasks more and feeling less deep focus and less control over code and design. Core coding tasks like writing, refactoring, and fixing code show only small differences, and the changes are larger for engineers who started programming before generative AI existed.",
-    "why": "It matters for how the next generation of engineers is trained and whether experienced engineers will stay in the field and adapt. The text reports perceptions rather than measured performance, so it shows how people feel their work has changed, not whether the changes improve or harm software quality.",
+    "ai": true,
     "background": "- Generative AI: software that produces text or code in response to prompts, such as coding assistants.\n- Software engineering \"craft\" activities: decomposing problems (breaking them into smaller parts), searching documentation, debugging, and refactoring (reorganizing code without changing what it does).\n- Self-reported survey data: the findings are based on what engineers say about their own work, not on direct observation.\n- Experience gradient: a pattern where the size of an effect grows with years of experience.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A study of how software engineers perceive their activities and experience differ when developing with generative AI tools versus traditional methods, and how those differences vary with years of programming experience.",
+    "plain": "This paper looks at how programmers feel their daily work has changed now that they use AI tools to write software. Based on what engineers report, they talk less with peers about technical problems, break work down less, search documentation less, and use debuggers less, while switching between tasks more and feeling less deep focus and less control over code and design. Core coding tasks like writing, refactoring, and fixing code show only small differences, and the changes are larger for engineers who started programming before generative AI existed.",
+    "why": "It matters for how the next generation of engineers is trained and whether experienced engineers will stay in the field and adapt. The text reports perceptions rather than measured performance, so it shows how people feel their work has changed, not whether the changes improve or harm software quality."
    },
    "abstract": "The fundamental changes in software engineering driven by generative AI will have profound effects not only on the number of available software engineering jobs but also on what software engineering itself looks like. As the career evolves, questions arise about what the skillset and interests of the next generation of software engineers will be and whether long-time engineers will continue to be attracted to the career. In this paper, we contribute to answering these questions by studying how software development with AI tools is perceived to differ from traditional development and how the differences are modulated by years of programming experience. We find that, in terms of programming activities, engineers report less talking with peers about technical problems, less decomposition, less searching of documentation, and less using a debugger, while they report more task switching. We also find experiential differences, including less deep focus and less sense of control over code and design. We call these the different craft results, in contrast to core code-production activities such as writing, refactoring, and fixing code, which show only small mean differences. We also find that these differences are amplified by years of programming experience (an experience gradient), with software engineers who started programming before the age of generative AI perceiving greater changes in both activity and developer experience. We discuss our findings and their implications on training of the next generation of engineers and on engineers who may have difficulty transitioning to the AI-infused world of software engineering.",
    "source": "arxiv"
@@ -38,12 +86,12 @@
    "primary_category": "cs.PL",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper introduces iBuchi, a shallowly embedded temporal specification language over Choice Trees for reasoning about the ordering of observable interactions in Interaction Trees, with trace- and tree-level satisfaction relations, compositional principles, and integration into the Dijkstra Monads Forever framework, all mechanized in Rocq.",
-    "plain": "Programs often interact with their surroundings over time, such as reading input, writing output, or making requests, and the order of those interactions matters as much as the final answer. This paper gives a way to write down rules about the timing and order of such interactions and to check that a program follows them. The authors built the framework in the Rocq proof assistant and tested it on several non-trivial examples.",
-    "why": "Being able to state and verify how a program behaves over time, in modular pieces, matters for software that runs continuously or reacts to its environment. The text does not claim wider impact, so its practical reach beyond the Interaction Trees and Rocq setting is unclear from this summary alone.",
+    "ai": true,
     "background": "- Formal verification: proving mathematically that a program meets a specification.\n- Interaction Trees: a data structure that represents a program's effects as a tree of possible interactions with its environment, possibly infinite.\n- Temporal properties: statements about how behaviour unfolds over time, such as \"a response always eventually follows a request.\"\n- Linear Temporal Logic (LTL): a notation for such time-based statements, with operators like \"always\" and \"eventually.\"\n- Hoare-style specifications: pre- and post-condition statements about what a program does.\n- Rocq (formerly Coq): a proof assistant used to write and machine-check proofs.\n- Shallow embedding: encoding a specification language directly within the host language rather than as a separate syntax tree.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper introduces iBuchi, a shallowly embedded temporal specification language over Choice Trees for reasoning about the ordering of observable interactions in Interaction Trees, with trace- and tree-level satisfaction relations, compositional principles, and integration into the Dijkstra Monads Forever framework, all mechanized in Rocq.",
+    "plain": "Programs often interact with their surroundings over time, such as reading input, writing output, or making requests, and the order of those interactions matters as much as the final answer. This paper gives a way to write down rules about the timing and order of such interactions and to check that a program follows them. The authors built the framework in the Rocq proof assistant and tested it on several non-trivial examples.",
+    "why": "Being able to state and verify how a program behaves over time, in modular pieces, matters for software that runs continuously or reacts to its environment. The text does not claim wider impact, so its practical reach beyond the Interaction Trees and Rocq setting is unclear from this summary alone."
    },
    "abstract": "The correctness of modern effectful programs depends not only on their final results but also on the temporal evolution of observable interactions with their environments. Interaction Trees (ITrees) provide a reusable denotational semantics for such programs by representing effectful computations as potentially infinite trees of observable interactions. However, reusable temporal reasoning over ITrees remains largely unexplored. This paper presents a compositional temporal specification framework for ITrees. We introduce iBuchi, a shallowly embedded temporal specification language based on Choice Trees, which represents finite and infinite interaction traces and supports expressive temporal operators, including sequencing, branching, conjunction, repetition, and Linear Temporal Logic modalities. We define trace- and tree-level satisfaction relations between iBuchi specifications and ITrees, together with compositional reasoning principles for modular verification of effectful programs. We integrate iBuchi into the Dijkstra Monads Forever framework, thereby enabling temporal specifications to compose with conventional Hoare-style specifications and supporting a generator-based encoding of future conditions. We have formally developed and verified our framework in Rocq and demonstrated its expressiveness and compositionality through several non-trivial case studies.",
    "source": "arxiv"

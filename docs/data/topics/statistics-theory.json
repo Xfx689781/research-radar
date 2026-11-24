@@ -1,7 +1,50 @@
 {
  "slug": "statistics-theory",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26886",
+   "title": "Estimating contextual networks via Fisher-scoring surrogate likelihood",
+   "url": "https://arxiv.org/abs/2611.26886",
+   "authors": [
+    "Myung Jin Lee",
+    "Fangzheng Xie"
+   ],
+   "label": "arXiv:2611.26886v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A tuning-free likelihood method, using a smooth surrogate likelihood and Fisher scoring, estimates latent positions in contextual generalized random dot product graphs with high-dimensional low-rank vertex covariates, with consistency and asymptotic normality established for the estimator.",
+    "plain": "The paper looks at networks, where data points are linked in pairs (such as people who know each other), and each point also carries a list of measured attributes. The authors propose a way to place each point at a hidden location that accounts for both the links and the attributes, without needing extra settings that depend on how sparse the network is. They report that the estimator is consistent and asymptotically normal, and they apply it to real data as a demonstration.",
+    "why": "Many real networks come with attributes for each node, and combining the two sources of information is a common need. The paper argues that existing spectral methods can be suboptimal and require tuning parameters that depend on unobservable quantities, so a tuning-free likelihood approach is of interest to people working on network and covariate data; the text does not show how it compares to these methods beyond these claims.",
+    "background": "- A network (graph) is a set of nodes joined by edges; here, a model places each node at a hidden \"latent position\" and the chance of an edge depends on those positions.\n- Vertex covariates are measured attributes attached to each node.\n- Random dot product graphs are a model where edge probability is given by the inner product of latent position vectors.\n- Spectral methods estimate positions using eigenvectors of a matrix, usually needing a tuning parameter.\n- Likelihood-based estimation picks the parameter values that make the observed data most probable; Fisher scoring is an iterative numerical way to find that maximum.\n- Consistency means estimates converge to the true values as data grow; asymptotic normality means their errors are approximately bell-curve distributed in large samples.\n- Tuning parameters are settings the user must choose by hand.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "When networks are accompanied by vertex-level covariates, effectively integrating and aligning the information underlying both data sources becomes a natural yet critical task. Current spectral approaches, despite their popularity, may yield suboptimal results and necessitate the specification of additional tuning parameters that are contingent upon unobservable signal-to-noise ratios. We propose a tuning-free, likelihood-based learning framework for estimating latent positions in contextual generalized random dot product graphs in the presence of high-dimensional vertex covariates with a low-rank structure. Our method constructs a smooth surrogate likelihood and implements a Fisher-scoring algorithm to iteratively estimate latent positions without introducing additional tuning parameters that depend on the network sparsity. We establish the consistency and asymptotic normality of the Fisher-scoring estimator. Application to real-world data further demonstrates the method's practical utility, offering a principled and scalable alternative to spectral approaches for analyzing contextual networks in high-dimensional settings.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27683",
+   "title": "On the Role of Fisher Information, Variance and Asymptotics in Statistical Inference",
+   "url": "https://arxiv.org/abs/2611.27683",
+   "authors": [
+    "Paul W. Vos"
+   ],
+   "label": "arXiv:2611.27683v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A reading of Bahadur's asymptotics chapter (MLE normality, Fisher's bound, Hodges's counterexample, local asymptotic normality) that replaces point estimators with a continuum of significance tests assessed by Fisher information, which yields an exact bound that differs geometrically from the Cramér–Rao bound.",
+    "plain": "This paper is about the mathematical limits on how precisely a quantity can be estimated from data, which statisticians have long described using approximations for large samples. The author revisits the standard large-sample results and re-describes them in terms of a family of significance tests rather than a single estimate, measuring the information they carry. The text reports that, under this view, the statements hold exactly at every sample size, and it gives an example where a t-test family keeps about half an observation's worth of the information in the sample mean.",
+    "why": "It offers a reframing of classical results like Fisher's bound and Hodges's counterexample, which are central to how statisticians think about efficiency. The connection to other fields is not described in the text, so its wider relevance is unclear.",
+    "background": "- Maximum likelihood estimator: the value of a parameter that makes observed data most probable.\n- Fisher information: a measure of how much data reveal about an unknown parameter, based on how sensitive the likelihood is to it.\n- Variance and mean square error: measures of how spread out or inaccurate an estimate is.\n- Cramér–Rao bound: a lower limit on the variance of an unbiased estimator, given by inverse Fisher information.\n- Superefficiency and Hodges's estimator: a known counterexample where an estimator beats the usual limit at one parameter value.\n- Asymptotic normality: the approximation that estimates behave like a bell curve as sample size grows.\n- Significance test: a procedure for judging whether data are consistent with a hypothesis.\n- Companion paper: the author's earlier work applying the same reframing to the preceding chapters.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Bahadur's \\emph{Lectures on the Theory of Estimation} close with a chapter on asymptotics: asymptotic normality of the maximum likelihood estimator, Fisher's bound on its asymptotic variance with Hodges's counterexample, and local asymptotic normality. A companion paper read the earlier lectures with one modification, replacing the point estimator by a generalized estimator---Fisher's continuum of significance tests---assessed by information rather than variance. This paper reads Chapter 8 the same way. At each of its three parts the classical statement is an approximation about a point estimator, while the corresponding statement about the score is exact at every sample size. Superefficiency does not arise, because information is bounded by the Fisher information at every $n$; Hodges's estimator, computed exactly, is fully efficient at the origin and loses information only where its mean square error is worst. The information of a generalized estimator is argued to be Fisher information: the mean rate at which a continuum of tests responds to the parameter, standardized by its variance. The resulting Fisher upper bound differs geometrically, not merely algebraically, from the Cram\\'er--Rao lower bound. The extension is not empty: the $t$-test continuum loses about half an observation's worth of the information in $\\bar X$ at every $n$.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26761",
    "title": "Pathwise Factorization and Uncertainty Quantification for Impedance Obstacles with Random Boundaries",
@@ -14,12 +57,12 @@
    "primary_category": "math.NA",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A factorization method for locating two-dimensional impedance obstacles with random boundaries from finitely many noisy multistatic measurements, with finite-sample confidence guarantees, simultaneous confidence bands, and a combined-field integral equation computed numerically.",
-    "plain": "The paper looks at how to find an object that sound waves bounce off when the object's edge is not fixed but varies randomly from one trial to the next. Using a limited set of noisy measurements, the authors build an imaging method and attach statistical error bounds to it, so the picture of where the object is comes with stated uncertainty. They check the resulting coverage of those error bounds against a high-accuracy Monte Carlo reference.",
-    "why": "Imaging hidden objects from scattered waves is used in radar, sonar, and medical or geophysical imaging, and attaching confidence statements to the image is the kind of step those fields need. The text does not discuss applications, so any connection beyond this specialist setting is my inference rather than something the paper states.",
+    "ai": true,
     "background": "- Acoustic scattering: waves sent at an object and the echoes or far-field patterns recorded.\n- Impedance obstacle: an object whose surface partly absorbs or reflects waves, described by a boundary condition.\n- Factorization method: an inverse-scattering technique that tests sampling points to decide whether they lie inside the object.\n- Multistatic data: measurements taken from several sending and receiving positions.\n- Monte Carlo reference: a brute-force simulation used as a benchmark for accuracy.\n- Confidence band and coverage: a range that should contain the true value with a stated probability, and the check of how often that holds.\n- Integral equation: a reformulation of the wave problem that can be solved numerically.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A factorization method for locating two-dimensional impedance obstacles with random boundaries from finitely many noisy multistatic measurements, with finite-sample confidence guarantees, simultaneous confidence bands, and a combined-field integral equation computed numerically.",
+    "plain": "The paper looks at how to find an object that sound waves bounce off when the object's edge is not fixed but varies randomly from one trial to the next. Using a limited set of noisy measurements, the authors build an imaging method and attach statistical error bounds to it, so the picture of where the object is comes with stated uncertainty. They check the resulting coverage of those error bounds against a high-accuracy Monte Carlo reference.",
+    "why": "Imaging hidden objects from scattered waves is used in radar, sonar, and medical or geophysical imaging, and attaching confidence statements to the image is the kind of step those fields need. The text does not discuss applications, so any connection beyond this specialist setting is my inference rather than something the paper states."
    },
    "abstract": "We develop a factorization method with finite-sample statistical guarantees for two-dimensional acoustic scattering by impedance obstacles whose boundary is random and whose data are finitely many noisy multistatic measurements. In the two-dimensional far-field normalization, the symmetrization must act on a phase-rotated far-field operator; we prove the optical and range identities for every realization of a compact family of uniformly bi-Lipschitz domains, with jointly measurable regularized indicators. A quadrature-weighted finite-sample analysis separates angular approximation, measurement noise, test-vector error, and regularization, and yields a consistency theorem for empirical means and variances, joint in all data parameters. Bounded indicators admit simultaneous confidence bands, a diagonal threshold recovers the probability that a sampling point lies in the random obstacle, and a nested design yields unbiased variance components. Computations use a combined-field integral equation proved invertible at all frequencies, and the finite-grid guarantees are examined in a coverage study against a high-accuracy Monte Carlo reference.",
    "source": "arxiv"
@@ -38,12 +81,12 @@
    "primary_category": "math.ST",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper builds a one-Gaussian-vector surrogate for convex empirical risk minimization with non-Gaussian features and nonsmooth penalties, calibrates it to the true joint law, and proves agreement of minimizers, prediction variances, and risks under a Poincaré inequality and regularity assumptions.",
-    "plain": "The paper studies a common way of fitting statistical models: pick settings that make the model's error small on training data while penalizing complexity. Real data are rarely Gaussian (bell-curve shaped), which makes exact analysis hard. The authors replace the messy data with a simpler surrogate built from one Gaussian random vector, and they show that, under stated conditions, the fitted solution and its predictions behave similarly to those of the surrogate.",
-    "why": "It offers a way to predict test error and classification risk for penalized models on non-Gaussian data without relying on the data being Gaussian, which matters for anyone relying on such formulas. The text does not show how widely the conditions apply in practice, so its reach beyond the stated settings is uncertain.",
+    "ai": true,
     "background": "- Empirical risk minimization (ERM): choosing model parameters to minimize average loss on a training sample.\n- Convex penalty: an added cost term (such as the Lasso's sum of absolute values) that keeps the problem well behaved and encourages simple solutions.\n- Gaussian approximation: replacing a complicated random quantity with a normal (bell-curve) one that has matching mean and variance.\n- Poincaré inequality: a condition limiting how much a random function can fluctuate, used to control the non-Gaussian data.\n- Anti-concentration: the requirement that random projections are not too likely to fall in a tiny interval.\n- Hamilton-Jacobi / cavity method: a technique from statistical physics that compares a system with and without one data point.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper builds a one-Gaussian-vector surrogate for convex empirical risk minimization with non-Gaussian features and nonsmooth penalties, calibrates it to the true joint law, and proves agreement of minimizers, prediction variances, and risks under a Poincaré inequality and regularity assumptions.",
+    "plain": "The paper studies a common way of fitting statistical models: pick settings that make the model's error small on training data while penalizing complexity. Real data are rarely Gaussian (bell-curve shaped), which makes exact analysis hard. The authors replace the messy data with a simpler surrogate built from one Gaussian random vector, and they show that, under stated conditions, the fitted solution and its predictions behave similarly to those of the surrogate.",
+    "why": "It offers a way to predict test error and classification risk for penalized models on non-Gaussian data without relying on the data being Gaussian, which matters for anyone relying on such formulas. The text does not show how widely the conditions apply in practice, so its reach beyond the stated settings is uncertain."
    },
    "abstract": "We study convex empirical risk minimization (ERM) with non-Gaussian features and nonsmooth penalties through a surrogate driven by a single Gaussian vector. The surrogate preserves the penalty and calibrates its coefficients using the actual joint law of the feature-label model. We prove that this population calibration exists and is unique. We prove a Gaussian approximation for fresh prediction scores when the data satisfy a Poincar\\'e inequality. Together with regularity conditions on the losses, this approximation yields agreement between the ERM minimizer and its surrogate in normalized means and prediction variances, as well as formulas for prediction and classification risks. The result covers general uniformly strongly convex penalties and pure Lasso under projection anti-concentration. The core proof relies on a cavity Hamilton-Jacobi argument that compares the main statistics of the two minimizers without differentiating the penalty.",
    "source": "arxiv"

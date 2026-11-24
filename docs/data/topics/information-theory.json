@@ -1,7 +1,52 @@
 {
  "slug": "information-theory",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27248",
+   "title": "User-Irrepressible Sequences for Multiple-Packet Reception",
+   "url": "https://arxiv.org/abs/2611.27248",
+   "authors": [
+    "Yen-Ling Shih",
+    "Yuan-Hsun Lo",
+    "Yijin Zhang",
+    "Ying Miao"
+   ],
+   "label": "arXiv:2611.27248v1",
+   "primary_category": "cs.IT",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper gives an explicit Chinese Remainder Theorem-based construction of periodic binary protocol sequences that guarantee every user at least one successful transmission per period under multiple-packet reception with capability γ ≥ 2, without feedback or phase synchronization.",
+    "plain": "Many users share one radio channel that can sometimes receive several packets at once, and each user follows a fixed repeating on-off pattern of transmissions. The paper studies how to design these patterns so that, no matter how the users' patterns are offset in time, every user gets at least one packet through in each cycle. The authors give a general explicit recipe for this, and they also work out the exact average waiting time (delay) for a user across all possible time offsets.",
+    "why": "Guaranteeing that every user gets through within a bounded time, without coordination or feedback, matters for random-access wireless networks. The text does not show practical deployment results, so its real-world impact is unclear from this summary alone.",
+    "background": "- Multiple-packet reception (MPR): a receiver that can decode up to γ simultaneous packets; a slot with at most γ transmitters succeeds.\n- Protocol sequence: a fixed repeating binary pattern (1 = transmit, 0 = stay silent) assigned to each user.\n- Cyclic shift: the same pattern started at a different point in the cycle; users are not synchronized, so shifts are arbitrary.\n- Hamming cross-correlation: a count of how often two patterns line up on a transmit slot under a given shift; used to bound collisions.\n- Chinese Remainder Theorem: a number-theory result used here to build sequences of a chosen length from smaller moduli.\n- Conflict-avoiding codes: a known family of sequence sets with low mutual interference, used as an alternative starting point.\n- Average individual delay: the expected wait until a user's first success, averaged over shifts.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper studies deterministic transmission schemes based on protocol sequences for slot-synchronous multiple-packet reception (MPR) channels without feedback or synchronization of sequence phases. Each user schedules its transmissions according to a preassigned periodic binary sequence. A sequence set has the user-irrepressible property with MPR capability $\\gamma$ ($\\gamma$-UI) if every user is guaranteed at least one successful transmission per period, regardless of the relative cyclic shifts. We propose a unified explicit construction based on the Chinese Remainder Theorem (CRT) for arbitrary MPR capability $\\gamma\\geq 2$. To the best of our knowledge, this is the first unified CRT-based construction framework for $\\gamma$-UI sequences over this full range, without requiring conflict-avoiding codes with prescribed parameters. We establish the $\\gamma$-UI property through bounds on pairwise Hamming cross-correlations and show that suitably selected subsets support one additional active user without increasing the sequence length. We also derive exact average individual delay expressions over all possible cyclic shifts and extend the delay analysis to $\\gamma$-UI sequence sets obtained from conflict-avoiding codes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26990",
+   "title": "Semi-regular admixed arrays: asymptotic enumeration and when information is additive",
+   "url": "https://arxiv.org/abs/2611.26990",
+   "authors": [
+    "Alan J. Aw"
+   ],
+   "label": "arXiv:2611.26990v1",
+   "primary_category": "q-bio.PE",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Asymptotic counts of doubly constrained two-way diploid admixed arrays (local ancestry tallies plus ancestry-specific allele sums) in the semi-regular regime, with a test of whether the two constraint families combine additively in information.",
+    "plain": "This paper studies grids of numbers that record, for a group of mixed-ancestry people, which ancestral origin and which allele each stretch of their genetic material carries. The authors count how many such grids satisfy two kinds of summary totals at once, and find that the count is governed by an entropy formula, with a different correction near the edges of the allowed range. They then ask whether the two summaries together narrow things down as much as you would guess by combining their individual effects, and report that, in general, they do not.",
+    "why": "Genomic studies of admixed populations often release only summary statistics, so knowing how much those summaries reveal about individuals matters for both analysis and privacy. The text does not say how these results would be used in practice, so the practical reach is unclear from the abstract alone.",
+    "background": "- Admixed population: people whose ancestry comes from more than one source population.\n- Local ancestry: which source population each segment of a person's chromosomes came from.\n- Diploid: each person carries two copies of each chromosome, so two haplotypes.\n- Contingency-table style counting: counting arrays that match fixed row and column totals.\n- Shannon entropy: a measure of how spread out or uncertain a set of frequencies is; exponential growth of counts is often governed by it.\n- Asymptotic formula: an approximation that becomes accurate as the array size grows.\n- Martingale techniques: probability tools for controlled random processes, used here as the main proof method.\n- Additivity heuristic: the guess that two pieces of information combine independently, so their effects simply add.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In genomic data analysis, admixed arrays are pairs of matrices recording the local ancestry and the allele at each position of the haplotypes of admixed individuals. We study two-way diploid admixed arrays with $N$ individuals and $P$ loci under two families of constraints: local ancestry tallies, which fix the number of ancestry assignments per individual, and ancestry-specific sums, which fix the allele count per locus and ancestry. These two constraint families correspond to summaries of admixed genetic data investigated in biomedical and genomic applications. In the semi-regular regime, where all tallies and sums are uniform, we use complex martingale techniques to derive asymptotic formulas for the number of doubly constrained arrays as $N$ and $P$ grow with bounded ratio, over the whole feasible region. The leading term is governed by the Shannon entropy of the frequencies of the four possible pairs of entries at a position of the two matrices; on the boundary one or two of them vanish, changing the Gaussian correction. We then ask whether the two families carry information additively, that is, whether an independence heuristic predicts the doubly constrained count up to a bounded factor. Measured against the smallest set of arrays defined by a constraint that each family implies on its own, additivity holds only on a set of measure zero. It includes an edge of the feasible region with correction factor $e^{-1/4}$, extending our earlier result at the symmetric point. Thus, how far the two summaries jointly narrow down individual-level ancestry and genotype configurations cannot generally be predicted from how far each does on its own.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27694",
    "title": "Coding Length and Optimal Power Allocation in Correlated Block Fading",
@@ -14,12 +59,12 @@
    "primary_category": "cs.IT",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "For a Gaussian block-fading channel with correlated fades, the paper studies when outage probability predicts the achievable rate under an exponential error-exponent requirement with many receive antennas, and it characterizes the optimal power allocation across blocks.",
-    "plain": "The paper looks at how to send a message reliably over a wireless link where signal strength varies in blocks of time that are correlated with each other. The transmitter knows only the statistical pattern of the fading, not the actual values, and the receiver has many antennas. The authors find when the simple \"outage\" measure (the chance the link is too weak to support a rate) correctly predicts the best rate, and when it overestimates it.",
-    "why": "It sharpens when a standard engineering shortcut for wireless links, outage, is accurate, and it gives explicit examples where power should be left off a block and then used again as reliability demands tighten. The text does not indicate links to specific applications beyond wireless communication.",
+    "ai": true,
     "background": "- Block fading: the channel gain stays fixed within a block and changes between blocks.\n- Outage: the event that the channel is too weak to support a chosen rate; outage probability is its chance.\n- Error exponent: how fast the chance of decoding error shrinks as a parameter (here, the number of receive antennas) grows.\n- Dispersion: a measure of how much the achievable rate fluctuates around the capacity for finite-length codes.\n- Power allocation: how a fixed total energy is split across the blocks of a codeword.\n- Autoregressive (AR(1)) fading: a model where each block's gain is correlated with the previous one.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "For a Gaussian block-fading channel with correlated fades, the paper studies when outage probability predicts the achievable rate under an exponential error-exponent requirement with many receive antennas, and it characterizes the optimal power allocation across blocks.",
+    "plain": "The paper looks at how to send a message reliably over a wireless link where signal strength varies in blocks of time that are correlated with each other. The transmitter knows only the statistical pattern of the fading, not the actual values, and the receiver has many antennas. The authors find when the simple \"outage\" measure (the chance the link is too weak to support a rate) correctly predicts the best rate, and when it overestimates it.",
+    "why": "It sharpens when a standard engineering shortcut for wireless links, outage, is accurate, and it gives explicit examples where power should be left off a block and then used again as reliability demands tighten. The text does not indicate links to specific applications beyond wireless communication."
    },
    "abstract": "A codeword spans a fixed number of correlated Gaussian fading blocks. The receiver knows the gains and the transmitter knows only their law. At fixed average signal-to-noise ratio, we require the decoding error probability to decay exponentially with the number of receive antennas. When does outage predict the achievable rate? If block length grows faster than the number of antennas, outage gives the limiting optimal rate. If both grow to infinity at a fixed positive ratio of block length to array size, outage strictly overestimates the limiting rate. We determine the critical ratio above which positive rates are possible. For sufficiently large finite ratios, we find the exact limiting rate over all codes satisfying a total energy constraint on each codeword. The leading rate loss is inversely proportional to the ratio. Its coefficient depends on Gaussian channel dispersion at the most likely fade causing outage and on how quickly the outage rate decreases as the required error exponent increases. In the long-block limit, equal power loses rate on every window of three or more blocks under stationary first-order autoregressive fading with positive lag-one correlation. In a different three-block channel with identical marginal gains, tightening the reliability requirement first makes it optimal to leave the middle block unused and later to use it again.",
    "source": "arxiv"
@@ -37,12 +82,12 @@
    "primary_category": "cs.IT",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proves qualitative stability of Shannon's entropy power inequality in R^d in L^1 and Ruzsa distance without any moment assumptions, using an optimal transport argument, majorization of density rearrangements, and Christ's stability result for sharp Young's inequality.",
-    "plain": "The paper studies a basic inequality from information theory that bounds how the uncertainty (entropy) of a sum of independent random quantities relates to that of the parts. It asks what happens when that inequality is nearly tight, and shows the near-equality stays close in a precise sense, without requiring the random quantities to have finite moments (a technical condition on how spread out they can be). The authors also extend several earlier one-dimensional results to random vectors of any dimension.</plain>\n<parameter name=\"why\">Stability results say that near-optimal cases must look close to the extremal ones, which matters for proofs and for understanding when the bound is sharp. The text does not describe applications beyond this mathematical setting, so any wider connections are unclear from the abstract alone.",
-    "why": "",
+    "ai": true,
     "background": "- Differential entropy: a measure of spread or uncertainty for a continuous random vector, with a density function.\n- Entropy power inequality: a bound saying the entropy power of a sum of independent random vectors is at least the sum of their entropy powers; equality holds for Gaussians.\n- Stability: if the inequality is almost an equality, the distributions are close to Gaussian-type extremizers in some measured distance.\n- L^1 distance: the total amount by which two probability densities differ, integrated over space.\n- Ruzsa distance: a distance between random variables that is used in additive combinatorics and probability.\n- Optimal transport: a way of moving one probability distribution into another at minimal cost, used here as a proof tool.\n- Young's inequality: a sharp inequality on convolutions of functions; its sharp form has known extremizers (Gaussians).\n- Moment assumptions: conditions that random variables have finite averages of powers of their size; the paper removes these.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves qualitative stability of Shannon's entropy power inequality in R^d in L^1 and Ruzsa distance without any moment assumptions, using an optimal transport argument, majorization of density rearrangements, and Christ's stability result for sharp Young's inequality.",
+    "plain": "The paper studies a basic inequality from information theory that bounds how the uncertainty (entropy) of a sum of independent random quantities relates to that of the parts. It asks what happens when that inequality is nearly tight, and shows the near-equality stays close in a precise sense, without requiring the random quantities to have finite moments (a technical condition on how spread out they can be). The authors also extend several earlier one-dimensional results to random vectors of any dimension.</plain>\n<parameter name=\"why\">Stability results say that near-optimal cases must look close to the extremal ones, which matters for proofs and for understanding when the bound is sharp. The text does not describe applications beyond this mathematical setting, so any wider connections are unclear from the abstract alone.",
+    "why": ""
    },
    "abstract": "We establish qualitative stability in $L^1$ and Ruzsa distance for Shannon's entropy power inequality in $\\mathbb{R}^d$, without any moment assumptions. The proof uses the optimal transport argument by Rioul (2017), majorization bounds of density rearrangements, and the stability of the sharp form of Young's inequality due to Christ (2019). Along the way we also extend recent one-dimensional results on de Bruijn's identity, the continuity of differential entropy, and the equality case of the entropy power inequality to random vectors of any dimension.",
    "source": "arxiv"

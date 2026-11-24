@@ -1,7 +1,60 @@
 {
  "slug": "plant-biology",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767983",
+   "title": "High-throughput phenotyping reveals natural variation in tomato pollen responses to heat stress",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767983v1",
+   "authors": [
+    "Warman, C.",
+    "Perkins, C. J.",
+    "McKinley, S.",
+    "Gonzalez, B.",
+    "Tsurho, K.",
+    "Smith, S. E.",
+    "Pease, J.",
+    "Palanivelu, R."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767983 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A high-throughput microscopy pipeline with automated pollen classification and single-tube tracking quantifies how 218 tomato accessions and wild relatives respond to 26 °C versus 34 °C during pollen germination and tube growth.",
+    "plain": "Heat during flowering can make pollen fail, which can reduce fruit set in crops such as tomato. The authors built an automated system that photographs pollen grown in a dish at normal and high temperature, uses software to sort each grain and tube into categories, and follows individual pollen tubes over time. They applied it to 218 tomato types and wild relatives and found wide differences in how each responds to heat.",
+    "why": "Pollen heat tolerance is hard to measure at scale, so a faster, automated way to score many genetic lines could help breeders and geneticists look for the genes behind heat tolerance. The text reports strong agreement between automated and manual counts, but it does not show that these pollen measurements predict fruit yield in the field.",
+    "background": "- Pollen: the male reproductive grains of a flowering plant; each must germinate and grow a tube to reach the egg.\n- Germination and bursting: a healthy grain sprouts a tube; under stress it may burst instead and fail.\n- Accession: a distinct line or variety held in a seed collection, used here as a unit of genetic variation.\n- Wild relatives: undomesticated species related to crop tomato, often carrying useful stress-tolerance traits.\n- Thermotolerant vs thermosensitive: able or unable to withstand high temperature without harm.\n- R² (coefficient of determination): a 0–1 measure of how closely two sets of values agree; values near 0.9 or higher indicate close agreement.\n- Bright-field microscopy: ordinary light microscopy used to image the grains.\n- Time to 50% germination: the time at which half the grains have sprouted.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Scalable measurements of pollen function are needed to investigate genetic variation in reproductive responses to heat. We developed a high-throughput phenotyping framework integrating automated bright-field microscopy, object detection, individual-tube tracking, and temporal analysis. We quantified pollen performance at 26 and 34 C across 218 tomato accessions and wild relatives by analyzing approximately 300,000 images collected over two-hour growth periods. Automated counts of pollen classes - aborted pollen grains, ungerminated, germinated, and burst pollen grains, and pollen tube tips - agreed closely with manual counts (R2 = 0.915-0.967). Heat stress shortened the mean time to 50% germination from 24.0 to 20.5 minutes but increased mean percent bursting at 2 hours from 14.9% to 83.1%. A burst integral metric combined the extent and timing of bursting and revealed apparently substantial variation among accessions. Mean pollen tube length was shorter at 34 C than at 26 C in 72% of accessions and was equal or greater at 34 C in the remaining 28%. Individual-tube tracking revealed contrasting growth-speed distributions in representative thermosensitive and thermotolerant accessions, including persistence of faster-growing tubes in the thermotolerant Tamaulipas variety. This framework enables population-scale analysis of dynamic pollen traits and provides quantitative phenotypes for investigating the genetic basis of pollen thermotolerance.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767995",
+   "title": "Arabidopsis histone demethylase RSI1/FLD self-regulates its pathogen-induced expression",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767995v1",
+   "authors": [
+    "Singh, U.",
+    "Patil, V.",
+    "Kumar, R.",
+    "Singh, V.",
+    "Nandi, A. K."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767995 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "In Arabidopsis, the histone demethylase RSI1/FLD, which is needed for systemic acquired resistance, appears to dampen its own pathogen-induced expression by removing H3K4me2/me3 marks near its own transcription start site, with GSTT2 required for that induction.",
+    "plain": "When a plant is attacked by a microbe, it can switch on a whole-plant defense called systemic acquired resistance, which protects leaves that were not infected too. This paper studies a plant gene, RSI1/FLD, that is needed for that defense and that is itself switched on by infection. The authors found that the gene seems to switch itself off again, which they suggest keeps the defense response at a moderate level.",
+    "why": "The work points to a self-limiting feedback loop that may help explain how plants keep immune responses from running too strong. The text is a short summary, so the mechanism is described only at the level of the reported experiments, and its wider importance for plant immunity is not established here.",
+    "background": "- Systemic acquired resistance (SAR): a plant-wide defense triggered by a local infection, protecting distant tissues.\n- Histone: the protein spool around which plant DNA is wrapped; chemical marks on histones affect whether nearby genes are read.\n- H3K4me2 and H3K4me3: methyl tags on histone H3 that are generally linked to genes being active; removing them (demethylation) tends to repress genes.\n- Histone demethylase: an enzyme that removes these methyl tags.\n- Transcription start site (TSS): the point where reading of a gene begins.\n- ChIP (chromatin immunoprecipitation): a lab method to find which DNA regions a protein or chemical mark sits on.\n- GUS reporter assay: a method that links a gene's control region to an easily measured enzyme to gauge how active it is.\n- rsi1 mutant: a plant lacking a working RSI1 gene, used to test its role.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "REDUCED SYSTEMIC IMMUNITY 1(RSI1)/FLOWERING LOCUS D (FLD) is essential for the activation of systemic acquired resistance (SAR). RSI1 functions as a repressor of gene expression by demethylating H3K4me2 and H3K4me3. RSI1 expression is induced both in local and systemic tissues upon pathogen inoculation. However, the mechanism of its induction or its expression regulation upon pathogenesis is not known. Here we show that RSI1 expression in SAR-induced rsi1 mutant plants is higher than WT plants, suggesting self-regulation. Pathogen-induced expression of RSI1 requires the function of GSTT2, a SANT domain-containing protein essential for SAR activation. Co-expression of RSI1 suppresses pRSI1:GUS activity in a transient assay system. Chromatin-immunoprecipitation (ChIP) experiments reveal that RSI1 physically associates near the transcription start site (TSS) of the RSI1 locus and facilitates demethylation of H3K4me2 and H3K4me3 at RSI1 locus. Our data altogether demonstrate that RSI1 negatively regulates its own expression as a possible mechanism of keep the SAR expression at an optimal level.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.19.767892",
    "title": "Circadian clock components CCA1 and LHY shape heat responses across regulatory layers",
@@ -16,12 +69,12 @@
    "primary_category": "plant biology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A time-resolved transcriptome, proteome and metabolome study of Arabidopsis clock mutants (altered CCA1 and LHY) after short heat stress, mapping shared and distinct clock-linked heat-response regulation across gene expression layers.",
-    "plain": "Heat is especially harmful to crops when it hits at night, so plants may need to respond differently depending on the time of day. This paper looks at how the plant's internal daily clock, specifically two clock genes called CCA1 and LHY, shapes the plant's response to a short burst of heat. The authors measured genes, proteins and metabolites over time in normal plants and in mutants lacking these clock genes.",
-    "why": "Crop losses from heat are a practical concern, and the text suggests timing-dependent heat tolerance could guide breeding or engineering. The work is mainly a data resource and set of candidate connections; the text does not show that these findings would translate to crops.",
+    "ai": true,
     "background": "- Circadian clock: an internal roughly 24-hour timekeeper that controls when many genes are switched on in a plant.\n- CCA1 and LHY: two closely related clock genes; the mutant plants have altered levels of them.\n- Transcriptome, proteome, metabolome: the full sets of RNA messages, proteins and small molecules in a sample, measured to see how a stress ripples through the cell.\n- Heat stress: a short period of high temperature that changes gene activity.\n- Thermotolerance: a plant's ability to survive and function under high heat.\n- Post-translational regulation: control of protein activity or levels after a protein is made.\n- Arabidopsis: a small model plant widely used in laboratory research.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A time-resolved transcriptome, proteome and metabolome study of Arabidopsis clock mutants (altered CCA1 and LHY) after short heat stress, mapping shared and distinct clock-linked heat-response regulation across gene expression layers.",
+    "plain": "Heat is especially harmful to crops when it hits at night, so plants may need to respond differently depending on the time of day. This paper looks at how the plant's internal daily clock, specifically two clock genes called CCA1 and LHY, shapes the plant's response to a short burst of heat. The authors measured genes, proteins and metabolites over time in normal plants and in mutants lacking these clock genes.",
+    "why": "Crop losses from heat are a practical concern, and the text suggests timing-dependent heat tolerance could guide breeding or engineering. The work is mainly a data resource and set of candidate connections; the text does not show that these findings would translate to crops."
    },
    "abstract": "High temperatures reprogram gene regulatory responses and are particularly deleterious for crop yield, especially when these events occur at night. This emphasizes that partitioning of heat responses is based on time of day. Coordination between time of day and environmental responses relies on the circadian clock. However, the precise regulatory mechanism of how the clock achieves this partitioning at different levels of gene regulation is poorly understood. Using circadian clock mutants with altered CCA1 and LHY expression, we generated a time-resolved transcriptome, proteome, and metabolome following a short-term heat stress in Arabidopsis. We identified regulatory connections specific to CCA1 and LHY, as well as those shared with other clock components linked to heat stress responses. Additionally, new connections between CCA1 and LHY and non-cycling genes highlight a broader role for the clock in regulating heat responsive gene expression. CCA1 and LHY regulated processes, such as sulfur assimilation and ROS scavenging, may contribute to time-of-day specific thermotolerance. Overall, heat responses were dampened in both the transcriptome and proteome in cca1lhy, suggesting both transcriptional and post-translational circadian-regulated processes are important for heat responses. Lastly, we identified differences in metabolic responses in cca1lhy and suggest a role for circadian regulation of starch degradation in thermotolerance. This study generates and utilizes data across levels of gene regulation to identify heat responses in the transcriptome and proteome regulated by CCA1 and LHY. These findings establish shared and distinct regulatory mechanisms of clock components in response to heat stress and provide new candidates for network integration and a foundation to engineer plants more tolerant to high temperatures depending on time of day.",
    "source": "biorxiv"
@@ -42,12 +95,12 @@
    "primary_category": "plant biology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "In the petals of Hibiscus trionum, auxin signalling is not needed to set up the initial bullseye boundary during pre-patterning, but it is needed in the distal petal region to maintain the bullseye's proportions established in young primordia.",
-    "plain": "Many flowers have coloured patterns on their petals, such as the dark centre of a bullseye, that guide pollinators. This paper asks whether a plant growth hormone called auxin helps draw the boundaries of these patterns in the hibiscus Hibiscus trionum. The authors report that auxin does not start the boundary, but it is needed to keep the pattern's proportions steady as the petal grows.",
-    "why": "The study suggests that a general growth hormone could change how big different parts of a pattern are, which may help explain how flower patterns vary between species over evolutionary time. The summary provided is limited to the abstract, so the strength of the evidence and the specific experiments cannot be judged from it.",
+    "ai": true,
     "background": "- Petal patterns such as bullseyes are made of epidermis cells (the outer skin layer of the petal) that differ in pigment and surface texture across regions.\n- Auxin is a plant hormone that controls cell growth and direction of development across many plant organs.\n- A petal primordium is the very young, not-yet-open petal tissue, where early pattern layout is set.\n- \"Pre-patterning\" means the early stage when regions of the petal are first marked out before colours appear.\n- \"Distal region\" means the part of the petal farthest from where it attaches to the flower.\n- \"Proportions\" here means the relative sizes of the bullseye's inner and outer zones.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "In the petals of Hibiscus trionum, auxin signalling is not needed to set up the initial bullseye boundary during pre-patterning, but it is needed in the distal petal region to maintain the bullseye's proportions established in young primordia.",
+    "plain": "Many flowers have coloured patterns on their petals, such as the dark centre of a bullseye, that guide pollinators. This paper asks whether a plant growth hormone called auxin helps draw the boundaries of these patterns in the hibiscus Hibiscus trionum. The authors report that auxin does not start the boundary, but it is needed to keep the pattern's proportions steady as the petal grows.",
+    "why": "The study suggests that a general growth hormone could change how big different parts of a pattern are, which may help explain how flower patterns vary between species over evolutionary time. The summary provided is limited to the abstract, so the strength of the evidence and the specific experiments cannot be judged from it."
    },
    "abstract": "Colourful motifs on the surface of flower petals fulfill important ecological functions, mediating pollination and providing protection against environmental stressors. These patterns form when epidermis cells in different subdomains of the petal acquire contrasting chemical and structural features. While some of the enzymes and transcription factors involved in specifying the production of different pigments, cell shapes and textures have been identified, the signalling events and upstream processes that divide the petal surface in distinct regions are not yet understood. Plant hormones play key roles in orchestrating all aspects of plant development but whether and how they contribute to the establishment of petal patterns remain to be tested. Here, we investigate the roles of auxin during bullseye pattern development in Hibiscus trionum. We found that auxin does not initiate bullseye boundary formation during the pre-patterning phase. Instead, auxin signalling is essential for regulating cell behaviour in the distal region and preserving the bullseye proportions established in young petal primordia. Therefore, auxin could act as a pattern modifier over evolutionary timescales, shifting bullseye dimensions by modulating the relative growth of different petal regions.",
    "source": "biorxiv"

@@ -1,7 +1,53 @@
 {
  "slug": "probability",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26946",
+   "title": "A Stochastic Tamed-Regularized Random Batch Method for Uncertain Particle Systems with Singularities",
+   "url": "https://arxiv.org/abs/2611.26946",
+   "authors": [
+    "Wenyi Wang",
+    "Lei Li",
+    "Yiwen Lin"
+   ],
+   "label": "arXiv:2611.26946v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes a stochastic tamed-regularized random batch (str-RB) scheme that combines an exponential regularization of singular diffusion coefficients, stochastic Galerkin projection for random coefficients, and random batch sampling to simulate uncertain interacting particle systems with singularities.",
+    "plain": "Many models describe large groups of interacting particles whose rules are only partly known, and some of the forces or noise strengths blow up when particles get close. Standard numerical solvers can produce runaway, meaningless values in these cases. The authors modify the calculation by smoothing the singular noise term with an exponential regularization and by computing only random subsets of particle interactions at each step to save work.",
+    "why": "The text reports that the method shows weak convergence, lower errors than several major existing methods on singular test cases, and stability over a wider range of singular settings, which matters for simulating uncertain many-body dynamics. The text does not give details of the test systems, so the size of the improvement and its relevance to particular applications are unclear from this summary alone.",
+    "background": "- Particle system: many interacting objects (particles) whose motion depends on pairwise forces, here with random noise.\n- Drift and diffusion: the deterministic push and the random-noise strength in a stochastic differential equation.\n- Singularity: a point where a coefficient becomes infinite, e.g. when two particles nearly coincide.\n- Numerical blow-up: a simulation producing unbounded, unphysical values.\n- Taming / regularization: modifying a singular term so it stays finite while keeping the main behaviour.\n- Stochastic Galerkin (sG) method: representing randomness in model coefficients as a series of known basis functions.\n- Random batch method: updating only a small random subset of pairwise interactions per step to cut computing cost.\n- Weak convergence: the accuracy of statistics (averages) of the solution, not of individual random paths.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The coefficients of particle systems often exhibit uncertainties due to incomplete knowledge. For particle systems with uncertainties and singularities in the drift and diffusion terms, existing methods may encounter numerical blow-up. In this paper, we propose a novel stochastic tamed-regularized Random Batch (str-RB) method for such uncertain particle systems with singularities. Specifically, since singularities in the diffusion term are more challenging than those in the drift term, building on a tamed scheme, we design an exponential regularization strategy that more effectively mitigates singularities in the diffusion term. This strategy ensures that the stochastic Galerkin (sG) projection coefficients remain finite even when the corresponding integrals for the original singular diffusion coefficient diverge. The sG method is applied to handle the random coefficients, and a random batch approach is then employed to reduce the computational complexity of large-scale simulations. Several theoretical properties of the proposed algorithm are established. Numerical tests demonstrate that the str-RB algorithm exhibits weak convergence, achieves lower errors than major existing methods across singular tests, and remains stable in a wider range of singular regimes. This work provides a robust and accurate approach for uncertain particle systems with singularities, laying a foundation for high-performance solvers in uncertain many-body dynamics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27843",
+   "title": "How communities help epidemics persist",
+   "url": "https://arxiv.org/abs/2611.27843",
+   "authors": [
+    "J\\'ulia Komj\\'athy",
+    "Marco Seiler",
+    "Daniel Valesin"
+   ],
+   "label": "arXiv:2611.27843v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper studies the contact process (SIS epidemic model) on random intersection graphs and their local weak limit, a tree of overlapping complete-graph communities, and gives survival-versus-extinction criteria based on the tails of the membership and community-size distributions.",
+    "plain": "This paper asks how infections spread through a population whose contacts happen inside overlapping groups such as households and workplaces. The authors model each person as belonging to a random number of groups, each group having a random size, and everyone in a group being in contact with everyone else. They show that whether an infection dies out or lingers depends on how heavy the tails of those group-count and group-size distributions are: when the tails are heavy, the infection persists for a very long time with high probability, while under certain lighter-tail conditions and a small transmission rate it dies out in the limiting tree-like model.",
+    "why": "Empirical studies cited in the paper indicate that community structure strongly affects how long infections last, so a mathematical account of this effect is relevant to disease modelling. The paper's comparison with \"community-free\" random graphs with similar degree patterns is meant to isolate the role of communities; the text does not claim direct applications beyond this.",
+    "background": "- Contact process (SIS model): individuals are either infected or healthy; infected ones recover at rate 1 and infect each neighbour at rate lambda, and can be reinfected.\n- Survival vs. extinction: whether the infection persists forever or dies out; \"exponentially long\" survival means the time to die out grows exponentially with population size.\n- Random graph: a network generated by a random rule; a random intersection graph links people who share a group.\n- Complete graph: a group where every member is connected to every other member.\n- Local weak limit: the tree-like picture of what a typical neighbourhood in a very large random network looks like.\n- Moment generating function / exponential moments (E[e^{cM}]): a measure of how heavy the upper tail of a random quantity is.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Empirical studies show that communities such as households and workplaces strongly influence how an infection spreads and how long it persists in a population. To understand this effect, we study the contact process (SIS epidemic model) on random intersection graphs and their local weak limit. In the contact process, infected vertices recover with rate $1$ and transmit the infection to each of their neighbours with rate $\\lambda$. The random intersection graph is defined on a finite population; each individual belongs to a random number of communities (captured by a membership distribution), and each community has a random size (captured by a community size distribution). Communities are all taken to be complete graphs. The local weak limit of the random intersection graph, called the branching community tree, has complete graphs arranged in a tree structure. Letting $M$ have the membership distribution and $K$ have the community size distribution, we prove that if either $\\mathbb E[e^{cM}]=\\infty$ for all $c > 0$ or $\\mathbb E[e^{cK\\log K}] = \\infty$ for all $c > 0$, then for all $\\lambda > 0$, the infection on the finite graph survives for exponentially long with high probability, and on the local limit graph, it survives forever with positive probability. On the other hand, if for some $c > 0$ both $\\mathbb E[e^{cM}]<\\infty$ and $\\mathbb E[e^{K\\log(cK)}]<\\infty$ hold, then the process with small $\\lambda$ dies out in the local limit graph. We compare these findings with known results on the behaviour of the contact process on a \"community-free\" random graph with similar degree distributions, to highlight the impact of communities.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27309",
    "title": "Stochastic Differential Equations on the Simplex",
@@ -14,12 +60,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper builds a class of simplex-valued diffusion processes as solutions to stochastic differential equations driven by antisymmetric Brownian motion, covering multivariate Jacobi processes and general simplex polynomial diffusions, and proves weak existence plus global strong existence and pathwise uniqueness from strictly positive starting states under a boundary non-attainment condition.",
-    "plain": "This paper studies random processes that move around inside a simplex, meaning a set of numbers that are all non-negative and add up to one, like a split of a whole into shares. The authors describe such moving shares as solutions to a type of random-motion equation, using a specific kind of random noise that keeps the total fixed. They show that these processes exist and are uniquely determined when they start with every share strictly positive, under a stated condition that they never reach the edge of the simplex.",
-    "why": "Shares that evolve randomly over time, such as portfolio weights or population proportions, are a natural setting for these models, so a general, well-posed framework matters for that kind of modelling. The text does not discuss applications, so any link to specific fields is my inference rather than something the paper states.",
+    "ai": true,
     "background": "- Simplex: the set of non-negative numbers that sum to one (e.g., proportions of a whole).\n- Brownian motion: the mathematical model of continuous random jiggling, as in pollen particles in water.\n- Stochastic differential equation (SDE): an equation describing how a quantity changes over time with both a steady push (drift) and random noise.\n- Diffusion process: a random process whose solution is described by such an SDE.\n- Weak vs. strong solution: a weak solution exists in some probabilistic sense; a strong solution is defined pathwise on a given noise source.\n- Pathwise uniqueness: for a given noise path, there is only one solution.\n- Jacobi process: a known diffusion living on an interval, here generalised to the simplex.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper builds a class of simplex-valued diffusion processes as solutions to stochastic differential equations driven by antisymmetric Brownian motion, covering multivariate Jacobi processes and general simplex polynomial diffusions, and proves weak existence plus global strong existence and pathwise uniqueness from strictly positive starting states under a boundary non-attainment condition.",
+    "plain": "This paper studies random processes that move around inside a simplex, meaning a set of numbers that are all non-negative and add up to one, like a split of a whole into shares. The authors describe such moving shares as solutions to a type of random-motion equation, using a specific kind of random noise that keeps the total fixed. They show that these processes exist and are uniquely determined when they start with every share strictly positive, under a stated condition that they never reach the edge of the simplex.",
+    "why": "Shares that evolve randomly over time, such as portfolio weights or population proportions, are a natural setting for these models, so a general, well-posed framework matters for that kind of modelling. The text does not discuss applications, so any link to specific fields is my inference rather than something the paper states."
    },
    "abstract": "We propose a framework for simplex-valued diffusion processes, formulated as solutions to stochastic differential equations driven by antisymmetric Brownian motion. Our edge-wise representation includes the multivariate Jacobi processes and the general class of continuous simplex-valued polynomial diffusions. Also, it allows bounded, locally Lipschitz state-dependent drift rates and edge weights. We establish weak solutions, as well as global strong existence and pathwise uniqueness for strictly positive initial states under a sufficient boundary non-attainment condition.",
    "source": "arxiv"
@@ -35,12 +81,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Studies the isolation number, domination number and F-isolation of the binomial random graph G(n,p) for p = o(1) and np → ∞, giving two-point concentration results, a transition in the gap between domination and isolation, and asymptotic sharpness of the minimum-degree bound for regular hosts.",
-    "plain": "This paper looks at random networks where each possible link between n points appears independently with some small probability p. It asks how few \"chosen\" vertices are needed so that every other vertex is either chosen or next to a chosen one, and how that changes when the goal is weakened to leaving behind only vertices that do not contain a given shape (such as a tree-like pattern). The authors give fairly precise answers on how these numbers behave as the network grows, and show how the gap between two related counts depends on how sparse the network is.",
-    "why": "These are questions about how precisely typical large random networks can be covered or dominated, and the text reports sharp thresholds where the behaviour of this gap changes. The text does not say what applications it may have, so its wider relevance is unclear from the abstract alone.",
+    "ai": true,
     "background": "- A random graph G(n,p): n vertices, each pair joined by an edge independently with probability p.\n- \"Asymptotic\" / \"with high probability\": statements about what happens as n grows large, holding with probability tending to 1.\n- Domination number γ(G): the fewest vertices that together touch or include every vertex (each vertex is chosen or adjacent to a chosen one).\n- Isolation number ι(G): the fewest vertices whose removal leaves a graph with no edges; the paper's F-isolation generalises this to leaving a graph with no copy of F, where F is a fixed forest (F = an edge gives ordinary isolation).\n- Two-point concentration: the value is, with high probability, one of two adjacent integers.\n- Minimum degree bound: a classical lower bound on domination in terms of the smallest number of neighbours any vertex has.\n- Probability asymptotics, including log and little-o notation.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Studies the isolation number, domination number and F-isolation of the binomial random graph G(n,p) for p = o(1) and np → ∞, giving two-point concentration results, a transition in the gap between domination and isolation, and asymptotic sharpness of the minimum-degree bound for regular hosts.",
+    "plain": "This paper looks at random networks where each possible link between n points appears independently with some small probability p. It asks how few \"chosen\" vertices are needed so that every other vertex is either chosen or next to a chosen one, and how that changes when the goal is weakened to leaving behind only vertices that do not contain a given shape (such as a tree-like pattern). The authors give fairly precise answers on how these numbers behave as the network grows, and show how the gap between two related counts depends on how sparse the network is.",
+    "why": "These are questions about how precisely typical large random networks can be covered or dominated, and the text reports sharp thresholds where the behaviour of this gap changes. The text does not say what applications it may have, so its wider relevance is unclear from the abstract alone."
    },
    "abstract": "We study isolation in the binomial random graph $G(n,p)$. When $p=o(1)$ and $np\\to\\infty$, allowing an $F$-free graph on the undominated vertices gives the same first-order asymptotics for every fixed forest $F$ as the domination number $\\gamma(G)$ in $G(n,p)$. For the ordinary isolation number $\\iota(G)$ ($F$ is an edge) we prove two-point concentration when $p$ is bounded away from $1$ and $np^2/(\\log n)^3\\to\\infty$. We also identify a transition in the gap $\\gamma(G)-\\iota(G)$ when $\\log(1/p)=o(\\log n)$. This gap tends to infinity in probability when $p$ is well below $(\\log\\log n/\\log n)^2$ and is at most one with high probability when $p$ is well above this scale. Finally, for every fixed graph $F$, we show that the classical minimum degree bound for domination is asymptotically sharp for $F$-isolation, even for regular host graphs.",
    "source": "arxiv"

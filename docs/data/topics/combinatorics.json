@@ -1,7 +1,50 @@
 {
  "slug": "combinatorics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27000",
+   "title": "The Order of the Inertia Bound for Random Graphs",
+   "url": "https://arxiv.org/abs/2611.27000",
+   "authors": [
+    "Zhengbo Chen",
+    "Xiao-Dong Zhang"
+   ],
+   "label": "arXiv:2611.27000v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proves a Hermitian version of the Kwan–Wigderson conjecture for random graphs G(n,1/2), showing that the minimum number of nonnegative eigenvalues of zero-diagonal Hermitian matrices supported on G is order n/log n, and it gives related bounds using Alon's constructions with independence number 2 and Shannon capacity 3.</one_liner>\n<parameter name=\"plain\">The paper studies how few \"nonnegative\" eigenvalues a matrix can have when its nonzero entries are only allowed where a given network has edges. For a typical random network with n points, where each pair is linked with probability one half, the authors show this minimum is at least a constant times n divided by log n, with very high probability. They also build specific graphs where the same quantity is larger than a small power of n.",
+    "plain": "",
+    "why": "This quantity links linear algebra of matrices to graph structure, and bounds on it can bear on problems such as Shannon capacity of graphs, a measure of how much information a noisy channel can carry. The text does not show further consequences beyond the stated results, so the wider significance is uncertain.",
+    "background": "- Graph G on n vertices: points joined by edges; G(n,1/2) is a random graph where each edge appears independently with probability 1/2.\n- Eigenvalues: special numbers attached to a square matrix; the paper counts how many are zero or positive (nonnegative).\n- Hermitian matrix: a complex-valued matrix equal to its own conjugate transpose; zero-diagonal and \"supported on G\" means nonzero entries only on edges of G.\n- Independence number alpha(G): the size of the largest set of vertices with no edges between them.\n- Shannon capacity: a graph measure from information theory giving the best rate at which symbols can be sent error-free over a noisy channel.\n- Kwan–Wigderson conjecture: a real-valued version of this eigenvalue question that the paper extends to the Hermitian case.\n- Big-O/Theta notation: Theta(f) means growth at the same rate as f up to constant factors; \"with high probability\" means the failure chance shrinks rapidly with n.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "For an $n$-vertex graph $G$, let $n_{\\geq0}(G)$ be the minimum number of nonnegative eigenvalues among zero-diagonal Hermitian matrices supported on $G$, allowing zero edge weights. For $n\\geq2$ and $G\\sim G(n,1/2)$, we prove $n_{\\geq0}(G)\\geq c_2n/\\log(2n)$ with probability at least $1-\\exp(-c_1n\\log(2n))$, where $c_1,c_2>0$ are absolute constants. This proves a Hermitian extension of the Kwan--Wigderson conjecture. With high probability, $n_{\\geq0}(G)=\\Theta(n/\\log n)$ and $n_{\\geq0} G)/\\alpha(G)=\\Theta(n/(\\log n)^2)$, where $\\alpha(G)$ is the independence number. Using Alon's constructions, we obtain, for every sufficiently large $n$, a $n$-vertex graph $G$ with $\\alpha(G)=2$ and $n_{\\geq0}(G)=\\Omega(n^{1/3})$. For infinitely many $n$, we also obtain $n$-vertex graphs $H$ with Shannon capacity $3$ and $n_{\\geq0}(H)=\\Omega(n^{1/4})$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27519",
+   "title": "Additive cubes are avoidable by a non-uniform morphism of length $6$ over $\\{0,a,b\\}$ (with $b \\ge 4$ and $\\gcd(a,b) = 1$)",
+   "url": "https://arxiv.org/abs/2611.27519",
+   "authors": [
+    "Damien Jamet"
+   ],
+   "label": "arXiv:2611.27519v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper shows that additive cubes can be avoided over every ternary alphabet {0, a, b} with gcd(a,b)=1 and b ≥ 4, using a single pair of parameterized non-uniform morphisms of image length at most 6 applied to the Cassaigne et al. additive-cube-free word, with abelian-cube reduction and finite-graph certification for the remaining cases.",
+    "plain": "The question is whether an infinite string built from three symbols can avoid a certain repeating pattern, where a block appears three times in a row with the same \"sum\" of letter values. The authors give one construction that works for all three-symbol alphabets {0, a, b} with b at least 4 (and a, b having no common factor), extending an earlier result that needed b at least 6. Parts of the proof for large b rely on a reduction to a related pattern called abelian cubes, and the small remaining cases are checked by computer.",
+    "why": "This settles a conjecture posed by Rao (2015) for a range of alphabets, narrowing the gap to the smallest cases. It sits in the area of combinatorics on words, which studies which patterns can or cannot be avoided in long strings; the wider relevance is mainly to that field and to computer-checked proofs.",
+    "background": "- Word combinatorics: a word is a finite or infinite string over an alphabet; a pattern is \"avoidable\" if some infinite word contains no instance of it.\n- Additive cube: a block repeated three times in a row where the corresponding letter values sum to the same amount in each copy (letters are read as integers).\n- Abelian cube: a block repeated three times where the blocks have the same letter counts, though not necessarily the same order.\n- Morphism: a rule that replaces each letter by a fixed block of letters; \"non-uniform\" means the blocks can have different lengths. Image length is the length of those blocks.\n- Dual pair: two related morphisms used together.\n- Finite-graph method: a computer-checkable technique for proving that a family of words avoids a pattern.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that additive cubes are avoidable over every ternary alphabet $\\{0, a, b\\}$ with $1 \\le a < b$, $\\gcd(a, b) = 1$, and $b \\ge 4$, thereby solving and extending Rao's~(2015) conjecture from $b \\ge 6$ down to $b \\ge 4$. Our construction applies a single dual pair of parameterized non-uniform morphisms of image length at most~$6$ to the additive-cube-free word $\\mathbf{w}$ of Cassaigne et al.~(2014). For $b \\ge 10$, we prove that every additive square in the image is an abelian square, reducing additive cubes to abelian cubes; the absence of abelian cubes and the $24$ finite cases with $4 \\le b \\le 9$ are then certified via the finite-graph method of Jamet and Rosenfeld~(2026).",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26879",
    "title": "Small spherical 7-designs in prime dimensions",
@@ -14,12 +57,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper constructs antipodal spherical 7-designs on the unit sphere S^{p-1} for every prime p ≥ 29, using at most 42(p-1)(p+2)^2 points, via eigenlines of finite Weil operators.",
-    "plain": "The paper is about placing a finite set of points evenly over the surface of a high-dimensional sphere so that they average out the way a truly uniform spread would, at least for polynomial functions up to degree 7. The author builds such point sets for every prime dimension p at least 29, with a stated point count of 42(p-1)(p+2)^2. The construction draws on a mathematical tool called Weil operators, which are used to find special directions (eigenlines) that supply the points.",
-    "why": "Small, explicit designs of this kind matter for numerical integration, coding and quantum state sampling, where fewer well-spread points save work. The text does not state which applications, if any, this result affects, so its wider relevance is uncertain from the abstract alone.",
+    "ai": true,
     "background": "- Sphere S^{p-1}: the surface of a ball in p-dimensional space.\n- Spherical t-design: a finite point set whose average of any polynomial of degree at most t equals the average over the whole sphere; here t = 7.\n- Antipodal: the point set is symmetric, so for every point x its opposite -x is also included.\n- Prime dimension p: the construction works only when the dimension is prime and at least 29.\n- Weil operator / eigenline: a finite-field object from number theory whose special eigen-directions give the point set; the abstract does not explain the details.\n- Point count: the bound 42(p-1)(p+2)^2 is an upper bound on how many points are used.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper constructs antipodal spherical 7-designs on the unit sphere S^{p-1} for every prime p ≥ 29, using at most 42(p-1)(p+2)^2 points, via eigenlines of finite Weil operators.",
+    "plain": "The paper is about placing a finite set of points evenly over the surface of a high-dimensional sphere so that they average out the way a truly uniform spread would, at least for polynomial functions up to degree 7. The author builds such point sets for every prime dimension p at least 29, with a stated point count of 42(p-1)(p+2)^2. The construction draws on a mathematical tool called Weil operators, which are used to find special directions (eigenlines) that supply the points.",
+    "why": "Small, explicit designs of this kind matter for numerical integration, coding and quantum state sampling, where fewer well-spread points save work. The text does not state which applications, if any, this result affects, so its wider relevance is uncertain from the abstract alone."
    },
    "abstract": "For every prime $p\\ge 29$, we construct an antipodal spherical $7$-design on $S^{p-1}$ with $42(p-1)(p+2)^2$ points. The construction uses eigenlines of finite Weil operators.",
    "source": "arxiv"
@@ -36,12 +79,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper determines the maximum number of edges and the maximum spectral radius over n-vertex graphs with k-th binding number below r, and characterizes the extremal graphs, generalizing known k=1 results.",
-    "plain": "This paper is about graphs, which are networks of points joined by lines, and a score called the k-th binding number that measures how well every group of vertices is connected to the rest. The authors ask: if a graph's score is kept below a fixed value r, how many connections can it have at most, and what does the densest such graph look like? They answer this for both the number of edges and a matrix-based measure called the spectral radius, and identify the graphs that reach the maximum.",
-    "why": "Extremal questions like this show how a structural condition limits how dense a network can be, which is the core of Turán-type graph theory. The authors say the proof method, which links neighborhood inequalities to the complement of the graph, may carry over to other Turán-type problems, but the text does not show how far that reaches.",
+    "ai": true,
     "background": "- Graph: vertices (points) joined by edges (lines); order n means number of vertices, size means number of edges.\n- Perfect matching / k-factor: a way to pair up all vertices (or cover them by k-regular spanning subgraphs) using edges.\n- Binding number: a graph parameter (Woodall, 1973) measuring how much the neighborhoods of vertex sets expand; Anderson (1971) showed binding number at least 4/3 forces a perfect matching.\n- k-th binding number: a higher-order version introduced by Chen et al.; the text notes that score at least 1 guarantees a k-factor when kn is even.\n- Extremal problem (Turán-type): find the largest graph (by edges or spectral radius) that avoids a given property.\n- Spectral radius: the largest eigenvalue of the graph's adjacency matrix, a single number summarizing its structure.\n- Complement graph: the graph on the same vertices with exactly the missing edges.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper determines the maximum number of edges and the maximum spectral radius over n-vertex graphs with k-th binding number below r, and characterizes the extremal graphs, generalizing known k=1 results.",
+    "plain": "This paper is about graphs, which are networks of points joined by lines, and a score called the k-th binding number that measures how well every group of vertices is connected to the rest. The authors ask: if a graph's score is kept below a fixed value r, how many connections can it have at most, and what does the densest such graph look like? They answer this for both the number of edges and a matrix-based measure called the spectral radius, and identify the graphs that reach the maximum.",
+    "why": "Extremal questions like this show how a structural condition limits how dense a network can be, which is the core of Turán-type graph theory. The authors say the proof method, which links neighborhood inequalities to the complement of the graph, may carry over to other Turán-type problems, but the text does not show how far that reaches."
    },
    "abstract": "The binding number of a graph, introduced by Woodall [J. Combin. Theory, Ser. B, 1973], is a central topic in structural and extremal graph theory. Recently, Chen et al. introduced the $k$-th binding number $\\beta^k(G)$. Anderson [J. Combin. Theory, Ser. B, 1971] proved that every graph $G$ of even order with $\\beta^1(G)\\ge\\frac43$ contains a perfect matching, and that the bound $\\frac43$ is best possible. For $k\\ge2$, Chen et al. proved that $\\beta^k(G)\\ge1$ guarantees a $k$-factor whenever $kn$ is even, and that the bound $1$ is best possible. The above facts reveal a fundamental distinction between the higher-order binding number and the classical binding number. This distinction makes extremal problems for graphs with bounded $k$-th binding number particularly intriguing. For positive integers $n,$ $k$ and $r$, we in this paper determine the maximum size and spectral radius among all graphs $G$ of order $n$ satisfying $\\beta^k(G)<r$, and characterize the corresponding extremal graphs, respectively. In particular, when $k=1$, our results imply the corresponding extremal results of Fan and Lin [Electron. J. Combin., 2024] and Liu, Chen and Fan [Electron. J. Combin., 2026]. Our proofs develop a structural framework that relates higher-order neighborhood inequalities to the structure of the complements of graphs. This framework may provide an approach to Tur\\'{a}n-type problem involving the $k$-th binding number, and the approach may be of independent interest.",
    "source": "arxiv"

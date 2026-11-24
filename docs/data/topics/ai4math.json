@@ -1,7 +1,54 @@
 {
  "slug": "ai4math",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27053",
+   "title": "Isolating the Language Shell: A Content-Controlled Study of Multilingual Reasoning",
+   "url": "https://arxiv.org/abs/2611.27053",
+   "authors": [
+    "Hoejoon Kwon",
+    "Jinhee Jang",
+    "Byeonggeuk Lim",
+    "YoungBin Kim"
+   ],
+   "label": "arXiv:2611.27053v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A controlled study showing that, with the same verified English math reasoning content, the language \"shell\" used to present training data (English, translated, or mixed) changes how well small student models reason in several target languages.",
+    "plain": "Some AI models learn to solve math problems by copying worked solutions from a stronger \"teacher\" model. This paper asks whether the language those solutions are written in matters, when the actual reasoning stays the same. The authors wrote the same verified solutions in English, in translated target languages, and in mixed-language versions, then trained two student models and tested them on math problems in three languages.",
+    "why": "The paper suggests that the wording language of training data is a separate design choice, not just a side effect of how data is generated or translated. This matters for building math-capable AI for non-English speakers, though the abstract alone does not show how large or general the effects are.",
+    "background": "- Distillation: training a smaller \"student\" model to imitate a larger \"teacher\" model's outputs.\n- Chain-of-thought reasoning: step-by-step written working that a model produces before its final answer.\n- Content control: holding the underlying math content fixed so that only the surface form (the \"shell\") varies.\n- Pre-training compatibility: how well a model's original training on many languages already fits a given language.\n- Output-language behavior: which language the student actually writes its answers in, which can differ from the language it was trained on.\n- The abstract reports that effects vary by student, language, and difficulty, and that no single pattern clearly predicts them.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Multilingual reasoning distillation requires choosing the language in which teacher reasoning is presented, yet existing recipes often entangle linguistic form with differences in generation, translation, and filtering. We construct content-controlled supervision by rendering the same verified English trajectories into English, translated target-language, and language-mixed shells, and fine-tune two pretrained students in three target languages, evaluating them on multilingual mathematical reasoning at two difficulty levels. Even with the underlying reasoning content held fixed, we find that shell choice can change downstream accuracy, with effects varying across students, languages, and difficulty levels. Pre-training compatibility does not consistently track these outcomes, and even when our tests find no clear accuracy difference between shells, their output-language behavior can still differ substantially. These results suggest that the supervision shell is a distinct design choice in multilingual reasoning distillation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26756",
+   "title": "Reinforcement Learning Unlearns Corrupted SFT Reasoning",
+   "url": "https://arxiv.org/abs/2611.26756",
+   "authors": [
+    "Anika Misra",
+    "Shreyas Vinod",
+    "Huteng Dai"
+   ],
+   "label": "arXiv:2611.26756v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "On GSM8K math word problems, the paper reports that GRPO reinforcement learning recovers accuracy from heavily corrupted supervised fine-tuning data, and that a few minimal, incorrect \"form-only\" traces make a better RL starting point than gold traces.",
+    "plain": "Language models are often first taught with worked examples (supervised fine-tuning) and then refined with reward-based trial and error (reinforcement learning). This paper asks what happens when the worked examples are badly corrupted. The authors deliberately damaged training solutions in 361 settings, up to 100% of the data, and found that the reinforcement learning stage largely recovered accuracy to about 60%.",
+    "why": "The finding challenges the assumption that the quality of the first training stage strongly determines final performance, which matters for how training data is collected and curated. The text reports only one dataset (GSM8K) and a specific RL method, so how far the result generalizes to other tasks or models is not shown here.",
+    "background": "- Supervised fine-tuning (SFT): training a model to imitate example solutions.\n- Reinforcement learning (RL): improving a model by rewarding correct final outcomes rather than copying examples.\n- GRPO (Group Relative Policy Optimization): a specific RL method that compares several sampled answers to the same question against each other.\n- GSM8K: a benchmark set of grade-school math word problems.\n- \"Form\" versus \"function\": here, form means the layout or structure of a reasoning trace; function means whether the reasoning actually works.\n- Correlation (r approximately 0): the SFT score and the final score showed essentially no linear relationship across the runs.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We show that reinforcement learning (RL) in reasoning tasks can succeed even when the supervised fine-tuning (SFT) data is severely corrupted. In a mathematical reasoning dataset (GSM8K), we systematically corrupt training trajectories across 361 configurations by injecting realistic error types, varying error locations, trace-answer consistency, and corruption ratios up to 100%. While aggregated SFT-only performance steadily deteriorates under corruption (dropping from 43.61% to 13.80%), Group Relative Policy Optimization (GRPO) post-training consistently restores model accuracy back to gold-baseline levels (approximately 60%). Crucially, initializing RL with as few as N = 8 minimal, incorrect, three-line \"form-only\" traces boosts post-RL performance to 69.30%, outperforming standard gold SFT initialization (60.71%) and GRPO without SFT (35.00%). Further, we show that SFT accuracy is largely uncorrelated with post-RL accuracy (r approximately 0), demonstrating a fundamental asymmetry in post-training: SFT primarily establishes structural layout (form), while RL independently discovers functional reasoning (function).",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26906",
    "title": "Budget-Aware Predict-and-Verify Theorem Proving with Heterogeneous LLM Solvers",
@@ -15,12 +62,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "BudgetPV is an agentic predict-and-verify system that uses a cross-solver predictor, trained with two different loss objectives for early and late allocation stages, to route Lean subgoals across heterogeneous LLM provers under a compute budget.",
-    "plain": "Automatic theorem provers use AI language models to break math proofs into smaller pieces, but some models are costly and others are cheap. This paper describes a way to decide which model should try each piece, and how to spend more effort on pieces that are still unsolved. The authors report that their method used less model computation than giving every piece the same effort, while solving the same number of pieces on four math benchmarks.",
-    "why": "Running large models on every step of a formal proof is expensive, so a better way to split effort across models could make automated proving cheaper. The text does not say how large the savings are in absolute terms or how the approach compares with other budget-allocation methods, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Theorem proving: a formal proof is checked by a computer; here the proof assistant is Lean.\n- Subgoal: a smaller statement that must be proved on the way to the full theorem.\n- LLM solver: a language model that tries to write a proof; solvers differ in skill and cost.\n- Predict-and-verify: a predictor guesses which solver is likely to succeed, and the proof checker confirms the result.\n- Cross-entropy: a standard training loss for classification; class weighting makes rare classes count more.\n- Calibrated probabilities: predicted probabilities that match how often the outcomes actually occur.\n- Benchmarks named: Lean Workbook, miniF2F, ProofNet, PutnamBench.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "BudgetPV is an agentic predict-and-verify system that uses a cross-solver predictor, trained with two different loss objectives for early and late allocation stages, to route Lean subgoals across heterogeneous LLM provers under a compute budget.",
+    "plain": "Automatic theorem provers use AI language models to break math proofs into smaller pieces, but some models are costly and others are cheap. This paper describes a way to decide which model should try each piece, and how to spend more effort on pieces that are still unsolved. The authors report that their method used less model computation than giving every piece the same effort, while solving the same number of pieces on four math benchmarks.",
+    "why": "Running large models on every step of a formal proof is expensive, so a better way to split effort across models could make automated proving cheaper. The text does not say how large the savings are in absolute terms or how the approach compares with other budget-allocation methods, so its wider significance is uncertain."
    },
    "abstract": "Large language model (LLM) theorem solvers differ in both proving capability and inference cost. Applying an expensive solver to every subgoal wastes computation when cheaper models are sufficient, while always starting from the cheapest solver wastes attempts on subgoals that require stronger models. We present BudgetPV, an agentic budget-aware predict-and-verify system that allocates computation across unresolved subgoals and heterogeneous LLM solvers. BudgetPV uses a cross-solver predictor to guide solver selection for each subgoal and revises the allocation as verification feedback becomes available. The allocation problem changes as proving progresses. Early decisions mainly determine which solver should handle an untried subgoal, while later decisions determine which previously attempted subgoals should receive additional computation. We train the predictor with two objectives for these two stages. Class-weighted cross-entropy improves assignment to less frequent stronger solvers during the initial stage, while plain cross-entropy provides better calibrated probabilities for later allocation among previously attempted subgoals. We evaluate BudgetPV on Lean Workbook, miniF2F, ProofNet, and PutnamBench using three progressively expanded solver settings: a strong but expensive solver alone, adding a medium-cost solver with intermediate solving capability, and further adding a cheap solver with lower solving capability. BudgetPV requires less LLM generation computation than uniform allocation to solve the same number of subgoals across the evaluated settings. The experiments further show the computation savings obtained as medium- and lower-cost solvers are added.",
    "source": "arxiv"
@@ -37,12 +84,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper introduces GSM-AB, a benchmark that separately varies operand digit length and operation count, and reports that executable symbolic representations (Lean, with a Python program-of-thought control) slow accuracy decline in LLM arithmetic reasoning compared with natural-language reasoning.",
-    "plain": "Large language models often score well on math tests, but that does not show whether they stay accurate when problems get harder. The authors built a controlled test where they could separately make numbers longer and make problems involve more steps. They report that having models write answers as runnable formal or code-based programs (Lean and Python) kept accuracy higher and made it fall more slowly than plain-language reasoning.",
-    "why": "Reliability on harder, multi-step calculations is a practical concern for using AI in math and science, so a method that makes accuracy degrade more gently is relevant. The text does not report how large the effects are or how broadly they hold beyond the tested models, so its significance should be treated as provisional.",
+    "ai": true,
     "background": "- LLM: a large language model, an AI system trained on text that generates answers from patterns learned in data.\n- Natural-language reasoning: the model writes out its steps in ordinary sentences.\n- Executable symbolic representation: the model writes its reasoning as formal code or proof that a computer can run and check.\n- Lean: a proof assistant language used to write machine-checkable mathematics.\n- Program-of-thought (PoT): a method where the model writes a short program to compute the answer rather than doing the arithmetic in its head.\n- Operand digit length: how many digits the numbers in a problem have.\n- Operation count: how many calculation steps a problem requires.\n- Accuracy scaling: how accuracy changes as problems get harder.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper introduces GSM-AB, a benchmark that separately varies operand digit length and operation count, and reports that executable symbolic representations (Lean, with a Python program-of-thought control) slow accuracy decline in LLM arithmetic reasoning compared with natural-language reasoning.",
+    "plain": "Large language models often score well on math tests, but that does not show whether they stay accurate when problems get harder. The authors built a controlled test where they could separately make numbers longer and make problems involve more steps. They report that having models write answers as runnable formal or code-based programs (Lean and Python) kept accuracy higher and made it fall more slowly than plain-language reasoning.",
+    "why": "Reliability on harder, multi-step calculations is a practical concern for using AI in math and science, so a method that makes accuracy degrade more gently is relevant. The text does not report how large the effects are or how broadly they hold beyond the tested models, so its significance should be treated as provisional."
    },
    "abstract": "High accuracy on mathematical benchmarks does not establish whether reasoning remains reliable as problem complexity increases. We examine how executable symbolic representations change accuracy scaling in large language models compared with natural-language reasoning. To address this limitation, we introduce the GSM Arithmetic Benchmark (GSM-AB), a controlled benchmark that independently varies operand digit length and operation count to probe numerical scale and compositional complexity. We find that executable representations can improve accuracy and slow its decline as complexity increases. Lean reduces average sensitivity to operand digit length at every tested model size. By contrast, slower degradation with increasing operation count emerges at the larger model sizes. A Python program-of-thought (Python-PoT) control shows a similar operation-axis pattern, suggesting that this finding is not specific to Lean. These findings show that reasoning representation shapes arithmetic accuracy scaling and support executable symbolic representations for more reliable reasoning on complex arithmetic tasks.",
    "source": "arxiv"

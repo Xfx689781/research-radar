@@ -1,7 +1,57 @@
 {
  "slug": "large-language-models",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27444",
+   "title": "Silent Arbitration: How Large Language Models Resolve Co-Authoritative Conflicting Instructions",
+   "url": "https://arxiv.org/abs/2611.27444",
+   "authors": [
+    "Sihyeon Lee",
+    "Jiwoo Kum",
+    "Jihun Song",
+    "Chanwoo Kim",
+    "Chanjun Park"
+   ],
+   "label": "arXiv:2611.27444v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "This paper measures how five LLMs handle a single prompt that assigns two opposing personas with equal authority, across eight conflict types, looking at whether they disclose the conflict, how they resolve it, and which side their answers lean toward.",
+    "plain": "Chatbots are often given instructions about who to be, such as a role, values, or a tone. This paper asks what happens when one prompt gives two incompatible roles at equal weight with no rule for choosing between them. The authors tested five language models and found that the models often notice the clash when asked directly (72% of the time) but rarely mention it in their actual answers (22%), so they quietly pick a side instead.",
+    "why": "It matters for anyone who relies on AI systems following instructions, since a model that hides a conflict and silently favors one side may be hard to audit. The text does not go beyond its own measurements, so its broader implications for deployment are not established here.",
+    "background": "- Large language model (LLM): an AI system trained on large amounts of text that generates responses to written prompts.\n- Persona: a role or identity a prompt asks the model to adopt, such as a character or a type of speaker.\n- Co-authoritative conflict: two instructions that clash but are given equal weight, with no tie-breaking rule.\n- Silent arbitration: the model settling the conflict without telling the user that a conflict existed.\n- Dominance vs. compromise: the response either follows one persona mostly, or tries to blend both; the paper notes compromise answers can still lean one way.\n- Directional stance: which of the two personas a response tilts toward.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Large language models increasingly receive high-level instructions about roles, values, interests, and communication style. Such instructions can conflict even when a prompt assigns them equal authority and provides no priority rule. We study co-authoritative persona conflict, in which a single prompt jointly assigns two opposing personas. Across eight conflict types grounded in published source material and five LLMs, we measure conflict acknowledgment, resolution strategy, and directional stance. Models acknowledge incompatibility in 72% of direct checks but explicitly surface it in only 22% of task responses, revealing silent arbitration. Dominance accounts for 45% of dual-persona responses, and 35% of compromise-labeled responses retain directional lean. Prompt framing further changes the visible form of arbitration substantially more than ordinary paraphrase variation. These findings show that evaluating instruction following should assess whether models disclose conflicts, how they resolve them, and which persona their responses favor.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27317",
+   "title": "Do Language Models Know Which Words Steer Their Reasoning?",
+   "url": "https://arxiv.org/abs/2611.27317",
+   "authors": [
+    "Yanbei Jiang",
+    "Chao Lei",
+    "Jey Han Lau",
+    "Krista A. Ehinger",
+    "Rena Gao Wei"
+   ],
+   "label": "arXiv:2611.27317v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper shows that language models' chain-of-thought reasoning is steered by semantically irrelevant prompt words that the models themselves deny are relevant, and proposes an inference-time intervention (Online KV Suppression) that zeroes out the cache entries of one such word to improve accuracy.",
+    "plain": "When AI language models work through a problem step by step, it is unclear which words in the prompt actually shape their reasoning. The authors find that models are pulled by words that have no real bearing on the question, and when asked, the same models say those words don't matter. They then test a simple fix: they remove the influence of one such word while the model is generating its answer, which raised accuracy on several reasoning tests.",
+    "why": "It points to a gap between what a model's internal behavior is doing and what it reports about itself, which matters for trusting explanations of AI reasoning. Whether the reported gains hold beyond the tested models and benchmarks is not something the summary establishes.",
+    "background": "- Chain-of-thought (CoT): prompting a model to write out intermediate reasoning steps before its final answer.\n- Next-token distribution: the model's probability scores over possible next words; the paper measures how these shift.\n- Leave-one-out analysis: testing the effect of a piece of input by deleting it and seeing how the output changes.\n- Jensen-Shannon divergence (JSD): a standard measure of how different two probability distributions are.\n- KV cache: the stored internal memory of earlier words that a model consults when generating new ones; zeroing entries effectively hides those words from the model.\n- Percentage points: the difference between two accuracy rates, not a relative change.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "While chain-of-thought (CoT) prompting elicits intermediate reasoning steps from language models, it is unclear which words in the context actually steer the CoT. We identify Phantom Context Influence (PCI): language models are disproportionately steered by semantically irrelevant context words, even as the same models deny those words' relevance when asked. To localize PCI, we introduce Leave-One-Out Word JSD analysis, which removes one context word at a time from the otherwise intact context to isolate its marginal effect on the next-token distribution; words whose removal flips the prediction (pivot words) are passed to the same LLM to self-judge whether it recognizes this predictive dependence. Across four models and three benchmarks, language models largely do not know which words steer their reasoning, a mismatch we call the Generation-Judgment Contradiction. Inspired by this phenomenon, we propose Online KV Suppression: it scores every prompt word's influence over the whole chain of thought in a single pass, then zeroes the KV-cache entries of the highest-influence word the model itself judges inert and redecodes. This single-word intervention improves CoT accuracy across four models and five reasoning benchmarks, by up to 8.9 percentage points on math reasoning benchmark.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26920",
    "title": "Partially canonical axes in large language model representations",
@@ -17,12 +67,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Across 12 LLMs from six families, the native coordinate axes of hidden representations align better with other models, human brain responses, and interpretable linguistic features than randomly rotated axes with the same geometry, yet fall short of the best achievable alignment, so the axes are \"partially canonical.\"",
-    "plain": "A common assumption is that the individual numbered slots inside a language model's internal state are arbitrary, and only whole directions carry meaning. This paper tests that by comparing the model's actual slots against versions of the same data rotated to a random orientation. The authors find the real slots match other models, human brain activity during language, and simple linguistic features somewhat better than the rotated versions, but not as well as the best possible alignment.",
-    "why": "If individual units in language models carry consistent meaning, that matters for interpreting how these systems work and for comparing them with brains. The paper's claim is a middle position rather than a full answer, and the text does not show how large or robust the effects are beyond the summary given.",
+    "ai": true,
     "background": "- Hidden representation: the list of numbers a neural network produces internally for a piece of text.\n- Coordinate axis: one of those numbered positions; rotating the whole space changes the axes but not the overall geometry of the points.\n- Random rotation baseline: a control in which the same data is spun to a random orientation, to test whether the original axes are special.\n- Representational alignment: a measure of how similar two systems' internal geometry is, used here to compare models with each other and with brain recordings.\n- Interpretable linguistic features: properties such as part of speech or syntactic role that humans can name.\n- Canonical vs. arbitrary axes: canonical means the axes pick out meaningful units; arbitrary means any rotation would work equally well.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Across 12 LLMs from six families, the native coordinate axes of hidden representations align better with other models, human brain responses, and interpretable linguistic features than randomly rotated axes with the same geometry, yet fall short of the best achievable alignment, so the axes are \"partially canonical.\"",
+    "plain": "A common assumption is that the individual numbered slots inside a language model's internal state are arbitrary, and only whole directions carry meaning. This paper tests that by comparing the model's actual slots against versions of the same data rotated to a random orientation. The authors find the real slots match other models, human brain activity during language, and simple linguistic features somewhat better than the rotated versions, but not as well as the best possible alignment.",
+    "why": "If individual units in language models carry consistent meaning, that matters for interpreting how these systems work and for comparing them with brains. The paper's claim is a middle position rather than a full answer, and the text does not show how large or robust the effects are beyond the summary given."
    },
    "abstract": "Large language models (LLMs) develop rich internal representations of language, but whether their individual coordinate axes carry meaning, or whether meaning is encoded only in directions in representation space, is still an open question. A common assumption is that individual axes in LLMs are arbitrary. We here challenge this view: across 12 LLMs from six model families, the native axes are reliably more aligned with other models' representations, with human brain responses to language, and with interpretable linguistic features than randomly rotated axes that preserve the same geometry. The native axes nonetheless fall well short of the best achievable alignment, so LLM coordinates are not fully arbitrary but also not fully canonical: they are partially canonical. A theory of how LLMs represent language must explain both the population geometry they learn and why individual units acquire patterns of response profiles that recur across systems.",
    "source": "arxiv"
@@ -58,12 +108,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "SP-Refine makes style extraction an explicit inference-time step for personalized long-form generation, using a 28-aspect taxonomy (StylePrism) to build a user style profile that guides draft revision on LongLaMP tasks.",
-    "plain": "Language models that write in a particular person's voice usually get a few of that person's past texts pasted into the prompt and must work out the style on their own. This paper proposes a method where the model first writes down an explicit profile of the user's writing habits, with quoted examples, then drafts and revises against that profile. Across three long-form writing tasks and three models, the method beat the standard retrieval-based baseline in 25 of 27 ROUGE and METEOR comparisons, by 10.2% on average.",
-    "why": "Personalizing text generation is a practical goal for writing assistants, and the paper's ablations suggest the explicit profile works mainly as revision guidance rather than a replacement for the user's samples. Whether the gains carry over to real users and to other metrics is not shown in the text; the authors also note that larger gains depend on information unavailable at inference time.",
+    "ai": true,
     "background": "- Retrieval-augmented generation (RAG): putting relevant examples from a user's past into the model's prompt before it writes.\n- Personalized long-form generation: producing multi-paragraph text that matches a specific person's style.\n- ROUGE and METEOR: automatic scores that measure word overlap between generated text and a reference text; they are imperfect proxies for quality or style match.\n- Inference-time method: a technique applied when the model is run, without retraining it.\n- Ablation: a test that removes one component to see how much it contributes.\n- Oracle variant: a version that peeks at the answer, used to estimate an upper bound.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "SP-Refine makes style extraction an explicit inference-time step for personalized long-form generation, using a 28-aspect taxonomy (StylePrism) to build a user style profile that guides draft revision on LongLaMP tasks.",
+    "plain": "Language models that write in a particular person's voice usually get a few of that person's past texts pasted into the prompt and must work out the style on their own. This paper proposes a method where the model first writes down an explicit profile of the user's writing habits, with quoted examples, then drafts and revises against that profile. Across three long-form writing tasks and three models, the method beat the standard retrieval-based baseline in 25 of 27 ROUGE and METEOR comparisons, by 10.2% on average.",
+    "why": "Personalizing text generation is a practical goal for writing assistants, and the paper's ablations suggest the explicit profile works mainly as revision guidance rather than a replacement for the user's samples. Whether the gains carry over to real users and to other metrics is not shown in the text; the authors also note that larger gains depend on information unavailable at inference time."
    },
    "abstract": "Personalized long-form generation asks a language model to write new text the way a specific user would. The standard recipe, retrieval-augmented generation, places a few of the user's past texts in the prompt but leaves the model to decide what to take from them. We introduce StylePrism, a taxonomy of 28 stylistic aspects in seven categories, and SP-Refine, an inference-time method that makes style extraction an explicit step: the model first fills StylePrism with the user's patterns, quoted evidence, and habits to avoid, then drafts from the user's samples and revises the draft twice against this profile, guided by its own style scores. On the three long-form tasks of LongLaMP with three LLMs, SP-Refine outperforms LongLaMP's retrieval-augmented baseline in 25 of 27 ROUGE and METEOR comparisons, by 10.2% on average and by up to 35.8%. Annotating users' own texts with the extracted profiles shows that StylePrism captures concrete, checkable habits, from the order of rhetorical moves to a reviewer's sign-off. Ablations show that the profile helps as revision guidance, not as a replacement for the samples: writing from the profile alone is worse in all 27 comparisons, while a single implicit-inference call is a cheaper alternative that comes close. Oracle variants that let the reviser see the reference, together with reference-free controls, show that larger refinement gains require information unavailable at inference time.",
    "source": "arxiv"

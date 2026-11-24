@@ -1,7 +1,65 @@
 {
  "slug": "human-computer-interaction",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27533",
+   "title": "Standard-Anchored Delegation in Teachers' Use of Generative AI",
+   "url": "https://arxiv.org/abs/2611.27533",
+   "authors": [
+    "Muhammad Saleh Farooq",
+    "Muhammad Ahmad Khan",
+    "Muhammad Jon Raza"
+   ],
+   "label": "arXiv:2611.27533v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A qualitative mixed-methods study of 13 teachers (plus administrators and a student) in Punjab, Pakistan, proposes \"standard-anchored delegation,\" where teachers hand AI tasks when an outside standard such as a rubric or textbook defines a correct output they can check.",
+    "plain": "Teachers using generative AI have to decide which parts of their work to hand to the tool, even though they stay responsible for what students receive. The authors interviewed teachers in Pakistan and coded each teacher's stance on twelve teaching tasks. Teachers were comfortable using AI for lesson-planning help, but none accepted AI-written learning objectives, and most did not use it to encourage or emotionally support students.",
+    "why": "The paper gives a concrete account of when people are willing to delegate work to AI, and it names a check on output (an outside standard) as the key condition. Its suggestions, such as asking for the standard before generating and showing it beside the output, are design ideas the authors propose rather than tested results. The study covers one region and a small sample, so its wider reach is uncertain.",
+    "background": "- Generative AI: software that produces text, such as lesson plans or feedback, from a prompt.\n- Delegation: handing part of a task to someone or something else while keeping responsibility for the outcome.\n- Rubric or answer key: an outside standard that says what a correct or good answer looks like, which makes it possible to check AI output.\n- Qualitative, mixed-methods study: research based mainly on interviews and coding of what people say, sometimes with some counting added.\n- Verifiability: how easily a person can confirm that an output is correct.\n- Government vs. private schools: the paper reports that private schools gave teachers more support for checking AI output.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Teachers who use generative AI must decide which parts of their work to hand over, while they remain accountable for what reaches students. We studied these decisions in Punjab, Pakistan, through a qualitatively driven mixed-methods study. We interviewed 13 teachers from government, private, NGO and vocational institutions, four administrators and one student, and coded each teacher's position on twelve educational tasks. Nine teachers accepted AI drafts or substantial assistance with lesson planning, but none accepted AI-drafted learning objectives, and eleven did not use AI to encourage or emotionally support students. Teachers who would accept AI marking required that the model be given a rubric or marking criteria. Building on assessment research and HCI work on verifiability, we call this pattern standard-anchored delegation: teachers handed a component of a task to AI when a standard outside the model, such as a textbook or rubric, defined a correct output and the teacher could apply that standard to the result. Having a standard was not always enough. Several government-school teachers did not use AI to mark quizzes even though the quizzes had answer keys, because they expected students to look for evidence of the teacher's effort. Checking AI output required subject knowledge and time, and private schools gave teachers more support for this than government schools did. Participants also read disclosure of AI use as a statement about whether the teacher had reviewed the work. We propose that teacher-facing AI tools ask for the relevant standard before generating and show each output beside it, and that schools account for the time that checking takes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27462",
+   "title": "On the Challenges of Using LLMs in High-Risk AI Recruitment: Guiding Questions for Legal Conformity with the AI Act",
+   "url": "https://arxiv.org/abs/2611.27462",
+   "authors": [
+    "Clara Punzi",
+    "Stefano Tramacere",
+    "Andrea Fedele",
+    "Sezer Kutluk",
+    "Roberto Pellungrini",
+    "Gizem Gezici",
+    "Paolo Baracco",
+    "Laura Castello",
+    "Eleonora Cusin",
+    "Eduardo Costa",
+    "Amedeo Giacovelli",
+    "Mario D'Almo",
+    "Fosca Giannotti",
+    "Dino Pedreschi",
+    "Marzio Di Vece"
+   ],
+   "label": "arXiv:2611.27462v1",
+   "primary_category": "cs.CY",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes a legal-by-design toolkit that translates the AI Act's conformity-assessment duties (Articles 9–15 and Annex IV) into technical requirements and guiding questions for AI recruitment tools built on third-party general-purpose AI models, and analyzes the information gaps along the supply chain.",
+    "plain": "The EU's AI Act sets detailed rules for \"high-risk\" AI, such as software that screens job applicants, but gives companies little practical guidance on how to meet them. This paper offers a toolkit of guiding questions that turns the legal duties into concrete technical requirements, and illustrates it with a simplified example. It also finds that when a recruitment tool is built on a general-purpose AI model made by another company, the builder often cannot get the technical details needed to prove compliance, which can weaken the employer's ability to oversee the tool.",
+    "why": "Hiring algorithms affect people's job prospects, and the AI Act's compliance rules are new, so practical translations of legal text matter for developers and regulators. The text does not report any tested results from using the toolkit, so its practical value is not yet shown.",
+    "background": "- EU AI Act: a European law that regulates AI systems by risk level; \"high-risk\" systems face the strictest duties.\n- Conformity assessment: the process of showing a system meets legal requirements before and during sale or use.\n- Articles 9–15 and Annex IV: the parts of the Act listing duties such as risk management, data quality, record-keeping, transparency, human oversight, and technical documentation.\n- General-purpose AI (GPAI) model: a broad AI model (like a large language model) that many products are built on top of.\n- Upstream vs. downstream providers: the company that makes the base model versus the company that builds a specific product on it.\n- Deployer: the organization that uses the AI system in practice, here an employer or recruiter.\n- \"Legal-by-design\": building compliance into the system from the start rather than adding it afterwards.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "The EU Artificial Intelligence Act (AI Act) imposes detailed obligations on providers of high-risk AI systems but offers limited operational guidance, particularly when these systems integrate third-party General-Purpose AI (GPAI) models. This paper introduces a toolkit that fosters the development of legal-by-design AI-assisted recruitment systems by translating the core legal obligations of the AI Act's conformity assessment---specifically Articles 9--15 and Annex IV---into techno-normative requirements and corresponding guiding questions. While recruitment pipelines may involve components with varying technical complexity and differing levels of algorithmic transparency, this paper focuses on the most challenging case: the integration of third-party GPAI models into critical stages of the selection process, including resume and job description parsing, applicant scoring, and shortlist generation. This scenario presents significant challenges for downstream providers of high-risk AI systems, as it underscores the difficulties in obtaining the technical information needed to demonstrate compliance with the AI Act's techno-normative requirements, both prior to and during market deployment. After introducing the toolkit and illustrating its application through a simplified example, the paper explores informational dependencies between upstream and downstream GPAI model providers. These dependencies may produce informational gaps across the AI supply chain, potentially hindering the collection of evidence necessary for the AI system provider to ensure legal compliance. The resulting lack of technical transparency negatively affects the deployer, who may struggle to maintain meaningful oversight of the system, and ultimately impacts the persons subject to the AI output.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26843",
    "title": "AROMA: Understanding AI Support For Mental Well-being through Role Theory",
@@ -18,12 +76,12 @@
    "primary_category": "cs.HC",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes AROMA, a role-oriented framework that annotates over 7,515 conversations from 13 datasets to derive eight observed \"Role States\" for AI mental well-being supporters, and uses them to analyze support contexts, structural and temporal differences from humans, and a prompting strategy for better role alignment.",
-    "plain": "AI chatbots that offer emotional support sometimes act outside the role they were meant to play, and this can hurt the relationship with the user. Standard tests only check whether such bots work in narrow tasks, so they miss why these mismatches happen. The authors labeled thousands of real conversations from 13 datasets by the roles the speakers actually took, and identified eight recurring role patterns.",
-    "why": "The work offers a shared vocabulary for describing when and how AI supporters drift from their intended role, which may help explain failures that task-based evaluations overlook. The text does not report how much the proposed prompting strategy improves outcomes, so its practical impact is unclear from the abstract alone.",
+    "ai": true,
     "background": "- Role theory: a social-science idea that people behave according to expected parts in a relationship, such as counselor or friend.\n- Relational harm: damage to trust or the relationship when one party behaves in unexpected ways.\n- Annotation: human labeling of data (here, conversation turns) to create a coded dataset.\n- Role States: the paper's term for eight behavior categories inferred from what speakers actually did, not from what they were told to do.\n- Prompting strategy: instructions written to steer a language model's behavior.\n- Structural and temporal characteristics: how conversation turns are organized and how roles shift over the course of a conversation.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper proposes AROMA, a role-oriented framework that annotates over 7,515 conversations from 13 datasets to derive eight observed \"Role States\" for AI mental well-being supporters, and uses them to analyze support contexts, structural and temporal differences from humans, and a prompting strategy for better role alignment.",
+    "plain": "AI chatbots that offer emotional support sometimes act outside the role they were meant to play, and this can hurt the relationship with the user. Standard tests only check whether such bots work in narrow tasks, so they miss why these mismatches happen. The authors labeled thousands of real conversations from 13 datasets by the roles the speakers actually took, and identified eight recurring role patterns.",
+    "why": "The work offers a shared vocabulary for describing when and how AI supporters drift from their intended role, which may help explain failures that task-based evaluations overlook. The text does not report how much the proposed prompting strategy improves outcomes, so its practical impact is unclear from the abstract alone."
    },
    "abstract": "AI supporters for mental well-being are becoming more prevalent. When these AI supporters start acting in ways beyond their expected function it leads to relational harm. Standard approaches to evaluating such AI supporters are limited to inspecting their efficacy in narrow task-specific settings, which do not explain these discrepancies in expected and actual behavior. To address this gap, we propose the AROMA (A Role-Oriented Model of Analysis) framework to provide a common role taxonomy for different support contexts. We developed AROMA using a theory-informed annotation of over 7,515 conversations from 13 datasets and propose eight \"Role States\" based on observed-not prescribed-behavior. We show these Role States vary according to the context of support; depict unique structural and temporal characteristics of AI supporters vis-a-vis Humans; and inform novel AI support prompting strategy for better role alignment. This framework provides a new lens to understand AI support failures.",
    "source": "arxiv"
@@ -43,12 +101,12 @@
    "primary_category": "cs.CY",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A CeRAI (IIT Madras) white paper proposing \"Responsible Frugal AI\" as a right-sized, resource-conscious policy and engineering framework for deploying AI at population scale in India, with seven levers, a seven-point checklist and eleven policy statements.",
-    "plain": "This white paper argues that India should not try to copy the huge, expensive AI models built in the US or China, nor simply use foreign AI with local tweaks. Instead it proposes a third approach: use the smallest AI system that does the job well enough, with careful checks, human oversight for serious decisions, and limits on total resource use. The authors frame this as a policy and design guide rather than a set of experimental results.",
-    "why": "India must serve a very large and varied population under tight budgets and uneven infrastructure, so a cost-aware approach to AI is a practical question for public services. The text is a position paper with a framework and checklist; it does not report measured outcomes, so its practical effect is untested from this text alone.",
+    "ai": true,
     "background": "- Foundation model: a very large AI model trained on huge datasets, costly in computing power and money.\n- Compute: the processing power (and electricity) needed to train or run AI.\n- Responsible AI: designing AI to be fair, safe, transparent and accountable.\n- Digital public infrastructure: shared government-built digital systems (such as identity or payment platforms) that others can build on.\n- Sovereignty: a country's ability to control, inspect and adapt the technology it relies on.\n- Vernacular-first: designing for local languages before English.\n- Right-sized model: the smallest model that meets a defined requirement with a safety margin.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A CeRAI (IIT Madras) white paper proposing \"Responsible Frugal AI\" as a right-sized, resource-conscious policy and engineering framework for deploying AI at population scale in India, with seven levers, a seven-point checklist and eleven policy statements.",
+    "plain": "This white paper argues that India should not try to copy the huge, expensive AI models built in the US or China, nor simply use foreign AI with local tweaks. Instead it proposes a third approach: use the smallest AI system that does the job well enough, with careful checks, human oversight for serious decisions, and limits on total resource use. The authors frame this as a policy and design guide rather than a set of experimental results.",
+    "why": "India must serve a very large and varied population under tight budgets and uneven infrastructure, so a cost-aware approach to AI is a practical question for public services. The text is a position paper with a framework and checklist; it does not report measured outcomes, so its practical effect is untested from this text alone."
    },
    "abstract": "India's AI debate often swings between two insufficient options: replicating the compute-intensive, capital-heavy foundation-model programmes of the United States or China, or remaining a downstream adopter of foreign AI with localised interfaces and safeguards. Neither serves a country that must deliver AI to a very large, diverse population across uneven infrastructure and within constrained budgets. This white paper from the Centre for Responsible AI (CeRAI), IIT Madras, proposes a third path: Responsible Frugal AI, which applies principle-based frugal engineering alongside Responsible AI. Responsible Frugal AI is right-sized AI: it fixes the functional requirement first, asks whether AI is needed at all, and then chooses the smallest sufficient model, meeting the requirement with minimal resources while keeping a verified margin, robustness and responsible governance. The framework applies frugality across four dimensions (data, compute, model and operations) through seven levers spanning the AI lifecycle, each with practices and measures. It calls for public AI rails, vernacular-first design, measured resource use, human oversight for high-stakes decisions, and a cap on total resource consumption so that efficiency gains are not cancelled out by rising usage. We argue that India is resource-imbalanced rather than resource-poor, and that frugal principles offer the most viable route to population-scale deployment, fit naturally with India's digital public infrastructure, and make sovereignty operational by preserving India's capacity to specify, deploy, govern, inspect and adapt its AI systems. A seven-point adoption checklist and eleven policy statements translate the framework into practice, positioning AI in India as a responsible, frugal public-value system that maximises social value per rupee and per joule.",
    "source": "arxiv"

@@ -1,7 +1,66 @@
 {
  "slug": "cosmology",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27249",
+   "title": "Baryon-Enhanced Strong Lensing Signatures of Self-Interacting Dark Matter Subhalos",
+   "url": "https://arxiv.org/abs/2611.27249",
+   "authors": [
+    "Meiwen Yang",
+    "Daneng Yang",
+    "Siyuan Hou",
+    "Yi-Ying Wang",
+    "Yiping Shu",
+    "Yue-Lin Sming Tsai"
+   ],
+   "label": "arXiv:2611.27249v1",
+   "primary_category": "astro-ph.CO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper argues that baryons (ordinary matter such as stars) can make self-interacting dark matter subhalos in galaxy clusters into more efficient gravitational lenses than cold dark matter subhalos, and that this could help explain an observed excess of galaxy-galaxy strong lensing.",
+    "plain": "Dark matter may be a little \"sticky,\" with its particles bumping into each other, and this paper asks how that stickiness changes the way small clumps of dark matter bend light around galaxies in clusters. The authors find that when compact stars sit at the centre of these clumps, the dark matter core does not puff out as expected, so the clumps can bend light more strongly than they would under ordinary cold dark matter. They then apply a simplified model to three of the most massive clusters in a large simulation and estimate that the lensing cross sections come out 1.4 to 2.7 times larger than in the standard model.",
+    "why": "Recent observations reportedly show more galaxy-galaxy strong lensing than standard cold dark matter predicts, and this work offers a possible explanation tied to self-interacting dark matter. It is a theoretical estimate from a parametric model rather than a direct simulation of the clumps, so the size of the effect should be treated as provisional until tested against data.",
+    "background": "- Dark matter: invisible matter that makes up most of the mass of galaxies and clusters, detected only through gravity.\n- Cold dark matter (CDM): the standard model in which dark matter particles barely interact apart from gravity.\n- Self-interacting dark matter (SIDM): a variant in which dark matter particles scatter off each other, reshaping the density profiles of halos.\n- Subhalo: a smaller dark matter clump orbiting inside a larger halo, such as a cluster.\n- Strong lensing: strong bending of background light by foreground mass, producing arcs and rings.\n- Galaxy-galaxy strong lensing (GGSL): lensing by individual galaxies or their subhalos, rather than the whole cluster.\n- Core formation and gravothermal collapse: the dark matter centre first flattens into a core, then can later contract to a dense state.\n- Baryons: ordinary matter such as gas and stars; here compact stars deepen the gravitational well at the centre.\n- TNG300-1: a large cosmological simulation whose clusters are used as test cases.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Self-interacting dark matter (SIDM) is generally expected to suppress subhalo strong lensing through core formation, with subsequent gravothermal collapse potentially enhancing it. We show that compact stars can make a viable population of galaxy-hosting SIDM subhalos more efficient lenses than their cold dark matter (CDM) counterparts. When the baryonic potential weakens or reverses the inner velocity-dispersion gradient, SIDM halos suppress or bypass core formation, allowing inner densities to grow from early times. The evolved SIDM subhalos produce larger deflection angles and tangential caustics than in CDM. Such galaxy-hosting subhalos also dominate the galaxy-galaxy strong-lensing (GGSL) budget in clusters, yet lie far below the resolution of cosmological simulations. We calibrate a baryonic parametric SIDM model to predict their effects in the three most massive TNG300-1 clusters, finding GGSL cross sections 1.4--2.7 times those in CDM, comparable to the excess inferred in recent analyses. Baryon-enhanced SIDM lensing can thus account for the observed GGSL excess and predicts stronger perturbations from luminous satellites, testable through resolved distortions of background arcs and rings.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26785",
+   "title": "SciPIC-lite: A flexible Halo Occupation Distribution pipeline aimed at clustering observables",
+   "url": "https://arxiv.org/abs/2611.26785",
+   "authors": [
+    "Gabriele Parimbelli",
+    "Martin Crocce",
+    "Giosu\\`e Gambardella",
+    "Alexander Eggemeier",
+    "Pablo Fosalba",
+    "Elizabeth J. Gonzalez",
+    "Sujatha Ramakrishnan",
+    "Isaac Tutusaus",
+    "Zahra Baghkhani",
+    "Jorge Carretero",
+    "Francisco Castander",
+    "Andrea Pezzotta",
+    "Pau Tallada-Cresp\\'i"
+   ],
+   "label": "arXiv:2611.26785v1",
+   "primary_category": "astro-ph.CO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "SciPIC-lite is a public Python library for Halo Occupation Distribution (HOD) modelling that populates simulated dark matter haloes with galaxies, validated by fitting the two-point clustering of H-alpha-selected galaxies from the Flagship 2 simulation using AbacusSummit haloes.",
+    "plain": "Astronomers simulate the invisible dark matter structure of the universe, but galaxies are what we actually observe, so they need rules for where galaxies sit inside that structure. This paper presents a free, modular software tool that places galaxies into simulated dark matter clumps using such rules. The authors test it by matching how galaxies cluster in one large simulation, and they report that the best-fit results hold up across different rule choices.",
+    "why": "Surveys of galaxies on the sky will be large, and reliable mock catalogues made from simulations are needed to interpret them and check analysis methods. The paper's main claim is that the fitted results are not sensitive to which modelling choices are made, which is useful for trusting such mocks; the text does not show how widely the tool will be adopted.",
+    "background": "- Dark matter haloes: dense clumps of invisible matter in simulations where galaxies form.\n- Halo Occupation Distribution (HOD): a statistical recipe giving the probability and number of galaxies hosted by a halo of a given mass.\n- Two-point correlation function: a measure of how much more likely galaxy pairs are to be found at a given separation than random chance; it describes galaxy clustering.\n- Redshift: a measure of distance and look-back time, from the stretching of light as the universe expands; redshift bins split the data by cosmic epoch.\n- H-alpha-selected galaxies: galaxies identified by emission from hydrogen's H-alpha spectral line, a marker of star formation.\n- Extensions named in the text: assembly bias, velocity bias, conformity and halo profile rescaling, which are refinements to the basic recipe.\n- Reduced chi-squared: a standard goodness-of-fit score; values near a common value indicate similar fit quality.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The Halo Occupation Distribution (HOD) framework provides a flexible approach to modelling the galaxy--halo connection in cosmological simulations, encoding the statistical relationship between galaxies and their host dark matter haloes. We present SciPIC-lite, a new public Python library for fast, flexible, and user-friendly HOD modelling, designed to populate dark matter haloes extracted from cosmological simulations with galaxies and to provide a comprehensive suite of tools for their subsequent analysis. The library is built around a modular and extensible codebase that incorporates the full breadth of the HOD framework, from the core occupation functions to a wide range of physically motivated extensions, making it suitable for a broad spectrum of galaxy clustering applications. We validate and characterise the performance of SciPIC-lite by developing a pipeline to fit the two-point correlation functions of H$\\alpha$-selected galaxies from the Flagship~2 simulation across multiple redshift bins. To this end, we populate AbacusSummit dark matter haloes with galaxies according to a variety of HOD parametrisations. We assess the robustness of the fits with respect to the choice of HOD parametrisation and the inclusion of physically motivated extensions, including assembly bias, velocity bias, conformity, and halo profile rescaling. The best-fit models are found to be remarkably robust across different HOD parametrisations and fitting configurations, with reduced $\\chi^2$ values clustering tightly around a common value regardless of the model adopted. We exploit these results to generate new AbacusSummit-based galaxy mocks that accurately reproduce the clustering properties of the Flagship~2 H$\\alpha$ galaxy population.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27069",
    "title": "Beyond the Peak: Constraining early dark energy with the damping tail",
@@ -15,12 +74,12 @@
    "primary_category": "astro-ph.CO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper argues that the post-peak \"tail\" of an early dark energy scalar field, not just its peak amplitude and location, carries observable information about a multiscale potential (axion-like plus alpha-attractor regimes) and can improve fits to high-ℓ CMB data and the inferred H0.",
-    "plain": "Cosmologists have proposed an \"early dark energy\" component that briefly existed before the universe's recombination era, which might ease a disagreement between two ways of measuring how fast the universe expands. This paper focuses on the part of that energy's behavior after its main burst, which the authors call the \"tail,\" and builds a simple model in which different parts of a field's energy landscape control its motion. Fitting the model to cosmic microwave background, galaxy-clustering (baryon acoustic oscillation), and supernova data, they report a better match to the high-resolution microwave data and a higher best-fit expansion rate.",
-    "why": "The Hubble tension is a well-known discrepancy in cosmology, and the paper suggests that a previously overlooked feature of early dark energy models could help distinguish between them and partly address it. The text does not establish how decisive the improvement is, and the claims would need independent checks against other datasets.",
+    "ai": true,
     "background": "- The Hubble tension: measurements of the universe's current expansion rate (H0) from the early universe (CMB) and from nearby stars and supernovae disagree.\n- Early dark energy (EDE): a hypothetical scalar field that briefly contributes energy shortly before recombination, changing the sound-wave scale in the early universe; proposed as one way to ease the tension.\n- Scalar field and potential: a field whose energy depends on its value, like a ball rolling in a landscape; the \"potential\" is that landscape's shape.\n- Axion-like and alpha-attractor potentials: two classes of field-landscape shapes used in model building.\n- Observational datasets: CMB (light from about 380,000 years after the Big Bang), baryon acoustic oscillations (large-scale galaxy patterns), and supernovae (distance markers).\n- High-ℓ CMB: the small-angle, fine-scale part of the microwave sky map.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper argues that the post-peak \"tail\" of an early dark energy scalar field, not just its peak amplitude and location, carries observable information about a multiscale potential (axion-like plus alpha-attractor regimes) and can improve fits to high-ℓ CMB data and the inferred H0.",
+    "plain": "Cosmologists have proposed an \"early dark energy\" component that briefly existed before the universe's recombination era, which might ease a disagreement between two ways of measuring how fast the universe expands. This paper focuses on the part of that energy's behavior after its main burst, which the authors call the \"tail,\" and builds a simple model in which different parts of a field's energy landscape control its motion. Fitting the model to cosmic microwave background, galaxy-clustering (baryon acoustic oscillation), and supernova data, they report a better match to the high-resolution microwave data and a higher best-fit expansion rate.",
+    "why": "The Hubble tension is a well-known discrepancy in cosmology, and the paper suggests that a previously overlooked feature of early dark energy models could help distinguish between them and partly address it. The text does not establish how decisive the improvement is, and the claims would need independent checks against other datasets."
    },
    "abstract": "Early dark energy is commonly characterized by the amplitude and location of its primary energy-injection peak. We show that its post-peak evolution, which we call the \\emph{EDE tail}, provides an additional observable probe of the underlying scalar dynamics and can materially affect its ability to alleviate the Hubble tension. We construct a simple phenomenological framework in which distinct regions of a multiscale scalar potential govern the dynamics at different field scales. As a representative realization, we consider a potential that combines axion-like and $\\alpha$-attractor-like regimes, thereby allowing the EDE tail to be reshaped through reflection and asymmetric oscillations. Confronting this framework with cosmic microwave background, baryon acoustic oscillation, and supernova observations, we find an improved fit to the high-$\\ell$ CMB data together with a higher inferred bestfit $H_0$. Our results show that the EDE tail retains observable information about the underlying scalar potential that is not captured by the conventional peak parameters alone. This provides a complementary route for constructing and observationally distinguishing EDE scenarios, and potentially for further alleviating the Hubble tension.",
    "source": "arxiv"
@@ -39,12 +98,12 @@
    "primary_category": "gr-qc",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper argues that realistic F(R) gravity models fitted to DESI-era dark energy data can drift into anti-gravity or ghost-graviton regimes in the future, and proposes a scalar-field potential barrier at small curvature to prevent this without fine-tuning initial conditions.",
-    "plain": "Recent measurements hint that dark energy, the mysterious cause of the universe's accelerating expansion, may have behaved in an unusual \"phantom\" way in the recent past and then switched to a more ordinary form. Some modified-gravity theories fit these data, but this paper finds that some of them may eventually lead to unphysical behavior, such as repulsive \"anti-gravity.\" The authors propose adding a barrier to a scalar field that keeps the universe out of that future, and suggest ways to test this with galaxy motion and the kinetic Sunyaev-Zel'dovich effect.",
-    "why": "It bears on whether the dark-energy models that currently fit DESI survey data are physically sound over the long term, a question that matters for the future of cosmology. The text does not show how strongly the proposed barrier would be supported by data, so its practical weight is still open.",
+    "ai": true,
     "background": "- Dark energy: the unknown component driving the universe's accelerated expansion.\n- Phantom vs. quintessence: phantom dark energy has an equation-of-state value below -1, quintessence stays above it; the text says the behavior may have shifted between them.\n- DESI: a large galaxy survey whose data constrain dark energy.\n- F(R) gravity: a modification of Einstein's general relativity in which the gravitational Lagrangian depends on the Ricci scalar curvature R.\n- Scalar field: an extra field whose value can vary across space and time; here it carries the potential barrier.\n- Ghost graviton: a mode with negative kinetic energy, which signals instability.\n- Peculiar velocities and the kSZ (kinetic Sunyaev-Zel'dovich) effect: observable signatures used to test gravity and dark energy on large scales.\n- Fine-tuning: choosing special starting values for parameters to get a desired outcome.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper argues that realistic F(R) gravity models fitted to DESI-era dark energy data can drift into anti-gravity or ghost-graviton regimes in the future, and proposes a scalar-field potential barrier at small curvature to prevent this without fine-tuning initial conditions.",
+    "plain": "Recent measurements hint that dark energy, the mysterious cause of the universe's accelerating expansion, may have behaved in an unusual \"phantom\" way in the recent past and then switched to a more ordinary form. Some modified-gravity theories fit these data, but this paper finds that some of them may eventually lead to unphysical behavior, such as repulsive \"anti-gravity.\" The authors propose adding a barrier to a scalar field that keeps the universe out of that future, and suggest ways to test this with galaxy motion and the kinetic Sunyaev-Zel'dovich effect.",
+    "why": "It bears on whether the dark-energy models that currently fit DESI survey data are physically sound over the long term, a question that matters for the future of cosmology. The text does not show how strongly the proposed barrier would be supported by data, so its practical weight is still open."
    },
    "abstract": "Based on current observational data, there is a strong possibility that dark energy was in a phantom regime in the near past, and a transition from a phantom to a quintessential regime may have occurred. Since then, many scenarios compatible with the DESI data have been proposed. In particular, there exist several realistic models in the framework of $F(R)$ gravity. In this paper, we show that such realistic models of $F(R)$ gravity may produce an anti-gravity or ghost graviton in the future. The problem could be avoided by further changing the parameters and fine-tuning the initial conditions, but we propose to introduce a potential barrier of the scalar field for the small scalar curvature region, which prevents the Universe from evolving into the anti-gravity or having a ghost graviton region, without the fine-tuning of the initial conditions. We also discuss how this regime can be tested using peculiar velocity and kSZ effect probes.",
    "source": "arxiv"

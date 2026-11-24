@@ -1,7 +1,59 @@
 {
  "slug": "computer-vision",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27585",
+   "title": "Leakage-Free Is Not Confounder-Free: What a Patient-Level Split Cannot Certify About a Medical Imaging Benchmark",
+   "url": "https://arxiv.org/abs/2611.27585",
+   "authors": [
+    "Ignazio Gallo",
+    "Mattia Gatti",
+    "Leonardo Sgroi",
+    "Darwin Castillo",
+    "Yuliana Jim\\'enez-Gaona",
+    "Nicola Landro"
+   ],
+   "label": "arXiv:2611.27585v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A five-question audit shows that on the DMR-IR breast thermography benchmark, the acquisition date alone predicts malignancy better than any imaging model, so a patient-level split cannot rule out this confounder.",
+    "plain": "Medical AI studies often split data so that no patient appears in both training and test sets, and this paper argues that this does not guard against every shortcut. Using a public set of breast heat-camera images from 236 patients, the authors found that the year a scan was taken predicted cancer better than any of nine image-based approaches, because benign and malignant cases were recorded in different years. They also report that a second, separately collected cohort, where patient age plays this role, gave the same result.",
+    "why": "It suggests that high scores on a widely used medical imaging benchmark may reflect how and when scans were collected rather than disease itself. The lesson about confounders applies beyond thermography to any medical dataset where recording conditions track the diagnosis.",
+    "background": "- Confounder: a hidden factor linked to both the outcome and the data, so a model can learn it instead of the real signal.\n- Patient-level split: dividing data so each patient is entirely in training or entirely in testing, to prevent memorizing individuals.\n- AUROC: a 0 to 1 score for how well a test ranks positive cases above negative ones; 0.5 is chance, 1.0 is perfect.\n- Breast thermography: using infrared cameras to measure skin temperature patterns of the breast.\n- Acquisition date/year: when the scan was taken; equipment, protocols or staff can drift over time.\n- Cross-label same-date pairs: patients with different diagnoses scanned on the same date, which would allow fairer comparisons; the paper notes there are only eight such pairs.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Patient-level splitting is the standard safeguard against subject leakage in medical imaging evaluation, but it cannot remove a confounder that every fold inherits: an acquisition variable aligned with the diagnosis across the whole cohort. We present a five-question audit of a candidate confounder: how well it predicts the diagnosis, whether it can be decoded from the images, whether diagnostic scores depend on it, whether the image adds predictive value beyond it and how much discrimination survives once it is controlled. We apply it to DMR-IR, the public dataset on which most machine-learning results in breast thermography rest. On 236 patients under a strict patient-disjoint protocol, the acquisition date alone predicts malignancy at AUROC 0.980, above the best of nine imaging arms (0.949), because benign and malignant patients were recruited in different years. The acquisition year is decodable from the pixels among patients who share a diagnosis, largely through a global thermal offset outside the breast, yet only one arm, the one pooling every frame of a visit, demonstrably carries it into its diagnostic score. No arm improves on the date on paired folds, and once the date is controlled, discrimination either collapses or survives only on comparisons the benchmark cannot attribute. The dataset contains only eight cross-label same-date pairs, from ten patients, which limits reliable evaluation within recorded acquisition-date groups. A second, independently acquired cohort, whose dominant channel is patient age, returns the same audit outcome from a different confounder. Mitigation may suppress such a confounder, but without cross-label acquisition support no evaluation on the benchmark can certify that what remains is pathology.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26972",
+   "title": "When Perception Collides with Priors: Diagnosing Modal Polarization in Video Understanding Models",
+   "url": "https://arxiv.org/abs/2611.26972",
+   "authors": [
+    "Yao Tong",
+    "Jiaxin Qi",
+    "Yan Cui",
+    "Jinli Ou",
+    "Yuhua Zheng",
+    "Jianqiang Huang"
+   ],
+   "label": "arXiv:2611.26972v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper names a failure mode, \"Modal Polarization,\" in video-understanding multimodal LLMs when what they see clashes with their built-in priors, and introduces TheaterBench to probe it with counter-intuitive video scenarios.",
+    "plain": "Video AI models are trained on realistic footage, so they can struggle when a video shows something that breaks physics or common sense. The authors describe two opposite ways these models go wrong: they either stick to what they expect despite the visual evidence, or they trust the video blindly and ignore that the scene makes no sense. They built a test set, TheaterBench, of such surprising scenes and report that current top models show this polarization, and that some methods meant to reduce hallucinations mostly shift the problem from one extreme to the other.",
+    "why": "Models that cannot reconcile what they see with what they know could be unreliable in unusual real-world situations, which matters for any use that depends on accurate video interpretation. The text presents the benchmark as an early step for evaluation rather than a solved problem, and its broader impact is not established beyond the reported experiments.",
+    "background": "- Multimodal Large Language Models (MLLMs): AI systems that take in several input types, here video and text, and answer questions about them.\n- Hallucination: when an AI states something unsupported by its input, such as describing an event that did not happen.\n- Priors: the expectations a model learned from training data, such as \"objects fall downward.\"\n- Benchmark: a standardized test set used to compare models.\n- De-hallucination methods: techniques intended to reduce made-up or unsupported outputs.\n- Counter-intuitive scenarios: deliberately constructed videos that violate physical laws or common sense.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Multimodal Large Language Models (MLLMs) have achieved strong video comprehension, largely benefiting from extensive training on realistic video data. However, when video perception severely conflicts with internal priors or common sense, we identify a critical failure pattern termed Modal Polarization, where models fail to integrate modalities and instead bifurcate into two distinct extremes: Cognitive Inertia, where models rigidly adhere to priors despite contradictory visual evidence, and Perceptual Inertia, where they blindly trust video perception while ignoring logical inconsistencies. To investigate this, we introduce TheaterBench, a benchmark designed to expose Modal Polarization using counter-intuitive scenarios that violate physical laws or common sense - situations rarely encountered in standard training distributions. Extensive experiments reveal that current state-of-the-art (SOTA) models exhibit severe Modal Polarization, and many de-hallucination methods merely rebalance the trade-off between Perceptual and Cognitive Inertia rather than fundamentally resolving the conflict. This work serves as a foundational step for evaluating and enhancing the perceptual-cognitive equilibrium of future video understanding models.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27266",
    "title": "PP-CFG: Polarity-Preserving Guidance for Controllable Few-Step Image and Video Generation",
@@ -22,12 +74,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "PP-CFG is a few-step diffusion distillation method that keeps positive and negative text conditions separate, combines their attention responses with opposite signs, and uses a scale-and-timestep mixer to keep adjustable classifier-free guidance and negative prompting for image and video generation.",
-    "plain": "Modern AI image and video generators often need many small refinement steps to produce output, and speeding them up by distilling them into fewer steps tends to remove the ability to fine-tune how strongly a prompt is followed or to tell the model what to avoid. This paper proposes a way to keep those controls in a four-step student model. The authors report results on video (Wan2.1) and image (Qwen-Image) generators, including a VBench score of 81.46 in four steps and higher target-removal rates on their own 1,000-case negative-prompt benchmark than the teacher models.",
-    "why": "Making generation both fast and controllable is a practical bottleneck for image and video tools, so a method that preserves guidance and negative prompts in few-step models is worth watching. The text supports claims across two backbones and two distillation methods, but the evaluation is described only at a high level and the benchmark is the authors' own, so the strength of the generality claim is not yet established.",
+    "ai": true,
     "background": "- Diffusion models generate images or videos by starting from noise and removing it over many denoising steps.\n- Distillation trains a faster \"student\" model with few steps to imitate a slower \"teacher\" model.\n- Classifier-free guidance (CFG) is a dial that controls how strongly the output follows a text prompt.\n- Negative prompts tell the model what to leave out of the output.\n- Attention is the mechanism through which parts of the model weigh and combine information from the text and image.\n- VBench is a standard benchmark suite for scoring video generation quality.\n- Distribution matching distillation (DMD) and latent consistency models (LCM) are two specific distillation techniques named in the paper.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PP-CFG is a few-step diffusion distillation method that keeps positive and negative text conditions separate, combines their attention responses with opposite signs, and uses a scale-and-timestep mixer to keep adjustable classifier-free guidance and negative prompting for image and video generation.",
+    "plain": "Modern AI image and video generators often need many small refinement steps to produce output, and speeding them up by distilling them into fewer steps tends to remove the ability to fine-tune how strongly a prompt is followed or to tell the model what to avoid. This paper proposes a way to keep those controls in a four-step student model. The authors report results on video (Wan2.1) and image (Qwen-Image) generators, including a VBench score of 81.46 in four steps and higher target-removal rates on their own 1,000-case negative-prompt benchmark than the teacher models.",
+    "why": "Making generation both fast and controllable is a practical bottleneck for image and video tools, so a method that preserves guidance and negative prompts in few-step models is worth watching. The text supports claims across two backbones and two distillation methods, but the evaluation is described only at a high level and the benchmark is the authors' own, so the strength of the generality claim is not yet established."
    },
    "abstract": "Few-step diffusion distillation reduces sampling cost but often weakens adjustable classifier-free guidance (CFG) and runtime negative prompting. We introduce PP-CFG, an architecture that keeps positive and negative text conditions separate and combines their attention responses with opposite signs within a shared visual backbone. Its Scale-Time Polarity Mixer refines each condition using the guidance scale and denoising timestep, allowing prompt influence to vary throughout generation. The student retains a continuous scale input and selectable negative prompts with one visual backbone pass per step. We evaluate PP-CFG on Wan2.1 for video generation with distribution matching distillation (DMD), and on Qwen-Image with both latent consistency model (LCM) distillation and DMD. PP-CFG achieves 81.46 VBench in four steps and lower video teacher-student distances across guidance scales than step-distilled DMD. On NegElement-1K, our benchmark of 1,000 matched image and video prompt cases, it achieves higher target-removal rates than the corresponding teachers. These experiments support the method's generality across attention architectures, generation modalities, and distillation objectives while retaining competitive generation quality.",
    "source": "arxiv"
@@ -47,12 +99,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes R2RG, a 3D CNN-based representation learning method that uses an auto-encoding GAN and a composite loss to learn reconstruction-based features from 3D MRI scans with limited data, reporting gains over contrastive methods on Parkinson's and Alzheimer's classification.",
-    "plain": "Medical scans like MRI are 3D, but many AI methods handle only flat 2D slices, which throws away depth information, and they often need more data than medical datasets provide. This paper presents a method that learns compact summaries of whole 3D brain MRI volumes by training a network to rebuild the scans, with a generative adversarial network (a pair of AI models that compete to make realistic images) helping sharpen the rebuilt results. The authors report that these learned summaries work across several datasets, including small ones, and perform better than certain competing approaches on Parkinson's and Alzheimer's disease classification.",
-    "why": "Many medical AI tasks have little labelled data, so methods that learn useful features without labels could matter in clinical research. The text reports results on a few datasets, but it does not show how well the approach would hold up in routine clinical use, so its wider significance is still to be tested.",
+    "ai": true,
     "background": "- Representation learning: training a model to turn raw data into compact numerical features that other tasks can use.\n- Reconstruction-based learning: learning by trying to rebuild the original input from its compressed form, with no human labels needed.\n- Contrastive learning: learning by pulling similar examples together and pushing different ones apart in feature space; a common alternative.\n- CNN (convolutional neural network): a common type of image model that detects local patterns; a 3D version works on volumes rather than flat images.\n- GAN (generative adversarial network): two networks trained against each other, one generating images and one judging them, often used to make outputs look realistic.\n- MRI: magnetic resonance imaging, which produces 3D scans of soft tissue such as the brain.\n- Parkinson's and Alzheimer's classification: deciding from scans whether a patient has these diseases, used here as a test of the learned features.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes R2RG, a 3D CNN-based representation learning method that uses an auto-encoding GAN and a composite loss to learn reconstruction-based features from 3D MRI scans with limited data, reporting gains over contrastive methods on Parkinson's and Alzheimer's classification.",
+    "plain": "Medical scans like MRI are 3D, but many AI methods handle only flat 2D slices, which throws away depth information, and they often need more data than medical datasets provide. This paper presents a method that learns compact summaries of whole 3D brain MRI volumes by training a network to rebuild the scans, with a generative adversarial network (a pair of AI models that compete to make realistic images) helping sharpen the rebuilt results. The authors report that these learned summaries work across several datasets, including small ones, and perform better than certain competing approaches on Parkinson's and Alzheimer's disease classification.",
+    "why": "Many medical AI tasks have little labelled data, so methods that learn useful features without labels could matter in clinical research. The text reports results on a few datasets, but it does not show how well the approach would hold up in routine clinical use, so its wider significance is still to be tested."
    },
    "abstract": "Learning representations of visual images is a challenging task. It requires extracting abstract patterns from high-dimensional data without explicit supervision. This becomes pronounced with 3D MR imaging due to sparse features, higher dimensional inputs, and smaller datasets. Many state-of-the-art representation learning algorithms successfully rely on transformers and diffusion-based architectures. However, these methods struggle with smaller datasets. In effect, solution methods relax the problem by slicing 3D volumes and solving the problem for 2D medical imaging, resulting in a loss of spatial 3D information. We present R2RG, a representation learning method based on Convolutional Neural Networks (CNNs), with Generative Adversarial Networks (GANs) honing the reconstruction task. Our key insights lie in exploiting architectural biases in 3D CNNs, combined with data-efficient auto-encoding GANs and a composite loss function to enhance reconstruction fidelity and stabilize training. Our experiments on three standard datasets and a locally collected dataset show that R2RG not only achieves superior performance but also generalizes to heterogeneous and smaller datasets. Furthermore, representations learned with R2RG outperform those learned with contrastive-based representation learning methods on Parkinson's and Alzheimer's disease classification. Our work demonstrates that reconstruction-based representation learning is a promising direction for 3D medical imaging under limited data availability.",
    "source": "arxiv"

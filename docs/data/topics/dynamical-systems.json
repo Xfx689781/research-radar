@@ -1,7 +1,52 @@
 {
  "slug": "dynamical-systems",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27036",
+   "title": "Nonlinear stability of periodic waves in the Benjamin-Ono equation",
+   "url": "https://arxiv.org/abs/2611.27036",
+   "authors": [
+    "Jinbing Chen",
+    "Colin Grant",
+    "Dmitry E. Pelinovsky"
+   ],
+   "label": "arXiv:2611.27036v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proves nonlinear orbital stability of periodic traveling waves of the Benjamin-Ono equation by building a Lyapunov functional from conserved quantities (momentum, energy, and a higher-order energy from integrability) and checking its second variation is positive.",
+    "plain": "The Benjamin-Ono equation is a mathematical model for waves in deep stratified fluids, such as internal waves in the ocean. This paper studies repeating wave shapes that keep travelling without changing form. The authors show that if you nudge such a wave a little, it stays close to its original shape over time.",
+    "why": "Showing that a wave pattern is stable under small disturbances is a basic question for whether such patterns can persist in real physical systems. The text does not say how far the result reaches beyond this equation, so its wider significance is uncertain.",
+    "background": "- Benjamin-Ono equation: a nonlinear partial differential equation describing one-directional waves in certain fluids.\n- Periodic wave: a wave shape that repeats in space, like a regular ripple, that travels at constant speed.\n- Orbital stability: a solution that stays close to the family of its shifted versions after small disturbances.\n- Conserved quantities: totals (such as momentum and energy) that do not change as the wave evolves; they are used to control the dynamics.\n- Lyapunov functional: a measure built from these quantities that cannot grow, used to prove stability.\n- Second variation: the curvature of that measure around the wave; positivity of it is the key check.\n- Integrability: a special structure that gives extra conserved quantities.\n- Sobolev space H^1: a function class measuring size and smoothness of disturbances.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We construct the Lyapunov functional for the periodic waves of the Benjamin-Ono equation based on the conservation of momentum, energy, and a higher-order energy, which exists due to integrability. Positivity of the second variation of the Lyapunov functional for perturbations in Sobolev space $H^1(\\mathbb{R})$ is established by utilizing the basis properties of eigenfunctions of the linearized Benjamin-Ono equation in $L^2(\\mathbb{R})$. Coercivity of the Lyapunov functional for co-periodic and multiple-periodic perturbations yields the nonlinear orbital stability of the periodic waves in the periodic domain.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27557",
+   "title": "Real-analytic actions of higher-rank lattices preserving an ergodic volume",
+   "url": "https://arxiv.org/abs/2611.27557",
+   "authors": [
+    "Federico Rodriguez Hertz",
+    "Zhiren Wang"
+   ],
+   "label": "arXiv:2611.27557v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper classifies real-analytic actions of higher-rank lattices that preserve an ergodic smooth volume on a compact manifold, showing that on an open dense full-measure set they are analytically conjugate to affine actions on copies of a single double quotient, which is offered as the open homogeneous case of Zimmer's program.",
+    "plain": "The paper studies how a certain kind of discrete symmetry group (a lattice in a higher-rank Lie group) can act smoothly on a compact space, such as a manifold, while keeping a volume measure fixed. It reports that, for real-analytic actions preserving an ergodic volume, almost all of the space can be described by a simple standard model built from affine (linear-plus-shift) motions. The author states that this gives a classification of the open homogeneous case.",
+    "why": "The question sits in Zimmer's program, which asks how far rigid algebraic models control all actions of large symmetry groups on manifolds, so a full classification in the open homogeneous case would be a substantial structural statement. The text does not show how wide its consequences are beyond this setting, so its reach should be judged by specialists.",
+    "background": "- Lattice: a discrete subgroup of a Lie group, such as integer matrices inside a group of transformations.\n- Higher-rank: the Lie group has several independent directions of symmetry, which makes rigidity results much stronger.\n- Action: a way the group moves points of a space, here a compact manifold (a smooth curved space).\n- Real-analytic: smooth in a strong sense where functions are given by convergent power series.\n- Ergodic volume: a measure preserved by the action such that no invariant piece splits it non-trivially; the orbits spread through the space.\n- Conjugacy: an change of coordinates that turns one action into another, so they are essentially the same.\n- Affine action and double quotient: the standard model, built from linear-plus-shift motions on a quotient of a Lie group.\n- Zimmer's program: a research program on rigidity of group actions on manifolds.\n- Lyapunov manifolds and joinings: tools for tracking how nearby orbits separate and for comparing two actions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We classify real-analytic actions of higher-rank lattices that preserve an ergodic smooth volume on a compact manifold. On an invariant open dense set of full volume, the action is analytically conjugate to the restriction of an affine action on finitely many copies of one double quotient. The conjugacy carries Haar probability to the given volume. Analytic germ superrigidity supplies local coordinates with measurable dependence on the center. The conditional measures on coarse Lyapunov manifolds determine the law of a displaced center. A two-point joining pairs charts whose evaluations agree there and gives the change of coordinates. The resulting analytic frame bundle carries a coframe whose vector fields integrate to the homogeneous model. This gives the open homogeneous classification in Zimmer's program.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27887",
    "title": "Recurrent sets and Lyapunov functions: from topological dynamics to weak KAM theory",
@@ -15,12 +60,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A survey linking Lyapunov functions and Conley's chain recurrent sets in topological dynamics, including recent weak KAM results for homeomorphisms, connections to the stationary Hamilton-Jacobi equation, and examples from epidemiology and predator-prey dynamics.",
-    "plain": "This survey looks at how to describe where a system that changes over time can keep returning near its starting points, and how \"energy-like\" measuring functions (Lyapunov functions) can reveal that structure. It reviews existing results, including newer ones from a field called weak KAM theory, and links them to a classical equation from physics and mathematics. To show how these sets change with a parameter, it works through a disease compartment model and a predator-prey model with an Allee effect (where small populations struggle to grow).",
-    "why": "The text presents this as a review of the current state of the field rather than a single new finding, so its value lies mainly in organizing known results. It may matter to researchers connecting stability analysis of dynamical systems with Hamilton-Jacobi equations, though the text does not spell out specific applications beyond the two examples.",
+    "ai": true,
     "background": "- Dynamical system: a rule that describes how a state evolves over time.\n- Recurrent set: a region a system keeps coming back to, at least approximately, after leaving it.\n- Chain recurrence (Conley): a way to track returns using short jumps that allow small errors.\n- Lyapunov function: a measuring function that decreases along trajectories, like an energy that settles, used to prove stability.\n- Homeomorphism: a continuous, reversible change of a space, used as the discrete-time analogue of a flow.\n- Hamilton-Jacobi equation: a partial differential equation from mechanics and optimal control; its stationary form is time-independent.\n- Weak KAM theory: a generalized framework from Hamiltonian mechanics relating dynamics to solutions of this equation.\n- Compartmental model: an epidemiology model that splits a population into groups such as susceptible and infected.\n- Allee effect: a condition where populations grow poorly when they are very small.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A survey linking Lyapunov functions and Conley's chain recurrent sets in topological dynamics, including recent weak KAM results for homeomorphisms, connections to the stationary Hamilton-Jacobi equation, and examples from epidemiology and predator-prey dynamics.",
+    "plain": "This survey looks at how to describe where a system that changes over time can keep returning near its starting points, and how \"energy-like\" measuring functions (Lyapunov functions) can reveal that structure. It reviews existing results, including newer ones from a field called weak KAM theory, and links them to a classical equation from physics and mathematics. To show how these sets change with a parameter, it works through a disease compartment model and a predator-prey model with an Allee effect (where small populations struggle to grow).",
+    "why": "The text presents this as a review of the current state of the field rather than a single new finding, so its value lies mainly in organizing known results. It may matter to researchers connecting stability analysis of dynamical systems with Hamilton-Jacobi equations, though the text does not spell out specific applications beyond the two examples."
    },
    "abstract": "The aim of this survey is to clarify the intimate relations between Lyapunov functions and chain recurrent sets. The study of this subject comes from a seminal paper by Conley and has had recent advances by the so-called Weak KAM Theory for homeomorphisms. We provide a survey of the state of the art, presenting recent improvements and connections with the stationary Hamilton-Jacobi equation. Finally, in order to illustrate the distinctions between recurrent sets in a non-trivial case as well as their dependence on a parameter, we discuss a compartmental model from mathematical epidemiology and a fast-slow version of a prey-predator model with Allee effect.",
    "source": "arxiv"
@@ -36,12 +81,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "For a product of two symplectomorphisms (one with a basic set, the other with a non-degenerate elliptic equilibrium on a compact surface), the paper shows that under a local domination condition a typical real-analytic perturbation yields a large normally hyperbolic lamination on which the natural invariant measure is ergodic.",
-    "plain": "This paper studies a mathematical model of a system that moves in a way that preserves a kind of \"volume\" from classical mechanics. The authors build a combined system from two simpler pieces and show that, after a small generic nudge to the rules, the system has a large structured set on which its typical behavior mixes thoroughly, so a long-run average over the set matches the average over the whole set. The text does not give the full statements, so details of the mixing claim are limited to the abstract.",
-    "why": "Ergodicity, the property that a system's time averages match its space averages, is a central question in dynamics, and this work addresses it for systems that are not uniformly hyperbolic, where such results are harder. The abstract says the technique, which combines KAM theory with geometric measure theory and introduces a new geometric source of \"semi-local\" ergodicity, may apply to more general settings, but how far it extends is not stated here.",
+    "ai": true,
     "background": "- Symplectomorphism: a transformation that preserves the area/volume structure of phase space, the basic symmetry of Hamiltonian mechanics.\n- Ergodic measure: a natural invariant measure under which almost every trajectory explores the set evenly over time.\n- Basic set: a compact invariant set with chaotic, hyperbolic dynamics, a building block in the theory of dynamical systems.\n- Elliptic equilibrium: a fixed point around which nearby orbits circle rather than run away or collapse.\n- Normally hyperbolic lamination: a layered family of invariant sets where motion transverse to the layers grows or shrinks at a controlled rate.\n- KAM theory: the body of results showing that many quasi-periodic motions survive small perturbations of a Hamiltonian system.\n- Real-analytic perturbation: a small change to the system's rules that is smooth in a strong, power-series sense.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "For a product of two symplectomorphisms (one with a basic set, the other with a non-degenerate elliptic equilibrium on a compact surface), the paper shows that under a local domination condition a typical real-analytic perturbation yields a large normally hyperbolic lamination on which the natural invariant measure is ergodic.",
+    "plain": "This paper studies a mathematical model of a system that moves in a way that preserves a kind of \"volume\" from classical mechanics. The authors build a combined system from two simpler pieces and show that, after a small generic nudge to the rules, the system has a large structured set on which its typical behavior mixes thoroughly, so a long-run average over the set matches the average over the whole set. The text does not give the full statements, so details of the mixing claim are limited to the abstract.",
+    "why": "Ergodicity, the property that a system's time averages match its space averages, is a central question in dynamics, and this work addresses it for systems that are not uniformly hyperbolic, where such results are harder. The abstract says the technique, which combines KAM theory with geometric measure theory and introduces a new geometric source of \"semi-local\" ergodicity, may apply to more general settings, but how far it extends is not stated here."
    },
    "abstract": "We consider the direct product of two symplectomorphisms, one of which exhibits a basic set and the other one acts on a compact surface and has a non-degenerate elliptic equilibrium. Under a local domination condition we show that a typical real-analytic perturbation of this system displays a large normally hyperbolic lamination on which the natural invariant measure is ergodic. The proof, which introduces a novel geometric source of semi-local ergodicity, combines tools ranging from KAM theory to geometric measure theory and is robust enough to be of interest in more general configurations.",
    "source": "arxiv"

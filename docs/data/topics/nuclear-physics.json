@@ -1,7 +1,58 @@
 {
  "slug": "nuclear-physics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27332",
+   "title": "Thermal photon production in massless boost-invariant gases: hydrodynamization without thermalization",
+   "url": "https://arxiv.org/abs/2611.27332",
+   "authors": [
+    "Caio V. P. de Brito",
+    "Gabriel S. Denicol"
+   ],
+   "label": "arXiv:2611.27332v1",
+   "primary_category": "nucl-th",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Using relativistic kinetic theory with a relaxation-time Boltzmann equation solved by the method of moments, this paper studies hydrodynamization versus thermalization in a boost-invariant expansion of a massless gas and how the resulting non-equilibrium state affects thermal photon emission rates in the forward-scattering approximation.",
+    "plain": "This paper looks at the hot, dense matter formed in heavy-ion collisions, such as those at particle colliders, as it expands and cools. The authors model it as a simple gas of massless particles and compute how it evolves. They find that its overall energy and pressure behave like a smooth fluid well before the particles reach a fully equilibrated distribution, and that the way this non-equilibrium state changes the rate of emitted thermal photons (particles of light) can be significant.",
+    "why": "Thermal photons are one of the few signals that carry information from inside the collision fireball, so how much early non-equilibrium behaviour shifts their predicted yield matters for interpreting experiments. The claim that fluid-like behaviour can appear without full thermalization is a modelling result from a simplified setup, so its reach to real collisions is uncertain.",
+    "background": "- Heavy-ion collisions: nuclei smashed at near light speed to create a quark-gluon plasma, a very hot state of matter.\n- Hydrodynamics: describing a fluid by its averaged quantities (energy, pressure, flow) rather than each particle.\n- Thermalization: when particles reach a standard equilibrium energy distribution; hydrodynamics can apply before this is complete.\n- Boltzmann equation: a kinetic equation tracking how the distribution of particles changes through motion and collisions.\n- Relaxation-time approximation: a simplified model where collisions push the system toward equilibrium at a set rate.\n- Method of moments: solving for averaged properties (moments) of the distribution instead of the full distribution.\n- Boost-invariant longitudinal expansion: a idealized expansion along the beam direction that looks the same to observers moving at any speed along that axis.\n- Thermal photons: light emitted by the hot matter itself, not from the initial collision.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study hydrodynamization and thermalization in ultrarelativistic heavy-ion collisions using relativistic kinetic theory. Modelling the quark-gluon plasma as a classical gas of massless particles undergoing a boost-invariant longitudinal expansion, we solve the Boltzmann equation in the relaxation-time approximation via a semi-analytical method based on the method of moments. We show that the energy-momentum tensor is well described by relativistic fluid dynamics even when the system is far from local equilibrium. The single-particle distribution function, on the other hand, is not well approximated by a hydrodynamic truncation, suggesting that the onset of hydrodynamic behaviour does not require thermalization. We then quantify how the departure from equilibrium affects the emission rate of thermal photons in the forward scattering approximation, and show that non-equilibrium corrections beyond the hydrodynamic limit can have a significant impact on this observable.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27628",
+   "title": "Nuclear Urca cooling in magnetar crust and anomalous heating",
+   "url": "https://arxiv.org/abs/2611.27628",
+   "authors": [
+    "LInjing Qi",
+    "Qiye Hu",
+    "Xinxu Wang",
+    "Yudong Luo",
+    "Ligang Cao",
+    "Longjun Wang",
+    "Toshitaka Kajino",
+    "Hiroyuki Sagawa",
+    "Fengshou Zhang"
+   ],
+   "label": "arXiv:2611.27628v1",
+   "primary_category": "nucl-th",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper argues that in magnetars, strong magnetic fields and finite-temperature effects alter the nuclear Urca neutrino-cooling process for the 29Na-29Mg pair, which may help explain the high surface temperatures observed in these stars.",
+    "plain": "Magnetars are dense, collapsed stars with extremely strong magnetic fields, and they are often hotter on the surface than ordinary neutron stars of their age would be. Neutron stars cool partly by releasing neutrinos, tiny nearly massless particles, and one channel for this is the \"nuclear Urca\" process, which involves pairs of atomic nuclei changing into each other. This paper reports that, using a new calculation that includes both the magnetic field and heat, the cooling from this process can be weakened or strengthened depending on the field strength and crust density, which could leave the star hotter.",
+    "why": "The surface temperature of magnetars is an open puzzle, and the authors suggest a cooling-based explanation that would be new if confirmed. The text does not show how strongly the result depends on its nuclear inputs or whether it matches observations, so it should be read as a proposed possibility rather than an established answer.",
+    "background": "- Neutron star: the collapsed core of a massive star, roughly city-sized and extremely dense.\n- Magnetar: a neutron star with a magnetic field far stronger than typical ones.\n- Neutrino cooling: a star loses heat by emitting neutrinos, which pass through matter almost unimpeded.\n- Nuclear Urca process: a cycle in which nuclei capture electrons and emit neutrinos, then reverse, cooling the star.\n- Urca pair: the two nuclei (here 29Na and 29Mg) that convert into each other in this process.\n- Finite temperature: at higher heat, some nuclei sit in excited energy states that can change the cooling rate.\n- Crust density: the density of the outer layer of the star, where these nuclei exist.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a new result that the nuclear Urca process in magnetars, associated with ultrastrong magnetic field, dramatically alters the neutrino cooling efficiency to support higher surface temper ature, which is not common in ordinary neutron stars. A new formalism for neutrino luminosity accommodating finite temperature on top of magnetic field is extended with the use of realistic nuclear structure inputs for the Urca pair 29Na-29Mg. We find that the neutrino luminosity of Urca pair shows a spiral variation as a function of magnetic field and crust density, while the Urca pair persists, in contrast to previous studies. Applying geometrically correct volumetric energy loss rate to Urca shell at fixed density with varying magnetic field strength, our results show that thermally populated excited states at finite temperature enhance neutrino luminosity, whereas conditions con strained Urca-pair formation driven by ultrastrong magnetic field reduce cooling efficiency, which can explain high temperature of magnetar surface as a new possibility.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26895",
    "title": "Nuclear Shell Model on the Light Front",
@@ -15,12 +66,12 @@
    "primary_category": "nucl-th",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper builds an analytically solvable light-front harmonic-oscillator model of nuclear shell structure and electromagnetic form factors, finding shell splitting tied to a longitudinal confinement interaction and form factors that differ from non-relativistic results, illustrated for 48Ca and 208Pb.",
-    "plain": "This paper looks at how the protons and neutrons inside an atomic nucleus are arranged in energy levels, using a version of quantum theory that treats space and time more relativistically than the usual textbook approach. The authors solve a simple model exactly, and find that one kind of energy level splits apart in a way the standard non-relativistic picture does not predict. They then apply the model to calcium-48 and lead-208 and report that its predicted scattering patterns (form factors) differ noticeably from the non-relativistic ones.",
-    "why": "Nuclear shell models underpin much of how physicists interpret nuclear experiments, so a tractable way to include relativistic effects could matter for future calculations. The text does not show how large these effects are in experiments or whether they change existing predictions in practice, so that remains uncertain.",
+    "ai": true,
     "background": "- Nuclear shell model: nucleons fill discrete energy levels in the nucleus, much like electrons in an atom.\n- Non-relativistic treatment: the standard approach that ignores the effects of Einstein's special relativity on fast-moving particles.\n- Light-front quantization: a relativistic formulation that uses \"light-front\" time to make certain calculations simpler.\n- Harmonic oscillator: an idealised model where particles are held by a spring-like force, which is exactly solvable.\n- Form factor: a function describing how a nucleus scatters probes such as electrons, reflecting its internal charge and structure.\n- Hellmann-Feynman theorem: a standard result that relates how an energy changes to the expectation value of a parameter's operator, used here to trace the splitting to a specific interaction.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper builds an analytically solvable light-front harmonic-oscillator model of nuclear shell structure and electromagnetic form factors, finding shell splitting tied to a longitudinal confinement interaction and form factors that differ from non-relativistic results, illustrated for 48Ca and 208Pb.",
+    "plain": "This paper looks at how the protons and neutrons inside an atomic nucleus are arranged in energy levels, using a version of quantum theory that treats space and time more relativistically than the usual textbook approach. The authors solve a simple model exactly, and find that one kind of energy level splits apart in a way the standard non-relativistic picture does not predict. They then apply the model to calcium-48 and lead-208 and report that its predicted scattering patterns (form factors) differ noticeably from the non-relativistic ones.",
+    "why": "Nuclear shell models underpin much of how physicists interpret nuclear experiments, so a tractable way to include relativistic effects could matter for future calculations. The text does not show how large these effects are in experiments or whether they change existing predictions in practice, so that remains uncertain."
    },
    "abstract": "Light-front descriptions of nuclear structure provide a relativistic framework that can potentially deepen our understanding of nuclear structure by revealing effects that are absent from traditional non-relativistic treatments. To utilize this framework, we start from the light-front harmonic oscillator to analytically calculate the shell structure and electromagnetic form factors. The relativistic shell model shows that the light-front result recovers the nonrelativistic oscillator limit while introducing shell splitting that depends on the longitudinal excitation quantum number. We derive the resulting effects on the shell model and use the Hellmann-Feynman theorem to identify the longitudinal confinement interaction as the origin of this splitting. We illustrate these results through applications to $^{48}\\mathrm{Ca}$ and $^{208}\\mathrm{Pb}$. In addition, we demonstrate a substantial difference between form factors calculated using non-relativistic and light-front treatments, a difference that further underscores the importance of including relativistic effects in the description of nuclear structure. Our findings demonstrate a tractable approach to relativistic nuclear calculations and show how extending nuclear models beyond the non-relativistic approximation can yield meaningful physical insight.",
    "source": "arxiv"
@@ -38,12 +89,12 @@
    "primary_category": "nucl-th",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes an observable-dependent variance ceiling on neutron-star core structure and a \"radius–Love compensation\" mechanism, and reports that a 0.3 km pulsar radius plus a 10% binary tidal measurement would remove 44–68% of current logarithmic Love-number variance across four data-conditioned equation-of-state families.",
-    "plain": "This paper asks how much we can pin down the inside of a neutron star, the extremely dense leftover core of a collapsed star, using nuclear laboratory data together with astronomical measurements. The authors estimate how much uncertainty remains in one property, the tidal Love number, which describes how easily a star deforms under another body's gravity. They report that combining a precise radius measurement from a pulsar with a tidal measurement from a binary star system would remove roughly 44 to 68 percent of the present uncertainty.",
-    "why": "Neutron-star tides and radii are measurable from gravitational-wave and X-ray observations, so linking them to laboratory nuclear constraints is a concrete way to test models of ultra-dense matter. The text does not show how robust these estimates are beyond the four equation-of-state families it uses, so the size of the effect should be treated as provisional.",
+    "ai": true,
     "background": "- Neutron star: the collapsed core of a massive star, roughly city-sized but denser than an atomic nucleus.\n- Equation of state (EOS): a rule linking pressure to density, which determines how a star is built; \"families\" are groups of such models.\n- Tidal Love number: a dimensionless number describing how much a star deforms when another body pulls on it.\n- Logarithmic variance: a measure of spread in the logarithm of a quantity, i.e. how uncertain the value is.\n- Pulsar radius: the size of a rapidly spinning neutron star, inferred from its emission.\n- Binary tide: the deformation of a star caused by a companion in a two-star orbit, measured from orbital or gravitational-wave signals.\n- Nuclear constraints: limits from experiments on atomic nuclei that restrict the possible EOS.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes an observable-dependent variance ceiling on neutron-star core structure and a \"radius–Love compensation\" mechanism, and reports that a 0.3 km pulsar radius plus a 10% binary tidal measurement would remove 44–68% of current logarithmic Love-number variance across four data-conditioned equation-of-state families.",
+    "plain": "This paper asks how much we can pin down the inside of a neutron star, the extremely dense leftover core of a collapsed star, using nuclear laboratory data together with astronomical measurements. The authors estimate how much uncertainty remains in one property, the tidal Love number, which describes how easily a star deforms under another body's gravity. They report that combining a precise radius measurement from a pulsar with a tidal measurement from a binary star system would remove roughly 44 to 68 percent of the present uncertainty.",
+    "why": "Neutron-star tides and radii are measurable from gravitational-wave and X-ray observations, so linking them to laboratory nuclear constraints is a concrete way to test models of ultra-dense matter. The text does not show how robust these estimates are beyond the four equation-of-state families it uses, so the size of the effect should be treated as provisional."
    },
    "abstract": "Neutron-star cores retain structural freedom beyond the constraints supplied by nuclear measurements. We quantify this freedom through an observable-dependent variance ceiling and identify radius--Love compensation as a mechanism suppressing nuclear constraints on tides. Across four data-conditioned equation-of-state families, a pulsar radius measured to 0.3 km paired with a binary tide measured to 10\\% removes 44--68\\% of the current logarithmic Love-number variance. The framework connects laboratory precision and complementary stellar measurements to core structure.",
    "source": "arxiv"

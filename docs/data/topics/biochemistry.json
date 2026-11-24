@@ -1,7 +1,53 @@
 {
  "slug": "biochemistry",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767499",
+   "title": "Synthesis of Cellulose Nanofiber Hydrogel Beads from Typha angustifolia for the Immobilization of Protease",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767499v1",
+   "authors": [
+    "Ameh, B. E.",
+    "Egwim, E. C.",
+    "Ossamulu, F. i."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767499 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Cellulose nanofibers extracted from the invasive aquatic plant Typha angustifolia were oxidized, blended with PVA, and crosslinked into hydrogel beads that serve as a support for immobilizing a crude protease, which raised specific activity and broadened its thermal and pH optima.",
+    "plain": "Typha angustifolia is an invasive water plant that causes problems for wetlands and irrigation channels. This study turned its fibrous plant material into small, water-swollen beads that hold an enzyme (a protein that speeds up chemical reactions), letting the enzyme be attached to a solid support.",
+    "why": "Attaching enzymes to a solid carrier can make them easier to reuse and more stable in industrial processes, and this work suggests a use for an invasive plant as the carrier material. The text reports lab measurements only, so its practical value for industry is not yet shown.",
+    "background": "- Cellulose: the structural fiber in plant cell walls; cellulose nanofibers are very thin fibers of it.\n- Hydrogel: a water-swollen, soft network material; here the beads absorbed about 400% of their weight in water.\n- Protease: an enzyme that breaks down proteins.\n- Immobilization: fixing an enzyme onto a support so it stays in place and can be reused.\n- Specific activity: enzyme activity per milligram of protein (units U/mg); higher means more active.\n- Optimum temperature and pH: the conditions under which the enzyme works best.\n- Half-life: how long the enzyme keeps half its activity under the stated conditions.\n- Crosslinking with glutaraldehyde and oxidation with periodate: chemical steps that create reactive groups to bind the network together and attach the enzyme.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Typha angustifolia, an invasive aquatic macrophyte, poses a persistent challenge to wetland and irrigation management, yet its cellulose-rich biomass represents an underexploited feedstock for value-added biomaterials. This study reports the synthesis of cellulose nanofiber (CNF) hydrogel beads from T. angustifolia and evaluates their performance as a support matrix for protease immobilization. Cellulose was isolated by chlorite delignification and alkaline treatment, oxidized with sodium periodate to introduce aldehyde functional groups, blended with polyvinyl alcohol (PVA), and crosslinked with glutaraldehyde to form hydrogel beads. The beads exhibited a high water-absorption capacity of 399.67 {plus minus} 0.53% and a mechanical strength of 1.27 MPa. Covalent immobilization of crude protease onto the beads increased specific activity nearly threefold, from 24.56 {plus minus} 0.39 U/mg for the free enzyme to 59.20 {plus minus} 1.06 U/mg for the immobilized enzyme, corresponding to a loading efficiency of 50.61%. The immobilized enzyme also displayed broadened thermal and pH optima, shifting from 40 {degree sign}C to 50 {degree sign}C and from pH 8.0 to 9.0, respectively, and an extended operational half-life from 4.40 h to 11.37 h. These findings support the valorization of invasive Typha biomass into a robust, biodegradable support system with potential application in industrial biocatalysis.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768189",
+   "title": "AlphaFold-assisted design of a modular Laminin E8 Fragment Panel",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768189v1",
+   "authors": [
+    "Litzau, L. A.",
+    "Kruse, A. C.",
+    "Blacklow, S. C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768189 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Uses AlphaFold structure prediction to optimize recombinant laminin E8 fragments and builds a modular panel of interchangeable α, β, and γ chains that can be combined to make all laminin isoforms, shown to support adhesion of cells bearing cognate integrins.",
+    "plain": "Laminins are large proteins that form a web-like scaffold in the tissue around cells, but they are too big to make easily in the lab. This paper uses an AI protein-structure tool, AlphaFold, to design smaller versions of one key piece, called E8, that can be produced in cells. The authors built a set of interchangeable pieces that can be mixed to make the different laminin forms, and report that these pieces let cells stick to them through their matching surface receptors.",
+    "why": "Having a ready supply of laminin-like fragments could make it easier to study stem cells, organoids, and the cell-surface receptors (integrins) that grip laminin. The text does not go beyond these stated uses, so its wider impact is uncertain.",
+    "background": "- Laminins: large, three-chain (heterotrimeric) proteins that are a main structural part of basement membranes, the thin tissue layers under cell sheets.\n- Recombinant: produced in engineered cells rather than extracted from tissue.\n- E8 fragment: a smaller, functional piece of laminin that still supports cell attachment and migration.\n- Integrins: cell-surface receptors that bind laminin and anchor cells to the matrix.\n- AlphaFold: an AI tool that predicts the 3D shape of proteins from their sequence.\n- Isoform: a variant form of the protein built from a different combination of chains.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Laminins are large, heterotrimeric glycoproteins that are a major structural component of basement membranes and the extracellular matrix. Although they are difficult to produce recombinantly because of their large size, a smaller fragment of the laminin heterotrimer that supports cell adhesion and cell migration, termed E8, can be recombinantly expressed. Here, we use AlphaFold to optimize laminin E8 fragments and design a panel of interchangeable laminin , {beta}, and {gamma} chains that can be combined to produce all isoforms recombinantly. These recombinant E8 fragments support adhesion of cells bearing their cognate integrins, and will be useful tools for stem-cell, organoid, and laminin-binding integrin biology research.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.20.767675",
    "title": "RUBRIC: rapid quality assessment tool for RNA 3D structures",
@@ -14,12 +60,12 @@
    "primary_category": "biochemistry",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "RUBRIC is an open-source tool that annotates RNA base pairs and checks their geometry, ribose sugar puckers and backbone conformations in 3D RNA structural models, flagging ambiguous or distorted features.",
-    "plain": "Cryo-electron microscopy now produces very large RNA molecule models quickly, but the checks used to catch errors in those models have not kept up. This paper presents RUBRIC, a free program that examines each RNA base pair, sugar ring and backbone segment, and flags shapes that are distorted or cannot be clearly classified. The authors report that it processes a complete human ribosome in under a second and that its base-pair labels mostly agree with established annotation programs.",
-    "why": "Errors in deposited RNA structures can propagate into the databases used to train and test structure prediction methods, so better validation could matter for both structural biology and computational modelling. The text reports that flagged problems were reduced in higher-resolution models or after targeted refinement, but its wider impact on the PDB is not yet shown.",
+    "ai": true,
     "background": "- RNA is a chain of nucleotides; each has a sugar (ribose), a phosphate backbone and a base.\n- Base pairs are hydrogen-bonded partner bases; Leontis-Westhof classes describe how the two bases pair geometrically.\n- Ribose \"pucker\" is the puckered shape of the sugar ring; backbone \"suites\" describe conformations of the chain between sugars.\n- Cryo-EM is an imaging method that yields 3D molecular models at near-atomic detail; \"resolution\" indicates how fine the detail is (lower numbers are better).\n- The PDB (Protein Data Bank) is the public archive of deposited 3D structures.\n- Validation means automated checks that find implausible geometry before a model is published or reused.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "RUBRIC is an open-source tool that annotates RNA base pairs and checks their geometry, ribose sugar puckers and backbone conformations in 3D RNA structural models, flagging ambiguous or distorted features.",
+    "plain": "Cryo-electron microscopy now produces very large RNA molecule models quickly, but the checks used to catch errors in those models have not kept up. This paper presents RUBRIC, a free program that examines each RNA base pair, sugar ring and backbone segment, and flags shapes that are distorted or cannot be clearly classified. The authors report that it processes a complete human ribosome in under a second and that its base-pair labels mostly agree with established annotation programs.",
+    "why": "Errors in deposited RNA structures can propagate into the databases used to train and test structure prediction methods, so better validation could matter for both structural biology and computational modelling. The text reports that flagged problems were reduced in higher-resolution models or after targeted refinement, but its wider impact on the PDB is not yet shown."
    },
    "abstract": "Cryo-electron microscopy has transformed RNA structural biology, revealing increasingly large and complex structures at an unprecedented pace. However, validation methods have lagged behind, and deposited models can contain distorted base pairs, incorrect ribose puckers and backbone conformational outliers. Here, we introduce Rapid Unified Base-pair, Ribose and backbone Integrity Check (RUBRIC), an open-source program that combines RNA structural annotation with local validation of base pairs, sugars, and backbones. RUBRIC assigns Leontis-Westhof classes and identifies geometrically ambiguous pairs that cannot be confidently assigned to a single class. It scores unambiguous pairs against reference geometries for each type and class, identifying the parameters responsible for low scores. It also assigns backbone suites to known conformers, suggests target torsions for unassigned suites and flags incorrect ribose puckers. RUBRIC analyzes a complete human ribosome in under a second, with base-pair detection and classification consistent with leading annotation programs. These programs disagreed significantly more often on pairs RUBRIC flagged as ambiguous than on unambiguous pairs. The geometric problems flagged by RUBRIC were reduced in higher-resolution models of the same RNA or after refinement targeting the affected geometry, indicating that these problems are correctable. A PyMOL plug-in and machine-readable output support model building, correction before deposition and assessment of deposited structures before reuse. RUBRIC can therefore help improve RNA structures in the PDB and the datasets used to train and evaluate RNA structure prediction methods.",
    "source": "biorxiv"
@@ -45,12 +91,12 @@
    "primary_category": "biochemistry",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A cytochrome P450 enzyme from the leaf beetle Chrysolina coerulans, CcCYP9Z273, converts pregnenolone to caraumbellogenin via C14-hydroxylation, an early step in beetle cardenolide biosynthesis, and one active-site residue controls whether C14 or C15 hydroxylation occurs.",
-    "plain": "Some beetles make cardenolides, chemicals related to the heart drug digitoxin, to defend themselves. This paper identifies an enzyme in one leaf beetle species that performs an early chemical step in making these compounds. Silencing the gene for the enzyme reduced the beetle's cardenolide production, and tracing labeled molecules suggested the product it makes, caraumbellogenin, is a real intermediate on the route.",
-    "why": "Cardenolides have been studied in plants for a long time, but how insects make them was not known, so this identifies a missing step. The finding that insects and plants use different enzyme families to reach a shared intermediate is of interest to researchers in natural product chemistry and drug-related biosynthesis, though the text does not show direct medical applications.",
+    "ai": true,
     "background": "- Cardenolides: steroid-based defensive chemicals, also the class of compounds that includes digitoxin, a heart medicine.\n- Steroid backbone: the four-ring carbon skeleton shared by cholesterol and related molecules; pregnenolone is an early member of this family.\n- Cytochrome P450: a large family of enzymes that add oxygen to molecules, often at specific carbon positions.\n- Hydroxylation: adding an –OH group to a carbon atom; C14 and C15 refer to specific carbon positions on the steroid ring.\n- Biosynthetic intermediate: a molecule formed along the way to a final product.\n- Gene silencing: switching off a gene to see what happens to the organism's chemistry.\n- Isotope tracing: feeding labeled atoms to an organism to track which molecules are made from which.\n- Active-site residue: an amino acid lining the enzyme's reaction pocket that shapes which reaction it favors.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A cytochrome P450 enzyme from the leaf beetle Chrysolina coerulans, CcCYP9Z273, converts pregnenolone to caraumbellogenin via C14-hydroxylation, an early step in beetle cardenolide biosynthesis, and one active-site residue controls whether C14 or C15 hydroxylation occurs.",
+    "plain": "Some beetles make cardenolides, chemicals related to the heart drug digitoxin, to defend themselves. This paper identifies an enzyme in one leaf beetle species that performs an early chemical step in making these compounds. Silencing the gene for the enzyme reduced the beetle's cardenolide production, and tracing labeled molecules suggested the product it makes, caraumbellogenin, is a real intermediate on the route.",
+    "why": "Cardenolides have been studied in plants for a long time, but how insects make them was not known, so this identifies a missing step. The finding that insects and plants use different enzyme families to reach a shared intermediate is of interest to researchers in natural product chemistry and drug-related biosynthesis, though the text does not show direct medical applications."
    },
    "abstract": "Cardenolides are naturally occurring steroidal derivatives that function as chemical defense compounds. These natural products are also widely used in medicine, as exemplified by the use of digitoxin in treating cardiac disease. Although cardenolides are most widely known as plant-derived natural products, these compounds are also produced in certain beetle species. However, while the biosynthesis of cardenolides has been well-studied in plants, it is not known how insects produce these compounds. Here we report the identification of a cardenolide biosynthetic enzyme from the leaf beetle Chrysolina coerulans. This cytochrome P450, CcCYP9Z273, catalyzes an array of steroid oxidations, including the conversion of pregnenolone into caraumbellogenin through C14-hydroxylation. Gene silencing suggests that CcCYP9Z273 is essential for beetle cardenolide formation and isotope tracing experiments support caraumbellogenin as an on-pathway biosynthetic intermediate. Mutagenesis of CcCYP9Z273 identifies an active-site residue that controls the enzyme product selectivity between C14- and C15-hydroxylation. These findings establish an early step in beetle cardenolide biosynthesis and highlight how distinct enzyme families have been recruited in insects and plants to generate a shared intermediate in the biosynthesis of these important metabolites.",
    "source": "biorxiv"

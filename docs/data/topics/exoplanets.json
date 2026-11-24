@@ -1,7 +1,66 @@
 {
  "slug": "exoplanets",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26774",
+   "title": "Searching for substellar companion candidates with Gaia IV. New planetary-mass companions found in debris disks",
+   "url": "https://arxiv.org/abs/2611.26774",
+   "authors": [
+    "A. -M. Lagrange",
+    "S. Toucheboeuf",
+    "F. Kiefer",
+    "P. Rubini",
+    "J. Milli",
+    "L. Matr.",
+    "H. Beust",
+    "C. Perrot",
+    "M. M. lin",
+    "A. Boccaletti",
+    "C. Wilkinson",
+    "P. Delorme"
+   ],
+   "label": "arXiv:2611.26774v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Applies the GaiaPMEX tool, which combines Gaia DR3 astrometric signature and Gaia-Hipparcos proper motion anomaly, to 94 resolved debris-disk stars to find stellar or planetary-mass companions, then refines candidates with high-contrast imaging and radial velocity data.",
+    "plain": "Many dusty debris disks around young stars show gaps, rings and spirals that could be carved by unseen planets, but those planets are rarely seen directly. This paper uses a method based on how a star's position and motion wobble in Gaia satellite measurements to search 94 such stars for hidden companions. The authors report companions around five stars, including a possible 2-6 Jupiter-mass planet orbiting HD 107146 at 2-10 au, and tentative planetary-mass companions around TWA 7 and HD 120326.",
+    "why": "It opens a way to find planets at separations and masses that direct imaging often misses, which matters for explaining disk structures. The companion detections are reported as ranges and some are only tentative (2 sigma), so they should be treated as candidates pending follow-up observations.",
+    "background": "- Debris disk: a ring or cloud of dust and rock fragments left around a young star after planet formation, often with visible gaps or rings.\n- Astrometry: precise measurement of star positions and motions; a companion makes the star wobble, which shows up in the data.\n- Gaia and Hipparcos: European space astrometry missions; comparing their measured motions reveals hidden companions (proper motion anomaly).\n- Jupiter mass and astronomical unit (au): Jupiter mass is the reference for planet masses; 1 au is the Earth-Sun distance.\n- Substellar companion: an object too small to be a star, such as a planet or brown dwarf.\n- High-contrast imaging and radial velocity: direct photography that blocks starlight, and measuring a star's speed toward or away from us, both used to confirm companions.\n- Sigma: a measure of statistical confidence; 2 sigma is a fairly weak signal.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "When spatially resolved, debris disks often exhibit structures (gaps, rings, and spirals) that may indicate the presence of unseen planetary-mass companions. However, such planets have not been detected in most cases. Gaia opens a new mass-separation parameter space for detecting unseen planets. A tool named GaiaPMEX has been developed to detect and characterize companions to stars. It is based on two binarity indicators derived from DR3: the Gaia astrometric signature and, when the sources were also observed by Hipparcos, the Gaia-Hipparcos proper motion anomaly. We used GaiaPMEX on 94 stars hosting resolved debris disks to search for companions. When companions were identified, we combined GaiaPMEX results with high-contrast imaging and radial velocity data to further constrain their mass and orbital properties. We found stellar or substellar companions around five targets (HD 54341, HD 146897, HD 206893, HD 107146, and HD 106906) and indications (2 sigma) for companions around three additional targets (BD+45 598, TWA 7, and HD 120326). The companion to the 150 Myr star HD 107146, which harbors a ring-like dust disk, is found to be a 2-6 Jupiter-mass planet orbiting between 2-10 au. A massive 3-20 Jupiter-mass companion is found 3-10 au from the close binary HD 106906, which already hosts a remote planet orbiting at more than 700 au, and an edge-on disk. The tentative companions to TWA 7 and HD 120326 are planetary-mass companions at 1-3 au. Both stars host a multiple-ring system. We finally provide meaningful upper limits on the possible presence of companions in the range of 0-100 au around a few emblematic stars (49 Cet, AU Mic, beta Pic, and epsilon Eri) and stars hosting well-defined ring-like structures.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26680",
+   "title": "PLATON 7: An ultra-fast exoplanet atmospheric retrieval code",
+   "url": "https://arxiv.org/abs/2611.26680",
+   "authors": [
+    "Michael Zhang",
+    "Tyler Fairnington",
+    "Yayaati Chachan",
+    "Kimberly Paragas",
+    "Eliza Kempton",
+    "Heather Knutson",
+    "Jacob Bean"
+   ],
+   "label": "arXiv:2611.26680v1",
+   "primary_category": "astro-ph.IM",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "PLATON 7 is a rewrite of an open-source Python atmospheric retrieval code for exoplanet transmission spectra, using JAX and single precision to run about 60 times faster, plus new features such as two-limb retrievals, patchy clouds, and additional OCS and CS2 opacities.",
+    "plain": "This paper describes a new version of PLATON, a free software tool that works backward from starlight filtered through a distant planet's atmosphere to estimate what gases and clouds that atmosphere contains. The authors rewrote the code and report it now runs about 60 times faster, computing a near-infrared spectrum in about 0.35 milliseconds on a single high-end graphics card, with little loss of accuracy according to the text. They also added features such as modeling patchy clouds and two different sides (limbs) of a planet.",
+    "why": "Retrieval fits many models to observed spectra, so a faster code can make large analyses practical; the text gives the speed figures but does not show detailed accuracy tests here, so the real-world gain is worth checking against the full paper. The paper also states the rewrite was done using \"Claude Fable 5,\" an AI tool, which is a notable detail about how the code was produced.",
+    "background": "- Exoplanet transmission spectrum: the pattern of starlight whose colors are slightly absorbed as a planet passes in front of its star, revealing which gases are present.\n- Atmospheric retrieval: a statistical method that adjusts model parameters (gas amounts, temperature, clouds) until the model matches observations.\n- Opacity: how strongly a gas absorbs light at each wavelength; OCS (carbonyl sulfide) and CS2 (carbon disulfide) are sulfur-bearing molecules.\n- Single vs. double precision: how many digits a computer stores for each number; fewer digits run faster.\n- JAX: a Python library for fast numerical computing on GPUs.\n- Patchy clouds: clouds that cover only part of the planet's limb rather than uniformly.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "PLATON is an open source Python package for atmospheric retrieval, first released in 2018. We introduce PLATON 7, a complete rewrite of PLATON using Claude Fable 5. The biggest changes are that PLATON now uses JAX for all intensive calculations, and these calculations are now performed in single precision instead of double precision. These two changes speed up the code by a factor of ~60 with negligible decrease in accuracy, allowing it to compute a 0.8--5.3 um transmission spectrum at R=20k in 0.35 ms on a RTX 5090. We also introduce several new features, including support for two-limb retrievals, patchy clouds, and more opacities (particularly OCS and CS2). PLATON is available on GitHub at https://github.com/ideasrule/platon.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27643",
    "title": "Hints of planet formation in progress around DR Tau from observations with LBT SHARK-NIR and SHARK-VIS",
@@ -52,12 +111,12 @@
    "primary_category": "astro-ph.EP",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "High-contrast narrow-band and broad-band imaging of the DR Tau protoplanetary disk with LBT SHARK-VIS and SHARK-NIR finds two compact features, consistent with reflected starlight rather than confirmed Halpha or Pabeta accretion from an embedded planet.",
-    "plain": "Young stars are surrounded by disks of gas and dust where planets form, and astronomers want to directly see newborn planets still inside them. This paper looks at one such disk, around the star DR Tau, using two cameras on a large telescope in Arizona. The team found two faint compact spots that have persisted over seven years and may move like objects orbiting the star, but the light they emit appears to be starlight bounced off dust rather than the glow of a forming planet.",
-    "why": "Direct detections of forming planets are rare, so candidate sources in disks matter for testing how planets form. This paper is a useful but tentative step: its main result is that the spots are most likely reflected dust light, so the planet interpretation remains unconfirmed.",
+    "ai": true,
     "background": "- Protoplanetary disk: a rotating disk of gas and dust around a young star, where planets form.\n- Embedded planet: a planet still growing inside its disk, usually much harder to see than a finished planet.\n- Accretion: material falling onto a young object; hot falling gas emits specific colors of light, here hydrogen Halpha (visible red) and Paschen-beta (near-infrared).\n- Narrow-band vs broad-band filters: narrow filters isolate one emission line; broad filters capture a wider color range.\n- Signal-to-noise (S/N): how strong a signal is relative to background noise; S/N of 6 to 13 is a modest detection.\n- Keplerian rotation: orbital motion expected for objects around a star, with inner parts moving faster than outer parts.\n- MJup: Jupiter masses, a unit of planet mass.\n- SPHERE: a previous high-contrast imager on the European VLT telescope that first detected the disk features.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "High-contrast narrow-band and broad-band imaging of the DR Tau protoplanetary disk with LBT SHARK-VIS and SHARK-NIR finds two compact features, consistent with reflected starlight rather than confirmed Halpha or Pabeta accretion from an embedded planet.",
+    "plain": "Young stars are surrounded by disks of gas and dust where planets form, and astronomers want to directly see newborn planets still inside them. This paper looks at one such disk, around the star DR Tau, using two cameras on a large telescope in Arizona. The team found two faint compact spots that have persisted over seven years and may move like objects orbiting the star, but the light they emit appears to be starlight bounced off dust rather than the glow of a forming planet.",
+    "why": "Direct detections of forming planets are rare, so candidate sources in disks matter for testing how planets form. This paper is a useful but tentative step: its main result is that the spots are most likely reflected dust light, so the planet interpretation remains unconfirmed."
    },
    "abstract": "Protoplanetary disks are the primary sites of planet formation. However, the direct imaging of protoplanets still embedded within their parental disks remains a significant challenge, with only a small number of confirmed detections to date and several candidates awaiting verification. We search for embedded planets in the protoplanetary disk of the young star DRTau by targeting accretion signatures from forming sub-stellar objects. Using narrow-band imaging, we observe both visible Halpha and near-infrared Paschen-beta (Pabeta) emission to identify actively accreting companions. To this end, we performed high-contrast observations of DRTau using the SHARK-VIS (0.40-0.95 micron) and SHARK-NIR (0.96-1.70 micron) imagers at the LBT. The study uses a combination of narrow-band filters to isolate accretion signatures and broad-band filters for multi-wavelength characterization in both the visible and near-infrared. Our observations recover the primary disk structures previously identified in the literature, albeit at low signal-to-noise (S/N). We identify two compact features with S/N between 6 and 13 in both narrow- and broad-band filters. The first, an elongated structure, matches previous SPHERE detections, while the second, more compact feature, is now confirmed despite its low S/N in earlier datasets. A comparison over a seven-year baseline confirms the stability of both structures. Their observed orbital motion is consistent with Keplerian rotation, potentially suggesting the presence of an undetected planetary-mass companion (few MJup) at the location of the second feature. However, our analysis does not confirm Halpha or Pabeta emission originating from localized accretion. Instead, we conclude that the observed flux is likely stellar light reflected by dust at these locations and discuss alternative mechanisms that could account for such detections.",
    "source": "arxiv"
@@ -84,12 +143,12 @@
    "primary_category": "astro-ph.EP",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Astrometric, photometric and dynamical study of asteroid 2026 QQ8, a natural temporary Earth companion on a long flyby orbit near the theoretical maximum-duration \"orbit of maximum lunation,\" with solar radiation pressure used to rule out an artificial origin.",
-    "plain": "Sometimes a small asteroid is briefly pulled into orbit around the Earth and then drifts away again. This paper examines one such object, 2026 QQ8, which was recently discovered. The authors tracked its position and brightness, modelled its path, and checked how sunlight pushes on it, concluding it is a natural rock rather than man-made debris.",
-    "why": "It is only the third known temporary Earth companion on a flyby orbit and the first of long duration, and its orbit sits near the predicted upper limit for how long such a capture can last in the Earth-Moon system. This makes it a useful test case for models of how Earth captures and releases small bodies; the text does not go beyond this.",
+    "ai": true,
     "background": "- Temporary captures: a small asteroid can orbit Earth for a limited time before escaping, unlike the Moon, which is permanently bound.\n- Astrometry: measuring precise sky positions over time to work out an orbit.\n- Photometry and spectrophotometry: measuring brightness and colour across wavelengths; an \"S-type\" asteroid is a stony class, as opposed to darker carbon-rich types.\n- Solar radiation pressure: the small push sunlight exerts on an object, which depends on its shape and density; here it helps separate natural from artificial objects.\n- Orbit of maximum lunation: an orbit geometry, tied to the Moon's influence, where capture lasts longest.\n- Discovery is recent, so the text gives no long-term follow-up.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Astrometric, photometric and dynamical study of asteroid 2026 QQ8, a natural temporary Earth companion on a long flyby orbit near the theoretical maximum-duration \"orbit of maximum lunation,\" with solar radiation pressure used to rule out an artificial origin.",
+    "plain": "Sometimes a small asteroid is briefly pulled into orbit around the Earth and then drifts away again. This paper examines one such object, 2026 QQ8, which was recently discovered. The authors tracked its position and brightness, modelled its path, and checked how sunlight pushes on it, concluding it is a natural rock rather than man-made debris.",
+    "why": "It is only the third known temporary Earth companion on a flyby orbit and the first of long duration, and its orbit sits near the predicted upper limit for how long such a capture can last in the Earth-Moon system. This makes it a useful test case for models of how Earth captures and releases small bodies; the text does not go beyond this."
    },
    "abstract": "Aims: On a rare occasion, asteroids are temporarily captured by the Earth to become the planet's interim companions. The discovery of asteroid 2026~QQ$_8$ provided an opportunity to study this class of objects, adding to the sparse discovery catalogue of Earth's temporary companions. Methods: We performed astrometric, photometric, and dynamical studies of 2026~QQ$_8$, and measured its solar radiation pressure signal to discern between a natural and an artificial origin. Results: We find 2026 QQ$_8$ to be of natural origin, with solar radiation pressure signal commensurable with natural objects and spectrophotometry of an S-type object. 2026 QQ$_8$ is Earth's third discovered otemporarily-captured companion on a flyby orbit, and the first long-duration one, owing this to being on the so-called \"orbit of maximum lunation\". Its unusual orbit lies close to the theoretical upper duration limit of an object captured in the Earth-Moon system, and has now been observed for the first time.",
    "source": "arxiv"

@@ -1,7 +1,55 @@
 {
  "slug": "theory-of-computation",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27814",
+   "title": "Pushdown Reachability Requires $N^{3/2}$ Time on Multitape Turing Machines",
+   "url": "https://arxiv.org/abs/2611.27814",
+   "authors": [
+    "A. R. Balasubramanian",
+    "Rupak Majumdar"
+   ],
+   "label": "arXiv:2611.27814v1",
+   "primary_category": "cs.CC",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proves unconditionally that no deterministic multitape Turing machine can decide pushdown reachability (equivalently PDA language non-emptiness) in time O(N^{3/2-ε}) even on sparse instances, and extends the bound to intersecting one PDA with k-1 NFAs.",
+    "plain": "The paper studies a basic question about \"stack-based\" machines: given a pushdown automaton (a simple machine with a stack memory), can it ever reach an accepting state? The authors prove that a standard model of computer, a multitape Turing machine, cannot solve this faster than roughly N to the power 1.5 steps, where N is the size of the input. This is a lower bound, meaning a limit on how fast any such algorithm can be, and the text says it is the first such unconditional result of this kind for this problem.",
+    "why": "Pushdown reachability is a core problem in program analysis, and the text notes that many other program-analysis problems are equivalent to it up to quasi-linear time, so the lower bound carries over to them. The text does not discuss practical consequences, and the bound applies to multitape Turing machines specifically, so its relevance to real hardware or other models is not addressed here.",
+    "background": "- Pushdown automaton (PDA): a finite-state machine with a stack, a last-in-first-out memory.\n- Pushdown reachability: deciding whether a PDA can reach an accepting configuration (equivalently, whether its language is non-empty).\n- NFA: nondeterministic finite automaton, a simpler machine with no stack.\n- Multitape Turing machine: an idealized computer with several tapes read and written in parallel; a standard model for measuring time.\n- Lower bound: a proof that no algorithm in a given model can be faster than some amount of time.\n- Super-linear: growing faster than the input size N, so a bound like N^{3/2} is super-linear.\n- Quasi-linear time: essentially linear time, up to logarithmic factors.\n- Sparse instance: one where the number of transitions is proportional to the number of states.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Pushdown reachability, or equivalently, language non-emptiness of pushdown automata (PDA), is a fundamental problem in automata theory and program analysis. We show that, for every $\\epsilon >0$, no deterministic multitape Turing machine can decide pushdown reachability in $O(N^{\\frac{3}{2}-\\epsilon})$ time, where $N$ is the input size. The lower bound already holds for \\emph{sparse instances}, i.e., instances in which the number of transitions is linear in the number of states. This gives the first unconditional super-linear lower bound for pushdown reachability. Furthermore, we also extend this result and show that for any $\\epsilon > 0$ and $k \\ge 1$, no deterministic multitape Turing machine can decide the intersection non-emptiness problem of one PDA and $k-1$ NFAs in time $O(N^{\\frac{3k}{2}-\\epsilon})$, where $N$ is the input size. Finally, pushdown reachability is well-known to be quasi-linear time equivalent to many different problems in program analysis. Our result translates to all of those problems as well and provides the first unconditional super-linear lower bounds for those problems on multitape Turing machines.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27934",
+   "title": "The Power of Sampling for Finding Far-Apart Bases in Matroids",
+   "url": "https://arxiv.org/abs/2611.27934",
+   "authors": [
+    "Mayank Goswami",
+    "Vasilis Livanos",
+    "Pasin Manurangsi",
+    "Arturo Merino",
+    "GiBeom Park",
+    "Adarsh Srinivasan"
+   ],
+   "label": "arXiv:2611.27934v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper studies how far apart bases of a matroid can be in its basis-exchange graph, showing that two random bases are a constant-factor proxy for the diameter, and gives approximation algorithms and hardness results for maximally diverse k-tuples of bases, including a Farthest Matroid Basis primitive.",
+    "plain": "A matroid is an abstract structure generalizing independent sets such as sets of columns in a matrix or edge sets forming forests in a graph; its bases are the maximal such sets. The paper asks how to find bases that are as different from each other as possible, measuring difference by how many single swaps separate them. It reports that picking two random bases already gets, on average, at least about 1/16 of the largest possible separation, and that picking k of them gives a tight log k-factor approximation.",
+    "why": "The work gives the first constant-factor polynomial-time algorithm for max-min diversity on arbitrary matroids, which the text describes as a new result for this problem, with the k=2 case already solvable by matroid intersection. The authors also note a graph with strong expansion where random sampling fails, so intuition from expansion alone does not suffice; the broader connections beyond this are not discussed in the text.",
+    "background": "- Matroid: an abstract system of \"independent\" sets (generalizing forests in a graph or independent columns of a matrix); a basis is a maximal independent set.\n- Basis-exchange graph: vertices are bases; two are joined if one can be obtained from the other by swapping one element.\n- Diameter: the longest shortest-path distance between any two vertices in a graph.\n- Approximation algorithm: a fast method guaranteed to find a solution within a fixed factor of the best possible.\n- Max-min diversity: choose k objects so that the smallest pairwise distance among them is as large as possible.\n- LP rounding: solve a relaxed linear program and convert the fractional answer into a valid integer solution.\n- W[1]-hardness: a parameterized-complexity signal that the problem is unlikely to admit a fast algorithm when the parameter is fixed-size.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the geometry of matroids via the \\emph{diameter} and \\emph{dispersion} of the metric space of their bases. Given a matroid $M$, we ask if the diameter of its basis-exchange graph $\\mathcal{G}(M)$ can be approximated by sampling two uniformly random bases. As our main result, we show that their expected distance is always at least $1/16$ of the diameter of $\\mathcal{G}(M)$. While this might appear to follow from the edge-expansion properties established by Anari, Liu, Gharan and Vinzant (STOC'19), we show that this inutition is false by constructing a graph $G$ with edge-expansion at least $1$ for which sampling two random vertices does \\emph{not} give a constant-factor approximation to its diameter. We turn to finding $k\\geq 2$ maximally-diverse bases of a matroid, the $k$ (max--min) diversity problem. When $k=2$, the problem is solvable via matroid intersection. However, for $k\\geq 3$ no polynomial-time approximation or hardness is known, even for diverse spanning trees. We show that sampling $k\\geq 3$ bases provides a tight $\\Theta(\\log k)$ approximation. We then combine structural insights about the local density of $\\mathcal{G}(M)$ with classical LP-rounding techniques to obtain a polynomial-time $1/6$-approximation algorithm for the $k$-diversity problem in arbitrary matroids, the first constant-factor polynomial-time approximation for max--min diversity on any matroid. A key ingredient for our result is the \\emph{Farthest Matroid Basis} problem: given a collection of bases, find a new basis as far as possible from all of them. We give a polynomial-time $1/3$-approximation algorithm for this, which is our main algorithmic primitive for $k$ max--min diversity. We also show it is $W[1]$-hard when parameterized by the optimal distance. We also improve the $1/6$-approximation for $k$-diversity, for partition matroids and graphic matroids of constant arboricity.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27977",
    "title": "No Polynomial-Time Algorithm For Tarski Fixed Points Unless Cryptographic Assumptions Fail",
@@ -16,12 +64,12 @@
    "primary_category": "cs.CC",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper gives a subexponential-time reduction from UEOPL to Tarski fixed-point finding, yielding conditional quasi-polynomial running-time lower bounds that match known query lower bounds.",
-    "plain": "The paper studies how fast a computer can find a \"Tarski fixed point,\" a point that stays put when a rule that only ever pushes things in one consistent direction is applied to a grid of options. The authors show that solving this problem could be used to solve a different, known-hard search problem (UEOPL) with only a modest overhead. Their result is that, if certain cryptographic assumptions hold, no algorithm can solve Tarski fixed points in polynomial time.",
-    "why": "It moves the known query lower bounds for this problem to conditional running-time lower bounds, which is a stronger kind of hardness statement. The connection to cryptographic assumptions means the conclusion holds only if those assumptions are true, so it is a conditional result rather than an unconditional proof.",
+    "ai": true,
     "background": "- Fixed point: an input that the rule maps back to itself.\n- Tarski fixed point: the guaranteed fixed point of a monotone map on a lattice (an ordered grid), which exists by Tarski's theorem but may be hard to locate.\n- Polynomial time vs. quasi-polynomial time: efficient algorithms grow polynomially with input size; quasi-polynomial time grows slightly faster but still far slower than exponential.\n- Reduction: a way of showing one problem is at least as hard as another by converting instances of one into instances of the other.\n- UEOPL (Unique End of Potential Line): a search problem in a class believed to be hard, used here as the source of hardness.\n- Cryptographic lower bounds: results that rest on widely believed assumptions about the difficulty of breaking cryptographic primitives.\n- Query lower bound: a limit on how many times an algorithm must query the input, as opposed to total running time.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives a subexponential-time reduction from UEOPL to Tarski fixed-point finding, yielding conditional quasi-polynomial running-time lower bounds that match known query lower bounds.",
+    "plain": "The paper studies how fast a computer can find a \"Tarski fixed point,\" a point that stays put when a rule that only ever pushes things in one consistent direction is applied to a grid of options. The authors show that solving this problem could be used to solve a different, known-hard search problem (UEOPL) with only a modest overhead. Their result is that, if certain cryptographic assumptions hold, no algorithm can solve Tarski fixed points in polynomial time.",
+    "why": "It moves the known query lower bounds for this problem to conditional running-time lower bounds, which is a stronger kind of hardness statement. The connection to cryptographic assumptions means the conclusion holds only if those assumptions are true, so it is a conditional result rather than an unconditional proof."
    },
    "abstract": "We study the time complexity of finding a Tarski fixed point. We provide a subexponential-time reduction from the Unique End of Potential Line (UEOPL) problem to the problem of finding a Tarski fixed point. Using a range of known cryptographic lower bounds for UEOPL, our reduction implies a range of conditional lower bounds on the running time of any algorithm that finds a Tarski fixed point. The strongest of these give quasi-polynomial-time lower bounds for the problem. We also obtain a similar quasi-polynomial-time lower bound for Tarski based instead on a weak exponential-time type hypothesis for UEOPL. These running time lower bounds match the recently discovered quasi-polynomial query lower bounds for the problem.",
    "source": "arxiv"
@@ -38,12 +86,12 @@
    "primary_category": "cs.LO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper studies the formula-size cost of rewriting existential-positive first-order queries into the bounded-variable fragment of positive first-order logic, giving exponential upper bounds, polynomial bounds in some signature and variable regimes, and an unconditional exponential lower bound proved via circuit complexity.",
-    "plain": "Database-style queries can often be rewritten using fewer variable names, which makes them faster to evaluate. This paper asks what that rewriting costs: the rewritten query may become much longer. The authors show the growth in length is at most exponential, identify cases where it is only polynomial, and prove that in the remaining cases an exponential increase is unavoidable.",
-    "why": "The result gives a provable limit on a common preprocessing trade-off: fewer variables help evaluation, but the formula can grow sharply. The lower bound is described as the first unconditional one for this kind of compilation, and the circuit-complexity link is said to be of possible future interest; the text does not show further practical consequences.",
+    "ai": true,
     "background": "- First-order logic: a formal language for statements about objects, using quantifiers such as \"for all\" and \"there exists\".\n- Existential-positive queries: queries built only from \"there exists\", \"and\", \"or\" and atomic conditions, with no negation or \"for all\".\n- Variable count: the number of distinct variable names a formula uses; bounded-variable fragments restrict this number.\n- Polynomial vs. exponential: polynomial growth is manageable; exponential growth means length can blow up very quickly with input size.\n- Formula size: the length or number of symbols in a formula, which the paper treats as the cost of rewriting.\n- Circuit complexity: the study of how large Boolean circuits (networks of logic gates) must be to compute functions; used here to prove the lower bound.\n- Unconditional lower bound: a proof that does not rely on an unproven assumption such as P not equal to NP.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies the formula-size cost of rewriting existential-positive first-order queries into the bounded-variable fragment of positive first-order logic, giving exponential upper bounds, polynomial bounds in some signature and variable regimes, and an unconditional exponential lower bound proved via circuit complexity.",
+    "plain": "Database-style queries can often be rewritten using fewer variable names, which makes them faster to evaluate. This paper asks what that rewriting costs: the rewritten query may become much longer. The authors show the growth in length is at most exponential, identify cases where it is only polynomial, and prove that in the remaining cases an exponential increase is unavoidable.",
+    "why": "The result gives a provable limit on a common preprocessing trade-off: fewer variables help evaluation, but the formula can grow sharply. The lower bound is described as the first unconditional one for this kind of compilation, and the circuit-complexity link is said to be of possible future interest; the text does not show further practical consequences."
    },
    "abstract": "A crucial property of bounded-variable fragments of first-order logic is that they can be evaluated in polynomial time. It is therefore a useful preprocessing step to rewrite, if possible, a first-order query to a logically equivalent one with a minimum number of variables. However, it may occur that reducing the number of variables causes an increase in formula size. We investigate this trade-off for the existential-positive fragment of first-order queries, where variable minimisation is decidable in general. In particular, we study the blow-up in the formula size when compiling existential-positive queries to the bounded variable fragment of positive first-order logic. While the increase of the formula size is always at most exponential, we identify situations (based on the signature and the number of variables) where only a polynomial blow-up is needed. In all other cases, we show that an exponential lower bound on the formula size of the compiled formula that matches the general upper bound. This exponential lower bound is unconditional, and is the first unconditional lower bound for formula size with respect to the studied compilation; it is proved via establishing a novel interface with circuit complexity which may be of future interest.",
    "source": "arxiv"

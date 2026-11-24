@@ -1,7 +1,49 @@
 {
  "slug": "complex-analysis",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27502",
+   "title": "Weighted fixed-bidegree subelliptic estimates for the \\(\\overline{\\partial}_f\\)-Neumann problem on Lipschitz pseudoconvex domain",
+   "url": "https://arxiv.org/abs/2611.27502",
+   "authors": [
+    "Ping'an Zhang"
+   ],
+   "label": "arXiv:2611.27502v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proves two types of a priori weighted subelliptic estimates, uniform in bidegree, for the twisted ∂̄_f-Neumann problem on bounded pseudoconvex domains with Lipschitz boundary satisfying an algebraic plurisubharmonic-type condition, with the twisting function holomorphic and having isolated critical points in the interior.",
+    "plain": "This paper is about a equation-solving problem in several complex variables, the kind that asks how smooth a solution must be when the domain has a rough, non-smooth edge. The authors prove estimates showing that solutions gain a limited amount of smoothness (a gain between 0 and 1/2) near the boundary, and that this holds consistently across the different types of forms involved. The result depends on a technical condition on how the boundary curves, and on a twisting function with controlled behavior.",
+    "why": "Estimates of this kind are the main tools for studying regularity of solutions to the ∂̄-Neumann problem, which connects complex geometry, partial differential equations and the theory of function spaces. The text does not say what specific applications follow, so beyond this field its wider significance is unclear from the text alone.",
+    "background": "- Complex analysis in several variables: functions of several complex numbers, and domains in complex space.\n- Pseudoconvexity: a geometric property of a domain's boundary, related to whether functions can be extended across it.\n- Plurisubharmonic function: a generalized convex-type function in complex space; its Hessian (matrix of second derivatives) measures its curvature.\n- ∂̄-Neumann problem: a boundary value problem for solving the complex analogue of the Cauchy-Riemann equations on a domain.\n- Subelliptic estimate: an inequality showing solutions are smoother than the equation alone guarantees, with a loss or gain measured by an exponent.\n- Lipschitz boundary: a boundary that is continuous and has bounded slope, but need not be smooth.\n- Twisted (weighted) problem: the problem modified by a weight e^{-f}, here with f holomorphic.\n- Bidegree: the type of differential form, indexed by how many holomorphic and antiholomorphic differentials it contains.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We establish two types of \\emph{a priori} subelliptic estimates for the twisted \\(\\overline{\\partial}_f\\)-Neumann problem on a bounded pseudoconvex domain with Lipschitz boundary. The estimates feature a subelliptic gain in \\((0, 1/2)\\) and are uniform with respect to the bidegree. The boundary is assumed to satisfy a plurisubharmonic-type condition, characterized by the local existence, near each boundary point, of a bounded plurisubharmonic function whose Hessian blows up algebraically near the boundary, with potentially different exponents at different points. The twisting function is holomorphic in a neighborhood of the domain, has bounded gradient, and its critical set inside the domain consists of isolated interior points with finite vanishing orders.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27925",
+   "title": "The Thurston algorithm for general entire maps on the complex plane: Existence and uniqueness",
+   "url": "https://arxiv.org/abs/2611.27925",
+   "authors": [
+    "Sebastian van Strien"
+   ],
+   "label": "arXiv:2611.27925v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper gives an existence and uniqueness criterion (no Levy cycle relative to A and infinity) for realizing marked entire Thurston maps of stable parabolic type by postsingularly finite entire functions, and proves a Wolff–Denjoy type contraction estimate on Teichmüller space that supplies the foliation used in the existence proof.",
+    "plain": "The paper studies when an abstract map of the plane, one that records how a surface is wrapped onto itself, can be realized by an actual complex function of the form studied in complex dynamics. It states that this is possible exactly when there is no obstruction called a Levy cycle, and that in that case the function is unique up to affine change of coordinates. The authors also prove a result about repeatedly applied contractions on the space of surface shapes, using a fixed measure built from limits of rescaled pushforwards along a geometric ray.",
+    "why": "Thurston's characterization of rational maps via a no-obstruction condition is a central idea in complex dynamics, and extending it to transcendental entire functions is a natural and technically hard step. The text does not say how widely the result will be used, so its broader significance is uncertain from the abstract alone.",
+    "background": "- Entire function: a complex function defined and holomorphic on the whole complex plane (e.g. exp(z)); \"transcendental\" means it is not a polynomial.\n- Thurston map: a topological map of a sphere or plane that is locally like a complex map, with a finite set of special points (postsingular set) whose orbits are tracked.\n- Thurston equivalence: two maps are equivalent if a pair of homeomorphisms relates them compatibly; realizability asks whether such a map comes from an actual holomorphic function.\n- Levy cycle: a combinatorial obstruction (a cycle of nested curves with certain degree behavior) that prevents realization.\n- Teichmüller space: the space of shapes (complex structures) of a surface, with a natural distance; Thurston pullback acts on it.\n- Measured foliation and extremal length: tools measuring how \"long\" curve families are on a surface; used to quantify contraction.\n- Wolff–Denjoy theorem: a classical result that orbits of a non-expanding map on a disk/hyperbolic space converge to a boundary point; the paper proves an analogue on Teichmüller space.\n- Relation to other settings: real entire maps and exponential maps, which the authors compare with.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that a marked topological entire Thurston map $(f,A)$ of stable parabolic type is Thurston equivalent relative to $A$ to a postsingularly finite entire function if and only if it has no Levy cycle relative to $A\\cup\\{\\infty\\}$. Here $A$ is a finite forward-invariant set containing the postsingular set. In the realizable case, the entire function is unique up to complex affine conjugacy, and every orbit of the Thurston pullback converges to its fixed point. We establish a Wolff--Denjoy type estimate for nonexpanding self-maps $T$ of the Teichm\\\"uller space of any connected orientable surface of finite type without boundary. If $T$ has an unbounded orbit, there are a nonzero measured foliation $G$ and a constant $C$ such that $\\operatorname{Ext}_{T^k x}(G)\\le C\\operatorname{Ext}_x(G)$ for every $x$ and $k\\ge0$. For a fixed-point-free transcendental Thurston pullback, this supplies the foliation used in the existence proof. A central tool is a fixed finite measure obtained as the total-variation limit of renormalized pushforward measures transported back along a Teichm\\\"uller ray. It allows us to select a cylinder at a late time and compare the mass of the same marked region at different times. If $G$ has a cylinder, a four-point extremal-length estimate and the Thurston matrix force a Levy cycle. Otherwise, in the absence of a Levy cycle, cluster rescaling shows that cylinders of large modulus carry almost all the fixed measure at all late times. Following a cylinder of definite mass until its modulus decreases gives a contradiction. We compare this geometric argument with the proofs for real entire maps and exponential maps.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27475",
    "title": "An affine surface with 3-step nilpotent fundamental group",
@@ -14,12 +56,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper constructs a smooth complex affine surface whose fundamental group is virtually 3-step nilpotent but not virtually 2-step nilpotent, giving a negative answer to the quasi-projective version of Campana's nilpotency problem.",
-    "plain": "The paper is about the shapes that complex algebraic surfaces can have, as seen through their \"loops\" (the fundamental group, a way of recording which closed paths can be deformed into one another). The author builds a specific smooth surface of this kind whose loop structure is nested three levels deep but not two, which settles a question in the negative.",
-    "why": "The result answers a specific open question (a version of Campana's nilpotency problem) by showing the answer is no in the quasi-projective setting. Beyond that, the text does not say more about wider implications, so its significance beyond this question is unclear from the summary alone.",
+    "ai": true,
     "background": "- Complex affine surface: a smooth solution set of polynomial equations in two complex variables, with the points at infinity removed.\n- Fundamental group: a group recording which loops on a space can be continuously deformed into one another.\n- Nilpotent group: a group that becomes trivial after repeatedly taking commutators; \"k-step nilpotent\" measures how many such levels are needed.\n- Virtually nilpotent: the group has a finite-index subgroup that is nilpotent.\n- Campana's nilpotency problem: a conjectural link between the loop structure of a space and its nilpotency, asked in the projective and quasi-projective settings.\n- Quasi-projective: a space that is an open subset of a projective (compact-type) algebraic variety.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper constructs a smooth complex affine surface whose fundamental group is virtually 3-step nilpotent but not virtually 2-step nilpotent, giving a negative answer to the quasi-projective version of Campana's nilpotency problem.",
+    "plain": "The paper is about the shapes that complex algebraic surfaces can have, as seen through their \"loops\" (the fundamental group, a way of recording which closed paths can be deformed into one another). The author builds a specific smooth surface of this kind whose loop structure is nested three levels deep but not two, which settles a question in the negative.",
+    "why": "The result answers a specific open question (a version of Campana's nilpotency problem) by showing the answer is no in the quasi-projective setting. Beyond that, the text does not say more about wider implications, so its significance beyond this question is unclear from the summary alone."
    },
    "abstract": "We construct a smooth complex affine surface $Y$ such that $\\pi_1(Y)$ is virtually $3$-step nilpotent, but not virtually $2$-step nilpotent. This gives a negative answer to the quasi-projective version of Campana's nilpotency problem.",
    "source": "arxiv"
@@ -36,12 +78,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proves local connectivity of Julia sets (the boundaries between stable and chaotic behaviour) for Newton maps of sin, cos, sinh and cosh, by verifying repelling petals at infinity for the cosine map and showing the hyperbolic family is affinely conjugate to the sine case.",
-    "plain": "The paper studies a method for finding roots of equations, called Newton's method, applied to four standard trigonometric and hyperbolic functions, and asks how the boundary between starting points that converge and those that do not is shaped. The authors show that for the cosine version, certain half-plane regions far from the origin behave in a way that lets an existing mathematical criterion apply, giving a clean boundary shape. They also show that a whole family of hyperbolic functions is, after a change of coordinates, the same as the sine version, so a previously published result covers them too.",
-    "why": "It settles a structural question about the boundaries of these dynamical systems for a whole family of maps by reducing them to one known case. Its wider relevance is mainly to specialists in complex dynamics; the text does not claim applications beyond that field.",
+    "ai": true,
     "background": "- Newton's method: an iterative rule for approximating roots of an equation; each starting point is mapped step by step.\n- Julia set: the boundary between starting points whose iterates behave tamely and those that behave chaotically.\n- Basin of attraction: the set of starting points that converge to a given attracting point; \"immediate\" means the component touching that point directly.\n- Transcendental meromorphic function: a complex function that is not a polynomial or rational function, with poles allowed, such as sin or cos.\n- Local connectivity: a topological property saying the boundary is not pinched in a way that makes it hard to approach locally; here it is stated for the boundary of each basin.\n- Repelling petal: a region near infinity where iteration pushes points away, used as a technical tool.\n- Affine conjugacy: two maps are the same up to a linear change of coordinates.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves local connectivity of Julia sets (the boundaries between stable and chaotic behaviour) for Newton maps of sin, cos, sinh and cosh, by verifying repelling petals at infinity for the cosine map and showing the hyperbolic family is affinely conjugate to the sine case.",
+    "plain": "The paper studies a method for finding roots of equations, called Newton's method, applied to four standard trigonometric and hyperbolic functions, and asks how the boundary between starting points that converge and those that do not is shaped. The authors show that for the cosine version, certain half-plane regions far from the origin behave in a way that lets an existing mathematical criterion apply, giving a clean boundary shape. They also show that a whole family of hyperbolic functions is, after a change of coordinates, the same as the sine version, so a previously published result covers them too.",
+    "why": "It settles a structural question about the boundaries of these dynamical systems for a whole family of maps by reducing them to one known case. Its wider relevance is mainly to specialists in complex dynamics; the text does not claim applications beyond that field."
    },
    "abstract": "We study the Newton maps of $\\sin z$, $\\cos z$, $\\sinh z$, and $\\cosh z$, each of which is transcendental meromorphic and has infinitely many unbounded immediate attracting basins. We first verify directly that, for the cosine Newton map $N_{\\cos}(z) = z + \\cot z$, the half-planes $\\{\\pm \\operatorname{Im} z > M\\}$ are repelling petals at infinity for every $M \\ge 2$. These explicit petals allow us to apply the tame-basin criterion of Bara\\'nski, Fagella, Jarque, and Karpi\\'nska and obtain local connectivity of the spherical boundary of each immediate basin of $N_{\\cos}$. We also show that the Newton map of $Ae^{\\lambda z} + Be^{-\\lambda z}$, where $AB\\lambda \\neq 0$, is affinely conjugate to the sine Newton map $N_{\\sin}(z) = z - \\tan z$. The published local-connectivity theorem for $J(N_{\\sin})$ therefore applies to this entire family, including the cosine and the two hyperbolic Newton maps. We describe the invariant lines and basin geometry of the four maps and illustrate the corresponding dynamical planes numerically.",
    "source": "arxiv"

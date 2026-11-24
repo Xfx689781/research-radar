@@ -1,6 +1,6 @@
 {
  "slug": "biological-physics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
   {
    "uid": "arxiv:2611.27960",
@@ -16,12 +16,12 @@
    "primary_category": "physics.bio-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A simulation study asks whether the rise in Lu/BCAM laminin receptors on red blood cells in Gaucher disease explains their excess adhesion, and finds that total receptor abundance alone underpredicts it, pointing instead toward receptor activity state.",
-    "plain": "Gaucher disease is an inherited condition in which red blood cells stick abnormally to blood vessel walls. The authors built a computer model of cells that form stochastic molecular bonds with a protein called laminin, calibrated it on healthy donors, and asked whether the extra receptors on diseased cells could account for the stickiness. They found that the modest rise in receptor count predicts much less adhesion than measured, and that matching the data needs several-fold more receptors that can actually bind, which fits a rise in chemically modified (phosphorylated) receptors.",
-    "why": "The result suggests that counting how many receptors a cell has may miss what matters for sticking, and that receptor activity may be the better measure. The text also reports that the same approach, using active-receptor counts, tracks changes in sickle cell disease under hydroxyurea treatment, and that stiffening the membrane may keep cells trapped at the spleen's narrow slits; how far these links hold beyond the reported model is not established here.",
+    "ai": true,
     "background": "- Red blood cells carry surface receptors; adhesion depends on how many bonds form with a partner surface.\n- Lu/BCAM is a receptor on red cells that binds laminin, a protein in the walls of blood vessels.\n- Gaucher disease is an inherited disorder of fat-breakdown enzymes that alters red cell behaviour.\n- Phosphorylation is the addition of a phosphate group that can switch a protein's activity on or off.\n- Shear stress is the force of flowing blood sliding along a surface.\n- Stochastic simulation models events, such as bond formation, as random processes over many trials.\n- Sickle cell disease and hydroxyurea (a treatment that alters red cell properties) are mentioned as a comparison case.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A simulation study asks whether the rise in Lu/BCAM laminin receptors on red blood cells in Gaucher disease explains their excess adhesion, and finds that total receptor abundance alone underpredicts it, pointing instead toward receptor activity state.",
+    "plain": "Gaucher disease is an inherited condition in which red blood cells stick abnormally to blood vessel walls. The authors built a computer model of cells that form stochastic molecular bonds with a protein called laminin, calibrated it on healthy donors, and asked whether the extra receptors on diseased cells could account for the stickiness. They found that the modest rise in receptor count predicts much less adhesion than measured, and that matching the data needs several-fold more receptors that can actually bind, which fits a rise in chemically modified (phosphorylated) receptors.",
+    "why": "The result suggests that counting how many receptors a cell has may miss what matters for sticking, and that receptor activity may be the better measure. The text also reports that the same approach, using active-receptor counts, tracks changes in sickle cell disease under hydroxyurea treatment, and that stiffening the membrane may keep cells trapped at the spleen's narrow slits; how far these links hold beyond the reported model is not established here."
    },
    "abstract": "Red blood cells (RBCs) in Gaucher disease (GD) adhere abnormally to vessel walls and carry more Lutheran/basal cell adhesion molecule (Lu/BCAM), a laminin receptor. Whether receptor abundance sets this adhesion is untested. We simulated RBCs carrying stochastic Lu/BCAM-laminin bonds, calibrated a population on control donors, and predicted GD adhesion from the 1.3-fold receptor rise. On laminin and endothelium the data exceed the prediction 1.6- to 1.7-fold. Matching them requires 2.4- and 4.6-fold more binding-competent receptors, compatible with the estimated 5.7-fold rise in phosphorylated receptors. Neither a stiffer membrane nor higher bond affinity removes the shortfall at high shear stress. In sickle cell disease, given active-receptor counts, the model predicts the fall in adhesion under hydroxyurea within 1.4-fold, while total receptors rise. Adhesion likely follows receptor state more than abundance. Stiffening instead retains cells at a splenic slit.",
    "source": "arxiv"

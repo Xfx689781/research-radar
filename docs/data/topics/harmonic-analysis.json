@@ -1,7 +1,52 @@
 {
  "slug": "harmonic-analysis",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27085",
+   "title": "Stable phase retrieval from operator measurements",
+   "url": "https://arxiv.org/abs/2611.27085",
+   "authors": [
+    "Deanna Needell",
+    "Yaniv Plan",
+    "Tomasz Szczepanski",
+    "\\\"Ozg\\\"ur Y{\\i}lmaz"
+   ],
+   "label": "arXiv:2611.27085v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper studies stable phase retrieval from operator-valued quadratic measurements in Hilbert spaces, showing that stability fails for most exponents p in infinite dimensions, that p=4 admits stable examples built from rank-one or rank-two operators, and that stability can be tested on orthogonal pairs.",
+    "plain": "The problem is recovering a signal from measurements that lose its overall phase, such as measuring only the squared amplitudes of its components, while still requiring that small errors in the data cause only small errors in the reconstruction. The paper shows that in infinitely many dimensions this kind of stable recovery is impossible for most measurement settings, with one exponent (p = 4) as the exception. It then constructs specific measurement systems that work in that exceptional case and proves that, in finite dimensions, unique recovery automatically implies stable recovery.",
+    "why": "It extends a known negative result about frames to a broader class of measurements and identifies exactly where stability can still be achieved. The text mentions second-moment measurements in cryo-electron microscopy as motivation, but the text does not say how far the results carry over to that application.",
+    "background": "- Phase retrieval: recovering a signal (up to a global phase factor) from measurements that discard phase information.\n- Hilbert space: a generalized space of vectors, possibly infinite-dimensional, with lengths and angles.\n- Frame and Bessel system: a family of vectors (or operators) whose measurements are controlled in size; a p-Bessel system bounds the measurements in a chosen norm.\n- Stability: small changes in the measured data cause only small changes in the recovered signal.\n- Rank-one and rank-two operators: simple linear maps with image of dimension one or two; self-adjoint means the operator equals its own conjugate transpose.\n- Cryo-EM: an imaging technique that reconstructs 3D molecular structures from noisy 2D projections.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A known result of Cahill, Casazza and Daubechies [Trans. Amer. Math. Soc. Ser. B3(2016), 63-76] states that no frame in an infinite-dimensional Hilbert space does stable phase retrieval. We show that stable recovery becomes possible for more general operator measurements, but only at a single exponent. Given a system of bounded operators $\\{A_j\\}_{j\\in J}$ on a real or complex Hilbert space $H$, we study recovery of $f\\in H$ up to a global phase from the quadratic measurements $\\langle A_j f,f\\rangle$ and from their phase preserving square roots. We consider $p$-Bessel systems ($2\\leq p<\\infty$) for which we measure the quadratic data in $\\ell_{p/2}$ and the square root data in $\\ell_p$. In infinite dimensions, we show that whenever $p\\neq 4$, no $p$-Bessel system of operators does stable phase retrieval. In the case of $p=4$, we show that stability still fails on any system of semidefinite operators. Nevertheless, we construct a system of rank-one operators, not all self-adjoint, for which stable recovery is possible. We also show that stability can be achieved on a system of self-adjoint operators of rank-two. For both types of measurements, we show that the stability can be tested on orthogonal pairs. This reduction preserves the optimal constant for quadratic measurements and, when the operators are semidefinite, for their phase preserving square roots. We deduce that in finite dimensions, uniqueness of recovery implies its stability. Finally, we show that whenever only the moduli of the measurements are retained, both the orthogonal reduction and the implication from uniqueness to stability can fail, already in dimension two. We also give second moment measurements in cryo-electron microscopy (cryo-EM) as a motivation for the quadratic model.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26769",
+   "title": "A rigorous Abel-summed Hardy-type identity for $p$-circle domains via regularized Poisson summation",
+   "url": "https://arxiv.org/abs/2611.26769",
+   "authors": [
+    "Masaya Kitajima"
+   ],
+   "label": "arXiv:2611.26769v1",
+   "primary_category": "math.CA",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper rigorously justifies, via an anisotropic Abel-type regularization of Poisson summation, a generalized Hardy-type identity for astroid-type p-circle domains, with boundary corrections (weight 1/2 at smooth points, vanishing cusp contributions for 0<p<1) and recovery of the classical p=2 Hardy–Voronoï Bessel series.",
+    "plain": "The paper studies a identity relating the counting of whole-number lattice points inside a certain shape (a \"p-circle\" with star-like corners) to a series of special functions. An earlier formal derivation left open whether the series is justified, so the authors smooth the counting with a damping kernel and take a limit. They find that smooth edge points contribute half weight, while the sharp corners contribute nothing when 0 < p < 1.",
+    "why": "It puts a previously heuristic lattice-point identity on rigorous footing and reduces to the known classical Hardy–Voronoï series when p=2, so it links to a well-studied area of number theory. The text does not say the unregularized series converges, which the authors flag as a separate open problem, so the practical reach is currently limited.",
+    "background": "- Lattice points: integer coordinate points counted inside a region.\n- Poisson summation: a standard tool relating sums over lattice points to sums over the Fourier transform of the region's indicator function.\n- Abel summation: a way of assigning a finite value to a divergent or oscillating series by damping it with a parameter and taking a limit.\n- p-circle: the set |x|^p + |y|^p ≤ 1; p=2 is an ordinary circle, and other p give squarish or star-like shapes (astroids for small p).\n- Bessel functions: classical special functions that arise in wave and circle problems; the p-Bessel versions generalize them.\n- Hardy–Voronoï identity: a classical formula for lattice points in a circle, expressed as a Bessel series.\n- Cusp: a sharp corner of a boundary.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In our previous work, a generalized Hardy-type identity (GHI) for astroid-type $p$-circle domains was formally derived in terms of generalized $p$-Bessel functions. However, the direct application of the Poisson summation formula to the indicator functions of these domains leaves the convergence and rigorous justification of the resulting oscillatory series unresolved. In the present paper, we address this difficulty by introducing an anisotropic regularization based on convolution kernels with Fourier multipliers $e^{-t(|\\xi_{1}|^p+|\\xi_{2}|^{p})}$. We establish the corresponding regularized Poisson summation identity and rigorously justify the limiting process through uniform estimates for lattice-point sums. A key feature of our analysis is the determination of boundary contributions: smooth boundary points carry weight $1/2$, whereas the contributions from axial cusps vanish for $0<p<1$. These results lead to an Abel-summed GHI, expressed in terms of the distorted-angle-dependent $p$-Bessel functions introduced in our previous work, with explicit boundary corrections. In particular, for $p=2$, the identity recovers the Abel-summed form of the classical Hardy--Vorono\\\"i Bessel series. Our result provides a rigorous regularized counterpart of the previously proposed identity, while the convergence of the corresponding unregularized series remains a separate problem.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27943",
    "title": "Freedom is all you need",
@@ -14,12 +59,12 @@
    "primary_category": "math.FA",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper begins a representation theory that relates a generic free functional calculus (for matrices and operators, over categories) to the classical noncommutative functional calculus of Taylor and Voiculescu, and notes consequences for domains that are closed under direct sums and similarity changes of coordinates.",
-    "plain": "The paper is about a way of applying functions to grids of numbers (matrices) and to more abstract operators, where the inputs can be non-commuting. It starts a general framework that links a newer \"free\" version of this calculus to the older classical version. The abstract only states that this framework is initiated and gives some properties of the resulting function classes; it does not give the detailed results.",
-    "why": "The abstract connects the framework to complex analysis and to large parallel networks, and it suggests a possible but explicitly \"hypothetical\" explanation for why overfitting can sometimes be harmless in such networks. That link is speculative as stated, and the text alone does not show how far it goes.",
+    "ai": true,
     "background": "- Functional calculus: a way of plugging a matrix or operator into a function (like a polynomial or power series) and getting a matrix or operator back.\n- Matrices do not generally commute (AB may differ from BA), so \"noncommutative\" versions of these ideas are harder than the usual scalar case.\n- Similarity (change of coordinates): rewriting a matrix in a different basis; a domain is \"similarity invariant\" if the property is preserved under such rewriting.\n- Direct sum: stacking matrices block-diagonally.\n- Category: an abstract framework of objects and maps between them, used here as the setting for the free calculus.\n- Analyticity: a function that is locally given by a convergent power series; \"monodromy\" refers to how analytic continuation around loops can change a function.\n- Overfitting: a machine learning model fitting training data very closely, including noise.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper begins a representation theory that relates a generic free functional calculus (for matrices and operators, over categories) to the classical noncommutative functional calculus of Taylor and Voiculescu, and notes consequences for domains that are closed under direct sums and similarity changes of coordinates.",
+    "plain": "The paper is about a way of applying functions to grids of numbers (matrices) and to more abstract operators, where the inputs can be non-commuting. It starts a general framework that links a newer \"free\" version of this calculus to the older classical version. The abstract only states that this framework is initiated and gives some properties of the resulting function classes; it does not give the detailed results.",
+    "why": "The abstract connects the framework to complex analysis and to large parallel networks, and it suggests a possible but explicitly \"hypothetical\" explanation for why overfitting can sometimes be harmless in such networks. That link is speculative as stated, and the text alone does not show how far it goes."
    },
    "abstract": "The functional calculus allows for the rigorous analysis of functions of matrices or even operators. The free functional calculus gives the natural class of functions over any category. We initiate the representation theory for taking a generic free functional calculus to the classical nc functional calculus going back to Taylor, Voiculescu and many others, with an eye towards learning of categories. The functional calculus on direct sum closed and locally similarity (i.e. change of coordinates) invariant domains inherits the niceties of complex analysis and large-scale parallel networks, such as automatic analyticity, free universal monodromy, which gives a hypothetical explanation for beneficial overfitting.",
    "source": "arxiv"
@@ -37,12 +82,12 @@
    "primary_category": "math.AC",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper claims a positive answer to the Ritt problem, which asks whether a certain algorithmic decision question about functional decompositions of polynomials and related functions is solvable.",
-    "plain": "This paper settles a long-standing question about how complicated formulas can be broken into simpler pieces. The Ritt problem asks whether there is a reliable procedure that can decide if two such breakdowns of a formula are equivalent. The text says the authors give a positive answer, meaning such a procedure exists, but the short summary does not spell out the method.",
-    "why": "The text is only a one-sentence abstract, so its importance cannot be judged from it alone. Results of this kind matter to researchers in algebra, dynamics and computer algebra, since they settle whether a class of questions can be answered by computation at all.",
+    "ai": true,
     "background": "- Polynomials: sums of powers of a variable, such as x^2 + 3x.\n- Functional decomposition: writing a function as a composition of simpler functions, e.g. f(g(x)).\n- Ritt's theory: classical results by Joseph Ritt (1920s–1930s) on when and how such decompositions can be rearranged.\n- Decidability: whether a yes/no question can be answered by a fixed, always-terminating algorithm.\n- Harmonic analysis is the listed field, but the abstract itself concerns algebraic decomposition problems; the link is not explained in the text.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper claims a positive answer to the Ritt problem, which asks whether a certain algorithmic decision question about functional decompositions of polynomials and related functions is solvable.",
+    "plain": "This paper settles a long-standing question about how complicated formulas can be broken into simpler pieces. The Ritt problem asks whether there is a reliable procedure that can decide if two such breakdowns of a formula are equivalent. The text says the authors give a positive answer, meaning such a procedure exists, but the short summary does not spell out the method.",
+    "why": "The text is only a one-sentence abstract, so its importance cannot be judged from it alone. Results of this kind matter to researchers in algebra, dynamics and computer algebra, since they settle whether a class of questions can be answered by computation at all."
    },
    "abstract": "We give an affirmative solution to the Ritt problem.",
    "source": "arxiv"

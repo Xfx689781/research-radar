@@ -1,7 +1,62 @@
 {
  "slug": "genetics-genomics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768053",
+   "title": "Reproductive competition amplifies purifying selection and reduces genetic load",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768053v1",
+   "authors": [
+    "van Oosterhout, C.",
+    "Marsters, J.",
+    "Birley, T."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768053 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Forward-time simulations express competitive and sexual selection as an effective selection coefficient calibrated against hard selection, showing that reproductive competition can purge deleterious mutations more efficiently and with lower genetic load.",
+    "plain": "The paper asks how a population gets rid of harmful genetic variants when individuals compete for mates or reproductive success, rather than simply dying off when they are unfit. Using computer simulations, the authors convert the strength of competition into an equivalent \"effective selection\" strength so it can be compared with simple culling. They report that competition with several rivals strongly speeds up removal of harmful variants, and that repeated contests help by averaging out noise, which lowers the overall burden of harmful mutations.",
+    "why": "The work offers a population-genetic mechanism for how competition could cut the demographic cost of purging harmful mutations, which may matter for small or bottlenecked populations where harmful variation tends to build up. The text does not show direct tests in real populations, so its practical relevance remains to be established.",
+    "background": "- Genetic load: the reduction in average fitness caused by harmful (deleterious) mutations carried in a population.\n- Purifying (negative) selection: the process by which harmful variants are removed over generations.\n- Hard selection: selection in which unfit individuals die or fail to reproduce regardless of others, which can impose a large demographic cost.\n- Competitive and sexual selection: selection through differences in success when individuals contest mates or resources, so reproduction is ranked rather than all-or-nothing.\n- Effective selection coefficient: a single number expressing how strong a selection process is, here calibrated so competition can be compared with hard selection.\n- Genetic drift: random change in variant frequencies, which can dominate for weakly harmful mutations in small populations.\n- Forward-time simulation: modelling a population generation by generation on a computer.\n- Genic capture: a term from the paper's framing, linking overall genome quality to how effectively selection acts; its meaning here is only briefly stated in the text.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Deleterious mutations impose genetic load, and purging them through hard selection can carry substantial demographic costs. Competitive and sexual selection can instead remove deleterious variation through differential reproductive success. What remains unclear is when this process is more efficient than equivalent hard selection, and how competition generates this advantage. Here, we use forward-time simulations to express the impact of competition as an effective selection coefficient (se) calibrated against hard selection. Competition with multiple rivals strongly amplified purifying selection, whereas repeated contests improved discrimination by averaging stochastic and environmental variation. Strong competition also reduced genetic load relative to hard selection. These effects can shift weakly deleterious mutations from drift-dominated behaviour towards efficient purging. By front-loading purifying selection into reproduction, competitive selection can reduce genetic load at lower demographic cost. This provides a population-genetic mechanism by which genic capture can translate genome-wide genetic quality into more effective purifying selection. This may be particularly important in bottlenecked populations, where demographic recovery can relax purifying selection and allow genomic erosion to persist.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767928",
+   "title": "A genetic toolkit of visible mutants for Caenorhabditis briggsae",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767928v1",
+   "authors": [
+    "Johnsen, R.",
+    "Mah, A.",
+    "Thillainathan, B.",
+    "Inoue, T.",
+    "Ailion, M.",
+    "Gharib, S.",
+    "Nagagireesh, B.",
+    "Sarma, D.",
+    "Tejpal, A.",
+    "Baillie, D.",
+    "Sternberg, P. W.",
+    "Gupta, B. P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767928 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A resource paper reporting 183 visible EMS-induced mutants of the nematode Caenorhabditis briggsae, their genetic mapping to six linkage groups, and molecular identification of several genes, with comparisons to C. elegans orthologs.",
+    "plain": "This paper is about a set of tiny worm mutants, made in a close relative of the lab worm C. elegans, that scientists can use as genetic tools. The authors collected 183 mutants with easy-to-see features, worked out where many of them sit on the worm's chromosomes, and linked several to specific genes. They also say some earlier records of these mutants were corrected.",
+    "why": "Genetic research depends on mutants that show clear traits, and C. briggsae is useful for comparing how related species evolved. The paper supplies data and strains that other labs can use, which may help comparative studies across Caenorhabditis worms; the text does not claim broader impact beyond this.",
+    "background": "- Mutant: an organism carrying a changed gene that produces a visible or measurable difference.\n- EMS: a chemical mutagen used to create random mutations in animals.\n- C. elegans and C. briggsae: two closely related roundworms; C. elegans is the standard lab model.\n- Linkage group: a set of genes that tend to be inherited together, roughly corresponding to a chromosome.\n- Complementation test: a cross that checks whether two mutations affect the same gene.\n- Ortholog: a gene in one species that descends from the same ancestral gene as one in another species.\n- Transgene rescue: putting a normal copy of a gene into a mutant to see whether the trait is restored, which confirms the gene's identity.\n- Levamisole: a drug that acts on nerve-muscle receptors; resistant worms reveal receptor genes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Caenorhabditis briggsae is a widely used model for comparative genetic studies involving C. elegans. Genetic analysis in C. briggsae depends on mutations with clear, easily recognizable phenotypes, yet most mutants reported so far have been mentioned only as names and linkage groups, without underlying experimental data. This study reports 183 C. briggsae mutants belonging to 11 phenotypic classes, which represent the most comprehensive collection to date. Almost all mutants were recovered in EMS screens of the reference strain AF16. Our analysis revealed that 121 mutations define 55 loci and 62 remain unassigned. A combination of complementation tests, linkage tests, two- and three-factor crosses, and polymorphism-based mappings helped place 51 loci and 15 further mutations to the six linkage groups. We report the supporting data, map distances, linkage groups, and corrections to several earlier assignments. Twenty-three loci correspond to molecularly identified orthologs of C. elegans genes, including six for which we report genetic, rescue, or sequence evidence here. The levamisole-resistant mutants fall into at least three complementation groups, two of which correspond to Cbr-unc-38 and Cbr-unc-29 (levamisole-sensitive nicotinic acetylcholine receptor a and non-a subunit, respectively). Transgene rescue experiments identify Cbr-dpy-1 (mucin-like), Cbr-sma-6 (TGFb type receptor kinase), and Cbr-unc-4 (homeodomain transcription factor), genes that have long been in use as genetic markers. In all cases, molecularly identified genes are located on the same chromosome as their C. elegans orthologs, although gene order within chromosomes differs. The strains, map, and underlying data provide a resource for genetic and comparative studies in Caenorhabditis nematodes.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.20.768136",
    "title": "Population-level learning of non-additive effects enables accurate and efficient prediction of combinatorial perturbation responses",
@@ -15,12 +70,12 @@
    "primary_category": "genomics",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "GAIN is a lightweight model that predicts the population-level (pseudobulk) response to a two-perturbation combination as the sum of the two single-perturbation responses plus a learned interaction term, and is evaluated on single-cell genetic and drug combination datasets.",
-    "plain": "Scientists often want to know what happens when two genetic changes or two drugs are applied together, but testing every pair is impossible because the number of pairs grows fast. This paper proposes a simple model that starts from how each treatment acts on its own and learns only the extra effect that appears when they are combined. The authors report that this approach predicted combination responses more accurately than a plain additive baseline and than more complex cell-level methods, while training much faster.",
-    "why": "Predicting combination effects could help choose which genetic or drug pairs to test in costly lab screens, and the text suggests that a simple model can match or beat more complex deep-learning tools on these tasks. The text does not establish how well the approach transfers beyond the three datasets and one leukemia screen it reports, so its broader usefulness remains to be seen.",
+    "ai": true,
     "background": "- Perturbation experiment: deliberately switching off a gene (often with CRISPR) or adding a drug, then measuring what changes in cells.\n- Combinatorial perturbation: applying two or more perturbations together; the number of possible pairs grows quickly with the number of targets.\n- Additive baseline: predicting the combined effect as the sum of the two single effects, which is the default expectation when treatments do not interact.\n- Non-additive effect (interaction or synergy): when the combined result differs from the sum, for example stronger or weaker than expected.\n- Single-cell data vs. pseudobulk: single-cell data measure each cell separately; pseudobulk averages cells within a group into one profile per condition.\n- Foundation model: a large, general-purpose machine-learning model trained on very large datasets and adapted to specific tasks.\n- Histone chaperone FACT: a protein complex that helps package DNA around histones and regulates gene activity.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "GAIN is a lightweight model that predicts the population-level (pseudobulk) response to a two-perturbation combination as the sum of the two single-perturbation responses plus a learned interaction term, and is evaluated on single-cell genetic and drug combination datasets.",
+    "plain": "Scientists often want to know what happens when two genetic changes or two drugs are applied together, but testing every pair is impossible because the number of pairs grows fast. This paper proposes a simple model that starts from how each treatment acts on its own and learns only the extra effect that appears when they are combined. The authors report that this approach predicted combination responses more accurately than a plain additive baseline and than more complex cell-level methods, while training much faster.",
+    "why": "Predicting combination effects could help choose which genetic or drug pairs to test in costly lab screens, and the text suggests that a simple model can match or beat more complex deep-learning tools on these tasks. The text does not establish how well the approach transfers beyond the three datasets and one leukemia screen it reports, so its broader usefulness remains to be seen."
    },
    "abstract": "Combinatorial perturbations are widely used to study genetic interactions and to develop drug combinations, but the number of possible combinations grows quadratically with the number of perturbations, and only a small fraction can be measured in a screen experiment. Despite their growing sophistication, deep-learning and foundation models often fail to outperform a simple additive baseline based on measured single-perturbation responses. This suggests a simpler approach that builds on these measurements and directly learns deviations from additivity at the population level. We therefore developed GAIN, a lightweight model that implements these principles by predicting the pseudobulk response to a combination as the sum of its two single-perturbation responses and a learned interaction term. Across three single-cell datasets of genetic and drug combinations, GAIN corrected deviations from additivity and outperformed the additive model and cell-level methods across generalization settings and metrics, while training 3- to 64-fold faster. Applied to a combinatorial CRISPR screen of leukemia differentiation regulators, GAIN revealed synergy between key regulators of the differentiation block and genes that restrain differentiation but have little effect alone. It also revealed dampening by the histone chaperone FACT, which supports the induction of differentiation genes. These results establish population-level modeling of the deviation from additivity as a simple, accurate and scalable approach to predicting combination responses.",
    "source": "biorxiv"
@@ -51,12 +106,12 @@
    "primary_category": "genomics",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Single-cell transcriptomics of the medial septum in a novel four-core-genotype (FCG) rat model, compared with the FCG mouse, tests whether sex chromosome complement (XX vs. XY) or gonads drive sex-biased gene regulation across species.",
-    "plain": "Men and women differ in many brain-related conditions, but it is hard to tell whether the cause is the sex chromosomes or the sex hormones made by the gonads. The authors used a special rat model that separates these two effects and measured gene activity in individual brain cells from a small brain region called the medial septum. They report that differences in the sex chromosomes had a stronger effect on gene activity than gonads, and that this pattern was similar in mice and rats even though many individual genes differed.",
-    "why": "The finding argues against the common view that hormones from the gonads are the main source of sex differences in the brain, which matters for how sex differences in brain disease are studied. The authors also link the sex-biased genes to conditions such as anxiety, Alzheimer's disease, epilepsy and schizophrenia, but the text gives only the association, not evidence that these genes cause those conditions.",
+    "ai": true,
     "background": "- Sex chromosome complement (SCC): whether an animal has XX or XY chromosomes, separate from whether it has ovaries or testes.\n- Gonads: the ovaries or testes, which produce sex hormones.\n- Four core genotypes (FCG) model: a mouse (and here rat) system that crosses these two factors, so chromosome and gonad effects can be compared directly.\n- Medial septum: a small brain region involved in mood, memory and rhythm of brain activity; it shows structural sex differences.\n- Single-cell gene expression: measuring which genes are active in each individual cell, then grouping cells by type.\n- Gene regulatory network and transcription factor analysis: computational methods that infer which regulatory proteins control groups of genes.\n- Cross-species comparison: checking whether a pattern found in one animal also holds in another, here rats and mice.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Single-cell transcriptomics of the medial septum in a novel four-core-genotype (FCG) rat model, compared with the FCG mouse, tests whether sex chromosome complement (XX vs. XY) or gonads drive sex-biased gene regulation across species.",
+    "plain": "Men and women differ in many brain-related conditions, but it is hard to tell whether the cause is the sex chromosomes or the sex hormones made by the gonads. The authors used a special rat model that separates these two effects and measured gene activity in individual brain cells from a small brain region called the medial septum. They report that differences in the sex chromosomes had a stronger effect on gene activity than gonads, and that this pattern was similar in mice and rats even though many individual genes differed.",
+    "why": "The finding argues against the common view that hormones from the gonads are the main source of sex differences in the brain, which matters for how sex differences in brain disease are studied. The authors also link the sex-biased genes to conditions such as anxiety, Alzheimer's disease, epilepsy and schizophrenia, but the text gives only the association, not evidence that these genes cause those conditions."
    },
    "abstract": "Sex differences are prominent in neuropsychiatric, neurological, and neurodegenerative conditions. While both gonads (ovaries vs. testes) and sex chromosome complement (SCC; XX vs. XY) contribute to sex differences, these effects are hard to differentiate in humans and gonadal contributions have been considered dominant in the brain. The four core genotypes (FCG) mouse model distinguishes between SCC and gonadal effects but whether findings are conserved across species remains unclear. Here, we present the first application of the novel FCG-derived rat model to explore cell-type-specific sex differences in the medial septum (MS), which shows robust structural sex differences, and convergence/divergence between species. Differential gene expression, pathway, transcription factor, and gene regulatory network analyses show dominant SCC effects and concordant gonadal effects on gene and network regulation in rat MS cell types. Comparison between the FCG rat and mouse models find convergence across species on the dominance of the SCC in regulating gene expression in concert with gonadal effects in the MS, despite divergence in individual sex-biased genes. In both species, the sex-biased, cell-type-specific MS genes and networks are associated with diverse diseases relevant to MS functions, such as anxiety, Alzheimers Disease, epilepsy, and schizophrenia, that can be targeted by proposed therapeutic candidates. Our cross-species investigation identifies a conserved dominance of SCC effects in sex-biased gene expression in the MS, thereby challenging the classical gonad-centric view of sexual differentiation in the brain and highlighting the MS as an important region for the study of sex differences driven by the sex chromosome complement.",
    "source": "biorxiv"

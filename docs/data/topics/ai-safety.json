@@ -1,7 +1,53 @@
 {
  "slug": "ai-safety",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27424",
+   "title": "Jagged Robustness: Uneven Safety Transfer and Emerging Vulnerabilities under LLM Quantization",
+   "url": "https://arxiv.org/abs/2611.27424",
+   "authors": [
+    "Ramneek Agnihotri",
+    "Yingte Xu",
+    "Hans Vath"
+   ],
+   "label": "arXiv:2611.27424v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "An audit of how weight quantization (compressing a language model's parameters) affects safeguards, instruction-following, ethics/bias and truthfulness in Qwen3-4B, introducing the term \"Jagged Robustness\" for uneven transfer of these properties to compressed models.",
+    "plain": "Language models are often shrunk with a technique called quantization so they run faster and on cheaper hardware. This paper checks whether a shrunken model keeps the same behavior across different areas: some areas, like refusing unsafe requests and bias, got worse, while others, like truthfulness, stayed fairly steady. The authors also found that a specially crafted text suffix that does nothing harmful to the full model could push the compressed version into producing content it should refuse.",
+    "why": "Many people run compressed models in practice, so if safety behavior shifts after compression without anyone noticing, deployed systems could be less safe than their original tests suggest. The text reports results for one model (Qwen3-4B), so how far the pattern generalizes is not established from this text alone.",
+    "background": "- Quantization: storing a model's numbers (weights) at lower precision to save memory and speed up inference, with some loss of detail.\n- Safeguards / jailbreaks: training that makes a model refuse harmful requests; a jailbreak is an input that gets around that refusal.\n- Adversarial suffix: a string of seemingly random text appended to a prompt to steer the model's output.\n- Benchmarks: standard test sets used to score model behavior on tasks.\n- Qwen3-4B: a specific open-weight language model with about 4 billion parameters.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Quantization enables efficient inference in language models through model parameter compression. This work audits the impact of quantization on capability and safety domains including model safeguards, instruction-following, ethics and bias. Through benchmarks, we find that model safeguards and bias can degrade under quantization, while other capabilities such as truthfulness remain more stable in Qwen3-4B. We define this uneven transfer of LLM capabilities under quantization as Jagged Robustness. We find multiple factors driving Jagged Robustness: task complexity, evaluation method and generation coherence. Moreover, we verify the degradation of model safeguards by observing increased compliance with unsafe requests under quantization, and demonstrate universal adversarial suffix attacks that are benign for the full model but jailbreak quantized models. The findings indicate that it is risky to assume that the performance and robustness can transfer evenly across different capability domains from full models to quantized models.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27260",
+   "title": "No Perfect Guardrail & No Perfect Guard: On the Decidability of Output Policies for Large Language Models",
+   "url": "https://arxiv.org/abs/2611.27260",
+   "authors": [
+    "Ahmed Amer",
+    "Loren Kinczel",
+    "Darrell D. E. Long"
+   ],
+   "label": "arXiv:2611.27260v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper uses computability theory to show that a computable guard can exactly separate forbidden from permitted language-model outputs only when the output policy is decidable, and that undecidable policies force infinite misclassification.",
+    "plain": "The paper asks whether a safety filter (a \"guardrail\") can perfectly block forbidden text from an AI model while letting all allowed text through. It proves that this is possible only when the rule being enforced is one a computer can always settle yes or no, and that for harder rules any filter must make infinitely many mistakes. The authors also argue that treating guardrails as a guarantee of safety is an ethical failure, so people remain responsible for the rules themselves.",
+    "why": "It gives a formal limit on what automated output filtering can guarantee, which bears directly on how AI safety claims are made and evaluated. The text is a theoretical and philosophical argument; its practical reach for real deployed guardrails is not shown in the excerpt.",
+    "background": "- Guardrail: a filter or check placed on an AI system's outputs to block unwanted content.\n- Decidable policy: a rule for which a computer program can always correctly answer yes or no for every input, in finite time.\n- Undecidable problem: a question that provably no general algorithm can always answer correctly (the classic example is the halting problem).\n- Misclassification: wrongly blocking an allowed output or letting a forbidden one through.\n- Computable guard: a filter that some algorithm can actually run.\n- Execution monitor: a runtime checker that watches a program's behavior as it runs, distinct from a filter on finished outputs.\n- The paper's examples include arithmetic truth, program behavior, and harmful instructions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Expecting guardrails to provide a general guarantee of safety fails to recognize the limits of computational enforcement and policy specification. We argue that promising such perfection is an ethical failure of precision, and that invoking it to abdicate responsibility is a moral failure. Guardrails can support responsible action, but cannot relieve researchers, developers, policymakers, or users of their obligations to examine what they claim, permit, and prevent. We establish a precise computational boundary. If every finite string is a possible output of a language model, a computable guard that blocks every forbidden output and passes every permitted one exists if and only if the policy is decidable. For an undecidable policy, every guard misclassifies infinitely many strings, and every guard that blocks all forbidden outputs excludes infinitely many permitted ones. We apply this characterization to arithmetic truth, program behavior, and harmful instructions to an idealized recipient. We distinguish guards from execution monitors, identify bounded and interceptable cases admitting exact enforcement, and explain why the results establish no positive lower bound on average error. Exact enforcement does not establish that a policy adequately captures safety. Conservative exclusion may withhold warnings, remedies, or challenges needed to recognize the policy's own defects. Human oversight cannot substitute for judgment: an apparent controller can become an instrument of purposes they have ceased to examine. Responsible governance requires continued critical challenge and the intellectual and moral humility to recognize possible flaws in our machines, rules, policies, and ourselves. The impossibility of a general assurance of perfection is a condition responsible practice must confront, not a responsibility that another guardrail - or another guard - can remove.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27288",
    "title": "Preserving Pretrained CFG Structure in RL for Diffusion Models with Conditional Contrast Regularization",
@@ -20,12 +66,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes Conditional Contrast Regularization (CCR), which uses the frozen pretrained model's classifier-free guidance direction as a structural prior to keep diffusion-model generation quality from degrading during reinforcement-learning fine-tuning for a target reward.",
-    "plain": "Image-generating AI models are often fine-tuned with reinforcement learning to score higher on a chosen reward, but this can make the images worse overall even as the score rises. The authors treat this as a kind of reward hacking and look at a built-in guidance technique (classifier-free guidance) that already makes images clearer and better aligned with prompts. They use it as a reference point to keep the fine-tuning from drifting away from good-quality behavior.",
-    "why": "Reward-driven fine-tuning that quietly lowers overall quality is a practical concern for deployed generative models, and this work offers a concrete, cheap regularizer tied to an existing component. Its broader significance beyond the reported experiments is not established by the text, which describes results only across unspecified reward settings and backbones.",
+    "ai": true,
     "background": "- Diffusion models: image generators that start from noise and refine it step by step.\n- Reinforcement learning (RL) post-training: adjusting a trained model to maximize a score (reward) on its outputs.\n- Reward hacking: the model improves the score in ways that do not reflect the real goal.\n- Classifier-free guidance (CFG): a standard sampling technique that pushes outputs toward the prompt, improving clarity and alignment.\n- Correction vectors: the difference between a model's prediction and a baseline, used here to compare CFG and RL updates geometrically.\n- Frozen reference model: a copy of the original model whose weights are not updated, used as an anchor.\n- Regularization: an extra penalty that keeps training close to a desired behavior.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes Conditional Contrast Regularization (CCR), which uses the frozen pretrained model's classifier-free guidance direction as a structural prior to keep diffusion-model generation quality from degrading during reinforcement-learning fine-tuning for a target reward.",
+    "plain": "Image-generating AI models are often fine-tuned with reinforcement learning to score higher on a chosen reward, but this can make the images worse overall even as the score rises. The authors treat this as a kind of reward hacking and look at a built-in guidance technique (classifier-free guidance) that already makes images clearer and better aligned with prompts. They use it as a reference point to keep the fine-tuning from drifting away from good-quality behavior.",
+    "why": "Reward-driven fine-tuning that quietly lowers overall quality is a practical concern for deployed generative models, and this work offers a concrete, cheap regularizer tied to an existing component. Its broader significance beyond the reported experiments is not established by the text, which describes results only across unspecified reward settings and backbones."
    },
    "abstract": "Reinforcement Learning (RL) has become an important component in the post-training of diffusion models. In practice, however, standard RL often improves the target reward without reliably preserving holistic generation quality, leading to unstable reward-quality trade-offs that we view as a form of reward hacking. Since Classifier-Free Guidance (CFG) is known to improve visual clarity, prompt alignment, and perceptual quality in generation, we investigate whether its underlying structure can serve as a useful prior during RL. We present a unified geometric view that interprets both CFG and RL as correction vectors in a common prediction space, and identify the projection of the RL-induced correction onto the pretrained CFG correction as a useful diagnostic of quality-related structural preservation. Geometric analysis and rotation intervention further show that the pretrained CFG direction carries information useful for generation quality that reward-driven RL updates do not necessarily preserve. Based on this insight, we propose Conditional Contrast Regularization (CCR), which uses the frozen reference model's conditional contrast as a local structural prior during RL. Experiments across multiple reward settings and backbones show that CCR more consistently preserves generation quality while maintaining competitive reward, yielding a better reward-quality trade-off than standard RL and generic regularization methods.",
    "source": "arxiv"
@@ -43,12 +89,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper extracts an \"assistant persona\" direction in activation space for 31 languages in Qwen3-32B and finds that these directions differ across languages, correlate with resource level, and affect how steering changes jailbreak susceptibility.",
-    "plain": "Language models are known to be less safe in languages with less training data. This paper looks inside a model to ask whether its internal \"helpful assistant\" setting is the same across languages. The authors found that the internal direction for this persona differs noticeably from language to language, and that the differences track how much data each language has.",
-    "why": "It offers a mechanistic, inside-the-model account of a safety gap that has so far mostly been measured from outside through behavior. The text suggests that multilingual alignment may need to target the assistant persona directly, though the findings come from a single model and the text does not show whether this carries over to other models.",
+    "ai": true,
     "background": "- Activation space: the set of internal numerical states a neural network passes through when processing text.\n- Direction: a particular axis in that space; a \"persona direction\" is one linked to a role or personality the model adopts.\n- Cosine similarity: a score from -1 to 1 for how closely two directions point the same way; 1 means identical.\n- Steering: nudging the model's internal activations along a direction to change its behavior.\n- Jailbreak: a prompt crafted to get a model to ignore its safety rules.\n- Resource level: how much text data exists for a language; \"lower-resource\" languages have less.\n- Qwen3-32B: a specific open large language model with 32 billion parameters.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extracts an \"assistant persona\" direction in activation space for 31 languages in Qwen3-32B and finds that these directions differ across languages, correlate with resource level, and affect how steering changes jailbreak susceptibility.",
+    "plain": "Language models are known to be less safe in languages with less training data. This paper looks inside a model to ask whether its internal \"helpful assistant\" setting is the same across languages. The authors found that the internal direction for this persona differs noticeably from language to language, and that the differences track how much data each language has.",
+    "why": "It offers a mechanistic, inside-the-model account of a safety gap that has so far mostly been measured from outside through behavior. The text suggests that multilingual alignment may need to target the assistant persona directly, though the findings come from a single model and the text does not show whether this carries over to other models."
    },
    "abstract": "Large language models behave differently across languages, and are noticeably less safe in lower-resource languages. This gap is well established behaviorally, but not mechanistically. Directions in activation space, including the assistant persona direction, are almost always extracted from English and assumed to generalize across languages. We extract the assistant persona direction in 31 languages in Qwen3-32B, and find that the resulting axes differ substantially: their cosine similarity to the English axis ranges from 0.378 to 0.911. Moreover, each language's assistant persona direction and its magnitude are correlated with the language's resource level. We also find that the model's default assistant state is farther from the helpful assistant pole in lower-resource languages. Finally, steering against a language's own axis amplifies persona-based jailbreak more than steering against the English axis. These results indicate that the model does not carry a single assistant representation across languages. More broadly, the assistant persona may need to be an explicit target of multilingual alignment.",
    "source": "arxiv"

@@ -1,7 +1,57 @@
 {
  "slug": "immunology-microbiology",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.21.768310",
+   "title": "Oral microbiome and DNA virome profiling in pigs reveals age-associated dynamics and extracellular recovery of Streptococcus suis-associated phage lineages",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.768310v1",
+   "authors": [
+    "Osei, E. K.",
+    "Ornelas, M. A. S.",
+    "Garcia Manzanilla, E.",
+    "Mahony, J.",
+    "Kenny, J. G."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.21.768310 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Shotgun metagenomic profiling of oral fluids from pigs on 15 Irish farms, with paired bulk and virus-like-particle enrichment, maps age-linked succession in oral bacteria and DNA phages and flags 26 vOTUs predicted to infect Streptococcus suis.",
+    "plain": "Researchers sampled the saliva-like oral fluid of pigs at several ages across 15 commercial farms and read out all the DNA in it, both the bacteria and the viruses that infect them. The mouth's microbial community changed in a fairly predictable way as pigs aged, moving from environmental bacteria shortly after weaning to lactic acid bacteria and anaerobes later on. Most of the viral sequences could not be matched to a known genus, but 26 were predicted to infect Streptococcus suis, a pig pathogen.",
+    "why": "Pig oral fluids are already used to monitor herd health, so a catalogue of the viruses living there could inform both disease surveillance and the search for phages that might be used against S. suis. The text is a descriptive survey; it does not show that these phages work against the bacterium or that they would be useful as treatments.",
+    "background": "- Microbiome: the community of bacteria and other microbes living in a body site.\n- Virome: the set of viruses in a sample; here, DNA viruses only.\n- Bacteriophage (phage): a virus that infects bacteria; phages are being studied as possible alternatives to antibiotics.\n- Shotgun metagenomics: sequencing all DNA in a sample without first culturing organisms, then identifying what is there computationally.\n- VLP (virus-like particle) enrichment: a lab step that concentrates viral particles before sequencing.\n- vOTU (viral operational taxonomic unit): a computational grouping of viral sequences treated as one viral species.\n- Streptococcus suis: a bacterium that causes disease in pigs and can occasionally infect people.\n- Resistome: the collection of antibiotic resistance genes in a sample.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The pig oral cavity is a critical interface for microbial transmission and herd health monitoring, yet its microbiome and virome remains poorly characterised. We performed shotgun metagenomic sequencing of oral fluids from pigs across 15 commercial farms in Ireland, using paired bulk and virus-like particles (VLP) enrichment to capture comprehensive microbial and DNA virome diversity. Microbial communities shifted progressively with age, with early post-weaning animals enriched in environmental genera such as Pseudomonas and Staphylococcus and later stages dominated by lactic acid bacteria and anaerobes. Only 20.6% of vOTUs could be assigned to a known genus, with the most abundant being Astrithrvirus, which increased with age. Both microbiome and DNA virome exhibited predictable, coordinated age-associated succession with strong cross-domain coupling supported by virus-host networks. Functional profiling of the microbiome revealed that predicted carbohydrate substrates tracked the dietary transitions, while accessory viral functions partitioned by lifestyle and host. The early post-weaning stage was characterised by high abundance of viral integration and excision functions, as well as elevated resistome diversity that was almost exclusively of prokaryotic origin rather than viral. Importantly, 26 of the 25,223 vOTUs identified were predicted to target Streptococcus suis, providing the first metagenomic catalogue of such phages from pig oral environments. These findings expand our understanding of oral microbiome-virome dynamics and establish a framework for integrated microbiome and viromics approaches that could enable therapeutic phage discovery and inform microbiome-targeted interventions in pig production systems.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.18.767516",
+   "title": "Spatial Transcriptomics Reveals Host Gene Expression Patterns Associated with Naegleria fowleri Infection in the Murine Brain",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767516v1",
+   "authors": [
+    "Dainis, J.",
+    "Bailey, M.",
+    "Sievert, M. A. C.",
+    "Ruberto, A. A.",
+    "Kyle, D. E."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.18.767516 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Spatially resolved transcriptomics of mouse brains at several time points after intranasal Naegleria fowleri inoculation maps region-specific host gene expression, including inflammatory and putative immune and neural cell signatures.",
+    "plain": "Naegleria fowleri is a free-living amoeba that can enter the brain through the nose and cause a rare, usually fatal infection called primary amoebic meningoencephalitis. The researchers infected mice through the nose, collected brain tissue at several time points, and measured which genes were active in different brain regions. They found strong inflammatory gene activity that differed by region and over time, including in areas where no amoebae were detected.",
+    "why": "The infection is extremely deadly, and little is known about where and when the brain's immune response happens. Mapping this by location in the brain may help guide later studies of how inflammation damages brain tissue, though the text is a descriptive profiling study and does not test treatments.",
+    "background": "- Naegleria fowleri: a free-living amoeba found in warm fresh water that can invade the nervous system through the nose.\n- Primary amoebic meningoencephalitis (PAM): the brain and lining infection it causes, with a mortality rate above 97% as stated in the text.\n- Transcriptomics: measuring which genes are switched on (expressed) in a tissue, usually via their RNA.\n- Spatial transcriptomics: gene activity measured while keeping track of where in the tissue each signal came from.\n- Neuroinflammation: inflammation inside the brain, driven by immune cells such as macrophages, neutrophils and natural killer T cells.\n- Cell-type signatures: patterns of genes that suggest which kinds of cells are present, inferred rather than directly counted.\n- Intranasal inoculation: infecting animals by placing the organism in the nose.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Primary Amoebic Meningoencephalitis (PAM), caused by the free-living amoebae Naegleria fowleri, is a devastating disease with a mortality rate exceeding 97%. Despite its severity, the spatial and temporal characteristics of the host immune response to infection within the brain remain poorly understood. Here, we used spatially resolved transcriptomic profiling to characterize region-specific gene expression patterns in brain tissue collected at multiple time points following intranasal inoculation of N. fowleri in mice. Our analysis revealed pronounced pro-inflammatory transcriptional signatures that varied across brain regions and over the course of infection. Cell type-associated gene expression profiles suggested the involvement of several immune cell populations, including macrophages, neutrophils, and natural killer T cells, alongside transcriptional changes associated with neural cell populations. Notably, inflammatory transcriptional signatures also were detected in brain regions without detectable amoebae, indicating that host responses extend beyond regions of apparent parasite localization. Collectively, these findings provide a spatial and temporal characterization of the host transcriptional response during experimental PAM, highlighting inflammatory gene expression signatures and putative immune and neural cell populations associated with disease progression. This study provides a foundation for future investigations into the cellular and molecular processes underlying neuroinflammation during N. fowleri infection.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.21.768283",
    "title": "Local macrophage and cDC1 cooperation in the liver drives T-cell immune surveillance against pioneering metastatic cancer cells.",
@@ -37,12 +87,12 @@
    "primary_category": "immunology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Intravital imaging of early liver metastasis in mice shows that resident Kupffer cells, macrophages and cDC1 dendritic cells cooperate via antigen cross-presentation to recruit T cells into activation clusters that help control arriving tumor cells.",
-    "plain": "Cancer often spreads to the liver through the bloodstream, and this study asks how the liver's own immune cells respond when the first tumor cells arrive. Using live imaging inside the organ, the authors describe three stages: routine immune patrolling, a rush of neutrophils and macrophage uptake of tumor material, and T-cell activation in small clusters within the liver. Boosting dendritic cell numbers with Flt3L-Ig reduced successful metastasis in their experiments.",
-    "why": "It maps the earliest immune steps against metastasis in a major target organ, which may matter for designing therapies that prime local immunity. The text does not show whether these mouse findings translate to human patients, so that link remains open.",
+    "ai": true,
     "background": "- Metastasis: cancer cells leaving a tumor and seeding new growth elsewhere, here in the liver.\n- Intravital imaging: filming living cells inside an intact animal organ with microscopes.\n- Kupffer cells: macrophages (immune cells that engulf material) resident in the liver.\n- Dendritic cells (cDC1): immune cells that capture antigens (molecular pieces of a pathogen or tumor) and present them to T cells; cross-presentation means displaying material from outside the cell.\n- T cells: immune cells that can kill targeted cells once activated.\n- Flt3L-Ig: a drug used in mice to expand dendritic cell populations.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Intravital imaging of early liver metastasis in mice shows that resident Kupffer cells, macrophages and cDC1 dendritic cells cooperate via antigen cross-presentation to recruit T cells into activation clusters that help control arriving tumor cells.",
+    "plain": "Cancer often spreads to the liver through the bloodstream, and this study asks how the liver's own immune cells respond when the first tumor cells arrive. Using live imaging inside the organ, the authors describe three stages: routine immune patrolling, a rush of neutrophils and macrophage uptake of tumor material, and T-cell activation in small clusters within the liver. Boosting dendritic cell numbers with Flt3L-Ig reduced successful metastasis in their experiments.",
+    "why": "It maps the earliest immune steps against metastasis in a major target organ, which may matter for designing therapies that prime local immunity. The text does not show whether these mouse findings translate to human patients, so that link remains open."
    },
    "abstract": "The liver is one of the most frequent sites for hematogenous metastasis across different types of cancer, but how the liver mounts effective immune responses against arriving tumor cells is not fully understood. Using intravital imaging, we have visualized the initial steps of liver metastasis and delineated three phases in the immune response at the earliest stages of liver metastasis: first, there is continuous surveillance of the liver parenchyma by discrete immune cell subsets in the premetastatic tissue. Second, upon metastatic cell arrival, there is massive neutrophil recruitment and tumor-cell material uptake mediated by resident macrophages. Third, antitumor-specific T-cell activation takes place in situ within intrahepatic leukocyte clusters. We find that tumor-derived material uptake triggers transcriptional programs in liver myeloid cells that upregulate chemoattraction programs in Kupffer cells and cDCs, leading to T-cell activation. Antigen cross-presentation and a functional partnership between cDC1s and local macrophages to recruit and form T-cell activation clusters are required for the elicitation of these intrahepatic T-cell responses. Consequently, prior expansion of cDCs by Flt3L-Ig treatment significantly enhances immunosurveillance, curtailing successful metastasis development. Collectively, our findings identify coordinated immune responses that are essential for anti-metastatic immunity within the liver, uncovering a program to mount defenses against tumor cells arriving in the liver.",
    "source": "biorxiv"
@@ -68,12 +118,12 @@
    "primary_category": "microbiology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "In mice infected intracerebrally with genetically distinct rabies viruses, temporal proteomics and spatial imaging show that viral genetics, through interferon antagonism, shape divergent brain immune states that are not simply proportional to viral load.",
-    "plain": "Rabies is a virus that attacks the brain, and different strains can cause very different immune reactions even when they reach similar levels in the tissue. The researchers infected mice directly into the brain with several engineered rabies viruses, including disease-causing field strains, a weakened strain, and a new variant that is more sensitive to interferon, an antiviral alarm signal. They then tracked protein changes over time and mapped where immune cells appeared in different brain regions.",
-    "why": "The text suggests that how much virus is present does not fully predict the strength or type of the host's immune response, which matters for understanding why some infections trigger brain inflammation and others do not. The work is limited to mice and a direct brain-injection model, so any link to human rabies or to vaccine design is an open question the text does not settle.",
+    "ai": true,
     "background": "- Rabies virus (RABV) spreads through the nervous system and is nearly always fatal once symptoms appear.\n- Field strains are viruses taken from wild or domestic animals; attenuated strains are weakened versions, often used as a basis for vaccines.\n- Interferons are signalling proteins that alarm cells and trigger antiviral defences; some viruses carry proteins (here, the phosphoprotein) that block this alarm.\n- Complement is a group of blood and tissue proteins that help clear pathogens and can also drive inflammation.\n- Proteomics measures the proteins present in tissue; spatial imaging shows where in the tissue they are found.\n- Recombinant viruses are built in the lab with specific genetic changes to test what each change does.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "In mice infected intracerebrally with genetically distinct rabies viruses, temporal proteomics and spatial imaging show that viral genetics, through interferon antagonism, shape divergent brain immune states that are not simply proportional to viral load.",
+    "plain": "Rabies is a virus that attacks the brain, and different strains can cause very different immune reactions even when they reach similar levels in the tissue. The researchers infected mice directly into the brain with several engineered rabies viruses, including disease-causing field strains, a weakened strain, and a new variant that is more sensitive to interferon, an antiviral alarm signal. They then tracked protein changes over time and mapped where immune cells appeared in different brain regions.",
+    "why": "The text suggests that how much virus is present does not fully predict the strength or type of the host's immune response, which matters for understanding why some infections trigger brain inflammation and others do not. The work is limited to mice and a direct brain-injection model, so any link to human rabies or to vaccine design is an open question the text does not settle."
    },
    "abstract": "Viral burden does not necessarily predict the extent or composition of the host immune response, reflecting the complexity of virus - host interactions. Rabies virus (RABV) provides a powerful model to investigate this question because genetically distinct RABVs differ in replication, immune evasion, and neuroimmune activation. Here, we performed integrated temporal proteomic and spatial imaging analyses of recombinant RABV, including pathogenic, attenuated, and a newly generated interferon-sensitive variant with disrupted phosphoprotein antagonistic activity. Following intracerebral infection of mice, viruses established distinct neuroimmune states that diverged over time in antiviral signaling, complement activation, and immune response. Notably, the pathogenic field viruses rDogA and rFox both exhibited substantial viral accumulation, but elicited markedly different central nervous system (CNS) responses, with rDogA inducing limited host immune engagement, whereas rFox triggered early and broad antiviral, complement, and immune recruitment programs. Disruption of phosphoprotein-mediated interferon antagonism in rDogA enhanced interferon-stimulated gene expression and antiviral effectors, restricting viral accumulation without inducing broad neuroimmune remodeling. Conversely, the attenuated glycoprotein-modified rSAD GASGAS elicited strong complement activation and T cell recruitment with little detectable viral levels, revealing a highly immunogenic neuroimmune state. Spatial profiling further identified virus-dependent patterns of myeloid, astrocyte-associated, complement, and lymphocyte responses across brain regions. Together, these findings demonstrate how viral genetic background and its modulation of host antiviral responses shape divergent neuroimmune states in which viral accumulation, antiviral immunity, and CNS immune activation are differentially coordinated.",
    "source": "biorxiv"

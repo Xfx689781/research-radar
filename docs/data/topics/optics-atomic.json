@@ -1,7 +1,83 @@
 {
  "slug": "optics-atomic",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26801",
+   "title": "Benchmark Ne-like Transitions of W, Re, Os, Ir, and Bi Measured by High-resolution TES x-ray Spectroscopy with Absolute Energy Calibration",
+   "url": "https://arxiv.org/abs/2611.26801",
+   "authors": [
+    "G. Mondeel (Clemson University",
+    "Massachusetts Institute of Technology)",
+    "C. A. Faiyaz (Clemson University)",
+    "Dipti (Clemson University",
+    "National Institute of Standards",
+    "Technology Gaithersburg)",
+    "H. Staiger (Clemson University",
+    "National Institute of Standards",
+    "Technology Gaithersburg)",
+    "L. Brent (Loyola University Maryland",
+    "National Institute of Standards",
+    "Technology Gaithersburg)",
+    "A. C. Gall (Auburn University",
+    "Center for Astrophysics | Harvard & Smithsonian)",
+    "C. I. Szabo (National Institute of Standards",
+    "Technology Gaithersburg)",
+    "G. O'Neil (National Institute of Standards",
+    "Technology Boulder)",
+    "D. S. Swetz (National Institute of Standards",
+    "Technology Boulder)",
+    "P. Szypryt (National Institute of Standards",
+    "Technology Boulder",
+    "University of Colorado Boulder)",
+    "J. W. Dean (National Institute of Standards",
+    "Technology Boulder",
+    "University of Colorado Boulder)",
+    "Yu. Ralchenko (NASA Goddard Space Flight Center",
+    "University of Maryland College Park)",
+    "E. Takacs (Clemson University",
+    "National Institute of Standards",
+    "Technology Gaithersburg)"
+   ],
+   "label": "arXiv:2611.26801v1",
+   "primary_category": "physics.atom-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "High-resolution TES microcalorimeter measurements of n=2-3 transitions in Ne-like W, Re, Os, Ir and Bi, using an X-ray fluorescence source calibrated with K-shell lines of metals to reach sub-eV absolute energy accuracy.",
+    "plain": "This paper reports precise measurements of the X-ray light emitted by heavy metal atoms (tungsten, rhenium, osmium, iridium and bismuth) that have been stripped of most of their electrons, leaving only ten. The authors used a very sensitive X-ray detector and a new X-ray source made from metals whose emission lines are well known, so the energy scale could be fixed to within a fraction of an electron volt. The results are offered as reference values that theories of how these atoms hold together can be checked against.",
+    "why": "Atoms this heavy are a demanding test of relativistic atomic theory, and the text says the data are meant as stringent benchmarks for it. The text does not go beyond that, so any wider application (for example to fusion plasmas or astrophysical X-ray spectra) is not established here.",
+    "background": "- Highly charged ion: an atom that has lost many electrons; Ne-like means it keeps the 10-electron configuration of neon.\n- Transition: an electron dropping between energy levels and emitting light of a specific energy (here X-rays).\n- n=2-3 transitions: jumps between the second and third electron shells.\n- Z: the number of protons in the nucleus; Z > 74 covers elements heavier than tungsten.\n- Relativistic effects: corrections needed because inner electrons in heavy atoms move close to the speed of light; they shift the energies measured.\n- TES (transition-edge sensor): a superconducting microcalorimeter that measures the energy of single X-ray photons by the small heat they deposit.\n- EBIT (electron beam ion trap): a device that produces and holds highly charged ions using an electron beam.\n- Sub-eV accuracy: energy uncertainty below one electron volt, a very fine level of precision for X-rays.\n- K-shell lines: X-ray emission from the innermost electron shell of a metal, used here as known reference energies.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present high-resolution measurements of $n=2$-3 transitions in Ne-like tungsten, rhenium, osmium, iridium, and bismuth using a transition-edge sensor (TES) microcalorimeter. These measurements provide new benchmarks for Ne-like ions in the high-$Z$ regime ($Z > 74$), extending previous EBIT studies of the sequence. To achieve sub-eV accuracy, we developed a dedicated x-ray fluorescence source employing well-characterized K-shell emission lines from metallic elements. Our results offer stringent tests for relativistic atomic structure theories and demonstrate the advantage of TES spectroscopy for precision measurements in highly charged ions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27333",
+   "title": "Monolithic ultraviolet-to- near infrared photodetection enabled by an aluminium oxide photonic platform",
+   "url": "https://arxiv.org/abs/2611.27333",
+   "authors": [
+    "Firehun T. Dullo",
+    "Marco Povoli",
+    "Ozhan Koybasi",
+    "Michael N. Getz",
+    "Daniel N. Wright"
+   ],
+   "label": "arXiv:2611.27333v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper demonstrates atomic-layer-deposited aluminium oxide waveguides evanescently coupled to on-chip silicon p-i-n photodiodes, giving waveguide-integrated photodetection from 375 nm to 780 nm, including centimetre-scale ultraviolet Mach-Zehnder circuits.",
+    "plain": "Light-guiding chips are used to route and measure light in tiny circuits, much like wires carry electricity. This work builds such a chip from aluminium oxide, a transparent material deposited one thin atomic layer at a time on top of silicon, and adds silicon light sensors that can detect light from ultraviolet to near-infrared. The authors report that the sensors respond to light at 375, 658 and 780 nm, with very low dark current (the small signal present when no light is shining).",
+    "why": "Ultraviolet light is hard to handle on integrated chips, and most silicon-based sensors do not work well there, so a platform that covers this range could matter for sensing, spectroscopy and quantum experiments. The text reports a roughly 15-fold higher response at 375 nm than a silicon nitride version of the same detector, but the wider impact is not established by this text alone.",
+    "background": "- Photonic integrated circuit: a chip that guides light through tiny waveguides, as electronic circuits guide current through wires.\n- Waveguide loss: how much light leaks or scatters as it travels; lower loss allows longer circuits.\n- Evanescent coupling: light passing through one waveguide leaks into a nearby structure through its faint outer field, letting light reach a detector without being blocked.\n- Photodiode (p-i-n): a semiconductor device that turns light into an electrical current; a p-i-n structure is a common, efficient design.\n- Dark current: the small leakage current a detector produces with no light, a measure of its noise.\n- Mach-Zehnder interferometer: a circuit that splits light into two paths and recombines them, used for measuring phase and for switching.\n- Atomic-layer deposition (ALD): a coating method that builds materials one atomic layer at a time, giving precise, uniform films.\n- Silicon nitride (Si3N4): another material commonly used for chip waveguides, used here as a comparison.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Broadband photonic integrated circuits require waveguide platforms that combine low optical loss across a wide spectral range with integrated photodetection. Here we demonstrate a monolithically integrated atomic-layer-deposited (ALD) aluminium oxide (Al$_2$O$_3$)-on-silicon platform enabling waveguide-coupled photodetection from the ultraviolet to the near-infrared. The architecture employs evanescent coupling between low-loss Al$_2$O$_3$ waveguides and silicon p-i-n photodiodes. The platform supports photodetection at 375, 658 and 780 nm, extending integrated silicon photodetection into the ultraviolet. The devices exhibit linear photocurrent scaling with optical power, dark currents of approximately 2 pA at 50 V reverse bias and nanosecond-scale temporal response. We further demonstrate centimetre-scale ultraviolet Mach-Zehnder interferometer circuits with integrated photodiodes. The same detector architecture is implemented with Si$_3$N$_4$ waveguides, whereas the lower ultraviolet propagation loss of Al$_2$O$_3$ enables an approximately 15-fold higher photodetection response at 375 nm. These results establish ALD Al$_2$O$_3$ as a broadband integrated photonics platform for sensing, spectroscopy and quantum technologies.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26878",
    "title": "Coherence Lengths of Laser Pointers",
@@ -21,12 +97,12 @@
    "primary_category": "physics.optics",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper measures the coherence lengths of several low-cost green laser pointers, using a noncollinear-beam interferometer read out by a CMOS detector array, and finds values that can exceed 10 cm while varying from device to device.",
-    "plain": "Coherence length is how far a light beam can travel and still interfere with a copy of itself, a rough measure of how \"pure\" or single-colored the light is. The authors tested cheap green laser pointers, including three diode-type lasers and one frequency-doubled solid-state laser, to see how far their light stayed coherent. They found the answer varies between devices, but often reaches more than 10 cm.",
-    "why": "The work is modest in scope: it characterizes everyday consumer lasers and suggests the setup could serve as a teaching experiment for advanced undergraduates. The abstract also says it may inspire laser-pointer designs that rely on interference, but that is speculative and not demonstrated in the text.",
+    "ai": true,
     "background": "- Coherence length: the distance over which a light wave stays in step with itself; longer means more spectrally pure light.\n- Interferometer: an instrument that splits a beam, recombines it, and reads the bright and dark fringes formed by the overlap.\n- Noncollinear beam geometry: the two beams cross at an angle rather than travelling along the same line.\n- Multimodal behavior: a laser emitting several slightly different wavelengths (modes) at once, which shortens coherence length.\n- Diode laser and diode-pumped solid-state (DPSS) laser: two common designs; the green pointer uses a solid-state crystal that doubles an infrared neodymium laser's frequency to green.\n- CMOS detector array: the same kind of sensor chip found in cameras, used here to record the fringe pattern.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper measures the coherence lengths of several low-cost green laser pointers, using a noncollinear-beam interferometer read out by a CMOS detector array, and finds values that can exceed 10 cm while varying from device to device.",
+    "plain": "Coherence length is how far a light beam can travel and still interfere with a copy of itself, a rough measure of how \"pure\" or single-colored the light is. The authors tested cheap green laser pointers, including three diode-type lasers and one frequency-doubled solid-state laser, to see how far their light stayed coherent. They found the answer varies between devices, but often reaches more than 10 cm.",
+    "why": "The work is modest in scope: it characterizes everyday consumer lasers and suggests the setup could serve as a teaching experiment for advanced undergraduates. The abstract also says it may inspire laser-pointer designs that rely on interference, but that is speculative and not demonstrated in the text."
    },
    "abstract": "We report on the coherence lengths of low-cost green laser pointers in the midst of multimodal behavior using an optical interferometer based on noncollinear beam geometries and a CMOS detector array. Examined devices include three diode lasers and a frequency-doubled neodymium-emission diode-pumped solid state (DPSS) laser. Coherence length measurements are variable among devices, but values can nevertheless regularly exceed 10 cm. The work serves as a template for an advanced undergraduate physics laboratory experiment and may inspire new kinds of laser pointer devices utilizing interference effects as operative principles.",
    "source": "arxiv"
@@ -56,12 +132,12 @@
    "primary_category": "physics.atom-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Two Earth-fixed optical atomic clocks at different latitudes are compared against the gravitational redshift predicted by general relativity, using independent geodetic height data, reaching a 4.6×10^-5 uncertainty and arguing that Earth's rotation can enhance sensitivity to a violation.",
-    "plain": "The paper checks a prediction of Einstein's general relativity: clocks sitting higher in a gravitational field tick slightly faster. The authors compared the ticking of two optical atomic clocks placed at different heights and latitudes on Earth, and found the measured difference matches the predicted shift. Their main new idea is that separating the clocks north-south, not just up-down, can make the test more sensitive because Earth's rotation partly offsets the height difference.",
-    "why": "The result tightens ground-based tests of a basic relativity prediction by about a factor of two, according to the text, and the latitude approach is presented as a new way to get closer to space-based test sensitivity. Its wider significance beyond precision testing of relativity is not stated in the text.",
+    "ai": true,
     "background": "- General relativity: Einstein's theory of gravity, which says gravity affects the passage of time.\n- Gravitational redshift: clocks lower in a gravitational field run slower compared with clocks higher up; the shift is seen as a change in frequency.\n- Optical atomic clocks: very precise clocks that count the oscillations of light absorbed by atoms, far more stable than ordinary clocks.\n- Geodetic measurements: precise surveys of the heights and positions of the clock sites relative to Earth's shape.\n- Centrifugal potential: the effective pull from Earth's spin, which depends on latitude and partly cancels gravity's height effect.\n- Uncertainty level: the size of the largest plausible error; smaller means a stricter test.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Two Earth-fixed optical atomic clocks at different latitudes are compared against the gravitational redshift predicted by general relativity, using independent geodetic height data, reaching a 4.6×10^-5 uncertainty and arguing that Earth's rotation can enhance sensitivity to a violation.",
+    "plain": "The paper checks a prediction of Einstein's general relativity: clocks sitting higher in a gravitational field tick slightly faster. The authors compared the ticking of two optical atomic clocks placed at different heights and latitudes on Earth, and found the measured difference matches the predicted shift. Their main new idea is that separating the clocks north-south, not just up-down, can make the test more sensitive because Earth's rotation partly offsets the height difference.",
+    "why": "The result tightens ground-based tests of a basic relativity prediction by about a factor of two, according to the text, and the latitude approach is presented as a new way to get closer to space-based test sensitivity. Its wider significance beyond precision testing of relativity is not stated in the text."
    },
    "abstract": "General relativity predicts that frequency comparisons between clocks are affected by both gravitational and kinematic time dilation. While the kinematic contribution has been tested with high accuracy, experimental tests of the gravitational redshift remain comparatively less stringent. Here, we measure the frequency shift between two Earth-fixed optical atomic clocks at different potentials and compare it to the redshift predicted by general relativity using independent geodetic measurements. The observed shift agrees with the prediction, testing the gravitational redshift at the $4.6 \\times 10^{-5}$ uncertainty level, improving ground-based tests by a factor two. Previous ground-based tests separated the clocks mainly vertically. For clocks at different latitudes, their height difference is governed not only by the gravitational potentials at their locations but also by the centrifugal potentials caused by Earth's rotation. As both contributions can partially cancel, the gravitational contribution can be considerably larger than their height difference suggests. In this work, a separation of the clocks by $4^\\circ$ in latitude enhances their sensitivity to a gravitational redshift violation threefold, to the equivalent of an approximately 1200 m difference in height for small latitudinal separation. Our results establish Earth's rotation as a so far unexploited resource for advancing ground-based tests of the gravitational redshift towards the sensitivity of previous space-based experiments.",
    "source": "arxiv"

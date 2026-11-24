@@ -1,7 +1,51 @@
 {
  "slug": "statistical-methods",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27052",
+   "title": "graphMTP: An R Shiny Interface for Graphical Multiple Testing and Interim Monitoring",
+   "url": "https://arxiv.org/abs/2611.27052",
+   "authors": [
+    "Valerie Le",
+    "MengYang Yi",
+    "Philip He"
+   ],
+   "label": "arXiv:2611.27052v1",
+   "primary_category": "stat.CO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "This paper presents graphMTP, an R Shiny application for building graphical multiple testing procedures with per-hypothesis group-sequential interim monitoring, alpha recycling, and JSON export of designs and histories.",
+    "plain": "Clinical trials often test several questions at once, and each test must be guarded so that the chance of any false \"success\" stays small. This paper describes a software tool, graphMTP, that lets analysts draw the rules for these tests as a graph, set up planned interim looks at the data, and see how unused significance budget gets passed on to other tests. The text describes the tool's features and worked examples; it does not report clinical findings.",
+    "why": "Trials that test several endpoints or patient groups need careful bookkeeping, and an interactive tool that records the exact boundaries used at each look could make such designs easier to check and reproduce. The text does not give any evidence of adoption or of how it compares with existing tools, so its practical reach is unclear.",
+    "background": "- Multiple testing: testing several hypotheses inflates the chance of a false positive, so the overall error rate (family-wise error rate) must be controlled.\n- Graphical procedure: hypotheses are nodes in a graph; each carries a share of the significance level (alpha), and when one is rejected its share is passed (\"recycled\") to neighbours.\n- Group-sequential design: data are examined at planned interim looks, with stopping boundaries that keep the error rate under control across looks.\n- Spending profile: a rule that sets how much error budget is used at each interim look.\n- Local significance level: the threshold applied to one hypothesis at a given look.\n- Fixed-sequence gatekeeping: hypotheses are tested in a set order, each only after the previous one succeeds.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Graphical multiple testing procedures provide a framework for controlling the family-wise error rate across endpoints, treatment comparisons, and patient populations in confirmatory clinical trials. Interim monitoring requires analysts to track changing local significance levels together with hypothesis-specific testing schedules. We present graphMTP, an R application built with shiny, for constructing hypothesis graphs, specifying per-hypothesis group-sequential plans, and inspecting alpha recycling. The application uses TrialSimulator for graph updates, gsDesign for spending profiles, and rpact for boundary calculations. It records the local levels, boundaries, and decisions used for each submitted test and exports designs and histories as JSON files. Worked examples cover fixed-design reallocation, fixed-sequence gatekeeping, delayed activation, and retesting a previously monitored recipient of alpha. Replication code checks graph updates, normal crossing probabilities, and saved-session replay. Sequential tests use a prespecified information schedule and reconstruct the complete local boundary family at the current allocation, including after recycling. Historical event records retain the boundaries actually used. An installable package and standalone sources accompany the article.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27867",
+   "title": "Scalable Matrix-Free Algorithms for Variance Estimation of Survey-Weighted Survival Curves",
+   "url": "https://arxiv.org/abs/2611.27867",
+   "authors": [
+    "Jingchen Liang"
+   ],
+   "label": "arXiv:2611.27867v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper presents two matrix-free algorithms that compute the conventional Taylor-linearization variance of survey-weighted Kaplan-Meier-type survival curves without forming the full event-time covariance matrix, validated on NHATS data and simulations.",
+    "plain": "When researchers estimate how long people survive in a large survey, the uncertainty around the survival curve can take a lot of computer time and memory to calculate, especially when many distinct event times occur. This paper describes two alternative calculation methods that avoid building a huge intermediate table, and that give the same results as the existing R implementation. On a 7-year study of 7,608 older adults with 2,879 deaths, run times dropped from about 26 minutes to a few seconds.",
+    "why": "The work targets a practical bottleneck: standard software can run out of memory on demanding survey analyses, while the proposed methods finished those cases. Its relevance beyond this one dataset and software setup is not established by the text.",
+    "background": "- Survival curve: the estimated share of people still alive over time.\n- Survey weights: numbers that make a sample represent a larger population; they change how uncertainty is computed.\n- Variance estimate: a measure of how much the estimate would vary across repeated samples; here it is a standard error-type quantity.\n- Taylor linearization: a standard approximation that turns a complicated estimate into a sum of per-person contributions to estimate its variance.\n- Primary sampling unit (PSU): a cluster (such as a neighborhood) from which survey respondents were drawn; variance is often aggregated at this level.\n- Matrix-free computation: calculating a result by accumulating sums directly, rather than storing a large grid of pairwise values in memory.\n- NHATS: the National Health and Aging Trends Study, a US survey of older adults.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Variance estimation for survey-weighted survival curves using existing statistical software can require substantial time and memory, particularly when the number of distinct event times is large. We developed two matrix-free algorithms that compute the conventional Taylor linearization variance estimator without constructing the full event-time covariance matrix: one accumulates individual-level linearization contributions, while the other directly updates aggregated contributions at the primary sampling unit (PSU) level. We evaluated numerical accuracy, runtime, and peak memory usage through an application to the National Health and Aging Trends Study (NHATS) and simulation experiments. Both approaches yielded survival and variance estimates identical to the R implementation. In the 7-year follow-up analysis of 7,608 NHATS participants with 2,879 deaths, computation time decreased from approximately 26 minutes to less than 3 seconds with the individual-level approach and less than 1 second with the PSU-level approach. Simulations with sample sizes of 1,000 to 10,000 showed similar results, with more pronounced computational advantages as sample size and the number of distinct event times increased. In more demanding settings, the existing implementation failed due to memory exhaustion, whereas both proposed approaches completed successfully. Matrix-free computation can improve the efficiency and scalability of design-based variance estimation while preserving numerical accuracy.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26838",
    "title": "Hidden Semi-Markov Models for Fully Functional Time Series",
@@ -15,12 +59,12 @@
    "primary_category": "stat.ME",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper extends hidden semi-Markov models, with data-driven state durations, to fully functional time series, embedding the hidden chain in a larger Markov chain so Baum-Welch and Viterbi fitting can be used, and applies this to pediatric EEG signals in the Gaussian-measure setting of locally convex spaces.",
-    "plain": "Many signals, such as brain recordings, switch between hidden modes over time, and a common model for this is the hidden Markov model. That model forces each mode to last for a random time that drops off quickly, which often does not fit real data. This paper replaces it with a version where each hidden mode can last for a more flexible, data-driven length, and applies the approach to overnight sleep-study EEG recordings from children.",
-    "why": "Modeling how long a hidden state lasts is central to interpreting physiological signals such as sleep stages, so a more realistic duration model may matter for that kind of analysis. The provided text does not report comparative results against standard models, so its practical gain is not established here.",
+    "ai": true,
     "background": "- Hidden Markov model: a model where an unseen state changes over time, and each state produces the observed data.\n- Markov property: the next state depends only on the current one, which makes durations decay geometrically.\n- Semi-Markov / sojourn time: a model that lets the time spent in a state follow its own distribution, such as a negative binomial.\n- Baum-Welch and Viterbi: standard algorithms for fitting such models and finding the most likely hidden state sequence.\n- Functional time series: data where each observation is a whole curve or function, not a single number.\n- Gaussian measures on locally convex spaces: a generalization of normal distributions to infinite-dimensional settings, used here to handle curves.\n- EEG and polysomnography: recordings of brain electrical activity and other signals during sleep.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extends hidden semi-Markov models, with data-driven state durations, to fully functional time series, embedding the hidden chain in a larger Markov chain so Baum-Welch and Viterbi fitting can be used, and applies this to pediatric EEG signals in the Gaussian-measure setting of locally convex spaces.",
+    "plain": "Many signals, such as brain recordings, switch between hidden modes over time, and a common model for this is the hidden Markov model. That model forces each mode to last for a random time that drops off quickly, which often does not fit real data. This paper replaces it with a version where each hidden mode can last for a more flexible, data-driven length, and applies the approach to overnight sleep-study EEG recordings from children.",
+    "why": "Modeling how long a hidden state lasts is central to interpreting physiological signals such as sleep stages, so a more realistic duration model may matter for that kind of analysis. The provided text does not report comparative results against standard models, so its practical gain is not established here."
    },
    "abstract": "Functional time series have a wide range of practical applications to modeling complex datasets such as Electroencephalogram (EEG) and other biological signals. Often latent states are hidden within the data dictating how a system is behaving and changing over time. The Hidden Markov Model (HMM) is one common and highly applicable latent state space model where the hidden state sequence evolves as a Markov chain. While the HMM has had much success modeling discrete, multivariate, and fully functional time series, it is also restricted by the Markov property which causes hidden states to persist only at geometrically decaying rates. This work investigates the implementation of hidden semi-Markov models for modeling fully functional time series data. This allows for the hidden state sequence to persist in a given state for a data-driven sojourn time, which can be parametrized by a discrete distribution (e.g. negative binomial) or left non-parametric. For efficient fitting of such a model, the hidden semi-Markov chain is embedded into a larger state space Markov chain and classic methods like the Baum-Welch and Viterbi algorithms are applied. We furthermore consider functional time series in the general setting of Gaussian measures in locally convex topological vector spaces. This is applied to a time series of pediatric EEG signals collected via overnight polysomnography.",
    "source": "arxiv"
@@ -38,12 +82,12 @@
    "primary_category": "stat.ME",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A generalized Bayesian changepoint method for dynamic networks uses a multinomial log loss, a low-rank sparse prior, and a Pólya-Gamma Gibbs sampler to locate local and global structural shifts in time-indexed adjacency matrices.",
-    "plain": "The paper addresses how to find the moments when a network that changes over time (such as who emails whom, or which countries are in conflict) suddenly shifts its pattern. The authors build a statistical method that looks at both the full set of connections and simple summary measures of the network, and it estimates where the change points are along with how uncertain those estimates are. They report that in simulations it was often more accurate than competing methods, and they illustrate it on an email network and an international conflict network.",
-    "why": "Detecting when relationships in a network change matters for fields that track communication, social ties, or political conflict over time. The text does not say how broadly the method will transfer beyond the benchmark simulations and the two applications shown.",
+    "ai": true,
     "background": "- A dynamic network is a sequence of snapshots over time, each recorded as an adjacency matrix (a grid where an entry marks whether two nodes are linked).\n- A changepoint is a time at which the underlying process generating the data shifts.\n- Bayesian inference combines a prior belief with observed data to get a posterior distribution, which expresses uncertainty about unknown quantities.\n- A generalized posterior replaces the usual likelihood with a loss function, so the method does not depend on knowing the exact data-generating process.\n- Low-rank structure and sparsity are simplifying assumptions that keep the model parameters compact and mostly zero.\n- Gibbs sampling and Pólya-Gamma data augmentation are computational techniques for drawing samples from the posterior.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A generalized Bayesian changepoint method for dynamic networks uses a multinomial log loss, a low-rank sparse prior, and a Pólya-Gamma Gibbs sampler to locate local and global structural shifts in time-indexed adjacency matrices.",
+    "plain": "The paper addresses how to find the moments when a network that changes over time (such as who emails whom, or which countries are in conflict) suddenly shifts its pattern. The authors build a statistical method that looks at both the full set of connections and simple summary measures of the network, and it estimates where the change points are along with how uncertain those estimates are. They report that in simulations it was often more accurate than competing methods, and they illustrate it on an email network and an international conflict network.",
+    "why": "Detecting when relationships in a network change matters for fields that track communication, social ties, or political conflict over time. The text does not say how broadly the method will transfer beyond the benchmark simulations and the two applications shown."
    },
    "abstract": "We introduce a generalized Bayesian approach to multiple changepoint analysis in dynamic network data based on a multinomial log loss function and a prior distribution that imposes low-rank structure and sparsity on the model parameters. The method can detect local and global changes in network structure by incorporating information from both the full adjacency matrices and network summary statistics. Moreover, the proposed method is agnostic to the true data-generating process. From the generalized posterior distribution, we can make simultaneous inferences with meaningful uncertainty quantification about the locations of changepoints as well as deduce the network attributes and summary statistics that characterize them. For posterior simulation, we develop an efficient Gibbs sampler based on P\\'olya-Gamma data augmentation with a computational cost that grows linearly with the number of observed edges in the dynamic network. Simulations across several benchmark network models show that the proposed method is often more accurate and flexible than competitors. We demonstrate the practical value of the method through applications to an email communication network and an international conflict network.",
    "source": "arxiv"

@@ -1,7 +1,55 @@
 {
  "slug": "reinforcement-learning",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27631",
+   "title": "Learning Inside Types: Epistemic Typestates for Safe Multi-Agent Reinforcement Learning",
+   "url": "https://arxiv.org/abs/2611.27631",
+   "authors": [
+    "Lorenzo Bacchiani",
+    "Mario Bravetti",
+    "Giovanni Pau",
+    "Roberto Girau"
+   ],
+   "label": "arXiv:2611.27631v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes \"epistemic typestates,\" a type discipline in which each agent's type is a protocol over its beliefs about which worlds are still possible, permitting only actions safe in every such world, and reports soundness and team-safety proofs (mechanised in Rocq) plus benchmark results for safe multi-agent reinforcement learning.",
+    "plain": "The paper is about teaching groups of learning software agents to act safely while they learn together. The authors treat safety like a type rule in programming: each agent gets a type that limits which actions it may take, based on what it can rule out from its own observations, and each agent's type is built and checked separately without the agents talking to each other. Their tests on nine benchmarks report no safety violations from the typed learners, task performance comparable to two recent shielding methods, and fast type construction for ten agents.",
+    "why": "Safety guarantees that hold for every policy a learner might produce, rather than only for those tested, would matter for robots or systems where errors are costly. The text reports proofs and benchmark comparisons, but these are the authors' own results, and how well they transfer to real-world settings is not shown in the text.",
+    "background": "- Reinforcement learning: an agent learns by trial and error which actions earn rewards.\n- Multi-agent setting: several learners act in a shared environment, and each one's safety can depend on what the others do.\n- Type system: a rule set in programming that rejects code that could go wrong in specified ways before it runs.\n- Typestate: a type that tracks what state an object is in and which operations are allowed then.\n- Shield: a runtime filter that blocks unsafe actions chosen by a learner.\n- Lagrangian method: a common way to add safety limits to learning by penalising constraint violations, which can still allow violations during training.\n- Mechanised proof (Rocq): a mathematical proof checked by a computer proof assistant.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Type disciplines make programs safe by construction: components checked against each other's types compose into programs that cannot go wrong in the ways the types exclude. Types suit reinforcement learning: a type constrains what an agent may choose, not how it chooses, so the guarantee holds for every policy a learner produces. We introduce epistemic typestates, a type discipline for safe multi-agent reinforcement learning. An agent's type is a protocol whose states record its beliefs, the worlds it cannot rule out from its own observations and actions, and permits only actions that are safe in every world of the belief, whatever the others do within their public types. Agents learn inside their types, which are built and checked one agent at a time and run without communication. We prove type soundness and team safety, give a synthesis that is sound and complete, build types from guards when worlds are infinite, and show that shields are a special case. All proofs are mechanised in Rocq. On nine benchmarks, no typed learner causes a safety violation, and task performance does not differ significantly from that of two recent multi-agent shielding methods. Where a contract-based method fails at five and ten agents, types for ten agents are built in under a second. In the two continuous benchmarks, Lagrangian learners cause thousands of violations in every training run.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27865",
+   "title": "SLICR: Strategy Logic-Guided Multi-Agent Reinforcement Learning",
+   "url": "https://arxiv.org/abs/2611.27865",
+   "authors": [
+    "Arshia Rafieioskouie",
+    "Matthew Lucas",
+    "Tzu-Han Hsu",
+    "Borzoo Bonakdarpour"
+   ],
+   "label": "arXiv:2611.27865v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "SLICR uses Strategy Logic specifications (with LTL objectives and constraints) to shape rewards for multi-agent reinforcement learning under adversarial settings and partial observability, evaluated on Predator-Prey, Google Research Football, and an extended SMAC-HARD.",
+    "plain": "This paper is about teaching groups of software agents to act well when they compete against other agents and can only see part of what is happening. The authors write goals as formal logic rules, so the agents get rewarded for meeting them. They report testing the method on three standard game-like benchmarks and say it works, scales, and adapts to different opposing strategies.",
+    "why": "Writing goals as precise logical rules could make it easier to say exactly what an AI agent should do, including how it should respond to rivals. The text gives only the abstract, so the strength of the results and how they compare with existing methods cannot be judged from it; the \"paradigm shift\" wording is the authors' own framing.",
+    "background": "- Reinforcement learning: an agent learns by trying actions and getting rewards or penalties.\n- Multi-agent setting: several learning agents act at once, sometimes against each other.\n- Partial observability: each agent sees only part of the situation.\n- Specification-guided RL: formal rules describing desired behavior are turned into reward signals.\n- Linear temporal logic (LTL): a notation for rules about how things must unfold over time, such as \"eventually reach X and never do Y\".\n- Strategy Logic (SL): an extension that lets you state rules about the strategies agents choose, not just their single actions.\n- Benchmarks: standard test games (Predator-Prey, Google Research Football, StarCraft Multi-Agent Challenge) used to compare methods.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Specification-guided reinforcement learning (RL) translates formal specifications of desired behavior of agents into shaped rewards. This paper introduces SLICR, a significant paradigm shift that advances the state of the art to specification-guided RL in adversarial settings under partial observability. We employ Strategy Logic (SL), which allows explicit quantification over agents' strategies and uses the linear temporal logic (LTL) to specify the agents' objectives and constraints. This enables reasoning not only about how agents should act to satisfy a specification, but also about how they should respond to the strategies and behaviors of other agents. We evaluate SLICR on three popular benchmarks: Predator-Prey, Google Research Football, and our home-grown extension of SMAC-HARD, demonstrating its effectiveness, scalability, and ability to adapt to diverse adversarial strategies.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27368",
    "title": "Testing for Coordination Failures in Cooperative Multi-Agent Reinforcement Learning",
@@ -15,12 +63,12 @@
    "primary_category": "cs.MA",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes DisQ, a test-case selection method that uses a \"Q-value gap\" (disagreement between agents' value estimates in a state) to find failure-revealing states when testing value-based cooperative multi-agent reinforcement learning policies.",
-    "plain": "Teams of AI agents that learn to work together can behave unsafely in ways their reward signal does not capture, and those failures are hard to explain. This paper proposes a way to pick which situations to test by flagging states where the agents' estimates of future reward diverge beyond a set threshold. The authors report that, in most of four benchmark environments tested, this selection finds more failures than random testing or genetic-algorithm search methods borrowed from single-agent testing.",
-    "why": "Testing multi-agent systems for safety has received less attention than testing single agents, and the authors offer an explainable signal computable from one state without running the system. Its practical value beyond the four benchmarks evaluated is not established in the text.",
+    "ai": true,
     "background": "- Reinforcement learning: an AI learns by trying actions and receiving rewards.\n- Multi-agent reinforcement learning: several agents learn at the same time, here aiming at one shared goal.\n- Q-value: a learned estimate of the total future reward from taking an action in a given state.\n- Coordination failure: agents' individual choices work against each other, so the team does badly.\n- Test case selection: choosing which situations to run a system in, to find failures efficiently.\n- Random testing and genetic-algorithm search: standard baseline methods for finding failures.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes DisQ, a test-case selection method that uses a \"Q-value gap\" (disagreement between agents' value estimates in a state) to find failure-revealing states when testing value-based cooperative multi-agent reinforcement learning policies.",
+    "plain": "Teams of AI agents that learn to work together can behave unsafely in ways their reward signal does not capture, and those failures are hard to explain. This paper proposes a way to pick which situations to test by flagging states where the agents' estimates of future reward diverge beyond a set threshold. The authors report that, in most of four benchmark environments tested, this selection finds more failures than random testing or genetic-algorithm search methods borrowed from single-agent testing.",
+    "why": "Testing multi-agent systems for safety has received less attention than testing single agents, and the authors offer an explainable signal computable from one state without running the system. Its practical value beyond the four benchmarks evaluated is not established in the text."
    },
    "abstract": "Deep parallel cooperative multi-agent reinforcement learning (CMARL)} trains multiple agents that all act at every time step to optimize a common objective. Like single-agent RL, CMARL can produce unsafe behaviors that violate implicit safety requirements not captured by the reward, and these behaviors are hard to explain. However, testing CMARL policies for safety has received less attention than the safety testing of single-agent RL policies. In this paper, we propose DisQ, a test case selection method that identifies failure-revealing states in value-based CMARL by exploiting a signal specific to trained Q-learning agents. The signal is the Q-value gap, an explainable metric that flags a state when the agents' estimates of the achievable return diverge by more than a calibrated threshold. DisQ selects such states for execution and skips those without a gap. Our experiments in four CMARL benchmark environments show that, in most of the evaluated configurations, DisQ improves failure detection over single-agent RL testing methods applied to CMARL, namely random testing and search-based testing with genetic algorithms. Our main contributions are the Q-value gap, an indicator of potential miscoordination computable from a single state without executing the system, and DisQ, a test case selection method that adapts existing single-agent testing methods to CMARL.",
    "source": "arxiv"
@@ -43,12 +91,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "DM-PRM turns a general-purpose yes/no decision model into a zero-shot, step-level process reward that is added to the advantage in policy-gradient RL for language agents, evaluated on ALFWorld and WebShop.",
-    "plain": "Training AI agents with reinforcement learning usually gives one score at the end of a whole attempt, so the agent cannot tell which individual steps helped. This paper proposes asking a general yes/no question about each step, using a model's probability answer as a step-by-step score, without extra labels or training. The authors report that this improves the GRPO training method on two household and web-shopping task benchmarks, and that it helps other methods too.",
-    "why": "It offers a way to get per-step credit without hand-made step labels or a separately trained critic, which are costly to build. Whether this holds beyond the two benchmarks and one small model (Qwen2.5-1.5B) is not shown in the text, so its broader value remains to be tested.",
+    "ai": true,
     "background": "- Reinforcement learning (RL): training by trial and reward; here an AI language agent learns from task success or failure.\n- Policy gradient: a family of RL update rules that make good actions more likely.\n- Reward and credit assignment: deciding which steps in a long attempt deserve the credit or blame for the result.\n- Process reward model (PRM): a scorer that rates intermediate steps, not just the final outcome.\n- Advantage: how much better an action turned out than expected; used to scale the learning update.\n- GRPO, PPO, GiGPO, HGPO, GraphGPO: named RL training methods for language agents; PPO uses a learned critic.\n- ALFWorld and WebShop: simulated benchmarks for household tasks and online shopping.\n- Zero-shot: used without task-specific training.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "DM-PRM turns a general-purpose yes/no decision model into a zero-shot, step-level process reward that is added to the advantage in policy-gradient RL for language agents, evaluated on ALFWorld and WebShop.",
+    "plain": "Training AI agents with reinforcement learning usually gives one score at the end of a whole attempt, so the agent cannot tell which individual steps helped. This paper proposes asking a general yes/no question about each step, using a model's probability answer as a step-by-step score, without extra labels or training. The authors report that this improves the GRPO training method on two household and web-shopping task benchmarks, and that it helps other methods too.",
+    "why": "It offers a way to get per-step credit without hand-made step labels or a separately trained critic, which are costly to build. Whether this holds beyond the two benchmarks and one small model (Qwen2.5-1.5B) is not shown in the text, so its broader value remains to be tested."
    },
    "abstract": "Reinforcement learning (RL) from verifiable outcomes gives a language agent one reward per episode: every step is credited alike, and nothing about the task is learned when all rollouts fail. The last mile, step-level credit, usually requires step labels, a learned critic, costly LLM judges or hand-written rules. We introduce DM-PRM, which turns a general-purpose decision model -- one answering yes/no questions with probabilities -- into a general-purpose process reward model (PRM), zero-shot: no step labels, no fine-tuning, no critic. DM-PRM asks one question per step and adds the standardised answers to the advantage. It plugs into any policy-gradient method; one model, with one question text per environment, serves household tasks, web shopping and multiple RL methods. With Qwen2.5-1.5B it lifts GRPO by over twenty points on ALFWorld and over ten on WebShop, overtakes GiGPO on ALFWorld and learns in far fewer iterations; it also improves GiGPO and GraphGPO on both benchmarks and reaches the highest success of our comparison, ahead of critic-based PPO and of state-of-the-art GiGPO, HGPO and GraphGPO. Its scores locate useful steps in failed rollouts, and trained agents drop idle actions and explore instead of circling. DM-PRM shows that step credit need not be learned: it can be asked for.",
    "source": "arxiv"

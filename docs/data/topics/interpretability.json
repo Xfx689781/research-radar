@@ -1,7 +1,54 @@
 {
  "slug": "interpretability",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27329",
+   "title": "H-MSAE: Hierarchical Sparse Concept Coverage for Efficient and Diverse Instruction Data Selection",
+   "url": "https://arxiv.org/abs/2611.27329",
+   "authors": [
+    "Bohan Cui",
+    "Jingyi Cui",
+    "Hongwei Wen",
+    "Feng Wang",
+    "Simiu Gu"
+   ],
+   "label": "arXiv:2611.27329v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "H-MSAE selects compact, diverse, high-quality instruction-tuning subsets by building a coarse-to-fine concept hierarchy from a Matryoshka sparse autoencoder, avoiding generated tags and explicit graphs.",
+    "plain": "Companies train AI chatbots on huge collections of example instructions and answers, and many of these examples repeat each other. This paper proposes a way to pick a smaller set of examples that keeps the useful variety and good quality while costing less to train on. The authors report that on the Tulu 3 data pool their selected 50K subsets scored highest on their average benchmark measure among the selectors they tested, and that their method ran roughly five times faster end-to-end than the MIG baseline.",
+    "why": "Training cost and data redundancy are practical concerns for anyone fine-tuning language models, so a cheaper selection method is of interest. The text does not show how broadly the gains hold beyond the Tulu 3 pool and the evaluated selectors, so its general significance is unclear.",
+    "background": "- Instruction tuning: further training a language model on example prompts paired with good responses so it follows instructions.\n- Data selection: choosing a subset of a large training pool to save compute while keeping performance.\n- Sparse autoencoder: a model that re-expresses internal representations as a small number of active \"concept\" features; a Matryoshka version learns features at several nested levels of detail.\n- Diversity and redundancy: many training examples cover the same content, so keeping one representative of each topic can be enough.\n- Effective rank: a measure of how many independent directions a set of representations spans, used here as a rough diversity indicator.\n- Baseline comparison: MIG is an existing selection method the authors compare against for runtime.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Large instruction-tuning corpora contain substantial semantic redundancy, motivating the selection of compact subsets that preserve useful supervision while reducing training cost. Existing diversity-aware selectors often rely on generated semantic tags and explicit graph structures, introducing considerable annotation and preprocessing overhead. We introduce H-MSAE, a hierarchical sparse instruction selection framework that organizes multi-resolution concepts learned by a Matryoshka sparse autoencoder into a coarse-to-fine hierarchy. Quality-weighted, diminishing-return coverage with ancestor propagation promotes high-quality and non-redundant semantic coverage, while pool-relative length constraints regulate subset composition. We motivate this design through a local quality-diversity analysis of subset SFT utility and examine it using example-quality and representation-space diversity diagnostics. On Tulu 3 data pool, H-MSAE achieves the highest Final Avg among the evaluated 50K selectors across scales and initialization. The selected subset also exhibits the highest mean quality and effective rank among the evaluated methods. By avoiding full-pool generative tagging and supporting efficient sparse selection, H-MSAE reduces measured end-to-end runtime by approximately $5\\times$ relative to MIG.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27559",
+   "title": "Can Language Models See the Circuit in Pixelated RFIC Passives?",
+   "url": "https://arxiv.org/abs/2611.27559",
+   "authors": [
+    "Jonathan Zhou",
+    "Kaushik Sengupta"
+   ],
+   "label": "arXiv:2611.27559v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A frontier language model, run without tools, is tested on reading, predicting, and debugging pixelated (inverse-designed) RFIC passive structures against full-wave EM simulation, with a limited simulation budget for the debugging step.",
+    "plain": "Chip designers use computer-optimized patterns for small electrical components on microwave chips. These patterns look like QR codes and are hard for people to read or fix when they misbehave. This paper asks whether a language model can look at such a pattern, predict how it will respond to signals across 20 to 100 GHz, and suggest edits to fix a failing design.",
+    "why": "It tests whether language models could serve as a reading and debugging aid for designs that people find opaque, which matters for the growing use of automatically designed chip parts. The text does not show how general these results are beyond the specific layouts tested, so the broader claim should be treated cautiously.",
+    "background": "- RFIC: radio-frequency integrated circuit, a chip handling radio and microwave signals.\n- Passives: components like inductors, resistors and capacitors that do not amplify signals; here, metal patterns on a grid of tiles.\n- Inverse design: an optimization algorithm searches for a layout that meets a performance target, rather than a human drawing it.\n- Tile grid: the layout is a square grid (18x18 or 27x27) where each cell is filled or empty.\n- Input impedance and Smith chart: a way of describing how a circuit resists and reacts to a signal at each frequency, drawn as a curve on a circular chart.\n- Full-wave EM simulation: a detailed physics simulation of electromagnetic fields, used as the reference truth here and expensive to run.\n- GA (genetic algorithm): a search method that evolves candidate designs by mutation and selection.\n- Transmission-line model: a simpler approximation that treats the structure as a straight wire; the paper says it ignores bends.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The emergence of inverse-designed, pixelated passives for microwave and millimeter-wave applications has been a major development in the field of RFIC design. These devices, which appear to be QR-code-like in structure, exist in a generalizable, high-dimensional design space that includes conventional passive topologies. However, these structures are naturally unintuitive for designers, and failures or deviations in performance are difficult to debug. In this work, we ask whether a frontier language model can understand, predict, and edit the responses and layout structure of pixelated passives. The agent, run with all tools disabled, is first asked to read layouts on 18x18 and 27x27 tile grids and, in a single reply, predict the input impedance and loss of the structure from 20-100 GHz. On eight GA-synthesized layouts and five random fills, the predicted Smith-chart locus follows full-wave simulation results closely, with a systematic shift that places features about 16% lower in frequency than EM. On multipath loop structures it identifies notches successfully but shows a smaller frequency bias, about half that of an ideal transmission-line model that ignores bends. The agent is then asked to debug seven designs that fail their specification, and given a budget of five EM simulations and at most twelve changed tiles, it is able to improve all seven and bring five designs within specification. These experiments suggest language models can serve as an interpretability and debugging tool for traditionally non-intuitive inverse-designed passives.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26711",
    "title": "Parasite Features: Causal Abstraction Through Spurious Pathways",
@@ -20,12 +67,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper shows that Distributed Alignment Search, a causal-abstraction interpretability method, can be fooled into crediting a neural network with a feature it does not actually use, via \"parasite features\" formed by two directions in representation space that together pass equivalence tests.",
-    "plain": "Researchers study how to check whether a neural network does a task in the same way a human-written algorithm would. They argue that a common checking method can be fooled: two separate directions inside the network, one that sorts inputs by some feature and one that pushes the output toward an answer, can together mimic the intended behavior. The method then appears to show the network uses that feature when it may not. They test this on grammar agreement and two-digit addition.",
-    "why": "Causal abstraction is a leading tool for explaining what neural networks compute, so a case where it gives false positives matters for how its results should be read. The text does not say how widespread this failure is in practice, and it only reports experiments on two tasks.",
+    "ai": true,
     "background": "- Neural network \"representation space\": the internal numerical state of a model, where concepts can be encoded as directions.\n- Mechanistic interpretability: reverse-engineering what internal parts of a model do.\n- Causal abstraction: testing whether a network's internal computation matches a simpler algorithm by intervening on internal states and checking that outputs match.\n- Distributed Alignment Search (DAS): a method that learns a linear map to find directions in the network that correspond to an algorithm's variables.\n- Spurious feature: something that looks like the real mechanism in a test but is not actually what the model relies on.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that Distributed Alignment Search, a causal-abstraction interpretability method, can be fooled into crediting a neural network with a feature it does not actually use, via \"parasite features\" formed by two directions in representation space that together pass equivalence tests.",
+    "plain": "Researchers study how to check whether a neural network does a task in the same way a human-written algorithm would. They argue that a common checking method can be fooled: two separate directions inside the network, one that sorts inputs by some feature and one that pushes the output toward an answer, can together mimic the intended behavior. The method then appears to show the network uses that feature when it may not. They test this on grammar agreement and two-digit addition.",
+    "why": "Causal abstraction is a leading tool for explaining what neural networks compute, so a case where it gives false positives matters for how its results should be read. The text does not say how widespread this failure is in practice, and it only reports experiments on two tasks."
    },
    "abstract": "Causal Abstraction defines a notion of \\emph{equivalence} between a neural network and an algorithm, thus serving as a powerful framework for mechanistic interpretability. In this paper, however, we show the existence of a class of \\emph{spurious features} which straightforwardly pass such equivalence tests. Suppose there are two directions in a model's representation space where: (i) one discriminates the input based on some feature, and (ii) the other steers the model towards a certain output. Interpretability methods based on Causal Abstraction (e.g., Distributed Alignment Search) can \\emph{spuriously} simulate these directions' combined behavior by leveraging pathways passing through them, giving the impression that the model implements this feature. In such cases, we say the method discovered a \\defn{parasite feature}. Experimentally, we show that Distributed Alignment Search finds parasite features using linear alignment maps in two tasks: syntactic agreement and two-digit addition. Our paper highlights an important consideration for Causal Abstraction and contributes to the ongoing debate about best practices for mechanistic interpretability.",
    "source": "arxiv"
@@ -43,12 +90,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "WaXup augments the training data for trainable introspection (models trained to describe their own finetuned behaviors) by linearly interpolating weights of finetuned experts, motivated by linear mode connectivity, and evaluates it on hidden-behavior models, a real-world NLP meta-dataset, and AuditBench.",
-    "plain": "Researchers are trying to get AI language models to explain, in plain words, what they were taught during extra training, rather than relying on hard-to-read technical inspection of their internals. This paper proposes WaXup, which creates extra training examples by blending the settings of several specialized versions of a model. The authors report that this improves how accurately the model describes its behaviors and how well it holds up when the test situations change.",
-    "why": "Being able to ask a model what it has learned, and trust the answer, could help people audit models for hidden or concealed behaviors, which matters for safety. The text reports gains in accuracy and robustness but gives limited detail on size or scale of those gains, so its practical impact is not yet clear.",
+    "ai": true,
     "background": "- Mechanistic interpretability: studying a model's internal parts (weights and activations) to understand what it computes.\n- Finetuning: extra training of a general model on a narrow task or behavior, producing a specialized \"expert\" version.\n- Introspection (here): training a model to describe, in natural language, the behavior it acquired during finetuning.\n- Weight space and weight averaging: each model is a long list of numbers (weights); blending two such lists gives a model whose behavior is often between the originals.\n- Linear mode connectivity: the observation that some finetuned models can be averaged without losing performance, suggesting they lie in a smooth region together.\n- Data augmentation: creating extra training examples from existing ones to make learning more robust. MiXup, the framework built on, is a related augmentation method.\n- Alignment auditing and AuditBench: checking whether a model has hidden or concealed behaviors; AuditBench is a suite of models adversarially trained to hide theirs.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "WaXup augments the training data for trainable introspection (models trained to describe their own finetuned behaviors) by linearly interpolating weights of finetuned experts, motivated by linear mode connectivity, and evaluates it on hidden-behavior models, a real-world NLP meta-dataset, and AuditBench.",
+    "plain": "Researchers are trying to get AI language models to explain, in plain words, what they were taught during extra training, rather than relying on hard-to-read technical inspection of their internals. This paper proposes WaXup, which creates extra training examples by blending the settings of several specialized versions of a model. The authors report that this improves how accurately the model describes its behaviors and how well it holds up when the test situations change.",
+    "why": "Being able to ask a model what it has learned, and trust the answer, could help people audit models for hidden or concealed behaviors, which matters for safety. The text reports gains in accuracy and robustness but gives limited detail on size or scale of those gains, so its practical impact is not yet clear."
    },
    "abstract": "As the capabilities of large language models keep improving, traditional mechanistic interpretability methods struggle to keep pace. In contrast, trainable introspection methods emerge as a promising alternative; they repurpose the model itself as a self-diagnostic tool, trained to verbalize what it has learned during finetuning in natural language. While training on datasets of finetuned experts achieves encouraging results, it currently lacks robustness and generalization. Building on the data augmentation framework of MiXup, we introduce WaXup, a method that augments the introspection training set through linear interpolation in the weight space. This is motivated by the linear mode connectivity property: weight averaged experts interpolate the behaviors of the initial experts. We evaluate WaXup on three benchmarks: hidden-behavior models, a meta-dataset of real-world NLP tasks and AuditBench, a challenging alignment auditing suite of models adversarially trained to conceal their behaviors. WaXup improves the accuracy of generated descriptions as well as robustness to various distribution shifts. We hope to improve the reliability of trainable introspection methods towards better and safer models.",
    "source": "arxiv"

@@ -1,7 +1,53 @@
 {
  "slug": "particle-physics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27549",
+   "title": "nuSTORM: a unique GeV electron-(anti)neutrino machine",
+   "url": "https://arxiv.org/abs/2611.27549",
+   "authors": [
+    "Xianguo Lu"
+   ],
+   "label": "arXiv:2611.27549v1",
+   "primary_category": "physics.acc-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A conference review arguing that the nuSTORM concept, a neutrino beam produced from a muon storage ring, could supply well-characterised electron-(anti)neutrino beams needed for cross-section inputs to Dirac CP phase measurements.",
+    "plain": "This is a short conference write-up about tiny, nearly massless particles called neutrinos. It reviews current experiments that study how neutrinos change type, which may help explain why matter dominates over antimatter in the universe. The author argues that a proposed facility, nuSTORM, could produce especially clean beams of one neutrino type that would help other measurements.",
+    "why": "Better measurements of how neutrinos interact could reduce uncertainty in experiments that look for differences between neutrinos and antineutrinos, which bear on the matter-antimatter puzzle. The text is a position argument from a conference talk and does not show results from an actual facility, so its practical impact is uncertain.",
+    "background": "- Neutrinos are very light, electrically neutral particles that rarely interact with matter.\n- Neutrinos come in types (electron, muon, tau), and they can switch between types as they travel, called oscillation.\n- The Dirac CP phase (δCP) is a parameter describing a possible difference in how neutrinos and antineutrinos oscillate; a nonzero value would mean a CP violation.\n- Accelerator experiments send beams of neutrinos over long distances and compare what arrives with what was sent.\n- Cross sections measure how likely a particle is to interact with a target; they must be known precisely to interpret oscillation data.\n- A muon storage ring is a circular magnet loop that holds muons, which decay to produce neutrino beams with known composition.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this conference contribution, I briefly review current experimental programmes measuring the Dirac CP phase {\\delta}CP using accelerator neutrinos. I argue that the nuSTORM concept---neutrino beams from a muon storage ring---could provide high-quality electron-(anti)neutrino beams needed for the cross-section inputs to {\\delta}CP measurements.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26854",
+   "title": "Optimized solver algorithms for computing $\\mathrm{Tr}(A^{-1})$",
+   "url": "https://arxiv.org/abs/2611.26854",
+   "authors": [
+    "Benjamin Luke",
+    "Sudip Shiwakoti",
+    "Shayan Nadeem",
+    "Ronald Morgan",
+    "Walter Wilcox"
+   ],
+   "label": "arXiv:2611.26854v1",
+   "primary_category": "hep-lat",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes \"Twin\" Krylov solvers (Twin-BiCG and Twin-BiCGStab) that build the solver's polynomial once and reuse it across noise vectors, plus a polynomial approximation and singular-value deflation scheme, to speed up Hutchinson-style estimation of Tr(A^{-1}) for lattice QCD quark matrices.",
+    "plain": "Physicists studying the strong force on a computer grid often need the trace of the inverse of a huge matrix, which is a single summary number that is expensive to get exactly. The standard shortcut uses many random noise vectors, and each one requires solving a large system of equations. This paper introduces solver methods that reuse work from one solve on the others, and a cheaper scheme that handles most noise vectors with an approximation, reporting a 17-fold speedup over the standard method in the authors' tests.</plain>\n<parameter name=\"why\">Lattice QCD calculations are computationally expensive, so a sizeable reduction in the cost of this trace step could matter for them. The text reports the speedup only from the authors' own tests, and does not show how it carries over to other problems or hardware.</plain>\n<parameter name=\"background\">- Matrix inverse and trace: the trace is the sum of diagonal entries; the inverse of a matrix A is the matrix that undoes A.\n- Linear system Ax = b: solving for x is the core computational cost.\n- Hutchinson's method: estimates a trace by averaging over random noise vectors b.\n- Krylov solvers (BiCG, BiCGStab): iterative algorithms that solve Ax = b by building up a sequence of vectors and a polynomial.\n- Lattice QCD: a numerical simulation of quarks and gluons on a discrete space-time grid, which produces very large sparse matrices.\n- Singular value deflation: removing the few directions where the matrix is most ill-conditioned so the rest converges faster.",
+    "why": "",
+    "background": "",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Estimating the trace of the inverse of a large quark matrix is a longstanding problem in lattice QCD. The standard approach is Hutchinson's method, which uses random noise vectors to estimate the trace to a desired statistical tolerance. Each noise vector $b$ requires solving a system of linear equations $Ax = b$. In this work, we introduce a new class of Krylov solvers for this task, called Twin methods. Twin methods generate the Krylov polynomial once then reuse it on all other right-hand sides. This reduces the number of basic linear algebra operations in the algorithm and therefore lowers the trace computation time. We apply the Twin approach to BiCG and BiCGStab and test them on lattice QCD matrices of varying size and in a range of computing contexts. We also present a more economical estimation of $\\mathrm{Tr}(A^{-1})$ which implements a polynomial approximation of $A^{-1}$ and a singular value deflation. In this scheme, the solvers are applied to only a few noise vectors, and the remainder are treated by the polynomial and the deflation. In our tests, the polynomial approximation combined with the deflation yield a 17-fold speedup in the time required to compute the trace over standard Hutchinson's method.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27518",
    "title": "Probing Compressed Dark Sectors at a Muon Collider through Dilepton Signatures and Machine Learning",
@@ -15,12 +61,12 @@
    "primary_category": "hep-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A study proposing that machine-learning classifiers (BDT and XGBoost) applied to dilepton final states at a future muon collider could help find inert-doublet scalar dark matter in compressed mass spectra via the process μ+μ− → AH, A → HZ*, Z* → ℓ+ℓ−.",
-    "plain": "The paper asks whether a possible dark matter particle, a hidden heavier cousin of the Higgs in a simple extension of the Standard Model, could be spotted at a future muon collider. The idea is that two heavy partner particles are made in muon collisions, one decays into the other plus a virtual Z boson, and that Z decays to a pair of leptons. Machine-learning tools are used to pick this signal out from ordinary background events.",
-    "why": "Dark matter that is only slightly heavier-or-lighter than its partner (\"compressed\" spectra) is hard to see at existing colliders, so a cleaner collider with machine-learning analysis is one proposed route to search for it. The text does not report sensitivity numbers or specific results, so how strong the claimed discovery potential is cannot be judged from this summary alone.",
+    "ai": true,
     "background": "- Standard Model: the current theory of known particles and forces.\n- Inert doublet model: a simple extension adding a second Higgs-like field; its lightest neutral new particle can be dark matter.\n- Dark matter relic abundance: the amount of dark matter left over from the early universe; the model struggles to match the observed amount in some mass ranges.\n- Compressed spectrum: new particles with very similar masses, so their decay products are soft and hard to detect.\n- Muon collider: a proposed future machine colliding muons and antimuons, offering cleaner collisions than proton machines.\n- Dilepton signature: a pair of leptons (electron or muon pairs) used as the detectable trace of the event.\n- BDT / XGBoost: machine-learning methods that combine many decision rules to separate signal from background.\n- Off-shell Z* : a virtual Z boson, not on its mass shell, produced in the decay chain.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A study proposing that machine-learning classifiers (BDT and XGBoost) applied to dilepton final states at a future muon collider could help find inert-doublet scalar dark matter in compressed mass spectra via the process μ+μ− → AH, A → HZ*, Z* → ℓ+ℓ−.",
+    "plain": "The paper asks whether a possible dark matter particle, a hidden heavier cousin of the Higgs in a simple extension of the Standard Model, could be spotted at a future muon collider. The idea is that two heavy partner particles are made in muon collisions, one decays into the other plus a virtual Z boson, and that Z decays to a pair of leptons. Machine-learning tools are used to pick this signal out from ordinary background events.",
+    "why": "Dark matter that is only slightly heavier-or-lighter than its partner (\"compressed\" spectra) is hard to see at existing colliders, so a cleaner collider with machine-learning analysis is one proposed route to search for it. The text does not report sensitivity numbers or specific results, so how strong the claimed discovery potential is cannot be judged from this summary alone."
    },
    "abstract": "The inert doublet model (IDM), a minimal extension of the Standard Model (SM), provides a scalar dark matter (DM) candidate that belongs to the additional Higgs doublet. The model faces challenges in achieving the correct relic abundance for compressed spectra and DM masses in the high-mass range. In this work we investigate the prospects of detecting dark matter candidates at future high-energy muon colliders. Focusing on the process $\\mu^+ \\mu^- \\to AH$ with subsequent decay $A \\to H Z^*$ and $Z^* \\to \\ell^+\\ell^-$, we explore the sensitivity of machine learning techniques, specifically Boosted Decision Trees (BDT) and XGBoost, to distinguish the signal from Standard Model backgrounds. We demonstrate that the combination of advanced multivariate analysis with high-luminosity muon collisions enhances the discovery potential for inert scalars in compressed mass spectra scenarios.",
    "source": "arxiv"
@@ -42,12 +88,12 @@
    "primary_category": "hep-lat",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A lattice QCD study that uses Bayesian spectral reconstruction of Euclidean correlators near the physical pion mass to extract the R-ratio, the rho-peak decay constant f_rho, and a Gaussian-smeared R-ratio compared against experiment, with finite-volume effects examined across ensembles.",
-    "plain": "This paper uses supercomputer simulations of the strong force that binds quarks into protons and pions to predict how often electrons and positrons colliding at high energy turn into hadrons, a quantity called the R-ratio. The authors reconstruct the particle-production spectrum from simulated data and compare it with experimental measurements. They report that the reconstruction matches the smooth high-energy trend seen in experiment, and that the rho resonance's decay constant comes out close to the experimental value.",
-    "why": "Computing this kind of inclusive quantity directly from the underlying theory is hard, so a method that reproduces both the resonance peak and the broad high-energy behavior is of interest to lattice QCD and hadron physics. The text does not establish how this compares with other lattice approaches, and its claimed applications to other channels and decay rates are stated as potential only.",
+    "ai": true,
     "background": "- QCD (quantum chromodynamics) is the theory of the strong force binding quarks and gluons.\n- Lattice QCD simulates that theory on a discrete grid of space and time on computers.\n- The R-ratio is the ratio of hadron production to muon-pair production in electron-positron collisions; it probes the strong force across energies.\n- A resonance (here the rho meson) is a short-lived particle seen as a peak in the energy spectrum; f_rho is its decay constant, a measure of how strongly it couples to its decay channel.\n- Euclidean correlators are simulation outputs in imaginary time that must be mathematically converted (via Bayesian reconstruction) back to real-energy spectra.\n- Finite-volume effects are distortions caused by simulating in a box of finite size.\n- A Gaussian smearing with width sigma is a broadening applied to compare lattice and experimental spectra on equal footing.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A lattice QCD study that uses Bayesian spectral reconstruction of Euclidean correlators near the physical pion mass to extract the R-ratio, the rho-peak decay constant f_rho, and a Gaussian-smeared R-ratio compared against experiment, with finite-volume effects examined across ensembles.",
+    "plain": "This paper uses supercomputer simulations of the strong force that binds quarks into protons and pions to predict how often electrons and positrons colliding at high energy turn into hadrons, a quantity called the R-ratio. The authors reconstruct the particle-production spectrum from simulated data and compare it with experimental measurements. They report that the reconstruction matches the smooth high-energy trend seen in experiment, and that the rho resonance's decay constant comes out close to the experimental value.",
+    "why": "Computing this kind of inclusive quantity directly from the underlying theory is hard, so a method that reproduces both the resonance peak and the broad high-energy behavior is of interest to lattice QCD and hadron physics. The text does not establish how this compares with other lattice approaches, and its claimed applications to other channels and decay rates are stated as potential only."
    },
    "abstract": "We investigate resonance properties and inclusive spectral behavior through Bayesian reconstruction of the $R$-ratio from Euclidean lattice correlators near the physical pion mass. Without additional Gaussian smearing, the reconstructed spectrum already captures the smooth high-energy behavior observed in experiment. Direct integration of the $\\rho$ peak determines $f_\\rho$ with approximately $1\\%$ statistical precision and close agreement with the experimental reference, providing access to resonance properties without resolving individual finite-volume levels. With a common Gaussian width of $\\sigma=0.6$~GeV, the lattice and experimental $R$-ratios show good overall agreement over $0.25$--$2.50$~GeV. Comparisons among ensembles with spatial extents up to approximately $10$~fm demonstrate that finite-volume effects can be controlled across these complementary observables. These results demonstrate a unified framework for studying resonance and inclusive physics from lattice QCD, with potential applications to other hadronic channels, inclusive decay rates, and hadronic tensors.",
    "source": "arxiv"

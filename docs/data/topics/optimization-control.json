@@ -1,7 +1,50 @@
 {
  "slug": "optimization-control",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27272",
+   "title": "Error-Corrected Physics-Informed Neural Operator for Optimal Control of Unmanned Aerial Vehicles under Uncertainty",
+   "url": "https://arxiv.org/abs/2611.27272",
+   "authors": [
+    "Oliver Lundqvist",
+    "Fabricio Oliveira"
+   ],
+   "label": "arXiv:2611.27272v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A physics-informed DeepONet surrogate, trained only on the dynamics residual and corrected by one Newton step computed with a parallel scan, is used to solve open-loop optimal control of a fixed-wing UAV under parametric uncertainty across many scenarios at once.",
+    "plain": "The paper looks at how to plan flight paths for a drone when some of its physical settings are not known exactly. Instead of solving each possible case separately, it trains a neural network that predicts the drone's trajectories for all sampled cases in one go. A single mathematical correction step then tightens these predictions so the optimizer is not misled by small mistakes in the network.",
+    "why": "Planning under uncertainty usually means solving many similar problems, which is slow, so a faster way to do this could matter for robust vehicle control. The paper reports matching the accuracy of two standard solvers while running about 8 to 15 times faster on the benchmark it tested; the text does not show how well this carries over to other vehicles or real flights.",
+    "background": "- Optimal control: choosing inputs (e.g., control surfaces, throttle) over time to reach a goal at the lowest cost, subject to the laws of motion.\n- Parametric uncertainty: some model values (such as wind or mass) are unknown and are treated as a range of possible scenarios.\n- Neural operator (DeepONet): a neural network that learns a mapping from input functions or settings to whole solution curves, so it can be reused for new targets and time horizons.\n- Physics-informed training: the network is trained to satisfy the governing equations (the dynamics residual) rather than fitted to data from solved examples.\n- Newton step: one iteration of a classic root-finding method that nudges an approximate solution toward one that satisfies the equations.\n- Parallel scan: an algorithm that computes sequential time-step updates simultaneously on a GPU.\n- Adam and Ipopt: a gradient-based optimizer commonly used to train neural networks, and a standard nonlinear optimization solver, used here as baselines.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We solve open-loop optimal control problems under parametric uncertainty using a physics-informed DeepONet that returns trajectories for all sampled scenarios in one evaluation. Trained only on the residual at generic controls, the operator is reused across targets and horizons. Because a gradient-based optimizer exploits surrogate errors, we correct the prediction by one Newton step on the dynamics, computed for all scenarios and times by one parallel scan. The corrected state has a second-order error bounded by the residual alone, and the corrected cost is honest for every control up to the sampling error. On a fixed-wing UAV benchmark, the corrected operator matches the accuracy of a batched Adam solver and an Ipopt solver at equal sample size and is 8 times faster than the Adam solver on the same GPU at a few hundred scenarios and 15 times faster than Ipopt on a CPU.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27484",
+   "title": "Boundary gradient asymptotics for superquadratic viscous Hamilton--Jacobi equations via optimal control",
+   "url": "https://arxiv.org/abs/2611.27484",
+   "authors": [
+    "S. E. Nikitin"
+   ],
+   "label": "arXiv:2611.27484v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper derives sharp boundary gradient asymptotics for maximal solutions of a superquadratic viscous Hamilton–Jacobi equation on arbitrary bounded C² domains, resolving a Lasry–Lions conjecture for bounded state-dependent terms and extending to singular terms, using stochastic optimal control and boundary blow-up analysis.</one_liner>\n<parameter name=\"plain\">The paper studies a equation that describes how a quantity u varies in space and how steeply it rises near the edge of a region, when the rise is driven by a power of the slope greater than 2. The authors find the precise way the slope grows as one approaches the boundary, for any smooth bounded region, and they also handle cases where the driving term becomes singular near the edge. They get these results by recasting the equation as a control problem where a random process is steered at lowest cost, and by studying how the solution blows up near the boundary.",
+    "plain": "",
+    "why": "The text says the result settles a conjecture of Lasry and Lions and removes the geometric restrictions that earlier boundary asymptotics needed, which matters for the theory of such equations. Its link to applications beyond this theory is not stated in the text, so I cannot say more.",
+    "background": "- Hamilton–Jacobi equation: a nonlinear partial differential equation describing optimal cost or value functions in control problems.\n- Viscous term (−Δu): a diffusion or noise term that smooths the solution; here the equation is elliptic.\n- Superquadratic gradient term |∇u|^p with p > 2: the nonlinearity grows faster than the square of the slope, which drives steep boundary behavior.\n- Maximal solution: the largest solution of the equation, which is the one that corresponds to the optimal control value.\n- Boundary gradient asymptotics: precise description of how the slope of the solution behaves as one approaches the boundary.\n- Stochastic optimal control: choosing controls for a randomly moving system to minimize an expected cost; dynamic programming is the standard tool for it.\n- Blow-up analysis: rescaling near a point where the solution becomes very large to extract a limiting profile.\n- Ergodic problem: a long-run average-cost version of the control problem.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the boundary behavior of the maximal solution of \\[ -\\Delta u + |\\nabla u|^{p} + \\lambda u = f \\] on arbitrary bounded $C^{2}$ domains, where $p > 2$ and $\\lambda > 0$. For bounded state-dependent terms $f$, we resolve a conjecture of Lasry and Lions by establishing sharp boundary gradient asymptotics without geometric restrictions on the domain. Previously, such asymptotics were established only for certain classes of domains with additional restrictions on $p$ and $f$. We also extend the analysis to state-dependent terms that may be singular near the boundary and obtain sharp boundary profiles and gradient asymptotics. Our approach relies on stochastic optimal control and boundary blow-up analysis. Dynamic programming estimates and comparisons of near-optimal trajectories establish tangential invariance of boundary blow-up limits, leading to the identification of one-dimensional profiles and the asymptotic formulas. For the associated state-constrained control problem, we establish sharp asymptotics for the minimizing feedback and deduce its admissibility and optimality, with corresponding results for the ergodic problem.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27695",
    "title": "Small noise limit for Entropic Variational Mean-Field Games",
@@ -14,12 +57,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proves that, as the random noise in second-order variational mean-field games shrinks to zero, the entropy-minimizing Lagrangian formulation Γ-converges to its deterministic first-order counterpart, and it derives a first-order energy expansion for the original Eulerian problem that selects among deterministic minimizers.",
-    "plain": "The paper studies large systems of many interacting agents that move under random noise and each try to optimize their own cost. It asks what happens when the noise is made very small, so the system approaches a deterministic model. The authors show that the noisy problem converges, in a precise variational sense, to the deterministic one, and that the noisy version also recovers a known result linking random transport (the Schrödinger problem) to optimal transport.",
-    "why": "The text indicates the work connects a noisy game-theoretic model with its noiseless limit and gives a new dynamical route to the Schrödinger-to-optimal-transport convergence. It also says a small-noise expansion selects particular minimizers of the deterministic problem; the broader significance beyond these claims is not stated in the text.",
+    "ai": true,
     "background": "- Mean-field game: a model of a very large population of agents, each optimizing a cost that depends on the population's overall distribution.\n- Second-order vs first-order: second-order models include random noise (diffusion); first-order models are deterministic.\n- Entropy: a measure of spread or randomness; entropy minimization here penalizes deviation from a reference random motion.\n- Schrödinger problem: a noisy, entropy-regularized version of optimal transport (finding the cheapest way to move one distribution of mass to another).\n- Optimal transport: the least-cost way to rearrange one distribution into another.\n- Γ-convergence: a notion of convergence for minimization problems, ensuring minimizers of approximating problems approach minimizers of the limit problem.\n- Eulerian vs Lagrangian: Eulerian tracks a density and velocity field at fixed points in space; Lagrangian tracks individual particle paths.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that, as the random noise in second-order variational mean-field games shrinks to zero, the entropy-minimizing Lagrangian formulation Γ-converges to its deterministic first-order counterpart, and it derives a first-order energy expansion for the original Eulerian problem that selects among deterministic minimizers.",
+    "plain": "The paper studies large systems of many interacting agents that move under random noise and each try to optimize their own cost. It asks what happens when the noise is made very small, so the system approaches a deterministic model. The authors show that the noisy problem converges, in a precise variational sense, to the deterministic one, and that the noisy version also recovers a known result linking random transport (the Schrödinger problem) to optimal transport.",
+    "why": "The text indicates the work connects a noisy game-theoretic model with its noiseless limit and gives a new dynamical route to the Schrödinger-to-optimal-transport convergence. It also says a small-noise expansion selects particular minimizers of the deterministic problem; the broader significance beyond these claims is not stated in the text."
    },
    "abstract": "We study second order variational mean-field games with quadratic Hamiltonian. In analogy with entropic optimal transport, Benamou, Carlier, Di Marino and the second author recently proposed an entropy-minimization formulation of the problem, which could be interpreted as the Lagrangian counterpart of the classical Eulerian approach. We investigate the small-noise $\\Gamma$-limit for the Lagrangian entropy-minimization formulation and establish $\\Gamma$-convergence of second order mean-field games towards their deterministic first order counterpart. This also translates into another (dynamical) proof of the convergence of the Schr\\\"odinger problem to optimal transport. Moreover, we study the original Eulerian problem and prove a first order energy expansion, which establishes a selection principle for minimizers of the deterministic problem.",
    "source": "arxiv"
@@ -35,12 +78,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes an approximation scheme that builds a sequence of infinite-dimensional systems to compute solutions of the H-infinity optimal control problem and its associated Riccati equation, and proves convergence of the approximate solutions to the original one.",
-    "plain": "The paper is about designing a feedback controller that keeps a system stable even when it is affected by unknown disturbances or modelling errors. Since the exact solution is hard to compute directly, the author builds a series of simpler approximating problems and shows that their solutions approach the true one. A worked example at the end shows how the method computes the controller and the related Riccati equation.",
-    "why": "Robust control of this kind is used in engineering settings where guarantees against disturbances matter, and a provable approximation method makes such designs more practical to compute. The text does not indicate specific applications or how the method performs beyond the single example, so its practical reach is uncertain. It continues earlier work by the same author cited in the text.",
+    "ai": true,
     "background": "- Optimal control: choosing inputs over time to make a system behave well at minimal cost.\n- Robust stabilization: designing a controller that keeps a system stable despite uncertainty or disturbances.\n- H-infinity norm: a measure of how strongly disturbances can affect a system's output in the worst case.\n- Riccati equation: a nonlinear matrix equation whose solution gives the optimal feedback gain in many control problems.\n- Infinite-dimensional systems: models where the state is a function (e.g., of space), not a finite list of numbers, so they are approximated by finite or simpler systems.\n- Convergence: the approximate solutions get closer to the true solution as the approximation is refined.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes an approximation scheme that builds a sequence of infinite-dimensional systems to compute solutions of the H-infinity optimal control problem and its associated Riccati equation, and proves convergence of the approximate solutions to the original one.",
+    "plain": "The paper is about designing a feedback controller that keeps a system stable even when it is affected by unknown disturbances or modelling errors. Since the exact solution is hard to compute directly, the author builds a series of simpler approximating problems and shows that their solutions approach the true one. A worked example at the end shows how the method computes the controller and the related Riccati equation.",
+    "why": "Robust control of this kind is used in engineering settings where guarantees against disturbances matter, and a provable approximation method makes such designs more practical to compute. The text does not indicate specific applications or how the method performs beyond the single example, so its practical reach is uncertain. It continues earlier work by the same author cited in the text."
    },
    "abstract": "This paper continues the results published in [G. Marinoschi, Appl. Math. Optimiz. 94:44, 1-29, 2026], by presenting an approximating method of calculating the solution to the $H^{\\infty }$-optimal control problem, which solves the robust stabilization of a system by a feedback controller, and to the associated Riccati equation. This method generates a sequence of infinite dimensional systems approximating the original system and the solution to the approximating $H^{\\infty }$-optimal control problem is proved to converge to the solution of the original $H^{\\infty }$-optimal control problem. An example for calculating the solution to the Riccati equation and the feedback controller is provided at the end.",
    "source": "arxiv"

@@ -1,7 +1,55 @@
 {
  "slug": "condensed-matter",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27819",
+   "title": "Magnetic-Field Response of a Hyperbolic Kitaev Spin Liquid",
+   "url": "https://arxiv.org/abs/2611.27819",
+   "authors": [
+    "Tao Yang",
+    "Baigeng Wang",
+    "Rui Wang",
+    "Z. Y. Xie"
+   ],
+   "label": "arXiv:2611.27819v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Using infinite tensor-network (iPEPS) simulations on a Kitaev honeycomb-type model placed on a hyperbolic {8,3} lattice, this paper compares how the fractionalized spin liquid responds to uniform versus staggered [111] magnetic fields.",
+    "plain": "The paper studies a quantum magnet whose spins are arranged on a lattice with negative curvature, like a saddle surface extended forever. Such magnets can host a \"spin liquid,\" a state where the spins stay disordered and their collective excitations behave like split-apart particles. The authors ask how this state reacts when a magnetic field is applied, and they find that a uniform field and a staggered field produce quite different responses.",
+    "why": "It connects the geometry of the lattice to the behaviour of an exactly solvable spin liquid under perturbations that break its conserved structure, which is useful for understanding how such states can be probed. The text does not establish broader implications beyond this model, so the wider significance is uncertain.",
+    "background": "- Spin liquid: a magnetic state with no ordered pattern even at low temperature, whose excitations can be fractionalized.\n- Kitaev model: an exactly solvable spin model whose spins split into emergent Majorana particles moving on a background of fixed \"flux\" values.\n- Hyperbolic lattice: a tiling of negatively curved space; {8,3} means eight-sided polygons with three meeting at each vertex.\n- Flux conservation: in the Kitaev model, the local flux through each plaquette (loop) is conserved unless a perturbation like a magnetic field breaks this.\n- Tensor network (iPEPS): a numerical method that represents an infinite quantum state compactly, used here to approximate ground states.\n- Effective Majorana model: a simplified description of the low-energy particles, here derived to third order in perturbation theory.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Hyperbolic geometry can give rise to Kitaev spin liquids with distinct flux structures and Majorana spectra, raising the question of how these fractionalized states respond beyond exactly solvable limits. We address this question on the Kekul\\'e-colored hyperbolic {8,3} lattice by developing an infinite projected entangled-pair-state approach with flux-resolved loop-gas initialization and geometry-adapted tensor-network contraction. Under uniform and staggered [111] magnetic fields, we find markedly different many-body responses. The uniform field induces a sharp change between competing variational branches at weak field, whereas the polarization and mean plaquette flux evolve over a much broader field range under the staggered field. Exchange-energy competition helps explain the different response scales, while third-order effective Majorana models in a fixed-flux background exhibit contrasting low-energy spectra. Our results connect the geometry-dependent fractionalized structure of a solvable hyperbolic spin liquid to its many-body response under physical perturbations that break flux conservation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27256",
+   "title": "Quantum-Chaos-Assisted Measure Synchronization in a Double-Well Ultracold Bose Gas",
+   "url": "https://arxiv.org/abs/2611.27256",
+   "authors": [
+    "Xianchao Le",
+    "Jiaxin Peng",
+    "Weiping Zhang",
+    "Keye Zhang"
+   ],
+   "label": "arXiv:2611.27256v1",
+   "primary_category": "cond-mat.quant-gas",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A theoretical study of measure synchronization, and its speed-up by quantum chaos, in a two-component ultracold Bose gas trapped in a double-well potential modeled as a many-body bosonic Josephson junction.",
+    "plain": "This paper studies a question about how parts of a quantum system can fall into step with each other. The system is a cloud of ultracold atoms held in a trap with two wells, where atoms can slosh back and forth between them. The authors report that, in a certain chaotic regime found by looking at energy-level statistics, the system reaches this synchronization, and that chaos makes it happen faster while the quantum entanglement between parts moves toward what a random state would show.",
+    "why": "It links quantum chaos, synchronization, and entanglement in a closed (conservative) many-body system, which may guide later work on how chaos can help synchronization. The text does not show how broadly these findings apply beyond this specific model, so the wider significance is uncertain.",
+    "background": "- Measure synchronization: a form of synchrony in which the measured quantities of coupled subsystems fall into step, even when the full dynamics is not simply in lockstep.\n- Bosonic Josephson junction: two trapped clouds of bosons (particles that can pile into the same state) that exchange particles through a barrier, analogous to a superconducting Josephson junction.\n- Ultracold atoms: atomic gases cooled to temperatures near absolute zero and held by laser or magnetic fields.\n- Quantum chaos: signatures of chaotic behavior in quantum systems, often detected by statistics of energy levels (spectral statistics).\n- Entanglement entropy: a measure of how strongly quantum correlations link one part of a system to the rest; a \"random-state prediction\" is the value expected for a generic, scrambled state.\n- Conservative system: one with no energy loss to the environment.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper investigates measure synchronization (MS) in a two-component ultracold atomic system confined in a double-well potential, which realizes a quantum many-body bosonic Josephson junction. Through spectral-statistics analysis, we identify the quantum chaotic parameter regime and confirm that the system achieves MS within this regime with weak dependence on the initial energy imbalance. We further show that chaotic dynamics not only significantly shortens the time scale for establishing synchronization but is also accompanied by entanglement entropy approaching the random-state prediction. These results reveal close connections among quantum chaos, MS, and quantum entanglement in conservative quantum many-body systems and may motivate further studies on the underlying mechanisms of chaos-assisted synchronization.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26693",
    "title": "Topological phases protected by half-chiral symmetry",
@@ -14,12 +62,12 @@
    "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes topological phases protected by \"half-chiral\" symmetry, where the sublattice (chiral) symmetry holds on only one sublattice, and builds a real-space invariant framework with a 2D Kekulé honeycomb model showing higher-order corner modes.",
-    "plain": "Some materials have atoms arranged on two interlocking sublattices, and a special symmetry normally pins down their edge behavior. This paper looks at the case where that symmetry holds on only one of the two sublattices, which can happen when the sublattices are unequal or when orbitals are localized. The authors describe a new way to classify such systems and show, in a two-dimensional model, that a single zero-energy state can be stuck to one corner.",
-    "why": "It extends the well-known idea of topology protected by sublattice symmetry to a weaker, algebraic constraint that group-theory methods do not cover, which may matter for materials like graphene on hexagonal boron nitride. The text does not report experiments or quantify practical impact, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Topological phase: a property of a material's electronic structure that stays the same under smooth changes, often producing protected edge or corner states.\n- Sublattice (chiral) symmetry: in a lattice split into two interleaved sets of sites, hopping only between the sets; this makes zero-energy edge states robust.\n- Su-Schrieffer-Heeger (SSH) chain: a simple one-dimensional model of such a chain, a standard example.\n- Hamiltonian: the matrix describing a system's energies and how particles hop between sites.\n- Projection P: a mathematical operator that selects the states on one sublattice; the constraint PHP=0 means no direct hopping within that sublattice.\n- Higher-order topology: edge states that appear at corners or hinges rather than along full edges.\n- Graphene and hexagonal boron nitride (hBN): atomically thin honeycomb-lattice materials; Kekulé distortion is a pattern that changes hopping strengths on the honeycomb.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes topological phases protected by \"half-chiral\" symmetry, where the sublattice (chiral) symmetry holds on only one sublattice, and builds a real-space invariant framework with a 2D Kekulé honeycomb model showing higher-order corner modes.",
+    "plain": "Some materials have atoms arranged on two interlocking sublattices, and a special symmetry normally pins down their edge behavior. This paper looks at the case where that symmetry holds on only one of the two sublattices, which can happen when the sublattices are unequal or when orbitals are localized. The authors describe a new way to classify such systems and show, in a two-dimensional model, that a single zero-energy state can be stuck to one corner.",
+    "why": "It extends the well-known idea of topology protected by sublattice symmetry to a weaker, algebraic constraint that group-theory methods do not cover, which may matter for materials like graphene on hexagonal boron nitride. The text does not report experiments or quantify practical impact, so its wider significance is uncertain."
    },
    "abstract": "Chiral (or sublattice) symmetry describes bipartite systems such as the Su-Schrieffer-Heeger (SSH) chain where same-sublattice A-A and B-B hoppings are forbidden, enabling the protection of topological phases. Here we identify new topological phases protected by half-chiral symmetry wherein chiral symmetry is preserved on only one sublattice, as may occur with sublattice imbalance (e.g. graphene-hBN) or localized orbitals (e.g. zincblende). Unlike conventional symmetry operators described by group theory, half-chiral symmetry is an algebraic constraint on the sublattice-projected Hamiltonian such as $PHP=0$, requiring a new framework for topological protection. We develop such a framework, identifying real-space bulk topological invariants and corresponding topological boundary modes that stick to zero energy. In two dimensions we construct a half-chiral Kekule honeycomb model and show that its unusual higher-order topology protects a single zero-energy mode at a single corner.",
    "source": "arxiv"
@@ -38,12 +86,12 @@
    "primary_category": "math-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Using Lieb-Robinson bounds to show that weakly interacting many-body quantum dynamics can be locally approximated by free (non-interacting) one-body dynamics on large perturbative time scales, yielding quantum diffusion results for weakly interacting Fermi systems and free-correlation approximations for Fermi-Hubbard models with low spin-down density.",
-    "plain": "This paper studies how quantum particles spread out and interact in a crowd. It shows that, for weak interactions and for a limited time, the complicated many-particle behavior can be locally replaced by a simpler version where the particles do not interact. Using this replacement, the authors prove that spreading behaves diffusively in certain systems and that some correlation patterns match their non-interacting counterparts.",
-    "why": "It gives a rigorous way to transfer known results for simple non-interacting systems to interacting ones over finite times, which matters for understanding how quantum information spreads. The text does not indicate direct experimental or applied consequences, and its link to the numerical work by Bippus et al. is described only as a counterpart, not as a confirmation.",
+    "ai": true,
     "background": "- Quantum many-body system: many interacting particles whose joint state is described by quantum mechanics.\n- Lieb-Robinson bound: a mathematical limit showing that effects spread through a lattice system at a finite speed, roughly like a light cone.\n- Non-interacting (one-body) dynamics: each particle evolves on its own, which is much easier to analyze.\n- Quantum diffusion: spreading that grows with time in the way heat or ink spreads, here measured by an operator spreading diagnostic.\n- Out-of-time-ordered correlator (OTOC): a correlation function used to measure how quickly quantum information scrambles.\n- Fermi-Hubbard model: a standard lattice model of interacting electrons.\n- Perturbative regime: results valid when interactions or disorder are weak and times are not too long.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using Lieb-Robinson bounds to show that weakly interacting many-body quantum dynamics can be locally approximated by free (non-interacting) one-body dynamics on large perturbative time scales, yielding quantum diffusion results for weakly interacting Fermi systems and free-correlation approximations for Fermi-Hubbard models with low spin-down density.",
+    "plain": "This paper studies how quantum particles spread out and interact in a crowd. It shows that, for weak interactions and for a limited time, the complicated many-particle behavior can be locally replaced by a simpler version where the particles do not interact. Using this replacement, the authors prove that spreading behaves diffusively in certain systems and that some correlation patterns match their non-interacting counterparts.",
+    "why": "It gives a rigorous way to transfer known results for simple non-interacting systems to interacting ones over finite times, which matters for understanding how quantum information spreads. The text does not indicate direct experimental or applied consequences, and its link to the numerical work by Bippus et al. is described only as a counterpart, not as a confirmation."
    },
    "abstract": "Lieb-Robinson bounds (LRBs) have become a standard tool for perturbative results in quantum many-body physics, including gap stability and many-body adiabatic theory. Here, we use LRBs to locally approximate weakly interacting many-body dynamics with one-body dynamics on large, perturbative time scales. This allows us to use one-body transport results to establish the expected many-body transport behavior on finite time scales in the following two illustrative settings: (i) We prove quantum diffusion, as quantified by a certain operator spreading diagnostic, in weakly interacting and weakly disordered Fermi systems in dimensions $D\\geq2$ on large finite time scales based on the non-interacting diffusion result of Black, Drogin, and Hern\\'andez [arXiv:2506.06468]. (ii) We show for Fermi-Hubbard models with initially low spin-down density, that all local multi-time spin-up correlation functions are approximated by their free counterparts. In particular, we obtain an OTOC (out-of-time-ordered correlator) counterpart to the patterns of short-time entanglement related to lattice path counts observed numerically by Bippus et al. [Phys. Rev. B 113, 035152 (2026)].",
    "source": "arxiv"

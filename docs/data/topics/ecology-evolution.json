@@ -1,7 +1,55 @@
 {
  "slug": "ecology-evolution",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.767538",
+   "title": "Social information use promotes breeding synchrony but constrains adaptation to rapid environmental changes",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.767538v1",
+   "authors": [
+    "Zheng, J.",
+    "Kuijper, B.",
+    "Aplin, L. M.",
+    "Sheldon, B.",
+    "Farine, D."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.767538 v1",
+   "primary_category": "animal behavior and cognition",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "An evolutionary individual-based model shows that breeders copying their neighbours' timing synchronises populations and speeds adaptation in stable or spatially varied conditions, but slows tracking of directional climate change, creating a synchrony-versus-flexibility trade-off.",
+    "plain": "The paper asks whether birds or other animals that time their breeding by watching their neighbours do better or worse than those relying only on their own sensing, especially as climate shifts the best timing. Using a computer simulation of individuals on territories with fluctuating, peaked resources, the authors found that copying neighbours makes breeding dates converge, which helps populations adapt faster and raises output when conditions are stable. When the climate shifts steadily, the same convergence leaves populations lagging behind the moving optimum and reduces reproduction.",
+    "why": "Breeding phenology is already shifting with climate change in many species, so whether copying others helps or hinders adjustment matters for conservation and forecasting. The results are from a model, so they show a mechanism that could operate in the wild rather than confirmed field effects; the text does not report empirical tests.",
+    "background": "- Social information: cues gained by observing others' choices, such as neighbours' timing of breeding.\n- Private information: an individual's own sensing of conditions, such as food or weather.\n- Phenology: the timing of seasonal events like breeding.\n- Individual-based model: a simulation in which each animal is tracked separately and can evolve over generations.\n- Synchrony and positive feedback: when individuals copy each other, their behaviour converges and reinforces itself.\n- Adaptive lag: when a population's average response trails a shifting environmental optimum.\n- Trade-off: a gain in one property (coordination) that costs another (flexibility).",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Animals use social information to make decisions, yet how such processes influence predictions in reproductive timing and population adaptation under environmental change remains unclear. While social information can improve decision accuracy through information pooling, spatiotemporal heterogeneity in conditions and patterns of environmental changes creates noise that potentially limits the value of social information use among breeding individuals. Here, we established an evolutionary individual-based model to examine how social and private sensing interact to shape breeding phenology in species distributed across territories with peaked resources and facing annual fluctuations and rapid climate change. We show that when individuals incorporate social information from neighbours, behavioural responses become increasingly synchronised through positive feedback in decision-making. This emergent synchrony helps populations to adapt faster and can increase reproductive output under stable environmental conditions relative to relying only on private information. However, under directional climate change, the same mechanism reduces population responsiveness by constraining variation in individual responses, leading to systematic lag in tracking shifting environmental optima and reduced population reproductive output. Our results demonstrate that social information use can produce a general trade-off at the population level between synchronisation and adaptive flexibility across environmental contexts. Social interaction enhances population performance when environments are either consistent or changing drastically across both spatial and temporal scales. Rather than uniformly improving performance, social interaction may create conditions under which collective behaviour becomes maladaptive when environments change rapidly.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.766513",
+   "title": "From individual movement to ecosystem response: how landscape structure shapes herbivore impacts",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.766513v1",
+   "authors": [
+    "Suarez, D. L.",
+    "Guisoni, N.",
+    "Laguna, M. F."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.766513 v1",
+   "primary_category": "ecology",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A spatially explicit stochastic individual-based model with Monte Carlo simulations of two herbivore populations with contrasting movement and foraging strategies sharing renewable, heterogeneous resources, including predation and refuge effects, examining how landscape structure and movement shape resource depletion and population dynamics.",
+    "plain": "This paper uses a computer simulation to ask how grazing animals that move differently affect the plants they share a landscape with. The authors track many individual animals across a patchy environment with uneven plant growth, predators, and safe refuges. They report that movement mainly controls where plants get depleted, and that a larger productive area can paradoxically lead to a larger relative loss of plants.",
+    "why": "The findings suggest that more food in a landscape does not automatically protect it from overgrazing, which matters for managing wildlife and rangelands. The text is a modelling study, so its results depend on the model's assumptions and it does not report field tests; how far they transfer to real ecosystems is not shown here.",
+    "background": "- Individual-based model: a simulation where each animal is tracked separately and its local behaviour produces larger patterns.\n- Monte Carlo simulation: running a model many times with random variation to see the range of likely outcomes.\n- Consumer-resource dynamics: how the number of grazers or predators and the amount of plant food change each other over time.\n- Heterogeneous landscape: an environment where resources are unevenly spread in patches rather than uniform.\n- Refuge: a place where prey can hide from predators, which changes how much time they spend feeding in exposed areas.\n- Resource biomass: the total mass of living plant material available as food.\n- Vulnerability: how easily a part of the plant community can be depleted, here linked to overlap between where plants are and where herbivores go.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Understanding how local interactions generate large-scale ecological dynamics is a central challenge in ecology. In heterogeneous environments, consumer movement links resource distribution with exploitation, producing responses that may not be predicted from consumer abundance or resource availability alone. Here, we develop a spatially explicit stochastic individual-based model of two herbivore populations with contrasting movement and foraging strategies that share renewable resources. The model incorporates heterogeneous resources, consumer movement and feeding, resource regeneration, predation, and refuge availability. Using Monte Carlo simulations, we examine how herbivore pressure and landscape structure shape population dynamics and resource depletion. Movement strongly determines the spatial pattern of depletion, while resource vulnerability depends on the overlap between resource distribution and consumer activity. Counterintuitively, increasing the extent of a productive region increases initial resource biomass but can also increase relative resource loss. Additional resources sustain consumer activity where herbivores concentrate, showing that greater resource availability does not necessarily buffer ecosystems against herbivory. Resource biomass can also decline substantially before major reductions in vegetation occupancy become apparent. These results demonstrate how individual behaviour and landscape structure jointly shape ecosystem responses. The model provides a framework for investigating how spatially coupled consumer-resource interactions generate ecological dynamics.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.20.768031",
    "title": "Biotic interactions buffer the effects of biodiversity loss on ecosystem functioning",
@@ -14,12 +62,12 @@
    "primary_category": "ecology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A theoretical model of species interaction networks suggests that the number and strength of trophic links determine how strongly losing species reduces ecosystem functions such as primary production and carbon retention.",
-    "plain": "Losing species from an ecosystem often weakens things like plant growth and carbon storage, but it is hard to say when the damage will be large. This paper builds a theoretical model showing that the web of who eats or affects whom shapes the answer. In networks with many or strong feeding links, surviving species can make up for lost ones through alternative pathways, so the loss hurts less; in networks with fewer or weaker links, the ecosystem is much more sensitive to extinctions.",
-    "why": "It offers a single framework for why biodiversity loss matters more in some systems than others, and it proposes that losing interactions, not just species, is a hidden part of the biodiversity crisis. The text is only an abstract, so the strength of the evidence and how well the model fits real ecosystems cannot be judged from it.",
+    "ai": true,
     "background": "- Ecosystem functioning: the processes an ecosystem performs, such as producing plant biomass (primary production) and storing carbon.\n- Trophic link: a feeding relationship, such as a predator eating prey or a herbivore eating a plant.\n- Species interaction network: a map of which species interact with which, drawn as nodes (species) joined by links (interactions).\n- Interaction strength: how much one species affects another's numbers or activity.\n- Compensation: when surviving species take over the role of lost ones, cushioning the effect on the whole system.\n- Theory vs. data: this is a model-based argument; the abstract does not report empirical tests.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A theoretical model of species interaction networks suggests that the number and strength of trophic links determine how strongly losing species reduces ecosystem functions such as primary production and carbon retention.",
+    "plain": "Losing species from an ecosystem often weakens things like plant growth and carbon storage, but it is hard to say when the damage will be large. This paper builds a theoretical model showing that the web of who eats or affects whom shapes the answer. In networks with many or strong feeding links, surviving species can make up for lost ones through alternative pathways, so the loss hurts less; in networks with fewer or weaker links, the ecosystem is much more sensitive to extinctions.",
+    "why": "It offers a single framework for why biodiversity loss matters more in some systems than others, and it proposes that losing interactions, not just species, is a hidden part of the biodiversity crisis. The text is only an abstract, so the strength of the evidence and how well the model fits real ecosystems cannot be judged from it."
    },
    "abstract": "Biodiversity loss generally impairs functions on which nature and societies depend upon. Yet, it is difficult to predict under which conditions losing biodiversity has larger effects on functions such as primary production or carbon retention. We present a theory that demonstrates that biotic interactions mediate the intensity of these effects. In species interaction networks with many or strong trophic links, biodiversity loss has weaker effects on functioning because alternative interaction pathways allow surviving species to compensate for species loss. In contrast, in networks with fewer or weaker links, ecosystem functioning is very sensitive to the extinction of species. Here, we identify interaction erosion as a hidden dimension of the biodiversity crisis that provides a unifying explanation for functional consequences of biodiversity loss across ecological contexts.",
    "source": "biorxiv"
@@ -41,12 +89,12 @@
    "primary_category": "ecology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Mapping how antibiotic resistance evolution in one Aeromonas caviae lineage reshapes three- and 16-species bacterial community states, diversity and dominance across a grid of resource and antibiotic conditions.",
-    "plain": "Evolution can happen fast enough to change a whole community of organisms, not just the species that evolves. This study asked how one bacterial species becoming antibiotic-resistant changed the wider community, and whether those changes depended on food supply and antibiotic level. The authors tested 64 combinations of resources and antibiotic and found that the same resistance change had different effects in different settings.",
-    "why": "It suggests that the ecological effects of evolution cannot be judged from one environment alone, which matters for predicting how resistance spreads through microbial communities. The text does not indicate applications beyond this experimental system, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- Antibiotic resistance: a heritable ability of bacteria to survive a drug that would normally kill or stop them.\n- Community: a set of coexisting species interacting in the same place.\n- Community-state boundary: the tipping line between environmental conditions where different sets of species dominate or persist.\n- Inhibitory concentration: the drug level high enough to stop a species growing; below it, the drug may still affect growth.\n- Intrinsic resistance: a species' inherent tolerance to a drug, as opposed to one acquired by evolution.\n- Dominance and diversity: which species take over a community, and how evenly many species coexist.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Mapping how antibiotic resistance evolution in one Aeromonas caviae lineage reshapes three- and 16-species bacterial community states, diversity and dominance across a grid of resource and antibiotic conditions.",
+    "plain": "Evolution can happen fast enough to change a whole community of organisms, not just the species that evolves. This study asked how one bacterial species becoming antibiotic-resistant changed the wider community, and whether those changes depended on food supply and antibiotic level. The authors tested 64 combinations of resources and antibiotic and found that the same resistance change had different effects in different settings.",
+    "why": "It suggests that the ecological effects of evolution cannot be judged from one environment alone, which matters for predicting how resistance spreads through microbial communities. The text does not indicate applications beyond this experimental system, so the wider significance is uncertain."
    },
    "abstract": "Rapid evolution in one species can restructure ecological communities, but how its effects vary across environmental conditions remains poorly understood. Here we mapped the consequences of antibiotic resistance evolution in Aeromonas caviae across 64 combinations of resource availability and antibiotic stress in three- and 16-species bacterial communities. Resistance evolution changed where community-state boundaries were located, with boundaries lost or gained depending on resource availability. The same evolutionary change increased diversity in some environments but decreased it in others. Species success was partly explained by growth traits at zero or low antibiotic concentrations and by intrinsic resistance at inhibitory concentrations. Resistance evolution reversed dominance between the two dominant species and changed which traits mattered. It also altered other species' responses below inhibitory concentrations, mostly between closely related species. Our findings show that the consequences of evolution depend on environmental context but can be partly explained by species traits.",
    "source": "biorxiv"

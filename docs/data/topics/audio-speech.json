@@ -1,7 +1,54 @@
 {
  "slug": "audio-speech",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26757",
+   "title": "Bird-Call Recognition Across Distance: Acoustic Degradation and BirdNET Performance",
+   "url": "https://arxiv.org/abs/2611.26757",
+   "authors": [
+    "Hasmik Gharibyan",
+    "Bhaskar Krishnamachari"
+   ],
+   "label": "arXiv:2611.26757v1",
+   "primary_category": "eess.AS",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Controlled playback of 20 bird species at seven distances (1 to 48 ft) tests how a STM32-based recorder and the BirdNET classifier hold up as calls degrade, reporting top-1 accuracy and median upper spectral edge trends.",
+    "plain": "This study asks how well a computer program can still tell which bird species is calling when the sound has travelled farther. The researchers played back ten-second bird calls from 20 species at distances from about 1 to 48 feet, recorded them with a small custom device, and ran the recordings through the BirdNET identification tool. They found accuracy stayed high up to 24 feet, dropped somewhat at 36 feet, and fell further at 48 feet, while the high-frequency part of the sound became weaker as distance grew.",
+    "why": "Automated bird monitoring often relies on recordings made at unknown distances, so knowing where recognition starts to fail helps set sensible limits on how such tools are used. The text does not say how the results would transfer to wild birds or other recording setups, so that link is uncertain.",
+    "background": "- Spectral content: how a sound's energy is spread across pitches (frequencies); high-frequency detail is often lost over distance.\n- Playback experiment: a recorded call is played through a speaker at set distances, so the original sound is known.\n- BirdNET: an existing machine-learning program that identifies bird species from audio clips.\n- Top-1 accuracy: the share of recordings where the program's single best guess is correct.\n- Metadata configurations: different sets of extra information (such as location or date) supplied to the classifier; the text does not specify them.\n- Mean-aggregated: results averaged across the four configurations.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "As bird calls weaken with distance, their recordings lose spectral detail. We examine how species recognition varies with distance using controlled playback of ten-second excerpts from 20 bird species at seven distances from 1 to 48 ft. An STM32-based recording system acquires and stores the audio, which is subsequently analyzed on a computer using acoustic measurements and BirdNET. Across four metadata configurations, mean-aggregated top-1 accuracy is 95--100% through 24 ft, 90--95% at 36 ft, and 80--90% at 48 ft, with 20 recordings evaluated per configuration at each distance. Across the screened recordings, the median upper spectral edge is below its 1-ft reference at every evaluated distance from 4 to 36 ft, indicating an overall reduction in upper-frequency content with distance. These results show that recognition remains high through 24 ft despite measurable spectral degradation, followed by greater and configuration-dependent losses at longer distances.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26831",
+   "title": "Impact of Edge Software Evolution on Audio Tagging Models: An Empirical Study on NVIDIA Jetson Orin Nano",
+   "url": "https://arxiv.org/abs/2611.26831",
+   "authors": [
+    "Guillem Fustier-Castillo",
+    "Ruben Ribes-Serrano",
+    "Jordi Grau-Haro",
+    "Marta Garcia-Ballesteros",
+    "Javier Naranjo-Alcazar"
+   ],
+   "label": "arXiv:2611.26831v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "An empirical benchmark of PANNs (CNN and ResNet variants), AST and PaSST audio tagging models on an NVIDIA Jetson Orin Nano, comparing latency, energy, utilization and memory across JetPack 6.2 and JetPack 7.2 software stacks and several inference backends and power modes.",
+    "plain": "This paper asks whether the software a small edge computer runs on changes how fast and how efficiently sound-recognition AI models work. The authors ran several well-known audio models on one small NVIDIA board, once with the older software release (JetPack 6.2) and once with the newer one (JetPack 7.2). They report that the newer software cut time and energy use by more than 50% for some convolutional models when paired with TensorRT, while the Transformer-based AST model gained little and PaSST fell in between.",
+    "why": "Edge benchmarks are often reported as if the hardware alone determines speed, so a software update changing which model looks best is a useful caution for anyone choosing models for embedded deployment. The text does not show how broadly these results hold beyond this board and these software versions.",
+    "background": "- Audio tagging: labeling which sound events (e.g., alarms, machinery, birdsong) occur in a recording.\n- Edge deployment: running AI models on small, local devices instead of cloud servers.\n- Latency and energy: how long one prediction takes and how much power it consumes.\n- CNN vs. Transformer: two families of neural network architectures; CNNs use local filters, Transformers use attention across the whole input.\n- PANNs, AST, PaSST: specific pretrained audio models of these two families.\n- JetPack: NVIDIA's software bundle (drivers, libraries) for its Jetson embedded boards.\n- TensorRT: NVIDIA's library that optimizes neural networks for faster inference on NVIDIA GPUs.\n- Power modes: preset settings that trade performance against power draw on the device.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Audio tagging is a fundamental task in machine listening, enabling the automatic identification of acoustic events in applications such as intelligent monitoring, industrial inspection, environmental sensing, and smart environments. As these applications increasingly migrate to edge platforms, deployment-oriented metrics such as latency, energy consumption, and resource utilization become critical alongside predictive performance. However, most existing studies evaluate audio tagging models under a single software environment, overlooking the potential impact of software stack evolution on deployment efficiency. This paper investigates how software ecosystem updates affect the execution characteristics of state-of-the-art audio tagging architectures on edge devices. We evaluate representative convolutional and Transformer-based models, including PANNs (CNN and ResNet variants), AST, and PaSST, on an NVIDIA Jetson Orin Nano platform using two generations of NVIDIA's software ecosystem: JetPack 6.2 and JetPack 7.2. Under identical hardware conditions, we analyze inference latency, energy consumption, CPU/GPU utilization, and memory footprint across multiple inference backends and power modes. The results show that software stack evolution can substantially affect deployment performance. JetPack 7.2 reduces latency and energy consumption by more than 50% for several convolutional architectures when combined with TensorRT, while significantly increasing GPU utilization. In contrast, AST exhibits only marginal gains, whereas PaSST shows intermediate behavior. These findings demonstrate that software evolution is a critical factor in Edge AI evaluation and can alter the relative deployment efficiency of competing architectures. Consequently, software stack versions should be explicitly considered when benchmarking and selecting audio tagging models for embedded deployment.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27601",
    "title": "PromptTTSD: Controllable Text to Spoken Dialogue Synthesis with Open-Ended Text Descriptions",
@@ -19,12 +66,12 @@
    "primary_category": "cs.SD",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "PromptTTSD is an open-source model for generating multi-speaker conversational speech from dialogue scripts with open-ended natural-language style control, trained on a new dataset (PromptDialog) extracted from multi-narrator audiobooks.",
-    "plain": "Current systems that turn written dialogue into spoken conversation struggle to make each line sound right for its moment, such as shifting tone as a conversation changes. This paper builds a large set of conversational speech from audiobooks, with style descriptions written in ordinary language and pulled from the story text by a language model. The authors then train a model, PromptTTSD, that accepts both the script and a plain-language style description.",
-    "why": "The work targets a real gap: most prior datasets only label style with fixed tags, which limits how expressive the output can be. The text reports that the model keeps strong basic speech quality, competes with proprietary systems on style control, and improves how well lines fit the surrounding conversation; the evaluation details are not given in the summary, so the size of these gains is unclear.",
+    "ai": true,
     "background": "- Text-to-speech (TTS): software that turns written text into spoken audio.\n- Spoken dialogue synthesis: generating a multi-turn conversation with several voices, not just one reading.\n- Zero-shot voice cloning: copying a voice from a short sample without extra training for that voice.\n- Prompt-based control: steering the speaking style by giving a text description (e.g., \"calm, slightly sad\") instead of choosing from preset labels.\n- Audiobook alignment: matching audio recordings to their text so that individual spoken lines can be cut out and labeled.\n- Large language model (LLM): an AI text model used here to write style descriptions from story passages.\n- Proprietary vs. open-source: the comparison models are closed commercial systems; this model's code and weights are publicly released.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PromptTTSD is an open-source model for generating multi-speaker conversational speech from dialogue scripts with open-ended natural-language style control, trained on a new dataset (PromptDialog) extracted from multi-narrator audiobooks.",
+    "plain": "Current systems that turn written dialogue into spoken conversation struggle to make each line sound right for its moment, such as shifting tone as a conversation changes. This paper builds a large set of conversational speech from audiobooks, with style descriptions written in ordinary language and pulled from the story text by a language model. The authors then train a model, PromptTTSD, that accepts both the script and a plain-language style description.",
+    "why": "The work targets a real gap: most prior datasets only label style with fixed tags, which limits how expressive the output can be. The text reports that the model keeps strong basic speech quality, competes with proprietary systems on style control, and improves how well lines fit the surrounding conversation; the evaluation details are not given in the summary, so the size of these gains is unclear."
    },
    "abstract": "Spoken dialogue synthesis aims to generate multi-turn conversational speech from dialogue scripts while maintaining speaker consistency and contextual appropriateness. However, existing models largely lack fine-grained controllability, which is critical for capturing the dynamic, context-dependent style shifts in natural conversations. While prompt-based TTS has enabled such control for single-speaker speech, existing datasets heavily rely on predefined tags, which fundamentally limits their capacity to capture open-ended styles. To address this gap, we propose a scalable pipeline for extracting conversational speech from multi-narrator audiobooks, featuring an improved two-stage alignment algorithm to preserve dialogue continuity, paired with LLM-based extraction of style descriptions directly from narrative text. We release PromptDialog, a large-scale multi-speaker conversational speech dataset comprising 8,383 hours of Chinese speech and 120 hours of English speech, with open-ended style descriptions for 79% of utterances. We further introduce PromptTTSD, a spoken dialogue synthesis model built via a prompt-aware fine-tuning strategy that integrates style prompts into text-speech interleaved sequences. PromptTTSD is an open-source spoken dialogue synthesis model that supports both zero-shot voice cloning and natural language style control. Experiments demonstrate that PromptTTSD not only maintains strong fundamental synthesis capabilities but also achieves competitive open-ended style control compared with proprietary models, and substantially improves contextual appropriateness in multi-turn dialogues.",
    "source": "arxiv"
@@ -43,12 +90,12 @@
    "primary_category": "cs.SD",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A company report presents ARCAS 290M, a frozen foundation model for detecting AI-generated speech that is claimed to generalize across generators, channels, and languages without benchmark-specific fine-tuning, evaluated on ten public benchmarks and commercial leaderboards.",
-    "plain": "Cheap voice-cloning tools can now copy someone's voice from a few seconds of audio, which makes scam calls and fake recordings harder to spot. This work describes a single detector model, ARCAS 290M, built by a company called Neural Defend, that is meant to tell real speech from AI-generated speech across many kinds of fakes, phone lines, and languages. The authors report strong results on several public test sets and leaderboards, though these are self-reported claims in a summary.",
-    "why": "Reliable detection of synthetic voices matters for fraud prevention, platform safety, and verifying media. The text, however, is a promotional-style summary without the detailed methods, error rates, or independent verification needed to judge how strong the claims are.",
+    "ai": true,
     "background": "- Voice cloning / text-to-speech (TTS): software that generates speech in a chosen voice from text.\n- Voice conversion: changing one speaker's voice to sound like another.\n- Deepfake audio detection: classifiers that label a recording as real or AI-generated.\n- Foundation model: a large general-purpose model trained once and reused for many tasks.\n- Zero-shot / fine-tuning: testing on data the model was not specifically tuned for, versus adapting it to a benchmark.\n- Equal error rate (EER): a standard score where lower means the detector confuses real and fake less often.\n- Benchmarks and leaderboards (e.g., ASVspoof5, SpeechFake): shared test datasets and public rankings used to compare systems.\n- Codec language model: a speech generator that works on compressed audio tokens.\n- Channel effects: distortion from telephone or Bluetooth transmission that can confuse detectors.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A company report presents ARCAS 290M, a frozen foundation model for detecting AI-generated speech that is claimed to generalize across generators, channels, and languages without benchmark-specific fine-tuning, evaluated on ten public benchmarks and commercial leaderboards.",
+    "plain": "Cheap voice-cloning tools can now copy someone's voice from a few seconds of audio, which makes scam calls and fake recordings harder to spot. This work describes a single detector model, ARCAS 290M, built by a company called Neural Defend, that is meant to tell real speech from AI-generated speech across many kinds of fakes, phone lines, and languages. The authors report strong results on several public test sets and leaderboards, though these are self-reported claims in a summary.",
+    "why": "Reliable detection of synthetic voices matters for fraud prevention, platform safety, and verifying media. The text, however, is a promotional-style summary without the detailed methods, error rates, or independent verification needed to judge how strong the claims are."
    },
    "abstract": "Voice cloning now needs only seconds of audio, and detectors tuned to one dataset often fail when the generator, channel, or language changes. We introduce ARCAS 290M, Neural Defend's foundation model for detecting AI-generated audio. A single frozen production model, with no benchmark-specific fine-tuning, generalizes across text-to-speech, voice-conversion, and codec-language-model generators, telephone and Bluetooth channels, recording conditions, and languages. We evaluate it on the complete official test sets of ten public benchmarks, scoring every recording exactly as released, and against commercial systems on independent leaderboards. ARCAS 290M ranks first among all systems on the Podonos leaderboard and has the lowest equal error rate among commercial detectors on ASVspoof5. It separates real from AI-generated speech almost perfectly on ASVspoof5, SpeechFake, and ShiftySpeech, and detects nearly all AI-generated speech in Hindi, Tamil, Bengali, and Telugu. On every benchmark with a published zero-shot comparison, including in-the-wild audio, partial fakes, and the conditions hardest for the field, it surpasses the strongest reported detector by a wide margin. These results establish ARCAS 290M as a general-purpose foundation for AI-generated audio detection in fraud prevention, platform safety, and media verification.",
    "source": "arxiv"

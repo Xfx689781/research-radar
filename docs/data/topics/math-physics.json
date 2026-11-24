@@ -1,7 +1,50 @@
 {
  "slug": "math-physics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27295",
+   "title": "Consecutive Supersymmetric Quantum Mechanical Algorithms for Resolving the Spectra of Legendre-type Differential Operators",
+   "url": "https://arxiv.org/abs/2611.27295",
+   "authors": [
+    "Tianchun Zhou"
+   ],
+   "label": "arXiv:2611.27295v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes iterative algorithms built from consecutive supersymmetric quantum mechanics (SUSYQM) to compute the eigenspectra of the Legendre operator and related operators in various coordinate systems, using supersymmetry and shape invariance as guiding principles.",
+    "plain": "The paper concerns a standard class of equations from mathematical physics (Legendre-type differential operators) whose solutions describe quantities such as allowed energy levels. The authors build step-by-step computational procedures that find these allowed values by repeatedly applying a hidden pairing symmetry, without relying on the traditional power-series method. The abstract claims the procedures are simple, efficient and independent of the older methods, but the excerpt itself gives no worked examples or numerical comparisons.",
+    "why": "The work offers an alternative route to well-known spectra, and the authors suggest some of these algorithms could replace the popular power-series approach. Whether that holds in practice cannot be judged from the abstract alone, since the text provides no results or benchmarks.",
+    "background": "- Differential operator: an equation-level rule (here, a Legendre-type equation) whose solutions are special functions used across physics.\n- Eigenspectrum: the set of allowed values (such as energy levels) for which the equation has well-behaved solutions.\n- Supersymmetric quantum mechanics: a method that pairs a problem with a related \"partner\" problem so that their energy levels are linked, allowing solutions to be built step by step.\n- Shape invariance: a property where partner problems share the same mathematical form with shifted parameters, which makes the chain of steps solvable.\n- Power series approach: the traditional method of solving such equations by writing the solution as an infinite sum of powers.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Quite comprehensive iterative algorithms based on consecutive supersymmetric quantum mechanics (SUSYQM) have been constructed heuristically, for resolving the eigenspectra of the Legendre operator and its associates parametrized in various coordinates, \\emph{without receiving any input from traditional analytical methods}. On building these algorithms, the two symmetries \\text{--} supersymmetry and shape invariance symmetry \\text{--} hidden in these operators are brought to the fore as the only two governing principles, with the aids of the newly devised algebraic techniques such as the \\emph{active supersymmetrization transformations}, \\emph{momentum operator maps} as well as plain and \\emph{higher-order spin matrix maps}. In view of their algebraic simplicity and elegance, high efficiency, as well as independence of traditional methods, some of these algorithms become the promising candidates to supplant the popular power series approach to the eigenspectra of Legendre-type operators.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27912",
+   "title": "Submanifolds, restriction of differential operators and Schouten-Nijenhuis bracket",
+   "url": "https://arxiv.org/abs/2611.27912",
+   "authors": [
+    "J. Queva",
+    "J. Renaud"
+   ],
+   "label": "arXiv:2611.27912v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper gives new, compact formulas for restricting the Hodge star, the codifferential and the Hodge Laplacian (operators on differential forms) to a submanifold, using the Schouten-Nijenhuis bracket and the generalized interior product.",
+    "plain": "The paper is about a technical question in geometry: if you have a rule for measuring or transforming shapes and fields in a space, how do you apply that rule when you only look at a smaller surface or curve sitting inside it? The authors write down new, shorter formulas for doing this for three standard operators. They say the formulas are concise and make explicit calculations easier in practice.",
+    "why": "Restricting these operators to a submanifold comes up when studying fields and waves on surfaces embedded in a larger space, so cleaner formulas can save effort in such calculations. The provided text is only the abstract, so I cannot say how widely the formulas apply or how they compare with existing approaches.",
+    "background": "- Submanifold: a smaller curved surface or curve sitting inside a larger space, such as a sphere inside three-dimensional space.\n- Differential forms: a general language for describing quantities like flux, area and volume, which can be integrated over shapes.\n- Hodge operator (Hodge star): a rule that converts a form into its \"complementary\" form, linked to the geometry of the space.\n- Codifferential and Hodge Laplacian: operators built from the Hodge star and differentiation; the Laplacian generalizes the familiar second-derivative operator that appears in heat and wave equations.\n- Restriction: evaluating an operator only on the submanifold, using only information available there.\n- Schouten-Nijenhuis bracket: an algebraic operation on multivector fields used as a bookkeeping tool here.\n- Generalized interior product: a way of contracting a form with a vector-like object, used to simplify the formulas.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this article, we present new formulas for restricting the Hodge operator, the codifferential and the Hodge Laplacian to a submanifold. These formulas are concise, thanks to the use of tools for differential forms (Schouten-Nijenhuis bracket and generalized interior product). They also facilitate explicit calculations for practical applications.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27861",
    "title": "Brane Tilings and Polygons with Two Interior Points",
@@ -13,12 +56,12 @@
    "primary_category": "hep-th",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A complete classification of brane tilings and their associated 4d N=1 quiver gauge theories for toric Calabi-Yau 3-folds whose toric diagrams are convex lattice polygons with exactly two interior lattice points (45 polygons, 323 toric phases), including Hilbert series and mesonic moduli space data.",
-    "plain": "This paper is a catalogue in theoretical physics and geometry. It looks at a family of shapes that encode certain higher-dimensional geometric spaces, and at the physics theories (built from particles and their interactions) linked to each one. The authors list every such shape with two interior points, find all 323 physical versions of them, and record the matching diagrams and mathematical data for each.",
-    "why": "The text presents this as a complete classification, which makes it a useful reference for anyone studying the link between string-theory gauge theories and the geometry of Calabi-Yau spaces. The text does not say what broader consequences follow, so its wider importance is unclear from this text alone.",
+    "ai": true,
     "background": "- Toric diagram: a small lattice polygon (points on a grid) that encodes a toric Calabi-Yau 3-fold, a special higher-dimensional geometric space used in string theory.\n- Interior lattice point: a grid point strictly inside the polygon; here, polygons with exactly two.\n- Brane tiling (dimer model): a tiling of a torus by polygons that encodes a gauge theory's particles and interactions.\n- Quiver gauge theory: a diagram of nodes (gauge groups) and arrows (matter fields) describing a 4d supersymmetric theory.\n- Superpotential: a polynomial describing the interactions among the fields.\n- Toric phase: one of the distinct gauge theories that share the same underlying geometry.\n- Moduli space, Hilbert series, plethystic logarithm: tools for counting the gauge-invariant quantities and their relations in a theory.\n- U(1)R charge: a symmetry charge used to fix the theory's superconformal behaviour.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A complete classification of brane tilings and their associated 4d N=1 quiver gauge theories for toric Calabi-Yau 3-folds whose toric diagrams are convex lattice polygons with exactly two interior lattice points (45 polygons, 323 toric phases), including Hilbert series and mesonic moduli space data.",
+    "plain": "This paper is a catalogue in theoretical physics and geometry. It looks at a family of shapes that encode certain higher-dimensional geometric spaces, and at the physics theories (built from particles and their interactions) linked to each one. The authors list every such shape with two interior points, find all 323 physical versions of them, and record the matching diagrams and mathematical data for each.",
+    "why": "The text presents this as a complete classification, which makes it a useful reference for anyone studying the link between string-theory gauge theories and the geometry of Calabi-Yau spaces. The text does not say what broader consequences follow, so its wider importance is unclear from this text alone."
    },
    "abstract": "We fully classify the brane tilings and the 4d N=1 supersymmetric quiver gauge theories corresponding to toric Calabi-Yau 3-folds whose toric diagrams are convex lattice polygons with two interior lattice points. There are 45 such polygons up to GL(2,Z) transformations and lattice translations: 5 triangles, 19 quadrilaterals, 16 pentagons and 5 hexagons. We identify all 323 toric phases corresponding to these toric Calabi-Yau 3-folds. For every toric phase, we present the brane tiling with its quiver and superpotential, the perfect matching matrix and the F- and D-term charge matrices. For each brane tiling, we study the mesonic moduli space of the corresponding abelian 4d N=1 theory through its Hilbert series and plethystic logarithm, and identify its generators and their leading relations. We also identify the mesonic global symmetry for each brane tiling and determine the superconformal U(1)R charges.",
    "source": "arxiv"
@@ -40,12 +83,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper computes all tracial moments and mixed reduced-state moments of random density matrices obtained by partial traces of projections onto random subspaces drawn from the Grassmannian, using Weingarten calculus, and derives almost-sure convergence of the spectrum to a rescaled Marchenko-Pastur law, an asymptotic freeness decomposition, and the asymptotic average entanglement entropy.",
-    "plain": "The paper studies a model of a \"typical\" quantum state: pick a random subspace of a two-part quantum system, then look at the state of just one part by averaging out the other. The authors work out the statistical averages of the eigenvalue pattern of these random density matrices exactly, using a counting technique called Weingarten calculus. From these results they show that the pattern of eigenvalues settles into a known shape (a rescaled Marchenko-Pastur law) as the system grows, and they estimate the average entanglement entropy.",
-    "why": "Random density matrices like these are used as benchmarks for what generic quantum states look like, which matters for quantum information and statistical physics. The text offers two routes to the same spectral result, one of which goes through asymptotic freeness, a link to random matrix theory; the broader impact beyond this setting is not addressed in the text.",
+    "ai": true,
     "background": "- Density matrix: a matrix describing a quantum state; its eigenvalues are nonnegative and sum to one.\n- Partial trace: averaging out one subsystem to get the state of the other.\n- Grassmannian: the space of all subspaces of a fixed dimension, here sampled uniformly via the unitary group.\n- Tracial moments: averages of powers of the matrix's trace, which encode the eigenvalue distribution.\n- Weingarten calculus: a systematic method for integrating polynomial functions of random unitary matrices.\n- Marchenko-Pastur law: the limiting eigenvalue distribution of certain large random matrices.\n- Asymptotic freeness: a notion from free probability describing when large random matrices behave independently in a specific algebraic sense.\n- Entanglement entropy: a measure of how correlated the two subsystems are, computed from the reduced density matrix.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper computes all tracial moments and mixed reduced-state moments of random density matrices obtained by partial traces of projections onto random subspaces drawn from the Grassmannian, using Weingarten calculus, and derives almost-sure convergence of the spectrum to a rescaled Marchenko-Pastur law, an asymptotic freeness decomposition, and the asymptotic average entanglement entropy.",
+    "plain": "The paper studies a model of a \"typical\" quantum state: pick a random subspace of a two-part quantum system, then look at the state of just one part by averaging out the other. The authors work out the statistical averages of the eigenvalue pattern of these random density matrices exactly, using a counting technique called Weingarten calculus. From these results they show that the pattern of eigenvalues settles into a known shape (a rescaled Marchenko-Pastur law) as the system grows, and they estimate the average entanglement entropy.",
+    "why": "Random density matrices like these are used as benchmarks for what generic quantum states look like, which matters for quantum information and statistical physics. The text offers two routes to the same spectral result, one of which goes through asymptotic freeness, a link to random matrix theory; the broader impact beyond this setting is not addressed in the text."
    },
    "abstract": "In this paper, we study random density matrices constructed by taking partial traces of projections onto random subspaces of a bipartite Hilbert space $\\mathcal{H}_A \\otimes \\mathcal{H}_{B}$ distributed according to the pushforward measure of the action of the unitary group on the Grassmannian $\\text{Gr}_{n}(\\mathcal{H}_A \\otimes \\mathcal{H}_{B})$. This ensemble models a `typical' quantum subspace. All tracial moments of the density operator, as well as mixed tracial moments of reduced density operators, are computed explicitly using Weingarten calculus. There are several consequences of these results. In particular, we prove that the empirical spectral distribution of the density operator converges almost surely to a rescaled Marchenko-Pastur law. We also prove that this ensemble can be written as a sum of asymptotically free random density operators, leading to an alternative proof of the convergence of the spectral distribution. Finally, we compute the asymptotic expansion of the average entanglement entropy.",
    "source": "arxiv"

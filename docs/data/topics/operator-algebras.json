@@ -1,7 +1,51 @@
 {
  "slug": "operator-algebras",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26647",
+   "title": "Nonlinear skew Lie-type centralizers on $\\ast$-algebras",
+   "url": "https://arxiv.org/abs/2611.26647",
+   "authors": [
+    "Mohammad Afajal Ansari",
+    "Mohammad Ashraf",
+    "Md Shamim Akhter"
+   ],
+   "label": "arXiv:2611.26647v1",
+   "primary_category": "math.RA",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper shows that nonlinear maps on a unital *-algebra that commute with a skew Lie-type bracket p_n are of the form X -> ZX with Z a self-adjoint central element, and uses this to describe nonlinear generalized skew Lie n-derivations as ZX plus an additive *-derivation.",
+    "plain": "This is a pure mathematics paper about algebras of operators, which are collections of matrix-like objects that can be multiplied and \"starred\" (a kind of conjugate-transpose). The authors study maps that respect a special twisted commutator-style bracket built from several inputs. They prove that any such map must simply multiply its input by a fixed central, self-adjoint element, and they use this to classify a wider family of related maps.",
+    "why": "The result gives a rigid classification of nonlinear maps that preserve an algebraic structure, which is a standard type of question in operator algebra theory. The text does not discuss applications beyond the algebra classes it names, so its wider significance is uncertain.",
+    "background": "- Unital *-algebra: a ring of operators containing an identity element, closed under an involution X -> X* (a conjugate-transpose-like operation).\n- Center Z(A): the elements that commute with everything in the algebra.\n- Commutator-type bracket: a product built from two inputs that measures how far they fail to commute; here a skew variant using X*.\n- Iterated brackets p_n: the bracket applied repeatedly to n inputs.\n- Derivation: a map obeying a product rule; an additive *-derivation also respects addition and the involution.\n- Nonlinear preserver problem: classifying nonlinear maps that keep a given algebraic expression unchanged.\n- Prime algebras, standard operator algebras and von Neumann algebras: standard classes of operator algebras with well-studied structure.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let \\(\\mathcal{A}\\) be a unital \\(\\ast\\)-algebra over the complex field \\(\\mathbb{C}\\), with center \\(\\mathcal{Z}(\\mathcal{A})\\). For any \\(X_1,X_2,\\ldots,X_n\\in\\mathcal{A}\\), define recursively $ p_1(X_1)=X_1,$ $p_2(X_1, X_2)=[X_1,X_2]_{\\ast}=X_1X_2-X_2X_1^{\\ast}$ and $p_n(X_1,X_2,\\ldots,X_n)=[p_{n-1}(X_1,X_2,\\ldots,X_{n-1}),X_n]_{\\ast}$ for all integers \\(n\\geq 2\\). In this paper, we prove that if a map \\(\\Phi:\\mathcal{A}\\to\\mathcal{A}\\) satisfies $\\Phi(p_n(X_1,X_2,\\ldots,X_n))=p_n(\\Phi(X_1),X_2,\\ldots,X_n)$ for all \\(X_1,X_2,\\ldots,X_n\\in\\mathcal{A}\\), then \\(\\Phi\\) necessarily has the form $\\Phi(X)=ZX,$ where \\(Z=Z^{\\ast}\\in\\mathcal{Z}(\\mathcal{A})\\). As an application, we establish that, under suitable assumptions, every nonlinear generalized skew Lie \\(n\\)-derivation \\(G:\\mathcal{A}\\to\\mathcal{A}\\) admits a standard form $G(X)=ZX+D(X),$ where \\(Z\\in\\mathcal{Z}(\\mathcal{A})\\) and \\(D:\\mathcal{A}\\to\\mathcal{A}\\) is an additive \\(\\ast\\)-derivation. Finally, we apply this result to several important classes of unital \\(\\ast\\)-algebras, including unital prime \\(\\ast\\)-algebras, standard operator algebras, and von Neumann algebras.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27850",
+   "title": "One exponential or two? Invertibility tests for Jordan epimorphisms",
+   "url": "https://arxiv.org/abs/2611.27850",
+   "authors": [
+    "Catalin Badea"
+   ],
+   "label": "arXiv:2611.27850v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper asks how many exponential-type test elements are needed to certify that a unital surjection between complex Banach algebras (with semisimple target) is a Jordan epimorphism, and gives conditions using products of two exponentials, single exponentials, kernel ideal properties, and special source or target classes.",
+    "plain": "The paper studies a question about structure-preserving maps between algebras of mathematical objects (operators). A map is called a Jordan epimorphism if it respects a symmetrised version of multiplication. The authors ask how many special test elements, the \"exponentials,\" must be checked to tell whether a given map has this property, and find that checking products of two exponentials suffices in general.",
+    "why": "The work sharpens when a simple invertibility check can certify a structural property of a map, which matters for the theory of operator algebras. The text does not indicate applications beyond this area, so broader significance is unclear from the given material.",
+    "background": "- Banach algebra: a space of bounded linear operators or functions that can be multiplied and has a norm, so limits make sense.\n- Unital linear surjection: a linear map that preserves the identity element and hits every element of the target.\n- Semisimple algebra: one with no nonzero nilpotent-type \"hidden\" pieces; its structure is determined by its nontrivial representations.\n- Jordan epimorphism: a surjective map that preserves the Jordan product (ab+ba)/2, a symmetrised product, rather than full multiplication.\n- Exponential of an element a: the series e^a, which is always invertible; testing whether T maps such elements to invertible ones is the test used.\n- Two-sided ideal: a subset closed under multiplication from both sides by any element of the algebra; the kernel condition in the result.\n- C*-algebra and group algebra l^1(G): standard examples of algebras with an adjoint or a group structure.\n- Tracial state: a normalised positive functional that behaves like a trace (value unchanged under commutators).\n- Spectral isometry and resolvent estimates: tools relating how spectra (sets of eigenvalue-like numbers) and inverses behave under the map.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "How many exponential factors must one test to recognise a Jordan epimorphism? Let \\(T\\colon A\\to B\\) be a unital linear surjection between complex Banach algebras, with \\(B\\) semisimple. Using a spectral-isometry theorem of Aznay and Chabbabi, we show that it suffices for \\(T\\) to send every product of two exponentials to an invertible element to force $T$ to be Jordan. If only single exponentials are tested, \\(T\\) is a Jordan epimorphism if and only if its kernel is a two-sided ideal, or equivalently a left ideal. A resolvent estimate on a logarithmic spiral shows that a single exponential suffices when the source is a \\(C^*\\)-algebra or the group algebra \\(\\ell^1(G)\\) of a discrete group. A separate argument, which does not use the spectral-isometry theorem, shows that a single exponential also suffices when the target is a \\(C^*\\)-algebra with a faithful family of tracial states.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27471",
    "title": "On the AF embedding problem",
@@ -13,12 +57,12 @@
    "primary_category": "math.OA",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A survey of the AF-embedding problem for C*-algebras, centred on the author's result that separable, exact, UCT C*-algebras with a faithful quasidiagonal trace embed into a unital simple AF algebra.",
-    "plain": "This paper is a survey about when a mathematical object called a C*-algebra can be placed inside a simpler kind of algebra, one built up step by step from finite-dimensional pieces. The main content, based on the author's earlier paper, is a sufficient condition for this kind of embedding to exist. The text also mentions some other results but gives only a brief outline of them.",
-    "why": "Embedding a complicated algebra into a simpler, well-understood one is a standard way to learn about the original, so results of this type help organise the field. The text does not say how far these results reach beyond operator algebras, so any wider connection is uncertain.",
+    "ai": true,
     "background": "- A C*-algebra is a collection of bounded linear operators on a Hilbert space (a space of possible states or waves), closed under addition, multiplication, and taking adjoints.\n- An AF (approximately finite dimensional) algebra is a limit of a growing chain of finite-dimensional matrix-type algebras.\n- \"Embedding\" means placing one algebra inside another as a copy of a subalgebra.\n- Terms like exact, UCT, quasidiagonal, faithful trace, and simple are technical properties of these algebras; each is a condition restricting which algebras qualify.\n- Familiarity with linear algebra and basic functional analysis is needed.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A survey of the AF-embedding problem for C*-algebras, centred on the author's result that separable, exact, UCT C*-algebras with a faithful quasidiagonal trace embed into a unital simple AF algebra.",
+    "plain": "This paper is a survey about when a mathematical object called a C*-algebra can be placed inside a simpler kind of algebra, one built up step by step from finite-dimensional pieces. The main content, based on the author's earlier paper, is a sufficient condition for this kind of embedding to exist. The text also mentions some other results but gives only a brief outline of them.",
+    "why": "Embedding a complicated algebra into a simpler, well-understood one is a standard way to learn about the original, so results of this type help organise the field. The text does not say how far these results reach beyond operator algebras, so any wider connection is uncertain."
    },
    "abstract": "This article gives a survey of the AF-embedding problem for $C^*$-algebras. The problem asks when a given $C^*$-algebra $A$ embeds into an \\emph{approximately finite dimensional} (AF) $C^*$-algebra (a direct limit of finite dimensional $C^*$-algebras). This is largely based on my paper ``Subalgebras of simple AF algebras,'' which shows that separable, exact $C^*$-algebras satisfying the UCT and admitting a faithful, quasidiagonal trace embed into a unital, simple AF algebra. Some other results are also discussed.",
    "source": "arxiv"
@@ -34,12 +78,12 @@
    "primary_category": "math.OA",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper shows that, for word-length semigroups on group von Neumann algebras, equality in two noncommutative Lichnerowicz-type spectral gap inequalities (the complete Γ2 constant of Junge–Zeng and the geometric Ricci constant of Junge–LaRacuente–Li) holds exactly when the group's Cayley graph is a partial cube.",
-    "plain": "The paper studies a rate at which a random-walk-like process on a group settles down to equilibrium, and how that rate compares with a geometric bound. The authors ask when the bound is exactly tight, and they find that tightness happens precisely when the group's Cayley graph (the picture of the group's elements linked by generator steps) can be drawn isometrically inside a hypercube, a class called partial cubes. The text given is only the abstract, so the details of the proofs are not visible here.",
-    "why": "It gives a precise graph-theoretic characterization of when a noncommutative geometric inequality is sharp, linking operator algebras to discrete geometry. The abstract alone does not show how broadly the result extends beyond word-length semigroups.",
+    "ai": true,
     "background": "- Group von Neumann algebra: an operator-algebra version of a discrete group, used to model quantum systems built from a group.\n- Quantum Markov semigroup: a family of maps describing how a quantum system evolves randomly over time, analogous to a random walk.\n- Spectral gap: the smallest nonzero eigenvalue of a generator; it controls how fast the process mixes toward equilibrium.\n- Lichnerowicz inequality: a classical bound relating spectral gap to curvature-like geometric quantities; here its noncommutative versions are studied.\n- Cayley graph: a graph whose vertices are group elements, with edges given by multiplying by generators.\n- Partial cube: a graph that embeds isometrically (distances preserved) into a hypercube.\n- Word-length semigroup: a semigroup of operators generated by the length of group elements measured in generators.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that, for word-length semigroups on group von Neumann algebras, equality in two noncommutative Lichnerowicz-type spectral gap inequalities (the complete Γ2 constant of Junge–Zeng and the geometric Ricci constant of Junge–LaRacuente–Li) holds exactly when the group's Cayley graph is a partial cube.",
+    "plain": "The paper studies a rate at which a random-walk-like process on a group settles down to equilibrium, and how that rate compares with a geometric bound. The authors ask when the bound is exactly tight, and they find that tightness happens precisely when the group's Cayley graph (the picture of the group's elements linked by generator steps) can be drawn isometrically inside a hypercube, a class called partial cubes. The text given is only the abstract, so the details of the proofs are not visible here.",
+    "why": "It gives a precise graph-theoretic characterization of when a noncommutative geometric inequality is sharp, linking operator algebras to discrete geometry. The abstract alone does not show how broadly the result extends beyond word-length semigroups."
    },
    "abstract": "We give an operator-algebraic characterization of Cayley graphs that are partial cubes, that is, embed isometrically into a hypercube. More precisely, noncommutative versions of the Lichnerowicz inequality control the spectral gap of the generator of a quantum Markov semigroup by the constant in the complete $\\Gamma_2$-criterion of Junge and Zeng or the constant in the geometric Ricci criterion of Junge, LaRacuente and Li. We show that for word-length semigroups on group von Neumann algebras, equality in either of these inequalities occurs exactly when the Cayley graph is a partial cube.",
    "source": "arxiv"

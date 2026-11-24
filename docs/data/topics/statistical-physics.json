@@ -1,7 +1,52 @@
 {
  "slug": "statistical-physics",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27647",
+   "title": "Cyclic perturbations encode memories in trained neural networks without loss of performance",
+   "url": "https://arxiv.org/abs/2611.27647",
+   "authors": [
+    "Max Kerr Winter",
+    "Liesbeth M. C. Janssen"
+   ],
+   "label": "arXiv:2611.27647v1",
+   "primary_category": "cond-mat.dis-nn",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Cyclically displacing all weights of a trained overparameterized deep network and relaxing by gradient descent writes retrievable memories into the weight structure, with deterministic and noisy write protocols, without measurably hurting performance on unseen data.",
+    "plain": "Some physical materials, such as certain disordered solids and suspensions, remember how they were repeatedly nudged back and forth. This paper asks whether a trained artificial neural network can do the same. The authors repeatedly shake all of the network's weights (its adjustable numbers), let it settle back through training, and find that the size of the shake can be read back out later.",
+    "why": "It suggests that neural networks may have a hidden storage capacity that can be used without damaging what they were trained to do, which the text reports as holding on unseen data. The link to memory effects in sheared suspensions is a conceptual bridge between machine learning and statistical physics; the text does not show practical applications.",
+    "background": "- Weights: the adjustable numbers in a neural network that set its behaviour.\n- Gradient descent: a standard training method that nudges weights step by step to reduce error.\n- Overparameterized: a network with more weights than strictly needed, which gives many settings that work equally well.\n- Cyclic perturbation memory: in some disordered materials, repeated back-and-forth driving leaves a lasting imprint, such as a point where motion turns from reversible to irreversible.\n- Reversible vs irreversible motion: reversible means the system returns to its starting state when the drive is removed; irreversible means it has permanently rearranged.\n- Noisy write: adding randomness to each perturbation cycle, which the authors borrowed from sheared suspensions to keep multiple memories alive.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Many disordered materials exhibit a remarkable form of memory: they retain information about the history of cyclic perturbations. Whether this phenomenon also occurs in artificial neural networks, whose mathematical structure and dynamics share many similarities with disordered physical systems, is unknown. Here we show that cyclically perturbing a trained, overparameterized deep neural network encodes information in the structure of the weights that can subsequently be retrieved, thus retaining memory of the perturbation history. During each write cycle, all weights are displaced, after which the network relaxes through gradient descent. Repeated cycles organise the neural network into a state that is reversible for perturbations up to the write amplitude, allowing the encoded value to be read from the onset of irreversible weight motion. Multiple memories can also be encoded, although under deterministic writing only the largest persists at long times. Inspired by cyclically sheared suspensions, we introduce a novel noisy-write protocol that preserves all encoded memories at long times. Remarkably, neither deterministic nor noisy memory writing measurably affects the network's performance on unseen data from its original learning task. Our results establish cyclic memory as a phenomenon shared by disordered physical systems and deep neural networks, and show that networks can exploit as yet unexplored memory capabilities without compromising their original function.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27564",
+   "title": "From non-universal spectra at the RS-RSB transition to the universal $\\omega^4$ regime inside the glassy phase",
+   "url": "https://arxiv.org/abs/2611.27564",
+   "authors": [
+    "Tommaso Pettinari",
+    "Edan Lerner",
+    "Gustavo D\\\"uring"
+   ],
+   "label": "arXiv:2611.27564v1",
+   "primary_category": "cond-mat.dis-nn",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Using the mean-field KHGPS model of interacting anharmonic oscillators, this paper links the universal omega^4 low-frequency density of states of glasses to the replica-symmetry-broken glassy phase, contrasts it with non-universal gapless spectra at the replica-symmetric boundary, and shows a discontinuous RS-RSB transition can arise from a suitable choice of quenched disorder.",
+    "plain": "Glasses contain a universal pattern of very low-energy vibrational modes: the number of modes at low frequency grows as the fourth power of frequency. This paper uses a simplified, idealized mean-field model of oscillators with random couplings to study where that pattern comes from. The authors report that the universal pattern appears inside the glassy phase, while the spectrum at the edge of the non-glassy phase depends on the details of the disorder.",
+    "why": "The origin of the universal low-frequency spectrum in glasses is still poorly understood, so tying it to a specific glassy phase in a solvable model is a useful step. The text also reports that a glass-like transition can become discontinuous without an external field, but how far this carries over to real glasses is not established by the text.",
+    "background": "- Glass: a solid without long-range crystal order; its low-energy excitations are not fully explained by ordinary crystal vibrations.\n- Density of states: how many vibrational modes exist at each frequency; a power law like omega^4 means very few low-frequency modes, with a specific scaling.\n- Mean-field model: an idealized model where each part interacts with an average effect of all others, making the math solvable.\n- Anharmonic oscillator: a vibrating unit whose restoring force is not a simple linear spring, so it can have multiple stable positions (bistable potentials).\n- Quenched disorder: random interactions fixed at random when the system is formed and not changing over time, like the frozen randomness in a glass.\n- Replica symmetry breaking (RSB): a mathematical description of the many-valley energy landscape of spin glasses; the replica-symmetric (RS) phase is the simpler, less structured one.\n- Continuous vs. discontinuous transition: continuous transitions show smooth changes and diverging susceptibilities (responses); discontinuous ones jump abruptly.\n- Susceptibility: how strongly a system responds to a small applied influence.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The universal low-frequency nonphononic density of states $\\mathcal{D}_\\mathrm{G}(\\omega)\\sim\\omega^4$ is a robust feature of structural glasses, yet its origin remains poorly understood. Here we investigate this question using the mean-field KHGPS model of interacting anharmonic oscillators. We show that the universal quartic spectrum is deeply rooted in the glassy, replica-symmetry-broken (RSB) phase, whereas the gapless density of states found at the boundary of the replica-symmetric (RS) phase is non-universal and depends sensitively on the details of the quenched disorder. We formulate a simplified variant of the KHGPS model that allows us to characterize the crossover between these two regimes and provides a physical interpretation of the associated crossover frequency scale. We further show that the conventional, spin-glass-like, continuous RS-RSB transition, accompanied by diverging susceptibilities, can be suppressed by an appropriate choice of the quenched disorder, allowing for a discontinuous RS-RSB transition even in the absence of an external field. Our results establish a direct connection between the emergence of the universal $\\omega^4$ spectrum and the glassy phase, and provide a simple framework for exploring the low-temperature properties of glasses and the soft localized excitations that emerge from bistable local potentials.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.26704",
    "title": "Large deviations, effective dynamics, and dynamical phase transitions in random maps",
@@ -16,12 +61,12 @@
    "primary_category": "cond-mat.stat-mech",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper extends the Doob transform and spectral large-deviation methods from deterministic chaotic maps to random maps, to build effective dynamics for rare trajectories and to characterize dynamical phase transitions.",
-    "plain": "The paper studies unusual, rare patterns of behavior over long stretches of time in simple systems that evolve in discrete steps with added randomness. Such patterns are exponentially hard to observe by just running the system normally. The authors show how to build a modified version of the dynamics in which these rare behaviors become typical, so they can be reproduced directly, and they use spectral methods to see when the system switches between different behavioral regimes.",
-    "why": "Rare fluctuations and sudden switches between behavioral regimes are central questions in statistical physics, and the framework could help study them in a wider class of systems. The text itself does not indicate specific applications beyond random chaotic maps, so the broader reach is unclear from this abstract alone.",
+    "ai": true,
     "background": "- Random maps: systems that update in discrete time steps, with each step including some randomness.\n- Large deviation theory: the mathematics of how improbable averages over time behave, typically with probabilities decaying exponentially.\n- Time-averaged observable: a quantity averaged over a long trajectory, such as how often a state is visited.\n- Doob transform: a reweighting of a random process that changes its probabilities so that a chosen rare event becomes the likely outcome.\n- Tilted operator: a modified transfer operator whose leading eigenvalue and eigenfunctions encode the rate of rare events.\n- Dynamical phase transition: an abrupt change in the typical behavior of a trajectory as a control parameter (here, the size of the deviation being studied) varies.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extends the Doob transform and spectral large-deviation methods from deterministic chaotic maps to random maps, to build effective dynamics for rare trajectories and to characterize dynamical phase transitions.",
+    "plain": "The paper studies unusual, rare patterns of behavior over long stretches of time in simple systems that evolve in discrete steps with added randomness. Such patterns are exponentially hard to observe by just running the system normally. The authors show how to build a modified version of the dynamics in which these rare behaviors become typical, so they can be reproduced directly, and they use spectral methods to see when the system switches between different behavioral regimes.",
+    "why": "Rare fluctuations and sudden switches between behavioral regimes are central questions in statistical physics, and the framework could help study them in a wider class of systems. The text itself does not indicate specific applications beyond random chaotic maps, so the broader reach is unclear from this abstract alone."
    },
    "abstract": "Large deviation theory provides a natural framework to characterize rare fluctuations of time-averaged observables in deterministic and stochastic systems. Building on previous results for deterministic chaotic maps, here we extend the Doob transform to random maps, constructing an effective dynamics in which rare events become typical. This makes it possible to directly reproduce the dynamics of rare trajectories that are exponentially difficult to sample under the original dynamics. We further apply spectral large-deviation methods to characterize dynamical phase transitions in random maps. The spectral structure of the tilted operator provides insight into the mechanisms underlying these transitions and, in particular, allows us to identify the appropriate initial states that select one dynamical phase or another. Our results extend the connection between large deviation theory, spectral methods, and effective dynamics to random chaotic maps, providing a general framework to study rare events and dynamical phase transitions in these systems.",
    "source": "arxiv"
@@ -43,12 +88,12 @@
    "primary_category": "cond-mat.dis-nn",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes the Cup and Cap Topological Neural Network (CCNN), which uses cup and cap products from algebraic topology to move signals between simplices of different dimensions in one layer and learns node-level features via many-body (e.g. triangle) interactions, validated on TopoBench datasets against other simplicial complex networks.",
-    "plain": "Many machine-learning models built on shapes or networks of connected parts can only pass information between neighbouring levels of structure, such as points to lines or lines to triangles, one level at a time. This paper proposes a new model that uses mathematical operations called \"cup\" and \"cap\" products, which let information jump across more than one level in a single step. The authors test it on standard benchmark datasets and report that it performs competitively with other existing models of this kind.",
-    "why": "The work targets a stated limitation of current topological deep learning, namely that signals can only be raised or lowered one dimension per layer, so it may matter for modelling group interactions in data. The text reports only competitive benchmark performance, not superiority, so the practical gain is unclear from this abstract alone.",
+    "ai": true,
     "background": "- Simplices: building blocks of a shape or network: points (dimension 0), edges (1), triangles (2), and higher.\n- Simplicial complex: a collection of such blocks glued together; it can represent group interactions, not just pairwise links.\n- Cochain: an assignment of numbers (features) to the blocks of a given dimension; node-based variables are 0-cochains.\n- Boundary operators and Hodge Laplacians: standard tools that move information between neighbouring dimensions of a complex.\n- Cup and cap products: operations from algebraic topology that combine features across dimensions, allowing jumps of more than one dimension.\n- TopoBench: a benchmark suite for topological neural networks.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes the Cup and Cap Topological Neural Network (CCNN), which uses cup and cap products from algebraic topology to move signals between simplices of different dimensions in one layer and learns node-level features via many-body (e.g. triangle) interactions, validated on TopoBench datasets against other simplicial complex networks.",
+    "plain": "Many machine-learning models built on shapes or networks of connected parts can only pass information between neighbouring levels of structure, such as points to lines or lines to triangles, one level at a time. This paper proposes a new model that uses mathematical operations called \"cup\" and \"cap\" products, which let information jump across more than one level in a single step. The authors test it on standard benchmark datasets and report that it performs competitively with other existing models of this kind.",
+    "why": "The work targets a stated limitation of current topological deep learning, namely that signals can only be raised or lowered one dimension per layer, so it may matter for modelling group interactions in data. The text reports only competitive benchmark performance, not superiority, so the practical gain is unclear from this abstract alone."
    },
    "abstract": "Topological Deep Learning (TDL) is designed to learn features associated not only with nodes but also with edges, triangles and higher dimensional simplices. However, most TDL approaches, being based on boundary operators and Hodge Laplacians, have the limitation that features and signals cannot be lifted or lowered across more than one dimension per layer. To overcome this limitation, in this work, we propose the adoption of the cup and cap products. Specifically, we formulate the Cup and Cap Topological Neural Network (CCNN), a topological deep learning architecture designed to learn node-based variables (or 0-cochains) by taking into account their many-body interactions (e.g. triangles) present in the data. We validate CCNN by assessing its performance on the TopoBench datasets, demonstrating its competitive performance with respect to other simplicial complex neural networks.",
    "source": "arxiv"

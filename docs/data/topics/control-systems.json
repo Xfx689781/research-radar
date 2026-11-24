@@ -1,7 +1,52 @@
 {
  "slug": "control-systems",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26811",
+   "title": "Connectivity-Constrained Linear System Realization: Feasibility and Realizable Sets",
+   "url": "https://arxiv.org/abs/2611.26811",
+   "authors": [
+    "Yaozhi Du (Lisa)",
+    "Jing Shuang (Lisa)",
+    "Li"
+   ],
+   "label": "arXiv:2611.26811v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper studies which state-space realizations of a given transfer function fit an arbitrary prescribed connectivity pattern (support), solving the realization problem exactly via polynomial equations and characterizing which transfer functions a given pattern can realize, using algebraic geometry.",
+    "plain": "The paper asks how to build a simple internal model of a linear system, with its internal parts wired together only in a specified pattern of allowed connections. It shows this can be turned into a system of polynomial equations and solved exactly, without approximation. It also asks the reverse question, which input-output behaviors a given wiring pattern can produce, and reports that a pattern can either realize nearly all behaviors or very few.",
+    "why": "Most prior work on this kind of problem concerns networked plants, whereas this paper targets arbitrary connection patterns, which the text says matter for modeling in sensorimotor neuroscience. The text does not show how far the results have been applied beyond the examples given, so its practical reach is uncertain.",
+    "background": "- Transfer function: a compact description of how a linear system turns inputs into outputs.\n- State-space realization: an internal model with explicit state variables that reproduces a given transfer function.\n- Connectivity pattern (support): which internal variables are allowed to influence which others; zeros in a matrix mean no connection.\n- Structured/distributed control: control design where the controller's structure or communication is restricted.\n- Multivariate polynomial equations: equations in several unknowns where each term is a product of powers of those unknowns.\n- Algebraic geometry: the branch of mathematics that studies solution sets of polynomial equations and their shapes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we first study the problem of finding a state-space realization of a given transfer function that adheres to a given connectivity pattern (i.e., support). While variants of this problem have been studied in distributed and structured control, existing work typically focuses on connectivity patterns relating to some networked plant. In contrast, we are interested in arbitrary connectivity patterns, which are relevant to modeling problems in sensorimotor neuroscience. We show that this problem is equivalent to solving a system of multivariate polynomial equations, and can be solved exactly without relaxation or approximation. We then study the reverse problem: given a connectivity pattern, what transfer functions have a state-space realization that adheres to this pattern? In other words, what transfer functions can this pattern realize? A surprising finding is that any given pattern can realize nearly all transfer functions, or very few transfer functions. We provide rigorous results and algorithms for both problems, leveraging technical machinery from algebraic geometry. The efficacy of our approach is demonstrated in examples at the end of the paper.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27400",
+   "title": "Active Learning of Flows from Curve Observations using Gaussian Processes",
+   "url": "https://arxiv.org/abs/2611.27400",
+   "authors": [
+    "Konrad Reichel",
+    "Sandra Hirche"
+   ],
+   "label": "arXiv:2611.27400v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes a local optimization method, using a Gaussian process model of an unknown control system, that plans the trajectory whose observation most reduces uncertainty about the system's flow, and reformulates the planning problem as a fixed end time optimal control problem via time rescaling.",
+    "plain": "Engineers often need to learn how a machine or system behaves by running it under chosen inputs, but each run is costly. This paper describes a way to pick the most useful input sequence to try, so that the recorded motion teaches the most about how the system responds. The authors also account for the fact that the real system may drift away from the planned path, and they test their planners on a numerical example against benchmark methods.",
+    "why": "Choosing informative experiments automatically can reduce the time and wear needed to identify a system, which matters for robotics and other real-world control. The text itself does not report how large the gains are, so the practical value is not established from this description alone.",
+    "background": "- Control system: a system whose behavior (e.g., a robot arm) can be steered by inputs over time.\n- Flow: the rule describing how the system's state evolves from a starting point under given inputs.\n- Gaussian process: a statistical model that gives a predicted value plus an uncertainty estimate, learned from observed data.\n- Active learning: choosing which data to collect next, rather than collecting it at random.\n- Posterior kernel: the updated description of the model's uncertainty after data are observed.\n- Pontryagin-type necessary condition: a standard calculus-of-variations rule that an optimal input must satisfy.\n- Time rescaling: stretching or compressing time along a trajectory so a problem with variable duration becomes one with fixed duration.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The active learning of real control systems requires informative roll-outs of controls. In this paper, we present a local optimization algorithm that finds the trajectory that most reduces uncertainty about the flow of a control system modeled by a Gaussian process. Therefore, we derive an approximation scheme for the posterior kernel of the Gaussian process after observing it on an entire continuous-time trajectory and establish a Pontryagin-type necessary condition for the optimizer. As the flow is unknown, the actual trajectory can deviate from the planned trajectory. We propose a trajectory planner that searches for the most informative control within a maximal allowed deviation horizon instead of a fixed time horizon. We show by trajectory-wise time rescaling that the underlying optimal control problem is equivalent to a fixed end time optimal control problem. Finally, we study both the fixed end time planner and the fixed maximum deviation planner in a numerical example and compare them with benchmarks.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27435",
    "title": "Learned Network Dynamics for Model Predictive Traffic Signal Control under Incidents",
@@ -16,12 +61,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "GNN-MPC is a receding-horizon traffic-signal controller that plans with action-conditioned graph-neural-network dynamics, coordinates phases across intersections via approximate best responses with an acceptance test, and is evaluated in microscopic simulation under non-recurrent incidents on a homogeneous grid and a heterogeneous 21-intersection network.",
-    "plain": "Cities use traffic lights to manage queues, and a crash or lane closure can make those queues behave in ways that are hard to predict. This paper proposes a controller that uses a learned model of how the whole road network responds to each light decision, rather than a hand-calibrated model. In computer traffic simulations with incidents, it reduced travel time and completed more trips than the controllers it was compared with.",
-    "why": "Traffic signals that adapt to incidents could reduce delays, and the paper's comparison suggests that both seeing queues that extend beyond short lanes and predicting how queues respond to control matter. The results come from simulation only, so it is unclear how they would transfer to real streets; the text does not address deployment.",
+    "ai": true,
     "background": "- Model predictive control (MPC): at each time step, the controller simulates several future steps under a model, picks the best action sequence, applies only the first action, then repeats.\n- Graph neural network (GNN): a neural network that operates on a graph of nodes (here, intersections and lanes) and passes information between connected nodes.\n- Action-conditioned dynamics: a model that predicts how the system will evolve given the control action being considered.\n- Store-and-forward model: a simple queueing model where vehicles are held at a link and released downstream, used here as a baseline predictor.\n- MaxPressure: a known traffic-signal heuristic that favors phases that relieve the most congested movements.\n- Non-recurrent incident: an unexpected, temporary disruption such as a crash or closure.\n- Microscopic simulation: software that models each vehicle individually.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "GNN-MPC is a receding-horizon traffic-signal controller that plans with action-conditioned graph-neural-network dynamics, coordinates phases across intersections via approximate best responses with an acceptance test, and is evaluated in microscopic simulation under non-recurrent incidents on a homogeneous grid and a heterogeneous 21-intersection network.",
+    "plain": "Cities use traffic lights to manage queues, and a crash or lane closure can make those queues behave in ways that are hard to predict. This paper proposes a controller that uses a learned model of how the whole road network responds to each light decision, rather than a hand-calibrated model. In computer traffic simulations with incidents, it reduced travel time and completed more trips than the controllers it was compared with.",
+    "why": "Traffic signals that adapt to incidents could reduce delays, and the paper's comparison suggests that both seeing queues that extend beyond short lanes and predicting how queues respond to control matter. The results come from simulation only, so it is unclear how they would transfer to real streets; the text does not address deployment."
    },
    "abstract": "Model predictive control (MPC) of urban traffic signals relies on a model of how queues respond to signal decisions, which is hard to specify and calibrate in heterogeneous networks, particularly when incidents change capacities and turning shares. Measurements add a second limitation: the controlled lanes at the stop line are often short, so queues extending upstream of them fall outside lane-level measurements. We propose GNN-MPC, a receding-horizon controller that plans with action-conditioned network dynamics learned by graph neural networks. Phase sequences are coordinated across intersections by approximate best responses, with an acceptance test that keeps the predicted cost no higher than that of the initial plan. In microscopic simulation under non-recurrent incidents, GNN-MPC reduces travel time and increases completed trips relative to all tested controllers, on a homogeneous grid and a heterogeneous 21-intersection network. Controlled comparisons on the heterogeneous network distinguish the roles of observation and prediction. With nearly as many vehicles entering the network, GNN-MPC reduces travel time by 13% relative to MaxPressure with the same upstream measurement, and GNN-MPC without the upstream representation does not reproduce its performance. Under the same traffic measurements, planner and objective, replacing the learned dynamics with calibrated store-and-forward predictors increases travel time by 31-34%. Observing hidden demand and predicting its response to control are thus complementary requirements of network-level predictive control.",
    "source": "arxiv"
@@ -39,12 +84,12 @@
    "primary_category": "math.OC",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "An event-triggered source-seeking controller for nonholonomic unicycle vehicles that separates continuous probing motion from aperiodically updated correction, with practical exponential convergence proved via a time-periodic Lyapunov function and a positive minimum dwell time.",
-    "plain": "This paper looks at how a robot vehicle can find the strongest point of a signal, such as the peak of a field, without constantly recalculating its steering. The vehicle keeps wiggling in a steady probing pattern to sense which way the signal rises, but it only updates its course correction when a trigger condition is met. The authors show, using mathematical proof, that the vehicle still gets close to the source and that updates never happen so rapidly that they pile up.",
-    "why": "Reducing how often a vehicle must compute and send control updates can save computing and communication resources, which matters for battery-powered or networked machines. The text does not report experiments or hardware results, so its practical payoff is not yet shown.",
+    "ai": true,
     "background": "- Source seeking: steering a vehicle toward a hidden maximum (or minimum) of an unknown signal, using only measurements.\n- Nonholonomic unicycle: a wheeled vehicle that cannot move sideways directly and must steer by turning and moving forward.\n- Event-triggered control: updating the control only when a measured error crosses a threshold, instead of at fixed time steps.\n- Dither/probing signals: small periodic wiggles that let the vehicle estimate the local slope of the signal.\n- Washout, demodulation and low-pass filtering: standard signal-processing steps that extract the slope estimate from the wiggles.\n- Lyapunov function: a energy-like certificate used to prove a system settles toward a target.\n- Zeno behavior: an unphysical case where triggered updates pile up infinitely fast; the paper proves a positive minimum gap between updates to rule this out.\n- Lie-bracket / averaging analysis: mathematical tools that approximate the fast wiggling motion by its average effect.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "An event-triggered source-seeking controller for nonholonomic unicycle vehicles that separates continuous probing motion from aperiodically updated correction, with practical exponential convergence proved via a time-periodic Lyapunov function and a positive minimum dwell time.",
+    "plain": "This paper looks at how a robot vehicle can find the strongest point of a signal, such as the peak of a field, without constantly recalculating its steering. The vehicle keeps wiggling in a steady probing pattern to sense which way the signal rises, but it only updates its course correction when a trigger condition is met. The authors show, using mathematical proof, that the vehicle still gets close to the source and that updates never happen so rapidly that they pile up.",
+    "why": "Reducing how often a vehicle must compute and send control updates can save computing and communication resources, which matters for battery-powered or networked machines. The text does not report experiments or hardware results, so its practical payoff is not yet shown."
    },
    "abstract": "This paper introduces an event-triggered source seeking control (ET-SSC) strategy for autonomous vehicles modeled as nonholonomic unicycles. The key feature of the proposed design is the separation between the continuous probing motion required for gradient extraction and the event-triggered update of the source-seeking correction. This separation enables aperiodic computation and transmission of the correction while the periodic probing signals remain continuously active. The triggering mechanism acts on a low-pass-filtered gradient estimate, obtained by high-pass (washout) filtering, demodulation, and low-pass filtering of the measured signal, and combines a relative and an absolute threshold. Stability is proved with a time-periodic Lyapunov function constructed along the exponentially stable periodic solution of the filtered closed loop, establishing practical exponential convergence of the vehicle to a neighborhood of the unknown source. The guaranteed minimum dwell time is strictly positive and independent of the probing frequency, which excludes Zeno behavior. Unlike available Lie-bracket analyses of the forward-velocity design, the proposed averaging-based analysis accommodates anisotropic quadratic source fields with distinct spatial curvatures. The resulting ET-SSC framework therefore provides a resource-aware implementation in which the source-seeking correction is updated aperiodically while the information-generating probing motion remains continuous.",
    "source": "arxiv"

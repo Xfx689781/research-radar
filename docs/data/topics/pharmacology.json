@@ -1,6 +1,6 @@
 {
  "slug": "pharmacology",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
   {
    "uid": "biorxiv:10.64898/2026.11.06.764605",
@@ -16,12 +16,12 @@
    "primary_category": "pharmacology and toxicology",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A case study of a chamber-based TEER system used with a gut co-culture model, analyzing 23 twenty-two-day experiments to separate within-run from run-to-run variability using Bayesian analysis and correlation of control measurements.",
-    "plain": "Scientists grow layers of cells on small porous inserts and measure how electrically resistant the layer is, as a way to check that it forms a tight barrier. This paper asks how much of the variation in those readings comes from within a single test session versus from one session to the next. The authors found that variation within a session was small, but differences between sessions, even ones run hours apart on the same day, were larger.",
-    "why": "Barrier measurements like this are used in drug testing and bioassays, so knowing where the noise comes from helps decide how results should be compared and analyzed. The text suggests the methods could be applied to other TEER measurements, though its scope is a single case study.",
+    "ai": true,
     "background": "- TEER (trans-epithelial/endothelial electrical resistance): an electrical resistance reading across a cell layer; higher values generally indicate a tighter barrier.\n- Cell inserts: small cup-like membranes on which cells are grown, letting researchers measure across the layer.\n- Gut co-culture model: a lab model in which two cell types are grown together to mimic the intestinal lining.\n- KCl and blank inserts: control measurements. KCl is a salt solution used as a reference reading; blank inserts have no cells and show the baseline.\n- Run: a batch of plates measured in one session.\n- Bayesian analysis: a statistical method that estimates how much each source of variation contributes, with uncertainty.\n- Correlation: a measure of whether two sets of deviations move together; here, whether control deviations track model deviations within a run.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A case study of a chamber-based TEER system used with a gut co-culture model, analyzing 23 twenty-two-day experiments to separate within-run from run-to-run variability using Bayesian analysis and correlation of control measurements.",
+    "plain": "Scientists grow layers of cells on small porous inserts and measure how electrically resistant the layer is, as a way to check that it forms a tight barrier. This paper asks how much of the variation in those readings comes from within a single test session versus from one session to the next. The authors found that variation within a session was small, but differences between sessions, even ones run hours apart on the same day, were larger.",
+    "why": "Barrier measurements like this are used in drug testing and bioassays, so knowing where the noise comes from helps decide how results should be compared and analyzed. The text suggests the methods could be applied to other TEER measurements, though its scope is a single case study."
    },
    "abstract": "Trans-epithelial/endothelial electrical resistance (TEER) measurements are a key nondestructive measurement of the barrier integrity of cells grown on inserts. To support the use of TEER measurements in bioassays, we have evaluated the sources of variability in a case study involving a chamber-based TEER system to assess a gut co-culture model. Data from 23 separate experiments, each lasting 22 d, were evaluated. Multiple lines of evidence suggested minimal variability within a run, a period during which several plates were analyzed sequentially. In contrast, run-to-run variability was substantially larger, even when two runs were performed several hours apart on the same day. Bayesian analysis of both KCl and blank insert data revealed that run-to-run variability was among the largest sources of variability, with relative uncertainty values of 3 % to 6 % of the mean value. Correlational analysis investigated whether deviations of KCl or blank insert TEER values within a run compared to long-term median values were correlated with deviations of the biculture gut model values within that same run from their long-term median values. Unexpectedly, the KCl values were not correlated, while the blank insert values had a weak correlation. We also evaluated the information gained from different control measurements. The findings from this study can influence how statistical analyses are performed on TEER results and can inform the design of robust TEER methods. For example, the approaches described here can be used to characterize variability within and among runs in TEER measurements for other methods.",
    "source": "biorxiv"

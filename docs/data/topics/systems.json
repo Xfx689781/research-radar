@@ -1,7 +1,53 @@
 {
  "slug": "systems",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27561",
+   "title": "Exploring the Potential of Ultra-Low-Bit Inference on LLM Accelerators",
+   "url": "https://arxiv.org/abs/2611.27561",
+   "authors": [
+    "Hao Wang",
+    "Yang Shi",
+    "Jiageng Shi",
+    "Qiuran Li",
+    "Yaohua Wang"
+   ],
+   "label": "arXiv:2611.27561v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes VQACC, a modest change to a systolic-array LLM accelerator's operand buffer access logic and data mapping so that vector-quantized weight codebook lookups reuse existing storage and ports, reporting a 2.63x speedup over the EVA baseline at 0.17% extra compute-array area.",
+    "plain": "Large language models are very big, and one way to shrink them is to store their numbers as short codes that point into a small lookup table, called a codebook. Turning those codes back into usable numbers requires many lookups, which clash with how existing AI chips move data, so past fixes added special-purpose hardware. This paper argues that today's chips already have the spare memory and access ports needed, and that the way they are wired just needs rethinking; the authors report that their version runs about 2.63 times faster than a prior baseline (EVA) while adding very little chip area.",
+    "why": "Running large models on cheaper, lower-power hardware is a practical concern for deploying AI, and this shows a way to get the benefit of extreme compression without building a separate accelerator. The claims come only from the abstract; the workloads, measurement setup, and comparison details are not given here, so the size of the gain should be read with that in mind.",
+    "background": "- Quantization: storing model numbers with fewer bits to save memory and time.\n- Vector quantization (VQ): grouping several values and replacing them with one index into a shared codebook.\n- Codebook lookup: fetching the stored values that an index points to, then using them in computation.\n- Systolic array: a grid of simple processing units that passes data across neighbors, common in AI accelerators.\n- Operand buffer: on-chip memory that holds the inputs fed to the compute array; its ports limit how fast data can be read.\n- Dataflow: the order and route by which data moves through hardware.\n- Dequantization: converting compressed codes back into full values before computing with them.\n- EVA: the prior accelerator design used as the comparison point in the paper.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Vector quantization (VQ) enables ultra-low-bit compression of large language models (LLMs) by encoding groups of values as compact codebook indexes. However, reconstructing these values for computation requires frequent codebook lookups, which conflict with the dataflows of conventional LLM accelerators and limit the performance gains from VQ compression. Consequently, prior work has resorted to VQ-specific accelerator designs, which either incur substantial additional hardware overhead or support only a limited range of inference scenarios. In this work, we argue that existing systolic-array-based LLM accelerators already possess the essential hardware resources for efficient VQ inference, but lack the mechanisms to effectively exploit them. To bridge this gap, we present VQACC, an architectural enhancement that jointly redesigns the existing operand buffer's access logic and data mapping to reuse its storage and port resources for codebook lookups, seamlessly integrating dequantization into the normal operand-addressing dataflow. Evaluation shows that VQACC achieves a 2.63$\\times$ speedup over the EVA baseline, with additional hardware occupying only 0.17\\% of the compute array's area.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26939",
+   "title": "Acceleration of Sparse and Irregular Workloads through Energy-Efficient Stream Extensions",
+   "url": "https://arxiv.org/abs/2611.26939",
+   "authors": [
+    "Paul Scheffler"
+   ],
+   "label": "arXiv:2611.26939v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A thesis proposing a core-coupled hardware stream extension for RISC-V processors that accelerates sparse and irregular workloads (affine and indirect streams, sparse tensor intersection and union), evaluated in a 432-core 2.5D system in 12nm FinFET and extended to chip-level interconnects.",
+    "plain": "Modern chips are built to run orderly, predictable computations well, but many real tasks involve scattered, unpredictable data access, so the chip's calculating units sit idle most of the time (the text cites under 10% utilization). This thesis designs add-on hardware that fetches and feeds such scattered data streams to the processor so it stays busy, and reports tests on a large chip built from many small processors.",
+    "why": "Sparse and irregular workloads underlie sparse neural networks, physics simulations, and graph analytics, so efficiency gains here could matter for those fields. The text reports benchmark results on its own prototype, but it does not show how these gains would carry over to commercial systems, so that remains open.",
+    "background": "- Hardware \"stream\" units: separate helpers that fetch data from memory in a planned sequence while the main processor computes.\n- Sparse data: arrays where most entries are zero, so only a few values need storing and processing.\n- Functional unit utilization: the share of time a chip's arithmetic units are actually doing useful work.\n- RISC-V: an open processor instruction set design.\n- Stencil computation: updating each point in a grid using its neighbours, common in physics simulations.\n- Dennard scaling and Moore's law: historical trends of faster, cheaper transistors that have slowed down.\n- 2.5D integration: placing several chips side by side on a shared connecting base rather than stacking them.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The slowdown of Moore's law and Dennard scaling has motivated computer architects to uphold performance scaling through architectural specialization. So far, most efforts have focused on highly regular workloads, which exhibit good data locality, ample reuse, and a data-independent execution flow. As this specialization hits diminishing returns, attention shifts towards sparse and irregular workloads, which are essential to applications like sparse neural networks, multiphysics simulations, and graph analytics. However, they lack the convenient properties of highly regular compute that modern architectures are optimized for, resulting in very low (<10%) functional unit utilization on traditional CPUs and GPUs. The most promising approaches to their general hardware acceleration leverage memory streams, which decouple data movement from execution. In this thesis, we explore energy-efficient hardware stream extensions that significantly accelerate sparse and irregular workloads in general-purpose systems without specializing to specific application domains or compromising on regular-workload performance. We design a flexible, core-coupled stream extension supporting affine and indirect streams as well as intersection and union of sparse tensors. We integrate it into an energy-efficient RISC-V compute cluster, achieving significant performance and energy efficiency benefits on general sparse linear algebra, and further use it to accelerate stencil computations, spiking neural network inference, and model-predictive control. We evaluate it at scale in a 432-core 2.5D RISC-V system fabricated in 12nm FinFET, achieving leading compute utilization and energy efficiency on sparse and irregular workloads while remaining competitive on regular workloads. Finally, we extend chip-level interconnects with end-to-end irregular streams, improving performance, energy efficiency, and bus utilization.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27320",
    "title": "Bring Cloud-Native Networking to FreeBSD Jails: Porting Calico from Linux",
@@ -16,12 +62,12 @@
    "primary_category": "cs.OS",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper describes porting Calico, a widely used Kubernetes-style container networking plugin, to FreeBSD Jails by swapping Linux networking components for FreeBSD equivalents (ipfw for iptables, routing sockets for netlink, vnet for network namespaces).",
-    "plain": "Software that runs many isolated programs on one computer, called containers, needs a way to connect them to networks and set rules about who can talk to whom. On Linux, a popular tool called Calico does this, but FreeBSD (an operating system with its own style of containers called Jails) lacked an equivalent, so users set things up by hand. This paper describes adapting Calico to run on FreeBSD by replacing Linux-only pieces with FreeBSD's own built-in tools.",
-    "why": "It aims to let FreeBSD work with the same container orchestration systems that Linux users rely on, which could matter for anyone running FreeBSD servers at scale. The text is a short abstract only, so it does not report measured results, and how complete or well-tested the port is cannot be judged from it.",
+    "ai": true,
     "background": "- Container: a way to run an isolated program with its own view of files and network, sharing the host's operating system.\n- FreeBSD Jails: FreeBSD's built-in container-like isolation.\n- CNI (Container Network Interface) plugin: a standard add-on that handles networking for containers in orchestration systems such as Kubernetes.\n- Calico: a widely used networking plugin that also enforces rules about which containers may communicate.\n- iptables / ipfw: packet-filtering rule systems on Linux and FreeBSD respectively.\n- Netlink / routing sockets: the interfaces programs use to query and change network settings in the kernel.\n- Network namespace / vnet: a way to give each container its own separate network stack.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper describes porting Calico, a widely used Kubernetes-style container networking plugin, to FreeBSD Jails by swapping Linux networking components for FreeBSD equivalents (ipfw for iptables, routing sockets for netlink, vnet for network namespaces).",
+    "plain": "Software that runs many isolated programs on one computer, called containers, needs a way to connect them to networks and set rules about who can talk to whom. On Linux, a popular tool called Calico does this, but FreeBSD (an operating system with its own style of containers called Jails) lacked an equivalent, so users set things up by hand. This paper describes adapting Calico to run on FreeBSD by replacing Linux-only pieces with FreeBSD's own built-in tools.",
+    "why": "It aims to let FreeBSD work with the same container orchestration systems that Linux users rely on, which could matter for anyone running FreeBSD servers at scale. The text is a short abstract only, so it does not report measured results, and how complete or well-tested the port is cannot be judged from it."
    },
    "abstract": "While Linux containers benefit from a rich ecosystem of Container Network Interface (CNI) plugins such as Calico and Cilium, FreeBSD Jails lacked native, standardized solutions for advanced networking. As a result, users have relied on manual, error-prone configurations, limiting scalability and integration with modern orchestration platforms. This paper introduces porting Calico, a widely adopted CNI plugin, to the FreeBSD operating system. Our approach replaced Linux-specific components with FreeBSD-native equivalents: iptables with ipfw, netlink sockets with routing sockets, and Linux network namespaces with FreeBSD's vnet. This work aims to bridge the gap between Linux and BSD container networking. By providing scalable, policy-driven capabilities that are compatible with existing Linux-centric infrastructure, FreeBSD can participate more fully in the broader container networking ecosystem.",
    "source": "arxiv"
@@ -39,12 +85,12 @@
    "primary_category": "cs.DC",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A characterization of how concurrently running GPU kernels slow each other down on AMD MI300X hardware, followed by CAFEML, a contention-aware scheduler that tunes operator overlap and resource allocation for ML training and inference, reporting up to 13% end-to-end speedup without kernel rewrites.",
-    "plain": "Modern AI software runs many small computing tasks (called kernels) at the same time on a graphics processor, and they compete for shared parts of the chip such as memory and cache, so each can run slower. This paper measures how much that slowdown happens on a current datacenter AI chip, and sorts the results by whether a task is limited by memory or by computation, and whether it is large or small. It then proposes simple scheduling rules for when to start overlapping tasks and how to split chip resources between them.",
-    "why": "Keeping expensive AI accelerators busy is a practical concern for anyone running large models, and the paper suggests that the default \"start whatever is ready first\" policy used by frameworks leaves performance on the table. The gain reported (up to 13% end-to-end) comes from scheduling changes alone, which is a modest but practically relevant result; the text does not show how well it generalizes beyond the scenarios tested.",
+    "ai": true,
     "background": "- GPU (graphics processing unit): a chip with many parallel cores, widely used to train and run AI models.\n- Kernel: a single compute job launched on a GPU, such as one matrix multiplication.\n- Concurrent execution: running several kernels at once so the chip is used more fully.\n- Contention: competition for shared resources like cache and memory bandwidth, which slows each job.\n- Memory-bound vs. compute-bound: whether a job is limited by how fast data moves or by how fast arithmetic can be done.\n- Training vs. inference (prefill and decode): training updates a model; inference uses it to generate output, with prefill and decode being its two phases.\n- End-to-end speedup: the improvement in total run time for a whole workload, not just one piece.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A characterization of how concurrently running GPU kernels slow each other down on AMD MI300X hardware, followed by CAFEML, a contention-aware scheduler that tunes operator overlap and resource allocation for ML training and inference, reporting up to 13% end-to-end speedup without kernel rewrites.",
+    "plain": "Modern AI software runs many small computing tasks (called kernels) at the same time on a graphics processor, and they compete for shared parts of the chip such as memory and cache, so each can run slower. This paper measures how much that slowdown happens on a current datacenter AI chip, and sorts the results by whether a task is limited by memory or by computation, and whether it is large or small. It then proposes simple scheduling rules for when to start overlapping tasks and how to split chip resources between them.",
+    "why": "Keeping expensive AI accelerators busy is a practical concern for anyone running large models, and the paper suggests that the default \"start whatever is ready first\" policy used by frameworks leaves performance on the table. The gain reported (up to 13% end-to-end) comes from scheduling changes alone, which is a modest but practically relevant result; the text does not show how well it generalizes beyond the scenarios tested."
    },
    "abstract": "Concurrent kernel execution is a ubiquitous paradigm in artificial intelligence (AI) and machine learning (ML) across both training and inference. That said, concurrency causes potential slowdown as concurrent kernels contend for limited GPU resources (cores, caches, memory bandwidth), which are shared between these kernels rather than exclusively available to one, as in isolated execution. This raises an important research question: to what extent does concurrency slow down kernel execution and how can it be mitigated. To answer this question, our work presents two studies. First, we characterize concurrent kernel execution extensively for the first time, to our knowledge. We conduct not just performance analysis of concurrent kernels but also memory behavior under concurrency on state-of-the-art AMD Instinct MI300X GPUs designed for datacenter AI, using the AMD-internal millisecond sampler. Based on the observations, we share insights on the slowdown along two dimensions (memory vs. compute bound, large vs. small kernels) to inform future optimizations. Second, we put the derived insights to use, aiming to deliver higher performance via targeted, flexible overlap of ML operators. Frameworks today make the simple decision of early-first for concurrent kernels, which is suboptimal. Noticing the opportunity that ML dataflow has inherent flexibility in which operators can be overlapped and how hardware resources can be allocated, we deduce simple heuristics to tune both overlap anchors and resource allocation for concurrent kernels to improve performance. We evaluate our proposed contention-aware flexible execution (termed CAFEML) across a variety of ML scenarios (inference decode, inference prefill, training) and demonstrate a speedup of up to 13% end-to-end with simple scheduling changes and no kernel rewrites.",
    "source": "arxiv"

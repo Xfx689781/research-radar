@@ -1,7 +1,112 @@
 {
  "slug": "ai-news",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "news:27065c561fbc5a7f",
+   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+   "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+   "authors": [
+    "Sarah Perez"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Anthropic has announced developer tools (\"Claude Ship\") that let AI agents review, fix, and approve code changes, aimed at easing the review bottleneck created by growing volumes of AI-generated code.",
+    "plain": "Software teams increasingly use AI to write code, and the human step of checking and approving those changes is becoming a slowdown. Anthropic's new tools let AI agents take over some of the routine checking and sign-off work. The article is a short announcement; it does not report measured results.",
+    "why": "If AI agents can safely handle routine approvals, software teams could ship changes faster, which matters for how much human oversight stays in the loop. The text is too brief to say how well the tools work or what safeguards exist, so the practical impact is unclear.",
+    "background": "- \"Agent\": an AI system that carries out multi-step tasks on its own, not just answering a single question.\n- \"Code review\": a process where another engineer reads proposed software changes before they are accepted.\n- \"Bottleneck\": a stage in a process that slows everything downstream, here the human review step.\n- \"Pull request\" or \"merge\": the standard way a proposed code change is submitted to and accepted into a project.\n- The article gives no details on accuracy, testing, or how approvals are audited.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:0d63fb1e6c01db65",
+   "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+   "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+   "authors": [
+    "Sarah Perez"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A news item reports that startup Supertake raised $20M and offers AI agents that convert a user's market views into stock portfolios, though the text is only a short teaser with few details.",
+    "plain": "Supertake is a startup that says you can act on your own ideas about where the stock market is going without choosing individual stocks yourself. Its AI agents, which are software programs that act on a user's behalf, turn those predictions into a portfolio, meaning a bundle of investments. The article is very short, so it does not explain how this works in practice or how well it performs.",
+    "why": "It is a small example of AI being pitched as a way for ordinary people to invest on their own views, which may matter to debates about automated investing and financial advice. The text gives too little detail to judge whether the approach is sound or significant.",
+    "background": "- A \"startup\" is a young company, often funded by investors; \"raising $20M\" means it received $20 million in new investment.\n- A \"stock portfolio\" is a collection of shares in different companies held as one investment.\n- \"AI agents\" are AI programs that carry out multi-step tasks for a user, rather than only answering questions.\n- Turning a prediction into a portfolio means a system must choose which stocks to buy and in what amounts to reflect the user's view.\n- The article offers no information on fees, regulation, risk, or track record, so these remain unknown.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:d6a5b08e3fa8b3f0",
+   "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+   "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+   "authors": [
+    "Ivan Mehta"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Sierra, a customer-experience AI startup co-founded by former Salesforce co-CEO Bret Taylor, reportedly raised $1.75 billion in a Series F round, roughly doubling its valuation to $30 billion within six months.",
+    "plain": "Sierra is a company that builds AI tools for businesses to handle customer service and similar interactions. It announced on Monday that it has raised $1.75 billion from investors, a funding round that pushes its estimated company value to about $30 billion. The article presents this as a sign of strong demand for AI in customer experience.",
+    "why": "The article is a funding announcement, not a research result, so it mainly signals investor confidence in AI for customer service. Whether the demand it describes lasts is not shown in the text; the article gives no revenue or customer figures.",
+    "background": "- Series F: a late-stage round of private fundraising, typically after several earlier rounds (A, B, and so on).\n- Valuation: the estimated total worth of a company, often set by the price investors pay for shares. A doubling in six months is a fast rise.\n- Customer experience (CX): how a company's customers interact with it, including support chat, phone, and service.\n- Bret Taylor: former co-CEO of Salesforce, a large business software firm; he co-founded Sierra.\n- The article gives no details on Sierra's products, customers, revenue, or investors.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:2475b067992dd4ab",
+   "title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
+   "url": "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/",
+   "authors": [
+    "Amanda Silberling"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A short news piece reporting that Nvidia employees welcomed CEO Jensen Huang warmly on his return to the company's headquarters, with Huang saying he intends to be a better CEO \"the second time around.\"",
+    "plain": "This is a brief report about Nvidia, the chipmaker that makes the processors used to train and run many AI systems. Its co-founder and chief executive, Jensen Huang, came back to the company's headquarters and was greeted warmly by staff, and he told them he plans to be a better CEO this time. The text is only a single quoted line and a headline, so it does not say why he left or came back, or what changes he plans.",
+    "why": "Nvidia is one of the central companies in the AI hardware business, so changes in its leadership are followed closely by investors and the industry. The article alone does not explain the circumstances of his absence or return, so its wider significance is unclear.",
+    "background": "- Nvidia designs graphics and AI chips (GPUs) that are widely used to build and run AI models.\n- Jensen Huang is Nvidia's co-founder and long-serving chief executive.\n- \"CEO\" means chief executive officer, the top manager of a company.\n- The phrase \"the second time around\" suggests he had stepped away from the role or been absent before, but the text does not give details.\n- The source text is very thin: a headline and one quote, with no context, dates, or company statements.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "\"I'm going to be a better CEO the second time around,\" Huang told employees.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:74f939e081ec8d04",
+   "title": "Why data centers are at the center of the Big Tech backlash",
+   "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+   "authors": [
+    "Anthony Ha"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A news piece summarizing journalist Paris Marx's new book \"Hyperscale,\" which frames data centers as a focal point of growing public criticism of Big Tech.",
+    "plain": "This article is about the growing public pushback against Big Tech companies over the huge computer facilities, called data centers, that run online services and AI. It introduces journalist Paris Marx's new book, \"Hyperscale,\" which looks at why these facilities have become a point of conflict. The text provided is only a short teaser, so it does not report specific findings or details of the book's arguments.",
+    "why": "Data centers are where much of the computing for AI and cloud services happens, so local and political objections to them may affect how the industry expands. The text is too brief to say how strong the backlash is or what the book concludes.",
+    "background": "- Data center: a large building full of servers that store data and run online services and AI models.\n- Hyperscale: a term for the very largest data centers, typically run by a few major cloud companies.\n- Big Tech backlash: public criticism of large technology companies, covering issues such as power use, local impacts, and market power.\n- Paris Marx: a journalist and host who writes about technology and its political and economic effects.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+   "source": "rss"
+  },
   {
    "uid": "news:de5cd1a6d51dc917",
    "title": "Perplexity and Intelligence",
@@ -11,12 +116,12 @@
    "primary_category": "openai.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A news piece that discusses perplexity, a standard language-model metric, as a possible common yardstick for judging progress and emerging capabilities in AI models.",
-    "plain": "This article looks at a score called \"perplexity,\" which measures how well an AI language model predicts the next word in a piece of text. It argues that this score could give developers a shared way to compare models and track new abilities as they appear. The text provided is only a one-sentence summary, so it does not show the specific results or examples behind the argument.",
-    "why": "Agreeing on how to measure AI progress matters for comparing systems and judging what they can do. The provided text is too thin to say how strong the argument is, so its practical impact is unclear.",
+    "ai": true,
     "background": "- Language model: an AI system trained to predict and generate text one word at a time.\n- Perplexity: a score where lower usually means the model finds the text less surprising, i.e. predicts it better.\n- Evaluation/benchmark: a standard test used to compare systems on the same terms.\n- Emerging capabilities: abilities that appear as models grow larger, which are hard to forecast.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A news piece that discusses perplexity, a standard language-model metric, as a possible common yardstick for judging progress and emerging capabilities in AI models.",
+    "plain": "This article looks at a score called \"perplexity,\" which measures how well an AI language model predicts the next word in a piece of text. It argues that this score could give developers a shared way to compare models and track new abilities as they appear. The text provided is only a one-sentence summary, so it does not show the specific results or examples behind the argument.",
+    "why": "Agreeing on how to measure AI progress matters for comparing systems and judging what they can do. The provided text is too thin to say how strong the argument is, so its practical impact is unclear."
    },
    "abstract": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
    "source": "rss"
@@ -30,12 +135,12 @@
    "primary_category": "deepmind.google",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A news piece describing the use of AI agent teams and formal verification to improve quantum algorithms aimed at fusion energy and chemistry simulations.",
-    "plain": "The article covers work on making quantum computer programs faster for two hard scientific problems: modeling fusion energy and simulating chemistry. It says AI \"agent teams\" and formal verification (a method of using logic to mathematically prove that a program does what it should) were used to improve these algorithms. The text is only a short summary, so it does not give details of the specific improvements or how large they were.",
-    "why": "Faster quantum algorithms could matter for hard simulations in energy and materials research, but the summary gives no measured results, so the practical impact is unclear. It is also a sign of interest in using AI systems to help design and check scientific software.",
+    "ai": true,
     "background": "- Quantum algorithm: a set of steps meant to run on a quantum computer, which uses quantum physics rather than ordinary bits.\n- Fusion energy: generating power by fusing atomic nuclei, the process that powers the sun, which requires detailed simulations.\n- Quantum chemistry simulation: using computers to model how molecules behave, a task that is very hard for classical machines.\n- AI agents: software systems that carry out multistep tasks with some autonomy, here working as a team.\n- Formal verification: mathematically proving that a program meets its specification, rather than only testing it.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A news piece describing the use of AI agent teams and formal verification to improve quantum algorithms aimed at fusion energy and chemistry simulations.",
+    "plain": "The article covers work on making quantum computer programs faster for two hard scientific problems: modeling fusion energy and simulating chemistry. It says AI \"agent teams\" and formal verification (a method of using logic to mathematically prove that a program does what it should) were used to improve these algorithms. The text is only a short summary, so it does not give details of the specific improvements or how large they were.",
+    "why": "Faster quantum algorithms could matter for hard simulations in energy and materials research, but the summary gives no measured results, so the practical impact is unclear. It is also a sign of interest in using AI systems to help design and check scientific software."
    },
    "abstract": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
    "source": "rss"
@@ -51,12 +156,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Amazon is reported to be acquiring the AI optimization technology and research team of Decart for about $7.5 billion, as it prepares to sell its Trainium AI chips.",
-    "plain": "Amazon is reportedly buying a startup called Decart, including its technology for making AI systems run more efficiently and the researchers who built it. The reported price is about $7.5 billion. The article is short and gives few details beyond the deal itself and the mention of Amazon's Trainium chips.",
-    "why": "Large acquisitions of AI efficiency teams can signal where big cloud companies are investing to cut the cost of running AI. The link to Amazon's Trainium chips suggests a possible connection to its chip business, but the text does not explain how the two are related.",
+    "ai": true,
     "background": "- Decart: the company being acquired, per the headline and text; the article gives no further description of its work.\n- AI optimization: techniques that make AI models faster or cheaper to run, for example by using less computing power.\n- Trainium: Amazon's custom chips designed for training and running AI models, as an alternative to chips from other suppliers.\n- \"Reported\" deal: the $7.5 billion figure comes from reports, not necessarily from an official announcement in this text.\n- Acqui-hire: buying a company partly to bring its staff on board, which the phrase \"research team\" hints at.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "Amazon is reported to be acquiring the AI optimization technology and research team of Decart for about $7.5 billion, as it prepares to sell its Trainium AI chips.",
+    "plain": "Amazon is reportedly buying a startup called Decart, including its technology for making AI systems run more efficiently and the researchers who built it. The reported price is about $7.5 billion. The article is short and gives few details beyond the deal itself and the mention of Amazon's Trainium chips.",
+    "why": "Large acquisitions of AI efficiency teams can signal where big cloud companies are investing to cut the cost of running AI. The link to Amazon's Trainium chips suggests a possible connection to its chip business, but the text does not explain how the two are related."
    },
    "abstract": "Amazon is acquiring Decart’s AI optimization technology and research team in a reported $7.5 billion deal.",
    "source": "rss"
@@ -72,12 +177,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A news report says Megaspeed, a company previously led by Alice Huang, appears headed for a U.S. blacklist that would bar American companies from doing business with it unless they obtain a special federal license.",
-    "plain": "The article reports that a company called Megaspeed seems likely to be placed on a U.S. government blacklist. If that happens, American businesses would generally not be allowed to work with it unless they first get a special permit from the federal government. The text is a short summary, so it does not explain the reasons for the listing or the wider dispute its headline refers to.",
-    "why": "Blacklists like this are a common tool for controlling which firms can buy US technology, and the headline links the company to a \"Jensen Huang scandal,\" which may connect it to the AI chip supply business. The text is too thin to say what the scandal involves or how serious the listing will be, so treat the connection as unconfirmed.",
+    "ai": true,
     "background": "- Blacklist (in this context): a government list of companies that U.S. firms may not trade with without special approval.\n- Special license: a formal permission from a government agency that allows a restricted transaction.\n- Jensen Huang: chief executive of Nvidia, a major maker of AI chips; the headline ties him to a scandal, but the article text does not describe it.\n- Alice Huang: former leader of Megaspeed, per the article; the text does not say whether she is related to Jensen Huang.\n- The article appears to be based on reporting of a planned or likely action, not a finalized one.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A news report says Megaspeed, a company previously led by Alice Huang, appears headed for a U.S. blacklist that would bar American companies from doing business with it unless they obtain a special federal license.",
+    "plain": "The article reports that a company called Megaspeed seems likely to be placed on a U.S. government blacklist. If that happens, American businesses would generally not be allowed to work with it unless they first get a special permit from the federal government. The text is a short summary, so it does not explain the reasons for the listing or the wider dispute its headline refers to.",
+    "why": "Blacklists like this are a common tool for controlling which firms can buy US technology, and the headline links the company to a \"Jensen Huang scandal,\" which may connect it to the AI chip supply business. The text is too thin to say what the scandal involves or how serious the listing will be, so treat the connection as unconfirmed."
    },
    "abstract": "Megaspeed, which was previously led by Alice Huang, would be barred from doing business with U.S. companies unless those companies attained a special license from the federal government.",
    "source": "rss"
@@ -91,12 +196,12 @@
    "primary_category": "openai.com",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A short vendor-style news item says Richpanel uses several OpenAI-named models (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna) to run AI customer-support agents that it claims can automate 50% of support within 30 days.",
-    "plain": "This item is about Richpanel, a company that sells customer-support software. It says its AI support agents are built on several language models: one set equips the agents with tools and step-by-step procedures, and another handles the actual back-and-forth conversations with customers. The headline claims companies can automate half of their support work within 30 days.",
-    "why": "It is a small example of how businesses are packaging AI models into customer-service products, which matters to support teams and to anyone judging such claims. The text gives only the headline figure and the model names, so it does not show how the 50% was measured or how well the agents perform; treat it as a company claim rather than a verified result.",
+    "ai": true,
     "background": "- Language models are AI systems that generate and understand text; companies usually license them from a model provider and build products on top.\n- \"Automating support\" means an AI handles customer requests that would otherwise need a human agent, often measured as a share of tickets.\n- The model names given (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna) are the labels used in the article; the text does not explain how they differ beyond their assigned roles.\n- \"Tools and procedures\" refers to actions the AI can take (such as looking up an order) and fixed workflows it must follow.\n- The article is brief and promotional in tone, and it gives no independent data, methods, or customer results.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A short vendor-style news item says Richpanel uses several OpenAI-named models (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna) to run AI customer-support agents that it claims can automate 50% of support within 30 days.",
+    "plain": "This item is about Richpanel, a company that sells customer-support software. It says its AI support agents are built on several language models: one set equips the agents with tools and step-by-step procedures, and another handles the actual back-and-forth conversations with customers. The headline claims companies can automate half of their support work within 30 days.",
+    "why": "It is a small example of how businesses are packaging AI models into customer-service products, which matters to support teams and to anyone judging such claims. The text gives only the headline figure and the model names, so it does not show how the 50% was measured or how well the agents perform; treat it as a company claim rather than a verified result."
    },
    "abstract": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
    "source": "rss"

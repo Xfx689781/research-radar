@@ -1,7 +1,64 @@
 {
  "slug": "embodied-ai",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26944",
+   "title": "Analysis of Multi-Client Inference Techniques for Vision-Language-Action Models",
+   "url": "https://arxiv.org/abs/2611.26944",
+   "authors": [
+    "Stefan de Lasa",
+    "Mohammadreza Mofayezi",
+    "Gennady Pekhimenko",
+    "Nandita Vijaykumar"
+   ],
+   "label": "arXiv:2611.26944v1",
+   "primary_category": "cs.DC",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A systems characterization of how standard multi-client serving techniques (batching and co-execution) trade off latency, throughput, power, and hardware utilization when serving Vision-Language-Action robot control models.",
+    "plain": "Robot control models that take camera images and text instructions and output motor actions are often run on shared computer hardware. This paper asks what happens when several robots (clients) send requests to the same model at once, and it measures how well common ways of sharing that hardware work for these models. The text says the authors measured trade-offs across speed, capacity, power use, and how busy the hardware is, but it does not list specific numbers in the summary provided.",
+    "why": "Robots running these models often leave expensive accelerator hardware idle between computations, so better sharing could make serving cheaper and more practical. The text frames the work as groundwork for future systems that serve several robot models at once, though it is unclear from the summary how far the findings extend beyond the tested setups.",
+    "background": "- Vision-Language-Action model (VLA): a neural network that reads camera images and a written instruction and outputs robot movements.\n- Inference: running a trained model to get an output, as opposed to training it.\n- Serving: hosting a model on a server so that many clients can send it requests.\n- Batching: grouping several requests together so the hardware processes them in one pass, which usually raises throughput but can add waiting time.\n- Co-execution: running several models or tasks on the same hardware at the same time.\n- Latency, throughput, utilization: how long one request takes, how many requests are handled per second, and what share of the hardware's capacity is in use.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Vision-Language-Action models (VLAs) are a new class of machine learning model for generalizable robot control. While they enable robots to perform complex tasks in unseen environments, serving VLAs leaves hardware idle between inference passes and under-utilized during inference. Serving multiple clients at once can improve utilization, but fundamental multi-client techniques such as batching and co-execution have not been characterized for VLAs. We therefore characterize the trade-offs these known techniques impose across latency, throughput, power, and hardware utilization. Our findings inform trade-offs and challenges for future multi-VLA serving systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27804",
+   "title": "Generalist Action Critic: Harnessing Frontier Models in Autonomous Driving",
+   "url": "https://arxiv.org/abs/2611.27804",
+   "authors": [
+    "Yun Yan",
+    "Shizhi Hu",
+    "Zhichao Li",
+    "Yang Guan",
+    "Shiqi Liu",
+    "Jiaxin Gao",
+    "Xiangteng Zhang",
+    "Wenbo Ding",
+    "Jiuhua Zhao",
+    "Hui Guo",
+    "Xintao Yan",
+    "Keqiang Li",
+    "Shengbo Eben Li"
+   ],
+   "label": "arXiv:2611.27804v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "GAC is a zero-shot, inference-time harness in which a frozen frontier vision-language model acts as a critic that checks, and may swap, trajectories proposed by specialized driving planners, evaluated on HUGSIM and NAVSIM v1.",
+    "plain": "Self-driving systems often pick a planned path that turns out unsafe. This paper proposes a setup where a large general-purpose AI model reviews the path a specialized driving planner chose, looking at camera images with marked overlays and written driving rules, and either keeps it or picks a better one from the planner's other options. No retraining is needed; the cooperation happens only when the system runs.",
+    "why": "It suggests a way to add the broad reasoning of large AI models to driving safety without retraining the specialized systems, which is a practical question for the field. The reported gains are from the paper's own benchmarks (HUGSIM and NAVSIM), so how well they carry over to real roads is not shown in the text.",
+    "background": "- Autonomous driving planners: software that proposes several candidate paths (trajectories) and picks one.\n- Frontier models: the largest general-purpose AI models, which can read images and text.\n- Zero-shot / inference-time: used on new tasks without extra training, only at the moment of running.\n- Frozen model: a model whose internal weights are not changed.\n- Closed-loop simulation (HUGSIM): the car's own choices affect what it sees next, unlike replaying recorded scenes.\n- NAVSIM: a benchmark that scores planned paths against recorded human driving.\n- HD-Score: a combined driving-quality score used in HUGSIM; the text does not define its components.\n- Relative gain: improvement expressed as a percentage of the prior score.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Frontier models have demonstrated remarkable general-purpose reasoning capabilities, opening new possibilities for intelligent decision making in the physical world. In autonomous driving, many recent approaches seek to leverage these capabilities through additional adaptation for action output, particularly in scenarios where existing models underperform. We introduce Generalist Action Critic (GAC), a zero-shot framework that combines frontier models' general-purpose reasoning with the planning competence of specialized driving models through an inference-time harness. In GAC, specialized planners generate multiple candidate trajectories and make an initial selection, while a frozen frontier model serves as an action critic that assesses the selected trajectory against scene evidence and either retains it or reselects from the available candidates. The harness combines camera images with spatial overlays, provides driving context and reasoning principles through textual instructions, and regulates the information available at each stage to support trajectory assessment and reselection. On HUGSIM, GAC raises DrivoR's HD-Score to 43.2, achieving state-of-the-art performance among methods trained without additional simulation data. GAC also consistently improves closed-loop driving safety across three planners, with relative HD-Score gains of up to 32.1%. Experiments on NAVSIM v1 further reveal how GAC improves planning performance by correcting up to 52.13% of eligible unsafe trajectory selections while introducing new failures in only 0.67% of originally high-quality selections. These results demonstrate the potential of harnessing frontier models to improve driving safety through inference-time cooperation with specialized planners.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27845",
    "title": "Humanoid robots for safety-critical electrical switching: A perception-informed runtime constraint filter",
@@ -16,12 +73,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A runtime safety filter that screens each operator command during VR teleoperation of a humanoid robot, using a head-camera scene model and a target-conditioned control barrier function quadratic program to keep the tool clear of a non-target electrical switch.",
-    "plain": "The paper looks at using humanoid robots to flip electrical switches so workers stay out of harm's way. The main risk is that a slightly imprecise remote command could make the robot's tool touch a neighbouring switch that should not be touched. The authors add a software filter that checks each command before it reaches the robot and adjusts only the unsafe ones, and they report it worked in ten real-robot trials on a Unitree G1 and in a simulation study.",
-    "why": "Electrical switching is a real safety hazard for people, so a way to let robots do it with fewer errors is worth watching. The text reports small-scale tests only, so it shows feasibility rather than readiness for field use.",
+    "ai": true,
     "background": "- Humanoid robot: a human-shaped robot with arms, legs and a head camera.\n- Teleoperation: a person controls the robot remotely, here through virtual reality.\n- Scene model: a computer's estimate of where objects are, built from camera images.\n- Control barrier function (CBF): a mathematical boundary that keeps a system inside a safe region.\n- Quadratic program (QP): an optimisation step that finds the closest safe version of a command.\n- Safety filter: a layer that passes safe commands unchanged and corrects unsafe ones.\n- Simulation vs. real-world test: simulation is a computer model; real-world tests use the physical robot.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A runtime safety filter that screens each operator command during VR teleoperation of a humanoid robot, using a head-camera scene model and a target-conditioned control barrier function quadratic program to keep the tool clear of a non-target electrical switch.",
+    "plain": "The paper looks at using humanoid robots to flip electrical switches so workers stay out of harm's way. The main risk is that a slightly imprecise remote command could make the robot's tool touch a neighbouring switch that should not be touched. The authors add a software filter that checks each command before it reaches the robot and adjusts only the unsafe ones, and they report it worked in ten real-robot trials on a Unitree G1 and in a simulation study.",
+    "why": "Electrical switching is a real safety hazard for people, so a way to let robots do it with fewer errors is worth watching. The text reports small-scale tests only, so it shows feasibility rather than readiness for field use."
    },
    "abstract": "Humanoid robots can reduce personnel exposure in electrical switching, but safe control is challenging because the tool must reach a target switch next to similar devices, where an imprecise operator command can contact a non-target switch. This study proposes a runtime safety filter that checks each operator command during virtual-reality teleoperation of a humanoid robot. The filter integrates a scene model estimated from the robot head camera and a target-conditioned control barrier function quadratic program that keeps the tool away from the non-target switch while passing safe commands unchanged. In real-world experiments on a Unitree G1 humanoid robot, with six rounds at each of two standing positions, target operations succeed in all ten rounds with an unchanged target and no non-target actuation. A simulation study achieves 9/9 safe completions, compared with 5/9 for raw teleoperation, demonstrating the feasibility of the method for humanoid switching operations.",
    "source": "arxiv"
@@ -47,12 +104,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "HumanoidPose introduces the Humanoids benchmark and a monocular framework for recovering the 3D whole-body pose of humanoid robots from single camera images, using robot articulation modeling and explicit kinematic grounding.",
-    "plain": "Humanoid robots are becoming more common, and it is useful to know their full body posture from an ordinary camera image. Existing tools were built either for factory-style robot arms or for human bodies, so they fit humanoid robots poorly. This paper provides a benchmark with synthetic and hand-labeled training data, plus a method called HumanoidPose that is designed for humanoid bodies.",
-    "why": "Estimating a robot's posture from a camera, without extra sensors, could support monitoring, motion analysis, and robot learning. The text reports strong results on its own benchmark and on the DHRP-H1 benchmark, including zero-shot transfer to real-world data, but the abstract gives no comparison numbers, so its practical impact is not yet clear.",
+    "ai": true,
     "background": "- Pose estimation: finding the positions and angles of a body's joints from an image.\n- 2D vs 3D pose: 2D is joint locations in the picture; 3D adds depth and the true spatial arrangement of the joints.\n- Monocular: using a single camera, with no depth sensor or stereo pair.\n- Kinematics: the rules describing how connected links and joints move, such as limb lengths and joint angle limits.\n- Synthetic data: computer-generated training images with known ground-truth poses.\n- Zero-shot transfer: applying a model to new data it was not trained on, without extra tuning.\n- Benchmark: a shared dataset and test protocol for fair comparison between methods.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "HumanoidPose introduces the Humanoids benchmark and a monocular framework for recovering the 3D whole-body pose of humanoid robots from single camera images, using robot articulation modeling and explicit kinematic grounding.",
+    "plain": "Humanoid robots are becoming more common, and it is useful to know their full body posture from an ordinary camera image. Existing tools were built either for factory-style robot arms or for human bodies, so they fit humanoid robots poorly. This paper provides a benchmark with synthetic and hand-labeled training data, plus a method called HumanoidPose that is designed for humanoid bodies.",
+    "why": "Estimating a robot's posture from a camera, without extra sensors, could support monitoring, motion analysis, and robot learning. The text reports strong results on its own benchmark and on the DHRP-H1 benchmark, including zero-shot transfer to real-world data, but the abstract gives no comparison numbers, so its practical impact is not yet clear."
    },
    "abstract": "As humanoid robots increasingly enter real-world environments, recovering their 3D whole-body pose from monocular imagery is becoming increasingly important for external state perception, motion analysis, and robot learning. However, Humanoid Robot Pose Estimation (HRPE) lies at the intersection of conventional Robot Pose Estimation (RPE) and Human Pose Estimation (HPE), while not being fully addressed by either paradigm: RPE primarily focuses on non-humanoid robots, particularly fixed-base manipulators, whereas HPE is built upon human-specific skeletal topologies, body models, and motion priors. Despite recent progress in humanoid 2D keypoint detection and HPE adaptation, humanoid-native 3D pose recovery remains insufficiently studied, and a dedicated benchmark with suitable training data and evaluation protocols is still lacking. To address this gap, we introduce Humanoids, a benchmark for monocular 3D humanoid robot pose estimation, and propose HumanoidPose, a framework for this task. Humanoids provides synthetic 3D supervision across diverse humanoid embodiments, manually annotated real-world 2D data, and real-world RGB sequences paired with robot states for 3D evaluation on a physical Roban humanoid. HumanoidPose combines human-inspired visual perception with robot articulation modeling and explicit kinematic grounding. Experiments on Humanoids and the DHRP-H1 benchmark demonstrate strong performance in articulation recovery and 3D pose estimation, including zero-shot transfer to real-world 2D and 3D evaluation. Ablation studies further show the contribution of robot-native articulation modeling and explicit kinematic grounding. The dataset and code will be publicly released to support future research in the community.",
    "source": "arxiv"

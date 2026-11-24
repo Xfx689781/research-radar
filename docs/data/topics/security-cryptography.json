@@ -1,7 +1,58 @@
 {
  "slug": "security-cryptography",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26824",
+   "title": "A Unified Framework for Intelligent Cyber Attack Detection and Alert Correlation",
+   "url": "https://arxiv.org/abs/2611.26824",
+   "authors": [
+    "Miguel Silva",
+    "Jo\\~ao Vitorino",
+    "Daniela Pinto",
+    "Eva Maia",
+    "Ivone Amorim",
+    "Isabel Pra\\c{c}a"
+   ],
+   "label": "arXiv:2611.26824v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper proposes a unified framework that combines signature rules, machine learning, and sequential pattern mining to classify network traffic and correlate alerts for multi-stage attacks in a Security Operations Center, evaluated in a controlled testbed.",
+    "plain": "Security teams that watch computer networks (called Security Operations Centers) are flooded with alerts, and real attacks that unfold in several steps can be missed among them. This paper describes a single system that sorts network traffic and links related alerts together so that a multi-step attack shows up as one story. The authors tested it on a controlled, simulated network that mimicked attacks such as malware, lateral movement, reconnaissance and data theft.",
+    "why": "Alert overload and missed multi-stage attacks are widely recognized problems for security teams, so a tool that ties alerts into attack sequences while keeping analysts in the loop is relevant to that practical concern. The text reports that the results show effectiveness, but gives no figures, comparisons or details on how well it works outside the testbed, so its real-world value remains unclear.",
+    "background": "- Security Operations Center (SOC): a team and facility that monitors an organization's networks for attacks.\n- Alert correlation: grouping separate warning alerts that likely belong to the same attack.\n- Signature rules: fixed patterns of known attack activity, like a wanted-poster description.\n- Machine learning: software that learns patterns from example data to flag unusual traffic.\n- Sequential pattern mining: finding recurring orders of events, such as scan then break-in then data copying.\n- Lateral movement: an attacker spreading from one compromised machine to others.\n- Exfiltration: stealing data out of a network.\n- Human-in-the-loop: a design where people review and decide on the automated system's output.\n- Testbed: a controlled lab network used for experiments instead of live systems.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "A Security Operations Center (SOC) plays a critical role in detecting, correlating, and responding to modern cyber threats. However, SOCs continue to face challenges related to alert overload, fragmented detection capabilities, and limited collaboration between analysts and automated systems. These issues often result in delayed incident response, analyst fatigue, and an increased risk of overlooking sophisticated, multi-stage attacks that unfold gradually across different layers of the network. To address these challenges, this paper proposes a unified framework for network traffic classification and alert correlation through the use of signature rules, machine learning, and sequential pattern mining algorithms. The solution was evaluated in a controlled testbed environment emulating realistic, multi-stage attack scenarios, including malware exploitation, lateral movement, reconnaissance, and data exfiltration. The obtained results demonstrate the effectiveness of the proposed framework in detecting and correlating complex attack behaviors, while providing analysts with actionable insights in line with a human-in-the-loop approach to SOC operations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26739",
+   "title": "Exploring Early Vulnerability Analysis via Automatic Identification of Vulnerability-Introducing Commits",
+   "url": "https://arxiv.org/abs/2611.26739",
+   "authors": [
+    "Weiliang Qi",
+    "Shu Wang",
+    "Youpeng Li",
+    "Ela Guo",
+    "Xinda Wang"
+   ],
+   "label": "arXiv:2611.26739v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper builds manually annotated datasets of vulnerability-introducing commits (VICs) and proposes D-SZZ, a data-state-aware framework that traces security fixes back to the commits that first introduced the flaws, then evaluates detectors on early-stage vulnerable code.",
+    "plain": "Software bugs that create security holes often sit unnoticed in code for a long time before anyone fixes them. Most existing datasets only mark the code just before a fix as \"vulnerable,\" missing the earlier versions where the flaw first appeared. This paper builds new labeled datasets that point to the original introducing changes, and a tool, D-SZZ, that finds them automatically.",
+    "why": "Security tools that learn from current labeled data may be missing vulnerabilities in their early, hidden stages, which matters for catching flaws sooner. The paper also reports that its method corrected 16 inaccurate affected-version records in the NVD (the US National Vulnerability Database), which were officially confirmed, though the wider impact beyond these reported results is not established in the text.",
+    "background": "- Vulnerability: a flaw in software that could be exploited for an attack.\n- CVE: a public ID assigned to a specific known vulnerability.\n- Commit: a saved set of code changes recorded in a version-control system such as Git.\n- Vulnerability-fixing commit (VFC): a commit that repairs a security flaw.\n- SZZ algorithm: a classic method that traces a bug fix back to the earlier commit that introduced the bug, typically using the code changes and history.\n- Vulnerability detector: a tool, often machine-learning based, that flags likely vulnerable code.\n- NVD: the US government's database of vulnerability records, including which software versions are affected.\n- LLM: large language model, a type of AI text model used here as a baseline.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Developing effective vulnerability analysis techniques requires high-quality datasets that capture how vulnerabilities appear and evolve in real software codebase. Existing datasets, however, typically label as vulnerable only the code immediately preceding vulnerability-fixing commits (VFCs), overlooking the earlier versions in which vulnerabilities were first introduced and subsequently evolved. This practice limits both dataset coverage and our understanding of whether current detectors can identify vulnerabilities during their early, latent stages. In this paper, we present three manually annotated datasets of vulnerability-introducing commits (VICs) based on recent CVEs and widely used open-source projects. We further propose D-SZZ, a data state-aware VIC identification framework that analyzes security-fixing patterns and performs vulnerability scope slicing to recover the semantics implied by a fix. Experimental results demonstrate that D-SZZ outperforms existing SZZ and LLM-based baselines in identifying VICs. In addition, we evaluate six representative vulnerability detectors and find that models trained only on pre-VFC code struggle with original vulnerabilities, while incorporating early-stage samples improves detection performance. We also show that D-SZZ improves downstream vulnerable-version identification, and use it to uncover 16 inaccurate affected-version records in the NVD, all of which were officially confirmed and updated.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27735",
    "title": "Post-Quantum Migration in Brownfield 5G Core Networks: Verified Hybrid Key Establishment, Performance, and Rollback",
@@ -13,12 +64,12 @@
    "primary_category": "cs.CR",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A deployment-controlled method for adding hybrid post-quantum/classical key establishment to an unmodified Open5GS AMF-NRF 5G Service-Based Interface via external boundary cryptographic entities, with packet-level verification, latency measurements, and rollback tests.",
-    "plain": "Phone networks use encryption to protect messages between their internal software components, and future quantum computers could eventually break some of the math that current encryption relies on. This paper looks at how an existing (brownfield) 5G core network can be upgraded to newer, quantum-resistant key exchange without changing the software of the network functions themselves, by routing traffic through external mediating units. In a lab test on one representative link, the authors found the new handshake worked and the network kept functioning, with a median registration delay rising from about 23 ms to about 26 ms, and they could switch back to the old setup.",
-    "why": "Operators running large networks cannot rebuild everything at once, so a way to add quantum-resistant encryption to deployed software without code changes is a practical question for the telecom security field. The results come from a single controlled testbed and one interface, so they say little yet about production networks or about the cost of the key exchange alone.",
+    "ai": true,
     "background": "- 5G Core: the software that runs the central part of a mobile network, split into network functions (such as AMF and NRF) that talk over a Service-Based Interface (SBI).\n- Open5GS: an open-source implementation of the 5G Core used for the experiments.\n- TLS: the standard protocol that encrypts connections; it begins with a key-establishment handshake.\n- Post-quantum cryptography (PQC): encryption designed to resist attacks from future quantum computers.\n- Hybrid key establishment: combining a classical method (X25519) with a post-quantum one (ML-KEM-768, named X25519MLKEM768), so security holds if either one is unbroken.\n- Brownfield: an existing, already-deployed system that must be changed gradually.\n- Rollback: returning a system to its earlier working configuration.\n- Median and confidence interval: the middle value of measurements, and a range that expresses the uncertainty in the estimated difference.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A deployment-controlled method for adding hybrid post-quantum/classical key establishment to an unmodified Open5GS AMF-NRF 5G Service-Based Interface via external boundary cryptographic entities, with packet-level verification, latency measurements, and rollback tests.",
+    "plain": "Phone networks use encryption to protect messages between their internal software components, and future quantum computers could eventually break some of the math that current encryption relies on. This paper looks at how an existing (brownfield) 5G core network can be upgraded to newer, quantum-resistant key exchange without changing the software of the network functions themselves, by routing traffic through external mediating units. In a lab test on one representative link, the authors found the new handshake worked and the network kept functioning, with a median registration delay rising from about 23 ms to about 26 ms, and they could switch back to the old setup.",
+    "why": "Operators running large networks cannot rebuild everything at once, so a way to add quantum-resistant encryption to deployed software without code changes is a practical question for the telecom security field. The results come from a single controlled testbed and one interface, so they say little yet about production networks or about the cost of the key exchange alone."
    },
    "abstract": "Migrating brownfield 5G Core networks to post-quantum cryptography (PQC) is difficult because deployed network functions, base images, and TLS libraries evolve under different upgrade constraints. This paper evaluates a deployment-controlled migration strategy that enables hybrid post-quantum/traditional key establishment through externally deployed Boundary Cryptographic Execution Entities (BCEEs), without modifying participating network function source code. The approach is evaluated using the Open5GS AMF-NRF Service-Based Interface as a representative 5G Core scenario. Classical and hybrid configurations are compared under an unchanged mediation topology. Packet-level analysis confirms successful negotiation of X25519MLKEM768, and functional validation demonstrates that representative SBI procedures remain operational through the mediated path. In 120 NF-registration transactions, the median AMF-facing registration latency increased from 22.968 ms under the classical state to 26.351 ms under the hybrid state, reflecting a 3.383 ms (14.73 percent) increase, with a whole-block 95 percent confidence interval of [1.193, 7.872] ms. At the mediated TLS boundary, the hybrid configuration shows a 4.599 ms higher median segment-local TLS-establishment time than the classical configuration. These two reported differences reflect system-level runtime effects and do not isolate key-encapsulation cost. Packet evidence verifies rollback from hybrid-mediated operation to classical mediated operation and, separately, restoration of the native direct path. NF-facing compatibility legs remained plaintext and outside the hybrid post-quantum scope. The results demonstrate a packet-verifiable and manually reversible brownfield mechanism for introducing hybrid post-quantum key establishment on a controlled 5G SBI segment.",
    "source": "arxiv"
@@ -38,12 +89,12 @@
    "primary_category": "cs.CR",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper compares machine learning models for intrusion detection in Internet-of-Things-linked metaverse environments across three benchmark datasets (ToN-IoT, CIC-IoT-2023, BoT-IoT), and uses SHAP and LIME explainability methods to identify influential features and justify the chosen model.",
-    "plain": "The paper looks at how to spot unauthorized access in the \"Metaverse of Things,\" a setting where virtual worlds are linked to connected physical devices. The authors tested several machine learning models on three public security datasets and chose the best performers, reporting accuracy of 99.83% on ToN-IoT and 96.45% on CIC-IoT-2023 with XGBoost, and 99.99% on BoT-IoT with Random Forest and Extra Trees. They also used explanation tools to show which data features drove those decisions.",
-    "why": "Intrusion detection systems that are hard to interpret are harder for operators to trust and check, so pairing high accuracy with explanations speaks to a practical concern for connected devices and virtual platforms. The text does not show how these results hold up in real deployments, and the datasets are benchmarks, so real-world performance remains unclear.",
+    "ai": true,
     "background": "- Intrusion detection system (IDS): software that watches network traffic and flags suspicious or malicious activity.\n- Internet of Things (IoT): everyday devices (sensors, cameras, appliances) connected to the internet.\n- Metaverse of Things: a concept linking virtual environments with IoT devices.\n- Machine learning (ML): algorithms that learn patterns from example data to make predictions, here classifying traffic as normal or attack.\n- Classifiers named in the text: XGBoost, Random Forest, and Extra Trees are common types of ML models.\n- Explainable AI (XAI): methods that show why a model made a particular decision.\n- SHAP and LIME: two popular XAI techniques that estimate how much each input feature contributed to a prediction.\n- Accuracy and benchmark datasets: accuracy is the share of correct classifications; benchmark datasets are shared test collections used to compare methods.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper compares machine learning models for intrusion detection in Internet-of-Things-linked metaverse environments across three benchmark datasets (ToN-IoT, CIC-IoT-2023, BoT-IoT), and uses SHAP and LIME explainability methods to identify influential features and justify the chosen model.",
+    "plain": "The paper looks at how to spot unauthorized access in the \"Metaverse of Things,\" a setting where virtual worlds are linked to connected physical devices. The authors tested several machine learning models on three public security datasets and chose the best performers, reporting accuracy of 99.83% on ToN-IoT and 96.45% on CIC-IoT-2023 with XGBoost, and 99.99% on BoT-IoT with Random Forest and Extra Trees. They also used explanation tools to show which data features drove those decisions.",
+    "why": "Intrusion detection systems that are hard to interpret are harder for operators to trust and check, so pairing high accuracy with explanations speaks to a practical concern for connected devices and virtual platforms. The text does not show how these results hold up in real deployments, and the datasets are benchmarks, so real-world performance remains unclear."
    },
    "abstract": "The MoT virtual environment, called the Metaverse of Things (MoT), combines machine learning (ML) and Internet of Things (IoT) to offer significant business opportunities in various sectors such as entertainment, healthcare, and education. In addition to its benefits, the MoT poses risks to privacy and security through unauthorized access, which threatens trustworthiness. While traditional intrusion detection systems (IDS) exist to handle this challenge, they struggle with high-dimensional data and poor interpretability. To address this challenge, the research conducted a thorough analysis of different ML models and proposed the optimal model to secure the MoT environment. The research employed explainable artificial intelligence (XAI) to identify the most effective features that contributed to optimal model selection. The research presented an optimal framework combining ML and XAI to safeguard MoT networks from the most recent cyberthreats. The research used three advanced benchmark security datasets: ToN-IoT, CIC-IoT-2023, and BoT-IoT, to examine the XAI-based intrusion detection framework. The XAI-based intrusion detection framework achieved 99.83% accuracy on ToN-IoT and 96.45% on CIC-IoT-2023 using the XGBoost model. On the BoT-IoT dataset, the Random Forest (RF) and Extra Trees (ET) classifiers reached 99.99% accuracy. The Shapley Additive Explanations (SHAP) and Local Interpretable Model-Agnostic Explanations (LIME) techniques used for XAI further enhanced feature relevance and user confidence in the optimal model.",
    "source": "arxiv"

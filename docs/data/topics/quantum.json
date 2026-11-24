@@ -1,7 +1,53 @@
 {
  "slug": "quantum",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27660",
+   "title": "Detection of genuine multipartite entanglement by means of entanglement monotones",
+   "url": "https://arxiv.org/abs/2611.27660",
+   "authors": [
+    "Sylvain Carrozza",
+    "Johann Chevrier",
+    "Luca Lionni"
+   ],
+   "label": "arXiv:2611.27660v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper looks for entanglement monotones (quantities that cannot increase under local operations) that certify \"irreducible\" genuine multipartite entanglement, proves a no-go result for combining LOCC-monotonicity with subadditivity, and shows a subfamily of the proposed monotones detects genuine tripartite entanglement in three-qubit systems.",
+    "plain": "The paper studies how to measure whether several quantum particles are entangled in a truly joint way, not just in pairs or as a product of smaller linked groups. The authors first show that one natural way of scoring this cannot satisfy two desirable rules at once. They then relax one rule and build a simple method for producing scores that do work, and report that a subset of these scores detects every form of genuine three-particle entanglement in three-qubit systems.",
+    "why": "Entanglement is a central resource for quantum computing and communication, and reliable ways to tell its genuinely multipartite forms apart are needed to characterise such resources. The text does not indicate applications beyond this theoretical characterisation, so its wider practical significance is unclear from the given material.",
+    "background": "- Entanglement: a correlation between quantum particles that has no classical counterpart.\n- Multipartite entanglement: entanglement shared among three or more particles (parties), as opposed to just two.\n- Irreducible entanglement (as defined here): an n-party state that cannot be written as a product of states each involving at most n-1 parties.\n- LOCC (local operations and classical communication): the operations each party can perform on its own particle while talking classically to the others; an entanglement measure should not increase under these.\n- LO-monotonicity: the weaker requirement that the measure does not increase under local operations alone, without classical communication.\n- Subadditivity: a rule that a combined quantity is at most the sum of its parts.\n- Entanglement monotone: a function of a quantum state that does not increase under the allowed operations, used as an entanglement score.\n- Three-qubit system: a set of three two-level quantum systems, the simplest case for genuine tripartite entanglement.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We look for pure state entanglement monotones that may serve as certificates of a strong form of genuine multipartite entanglement, that we refer to as irreducible entanglement: a $D$-partite state (with $D\\geq 3$) is irreducibly $D$-partite entangled if it cannot be decomposed as a product of states that are at most $(D-1)$-partite entangled. We start by establishing a no-go result proving that no reasonable genuine multipartite entanglement entropy can simultaneously obey LOCC-monotonicity and subadditivity. After relaxing the first condition to LO-monotonicity, we provide a simple method generating genuine multipartite entanglement monotones with the desired properties. Focusing on a subfamily of these monotones, we show that they are able to detect any form of genuine tripartite entanglement in three-qubit systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.26755",
+   "title": "Gravity-induced entanglement assisted by an additional interaction using magic angle calibration",
+   "url": "https://arxiv.org/abs/2611.26755",
+   "authors": [
+    "Daisuke Miki",
+    "Alfred Li",
+    "Yanbei Chen"
+   ],
+   "label": "arXiv:2611.26755v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "A proposed protocol for testing whether gravity alone can entangle two masses, using an added controllable coupling calibrated at a magic-angle null of the projected tidal coupling so that the protocol needs less absolute force-noise suppression than direct schemes.",
+    "plain": "The paper asks whether gravity can create quantum entanglement between two small masses, which would indicate that gravity is not just a classical force that works through local operations and classical communication. Gravity is so weak that direct attempts require extremely low force noise, so the authors propose adding a controllable extra interaction that sits just below the threshold where it could itself create entanglement. Gravity then only has to supply the small remaining part, and an angle-based null setting is used to calibrate the extra interaction and noise.",
+    "why": "The question bears on whether gravity must be quantized, a long-running open problem in physics. The text is a theoretical protocol only and reports no experimental result, so its practical feasibility is not shown here.",
+    "background": "- Entanglement: a quantum link between two objects whose states cannot be described independently.\n- LOCC (local operations and classical communication): the set of operations that cannot by themselves create entanglement; a classical-only description of gravity would respect this.\n- Gravity-induced entanglement: the idea that if gravity entangles two masses, gravity must have some quantum character.\n- Test masses and force noise: small objects whose motion is disturbed by unwanted random forces that must be kept small.\n- Tidal coupling: how the gravitational pull between two nearby masses varies with their relative position; the \"magic angle\" is a geometry where its projected effect vanishes.\n- Markovian model: an assumption that the environment has no memory of past effects.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Gravity-induced entanglement provides an operational test of whether gravitational dynamics are compatible with local operations and classical communication (LOCC), but the weakness of the gravitational interaction and the presence of force noise make direct entanglement generation extremely demanding. We introduce a controllable additional coherent interaction that biases two test masses close to, but within, a separability-preservation bound, so that the weak Newtonian coupling supplies only the remaining coherent contribution needed for entanglement. If the additional interaction alone is shown to be incapable of generating entanglement, while entanglement is observed when gravity is included, the gravitational interaction provides a non-LOCC contribution. Since gravity cannot be turned off, we use a magic-angle null of the projected tidal coupling to calibrate the additional interaction and force noise. If the additional dynamics is certified to preserve separability at the magic angle and entanglement is subsequently observed in a non-null configuration, the gravitational contribution is incompatible with an LOCC description within the Markovian model. The protocol trades the stringent absolute force-noise requirement of direct schemes for precision in controlling the additional coupling, its backaction, and angle-dependent systematics.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27815",
    "title": "Autonomous quantum machine learning via Riemannian gradient-based optimization",
@@ -21,12 +67,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper proposes autonomous quantum machine learning, where Riemannian gradient-based training runs entirely inside a quantum circuit without quantum measurements or a classical optimization loop, with an exponential convergence guarantee for small step sizes and numerical tests on phase classification and hidden-symmetry unitary learning.",
-    "plain": "Most quantum machine learning today trains by repeatedly measuring a quantum device and sending the results to a classical computer to adjust settings. This paper proposes a way to let the quantum system update its own settings during training, so the classical feedback loop is removed. The authors state that under certain conditions this can be done autonomously, that training converges exponentially in the number of iterations for small steps, and that in their numerical tests the model could find a hidden symmetry in the data at low circuit depth using only a few training examples.",
-    "why": "Measurement and classical feedback are often named as a key bottleneck for scaling quantum machine learning, so a training method that avoids them addresses a real practical concern. The results are numerical and limited to the paper's chosen examples, so how far the approach extends to larger or noisy hardware is not established by the text.",
+    "ai": true,
     "background": "- Quantum machine learning: training a parameterized quantum circuit to perform a learning task.\n- Measurement: reading out a quantum state yields classical numbers but disturbs the state and must be repeated many times.\n- Gradient-based optimization: adjusting parameters step by step in the direction that reduces a cost function.\n- Riemannian gradient: gradient descent constrained to a curved space of allowed quantum operations (e.g., unitary matrices), so updates stay valid.\n- Circuit depth: the number of sequential layers of quantum gates; a proxy for run time and noise exposure.\n- Unitary learning and phase classification: learning a quantum transformation, or sorting quantum states by their phase of matter.\n- Hidden symmetry: an invariance in the data (such as a transformation that leaves outcomes unchanged) not specified in advance.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes autonomous quantum machine learning, where Riemannian gradient-based training runs entirely inside a quantum circuit without quantum measurements or a classical optimization loop, with an exponential convergence guarantee for small step sizes and numerical tests on phase classification and hidden-symmetry unitary learning.",
+    "plain": "Most quantum machine learning today trains by repeatedly measuring a quantum device and sending the results to a classical computer to adjust settings. This paper proposes a way to let the quantum system update its own settings during training, so the classical feedback loop is removed. The authors state that under certain conditions this can be done autonomously, that training converges exponentially in the number of iterations for small steps, and that in their numerical tests the model could find a hidden symmetry in the data at low circuit depth using only a few training examples.",
+    "why": "Measurement and classical feedback are often named as a key bottleneck for scaling quantum machine learning, so a training method that avoids them addresses a real practical concern. The results are numerical and limited to the paper's chosen examples, so how far the approach extends to larger or noisy hardware is not established by the text."
    },
    "abstract": "Quantum machine learning models typically rely on repeated quantum measurements and classical optimization during training, making the quantum-to-classical information-extraction process a fundamental bottleneck for scalability. We propose a framework for autonomous self-training quantum machine learning, based on Riemannian gradient optimization, in which the optimization proceeds entirely within the quantum domain without requiring quantum measurements or classical feedback. We derive the Riemannian gradient update rules for a broad class of learning tasks and identify sufficient conditions under which the resulting training dynamics can be realized fully autonomously. Within this regime, we establish an exponential convergence guarantee, in the training iterations, for sufficiently small step sizes, and further analyze the training cost in terms of the growth of the circuit depth. Importantly, we further show that the trained model can automatically discover symmetries hidden in the training data without $\\textit{a priori}$ specification. For the canonical examples of quantum phase classification and unitary learning with a hidden symmetry, our numerical study indicates that learning can be achieved at low circuit depths with only a few distinct training examples. Our results thus establish autonomous quantum machine learning as a promising paradigm that removes the classical optimization loop while retaining strong theoretical guarantees and practical performances.",
    "source": "arxiv"
@@ -43,12 +89,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "A comparative empirical study of exponential concentration (observables becoming insensitive to input changes as system size grows) across fidelity quantum kernels, projected quantum kernels, and quantum extreme learning, using an expectation-value variance framework and bandwidth scaling as a control knob.",
-    "plain": "Quantum machine learning models can fail when their measured outputs barely change as the input changes, and this gets worse as the quantum system grows. This paper compares three quantum model designs to see how strongly this happens and what factors influence it. It finds that some approaches suffer more than others, and that scaling the encoding \"bandwidth\" (how strongly inputs are stretched into the quantum circuit) can help in moderate cases but loses its benefit when the circuit is highly expressive.",
-    "why": "Exponential concentration is a known obstacle to scaling quantum machine learning, so practical guidance on which designs and settings reduce it is useful to researchers building these models. The text does not establish how far the findings extend beyond the systems studied, so their broader significance is uncertain.",
+    "ai": true,
     "background": "- Quantum machine learning: using quantum circuits as models that learn from data.\n- Quantum kernel: a similarity measure between data points computed from quantum states; fidelity kernels compare overlaps of states.\n- Exponential concentration: as the number of qubits (quantum bits) grows, outputs cluster around one value, so differences between inputs become tiny and hard to measure.\n- Observable and expectation value: a measurable quantity and its average result from repeated quantum measurements; variance measures how spread out those results are.\n- Measurement locality: whether a measurement involves a few qubits (local) or the whole system (global).\n- Entanglement and expressivity: entanglement is quantum correlation between qubits; expressivity is how broadly a circuit can explore possible quantum states.\n- Bandwidth scaling: a factor that controls how strongly input data is mapped into rotation angles in the circuit.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A comparative empirical study of exponential concentration (observables becoming insensitive to input changes as system size grows) across fidelity quantum kernels, projected quantum kernels, and quantum extreme learning, using an expectation-value variance framework and bandwidth scaling as a control knob.",
+    "plain": "Quantum machine learning models can fail when their measured outputs barely change as the input changes, and this gets worse as the quantum system grows. This paper compares three quantum model designs to see how strongly this happens and what factors influence it. It finds that some approaches suffer more than others, and that scaling the encoding \"bandwidth\" (how strongly inputs are stretched into the quantum circuit) can help in moderate cases but loses its benefit when the circuit is highly expressive.",
+    "why": "Exponential concentration is a known obstacle to scaling quantum machine learning, so practical guidance on which designs and settings reduce it is useful to researchers building these models. The text does not establish how far the findings extend beyond the systems studied, so their broader significance is uncertain."
    },
    "abstract": "Quantum Machine Learning (QML) models are often limited by exponential concentration, where quantum observables become insensitive to input variations as system size increases. In this work, we provide a comparative empirical study of this phenomenon across Fidelity Quantum Kernels (FQK), Projected Quantum Kernels (PQK), and Quantum Extreme Learning (QEL), within a unified observable-based framework based on expectation-value variance. We investigate how measurement locality, entanglement, and circuit expressivity shape concentration across different architectures. Global fidelity-based kernels exhibit strong concentration driven by Hilbert space dimensionality, whereas local-observable approaches reduce but do not eliminate this effect. In PQK and QEL, concentration is primarily governed by entanglement and quantum dynamical expressivity, with reservoir depth emerging as a key factor in QEL architectures. We further study bandwidth scaling as a general mechanism for controlling encoding expressivity across all models. Our results indicate that bandwidth scaling effectively reduces concentration in moderate regimes by restricting the effective expressivity of the encoding, though this protective effect diminishes in highly expressive structural settings.",
    "source": "arxiv"

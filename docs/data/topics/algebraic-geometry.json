@@ -1,7 +1,50 @@
 {
  "slug": "algebraic-geometry",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.26947",
+   "title": "Tensor products of additive groups as reciprocity sheaves",
+   "url": "https://arxiv.org/abs/2611.26947",
+   "authors": [
+    "Toshiro Hiranouchi",
+    "Rin Sugiyama"
+   ],
+   "label": "arXiv:2611.26947v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper computes the Nisnevich reciprocity sheaves attached to tensor products of cube-invariant objects built from the additive and multiplicative groups (with at least one additive factor), showing over perfect fields of characteristic not two that they split into sums of absolute Kähler differential sheaves with binomial multiplicities, and applies this to the Hochschild homology of the additive object.</one_liner>\n<parameter name=\"plain\">This is a technical paper in algebraic geometry, a field that studies solutions of polynomial equations using geometric tools. The authors study a family of mathematical objects built by combining two basic building blocks, the additive group and the multiplicative group, and they work out exactly what these objects look like. They find that, over suitable number systems, each one breaks apart into simpler pieces of a known type, and they use this to describe a related construction called Hochschild homology.",
+    "plain": "",
+    "why": "The text gives only the abstract, so the wider significance is unclear from it alone. It is likely of interest to specialists working on reciprocity sheaves and motivic or cohomological methods, where explicit decompositions of this kind can be useful for computations.",
+    "background": "- Algebraic geometry: the study of geometric shapes defined by polynomial equations.\n- Sheaf: a bookkeeping device that assigns data to open pieces of a space consistently.\n- Reciprocity sheaf: a sheaf with extra structure (from Kahn, Saito and Yamazaki) that tracks how data behaves under maps of curves; used in motivic homotopy theory.\n- Additive and multiplicative groups: the line with addition, and the nonzero numbers with multiplication, viewed as geometric objects.\n- Tensor product: a way of combining two algebraic objects into one.\n- Kähler differentials: an algebraic notion of \"infinitesimal change\" of functions.\n- Hochschild homology: an invariant measuring the structure of an algebra, here applied to geometric objects.\n- Perfect field of characteristic not two: a base number system with well-behaved arithmetic, excluding the case where 1+1=0.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We compute the Nisnevich reciprocity sheaves associated with tensor products of the cube-invariant objects for the additive and multiplicative groups, with at least one additive factor. Over a perfect field of characteristic different from two, these sheaves decompose into direct sums of absolute K$\\\"a$hler differential sheaves with binomial multiplicities. As an application, we compute the associated reciprocity sheaves of the Hochschild homology of the additive object.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27025",
+   "title": "Constructing toric diagonal modules with short linear resolutions",
+   "url": "https://arxiv.org/abs/2611.27025",
+   "authors": [
+    "Jay Yang"
+   ],
+   "label": "arXiv:2611.27025v1",
+   "primary_category": "math.AC",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "For a complete simplicial toric variety, the paper constructs Cohen–Macaulay modules with linear resolutions whose associated sheaf is the diagonal, and relates the Favero–Huang and Hanlon–Hicks–Lazarev constructions as dual approaches starting from a compatible Z^n-stratification.",
+    "plain": "This paper works in algebraic geometry, the study of shapes defined by polynomial equations. It looks at a special family of geometric spaces called toric varieties and builds, for each one, a collection of algebraic objects (modules) that have especially simple step-by-step \"resolutions,\" which are ways of approximating a given object by a chain of simpler ones. These objects are tied to the diagonal, the natural copy of a space sitting inside the product of the space with itself. The authors also say that two existing methods for building such resolutions turn out to be dual to each other.</plain>\n<parameter name=\"why\">The text gives the construction and the duality claim, but not the detailed results or their applications, so its wider significance is hard to judge from this excerpt. It may matter for researchers who use resolutions of the diagonal as a tool in homological algebra and geometry.",
+    "why": "",
+    "background": "- Toric variety: a geometric space built from combinatorial data (cones and fans), often studied through polytopes.\n- Simplicial: the underlying cones have a simple, triangle-like shape, which makes computations tractable.\n- Sheaf: a tool for keeping track of local data (like functions) across a space.\n- Diagonal: the subspace of pairs (x, x) inside the product space; its associated sheaf encodes how the space relates to itself.\n- Cohen–Macaulay module: an algebraic object with good depth properties, meaning it behaves well under taking slices.\n- Linear resolution: a chain of free modules whose maps are given by linear equations, the simplest kind of resolution.\n- Z^n-stratification: splitting a space into pieces indexed by integer lattice points, used to organize the construction.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "For a complete simplicial toric variety $X$, we construct a collection of Cohen--Macaulay modules with linear resolutions where the associated sheaf is the diagonal. Through this work, we see that the resolutions constructed by Favero--Huang from homotopy path algebras and those constructed by Hanlon--Hicks--Lazarev can be viewed as two dual methods to construct resolutions of the diagonal starting from a compatible $\\mathbb{Z}^n$-stratification.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27238",
    "title": "Combinatorial relative orientability for toric and tropical geometry",
@@ -13,12 +56,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper gives a combinatorial criterion for relative orientability of vector bundles on smooth proper toric varieties, shows it is preserved under tropicalization, and applies this to a quadratically enriched Bernstein-Khovanskii-Kushnirenko theorem and to k-phase structures on tropical hypersurfaces.",
-    "plain": "Many counting problems in geometry ask how many solutions a system of equations has, and modern methods answer these by computing a single numerical invariant. This paper works on making that invariant well-defined over any field, and it translates the question into a simpler combinatorial setting called tropical geometry, where the problem reduces to counting on piecewise-linear shapes. The authors give a checkable combinatorial test for when the needed geometric data is consistent, and they show that the test carries over to the tropical setting.",
-    "why": "It offers a route for using tropical geometry, which turns hard algebra into combinatorics, to answer enumerative questions over arbitrary fields, not only over the complex numbers. The text itself only indicates this as a goal and a demonstration, so the broader impact is something to judge from the full paper.",
+    "ai": true,
     "background": "- Enumerative geometry: counting solutions to geometric problems, such as how many curves satisfy given conditions.\n- Vector bundle: a family of vector spaces attached smoothly to each point of a space; \"relatively oriented\" means a consistent choice of orientation is possible, which is needed for the count to be well-defined.\n- Chern class and Euler class: invariants of vector bundles whose degree gives a count of solutions; the Euler class lives in Chow-Witt groups, a refined version that works over any field.\n- A^1-homotopy theory: a framework from modern algebraic topology that lets topological tools be applied to algebraic varieties over arbitrary fields.\n- Toric variety: an algebraic variety built from combinatorial data (a fan of cones), so its geometry can be read off from polytopes and lattices.\n- Tropical geometry: a piecewise-linear shadow of algebraic geometry, where polynomial problems become problems about polyhedral complexes.\n- Bernstein-Khovanskii-Kushnirenko theorem: a classical result counting solutions of polynomial systems via the volumes of their Newton polytopes.\n- Quadratic enrichment: refining an integer count into a count valued in quadratic forms, which keeps track of extra arithmetic information.\n- Phase structure: extra data on a tropical hypersurface that records signs; the real case is the classical version that the paper generalizes to k phases.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives a combinatorial criterion for relative orientability of vector bundles on smooth proper toric varieties, shows it is preserved under tropicalization, and applies this to a quadratically enriched Bernstein-Khovanskii-Kushnirenko theorem and to k-phase structures on tropical hypersurfaces.",
+    "plain": "Many counting problems in geometry ask how many solutions a system of equations has, and modern methods answer these by computing a single numerical invariant. This paper works on making that invariant well-defined over any field, and it translates the question into a simpler combinatorial setting called tropical geometry, where the problem reduces to counting on piecewise-linear shapes. The authors give a checkable combinatorial test for when the needed geometric data is consistent, and they show that the test carries over to the tropical setting.",
+    "why": "It offers a route for using tropical geometry, which turns hard algebra into combinatorics, to answer enumerative questions over arbitrary fields, not only over the complex numbers. The text itself only indicates this as a goal and a demonstration, so the broader impact is something to judge from the full paper."
    },
    "abstract": "Many problems in enumerative geometry are solved by computing the degree of the top Chern class of a suitable vector bundle. Results from $\\mathbb{A}^1$-homotopy theory allow to answer enumerative questions over arbitrary fields, replacing the top Chern class by the Euler class in Chow-Witt groups. For its degree to be well-defined, one needs the vector bundle to be relatively oriented. Another way to solve enumerative problems is to translate them to tropical geometry, where they become combinatorial problems. In this paper, we give a combinatorial description of relative orientability for vector bundles over smooth proper toric varieties. We show that it behaves well under tropicalization, establishing a tropical version of relative orientability, which will allow to the use of tropical geometry to answer enumerative questions over arbitrary fields. As a demonstration, we prove a quadratically enriched version of the Bernstein-Khovanskii-Kushnirenko theorem via tropical geometry. Lastly, we define the notion of $k$-phase structures on tropical hypersurfaces, generalizing the real case.",
    "source": "arxiv"
@@ -35,12 +78,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper classifies strongly F-regular and F-pure normal surface singularities over possibly imperfect residue fields, via weighted dual graphs and geometric reducedness of exceptional components of the minimal resolution, extending Hara's algebraically closed case.",
-    "plain": "The paper studies a family of \"mild\" singular points on surfaces, the kind of points where a shape folds in on itself, and asks when these points behave well under a specific arithmetic operation (the Frobenius map, which raises coefficients to a power p) in characteristic p. It works in a more general setting where the underlying number field need not be perfect, which the earlier classical results did not cover. The authors give a description of these singularities using the pattern of a graph built from the resolved surface, and they also list which graphs can occur for the weaker F-pure version.",
-    "why": "The work extends a known classification by Hara from algebraically closed fields to imperfect residue fields, so it covers a broader class of cases. The text also states a specific consequence: for F-pure surface singularities, the exceptional components are geometrically reduced unless the singularity is a rational double point. How far this reaches beyond surfaces is not stated in the text.",
+    "ai": true,
     "background": "- Singularity: a point where a surface fails to be smooth, e.g. a cone tip.\n- Minimal resolution: a way of replacing the singular point by a smooth surface with a chain or tree of curves, the exceptional components.\n- Dual graph: a diagram with one node per exceptional curve and edges for intersections, weighted by numerical data.\n- Characteristic p and Frobenius: working with arithmetic where adding p copies of 1 gives 0; Frobenius raises functions to the p-th power.\n- F-regular / F-pure: technical \"good behaviour under Frobenius\" conditions indicating mild singularities.\n- Residue field: the field of values at the singular point; \"imperfect\" means Frobenius is not surjective on it.\n- Geometric reducedness: a curve stays reduced (no repeated components) after passing to an algebraic closure.\n- Rational double point: a simple, well-classified type of surface singularity.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper classifies strongly F-regular and F-pure normal surface singularities over possibly imperfect residue fields, via weighted dual graphs and geometric reducedness of exceptional components of the minimal resolution, extending Hara's algebraically closed case.",
+    "plain": "The paper studies a family of \"mild\" singular points on surfaces, the kind of points where a shape folds in on itself, and asks when these points behave well under a specific arithmetic operation (the Frobenius map, which raises coefficients to a power p) in characteristic p. It works in a more general setting where the underlying number field need not be perfect, which the earlier classical results did not cover. The authors give a description of these singularities using the pattern of a graph built from the resolved surface, and they also list which graphs can occur for the weaker F-pure version.",
+    "why": "The work extends a known classification by Hara from algebraically closed fields to imperfect residue fields, so it covers a broader class of cases. The text also states a specific consequence: for F-pure surface singularities, the exceptional components are geometrically reduced unless the singularity is a rational double point. How far this reaches beyond surfaces is not stated in the text."
    },
    "abstract": "We study strongly $F$-regular and $F$-pure normal surface singularities whose residue fields are not necessarily perfect. We characterize strong $F$-regularity in terms of the weighted dual graph and geometric reducedness of the exceptional components of the minimal resolution, extending Hara's classification over algebraically closed residue fields. We also determine the possible dual graphs of $F$-pure surface singularities and give converse criteria. Notably, the exceptional components of an $F$-pure surface singularity are geometrically reduced unless the singularity is a rational double point.",
    "source": "arxiv"

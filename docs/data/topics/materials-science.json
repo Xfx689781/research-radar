@@ -1,7 +1,57 @@
 {
  "slug": "materials-science",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27938",
+   "title": "Group-III doping of the p-type oxide SnO",
+   "url": "https://arxiv.org/abs/2611.27938",
+   "authors": [
+    "Nicola Gutmann",
+    "Georg Hoffmann",
+    "Aidan Flynn Campbell",
+    "Jonas Laehnemann",
+    "Oliver Bierwagen"
+   ],
+   "label": "arXiv:2611.27938v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Molecular-beam-epitaxy growth of Al-, Ga- and In-doped p-type SnO films, reporting Hall-measured hole concentrations, doping efficiencies, and an unexpected acceptor behavior for Al that contradicts a prior calculation.",
+    "plain": "Tin monoxide is a transparent oxide that conducts electricity by carrying positive charges (\"holes\"), and making it conduct well depends on adding small amounts of other elements. This paper grew thin films of tin monoxide with aluminium, gallium, or indium added, and measured how many holes each dopant produced. The hole counts stayed low, peaking around 10^19 to 3×10^19 per cubic centimetre, and aluminium behaved unexpectedly as a hole-making dopant, which the authors could not fully explain even after growing films in an oxidizing atmosphere.",
+    "why": "Good p-type oxides are scarce, so a clear picture of why SnO stops at modest hole densities matters for transparent electronics. The text suggests the limit may reflect basic defect chemistry in SnO, but the authors leave the explanation open, so this is a measured finding rather than a settled answer.",
+    "background": "- SnO (tin monoxide) is a transparent oxide semiconductor studied as a p-type (hole-conducting) material.\n- Dopants are small amounts of foreign atoms added to change conductivity; group-III elements (Al, Ga, In) are typically expected to act as acceptors in SnO, meaning they add holes.\n- Hall measurements determine the sign and density of charge carriers in a film.\n- Doping efficiency is the fraction of added dopant atoms that actually produce a carrier.\n- Molecular beam epitaxy is a method of growing thin films one atomic layer at a time under vacuum.\n- Oxidation state (e.g., Al1+ vs Al3+) describes how many electrons an atom has given up; the authors suspect a different charge state of Al explains its behavior.\n- The text gives only the abstract-level summary; full methods, error bars, and defect calculations are not included here.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Al-, Ga-, and In-doped tin monoxide (SnO) films were grown by molecular beam epitaxy. Hall measurements reveal acceptor character of all investigated group-III dopants in SnO, which correspond to theoretical calculations and previous experiments for Ga and In, but contradicts theoretical calculations predicting donor character for Al in SnO. Doping concentrations of 10e18-1e22 cm-3 were tested and maximum hole concentrations of 2e19, 3e19, and 1e19 cm-3 with doping efficiencies of 3 percent, 9 percent, and 1 percent were found for Al, Ga, and In, respectively. The observed doping limit in the mid e19 cm-3 aligns with the limits observed in literature for different dopants, hinting to fundamental aspects of the SnO defect chemistry. Due to the unexpected Al acceptor behavior, we hypothesized Al1+ being present instead of Al3+. To stabilize the higher Al3+ oxidation state, another sample series of Al-doped SnO was grown in an oxidizing atmosphere. Despite the oxidizing atmosphere, these samples showed p-type character. A more complex defect chemistry is thus expected to explain the Al acceptor character.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27384",
+   "title": "Frustration-Stabilized Hexamerons and Their Topological Magnons in Janus MXene",
+   "url": "https://arxiv.org/abs/2611.27384",
+   "authors": [
+    "C. B. Subba",
+    "Z. Pachuau",
+    "Samy Brahimi",
+    "Samir Lounis",
+    "D. P. Rai"
+   ],
+   "label": "arXiv:2611.27384v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "First-principles and atomistic spin simulations of the Janus MXene MnHf2C2FI predict a frustrated 120-degree Néel ground state with a metastable hexameron (six merons and antimerons) whose in-gap magnons carry Chern numbers and a sign-dependent thermal Hall response.",
+    "plain": "This paper studies a two-dimensional material in which the magnetic moments of manganese atoms are arranged in a triangular pattern that cannot all point in opposing directions at once, so they settle into a tilted, frustrated arrangement. The authors used computer calculations to find a metastable cluster of swirling spin patterns, called a hexameron, sitting on top of that arrangement. They report that this cluster traps specific wave-like spin excitations (magnons) and that, in an ordered array, these waves could carry heat sideways in a direction set by the cluster's handedness.",
+    "why": "",
+    "background": "- MXenes: a family of thin, layered two-dimensional materials built from metal, carbon or nitrogen layers.\n- Janus material: a layered material whose two outer faces differ chemically, so it lacks inversion symmetry (a mirror-like flip changes it).\n- Magnetic frustration: when neighbouring magnetic moments cannot all satisfy their preferred antialignment on a triangular lattice, forcing a compromise arrangement such as 120-degree order.\n- Dzyaloshinskii-Moriya interaction: a spin-orbit-driven coupling that twists neighbouring spins and favours swirling textures.\n- Merons and antimerons: half-units of a swirling spin texture, carrying topological charge of plus or minus one half; a hexameron is a six-unit bound cluster with zero net charge.\n- Magnons: quantized waves of spin disturbance in a magnet, analogous to phonons for lattice vibrations.\n- Chern number and Berry curvature: topological quantities describing how wave bands twist; they control edge-directed heat flow (thermal Hall effect).\n- Metastable: a state that is a local, not global, energy minimum and could persist but is not the lowest-energy state.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Frustrated magnets on triangular lattices favour noncollinear order, and when inversion symmetry is broken they can host localized topological textures on top of that order. Here we show that the Janus MXene MnHf2C2FI is such a system. Combining first-principles calculations with atomistic spin simulations, we find that magnetism is confined to the Mn layer, where a strong antiferromagnetic nearest-neighbor exchange together with a sizable Dzyaloshinskii-Moriya interaction stabilizes a frustrated 120 Neel ground state. On top of this ground state we identify a metastable hexameron: a composite of six merons and antimerons, one vortex-antivortex pair on each of the three sublattices, whose sublattice-resolved topological charges compensate. Linear spin-wave theory confirms that the hexameron is a local energy minimum, and its noncoplanar cores act as potential wells that bind discrete in-gap magnon modes below the bulk continuum. In a periodic hexameron array the magnon bands carry nonzero Chern numbers, and the resulting Berry curvature produces a magnon thermal Hall response whose sign depends on which of the two time-reversal partners of the hexameron is realized. Our results establish Janus MXenes as a two-dimensional platform in which frustration, broken inversion symmetry, and spin-orbit coupling combine to produce metastable antiferromagnetic solitons with distinct spectroscopic and transport fingerprints.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27580",
    "title": "Designing Perovskites for Chemical Looping Hydrogen Production",
@@ -17,12 +67,12 @@
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "An autonomous active-learning loop (Wasserstein autoencoder plus deep-ensemble surrogate) searched perovskite compositions for hydrogen production capacity in chemical looping, and then ranked 20 candidates by cost, supply resilience and environmental/health impact.",
-    "plain": "Researchers wanted to find better solid materials for making hydrogen in a cyclic chemical process, where a metal-oxide-like material repeatedly gives up and takes back oxygen. There are too many possible mixtures of elements to test one by one, so they used a computer program that proposes new mixtures, learns from the results, and repeats. Over 50 cycles, the average hydrogen yield of the proposed materials rose from 0.41 to 2.05 mmol per gram, and the best reached about 2.65 to 2.99.",
-    "why": "It shows a way to speed up materials searches while also weighing price, supply and safety, which matters for practical deployment of cleaner hydrogen. The text does not report experimental validation or how far these computed values would hold up in a real reactor, so its practical impact is still uncertain.",
+    "ai": true,
     "background": "- Perovskites: a family of crystal materials with a flexible structure whose elements can be swapped (A and B sites) to tune properties.\n- Chemical looping: a cycle in which a solid material is reduced and then re-oxidized, here used to produce hydrogen from steam.\n- Hydrogen production capacity (HPC): the amount of hydrogen produced per gram of material, in mmol per gram.\n- Active learning: a loop where a model picks the next most informative experiments or calculations, then updates itself.\n- Autoencoder: a neural network that compresses data into a smaller set of numbers and reconstructs it; the Wasserstein variant is a specific training method.\n- Deep ensemble: many neural networks trained together whose spread gives a sense of uncertainty.\n- Multi-objective ranking: choosing candidates by balancing several criteria at once, such as performance, cost and environmental impact.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "An autonomous active-learning loop (Wasserstein autoencoder plus deep-ensemble surrogate) searched perovskite compositions for hydrogen production capacity in chemical looping, and then ranked 20 candidates by cost, supply resilience and environmental/health impact.",
+    "plain": "Researchers wanted to find better solid materials for making hydrogen in a cyclic chemical process, where a metal-oxide-like material repeatedly gives up and takes back oxygen. There are too many possible mixtures of elements to test one by one, so they used a computer program that proposes new mixtures, learns from the results, and repeats. Over 50 cycles, the average hydrogen yield of the proposed materials rose from 0.41 to 2.05 mmol per gram, and the best reached about 2.65 to 2.99.",
+    "why": "It shows a way to speed up materials searches while also weighing price, supply and safety, which matters for practical deployment of cleaner hydrogen. The text does not report experimental validation or how far these computed values would hold up in a real reactor, so its practical impact is still uncertain."
    },
    "abstract": "Perovskites are promising materials for chemical looping hydrogen production (CLHP) due to their compositional flexibility and tunable redox properties. However, cation substitution opens a vast compositional space, making screening for new high-performing materials computationally demanding. Here, an autonomous active-learning framework combining a Wasserstein autoencoder (WAE) with a deep ensemble surrogate model was used to search for perovskites with a high hydrogen production capacity (HPC). In seven independent runs of 50 cycles, the mean HPC of the acquired compositions rose from 0.41 mmol H$_2$ g$^{-1}$ in the starting set to 2.05 mmol H$_2$ g$^{-1}$, and the best compositions reached 2.65-2.99 mmol H$_2$ g$^{-1}$. All runs enriched Sn on the B-site, mostly combined with Ti and with Mg, Ce, K and Y on the A-site. Twenty diverse candidates (2.22-2.84 mmol H$_2$ g$^{-1}$) were then selected by a multi-objective ranking that also accounts for raw-material price, supply resilience and potential environmental and health impacts. The approach links materials discovery with practical deployment constraints, and the methodology is transferable to other chemical looping processes.",
    "source": "arxiv"
@@ -39,12 +89,12 @@
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "Molecular dynamics simulations of an edge dislocation passing through sub-3 nm vacancy and mixed Fe-Cr interstitial clusters in Fe-3Cr, Fe-5Cr and Fe-10Cr at 300 K, quantifying obstacle strength, survival, and the dispersed-barrier alpha values implied for low-dose hardening.",
-    "plain": "Metal alloys used in nuclear reactors get harder and more brittle under radiation, even at doses where microscopes show no visible damage. This paper uses computer simulations of atoms to study tiny clusters of missing or extra atoms, too small to see under a microscope, and how strongly they block the movement of dislocations (line-like defects whose motion makes metals soft). The authors find that vacancy clusters (missing atoms) are strong blockers that always survive, while most interstitial clusters (extra atoms) are weaker and usually get absorbed.",
-    "why": "Models of radiation hardening are usually fitted to defects visible in electron microscopes, so they may overstate how strong those visible defects are if invisible clusters contribute. The paper argues that earlier fitted strength values are inflated for this reason, which could matter for predicting the lifetime of reactor steels; the link to real materials is inferred from simulations and has not been tested here.",
+    "ai": true,
     "background": "- Edge dislocation: a line defect in a crystal; its glide through the lattice is what makes metals deform.\n- Obstacle strength: how hard a defect resists a passing dislocation; here reported in MPa and as a dimensionless alpha in hardening models.\n- Vacancy / interstitial cluster: small groups of missing atoms or extra atoms in a crystal lattice, typically a few nanometres across.\n- Dispersed-barrier hardening: a standard model where hardening scales with the square root of defect density times defect strength.\n- Molecular dynamics (MD): simulating how atoms move according to interatomic forces, limited to very short timescales and small sample sizes.\n- Fe-Cr alloys: iron with 3-10% chromium, a model for reactor structural steels.\n- TEM (transmission electron microscopy): imaging technique that resolves defects only above a certain size.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Molecular dynamics simulations of an edge dislocation passing through sub-3 nm vacancy and mixed Fe-Cr interstitial clusters in Fe-3Cr, Fe-5Cr and Fe-10Cr at 300 K, quantifying obstacle strength, survival, and the dispersed-barrier alpha values implied for low-dose hardening.",
+    "plain": "Metal alloys used in nuclear reactors get harder and more brittle under radiation, even at doses where microscopes show no visible damage. This paper uses computer simulations of atoms to study tiny clusters of missing or extra atoms, too small to see under a microscope, and how strongly they block the movement of dislocations (line-like defects whose motion makes metals soft). The authors find that vacancy clusters (missing atoms) are strong blockers that always survive, while most interstitial clusters (extra atoms) are weaker and usually get absorbed.",
+    "why": "Models of radiation hardening are usually fitted to defects visible in electron microscopes, so they may overstate how strong those visible defects are if invisible clusters contribute. The paper argues that earlier fitted strength values are inflated for this reason, which could matter for predicting the lifetime of reactor steels; the link to real materials is inferred from simulations and has not been tested here."
    },
    "abstract": "Fe-Cr alloys harden at irradiation doses where transmission electron microscopy (TEM) shows no defects, implicating defects too small to be resolved. Their obstacle strength is unknown, so hardening models ignore them and fit measured hardening to visible defects alone. Here, molecular dynamics drives an edge dislocation through relaxed 1-3 nm vacancy and mixed Fe-Cr interstitial clusters in Fe-3Cr, Fe-5Cr and Fe-10Cr at 300 K. Vacancy clusters relax into platelets whose strength rises with size to about 350 MPa at 2.9 nm, following strong-obstacle scaling independently of Cr content, and always survive dislocation passage. Interstitial clusters relax into $\\frac{1}{2}\\langle 111 \\rangle$, mixed or $\\langle 100 \\rangle$ loops. They are mostly weaker than platelets of the same size, their strength varies up to fivefold with the local Cr arrangement, and most are absorbed. Only $\\langle 100 \\rangle$ loops in Fe-5Cr and Fe-10Cr often survive. During pinning, Cr collects at the junction between these loops and the dislocation; atom tracking for one loop shows that more than half comes from the loop itself. Surviving loops are not stronger than absorbed ones: strength and survival are thus distinct. Computed dispersed-barrier strengths ($\\alpha \\approx$ 0.02-0.25) are upper bounds that lie below the $\\alpha$ values obtained in earlier studies by fitting hardening to TEM-visible loops. These earlier values are therefore inflated by TEM-invisible defects. Wherever small vacancy clusters form, they are more effective obstacles than interstitial clusters of the same size. These defect-specific strengths and fates provide a physical basis for models of low-dose hardening.",
    "source": "arxiv"

@@ -1,7 +1,51 @@
 {
  "slug": "differential-geometry",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "papers": [
+  {
+   "uid": "arxiv:2611.27776",
+   "title": "Riemannian Curvature Functionals for de Rham Spectral Triples",
+   "url": "https://arxiv.org/abs/2611.27776",
+   "authors": [
+    "Yong Wang"
+   ],
+   "label": "arXiv:2611.27776v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "The paper builds curvature functionals (Riemann and Einstein tensors) from mixed Clifford residues of the Hodge-de Rham operator in even dimensions, and examines their boundary behaviour, extensions to two one-form actions, and failure cases on noncommutative tori, finite-direction examples and a conformal example.",
+    "plain": "The paper asks whether the curvature of a space (how much it bends, the quantity Einstein used for gravity) can be recovered from a purely algebraic setup built on the operator that describes differential forms on the space. The authors compute several such \"curvature functionals\" and check them on special cases, including spaces with boundaries. They also report where the recipe breaks: some versions fail to respect the usual symmetry rules for curvature, and a naive extension does not recover the classical curvature.",
+    "why": "It connects noncommutative geometry, where spaces are described by algebras of operators, with classical Riemannian curvature, which is a useful test of whether that framework captures geometry correctly. The text states its limitations explicitly, so the value lies partly in the clearly mapped failure cases; the wider significance beyond this setting is not established by the text.",
+    "background": "- Riemannian manifold: a smooth curved space in which distances and angles are defined locally.\n- Curvature (Riemann and Einstein tensors): standard measures of how a space bends; the Einstein tensor is a contraction of the Riemann tensor.\n- Differential forms and the Hodge-de Rham operator: generalised \"areas and volumes\" on a space and the operator that acts on them.\n- Clifford algebra: an algebra that encodes directions and their products, used here to build symbols of operators.\n- Spectral triple: a noncommutative-geometry package (algebra, Hilbert space, operator) that encodes a space algebraically.\n- Residue functional: a linear functional extracting a coefficient from the asymptotic expansion of an operator's zeta or heat-type data.\n- Noncommutative torus: a standard example of a noncommutative space; finite-direction examples are simpler toy models.\n- Manifold with boundary and warped collar: a space with an edge, and a specific product-like neighbourhood of that edge.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We compute mixed Clifford residue functionals for the Hodge-de Rham operator in even dimensions. A symbol-composition calculation recovers the Riemann and Einstein tensors and yields two ordered curvature functionals with the same classical limit. For specified truncation products on warped collars, we evaluate all five boundary cases and prove that the curvature-recovering antisymmetrizations have no boundary correction. We extend the constructions to spectral data equipped with two one-form actions. Explicit noncommutative torus and finite-direction examples distinguish the functionals and exhibit failures of module balancing and Riemann symmetries. A conformal example shows that a naive exterior lift need not recover classical curvature. The additional structures and limitations of each extension are stated explicitly.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.27950",
+   "title": "Yau's pinching problem and vanishing of Betti numbers",
+   "url": "https://arxiv.org/abs/2611.27950",
+   "authors": [
+    "Xiaolong Li",
+    "Elham Matinpour",
+    "Peter Petersen"
+   ],
+   "label": "arXiv:2611.27950v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-24",
+   "summary": {
+    "one_liner": "Under a pinching condition relating sectional curvature to scalar curvature (sec > Scal/(n(n+2))), closed Riemannian n-manifolds with n ≥ 4 are shown to have vanishing real cohomology in degrees 1 through n-1, with rigidity results for the weak inequality and intermediate Ricci variants.</one_liner>\n<parameter name=\"plain\">This paper studies closed curved shapes of dimension four or higher and asks when their curvature, measured in two ways, forces them to have no \"holes\" of the usual topological kinds. The authors show that a specific curvature inequality (a version of Yau's pinching condition) forces the relevant topological counts, called Betti numbers, to vanish in most degrees. The complex projective space is used to show the constant in the inequality cannot be improved and the strict inequality is needed in even dimensions.",
+    "plain": "",
+    "why": "It settles a sharp, decades-old style question about how curvature controls topology, and the rigidity result (only a quotient of complex projective space escapes the conclusion) gives a clear classification-type statement. Its wider connections are to the sphere theorem and to Hodge theory, but the text itself does not say how far these tools reach beyond the stated cases.",
+    "background": "- Riemannian manifold: a smooth space with a way of measuring lengths and angles, so it has a notion of curvature.\n- Sectional curvature: curvature measured on each two-dimensional plane through a point; scalar curvature is a single averaged number at each point.\n- Pinching condition: an inequality bounding one curvature quantity by a fraction of another, which constrains the shape of the space.\n- Betti numbers: counts of independent \"holes\" of each dimension in a space, computed with real coefficients here.\n- Rational homology sphere: a space whose topology looks like a sphere when counted with rational numbers.\n- Hodge theory and Weitzenböck formula: tools linking harmonic forms (smooth generalized \"fields\" on the space) to curvature.\n- Complex projective space with Fubini-Study metric: a standard highly symmetric example of a curved space.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that a closed connected Riemannian $n$-manifold, $n\\geq4$, satisfying $\\sec>\\frac{\\operatorname{Scal}}{n(n+2)}$ at every point has vanishing real cohomology in degrees $1,..., n-1$. It is consequently a rational homology sphere if $n$ is odd or the manifold is orientable. Complex projective space shows that the coefficient is optimal and that the strict inequality is necessary in every even dimension. The required estimate for the Weitzenb\\\"ock curvature term is established by integrating restricted Ricci operators over orthonormal frames and combining complementary degrees using Hodge duality. This also allows us to replace sectional curvature pinching by intermediate Ricci curvature bounds. For a nonflat metric, the weak Yau inequality, $\\sec\\geq\\frac{\\operatorname{Scal}}{n(n+2)}$, gives the same cohomology vanishing unless the manifold is isometric, up to scaling, to a quotient of complex projective space with its Fubini-Study metric. This also holds using the second intermediate Ricci curvature in place of sectional curvature. More generally, a nonzero Betti number in the range controlled by an intermediate Ricci bound forces local symmetry. We also derive sharp Hodge eigenvalue estimates and a scalar spectral vanishing criterion.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.27723",
    "title": "Projectively Flat Spherically Symmetric Sprays of Constant Curvature",
@@ -14,12 +58,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper classifies projectively flat, spherically symmetric sprays of constant curvature by solving the equations that constant curvature imposes on the projective factor p(r,s), obtaining four explicit families that include the spray cases for constant flag curvature K = 0, -1, and 1.",
-    "plain": "This is a pure mathematics paper about \"sprays,\" which are rules describing how straight-line-like paths behave on a curved space, the kind used in Finsler geometry (a generalization of Riemannian geometry where distances can depend on direction). The authors write down the conditions that make such a spray have constant curvature, solve them, and sort every possible solution into four explicit families. They also check that the known constant-curvature examples with curvature 0, -1, and 1 fall inside these families.",
-    "why": "The result gives a complete list rather than a set of examples, which matters for anyone studying which curved geometries of this type exist. The text does not describe applications outside geometry, so its wider relevance is uncertain.",
+    "ai": true,
     "background": "- Manifold: a space that looks locally like ordinary Euclidean space, on which calculus can be done.\n- Finsler metric: a way of measuring length in which the length of a vector can depend on its direction, generalizing Riemannian metrics.\n- Spray: a geometric object on the space of directions that determines the \"natural paths\" (geodesics) of a Finsler metric.\n- Projective flatness: the spray's paths match straight lines up to reparametrization, the Finsler analogue of a flat-looking geometry.\n- Spherical symmetry: the spray looks the same in all directions around a point, so it depends only on the radius r and a direction variable s.\n- Flag curvature: a measure of how curved the space is along a given 2-dimensional direction; constant means the same everywhere and in all directions.\n- Projective factor p(r,s): the function that encodes the spray's projective structure and is solved for in the paper.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper classifies projectively flat, spherically symmetric sprays of constant curvature by solving the equations that constant curvature imposes on the projective factor p(r,s), obtaining four explicit families that include the spray cases for constant flag curvature K = 0, -1, and 1.",
+    "plain": "This is a pure mathematics paper about \"sprays,\" which are rules describing how straight-line-like paths behave on a curved space, the kind used in Finsler geometry (a generalization of Riemannian geometry where distances can depend on direction). The authors write down the conditions that make such a spray have constant curvature, solve them, and sort every possible solution into four explicit families. They also check that the known constant-curvature examples with curvature 0, -1, and 1 fall inside these families.",
+    "why": "The result gives a complete list rather than a set of examples, which matters for anyone studying which curved geometries of this type exist. The text does not describe applications outside geometry, so its wider relevance is uncertain."
    },
    "abstract": "In this paper, we study projectively flat spherically symmetric sprays of constant curvature. We derive a system of equations that is equivalent to the constant-curvature condition for such sprays and solve it to obtain a complete classification of the projective factor \\(p(r,s)\\) into four explicit families. We further show that the sprays induced by projectively flat spherically symmetric Finsler metrics of constant flag curvature \\(K=0\\), \\(K=-1\\), and \\(K=1\\) are all special cases of our classification, thereby confirming that the sprays induced by these constant-flag-curvature Finsler metrics are fully contained in our framework.",
    "source": "arxiv"
@@ -35,12 +79,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-23",
    "summary": {
-    "one_liner": "The paper shows that a projectively induced Kähler–Einstein metric must have positive Einstein constant whenever it has at least one nonzero local real-holomorphic Killing field, with no completeness or global group-action assumption, and extends this to a non-Einstein obstruction and compact equivariant continuations.",
-    "plain": "The paper studies curved geometric shapes that sit inside a flat-style projective space and carry a specific kind of balanced, evenly curved structure. The authors show that if such a shape has even a local symmetry (a smooth flow that preserves the geometry in a neighbourhood), then its curvature must be strictly positive, so negative and zero curvature are ruled out. The argument uses a global extension of the local symmetry, which the text describes as coming from a known rigidity result of Calabi.",
-    "why": "The general question of whether such embedded Kähler–Einstein submanifolds of projective space must have positive curvature is open, and this gives a partial answer under a local symmetry hypothesis. The text does not say how far the method extends beyond this setting, so its wider reach is uncertain.",
+    "ai": true,
     "background": "- Kähler manifold: a complex geometric space with a compatible notion of distance and angle.\n- Kähler–Einstein metric: a Kähler metric whose Ricci curvature is a constant multiple of the metric; the sign of that constant (positive, zero, negative) is the key quantity.\n- Projective space and submanifold: the complex analogue of the sphere-like space of lines through the origin; a submanifold is a smaller shape embedded inside it.\n- Killing field: a smooth vector field whose flow preserves the metric, i.e. a continuous symmetry.\n- Real-holomorphic vector field: a flow that respects the complex structure.\n- Calabi rigidity: a result saying that local symmetries of such embeddings extend in a controlled way.\n- Omori–Yau maximum principle and Yau's Liouville theorem: standard tools for showing that certain bounded functions on non-compact spaces must be constant.\n- Hulin's continuation: a known construction extending the embedded metric; the text uses it as an input.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that a projectively induced Kähler–Einstein metric must have positive Einstein constant whenever it has at least one nonzero local real-holomorphic Killing field, with no completeness or global group-action assumption, and extends this to a non-Einstein obstruction and compact equivariant continuations.",
+    "plain": "The paper studies curved geometric shapes that sit inside a flat-style projective space and carry a specific kind of balanced, evenly curved structure. The authors show that if such a shape has even a local symmetry (a smooth flow that preserves the geometry in a neighbourhood), then its curvature must be strictly positive, so negative and zero curvature are ruled out. The argument uses a global extension of the local symmetry, which the text describes as coming from a known rigidity result of Calabi.",
+    "why": "The general question of whether such embedded Kähler–Einstein submanifolds of projective space must have positive curvature is open, and this gives a partial answer under a local symmetry hypothesis. The text does not say how far the method extends beyond this setting, so its wider reach is uncertain."
    },
    "abstract": "We prove that a projectively induced Kahler-Einstein metric has positive Einstein constant as soon as it admits one nonzero local real-holomorphic Killing field. Neither completeness nor a prescribed global group action is assumed. This gives a partial answer, under a local symmetry hypothesis, to the general positivity problem for Kahler-Einstein submanifolds of (finite-dimensional) projective space. The key observation is that, by Calabi rigidity, a local real-holomorphic Killing field is induced by a projective unitary vector field whose tangency propagates along any connected global Kahler immersion, without a simple-connectivity assumption. Applied to Hulin's complete continuation, this produces a global Killing field with a bounded Hamiltonian potential given by the ambient projective moment map. The resulting Laplace equation, the Omori--Yau maximum principle and Yau's Liouville theorem exclude both negative and zero Einstein curvature. We also prove a non-Einstein obstruction under uniformly negative Ricci curvature and obtain compact equivariant continuations.",
    "source": "arxiv"
