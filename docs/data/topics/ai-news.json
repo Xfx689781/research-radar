@@ -1,7 +1,108 @@
 {
  "slug": "ai-news",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "news:7a6462e387eb267a",
+   "title": "How iFood scales coding agents across 15,000 repositories",
+   "url": "https://openai.com/business/customer-stories/ifood",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A news piece titled \"How iFood scales coding agents across 15,000 repositories,\" though the body text is missing, so only the headline's topic can be reported.",
+    "plain": "The article appears to be about how iFood, a food delivery company, uses AI coding agents (software that writes or changes code on its own) across about 15,000 code repositories (storage areas holding a project's source code). The text itself is not available, so I cannot say what approach was used or what results were reported.",
+    "why": "Large companies using AI tools to change code at scale is a live topic in software engineering, so the piece may connect to that trend. However, the body is empty, so I cannot confirm the details or how significant the work is.",
+    "background": "- Coding agent: an AI system that reads, edits, and tests software with limited human input.\n- Repository (repo): a project's stored source code, often tracked with version-control tools such as Git.\n- Scaling across many repos: applying the same tool or change to thousands of separate code projects, which raises questions about reliability, review, and cost.\n- iFood: a Brazilian food-delivery company, so the work likely reflects its internal engineering practices.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:27065c561fbc5a7f",
+   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+   "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+   "authors": [
+    "Sarah Perez"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Anthropic has announced \"Claude Ship,\" developer tools that let AI agents review, fix, and approve code changes, aiming to reduce the approval backlog created by growing volumes of AI-generated code.",
+    "plain": "As AI tools write more software, the step where people check and sign off on each change has become a slowdown. The article reports that Anthropic, an AI company, has launched new developer tools, called Claude Ship, that let AI agents handle some of these routine checks and approvals. The text is brief and does not give details on how the approvals work or how well they perform.",
+    "why": "It matters because it reflects a shift toward letting AI systems oversee other AI-written work, which raises practical questions about quality and accountability. The article is short, so its claims about real-world effect are unverified and should be read as a product announcement.",
+    "background": "- AI agent: a program that carries out multi-step tasks with limited human input, rather than only answering one prompt.\n- Code review: the standard practice where another person checks a software change before it is merged into a project.\n- Approval bottleneck: when a queue of changes waits on human sign-off, slowing the whole process.\n- Anthropic: an AI company that makes the Claude family of AI models.\n- Note: the article gives no technical specifics, so details of what \"approve\" means here are unknown.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:26c3ceae08944feb",
+   "title": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
+   "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
+   "authors": [
+    "Ivan Mehta"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Streaming service Tidal says it will ban and remove millions of fully AI-generated tracks while still accepting songs made with AI assistance.",
+    "plain": "Tidal, a music streaming service, is moving to remove millions of songs that were created entirely by artificial intelligence, which the headline calls \"AI slop\" as they flood the platform. The company says it will still allow songs where AI helped in the making but did not generate the whole piece.",
+    "why": "Streaming platforms pay royalties per play, so a flood of machine-made tracks can affect how money and listener attention are shared among artists. The source text is very short, so it does not show how Tidal will identify fully generated tracks or what the policy's enforcement looks like.",
+    "background": "- Music streaming services host catalogs of tracks and pay rights holders based on plays.\n- \"AI-generated\" music is created by software from prompts or models, with little or no human composition.\n- \"AI-assisted\" music means a person used AI tools for parts of the work, such as editing or mixing, while still making the core creative choices.\n- \"AI slop\" is a informal term for low-quality, mass-produced AI content.\n- The article is a brief news item; details of the policy are not given in the text provided.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The company said it will still accept songs that were made with AI assistance, but not fully generated.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:eaadf2423721fd74",
+   "title": "Meta brings its Muse AI assistant directly into Instagram DMs",
+   "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
+   "authors": [
+    "Aisha Malik"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Meta has integrated its Muse AI assistant directly into Instagram direct messages, so users no longer need to switch to the separate Muse app to use it.",
+    "plain": "Meta, the company that owns Instagram, has added its Muse AI assistant inside Instagram's private messaging. Until now, people who wanted to use the assistant had to leave Instagram and open a separate Muse app. The article says the change removes that extra step, but it gives little other detail.",
+    "why": "It shows a common industry move: putting AI helpers inside apps people already use, rather than asking them to download a new one. The text does not say how many people will use it or how well it works, so its wider significance is unclear.",
+    "background": "- Meta owns Instagram and Facebook.\n- Muse is Meta's AI assistant, which the text describes as an \"AI agent\" that users talk to.\n- \"DMs\" means direct messages, the private chat feature inside Instagram.\n- \"Integration\" here means building one product into another so they work together.\n- The article is short and gives no technical details, pricing, or user numbers.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The new integration gets rid of the need for users to toggle between Instagram and the Muse app when they want to interact with the AI agent.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:ec442b764e041cd2",
+   "title": "How Intentful uses dots to make more time for growth",
+   "url": "https://openai.com/business/customer-stories/intentful-dots",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A short company feature describing how Intentful uses a tool called \"dot,\" an AI assistant named Aria, which Marina Petrova uses to research websites, draft proposals, flag messages, and resolve issues.",
+    "plain": "This short article profiles a company called Intentful and how one of its staff, Marina Petrova, uses an AI assistant named Aria, which runs on a product called dot. According to the text, Aria helps with researching websites and writing proposals, and it points out important messages and helps sort out problems before she asks.",
+    "why": "It is a small example of how AI assistants are being used for everyday office work, which is a widely discussed trend. The text is a brief user story, so it does not show measured results or how well the tool performs.",
+    "background": "- \"dot\" is the name of the AI product in the text; Aria is the assistant Marina Petrova uses.\n- An AI assistant is software that carries out routine tasks such as research, drafting, and message triage.\n- \"Proactively flagging\" means the tool raises items on its own rather than waiting to be asked.\n- The text is a promotional-style user story with no figures, methods, or independent evaluation.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+   "source": "rss"
+  },
   {
    "uid": "news:724878a26e68ea5b",
    "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
@@ -13,12 +114,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A funding announcement for Maple, a startup that says its encrypted AI architecture is built so the company itself cannot read users' private data.",
-    "plain": "A startup called Maple has raised $5.3 million to build AI products. The company says its design keeps users' private information locked up so that even Maple cannot see it. The article is short and gives only this high-level description, so the details of how it works are not clear from the text.",
-    "why": "Many AI tools require users to share personal data with the company running them, so a design that avoids this is of interest to people concerned about privacy. The text does not show how well the approach works in practice, so its value is still unproven.",
+    "ai": true,
     "background": "- AI products often send user data to company servers to process it.\n- \"Encrypted\" means data is scrambled so only holders of a secret key can read it.\n- Some privacy designs aim for \"zero-knowledge\" setups, where a service can run without seeing the content, but the article does not say whether Maple uses one.\n- Venture funding of $5.3 million is a modest seed-stage round.\n- The article is a brief company announcement with little technical detail.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A funding announcement for Maple, a startup that says its encrypted AI architecture is built so the company itself cannot read users' private data.",
+    "plain": "A startup called Maple has raised $5.3 million to build AI products. The company says its design keeps users' private information locked up so that even Maple cannot see it. The article is short and gives only this high-level description, so the details of how it works are not clear from the text.",
+    "why": "Many AI tools require users to share personal data with the company running them, so a design that avoids this is of interest to people concerned about privacy. The text does not show how well the approach works in practice, so its value is still unproven."
    },
    "abstract": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data.",
    "source": "rss"
@@ -34,12 +135,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A news piece reporting that a new benchmark finds even leading AI models often fail to complete everyday tasks reliably and safely, sometimes creating new problems while trying.",
-    "plain": "Millions of people now use personal AI assistants, the kind that can act on your behalf. The article describes a new test, called a benchmark, which found that even the most advanced AI models often fail to finish ordinary tasks dependably and safely, and can cause new problems along the way.",
-    "why": "It points to a gap between how widely these assistants are being adopted and how reliable they are in routine use. The text does not give details of the tasks, scores, or the test design, so its broader significance is hard to judge from this piece alone.",
+    "ai": true,
     "background": "- AI agent: an AI system that does multi-step tasks for a user, such as booking, emailing, or browsing, rather than only answering questions.\n- Benchmark: a standard test set used to measure and compare how well AI systems perform.\n- Reliability and safety: whether the assistant gets tasks right consistently and avoids side effects, such as sending the wrong message or making an unwanted change.\n- The article is short and gives no specific figures, named tests, or named models, so it should be read as a summary of a claim rather than a full account.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A news piece reporting that a new benchmark finds even leading AI models often fail to complete everyday tasks reliably and safely, sometimes creating new problems while trying.",
+    "plain": "Millions of people now use personal AI assistants, the kind that can act on your behalf. The article describes a new test, called a benchmark, which found that even the most advanced AI models often fail to finish ordinary tasks dependably and safely, and can cause new problems along the way.",
+    "why": "It points to a gap between how widely these assistants are being adopted and how reliable they are in routine use. The text does not give details of the tasks, scores, or the test design, so its broader significance is hard to judge from this piece alone."
    },
    "abstract": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
    "source": "rss"
@@ -53,12 +154,12 @@
    "primary_category": "huggingface.co",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A news item titled \"Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton\" describes a simulation-to-real-robot workflow for obstacle avoidance, but the body text is unavailable, so its specific methods and results cannot be confirmed.",
-    "plain": "This item is about teaching a small robot, called Microduck, to avoid obstacles by first training it in a computer simulation and then moving that training onto a real machine. The text provided is empty, so I cannot say what was built, how well it worked, or what results were reached.",
-    "why": "Moving robot skills from simulated training to physical hardware is a known challenge in robotics, so the topic may be of interest to people following robot learning. Beyond the title, I cannot judge its significance or what it connects to.",
+    "ai": true,
     "background": "- Simulation (sim): a computer model of a robot and its surroundings where it can practice safely and quickly.\n- Sim2Real (\"sim to real\"): the step of transferring a skill learned in simulation to a physical robot, which often behaves differently than the model predicted.\n- Obstacle avoidance: a robot sensing and steering around objects in its path.\n- Isaac Lab and Newton: software tools for robot simulation and training; the item's text does not explain their roles in detail.\n- Microduck: the name of the small robot in the title; no further details are given in the provided text.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A news item titled \"Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton\" describes a simulation-to-real-robot workflow for obstacle avoidance, but the body text is unavailable, so its specific methods and results cannot be confirmed.",
+    "plain": "This item is about teaching a small robot, called Microduck, to avoid obstacles by first training it in a computer simulation and then moving that training onto a real machine. The text provided is empty, so I cannot say what was built, how well it worked, or what results were reached.",
+    "why": "Moving robot skills from simulated training to physical hardware is a known challenge in robotics, so the topic may be of interest to people following robot learning. Beyond the title, I cannot judge its significance or what it connects to."
    },
    "abstract": "",
    "source": "rss"
@@ -74,12 +175,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Walmart says customers can now shop its Black Friday deals through Muse, an AI agent built by Meta.",
-    "plain": "Walmart has added its Black Friday sale items to Muse, a Meta AI assistant. Shoppers can use the assistant to look for and buy these deals without leaving the chat. The text is a short announcement and does not say how the feature works in detail.",
-    "why": "It is a small example of retailers putting their products inside AI assistants, a trend that could change how people find and buy things online. The text gives no sales figures or user numbers, so its wider impact is uncertain.",
+    "ai": true,
     "background": "- An AI agent is a chatbot-style program that can carry out tasks for a user, such as searching for or buying products, not just answering questions.\n- Muse is described here as Meta's AI agent; the text does not explain its features or how widely it is available.\n- Black Friday is the November shopping day in the US when many retailers run large discounts.\n- Partnerships like this one usually mean a store's product listings are connected to an AI platform, but the text does not describe the terms or data arrangements.\n- The source is a brief news item, so the details of the deal are thin.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "Walmart says customers can now shop its Black Friday deals through Muse, an AI agent built by Meta.",
+    "plain": "Walmart has added its Black Friday sale items to Muse, a Meta AI assistant. Shoppers can use the assistant to look for and buy these deals without leaving the chat. The text is a short announcement and does not say how the feature works in detail.",
+    "why": "It is a small example of retailers putting their products inside AI assistants, a trend that could change how people find and buy things online. The text gives no sales figures or user numbers, so its wider impact is uncertain."
    },
    "abstract": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
    "source": "rss"
@@ -93,12 +194,12 @@
    "primary_category": "openai.com",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A news item reports that GPT-6 models can design protein structures and sequences through reasoning and code, with lab tests reportedly finding evidence of binding across five targets.",
-    "plain": "The article says a new AI model called GPT-6 can help design proteins, the small molecular machines that make up much of living cells. According to the text, the AI reasoned its way to designs and wrote code to produce them, and lab tests found signs that these designs attached to five chosen targets. The text is very short, so it gives no details on how the tests were run or how strong the binding was.",
-    "why": "If accurate, AI that designs working proteins could speed up drug and biotech research, which is why it draws attention. The article is too brief to show how significant the result is, and it does not name a source, paper, or independent check, so the claim should be treated cautiously until more detail appears.",
+    "ai": true,
     "background": "- Proteins are chains of molecules that do most of the work in living cells; their shape determines their job.\n- \"Protein design\" means creating new protein sequences or shapes for a purpose, such as treating disease.\n- \"Binding\" means one molecule sticking to another, often a key step in how drugs act.\n- A \"target\" is the specific molecule a designed protein is meant to bind to.\n- \"Lab tests\" usually mean experiments in a physical lab, but the article gives no details of them.\n- \"GPT\" refers to a family of large language models; the article does not explain what GPT-6 is or who built it.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A news item reports that GPT-6 models can design protein structures and sequences through reasoning and code, with lab tests reportedly finding evidence of binding across five targets.",
+    "plain": "The article says a new AI model called GPT-6 can help design proteins, the small molecular machines that make up much of living cells. According to the text, the AI reasoned its way to designs and wrote code to produce them, and lab tests found signs that these designs attached to five chosen targets. The text is very short, so it gives no details on how the tests were run or how strong the binding was.",
+    "why": "If accurate, AI that designs working proteins could speed up drug and biotech research, which is why it draws attention. The article is too brief to show how significant the result is, and it does not name a source, paper, or independent check, so the claim should be treated cautiously until more detail appears."
    },
    "abstract": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
    "source": "rss"

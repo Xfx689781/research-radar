@@ -1,7 +1,53 @@
 {
  "slug": "human-computer-interaction",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28007",
+   "title": "The Agent Is Not Your Driver: Clarifying the Implied Capabilities of In-Vehicle Anthropomorphic Agents",
+   "url": "https://arxiv.org/abs/2611.28007",
+   "authors": [
+    "Benjamin Hardin"
+   ],
+   "label": "arXiv:2611.28007v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A position paper arguing that anthropomorphic in-vehicle agents can imply driving knowledge and control they do not have, and proposing a research agenda on the resulting psychological risks of dependence and betrayal.",
+    "plain": "Some cars now include talking, human-like assistants that sit in the dashboard or voice system. This paper is concerned that such an assistant may suggest it is part of the car's self-driving system when it is not, which could lead passengers to trust it too much. The paper does not report experiments; it proposes questions and a research plan for studying this gap and narrowing it in a way that supports safety.",
+    "why": "As cars take on more automated driving and their voice assistants become more human-like, a mismatch between what an assistant appears to know and what it actually controls could affect how safely people rely on it. The text does not provide evidence of how common this problem is today, so its scale is uncertain.",
+    "background": "- Autonomous vehicle: a car whose driving system can steer, brake, and monitor the road with varying levels of human involvement.\n- Automated driving system: the software and sensors that actually control the vehicle, as distinct from other systems in the car.\n- Anthropomorphic agent: a voice or on-screen assistant designed to seem human-like, with a name, personality, or conversational manner.\n- Implied capability: what a user is led to believe a system can do, which may differ from what it really can do.\n- Dependence and betrayal: over-reliance on a system, and the sense of being misled when it fails to deliver what it seemed to promise.\n- Position paper: an argument and agenda rather than a report of new experimental results.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "This position paper considers how the gap between an anthropomorphic agent in an autonomous vehicle and the automated driving system of the vehicle can create psychological risks if the agent inaccurately presents itself as integrated into the driving system. This gap is under-explored both because of the evolving nature of these agents and because of study limitations in Human-Computer Interaction (HCI) research. Nevertheless, this gap may cause the agent to misrepresent itself as more knowledgeable about the car than it is, creating a risk of dependence and, in the worst case, betrayal if the occupant feels that the agent has misled them. This paper proposes a research agenda for future work to understand the psychological risk that exists in the gap between agents and driving systems and to narrow this gap in a manner aligned with safety assurance. As these agents evolve to hold greater capabilities and increased anthropomorphism, future research must investigate risks which may emerge from richer interaction with them. The impact of how an agent presents itself and its knowledge becomes greater.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2606.28090",
+   "title": "Typing Behavior in Human-LLM Interaction: Keystroke Dynamics Reveal Cognitive Effort During Prompting",
+   "url": "https://arxiv.org/abs/2606.28090",
+   "authors": [
+    "Laura Sch\\\"utz",
+    "Yousri Cherif",
+    "Clara Sayffaerth",
+    "Thomas Weber",
+    "Francesco Chiossi"
+   ],
+   "label": "arXiv:2606.28090v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A 36-person user study finds that keystroke timing and volume track self-reported mental workload when prompting an LLM under easy versus hard tasks and desktop versus mobile devices, but do not predict how useful users rate the output.",
+    "plain": "People typing questions to AI chatbots may reveal how hard they are thinking through how they type: harder tasks led to more keystrokes, slower typing, and longer pauses. The study had 36 participants work on easy and hard tasks on a computer or a phone, and the typing patterns matched how much effort they reported. However, the typing patterns did not tell the researchers whether people found the AI's answers useful.",
+    "why": "Typing signals could offer a cheap, real-time way for software to notice when a user is struggling, without asking them questions. The limit found here, that typing does not capture perceived usefulness, suggests such signals would be a partial picture of how well human-AI collaboration is going.",
+    "background": "- Keystroke dynamics: measuring how a person types, such as how many keys they press, how fast, and how long they pause between keys.\n- Human-computer interaction (HCI): the field that studies how people use and experience computers and software.\n- Large Language Model (LLM): an AI system that generates text in response to written prompts, such as a chatbot.\n- Prompting: writing the input or question given to an AI system.\n- NASA-TLX: a standard questionnaire where people rate their mental workload, such as mental demand, effort, and frustration.\n- Cognitive effort: the amount of mental work a task requires.\n- The text is a short abstract only; it gives no detail on exact measures, statistics, or task design.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "As Large Language Models (LLMs) become increasingly integrated into daily routines, understanding how users interact with these systems is crucial for effective human-AI collaboration. This work investigates keystroke dynamics as a behavioral measure of user mental effort and perceived output usefulness in human-LLM interaction. We conducted a user study (N = 36) to examine how task difficulty (easy vs. hard) and device type (desktop vs. mobile) influence typing behavior and workload (NASA-TLX) during interactions. Our results indicate that hard tasks led to significantly more keystrokes, slower typing, increased pauses, and higher self-reported workload. Device type had weaker effects, with mobile use slightly reducing input length and typing speed. While keystrokes captured differences in cognitive effort, they did not predict perceived LLM output usefulness. These findings highlight the potential of keystroke dynamics as real-time indicators of cognitive effort during LLM prompting, while also showing their limitations in capturing perceived collaboration success.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28011",
    "title": "Neurosymbolic Human-AI Collaboration: Foundations, Conceptual Framework, and Applications",
@@ -15,12 +61,12 @@
    "primary_category": "cs.HC",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "This paper proposes NeSy-HAIC, a conceptual framework that uses neurosymbolic AI (combining neural networks with symbolic reasoning) to give humans and AI a shared, human-readable interface for collaborating on tasks, illustrated with semi-autonomous driving and security alert prioritization.",
-    "plain": "Many workplaces now have people and AI systems working on the same tasks, but it is still hard for them to understand each other. This paper proposes a conceptual blueprint, called NeSy-HAIC, that mixes two styles of AI so the machine's internal workings can be expressed as concepts people already understand. The authors sketch how this could work in two example settings, self-driving cars that still need a human driver and ranking security alerts, but the text describes the framework rather than reporting tested results.",
-    "why": "Getting humans and AI to communicate clearly is a long-standing obstacle in human-AI collaboration, and the paper ties that problem to explainable AI and neurosymbolic methods. Because it is a framework proposal without reported experiments in the text, its practical value is still to be shown.",
+    "ai": true,
     "background": "- Human-AI collaboration (HAIC): people and AI sharing a task, each covering the other's weaknesses.\n- Machine learning: software that learns patterns from data, such as recognizing images or speech.\n- Explainable AI: methods that try to make a model's reasoning understandable to people.\n- Neurosymbolic AI: combining neural networks (pattern learning from data) with symbolic reasoning (explicit rules and concepts).\n- Semantic gap: the mismatch between how a machine represents information and how humans think about it.\n- Human-in-the-loop vs. human-on-the-loop: a person actively approves each AI decision versus a person supervising and intervening when needed.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "This paper proposes NeSy-HAIC, a conceptual framework that uses neurosymbolic AI (combining neural networks with symbolic reasoning) to give humans and AI a shared, human-readable interface for collaborating on tasks, illustrated with semi-autonomous driving and security alert prioritization.",
+    "plain": "Many workplaces now have people and AI systems working on the same tasks, but it is still hard for them to understand each other. This paper proposes a conceptual blueprint, called NeSy-HAIC, that mixes two styles of AI so the machine's internal workings can be expressed as concepts people already understand. The authors sketch how this could work in two example settings, self-driving cars that still need a human driver and ranking security alerts, but the text describes the framework rather than reporting tested results.",
+    "why": "Getting humans and AI to communicate clearly is a long-standing obstacle in human-AI collaboration, and the paper ties that problem to explainable AI and neurosymbolic methods. Because it is a framework proposal without reported experiments in the text, its practical value is still to be shown."
    },
    "abstract": "The growing adoption of Artificial Intelligence (AI) across workplaces and industries, ranging from manufacturing plants to healthcare facilities, has paved the way to the design of systems in which humans and AI collaborate on shared tasks. The first developments of Human-AI Collaboration (HAIC) were driven by advances in Machine Learning (ML), which enabled the automation of numerous tasks, including large-scale data processing, image analysis, and speech recognition. However, ML automation have proven insufficient for certain applications due to methodological, safety, and ethical concerns. In such cases, researchers argue for integrating human expertise into operational workflows to improve performance, relying on the complementary skill sets of humans and AI. Despite long-standing research, the field of HAIC has not yet reached full maturity, largely due to the intrinsic difficulty of ensuring a seamless communication between humans and AI. This challenge is partially addressed by Explainable AI methods, which aim to make internal model reasoning more transparent through human-understandable explanations. Recognizing the need for a shared interface between humans and AI in collaborative settings, we propose a novel conceptual framework, NeSy-HAIC, that leverages Neurosymbolic AI (NeSy AI) to bridge the semantic gap between machine representations and human-understandable symbolic concepts. The framework builds on current research in NeSy AI and HAIC, supports multiple interaction paradigms, including Human-In-The-Loop and Human-On-The-Loop, and is characterized through its enabling methodologies and two illustrative use cases in semi-autonomous driving and security alert prioritization. We argue that the integration of data-driven learning and symbolic reasoning can substantially enhance human-AI interaction and mitigate limitations of collaborative systems.",
    "source": "arxiv"
@@ -37,12 +83,12 @@
    "primary_category": "cs.CY",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A sensitivity study of a two-step floating catchment accessibility model for over-the-counter medicine access at Tokyo pharmacies after a scenario magnitude-7.3 earthquake, showing that stock-depletion assumptions, model type and floating-catchment method choices can change recovery verdicts.",
-    "plain": "After a major earthquake, people need nearby pharmacies to still be open, staffed and holding medicine. This paper simulates over-the-counter medicines at about 4,700 registered pharmacies in Tokyo's 23 wards during the first week after a scenario quake, and measures how walking access compares with pre-quake levels. The authors find that the answer to \"is access recovering?\" depends heavily on how one models pharmacies running low on stock, on the kind of model used, and on which method is chosen.",
-    "why": "Local decisions about where to prioritise pharmacy support may hinge on modelling choices that are rarely reported, so the paper argues for stating stock assumptions and worst-case (low-end) outcomes. The relevance beyond Tokyo is plausible but the text covers only one city and one scenario.",
+    "ai": true,
     "background": "- Accessibility model: estimates how easily people can reach a service on foot, based on distance and how many providers are nearby.\n- Floating catchment area method: a common accessibility calculation that assigns each location a supply-to-demand ratio using nearby providers and people; the paper compares four variants.\n- Retention: post-disaster accessibility divided by the same location's pre-disaster accessibility (1 means no loss).\n- Stock depletion: pharmacies run out of medicine over time, so their capacity to serve people falls even if the building is open.\n- Scenario earthquake: a hypothetical event used for planning and simulation, not a real event.\n- Rank correlation and Jaccard index: measures of how similar two rankings are overall, and how much two sets of \"lowest 10%\" areas overlap (0.56 means partial overlap).\n- Percentile: the 10th-percentile result is a low-end outcome, worse than most sampled cases.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A sensitivity study of a two-step floating catchment accessibility model for over-the-counter medicine access at Tokyo pharmacies after a scenario magnitude-7.3 earthquake, showing that stock-depletion assumptions, model type and floating-catchment method choices can change recovery verdicts.",
+    "plain": "After a major earthquake, people need nearby pharmacies to still be open, staffed and holding medicine. This paper simulates over-the-counter medicines at about 4,700 registered pharmacies in Tokyo's 23 wards during the first week after a scenario quake, and measures how walking access compares with pre-quake levels. The authors find that the answer to \"is access recovering?\" depends heavily on how one models pharmacies running low on stock, on the kind of model used, and on which method is chosen.",
+    "why": "Local decisions about where to prioritise pharmacy support may hinge on modelling choices that are rarely reported, so the paper argues for stating stock assumptions and worst-case (low-end) outcomes. The relevance beyond Tokyo is plausible but the text covers only one city and one scenario."
    },
    "abstract": "Community pharmacies sustain access to medicines after an earthquake only while open, staffed and stocked. Accessibility models rarely represent stock depletion, and the assumptions this requires may change conclusions about recovery. We examine these assumptions for over-the-counter (OTC) medicines supplied by 4,748 registered pharmacies in Tokyo's 23 wards during the first week after a magnitude-7.3 scenario earthquake. A two-step floating catchment area model computes walking accessibility for 2,651 grid cells (500 m) under 10,000 sampled combinations of stock duration, staffing, operation and demand. Results are expressed as Retention: post-disaster accessibility divided by the same cell's pre-disaster accessibility. First, the assumed link between stock and service, the supply a pharmacy can still provide, determines the recovery verdict. If service falls in proportion to remaining stock, mean Retention declines from 0.479 (days 2-3) to 0.273 (days 4-7). If service is maintained until stock falls below one quarter, the mean rises instead, although low-end (10th-percentile) outcomes still decline. Measuring at the start of each period rather than averaging over it also reverses the trend. Second, a simple model that rescales a fixed map by citywide supply and demand reproduces citywide patterns but cannot evaluate where pharmacies close or where capacity is added; a spatial model run once on average inputs can. Third, four floating catchment methods agree on overall rankings (rank correlation 0.81), but their lowest-ranked 10% of cells overlap only partially (Jaccard index 0.56). Disaster assessments should report stock assumptions and low-end outcomes, and treat local priority areas as method-dependent.",
    "source": "arxiv"

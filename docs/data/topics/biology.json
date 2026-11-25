@@ -1,7 +1,64 @@
 {
  "slug": "biology",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.16.767119",
+   "title": "Microbiome complexity shapes host transcriptional networks across the ileum-liver axis",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767119v1",
+   "authors": [
+    "Halkhoree, A. C.",
+    "Grannell, A.",
+    "Pearson, C.",
+    "Araujo, E.",
+    "Jeffery, R.",
+    "Jones, K.",
+    "Rot, G.",
+    "Galvez, E.",
+    "Powrie, F.",
+    "Scepanovic, P.",
+    "Ilott, N. E."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.16.767119 v1",
+   "primary_category": "systems biology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Transcriptomic survey of mouse terminal ileum across germ-free, defined 12-strain microbiota (MM12), and specific-pathogen-free conditions to test how microbiome complexity reshapes host gene co-expression networks in the ileum and liver axis.",
+    "plain": "This study asks how much the community of microbes living in the gut changes the way genes switch on and off in the lower small intestine (ileum), and whether that affects the nearby liver. The researchers compared mice with no microbes, mice with a simple set of 12 known bacterial strains, and mice with a normal, more varied microbiome. The text describes the setup and sample sizes but does not give the results in the excerpt provided.",
+    "why": "Gut bacteria are linked to digestion, immunity and liver health, so knowing which gene networks they tune could help explain those links. The excerpt does not report findings, so its significance beyond the design cannot yet be judged.",
+    "background": "- Transcriptome: the full set of gene activity readings in a tissue sample, often used to see which genes are active.\n- Co-expression network: a map of genes that rise and fall together, suggesting they are regulated as a group.\n- Germ-free (GF) mice: raised with no microbes at all, used as a baseline.\n- MM12 (Oligo-Mouse-Microbiota-12): mice colonised with a defined set of 12 bacterial strains, giving a controlled level of microbiome complexity.\n- SPF (specific pathogen free): standard lab mice with a full, varied but screened microbiome.\n- Ileum: the last part of the small intestine, where nutrients and bile acids are absorbed.\n- Bile acids: digestive molecules made by the liver and modified by gut bacteria.\n- Peyer's patches: immune tissue in the gut wall.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The microbiome plays an increasingly recognised role in development, metabolism and immunity across all segments of the small and large intestine, as well as more distant organs such as the liver. In the terminal ileum - a key site of nutrient absorption - the presence of microbes dictates the development of secondary lymphoid structures (Peyers patches), mediates bile acid metabolism, and impacts absorption. In part, coordinated regulatory networks in the gut impact liver function and immunity through gut-liver connectivity and the movement of immune cells and bioactive small molecules that includes bile acids and other bacterial metabolites. We aimed to examine the extent of microbiome involvement in ileal transcription, where subtle changes in co-expression networks can be tuned by microbiome diversity, composition and function. We surveyed ileal transcriptomes across mouse models which vary in microbiome complexity ranging from germ-free (GF, n = 15), the Oligo-Mouse-Microbiota-12 (MM12, n = 15), and specific pathogen free (SPF, n = 15).",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768033",
+   "title": "A2Holo: Dual-Stream Flow Matching of 3D Structure and a Protein Language Model for Conformational Transition Prediction",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768033v1",
+   "authors": [
+    "Kim, D.",
+    "Kim, H.",
+    "Sim, J.",
+    "Kim, M.",
+    "Jang, M.",
+    "Lee, J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768033 v1",
+   "primary_category": "bioinformatics",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A2Holo uses deterministic flow matching between apo and holo protein structures, with a dual-stream joint attention block that fuses a protein language model's residue embeddings with 3D structure, and analyses the resulting residue-level attention patterns.",
+    "plain": "Proteins change shape when a drug-like molecule (a ligand) binds to them, and drug designers would like to predict the bound shape from the unbound one. This paper presents A2Holo, a model that maps an unbound protein structure to its bound form in a single fixed sequence of steps, rather than starting from random noise. The authors report that it gives the lowest median structural error among existing methods on a shared benchmark, and they also inspect which residues (amino-acid building blocks) pay attention to which others inside the model.",
+    "why": "Predicting how a protein changes shape on binding matters for structure-based drug discovery, so a fast, deterministic predictor could be useful if the reported accuracy holds up. The attention analysis offers a possible window into how sequence and structure information are combined, though the text alone does not show how far that interpretation generalises.",
+    "background": "- Apo vs holo: a protein's shape without (apo) and with (holo) a bound ligand.\n- Flow matching: a way to train a model to transform one set of data into another along a smooth path; here, between two real structures.\n- Protein language model: a neural network trained on protein sequences that produces a numerical vector for each residue.\n- Joint attention: a mechanism letting two streams of information (here sequence and 3D structure) inform each other.\n- C-alpha RMSD and TM-score: standard measures of how far a predicted 3D backbone is from the reference; lower RMSD and higher TM-score mean closer agreement.\n- Stochastic sampling: generating several outputs with randomness; the paper compares against best-of-10 samples from such baselines.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Modelling a ligand-bound holo conformation from a ligand-free apo conformation is essential in structure-based drug discovery. We present A2Holo, which casts apo-to-holo prediction as flow matching between two experimental structures rather than generation from noise. It transplants the dual-stream joint attention of in-context image generation to residue-aligned protein language model embeddings and structure. Without ligand conditioning or stochastic sampling, A2Holo's single deterministic trajectory reaches a median C RMSD of 0.809 [A] on the D3PM benchmark, the lowest among existing methods. Its TM-score exceeds even the best of 10 samples from every stochastic baseline on at least 144 of 150 pairs. Beyond performance, we directly measure the transplanted multimodal mechanism itself. Because sequence and structure are residue-aligned, its joint attention can be measured at residue resolution and tested for reproducibility across independently trained model variants. Within the structure stream, the attention a residue receives recovers moving residues better than the attention it emits, and this asymmetry is learned. A2Holo demonstrates a successful multimodal transplant from in-context image generation to protein conformational change, with strong deterministic apo-to-holo prediction. It also provides a quantitative account of how that mechanism organises residue-aligned sequence and structure around the residues that move.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768576",
    "title": "APEs: Agentic Prediction of Epitopes to Guide Antibody-Antigen Structure Prediction",
@@ -17,12 +74,12 @@
    "primary_category": "bioinformatics",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "APEs is an LLM-agent system that retrieves pre-target public evidence to propose ranked residue-level epitope patches, which are then used to steer Protenix-v1 sampling and select antibody-antigen complex models evaluated on CASP16 and CASP17 targets.",
-    "plain": "Antibodies stick to specific spots on a target protein, called the epitope, and computer models often struggle to predict where those spots are and how the two proteins fit together. This paper describes a system that searches public sources for clues about the target, uses them to suggest likely contact spots, and then uses those suggestions to guide a structure-prediction model's sampling and choice of final models. On retrospective CASP test targets, the top suggested spot was at least 50% correct for nine of 14 targets, and the best selected models scored higher on average than the unguided top-ranked models.",
-    "why": "Predicting antibody-antigen structures is a hard, practically important problem for drug and vaccine design, and the paper shows that public, target-specific evidence can be used at inference time to guide predictions. The gains are reported on a small set of targets, and the prospective CASP17 release is still untested in the text, so the broader value is unclear.",
+    "ai": true,
     "background": "- Antibody: an immune protein that binds a specific target molecule (antigen).\n- Epitope: the patch of residues (amino acids) on the antigen that the antibody contacts.\n- Antibody-antigen complex: the 3D structure formed when the two proteins bind.\n- CASP: a community blind contest in which groups predict protein structures before experimental results are published.\n- DockQ: a 0-1 score for how accurately a predicted complex matches the true one.\n- ipSAE: a confidence score for interface quality, used here to pick among models.\n- Protenix-v1: a structure-prediction model; \"sampling\" means generating many candidate poses.\n- Retrospective evaluation: testing on past targets while restricting searches to information available before each target's release date.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "APEs is an LLM-agent system that retrieves pre-target public evidence to propose ranked residue-level epitope patches, which are then used to steer Protenix-v1 sampling and select antibody-antigen complex models evaluated on CASP16 and CASP17 targets.",
+    "plain": "Antibodies stick to specific spots on a target protein, called the epitope, and computer models often struggle to predict where those spots are and how the two proteins fit together. This paper describes a system that searches public sources for clues about the target, uses them to suggest likely contact spots, and then uses those suggestions to guide a structure-prediction model's sampling and choice of final models. On retrospective CASP test targets, the top suggested spot was at least 50% correct for nine of 14 targets, and the best selected models scored higher on average than the unguided top-ranked models.",
+    "why": "Predicting antibody-antigen structures is a hard, practically important problem for drug and vaccine design, and the paper shows that public, target-specific evidence can be used at inference time to guide predictions. The gains are reported on a small set of targets, and the prospective CASP17 release is still untested in the text, so the broader value is unclear."
    },
    "abstract": "Antibody-antigen complex prediction remains difficult because the surface recognized by a specific antibody is often uncertain, and model confidence may not distinguish alternative poses. We developed APEs (Agentic Prediction of Epitopes for Structure Prediction), an agentic system that retrieves public evidence, interprets predicted antibody and antigen structures, and produces ranked residue-level epitope hypotheses. For retrospective evaluation, web retrieval was restricted to sources released before each CASP target entry date. Across eight CASP16 and six released CASP17 targets, the top-ranked patch reached residue precision of at least 0.5 for nine of 14 targets. We then used the predicted epitopes to steer additional Protenix-v1 sampling and to compare steered finalists with the highest ipSAE unsteered model. The retrospective best selection across three independent router calls increased mean DockQ from 0.306 to 0.375; DockQ increased from 0.089 to 0.679 for H2321 and from 0.005 to 0.379 for H2346. These results show that publicly available evidence specific to the target antibody-antigen complex can serve as an inference-time signal for epitope localization, guided complex sampling, and model selection. We also release predictions for CASP17 targets whose experimental structures had not been released when the predictions were finalized, providing a prospective test of APEs (https://github.com/CSSB-SNU/ape).",
    "source": "biorxiv"
@@ -42,12 +99,12 @@
    "primary_category": "biophysics",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper applies Koopman operator theory to whole-cell dynamical models to extract globally defined collective modes, which separate into slow modes forming a low-dimensional manifold and are linked to cell-cycle and cell-state transition processes.",
-    "plain": "Living cells are very complicated systems whose behavior is hard to predict, especially when they are far from a steady state. This paper uses a mathematical tool called Koopman analysis to re-describe whole-cell computer models in a simpler form, looking for patterns that act across the whole system. The authors report that these patterns relate to specific cell-cycle processes such as mitosis and DNA replication.",
-    "why": "The approach aims to give a global, rather than only local, simplification of nonlinear biological dynamics, which is a long-standing difficulty. Its value depends on whether the reported links to biology hold up in other models and in experiments; the text alone does not show that.",
+    "ai": true,
     "background": "- Nonlinear system: outputs do not scale simply with inputs, so small changes can have large or unexpected effects.\n- Linearization: approximating a complicated system with simpler linear rules; most standard versions only work near one reference state.\n- Koopman operator: a method that tracks how measurements of a system evolve, allowing a nonlinear system to be described linearly over its whole state space.\n- Normal modes: independent patterns of collective motion in a system, familiar from vibrating molecules and crystals.\n- Slow manifold: the lower-dimensional set of states that a system settles onto over long times.\n- Gene regulatory network: the web of interactions by which genes switch each other on or off.\n- Whole-cell model: a computer simulation that represents many cellular processes together.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper applies Koopman operator theory to whole-cell dynamical models to extract globally defined collective modes, which separate into slow modes forming a low-dimensional manifold and are linked to cell-cycle and cell-state transition processes.",
+    "plain": "Living cells are very complicated systems whose behavior is hard to predict, especially when they are far from a steady state. This paper uses a mathematical tool called Koopman analysis to re-describe whole-cell computer models in a simpler form, looking for patterns that act across the whole system. The authors report that these patterns relate to specific cell-cycle processes such as mitosis and DNA replication.",
+    "why": "The approach aims to give a global, rather than only local, simplification of nonlinear biological dynamics, which is a long-standing difficulty. Its value depends on whether the reported links to biology hold up in other models and in experiments; the text alone does not show that."
    },
    "abstract": "Living systems are complex nonlinear systems that operate far from thermodynamic equilibrium, and this nonlinearity makes their dynamics difficult to analyze. Several linearization techniques have been developed to address this problem, but most are local. Koopman operator theory is a powerful alternative that linearizes a system globally. Here we show that it not only achieves global linearization but also reveals collective modes that govern the dynamics of complex, out-of-equilibrium nonlinear systems. Applying the approach to whole-cell dynamical models, we find that these collective modes have physical and biological significance and relate to distinct processes in the cell cycle and in cell-state transitions. Collective and normal modes are widespread in many-body systems, particularly in condensed matter (e.g., magnons, phonons, hydrodynamic modes) and in macromolecular dynamics (e.g., normal mode analysis). By demonstrating that such modes also exist in cell-state transition dynamics, and in non-equilibrium nonlinear systems more generally, we offer a new theoretical-physics perspective on these systems. The collective modes separate into slow and fast modes. Long-term dynamics are governed by a few dominant slow modes that form a slow manifold of much lower dimension than the original state space. Thus, although the cell is a very high-dimensional system, its cell-cycle dynamics ultimately reduce to a low-dimensional space. Each mode comprises the coordinated behavior of groups of genes and reflects the structure of the underlying gene regulatory network. The modes can also be decomposed into terms that behave like damped harmonic oscillators, drawing an analogy between the modes of a nonlinear system and the normal modes of many-body systems. Finally, our analysis suggests that the dominant modes are closely associated with biological processes in the cell cycle, including mitosis, spindle checkpoint signaling, and DNA replication and repair.",
    "source": "biorxiv"

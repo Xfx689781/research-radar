@@ -1,7 +1,80 @@
 {
  "slug": "mental-health",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.22.26368682",
+   "title": "Plasma proteomic markers of cognitive and brain aging in a multi-ethnic cohort",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368682v1",
+   "authors": [
+    "Wood, B.",
+    "Wood Alexander, M.",
+    "Clappison, A.",
+    "Vandeloo, K. L.",
+    "Yep, R.",
+    "Saloner, R.",
+    "Downer, J.",
+    "Casaletto, K. B.",
+    "Caunca, M.",
+    "Kumar, R.",
+    "Malhotra, S.",
+    "Zhang, A.",
+    "Marawi, T.",
+    "Sit, V.",
+    "Kim, E.",
+    "Nyman, A. J.",
+    "Splinter, T. F. L.",
+    "Kang, M. S.",
+    "Swardfager, W.",
+    "Karikari, T. K.",
+    "Black, S. E.",
+    "Ottoy, J.",
+    "Goubran, M.",
+    "Rabin, J. S.",
+    "Alzheimer's Disease Neuroimaging Initiative,"
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.22.26368682 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A plasma proteomics study measuring 220 blood proteins in a multi-ethnic older cohort, relating them to cognition, brain MRI markers, and cognitive decline, with replication in ADNI participants.",
+    "plain": "Researchers measured about 220 proteins in blood samples from 250 older adults of Chinese, South Asian, and non-Hispanic White background. They looked for proteins linked to thinking ability and brain scan measures, such as markers of brain-cell damage (including a tau protein form), inflammation, and small blood-vessel disease. Several of these links were checked again in a separate group of about 1,381 people from the Alzheimer's Disease Neuroimaging Initiative.",
+    "why": "Most Alzheimer's and brain-aging research has been done in people of European descent, so testing blood markers in more diverse groups matters for whether they generalize. The text reports associations, not proof that these proteins cause brain decline, so they are candidate markers that would need further study before any clinical use.",
+    "background": "- Plasma proteomics: measuring many proteins at once in a blood sample; here an ultrasensitive assay (NULISAseq) covering 220 brain-related proteins.\n- Tau: a protein that forms tangles inside brain cells in Alzheimer's disease; BDpTau is a form of tau thought to come from the brain and detectable in blood.\n- Entorhinal thickness: thickness of a brain region involved in memory, seen on MRI, often thinner early in Alzheimer's.\n- Cerebral small vessel disease: damage to the tiny blood vessels deep in the brain, visible on MRI.\n- Association vs. causation: a link between a protein level and a outcome does not show the protein drives the outcome.\n- ADNI: a large, long-running North American study of people with and without memory problems, used here as a replication group.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Advances in ultrasensitive proteomics offer opportunities to characterize molecular pathways underlying brain aging. We measured 220 plasma proteins using NULISAseq Neuro220 in 250 Chinese, South Asian, and non-Hispanic White older adults (mean age=68.2 years, 70.4% female). Proteins implicated in neurodegenerative diseases (including brain-derived phosphorylated Tau, BDpTau), synaptic function, oxidative stress, and inflammation were associated with poorer cognition. Phosphorylated Tau205 was associated with reduced entorhinal thickness, whereas inflammatory proteins were associated with imaging markers of cerebral small vessel disease. Several findings were replicated in 1,381 participants in the Alzheimer's Disease Neuroimaging Initiative, including associations of BDpTau species, NPTX2, BACE1, TREM1, CCL17, PRDX6, and IGF1R with cognitive decline and clinical progression. Cardiometabolic risk factors were associated with widespread proteomic alterations, many of which were also linked to poorer brain health. These results identify promising molecular markers of brain aging and extend proteomic research to ethnically diverse populations historically underrepresented in Alzheimer's disease research.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.19.26368469",
+   "title": "Remote auditory task performance, cognition, and APOE4 across two dementia-risk cohorts",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368469v1",
+   "authors": [
+    "Happs, C.",
+    "Toma, A.",
+    "Koychev, I.",
+    "Malhotra, P.",
+    "O'Brien, J.",
+    "Ritchie, C.",
+    "Muniz-Terrera, G.",
+    "Lad, M."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.19.26368469 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Two independent cohorts (164 older Great Minds adults, 90 mid-life PREVENT participants) completed the same remote auditory battery, and the study finds no link between APOE ε4 carrier status and auditory performance, with some links to memory only in the older group.",
+    "plain": "Hearing speech in noise is known to go along with thinking decline and dementia risk. This study asked whether online hearing and listening tests reflect the gene APOE ε4, the strongest common genetic risk factor for Alzheimer's disease, or just general ageing and thinking skills. In two groups of people, the tests did not track the gene, but in the older group better scores on some tests went with better memory learning.",
+    "why": "Remote tests are cheap and easy to scale, so knowing what they measure matters if they are ever used to screen for dementia risk. The paper is cautious: the samples are modest, so it cannot rule out small gene effects, and it only looks at one point in time, so it cannot say whether these tests predict later decline.",
+    "background": "- APOE ε4 is a gene variant that raises the risk of Alzheimer's disease; \"carrier\" means a person has at least one copy.\n- Digits-in-noise and speech-in-babble tests ask people to repeat numbers or words over background sound; they measure how well speech is understood in noise.\n- Working-memory precision means how accurately someone holds and reproduces a sound (here a tone frequency or a rate of loudness fluctuation) in mind.\n- Robust regression is a statistical method that is less thrown off by outliers; false-discovery-rate correction guards against false positives when many tests are run.\n- Cohorts: Great Minds is a register of older adults; PREVENT Dementia follows people in mid-life.\n- The Goldsmiths Musical Sophistication Index measures musical skill and engagement.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Background. Difficulty hearing speech in noise is associated with cognitive ageing and dementia risk. It is unclear whether performance on remote auditory tasks reflects the apolipoprotein E (APOE) {epsilon}4 allele, the strongest common genetic risk factor for Alzheimers disease, or broader cognitive and ageing processes. Methods. We analysed two independent cohorts: the Great Minds research register of older adults and the mid-life PREVENT Dementia programme. Both completed the same remote auditory battery: digits-in-noise, speech-in-babble, auditory working-memory precision for tone frequency and for amplitude-modulation rate, and the Goldsmiths Musical Sophistication Index. Cognitive outcomes were paired-associate learning in Great Minds, and the Four Mountains Task, Supermarket Task and selected COGNITO scores in PREVENT. Associations were tested with covariate-adjusted robust regression and false-discovery-rate (FDR) correction. Results. The analytic samples comprised 164 Great Minds and 90 PREVENT participants (mean age 70.6 vs 56.8 years). APOE {epsilon}4 carrier status was not associated with any auditory measure in either cohort (all FDR-corrected p>0.70). In Great Minds, better speech-in-babble performance and better amplitude-modulation-rate working-memory precision were each associated with better paired-associate learning (both FDR-corrected p=0.019). In PREVENT, no auditory measure was associated with spatial-memory or COGNITO scores after age and sex adjustment and FDR correction. Conclusions. Remote auditory task performance was associated with memory in the older cohort but not with APOE {epsilon}4 carrier status in either cohort, although the samples could not exclude small genotype effects. Longitudinal studies are needed to determine whether remote auditory testing predicts cognitive change.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.16.26368132",
    "title": "Disease-specific versus symptom-specific neuroimaging phenotypes across Alzheimer's Disease, Parkinson's Disease, and Small Vessel Disease",
@@ -23,12 +96,12 @@
    "primary_category": "neurology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A case-control and transdiagnostic MRI study of 251 people with Alzheimer's, Parkinson's, small vessel disease, or healthy age-matched controls, using the UK Biobank imaging protocol, linking disease-specific and shared brain changes to symptoms such as apathy, fatigue, depression and cognitive deficits.",
-    "plain": "Several brain diseases that develop with age, including Alzheimer's, Parkinson's and small vessel disease, share symptoms like memory problems, low mood and tiredness. This study scanned 251 people with these conditions and healthy older adults using one standard brain-scan protocol, and compared their brain features. The authors found that each disease has some distinct brain changes, but also many changes that overlap across diseases.",
-    "why": "Shared symptoms are common across these conditions, and the study suggests that a few brain connections may be linked to particular symptoms regardless of diagnosis. This could help explain symptom variation in older people, but the findings come from a modest sample and would need confirmation in larger, independent studies before they guide care.",
+    "ai": true,
     "background": "- Neurodegenerative disorders: diseases where brain cells or their connections gradually lose function, such as Alzheimer's and Parkinson's.\n- Small vessel disease: damage to the tiny blood vessels deep in the brain, often seen on scans as white matter lesions.\n- Case-control comparison: comparing people with a condition against similar people without it.\n- Transdiagnostic: a pattern that cuts across diagnostic labels rather than belonging to one disease.\n- MRI measures: brain volume, white matter microstructure (how well the wiring is organised), tract volume, iron content, and functional connectivity (how regions activity is synchronised at rest).\n- UK Biobank protocol: a standardised brain-imaging method from a large UK population study, so results can be compared across groups.\n- Medial frontal pole and cingulum: a front-middle brain region and a fibre bundle running along the inner brain; the paper links these to symptoms.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A case-control and transdiagnostic MRI study of 251 people with Alzheimer's, Parkinson's, small vessel disease, or healthy age-matched controls, using the UK Biobank imaging protocol, linking disease-specific and shared brain changes to symptoms such as apathy, fatigue, depression and cognitive deficits.",
+    "plain": "Several brain diseases that develop with age, including Alzheimer's, Parkinson's and small vessel disease, share symptoms like memory problems, low mood and tiredness. This study scanned 251 people with these conditions and healthy older adults using one standard brain-scan protocol, and compared their brain features. The authors found that each disease has some distinct brain changes, but also many changes that overlap across diseases.",
+    "why": "Shared symptoms are common across these conditions, and the study suggests that a few brain connections may be linked to particular symptoms regardless of diagnosis. This could help explain symptom variation in older people, but the findings come from a modest sample and would need confirmation in larger, independent studies before they guide care."
    },
    "abstract": "Background: Neurodegenerative disorders are common in ageing populations, and arise from several distinct pathophysiological causes. Yet, they also share many symptoms, including cognitive and neuropsychiatric ones. It is unclear to what extent the impact of neurodegeneration on brain systems is unique or shared across disorders, and whether shared symptoms are driven by degeneration of the same brain systems. Methods: We collected data from n=251 participants with Alzheimer's Disease, Parkinson's Disease, Small Vessel Disease, and age-matched healthy controls. All participants underwent harmonized cognitive and neuropsychiatric assessment and were scanned using the UK-Biobank MRI protocol capturing features including brain volume, white matter lesions and microstructure, tract volume, iron content, and functional connectivity. Results: We replicated established case-control brain changes in Alzheimer's Disease, Parkinson's Disease and Small Vessel Disease compared to healthy controls. Leveraging this joint standardised dataset, we identified distinct neuroimaging features of individual neurodegenerative disorders, providing evidence for robust diagnosis-specific brain changes. Importantly, however, there was also a large degree of transdiagnostic similarity across neuroimaging markers. Testing for transdiagnostic associations between symptoms and brain phenotypes, we found that lower medial frontal pole connectivity to primary motor cortex was preferentially associated with apathy, fatigue, and depression; whereas cingulum microstructure was associated with cognitive deficits across diagnoses. Conclusions: These results demonstrate that different neurodegenerative diseases are characterised by dissociable brain changes, but also common transdiagnostic and symptom-associated features. This suggests that shared symptoms across neurodegeneration may in part be driven by overlapping impact on key brain systems, such as changes in medial frontal pole connectivity and cingulum microstructure. Our work highlights that multimodal imaging biomarkers can help understand and parse symptomatic heterogeneity in neurodegenerative and ageing populations.",
    "source": "medrxiv"
@@ -44,12 +117,12 @@
    "primary_category": "neurology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Reanalysis of ten public 16S rRNA gene sequencing cohorts (Alzheimer's, Parkinson's and autism; 1,185 samples from eleven cities in six countries) showing that gut microbiome classifiers trained in one cohort transfer poorly to another, even between recruitment sites within a single city pair.",
-    "plain": "Researchers have proposed that certain gut bacteria could serve as signs of brain conditions such as Alzheimer's, Parkinson's and autism. This paper asks whether those signs hold up in other groups of people, and it reprocessed public gut-bacteria datasets from many cities to test this. Models that worked reasonably well inside their own dataset became close to guesswork when applied to a different population, and the drop did not depend on how far apart the places were.",
-    "why": "It bears directly on whether gut microbiome tests could ever be used as diagnostic tools, and it suggests that signatures from a single study may not generalize even across nearby sites. The text does not show how this would translate into clinical practice, so the implications for diagnosis remain uncertain.",
+    "ai": true,
     "background": "- The gut microbiome is the community of bacteria living in the intestine; 16S rRNA sequencing is a common, relatively inexpensive way to identify which bacterial groups (taxa) are present.\n- A \"biomarker\" here means a set of bacterial features used to tell apart people with and without a condition.\n- Machine-learning classifiers are models trained on one dataset and scored on held-out data; AUC (area under the curve) measures discrimination, where 0.5 is no better than chance and 1.0 is perfect.\n- \"Transfer\" means training on one cohort and testing on a different one, the key test of whether a signature generalizes.\n- A \"cohort\" is a group of study participants recruited in a particular way, and cohort-specific differences (diet, medication, lab protocol, local environment) can confound results.\n- Feature rankings compare which bacterial taxa a model relies on most; the paper reports these rankings did not agree across cohorts.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Reanalysis of ten public 16S rRNA gene sequencing cohorts (Alzheimer's, Parkinson's and autism; 1,185 samples from eleven cities in six countries) showing that gut microbiome classifiers trained in one cohort transfer poorly to another, even between recruitment sites within a single city pair.",
+    "plain": "Researchers have proposed that certain gut bacteria could serve as signs of brain conditions such as Alzheimer's, Parkinson's and autism. This paper asks whether those signs hold up in other groups of people, and it reprocessed public gut-bacteria datasets from many cities to test this. Models that worked reasonably well inside their own dataset became close to guesswork when applied to a different population, and the drop did not depend on how far apart the places were.",
+    "why": "It bears directly on whether gut microbiome tests could ever be used as diagnostic tools, and it suggests that signatures from a single study may not generalize even across nearby sites. The text does not show how this would translate into clinical practice, so the implications for diagnosis remain uncertain."
    },
    "abstract": "Gut microbiota composition has been associated with multiple neurological conditions, and candidate biomarkers have been proposed on the basis of these associations. Their usefulness presupposes that taxa altered in one population are also altered in others, a condition that is rarely verified. This work quantifies the extent to which it holds, and the geographic scale at which it ceases to do so. Ten public 16S rRNA gene sequencing cohorts of Alzheimer's disease, Parkinson's disease and autism spectrum disorder, collected in eleven cities across six countries, were reprocessed from raw data, comprising 1,185 samples with uniform processing within each condition. Models trained and evaluated within a single cohort reached a mean AUC of 0.751 in Alzheimer's disease, 0.741 in autism spectrum disorder and 0.673 in Parkinson's disease. When applied to a different population, these values fell to 0.569, 0.542 and 0.551 respectively. The decline was not associated with geographic distance: transfer between cities within the same country was equivalent to transfer between continents. No taxon appeared among the twenty most important features in all cohorts of a given condition, and no correlation between rankings reached significance. Classifiers trained to predict cohort of origin, disregarding clinical group, reached AUC values of 0.87 to 1.00 using control subjects, and equivalent values using affected subjects. In one cohort with two recruitment centers and a single protocol, controls from both cities were separable (AUC 0.947), models did not transfer between centers (0.562 and 0.515), and their rankings correlated 0.003. Geographic heterogeneity of discriminant taxa operates below the national scale, which constrains the generalization of microbiome signatures derived from individual cohorts.",
    "source": "medrxiv"

@@ -1,7 +1,53 @@
 {
  "slug": "economics",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30595",
+   "title": "Adaptive experiments with observational data: Efficient experimental design and asymptotic time-uniform inference for long-term treatment effects",
+   "url": "https://arxiv.org/abs/2611.30595",
+   "authors": [
+    "Kentaro Kawato"
+   ],
+   "label": "arXiv:2611.30595v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proposes using pre-experiment observational data both to identify long-term average treatment effects and to design adaptive experiments, deriving an efficiency-optimal fixed design, a sequential learning procedure that attains the oracle variance, and an anytime-valid confidence sequence.",
+    "plain": "Studies of policies often need years before the outcome that matters, such as income later in life, can be measured. This paper asks whether data gathered before a trial starts, which already contain the long-term outcome for other people, can be used to decide in advance who to enroll and how to assign treatment, so the trial estimates the long-term effect more precisely. The authors show how to learn this design while the experiment runs and provide confidence intervals that stay valid if the experimenter checks them after every participant.",
+    "why": "Shortening the wait for long-term results could speed up decisions in policy evaluation and online testing. The text reports simulation gains in precision and detection time, and an illustration with the Pakistan Graduation experiment, but the abstract does not show how large these gains are in practice.",
+    "background": "- Average treatment effect: the average difference in outcomes between treated and untreated groups.\n- Long-term outcome: a result measured only after a long delay, so it is often missing for the experiment's own participants.\n- Observational data: records collected without random assignment, here used to predict long-term outcomes.\n- Semiparametric efficiency bound: the lowest possible variance an estimator can reach without strong distributional assumptions.\n- Adaptive experiment: a trial where later sampling and assignment decisions use data gathered earlier.\n- Confidence sequence: an interval that stays valid across many interim looks, so the experimenter can stop early without invalidating results.\n- Conditional variance: how much outcome noise varies across types of participants, which drives the optimal design.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Estimating long-term treatment effects in experiments requires waiting for outcomes to become observable, which can delay both the evaluation of an intervention and subsequent decisions. Recent econometric work has developed identification methods that combine experimental data with observational data containing long-term outcomes. This paper proposes using observational data available before the experiment begins not only for identification but also for designing adaptive experiments, in which experimental data are collected sequentially. To estimate the long-term average treatment effect as precisely as possible, we express its semiparametric efficiency bound as a function of the covariate sampling and treatment assignment rules and minimize the bound over these rules to characterize an optimal fixed experimental design. This experimental design depends on the treatment-specific conditional variances of the observational prediction of the long-term outcome, which can be learned only from experimental participants. We therefore construct a sequential procedure that learns the experimental design as experimental data accumulate and show that its estimator attains the same limiting variance as an oracle estimator implemented under the optimal fixed experimental design. We further construct an asymptotic confidence sequence whose coverage holds simultaneously over all rounds after a prespecified start, so that the experimenter can inspect the interval after each participant and stop once it excludes zero. Monte Carlo simulations show that the learned experimental design can improve precision and shorten the time to detection relative to baseline sampling and equal-probability assignment. An illustration using the Pakistan Graduation experiment shows how estimated conditional variance heterogeneity informs sampling and treatment assignment.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31100",
+   "title": "Place-Based Policy from Space: Evidence from Italy's Inner Areas",
+   "url": "https://arxiv.org/abs/2611.31100",
+   "authors": [
+    "Nicola Caravaggio",
+    "Giuseppe Di Renzo",
+    "Giuliano Resce",
+    "Agapito Emanuele Santangelo",
+    "Giulia Valeria Sonzogno"
+   ],
+   "label": "arXiv:2611.31100v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A staggered difference-in-differences study using satellite nighttime lights finds that Italy's SNAI place-based program is associated with a larger lit area, but no detectable change in brightness per lit cell, across 941 funded and 3,112 eligible control municipalities from 2011 to 2022.",
+    "plain": "Italy's National Strategy for Inner Areas is a government program that sends money to remote, struggling towns to fund services and local business. This paper asks whether the program shows up from space, using satellite images of nighttime lights as a rough proxy for economic activity. The authors report that funded towns saw their lit area grow, while the brightness of already-lit spots did not clearly change, which they read as activity spreading out rather than intensifying in existing centres.",
+    "why": "It offers a way to measure place-based policy with annual satellite data, which the authors suggest can complement slower and coarser official statistics. The text does not show how far the findings generalise beyond Italy, so the value as a method is worth weighing against that limit.",
+    "background": "- Place-based policy: government programs that target specific geographic areas, here remote municipalities, rather than individuals or the whole country.\n- Difference-in-differences: a comparison method that tracks treated and untreated areas before and after a program starts, to estimate its effect. \"Staggered\" means areas start receiving funds at different times.\n- Nighttime lights: satellite measurements of artificial light at night, used as a rough stand-in for economic activity and settlement.\n- Lit area vs. radiance: lit area is how much of a region shows any light; radiance is how bright each lit cell is.\n- Control group: comparable areas that did not receive funds, used as a baseline for what would have happened anyway.\n- The text only gives the abstract; details on methods, robustness checks and magnitudes are not available here.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper evaluates a place-based policy, Italy's National Strategy for Inner Areas (SNAI), using satellite nighttime lights. Targeting structurally fragile and peripheral municipalities, SNAI invests in essential services and economic activities. Staggered difference-in-differences compares 941 funded municipalities with 3,112 eligible controls over 2011--2022. Funding is associated with an expansion of lit area and no detectable change in radiance per lit cell, suggesting that activity extends its footprint rather than intensifying in existing centres. The expansion holds across comparison groups and, descriptively, concentrates at intermediate funding per resident. Annual satellite data can complement slower and coarser statistics.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28297",
    "title": "Measuring Colombia's Informal Output: Relative Earnings and Identification in a Bayesian Two-Sector Model, 1993-2026",
@@ -13,12 +59,12 @@
    "primary_category": "econ.EM",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A Bayesian two-sector business-cycle model for Colombia that uses a new quarterly informal-to-formal earnings series to identify the size of the informal output share, 1993–2026.",
-    "plain": "The paper asks how much of Colombia's measured economic output comes from informal work, meaning jobs without formal contracts or social-security coverage. The authors argue that the share of workers who are informal cannot answer this, because informal jobs pay less and so produce less per worker. They estimate the informal output share from national accounts and household-survey data, and find it fell from about 30% of GDP in 1993 to about 20% in 2026Q2.",
-    "why": "Informal activity is hard to measure, and official output figures may miss or misstate it, which matters for tax policy and for reading growth and inflation. The paper's main methodological point, that relative earnings can identify the informal share where aggregate data cannot, may be useful to other countries with large informal sectors; the text does not show how well this carries over elsewhere.",
+    "ai": true,
     "background": "- Informality rate: the share of workers without formal employment protection or social-security coverage. It is a labor measure, not an output measure.\n- Two-sector model: a macroeconomic model with a formal sector (uses capital and labor) and an informal sector (uses labor only).\n- Bayesian estimation: combining prior assumptions with data to estimate model parameters, giving a range of plausible values rather than a single figure.\n- Identification: whether the data are rich enough to pin down a parameter; here, the paper says aggregate data alone cannot.\n- Steady state: the long-run equilibrium a model settles to when shocks stop; the paper reports the quarterly path is nearly unaffected by it from 2007.\n- Shadow-economy estimates: indirect statistical estimates (such as MIMIC models) of unrecorded economic activity; the paper compares its results to these.\n- Capital share: the portion of formal output paid to capital rather than labor.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A Bayesian two-sector business-cycle model for Colombia that uses a new quarterly informal-to-formal earnings series to identify the size of the informal output share, 1993–2026.",
+    "plain": "The paper asks how much of Colombia's measured economic output comes from informal work, meaning jobs without formal contracts or social-security coverage. The authors argue that the share of workers who are informal cannot answer this, because informal jobs pay less and so produce less per worker. They estimate the informal output share from national accounts and household-survey data, and find it fell from about 30% of GDP in 1993 to about 20% in 2026Q2.",
+    "why": "Informal activity is hard to measure, and official output figures may miss or misstate it, which matters for tax policy and for reading growth and inflation. The paper's main methodological point, that relative earnings can identify the informal share where aggregate data cannot, may be useful to other countries with large informal sectors; the text does not show how well this carries over elsewhere."
    },
    "abstract": "How much of Colombia's measured output is produced by informal work? The answer cannot be read from the labor-informality rate: Colombia combines an informality rate above 50% with a much smaller informal share of output, because informal work is less productive. We estimate a Bayesian two-sector business-cycle model on quarterly national accounts and on reconstructed employment and informality series for 1993-2026. Identification comes from a new quarterly series of informal-to-formal labor earnings built from household-survey microdata for 2007-2026. Formal production uses capital and labor, informal production is labor based, and an accounting relationship maps relative earnings, the informality rate and the formal capital share into the informal output share. We show that aggregate data alone cannot pin down the size of the informal sector, and that relative earnings identify its quarterly path: from 2007 the path is invariant, within 0.3 percentage points, to the model's steady state. The informal share declines from about 30% of GDP in 1993 to 20% in 2026Q2, while labor informality falls from about 69% to 54%. The estimates lie within the range of published shadow-economy series for Colombia, close to the enhanced MIMIC estimates of Asllani, Dell'Anno and Schneider for 2009-2020. Sensitivity analysis quantifies the role of the capital share and of non-wage labor costs.",
    "source": "arxiv"
@@ -35,12 +81,12 @@
    "primary_category": "econ.GN",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A difference-in-differences style study of how adoption of the GitHub Copilot AI coding assistant across 5,414 multinational firms affected technical hiring, separations, headcount, vacancy duration, and the seniority mix of technical roles, using firms' predetermined software procurement cycles as a natural experiment.",
-    "plain": "This paper asks whether AI tools that write computer code are changing how many programmers companies hire. The authors track thousands of large firms that adopted GitHub Copilot, and use the timing of each firm's routine software purchasing cycle as a quasi-random source of when they adopted it. They report that, one year after adoption, quarterly technical hiring fell by 29% among firms that adopted because of a review, with no change in layoffs, total technical headcount, or how long jobs stayed open.",
-    "why": "It offers causal-style evidence on a question many people care about: whether generative AI reduces demand for workers doing the tasks it can perform. The effect appears concentrated in junior technical roles, and the paper suggests firms shift toward more experienced workers and roles that combine some coding with design work, though the text alone does not show how far these findings generalize beyond this sample.",
+    "ai": true,
     "background": "- Generative AI: software that produces text or code from prompts; GitHub Copilot is an AI assistant that suggests code inside a programmer's editor.\n- Natural experiment: a situation where something other than the researchers' choice (here, firms' scheduled software purchasing cycles) determines who gets a treatment, allowing cause-and-effect inference.\n- Difference-in-differences style comparison: comparing changes over time between adopting and non-adopting groups.\n- Labor demand: how many workers employers want to hire.\n- Separations: workers leaving a firm through quits, layoffs, or firings.\n- Vacancy duration: how long a job posting stays open before it is filled.\n- Junior vs. senior roles: entry-level versus experienced positions; the paper finds the hiring drop is concentrated in junior technical roles.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A difference-in-differences style study of how adoption of the GitHub Copilot AI coding assistant across 5,414 multinational firms affected technical hiring, separations, headcount, vacancy duration, and the seniority mix of technical roles, using firms' predetermined software procurement cycles as a natural experiment.",
+    "plain": "This paper asks whether AI tools that write computer code are changing how many programmers companies hire. The authors track thousands of large firms that adopted GitHub Copilot, and use the timing of each firm's routine software purchasing cycle as a quasi-random source of when they adopted it. They report that, one year after adoption, quarterly technical hiring fell by 29% among firms that adopted because of a review, with no change in layoffs, total technical headcount, or how long jobs stayed open.",
+    "why": "It offers causal-style evidence on a question many people care about: whether generative AI reduces demand for workers doing the tasks it can perform. The effect appears concentrated in junior technical roles, and the paper suggests firms shift toward more experienced workers and roles that combine some coding with design work, though the text alone does not show how far these findings generalize beyond this sample."
    },
    "abstract": "Generative AI has demonstrated human-level performance on technical work tasks, yet evidence on how these task-level capabilities are changing labor demand remains scarce. We study the firm-level adoption of GitHub Copilot, an AI coding assistant, across 5,414 multinational firms accounting for 38% of the U.S. programming workforce. To identify causal effects, we exploit a natural experiment generated by firms' predetermined software procurement cycles. Early AI-adopting firms hired more workers before the launch of GitHub Copilot and had larger, more technical, and older workforces. After one year, GitHub Copilot adoption reduces quarterly technical hiring by 29% among review-induced adopters, with no effect on separations, overall technical headcount, or vacancy duration. The hiring slowdown is concentrated in the subset of junior technical roles that involve the highest share of coding work. Overall, AI coding assistance causes firms to shift demand towards more experienced workers and roles that pair some coding with broader design responsibilities.",
    "source": "arxiv"

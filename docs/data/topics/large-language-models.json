@@ -1,7 +1,55 @@
 {
  "slug": "large-language-models",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28558",
+   "title": "From Reward Engineering to Data-Centric Reinforcement Learning for Effective Agentic Visual Tool Use",
+   "url": "https://arxiv.org/abs/2611.28558",
+   "authors": [
+    "Jin Cui",
+    "Xinyue Long",
+    "Jiepeng Zhou",
+    "Boran Zhao",
+    "Pengju Ren",
+    "Hao Dong"
+   ],
+   "label": "arXiv:2611.28558v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "AOVO proposes a data-centric reinforcement learning method, using counterfactual probing and policy-adaptive data sampling (PADS), to teach multimodal LLMs when to call visual tools without adding tool-specific rewards.",
+    "plain": "This paper is about teaching AI models that can read images and text when it is worth using a visual tool, such as one that looks closer at part of a picture. The authors argue that rewarding tool use directly can warp what the model is trying to do, so instead they change which training questions the model practices on, picking those where seeing more of the image would actually help. They report consistent gains over other tool-using models on visual perception and reasoning benchmarks, with some causal analysis supporting the approach.",
+    "why": "It offers an alternative to reward design for tool use: changing the training data rather than the scoring rules. Its broader relevance to making AI agents use tools more sensibly is plausible, but the text alone does not establish how far the approach generalizes beyond the benchmarks tested.",
+    "background": "- Multimodal large language model (MLLM): a language model that takes images as well as text input.\n- Tool use: the model calls an external function (e.g., zooming into an image region) to gather more information mid-reasoning.\n- Reinforcement learning (RL): training by trial and reward; the model is nudged toward answers that score well.\n- Reward engineering: adding extra scoring rules to steer behavior, which can unintentionally change the goal.\n- Counterfactual probing: checking how the model's answer changes when its inputs or observations are altered, to see whether the visual information mattered.\n- Data sampling: deciding which training questions to show the model and how often.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Multimodal large language models (MLLMs) increasingly use external visual tools to acquire evidence during reasoning, yet learning when to invoke these tools remains challenging. Existing tool-use reinforcement learning (RL) methods often rely on call-contingent rewards to encourage beneficial tool use, but such reward engineering can distort the task objective and lead to degenerate calling behaviors. We argue that effective tool-use learning requires identifying not merely which questions are difficult, but which failures are attributable to missing visual evidence and can therefore be corrected through tool observations. We propose AOVO, a data-centric framework that enables MLLMs to learn effective tool use through perception attribution and policy-adaptive data sampling (PADS), without introducing tool-specific rewards. It counterfactually probes the model's reasoning states to identify observation-sensitive questions, distinguishing them from reasoning-dominated ones. PADS then periodically estimates category-level observation effects from recent policy rollouts and dynamically reallocates the training distribution toward questions where visual observations provide informative learning signals, while optimizing solely for final-answer correctness. Experiments across diverse visual perception and multimodal reasoning benchmarks demonstrate consistent improvements over competitive tool-use MLLMs, with causal analysis further validating the data-centric perspective for learning effective visual tool use.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28929",
+   "title": "Definition-Guided In-Context Learning for Zero-Shot Spoken Language Understanding",
+   "url": "https://arxiv.org/abs/2611.28929",
+   "authors": [
+    "Neeraj Agrawala",
+    "Sriram Ganapathy"
+   ],
+   "label": "arXiv:2611.28929v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proposes Definition-Guided In-Context Learning (DG-ICL), a fine-tuning method that trains speech-text models to classify spoken input using natural-language definitions of labels, with labels randomized to synthetic tokens or permuted words, so new categories can be added at inference without demonstrations or retraining.",
+    "plain": "Voice systems that sort spoken requests into categories usually need new labeled recordings and retraining whenever the category list changes. This paper tests whether a plain-language description of each category, given in the instructions, is enough for a speech-AI model to handle categories it never saw during training. The authors report that their training method, which hides the usual label names behind random symbols or swapped words, beats standard instruction tuning on held-out tasks with novel labels.",
+    "why": "If definitions alone can steer a speech model, category lists could be updated by editing text rather than collecting data and retraining, which matters for real deployments. The text reports gains on three models, but it is a single preprint and the evaluation is limited to the settings described, so the practical reach is still unclear.",
+    "background": "- Spoken language understanding (SLU): turning speech into structured meaning, such as an intent or slot label.\n- Zero-shot / few-shot: handling new categories with no examples, or only a few shown in the prompt.\n- In-context learning: a model learns a task from instructions or examples written in its input, without changing its weights.\n- Instruction tuning: fine-tuning a model on instruction-and-answer pairs so it follows directions.\n- Macro-F1: an accuracy-style score that averages performance across categories, giving rare categories equal weight.\n- Audio-language models: models such as Qwen2-Audio, SALMONN and Audio Flamingo 3 that take audio and text as input.\n- Counterfactual evaluation: testing whether a model follows a definition even when it contradicts what it learned before.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Adapting spoken language understanding (SLU) systems to novel or revised label taxonomies conventionally requires additional labeled data and retraining, creating a bottleneck for real world deployment. While in-context learning with few-shot demonstrations offers an alternative, multi-modal generalization and scaling has been challenging. In this work, we investigate whether natural-language definitions alone can guide zero-shot SLU without demonstration exemplars, finding that symbolic definitions serve as the primary supervisory driver for adapting speech-text models. We operationalize this principle as Definition-Guided In-Context Learning (DG-ICL), a fine-tuning framework that decouples semantic categories from fixed lexical names. By replacing labels with dynamically randomized definitions (arbitrary synthetic tokens in DG-ICL-Sym or permuted vocabulary words in DG-ICL-Flip), DG-ICL avoids lexical shortcuts and encourages the model to ground acoustic representations in contextual definitions. Novel categories can thus be introduced at inference simply by defining them through the instructions. Across three speech-text models (AUDIO FLAMINGO 3, QWEN2-AUDIO, and SALMONN), DG-ICL outperforms standard instruction tuning on held-out tasks under novel symbols (0.663 vs. 0.449 macro-F1 on Audio Flamingo 3; 0.703 vs. 0.620 on Qwen2-Audio; 0.582 vs. 0.399 on SALMONN), while remaining competitive on original labels. Furthermore, counterfactual evaluations demonstrate instruction following abilities, where it is shown that DG-ICL-Sym retains 68% of its performance when definitions contradict pre-trained lexical priors, whereas standard instruction tuning elicits significantly reduced retention of 21%. Finally, we show that DG-ICL enables zero-shot speech clustering into user-defined categories specified on the fly",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30181",
    "title": "Retrieval-Augmented Generation in the Agentic Era: Tradition, Present, and Prospect",
@@ -20,12 +68,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A survey that organizes retrieval-augmented generation (RAG) along one lifecycle axis, from offline indexing through pre-retrieval, retrieval, post-retrieval and orchestration, and treats agentic workflows as a paradigm of their own.",
-    "plain": "Language models answer questions from what they memorized during training, which can be outdated or wrong. This paper is a review of a common fix: letting the model look up material from an external, updatable source before it answers. It maps the whole process, from preparing the document store to deciding how the model uses what it finds, and it covers newer setups where the model acts as an agent that plans and repeats lookups.",
-    "why": "Retrieval is one of the main ways people try to make language model answers more current and checkable, so a structured overview is useful for anyone building or evaluating these systems. The text does not give evidence of new experimental results; its value is as a map of existing work, and its significance for the field is for readers to judge.",
+    "ai": true,
     "background": "- Language models generate text from patterns learned in training (their \"parametric memory\").\n- RAG adds a step that searches an outside collection of documents and feeds relevant passages to the model.\n- Indexing means preparing searchable representations of documents ahead of time.\n- Pre-retrieval and post-retrieval refer to steps before the search (e.g., rewriting the question) and after it (e.g., filtering or condensing results).\n- Orchestration means coordinating these steps, often with an agent that decides what to do next.\n- \"Agentic\" refers to systems that plan, take actions, and loop through tool use rather than producing a single answer.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A survey that organizes retrieval-augmented generation (RAG) along one lifecycle axis, from offline indexing through pre-retrieval, retrieval, post-retrieval and orchestration, and treats agentic workflows as a paradigm of their own.",
+    "plain": "Language models answer questions from what they memorized during training, which can be outdated or wrong. This paper is a review of a common fix: letting the model look up material from an external, updatable source before it answers. It maps the whole process, from preparing the document store to deciding how the model uses what it finds, and it covers newer setups where the model acts as an agent that plans and repeats lookups.",
+    "why": "Retrieval is one of the main ways people try to make language model answers more current and checkable, so a structured overview is useful for anyone building or evaluating these systems. The text does not give evidence of new experimental results; its value is as a map of existing work, and its significance for the field is for readers to judge."
    },
    "abstract": "Retrieval-augmented generation (RAG) couples frozen language models with external, updatable knowledge, so that generation is grounded in retrieved evidence rather than in parametric memory alone. This work maps RAG in the agentic era by joining them on a single lifecycle axis, from offline indexing through pre-retrieval, retrieval, post-retrieval, and orchestration over these stages. It treats indexing and orchestration as first-class components and agentic workflows as a paradigm of their own, and it covers the agentic work that has appeared since those reviews. Beyond these components, it covers evaluation, applications, and the questions that remain open for future exploration. From tradition to present and beyond, this work systematically reviews RAG from a perspective of the agentic era.",
    "source": "arxiv"
@@ -50,12 +98,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "FiRE proposes reference-free, criterion-driven pairwise ranking of machine translations by off-the-shelf LLMs along faithfulness, fluency, and style consistency, plus a new human-annotated benchmark and an analysis of LLM evaluator biases.",
-    "plain": "Companies and researchers need a reliable way to tell which machine translation is better, without a human-written reference translation to compare against. This paper proposes asking a large language model to compare two translations side by side on three separate qualities (accuracy to the source, smoothness of the language, and consistent style), rather than giving one overall score. The authors also built a new set of translations ranked by human annotators to test the method, and report that it agrees with human comparisons better than the older scoring approaches they tested.",
-    "why": "Better evaluation is what lets translation systems be improved and compared fairly, and the paper's finding that LLM judges show position and self-preference biases is useful for anyone using LLMs as graders. The claimed gains are based on the authors' own benchmark and existing MQM datasets, so they should be checked by independent work.",
+    "ai": true,
     "background": "- Machine translation (MT): software that converts text from one language to another.\n- Reference-free evaluation: judging a translation using only the source and the output, with no human \"correct\" translation.\n- Pairwise comparison: showing a judge two outputs and asking which is better, instead of scoring each one.\n- Large language models (LLMs) as judges: using a general AI chat model to grade outputs.\n- Regression-based metrics: scoring methods trained to predict human ratings with a numeric formula.\n- MQM (Multidimensional Quality Metrics): a framework where human experts label and weight translation errors.\n- Inter-annotator agreement: how consistently different human raters give the same judgments; a measure of label reliability.\n- Position and self-enhancement bias: tendencies for a judge to favor an option based on its order or on the judge's own style of output.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "FiRE proposes reference-free, criterion-driven pairwise ranking of machine translations by off-the-shelf LLMs along faithfulness, fluency, and style consistency, plus a new human-annotated benchmark and an analysis of LLM evaluator biases.",
+    "plain": "Companies and researchers need a reliable way to tell which machine translation is better, without a human-written reference translation to compare against. This paper proposes asking a large language model to compare two translations side by side on three separate qualities (accuracy to the source, smoothness of the language, and consistent style), rather than giving one overall score. The authors also built a new set of translations ranked by human annotators to test the method, and report that it agrees with human comparisons better than the older scoring approaches they tested.",
+    "why": "Better evaluation is what lets translation systems be improved and compared fairly, and the paper's finding that LLM judges show position and self-preference biases is useful for anyone using LLMs as graders. The claimed gains are based on the authors' own benchmark and existing MQM datasets, so they should be checked by independent work."
    },
    "abstract": "Developing reliable machine translation (MT) systems hinges on our ability to distinguish superior translations from inferior ones. However, existing evaluation paradigms, whether limited to coarse overall rankings or misaligned with human preferences, fail to deliver interpretable, fine-grained feedback in reference-free settings. We present a Fine-Grained Ranking Evaluation method (FiRE) that leverages off-the-shelf large language models to perform criterion-driven pairwise comparison across three complementary dimensions: faithfulness, fluency, and consistency of style, instead of producing a single holistic judgment. To enable rigorous meta-evaluation of evaluation paradigms in the absence of any suitable testbed, we construct the first human-annotated, reference-free benchmark for fine-grained ranking evaluation, achieving substantial inter-annotator agreement. Through meta-evaluation on this benchmark and existing MQM datasets, FiRE demonstrably outperforms regression-based and error-analysis metrics in aligning with human comparative judgments, while providing more informative insights into translation quality. Finally, our examination of LLM evaluator biases (position and self-enhancement) and their handling of tied cases offers guidance for more nuanced MT evaluation. Code and benchmark resources are available at https://github.com/wygao8/FiRE-MT.",
    "source": "arxiv"

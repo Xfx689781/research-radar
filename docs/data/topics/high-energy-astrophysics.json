@@ -1,7 +1,79 @@
 {
  "slug": "high-energy-astrophysics",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30454",
+   "title": "Tidal effects of bulk viscosity in neutron stars",
+   "url": "https://arxiv.org/abs/2611.30454",
+   "authors": [
+    "A. Kanakis-Pegios",
+    "P. S. Koliogiannis",
+    "Ch. C. Moustakidis"
+   ],
+   "label": "arXiv:2611.30454v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A study of how bulk viscosity from direct Urca neutrino reactions in neutron-star matter adds tidal dissipation, using an effective volume-averaged viscosity, with lag time and dissipative deformability reported versus temperature and compactness for 1.4 solar-mass and maximum-mass stars.",
+    "plain": "Neutron stars are extremely dense stellar remnants, and when two orbit each other they stretch and squeeze one another via tides. This paper asks how the internal friction of the star's matter, called bulk viscosity, changes that tidal stretching by turning some of the motion into heat. The authors model the effect at temperatures up to a few MeV, and they report that it peaks at a temperature close to where the viscosity itself is largest.",
+    "why": "Tidal effects are what gravitational-wave detectors use to learn about neutron-star interiors during binary inspirals, so a dissipative signature could in principle be a probe of the matter. The text does not establish whether such effects are large enough to be detected, and it only gives causality-based upper bounds as benchmarks.",
+    "background": "- Neutron star: a collapsed star roughly 1.4 times the Sun's mass squeezed into about 20 km across.\n- Tides: the gravitational stretching one body causes on another; the stretch lags slightly when the star's matter dissipates energy.\n- Bulk viscosity: resistance of dense matter to being compressed and expanded out of balance; it converts motion into heat.\n- Direct Urca process: a fast neutrino-emitting reaction that restores chemical balance between neutrons, protons and electrons.\n- Equation of state: the rule relating pressure, density and composition of the star's matter.\n- Compactness: mass divided by radius, a measure of how strongly gravity compresses the star.\n- Lag time and dissipative deformability: measures of how far and how late the tidal bulge trails the orbit, and the energy-loss-related tidal response.\n- Neutrino-transparent regime: conditions where neutrinos escape the star freely.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Bulk viscosity in neutron-star matter provides a temperature-dependent mechanism for tidal dissipation. In this study, we investigate the impact of bulk viscosity on the dissipative tidal response of neutron stars composed of neutrons, protons, and electrons. Employing cold equations of state derived through the momentum-dependent interaction model, we examine the bulk viscosity arising from the direct Urca process, which acts to restore chemical equilibrium. The temperature dependence is incorporated through the weak-interaction rate, allowing us to explore the behavior of bulk viscosity in the neutrino-transparent regime at temperatures up to a few MeV. To account for the spatial distribution of bulk viscosity within neutron stars, we introduce the effective bulk viscosity, a volume-averaged quantity over the region where direct Urca process operates, and establish a connection with the bulk viscosity. Specifically, we investigate its implications for tidal quantities, including the lag time and dissipative deformability, highlighting their dependence on temperature and stellar compactness. We find that the dissipative tidal effects become maximal at a temperature approximately coinciding with the one of maximum bulk viscosity on the onset of direct Urca. Additionally, these effects are more pronounced in intermediate neutron star masses compared to maximum ones. Finally, for both canonical $1.4\\;M_\\odot$ and maximum-mass neutron star configurations, we derive causality-based upper bounds on these quantities, providing theoretical benchmarks for assessing the potential observability of bulk-viscous effects in gravitational-wave signals from binary neutron star inspirals.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28250",
+   "title": "Fast Radio Bursts Co-detected by CHIME/FRB and DSA-110 from 400 to 1530 MHz",
+   "url": "https://arxiv.org/abs/2611.28250",
+   "authors": [
+    "S. K. Ocker",
+    "K. Nimmo",
+    "J. Faber",
+    "K. Shin",
+    "V. Ravi",
+    "F. Verdi",
+    "N. Jain",
+    "Z. Pleunis",
+    "A. Pandhi",
+    "M. Sherman",
+    "D. Jow",
+    "S. Pradeep E. T.",
+    "D. Amouyal",
+    "L. Connor",
+    "A. Curtin",
+    "M. Fine",
+    "B. M. Gaensler",
+    "J. W. T. Hessels",
+    "V. Kaspi",
+    "A. Khan",
+    "C. Law",
+    "R. Main",
+    "K. McGregor",
+    "A. B. Pearlman",
+    "M. Sammons",
+    "P. Scholz",
+    "K. Sharma",
+    "K. Smith",
+    "I. Stairs"
+   ],
+   "label": "arXiv:2611.28250v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A sample of 15 fast radio bursts detected by both the CHIME/FRB and DSA-110 telescopes (12 with channelized voltage data, 9 with secure redshifts) is used to study spectral shape, scattering, and selection effects across 400 to 1530 MHz.",
+    "plain": "Fast radio bursts are brief, very bright flashes of radio waves from distant galaxies. This paper looks at 15 of them that were caught by two different radio telescope systems, which together cover a wide range of radio frequencies. The authors compare how the bursts' energy and brightness change across that range, and how their signals are smeared out as they travel.",
+    "why": "Few bursts have been seen across more than one gigahertz of radio spectrum, so this sample helps test how bursts emit and how their signals are scattered on the way to us. The paper reports that the two telescopes appear to pick out different subsets of bursts, which matters for interpreting survey results and designing future wide-band surveys; the broader physical implications are not established by the text.",
+    "background": "- Fast radio bursts (FRBs): millisecond-long radio flashes of unknown origin, mostly from other galaxies.\n- Redshift: a measure of distance, inferred from how much a source's light is stretched on the way to Earth; \"secure\" means the host galaxy was identified reliably.\n- Repeating vs. non-repeating: some FRBs flash again; most reported here have not been seen to repeat.\n- MHz/GHz: units of radio frequency; CHIME observes 400 to 800 MHz and DSA-110 observes 1280 to 1530 MHz.\n- Spectral index and spectral turnover: describe how a burst's brightness changes with frequency, and whether it peaks at some frequency.\n- Pulse broadening and scintillation: scattering by intervening plasma stretches a pulse in time and causes twinkling in frequency, like starlight shimmering.\n- Selection effect: a bias in which objects a survey is able to detect.\n- Pulsars and magnetars: rotating neutron stars; some show spectra peaking near a gigahertz, which the paper compares to certain bursts.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a sample of $15$ fast radio bursts (FRBs) that were co-detected by the Deep Synoptic Array (DSA-110) and the Canadian Hydrogen Intensity Mapping Experiment (CHIME) between 2022 and 2024, of which $12$ have channelized voltage data from both instruments and 9 have secure redshifts. All but one are as-yet-non-repeating. Most bursts span the entire bandwidth of each instrument (400-800 MHz for CHIME, 1280-1530 MHz for DSA-110), significantly expanding the number of FRBs known to emit across $>1$ GHz of spectral bandwidth and constraining the spectral evolution of energy and propagation effects. On average, the FRBs exhibit higher spectral energies (up to a factor of $\\sim10$) in the CHIME band but are lower in peak flux density due to substantial pulse broadening. The sample mean (median) spectral index $-0.4\\pm0.4$ ($-0.3\\pm0.4$) is shallower than previously reported spectral indices, likely a selection effect. A third of the sample shows evidence for a spectral turnover, comparable to that seen in GHz-peaked pulsar and magnetar spectra. Joint scintillation and pulse broadening constraints indicate that nearly all bursts encounter multiple scattering screens, with pulse broadening originating within their host galaxies. The co-detected bursts are among the most scattered in the CHIME/FRB sample, while being the narrowest in the DSA-110 sample, indicating that CHIME/FRB and DSA-110 select different subsets of the FRB population; the interplay between intrinsic burst width, scattering, and the FRB search time resolution creates a narrow window of sensitivity to co-detected FRBs, providing a blueprint for future ultra-wideband FRB surveys.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31172",
    "title": "Enhancing eccentricity through tidal resonance in binary neutron star systems",
@@ -15,12 +87,12 @@
    "primary_category": "gr-qc",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Numerical-relativity simulations show that a highly spinning, retrograde neutron star can resonate with its own f-mode during the late inspiral of a binary neutron star, pumping eccentricity into an otherwise quasicircular orbit and transferring spin from the orbit to the star, with a simple resonance-locking model reproducing the spin change.",
-    "plain": "Two neutron stars, the dense collapsed cores of once-massive stars, can spiral toward each other and merge. Usually their orbits become almost perfectly circular before they merge, so a noticeably oval orbit is a hint that they formed in a crowded star cluster. This paper uses supercomputer simulations of Einstein's gravity to show that a rapidly spinning star can make its orbit oval on its own, through a resonance in how its body vibrates under the other star's pull.",
-    "why": "Measured orbital eccentricity is proposed as a clue to how a merging pair formed, so a non-formation-based source of eccentricity could complicate that inference. The text reports a specific mechanism and a simple model for it, but it is a simulation study of one configuration (two highly spinning stars, one prograde and one retrograde), so how common or large the effect is in real systems is not established here.",
+    "ai": true,
     "background": "- Binary neutron star: two neutron stars orbiting each other; their merger emits gravitational waves that detectors can measure.\n- Orbital eccentricity: how far an orbit departs from a perfect circle; circular is zero.\n- Quasicircular inspiral: the slow spiral-in phase when the orbit is nearly circular.\n- Numerical relativity: computer simulations solving Einstein's equations for strong gravity.\n- f-mode (fundamental mode): a natural vibration pattern of a star's body; resonance occurs when an outside driving frequency matches it.\n- Spin-orbit angular momentum transfer: the star's spin and the orbit exchange spin angular momentum, so a change in one changes the other.\n- Prograde vs retrograde spin: spinning in the same direction as the orbit vs the opposite direction.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Numerical-relativity simulations show that a highly spinning, retrograde neutron star can resonate with its own f-mode during the late inspiral of a binary neutron star, pumping eccentricity into an otherwise quasicircular orbit and transferring spin from the orbit to the star, with a simple resonance-locking model reproducing the spin change.",
+    "plain": "Two neutron stars, the dense collapsed cores of once-massive stars, can spiral toward each other and merge. Usually their orbits become almost perfectly circular before they merge, so a noticeably oval orbit is a hint that they formed in a crowded star cluster. This paper uses supercomputer simulations of Einstein's gravity to show that a rapidly spinning star can make its orbit oval on its own, through a resonance in how its body vibrates under the other star's pull.",
+    "why": "Measured orbital eccentricity is proposed as a clue to how a merging pair formed, so a non-formation-based source of eccentricity could complicate that inference. The text reports a specific mechanism and a simple model for it, but it is a simulation study of one configuration (two highly spinning stars, one prograde and one retrograde), so how common or large the effect is in real systems is not established here."
    },
    "abstract": "Orbital eccentricity of binary neutron star systems is a key parameter to reveal their formation history. Since binaries formed in isolation are expected to circularize long before merger, measurable eccentricity suggests dynamical formation in dense stellar environments. However, using numerical-relativity simulations, we show that eccentricity can be introduced in the late inspiral of an initially quasicircular binary, due to the $f$-mode resonance of one of the stars. We simulate the merger of two highly spinning neutron stars, one star spinning prograde and the other retrograde. Persistent tidal resonance with the $f$ mode of the retrograde-spinning star is observed, accompanied by a gradual change of its spin due to angular momentum transfer from the orbit. This spin change can be well explained by a simple resonance locking model that accounts for the spin-dependent shift of the $f$-mode frequency. These findings reveal an origin of eccentricity in binary neutron stars that is independent of their formation history and provide important information for modeling binary neutron star dynamics with rapidly spinning stars.",
    "source": "arxiv"
@@ -39,12 +111,12 @@
    "primary_category": "astro-ph.HE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A source-level Bayesian framework treats each fast radio burst's host-galaxy dispersion measure as a latent variable drawn from a shared lognormal population, fit by EM to 92 localized FRBs, to estimate the probability that each sightline retains a positive excess cosmological DM.",
-    "plain": "Fast radio bursts are brief flashes of radio waves from distant sources, and their signals are delayed by the electrons they pass through on the way to us. Part of that delay comes from the burst's own host galaxy, which is hard to measure directly, so the extra electrons along the line of sight are uncertain. This paper treats the host contribution as an unknown drawn from a shared population, and estimates for each of 92 localized bursts how likely it is that some electrons remain after subtracting that host share.",
-    "why": "The probability of a leftover excess gives a way to rank which bursts are worth follow-up searches for intervening galaxies, groups, clusters or large-scale structure. The paper reports that bursts previously linked to foreground material tend to score high, which supports the idea, though the 18 new candidates still need observational checks that the text does not describe.",
+    "ai": true,
     "background": "- Dispersion measure (DM): how much a radio pulse is delayed by free electrons along its path; larger values mean more electrons.\n- The total DM is a sum of parts: the Milky Way, the intergalactic medium (the cosmic baryon reservoir), the host galaxy, and any intervening galaxies or halos.\n- Localized FRBs: bursts whose position on the sky has been pinned to a specific host galaxy, so host redshift is known.\n- Lognormal distribution: a skewed distribution for positive quantities whose logarithm is normally distributed.\n- Expectation–maximization (EM): an iterative statistical method for fitting models that include hidden (latent) variables.\n- Marginalizing: averaging over an uncertain quantity instead of fixing it to one value.\n- Foreground follow-up: deep imaging or spectroscopy of fields along a burst's sightline to look for intervening matter.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A source-level Bayesian framework treats each fast radio burst's host-galaxy dispersion measure as a latent variable drawn from a shared lognormal population, fit by EM to 92 localized FRBs, to estimate the probability that each sightline retains a positive excess cosmological DM.",
+    "plain": "Fast radio bursts are brief flashes of radio waves from distant sources, and their signals are delayed by the electrons they pass through on the way to us. Part of that delay comes from the burst's own host galaxy, which is hard to measure directly, so the extra electrons along the line of sight are uncertain. This paper treats the host contribution as an unknown drawn from a shared population, and estimates for each of 92 localized bursts how likely it is that some electrons remain after subtracting that host share.",
+    "why": "The probability of a leftover excess gives a way to rank which bursts are worth follow-up searches for intervening galaxies, groups, clusters or large-scale structure. The paper reports that bursts previously linked to foreground material tend to score high, which supports the idea, though the 18 new candidates still need observational checks that the text does not describe."
    },
    "abstract": "Fast radio bursts (FRBs) provide a unique probe of diffuse baryons through their dispersion measure (DM), but interpreting a large DM for an individual burst is limited by the uncertain contribution from its host galaxy, which is hard to directly observed. We address this gap with a source-level diagnostic framework that treats $\\mathrm{DM_{host}}$ as a latent variable drawn from a shared lognormal population, thereby marginalizing over the uncertain host contribution. Applying an expectation--maximization (EM) inference scheme to 92 localized FRBs, we jointly estimate the host-DM population and obtain a model-conditioned host-DM distribution for each burst. We propagate these distributions into an excess cosmological DM for each sightline, quantifying both its uncertainty and the probability that a positive excess remains after accounting for the host contribution. FRBs previously reported to show evidence for foreground or intervening contributions preferentially exhibit high probabilities of retaining such an excess, indicating that this source-level probability can provide a useful statistic for prioritizing foreground follow-up observations. Using this diagnostic, we identify 18 additional localized FRBs as high-priority candidates for follow-up searches for possible intervening galaxies, groups, clusters, or large-scale structure.",
    "source": "arxiv"

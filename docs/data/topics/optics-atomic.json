@@ -1,7 +1,55 @@
 {
  "slug": "optics-atomic",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29115",
+   "title": "Reconfigurable Microwave Photonic All-Pass Filters based on Optical Kerr Microcombs",
+   "url": "https://arxiv.org/abs/2611.29115",
+   "authors": [
+    "David J. Moss"
+   ],
+   "label": "arXiv:2611.29115v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proposes and experimentally demonstrates microwave photonic all-pass filters (1st and 2nd order) built on a Kerr microcomb-driven transversal filter, reconfigurable by changing tap coefficients in software.",
+    "plain": "The paper describes a way to shift the timing (phase) of radio-frequency signals using light, without changing their strength. The authors built first- and second-order versions of such a filter from an optical frequency comb, a set of evenly spaced laser colors. They report that the filter's settings can be changed by reprogramming its tap coefficients (the weights applied to each comb line) rather than by rebuilding the hardware.",
+    "why": "Precise control of signal phase matters for high-bandwidth radar, communications and signal processing, so a filter that is both low-loss and easy to reconfigure could be useful there. The text reports measured group delays of 580 ps (1st order) and 1740 ps (2nd order) with amplitude variation around 2 dB, but it does not compare these against competing methods, so its practical standing is unclear.",
+    "background": "- Microwave photonics: using light to process radio-frequency signals, often for bandwidth or flexibility.\n- All-pass filter: a filter that changes the phase (timing) of a signal while leaving its amplitude roughly unchanged.\n- Group delay: how much a signal's envelope is delayed at each frequency; larger values mean stronger phase change.\n- Optical Kerr microcomb: a set of many equally spaced optical colors generated in a tiny resonator by a nonlinear optical effect.\n- Transversal filter (tapped delay line): a filter that sums weighted, delayed copies of a signal; the tap coefficients are the weights.\n- Order of a filter: roughly, how many poles or phase-shifting stages it has; higher order gives sharper phase transitions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Microwave photonic (MWP) all pass filters (APFs), which enable phase manipulation without altering signal amplitudes, are essential for phase engineering in high bandwidth microwave signal processing. However, achieving a high degree of reconfigurability in the filter order and characteristic parameters of APFs remains challenging for conventional methods. Here, we propose and experimentally demonstrate a new strategy for realizing MWP APFs based on a microcomb driven transversal filter system, enabling high reconfigurability, sharp phase transitions with high group delays, and low loss. We experimentally demonstrate both 1st and 2nd order APFs, achieving a maximum amplitude variation (MAV) of 1.95 dB and a maximum group delay (MGD) of 580 ps for the former, and a MAV of 2.01 dB and an MGD of 1740 ps for the latter. In addition, both independent and joint tuning of APF characteristic parameters are demonstrated by simply programming the tap coefficients without changing any hardware, enabling highly reconfigurable filter response for diverse phase engineering functionalities. These results highlight the potential of our approach for implementing MWP APFs with both high performance and reconfigurability for practical applications requiring dynamic and versatile phase control.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28458",
+   "title": "Anisoplanatic Blind Deconvolution using Phase Diversity",
+   "url": "https://arxiv.org/abs/2611.28458",
+   "authors": [
+    "Shubhankar Jape",
+    "Seungman Choi",
+    "Peter Menart",
+    "Andrew Schramka",
+    "Pratyush Uppuluri",
+    "Vaneet Aggarwal",
+    "Zubin Jacob"
+   ],
+   "label": "arXiv:2611.28458v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proposes coded anisoplanatic blind deconvolution (CA-BD), which uses a pupil-plane spatial light modulator to apply known phase codes across short image bursts to jointly estimate a scene and spatially varying atmospheric phase, and compares it in simulation against tuned multiframe blind deconvolution.",
+    "plain": "Turbulence in the air bends light from distant objects and blurs images, and the blur differs from one part of the view to another and changes over time. This paper describes a way to undo that blur by placing a programmable light-shaping device in the imaging path that applies a known pattern to each frame, so the frames differ in a controlled way even when taken quickly. In simulations, the authors report that this approach recovers phase errors more accurately than a standard reconstruction method, especially in stationary turbulence.",
+    "why": "Imaging through turbulence matters for astronomy and long-range surveillance, where fast capture is often needed. The text reports only simulation results, so how well the approach works with real hardware and real air is not shown here.",
+    "background": "- Atmospheric turbulence: small changes in air temperature and density that distort light's wavefront and blur images.\n- Isoplanatic angle: the angular region over which the blur is roughly the same; beyond it, the blur varies across the image (anisoplanatism).\n- Blind deconvolution: recovering a sharp image when the blur itself is unknown, estimated jointly with the scene.\n- Phase diversity: using several measurements with known, different phase distortions so the unknowns can be separated.\n- Spatial light modulator (SLM): a programmable device that changes the phase of light across the aperture.\n- Cramér-Rao bound: a theoretical lower limit on how precisely a parameter can be estimated from measured data.\n- Coherence time: how long the turbulence stays roughly fixed; the paper's fast-capture advantage depends on measurements taken within a few of these.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Atmospheric turbulence distorts the wavefront of light from a distant scene and blurs its image. Over a field of view wider than the isoplanatic angle, the distortion varies with direction and evolves in time, so no single wavefront describes the blur. Multiframe blind deconvolution (MFBD) can recover the scene from measurements spread over a long acquisition, but falls short during fast imaging because of limited diversity across measurements. We present coded anisoplanatic blind deconvolution (CA-BD), in which a pupil-plane spatial light modulator (SLM) applies a different known phase code to every measurement, with no wavefront sensor or deformable mirror, so that the measurements carry diversity even within a short acquisition. A per-pixel single-layer estimator recovers the object and spatially varying phases from the coded measurements. In simulation, a Cram\\'er-Rao bound analysis shows that under anisoplanatism direct imaging needs about 41 times the photons of coded imaging for equal phase precision in strong turbulence. At the stronger of two turbulence strengths, CA-BD outperforms tuned MFBD on average at every burst length. It reduces the phase mean squared error 3.5x for stationary turbulence and 2-3x for time-varying turbulence. Measurements taken within a few coherence times benefit most from the known coded SLM patterns, making faster SLMs the key to its full advantage in time-varying turbulence.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30257",
    "title": "Stellar Temporal Intensity Interferometry with Adaptive Optics at the Palomar Observatory",
@@ -19,12 +67,12 @@
    "primary_category": "astro-ph.IM",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper reports the first detection of temporal photon bunching (a correlation in photon arrival times, quantified by g^(2)(0)) from a resolved star, α Her, using narrowband filtering, fast single-photon counters, and the adaptive optics system at Palomar Observatory.",
-    "plain": "Starlight arrives as a stream of individual light particles, and their arrival times can be correlated in a way that depends on the star's size and on quantum statistics. The authors looked for this timing pattern in light from the red supergiant α Her, using a very narrow color filter, fast photon detectors, and the telescope's adaptive optics, which corrects for air turbulence. They report a peak correlation value of 1.3 ± 0.1 for this star.",
-    "why": "The text claims this shows temporal intensity interferometry can be a practical observing method, linking quantum optics with stellar astronomy. Whether it will yield stellar measurements beyond this one target is not shown in the text, so its broader reach remains uncertain.",
+    "ai": true,
     "background": "- Photon bunching: photons from thermal sources like stars tend to arrive in clumps; g^(2)(0) measures the strength of this clumping at zero time delay (1 means no correlation, higher means more bunching).\n- Intensity interferometry: combining light intensity fluctuations from two telescopes (rather than raw light waves) to measure a star's angular size; it is robust to air turbulence.\n- Temporal vs spatial correlation: spatial intensity interferometry compares light between separated telescopes; temporal version compares arrival times of photons at one detector.\n- Adaptive optics: deformable mirrors that cancel out atmospheric blurring in real time.\n- Narrowband spectral filtering: restricting light to a very narrow color band so the quantum correlation is not washed out.\n- Single-photon counting: detectors that register individual photons and their arrival times.\n- Red supergiant: a very large, cool, luminous star near the end of its life.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper reports the first detection of temporal photon bunching (a correlation in photon arrival times, quantified by g^(2)(0)) from a resolved star, α Her, using narrowband filtering, fast single-photon counters, and the adaptive optics system at Palomar Observatory.",
+    "plain": "Starlight arrives as a stream of individual light particles, and their arrival times can be correlated in a way that depends on the star's size and on quantum statistics. The authors looked for this timing pattern in light from the red supergiant α Her, using a very narrow color filter, fast photon detectors, and the telescope's adaptive optics, which corrects for air turbulence. They report a peak correlation value of 1.3 ± 0.1 for this star.",
+    "why": "The text claims this shows temporal intensity interferometry can be a practical observing method, linking quantum optics with stellar astronomy. Whether it will yield stellar measurements beyond this one target is not shown in the text, so its broader reach remains uncertain."
    },
    "abstract": "Spatial intensity interferometry has seen a major resurgence in astronomy due to its immunity to atmospheric phase turbulence, but its temporal counterpart - a cornerstone of quantum optics - has remained largely unexplored for astronomical sources. Here, we demonstrate that high-visibility temporal photon bunching signatures from stellar sources are now accessible by combining ultra-narrowband spectral filtering with high-speed single-photon counting detectors. Leveraging the adaptive optics architecture at the Palomar Observatory, we report the first observation of resolved stellar temporal photon bunching, with a peak of $g^{(2)}(\\tau=0) = 1.3 \\pm 0.1$, from the red supergiant $\\alpha$ Her. This advance establishes stellar temporal intensity interferometry as a viable observational modality, bridging quantum optics with high-resolution stellar astrophysics.",
    "source": "arxiv"
@@ -47,12 +95,12 @@
    "primary_category": "physics.optics",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Shows that making cerium-doped yttrium iron garnet (Ce:YIG) films closer to exact stoichiometry, via an iron-deficient sputtering target, removes nano-cluster defects and yields a silicon Mach-Zehnder optical isolator with 1.2 dB insertion loss at 1556 nm.",
-    "plain": "Optical isolators are devices that let light pass in one direction while blocking reflections going back, which keeps chip-based light circuits stable. This paper addresses why such isolators on silicon chips lose too much light, and traces the problem to the chemical makeup of the magnetic garnet film used in them. By adjusting the target material so the film has the intended chemical ratio, the authors removed small clusters of mismatched material and built an isolator that lost only 1.2 dB of light.",
-    "why": "Insertion loss is a main obstacle to putting isolators on photonic chips, so a lower loss figure matters for that goal. The text reports a figure of merit 1.7 times higher than non-stoichiometric films, but it describes a single device demonstration, so its broader practical impact is not yet shown.",
+    "ai": true,
     "background": "- Optical isolator: a one-way valve for light; it stops back-reflected light from disturbing a laser or circuit.\n- Photonic integrated circuit (PIC): a chip that guides light through tiny waveguides, analogous to an electronic chip for light.\n- Magneto-optical (MO) effect: a material rotates the polarization of light when a magnetic field is applied; this rotation is what enables one-way behavior.\n- Faraday rotation: the amount of polarization rotation per unit length; measured in degrees per centimeter.\n- Figure of merit (FoM) here: Faraday rotation divided by optical loss, in degrees per dB; higher means less loss for a given rotation.\n- Stoichiometry: the exact ratio of elements in a compound; deviations can form unwanted clusters.\n- Ce:YIG: cerium-substituted yttrium iron garnet, a magneto-optical garnet material.\n- Mach-Zehnder interferometer (MZI): a light-splitting and recombining layout used here to build the isolator.\n- Insertion loss (dB) and isolation ratio (dB): how much light is lost passing forward, and how strongly backward light is blocked.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Shows that making cerium-doped yttrium iron garnet (Ce:YIG) films closer to exact stoichiometry, via an iron-deficient sputtering target, removes nano-cluster defects and yields a silicon Mach-Zehnder optical isolator with 1.2 dB insertion loss at 1556 nm.",
+    "plain": "Optical isolators are devices that let light pass in one direction while blocking reflections going back, which keeps chip-based light circuits stable. This paper addresses why such isolators on silicon chips lose too much light, and traces the problem to the chemical makeup of the magnetic garnet film used in them. By adjusting the target material so the film has the intended chemical ratio, the authors removed small clusters of mismatched material and built an isolator that lost only 1.2 dB of light.",
+    "why": "Insertion loss is a main obstacle to putting isolators on photonic chips, so a lower loss figure matters for that goal. The text reports a figure of merit 1.7 times higher than non-stoichiometric films, but it describes a single device demonstration, so its broader practical impact is not yet shown."
    },
    "abstract": "Integrated optical isolators play a crucial role in photonic integrated circuits (PICs) by effectively stabilizing optical signals, making them indispensable components for advanced photonic systems. However, integrated magneto-optical (MO) isolators suffer from their high insertion loss, which is mainly caused by the relatively low FoM of Ce:YIG MO thin films deposited on silicon. Here, we show that film stoichiometry plays a key role in controlling the FoM of Ce:YIG. We observed garnet phase Fe-rich and Ce-rich nano-clusters in non-stoichiometric Ce:YIG. By using an iron-deficient target, we demonstrated that nearly stoichiometric Ce:YIG films on Si(100) could be fabricated, eliminating the nano-cluster defects. Consequently, the film exhibited a saturation Faraday rotation angle of -5523 deg/cm and a figure of merit of 72.7 deg/dB, which is 1.7 times higher compared to nonstoichiometric films. An MZI-type optical isolator on SiN fabricated by this method demonstrated a record low insertion loss of 1.2 dB and isolation ratio of 27.6 dB at 1556 nm wavelength. Our results provide an important step toward the practical application of integrated MO nonreciprocal photonic devices.",
    "source": "arxiv"

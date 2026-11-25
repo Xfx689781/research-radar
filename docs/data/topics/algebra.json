@@ -1,7 +1,50 @@
 {
  "slug": "algebra",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29140",
+   "title": "Blocks with one simple module and solvable groups",
+   "url": "https://arxiv.org/abs/2611.29140",
+   "authors": [
+    "Kun Zhang",
+    "Yuanyang Zhou"
+   ],
+   "label": "arXiv:2611.29140v1",
+   "primary_category": "math.GR",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper shows that a block with a single simple module of a finite group is Morita equivalent over a suitable complete discrete valuation ring to a block of a finite solvable group, and that a block Morita equivalent to a p-group algebra is nilpotent.",
+    "plain": "The paper is about the representation theory of finite groups, which studies how symmetry groups act on vector spaces. The authors consider a specific building block of such a group, called a block, that has only one kind of irreducible (indivisible) piece when working mod p. They show that this block can be matched, in a precise sense called Morita equivalence, with a block coming from a simpler kind of group, a solvable one.",
+    "why": "The text gives the main claims but not their wider impact, so the significance beyond this specialist area is unclear. Results of this kind relate blocks of general finite groups to solvable ones, which is a recognised theme in modular representation theory, but the text does not say how far the result extends.",
+    "background": "- Finite group: a group with finitely many elements, such as the symmetries of a finite object.\n- Representation / module: a way of letting a group act on a vector space; a simple module is one with no smaller nontrivial pieces.\n- Block: an indecomposable piece of the group algebra, a standard building block of representation theory.\n- Characteristic p: arithmetic mod a prime p, which changes how representations behave.\n- Morita equivalence: a notion saying two algebras have the same module categories, so they share the same representation-theoretic structure.\n- Complete discrete valuation ring: a local number-like ring used to lift results from characteristic p to characteristic zero.\n- Solvable group: a group built in layers from abelian pieces; nilpotent and p-group are special, more restrictive cases.\n- Twisted group algebra and derivation: algebraic constructions used in the paper's criterion.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $b$ be a block of a finite group with one isomorphism class of simple modules in characteristic $p$. We construct, over a sufficiently large complete discrete valuation ring of characteristic zero, a Morita equivalence between $b$ and a block of a finite solvable group. The proof uses equivariant Morita bimodules for the quasisimple blocks that occur in the component reduction. We also prove that a block over an algebraically closed field of characteristic $p$ is nilpotent whenever it is Morita equivalent to the group algebra of a finite $p$-group. For the latter result, we establish a criterion for twisted group algebras using derivations of the basic algebra and group transfer.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29478",
+   "title": "On a question of A.N. Skiba concerning the modularity of the lattice of $\\sigma$-permutable subgroups",
+   "url": "https://arxiv.org/abs/2611.29478",
+   "authors": [
+    "Chenxiao Lin"
+   ],
+   "label": "arXiv:2611.29478v1",
+   "primary_category": "math.GR",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper characterises finite groups whose lattice of σ-permutable subgroups is modular, answering the first part of a question posed by A.N. Skiba, and shows that when all Hall σ_i-subgroups are nilpotent, modularity is equivalent to every two members permuting.",
+    "plain": "This is a paper in group theory, the study of symmetry operations in mathematics. It looks at a family of subgroups of a finite group, called σ-permutable subgroups, where a partition of the primes sorts the group's structure into classes. The authors identify exactly which finite groups have a well-behaved (modular) pattern of these subgroups, which answers part of a question raised by Skiba.",
+    "why": "The work settles a specific open question from the literature on subgroup lattices, so it matters mainly to specialists in finite group theory. The text gives no wider applications, and I have not checked how it relates to other work beyond the question it answers.",
+    "background": "- Finite group: a group with finitely many elements, a set with a rule for combining elements (like rotations of a shape).\n- Subgroup: a subset of a group that is itself a group under the same rule.\n- Lattice of subgroups: all subgroups arranged by inclusion, with a way to combine any two.\n- Modular lattice: a lattice obeying a specific compatibility rule for how its elements combine; a structural regularity.\n- Permutable subgroups: two subgroups A and B are permutable if AB = BA, meaning combining them in either order gives the same set.\n- Partition of primes: splitting the set of prime numbers into disjoint classes σ_i.\n- Hall σ_i-subgroup: a subgroup whose order involves only primes from class σ_i, in the sense of a generalised Sylow subgroup.\n- Nilpotent: a group whose structure is built up in layers that commute nicely; a mild form of regularity.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $\\sigma=\\{\\sigma_i\\mid i\\in I\\}$ be some partition of the set of all primes and let $G$ be a finite group. A subgroup $A$ of $G$ is said to be $\\sigma$-permutable in $G$ if $G$ has a Hall $\\sigma_i$-subgroup for every $i\\in I$ and $A$ permutes with every Hall $\\sigma_i$-subgroup of $G$ for all $i\\in I$. We describe the finite groups $G$ for which the lattice $\\Lper(G)$ of all $\\sigma$-permutable subgroups of $G$ is modular. This answers the first part of a question of A.N. Skiba. We also prove that if every Hall $\\sigma_i$-subgroup of $G$ is nilpotent, then $\\Lper(G)$ is modular if and only if every two members of $\\Lper(G)$ are permutable.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30340",
    "title": "The Fourth-Power Formula for the Antipode in AS-Gorenstein Hopf Algebras",
@@ -14,12 +57,12 @@
    "primary_category": "math.RA",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves an S^4 formula for the antipode of left AS-Gorenstein Hopf algebras (infinite-dimensional generalization of Radford's finite-dimensional result), via a twisted Yetter–Drinfeld structure on the space of left homological integrals, and applies it to antipode bijectivity and finite-order bounds.</one_liner>\n<parameter name=\"plain\">The paper studies a class of algebraic structures called Hopf algebras, which carry a built-in \"reversal\" map called the antipode. It shows that applying this reversal four times returns to the start up to a controlled twist, extending a known result that was previously proved only for finite-dimensional cases. The authors also use this formula to say when the reversal map is a bijection and to give explicit bounds on how many repetitions are needed in certain settings.",
-    "plain": "",
-    "why": "The result extends a known formula (Radford's S^4 formula) to a much broader, infinite-dimensional class, and refines an earlier formula by Brown and Zhang by identifying a specific conjugating element. The text does not indicate wider applications beyond algebra, so its significance is mainly within this area of research.",
+    "ai": true,
     "background": "- Hopf algebra: an algebraic structure combining multiplication, comultiplication and an antipode (a kind of inverse-like map), used to describe symmetries.\n- Antipode S: a linear map generalizing inversion; its fourth power S^4 is the object of the formula.\n- Radford's S^4 formula: a known result for finite-dimensional Hopf algebras expressing S^4 as conjugation by a group-like element.\n- AS-Gorenstein property: a homological regularity condition (from Artin–Schelter) that allows homological integrals to be defined.\n- Homological integrals and Yetter–Drinfeld modules: advanced tools from homological algebra and representation theory used to carry out the argument.\n- Coradical, noetherian, faithfully flat: standard technical conditions under which the main results hold.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves an S^4 formula for the antipode of left AS-Gorenstein Hopf algebras (infinite-dimensional generalization of Radford's finite-dimensional result), via a twisted Yetter–Drinfeld structure on the space of left homological integrals, and applies it to antipode bijectivity and finite-order bounds.</one_liner>\n<parameter name=\"plain\">The paper studies a class of algebraic structures called Hopf algebras, which carry a built-in \"reversal\" map called the antipode. It shows that applying this reversal four times returns to the start up to a controlled twist, extending a known result that was previously proved only for finite-dimensional cases. The authors also use this formula to say when the reversal map is a bijection and to give explicit bounds on how many repetitions are needed in certain settings.",
+    "plain": "",
+    "why": "The result extends a known formula (Radford's S^4 formula) to a much broader, infinite-dimensional class, and refines an earlier formula by Brown and Zhang by identifying a specific conjugating element. The text does not indicate wider applications beyond algebra, so its significance is mainly within this area of research."
    },
    "abstract": "AS-Gorenstein Hopf algebras, for which homological integrals are defined, form a broad class of (infinite-dimensional) Hopf algebras. We establish an $S^4$ formula for left AS-Gorenstein Hopf algebras, thereby generalizing Radford's $S^4$ formula for finite-dimensional Hopf algebras and refining the formula of Brown and Zhang by identifying a group-like conjugating element in the Hopf algebra $H$. Our approach is to endow the space of left homological integrals $\\int^{\\ell}_H$ with a canonical right $H^*$-module structure compatible with its natural right $H$-action. If the $H^*$-action is rational, then $\\int^{\\ell}_H$ carries a canonical $(\\mathrm{id}_H,S^4)$-twisted right-left Yetter--Drinfeld module structure. The right $H$-action and left $H$-coaction on this one-dimensional space determine a character and a group-like element in $H$, respectively; the twisted Yetter--Drinfeld compatibility condition then yields the $S^4$ formula. The $H^*$-action on $\\int^{\\ell}_H$ is rational if either the coradical of $H$ is coreflexive or the trivial left module $\\Bbbk$ admits a finitely generated projective resolution. In particular, the latter condition holds when $H$ is left noetherian. We also establish a corresponding result for right AS-co-Gorenstein Hopf algebras with coreflexive coradical. As applications, we use the $S^4$ formula to study the bijectivity of the antipode and derive explicit finite-order bounds when $H$ is module-finite and faithfully flat over a central right coideal subalgebra, or finitely cogenerated and faithfully coflat over a cocentral quotient.",
    "source": "arxiv"
@@ -36,12 +79,12 @@
    "primary_category": "math.GR",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "If a finite group is a product of two supersoluble subgroups, then its nonabelian composition factors are all PSL_2(p) with p at least 5, and its nonsoluble length is at most one.",
-    "plain": "This paper is about finite groups, which are collections of symmetries that can be combined, and how they can be built from smaller pieces. It asks what happens when a group can be written as the product of two \"supersoluble\" subgroups, which are groups that are especially simple in structure. The author shows that any non-abelian building blocks of such a group must be one specific family of groups, and that the group is only mildly complicated in how it stacks non-solvable layers.",
-    "why": "This is a structural classification result within group theory: it narrows down exactly what the pieces of a factorised group can look like. The text does not say what wider applications it has, so any connection beyond pure algebra is unclear from the summary alone.",
+    "ai": true,
     "background": "- Finite group: a group with finitely many elements, such as the symmetries of a shape.\n- Product of subgroups G = AB: every element of G can be written as a times b, with a in A and b in B.\n- Supersoluble group: a group whose structure breaks into a chain of cyclic pieces, a fairly restricted kind of solvable group.\n- Soluble (solvable) group: a group that can be built step by step from abelian (commutative) pieces.\n- Composition factor: the simple building blocks that a finite group is assembled from.\n- PSL_2(p): a specific simple non-abelian group, defined for each prime p.\n- Nonsoluble length: how many layers of non-solvable structure the group has, counted in stages.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "If a finite group is a product of two supersoluble subgroups, then its nonabelian composition factors are all PSL_2(p) with p at least 5, and its nonsoluble length is at most one.",
+    "plain": "This paper is about finite groups, which are collections of symmetries that can be combined, and how they can be built from smaller pieces. It asks what happens when a group can be written as the product of two \"supersoluble\" subgroups, which are groups that are especially simple in structure. The author shows that any non-abelian building blocks of such a group must be one specific family of groups, and that the group is only mildly complicated in how it stacks non-solvable layers.",
+    "why": "This is a structural classification result within group theory: it narrows down exactly what the pieces of a factorised group can look like. The text does not say what wider applications it has, so any connection beyond pure algebra is unclear from the summary alone."
    },
    "abstract": "Let $G=AB$ be a finite group, where $A$ and $B$ are supersoluble. We prove that every nonabelian composition factor of $G$ is isomorphic to $\\PSL_2(p)$ for some prime $p\\ge5$ and that the nonsoluble length of $G$ is at most one.",
    "source": "arxiv"

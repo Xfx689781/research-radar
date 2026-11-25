@@ -1,7 +1,56 @@
 {
  "slug": "ecology-evolution",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.767538",
+   "title": "Social information use promotes breeding synchrony but constrains adaptation to rapid environmental changes",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.767538v1",
+   "authors": [
+    "Zheng, J.",
+    "Kuijper, B.",
+    "Aplin, L. M.",
+    "Sheldon, B.",
+    "Farine, D."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.767538 v1",
+   "primary_category": "animal behavior and cognition",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "An evolutionary individual-based model shows that breeders copying their neighbours' timing synchronises populations and speeds adaptation in stable conditions, but slows tracking of directional climate change.",
+    "plain": "Many animals decide when to breed by watching what their neighbours do, not only by sensing conditions themselves. This paper uses a computer simulation of populations living in territories with seasonal food peaks and a warming climate to ask whether copying neighbours helps or hurts timing of breeding. The authors report that copying makes individuals' timing converge, which helps populations adapt in stable or dramatically changing settings but leaves them lagging behind steady, directional climate shifts.",
+    "why": "Shifts in breeding timing are a well-known response to climate change, so the finding that group-following can make populations less responsive is relevant to conservation and to how animal populations may cope with warming. The text is a modelling study, so its conclusions depend on the model's assumptions and are not yet tested against field data in the given text.",
+    "background": "- Phenology: the timing of seasonal events such as breeding or egg-laying.\n- Social information: cues gained by observing others, such as neighbours' breeding dates, as opposed to private information from one's own sensing of conditions.\n- Individual-based model: a simulation in which each virtual animal is tracked separately and can evolve over generations.\n- Synchrony: many individuals acting at the same time, which can arise from positive feedback when copying amplifies early or late choices.\n- Adaptive lag: when a population's average response trails a moving target, here the shifting best breeding time under climate change.\n- Trade-off: a gain in one property (synchrony, faster adaptation) that comes at a cost to another (flexibility under directional change).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Animals use social information to make decisions, yet how such processes influence predictions in reproductive timing and population adaptation under environmental change remains unclear. While social information can improve decision accuracy through information pooling, spatiotemporal heterogeneity in conditions and patterns of environmental changes creates noise that potentially limits the value of social information use among breeding individuals. Here, we established an evolutionary individual-based model to examine how social and private sensing interact to shape breeding phenology in species distributed across territories with peaked resources and facing annual fluctuations and rapid climate change. We show that when individuals incorporate social information from neighbours, behavioural responses become increasingly synchronised through positive feedback in decision-making. This emergent synchrony helps populations to adapt faster and can increase reproductive output under stable environmental conditions relative to relying only on private information. However, under directional climate change, the same mechanism reduces population responsiveness by constraining variation in individual responses, leading to systematic lag in tracking shifting environmental optima and reduced population reproductive output. Our results demonstrate that social information use can produce a general trade-off at the population level between synchronisation and adaptive flexibility across environmental contexts. Social interaction enhances population performance when environments are either consistent or changing drastically across both spatial and temporal scales. Rather than uniformly improving performance, social interaction may create conditions under which collective behaviour becomes maladaptive when environments change rapidly.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.23.768529",
+   "title": "No evidence of evolution of male fitness components in response to yeast deprivation: Putative female specific nutrient dependent reproductive adaptation",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768529v1",
+   "authors": [
+    "Adhikary, S.",
+    "Pal, R. S.",
+    "Halder, S.",
+    "Nandy, B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.23.768529 v1",
+   "primary_category": "evolutionary biology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Experimental evolution of Drosophila melanogaster under adult live-yeast deprivation for over 140 generations found no measurable change in male pre- and post-copulatory competitive fitness traits, suggesting the nutrient-driven female adaptation is sex-specific and not carried over via genetic correlation.",
+    "plain": "Fruit flies were raised for more than 140 generations on a diet without live yeast, a protein source that females need to make eggs. Earlier work had shown that the females adapted to this, becoming more fertile early in life, and this study asked whether males changed too. The authors measured a range of male traits linked to winning mating and fathering offspring, and found none had shifted.",
+    "why": "It tests whether a trait that evolves in one sex drags the other sex along through shared genes, a question that matters for how sexes can separately adapt. The text does not show how far the result generalises beyond these four laboratory populations and this one stress.",
+    "background": "- Experimental evolution: populations are kept under a set condition for many generations to see how they change genetically.\n- Intersexual genetic correlation: when genes that affect a trait in one sex also affect it in the other, so selection on one sex can change the other.\n- Sexual antagonism: a gene that helps one sex but harms the other.\n- Pre-copulatory traits (before mating, such as mating success) and post-copulatory traits (after mating, such as sperm competition) are both components of male fitness.\n- Drosophila melanogaster is the common fruit fly, widely used in genetics.\n- Absence of change is reported as \"no evidence\"; it does not prove that males could never change.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Intersexual genetic correlation (IGC) is pervasive in sexually reproducing organisms and can constrain sex-specific adaptive evolution. Nevertheless, sexes frequently undergo adaptive divergence in response to novel ecological challenges. Here, we investigated whether adaptation to nutritional stress is sex-limited or constrained by shared genetic architecture. We utilized four laboratory-adapted populations of Drosophila melanogaster subjected to experimental evolution under adult-stage live-yeast deprivation for over 140 generations - a regime that previously drove adaptive female reproductive evolution, particularly enhancing early-life fecundity and ovarian function. Because female D. melanogaster rely heavily on dietary yeast for protein-dependent egg production, this evolutionary response may be female-limited. Alternatively, male fitness traits could respond either through direct selection or via correlated response driven by IGC. To distinguish between these hypotheses, we evaluated a comprehensive suite of pre- and post-copulatory male competitive fitness components. We found that all measured male fitness traits remained unchanged following experimental evolution, demonstrating that nutrient-dependent adaptation in these populations is strictly female-specific, with no evidence of correlated responses or sexually antagonistic trade-offs. Our results indicate that the genetic architecture underlying nutrient-dependent reproductive adaptation is largely decoupled between the sexes, allowing each sex to independently approach its sex-specific fitness optimum.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.19.766513",
    "title": "From individual movement to ecosystem response: how landscape structure shapes herbivore impacts",
@@ -15,12 +64,12 @@
    "primary_category": "ecology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A spatially explicit stochastic individual-based model of two herbivore populations with different movement and foraging strategies, sharing renewable resources across heterogeneous landscapes, examined with Monte Carlo simulations to show how movement and landscape structure shape resource depletion and population dynamics.",
-    "plain": "This paper asks how the way individual animals move and feed shapes what happens to plant resources across a whole landscape. The authors built a computer simulation of two grazing animal groups that share regrowing vegetation, with patchy resources, predators and places to hide, and ran many randomized runs. They report that movement largely determines where plants get depleted, and that more productive land can sometimes lead to a larger relative loss of resources.",
-    "why": "The text suggests that local behaviour can produce landscape-scale outcomes that simple abundance counts would miss, which matters for managing grazed ecosystems. Because the results come from a simulation model described only in this abstract, their relevance to real ecosystems is not established here.",
+    "ai": true,
     "background": "- Consumer-resource interaction: herbivores (consumers) eating plants (resources) that regrow over time.\n- Individual-based model: each animal is simulated separately with its own movement and feeding rules, and large-scale patterns emerge from these.\n- Stochastic model and Monte Carlo simulation: the model includes random elements, and many randomized runs are averaged to see typical outcomes.\n- Landscape heterogeneity: resources are unevenly distributed in space, so where animals go matters.\n- Refuges and predation: prey can escape to safe areas, which affects where they feed.\n- Resource biomass vs. vegetation occupancy: total plant mass can fall well before the area covered by plants shrinks.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A spatially explicit stochastic individual-based model of two herbivore populations with different movement and foraging strategies, sharing renewable resources across heterogeneous landscapes, examined with Monte Carlo simulations to show how movement and landscape structure shape resource depletion and population dynamics.",
+    "plain": "This paper asks how the way individual animals move and feed shapes what happens to plant resources across a whole landscape. The authors built a computer simulation of two grazing animal groups that share regrowing vegetation, with patchy resources, predators and places to hide, and ran many randomized runs. They report that movement largely determines where plants get depleted, and that more productive land can sometimes lead to a larger relative loss of resources.",
+    "why": "The text suggests that local behaviour can produce landscape-scale outcomes that simple abundance counts would miss, which matters for managing grazed ecosystems. Because the results come from a simulation model described only in this abstract, their relevance to real ecosystems is not established here."
    },
    "abstract": "Understanding how local interactions generate large-scale ecological dynamics is a central challenge in ecology. In heterogeneous environments, consumer movement links resource distribution with exploitation, producing responses that may not be predicted from consumer abundance or resource availability alone. Here, we develop a spatially explicit stochastic individual-based model of two herbivore populations with contrasting movement and foraging strategies that share renewable resources. The model incorporates heterogeneous resources, consumer movement and feeding, resource regeneration, predation, and refuge availability. Using Monte Carlo simulations, we examine how herbivore pressure and landscape structure shape population dynamics and resource depletion. Movement strongly determines the spatial pattern of depletion, while resource vulnerability depends on the overlap between resource distribution and consumer activity. Counterintuitively, increasing the extent of a productive region increases initial resource biomass but can also increase relative resource loss. Additional resources sustain consumer activity where herbivores concentrate, showing that greater resource availability does not necessarily buffer ecosystems against herbivory. Resource biomass can also decline substantially before major reductions in vegetation occupancy become apparent. These results demonstrate how individual behaviour and landscape structure jointly shape ecosystem responses. The model provides a framework for investigating how spatially coupled consumer-resource interactions generate ecological dynamics.",
    "source": "biorxiv"
@@ -44,12 +93,12 @@
    "primary_category": "ecology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "ADTSIM 2.0 is an updated weekly-time-step simulation of the American dog tick's life cycle, covering questing, host-seeking, survival, and temperature effects on development, with the aim of explaining variable local tick densities.",
-    "plain": "American dog ticks carry diseases that affect people and animals, but it is unclear why their numbers rise and fall so much from year to year. The authors updated an existing computer model that simulates the tick's life stages week by week, including how hosts such as small and medium mammals and local weather affect the ticks. The abstract reports that accurate data on host numbers and weather are critical for predicting local tick densities.",
-    "why": "A working model of tick populations could support public health information and help compare tick control measures. The authors say it could later be extended to track tick-borne pathogens, but the abstract does not show that this has been done.",
+    "ai": true,
     "background": "- Dermacentor variabilis (American dog tick): a hard-bodied tick found across central and eastern North America that can transmit pathogens to people and pets.\n- Life stages: egg, larva, nymph, and adult; each stage must find a host to feed on.\n- Questing: ticks climb vegetation and wait with their legs out to grab passing hosts.\n- Simulation model: a computer program that uses rules and inputs (weather, host numbers) to project population change over time; a weekly time step means it updates once per week.\n- Trade-off: a tick that quests more may find more hosts but may dry out or die sooner.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "ADTSIM 2.0 is an updated weekly-time-step simulation of the American dog tick's life cycle, covering questing, host-seeking, survival, and temperature effects on development, with the aim of explaining variable local tick densities.",
+    "plain": "American dog ticks carry diseases that affect people and animals, but it is unclear why their numbers rise and fall so much from year to year. The authors updated an existing computer model that simulates the tick's life stages week by week, including how hosts such as small and medium mammals and local weather affect the ticks. The abstract reports that accurate data on host numbers and weather are critical for predicting local tick densities.",
+    "why": "A working model of tick populations could support public health information and help compare tick control measures. The authors say it could later be extended to track tick-borne pathogens, but the abstract does not show that this has been done."
    },
    "abstract": "The American dog tick, Dermacentor variabilis (Say), is found across most of the central and eastern portions of North America, and is a known vector of human and veterinary pathogens. While this tick has been found throughout this region for decades, there is still little understanding of the drivers for the highly variable annual densities. To explore the relative effects of hosts, environmental conditions, and tick biology, we introduce ADTSIM 2.0, an upgraded version of the ADTSIM model that simulates the lifecycle of D. variabilis. The model uses a weekly time step and follows the life stages (egg, larvae, nymph, and adult), questing behavior, host-seeking dynamics, and survival rates under varying environmental conditions. The model includes calculations for tick interactions with small- and medium-sized mammal hosts and factors in critical environmental influences such as temperature on tick development and questing activity. It addresses the effect of questing behavior on tick longevity, emphasizing the trade off between survival and host-seeking. The results show that accurate estimates of both host densities and weather information are critical to predict local D. variabilis densities. This model provides the first step to building a tool for public health information, offering a framework for assessing tick control measures and is adaptable to add tick-borne pathogen dynamics for both human and animal diseases.",
    "source": "biorxiv"

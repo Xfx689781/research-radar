@@ -1,7 +1,54 @@
 {
  "slug": "biochemistry",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.21.768247",
+   "title": "Albumin alleviates pressure overload-induced heart failure by improving mitochondrial homeostasis via PKA-LKB1-AMPK axis",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.768247v1",
+   "authors": [
+    "AN, Q.",
+    "Ma, B.",
+    "Fu, Y.",
+    "Luo, Y."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.21.768247 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "In a mouse model of pressure-overload heart failure, recombinant mouse serum albumin improved cardiac function and mitochondrial energy metabolism, reportedly via a PKA-LKB1-AMPK signaling axis.",
+    "plain": "Heart failure is a condition where the heart cannot pump blood well enough, and it often carries a poor outlook. This study looked at albumin, the most abundant protein in blood, whose levels tend to be low in people with heart failure. In mice whose hearts were put under strain by constricting the aorta, giving extra albumin improved heart pumping and reduced enlargement, scarring and inflammation.",
+    "why": "It suggests that a protein already used clinically could be a therapeutic candidate for heart failure, and that its effect may run through the energy-producing machinery of heart cells (mitochondria). Whether this carries over to humans is not shown by the text, which reports only mouse and cell experiments.",
+    "background": "- Heart failure: the heart weakens and cannot pump enough blood; pressure overload (e.g., from high blood pressure or a narrowed aortic valve) is a common cause.\n- Serum albumin: the most abundant protein in blood plasma; low levels are linked to worse heart failure outcomes.\n- Transverse aortic constriction (TAC): a surgical method in mice that narrows the aorta to mimic pressure overload.\n- Knockout (AKO) mice: animals genetically engineered to lack the albumin gene, used to test whether a protein is needed.\n- Mitochondria: the cell's energy-producing structures; \"homeostasis\" here means keeping their function and quality balanced.\n- AMPK: an energy-sensing enzyme that switches cells toward fat burning and energy conservation when energy is low; PKA and LKB1 are signaling proteins that act upstream of it.\n- Hypertrophy and fibrosis: enlargement of heart muscle cells and build-up of scar-like tissue.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Aims Heart failure (HF) is a global health challenge due to its high incidence, mortality, and socioeconomic burden. Despite medical advancements, HF prognosis remains poor, highlighting the need for enhanced understanding and treatment strategies. Serum albumin, a key circulatory protein, has gained attention as a biomarker in cardiovascular diseases. Low serum albumin levels are linked to HF incidence, progression, and prognosis, suggesting its regulatory role, though mechanisms remain unclear. This study aimed to elucidate the role of serum albumin in HF pathogenesis and investigate its potential therapeutic effects. Methods and results A mouse model of pressure overload-induced HF was established via transverse aortic constriction (TAC). Serum albumin levels were significantly decreased in HF mice. Administration of recombinant mouse serum albumin (rMSA) effectively restored serum albumin concentrations, improved cardiac systolic function, alleviated cardiac hypertrophy and fibrosis, and reduced inflammatory responses, collectively attenuating disease progression. In contrast, albumin-knockout (Alb-/-, AKO) HF mice displayed aggravated pathological manifestations compared with wild-type (WT) controls, whereas rMSA supplementation markedly ameliorated these impairments. In vitro experiments demonstrated that rMSA protected against phenylephrine (PE)-induced hypertrophy in cardiomyocytes. To elucidate the underlying mechanism, transcriptomic analyses of cardiac tissues revealed that albumin played a critical role in improving mitochondrial homeostasis. Experimental validation further demonstrated that albumin activated the PKA-LKB1-AMPK signaling axis, leading to improved mitochondrial respiratory function and oxidative phosphorylation, as well as enhanced mitochondrial quality control. These changes promoted fatty acid oxidation and optimized energy metabolism, thereby reversing the energy imbalance underlying cardiac dysfunction. Conclusion Our study suggests that serum albumin exerts a protective effect in HF by improving mitochondrial dysfunction and energy metabolism disorders, thus reversing energy imbalance and mitigating disease progression. These results support recombinant serum albumin as a promising therapeutic for HF, with its mechanism involving the critical improvement of mitochondrial homeostasis.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767663",
+   "title": "A Shifting Landscape: Deconvoluting the Effect of Mg2+ and pH on Base Triple Formation in 7SK SL-1",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767663v1",
+   "authors": [
+    "Fallon, L.",
+    "Venkatesh, H.",
+    "Jones, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767663 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A combined molecular dynamics, free-energy, NMR, and SAXS study that maps how Mg2+ and pH independently shift the conformational landscape and base-triple formation in the 7SK snRNA stem-loop 1 that binds HEXIM.",
+    "plain": "This paper looks at a small RNA molecule, 7SK, which helps control how a cell's gene-copying machinery (RNA polymerase II) switches genes on and off. The authors study one part of this RNA, stem-loop 1, and ask how the acidity of the surroundings (pH) and the amount of magnesium ions change the way its bases lock together into small three-way groupings. They report that both factors strongly reshape the molecule's possible shapes and that they act in different, independent ways to favor these groupings.",
+    "why": "The RNA's shape determines how it binds the protein HEXIM, which in turn affects transcription output, so understanding what tunes that shape is relevant to gene regulation. The text does not show any direct biological or therapeutic consequence; the link to transcription control is offered as a possibility the authors discuss.",
+    "background": "- RNA is a chain of bases (building blocks) that can fold into shapes; this molecule is a noncoding RNA.\n- Stem-loop: a hairpin-shaped fold of RNA.\n- Base triple: three RNA bases held together by hydrogen bonds, which stabilizes a particular fold.\n- HEXIM and P-TEFb: proteins that 7SK helps regulate, which in turn controls RNA polymerase II, the enzyme that copies protein-coding genes.\n- Mg2+: magnesium ions, which help RNA fold by neutralizing its negative charge.\n- pH: a measure of acidity; changes can alter which bases are charged and how they pair.\n- Methods: molecular dynamics (computer simulation of atomic motion), free-energy calculations, NMR (spectroscopy that reports on atomic environments), and SAXS (X-ray scattering that reports overall shape in solution).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The small-nuclear RNA (snRNA) 7SK is essential for regulating the transcription of genes by RNA polymerase II through its interactions with Hexamethylene Bisacetamide Inducible Protein (HEXIM) and positive transcription elongation factor b (P-TEFb). High-resolution structures of 7SK stem-loop 1 (SL-1) reveal the presence of several base triples that coordinate the interaction with HEXIM. However, different high-resolution structures of 7SK SL-1 exhibit different conformations, each with unique base triple configurations. Previous NMR studies show that the conformation of 7SK SL-1 is sensitive to changes in pH and Mg2+ concentration. However, the exact mechanism by which Mg2+ and pH influence the formation and stability of base triples in 7SK SL-1 at an atomic level remains unclear. We combine molecular dynamics (MD) simulations, free energy calculations, nuclear magnetic resonance (NMR), and small angle X-ray scattering (SAXS) to conduct a detailed investigation into the mechanism and dynamics of base triple formation in 7SK SL-1, and deconvolute the effects of pH and Mg2+. We find that the conformational landscape of 7SK SL-1 dramatically changes depending on the pH and presence of Mg2+, and that pH and Mg2+ act orthogonally to favor the formation of base triples. We discuss how the dynamic behavior of the base triples may provide a means for 7SK to regulate its interactions with HEXIM, modulating the transcriptional output of RNA polymerase II.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.18.767499",
    "title": "Synthesis of Cellulose Nanofiber Hydrogel Beads from Typha angustifolia for the Immobilization of Protease",
@@ -15,12 +62,12 @@
    "primary_category": "biochemistry",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Cellulose nanofibers extracted from the invasive aquatic plant Typha angustifolia were oxidized, blended with polyvinyl alcohol, and crosslinked into hydrogel beads that serve as a covalent support for immobilizing crude protease.",
-    "plain": "Typha angustifolia is an invasive water plant that causes trouble for wetlands and irrigation channels. This study turned its fibrous cellulose into small water-swollen gel beads, then attached a crude protease (a enzyme that breaks down proteins) to them. The enzyme on the beads kept more activity over time and worked across a somewhat wider range of temperature and pH than the free enzyme.</plain>\n<parameter name=\"why\">It offers one way to put an invasive plant to use while making enzyme catalysts easier to reuse, which matters for industrial processes. The text reports only laboratory measurements, so practical or industrial value is not yet shown.",
-    "why": "",
+    "ai": true,
     "background": "- Cellulose: the structural fiber of plant cell walls; cellulose nanofibers are very thin strands of it.\n- Hydrogel: a water-filled, soft, net-like material; here the beads absorb about four times their weight in water.\n- Immobilization: fixing an enzyme onto a solid support so it stays in place and can be reused.\n- Protease: an enzyme that cuts proteins into smaller pieces.\n- Covalent binding: attaching the enzyme by strong chemical bonds rather than loose contact.\n- Specific activity: enzyme activity per milligram of protein; higher means more active.\n- Half-life: how long the enzyme keeps half its activity under operating conditions.\n- Glutaraldehyde and sodium periodate: chemicals used to crosslink and to introduce reactive groups.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "Cellulose nanofibers extracted from the invasive aquatic plant Typha angustifolia were oxidized, blended with polyvinyl alcohol, and crosslinked into hydrogel beads that serve as a covalent support for immobilizing crude protease.",
+    "plain": "Typha angustifolia is an invasive water plant that causes trouble for wetlands and irrigation channels. This study turned its fibrous cellulose into small water-swollen gel beads, then attached a crude protease (a enzyme that breaks down proteins) to them. The enzyme on the beads kept more activity over time and worked across a somewhat wider range of temperature and pH than the free enzyme.</plain>\n<parameter name=\"why\">It offers one way to put an invasive plant to use while making enzyme catalysts easier to reuse, which matters for industrial processes. The text reports only laboratory measurements, so practical or industrial value is not yet shown.",
+    "why": ""
    },
    "abstract": "Typha angustifolia, an invasive aquatic macrophyte, poses a persistent challenge to wetland and irrigation management, yet its cellulose-rich biomass represents an underexploited feedstock for value-added biomaterials. This study reports the synthesis of cellulose nanofiber (CNF) hydrogel beads from T. angustifolia and evaluates their performance as a support matrix for protease immobilization. Cellulose was isolated by chlorite delignification and alkaline treatment, oxidized with sodium periodate to introduce aldehyde functional groups, blended with polyvinyl alcohol (PVA), and crosslinked with glutaraldehyde to form hydrogel beads. The beads exhibited a high water-absorption capacity of 399.67 {plus minus} 0.53% and a mechanical strength of 1.27 MPa. Covalent immobilization of crude protease onto the beads increased specific activity nearly threefold, from 24.56 {plus minus} 0.39 U/mg for the free enzyme to 59.20 {plus minus} 1.06 U/mg for the immobilized enzyme, corresponding to a loading efficiency of 50.61%. The immobilized enzyme also displayed broadened thermal and pH optima, shifting from 40 {degree sign}C to 50 {degree sign}C and from pH 8.0 to 9.0, respectively, and an extended operational half-life from 4.40 h to 11.37 h. These findings support the valorization of invasive Typha biomass into a robust, biodegradable support system with potential application in industrial biocatalysis.",
    "source": "biorxiv"
@@ -38,12 +85,12 @@
    "primary_category": "biochemistry",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Using AlphaFold structure predictions, the authors optimize recombinant laminin E8 fragments and build a modular panel of interchangeable α, β and γ chains that can be combined to make all laminin isoforms, with the fragments shown to support adhesion of cells expressing their matching integrins.",
-    "plain": "Laminins are large protein assemblies that form part of the scaffolding around cells in tissues, but they are too big to make easily in the lab. This work uses an AI protein-structure tool, AlphaFold, to design smaller working pieces of laminin, called E8 fragments, that can be produced in cells in culture. The authors built a set of interchangeable pieces that can be mixed to form the different laminin versions, and reported that these pieces help cells stick to them when those cells carry the matching receptors.",
-    "why": "Having a readily made, mix-and-match set of laminin fragments could make it easier to study stem cells, organoids and the cell receptors (integrins) that grip laminin. The text does not report how widely these tools have been adopted or how they compare with existing laminin preparations, so their practical impact is still to be seen.",
+    "ai": true,
     "background": "- Laminins: large three-chain proteins (α, β, γ) that form a major part of basement membranes, the thin sheets that support tissues.\n- Recombinant: made in engineered cells rather than extracted from animal tissue.\n- E8 fragment: a shortened, functional piece of laminin that keeps its cell-adhesion activity.\n- Integrins: cell-surface receptors that attach cells to the extracellular matrix.\n- AlphaFold: an AI tool that predicts the 3D shape of proteins from their sequence, used here to guide the design of fragments.\n- Isoform: a variant of the same protein built from a different combination of chains.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using AlphaFold structure predictions, the authors optimize recombinant laminin E8 fragments and build a modular panel of interchangeable α, β and γ chains that can be combined to make all laminin isoforms, with the fragments shown to support adhesion of cells expressing their matching integrins.",
+    "plain": "Laminins are large protein assemblies that form part of the scaffolding around cells in tissues, but they are too big to make easily in the lab. This work uses an AI protein-structure tool, AlphaFold, to design smaller working pieces of laminin, called E8 fragments, that can be produced in cells in culture. The authors built a set of interchangeable pieces that can be mixed to form the different laminin versions, and reported that these pieces help cells stick to them when those cells carry the matching receptors.",
+    "why": "Having a readily made, mix-and-match set of laminin fragments could make it easier to study stem cells, organoids and the cell receptors (integrins) that grip laminin. The text does not report how widely these tools have been adopted or how they compare with existing laminin preparations, so their practical impact is still to be seen."
    },
    "abstract": "Laminins are large, heterotrimeric glycoproteins that are a major structural component of basement membranes and the extracellular matrix. Although they are difficult to produce recombinantly because of their large size, a smaller fragment of the laminin heterotrimer that supports cell adhesion and cell migration, termed E8, can be recombinantly expressed. Here, we use AlphaFold to optimize laminin E8 fragments and design a panel of interchangeable laminin , {beta}, and {gamma} chains that can be combined to produce all isoforms recombinantly. These recombinant E8 fragments support adhesion of cells bearing their cognate integrins, and will be useful tools for stem-cell, organoid, and laminin-binding integrin biology research.",
    "source": "biorxiv"

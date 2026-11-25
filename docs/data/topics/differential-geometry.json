@@ -1,7 +1,51 @@
 {
  "slug": "differential-geometry",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30716",
+   "title": "Gray II, K\\\"ahler Nullity and Ricci Flow on Generalized Flag Manifolds with Two Isotropy Summands",
+   "url": "https://arxiv.org/abs/2611.30716",
+   "authors": [
+    "Lino Grama",
+    "Ailton R. Oliveira",
+    "Francisco V. Oliveira"
+   ],
+   "label": "arXiv:2611.30716v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper studies Gray's second curvature identity, Kähler nullity, and normalized homogeneous Ricci flow on generalized flag manifolds with two isotropy summands, for both invariant almost complex structures.",
+    "plain": "The paper looks at a family of smooth curved spaces with a high degree of symmetry (generalized flag manifolds) and asks how their geometry behaves under a few specific rules for measuring and smoothing curvature. The authors show that every symmetric way of measuring distance on these spaces satisfies one known curvature identity, and they track how the special \"Kähler\" directions of the space change. They also reduce a geometric smoothing process (Ricci flow) to a single equation for one ratio of parameters, and study where that ratio goes over time.",
+    "why": "The result gives a fairly complete, explicit picture on a concrete class of spaces, which is useful for testing general conjectures about curvature and geometric flows. The stated finding that the Kähler–Einstein direction attracts while the other Einstein direction repels is a specific dynamical statement; its wider significance beyond these spaces is not established in the text.",
+    "background": "- Generalized flag manifolds: symmetric curved spaces built from Lie groups, a standard object in homogeneous geometry.\n- Isotropy summands: pieces of the space's symmetry data at a point; \"two summands\" means the simplest nontrivial case.\n- Invariant metric: a way of measuring distance that respects the space's symmetries; it is described by a few parameters.\n- Almost complex structure: a rotation-like structure on tangent directions; \"Kähler\" means it is compatible with the metric and closed in a suitable sense.\n- Gray's identity: a constraint relating curvature and its derivatives on almost Hermitian manifolds.\n- Kähler nullity: the space of directions where the curvature behaves like a Kähler manifold's; \"trivial\" means it is zero.\n- Ricci flow: an evolution of the metric that tends to smooth out curvature, here normalized and reduced to an ODE for one ratio.\n- Attracting/repelling: whether nearby starting ratios are drawn toward or pushed away from a fixed value under the flow.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate Gray's second curvature identity, K\\\"ahler nullity, and homogeneous Ricci flow on generalized flag manifolds with two isotropy summands. We prove that every invariant metric satisfies Gray's second identity for both invariant almost complex structures. For the non-integrable structure, the K\\\"ahler nullity is trivial except at a distinguished metric ratio, where it coincides with the vertical distribution of a homogeneous fibration. This distribution is integrable and has totally geodesic leaves. For the integrable structure, the K\\\"ahler nullity exhibits a different behavior and need not be integrable away from the K\\\"ahler locus. Finally, we reduce the normalized homogeneous Ricci flow to an autonomous equation for the ratio of the metric parameters. The resulting dynamics identify two invariant Einstein directions and show that the K\\\"ahler--Einstein direction is attracting, while the other is repelling.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29625",
+   "title": "Support functions of sections of $p$-minimal tubes",
+   "url": "https://arxiv.org/abs/2611.29625",
+   "authors": [
+    "Vladimir G. Tkachev"
+   ],
+   "label": "arXiv:2611.29625v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper studies convex hulls of horizontal sections of compact p-minimal hypersurfaces bounded by two parallel planes, proves a viscosity subsolution inequality for their support functions, and derives distance and lifetime bounds for minimal surfaces, including a sharp catenoid-equality bound in R^3.",
+    "plain": "The paper looks at soap-film-like surfaces stretched between two parallel flat planes and at the convex shapes enclosed by their cross-sections at each height. It describes how a standard \"support function\" measuring those shapes must behave, and uses this to bound how far apart the two planes can be. For ordinary minimal surfaces in three-dimensional space, the bound is sharp and holds with equality only for the catenoid, the classic soap-film shape.",
+    "why": "It gives a new analytic route to known rigidity results (Bernstein and Breiner) and extends them to non-convex and multi-component boundaries. The link to the Meeks annulus conjecture, which the authors reduce to a statement about atoms in area functions, may make it relevant to specialists in minimal surface theory, though the text alone does not show how far that reduction goes.",
+    "background": "- Minimal surface: a surface that locally has the least area for its boundary, like a soap film; p-minimal is a generalization of this notion from a variational/PDE viewpoint.\n- Hypersurface: a surface of one dimension less than the ambient space (e.g. a surface in ordinary 3D space).\n- Convex hull and support function: the smallest convex set containing a shape, and a function recording how far its flat supporting planes lie from the origin in each direction.\n- Viscosity subsolution: a weak notion of solution for second-order partial differential equations, used when solutions may not be smooth.\n- Degenerate elliptic inequality: a class of second-order PDE inequalities that may lose strictness in some directions.\n- Monge–Ampère type: a nonlinear second-order PDE family common in convex geometry.\n- Alexandrov area functions and atoms: measures describing how surface area of a convex body is distributed by normal direction; atoms correspond to edges.\n- Catenoid: the surface of revolution formed by a soap film between two coaxial rings.\n- Meeks annulus conjecture: a open conjecture about minimal annuli in space.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $M$ be a compact $p$-minimal hypersurface in ${\\mathbb R}^{n+1}$ with boundary in two parallel hyperplanes. We study the convex hulls $\\Omega(\\tau)$ of its horizontal sections through their support function $H(\\tau,\\cdot)$, without any assumption on the topology of $M$. We prove that $H$ is a viscosity subsolution of a degenerate elliptic inequality. For $n=2$ it is of Monge--Amp\\`ere type, and its equality case for minimal surfaces with circular sections is Riemann's system. A posteriori, $H$ is locally semiconvex and every hull is a smooth convex body; the inequality then also holds in the sense of measures, with the edges of the hulls appearing as atoms of Alexandrov's area functions. Averaging over directions gives a catenary-type inequality for the mean width of the hulls. It yields lifetime bounds for $p$-minimal tubes when $n>p$. For minimal surfaces in ${\\mathbb R}^3$ it gives a sharp bound for the distance between the planes in terms of the perimeters of the hulls of the boundary curves, with equality only for a catenoid. For one convex curve in each plane this recovers, by a different method, the nonexistence and rigidity theorem of Bernstein and Breiner. The bound extends to non-convex curves and to boundaries with several components. Finally, we show that the Meeks annulus conjecture is equivalent to the absence of atoms in the area functions of the hulls of all intermediate sections.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29246",
    "title": "Cylindrical Ricci flows and the PDE-ODI principle",
@@ -14,12 +58,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper derives precise asymptotics for ancient asymptotically cylindrical Ricci flows, showing a linear-or-quadratic dichotomy in the leading deviation from the cylinder, and uses a PDE-ODI principle and a harmonic map heat flow gauge that works without a curvature sign assumption.",
-    "plain": "This paper studies how a curved shape evolving over time (a Ricci flow, which smooths out a geometric space much like heat spreads through metal) behaves when it looks like a long cylinder in the far past. The authors show that the first correction away from a perfect cylinder is either linear or quadratic in the stretched-out directions. In the linear case, the flow closely matches a known special shape (a Bryant soliton) times a flat Euclidean factor.",
-    "why": "The results are technical but structural: they give a unified treatment of Ricci flow and mean curvature flow via one shared principle, and the tools are said to be part of a program toward Ricci flow with surgery in dimension 4. The text does not claim wider consequences beyond this.",
+    "ai": true,
     "background": "- Ricci flow: a process that deforms a geometric space over time, shrinking regions of high curvature; it is a central tool in the proof of the Poincaré conjecture.\n- Ancient flow: a flow defined for all negative times, i.e. one studied looking backward into the far past.\n- Asymptotically cylindrical: the shape looks more and more like a cylinder (a round tube times a line) as one goes back in time.\n- Soliton: a special self-similar shape that evolves in a predictable way; a Bryant soliton is a particular steady-type example.\n- Asymptotics: precise description of how a quantity behaves in a limit, here the leading correction terms.\n- Mean curvature flow: a related geometric evolution of surfaces, whose cylindrical case the authors treated earlier.\n- Harmonic map heat flow: a standard PDE tool used here as a coordinate (gauge) choice.\n- Ricci flow with surgery: a method of continuing the flow past singularities by cutting and capping; the paper says these tools are aimed at this in dimension 4.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives precise asymptotics for ancient asymptotically cylindrical Ricci flows, showing a linear-or-quadratic dichotomy in the leading deviation from the cylinder, and uses a PDE-ODI principle and a harmonic map heat flow gauge that works without a curvature sign assumption.",
+    "plain": "This paper studies how a curved shape evolving over time (a Ricci flow, which smooths out a geometric space much like heat spreads through metal) behaves when it looks like a long cylinder in the far past. The authors show that the first correction away from a perfect cylinder is either linear or quadratic in the stretched-out directions. In the linear case, the flow closely matches a known special shape (a Bryant soliton) times a flat Euclidean factor.",
+    "why": "The results are technical but structural: they give a unified treatment of Ricci flow and mean curvature flow via one shared principle, and the tools are said to be part of a program toward Ricci flow with surgery in dimension 4. The text does not claim wider consequences beyond this."
    },
    "abstract": "We derive precise asymptotics for ancient asymptotically cylindrical Ricci flows. We establish a dichotomy in which the leading deviation from the cylinder is either linear or quadratic in the axial variables. In the linear case, we show that the flow is exponentially asymptotic to a Bryant soliton times a Euclidean factor. For $\\kappa$-solutions, we further show that the flow is isometric to such a product, up to parabolic rescaling. In the quadratic case, we obtain higher-order asymptotics governed by a finite-dimensional invariant. We also establish propagation of cylindrical regions and uniqueness of cylindrical tangent flows. These results closely parallel those in our earlier work on cylindrical mean curvature flows. Both analyses use the same PDE-ODI principle and yield a unified treatment of cylindrical Ricci flow and mean curvature flow. The essential new ingredient in the Ricci flow setting is a coherent harmonic map heat flow gauge, which allows us to apply this principle without assuming a sign for the curvature. The local analytic tools developed here also form part of a program aimed at constructing Ricci flow with surgery in dimension 4.",
    "source": "arxiv"
@@ -35,12 +79,12 @@
    "primary_category": "math.SG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Studies scaling limits of equivariant Szegő kernels near a singular point of the moment map for a compact group action on a Hodge manifold, and applies them to the quantization of the singular Kähler reduced space.",
-    "plain": "This paper looks at a symmetry-based construction in geometry: when a group of symmetries acts on a space, one can build a smaller \"reduced\" space by keeping only the symmetric parts. The authors study what happens near a special point where this reduction becomes singular (the reduced space is no longer smooth). They use a rescaling technique that zooms in on that point to describe the behaviour of the relevant kernels there.",
-    "why": "The text describes how the method applies to several questions about invariant sections near singular strata, including whether the Guillemin–Sternberg map stays asymptotically unitary there. Its wider significance beyond this specialist setting is not stated in the text, so I cannot say more about it.",
+    "ai": true,
     "background": "- Hodge manifold: a complex geometric space with a line bundle whose curvature is positive, so holomorphic sections are well behaved.\n- Compact Lie group action: a compact symmetry group acting holomorphically on the space.\n- Moment map: a function that encodes the group action; zero being a singular value means the reduction at zero is singular.\n- Kähler (symplectic) reduction: forming a quotient space by fixing the moment map level and dividing out the symmetry.\n- Szegő kernel: the reproducing kernel for holomorphic sections, which acts as a density-type object in quantization.\n- Guillemin–Sternberg map: a map relating quantization before and after reduction.\n- Asymptotic unitarity and scaling limits: statements about behaviour as a power of the line bundle grows large, examined after rescaling near a point.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Studies scaling limits of equivariant Szegő kernels near a singular point of the moment map for a compact group action on a Hodge manifold, and applies them to the quantization of the singular Kähler reduced space.",
+    "plain": "This paper looks at a symmetry-based construction in geometry: when a group of symmetries acts on a space, one can build a smaller \"reduced\" space by keeping only the symmetric parts. The authors study what happens near a special point where this reduction becomes singular (the reduced space is no longer smooth). They use a rescaling technique that zooms in on that point to describe the behaviour of the relevant kernels there.",
+    "why": "The text describes how the method applies to several questions about invariant sections near singular strata, including whether the Guillemin–Sternberg map stays asymptotically unitary there. Its wider significance beyond this specialist setting is not stated in the text, so I cannot say more about it."
    },
    "abstract": "Suppose that a compact and connected Lie group acts holomorphically on a Hodge manifold, and that the action linearises to the associated Hermitian ample line bundle. Assume that zero is a singular value of the associated moment map. The spaces of global holomorphic sections of powers of the line bundle decompose over the finite dimensional irreducible representations of the group. The main goal of this paper is to study the scaling limits for equivariant Szeg\\H{o} kernels near a singular point of the moment map. As an application, we discuss the quantization of the singular reduced space: the behaviour of invariant sections along the singular strata, the failure of the asymptotic unitarity of the Guillemin--Sternberg map near the singular strata, and the number of invariant sections concentrated near a singular orbit.",
    "source": "arxiv"

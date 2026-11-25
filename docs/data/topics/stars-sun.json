@@ -1,7 +1,58 @@
 {
  "slug": "stars-sun",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29291",
+   "title": "Asteroseismic investigation of intermediate age open star cluster NGC 2126",
+   "url": "https://arxiv.org/abs/2611.29291",
+   "authors": [
+    "Athul Dileep",
+    "Santosh Joshi",
+    "Patricia Lampens",
+    "Chenglong Lv",
+    "David Mkrtichian",
+    "Peter De Cat",
+    "Abhay Pratap Yadav",
+    "Arjun Dawn",
+    "Ali Esamdin"
+   ],
+   "label": "arXiv:2611.29291v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A preliminary asteroseismic study of delta Scuti pulsators and the binary V551 Aur in the intermediate-age open cluster NGC 2126, using TESS and ground-based photometry, with tentative mode identifications and a spectroscopic search for chemical peculiarities.",
+    "plain": "This paper studies a group of pulsating stars that belong to NGC 2126, a cluster of stars born together roughly a few hundred million to a billion years ago. The stars pulse, like a bell ringing, and the authors use the rhythm and brightness of those pulses to guess which vibration patterns they are showing. They report tentative matches for three stars and a firmer match for one, and they also find that one star's pulsations change as it orbits its partner in a binary system.",
+    "why": "Pulsations act like a stethoscope on a star's interior, so matching them to models can constrain stellar ages and structure. The authors call the work preliminary, and the identifications are described as tentative, so it is best read as a progress report rather than a settled result.",
+    "background": "- Open star cluster: a loose group of stars formed from the same cloud at about the same time.\n- Delta Scuti star: a type of pulsating star that swells and shrinks, changing brightness on timescales of hours.\n- Asteroseismology: inferring a star's interior and properties from the frequencies of its oscillations, much like geologists use seismic waves.\n- Radial mode / overtone: a pulsation in which the star expands and contracts uniformly; overtones are versions with more nodes in the pattern.\n- TESS: a NASA space telescope that monitors large areas of sky for brightness changes.\n- Eclipsing binary: two stars orbiting so that they periodically pass in front of each other, dimming the light.\n- Am star: a star with unusual surface chemistry, with some metals appearing stronger than normal.\n- The paper finds the fundamental radial mode fails to fit unless the star is much brighter than observed, so that mode is ruled out in this analysis.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a preliminary asteroseismic investigation of the pulsating stars in the intermediate-age open cluster NGC 2126. The TESS Full Frame Images and ground-based photometry from the previous study, Dileep et al. (2025), were used to identify the pulsation modes of {\\delta} Scuti member stars using period-luminosity relations and pulsation modelling. Our analysis resulted in a tentative identification up to the first radial overtone in stars N1, N2 and ZV1. Additionally, the second radial overtone was secured in N1. The disentangled pulsation and eclipse light curves of the binary star V551 Aur (V6) from our previous research were employed to study pulsation amplitude and phase modulations across the orbital period. The primary component of V6 exhibits pulsations showing amplitude and phase modulations, indicating tidal influence on the oscillations. Modelling the pulsation as the fundamental radial mode reveals that in order for the mode to be radial, the star must be significantly brighter than observed. Hence, the mode is not the fundamental radial mode or the overtones. Low-resolution spectroscopy was used to search for chemical peculiarities in the pulsating members, and we found that star ID 143 has features similar to an Am star.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28229",
+   "title": "Empirical Mass and Radius Relations for Main-sequence Stars from Detached Eclipsing Binaries",
+   "url": "https://arxiv.org/abs/2611.28229",
+   "authors": [
+    "D. M. Rowan",
+    "C. S. Kochanek"
+   ],
+   "label": "arXiv:2611.28229v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Empirical polynomial relations linking spectroscopic parameters (temperature, surface gravity, metallicity) to masses and radii of main-sequence stars, calibrated on 605 stars in detached eclipsing binaries, with comparisons to MIST and PARSEC stellar models.",
+    "plain": "Astronomers want to know how big and how heavy a star is, but the most direct way needs a pair of stars orbiting and eclipsing each other. This paper uses about 605 such star pairs as reference points to build formulas that estimate a star's mass and radius from measurements of its light spectrum, such as its temperature and composition. The authors report that an eight-term formula matches the reference stars to within about 4% in radius and about 8% in mass, and they give a predicted mass and radius for the Sun.",
+    "why": "Mass and radius estimates feed into work on stellar evolution and on exoplanets, since a planet's size and mass depend on its host star's. The paper also reports that two widely used stellar model sets differ systematically from the observations, with hot stars' radii overestimated and cool stars' underestimated, which may matter for those models' users; the text does not say how much these offsets would change any particular result.",
+    "background": "- Detached eclipsing binary: two stars orbiting each other, passing in front of one another without touching; their light dips reveal their sizes and masses precisely.\n- Main-sequence star: a star in the stable, hydrogen-burning phase of its life, like the Sun.\n- Effective temperature and surface gravity: the surface temperature of a star and how strongly gravity pulls on its surface; these are measured from spectra.\n- Metallicity: the fraction of elements heavier than helium in a star, a measure of its chemical composition.\n- Empirical relation: a formula fitted to observed data rather than derived from physical theory.\n- RMS scatter and dex: the typical spread of the fit errors; a dex is a logarithmic unit, where 0.016 dex is about 3.8%.\n- Stellar models (MIST, PARSEC): computer-calculated predictions of how stars evolve, used as theoretical comparisons.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Detached eclipsing binaries have long served as fundamental calibrators for stellar models because they provide precise measurements of stellar masses and radii. Given a sample of detached eclipsing binaries, we can derive empirical relations between spectroscopic parameters (effective temperatures, surface gravities and abundances) and stellar masses and radii. We use a sample of 605 stars (330 with metallicities) in detached eclipsing binaries to update and refine these empirical models for main-sequence stars. An eight-term polynomial model reproduces the radii and masses of the eclipsing binary calibrators with an RMS scatter of $\\sigma_{\\log R} = 0.0161$ dex (3.8%) and $\\sigma_{\\log M} = 0.0322$ dex (7.7%), respectively. Most of this scatter is explained by the parameter uncertainties - the estimated intrinsic scatters in the radius and mass are only $\\sigma_{\\rm int}=0.0085$ and $0.017$ dex (2.0% and 4.0%). The predicted mass and radius of the Sun are $(1.028\\pm0.004)\\ M_\\odot$ and $(1.014\\pm0.002)\\ R_\\odot$. A 14-term model, while formally preferred, explains little more of the intrinsic scatter. We additionally provide the equivalent relations in terms of the mean stellar density instead of the surface gravity for use with exoplanet host stars. If we compare the 8-term model to MIST and PARSEC model stars with closely matched spectroscopic parameters, we find systematic differences. For example, the radii of hot (cool) stars are systematically over- (under-)estimated in both models by several percent.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29181",
    "title": "Identifying Distant and Highly Reddened Star Clusters: 486 Open Clusters and Candidates in the Dusty Galactic Disk",
@@ -17,12 +68,12 @@
    "primary_category": "astro-ph.GA",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Using Gaia DR3 astrometry with 2MASS near-infrared photometry and a Bayesian membership scheme, the authors report 486 clusters and candidates in the dust-obscured Galactic disk, 450 of them without a literature counterpart.",
-    "plain": "Star clusters are groups of stars born together and moving together through the Milky Way. Many distant clusters are hidden behind interstellar dust, which blocks visible light, so astronomers have found fewer of them. This paper searches for such groups by combining a European space telescope's motion and brightness catalogue with infrared measurements, which see through dust better.",
-    "why": "The sample adds hundreds of mostly distant, heavily dust-covered clusters to a region that has been poorly mapped, and the authors suggest it may serve as a baseline for the next Gaia data release. The text also reports that the new objects show the north-south tilt of the Galactic warp, though the strength of that link is for readers to judge from the full paper.",
+    "ai": true,
     "background": "- Open cluster: a loose group of stars formed together, typically a few hundred to a few thousand stars.\n- Gaia: an ESA satellite that measures positions, motions (proper motion) and distances (parallax) of over a billion stars.\n- 2MASS: an earlier near-infrared sky survey; infrared light passes through dust more easily than visible light.\n- Extinction (Av): how much starlight is dimmed by dust, measured in magnitudes; Av of 5 means roughly 100 times fainter in visible light.\n- Kiloparsec (kpc): about 3,260 light-years; 6.9 kpc is roughly 22,000 light-years away.\n- Galactic warp: a bending of the Milky Way's outer disk, with one side tilted up and the other down.\n- DBSCAN: a standard computer algorithm that groups nearby points in data.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using Gaia DR3 astrometry with 2MASS near-infrared photometry and a Bayesian membership scheme, the authors report 486 clusters and candidates in the dust-obscured Galactic disk, 450 of them without a literature counterpart.",
+    "plain": "Star clusters are groups of stars born together and moving together through the Milky Way. Many distant clusters are hidden behind interstellar dust, which blocks visible light, so astronomers have found fewer of them. This paper searches for such groups by combining a European space telescope's motion and brightness catalogue with infrared measurements, which see through dust better.",
+    "why": "The sample adds hundreds of mostly distant, heavily dust-covered clusters to a region that has been poorly mapped, and the authors suggest it may serve as a baseline for the next Gaia data release. The text also reports that the new objects show the north-south tilt of the Galactic warp, though the strength of that link is for readers to judge from the full paper."
    },
    "abstract": "The Gaia mission has transformed the census of Galactic star clusters. Most discoveries were based on Gaia DR2 and EDR3, and the rate of new large cluster catalogues has declined since 2023. The distant and dusty part of the disk is still poorly sampled because optical data are strongly affected by extinction. We search for star clusters in the Galactic disk using Gaia DR3 astrometry and photometry, together with 2MASS near-infrared photometry. We scan trial cluster centers in Galactic position, proper motion, and parallax space, assign a Bayesian membership probability to each star, construct a relative density map, and use DBSCAN solely to separate neighboring peaks. We identify 486 clusters and candidates with astrometric quality comparable to that of previously reported clusters. Of these, 450 have no literature counterpart, while 36 are known clusters that were not recovered in earlier Gaia cluster searches. The median distance is 6.9 kpc, and 39% of the objects lie beyond 8 kpc. The median extinction is Av = 5.10 mag, and 16% of the objects have Av > 8mag. The new objects fill a sparsely sampled region of the distance--extinction plane. Their distribution reveals the north--south displacement of the Galactic warp, and high-latitude objects are on average farther, older, and less extincted. Gaia DR3 still offers room for distant, dust-obscured clusters, and this sample provides a baseline for Gaia DR4. All cluster parameters, member star information, spatial distribution maps, and color-magnitude diagrams can be downloaded from https://zenodo.org/records/24431850.",
    "source": "arxiv"
@@ -40,12 +91,12 @@
    "primary_category": "astro-ph.SR",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A 30-year radial-velocity survey of 119 slowly rotating, non-peculiar A-type dwarf and subgiant stars finds a multiplicity fraction of 0.64 and argues that tidal braking in short-period binaries is unlikely to explain their slow spins.",
-    "plain": "Astronomers wanted to know how many of the moderately hot, ordinary \"A-type\" stars that spin slowly have companion stars. Over more than 30 years they tracked the back-and-forth motion of 119 such stars toward and away from us, which reveals hidden partners. They worked out the orbits for 43 of them and, adding other known companions, found that about 64% of these stars have at least one companion.",
-    "why": "The result bears on why some stars spin slowly while most fast spinners look normal, a question that connects star formation and binary evolution. The authors report that only 6 of the 80 companion-bearing stars have orbits shorter than 10 days, so tides are probably not the main reason for their slow spin; the text does not establish a single cause.",
+    "ai": true,
     "background": "- A-type stars: hot, white-ish stars somewhat more massive than the Sun.\n- Projected rotational velocity (vsini): how fast a star spins, measured only along our line of sight, so it is a lower limit.\n- Radial velocity: the star's speed toward or away from us, measured from Doppler shifts in its light; periodic changes reveal an unseen companion.\n- Orbital elements: numbers describing a companion's orbit (period, size, shape, orientation).\n- Multiplicity fraction: the share of stars that have one or more companions.\n- Tidal interaction: gravitational pull between close companions that can slow a star's spin, mainly when the orbit is tight.\n- Main sequence: the long stable core-hydrogen-burning phase of a star's life.\n- Peculiar spectra: unusual chemical patterns in a star's light.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A 30-year radial-velocity survey of 119 slowly rotating, non-peculiar A-type dwarf and subgiant stars finds a multiplicity fraction of 0.64 and argues that tidal braking in short-period binaries is unlikely to explain their slow spins.",
+    "plain": "Astronomers wanted to know how many of the moderately hot, ordinary \"A-type\" stars that spin slowly have companion stars. Over more than 30 years they tracked the back-and-forth motion of 119 such stars toward and away from us, which reveals hidden partners. They worked out the orbits for 43 of them and, adding other known companions, found that about 64% of these stars have at least one companion.",
+    "why": "The result bears on why some stars spin slowly while most fast spinners look normal, a question that connects star formation and binary evolution. The authors report that only 6 of the 80 companion-bearing stars have orbits shorter than 10 days, so tides are probably not the main reason for their slow spin; the text does not establish a single cause."
    },
    "abstract": "While nearly all rapidly rotating (vsini > 120 km/s) A stars are observed to have normal spectra, a significant fraction (~43%) of slow rotators have peculiar spectra although many do not. For over 30 years, we conducted a radial velocity survey of 119 non-peculiar, slowly rotating dwarf or subgiant A stars. We determined orbital elements and related parameters for 43 systems and along with known visual binaries, common proper motion companions and stars with proper motion anomalies, find a multiplicity fraction of 0.64. We compared our results to recent findings concerning similar stars. We also examined whether the slow rotation of our sample of could have been caused by tidal interactions in short-period binaries. Of the 80 stars that we determined to be at least binary in nature or to show other evidence of having companions, only 6 have periods < 10 days. Thus, a large majority have periods that are much too long for tidal forces to have reduced their rotation rates while they are on the main-sequence. We also observed a small sample of rapid rotators (vsini = 125-230 km/s) over a shorter time interval to judge the accuracy of our measuring techniques on A stars with very broad lines. Orbital elements for 5 non-survey A-type stars, also with low vsini, are listed with our results, but are not included in the statistical discussion.",
    "source": "arxiv"

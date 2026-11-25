@@ -1,7 +1,52 @@
 {
  "slug": "probability",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30214",
+   "title": "Support monotonicity for quadratically regularized optimal transport",
+   "url": "https://arxiv.org/abs/2611.30214",
+   "authors": [
+    "Johannes Wiesel",
+    "Xingyu Xu"
+   ],
+   "label": "arXiv:2611.30214v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "For quadratically regularized optimal transport with quadratic cost and compactly supported marginals, the paper proves interior nesting of the optimizer's supports as the regularization parameter decreases, under regularity assumptions, in every dimension.",
+    "plain": "This paper studies a way of moving one pile of material onto another as cheaply as possible, where a small penalty term is added to make the solution smoother. The authors ask whether the region where the best plan places material only grows as the penalty gets weaker, and they show that this holds in the interior of the domain, under regularity assumptions, for small enough penalty values. The argument relies on detailed estimates of an auxiliary function and a rescaling trick.",
+    "why": "The text gives a concrete nesting result that tracks how the regularized solution approaches the classical (unregularized) optimal map as the penalty goes to zero, which is a basic question in the theory of regularized transport. Its broader connections are not spelled out in the text, so beyond this specialist setting I am not sure how far it reaches.",
+    "background": "- Optimal transport: finding the cheapest way to rearrange one probability distribution into another, with a cost for moving each unit.\n- Coupling: a joint distribution (plan) whose two sides match the given source and target distributions.\n- Monge coupling: the classical solution given by a single map from source to target points.\n- Quadratic regularization: adding a squared-size penalty to the cost, so the optimal plan is spread out rather than concentrated on one map; the penalty strength is the small parameter epsilon.\n- Support: the set of points where the plan puts positive weight.\n- Brenier map: the special optimal map for quadratic cost, given by the gradient of a convex function.\n- Compact support and interior: the marginal distributions live on bounded sets, and results are proved away from the boundary.\n- Density and rescaling: the plan is compared with the product of the two marginals; the paper rescales it by epsilon and studies the limit.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the support of the optimizer $\\pi_\\varepsilon$ of the quadratically regularized optimal transport problem for quadratic cost and compactly supported marginals. As $\\varepsilon$ tends to zero, this support converges to the support of the Monge coupling. We investigate whether the regularized supports are nested as $\\varepsilon $ decreases. Under regularity assumptions on the marginal densities, their domains, and the Brenier map, we establish interior support inclusions in every dimension. More precisely, for each compact $K\\subset\\operatorname{int}X$ and fixed $\\theta\\in(0,1)$, we prove that $\\mathrm{spt}\\pi_\\delta\\cap(K\\times Y) \\subseteq\\mathrm{spt}\\pi_\\varepsilon\\cap(K\\times Y)$ whenever $0<\\delta\\le\\theta\\varepsilon $ and $\\varepsilon$ is sufficiently small. On these points, the rescaled density $\\varepsilon d\\pi_\\varepsilon/d(\\mu\\otimes\\nu)$ is bounded below by a positive multiple of $\\varepsilon^{2/(d+2)}$. Our analysis combines sharp potential estimates with affine rescaling and a Liouville theorem that identifies the unique limiting density of the rescaled problem.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28268",
+   "title": "Fermat costs and path-dependent first-passage percolation",
+   "url": "https://arxiv.org/abs/2611.28268",
+   "authors": [
+    "Sandro Gallo",
+    "Matthieu Jonckheere",
+    "Alejandro H. Wences"
+   ],
+   "label": "arXiv:2611.28268v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper introduces a continuum first-passage percolation model on a Riemannian manifold in which the step-cost exponent grows along the path under a control rule, and proves a shape theorem showing the costs converge to deterministic space-time integrals that define a quasi-distance.",
+    "plain": "The paper studies how cheaply one can travel between two points when you are dropped randomly among many scattered points and must hop between them, with the cost of each hop depending on its length and on how far along the route you already are. As the number of points grows, the cheapest travel costs settle into a fixed, predictable pattern. The authors show this limit is not a true distance, because going from a crowded region to a sparse one can be cheaper than the reverse.",
+    "why": "The asymmetry of the limiting cost is the stated reason for interest, and the text suggests possible use in machine learning, though it does not show a concrete application. Its relevance beyond probability theory is therefore a suggestion rather than a demonstrated result.",
+    "background": "- First-passage percolation: a random model where the cost of paths is the sum of random or position-dependent step costs, and one studies the minimal cost between points.\n- Shape theorem: a result that the random minimal cost, rescaled, converges to a deterministic limiting shape or cost function.\n- Riemannian manifold: a smooth curved space in which distances and volumes are defined locally, generalizing flat Euclidean space.\n- Quasi-distance: like a distance but possibly not symmetric (cost from A to B may differ from B to A), and may fail the triangle inequality.\n- Step cost exponent alpha > 1: each hop costs its length raised to a power greater than one, so long hops are penalized more than short ones.\n- Point density: the points are sampled with a varying density, so some regions are crowded and others sparse.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce a path-dependent and space-inhomogeneous first-passage percolation (FPP) model in the continuum. Inspired by Euclidean FPP, it is defined through a sample of points drawn from a common density function on a Riemannian manifold. In Euclidean FPP, the cost of each step in a discrete path is given by its length raised to the power $\\alpha>1$. In our model, the power $\\alpha$ increases as the path progresses, governed by a control mechanism. Consequently, the resulting percolation cost is not a distance. However, we prove a shape theorem showing that, as the number of points goes to infinity, the percolation costs converge to deterministic space-time integrals along curves in the manifold. This limit defines a quasi-distance with the property that traversing a curve from a high-density region towards a low-density one is generally cheaper than in the reverse direction; thus highlighting its potential use in machine learning applications.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28254",
    "title": "Epidemic random model under vaccination regime and non-permanent immunity driven by time-changed Levy noise",
@@ -15,12 +60,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A stochastic SIRV epidemic model with waning (non-permanent) immunity and variable population size, where the contact rate is a random process driven by time-changed Lévy noise, is shown to have a unique positive global solution, a random basic reproduction number, and sufficient conditions for disease extinction and persistence in mean.",
-    "plain": "This paper studies how a contagious disease might spread in a population when the rate of contact between people fluctuates unpredictably over time. The model splits people into groups (susceptible, infected, recovered, and vaccinated), and immunity from infection or vaccination can wear off. The authors prove the model has a sensible, always-nonnegative solution and give conditions under which the disease dies out or lingers on average, expressed in terms of the model's parameters and two long-run measures.",
-    "why": "Real contact rates are rarely constant, so models that let them fluctuate randomly are a more realistic way to ask whether an outbreak will fade out. The text does not say how the results compare with data or other models, so their practical use is unclear from the summary alone.",
+    "ai": true,
     "background": "- Compartmental epidemic models: populations split into Susceptible, Infected, Recovered, Vaccinated groups, linked by differential equations.\n- Basic reproduction number: the average number of new infections caused by one case in a fully susceptible population; above a threshold the disease can spread.\n- Non-permanent immunity: recovered or vaccinated people can become susceptible again after immunity wears off.\n- Stochastic differential equations: equations with a random noise term, used for quantities that fluctuate unpredictably.\n- Lévy noise: random fluctuations that can include both smooth wiggles (Brownian motion) and sudden jumps (Poisson-type events).\n- Time change: running the randomness on a random clock, so activity can speed up or slow down.\n- Extinction vs. persistence in mean: whether the disease dies out, or its average level stays above zero over the long run.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A stochastic SIRV epidemic model with waning (non-permanent) immunity and variable population size, where the contact rate is a random process driven by time-changed Lévy noise, is shown to have a unique positive global solution, a random basic reproduction number, and sufficient conditions for disease extinction and persistence in mean.",
+    "plain": "This paper studies how a contagious disease might spread in a population when the rate of contact between people fluctuates unpredictably over time. The model splits people into groups (susceptible, infected, recovered, and vaccinated), and immunity from infection or vaccination can wear off. The authors prove the model has a sensible, always-nonnegative solution and give conditions under which the disease dies out or lingers on average, expressed in terms of the model's parameters and two long-run measures.",
+    "why": "Real contact rates are rarely constant, so models that let them fluctuate randomly are a more realistic way to ask whether an outbreak will fade out. The text does not say how the results compare with data or other models, so their practical use is unclear from the summary alone."
    },
    "abstract": "A random version of the Susceptible-Infected-Recovered-Vaccinated (SIRV) epidemic model with non-permanent immunity and a population of non-constant size is studied. The compartments satisfy a system of differential equations in which the contact rate is a random coefficient, and the contact rate itself is driven by a stochastic differential equation with time-changed Levy noise. This noise is constructed from a conditional Brownian motion and a doubly stochastic Poisson random field, both governed by a stochastic clock. When the clock is independent of the Brownian and Poisson components, the two parts of the noise are a time-changed Brownian motion and a time-changed Poisson random measure. The equation for the contact rate decouples from the compartment equations and enters them as a random parameter, which allows the compartments to be treated pathwise. The existence, uniqueness, and positivity of the global solution are proven, and the basic reproduction number of the model is shown to be random. Furthermore, sufficient conditions for extinction and persistence in mean of the disease are derived. The conditions are expressed in terms of the parameters of the model and two long-run characteristics.",
    "source": "arxiv"
@@ -39,12 +84,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Proves existence and regularity of invariant measures for stochastic fractional PDEs with memory and nonlinear multiplicative noise, using a Dafermos-type past-history variable to restore a Markov structure.",
-    "plain": "This paper studies random evolution equations that depend on both their past and random disturbances, the kind used to model materials or processes with memory. The authors recast the problem using a new variable that sums up the past history, which makes the system behave Markov-style, meaning the future depends only on the present state. Using that device, they show that long-run statistical equilibria (invariant measures) exist and that these equilibria have additional smoothness.",
-    "why": "Long-term behaviour of random systems with memory is hard to analyse because the usual Markov tools fail, so a workable reformulation is of interest to specialists in stochastic PDEs. The text does not discuss applications, so any connection to particular physical or engineering models is not stated here.",
+    "ai": true,
     "background": "- Stochastic PDE: a partial differential equation driven by random noise.\n- Fractional operator: a generalised derivative of non-integer order, used to model nonlocal or anomalous behaviour.\n- Memory (non-Markovian) effect: the current evolution depends on the whole past, not just the present state.\n- Multiplicative noise: the random disturbance's strength depends on the current state.\n- Markov semigroup and invariant measure: the probability distribution a random system settles into and keeps over time.\n- Dafermos method: a standard trick that replaces the past history with an auxiliary variable to remove memory.\n- Galerkin approximation and Minty's technique: standard tools for proving well-posedness of nonlinear equations.\n- Krylov-Bogoliubov approach: a classical way to construct invariant measures from time averages.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Proves existence and regularity of invariant measures for stochastic fractional PDEs with memory and nonlinear multiplicative noise, using a Dafermos-type past-history variable to restore a Markov structure.",
+    "plain": "This paper studies random evolution equations that depend on both their past and random disturbances, the kind used to model materials or processes with memory. The authors recast the problem using a new variable that sums up the past history, which makes the system behave Markov-style, meaning the future depends only on the present state. Using that device, they show that long-run statistical equilibria (invariant measures) exist and that these equilibria have additional smoothness.",
+    "why": "Long-term behaviour of random systems with memory is hard to analyse because the usual Markov tools fail, so a workable reformulation is of interest to specialists in stochastic PDEs. The text does not discuss applications, so any connection to particular physical or engineering models is not stated here."
    },
    "abstract": "We are concerned with stochastic fractional partial differential equations involving memory and nonlinear multiplicative noise. Based on the well-known Dafermos method, a suitable variable defined by the integrated past history is introduced. This transformation not only overcomes the non-Markovianity of the original problem which prevents us from analyzing invariant measures for the associated Markov semigroup, but also facilitates the analysis of the well-posedness together with the Faedo-Galerkin approximations and Minty's technique. Moreover, we prove the existence of invariant measures by the classical Krylov-Bogoliubov approach, and further establish the regularity of invariant measures by virtue of a control argument.",
    "source": "arxiv"

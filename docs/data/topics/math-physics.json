@@ -1,7 +1,50 @@
 {
  "slug": "math-physics",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.31189",
+   "title": "Tensionless M5-brane in light-cone gauge. The spinor moving frame method is wanted",
+   "url": "https://arxiv.org/abs/2611.31189",
+   "authors": [
+    "Igor Bandos"
+   ],
+   "label": "arXiv:2611.31189v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper performs complete light-cone gauge fixing of the tensionless limit of the M5-brane action, using a spinor moving frame method adapted to handle the fermionic kappa-symmetry, and also builds the analogous formulation for tensionless p-branes without worldvolume gauge fields.",
+    "plain": "The paper studies a idealized version of a membrane-like object from string/M-theory, the 5-dimensional \"M5-brane,\" in the limit where its tension (the energy cost per unit size that gives it stiffness) goes to zero. The main difficulty is that the usual way of removing redundant descriptions of the object does not work cleanly here, so the authors adapt a technique called the spinor moving frame method to do it. The text describes this as a method that works, and it also checks the symmetries of the resulting equations.",
+    "why": "Tensionless branes are a niche but active topic in theoretical physics, and this work shows how to put the M5-brane's tensionless action into a fixed, simpler gauge. It may matter for understanding high-tension-to-zero limits of M-theory, but the text does not state broader consequences, so the wider significance is unclear from the abstract alone.",
+    "background": "- M-theory: the proposed 11-dimensional theory unifying string theories.\n- Branes: extended objects; a p-brane has p spatial dimensions, and an M5-brane is 5+1 dimensional.\n- Tension: the energy per unit volume of a brane; a tensionless brane is a limiting case.\n- Gauge fixing: choosing a convenient description by removing redundant mathematical freedom.\n- Light-cone gauge: a specific choice of coordinates that simplifies equations.\n- Kappa-symmetry: a local fermionic (spinor-valued) symmetry of brane actions that must be handled when fixing the gauge.\n- Spinor moving frame: a technique that builds a local coordinate frame from spinor quantities to fix that symmetry.\n- PST scalar: a scalar field from the Pasti-Sorokin-Tonin formulation of the M5-brane action.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We perform the complete light-cone gauge fixing for the tensionless limit of the M-theory 5-brane the action for which was recently obtained in [1]. The problem of gauge fixing of local fermionic $\\kappa$-symmetry becomes quite nontrivial because the projector of that is constructed from the gauge field strength which in its turn is required to be nonvanaishing and nontrivial in this limit. To resolve this problem the spinor moving frame method has been adapted. The corresponding moving frame is constructed on a vector quadratic in the gauge field strength, which is required to be nonvanishing and nondegenerate in the tensionless limit, and the derivative of the PST (Pasti-Sorokin-Tonin) scalar. The symmetries of the gauge fixed action and equations of motion are briefly discussed. To make a comparison with the case of usual tensionless p-branes (null-p-branes), those which do not carry worldvolume gauge fields, we also elaborate their spinor moving frame formulation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29691",
+   "title": "Infrared finite scattering theory: Non-relativistic Coulomb scattering",
+   "url": "https://arxiv.org/abs/2611.29691",
+   "authors": [
+    "Kartik Prabhu",
+    "Shivam Upadhyay"
+   ],
+   "label": "arXiv:2611.29691v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper builds a perturbative, infrared-finite Dollard scattering operator for non-relativistic Coulomb scattering, checks it through second Born order, and sets up an LSZ-type reduction in the Heisenberg picture adapted to the modified asymptotic dynamics.",
+    "plain": "When two charged particles fly past each other, their electric pull never fully switches off, so the standard textbook way of calculating how they scatter produces infinite terms. This paper revisits that problem for the simple non-relativistic Coulomb case and uses a modified reference dynamics (Dollard's approach) that makes the infinities cancel order by order in the calculation. The authors check that the result matches the known exact Coulomb scattering amplitude, including its forward-scattering part, and then rewrite the setup in a different mathematical viewpoint meant as a stepping stone toward quantum field theory.",
+    "why": "Long-range forces and massless particles, such as photons, create the same kind of infrared divergence in quantum field theory, so a clean, checkable version of the method in a simple case may help with that harder setting. The text only describes the framework and its consistency checks through second order; it does not show that the relativistic extension works, so that link remains a goal rather than a result.",
+    "background": "- Scattering amplitude: a quantity giving the probability-like outcome when particles collide or pass each other.\n- Coulomb potential: the 1/r electric attraction or repulsion between charges, which decays slowly with distance.\n- Born series: calculating scattering as a sum of successively refined approximations; each term here is a perturbation.\n- Infrared divergence: infinite results caused by long-range effects or very low-energy (soft) quanta.\n- Dollard scattering operator: a modified reference dynamics that absorbs the slow-decay problem so the scattering quantity is well defined.\n- Heisenberg picture and S-matrix: a way of tracking operators over time, and the matrix connecting incoming to outgoing states.\n- LSZ reduction: the standard recipe in quantum field theory for extracting scattering amplitudes from correlation functions.\n- Canonical transformation: a change of position and momentum variables that preserves the underlying physics.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We revisit non-relativistic quantum-mechanical scattering in a Coulomb potential. The long-range nature of the interaction leads to divergent integrals in conventional S-matrix calculations using the Born series. Dollard showed that a well-defined scattering operator can be constructed by replacing the free Hamiltonian $ H_0 $ with an appropriate asymptotic Hamiltonian $ H_{\\rm D} $. However, explicit perturbative calculations within Dollard's framework have remained scarce. We develop a perturbative formulation of the Dollard scattering operator in which the Coulomb divergences cancel to all orders. Perturbatively, we demonstrate this cancellation explicitly through second Born order and show that the resulting amplitude reproduces the known exact distributional Coulomb amplitude, including its forward-scattering contribution. With the aim of generalizing our analysis to quantum field theory, we reformulate the problem in the Heisenberg picture. We construct a new set of canonical variables through a time-dependent canonical transformation that removes the logarithmic Coulomb correction from the asymptotic phase-space coordinates. Using these variables, we construct the corresponding Heisenberg S-matrix through several complementary approaches. This leads to a formulation of the Lehmann--Symanzik--Zimmermann (LSZ) reduction formalism adapted to the modified asymptotic dynamics, which we relate to the Dollard scattering operator. This construction provides a framework for extending the LSZ formalism to infrared divergences in relativistic quantum field theories with long-range interactions and massless fields.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31050",
    "title": "Gradient formula from the sphere for perturbative RG flows near critical dimensions",
@@ -13,12 +56,12 @@
    "primary_category": "hep-th",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper derives a gradient formula for perturbative renormalisation group flows near critical dimensions, built from a renormalised functional on the sphere S^d, and checks its properties in several specific field theories in d = d_c − ε.",
-    "plain": "Physicists describe how a quantum field theory changes with the scale at which you look at it, and this flow is often described by a \"beta function\". The paper studies when such flows behave like the downhill motion of a ball on a landscape, which is the gradient property. The authors put the theory on a round sphere, derive a formula of this kind, and show that its potential at fixed points is related to the sphere free energy, for several example theories in dimensions just below a critical value.",
-    "why": "A gradient structure would give a general way to organise which scale-dependent theories can flow to which fixed points, and it links the flow to a sphere free energy that is a known quantity. The text does not show how far these results reach beyond the listed theories; for interacting gauge theories the authors state the properties only as assumptions.",
+    "ai": true,
     "background": "- Renormalisation group (RG): the systematic way physicists track how a theory's couplings change with energy or length scale.\n- Beta function: the rate of change of a coupling along the RG flow; fixed points are where it vanishes.\n- Critical dimension d_c and ε: the paper works in a spacetime dimension d = d_c − ε, expanding in the small number ε.\n- Weyl anomaly: a scaling symmetry that fails to hold exactly once quantum effects are included.\n- Sphere free energy F̃: a scheme-independent number attached to a conformal theory placed on a sphere; it is used as a measure of degrees of freedom.\n- Gradient flow: a flow that follows the downhill direction of a scalar potential under a metric.\n- Two-point function: the correlation between field values at two points, here on the sphere.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives a gradient formula for perturbative renormalisation group flows near critical dimensions, built from a renormalised functional on the sphere S^d, and checks its properties in several specific field theories in d = d_c − ε.",
+    "plain": "Physicists describe how a quantum field theory changes with the scale at which you look at it, and this flow is often described by a \"beta function\". The paper studies when such flows behave like the downhill motion of a ball on a landscape, which is the gradient property. The authors put the theory on a round sphere, derive a formula of this kind, and show that its potential at fixed points is related to the sphere free energy, for several example theories in dimensions just below a critical value.",
+    "why": "A gradient structure would give a general way to organise which scale-dependent theories can flow to which fixed points, and it links the flow to a sphere free energy that is a known quantity. The text does not show how far these results reach beyond the listed theories; for interacting gauge theories the authors state the properties only as assumptions."
    },
    "abstract": "We study the gradient property of perturbative renormalisation group flows in $d=d_c-\\varepsilon$, with a potential and a metric regular at $\\varepsilon=0$ up to logarithms of gauge couplings. We state properties of the renormalised functional with local couplings on the sphere $S^d$: finiteness, a local Weyl anomaly, the Ward identity of a conformal Killing vector, rotation properties and statements on the free theory. From them we derive a Ward identity without anomaly for a combination of the functional and its anomaly. Its first variation is a gradient formula whose symmetric metric contains the two-point function on the sphere and whose potential at fixed points is, in an extended form of the properties, proportional to the sphere free energy $\\tilde F$ up to a constant. Sources of relevant operators enter through their Weyl variation, and in a scheme which we construct the gradient formula persists, with a nondegenerate metric if a matrix of the free theory is invertible. For multiscalar $\\phi^4$ theory and for scalars and Dirac fermions with Yukawa and quartic couplings in $d=4-\\varepsilon$, for sextic scalars in $d=3-\\varepsilon$ and for cubic scalars in $d=6-\\varepsilon$, we derive all these properties from a finiteness hypothesis. The gradient formula then holds to all orders for the beta function defined on the sphere. For interacting gauge theories the properties remain assumptions.",
    "source": "arxiv"
@@ -38,12 +81,12 @@
    "primary_category": "math-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper constructs μ- and q-extended versions of the special functions and nested sums (harmonic sums, polylogarithms, cyclotomic and root-valued objects) that arise in perturbative quantum field theory loop calculations.",
-    "plain": "Calculations in particle physics often produce a family of named mathematical functions and sums. This paper builds generalized versions of these functions, each with an extra parameter (called μ or q) that deforms the usual algebra. The abstract reports that the μ-versions mostly keep the same classes of functions, except for the case involving roots, while the q-versions produce new, higher-level functions.",
-    "why": "These deformed functions are said to be expected in loop calculations in theories modified by changed commutation rules, so the work is a mathematical groundwork for that possibility. Whether it connects to physical predictions is not shown in the text provided, so that link remains unclear.",
+    "ai": true,
     "background": "- Perturbative quantum field theory: approximating particle interactions as a series of terms, each computed as a loop integral.\n- Polylogarithms and harmonic sums: standard families of special functions and sums that appear in these integrals.\n- Mellin transform: a mathematical change of variables that links integrals to sums.\n- q- and μ-extensions: deformations of ordinary algebra (q-numbers, or commutation rules modified by a parameter) used to generalize these functions.\n- Transcendental functions: functions that cannot be expressed as roots of polynomials with simple coefficients; \"higher\" means more complex in this classification.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper constructs μ- and q-extended versions of the special functions and nested sums (harmonic sums, polylogarithms, cyclotomic and root-valued objects) that arise in perturbative quantum field theory loop calculations.",
+    "plain": "Calculations in particle physics often produce a family of named mathematical functions and sums. This paper builds generalized versions of these functions, each with an extra parameter (called μ or q) that deforms the usual algebra. The abstract reports that the μ-versions mostly keep the same classes of functions, except for the case involving roots, while the q-versions produce new, higher-level functions.",
+    "why": "These deformed functions are said to be expected in loop calculations in theories modified by changed commutation rules, so the work is a mathematical groundwork for that possibility. Whether it connects to physical predictions is not shown in the text provided, so that link remains unclear."
    },
    "abstract": "Analytic calculations up to single-scale quantities in perturbative quantum field theory result into special numbers and functions, which are generalizations as iterative integrals over special alphabets. In this way one obtains polylogarithms, Nielsen integrals, the iterated integrals over linear denominator terms, cyclotomic letters, letters induced by quadratic forms, and square-root valued letters. The inverse Mellin transform relates special nested sums to these quantities, which are harmonic sums, generalized harmonic sums, nested sums implied by quadratic forms, cyclotomic harmonic sums, and nested sums containing central binomials. We construct the $\\mu$- and $q$-extensions of all these special functions. They are expected to occur in loop calculations within $\\mu$- and $q$-extended quantum field theories via modified (anti)commutation relations. The $\\mu$-extended special functions are quite different form the corresponding $q$-extended functions. While in the former case one observes class-preservation characterized by the polynomial $\\mu$-parameter, except for the case of root-valued letters. In the latter case new higher transcendental functions are obtained.",
    "source": "arxiv"

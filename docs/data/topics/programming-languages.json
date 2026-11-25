@@ -1,7 +1,56 @@
 {
  "slug": "programming-languages",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29853",
+   "title": "Landscape and Taxonomy of Prompt Engineering Patterns in Software Engineering",
+   "url": "https://arxiv.org/abs/2611.29853",
+   "authors": [
+    "Yuya Sasaki",
+    "Hironori Washizaki",
+    "Jialong Li",
+    "Nobukazu Yoshioka",
+    "Naoyasu Ubayashi",
+    "Yoshiaki Fukazawa"
+   ],
+   "label": "arXiv:2611.29853v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A taxonomy of prompt engineering patterns for software engineering, derived from a systematic literature review conducted in early 2023.",
+    "plain": "Large language models are AI systems that write text in response to instructions, called prompts. This paper sorts the recurring ways people word those prompts to get useful results for software tasks, and builds a classification of these approaches. The classification is based on a review of existing published studies gathered in early 2023, when these models still had tight limits on how much text they could read at once.",
+    "why": "Prompt wording strongly affects how useful AI tools are for developers, so a shared catalogue of patterns can help practitioners and researchers. The text does not report specific results or how well each pattern performs, so its practical impact is hard to judge from this summary alone.",
+    "background": "- Large language model (LLM): an AI system trained on large amounts of text that generates responses to written input.\n- Prompt: the instruction or question given to the model.\n- Prompt pattern: a reusable way of structuring a prompt to get a reliable result, similar to a recipe.\n- Systematic literature review: a structured search and summary of published research on a topic.\n- Context length: how much text a model can take in at once.\n- Software engineering: the work of designing, building, and maintaining software.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Advancements in large language models (LLMs) have enhanced their ability to handle ambiguous user instructions. However, effective prompt patterns remain crucial for usability and comprehension. This article presents a taxonomy of prompt engineering patterns for software engineering. It is based on a systematic literature review that was conducted in early 2023, when LLMs still faced significant limitations in context length and inference capabilities. Our study explores techniques that enhance the usability and reliability of LLMs, emphasizing the ongoing importance of well-designed prompts in optimizing task performance. Our findings highlight the critical role of prompt patterns in maximizing LLM's potential, even as their capabilities continue to evolve.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30692",
+   "title": "Sheaf Semantics of Probabilistic Programs",
+   "url": "https://arxiv.org/abs/2611.30692",
+   "authors": [
+    "Shing Hin Ho",
+    "Nicolas Wu",
+    "Azalea Raad"
+   ],
+   "label": "arXiv:2611.30692v1",
+   "primary_category": "cs.LO",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper gives a monadic denotational semantics, built on Simpson's probability sheaves and the internal logic of atomic sheaves, for higher-order probabilistic programs with continuous distributions, proves it is a model of the ν-calculus, and derives a higher-order probabilistic Hoare logic that handles continuous random variables, higher-order functions and independence.",
+    "plain": "The paper is about how to give a precise mathematical meaning to computer programs that make random choices from continuous distributions (such as a value drawn from a bell curve), including programs whose functions can take other functions as inputs. The authors build such a meaning using a mathematical framework called sheaves and then use it to set up a logic for proving properties of these programs, such as what distribution their outputs follow and whether outputs are independent of each other. The text presents this as a set of proofs and a derived proof system rather than experiments.",
+    "why": "Reasoning formally about randomized programs with continuous values is hard, and most existing tools handle only discrete randomness or first-order programs, so an approach that covers higher-order functions and independence addresses a real gap. The connection is to verification of probabilistic software and to the mathematical foundations of statistics-driven code; the text does not say how practical the logic is, so its impact on real tools is uncertain.",
+    "background": "- Probabilistic programs: programs that draw random values, here from continuous distributions (real-valued, not just coin flips).\n- Denotational semantics: assigning each program a mathematical object that captures its meaning.\n- Measure theory: the branch of mathematics that makes probabilities over real numbers rigorous.\n- Monad: a standard way in programming theory to package effects such as randomness into a composable structure.\n- Sheaf and topos: advanced category-theory structures that organize local information consistently; the paper uses their internal logic.\n- Hoare logic: a proof system that reasons about programs using pre- and post-conditions.\n- Probabilistic (in)dependence: whether knowing one random output tells you anything about another.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Finding denotational models of probabilistic languages that support sampling from continuous distributions is difficult: the existence of continuous distributions means that measure-theoretic objects are needed to define the semantics. A challenging task on top of this is logical reasoning with respect to the semantic model: in the case of probabilistic programs, the desired properties to reason about include the distributions, expected value and the probabilistic (in)dependence of outputs. This paper introduces a monadic semantics for higher-order probabilistic programs with continuous distributions based on Simpson's theory of probability sheaves and the internal logic of atomic sheaves. We prove that our semantics forms a model of the $\\nu$-calculus. Furthermore, using the well-behavedness of the semantic domain and the internal logic of the topos, we derive the first higher-order probabilistic Hoare logic with rigorous treatment of continuous random variables, higher-order functions, and independence.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28996",
    "title": "\"What Should I Do?\" Guidelines for Responsibly Integrating AI in Software Engineering",
@@ -20,12 +69,12 @@
    "primary_category": "cs.SE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A two-phase survey study of 1,118 developers at Microsoft, GitHub, and Pfizer that derives and then validates 35 guidelines for how software engineers should responsibly integrate AI into their work.",
-    "plain": "Software developers are now using AI tools in their daily work, but the advice on how to use them well is thin and sometimes contradictory. The researchers first surveyed 860 Microsoft developers about where they did and did not want AI help, and turned their answers into 35 practical guidelines. A year later, they checked those guidelines with 258 developers at Microsoft, GitHub, and the drug company Pfizer, and most said the guidelines were clear, relevant, and something they wanted to follow.",
-    "why": "As AI tools spread into software that people depend on, the question of who is accountable for AI-assisted code matters, and this paper offers practitioner-sourced guidance and shared terms teams could adopt. The text does not show how much the guidelines change actual outcomes, so their practical effect is still unclear.",
+    "ai": true,
     "background": "- Software engineering (SE): the work of designing, building, testing and maintaining software.\n- Generative AI coding assistants: tools that suggest or write code from natural-language prompts.\n- Survey study: collecting self-reported experiences from many people; results reflect what respondents say, not measured performance.\n- Validation phase: a second round where a new group rates whether the derived guidelines are clear and useful.\n- Delegation vs. judgment: the paper's framing of handing checkable tasks to AI while keeping decisions and responsibility with the human.\n- Relationship-centric work: SE tasks that depend on collaboration and interpersonal communication, where the paper reports more variation in endorsement.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A two-phase survey study of 1,118 developers at Microsoft, GitHub, and Pfizer that derives and then validates 35 guidelines for how software engineers should responsibly integrate AI into their work.",
+    "plain": "Software developers are now using AI tools in their daily work, but the advice on how to use them well is thin and sometimes contradictory. The researchers first surveyed 860 Microsoft developers about where they did and did not want AI help, and turned their answers into 35 practical guidelines. A year later, they checked those guidelines with 258 developers at Microsoft, GitHub, and the drug company Pfizer, and most said the guidelines were clear, relevant, and something they wanted to follow.",
+    "why": "As AI tools spread into software that people depend on, the question of who is accountable for AI-assisted code matters, and this paper offers practitioner-sourced guidance and shared terms teams could adopt. The text does not show how much the guidelines change actual outcomes, so their practical effect is still unclear."
    },
    "abstract": "Speculations abound about the \"right\" ways for developers to integrate AI into their software engineering (SE) work, but the evidence that exists is sparse and contradictory. Yet, developers are held responsible for the products they ship with (or without) AI's help, so they need to integrate AI in responsible ways. To address this gap, we conducted a two-phase, large-scale investigation with 1,118 developers at Microsoft, GitHub, and Pfizer. In Phase 1, we surveyed 860 developers at Microsoft on where they sought and resisted AI support in their daily work, and from their accounts, synthesized 35 developer-facing guidelines: 29 across five categories of SE work and 6 cross-cutting ones. A year later, as AI capabilities and developers' experiences co-evolved, we validated them in Phase 2 with 258 developers in technology (Microsoft, GitHub) and biopharmaceutical (Pfizer) domains. Developers in our study found the guidelines clearly worded (92%) and relevant to their work (91%), and most wanted to adopt them in their own work (89%). We also report how developers described operationalizing these guidelines in practice: using AI to refine their craft and delegate verifiable work, while keeping judgment and accountability for themselves. For relationship-centric work, endorsement varied with developers' domain and their SE and AI experience. Overall, we offer concrete advice from in-the-trenches developers to other in-the-trenches developers, and a shared vocabulary that engineering teams can adopt to integrate AI well in their work.",
    "source": "arxiv"
@@ -43,12 +92,12 @@
    "primary_category": "cs.SE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes \"scenario domain analysis,\" a method that searches for the smallest expected change in natural-language coding-task descriptions that causes an LLM to generate incorrect code, and uses it to compare four LLMs and several task types.",
-    "plain": "Developers increasingly ask AI language models to write program code from a short written description of a task. This paper asks how sensitive those models are to small changes in the wording of that description, and it introduces a way to measure that sensitivity. The authors report that they could rank four models from most to least robust, and that the models did worse on more complex tasks and on advanced topics such as multi-threading and data structures.",
-    "why": "Code generated by AI is only useful if it stays correct when people phrase their requests slightly differently, so measuring this sensitivity matters for trusting such tools. The text does not say how the method performs beyond the four models and tasks tested, so its broader reach is unclear.",
+    "ai": true,
     "background": "- Large language model (LLM): an AI system trained on large amounts of text, here used to write code from instructions.\n- Robustness: how much a system's output stays correct when its input is changed a little.\n- Natural-language (NL) description: the plain-English statement of what a program should do.\n- Discrete and sparse input space: the possible wordings are separate, countable options with large gaps between them, so ordinary tests for smooth changes do not apply.\n- Multi-threading: running several parts of a program at the same time.\n- Formal proof: a mathematical argument that a property always holds, which the authors say they provided for their method.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper proposes \"scenario domain analysis,\" a method that searches for the smallest expected change in natural-language coding-task descriptions that causes an LLM to generate incorrect code, and uses it to compare four LLMs and several task types.",
+    "plain": "Developers increasingly ask AI language models to write program code from a short written description of a task. This paper asks how sensitive those models are to small changes in the wording of that description, and it introduces a way to measure that sensitivity. The authors report that they could rank four models from most to least robust, and that the models did worse on more complex tasks and on advanced topics such as multi-threading and data structures.",
+    "why": "Code generated by AI is only useful if it stays correct when people phrase their requests slightly differently, so measuring this sensitivity matters for trusting such tools. The text does not say how the method performs beyond the four models and tasks tested, so its broader reach is unclear."
    },
    "abstract": "It is now common practice in software development for large language models (LLMs) to be used to generate program code. It is desirable to evaluate the robustness of LLMs for this usage. This paper is concerned in particular with how sensitive LLMs are to variations in descriptions of the coding tasks. However, existing techniques for evaluating this robustness are unsuitable for code generation because the input data space of natural language (NL) descriptions is discrete and sparse. To address this problem, we propose a robustness evaluation method called scenario domain analysis, which aims to find the expected minimal change in the NL descriptions of coding tasks that would cause the LLMs to produce incorrect outputs. We have formally proved the theoretical properties of the method and also conducted extensive experiments to evaluate the robustness of four state-of-the-art LLMs: Gemini-pro, Codex, Llamma2 and Falcon 7B, and have found that we are able to rank these with confidence from best to worst. Moreover, we have also studied how robustness varies in different scenarios, including the variations with the topic of the coding task and with the complexity of its sample solution, and found that robustness is lower for more complex tasks and also lower for more advanced topics, such as multi-threading and data structures.",
    "source": "arxiv"

@@ -1,7 +1,49 @@
 {
  "slug": "number-theory",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29380",
+   "title": "On the number theory of the Greeks. I. The Fundamental Theorem of Arithmetic",
+   "url": "https://arxiv.org/abs/2611.29380",
+   "authors": [
+    "Franz Lemmermeyer"
+   ],
+   "label": "arXiv:2611.29380v1",
+   "primary_category": "math.NT",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A historical study arguing that Euclid's version of the fundamental theorem of arithmetic (unique factorization into primes) was widely known to pre-Gaussian number theorists, much as Gauss's later formulation is known today.",
+    "plain": "This paper looks at a basic rule of arithmetic: every whole number larger than 1 can be built from prime numbers in only one way. The author says Euclid stated this rule long ago, and that it was once as familiar to mathematicians as the later version given by Gauss is now. The text given here is only a short summary, so the detailed evidence is not shown.",
+    "why": "It is a historical claim about how a central idea of number theory was understood and passed on, which matters for how we credit mathematical results. The excerpt does not show the evidence in detail, so the strength of the claim cannot be judged from it alone.",
+    "background": "- Prime number: a whole number greater than 1 with no divisors other than 1 and itself (2, 3, 5, 7, ...).\n- Fundamental Theorem of Arithmetic: every whole number above 1 factors into primes in exactly one way, ignoring order.\n- Euclid: ancient Greek mathematician, author of the Elements, around 300 BCE.\n- Gauss: Carl Friedrich Gauss, 18th–19th century mathematician, whose 1801 Disquisitiones Arithmeticae is often credited with the modern statement of the theorem.\n- The paper is the first part of a series on Greek number theory.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "In this article we present Euclid's fundamental theorem of number theory and give evidence for the claim that this theorem, which is largely unknown today, was as familiar to number theorists before Gauss as the Gaussian version of the fundamental theorem is to us.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30908",
+   "title": "A Classification of Low Genus Modular Curves",
+   "url": "https://arxiv.org/abs/2611.30908",
+   "authors": [
+    "Eray Karabiyik"
+   ],
+   "label": "arXiv:2611.30908v1",
+   "primary_category": "math.NT",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper classifies modular curves of a fixed genus g attached to open subgroups G of GL_2(Z-hat) with full determinant and -I in G, shows they fall into finitely many families of Q^ab-twists, and gives an algorithm (implemented for g ≤ 12) to compute their projective models.",
+    "plain": "The paper studies a family of geometric curves that classify elliptic curves (a standard kind of smooth curve defined by cubic equations) with extra structure. For each fixed \"genus\" (roughly, the number of holes in the curve's surface), the authors sort all such curves into a finite number of families. They also describe a computer procedure for finding explicit equations for these curves, which they carried out for genus up to 12.",
+    "why": "Modular curves are central to modern number theory, and their rational points connect to questions such as which elliptic curves can have particular torsion behaviour. A finite classification by genus gives a systematic way to organise these curves, though the text alone does not show how far the results will be used in later work.",
+    "background": "- Elliptic curves: smooth cubic curves with a group law, widely used in number theory and cryptography.\n- Modular curve X_G: a curve over the rationals whose points parametrise elliptic curves with a given level structure (extra symmetry data on their torsion points).\n- GL_2(Z-hat): the group of invertible 2x2 integer matrices, completed over all primes; open subgroups encode level structures.\n- Genus: a whole-number measure of a curve's topology (number of \"handles\"); genus 0 curves are rational-like, higher genus curves are harder.\n- Q^ab-twist: a twist of a curve by an extension of the rationals with abelian Galois group.\n- Projective model: explicit polynomial equations describing the curve in projective space.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $G$ be an open subgroup of $\\mathrm{GL}_2(\\widehat{\\mathbb{Z}})$ satisfying $\\det(G)=\\widehat{\\mathbb{Z}}^{\\times}$ and $-I\\in G$. Associated to $G$, there is a modular curve $X_G$ defined over $\\mathbb{Q}$ which parametrizes elliptic curves with $G$-level structure. We give a classification of modular curves with genus equal to a fixed nonnegative integer $g$. In particular, we show that all modular curves of genus $g$ lie in finitely many families of $\\mathbb{Q}^{\\mathrm{ab}}$-twists of modular curves. We also describe an algorithm for computing all families of modular curves of a fixed genus $g$ and use this to compute projective models for these modular curves. This algorithm has been fully implemented for $g \\leq 12$. In an appendix with Yongyuan Huang and Rakvi, we describe two algorithms, one for computing rational functions on modular curves given as quotients of two modular forms of the same weight, and the other for computing models for the generic fibers of universal elliptic curves $\\mathcal{E}_G$, where $G\\subset \\mathrm{GL}_2(\\widehat{\\mathbb{Z}})$ is an open subgroup satisfying $\\det(G)=\\widehat{\\mathbb{Z}}^{\\times}$ and $-I\\notin G$.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29641",
    "title": "The Birch and Swinnerton-Dyer formula for CM elliptic curves of analytic rank one",
@@ -15,12 +57,12 @@
    "primary_category": "math.NT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves the Birch and Swinnerton-Dyer formula for elliptic curves over the rationals that have complex multiplication and analytic rank one.",
-    "plain": "The paper is about a family of equations of the form y² = cubic in x, called elliptic curves, which have a special symmetry called complex multiplication. These curves have a count of rational solutions, the \"rank,\" and the paper concerns a conjectured formula linking that rank to a value computed from an analytic (infinite-sum) function attached to the curve. For the special case where that analytic count equals one, the author(s) prove the formula holds.",
-    "why": "The Birch and Swinnerton-Dyer conjecture is one of the Clay Millennium Prize problems, so a proof for a well-defined class of curves is a notable partial result. The text does not say how far the result extends beyond this class, so its wider significance is unclear from the abstract alone.",
+    "ai": true,
     "background": "- Elliptic curve: the set of solutions to a cubic equation in two variables, with a natural group structure.\n- Rational numbers: fractions; the paper considers solutions in rationals.\n- Rank: how many independent rational solutions a curve has, in a loose sense.\n- Complex multiplication: a special symmetry of a curve, tied to imaginary quadratic number fields.\n- Analytic rank: a rank-like number read off from an analytic function (an infinite sum or product), which is conjectured to equal the algebraic rank.\n- L-function: the analytic function attached to a curve whose behaviour at a specific point encodes the rank.\n- Birch and Swinnerton-Dyer conjecture: the claim that the algebraic and analytic ranks agree and that a specific leading constant matches arithmetic data.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves the Birch and Swinnerton-Dyer formula for elliptic curves over the rationals that have complex multiplication and analytic rank one.",
+    "plain": "The paper is about a family of equations of the form y² = cubic in x, called elliptic curves, which have a special symmetry called complex multiplication. These curves have a count of rational solutions, the \"rank,\" and the paper concerns a conjectured formula linking that rank to a value computed from an analytic (infinite-sum) function attached to the curve. For the special case where that analytic count equals one, the author(s) prove the formula holds.",
+    "why": "The Birch and Swinnerton-Dyer conjecture is one of the Clay Millennium Prize problems, so a proof for a well-defined class of curves is a notable partial result. The text does not say how far the result extends beyond this class, so its wider significance is unclear from the abstract alone."
    },
    "abstract": "In this article, we prove the Birch and Swinnerton-Dyer formula for elliptic curves over the field of rational numbers with complex multiplication and analytic rank one.",
    "source": "arxiv"
@@ -37,12 +79,12 @@
    "primary_category": "math.NT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper constructs two elliptic curves over Q(k) with torsion Z/5Z and generic rank exactly 4 (with unconditional upper bounds via reduction of elliptic surfaces modulo primes), and uses a further quadratic-twist condition to obtain a fifth independent point, giving infinitely many rational elliptic curves with torsion Z/5Z and rank at least 5.",
-    "plain": "This paper is about elliptic curves, a family of smooth curves defined by cubic equations that carry a group structure, and specifically about how many independent \"rational points\" (solutions with rational coordinates) they can have. The authors write down two explicit families whose number of independent points is exactly four in general, and they check that no more exist using a modular-arithmetic argument. By adding one extra condition to one family, they find a fifth independent point and conclude there are infinitely many rational curves with at least five.",
-    "why": "Rank records for curves with a fixed small torsion group are a standard benchmark in arithmetic geometry, and this moves the known lower bound for that torsion from 4 to 5. The text does not discuss wider applications, so its connections beyond this area are unclear.",
+    "ai": true,
     "background": "- Elliptic curve: a smooth cubic curve with a group law on its rational points.\n- Rational points: solutions whose coordinates are rational numbers; their group is finitely generated, with a finite torsion part and a free part of rank r.\n- Rank: the number of independent points of infinite order; higher rank means more independent rational solutions.\n- Torsion Z/5Z: the finite part of the group has five elements.\n- Q(k): the curves depend on a parameter k, so this is a one-parameter family over the rationals.\n- Elliptic surface and reduction modulo primes: a way to bound the rank from above by counting points over finite fields.\n- Quadratic twist: a related curve obtained by a square-root-type modification, used here to add a condition.\n- Genus-one curve: a curve of genus 1 with its own rank, here of rank two.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper constructs two elliptic curves over Q(k) with torsion Z/5Z and generic rank exactly 4 (with unconditional upper bounds via reduction of elliptic surfaces modulo primes), and uses a further quadratic-twist condition to obtain a fifth independent point, giving infinitely many rational elliptic curves with torsion Z/5Z and rank at least 5.",
+    "plain": "This paper is about elliptic curves, a family of smooth curves defined by cubic equations that carry a group structure, and specifically about how many independent \"rational points\" (solutions with rational coordinates) they can have. The authors write down two explicit families whose number of independent points is exactly four in general, and they check that no more exist using a modular-arithmetic argument. By adding one extra condition to one family, they find a fifth independent point and conclude there are infinitely many rational curves with at least five.",
+    "why": "Rank records for curves with a fixed small torsion group are a standard benchmark in arithmetic geometry, and this moves the known lower bound for that torsion from 4 to 5. The text does not discuss wider applications, so its connections beyond this area are unclear."
    },
    "abstract": "We give two elliptic curves over $\\mathbb{Q}(k)$ with torsion group $\\mathbb{Z}/5\\mathbb{Z}$ and rank exactly $4$, with four explicit independent points. The upper bounds come from reducing the relevant elliptic surfaces modulo suitable primes and are unconditional. They match the known lower bound for the generic rank with this torsion, due to Eroshkin, and are not isomorphic to Eroshkin's curve or to each other: their parametrising maps to $X_1(5)$ have degree $8$ instead of $12$, the constructions are dihedral rather than biquadratic, and their branch loci differ. In each case, two of the points come from a ``doubling'' step in the spirit of Jaswal. Adding one further condition to the second curve, coming from a quadratic twist over an intermediate conic, gives a fifth independent point over a genus-one curve of rank two. Hence there are infinitely many elliptic curves over $\\mathbb{Q}$ with torsion $\\mathbb{Z}/5\\mathbb{Z}$ and rank at least $5$, improving the known bound $C(\\mathbb{Z}/5\\mathbb{Z})\\ge 4$ to $C(\\mathbb{Z}/5\\mathbb{Z})\\ge 5$.",
    "source": "arxiv"

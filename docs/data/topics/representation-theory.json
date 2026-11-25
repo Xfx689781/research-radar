@@ -1,7 +1,50 @@
 {
  "slug": "representation-theory",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29234",
+   "title": "M\\\"obius Fusion Algebra",
+   "url": "https://arxiv.org/abs/2611.29234",
+   "authors": [
+    "Ippo Orii",
+    "Yuji Tachikawa"
+   ],
+   "label": "arXiv:2611.29234v1",
+   "primary_category": "math.QA",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper defines a generally non-commutative \"Möbius fusion algebra\" from a pseudo-unitary modular tensor category with an anti-monoidal involution, shows it is semisimple, and gives a dimension formula for its simple modules in terms of the modular S-matrix and data from the involution.",
+    "plain": "This is a piece of abstract algebra arising from topological quantum field theory: it builds a new algebraic structure out of ribbon-graph diagrams drawn on a Möbius band, a one-sided surface. The authors prove that this structure is well behaved (semisimple), and they give a formula for the sizes of its basic building blocks, the simple modules. The formula is meant as a counterpart, for non-orientable surfaces, of the Verlinde formula known for orientable ones.",
+    "why": "The Verlinde formula links algebra to the counting of quantum states on surfaces, so a version for non-orientable surfaces would extend that link to a wider class of spaces. The text only states this as an expectation; it does not show the full connection, so that remains a hope rather than a demonstrated result.",
+    "background": "- Modular tensor category: an abstract algebraic framework of anyons or quantum particles and how they fuse and braid.\n- Ribbon graphs: diagrams of lines (with framing) drawn inside a surface, used to compute in topological quantum field theory.\n- Möbius band: a surface with only one side and one edge, the simplest non-orientable surface.\n- Orientation reversal and involution: a map that undoes itself when applied twice; here it flips the orientation of the band.\n- Semisimple algebra: one whose modules decompose cleanly into simple pieces, making it easier to analyse.\n- Simple module and dimension: the smallest building block of a representation, and its size (dimension).\n- Modular S-matrix: a matrix encoding how the basic objects of the category relate to one another; it is the key input to the Verlinde formula.\n- Verlinde formula: a classical result expressing fusion-rule counts for orientable surfaces via the S-matrix.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Given a pseudo-unitary modular tensor category $\\mathcal{C}$ with an anti-monoidal involution $\\mathsf{P}$, we define a generally non-commutative algebra from this data, which we call the M\\\"obius fusion algebra $\\mathfrak{M}$ of $(\\mathcal{C},\\mathsf{P})$, in terms of ribbon graphs drawn on the M\\\"obius band, where the orientation-reversal of the M\\\"obius band acts on the graphs by $\\mathsf{P}$. We show that this algebra is semisimple, and give a formula for the dimensions of its simple modules, in terms of the modular $S$-matrix of $\\mathcal{C}$ and a certain set of quantities extracted from the action of $\\mathsf{P}$. This formula is expected to play the role of a non-orientable analogue of the Verlinde formula, in the context of Reshetikhin-Turaev-type topological quantum field theories on non-orientable manifolds.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28814",
+   "title": "Inner derivations and automorphism groups of vertex operator algebras",
+   "url": "https://arxiv.org/abs/2611.28814",
+   "authors": [
+    "Jianzhi Han"
+   ],
+   "label": "arXiv:2611.28814v1",
+   "primary_category": "math.QA",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "For a simple, rational, C_2-cofinite vertex operator algebra of CFT type, the zero-mode map from the weight-one space V_1 to the derivations of V is shown to be a Lie algebra isomorphism, which identifies the inner automorphism group as the identity component of Aut(V) with finite index and gives dim Aut(V) = dim V_1.",
+    "plain": "This paper studies a symmetric algebraic structure, called a vertex operator algebra, that appears in the mathematics behind two-dimensional conformal field theory in physics. The author(s) show that a certain natural correspondence between the weight-one part of the structure and its rules of change (derivations) is exact, meaning it pairs the two up perfectly. From this, they conclude how the group of symmetries relates to the simpler \"inner\" symmetries, and that the symmetry group is finite exactly when the weight-one part is zero.",
+    "why": "It gives a precise, checkable link between the size of the weight-one space and the size of the symmetry group, which is a structural result for a central class of algebras. The text does not say how far it extends beyond these algebras, so its wider reach is unclear from this excerpt alone.",
+    "background": "- Vertex operator algebra: an algebraic object graded by \"weight\", modelling chiral symmetry in 2D conformal field theory.\n- Weight-one space V_1: the part of the algebra with weight exactly 1; it carries a Lie algebra structure.\n- Derivation: a rule for differentiating products inside the algebra, forming a Lie algebra.\n- Inner automorphism: a symmetry that comes from exponentiating a derivation coming from V_1.\n- Identity component and finite index: a connected core of a group of symmetries, and how many pieces the whole group splits into.\n- Lie algebra and Lie group dimension: the continuous \"size\" of a symmetry group.\n- Simple, rational, C_2-cofinite, CFT type: technical finiteness and nondegeneracy hypotheses on the algebra.\n- Zhu's algebra and vacuum character: a finite-dimensional algebra attached to V and a generating function counting its lowest-weight states, used in the injectivity proof.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $V$ be a simple, rational, $C_2$-cofinite vertex operator algebra of CFT type. We prove that the zero mode map $V_1\\to\\operatorname{Der}(V)$, $h\\mapsto h_0$, is an isomorphism of Lie algebras. We prove surjectivity using traces on finite sums of weight spaces and Li's module construction, and injectivity using the vacuum character of Zhu's algebra. It follows that $\\operatorname{Inn}(V)$ is the identity component of $\\operatorname{Aut}(V)$ and has finite index in $\\operatorname{Aut}(V)$. Moreover, $\\operatorname{dim}\\operatorname{Aut}(V)=\\dim V_1$, so $\\operatorname{Aut}(V)$ is finite if and only if $V_1=0$.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29412",
    "title": "Principal subspaces of affine vertex algebras at admissible levels",
@@ -14,12 +57,12 @@
    "primary_category": "math.QA",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper classifies generic principal subspaces of admissible affine vertex algebras across all simple Lie algebras, and studies the exceptional (nongeneric) cases through their C_2-algebras and arc algebras, proving classical freeness and product character formulas in some of them.",
-    "plain": "The paper studies a family of algebraic structures built from symmetry groups (Lie algebras) at special \"admissible\" settings of a parameter called the level. It sorts out which cases behave generically and which are exceptional, and then looks closely at the exceptional ones. For a few specific cases, the author(s) prove a tidy counting formula for the structure's size, and for one more case the counting formula is proved but a related freeness property is only conjectured.",
-    "why": "The text gives a complete classification of generic cases, and it notes that the null vectors needed for this were already known in the literature. The exceptional cases are the main new results, but the text does not say what applications they have beyond this area, so the wider significance is unclear from the text alone.",
+    "ai": true,
     "background": "- Lie algebra: a mathematical object describing continuous symmetries, such as rotations in space; types (A, B, C, D, G_2, F_4, and so on) label the families.\n- Affine vertex algebra: an infinite-dimensional algebraic structure built from a Lie algebra with a parameter called the level, used in conformal field theory in physics.\n- Admissible level: a special family of values of that parameter where the structure is well behaved.\n- Principal subspace: a particular subspace of the vertex algebra, built from the highest-weight part of the symmetry.\n- Null vector: an element that must be set to zero in the quotient; it encodes the relations the structure satisfies.\n- Character formula: a generating function that counts the dimensions of the pieces of the structure by degree.\n- C_2-algebra and arc algebra: finite-type and infinite-jet versions of the structure, used to test its size; classical freeness means the structure is as large as the generic case predicts.\n- Denominator: a number in the admissible-level formula that determines which levels are exceptional.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper classifies generic principal subspaces of admissible affine vertex algebras across all simple Lie algebras, and studies the exceptional (nongeneric) cases through their C_2-algebras and arc algebras, proving classical freeness and product character formulas in some of them.",
+    "plain": "The paper studies a family of algebraic structures built from symmetry groups (Lie algebras) at special \"admissible\" settings of a parameter called the level. It sorts out which cases behave generically and which are exceptional, and then looks closely at the exceptional ones. For a few specific cases, the author(s) prove a tidy counting formula for the structure's size, and for one more case the counting formula is proved but a related freeness property is only conjectured.",
+    "why": "The text gives a complete classification of generic cases, and it notes that the null vectors needed for this were already known in the literature. The exceptional cases are the main new results, but the text does not say what applications they have beyond this area, so the wider significance is unclear from the text alone."
    },
    "abstract": "We classify generic principal subspaces of admissible affine vertex algebras for all simple Lie algebras. The nongeneric cases occur precisely at denominator two in types $B,C,F_4$ and at denominator three in type $G_2$. The proof uses geometry of nilpotent orbits combined with positive root null vectors. Surprisingly, null vectors needed for our classification are explicitly known and already studied in the literature. We then study the exceptional principal subspaces at the level of their $C_2$-algebras and arc algebras. For $\\mathfrak{sp}_4$ at level $-\\frac12$ and $G_2$ at level $-\\frac53$, we prove classical freeness and obtain product character formulas. In type $C_n$ at level $-\\frac12$, classical freeness fails for $n\\ge4$. For $n=3$, we combine the functional model method of Feigin and Stoyanovsky, and a flat degeneration of the explicit realization of $L_{-3/2}(\\mathfrak{sl}_3)$ to prove a product character formula, while classical freeness in this case remains conjectural. The principal subspace of $L_{-5/2}(F_4)$ is also conjecturally classically free.",
    "source": "arxiv"
@@ -35,12 +78,12 @@
    "primary_category": "hep-th",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper computes the perturbative holomorphic-topological local operator algebra of pure N=2 SU(2) gauge theory, identifying it as a Poisson vertex algebra with a central-charge-zero Virasoro generator X (with X^2=0) and an odd weight-three primary Y, and equivalently the relative Lie algebra cohomology of sl_2[z,w]/(w^2) and self-Ext groups of the unit in the coherent Satake category.",
-    "plain": "This paper is about a precise algebraic answer to a question coming from physics: which local observables exist in a particular four-dimensional gauge theory (pure SU(2) theory with extended supersymmetry) when one looks at its perturbative, holomorphic-topological part. The author proves a previously stated conjecture, showing the answer is a specific algebraic structure built from two generators, and shows the same answer can be phrased as a cohomology computation for a Lie algebra. The proof relies on tools such as factorization over configurations of points on a line and two deformations of a coefficient algebra.",
-    "why": "The result turns a conjectured description from physics into a proven algebraic statement, and it links three areas: Seiberg-Witten-type gauge theory, Lie algebra cohomology, and the Satake category used in geometric representation theory. The text does not say more about broader consequences, so the wider significance is best judged by specialists.",
+    "ai": true,
     "background": "- Gauge theory: a physical theory built from symmetry groups such as SU(2); \"pure\" means no matter fields.\n- Supersymmetry (N=2): an extra symmetry relating particles of different spin; it is what makes the Seiberg-Witten framework possible.\n- Local operators: observables attached to single points of spacetime; their algebra records how they combine.\n- Vertex algebras and Poisson vertex algebras: algebraic structures modelling local operators in two-dimensional conformal field theory and its classical limits; a Virasoro element is a generator obeying the Virasoro algebra, the symmetry algebra of conformal transformations.\n- Lie algebra cohomology: a way of extracting invariants of a Lie algebra (a linear structure encoding continuous symmetries, here sl_2) relative to a subalgebra; sl_2[z,w]/(w^2) is the sl_2 Lie algebra with coefficients in a ring of \"dual numbers.\"\n- Ext groups: measure how an object fails to be projective or how it deforms, in a category.\n- Factorization: a rule for how local observables on configurations of points combine as the points collide or separate.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper computes the perturbative holomorphic-topological local operator algebra of pure N=2 SU(2) gauge theory, identifying it as a Poisson vertex algebra with a central-charge-zero Virasoro generator X (with X^2=0) and an odd weight-three primary Y, and equivalently the relative Lie algebra cohomology of sl_2[z,w]/(w^2) and self-Ext groups of the unit in the coherent Satake category.",
+    "plain": "This paper is about a precise algebraic answer to a question coming from physics: which local observables exist in a particular four-dimensional gauge theory (pure SU(2) theory with extended supersymmetry) when one looks at its perturbative, holomorphic-topological part. The author proves a previously stated conjecture, showing the answer is a specific algebraic structure built from two generators, and shows the same answer can be phrased as a cohomology computation for a Lie algebra. The proof relies on tools such as factorization over configurations of points on a line and two deformations of a coefficient algebra.",
+    "why": "The result turns a conjectured description from physics into a proven algebraic statement, and it links three areas: Seiberg-Witten-type gauge theory, Lie algebra cohomology, and the Satake category used in geometric representation theory. The text does not say more about broader consequences, so the wider significance is best judged by specialists."
    },
    "abstract": "We compute the algebra of perturbative holomorphic-topological local operators of pure $\\mathcal N=2$ gauge theory with gauge group $SU(2)$, proving a conjecture of the author: it is the Poisson vertex algebra generated by a Virasoro element $X$ of central charge zero and an odd primary $Y$ of weight three, subject only to $X^2=0$. Equivalently, we compute the relative Lie algebra cohomology $H^*(\\mathfrak{sl}_2[z,w]/(w^2),\\mathfrak{sl}_2)$ and the self-Ext groups of the unit in the coherent Satake category for $SL_2$ and $PGL_2$. The proof uses factorization on configuration spaces of points on the affine line, a depth argument, and two deformations of the coefficient algebra $\\mathbb C[z,w]/(w^2)$.",
    "source": "arxiv"

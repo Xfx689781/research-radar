@@ -1,7 +1,49 @@
 {
  "slug": "harmonic-analysis",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28895",
+   "title": "Multipliers and integration operators on Hardy--Bloch type tent spaces",
+   "url": "https://arxiv.org/abs/2611.28895",
+   "authors": [
+    "Jiale Chen"
+   ],
+   "label": "arXiv:2611.28895v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper characterizes when integration operators J_g and I_g and pointwise multipliers M_g are bounded between Hardy–Bloch type tent spaces BT^p, with complete results for I_g and for J_g and M_g when p<q, and separate conditions when p≥q.",
+    "plain": "The paper studies a family of function spaces on the unit disc in the complex plane, defined using a maximal average of a function's radial derivative taken near the boundary. It asks when three standard operations (integrating a function, and two ways of multiplying by a fixed function g) keep functions inside these spaces in a controlled way. The authors give a full answer for one operator across all exponents, a full answer for the other two when the input exponent is smaller than the output exponent, and separate, not fully matching conditions otherwise.",
+    "why": "Questions of when multiplication and integration operators are bounded are basic tools for understanding function spaces, and this work sits where complex analysis meets harmonic analysis. The text does not indicate applications beyond this theory, so its wider significance is uncertain.",
+    "background": "- Unit disc: the set of complex numbers with modulus less than 1, where holomorphic (complex-differentiable) functions live.\n- Bloch-type space: a space of holomorphic functions whose derivative is controlled in a weighted sense.\n- Hardy-type space: spaces measuring a function's size near the boundary circle, indexed by an exponent p.\n- Tent spaces: spaces of functions on the disc defined via maximal functions taken over cone-shaped regions reaching the boundary.\n- Non-tangential maximal function: the largest value of a function over approach regions that meet the boundary at an angle, used to measure boundary behaviour.\n- Bounded operator: one that maps the space into itself (or another space) while keeping size controlled by a constant.\n- Fractional maximal function: an averaging tool that measures local concentration with a power-law weight; used here in the proofs.\n- Synthesis lemma: a technical decomposition tool for rebuilding a function from pieces.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the boundedness of integration operators $J_g$ and $I_g$ and pointwise multipliers $M_g$ on Hardy--Bloch type tent spaces $\\mathcal{BT}^p$. The main difficulty is that these spaces are defined through a non-tangential maximal function of the radial derivative, which places the problem at the interface of holomorphic function theory and harmonic analysis. We completely characterize the boundedness of $I_g:\\mathcal{BT}^p\\to\\mathcal{BT}^q$ for all $0<p,q<\\infty$, and obtain a complete characterization for $J_g$ and $M_g$ when $p<q$. For $p\\geq q$, we establish separate necessary and sufficient conditions. The proofs in the case $p\\leq q$ are mainly based on some fractional maximal function estimates, whereas those in the case $p>q$ are mainly based on a synthesis lemma. We also give examples showing that several converse implications in the range $p\\geq q$ fail.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28400",
+   "title": "Perturbed Nevo--Thangavelu maximal functions on two-step nilpotent groups",
+   "url": "https://arxiv.org/abs/2611.28400",
+   "authors": [
+    "Jaehyeon Ryu"
+   ],
+   "label": "arXiv:2611.28400v1",
+   "primary_category": "math.CA",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper studies L^p boundedness of maximal averages over parabolically dilated, curved convex hypersurfaces lying in a tilted subspace of a two-step nilpotent Lie group, in the low-rank regime, giving a sharp p-range when m=1 and a Łojasiewicz-exponent criterion for m≥2.",
+    "plain": "The paper looks at a way of averaging a function over curved surfaces inside a particular kind of geometric space, and asks for which sizes of function the largest such average stays well behaved. For the simplest case (one extra direction, m=1) the authors pin down exactly which range of sizes works. For higher-dimensional extra directions, they show that a known necessary condition is also sufficient precisely when a certain algebraic measure of how flat the surface can get, the Łojasiewicz exponent, meets a condition.",
+    "why": "Maximal operators of this kind are standard tools for controlling averages in harmonic analysis, and the result gives a sharp answer in one case and a clean criterion in the other. The text does not state wider applications, so any connection beyond this area is uncertain.",
+    "background": "- Maximal operator: takes the largest average of a function over dilated copies of a surface; asking if it is bounded on L^p means asking whether it keeps the function's overall size under control for a range of p.\n- L^p spaces: measure of function size; p is an exponent, and boundedness typically holds only for some range of p.\n- Nilpotent Lie group: a curved, non-commutative space whose structure is built in layers; here a two-step version, identified with R^d × R^m.\n- Exponential coordinates: a way of labeling points of the group by ordinary vectors.\n- Parabolic dilates: rescalings that stretch the space by different amounts in different directions.\n- Nonvanishing Gaussian curvature: the surface bends in every direction at every point (like a sphere or paraboloid, not flat anywhere).\n- Tilted subspace and low-rank regime: the surface sits in a slanted slice of the space, with the tilt setting how degenerate the geometry is.\n- Łojasiewicz exponent: a number measuring how flat a smooth function can be near its zeros; used here as the criterion.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Consider a step-two nilpotent Lie group $G$ identified with $\\mathbb R^d\\times \\mathbb R^m$ in exponential coordinates. We study maximal operators associated with parabolic dilates of smooth convex hypersurfaces with nonvanishing Gaussian curvature in a tilted $d$-dimensional subspace of $G$. We focus on the low-rank regime, where the rank is determined by the group law and the tilt. When $m=1$, we determine the optimal range of $p$ for which the maximal operator is bounded on $L^p(G)$. For $m\\ge2$, we characterize, in terms of a {\\L}ojasiewicz exponent, when the known necessary condition on $p$ is also sufficient.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29806",
    "title": "On the Bourgain-Rudnick eigenfunction restriction conjecture in four dimensions",
@@ -13,12 +55,12 @@
    "primary_category": "math.CA",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves a uniform L^2 upper bound for eigenfunctions of the four-dimensional flat torus restricted to the compact paraboloid, using Fourier restriction estimates and the Du–Zhang fractal restriction theorem applied on two-dimensional slices.",
-    "plain": "The paper studies the standing-wave patterns (eigenfunctions) that live on a four-dimensional flat, repeating space, and how much they can concentrate when measured on a curved surface inside that space. The authors prove an upper limit on that concentration, which is a version of a conjecture by Bourgain and Rudnick. Their method reinterprets counts of lattice points on spheres as a measure of how spread out certain points are, and then uses a known theorem about that spread.",
-    "why": "Bounds of this type control how large wave-like functions can get on a surface, a question that links number theory (lattice point counts) with analysis of waves. The text does not discuss applications beyond this setting, and it only mentions that further extensions are possible without specifying them.",
+    "ai": true,
     "background": "- Flat torus: a space with no curvature that wraps around like a video game screen, in which opposite edges are glued together.\n- Eigenfunction: a wave-like pattern that keeps its shape under the Laplace operator, roughly a standing wave with fixed frequency.\n- L^2 norm: a way of measuring the overall size of a function; bounds on it limit how strongly waves can focus.\n- Paraboloid: a curved bowl-shaped surface; here, a compact piece of it.\n- Lattice point statistics: how integer grid points are distributed on a sphere, which relates to eigenfunction sizes.\n- Fourier restriction: the study of how Fourier transforms behave when restricted to curved surfaces.\n- Fractal restriction theorem: a result (by Du and Zhang) about how restriction estimates hold for sets with fractal-like spread.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves a uniform L^2 upper bound for eigenfunctions of the four-dimensional flat torus restricted to the compact paraboloid, using Fourier restriction estimates and the Du–Zhang fractal restriction theorem applied on two-dimensional slices.",
+    "plain": "The paper studies the standing-wave patterns (eigenfunctions) that live on a four-dimensional flat, repeating space, and how much they can concentrate when measured on a curved surface inside that space. The authors prove an upper limit on that concentration, which is a version of a conjecture by Bourgain and Rudnick. Their method reinterprets counts of lattice points on spheres as a measure of how spread out certain points are, and then uses a known theorem about that spread.",
+    "why": "Bounds of this type control how large wave-like functions can get on a surface, a question that links number theory (lattice point counts) with analysis of waves. The text does not discuss applications beyond this setting, and it only mentions that further extensions are possible without specifying them."
    },
    "abstract": "We prove a uniform upper $L^2$ bound for eigenfunctions of the four-dimensional flat torus on the compact paraboloid $\\mathbb{P}^3$. The main novelty is the use of Fourier restriction estimates. We interpret spherical lattice point statistics as non-concentration inequalities of the strength needed to apply the Du--Zhang fractal restriction theorem. We apply their result on two-dimensional slices of $\\mathbb{P}^3$. Further possible extensions are also discussed.",
    "source": "arxiv"
@@ -34,12 +76,12 @@
    "primary_category": "math.CA",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves the T1 theorem for Calderón-Zygmund operators assuming only the classical Dini regularity condition on the kernel, which the authors describe as resolving a long-standing open problem in singular integral theory.",
-    "plain": "The paper is about a standard test in harmonic analysis: a rule for deciding when an operator that smooths and rearranges functions stays well-behaved (bounded) when measured in standard size norms. The authors show this test works under the Dini condition, a classical smoothness requirement on the operator's kernel. The text states that this answers a question that had been open for a long time.",
-    "why": "The T1 theorem is a central tool for checking boundedness of singular integrals, which underlie much of modern analysis and partial differential equations. The provided text gives only the abstract, so its precise scope and how it compares with earlier results cannot be judged from it.",
+    "ai": true,
     "background": "- Harmonic analysis: the study of how functions decompose into waves or frequencies and how operators act on them.\n- Singular integral operator: an averaging operator whose kernel blows up near the diagonal, so it needs careful treatment.\n- Calderón-Zygmund operator: a major class of singular integral operators with kernel size and smoothness estimates.\n- T1 theorem: a criterion saying such an operator is bounded if it is bounded on a test function like the constant 1 (plus related conditions).\n- Dini regularity: a slightly weaker-than-Hölder smoothness condition on a function, measured by an integral condition on its modulus of continuity.\n- Operator boundedness: the operator does not blow up the size of inputs beyond a fixed constant factor.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves the T1 theorem for Calderón-Zygmund operators assuming only the classical Dini regularity condition on the kernel, which the authors describe as resolving a long-standing open problem in singular integral theory.",
+    "plain": "The paper is about a standard test in harmonic analysis: a rule for deciding when an operator that smooths and rearranges functions stays well-behaved (bounded) when measured in standard size norms. The authors show this test works under the Dini condition, a classical smoothness requirement on the operator's kernel. The text states that this answers a question that had been open for a long time.",
+    "why": "The T1 theorem is a central tool for checking boundedness of singular integrals, which underlie much of modern analysis and partial differential equations. The provided text gives only the abstract, so its precise scope and how it compares with earlier results cannot be judged from it."
    },
    "abstract": "We prove the $T1$ theorem for Calder\\'on-Zygmund operators under the classical Dini regularity condition on the kernel, solving a longstanding open problem in singular integral theory.",
    "source": "arxiv"

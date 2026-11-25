@@ -1,7 +1,50 @@
 {
  "slug": "theory-of-computation",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30319",
+   "title": "Weighted Flow Time Does Not Admit Constant-Competitive Randomized Algorithms",
+   "url": "https://arxiv.org/abs/2611.30319",
+   "authors": [
+    "Alexander Lindermayr"
+   ],
+   "label": "arXiv:2611.30319v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves that no randomized online algorithm for preemptive single-machine scheduling minimizing total weighted flow time is O(1)-competitive against an oblivious adversary, giving a lower bound of Ω(min{log log W, log log log min{P,D,n}}) on the competitive ratio.",
+    "plain": "This paper is about deciding how to run jobs on one machine when jobs arrive over time without warning, and the goal is to keep the total weighted waiting time low. The authors show that even randomized strategies, which make random choices, cannot stay within a fixed constant factor of the best possible schedule in the worst case. This closes the remaining open case of whether such a constant-factor guarantee exists.",
+    "why": "It settles a long-standing open question in online scheduling: earlier work had ruled out constant-factor guarantees only for deterministic algorithms, and this extends the negative answer to randomized ones. The result is a theoretical limit on what any online method can guarantee, so its relevance is mainly to algorithm design theory rather than to a specific application named in the text.",
+    "background": "- Online algorithm: makes decisions without knowing future job arrivals.\n- Competitive ratio: worst-case ratio between an online algorithm's cost and the best offline cost knowing everything in advance.\n- Preemptive scheduling: a running job may be paused and resumed later.\n- Flow time: time a job spends in the system from arrival to completion; weighted flow time multiplies each job's time by its importance weight.\n- Job size, weight, and density (weight divided by size); W, P, D are ratios of largest to smallest of these quantities.\n- Randomized algorithm vs. deterministic; oblivious adversary means the adversary fixes the input without seeing the algorithm's random coin flips.\n- High probability: the bound holds except with very small chance.\n- Big-O and Omega notation: asymptotic upper and lower bounds.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study online preemptive scheduling on a single machine with the objective of minimizing the total weighted flow time. Bansal and Chan (SODA 2009) showed that no deterministic online algorithm is $O(1)$-competitive for this problem. We show that no randomized online algorithm is $O(1)$-competitive against an oblivious adversary either. This settles the remaining case of the long-standing question whether the problem admits an $O(1)$-competitive online algorithm. Quantitatively, every randomized online algorithm has a competitive ratio in $\\Omega(\\min\\{\\log\\log W,\\log\\log\\log\\min\\{P,D,n\\}\\})$, where $n$ is the number of jobs and $W$, $P$, and $D$ are the ratios of the largest to the smallest job weight, size, and density (weight divided by size), respectively. The lower bound also holds with high probability, with the same asymptotic dependence on the instance parameters. For every $\\rho\\ge1$ and every randomized online algorithm, there is an instance on which the cost of the algorithm is at least $\\rho$ times the optimal cost with probability at least $1-2^{-2^\\rho}$. Both lower bounds hold even if the algorithm knows in advance the size and weight of every job in release order and, for any fixed $\\varepsilon>0$, every interarrival time up to a factor of $1+\\varepsilon$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29237",
+   "title": "A Local-to-Global Approximation Framework for Covering Disjointness-Compliable Set Families",
+   "url": "https://arxiv.org/abs/2611.29237",
+   "authors": [
+    "Jingyang Zhao",
+    "Mingyu Xiao"
+   ],
+   "label": "arXiv:2611.29237v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper gives a local-to-global approximation framework for covering disjointness-compliable set families by edges, reducing the global problem to a local minimum-cost tree problem and yielding (1+ε)(√2+√α)²-approximations, with applications to generalized point-to-point connection and multiroot quota tree problems.",
+    "plain": "The paper studies network design: choosing the cheapest set of links so that a required collection of groups of points is covered. The authors show that if a smaller \"local\" version of the problem can be solved within a known factor of the best possible cost, then the full problem can be solved within a guaranteed factor of the optimum, computed in polynomial time. Applied to several specific problems, this gives solutions guaranteed to cost at most about 8 times (plus a small ε) the optimum.",
+    "why": "Constant-factor guarantees for these network design problems are useful benchmarks, and the abstract claims the first such results for two of the applications. The text does not show how the bounds compare with prior work beyond these claims, so the practical reach is unclear from this abstract alone.",
+    "background": "- Approximation algorithm: a fast method that guarantees a solution within a fixed multiple of the best possible cost, rather than finding the exact optimum.\n- Polynomial time: running time that grows at a manageable rate with input size.\n- Spanning/Steiner tree: a set of edges linking chosen vertices without cycles; minimum-cost versions are classic network design tasks.\n- Set family covering: choosing edges so that each required set of vertices is linked as the constraints demand.\n- Disjointness-compliable family: a family of sets where requirements behave well when the sets do not overlap; the paper's framework relies on this property.\n- Membership test: a fast check of whether a given set of vertices satisfies the family's requirement.\n- Randomized approximation: an algorithm that uses random choices, with the guarantee holding in expectation or with high probability.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Many network design problems can be formulated as covering a family of vertex sets by edges. We develop a local-to-global approximation framework for disjointness-compliable families with polynomial-time membership tests. A class of vertices is deficient if it belongs to the family and feasible otherwise. Our local problem seeks a minimum-cost tree that connects one deficient class to feasible classes so that their union is feasible. If this local problem admits a polynomial-time $\\alpha$-approximation, then the covering problem admits a polynomial-time $(1+\\varepsilon)(\\sqrt{2}+\\sqrt{\\alpha})^2$-approximation for every fixed $\\varepsilon>0$. Our algorithm first connects deficient vertices that are difficult to separate and then handles regions containing one deficient class at a time. To bound the total local cost, we compare the local trees with a feasible forest. We delete edges of this forest after using them in the bound, so each is counted at most once even when regions overlap. As applications, we obtain polynomial-time $(8+\\varepsilon)$-approximation algorithms for generalized point-to-point connection and multiroot quota tree, including multiroot $k$-minimum spanning tree. To the best of our knowledge, these are the first polynomial-time constant-factor approximations for both problems. We also obtain a randomized approximation for multiroot covering Steiner that has the same asymptotic ratio as the known approximation for its single-root version.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30887",
    "title": "A $(17/7-o(1))n$ Circuit Lower Bound for Binary-Encoded 3-SAT",
@@ -14,12 +57,12 @@
    "primary_category": "cs.CC",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper improves the circuit-size lower bound for a specific binary encoding of 3-SAT to (17/7)n minus lower-order terms over the full two-input Boolean basis, using weighted gate elimination and a nonlinear-degree argument, with Lean-verified proofs of the key inequality and asymptotic bound.",
-    "plain": "This paper is about how many logic gates a computer circuit needs to solve a standard hard logic puzzle (3-SAT) when the puzzle's input is written as a string of bits in one particular encoding. The authors prove that such circuits need at least about 17/7 times the input length, which is a modest improvement over the previous known bound of roughly n minus 1. They also checked key parts of the argument with the Lean proof assistant, a software tool that verifies mathematical proofs.",
-    "why": "Proving lower bounds on circuit size is a central open problem in theoretical computer science, and even small improvements are technically hard to obtain. The result is limited to one specific encoding of one problem, so its reach beyond that case is unclear from the text alone.",
+    "ai": true,
     "background": "- Boolean circuit: a network of logic gates (AND, OR, XOR and similar) that computes a yes/no answer from input bits.\n- Circuit size / gate count: how many gates are needed; a lower bound says no circuit can do better than a given count.\n- 3-SAT: a standard hard problem asking whether a set of 3-literal clauses can all be satisfied by some true/false assignment.\n- Encoding: a fixed rule for writing a formula as a bit string; here the bound depends on this encoding.\n- Gate elimination: a proof method that shows each gate removed under a restriction eliminates a set number of gates, giving a total lower bound.\n- Algebraic degree over F_2: a measure of how complex a Boolean function is as a polynomial over the two-element field; nonlinear functions need more than trivial gates.\n- Lean: a proof assistant that machine-checks mathematical proofs.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper improves the circuit-size lower bound for a specific binary encoding of 3-SAT to (17/7)n minus lower-order terms over the full two-input Boolean basis, using weighted gate elimination and a nonlinear-degree argument, with Lean-verified proofs of the key inequality and asymptotic bound.",
+    "plain": "This paper is about how many logic gates a computer circuit needs to solve a standard hard logic puzzle (3-SAT) when the puzzle's input is written as a string of bits in one particular encoding. The authors prove that such circuits need at least about 17/7 times the input length, which is a modest improvement over the previous known bound of roughly n minus 1. They also checked key parts of the argument with the Lean proof assistant, a software tool that verifies mathematical proofs.",
+    "why": "Proving lower bounds on circuit size is a central open problem in theoretical computer science, and even small improvements are technically hard to obtain. The result is limited to one specific encoding of one problem, so its reach beyond that case is unclear from the text alone."
    },
    "abstract": "We strengthen the elementary $n-1$ circuit lower bound for a specified binary encoding of 3-SAT to $(17/7)n-O(n\\log\\log n/\\log n)$ gates over the full two-input Boolean basis, with unrestricted depth and sharing. For each integer $w\\ge5$, we encode 3-CNF formulas with exactly $m=2^w-1$ clauses over $m$ available variables using $n=3m(w+1)$ bits. The proof embeds Boolean tests in variable identifiers while retaining $n-o(n)$ free bits, and combines weighted gate elimination with a nonlinear-gate lower bound from the tests' full algebraic degree over $\\mathbb F_2$. We provide Lean proofs of the finite inequality and the asymptotic bound for arbitrary acyclic binary circuits.",
    "source": "arxiv"
@@ -35,12 +78,12 @@
    "primary_category": "cs.DS",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves that deterministic and randomized online algorithms for coloring k-colorable graphs (k≥3) must sometimes use n^{1/(log* n+3)} colors, via iterated clique blow-up instances, and shows a matching-type upper limit on such adversaries.",
-    "plain": "The paper studies a graph-coloring task where vertices of a network show up one at a time and each must be given a color right away, without changing it later. The question is how many colors such a procedure is forced to use when the network could be split into a small number of color classes. The authors show the number of colors needed grows almost as fast as a small power of the network size n, which is much more than the older logarithmic bound.",
-    "why": "This narrows a long-standing gap between the best known online algorithms and lower bounds for coloring k-colorable graphs, a classic problem in theoretical computer science. The paper also reports that all numbered results were checked in the Lean 4 proof assistant, which is a notable feature for a theory result; the broader practical significance is limited to the theory itself.",
+    "ai": true,
     "background": "- Graph coloring: assigning labels (colors) to vertices so that adjacent vertices differ; a k-colorable graph can be colored with k colors.\n- Online algorithm: must make each decision on arrival, with no knowledge of future input and no revisions.\n- Competitive/lower-bound reasoning: an adversary chooses the arrival order to force an algorithm to waste colors.\n- Deterministic vs. randomized algorithms: the second uses random choices; the paper gives bounds for both.\n- Blow-up of a graph: replacing each vertex with a set of independent copies, which keeps some structure while changing others.\n- Iterated logarithm (log*): the number of times you must take the logarithm before the value drops below 1; it grows extremely slowly.\n- Lean 4: a computer proof assistant used to machine-check mathematical proofs.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that deterministic and randomized online algorithms for coloring k-colorable graphs (k≥3) must sometimes use n^{1/(log* n+3)} colors, via iterated clique blow-up instances, and shows a matching-type upper limit on such adversaries.",
+    "plain": "The paper studies a graph-coloring task where vertices of a network show up one at a time and each must be given a color right away, without changing it later. The question is how many colors such a procedure is forced to use when the network could be split into a small number of color classes. The authors show the number of colors needed grows almost as fast as a small power of the network size n, which is much more than the older logarithmic bound.",
+    "why": "This narrows a long-standing gap between the best known online algorithms and lower bounds for coloring k-colorable graphs, a classic problem in theoretical computer science. The paper also reports that all numbered results were checked in the Lean 4 proof assistant, which is a notable feature for a theory result; the broader practical significance is limited to the theory itself."
    },
    "abstract": "In online coloring, the vertices of a graph arrive one at a time with their edges to earlier vertices, and each vertex must be colored irrevocably on arrival. For graphs promised to be $k$-colorable, with $k\\ge 3$ fixed, the best deterministic algorithms use $n^{1-\\Theta(1/k^2)}$ colors, while the best lower bound was Vishwanathan's $\\Omega(\\log^{k-1}n)$ from 1990 until Li recently proved $2^{\\Omega((\\log n)^{1/3}(\\log\\log n)^{2/3})}$. For every fixed $k\\ge 3$ and all sufficiently large $n$, we prove a lower bound of $n^{1/(\\log^*n+3)}$ colors for deterministic online algorithms on $n$-vertex $k$-colorable graphs, and the same lower bound in expectation for randomized online algorithms. Both bounds hold on a single triangle-free $3$-colorable graph: even an algorithm that is shown this graph in advance, but is not told which of its vertices each arriving vertex is, can be forced to use this many colors by a suitable arrival order. The hard instances are iterated blow-ups of a clique, in which every vertex becomes a block of independent vertices and every edge a private server in the earlier block; each blow-up keeps the forced colors and replaces the chromatic number $\\chi$ by about $\\log\\chi$, so about $\\log^*n$ blow-ups bring it down to $k$. We also show that deterministic lower bounds for different values of $k\\ge 3$ are polynomially equivalent, and that no adversary presenting such iterated blow-ups can force more than $n^{1/(\\log^*n-O(1))}$ colors. All numbered results are formalized in Lean 4.",
    "source": "arxiv"

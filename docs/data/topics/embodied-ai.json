@@ -1,7 +1,62 @@
 {
  "slug": "embodied-ai",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29947",
+   "title": "SAGE-Drive: Benefit-Aware Adaptive Reasoning for Autonomous Driving Planning",
+   "url": "https://arxiv.org/abs/2611.29947",
+   "authors": [
+    "Donglei Rong",
+    "Wenbin Yao",
+    "Congcong Bai",
+    "Xi Gao",
+    "Qiaoqiao Ren",
+    "Sheng Jin",
+    "Cheng Xu"
+   ],
+   "label": "arXiv:2611.29947v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "SAGE-Drive learns to predict, from an initial non-reasoning trajectory plan and multimodal scene features, when explicit reasoning will reduce planning error in autonomous driving, and invokes reasoning only on the top-predicted scenarios under a fixed compute budget.",
+    "plain": "Self-driving cars can think through tricky traffic before choosing a path, but that thinking costs computing time. This paper asks when the extra thinking actually helps, and builds a gate that predicts which situations benefit most and only spends that effort there. On 1,497 paired driving scenarios, the extra reasoning helped in about 53.5% of cases and hurt in 46.5%, so on average it made almost no difference.",
+    "why": "Reasoning is expensive, and the paper suggests a way to spend it selectively while keeping accuracy close to always reasoning. The reported gains are small in absolute terms (for example, an error of 1.5191 m at a 20% budget versus 1.5252 m for random selection), so the practical value depends on how the method holds up beyond this dataset; the text does not show deployment or real-road tests.",
+    "background": "- Trajectory planning: choosing the path a vehicle should follow over the next few seconds.\n- Average displacement error (ADE): the average distance between the planned path and the actual path, in metres; lower is better.\n- Explicit reasoning: the model generating intermediate step-by-step analysis of the scene before outputting a plan, which costs extra computation.\n- Reasoning benefit: the reduction in planning error gained by reasoning, measured by comparing paired plans with and without it.\n- Reasoning budget: the fixed share of scenarios allowed to use the costly reasoning step (e.g., 20% or 35%).\n- Multimodal scene information: inputs combining different sensor or data types describing the road scene.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Explicit reasoning enables autonomous vehicles (AVs) to interpret complex traffic interactions and support trajectory planning, but introduces additional computational demands. Determining when explicit reasoning can improve planning accuracy remains a key challenge, as its benefits vary across driving scenarios. To address this challenge, this study proposes Scene-Adaptive Gating of Explicit Reasoning for Driving (SAGE-Drive), a benefit-aware adaptive reasoning framework for autonomous driving planning. First, paired planning outcomes with and without explicit reasoning are analyzed to measure the reasoning benefit, i.e., the reduction in planning error achieved by explicit reasoning, which serves as the supervision label. SAGE-Drive then learns to predict these benefits using geometric features of the initial trajectory planned without reasoning and multimodal scene information, and invokes explicit reasoning only for the scenarios with the highest predicted benefits under a predefined reasoning budget. Experiments on 1,497 paired driving scenarios reveal that explicit reasoning improves planning accuracy in 53.5% of cases while degrading it in 46.5%, yielding a near-zero average benefit. On the test set, with a 20% reasoning budget, SAGE-Drive achieves an average displacement error (ADE) of 1.5191 m, compared with 1.5252 m for random selection. At a 35% budget, it achieves an ADE of 1.5148 m, close to the 1.5141 m obtained when reasoning is applied to every scenario. These findings establish the predicted reasoning benefit as an effective criterion for reasoning selection, allowing explicit reasoning to be invoked where it improves planning accuracy at a fraction of its computational cost.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29123",
+   "title": "Your Diffusion-Based Driving Planner Only Needs a Nudge",
+   "url": "https://arxiv.org/abs/2611.29123",
+   "authors": [
+    "Zilin Wang",
+    "Guozheng Ma",
+    "Saeed Rahmani",
+    "Jiong Yang",
+    "Antyanta Bangunharcana",
+    "Yiluan Guo",
+    "Jakob Nicolaus Foerster",
+    "Shimon Whiteson"
+   ],
+   "label": "arXiv:2611.29123v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "PlanNudge freezes a pretrained diffusion-based driving planner and trains a small MLP \"nudge policy\" with off-policy RL to adjust the plan's speed and curvature, reporting matched or better scores than the prior RL finetuning method on nuPlan with about one sixth the environment steps.",
+    "plain": "Self-driving planners trained on human driving data can drift into collisions or off the road when they encounter situations unlike their training data. This paper proposes a small add-on that makes slight corrections to the planner's chosen path, adjusting its speed and steering curvature, while the original planner stays unchanged. On the nuPlan driving benchmark, the authors report that this matches or beats the previous best reinforcement-learning fine-tuning method while using far less simulated experience.",
+    "why": "Fine-tuning a capable planner without destroying what it already learned is a practical problem for autonomous driving, and the claim that small corrections prevent many unsafe outcomes is a concrete, testable idea. The text does not say how it would transfer to real vehicles or other domains, so its wider significance is uncertain.",
+    "background": "- Diffusion model: a generative method that produces outputs by gradually removing noise; here it generates candidate driving trajectories.\n- Covariate shift: when a model meets inputs unlike its training data, so its errors compound over time.\n- Closed-loop simulation: testing where the planner's actions change what it sees next, rather than replaying recorded data.\n- Receding-horizon execution: the planner computes a long plan but only executes the first part before replanning.\n- Reinforcement learning (RL) finetuning: improving a trained model by rewarding good behavior in simulation.\n- Off-policy RL: learning from experience gathered by any policy, which tends to be more sample-efficient.\n- nuPlan: a public autonomous driving benchmark built on real-world driving logs.\n- Multilayer perceptron (MLP): a simple feedforward neural network.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Diffusion-based planners capture the multimodality of human driving behavior well, yet covariate shift in closed-loop driving can lead them to generate trajectories that result in collisions or road departures. Reinforcement learning (RL) finetuning offers a promising way to tackle this issue, but applying it to diffusion-based planners is complicated by their iterative denoising process and receding-horizon execution. We find that small adjustments to the planned trajectories can prevent many of these unsafe outcomes. Motivated by this observation, we propose PlanNudge, which preserves the learned planning capabilities of a pretrained diffusion-based planner by freezing it and trains a lightweight policy that we call the nudge policy. At each planning step, the nudge policy outputs a nudge, a two-dimensional adjustment of the speed and curvature of the plan from the frozen planner. The nudge policy is a multilayer perceptron that predicts the nudge in a single forward pass, and both dimensions directly change the motion of the vehicle, so standard off-policy RL can train it in closed-loop simulation. We evaluate PlanNudge on nuPlan, a large-scale autonomous driving benchmark based on real-world driving data. In all six settings, PlanNudge matches or exceeds the final scores of the previous state-of-the-art RL finetuning method while using about one sixth as many environment steps and less than one fifth as much model compute. We also provide guidelines for reward shaping, value learning, and exploration when using off-policy RL to post-train autonomous driving planners. Our results are reported with means and standard deviations over six training runs. Project page: https://zerlinwang.github.io/plannudge/",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28779",
    "title": "Imagine Smarter, Drive Faster: Efficient World Modeling for Decision-Aware Autonomous Driving",
@@ -21,12 +76,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "FastWorld is a lightweight world-model planner for autonomous driving that imagines short-horizon, action-conditioned futures over compact scene representations and selectively verifies candidate trajectories, without teacher distillation or extra domain-specific pre-training.",
-    "plain": "Self-driving planners can be made to \"imagine\" how the road will look after each possible move, but that imagining is usually expensive to run. This paper describes FastWorld, a version designed to be cheap from the start: it uses compact summaries of the scene, looks only a short way ahead, and checks and rescores only a selected set of candidate driving plans. The authors report that it scores well on standard driving benchmarks while running quickly on a single consumer GPU.",
-    "why": "Making future-aware planning fast enough for real vehicles is a practical bottleneck, and the paper's claim is that efficiency can come from the model design itself rather than from large teacher models or costly pre-training. Its relevance beyond the reported benchmarks (NAVSIM and nuScenes) is not established by the text.",
+    "ai": true,
     "background": "- World model: a learned model that predicts how an environment will change, used here to forecast the road ahead.\n- Planning in autonomous driving: choosing a trajectory for the car from several candidates.\n- Knowledge distillation: training a small model to copy a large \"teacher\" model, which the paper says it avoids.\n- Action-conditioned prediction: forecasting future scenes given the specific action (driving move) taken.\n- Benchmarks: NAVSIMv1 and v2 use PDMS and EPDMS scores (higher is better) for driving quality; nuScenes uses L2 error, the distance from the planned path to the human-driven path (lower is better).\n- FPS: frames per second, a measure of speed; 132 FPS on one RTX 4090 GPU is the reported figure.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "FastWorld is a lightweight world-model planner for autonomous driving that imagines short-horizon, action-conditioned futures over compact scene representations and selectively verifies candidate trajectories, without teacher distillation or extra domain-specific pre-training.",
+    "plain": "Self-driving planners can be made to \"imagine\" how the road will look after each possible move, but that imagining is usually expensive to run. This paper describes FastWorld, a version designed to be cheap from the start: it uses compact summaries of the scene, looks only a short way ahead, and checks and rescores only a selected set of candidate driving plans. The authors report that it scores well on standard driving benchmarks while running quickly on a single consumer GPU.",
+    "why": "Making future-aware planning fast enough for real vehicles is a practical bottleneck, and the paper's claim is that efficiency can come from the model design itself rather than from large teacher models or costly pre-training. Its relevance beyond the reported benchmarks (NAVSIM and nuScenes) is not established by the text."
    },
    "abstract": "World models hold great promise for autonomous driving planning, yet their ability to imagine the future often comes at a formidable computational cost. Efficiency efforts, such as knowledge distillation and domain-specific pre-training, often shift this burden to costly teachers or training pipelines, leaving lightweight world modeling an open challenge. We introduce FastWorld, a natively lightweight world-model framework for efficient autonomous driving planning. FastWorld reduces computation through compact scene representations, short-horizon action-conditioned prediction, and selective candidate verification and score refinement. These designs support efficient future-informed planning without teacher distillation or additional domain-specific pre-training. On NAVSIMv1, FastWorld achieves 92.2 PDMS at 132 FPS on a single 4090 GPU. It also achieves 89.4 EPDMS on NAVSIMv2 and an average L2 of 0.40 over 3 seconds at 17 FPS on nuScenes. Code and models can be found at https://github.com/MoyangSensei/FastWorld.",
    "source": "arxiv"
@@ -64,12 +119,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A technical report describing an end-to-end autonomous driving pipeline for a closed-loop challenge, which pairs imitation learning and simulator-based reinforcement learning with a perception-based filter that rejects trajectory candidates likely to collide or leave the drivable area.",
-    "plain": "This report describes a system for teaching a self-driving car to plan its own path directly from sensor data, and tests it in a simulator where the car's actions affect what happens next. The team's main idea is to generate a fixed set of possible driving paths, score them for safety and progress, and pick the best one that passes a safety check based on object detection and a top-down map of the road. The text presents the design; it does not report detailed benchmark results.",
-    "why": "Closed-loop testing, where a driving model's choices change the scenes it sees next, is harder to get right than offline tests, so a safety filter layered on a learned planner is a practical design question for the field. The text gives only the approach and not measured outcomes, so its real-world value is uncertain from this report alone.",
+    "ai": true,
     "background": "- End-to-end driving: a single learned model maps camera or sensor input to driving actions, rather than using separate hand-built modules.\n- Imitation learning: the model learns by copying recorded human driving.\n- Reinforcement learning: the model improves by trial and error, here using rollouts in a simulator.\n- Closed-loop evaluation: the simulated car's own actions shape later inputs, which makes testing stricter than replaying fixed recordings.\n- BEV (bird's-eye view) segmentation: labeling a top-down map of the road, such as drivable areas.\n- Trajectory candidates: a fixed list of possible short paths the car can follow; the system scores each one.\n- HD map: a detailed, high-precision map of roads, here generated by automatic labeling.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A technical report describing an end-to-end autonomous driving pipeline for a closed-loop challenge, which pairs imitation learning and simulator-based reinforcement learning with a perception-based filter that rejects trajectory candidates likely to collide or leave the drivable area.",
+    "plain": "This report describes a system for teaching a self-driving car to plan its own path directly from sensor data, and tests it in a simulator where the car's actions affect what happens next. The team's main idea is to generate a fixed set of possible driving paths, score them for safety and progress, and pick the best one that passes a safety check based on object detection and a top-down map of the road. The text presents the design; it does not report detailed benchmark results.",
+    "why": "Closed-loop testing, where a driving model's choices change the scenes it sees next, is harder to get right than offline tests, so a safety filter layered on a learned planner is a practical design question for the field. The text gives only the approach and not measured outcomes, so its real-world value is uncertain from this report alone."
    },
    "abstract": "This report presents a comprehensive pipeline for developing an end-to-end (E2E) autonomous driving model for the Physical AI AV Track. The framework consists of data curation, HD map auto-labelling, data-driven imitation learning, and simulator-based reinforcement learning. To ensure safety in the closed-loop setting, we introduce a selection-based E2E planning approach that leverages object detection and BEV segmentation to filter out trajectory candidates likely to cause collisions or off-road driving. Trained on NVIDIA NuRec and the NVIDIA PAI-AV dataset, our method scores a fixed vocabulary of trajectory candidates for collision, drivable-area compliance, and progress learned from simulated rollouts, and selects the best candidate that passes the filter. This design highlights the effectiveness of combining E2E planning with perception-based trajectory filtering for safe and reliable closed-loop autonomous driving.",
    "source": "arxiv"

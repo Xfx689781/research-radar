@@ -1,7 +1,56 @@
 {
  "slug": "condensed-matter",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.31137",
+   "title": "Anomalous Field-induced Coherence beyond Single-ion Kondo Physics",
+   "url": "https://arxiv.org/abs/2611.31137",
+   "authors": [
+    "Arushi",
+    "Konstantin Semeniuk",
+    "Manuel Brando",
+    "Javier F. Landaeta",
+    "Elena Hassinger",
+    "Christoph Geibel"
+   ],
+   "label": "arXiv:2611.31137v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "In the Ce-based heavy fermion Ce2Rh3Ga5, a magnetic field produces large negative magnetoresistance and restores T^2 coherent transport, a behavior the authors say cannot be explained by single-ion Kondo physics alone and resembles the anomalous magnetotransport of UBe13.",
+    "plain": "Some metals made of rare-earth elements carry heavy electrons that usually conduct electricity more easily as they get colder. This paper studies Ce2Rh3Ga5, a material whose electrical resistance stays high at very low temperatures, and reports that a magnetic field lowers that resistance and makes the material behave like a well-ordered metal again. The authors conclude that a simple single-atom model does not account for the drop, which points to an extra source of electron scattering.",
+    "why": "The result matters because it offers a new, clean material in which electron scattering and coherent transport can be studied in a heavy fermion system without superconductivity, which complicates the older UBe13 case. The text does not establish the microscopic origin of the extra scattering, so its broader significance is still to be tested.",
+    "background": "- Heavy fermions: metals whose electrons behave as if they are many times heavier than normal, usually arising from interactions with localized magnetic atoms (here cerium).\n- Kondo effect: a localized magnetic atom gets screened by conduction electrons; the single-ion version describes one such atom at a time.\n- Coherence: when scattering weakens and electrons act collectively, resistivity typically drops at low temperature.\n- Resistivity and magnetoresistance: resistance to electric current, and how much it changes with a magnetic field.\n- Specific heat coefficient C/T: a measure of how many low-energy thermal states the electrons have; large values signal heavy quasiparticles.\n- T^2 resistivity: resistance that grows with the square of temperature, a signature of coherent metallic behavior.\n- UBe13: a uranium heavy fermion compound with long-standing puzzles in its transport, which the paper uses as a comparison.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The emergence of coherent heavy quasiparticles in Kondo lattices is generally accompanied by a reduction in electrical resistivity at low temperatures. However, certain strongly correlated metals exhibit anomalously large resistivities that persist to very low temperatures, raising fundamental questions about the mechanisms governing charge transport. Here, we report an unusual magnetic field-induced evolution of electronic transport and thermodynamic properties in a Ce-based heavy fermion compound, Ce$_{2}$Rh$_{3}$Ga$_{5}$. At zero field, Ce$_{2}$Rh$_{3}$Ga$_{5}$ undergoes a magnetic transition at $T$$_{0}$ = 0.45 K and exhibits a strongly enhanced low temperature specific heat coefficient, reaching $C$/$T$ = 2.2 J/mol$_{Ce}$-K$^{2}$, but no discernible coherence in its electrical resistivity. Remarkably, applying a magnetic field produces a large negative magnetoresistance and restores coherent metallic behavior, characterized by low-temperature $T$$^2$ resistivity. Although the field dependence of the electronic specific heat coefficient can be described phenomenologically within a single-ion Kondo framework, the same description fails to account for the strong suppression of the residual resistivity and the overall magnetoresistance. These results point to an additional field-sensitive scattering contribution beyond conventional single-ion Kondo physics. The striking resemblance to the long-standing anomalous magnetotransport behavior of UBe$_{13}$, without the complications introduced by superconductivity, establishes Ce$_{2}$Rh$_{3}$Ga$_{5}$ as a platform for investigating the microscopic origin of anomalous scattering and field-induced coherent transport in strongly correlated electron systems.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30781",
+   "title": "Perfect Spin-to-Charge Signal Conversion via Inverse Spin Hall Effect in a Superconductor",
+   "url": "https://arxiv.org/abs/2611.30781",
+   "authors": [
+    "Rodrigo de las Heras",
+    "Ilya V. Tokatly",
+    "F. Sebastian Bergeret"
+   ],
+   "label": "arXiv:2611.30781v1",
+   "primary_category": "cond-mat.supr-con",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A theoretical proposal that, in a superconductor, the quasiparticle charge imbalance created by injected spin accumulation can convert spin into a charge voltage near unity efficiency via the inverse spin Hall effect, despite a small spin Hall angle, with finite broadening and temperature effects included.",
+    "plain": "Spintronics devices often turn spin (a quantum magnetic property of electrons) into an electrical voltage, but the usual materials convert only a small fraction of it. This paper argues that running the process through a superconductor, a material that carries current without resistance below a critical temperature, could make the voltage almost as large as the injected spin signal. The authors derive the full theory of this effect for a standard test geometry and suggest experiments that vary temperature and spin bias to check it.",
+    "why": "If confirmed, a near-complete spin-to-charge conversion would be a useful readout tool for spin-based electronics, which is why the claim merits attention. The text is theoretical only and reports no experimental data, so the size of the effect in real materials remains untested.",
+    "background": "- Spin: an electron's intrinsic magnetic moment, which can be carried as a \"spin accumulation\" in a material.\n- Spin Hall effect / inverse spin Hall effect: a spin current bends sideways and produces a transverse charge voltage; the spin Hall angle measures how efficient this is, and it is usually small.\n- Nonlocal spin-valve: a device where spin is injected at one point and detected by a voltage at a separate point, so the signal is not mixed with ordinary charge current.\n- Superconductor gap: below a critical temperature, electrons pair up and there is an energy gap; quasiparticles (single unpaired excitations) are suppressed below this gap, so charge current flows with little resistance.\n- Charge imbalance: a surplus of one kind of quasiparticle charge that a spin bias can create in a superconductor.\n- Spectral broadening: a smearing of the energy levels caused by finite lifetimes, which the paper includes in its calculation.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Spin-to-charge conversion is central to spintronics, but conventional spin Hall mechanisms are intrinsically limited by the small spin Hall angle. Here we show that superconductivity can overcome this limitation and enable near-unity spin-to-charge signal conversion. We consider a nonlocal spin-valve geometry in which a spin accumulation is injected into a superconductor and converted into a transverse charge signal through the inverse spin Hall effect. In the superconducting state, the strongly suppressed quasiparticle conductance below the gap allows the resulting charge imbalance to generate a voltage comparable to the injected spin bias, despite a small spin Hall angle. We derive the full nonequilibrium response including finite spectral broadening and finite temperature, and propose temperature and spin-bias-dependent measurements of the detector voltage to test our predictions.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28751",
    "title": "Quantum Hall Effect in a 3D Cross-Dimensional Quantum Anomalous Hall System",
@@ -16,12 +65,12 @@
    "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A theoretical study of how magnetic fields along three high-symmetry directions change Chern numbers, chiral edge-like modes, and multi-terminal Hall responses in a 3D system built by coupling two Weyl-semimetal Hamiltonians, reporting a breakdown of conventional Chern-number-based bulk-boundary correspondence.",
-    "plain": "This paper studies a three-dimensional material model that shows the quantum Hall effect, a precisely quantized electrical response usually seen in flat two-dimensional systems. The authors apply magnetic fields along three special directions and track how the topological counts (Chern numbers) and the paths electrons can travel along the surfaces change. They report that the usual rule linking the bulk count to the surface behavior does not fully hold here, and they check this with computer simulations of Hall transport.",
-    "why": "It challenges a standard rule that topological physicists use to predict edge behavior, which matters for interpreting Hall measurements in 3D materials. The text does not show experimental realization or applications, so its practical reach is unclear.",
+    "ai": true,
     "background": "- Quantum Hall effect: quantized electrical resistance in a material under a magnetic field, carried by one-way edge currents.\n- Chern number: an integer that counts topological twist in a material's electronic bands; it predicts how many one-way edge channels exist.\n- Bulk-boundary correspondence: the principle that the interior topology determines what happens at a material's surface or edge.\n- Weyl semimetal: a 3D material whose electrons behave like massless particles at points in momentum space, the building block here.\n- Quantum anomalous Hall effect: a quantized Hall response produced without an external magnetic field, through internal magnetism.\n- Multi-terminal transport: measuring currents and voltages at several electrical contacts to map how current flows.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A theoretical study of how magnetic fields along three high-symmetry directions change Chern numbers, chiral edge-like modes, and multi-terminal Hall responses in a 3D system built by coupling two Weyl-semimetal Hamiltonians, reporting a breakdown of conventional Chern-number-based bulk-boundary correspondence.",
+    "plain": "This paper studies a three-dimensional material model that shows the quantum Hall effect, a precisely quantized electrical response usually seen in flat two-dimensional systems. The authors apply magnetic fields along three special directions and track how the topological counts (Chern numbers) and the paths electrons can travel along the surfaces change. They report that the usual rule linking the bulk count to the surface behavior does not fully hold here, and they check this with computer simulations of Hall transport.",
+    "why": "It challenges a standard rule that topological physicists use to predict edge behavior, which matters for interpreting Hall measurements in 3D materials. The text does not show experimental realization or applications, so its practical reach is unclear."
    },
    "abstract": "We systematically investigate cross-dimensional transport and the resulting quantum Hall effect in 3D quantum anomalous Hall effect systems, which are constructed by coupling two Weyl-semimetal Hamiltonians. Our study unveils that the system hosts highly anisotropic surface states and chiral modes, leading to rich quantum Hall responses. Crucially, we clarify how magnetic fields applied along three high-symmetry directions dictate the evolution of the Chern numbers, chiral modes, and Hall responses. We discover that chiral modes along different directions can originate from distinct mechanisms, giving rise to various magnetic modulation characteristics. Furthermore, we unveil the breakdown of the conventional Chern-number-based bulk-boundary correspondence under magnetic fields, where the Chern numbers alone fail to fully characterize the evolution of the chiral states. This anomalous behavior is attributed to the unique momentum-space distributions of surface bands. These insights are further validated numerically through multi-terminal Hall transport simulations. Our findings expand the understanding of magnetic-field-driven mechanisms in 3D topological systems and provide deeper insights into the interplay between quantized Hall effects and Chern numbers in 3D systems.",
    "source": "arxiv"
@@ -44,12 +93,12 @@
    "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A theoretical study of twisted bilayer graphene under circularly polarized light, with broken inversion symmetry from an out-of-plane electric field and insulating substrates, reporting Floquet-induced valley polarization, Chern-number phase transitions (C = -2, -1, 0), valley-polarized domain-wall channels, and spin-valley filtering via adjacent 2D ferromagnetic contacts.",
-    "plain": "This paper is a computer-based theory study of a stack of two sheets of carbon atoms (graphene) twisted relative to each other. Shining circularly polarized light on the stack, and tilting its symmetry with an electric field and surrounding materials, the authors find conditions where one of the two \"valleys\" (electron energy-momentum sites) stays conducting while the other opens an energy gap and goes quiet. The text reports that this setup can produce topological phase changes and channels that carry only one valley's electrons, and that nearby magnetic layers may allow filtering by spin and valley.",
-    "why": "It is a proposal for controlling electron valley and spin with light and fields in a tunable material, which may matter for future electronics concepts. The text is theoretical only and gives no experimental confirmation, so the practical relevance is uncertain.",
+    "ai": true,
     "background": "- Graphene: a one-atom-thick sheet of carbon; stacking two sheets with a small twist angle creates a \"moiré\" pattern that changes how electrons behave.\n- Valley: a distinct low-energy momentum point in the electron band structure; \"valley degree of freedom\" means electrons can carry information in which valley they occupy.\n- Dirac-like dispersion: electrons behaving like massless particles, with energy rising linearly with momentum; this gives conducting behavior.\n- Band gap: an energy range with no allowed electron states; a gapped valley is effectively switched off.\n- Floquet driving: treating a periodically oscillating light field as creating an effective, modified material during illumination.\n- Inversion symmetry: a symmetry where the structure looks the same when flipped through a central point; breaking it is needed for the valley effects.\n- Chern number: an integer describing the topological character of electron bands; changes signal topological phase transitions.\n- Domain-wall channel: a boundary between differently ordered regions that conducts electrons along it.\n- Spin-valley filtering: selecting electrons by spin and valley type.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A theoretical study of twisted bilayer graphene under circularly polarized light, with broken inversion symmetry from an out-of-plane electric field and insulating substrates, reporting Floquet-induced valley polarization, Chern-number phase transitions (C = -2, -1, 0), valley-polarized domain-wall channels, and spin-valley filtering via adjacent 2D ferromagnetic contacts.",
+    "plain": "This paper is a computer-based theory study of a stack of two sheets of carbon atoms (graphene) twisted relative to each other. Shining circularly polarized light on the stack, and tilting its symmetry with an electric field and surrounding materials, the authors find conditions where one of the two \"valleys\" (electron energy-momentum sites) stays conducting while the other opens an energy gap and goes quiet. The text reports that this setup can produce topological phase changes and channels that carry only one valley's electrons, and that nearby magnetic layers may allow filtering by spin and valley.",
+    "why": "It is a proposal for controlling electron valley and spin with light and fields in a tunable material, which may matter for future electronics concepts. The text is theoretical only and gives no experimental confirmation, so the practical relevance is uncertain."
    },
    "abstract": "We theoretically investigate twisted bilayer graphene (tTBG) heterostructures subjected to circularly polarized light. Inversion symmetry is broken through the combined application of an out-of-plane electric field and the incorporation of insulating substrates, enabling precise control of the valley degrees of freedom and associated topological phases. We identify a regime in which the valley degeneracy is lifted: one valley retains a gapless, linear Dirac-like dispersion, whereas the other develops a finite band gap and becomes electronically inactive. The interplay between Floquet driving and inversion-symmetry breaking induces topological phase transitions characterized by Chern numbers C = -2, C = -1, and C = 0, together with the emergence of perfectly valley-polarized domain-wall channels. Furthermore, magnetic asymmetry arising from proximity to adjacent two-dimensional ferromagnetic contacts enables spin-valley filtering. These findings establish the potential of graphene-based heterostructures as highly tunable systems for controlling spin and valley degrees of freedom.",
    "source": "arxiv"

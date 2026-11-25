@@ -1,7 +1,56 @@
 {
  "slug": "interpretability",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29368",
+   "title": "SAE-Audit: Clinical-Trial Prediction via Inference-Time Optimization of Black-Box LLMs Audited by Sparse Autoencoder Evidence",
+   "url": "https://arxiv.org/abs/2611.29368",
+   "authors": [
+    "Junbo Shen"
+   ],
+   "label": "arXiv:2611.29368v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "SAE-Audit uses concepts extracted from a frozen sparse autoencoder on an open Llama-3.1-8B model, weighted by sparse probes fitted on past trials, to feed evidence into inference-time optimization of black-box LLMs for clinical-trial outcome prediction.",
+    "plain": "The paper looks at predicting whether a registered clinical trial will finish or stop early, a task where large language models have been only slightly better than guessing. The authors attach evidence to each new trial protocol: clinical concepts found inside an open model, each marked as pointing toward or away from the outcome based on past trials. The audited model then revises its answer in light of that evidence, and the authors report accuracy gains without any retraining.",
+    "why": "Trial outcome forecasting could help plan costly, slow studies, and the method tries to make the model's reasoning traceable to specific concepts rather than opaque. The text reports gains on several tasks, but the evaluation details and comparisons are not shown here, so the strength of the result is not yet clear.",
+    "background": "- Clinical trial: a structured study testing a medical treatment; \"completes\" versus \"terminates early\" is the outcome being predicted.\n- Large language model (LLM): an AI text model; \"black-box\" means its internals are not accessible, so it can only be prompted.\n- Balanced accuracy: a score that averages accuracy across outcome classes, so a model cannot look good by always guessing the common class.\n- Sparse autoencoder (SAE): a tool that splits a model's internal activity into many separate, more human-readable features, here treated as clinical concepts.\n- Sparse probe: a simple, selective classifier that checks which features predict an outcome.\n- Inference-time optimization: improving an answer while the model is running, by adjusting prompts or evidence, without retraining it.\n- Interpretability: methods for explaining why a model produces its outputs.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Clinical trials are costly and often take years to complete, making early outcome prediction valuable for trial planning. Large language models (LLMs) are increasingly used to forecast clinical-trial outcomes, yet their predictions remain unreliable and their rationales may not faithfully reflect the evidence underlying their answers. On tasks such as predicting whether a registered clinical trial will complete or terminate early, frontier LLMs perform only modestly above chance in our experiments. We introduce SAE-Audit, which optimizes a black-box LLM at inference time with evidence obtained from a deployable open model. A frozen sparse autoencoder (SAE) on Llama-3.1-8B-Instruct is converted into a vocabulary of clinical concepts. Sparse probes fitted on past trials determine which concepts are associated with the outcome. For a new protocol, the concepts detected by the probe are written as evidence, each with the direction and strength of its association with the outcome, and the LLM being audited optimizes its answer in the light of this evidence. Without additional training, SAE-Audit raises balanced accuracy of deepseek-v4-flash by 9.6--12.0 points on five clinical-trial prediction tasks and raises GPT-5.6-terra by 8.0 points on trial completion, exceeding other agentic inference-time optimization methods by a large margin. As an auxiliary, SAE probes module within SAE-Audit is itself accurate and auditable, providing natural-language explanations directly derived from verified concept contributions and protocol evidence, without requiring additional LLMs at inference time. SAE-Audit provides verifiable, concept-level evidence for more accurate and auditable clinical-trial prediction. It can also be embedded into biomedical AI agents such as Biomni to optimize their performance.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29936",
+   "title": "SAEPO: Sparse-Autoencoder-Guided Credit Assignment for Policy Optimization",
+   "url": "https://arxiv.org/abs/2611.29936",
+   "authors": [
+    "Yusong Zhao",
+    "Zihao Zhao",
+    "Zirui Zhang",
+    "Tunyu Zhang",
+    "Ziyan Wang",
+    "Yi Wang",
+    "Chengzhi Mao",
+    "Hao Wang"
+   ],
+   "label": "arXiv:2611.29936v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "SAEPO uses concepts from a pretrained sparse autoencoder to assign token-level credit inside reasoning trajectories, as a plug-in advantage-shaping module for GRPO and GSPO policy optimization under outcome-only (RLVR) rewards.",
+    "plain": "Training language models to reason often gives only one score for a whole answer: right or wrong. This paper proposes a way to spread that score across individual words in the reasoning, so the model can tell which parts helped or hurt. It uses a tool that finds recurring patterns, called concepts, inside the model's own internal activity, and rewards or penalizes tokens based on those concepts.",
+    "why": "Finer-grained feedback could make reinforcement learning for reasoning models more efficient, which matters for training base models from sparse outcome signals. The text reports gains of up to 6.63% on math and 5.57% on code averages across three backbones, but these are the authors' own benchmark results and I have not checked how robust they are.",
+    "background": "- Reinforcement learning with verifiable rewards (RLVR): a model is trained by checking whether its final answer is correct, with no feedback on intermediate steps.\n- Credit assignment: deciding which specific steps or words deserve credit or blame for an outcome.\n- Policy optimization (GRPO, GSPO): families of algorithms that adjust a model's outputs toward higher-reward responses.\n- Advantage shaping: modifying the learning signal (the \"advantage,\" how much better than expected an action was) before it updates the model.\n- Sparse autoencoder (SAE): a method that learns a set of human-inspectable features from a model's internal activations, without labels.\n- Base model: a language model before instruction tuning or alignment.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has demonstrated strong performance in improving large language model (LLM) reasoning, yet its credit-assignment signal remains coarse. Outcome verifiers provide scalable supervision by judging whether a completed response is correct, but they do not directly indicate which intermediate reasoning tokens contribute to success or failure. As a result, policy optimization can be inefficient, especially when training base models directly from sparse outcome feedback. In this paper, we introduce SAEPO, a Sparse AutoEncoder-guided token-level credit assignment method for outcome-supervised Policy Optimization. Rather than treating correctness only as a rollout-level (sequence-level) signal, SAEPO uses a pretrained sparse autoencoder (SAE) to build token-level semantic representations within reasoning trajectories; it scores each token based on the SAE concepts (e.g., penalizing wrong \"final-answer\" tokens but rewarding correct \"reasoning-process\" tokens), learned in an unsupervised manner, to achieve fine-grained credit assignment. SAEPO is a plug-in advantage-shaping module compatible with various policy optimization algorithms. We instantiate SAEPO with both GRPO and GSPO, covering token-ratio and sequence-ratio policy-gradient objectives, and evaluate SAEPO across three LLM backbones on six math and two code benchmarks. Empirical results show that SAEPO improves both the math and code benchmark averages over the matched baselines, with gains of up to 6.63% and 5.57%, respectively. On Qwen3-1.7B-Base, training curves also show faster early accuracy growth. Feature and token-level analyses suggest that the SAE-derived signal favors question-relevant concepts and reasoning tokens.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30939",
    "title": "Beyond Patching: Consistent Circuit Discovery via Gradient Spectral Analysis",
@@ -16,12 +65,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Proposes Spectral Circuit Analysis (SCA), a counterfactual-free method that finds circuits in GPT-2 Small and Pythia-160M from the singular-value structure of gradients across paraphrased prompts, and reports results compared against EAP-family attribution-patching baselines.",
-    "plain": "Researchers studying how language models work often look for small sub-networks, called circuits, that carry out a specific behavior. The usual method requires carefully built pairs of prompts, one normal and one altered, and the result can depend on how those prompts were written. This paper proposes a way to find these sub-networks by looking at patterns across several rewordings of the same task, without building the altered prompts.",
-    "why": "If the method holds up, it could make circuit discovery less dependent on hand-built prompt pairs and let researchers compare circuits shared across tasks. The text reports comparable or better scores than baselines on twelve tasks, but these are the authors' own claims and I have not verified them.",
+    "ai": true,
     "background": "- Mechanistic interpretability: reverse-engineering neural networks to find the parts responsible for a behavior.\n- Circuit: a small subgraph of units (such as attention heads) that implements a behavior.\n- Activation patching / attribution patching: methods that test a unit's importance by swapping in activations from a corrupted prompt.\n- Gradients: how much each output changes when a unit's value is nudged; here, gradients are collected over paraphrases of a task.\n- SVD (singular value decomposition): a way to split a matrix into directions ranked by how much variation they capture.\n- Recovery score and Precision@K: standard measures of how well a found circuit reproduces behavior and how many known important units appear in a top-K list.\n- GPT-2 Small, Pythia-160M: small open language models used as test subjects.\n- IOI (indirect object identification): a well-studied task with known \"canonical\" attention heads.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Proposes Spectral Circuit Analysis (SCA), a counterfactual-free method that finds circuits in GPT-2 Small and Pythia-160M from the singular-value structure of gradients across paraphrased prompts, and reports results compared against EAP-family attribution-patching baselines.",
+    "plain": "Researchers studying how language models work often look for small sub-networks, called circuits, that carry out a specific behavior. The usual method requires carefully built pairs of prompts, one normal and one altered, and the result can depend on how those prompts were written. This paper proposes a way to find these sub-networks by looking at patterns across several rewordings of the same task, without building the altered prompts.",
+    "why": "If the method holds up, it could make circuit discovery less dependent on hand-built prompt pairs and let researchers compare circuits shared across tasks. The text reports comparable or better scores than baselines on twelve tasks, but these are the authors' own claims and I have not verified them."
    },
    "abstract": "Mechanistic interpretability seeks to reverse-engineer neural networks by identifying small, faithful subgraphs--circuits--that implement specific behaviors. The dominant paradigm scores each unit by replacing its clean activation with a corrupted counterpart as causal intervention. While effective, this approach rests on a brittle prerequisite: the structure prompt pairs are task-specific, expensive to engineer, and silently couple the discovered circuit to prompt-design choices. In this work, we propose Spectral Circuit Analysis (SCA), a gradient-spectral pipeline that achieves consistent circuit discovery along both axes: stable across input formulations of the same task, and natively exposing structure shared across tasks. Our contributions are threefold. First, we provide a counterfactual-free reframing of circuit discovery: causally relevant directions are recoverable from the spectral structure of forward gradients across paraphrases, with leading directions concentrating task signal and trailing ones absorbing paraphrase noise, yielding circuits tied to the task rather than the prompt. Second, we introduce SCA, a block-wise SVD pipeline that extracts a task subspace per architectural block and redistributes spectral energy onto constituent units via a consistency-weighted share, producing per-unit rankings competitive with attribution-patching baselines under strictly less supervision. Finally, on twelve circuit-discovery tasks in GPT-2 Small and Pythia-160M, SCA performs comparably or exceeds EAP-family methods under the standard recovery-score protocol and recovers IOI canonical heads with Precision@K = 1.0 in top-10 slices on GPT-2 Small; the same machinery extends to a unified cross-task analysis classifying units as universal, family-shared, or task-specific and exposing compositional structure invisible to per-task analyses.",
    "source": "arxiv"
@@ -40,12 +89,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper tests Self-WSP, where a small language model (Qwen3.5-0.8B) reads and edits its own weights and then keeps working with the edited version, reporting large benchmark gains from sometimes very small edits but finding that the gains are hard to interpret and that random search can perform comparably.",
-    "plain": "Researchers asked whether a language model could improve itself by reading its own internal settings (its weights), proposing a small change, and then using the changed version to solve problems and make further changes. On math tests, the reported accuracy rose sharply in some cases, sometimes from changing only 16 parameters. However, the authors also found that the model seemed to understand little about why its edits helped, and that a random search over edits sometimes did about as well.",
-    "why": "It bears on whether AI systems can improve themselves in a loop, a long-discussed idea called recursive self-improvement. The text's own caveats mean the gains should not be read as evidence that this works reliably or for understood reasons.",
+    "ai": true,
     "background": "- Weights: the numerical settings inside a neural network that determine its behavior; editing them changes what the model does.\n- Weight-Space Programming (WSP): treating those weights like code that a strong model reads and modifies to improve a smaller model.\n- Self-WSP: the variant in this paper, where the model edits itself rather than another model.\n- Benchmarks used: GSM8K (grade-school math word problems) and MATH500 (harder competition-style math problems).\n- Random search: trying edits at random as a baseline; if it matches the proposed method, the method's advantage is unclear.\n- Interpretability: understanding why a model behaves as it does; the paper argues its gains lack this.\n- Recursive self-improvement: a system repeatedly improving its own ability to improve.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper tests Self-WSP, where a small language model (Qwen3.5-0.8B) reads and edits its own weights and then keeps working with the edited version, reporting large benchmark gains from sometimes very small edits but finding that the gains are hard to interpret and that random search can perform comparably.",
+    "plain": "Researchers asked whether a language model could improve itself by reading its own internal settings (its weights), proposing a small change, and then using the changed version to solve problems and make further changes. On math tests, the reported accuracy rose sharply in some cases, sometimes from changing only 16 parameters. However, the authors also found that the model seemed to understand little about why its edits helped, and that a random search over edits sometimes did about as well.",
+    "why": "It bears on whether AI systems can improve themselves in a loop, a long-discussed idea called recursive self-improvement. The text's own caveats mean the gains should not be read as evidence that this works reliably or for understood reasons."
    },
    "abstract": "Frontier language models can now read and edit the weights of a neural network much like code and thereby improve a small model, an approach known as Weight-Space Programming (WSP). We further explore applying WSP to a language model itself, which we call Self-WSP. Specifically, Qwen3.5-0.8B reads its own weights, proposes an edit, and then continues with the edited weights as both problem solver and editor. We find many cases of genuine self-improvement. Self-edits can raise GSM8K accuracy from 11.8% to 62.2% and MATH500 accuracy from 7.0% to 32.2%, sometimes by changing only 16 parameters, and in some cases repeated self-editing keeps improving the model. A closer look, however, reveals that these gains lack interpretability. The model shows little understanding of the edits it makes, and WSP driven by random search sometimes performs comparably. Self-WSP thus holds promise as a path toward recursive self-improvement (RSI), but realizing this promise requires further exploration.",
    "source": "arxiv"

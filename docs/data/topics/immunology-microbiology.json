@@ -1,7 +1,62 @@
 {
  "slug": "immunology-microbiology",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.21.768310",
+   "title": "Oral microbiome and DNA virome profiling in pigs reveals age-associated dynamics and extracellular recovery of Streptococcus suis-associated phage lineages",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.768310v1",
+   "authors": [
+    "Osei, E. K.",
+    "Ornelas, M. A. S.",
+    "Garcia Manzanilla, E.",
+    "Mahony, J.",
+    "Kenny, J. G."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.21.768310 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Shotgun metagenomic profiling of oral fluids from pigs on 15 Irish farms, using paired bulk and virus-like-particle enrichment, describes age-associated succession of oral bacteria and DNA phages, and identifies 26 predicted Streptococcus suis-targeting phages among 25,223 viral operational taxonomic units (vOTUs).",
+    "plain": "Pigs' mouths host large communities of bacteria and viruses, and this study sampled oral fluid from pigs on 15 commercial farms in Ireland to map who is there as the animals age. The bacterial mix shifted from environmental genera such as Pseudomonas and Staphylococcus soon after weaning to lactic acid bacteria and anaerobes later on. Most of the viral sequences could not be matched to a known genus, and the authors report 26 viral lineages predicted to infect Streptococcus suis, a pig pathogen.",
+    "why": "Phages that infect a pathogen like S. suis could in principle inform phage-based therapies or microbiome-targeted approaches, though the text only describes a catalogue and predicted targets, not tested activity. The study is a descriptive survey, so its links to herd health or treatment remain possibilities the authors suggest rather than show.",
+    "background": "- Metagenomics: sequencing all DNA in a sample at once, then identifying which organisms it came from.\n- Virome: the set of viruses in a sample; here, DNA viruses (phages infect bacteria).\n- Virus-like particles (VLP) enrichment: a lab step that concentrates viral particles so viral DNA is easier to capture.\n- vOTU (viral operational taxonomic unit): a cluster of similar viral sequences treated as one viral 'species' when a formal name is unavailable.\n- Phage: a virus that infects bacteria.\n- Streptococcus suis: a bacterial pathogen of pigs.\n- Resistome: the collection of antibiotic-resistance genes.\n- Weaning: when piglets are separated from their mothers and move to a new diet.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The pig oral cavity is a critical interface for microbial transmission and herd health monitoring, yet its microbiome and virome remains poorly characterised. We performed shotgun metagenomic sequencing of oral fluids from pigs across 15 commercial farms in Ireland, using paired bulk and virus-like particles (VLP) enrichment to capture comprehensive microbial and DNA virome diversity. Microbial communities shifted progressively with age, with early post-weaning animals enriched in environmental genera such as Pseudomonas and Staphylococcus and later stages dominated by lactic acid bacteria and anaerobes. Only 20.6% of vOTUs could be assigned to a known genus, with the most abundant being Astrithrvirus, which increased with age. Both microbiome and DNA virome exhibited predictable, coordinated age-associated succession with strong cross-domain coupling supported by virus-host networks. Functional profiling of the microbiome revealed that predicted carbohydrate substrates tracked the dietary transitions, while accessory viral functions partitioned by lifestyle and host. The early post-weaning stage was characterised by high abundance of viral integration and excision functions, as well as elevated resistome diversity that was almost exclusively of prokaryotic origin rather than viral. Importantly, 26 of the 25,223 vOTUs identified were predicted to target Streptococcus suis, providing the first metagenomic catalogue of such phages from pig oral environments. These findings expand our understanding of oral microbiome-virome dynamics and establish a framework for integrated microbiome and viromics approaches that could enable therapeutic phage discovery and inform microbiome-targeted interventions in pig production systems.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768025",
+   "title": "Infant formula composition is linked to distinct patterns of early gut colonization",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768025v1",
+   "authors": [
+    "Fountouli, I.",
+    "Jayaprakash, Y.",
+    "Keizer, T.",
+    "Sinha, T.",
+    "Docherty, J. A. D.",
+    "Lifelines Next Cohort Study,",
+    "Kurilshikov, A.",
+    "Harmsen, H.",
+    "Zhernakova, A.",
+    "Mallon, C. A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768025 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "In 240 exclusively formula-fed infants in the Lifelines-NEXT cohort, variation in 62 reconstructed formula components was associated with gut species richness and with species-level colonization, notably higher iron linked to lower Bifidobacterium breve and B. bifidum and higher Clostridium paraputrificum, with in vitro iron-limitation assays partly consistent with these associations.",
+    "plain": "Babies fed infant formula, rather than breast milk, get formulas that differ in their mix of vitamins, minerals and other nutrients. This study reconstructed the contents of 17 formulas used by 240 infants during their first three months and checked how those contents lined up with which bacteria settled in the babies' guts. Some micronutrients, such as vitamin E and iodine, tracked with the number of bacterial species, and higher iron tracked with fewer Bifidobacterium and more Clostridium paraputrificum.",
+    "why": "Formula is the main feeding option for many infants, and early gut bacteria are linked to later health, so knowing that formula composition may steer which microbes establish themselves is useful. The lab tests on stool isolates offer some support for the iron findings, but the study is observational, so it shows association rather than cause, and the text does not establish health outcomes.",
+    "background": "- Infant gut microbiota: the community of bacteria that colonizes the gut in the first months of life; it changes with diet.\n- Infant formula: manufactured milk substitute whose vitamins, minerals and other components vary between brands.\n- Species richness: how many different bacterial species are present in a sample.\n- Bifidobacterium: a genus of bacteria common in breastfed and formula-fed infant guts.\n- Clostridium paraputrificum: a gut bacterium species; the text does not describe its health role.\n- Observational association: a link found in data that does not by itself prove the nutrient caused the change.\n- In vitro growth assay: testing how bacteria grow in a lab dish under set conditions, here with limited iron.\n- Iron limitation: growing bacteria in a medium with little iron to see which species cope.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Early-life nutrition shapes the gut microbiota and can have long-term health implications. While infant formula feeding is widespread, it remains unclear how variations in its nutritional components shape microbiome colonization. Here, we reconstructed 62 components across the 17 infant formulas consumed during the first three months of life in 240 exclusively formula-fed infants in the Lifelines-NEXT birth cohort. Formula composition varied widely and several micronutrients, including vitamin E and iodine, were associated with species richness. Components were also associated with species-level colonization patterns. Higher iron content was associated with reduced Bifidobacterium breve and Bifidobacterium bifidum and increased Clostridium paraputrificum. Follow-up in vitro growth assays on infant-derived stool isolates showed that Bifidobacterium breve and Bifidobacterium bifidum tolerated iron limitation, while C. paraputrificum did not, consistent with the association signals. These findings show that infant formulas are not all alike and differences in component concentration affect microbiome colonization in early-life.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768517",
    "title": "Intradermal and intranasal vaccination with microparticulated ASFV proteins induces distinct immune profiles in pigs",
@@ -31,12 +86,12 @@
    "primary_category": "immunology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "In pigs, intradermal and intranasal vaccination with the same nanoparticle-delivered ASFV protein cocktail produced distinct immune profiles, but no group was protected against a virulent challenge.",
-    "plain": "African swine fever is a deadly virus that infects pigs and has no safe, widely approved vaccine. This study tested whether giving the same set of viral proteins by different routes, under the skin or into the nose, changes the kind of immune response pigs make. Skin injection produced antibodies in the blood but only modest cell-based immunity, while nasal delivery alone produced no detectable blood antibodies or cell responses before challenge.",
-    "why": "Vaccine research for this disease is limited by safety concerns with live vaccines, so comparing delivery routes helps show which immune responses matter. The authors report that antibodies alone did not protect, which supports the view that cell-mediated immunity is important; the text does not establish how this would translate to field vaccines.",
+    "ai": true,
     "background": "- African swine fever (ASF) is a severe viral disease of pigs with large economic impact on the pig industry.\n- Live attenuated vaccines (weakened live virus) work but raise biosafety concerns, so subunit vaccines (made from selected viral parts) are being explored.\n- Vaccines can be given by different routes (intradermal = into the skin; intranasal = into the nose), which can shape the immune response.\n- Two main immune arms: antibodies (proteins that b",
     "difficulty": "",
-    "ai": true
+    "one_liner": "In pigs, intradermal and intranasal vaccination with the same nanoparticle-delivered ASFV protein cocktail produced distinct immune profiles, but no group was protected against a virulent challenge.",
+    "plain": "African swine fever is a deadly virus that infects pigs and has no safe, widely approved vaccine. This study tested whether giving the same set of viral proteins by different routes, under the skin or into the nose, changes the kind of immune response pigs make. Skin injection produced antibodies in the blood but only modest cell-based immunity, while nasal delivery alone produced no detectable blood antibodies or cell responses before challenge.",
+    "why": "Vaccine research for this disease is limited by safety concerns with live vaccines, so comparing delivery routes helps show which immune responses matter. The authors report that antibodies alone did not protect, which supports the view that cell-mediated immunity is important; the text does not establish how this would translate to field vaccines."
    },
    "abstract": "African Swine Fever (ASF) is a major threat to the swine industry due to its severe socioeconomic impact and the lack of safe and effective vaccines. Although live attenuated vaccines (LAVs) can induce robust immunity, biosafety concerns restrict their use, making subunit vaccines the preferred alternative. In this context, understanding how vaccination routes modulate immunity is critical. A previous study using a viral vector-based vaccine, encoding for the ASFV antigens p30, p54, p72, p72c and CD2v, induced protection when combining intranasal (IN) and parenteral administrations. However, the relative contribution of each administration route to vaccine-induced immunity remains unclear. Here we investigated how independent and combined vaccination routes influence the immune responses induced by the same ASFV protein cocktail delivered as nanoparticle-based secretory granules. Following a prime-boost regime, pigs vaccinated via intradermal (ID) route seroconverted and developed strong systemic ASFV-specific IgG responses, despite inducing only modest ASFV-specific cellular responses. In contrast, IN administration alone failed to elicit detectable systemic humoral or cellular responses and did not improve the vaccine-induced immunogenicity when combined with the ID route. Following a challenge with a virulent ASFV strain, no protection was achieved in any of the immunized groups. Interestingly, intranasally vaccinated pigs exhibited an accelerated post-challenge ASFV-specific antibody boost in serum compared to controls, suggesting that vaccination through this mucosal route induced immune priming despite the absence of detectable systemic humoral responses before challenge. Overall, these findings reveal distinct route-dependent immune profiles elicited by the same ASFV antigen cocktail and highlight again that robust humoral responses alone are insufficient for protection, further supporting the importance of cellular immunity in vaccine-induced protection.",
    "source": "biorxiv"
@@ -59,12 +114,12 @@
    "primary_category": "microbiology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A computational framework combining mutation likelihoods, continuous-time stochastic modeling and population pharmacokinetics that prioritizes clinically common fluoroquinolone-resistance alleles (gyrA S81L) in Acinetobacter baumannii, with virtual-twin cohort simulations of drug penetration and immunity.",
-    "plain": "Bacteria can become resistant to antibiotics through specific genetic changes, but lab tests do not always predict which changes will spread once a drug is widely used. This paper builds a computer model that combines how likely each DNA change is to occur with how drug levels rise and fall in patients. Using the antibiotic ciprofloxacin and the bacterium Acinetobacter baumannii as a test case, the model ranks the common gyrA mutation S81L above rarer ones, matching what is seen in hospitals.",
-    "why": "Antibiotic resistance is a major global health threat, and better ways to anticipate which resistance mutations will take hold could inform drug development and risk checks. The authors also report limits: the same approach did not explain success in the pmrB and adeS genes, so it is a proof of concept rather than a general predictor.",
+    "ai": true,
     "background": "- Antibiotic resistance: bacteria evolve changes that let them survive drugs that would normally kill them.\n- Allele: a variant form of a gene; here, a specific DNA change in a gene.\n- gyrA: a bacterial gene for an enzyme (DNA gyrase) that fluoroquinolone antibiotics like ciprofloxacin target.\n- S81L: a specific single amino-acid change at position 81 of the GyrA protein, swapping serine for leucine.\n- Nucleotide substitution likelihood: how readily a given DNA letter change happens by chance.\n- Pharmacokinetics: how the body absorbs, distributes and clears a drug over time, which sets how drug levels fluctuate.\n- Stochastic modeling: simulation that includes random chance in births, deaths and mutations.\n- Virtual twin cohort: a simulated group of patients with varied characteristics, used to test scenarios.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A computational framework combining mutation likelihoods, continuous-time stochastic modeling and population pharmacokinetics that prioritizes clinically common fluoroquinolone-resistance alleles (gyrA S81L) in Acinetobacter baumannii, with virtual-twin cohort simulations of drug penetration and immunity.",
+    "plain": "Bacteria can become resistant to antibiotics through specific genetic changes, but lab tests do not always predict which changes will spread once a drug is widely used. This paper builds a computer model that combines how likely each DNA change is to occur with how drug levels rise and fall in patients. Using the antibiotic ciprofloxacin and the bacterium Acinetobacter baumannii as a test case, the model ranks the common gyrA mutation S81L above rarer ones, matching what is seen in hospitals.",
+    "why": "Antibiotic resistance is a major global health threat, and better ways to anticipate which resistance mutations will take hold could inform drug development and risk checks. The authors also report limits: the same approach did not explain success in the pmrB and adeS genes, so it is a proof of concept rather than a general predictor."
    },
    "abstract": "Established in vitro measures for the emergence of antimicrobial resistance, a critical global threat, can fail to predict which in vitro discovered mutations will dominate in the real world following widespread antibiotic use. Here, we introduce a multi-scale computational framework integrating genetic constraints and population pharmacokinetics and apply it to explain resistance allele success in Acinetobacter baumannii for the historic case of resistance to the fluoroquinolone antibiotic ciprofloxacin. By coupling intrinsic nucleotide substitution likelihoods with continuous-time stochastic modeling under fluctuating drug exposures, our framework clearly prioritizes the most common real world gyrA fluoroquinolone resistance allele S81L over rarer alleles, reflecting its clinical success. While gyrA serves as a proof-of-concept case study for direct, active-site drug-target interactions where the target space is constrained, we observe that the nucleotide substitution likelihoods are not explaining allele success in resistance-determining genes pmrB and adeS. Furthermore, \"virtual twin\" cohort simulations reveal that restricted drug penetration or compromised immunity expands selective windows, rescuing rare, low-fitness alleles. This advances our understanding of prospective, model-informed risk prediction during antibiotic development.",
    "source": "biorxiv"

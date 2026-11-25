@@ -1,7 +1,58 @@
 {
  "slug": "climate-earth",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29086",
+   "title": "Tipping cascades may lock the Earth system on a pathway towards a melthouse",
+   "url": "https://arxiv.org/abs/2611.29086",
+   "authors": [
+    "Victor Couplet",
+    "Wim Thiery",
+    "Michel Crucifix"
+   ],
+   "label": "arXiv:2611.29086v1",
+   "primary_category": "physics.ao-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A reduced-complexity Earth system model with a dynamic carbon cycle and interacting tipping elements finds no single threshold for a hothouse Earth, but suggests tipping cascades can lead to an irreversible melthouse state with over 10 m of sea-level rise, possibly even under low-emission scenarios.",
+    "plain": "This study asks whether warming could push the planet past a point of no return into a very hot state, often called a \"hothouse Earth.\" Using a simplified computer model of the climate, carbon cycle and several large natural systems that can flip into new states, the authors found no single tipping point for that. Instead, one tipping event can set off others in a chain, which they say could lock in a \"melthouse\" state with more than 10 metres of sea-level rise.",
+    "why": "Sea-level rise of this scale would threaten coastal cities, so the claim bears directly on climate policy. The text does not show how sensitive the result is to the model's simplifications, so it should be read as a model-based risk estimate rather than a firm forecast.",
+    "background": "- Tipping element: a part of the climate system (such as ice sheets or forests) that can shift abruptly and self-reinforce once a threshold is crossed.\n- Tipping cascade: one tipping element triggering others, so the combined effect is larger than each alone.\n- Hothouse Earth: a proposed very hot planetary state that would be hard to reverse, discussed widely in the literature.\n- Melthouse: the paper's term for a state where large-scale ice loss drives very high sea levels; the text gives over 10 m of rise.\n- Reduced-complexity model: a simplified climate model that runs quickly and captures key feedbacks but omits much detail.\n- Irreversibility: once reached, the state persists even if emissions later fall.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The potential for the Earth system to transition irreversibly into a hothouse Earth has attracted considerable scientific and media attention but remains insufficiently explored in modeling studies. Using a reduced-complexity Earth system model that includes a dynamic carbon cycle and interacting tipping elements, we find no planetary threshold beyond which the Earth system irreversibly shifts into a hothouse state. Instead, tipping cascades can drive the system towards an irreversible melthouse state with over 10 m of sea-level rise. Such cascades may occur even under low-emission scenarios, preventing long-term stabilization of sea level at intermediate values. Our results overall highlight the substantial risk of a melthouse rather than a hothouse Earth, and call for drastic emission reductions to avert dramatic impacts on coastal cities and communities.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30866",
+   "title": "An exact and differentiable rewrite of a coupled weather and fire model",
+   "url": "https://arxiv.org/abs/2611.30866",
+   "authors": [
+    "John S. Schreck",
+    "John Dennis",
+    "Iris Linck",
+    "Maria Frediani",
+    "Pedro A. Jimenez Munoz",
+    "Matthew Rehme",
+    "Nihanth Cherukuru",
+    "David John Gagne II"
+   ],
+   "label": "arXiv:2611.30866v1",
+   "primary_category": "physics.ao-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "AI coding agents rebuilt selected configurations of the WRF atmospheric and coupled fire model in PyTorch, matching the corrected Fortran code bit for bit over a 12-hour Marshall Fire simulation, with a differentiable backward pass and neural-network replacements for radiation and fire-spread terms.",
+    "plain": "This paper looks at a model that simulates how weather and wildfire interact, using the Marshall Fire in Colorado as its test case. The authors had AI coding agents rewrite the original Fortran program in a machine-learning framework, and treated any mismatch with the original as a bug to fix. The rewrite matched the original exactly at all 365 checkpoints over twelve simulated hours, and it ran about five times faster on one GPU than the original on a 128-core CPU node.",
+    "why": "A rewrite that reproduces an established forecast exactly, while also being differentiable, could make physics-based fire and weather models easier to tune and combine with learned components. The text does not show how well this generalises beyond the selected configurations and one fire event, so its wider value is still to be tested.",
+    "background": "- WRF (Weather Research and Forecasting) is a widely used open-source weather model written in Fortran, a language long used for scientific computing.\n- Its coupled fire component simulates how a wildfire spreads and how it feeds heat and smoke back into the air, including firebrands (burning particles carried by the wind).\n- PyTorch is a machine-learning software library; models built in it can run on GPUs and can be differentiated automatically.\n- \"Bit for bit\" agreement means the two programs produce numerically identical outputs, not just similar ones.\n- A \"backward pass\" computes how sensitive the output is to each input, such as wind speed at each grid point, which can guide corrections.\n- Double precision is a high-accuracy number format; the CPU baseline used it.\n- Neural networks here stand in for some physics calculations (radiation and fire spread), and their effect is measured against the original physics.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "AI is changing weather and climate prediction by replacing physical models with learned ones. Here we show a different path, in which AI coding agents rebuild the physical model itself in a machine-learning framework and reproduce its forecast bit for bit. We reconstruct selected configurations of the Weather Research and Forecasting model and its coupled fire physics in PyTorch, treating every difference from the corrected Fortran code as a bug. Across twelve hours of a Marshall Fire simulation, the two independently advancing codes agree bit for bit at all 365 checkpoints, in the atmosphere, fire and firebrand particles. This agreement holds when the code runs one operation at a time, with the Fortran code's mathematical library. On a separate fast route, the reconstructed model runs about five times faster on one GPU than the double-precision Fortran code on a 128-core CPU node. One backward pass maps the fire's sensitivity to the wind at every grid point. In synthetic tests, its derivatives show how to change wind and fuel moisture to correct a misplaced fire front. Neural networks replace the radiation and fire-spread calculations in 24-hour coupled forecasts, and we measure their effect against the physical calculation. An established model thus becomes fast, differentiable and open to learned components, with its tested calculation intact.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28357",
    "title": "Competing climates of the present-day Earth: from Snowball to Hothouse",
@@ -15,12 +66,12 @@
    "primary_category": "physics.ao-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Using the BIG-MITgcm coupled climate model, which links atmosphere, ocean, ice sheets and vegetation over many millennia, the authors report five alternative stable climate states for present-day Earth's continents, solar output and pre-industrial CO2, and argue that ocean heat transport sets where the ice edge sits in each.",
-    "plain": "Earth's climate today is only one of several states it could settle into with the same continents, Sun output and carbon dioxide level. The authors ran a long-timescale computer model and found five such states, from a planet fully covered in ice (a \"Snowball\") to a much warmer one where the Atlantic's overturning ocean circulation has shut down. Each state is kept in place by its own balance of feedbacks, such as ice reflecting sunlight.",
-    "why": "If several climates are stable under today's conditions, the present one is not guaranteed, which bears on how past glacial-interglacial shifts happened and on the risk of crossing future tipping points. The text does not show how well the model captures real-world behaviour, so these links remain suggestions rather than established results.",
+    "ai": true,
     "background": "- Climate \"state\": a long-lasting pattern of temperature, ice cover and ocean circulation that a system can stay in.\n- Feedback: a process where a change amplifies or dampens the original change; for example, ice reflects sunlight, so more ice cools the planet further.\n- Snowball Earth: a hypothesised episode in which ice covers the whole planet, pole to pole.\n- Last Glacial Maximum: the peak of the most recent ice age, about 20,000 years ago.\n- Ocean heat transport: the movement of heat from warm regions to cold ones by ocean currents.\n- Atlantic overturning circulation: a large-scale current system that carries warm water north in the Atlantic and cold water south at depth.\n- Coupled model: a computer model that links several parts of the Earth system (air, ocean, ice, plants) so they affect one another.\n- Pre-industrial CO2: the atmospheric carbon dioxide level before the industrial era, used as a fixed reference.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using the BIG-MITgcm coupled climate model, which links atmosphere, ocean, ice sheets and vegetation over many millennia, the authors report five alternative stable climate states for present-day Earth's continents, solar output and pre-industrial CO2, and argue that ocean heat transport sets where the ice edge sits in each.",
+    "plain": "Earth's climate today is only one of several states it could settle into with the same continents, Sun output and carbon dioxide level. The authors ran a long-timescale computer model and found five such states, from a planet fully covered in ice (a \"Snowball\") to a much warmer one where the Atlantic's overturning ocean circulation has shut down. Each state is kept in place by its own balance of feedbacks, such as ice reflecting sunlight.",
+    "why": "If several climates are stable under today's conditions, the present one is not guaranteed, which bears on how past glacial-interglacial shifts happened and on the risk of crossing future tipping points. The text does not show how well the model captures real-world behaviour, so these links remain suggestions rather than established results."
    },
    "abstract": "Earth today has one climate, but it could have others. With the same continents, the same solar constant and the same pre-industrial CO2, our planet could settle into strikingly different ones. We explore this possibility with BIG-MITgcm, a model which couples atmosphere and ocean circulation with ice sheets and vegetation, and which can be integrated over many millennia. We find five different climates and describe them here. At one extreme is a Snowball, with ice from pole to pole. A Waterbelt also exists, in which sea ice reaches the tropics and only a thin equatorial ribbon of open ocean survives. There is a Cold world much like the Last Glacial Maximum, a Warm climate in which we live in today, and a Hot world in which the Atlantic overturning circulation has collapsed. Each state is held in place by its own balance of competing feedbacks. Ocean heat transport anchors each climate, holding the ice edge where that transport is weak. The familiar climate of the past 10 thousand years is perhaps just one of several possibilities. This has implications for glacial-interglacial transitions and the risk of crossing global tipping points in the future.",
    "source": "arxiv"
@@ -41,12 +92,12 @@
    "primary_category": "physics.ao-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "ACE2.5-ERA5 is a stochastic, autoregressive AI emulator of ERA5 reanalysis that adds noise conditioning, a spectrally bottlenecked Spherical Fourier Neural Operator backbone, and a daily time step, yielding calibrated ensembles, improved small-scale precipitation spectra, and cheaper training and inference than its predecessor ACE2-ERA5.",
-    "plain": "This paper presents a new AI model that imitates the global weather and climate record (ERA5) and can produce many possible future weather paths, not just one. The authors report that its spread of possible outcomes matches its actual forecast errors well from about day 3 onward, that it keeps finer-scale rain patterns more faithfully than the previous version, and that it runs stably for 1000 simulated years. It is also smaller, faster, and cheaper to train, and the team released model checkpoints.",
-    "why": "Ensembles that are well calibrated, meaning their spread honestly reflects uncertainty, are central to useful weather and climate prediction, and cheaper emulators could make such experiments accessible to more groups. The text also notes that year-to-year variability of global mean temperature is not calibrated in either model, so the approach has a known limit. Broader impact is not established by the text alone.",
+    "ai": true,
     "background": "- Emulator: a fast statistical or AI model trained to reproduce a slower physics-based simulation or observed data record.\n- ERA5: a widely used global reanalysis dataset that combines past observations with a weather model to give a consistent history of the atmosphere.\n- Autoregressive: the model predicts the next time step from the current state and repeats, producing long simulations.\n- Ensemble: a set of runs from slightly different starting conditions or noise, used to express uncertainty.\n- Calibrated: the ensemble spread matches how large the real errors actually are.\n- CRPS (continuous ranked probability score): a loss function that rewards probabilistic forecasts that are both sharp and accurate.\n- Spectral power / wavenumber: how much variation sits at each spatial scale; higher wavenumbers mean finer detail.\n- ENSO: El Niño–Southern Oscillation, a recurring tropical Pacific climate pattern that affects rainfall worldwide.\n- Spherical Fourier Neural Operator: a neural network design that works on the sphere of the Earth using spherical harmonics.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "ACE2.5-ERA5 is a stochastic, autoregressive AI emulator of ERA5 reanalysis that adds noise conditioning, a spectrally bottlenecked Spherical Fourier Neural Operator backbone, and a daily time step, yielding calibrated ensembles, improved small-scale precipitation spectra, and cheaper training and inference than its predecessor ACE2-ERA5.",
+    "plain": "This paper presents a new AI model that imitates the global weather and climate record (ERA5) and can produce many possible future weather paths, not just one. The authors report that its spread of possible outcomes matches its actual forecast errors well from about day 3 onward, that it keeps finer-scale rain patterns more faithfully than the previous version, and that it runs stably for 1000 simulated years. It is also smaller, faster, and cheaper to train, and the team released model checkpoints.",
+    "why": "Ensembles that are well calibrated, meaning their spread honestly reflects uncertainty, are central to useful weather and climate prediction, and cheaper emulators could make such experiments accessible to more groups. The text also notes that year-to-year variability of global mean temperature is not calibrated in either model, so the approach has a known limit. Broader impact is not established by the text alone."
    },
    "abstract": "We introduce ACE2.5-ERA5 (Ai2 Climate Emulator of ERA5, version 2.5), a stochastic autoregressive weather-climate AI model that produces calibrated weather ensembles with realistic small-scale structure on timescales from days to centuries. Its deterministic predecessor, ACE2-ERA5, retains 36% of its ERA5 target's precipitation spectral power at total wavenumbers 100--179; ACE2.5-ERA5 retains 86%. In weather forecasts its ensemble spread matches its error to within 4% from day 3. Time-mean climate is on par with or better than ACE2-ERA5, the precipitation response to ENSO is improved, and the model is stable over 1000 years. Interannual variability of global mean surface temperature is shown not to be calibrated in either ACE2.5-ERA5 or its predecessor. ACE2.5-ERA5 differs from ACE2-ERA5 in three ways. Noise-conditioned layer normalization, trained with a combined CRPS and spectral energy score loss in place of mean squared error, makes it stochastic. Spectral bottlenecking with grouped convolutions cuts the Spherical Fourier Neural Operator's spectral filter parameters by more than two orders of magnitude and leaves a model a tenth the size of ACE2-ERA5. Its time step is daily rather than 6-hourly. ACE2.5-ERA5 has 3.2 times the inference throughput of ACE2-ERA5. A 6-hourly variant has weather prediction skill similar to ACE2-ERA5. A 4-degree variant reaches comparable climate skill at an order of magnitude lower training cost, enabling rapid iteration during development. We release 1-degree daily, 4-degree daily and 1-degree 6-hourly checkpoints.",
    "source": "arxiv"

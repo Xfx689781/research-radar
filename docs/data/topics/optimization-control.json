@@ -1,7 +1,51 @@
 {
  "slug": "optimization-control",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29080",
+   "title": "The dimension of optimal plans in multi-marginal optimal transport",
+   "url": "https://arxiv.org/abs/2611.29080",
+   "authors": [
+    "Camilla Brizzi",
+    "Gero Friesecke"
+   ],
+   "label": "arXiv:2611.29080v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper determines the maximal dimension on which optimal solutions of multi-marginal optimal transport problems with absolutely continuous marginals concentrate, using a new integer invariant derived from the Hessian of the cost function, with applications to Wasserstein barycenters, Wasserstein cubic splines and Brenier's generalized Euler equations.",
+    "plain": "The paper studies a problem about the best way to match up several smooth probability distributions at once, where a cost is paid for each combined arrangement. It asks how \"spread out\" the best matchings can be: whether they fill a full-dimensional region or sit on a smaller, lower-dimensional set. The authors give a general answer for the maximal dimension of that set, computed from a new integer tied to the curvature (Hessian) of the cost function.",
+    "why": "Optimal transport is a central tool for comparing and averaging distributions, and knowing where optimal solutions live tells you how they can be computed and described. The text notes applications to Wasserstein barycenters, cubic splines and Brenier's generalized Euler equations, but the abstract alone does not show how far these results reach beyond those examples.",
+    "background": "- Optimal transport: finding the cheapest way to move one probability distribution of mass onto another, given a cost for each move.\n- Multi-marginal version: the same idea with three or more distributions that must be coupled jointly.\n- Marginals: the individual distributions being matched; \"absolutely continuous\" means they have a density, so they do not sit on thin sets.\n- Concentration dimension: whether the optimal arrangement spreads over a full-dimensional region or lies on a lower-dimensional surface.\n- Hessian: the matrix of second derivatives of the cost, describing its local curvature.\n- Wasserstein barycenter: an \"average\" of several distributions defined through transport distance.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "For general cost functions, we determine the maximal dimension on which solutions to the multi-marginal optimal transport problem with absolutely continuous marginals are concentrated. The dimension is obtained via a novel characteristic integer associated with the Hessian of the cost function. Applications are given to important examples of multi-marginal problems like Wasserstein barycenters, Wasserstein cubic splines and Brenier's generalized Euler equations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30984",
+   "title": "Convergence of potential-preserving annealed Sinkhorn algorithm",
+   "url": "https://arxiv.org/abs/2611.30984",
+   "authors": [
+    "Dawid Lipinski",
+    "Maciej Buze"
+   ],
+   "label": "arXiv:2611.30984v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves convergence results for a potential-preserving annealed Sinkhorn algorithm for entropic optimal transport, including a sharp non-summability condition on the regularisation schedule, full-sequence convergence under an additional square-summability condition, and convergence rates for polynomial inverse-temperature schedules up to linear growth.",
+    "plain": "The paper studies a computer method for finding the cheapest way to move one spread of material (a probability distribution) onto another, a problem known as optimal transport. The method works by gradually lowering a smoothing \"temperature\" parameter while it iterates, and the authors examine the version that keeps track of dual potentials (internal weight values) rather than scaling factors. They show that if the temperature drops slowly enough that its total sum diverges, some subsequence of the iterates reaches a correct solution, and that this condition cannot be weakened in general.",
+    "why": "Annealing schedules control whether a fast iterative method lands on the right answer, so precise conditions on them are useful for anyone relying on these solvers. The text reports that the conditions cover linear schedules, for which recent work found the alternative scaling-preserving version fails, and that it gives rate bounds; its relevance beyond this specific algorithm is not established in the text.",
+    "background": "- Optimal transport: finding a minimum-cost way to rearrange one probability distribution into another, given a cost for each move.\n- Entropic regularisation: adding a smoothing term controlled by a parameter (here, the inverse temperature); larger smoothing makes the problem easier to solve but less exact.\n- Sinkhorn algorithm: a simple iterative method that alternately rescales rows and columns of a plan until it matches the target distributions.\n- Annealing: gradually changing the smoothing parameter during iteration, similar to slowly cooling a material.\n- Dual potentials: auxiliary weight functions attached to each distribution whose values drive the transport plan.\n- Convergence and summability: whether a sequence settles to a limit; a series is summable if its total sum is finite, and non-summable if it diverges.\n- Mirror descent and KL divergence: standard optimisation tools and a measure of mismatch between distributions, used here for rate bounds.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The annealed Sinkhorn algorithm is an iterative method for approximating solutions of optimal transport problems, in which the entropic regularisation parameter is progressively decreased. As this parameter decreases, one may preserve either the multiplicative scaling factors or the corresponding dual potentials. We study the potential-preserving iterates under positive, non-increasing regularisation schedules tending to zero. We prove that, if the schedule is non-summable, the iterates admit a subsequence converging to a solution of the corresponding optimal transport problem. The non-summability condition is sharp, as for every summable schedule in this class we construct an example in which the iterates converge to a plan violating the prescribed source marginal. We further establish convergence of the entire sequence if the relative inverse-temperature increments are also square-summable, and show by example that non-summability alone does not guarantee full convergence. Our convergence conditions are satisfied by linear inverse-temperature schedules, under which recent work has shown that the scaling-preserving iterates fail to converge to a solution of the optimal transport problem. We also derive convergence rates for polynomial inverse-temperature schedules up to and including linear growth, extending the marginal KL bound obtained by mirror-descent analysis at fixed temperature. Our best rate for the transport cost gap after rounding improves on that established for scaling-preserving annealing. Simple numerical illustrations accompany these convergence results.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30376",
    "title": "Low-Rank Tensor Representations for Efficient Multimarginal Optimal Transport",
@@ -21,12 +65,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes LRMOT, which restricts multimarginal optimal transport plans to tensors of bounded multilinear rank to cut the exponential cost of computing them, and reports approximation bounds and experiments showing faster runs with low transport cost.",
-    "plain": "Optimal transport is a way of finding the cheapest way to move a pile of material so it matches several target distributions at once. When many distributions are involved, the plan for moving things becomes a huge high-dimensional table whose size grows exponentially, so it quickly becomes too slow and memory-hungry. This paper restricts the plan to a compressed, structured form (low-rank tensors) that is much smaller to store and work with, and reports that the resulting algorithms run substantially faster while still giving low-cost solutions.",
-    "why": "Many problems that involve matching several probability distributions at once, such as combining multiple datasets or sensor views, run into this exponential cost. The text does not say how far the approach extends beyond the experiments it reports, so its wider reach is uncertain.",
+    "ai": true,
     "background": "- Optimal transport: finding the least-costly way to rearrange one distribution into another, given a cost for each move.\n- Marginals: the individual distributions a joint plan must match; multimarginal means more than two at once.\n- Transport plan: a table (tensor) saying how much mass moves between every combination of locations.\n- Tensor: a multi-dimensional array, a generalisation of a matrix to more than two indices.\n- Multilinear rank: a measure of how compressible a tensor is; low rank means it can be described by far fewer numbers.\n- Approximation bounds: guarantees on how close the restricted solution is to the true optimum.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes LRMOT, which restricts multimarginal optimal transport plans to tensors of bounded multilinear rank to cut the exponential cost of computing them, and reports approximation bounds and experiments showing faster runs with low transport cost.",
+    "plain": "Optimal transport is a way of finding the cheapest way to move a pile of material so it matches several target distributions at once. When many distributions are involved, the plan for moving things becomes a huge high-dimensional table whose size grows exponentially, so it quickly becomes too slow and memory-hungry. This paper restricts the plan to a compressed, structured form (low-rank tensors) that is much smaller to store and work with, and reports that the resulting algorithms run substantially faster while still giving low-cost solutions.",
+    "why": "Many problems that involve matching several probability distributions at once, such as combining multiple datasets or sensor views, run into this exponential cost. The text does not say how far the approach extends beyond the experiments it reports, so its wider reach is uncertain."
    },
    "abstract": "Multimarginal Optimal Transport (MOT) suffers from exponential computational and memory costs in the number of marginals, as transport plans are represented by high-dimensional tensors. We introduce Low-Rank Multimarginal Optimal Transport (LRMOT), which restricts transport plans to tensors with bounded multilinear rank, providing a compact and structured representation of multimarginal couplings. This structure enables efficient algorithms with a low memory footprint. We establish approximation bounds for the resulting low-rank formulations and demonstrate experimentally that the proposed algorithms substantially reduce computational time while achieving solutions with low transport cost.",
    "source": "arxiv"
@@ -43,12 +87,12 @@
    "primary_category": "math.OC",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper derives an almost sure upper bound on the convergence rate of push-sum averaging algorithms whose message-passing events follow a Markov chain or hidden Markov model, gives tools to make that bound cheap to compute, and proposes a transformation that provably improves the bound.",
-    "plain": "The paper studies distributed computing, where many connected devices each hold a number and try to agree on the average by passing messages to one another. Here the timing of who sends to whom follows a random pattern with memory (a Markov chain or hidden Markov model), and the authors work out a guaranteed bound on how fast the devices converge. They also give methods to compute that bound more cheaply and a way to modify the scheme so the bound gets better, with numerical experiments supporting all three parts.",
-    "why": "Reliable guarantees on how quickly distributed averaging converges matter for sensor networks and decentralized learning, where communication is unreliable or asymmetric. The text does not say how far the results extend beyond the numerical examples it reports, so the practical reach is unclear from the abstract alone.",
+    "ai": true,
     "background": "- Consensus / averaging: nodes in a network repeatedly combine their values so all converge to a common value, ideally the average.\n- Push-sum: a variant that works on directed networks where links are one-way, tracking an extra weight to correct for uneven sending.\n- Markov chain: a random process where the next state depends only on the current state; a hidden Markov model adds unobserved states that drive what is seen.\n- Almost sure convergence: convergence that holds with probability one, not just on average.\n- Convergence rate: how quickly the error shrinks over iterations, often expressed as an exponential decay bound.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives an almost sure upper bound on the convergence rate of push-sum averaging algorithms whose message-passing events follow a Markov chain or hidden Markov model, gives tools to make that bound cheap to compute, and proposes a transformation that provably improves the bound.",
+    "plain": "The paper studies distributed computing, where many connected devices each hold a number and try to agree on the average by passing messages to one another. Here the timing of who sends to whom follows a random pattern with memory (a Markov chain or hidden Markov model), and the authors work out a guaranteed bound on how fast the devices converge. They also give methods to compute that bound more cheaply and a way to modify the scheme so the bound gets better, with numerical experiments supporting all three parts.",
+    "why": "Reliable guarantees on how quickly distributed averaging converges matter for sensor networks and decentralized learning, where communication is unreliable or asymmetric. The text does not say how far the results extend beyond the numerical examples it reports, so the practical reach is unclear from the abstract alone."
    },
    "abstract": "In this work we establish an upper bound on the almost sure convergence rate of a broad class of push-sum algorithms, more precisely for those where message passing events follow a Markovian dynamics, or a Hidden Markov Model. In this context, having a computationally accessible quantity at hand is of top priority; we thus formulate tools to cut down the complexity of obtaining the stated bound. Furthermore, we introduce a transformation to adjust a given push-sum scheme in a way that the bound on the rate provably improves -- and often so does the true convergence rate. Theoretical understanding is complemented by numerical results, where the quality of all three directions is demonstrated: for the bound on the rate, for the computational complexity and for the improvement strategy.",
    "source": "arxiv"

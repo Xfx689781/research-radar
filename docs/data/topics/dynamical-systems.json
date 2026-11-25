@@ -1,7 +1,54 @@
 {
  "slug": "dynamical-systems",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28587",
+   "title": "KAM theory for contact Hamiltonian systems",
+   "url": "https://arxiv.org/abs/2611.28587",
+   "authors": [
+    "Zhicheng Tong",
+    "Yong Li",
+    "Xuefeng Zhao"
+   ],
+   "label": "arXiv:2611.28587v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves frequency-preserving KAM theorems for full-dimensional Legendrian tori in contact Hamiltonian families (finite and infinite dimensional), with analytic coupling between momenta and the contact variable, and links the resulting invariant graphs to analytic stationary Hamilton–Jacobi solutions and weak KAM solutions.",
+    "plain": "The paper studies dynamical systems that have friction-like damping built into their rules of motion, and asks when their motion stays on a predictable, quasi-periodic pattern (like a set of nested, repeating loops) even under small disturbances. The authors show that, after suitable parameter adjustments, such motion on special invariant surfaces can be smoothly re-timed and kept at its prescribed rhythm, including in cases where the damping averages to a nonzero value. In finite dimensions they also show the resulting smooth solution is the only one of its type in both time directions, under extra assumptions.",
+    "why": "KAM theory is a standard tool for showing that quasi-periodic motion survives small perturbations, and extending it to dissipative (contact) systems is a natural but technically hard step. The text does not show applications beyond the mathematical connections it names, so its wider significance is uncertain.",
+    "background": "- Hamiltonian systems: energy-conserving motion described by position and momentum.\n- Contact systems: a generalization that includes energy loss or gain through an extra \"contact\" variable.\n- KAM theory: results showing that quasi-periodic (non-repeating but regular) motion survives small perturbations.\n- Invariant tori: smooth surfaces that the motion stays on, winding around at fixed rates.\n- Legendrian tori: a special, geometrically constrained kind of invariant torus in contact systems.\n- Hamilton–Jacobi equations and weak KAM solutions: partial differential equations whose solutions encode the long-term behavior of the motion.\n- Analytic: infinitely smooth in a strong, power-series sense.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In both finite and infinite dimensions, we establish the first frequency-preserving KAM theorems for full-dimensional Legendrian tori in contact Hamiltonian families with general analytic coupling between the momenta and the contact variable. After adjustment of external parameters, the flow on each torus is analytically conjugate in the original time to the prescribed translation, with estimates uniform as the damping parameter crosses zero. This coupling can generate nonzero mean damping at first order even when the damping parameter vanishes. In finite dimensions, nonzero mean damping yields a time-preserving analytic contact linearization near the torus. In both settings the invariant graphs give global analytic solutions of stationary Hamilton--Jacobi equations whose characteristic flows are conjugate to the prescribed translation. A novel consequence in finite dimensions is that, under global Tonelli assumptions and strict increase in the contact variable, this analytic solution is both the unique forward and the unique backward weak KAM solution, and its associated Legendrian graph is an invariant torus carrying quasi-periodic dynamics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30470",
+   "title": "One-shot identification of analytic systems",
+   "url": "https://arxiv.org/abs/2611.30470",
+   "authors": [
+    "Nicolas Boull\\'e",
+    "Diana Halikias",
+    "Samuel E. Otto",
+    "Alex Townsend"
+   ],
+   "label": "arXiv:2611.30470v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper gives a zero-one law for when the coefficients of a linearly parameterized analytic system can be recovered from one input-solution pair, characterizing the degenerate inputs where injectivity of the recovery map fails, and applies this to matrices, continuous-time dynamical systems and differential operators.",
+    "plain": "The paper asks whether you can work out the unknown settings of a system (such as the rates in a set of differential equations) by watching it respond to just one input and recording one resulting trajectory. It shows that for a given input, either every input fails to reveal the settings, or the failing inputs form a very small set that is negligible under random Gaussian choices. The authors then work out explicit failing sets for several classes of ODEs and PDEs and name some deterministic inputs that do guarantee recovery.",
+    "why": "Identifying a system from a single experiment is practically useful when repeated experiments are costly or impossible. The result may connect to system identification and control, though the text alone does not show how far the framework extends beyond the classes it covers.",
+    "background": "- Analytic function: a smooth function that can be locally written as a convergent power series.\n- Dynamical system: a rule describing how a state evolves over time, often given by differential equations.\n- Linearly parameterized system: the unknown coefficients enter the equations linearly, multiplying fixed known operators.\n- Injective map: a map where different inputs give different outputs, so the output determines the input uniquely; here it means the coefficients are uniquely determined by the observed output.\n- Degenerate set: the inputs for which this uniqueness fails.\n- Gaussian measure: a standard way of randomly choosing inputs; a set of zero measure is one that random choices almost never hit.\n- Differential operator: a rule combining derivatives of a function, as in ODEs (one variable) and PDEs (several variables).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study when the coefficients of a linearly parameterized analytic system can be identified from a single input-solution pair. Given a finite dictionary of analytic operators, each admissible input induces a finite-dimensional linear recovery map from coefficients to observed outputs. Coefficient recovery is possible exactly when this map is injective. We define the degenerate input set as the set of inputs for which injectivity fails and prove a zero-one law: either every admissible input is degenerate, or the degenerate set is negligible in the sense that it is compactly slice-null and has zero measure under every nondegenerate Gaussian measure. We then apply this framework to the recovery of matrices, analytic continuous-time dynamical systems, and differential operators. For several ODE and PDE classes, we further characterize the degenerate sets explicitly and identify deterministic choices of inputs that guarantee recovery.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29387",
    "title": "A transitive $C^{1+\\alpha}$ surface diffeomorphism with positive entropy has at most one measure of maximal entropy",
@@ -14,12 +61,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "For a topologically transitive C^{1+α} diffeomorphism of a closed surface with positive topological entropy, the measure of maximal entropy is shown to be unique (at most one exists).",
-    "plain": "This paper studies smooth rules for moving points around a closed surface, such as a sphere or torus, in a way that is chaotic but still follows a pattern. Such a rule can be described by many probability distributions over its long-run behaviour, and some are \"most chaotic\" in a precise sense. The paper shows that, under these conditions, there is at most one such most-chaotic distribution.",
-    "why": "Uniqueness of the maximal-entropy measure is a standard question in dynamical systems, because it tells you that the system's chaos has one canonical statistical description. The text itself gives only the statement, so its wider significance and links to other results are not established here.",
+    "ai": true,
     "background": "- Diffeomorphism: a smooth, invertible map of a surface onto itself, with a smooth inverse.\n- C^{1+α}: the map and its derivative are smooth enough, with a mild Hölder-type regularity condition (α between 0 and 1).\n- Topological entropy: a number measuring how fast the orbits of a map become complicated; positive means genuinely chaotic.\n- Topologically transitive: some orbit eventually comes arbitrarily close to every point of the space.\n- Invariant measure: a way of assigning probabilities to regions that the map leaves unchanged.\n- Measure of maximal entropy: an invariant measure whose entropy equals the topological entropy of the map.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "For a topologically transitive C^{1+α} diffeomorphism of a closed surface with positive topological entropy, the measure of maximal entropy is shown to be unique (at most one exists).",
+    "plain": "This paper studies smooth rules for moving points around a closed surface, such as a sphere or torus, in a way that is chaotic but still follows a pattern. Such a rule can be described by many probability distributions over its long-run behaviour, and some are \"most chaotic\" in a precise sense. The paper shows that, under these conditions, there is at most one such most-chaotic distribution.",
+    "why": "Uniqueness of the maximal-entropy measure is a standard question in dynamical systems, because it tells you that the system's chaos has one canonical statistical description. The text itself gives only the statement, so its wider significance and links to other results are not established here."
    },
    "abstract": "Let $0<\\alpha\\le 1$. On a closed surface, every topologically transitive $C^{1+\\alpha}$ diffeomorphism with positive topological entropy has at most one measure of maximal entropy.",
    "source": "arxiv"
@@ -35,12 +82,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "This fourth part of a series classifies smooth functions and Hamiltonian flows on surfaces up to topological equivalence using Reeb graphs and cell decompositions, with recursive counts and generating functions for simple cases on the disc and sphere.",
-    "plain": "The paper asks when two ways of describing motion or height on a curved surface, such as a landscape or a sphere, count as \"the same\" once you ignore smooth stretching and only keep the overall shape of how things rise, fall and flow. The authors use simple tree-like diagrams (Reeb graphs) and grid-like cell decompositions as fingerprints that capture this shape. They then count how many essentially different cases exist for a given number of saddle points.",
-    "why": "Counting topologically distinct flows and height functions gives a concrete, checkable way to organize a classical area of dynamical systems. The text does not say how these counts will be used beyond the paper itself, so its wider impact is unclear from this excerpt.",
+    "ai": true,
     "background": "- Topological equivalence: two systems are considered the same if one can be continuously deformed into the other without tearing, ignoring exact shape and speed.\n- Structural stability: a system whose overall behaviour survives small perturbations.\n- Morse function: a smooth height function whose critical points (peaks, pits, saddles) are non-degenerate.\n- Saddle point: a point where a surface is flat but rises in one direction and falls in another.\n- Reeb graph: a graph built by collapsing each level set of a function to a point, recording how components merge and split.\n- Cell decomposition: splitting a surface into simple pieces (points, edges, faces) for combinatorial bookkeeping.\n- Hamiltonian flow: the motion generated by an energy function in classical mechanics.\n- Generating function: a formal series whose coefficients are the counts of interest.\n- This is part IV of a series; earlier parts cover differential topology, discrete structures and manifold recognition algorithms.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This fourth part of a series classifies smooth functions and Hamiltonian flows on surfaces up to topological equivalence using Reeb graphs and cell decompositions, with recursive counts and generating functions for simple cases on the disc and sphere.",
+    "plain": "The paper asks when two ways of describing motion or height on a curved surface, such as a landscape or a sphere, count as \"the same\" once you ignore smooth stretching and only keep the overall shape of how things rise, fall and flow. The authors use simple tree-like diagrams (Reeb graphs) and grid-like cell decompositions as fingerprints that capture this shape. They then count how many essentially different cases exist for a given number of saddle points.",
+    "why": "Counting topologically distinct flows and height functions gives a concrete, checkable way to organize a classical area of dynamical systems. The text does not say how these counts will be used beyond the paper itself, so its wider impact is unclear from this excerpt."
    },
    "abstract": "This is the fourth part of a series on algorithms and topological invariants for dynamical systems. We study the topological equivalence of smooth functions and of Hamiltonian flows on surfaces, and the discrete invariants, Reeb graphs and cell decompositions, that classify them. We recall the notions of topological equivalence and structural stability, introduce two equivalences of functions (with and without the order of the critical values) and show that simple Morse functions on closed orientable surfaces are classified by their Reeb graphs with vertex odering, while simple Hamiltonian flows are classified by Reeb graphs with marked edges. For the disc and for the sphere we obtain a recursive description and a generating function for the numbers of such trees, and compute the numbers of topologically non-equivalent simple Morse functions and Hamiltonian flows with a given number of saddles. We also describe functions with isolated, possibly degenerate, critical points by cell decompositions, and give an algorithm and computational results for functions with three critical points. In the first part (arXiv:2501.15657) we discussed the basic concepts of differential topology. In the second part (arXiv:2502.00506) we discussed the discrete topological structures used in the topological theory of dynamical systems. In the third part (arXiv:2502.09958) we constructed algorithms that recognize $2$- and $3$-manifolds in simplicial complexes and regular CW-complexes and determine the topological type of a $2$-manifold (connectivity, orientability, genus, number of boundary components).",
    "source": "arxiv"

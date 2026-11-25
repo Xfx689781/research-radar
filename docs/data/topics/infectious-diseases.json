@@ -1,7 +1,41 @@
 {
  "slug": "infectious-diseases",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.22.26368705",
+   "title": "Safety and microbiological activity of a combined phage cocktail in persons with cystic fibrosis colonized with Achromobacter: Study protocol for a phase 1, investigator-initiated, randomized clinical trial.",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368705v1",
+   "authors": [
+    "Massey, J.",
+    "Hughes Kramer, K.",
+    "Snook Barrett, S.",
+    "Bishop, B.",
+    "Rothenberger, S.",
+    "Aslam, S.",
+    "Silveira, F.",
+    "Pilewski, J.",
+    "Robinson, K.",
+    "Zemke, A.",
+    "Shields, R. K.",
+    "Stellfox, M.",
+    "Van Tyne, D.",
+    "Haidar, G."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.22.26368705 v1",
+   "primary_category": "infectious diseases",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A registered phase 1 protocol for a randomized, open-label pilot testing the safety, tolerability, and early pharmacokinetics of a four-phage cocktail (AchromoPhage) given intravenously, by inhalation, or both, in 12 adults with cystic fibrosis and Achromobacter lung infection.",
+    "plain": "This is a plan for a small first-in-people safety trial of a mixture of four viruses that kill a bacterium called Achromobacter, which can cause serious lung infections in people with cystic fibrosis. Twelve adults will be split into three groups receiving three weekly doses by vein, by breathing it in, or both, and researchers will track side effects, lung function, quality of life, and how the viruses move through the blood and airways. The text describes the design only; no results are reported.",
+    "why": "Phage therapy is an understudied option for drug-resistant bacteria, and the authors note that clinical trial data in people with cystic fibrosis are scarce and that Achromobacter has not been studied in trials before. Results would help judge whether phages are safe and how they behave in the body, but this protocol alone shows no evidence of effectiveness.",
+    "background": "- Cystic fibrosis (CF) is an inherited condition that causes thick mucus and chronic lung infections.\n- Achromobacter is a group of Gram-negative bacteria (a bacterial category with a protective outer membrane) that are often resistant to many antibiotics.\n- Bacteriophages (\"phages\") are viruses that infect and kill specific bacteria; they are not active against human cells.\n- \"Obligately lytic\" means the phages only reproduce by bursting the bacterial cell rather than living alongside it.\n- Phase 1 trials mainly test safety and dosing, not whether a treatment works.\n- Pharmacokinetics means how a drug is absorbed, spread, and cleared from the body.\n- Neutralizing antibodies are immune proteins that can block a virus; their appearance may limit repeated phage dosing.\n- FEV1 is a standard spirometry measure of how much air a person can forcefully exhale in one second.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Background: Achromobacter are a genus of difficult-to-treat, frequently multi-drug-resistant Gram-negative bacteria that can cause severe infections in people with cystic fibrosis (pwCF). Bacteriophages are an understudied yet promising therapy for these and other antibiotic-resistant bacteria. However, data are largely limited to case reports or series, and clinical trials among pwCF to date have not evaluated Achromobacter. Methods: This is an investigator-initiated, open-label, randomized phase 1 pilot trial to evaluate the safety, tolerability, and biological effects of AchromoPhage, a cocktail of four genetically distinct, obligately lytic Achromobacter-targeting phages (phiACH01, phiACH04, phiACH06, phiACH07) with broad activity against Achromobacter species, in 12 adult participants with CF and pulmonary Achromobacter infection. Twelve participants will be randomized into three groups to receive a total of three, increasing, weekly doses of the AchromoPhage cocktail via one of three routes: 1) intravenous, 2) via inhalation, or 3) or intravenously and inhaled. Participation in the trial will span approximately 7 weeks, which will consist of outpatient phage dose administrations, safety and symptom monitoring, and longitudinal collection of biospecimens for protocol-specified and exploratory analyses through Day 42. The primary safety endpoint is the occurrence of treatment-related Grade 4 or greater adverse events. Secondary endpoints include longitudinal changes in FEV1 by spirometry, longitudinal changes in health-related quality of life, pharmacokinetics of each of the four phages in blood and the respiratory tract, and emergence of a phage neutralizing antibody response in serum. Discussion: While existing case anecdotes and observational studies suggest that phages are safe and may have a role in treating human infections, there is a paucity of clinical trials studying the adverse effect profile and basic pharmacological parameters of phages. This trial will study the safety and explore the pharmacokinetic and other properties of a four-phage cocktail in patients with CF and chronic Achromobacter lung infection. Trial registration: ClinicalTrials.gov NCT0727590. Registered on 12/10/2025",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.19.26368501",
    "title": "Pre-conception PfSPZ Vaccine administration to Malian women prevents malaria in their offspring during infancy",
@@ -34,12 +68,12 @@
    "primary_category": "infectious diseases",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A randomized, placebo-controlled trial in Mali testing whether pre-conception PfSPZ malaria vaccination of women reduces parasitemia and clinical malaria in their infants during the first year of life.",
-    "plain": "Malaria is especially dangerous for babies and pregnant women, and protecting infants is hard. In this trial in Mali, healthy women were given either a malaria vaccine (at one of two doses) or saline before they became pregnant, and their babies were then tracked for malaria during the first year of life. In the lower-dose vaccine group, far fewer infants had malaria parasites in their blood or clinical malaria than in the saline group, while the higher-dose group did not show a significant effect.",
-    "why": "Protecting infants through a vaccine given to mothers before pregnancy would be a new approach if it holds up, which is why it merits attention. The sample is small (104 infants, with wide confidence intervals), and the higher-dose group did not show a significant benefit, so the result should be read as promising rather than settled.",
+    "ai": true,
     "background": "- Malaria is caused by Plasmodium parasites, spread by mosquitoes; Plasmodium falciparum is the most dangerous species.\n- PfSPZ Vaccine is made of live but attenuated (weakened) parasite sporozoites, the stage that enters the body from a mosquito bite.\n- \"Pre-conception\" means given before pregnancy begins.\n- \"Parasitemia\" means malaria parasites detected in the blood, often via a blood smear under a microscope.\n- \"Vaccine efficacy (VE)\" is the percentage reduction in cases among vaccinated versus control groups; a wide confidence interval (CI) means the estimate is uncertain.\n- Placebo-controlled and double-blind means neither participants nor researchers knew who got the real vaccine.\n- PfCSP antibodies are immune proteins against the parasite's circumsporozoite protein, measured as a sign of immune response.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A randomized, placebo-controlled trial in Mali testing whether pre-conception PfSPZ malaria vaccination of women reduces parasitemia and clinical malaria in their infants during the first year of life.",
+    "plain": "Malaria is especially dangerous for babies and pregnant women, and protecting infants is hard. In this trial in Mali, healthy women were given either a malaria vaccine (at one of two doses) or saline before they became pregnant, and their babies were then tracked for malaria during the first year of life. In the lower-dose vaccine group, far fewer infants had malaria parasites in their blood or clinical malaria than in the saline group, while the higher-dose group did not show a significant effect.",
+    "why": "Protecting infants through a vaccine given to mothers before pregnancy would be a new approach if it holds up, which is why it merits attention. The sample is small (104 infants, with wide confidence intervals), and the higher-dose group did not show a significant benefit, so the result should be read as promising rather than settled."
    },
    "abstract": "Background: Preconception administration of Plasmodium falciparum sporozoite (PfSPZ) Vaccine is safe and prevents malaria during pregnancies identified within 21 months post-vaccination. We evaluated pre-conception PfSPZ Vaccine effects on malaria risk in offspring during the first year of life. Methods: In a randomized, double-blind, placebo-controlled trial in Ouelessebougou, Mali, 300 healthy 18-38-year-old women were allocated 1:1:1 to receive 9x10^5 PfSPZ or 1.8x10^6 PfSPZ of PfSPZ Vaccine or normal saline on days 1-8-29, and followed up to 21 months for malaria endpoints and pregnancies. 104 infants from 103 pregnancies identified first year post-vaccination [9x10^5 PfSPZ (n=38); 1.8x10^6 PfSPZ (n=40); normal saline (n=26)] were seen every two months and during illnesses. Primary endpoints were blood-smear parasitemia and clinical malaria. Safety outcomes included newborn baseline characteristics and infant adverse events (AEs). Findings: Newborn baseline characteristics and infant AEs did not differ between arms; AEs were common but predominantly mild (91.9-96% Grade 1). Vaccine efficacy of 9x10^5 PfSPZ was 75.1% (95% CI 20.6-92.2) against parasitemia (10.5% parasitemic infants versus 38.5% of placebo) and 94.2% (54.9-99.3) against clinical malaria (2.6% malarious infants versus 38.5% of placebo). VE of 1.8x10^6 PfSPZ group was 40.3% (-43.6-75.2) against parasitemia and 36.3% (-50.3-73.0) against clinical malaria, both non-significant. At 6 and 12 months of age, PfCSP antibodies were similar in offspring of vaccinated and control mothers. Interpretation: Pre-conception PfSPZ Vaccine was safe and reduced Pf infection and clinical malaria during infancy in 9x10^5 PfSPZ group. Further development of preconception PfSPZ vaccines is warranted to protect mother-infant dyads.",
    "source": "medrxiv"

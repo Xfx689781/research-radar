@@ -1,7 +1,54 @@
 {
  "slug": "quantum",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30187",
+   "title": "Quantum simulation of low-temperature impurity models",
+   "url": "https://arxiv.org/abs/2611.30187",
+   "authors": [
+    "Jiaqing Jiang",
+    "Nathan Ju"
+   ],
+   "label": "arXiv:2611.30187v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper gives quantum algorithms for preparing thermal and ground states of fermionic quantum impurity models, using global jump operators in quantum Gibbs samplers to avoid exponential-in-inverse-temperature overhead, with a claimed Heisenberg-scaling estimate of static and dynamical properties.",
+    "plain": "The paper looks at a standard model in materials physics: a small strongly interacting piece of a system attached to a large, simpler surrounding bath. It describes quantum computer procedures for preparing this system's state at low temperature and for estimating its properties. The authors state that the running time grows polynomially with system size and inverse temperature, and only logarithmically with the required accuracy.",
+    "why": "Impurity models are the core computational step in dynamical mean field theory, a widely used method for strongly correlated materials, so faster low-temperature simulation would matter if the scaling holds in practice. The text is a theory paper with claimed asymptotic bounds only; it does not show any numerical demonstration or hardware run, so practical impact is unclear.",
+    "background": "- Quantum impurity model: a small interacting subsystem coupled to a large noninteracting bath.\n- Dynamical mean field theory: a method that maps a material's behavior onto an impurity model solved self-consistently.\n- Thermal state: the quantum state of a system in equilibrium at a given temperature; inverse temperature (beta) grows as temperature falls.\n- Fermionic modes: the basic units of storage for electrons-like particles, here counted as n.\n- Quantum Gibbs sampler: a quantum analogue of Markov chain Monte Carlo that prepares thermal states by simulated random jumps between states.\n- Spectral gap: the energy difference between the ground state and the first excited state; a larger gap makes the ground state easier to isolate.\n- Purification: an enlarged quantum state whose reduced description equals the thermal state, allowing thermal averages to be estimated on a quantum computer.\n- Heisenberg scaling: error decreasing as 1/δ rather than 1/√δ, the best possible for many estimation tasks.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Quantum impurity models, which describe a small but strongly-interacting subsystem coupled to a large noninteracting bath, are the computational core of dynamical mean field theory and play an important role in simulating strongly correlated materials. We develop quantum algorithms for efficiently simulating these models at low temperatures and with high precision. For any impurity model on $n$ fermionic modes with fixed impurity size: (1) We give a quantum algorithm that prepares the thermal state at inverse temperature $\\beta$ to precision $\\delta$ in time $\\mathrm{poly}(n,\\beta,\\log(1/\\delta))$. This algorithm is the first to achieve both polynomial scaling in the inverse temperature and polylogarithmic scaling in the precision. When the Hamiltonian has an inverse-polynomial spectral gap, our quantum algorithm prepares its ground state to precision $\\delta$ in time $\\mathrm{poly}(n,\\log(1/\\delta))$. (2) We further give a quantum algorithm that prepares a purification of the thermal state in time $\\mathrm{poly}(n,\\beta,\\log(1/\\delta))$. Using this purification, we estimate static and dynamical properties with error $\\delta$ in time polynomial in $n$ and $\\beta$ and linear in $1/\\delta$ up to polylogarithmic factors, achieving the Heisenberg scaling. Our algorithms build on quantum Gibbs samplers, which are quantum analogues of Markov chain Monte Carlo methods. By using global jump operators instead of local ones, we avoid the $\\exp(\\beta)$ overhead commonly associated with quantum Gibbs samplers, making them efficient for impurity models even at low temperatures.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28361",
+   "title": "Incompressible quantum information",
+   "url": "https://arxiv.org/abs/2611.28361",
+   "authors": [
+    "Lasse H. Wolff",
+    "Matthias Christandl",
+    "Bergfinnur Durhuus",
+    "Christoph Hirche",
+    "Andreas Winter"
+   ],
+   "label": "arXiv:2611.28361v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper shows that, unlike the classical case, a small classical system correlated with a large quantum system cannot always be matched by a compressed encoding of the large system that keeps the correlations intact, which limits information-bottleneck approaches to quantum machine learning.",
+    "plain": "The paper asks whether a big quantum system can be squeezed into a much smaller one without losing the links it shares with a small classical system. For ordinary classical data this is always possible, but the authors show that for some quantum states any substantial compression destroys a significant amount of the shared information, measured as mutual information.",
+    "why": "It identifies a limit on a compression idea used in quantum machine learning: specifying the relevant features with a small system does not guarantee a compact encoding of the quantum data that keeps those features. The text does not say how far this affects practical quantum learning methods.",
+    "background": "- Mutual information: a measure of how much knowing one system tells you about another.\n- Compression: encoding a large system in fewer resources, here meaning a smaller system.\n- Classical versus quantum: quantum systems can be correlated in ways with no classical counterpart, and their states cannot always be copied or split as classical data can.\n- Information bottleneck: a method that keeps only the parts of data relevant to a target, used in machine learning.\n- Bipartite state: a joint quantum state of two systems, one small and classical, one large and quantum.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "For a small classical system correlated with a large one, it is always possible to compress the large system down to a size only dependent on the size of the smaller one, while preserving all correlations up to a given controllable error. Here, we show that such a statement does not hold at all when the large system is quantum mechanical. More precisely, we show that there are bipartite states such that any compression of the large system, by a non-trivial relative factor, will necessarily lead to the destruction of a significant amount of correlation, measured in mutual information. Our results therefore identify a limitation of information-bottleneck approaches to quantum machine learning, showing that a small system specifying the relevant features contained in a large quantum data set does not guarantee a compact encoding of the latter that preserves the relevant correlations.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30303",
    "title": "Impact of structured noise on bosonic quantum error correction",
@@ -24,12 +71,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Experiments in a 3D superconducting circuit show that structured environmental noise makes single-photon loss depend on the photon-number state of a weakly nonlinear oscillator, deforming the error space assumed by bosonic quantum error correction, with transient dynamics matched by a second-order time-convolutionless theory.",
-    "plain": "Quantum computers can store information in microwave resonators, where photons are the carriers and sometimes leak out. The standard models assume every stored state leaks in the same simple way. This paper shows that when the surrounding environment is not flat in frequency, the leak rate can depend on how many photons are present, and that this changes which errors a correction scheme must handle.",
-    "why": "Bosonic error-correction schemes are designed around an idealized loss model, so a state-dependent leak could make them less effective than their design assumes. The text reports agreement between measurements and a theory for the transient behavior, and a demonstration with a logical qubit; its broader implications for hardware design are for the authors and readers to judge.",
+    "ai": true,
     "background": "- Bosonic mode: a resonator (here a microwave cavity) whose excitations are photons, counted by the number of photons, or Fock state.\n- Photon loss: photons leaking out of the cavity into its environment, the main error in these devices.\n- Quantum error correction: encoding information redundantly so that certain errors can be detected and undone.\n- Binomial code: a specific encoding of a logical qubit across several photon-number states.\n- Markovian vs non-Markovian: Markovian means the environment forgets quickly, so loss rates are constant; non-Markovian means memory effects shape the early dynamics.\n- Time-convolutionless theory: a mathematical method for describing open quantum systems with memory.\n- Circuit QED: superconducting circuits coupled to microwave resonators, used to build and probe such oscillators.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Experiments in a 3D superconducting circuit show that structured environmental noise makes single-photon loss depend on the photon-number state of a weakly nonlinear oscillator, deforming the error space assumed by bosonic quantum error correction, with transient dynamics matched by a second-order time-convolutionless theory.",
+    "plain": "Quantum computers can store information in microwave resonators, where photons are the carriers and sometimes leak out. The standard models assume every stored state leaks in the same simple way. This paper shows that when the surrounding environment is not flat in frequency, the leak rate can depend on how many photons are present, and that this changes which errors a correction scheme must handle.",
+    "why": "Bosonic error-correction schemes are designed around an idealized loss model, so a state-dependent leak could make them less effective than their design assumes. The text reports agreement between measurements and a theory for the transient behavior, and a demonstration with a logical qubit; its broader implications for hardware design are for the authors and readers to judge."
    },
    "abstract": "Bosonic quantum error correction relies on an accurate description of single-photon loss dissipation using an ideal annihilation operator, under which correctable loss errors act equivalently on different logical code states. In realistic weakly nonlinear bosonic modes, however, coupling to a structured environment can render photon loss Fock-state dependent, thereby modifying the effective dissipation operator and deforming the associated error space. Here, we experimentally investigate this effect in a three-dimensional circuit quantum electrodynamics system. By injecting spectrally engineered environmental noise into a weakly nonlinear oscillator, we observe pronounced frequency selectivity in the measured Fock-state dynamics. While the long-time transition rates converge to the Markovian limit, the transient dynamics display distinctly non-Markovian behavior, in quantitative agreement with a second-order time-convolutionless theory. By applying narrowband noise to a binomially encoded logical qubit, we further demonstrate Fock-state-dependent dissipation channels that drive logical states beyond the nominally correctable error space. These results establish structured environmental noise as a mechanism for deforming photon-loss errors in weakly nonlinear bosonic systems and highlight the need to incorporate realistic, state-dependent dissipation into the design and characterization of bosonic quantum error correction.",
    "source": "arxiv"
@@ -45,12 +92,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper studies the query complexity of approximation and integration over Sobolev spaces in the quantum setting of information-based complexity, dropping a previously assumed embedding condition and using a quantum version of a stochastic discretization technique.",
-    "plain": "This paper is about how many questions a quantum computer needs to ask about a smooth function in order to estimate it or to compute its average (integral) to a given accuracy. The authors extend earlier results to functions with low smoothness, where a previously used condition no longer applies. They do this by adapting a random-sampling-based discretization method to the quantum setting.",
-    "why": "Work on the cost of approximating and integrating functions with quantum queries connects the theory of quantum algorithms to numerical analysis. The text given does not report specific results or bounds, so its significance beyond this extension cannot be judged from the excerpt.",
+    "ai": true,
     "background": "- Sobolev space: a family of functions with limited smoothness, measured by how many derivatives are square-integrable.\n- Information-based complexity (IBC): a field that asks how much information (number of function evaluations or queries) is needed to solve a continuous math problem to a target accuracy.\n- Quantum setting: the algorithm can query the function through quantum operations, which can allow different cost scaling than classical sampling.\n- Approximation vs. integration: approximation reconstructs the whole function; integration estimates its average value.\n- Embedding condition: a technical assumption relating the smoothness space to a function space with weaker requirements; the paper drops it.\n- Discretization: replacing a continuous function with a finite set of sampled or computed values.\n- Only the abstract-level description is available; no formulas or numerical results are included in the text.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies the query complexity of approximation and integration over Sobolev spaces in the quantum setting of information-based complexity, dropping a previously assumed embedding condition and using a quantum version of a stochastic discretization technique.",
+    "plain": "This paper is about how many questions a quantum computer needs to ask about a smooth function in order to estimate it or to compute its average (integral) to a given accuracy. The authors extend earlier results to functions with low smoothness, where a previously used condition no longer applies. They do this by adapting a random-sampling-based discretization method to the quantum setting.",
+    "why": "Work on the cost of approximating and integrating functions with quantum queries connects the theory of quantum algorithms to numerical analysis. The text given does not report specific results or bounds, so its significance beyond this extension cannot be judged from the excerpt."
    },
    "abstract": "We study the complexity of approximation and integration in Sobolev spaces in the quantum setting of information-based complexity theory (IBC). Previous results have been obtained under the assumption that the embedding condition holds. Here we drop this assumption and use a quantum version of a previously developed stochastic discretization technique.",
    "source": "arxiv"

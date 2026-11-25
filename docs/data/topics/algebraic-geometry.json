@@ -1,7 +1,54 @@
 {
  "slug": "algebraic-geometry",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30506",
+   "title": "Functionals commuting with reparametrizations",
+   "url": "https://arxiv.org/abs/2611.30506",
+   "authors": [
+    "Pierre-Emmanuel Chaput",
+    "David Dos Santos Ferreira",
+    "Valentin F\\'eray"
+   ],
+   "label": "arXiv:2611.30506v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper classifies the algebraic functionals from n-tuples of polynomials vanishing at 0 to such polynomials that commute with right-composition (reparametrization), introducing a \"semi-product\" operation, with links to polyharmonic functions on the positive discrete orthant and the type A co-invariant algebra.",
+    "plain": "The paper studies rules that take several functions and combine them into one function in a way that respects changing the parameter of the curve (reparametrization). The authors motivate this by the geometry of tangent curves to algebraic varieties. For the case of polynomials that vanish at zero, they give a complete description of all such algebraic rules, built from a new operation they call the semi-product.",
+    "why": "The result is a complete classification in a specific setting, and the proof uses tools from discrete analysis and algebra that are not obviously related to the original geometric question. The text says the semi-product has interesting algebraic and geometric properties, but does not spell these out, and the setting is narrow, so its wider significance is unclear from this abstract alone.",
+    "background": "- Functional: a rule that takes functions as inputs and returns a function as output.\n- Reparametrization: changing the variable of a curve, for example replacing t by a function of t; here, right-composition of a function with another function from the space.\n- Polynomials vanishing at 0: polynomials with zero constant term, written C[T]_0.\n- Polyharmonic function: a function on a grid of integer points whose discrete Laplacian-type operators repeatedly vanish, a discrete analogue of harmonic functions.\n- Positive discrete orthant: the set of integer points with all coordinates positive.\n- Co-invariant algebra of type A: a finite-dimensional quotient algebra associated with the symmetric group, arising in combinatorics and representation theory.\n- Colored permutations: permutations in which each entry also carries a color or label from a finite group.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Motivated by the study of tangent curve bundles of algebraic varieties, we consider the following simple-looking problem: given a space $E$ of functions, describe functionals from $E^n$ to $E$ which commutes with reparametrizations, i.e. with the right-composition with an element of $E$. Our main result is a complete description of the algebraic solutions of this problem when $E$ is the space of polynomials vanishing in $0$, which we denote by $\\mathbb C[T]_0$. This description involves a simple operation, which we call semi-product, with interesting algebraic and geometric properties. The proof involves the study of polyharmonic functions on the positive discrete orthant $\\mathbb Z^n_{>0}$, and a relation with the co-invariant algebra of type $A$. We also provide a generalization connected to colored permutations, and discuss the analogue problems where $E=\\mathbb C[T]_0/(T^\\ell)$ for some $\\ell >0$, and where $E$ consists of infinitely differentiable functions. Finding a complete description of algebraic solutions in these settings is still open.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29599",
+   "title": "The generalized Franchetta conjecture for some hyper-K\\\"ahler varieties, III",
+   "url": "https://arxiv.org/abs/2611.29599",
+   "authors": [
+    "Lie Fu",
+    "Robert Laterveer",
+    "Carl Mazzanti",
+    "Charles Vial"
+   ],
+   "label": "arXiv:2611.29599v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "This paper proves the generalized Franchetta conjecture (cycles on the generic fiber of a family of hyper-Kähler varieties inject into cohomology) for double EPW sextics and double EPW cubes, and studies Chow-Künneth decompositions of Gushel-Mukai varieties to do so.",
+    "plain": "The paper studies a family of geometric shapes, called hyper-Kähler varieties, that vary smoothly as parameters change. It asks whether certain algebraic sub-objects defined over the general member of the family can be told apart by their topological fingerprint (cohomology), and it answers yes for two specific families, the double EPW sextics and double EPW cubes. The main tool is a link to Gushel-Mukai fourfolds, whose structure is used to realize these shapes as spaces of stable objects.",
+    "why": "This is the third paper in a series on one conjecture, so it extends a line of established work rather than starting a new field. The connection it draws between double EPW sextics and Gushel-Mukai fourfolds at the level of motives is the kind of link that specialists in algebraic cycles and moduli may find useful; the text does not say how far it reaches beyond this area.",
+    "background": "- Algebraic geometry studies shapes defined by polynomial equations, and families of such shapes indexed by parameters.\n- Hyper-Kähler varieties are a special class of higher-dimensional complex shapes with particularly rigid geometry; they are the higher-dimensional analogues of K3 surfaces.\n- Cohomology is an algebraic fingerprint of a shape's holes and structure; the cycle class map sends algebraic sub-shapes (cycles) to this fingerprint.\n- \"Generically defined\" cycles are those that make sense over a general member of a family, rather than only special members.\n- The Franchetta conjecture concerns whether such cycles are determined by their cohomology class; \"injects\" means distinct cycles have distinct fingerprints.\n- Chow-Künneth decomposition splits the cohomology-like structure of a shape into pieces; multiplicativity means this splitting behaves well under products.\n- Bridgeland-stable objects come from derived categories, a homological-algebra framework for organizing geometric objects; Kuznetsov components are pieces of such categories attached to Fano varieties.\n- Motives are a universal framework relating different algebraic varieties.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The generalized Franchetta conjecture states that for a locally complete family of polarized hyper-K\\\"ahler varieties, the generically defined cycles on any fiber of the universal family over the moduli stack inject into cohomology via the cycle class map. We prove the generalized Franchetta conjecture for the family of double EPW sextics discovered by O'Grady and for the family of double EPW cubes discovered by Iliev-Kapustka-Kapustka-Ranestad. We also prove a Franchetta-type result for the relative square of the universal family of double EPW sextics, which allows to relate double EPW sextics and Gushel-Mukai fourfolds on the level of motives. The proof involves the geometry of Gushel-Mukai fourfolds, whose Kuznetsov component allows to realize double EPW sextics and cubes as moduli spaces of Bridgeland-stable objects, relatively over the parameter space of Gushel-Mukai fourfolds. A key step is that the canonical Chow-K\\\"unneth decomposition of special Gushel-Mukai fourfolds is multiplicative; we use this to show that generically defined cycles on the third power of a special Gushel-Mukai fourfold inject into cohomology via the cycle class map. Along the way, we also show that the canonical Chow-K\\\"unneth decomposition of any Gushel-Mukai sixfold is multiplicative.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30760",
    "title": "Categorical Torelli theorem for quintic threefolds",
@@ -13,12 +60,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves a categorical Torelli theorem for smooth quintic threefolds over the complex numbers: equivalence of bounded derived categories of coherent sheaves implies isomorphism of the varieties.",
-    "plain": "The paper studies a particular kind of shape studied in algebraic geometry: smooth quintic threefolds, which are high-dimensional surfaces cut out by fifth-degree polynomial equations. It asks whether the bookkeeping of sheaves on such a shape (a structured record of how functions and data sit on it) is enough to recover the shape itself. The authors show that if two such shapes have equivalent categories of sheaves, then the shapes are in fact the same up to isomorphism.",
-    "why": "This is a rigidity result: the algebraic data determines the geometry, which is a clean answer to a question of the form \"how much of a shape does its derived category remember?\" The text gives only the statement, so its wider significance and methods cannot be judged from it here.",
+    "ai": true,
     "background": "- Complex numbers and algebraic varieties: solution sets of polynomial equations over the complex numbers.\n- Quintic threefold: a smooth variety of complex dimension three in projective space, defined by one degree-five polynomial.\n- Coherent sheaves: a standard way to attach algebraic data (like functions or vector bundles) to a variety.\n- Derived category: a larger organized category built from complexes of sheaves, encoding homological information.\n- Equivalence of categories: a structure-preserving correspondence; here, two varieties having equivalent derived categories.\n- Torelli theorem: the general type of result that a geometric object is determined by associated data (originally for curves and Hodge structures).",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves a categorical Torelli theorem for smooth quintic threefolds over the complex numbers: equivalence of bounded derived categories of coherent sheaves implies isomorphism of the varieties.",
+    "plain": "The paper studies a particular kind of shape studied in algebraic geometry: smooth quintic threefolds, which are high-dimensional surfaces cut out by fifth-degree polynomial equations. It asks whether the bookkeeping of sheaves on such a shape (a structured record of how functions and data sit on it) is enough to recover the shape itself. The authors show that if two such shapes have equivalent categories of sheaves, then the shapes are in fact the same up to isomorphism.",
+    "why": "This is a rigidity result: the algebraic data determines the geometry, which is a clean answer to a question of the form \"how much of a shape does its derived category remember?\" The text gives only the statement, so its wider significance and methods cannot be judged from it here."
    },
    "abstract": "We prove that two smooth quintic threefolds over $\\mathbb{C}$ are isomorphic if their bounded derived categories of coherent sheaves are equivalent.",
    "source": "arxiv"
@@ -36,12 +83,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper studies holomorphic foliations on orbifold projective surfaces with cyclic divisor class group that have a single singular point of algebraic multiplicity one, and shows that when the normal degree is large enough there is no invariant algebraic curve, with examples showing the bound is sharp.",
-    "plain": "This is about a way of splitting a surface with mild \"cone-like\" points into smooth flowing paths, called a foliation, which has only one special point where the paths meet. The authors ask whether such a splitting can be built around a fixed algebraic curve, and show that once a certain numerical measure of the foliation is large enough, it cannot. They also give examples showing that their threshold cannot be lowered.",
-    "why": "Results of this type classify which geometric structures are possible on a space, a central theme in algebraic geometry. The text does not say how it connects to other areas, so wider significance is unclear from this abstract alone.",
+    "ai": true,
     "background": "- Projective surface: a two-dimensional space described by polynomial equations, the complex analogue of a sphere or plane.\n- Orbifold point: a point where the surface looks like a quotient by a finite symmetry group, a mild kind of singularity.\n- Holomorphic foliation: a decomposition of the surface into a family of non-crossing curves (leaves), like parallel threads, defined by complex-smooth rules.\n- Singularity of a foliation: a point where the leaves fail to form a smooth family; here there is exactly one, with algebraic multiplicity one (the simplest kind).\n- Invariant algebraic curve: a curve made of solutions of polynomial equations that the foliation preserves, i.e. each leaf-path that starts on it stays on it.\n- Normal degree: a number measuring how the foliation bends relative to the surface; larger means more complicated.\n- Divisor class group: a finite-type algebraic bookkeeping object for curves on the surface; cyclic means it is generated by one element.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies holomorphic foliations on orbifold projective surfaces with cyclic divisor class group that have a single singular point of algebraic multiplicity one, and shows that when the normal degree is large enough there is no invariant algebraic curve, with examples showing the bound is sharp.",
+    "plain": "This is about a way of splitting a surface with mild \"cone-like\" points into smooth flowing paths, called a foliation, which has only one special point where the paths meet. The authors ask whether such a splitting can be built around a fixed algebraic curve, and show that once a certain numerical measure of the foliation is large enough, it cannot. They also give examples showing that their threshold cannot be lowered.",
+    "why": "Results of this type classify which geometric structures are possible on a space, a central theme in algebraic geometry. The text does not say how it connects to other areas, so wider significance is unclear from this abstract alone."
    },
    "abstract": "We investigate holomorphic foliations on orbifold projective surfaces with cyclic divisor class group, assuming that the foliation has a unique singular point of algebraic multiplicity one. If the normal degree of the foliation is sufficiently large, then we prove that it admits no invariant algebraic curve. Furthermore, we present several examples showing that the bound obtained is optimal.",
    "source": "arxiv"

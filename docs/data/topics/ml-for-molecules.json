@@ -1,7 +1,53 @@
 {
  "slug": "ml-for-molecules",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29444",
+   "title": "RumiFold: Teaching an LLM to Natively Fold Proteins and Reason About Their Function",
+   "url": "https://arxiv.org/abs/2611.29444",
+   "authors": [
+    "Kevin Lu",
+    "David Bau",
+    "Wengong Jin"
+   ],
+   "label": "arXiv:2611.29444v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "RumiFold is a pretrained chat language model that is taught to fold proteins (predict 3D structure) from its own hidden states, then uses those folded representations to answer natural-language questions about protein function, reporting accuracy comparable to SimpleFold and state-of-the-art results on Gene Ontology and free-text function tasks.",
+    "plain": "Proteins are chains of molecules that fold into specific 3D shapes, and the shape largely determines what they do in a cell. This paper asks whether a general-purpose chatbot-style language model can learn to predict those shapes inside its own internal processing, and then use that shape information to answer questions about what a protein does. The authors report that it predicts structures about as well as a dedicated folding model and does well on function-labeling tasks.",
+    "why": "It suggests that protein structure knowledge and ordinary language reasoning could live in one model rather than in separate tools, which may matter for scientists who want to query biology in plain language. The text does not show how it compares with the wider range of specialized tools beyond the named baseline, so the scope of the advance should be judged from the full paper.",
+    "background": "- Protein folding: a protein's amino acid sequence determines its 3D shape, and shape largely determines function.\n- Language model: a neural network trained on text; \"hidden states\" are its internal numerical representations of the input.\n- Per-residue: one representation for each amino acid position along the protein chain.\n- Gene Ontology (GO): a standard vocabulary of biological functions used to label proteins.\n- Causal intervention: deliberately altering internal parts of the model to test whether they actually drive a given output.\n- Dedicated single-representation models such as SimpleFold: specialized protein-structure predictors, used here as a comparison point.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Can we teach a general-purpose language model to fold proteins? And if so, what does learning to fold enable beyond structure prediction itself? We introduce RumiFold, a pretrained chat model that learns to predict protein structures directly from its own hidden states. RumiFold processes proteins through repeated folding passes, then uses these folded representations to answer questions in natural language. It achieves folding accuracy comparable to dedicated single-representation models such as SimpleFold, alongside state-of-the-art performance on Gene Ontology protein function prediction and free-text function description. We find that folding pretraining organizes the model's hidden states around protein function, creating an internal per-residue workspace that is biologically grounded. Causal interventions show that this folded workspace links structure and language when RumiFold predicts function, providing rich representations for biomolecular reasoning. We see RumiFold as a step toward native biomolecular intelligence: where protein-based computations and language-based reasoning become integrated capabilities of general-purpose language models. Code, data, and models are available at: https://rumifold.baulab.info",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28096",
+   "title": "Auditing two-stage MS/MS molecular retrieval on MassSpecGym v1.5: Reranking gains, candidate priors and spectrum dependence",
+   "url": "https://arxiv.org/abs/2611.28096",
+   "authors": [
+    "Jiaqi Xue",
+    "Yutong Wu",
+    "Qiang Zhang"
+   ],
+   "label": "arXiv:2611.28096v1",
+   "primary_category": "physics.chem-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "An audit of a two-stage retrieval system that ranks candidate molecules for tandem mass spectra on the MassSpecGym v1.5 benchmark, separating genuine spectrum-based signal from candidate priors, replicate effects, and training-set overlap.",
+    "plain": "This paper looks at software that tries to identify an unknown chemical compound from its mass spectrum, a fingerprint made by breaking molecules into fragments and weighing them. The authors built a two-step system: first a shortlist of likely candidate structures, then a reranker that reorders them. They then tested how much of the reported accuracy really comes from the spectrum itself versus from shortcuts such as which candidates are common or well represented in training data.",
+    "why": "Reported gains in this kind of benchmark can look larger than they are if the tests reward shortcuts, so careful audits matter for anyone using such tools to identify compounds. The paper's own conclusion is limited: the gains come mainly from mass-feasibility evidence, not proven learned structural discrimination, and it argues that evaluation should check shortlist reachability, spectrum dependence and generalization to new molecules separately.",
+    "background": "- Tandem mass spectrometry (MS/MS): an instrument method that fragments molecules and records the pieces' masses, giving a spectrum.\n- Molecular retrieval: picking the correct chemical structure from a list of candidate structures for a given spectrum.\n- Recall@k: the share of test spectra whose correct molecule appears in the top k ranked candidates.\n- Two-stage retrieval: a fast first pass produces a shortlist, then a slower, more careful model reranks it.\n- Fingerprints and embeddings: numerical encodings of molecules or spectra used for comparison.\n- Adduct and precursor mass: the ion form and mass of the molecule being measured; used to filter chemically feasible candidates.\n- Candidate priors: biases where some molecules are favoured simply because they are common or frequently seen in training.\n- Data leakage and train/test overlap: when test molecules are too similar to training molecules, inflating scores.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Two-stage retrieval of molecular structures from tandem mass spectra (MS/MS) can benefit from candidate reranking, but benchmark gains may also reflect candidate priors, replicate spectra, precursor mass, and training-set coverage. We audit a two-stage retrieval system on the official MassSpecGym v1.5 split (17,556 test spectra). A data-safe DreaMS encoder and composite molecular fingerprints provide an initial shortlist; a support-gated reranker combines pair scores, candidate-relative peak coverage, and mass-feasibility features. The final system achieves 31.05% Recall@1, a 10.05-point gain over its Stage 1 ensemble, while preserving its 72.62% Recall@20. Replacing the query spectrum with one from a different molecule matched on adduct and precursor mass reduces Recall@1 by 9.0 points (15.3 points under molecule-balanced weighting); nevertheless, a training-mean spectrum retains 13.75% Recall@1, indicating substantial spectrum-independent signal. Mass-feasibility features improve Recall@1 beyond score and coverage controls, while learned peak-fragment similarities do not outperform constant coverage. Errors cluster by molecule, and removing close training neighbours causes a large decline in Stage 1 shortlist recall among initially well-covered molecules. We conclude that candidate-relative mass-feasibility evidence improves front-rank retrieval and spectrum dependence, but does not establish learned structural discrimination or eliminate candidate priors. Evaluation should separately assess shortlist reachability, spectrum dependence, and molecule-level generalization.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29858",
    "title": "Electric polarizabilities with phaseless auxiliary-field quantum Monte Carlo",
@@ -15,12 +61,12 @@
    "primary_category": "physics.chem-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper shows that electric (static) polarizability tensors can be computed with phaseless auxiliary-field quantum Monte Carlo using a correlated-sampling finite-difference scheme, with Hartree-Fock trial wave functions, for small molecules, polyacenes, ferrocene and stretched N2.",
-    "plain": "Quantum Monte Carlo is a family of computer methods that estimate how electrons in a molecule behave by sampling many random configurations. This paper asks whether such methods, which are good at predicting a molecule's energy, can also predict how strongly its electron cloud shifts when placed in an electric field. The authors report that they can, and they test the approach on small molecules, a series of polyacenes (chains of fused rings), and ferrocene, a metal-containing compound.",
-    "why": "Polarizability controls how molecules respond to light and electric fields, and it is useful for building training data for cheaper approximate models. The text claims the method scales to molecules with thousands of basis functions and stays reliable for a strongly correlated case (stretched N2), but it gives no comparison numbers here, so the accuracy relative to other methods cannot be judged from this text alone.",
+    "ai": true,
     "background": "- Polarizability: how much a molecule's charge distribution distorts in an applied electric field; the static tensor is the second derivative of energy with respect to field strength.\n- Quantum Monte Carlo: stochastic (random-sampling) methods for solving the electronic Schrödinger equation.\n- Phaseless auxiliary-field QMC: a variant that avoids the sign problem by constraining the sampled walkers using a trial wave function.\n- Trial wave function: an approximate guess of the electronic state that guides the sampling; here a simple Hartree-Fock state.\n- Finite-difference: estimating a derivative by computing energies at slightly different field strengths; correlated sampling reuses random samples so the small differences are less noisy.\n- Density functionals and semi-empirical methods: cheaper approximate quantum chemistry methods used as points of comparison.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that electric (static) polarizability tensors can be computed with phaseless auxiliary-field quantum Monte Carlo using a correlated-sampling finite-difference scheme, with Hartree-Fock trial wave functions, for small molecules, polyacenes, ferrocene and stretched N2.",
+    "plain": "Quantum Monte Carlo is a family of computer methods that estimate how electrons in a molecule behave by sampling many random configurations. This paper asks whether such methods, which are good at predicting a molecule's energy, can also predict how strongly its electron cloud shifts when placed in an electric field. The authors report that they can, and they test the approach on small molecules, a series of polyacenes (chains of fused rings), and ferrocene, a metal-containing compound.",
+    "why": "Polarizability controls how molecules respond to light and electric fields, and it is useful for building training data for cheaper approximate models. The text claims the method scales to molecules with thousands of basis functions and stays reliable for a strongly correlated case (stretched N2), but it gives no comparison numbers here, so the accuracy relative to other methods cannot be judged from this text alone."
    },
    "abstract": "While projector quantum Monte Carlo methods are known for producing accurate ground-state energies, the prediction of other properties that encode the electronic response to applied electric and magnetic fields has historically been challenging. In this work we demonstrate that the electric (static) polarizability tensor, which is formally a second-derivative of the energy with respect to electric fields, can be efficiently computed with phaseless auxiliary-field quantum Monte Carlo using a correlated sampling finite-difference strategy. With simple Hartree-Fock trial wave functions, we investigate a series of small molecules (some of which are difficult for approximate density functionals), polyacenes of increasing size, and ferrocene as a representative organometallic complex. The methodology is scalable to relatively large molecules involving thousands of basis functions, and with appropriate trial wave functions remains robust for strongly correlated electronic states, as we show for the stretched dinitrogen molecule. This work opens the door to the computation of a host of other second-order molecular properties with auxiliary-field quantum Monte Carlo, which will inform the ongoing search for optimal trial wave functions and extend benchmark-quality training data sets for the refinement of semi-empirical and machine learning models for quantum chemistry and molecular simulation.",
    "source": "arxiv"
@@ -37,12 +83,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A reinforcement-learning framework that generates new candidate odorant molecules tuned to hit target activation patterns across a panel of 20 olfactory receptors, using a clustered binding matrix and a structured selectivity loss.",
-    "plain": "Smell works by a pattern: each odor molecule switches on a particular set of receptors in the nose, and the brain reads that combination as a scent. This paper proposes a computer method that designs new molecules aimed at a chosen receptor pattern, rather than screening existing ones. The authors report that it reaches high predicted selectivity on nine target patterns within 18,000 model evaluations, with the biggest gains on patterns that are uncommon among starting molecules.",
-    "why": "Designing molecules from a desired receptor response, instead of searching a fixed library, could matter for fragrance and flavor work and for studying how the nose encodes smell. The text does not show experimental validation, so the results are predictions from models, and their real-world odor relevance is unclear.",
+    "ai": true,
     "background": "- Olfactory receptors (ORs): proteins in the nose that bind odor molecules; many receptors respond to each odor, and the overall pattern encodes the smell.\n- Binding matrix: a table of predicted strengths of how each molecule binds each receptor.\n- De novo generation: designing new molecules from scratch, rather than picking from a list.\n- Reinforcement learning: training a generator by rewarding outputs that score well on a goal, here a predicted receptor pattern.\n- Oracle calls: the number of times the scoring model is queried during the search; a measure of computational cost.\n- Selectivity: how specifically a molecule activates the intended receptors and not others.\n- Prior: the distribution of molecules the generator starts from before steering.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A reinforcement-learning framework that generates new candidate odorant molecules tuned to hit target activation patterns across a panel of 20 olfactory receptors, using a clustered binding matrix and a structured selectivity loss.",
+    "plain": "Smell works by a pattern: each odor molecule switches on a particular set of receptors in the nose, and the brain reads that combination as a scent. This paper proposes a computer method that designs new molecules aimed at a chosen receptor pattern, rather than screening existing ones. The authors report that it reaches high predicted selectivity on nine target patterns within 18,000 model evaluations, with the biggest gains on patterns that are uncommon among starting molecules.",
+    "why": "Designing molecules from a desired receptor response, instead of searching a fixed library, could matter for fragrance and flavor work and for studying how the nose encodes smell. The text does not show experimental validation, so the results are predictions from models, and their real-world odor relevance is unclear."
    },
    "abstract": "Odor perception arises from a combinatorial code in which each molecule activates a specific subset of olfactory receptors (ORs), and the resulting activation pattern determines the perceived smell. We present a framework for de novo generation of molecules predicted to match target multi-receptor activation profiles. We first construct a panoramic binding matrix over 20 ORs, then cluster it to discover representative activation patterns, and finally formulate a structured selectivity loss, combining pairwise ranking, distribution matching, and complexity constraints, to steer a molecular generator via reinforcement learning. Across nine target profiles of varying complexity, our method achieves high predicted selectivity within 18000 oracle calls and provides the largest gains on profiles that are rare under the prior, especially broad-spectrum and sparse-activator targets.",
    "source": "arxiv"

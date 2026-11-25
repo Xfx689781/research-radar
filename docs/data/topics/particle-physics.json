@@ -1,7 +1,54 @@
 {
  "slug": "particle-physics",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30113",
+   "title": "Superheavy gravitational dark matter from runaway bubble collisions",
+   "url": "https://arxiv.org/abs/2611.30113",
+   "authors": [
+    "Cheng-Wei Chiang",
+    "Van Que Tran"
+   ],
+   "label": "arXiv:2611.30113v1",
+   "primary_category": "hep-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proposes that a particle coupling only gravitationally is pair-produced when runaway bubble walls collide during a first-order phase transition, yielding a flat relic abundance up to masses near 10^17 GeV at low reheating temperatures.",
+    "plain": "The paper asks how very heavy dark matter could be made in the early universe, when a vacuum bubble expands and its walls collide. The idea is that a hidden particle interacting only through gravity can be created in pairs when these fast-moving walls hit, with no other forces needed. The text reports an estimated yield for a Dirac fermion (a common type of particle) that stays roughly constant up to very large masses, enough to account for dark matter up to about 10^17 GeV even when the universe was reheated to temperatures far below that mass.",
+    "why": "It offers a route to dark matter far heavier than the usual freeze-in mechanism can reach, using gravity as the only link to the Standard Model. The text does not say how the result compares with observations or whether the bubble scenario is realised, so its relevance to real dark matter remains an open question.",
+    "background": "- Dark matter: unseen matter that makes up most of the matter in the universe, inferred from its gravitational pull.\n- Vacuum bubbles: in some models of the early universe, regions of space tunnel into a lower-energy state and expand as bubbles; their walls can run away, accelerating toward light speed.\n- Graviton exchange: gravity is carried by a hypothetical particle, the graviton; here it is the only force linking the bubble walls to the dark particle.\n- Yield: the number of dark particles produced per unit of entropy (a measure of the hot material's disorder), which sets how much dark matter remains.\n- Reheating temperature: the temperature the universe reached after inflation ended and its energy was converted into hot particles.\n- Freeze-in: a production mechanism where particles are slowly created by ordinary collisions in the hot early universe; the text says it fails for these very heavy masses.\n- Planck mass: the natural mass scale of gravity (about 10^19 GeV).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A stable particle that couples only through gravity is pair-produced in collisions of runaway bubble walls by graviton exchange. For a transition of duration $1/\\beta$, a Dirac fermion reaches the yield $Y_X\\simeq6.8\\times10^{-3}(H/\\beta)(T_{\\rm reh}/M_{\\rm P})^3$, where $H$ is the Hubble rate of the vacuum energy, $T_{\\rm reh}$ the reheating temperature and $M_{\\rm P}$ the reduced Planck mass. The yield is flat up to masses near $(H/\\beta)M_{\\rm P}/\\nu^2$, where $\\nu$ of order one sets the wall-field excursion. Gravity alone then gives dark matter up to about $10^{17}$~GeV at reheating temperatures far below its mass, where freeze-in fails.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28217",
+   "title": "WIMPs as FIMPs: the Inert Doublet Model and low-temperature reheating",
+   "url": "https://arxiv.org/abs/2611.28217",
+   "authors": [
+    "Genevi\\`eve B\\'elanger",
+    "Nicol\\'as Bernal",
+    "Andreas Goudelis",
+    "Alexander Pukhov",
+    "Thomas Reggio"
+   ],
+   "label": "arXiv:2611.28217v1",
+   "primary_category": "hep-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper revisits the Inert Doublet Model, showing that low reheating temperatures can stop a WIMP dark matter candidate from reaching chemical equilibrium, so its relic abundance comes from freeze-in rather than freeze-out, including instantaneous and finite-duration reheating scenarios.",
+    "plain": "The paper asks how dark matter particles could have been produced in the early universe, a question usually answered by assuming they were once in thermal balance and then \"froze out\" as the universe cooled. The authors show that if the universe was reheated to only a low temperature after inflation, a heavy dark matter candidate in the Inert Doublet Model may never reach that balance and instead gets produced gradually, a process called freeze-in. They describe several possible production histories and report that this opens parameter regions that would otherwise be ruled out because they produce too much dark matter.",
+    "why": "It suggests that the standard assumption linking a WIMP's abundance to its interaction strength may not hold, which matters for how dark matter searches are interpreted. The text does not show experimental consequences, so the broader significance remains to be tested.",
+    "background": "- Dark matter: unseen matter whose gravity explains galaxy motions; its total amount is measured.\n- WIMP (weakly interacting massive particle): a heavy dark matter candidate that is produced through its interactions with ordinary particles.\n- Thermal freeze-out: the particle is in balance with the hot plasma, then drops out as the universe expands and cools, leaving a fixed leftover amount.\n- Freeze-in: the particle is produced very weakly and gradually, never reaching balance; this is typical of FIMPs (feebly interacting particles).\n- Reheating: the hot phase of the universe after inflation; its temperature sets the early thermal history.\n- Inert Doublet Model: an extension of the Standard Model Higgs sector that contains a dark matter candidate.\n- Relic abundance: the amount of dark matter left over today.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Weakly Interacting Massive Particles (WIMPs) are conventionally assumed to acquire their dark matter relic abundance through thermal freeze-out. However, this association relies on assumptions concerning the thermal history of the early Universe. We revisit the Inert Doublet Model (IDM), a representative WIMP framework in which dark matter interacts with the Standard Model through electroweak gauge interactions, even when its Higgs-portal coupling vanishes. We demonstrate that sufficiently low reheating temperatures can prevent chemical equilibrium, allowing a genuine WIMP to acquire its relic abundance through freeze-in rather than freeze-out. Considering both instantaneous and finite-duration reheating, we identify different production histories, including freeze-out during radiation domination, freeze-out during reheating, and freeze-in with potentially significant annihilation backreactions. These scenarios open regions of the IDM parameter space that would otherwise be excluded by dark matter overabundance. Our results demonstrate that WIMPs can behave as FIMPs, depending on the thermal history of the Universe.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30321",
    "title": "Dark matter mass fraction in axion stars",
@@ -16,12 +63,12 @@
    "primary_category": "astro-ph.CO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Using an recently derived analytic solution for how Bose stars grow inside QCD axion miniclusters, this paper estimates the present-day fraction of dark matter bound in Bose stars and their resulting mass function.",
-    "plain": "The paper looks at a proposed form of dark matter made of very light particles called axions. In this picture, the dark matter clumps into small, dense blobs, and inside those blobs it may condense into compact \"Bose stars,\" which are like giant quantum clouds. The authors use a previously published mathematical solution for how these stars grow to work out how much of today's dark matter ends up locked in them and how their sizes are distributed.",
-    "why": "If dark matter is largely in these compact stars, that would change predictions for how it clusters and for any signals from detectors or astrophysical observations. The text does not state the actual fraction or mass values, so the size of the effect is not clear from the abstract alone, and its link to observations is not described here.",
+    "ai": true,
     "background": "- Dark matter: unseen matter that makes up most of the mass of galaxies, detected only through gravity.\n- QCD axion: a hypothetical very light particle proposed to solve a puzzle in the strong nuclear force; a candidate for dark matter.\n- Minicluster: a small, dense clump of axion dark matter formed early in the universe.\n- Bose-Einstein condensation: a state where many identical light particles all occupy the same quantum state, acting like one big wave.\n- Bose star: a gravitationally bound, self-gravitating blob of such a condensate.\n- Mass fraction and mass function: the share of total dark matter in these stars, and how many stars exist at each mass.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using an recently derived analytic solution for how Bose stars grow inside QCD axion miniclusters, this paper estimates the present-day fraction of dark matter bound in Bose stars and their resulting mass function.",
+    "plain": "The paper looks at a proposed form of dark matter made of very light particles called axions. In this picture, the dark matter clumps into small, dense blobs, and inside those blobs it may condense into compact \"Bose stars,\" which are like giant quantum clouds. The authors use a previously published mathematical solution for how these stars grow to work out how much of today's dark matter ends up locked in them and how their sizes are distributed.",
+    "why": "If dark matter is largely in these compact stars, that would change predictions for how it clusters and for any signals from detectors or astrophysical observations. The text does not state the actual fraction or mass values, so the size of the effect is not clear from the abstract alone, and its link to observations is not described here."
    },
    "abstract": "QCD axion dark matter is fragmented into small mass miniclusters of high density. With the natural parameters of miniclusters, the time for Bose-Einstein condensation is less than the age of the Universe, which leads to the formation of Bose stars inside these structures. Recently, the problem of the subsequent growth of Bose stars was solved analytically (Dmitriev et al, Phys. Rev. Lett. 132, 091001 (2024)). We use this solution to determine present day mass fraction of dark matter in Bose stars and their mass function.",
    "source": "arxiv"
@@ -42,12 +89,12 @@
    "primary_category": "hep-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A proposed \"scotogenic\" extension of the Standard Model, built on a gauged L_mu + L_tau lepton-number symmetry, that generates small Majorana neutrino masses at one loop and provides a weakly interacting dark matter candidate stabilized by a remnant matter parity, with analysis of its scalar dark matter, Z' boson, and collider constraints.",
-    "plain": "The paper proposes a theoretical model in which the tiny masses of neutrinos and the invisible dark matter in the universe share a common origin. A new force carrier (Z') linked to the difference between muon-type and tau-type lepton numbers is introduced, and its symmetry breaking leaves behind a leftover \"parity\" that keeps the lightest new particle from decaying. The authors study which parameter choices give a dark matter abundance matching observations, and check the model against precision electroweak measurements, existing searches for leptophilic gauge bosons, and possible collider signals.",
-    "why": "It offers a single framework that links two open problems, neutrino mass and dark matter, through a new gauge boson that could be tested in experiments. The text does not show how strongly the model is favored over alternatives, so its relevance to real data remains to be judged by further work.",
+    "ai": true,
     "background": "- Standard Model: the established theory of known particles and forces.\n- Neutrino mass: neutrinos have very small masses; Majorana nature means a neutrino is its own antiparticle.\n- Scotogenic model: a scheme where neutrino masses arise from a loop of new particles, with a dark matter candidate in that loop.\n- Gauged symmetry: a conserved quantity promoted to a force carrier, here L_mu + L_tau (muon and tau lepton numbers), whose boson is the Z'.\n- Matter parity: a leftover symmetry (like a sign ±1 for particles) that makes the lightest odd particle stable.\n- WIMP: weakly interacting massive particle, a common dark matter candidate with a thermal relic abundance.\n- Kinetic mixing: a small coupling between the new force's field and the ordinary photon field, parameterized by epsilon.\n- Electroweak precision constraints: high-precision measurements of W, Z and related quantities that limit new physics.\n- Leptophilic: a particle that couples mainly to leptons.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A proposed \"scotogenic\" extension of the Standard Model, built on a gauged L_mu + L_tau lepton-number symmetry, that generates small Majorana neutrino masses at one loop and provides a weakly interacting dark matter candidate stabilized by a remnant matter parity, with analysis of its scalar dark matter, Z' boson, and collider constraints.",
+    "plain": "The paper proposes a theoretical model in which the tiny masses of neutrinos and the invisible dark matter in the universe share a common origin. A new force carrier (Z') linked to the difference between muon-type and tau-type lepton numbers is introduced, and its symmetry breaking leaves behind a leftover \"parity\" that keeps the lightest new particle from decaying. The authors study which parameter choices give a dark matter abundance matching observations, and check the model against precision electroweak measurements, existing searches for leptophilic gauge bosons, and possible collider signals.",
+    "why": "It offers a single framework that links two open problems, neutrino mass and dark matter, through a new gauge boson that could be tested in experiments. The text does not show how strongly the model is favored over alternatives, so its relevance to real data remains to be judged by further work."
    },
    "abstract": "In this work, we introduce the first scotogenic model based on a gauged $L_{\\mu} + L_{\\tau}$ symmetry whose spontaneous breaking by two units leaves a remnant matter parity $M_P$. The resulting light active neutrinos are of Majorana nature and the lightest electrically neutral state mediating the scotogenic loop is stabilized by $M_P$ and can be identified as a weakly interacting massive particle dark matter candidate. We analyze the phenomenology of a predominantly singlet-like CP-even scalar dark matter candidate and the representative regions of parameter space compatible with the observed thermal relic abundance. The $Z'$ boson is compatible with a broad range of parameters relevant for dark matter. In particular, electroweak precision constraints do not lead to significant tensions for kinetic mixing values up to $\\epsilon\\sim 10^{-2}$. We discuss the implications of existing searches for leptophilic gauge bosons and the conditions under which visible and invisible collider signatures become relevant.",
    "source": "arxiv"

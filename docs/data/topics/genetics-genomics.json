@@ -1,7 +1,55 @@
 {
  "slug": "genetics-genomics",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767897",
+   "title": "The 'near T2T' Canton-S assembly is inconsistent with other Canton-S genomes",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767897v1",
+   "authors": [
+    "Emerson, J. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767897 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A commentary arguing that the recently published \"near T2T\" genome assembly of the Drosophila Canton-S strain differs from three other independently sequenced Canton-S assemblies by an amount comparable to differences between distinct strains, raising doubts about its genetic identity.",
+    "plain": "Canton-S is a fruit fly lineage that scientists have used as a standard reference for decades. A newly published, very high-quality genome sequence of this fly is presented as a community resource, but this short comment says that its genetic makeup does not match three other separately sequenced versions of the same strain. The author suggests that this mismatch should make the community think carefully before adopting the new sequence.",
+    "why": "A reference genome is only useful if it truly represents the strain labelled on it, since many experiments and mapping studies rely on that identity. The comment matters for anyone choosing which fly genome to use as a baseline, though the text itself gives only the author's comparison and no independent check.",
+    "background": "- Drosophila melanogaster is the common fruit fly, a major model organism in genetics.\n- A \"strain\" is a line of flies kept inbred so that individuals are genetically very similar.\n- Canton-S is a widely used wild-type (standard-type) strain for behaviour, genetics and trait mapping.\n- A genome assembly is a reconstructed DNA sequence built from sequencing reads; \"T2T\" (telomere-to-telomere) means it aims to cover whole chromosomes end to end with no gaps.\n- Comparing assemblies from the same named strain is a way to check whether they are genetically the same; large differences suggest different lineages or errors.\n- The text gives no details of the methods, the exact size of differences, or any response from the original authors.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Canton-S is among the most widely used Drosophila melanogaster strains, underlying substantial community infrastructure, including serving as a wild-type strain for: genetics studies; studying phenotypes, especially in behavioral studies; and complex trait mapping studies among many others. The recent 'near T2T' assembly of Canton-S (LIU et al.) is presented as delivering modern sequencing and assembly quality to the Drosophila community via this important strain. I find that this assembly is inconsistent with three other independently sequenced Canton-S genome assemblies on a magnitude comparable to differences between distinct strains, raising concerns about its genetic identity that the community should consider when choosing whether to adopt it as a resource.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768178",
+   "title": "Genomics of the diversification of Heliconius cydno (Lepidoptera: Nymphalidae) in northern South America: geographic and phenotypic patterns",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768178v1",
+   "authors": [
+    "Arias Cardenas, A.",
+    "Rueda-M, N.",
+    "Arias, C. F.",
+    "Ravinet, M.",
+    "McMillan, O.",
+    "Pardo-Diaz, C.",
+    "Salazar, C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768178 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Whole-genome analysis of 133 Heliconius cydno butterflies that tests how Andean uplift, geography and introgression shaped its radiation, and maps the locus (ivory:mir-193) behind its hindwing white band.",
+    "plain": "This paper looks at a group of colorful butterflies in Central and northern South America and asks how they split into separate populations and forms. The researchers read the complete genomes of 133 butterflies covering all recognized subspecies. They found that five of the fourteen subspecies form distinct genetic lineages, and they traced a wing-pattern trait to one genetic region, while also finding signs that the trait moved between related species.",
+    "why": "It shows how mountains, geography and hybridization between species can together drive rapid diversification and the sharing of warning-color patterns. The text does not establish how broadly these findings apply beyond this butterfly group.",
+    "background": "- Heliconius butterflies are known for warning (aposematic) coloration that predators avoid, and for mimicry, where unrelated-looking species share patterns.\n- A subspecies is a geographic variant within a species; a monophyletic lineage is a group descended from a single common ancestor.\n- Introgression means genes passing from one species into another through interbreeding.\n- Cis-regulatory elements are DNA segments that switch genes on or off; microRNA (mir-193) is a small RNA that regulates gene activity.\n- The Andean orogeny is the uplift of the Andes mountains, which can split populations and shape where species live.\n- Whole-genome sequencing reads an organism's complete DNA, allowing comparison of genetic relationships.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The interplay between natural selection, gene flow, and geography is a key driver of population differentiation. This study investigates their influence on the recent adaptive radiation of Heliconius cydno, a mimetic and aposematic butterfly with striking variation in wing color pattern across its distribution in Central and northern South America. The genetic basis of this phenotypic diversity has a modular architecture, whereby a few key genes and cis-regulatory elements control differences among morphotypes. Using whole-genome sequences from 133 individuals representing all subspecies of H. cydno, we investigated (1) the role of Andean orogeny in its diversification and (2) the genetic basis of the variation in the hindwing white submarginal band, which to date, had remained unknown. First, we found that five of the fourteen described subspecies correspond to distinct monophyletic lineages and well-defined genetic clusters that originated in northwestern South America and later expanded into Central America and the Colombian inter-Andean valleys. Second, we observed signatures of genetic structure that were consistent with geographic patterns, particularly those associated with the inter-Andean region and Gorgona Island. Third, we identified ivory:mir-193 as the locus underlying variation in the white submarginal band on the hindwing. We also detected evidence of introgression suggesting that this trait was likely transferred from H. cydno to H. melpomene, contributing to the establishment of a novel mimicry ring with H. erato. Altogether, these findings highlight the roles of geography, genomic architecture, and introgression in the diversification of H. cydno.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.20.768053",
    "title": "Reproductive competition amplifies purifying selection and reduces genetic load",
@@ -15,12 +63,12 @@
    "primary_category": "genetics",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Forward-time simulations quantify how competitive and sexual selection, expressed as an effective selection coefficient calibrated against hard selection, remove deleterious variation and reduce genetic load more efficiently than hard selection, with implications for bottlenecked populations.",
-    "plain": "The paper asks whether animals or plants that win mates or resources through competition clear out harmful genetic variants more effectively than a population where those with poor genes simply die off. Using computer simulations of evolution over time, the authors measure competition's effect as an equivalent strength of natural selection. They report that competing against several rivals, and repeating contests, strengthens the removal of harmful mutations and lowers the overall genetic burden at a smaller cost to population size.",
-    "why": "The idea that reproductive competition can purge harmful mutations with less demographic cost is relevant to conservation of small or recovering populations, where genetic load can persist. The text suggests a possible link to \"genic capture\" (the idea that mate choice reflects overall genetic quality), but this connection is framed as a possibility rather than shown directly, and the summary is based only on the abstract.",
+    "ai": true,
     "background": "- Deleterious mutations: genetic changes that reduce fitness (survival or reproduction).\n- Genetic load: the average fitness cost a population carries from these mutations.\n- Hard selection: death or non-reproduction of individuals below a fitness threshold, regardless of others.\n- Competitive/sexual selection: differences in reproductive success arising from contests among individuals, such as mate competition.\n- Selection coefficient: a number expressing how strongly a variant is favoured or disfavoured.\n- Forward-time simulation: computer models that track genetic changes generation by generation.\n- Genetic drift: random changes in gene frequencies, stronger in small populations.\n- Bottleneck: a sharp population decline that reduces genetic diversity.\n- Genic capture: the idea that mate choice or competition reflects genome-wide quality.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Forward-time simulations quantify how competitive and sexual selection, expressed as an effective selection coefficient calibrated against hard selection, remove deleterious variation and reduce genetic load more efficiently than hard selection, with implications for bottlenecked populations.",
+    "plain": "The paper asks whether animals or plants that win mates or resources through competition clear out harmful genetic variants more effectively than a population where those with poor genes simply die off. Using computer simulations of evolution over time, the authors measure competition's effect as an equivalent strength of natural selection. They report that competing against several rivals, and repeating contests, strengthens the removal of harmful mutations and lowers the overall genetic burden at a smaller cost to population size.",
+    "why": "The idea that reproductive competition can purge harmful mutations with less demographic cost is relevant to conservation of small or recovering populations, where genetic load can persist. The text suggests a possible link to \"genic capture\" (the idea that mate choice reflects overall genetic quality), but this connection is framed as a possibility rather than shown directly, and the summary is based only on the abstract."
    },
    "abstract": "Deleterious mutations impose genetic load, and purging them through hard selection can carry substantial demographic costs. Competitive and sexual selection can instead remove deleterious variation through differential reproductive success. What remains unclear is when this process is more efficient than equivalent hard selection, and how competition generates this advantage. Here, we use forward-time simulations to express the impact of competition as an effective selection coefficient (se) calibrated against hard selection. Competition with multiple rivals strongly amplified purifying selection, whereas repeated contests improved discrimination by averaging stochastic and environmental variation. Strong competition also reduced genetic load relative to hard selection. These effects can shift weakly deleterious mutations from drift-dominated behaviour towards efficient purging. By front-loading purifying selection into reproduction, competitive selection can reduce genetic load at lower demographic cost. This provides a population-genetic mechanism by which genic capture can translate genome-wide genetic quality into more effective purifying selection. This may be particularly important in bottlenecked populations, where demographic recovery can relax purifying selection and allow genomic erosion to persist.",
    "source": "biorxiv"
@@ -47,12 +95,12 @@
    "primary_category": "genetics",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A resource paper reporting 183 visible EMS-induced mutants of the nematode Caenorhabditis briggsae, their genetic mapping to six linkage groups, and molecular identification of several orthologs of C. elegans genes.",
-    "plain": "Researchers studying a tiny worm called Caenorhabditis briggsae, a close relative of the lab favorite C. elegans, built a catalogue of 183 mutant worms that show easy-to-spot differences such as changes in body shape or movement. They worked out which of the worm's six chromosome groups most of these mutations sit on, and matched several genes to their counterparts in C. elegans. The authors present the strains and underlying data as a shared resource for comparing these worm species.",
-    "why": "Visible mutants are the basic tools geneticists use to study how a gene produces a trait, so a documented, publicly usable set for a second model worm makes comparisons between species easier. The text describes this as a resource and does not claim a specific new biological finding beyond the mapping and gene identifications.",
+    "ai": true,
     "background": "- Caenorhabditis elegans is a small roundworm used heavily in genetics; C. briggsae is a related species used for comparison.\n- EMS (a chemical mutagen) randomly creates mutations in an organism's DNA; screeners then look for worms with obvious traits.\n- A \"locus\" is a position on a chromosome where a gene or mutation sits; \"linkage group\" is a chromosome as defined by genetic crosses.\n- Complementation tests check whether two mutations affect the same gene; linkage and multi-factor crosses measure how close mutations sit on a chromosome.\n- Orthologs are genes in different species that descend from a common ancestor gene.\n- Levamisole is a drug that acts on worm muscle receptors; mutants resistant to it help identify receptor subunit genes (unc-38, unc-29).\n- Transgene rescue means inserting a working copy of a gene to see if it restores the normal trait, which confirms the gene's identity.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A resource paper reporting 183 visible EMS-induced mutants of the nematode Caenorhabditis briggsae, their genetic mapping to six linkage groups, and molecular identification of several orthologs of C. elegans genes.",
+    "plain": "Researchers studying a tiny worm called Caenorhabditis briggsae, a close relative of the lab favorite C. elegans, built a catalogue of 183 mutant worms that show easy-to-spot differences such as changes in body shape or movement. They worked out which of the worm's six chromosome groups most of these mutations sit on, and matched several genes to their counterparts in C. elegans. The authors present the strains and underlying data as a shared resource for comparing these worm species.",
+    "why": "Visible mutants are the basic tools geneticists use to study how a gene produces a trait, so a documented, publicly usable set for a second model worm makes comparisons between species easier. The text describes this as a resource and does not claim a specific new biological finding beyond the mapping and gene identifications."
    },
    "abstract": "Caenorhabditis briggsae is a widely used model for comparative genetic studies involving C. elegans. Genetic analysis in C. briggsae depends on mutations with clear, easily recognizable phenotypes, yet most mutants reported so far have been mentioned only as names and linkage groups, without underlying experimental data. This study reports 183 C. briggsae mutants belonging to 11 phenotypic classes, which represent the most comprehensive collection to date. Almost all mutants were recovered in EMS screens of the reference strain AF16. Our analysis revealed that 121 mutations define 55 loci and 62 remain unassigned. A combination of complementation tests, linkage tests, two- and three-factor crosses, and polymorphism-based mappings helped place 51 loci and 15 further mutations to the six linkage groups. We report the supporting data, map distances, linkage groups, and corrections to several earlier assignments. Twenty-three loci correspond to molecularly identified orthologs of C. elegans genes, including six for which we report genetic, rescue, or sequence evidence here. The levamisole-resistant mutants fall into at least three complementation groups, two of which correspond to Cbr-unc-38 and Cbr-unc-29 (levamisole-sensitive nicotinic acetylcholine receptor a and non-a subunit, respectively). Transgene rescue experiments identify Cbr-dpy-1 (mucin-like), Cbr-sma-6 (TGFb type receptor kinase), and Cbr-unc-4 (homeodomain transcription factor), genes that have long been in use as genetic markers. In all cases, molecularly identified genes are located on the same chromosome as their C. elegans orthologs, although gene order within chromosomes differs. The strains, map, and underlying data provide a resource for genetic and comparative studies in Caenorhabditis nematodes.",
    "source": "biorxiv"

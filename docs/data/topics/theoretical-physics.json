@@ -1,7 +1,54 @@
 {
  "slug": "theoretical-physics",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29622",
+   "title": "Scattering amplitudes in AdS$_5\\times$ S$^5$ from the pure spinor superstring",
+   "url": "https://arxiv.org/abs/2611.29622",
+   "authors": [
+    "Luis F. Alday",
+    "Thiago Fleury",
+    "Tobias Hansen",
+    "Lucas N. S. Martins",
+    "Dennis Zavaleta"
+   ],
+   "label": "arXiv:2611.29622v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper gives a BRST-invariant rule for integrating over zero modes in the pure spinor superstring on AdS5×S5, valid for genus-zero amplitudes, and uses it to compute two- and three-point supergravity amplitudes that match planar N=4 super Yang-Mills.",
+    "plain": "The paper concerns a string-theory model of particles living on a curved, five-dimensional anti-de Sitter space times a five-sphere, the background linked to a well-known gauge-theory duality. The authors fix a long-standing technical problem: how to add up the \"zero mode\" directions of the string's worldsheet consistently. With that fix, they directly compute how simple particle interactions (two- and three-point amplitudes) come out of the string description.",
+    "why": "Scattering amplitudes are the basic predictions of a quantum theory, so having a working worldsheet method in this background is a prerequisite for computing more of them. The reported check is that the three-point results agree with planar N=4 super Yang-Mills, which is the gauge theory the duality relates to this background; the text does not go beyond that comparison.",
+    "background": "- Scattering amplitude: a quantity giving the probability-like strength of particles colliding and producing other particles.\n- Worldsheet: the two-dimensional surface a string sweeps out through spacetime; string amplitudes are integrals over it.\n- Pure spinor superstring: a particular formulation of superstring theory with built-in supersymmetry, used here to handle the curved background.\n- Zero modes: directions of the worldsheet integral that do not change the field configuration and must be integrated separately.\n- BRST invariance: a symmetry used to remove unphysical (gauge) degrees of freedom consistently.\n- Picture changing operators: bookkeeping devices needed to deal with fermionic fields in superstring calculations.\n- Genus zero, planar: the simplest topology of the worldsheet and the leading-order limit of the gauge theory.\n- AdS5×S5 / N=4 super Yang-Mills: the pair of theories linked by the AdS/CFT correspondence, a flagship example of a gravity–gauge theory duality.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We formulate a BRST-invariant prescription for the integration of zero modes in the pure spinor superstring on $AdS_5\\times S^5$. The measure includes contributions absent in flat space and admits a description in terms of picture changing operators or a non-minimal regulator. The prescription is valid for genus-zero amplitudes with arbitrary multiplicity and external states and removes a central obstacle to amplitude computations in this background. We use it to perform the first direct worldsheet computation of two and three-point amplitudes of half-BPS supergravity states. The properly normalised three-point amplitudes exactly reproduce the results of planar ${\\mathcal N}=4$ super Yang-Mills theory.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28150",
+   "title": "Primordial black holes production in Einstein-Gauss-Bonnet gravity",
+   "url": "https://arxiv.org/abs/2611.28150",
+   "authors": [
+    "Ekaterina O. Pozdeeva",
+    "Sergey Yu. Vernov"
+   ],
+   "label": "arXiv:2611.28150v1",
+   "primary_category": "gr-qc",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Proposes an inflation model in Einstein-Gauss-Bonnet gravity, where the Gauss-Bonnet term is coupled to a function of the scalar field, that may generate primordial black holes and agree with ACT data for some parameter values.",
+    "plain": "The paper looks at a theory of the early universe, in the first instants after the Big Bang, when space expanded very rapidly (inflation). The authors propose a new version of that model in which a mathematical term from gravity theory is tied to a field that drives the expansion. They report that for certain parameter choices the predictions match data from the Atacama Cosmology Telescope, and they suggest the resulting small black holes could make up all or part of dark matter.",
+    "why": "If primordial black holes formed in the early universe, they could be a candidate for some or all of dark matter, which is still unidentified. The work connects inflation, cosmological observations and dark matter, but the text gives only a brief abstract, so the strength of the claims cannot be judged from it alone.",
+    "background": "- Inflation: a brief period of extremely rapid expansion of the early universe, usually driven by a scalar field (a field with a single value at each point in space).\n- Primordial black holes (PBHs): black holes that could have formed in the early universe from density fluctuations, not from collapsed stars.\n- Gauss-Bonnet term: a specific combination of spacetime curvature terms in gravity theory that goes beyond standard General Relativity.\n- Einstein-Gauss-Bonnet gravity: General Relativity extended with this term.\n- ACT (Atacama Cosmology Telescope): a ground telescope whose measurements of the cosmic microwave background constrain inflation models.\n- Dark matter: unseen matter inferred from its gravitational effects on galaxies and large-scale structure.\n- The abstract gives no equations, specific parameter values, or PBH mass numbers, so the details must be checked in the full paper.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We consider models with the Gauss-Bonnet term multiplied to a function of the scalar field and propose a new inflationary model which provides a mechanism for the formation of primordial black holes (PBHs). For certain values of the model parameters, the predictions of this model agree with observational data from the Atacama Cosmology Telescope (ACT). Due to estimation of possiable PBHs masses, we demonstrate that they can be considered as a possible source for all or part of dark matter.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30616",
    "title": "Constraining Regular Black Hole Models with the Effective Field Theory treatment of General Relativity",
@@ -13,12 +60,12 @@
    "primary_category": "gr-qc",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper uses the known perturbative quantum correction to the static-particle interaction energy near a black hole, derived from treating general relativity as an effective field theory, as a test that non-perturbative \"regular\" (modified Schwarzschild) black hole metrics must satisfy, and applies it to the Hayward metric.",
-    "plain": "Physicists want to know what happens inside black holes once quantum effects of gravity are included, and one family of proposed answers is \"regular\" black holes, which replace the central singularity with a smooth core. This paper offers a way to check such proposals against a quantum correction that can be calculated with the well-established perturbative approach to gravity. The authors find that the Hayward model does not match this check, and they identify the most general modified metric that would reproduce the expected result.",
-    "why": "Regular black hole models are widely studied as possible outcomes of quantum gravity, but they are often hard to compare with anything firm. A concrete consistency test tied to a perturbative calculation gives a way to rule models in or out, though the text does not show how far this test reaches beyond the Hayward case.",
+    "ai": true,
     "background": "- General relativity: Einstein's theory of gravity, in which mass bends spacetime; the Schwarzschild metric describes a non-rotating black hole.\n- Singularity: a point where the classical equations break down, with curvature becoming infinite at the centre of a standard black hole.\n- Regular black hole: a modified metric in which the centre is smooth and free of singularity, often proposed as a stand-in for quantum gravity effects.\n- Metric: the mathematical rule giving distances and time intervals in spacetime.\n- Effective field theory: treating a theory as valid only up to some energy scale, using corrections organised in powers of that scale; here it gives small, calculable quantum corrections.\n- Perturbative vs non-perturbative: perturbative calculations expand in a small parameter; non-perturbative approaches aim to capture effects beyond such expansions.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper uses the known perturbative quantum correction to the static-particle interaction energy near a black hole, derived from treating general relativity as an effective field theory, as a test that non-perturbative \"regular\" (modified Schwarzschild) black hole metrics must satisfy, and applies it to the Hayward metric.",
+    "plain": "Physicists want to know what happens inside black holes once quantum effects of gravity are included, and one family of proposed answers is \"regular\" black holes, which replace the central singularity with a smooth core. This paper offers a way to check such proposals against a quantum correction that can be calculated with the well-established perturbative approach to gravity. The authors find that the Hayward model does not match this check, and they identify the most general modified metric that would reproduce the expected result.",
+    "why": "Regular black hole models are widely studied as possible outcomes of quantum gravity, but they are often hard to compare with anything firm. A concrete consistency test tied to a perturbative calculation gives a way to rule models in or out, though the text does not show how far this test reaches beyond the Hayward case."
    },
    "abstract": "In this paper, we present a method for using perturbative predictions from treating general relativity as an effective field theory to constrain non-perturbative approaches to quantum gravity in black hole contexts. We start by reviewing a known result from this framework, which estimates the first quantum corrections to the interaction energy of a static particle near a black hole. We then propose a way to test non-perturbative quantum black hole models - specifically those formulated as modified Schwarzschild metrics, also known as regular black holes - against this perturbative result. To illustrate, we apply our method to the Hayward metric, showing that it does not align with the perturbative prediction, and we identify the most general metric that can reproduce the expected result.",
    "source": "arxiv"
@@ -35,12 +82,12 @@
    "primary_category": "math-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper derives the joint probability distribution of commuting, normal smeared-field observables of the form A(f_i)*A(f_i) in the Fewster-Verch measurement framework (under assumed Fock-space representability), and uses it to build a CHSH Bell-test model with a coupled Proca-scalar polarization setup that violates the CHSH inequality up to Tsirelson's bound in the limit of perfect vacuum-effect rejection.",
-    "plain": "This paper asks how measurements in quantum field theory, the framework describing particles and fields, update the quantum state and whether those updates can produce the strong, \"quantum\" correlations seen in Bell tests. The authors compute the full joint statistics of several measurements of a field at once, under stated technical assumptions. They then build a simple Bell-test model based on a previously developed polarization model and report that it can exceed the CHSH limit, approaching the maximum allowed by quantum mechanics when background vacuum effects are removed.",
-    "why": "It shows that the state-update rules of a rigorous measurement framework for quantum fields are compatible with strongly nonclassical correlations, which matters for foundations of quantum field theory and quantum information. The reach beyond this model is unclear from the abstract alone, and the result depends on the stated assumptions and on the idealisation of perfect vacuum rejection.",
+    "ai": true,
     "background": "- Quantum field theory: a description where particles are excitations of fields spread through spacetime.\n- Smeared field operator A(f): a field measured with a weighting function f over a region, rather than at a single point.\n- Fewster-Verch framework: a rigorous way to describe measurements and state updates in curved spacetime quantum field theory.\n- Bell inequality and CHSH: a test of whether measurement correlations can be explained by local hidden variables; quantum mechanics can exceed the classical limit, up to Tsirelson's bound.\n- Fock space: the standard mathematical space of states containing variable numbers of particles.\n- Normal and commuting operators: technical conditions meaning the measurements can be performed together and their outcomes are well defined jointly.\n- Moment generating functional: a tool that encodes all the statistics (averages, spreads) of a distribution in one object.\n- Proca field: a massive vector (spin-1) field, used here to model polarization.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives the joint probability distribution of commuting, normal smeared-field observables of the form A(f_i)*A(f_i) in the Fewster-Verch measurement framework (under assumed Fock-space representability), and uses it to build a CHSH Bell-test model with a coupled Proca-scalar polarization setup that violates the CHSH inequality up to Tsirelson's bound in the limit of perfect vacuum-effect rejection.",
+    "plain": "This paper asks how measurements in quantum field theory, the framework describing particles and fields, update the quantum state and whether those updates can produce the strong, \"quantum\" correlations seen in Bell tests. The authors compute the full joint statistics of several measurements of a field at once, under stated technical assumptions. They then build a simple Bell-test model based on a previously developed polarization model and report that it can exceed the CHSH limit, approaching the maximum allowed by quantum mechanics when background vacuum effects are removed.",
+    "why": "It shows that the state-update rules of a rigorous measurement framework for quantum fields are compatible with strongly nonclassical correlations, which matters for foundations of quantum field theory and quantum information. The reach beyond this model is unclear from the abstract alone, and the result depends on the stated assumptions and on the idealisation of perfect vacuum rejection."
    },
    "abstract": "State update rules and their behaviour in Bell tests play an important role in the study of measurement schemes and quantum information. We consider the state updates of the Fewster-Verch measurement framework for quantum field theory using their connection to the probability distribution of measurement outcomes. We focus on a set of observables of the form $A(f_i)^*A(f_i)$, where $A(f)$ is the (complex) smeared field operator for any theory induced by a formally hermitian, Green hyperbolic differential operator, and where the $(A(f_i))_{i=1, \\dots, m}$ are assumed to be normal and mutually commuting. Under the assumption that these operators have a sufficiently nice representation on a bosonic Fock space, we derive the joint moment generating functional and the unique joint probability distribution for the observables $(A(f_i)^*A(f_i))_{i=1,\\dots,m}$. As an application of these results, we construct a model of a Bell inequality test within quantum field theory using a recently developed coupled Proca-scalar model for polarization measurements. We show that our Bell test model can violate the CHSH inequality, approaching Tsirelson's bound for maximally entangled states in the limit where vacuum effects are perfectly rejected. These results show that the state update rules derived in the Fewster-Verch framework are compatible with strongly quantum correlations. They also support a viewpoint in which state updates should be understood in relation to available information.",
    "source": "arxiv"

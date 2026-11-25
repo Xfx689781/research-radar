@@ -1,7 +1,51 @@
 {
  "slug": "soft-matter",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28284",
+   "title": "Intrinsic volume fraction can decouple from hydrodynamic size in p(NIPAm-co-AA) microgels",
+   "url": "https://arxiv.org/abs/2611.28284",
+   "authors": [
+    "Peter Edimeh",
+    "Howard Chen",
+    "Jacinta C. Conrad"
+   ],
+   "label": "arXiv:2611.28284v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Experimental test of whether the intrinsic volume fraction and hydrodynamic size of p(NIPAm-co-AA) microgels stay proportional across pH and temperature, using capillary viscometry and static and dynamic light scattering for two crosslinker levels.",
+    "plain": "Microgels are tiny soft gel particles that swell and shrink with temperature and acidity, and scientists often estimate how tightly they pack together by assuming their size and the amount of polymer inside change in lockstep. This paper tests that assumption on two versions of a temperature- and pH-sensitive microgel. The authors found that at high temperature in acidic conditions, the size measured by light scattering and the volume measured by viscosity no longer change together.",
+    "why": "Packing fraction controls how thick or flowing a suspension is, so a wrong estimate could mislead predictions of rheology and transport in applications such as coatings, drug delivery, or fluids. The text suggests the mismatch comes from uneven polymer distribution inside the particle, but this is an interpretation from a single study and its broader reach is not established here.",
+    "background": "- Microgels: micrometer-scale or smaller crosslinked polymer networks that swell in water like tiny sponges.\n- Packing fraction / intrinsic volume fraction: how much space the swollen polymer occupies relative to the total volume; it governs flow behavior.\n- Hydrodynamic radius (R_h): the effective size a particle has when it moves through liquid, measured by dynamic light scattering.\n- Radius of gyration (R_g): a size measured from how light scatters at different angles, reflecting how mass is spread within the particle.\n- Capillary viscometry: measuring a liquid's thickness by timing its flow through a thin tube.\n- pKa and ionization: acrylic acid groups carry charge at high pH and are mostly uncharged at low pH, which changes swelling.\n- Volume phase transition: an abrupt-ish shrinking of a gel as conditions cross a threshold; here near the lower critical solution temperature (LCST) of pNIPAm, roughly 32 °C.\n- Crosslinker: the molecule (here methylenebisacrylamide) that ties polymer chains together; more crosslinker means a stiffer, less swollen network.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Quantifying the packing fraction of microgels is key to understanding their rheology and transport properties. Often, packing fractions are extrapolated from the hydrodynamic size and intrinsic volume fraction under the assumption that particle size and polymer volume change are proportional. Here, we test this assumption for p(N-isopropylacrylamide-co-acrylic acid) [p(NIPAm-co-AA)] microgels of two crosslinker concentrations (1 wt\\% and 7 wt\\% methylenebisacrylamide) using capillary viscometry and light scattering (static and dynamic) above and below the pKa of acrylic acid (AA). At pH 8, where AA is fully ionized, the microgels do not undergo a pronounced volume phase transition because electrostatic repulsion hinders thermal collapse, and both measures of hydrodynamic volume are equal. At pH 4, however, p(NIPAm-co-AA) microgels are weakly charged and exhibit a volume phase transition near the lower critical solution temperature of pNIPAm; the magnitude of the size change is greater for the less-crosslinked microgel. Above the volume phase transition temperature, the volume change from hydrodynamic radius decouples from that from viscosity. The ratio of the radius of gyration and hydrodynamic radius R_g/R_h of p(NIPAm-co-AA) microgels at high temperature exceeds the value theoretically predicted for homogeneous spheres and the deviation increases with the extent of crosslinking, suggesting that a non-uniform internal distribution of polymer gives rise to the anomalous decoupling at high temperatures. Our results indicate that care must be taken in extrapolating packing fractions for multi-responsive copolymer microgels, and suggest that copolymer composition and crosslink density may be used to tune bulk properties such as rheology through the internal microstructure.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30232",
+   "title": "Dynamical evolution and rheological behavior of a sheared compound vesicle with a highly viscous core: a mesoscale particle-based study",
+   "url": "https://arxiv.org/abs/2611.30232",
+   "authors": [
+    "A. Lamura"
+   ],
+   "label": "arXiv:2611.30232v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A two-dimensional mesoscale particle simulation of a compound vesicle (an outer membrane enclosing a fluid annulus and a more viscous inner core) in wall-bounded shear flow, examining how core viscosity and filling fraction change membrane dynamics and effective rheology.",
+    "plain": "This study uses computer simulations to look at a soft capsule-like object, a membrane bag with a second, thicker fluid inside it, being pushed along by a flowing liquid between walls. It is offered as a simple stand-in for a cell that has a nucleus-like inner body. The authors report that making the inner core more viscous eventually stops the outer membrane from settling into a steady rolling motion, and that the inner body's motion can cause the outer membrane's shape to jump around at high filling fractions.",
+    "why": "The work is a idealized model, so its value is mainly in showing how an internal viscous structure can change the flow behavior of a deformable cell-like object; the text does not show direct links to specific biological or industrial measurements. Its relevance to real cells would need experimental checks that the text does not describe.",
+    "background": "- Vesicle: a thin elastic membrane enclosing fluid, a simple model of a cell.\n- Compound vesicle: a vesicle with another vesicle or body inside, here a viscous core.\n- Shear flow: liquid moving faster in one layer than the next, like wind shearing across a surface.\n- Tank-treading: the membrane steadily rotates around its shape, like a tank track, rather than tumbling end over end.\n- Viscosity: how thick or resistant to flow a fluid is.\n- Filling fraction (φ): how much of the space between the walls is occupied by the object, with higher values meaning more crowded.\n- Intrinsic viscosity: a measure of how much an suspended object raises the thickness of the surrounding fluid.\n- Mesoscale particle-based simulation: a computer method that tracks groups of particles to represent fluid and membrane at a scale between atoms and whole continuum flows.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study numerically the dynamics and the rheology of a two-dimensional compound vesicle in wall-bounded shear flow, as a minimal model of a nucleated cell. We consider the configuration in which the annular fluid is iso-viscous with the external one, while the inner core is more viscous. Increasing the core viscosity drives the external vesicle away from steady tank-treading at values $\\phi \\geq 0.6$. When an internal body is present, the annular fluid partially shields the outer membrane from the viscous core, so that at small filling fractions the external vesicle retains tank-treading with a higher inclination angle and the intrinsic viscosity stays comparatively low. The internal vesicle, by contrast, tumbles and migrates away from the center, and at high $\\phi$ this motion couples back to the host, producing intermittent shape excursions of the external membrane. The inner viscous body thus acts as an internal governor of the dynamical state.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30245",
    "title": "Growing Knot Embeddings into Spherical Graphs",
@@ -14,12 +58,12 @@
    "primary_category": "cond-mat.soft",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper introduces a growth-and-relaxation construction that turns a 3D knot embedding into a graph on the sphere, compares these growth graphs with standard Tait graphs for prime knots up to seven crossings, and tests whether they are knot invariants using non-minimal diagrams and connected sums.",
-    "plain": "The paper looks at knots, the tangled loops familiar from string, and asks whether a knot's shape can be captured as a network drawn on a sphere. The authors grow the knot outward and let the surface settle under interfacial energy, which is the same force that makes soap films and droplets smooth, and read a graph from the resulting regions. For simple prime knots with at most seven crossings, the resulting graphs generally differ from the standard Tait graphs, and the authors describe an empirical rule for building them.",
-    "why": "Knotted structures matter in soft matter and biology, where tangles can affect how polymers relax and organize, so a way to encode knot shape as a graph could be a useful tool. The text shows that these graphs are not knot invariants, and that some prime-factor features may survive in connected sums, but it leaves open whether they reveal anything invariant under isotopy (smooth deformation without cutting), so their long-term value is uncertain.",
+    "ai": true,
     "background": "- Knot: a closed loop in 3D space that cannot be untangled without cutting it.\n- Knot diagram: a 2D drawing of a knot showing where strands cross over or under each other.\n- Crossings: the points where the drawing overlaps itself; the count is a rough measure of complexity.\n- Prime knot: a knot that cannot be split into simpler knots joined together; a connected sum is the join of two knots.\n- Tait graph: a standard graph built from a knot diagram's regions, used in knot theory.\n- Knot invariant: a property that stays the same under any smooth deformation of the knot (isotopy).\n- Interfacial energy: the surface-tension-like energy that drives soft materials such as films and droplets toward smooth shapes.\n- Graph embedded on the sphere: a network of nodes and edges drawn on the surface of a ball without crossings.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper introduces a growth-and-relaxation construction that turns a 3D knot embedding into a graph on the sphere, compares these growth graphs with standard Tait graphs for prime knots up to seven crossings, and tests whether they are knot invariants using non-minimal diagrams and connected sums.",
+    "plain": "The paper looks at knots, the tangled loops familiar from string, and asks whether a knot's shape can be captured as a network drawn on a sphere. The authors grow the knot outward and let the surface settle under interfacial energy, which is the same force that makes soap films and droplets smooth, and read a graph from the resulting regions. For simple prime knots with at most seven crossings, the resulting graphs generally differ from the standard Tait graphs, and the authors describe an empirical rule for building them.",
+    "why": "Knotted structures matter in soft matter and biology, where tangles can affect how polymers relax and organize, so a way to encode knot shape as a graph could be a useful tool. The text shows that these graphs are not knot invariants, and that some prime-factor features may survive in connected sums, but it leaves open whether they reveal anything invariant under isotopy (smooth deformation without cutting), so their long-term value is uncertain."
    },
    "abstract": "Knotted structures occur throughout soft matter and biology, where topological constraints can shape relaxation and spatial organization. Here, we introduce a computational construction that maps a specific 3D knot embedding to a graph embedded on the sphere through growth and interfacial-energy relaxation. For standard 3D embeddings of prime knots with at most seven crossings, we obtain a family of growth-based graphs that generally differ from the corresponding Tait graphs. We further identify an empirical growth-graph reconstruction rule based on polygonal regions with alternating crossing structure in a knot diagram. Non-minimal diagrams demonstrate that these graphs are not knot invariants, while selected connected sums suggest that graph features associated with their prime factors can remain recognizable. Determining how these graphs transform under isotopy may reveal invariant features, which we leave for future study.",
    "source": "arxiv"
@@ -35,12 +79,12 @@
    "primary_category": "cond-mat.soft",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "In a confined, partially active polymer, the same unknotted starting configurations are shown to differ in their later chance of knotting, and a pore-radius change can reverse which starting states are more susceptible.",
-    "plain": "The paper studies when a long chain-like molecule that is pushed around and squeezed through a narrow opening will tie itself into a knot. Starting from configurations that all look unknotted, the authors find that some are more likely than others to knot later, and that changing the size of the opening can flip which group is more likely to knot.",
-    "why": "It suggests that a system's present mechanical arrangement, not only the outside conditions, can decide how it will later change, which matters for understanding rare transitions in driven systems. The text does not show how far this extends beyond this polymer model, so broader applications remain unclear.",
+    "ai": true,
     "background": "- Polymer: a long chain of repeated units, here simulated on a computer.\n- Knot (topological state): a tangle that cannot be undone by moving the chain without cutting it; \"unknotted\" means no such tangle yet.\n- Confinement and pore: the chain is pushed through a narrow opening whose radius is a controllable parameter.\n- Partially active polymer: some segments are driven by a self-propelled, out-of-equilibrium force, so the system is not in thermal equilibrium.\n- Langevin noise: random thermal kicks used in simulations to model molecular jiggling.\n- Replicas and branches: independent copies of the simulation, and new simulated runs launched from saved configurations to test their future.\n- Classifier: a rule that predicts which starting states are more susceptible to knotting; here it was fixed on separate data before the test.\n- Susceptibility ordering: which group is more likely to knot; \"reversal\" means the ranking flips.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "In a confined, partially active polymer, the same unknotted starting configurations are shown to differ in their later chance of knotting, and a pore-radius change can reverse which starting states are more susceptible.",
+    "plain": "The paper studies when a long chain-like molecule that is pushed around and squeezed through a narrow opening will tie itself into a knot. Starting from configurations that all look unknotted, the authors find that some are more likely than others to knot later, and that changing the size of the opening can flip which group is more likely to knot.",
+    "why": "It suggests that a system's present mechanical arrangement, not only the outside conditions, can decide how it will later change, which matters for understanding rare transitions in driven systems. The text does not show how far this extends beyond this polymer model, so broader applications remain unclear."
    },
    "abstract": "Even under identical external conditions, a driven system can occupy distinct long-lived states with different susceptibilities to the same rare transition. We demonstrate this in a confined partially active polymer, where independent unknotted replicas occupy distinct mechanical states with different topological futures. Matched-control and event-resolved analyses reveal a susceptible reservoir and a short threading precursor. We test this state dependence prospectively by launching 2272 Langevin-noise branches from 71 preserved unknotted phase-space states using a classifier prespecified from independent data. Most strikingly, the same classifier strongly separates finite-time knotting at one pore radius, yet reverses its susceptibility ordering at a neighboring radius. Thus geometry does not merely shift an average knotting rate; it selects among long-lived nonequilibrium states and reorganizes the mapping between a pre-existing mechanical coordinate and future topological fate.",
    "source": "arxiv"

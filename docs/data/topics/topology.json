@@ -1,7 +1,54 @@
 {
  "slug": "topology",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30095",
+   "title": "A complete knot invariant from grid diagrams",
+   "url": "https://arxiv.org/abs/2611.30095",
+   "authors": [
+    "Agnese Barbensi",
+    "Daniele Celoria",
+    "Lavender Marshall",
+    "Finn Thompson"
+   ],
+   "label": "arXiv:2611.30095v1",
+   "primary_category": "math.GT",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper builds an infinite graph from grid diagrams of a knot and proves that this graph, up to isomorphism and mirror image, completely determines the knot type, with finite algorithmically computable portions sufficing.",
+    "plain": "The paper is about knots, the tangled loops studied in mathematics, and how to tell two knots apart. The authors turn each knot into a grid of marks and from that build a large network-like object, called a graph. They show that this object captures the knot completely, so two knots are the same type exactly when their graphs match, apart from a mirror reflection. They also show that a finite, computable piece of the graph is already enough.",
+    "why": "A complete invariant is a rare and valuable tool, because many standard knot invariants cannot distinguish all knots. The text does not say how practical the method is or how it compares with existing invariants, so its broader usefulness is uncertain from this summary alone.",
+    "background": "- A knot is a closed loop embedded in three-dimensional space, considered the same as another if one can be deformed into the other without cutting.\n- A knot invariant is a property that is the same for equivalent knots; a complete invariant determines the knot fully.\n- A grid diagram is a square grid with markers placed in cells that encode a knot's crossings.\n- A graph is a set of points (vertices) joined by lines (edges); isomorphism means two graphs have the same structure.\n- Mirroring reverses a knot like a reflection in a mirror; the result is only claimed to be determined up to this.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Using grid diagrams, we define an infinite graph associated to each knot type. We prove that the isomorphism class of this grid graph is a complete invariant of the knot, up to mirroring. Even more, we prove that algorithmically determinable finite parts of this graph are enough to determine the knot type.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29233",
+   "title": "Unknotting number is strictly subadditive for the trefoil",
+   "url": "https://arxiv.org/abs/2611.29233",
+   "authors": [
+    "Anne Dranowski",
+    "Yura Kabkov",
+    "Daniel Tubbenhauer"
+   ],
+   "label": "arXiv:2611.29233v1",
+   "primary_category": "math.GT",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper shows that the unknotting number is strictly subadditive for the trefoil: there is a knot K such that u(T#K) < u(T)+u(K), with the saving extended to infinitely many prime partners and to positive braid knots and torus knots.",
+    "plain": "The paper studies knots, which are closed loops of string tangled in space. For a knot, the \"unknotting number\" is the fewest times you must swap one crossing for the other to make the loop plain, untangled. The question is whether joining two knots together can ever be cheaper to untangle than doing each separately, and the text reports that for the trefoil it can be: a trefoil plus a particular fourteen-crossing knot needs at most three changes together, while the two separately need four each.",
+    "why": "Whether this unknotting cost adds up exactly when knots are joined was an open-style question in knot theory, so a concrete saving is a notable, checkable example. The text does not say what broader consequences follow beyond the stated families of knots.",
+    "background": "- Knot: a closed loop embedded in three-dimensional space, considered the same if it can be deformed without cutting.\n- Crossing change: switching which strand passes over at one crossing in a diagram.\n- Unknotting number: the minimum number of crossing changes needed to turn a knot into the unknot (the simplest, untangled loop).\n- Trefoil: the simplest nontrivial knot, with three crossings.\n- Connected sum: joining two knots into one, like tying their ends together; the unknotting number is subadditive if the cost of the joined knot is at most the sum of the costs.\n- Strict subadditivity: the joined knot is strictly cheaper than the sum, which is what this paper exhibits.\n- Positive braid knot and torus knot: special families of knots with regular, structured descriptions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A trefoil and a certain fourteen-crossing knot take four crossing changes to unknot separately and at most three together. We extend this example to infinitely many prime partners and show that the same partners give a saving for every nontrivial positive braid knot and, up to mirror, every nontrivial torus knot.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31031",
    "title": "Tame homotopy theory and the Goodwillie tower of the identity",
@@ -13,12 +60,12 @@
    "primary_category": "math.AT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper modernizes Dwyer's tame homotopy theory, extends it to non-simply connected spaces using Heuts's work on the Goodwillie tower of the identity, and builds spectral Lie algebraic models for Hess's r-mild homotopy theory.",
-    "plain": "This paper is about a way of describing the shape of spaces (such as surfaces or more abstract higher-dimensional objects) using algebraic structures, so that questions about shape become questions about algebra. The author revisits an existing approach by Dwyer, extends it to spaces that have loops which cannot be shrunk to a point, and links it to a series of increasingly refined approximations of shape called the Goodwillie tower. The text summarizes this as a set of constructions, and does not report further findings beyond these.",
-    "why": "The work tries to connect two existing lines of research, Dwyer's tame homotopy theory and Heuts's study of the Goodwillie tower, and to extend the first beyond simply connected spaces. Its significance for wider mathematics is not stated in the text, so readers should treat the value as provisional and check the full paper.",
+    "ai": true,
     "background": "- Homotopy theory: classifies spaces by when continuous deformations can be considered equivalent, ignoring rigid geometry.\n- Simply connected space: a space in which every loop can be shrunk to a point; the paper extends beyond this case.\n- Lie algebra: an algebraic structure (with a bracket operation) used here as a algebraic model of a space.\n- Goodwillie tower: a sequence of successively finer polynomial approximations to a functor, here applied to the identity functor on spaces.\n- Model (in this context): an algebraic object that encodes the homotopy type of a space, so that topology can be studied by algebra.\n- Spectral: refers to objects from stable homotopy theory (spectra), a more linear, additive setting.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper modernizes Dwyer's tame homotopy theory, extends it to non-simply connected spaces using Heuts's work on the Goodwillie tower of the identity, and builds spectral Lie algebraic models for Hess's r-mild homotopy theory.",
+    "plain": "This paper is about a way of describing the shape of spaces (such as surfaces or more abstract higher-dimensional objects) using algebraic structures, so that questions about shape become questions about algebra. The author revisits an existing approach by Dwyer, extends it to spaces that have loops which cannot be shrunk to a point, and links it to a series of increasingly refined approximations of shape called the Goodwillie tower. The text summarizes this as a set of constructions, and does not report further findings beyond these.",
+    "why": "The work tries to connect two existing lines of research, Dwyer's tame homotopy theory and Heuts's study of the Goodwillie tower, and to extend the first beyond simply connected spaces. Its significance for wider mathematics is not stated in the text, so readers should treat the value as provisional and check the full paper."
    },
    "abstract": "The purpose of this note is to provide a modern treatment of Dwyer's tame homotopy theory and extend it to non-simply connected spaces, exploiting a connection with the work of Heuts on the Goodwillie tower of the identity. As an application, we construct spectral Lie algebraic models for Hess's $r$-mild homotopy theory.",
    "source": "arxiv"
@@ -34,12 +81,12 @@
    "primary_category": "math.AT",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper defines a Laplace operator on the Möbius chain complex of persistence modules (the \"Möbius homology Laplacian\"), whose kernel gives canonical cycle representatives, and analyzes its spectrum for one-parameter modules and birth-death modules from simplicial filtrations.",
-    "plain": "The paper studies how shapes in data change as a parameter grows, a setting called persistent homology, which tracks when loops and holes appear and disappear. The authors build a matrix-style operator, analogous to the Laplacian used in graph and spectral analysis, on a structure that categorifies Möbius inversion, a counting tool from combinatorics. They report that for one-parameter modules they fully determine the eigenvalues of the degree-one version, and for birth-death modules the trace and determinant of the degree-zero version reflect the structure of the persistence diagram.",
-    "why": "It offers a way to attach analytic, spectral information to persistence modules, which standard persistence diagrams do not directly encode. Its connection to applications is not established in the text, so its practical reach is uncertain.",
+    "ai": true,
     "background": "- Persistent homology: tracking holes and loops in a growing family of spaces, summarized by a persistence diagram of birth and death times.\n- Persistence module: the algebraic object (vector spaces with maps linking stages of the filtration) that persistent homology studies.\n- Chain complex: a sequence of vector spaces with boundary maps, used to compute homology (cycles modulo boundaries).\n- Möbius inversion: a combinatorial rule for recovering values from cumulative data over a partially ordered set; \"categorifying\" it means replacing numbers with vector spaces and maps.\n- Laplace operator and spectrum: a matrix-like operator whose eigenvalues and kernel describe structure; its kernel gives harmonic representatives.\n- Simplicial complex and filtration: spaces built from vertices, edges, triangles, etc., added in stages.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper defines a Laplace operator on the Möbius chain complex of persistence modules (the \"Möbius homology Laplacian\"), whose kernel gives canonical cycle representatives, and analyzes its spectrum for one-parameter modules and birth-death modules from simplicial filtrations.",
+    "plain": "The paper studies how shapes in data change as a parameter grows, a setting called persistent homology, which tracks when loops and holes appear and disappear. The authors build a matrix-style operator, analogous to the Laplacian used in graph and spectral analysis, on a structure that categorifies Möbius inversion, a counting tool from combinatorics. They report that for one-parameter modules they fully determine the eigenvalues of the degree-one version, and for birth-death modules the trace and determinant of the degree-zero version reflect the structure of the persistence diagram.",
+    "why": "It offers a way to attach analytic, spectral information to persistence modules, which standard persistence diagrams do not directly encode. Its connection to applications is not established in the text, so its practical reach is uncertain."
    },
    "abstract": "Persistent homology provides a framework for studying the evolution of topological features across filtered spaces. While persistence diagrams give discrete invariants that record the birth and death of homological features, they do not directly encode analytic or geometric structure associated to persistence modules. This paper develops a spectral framework for persistent homology by introducing and studying a Laplace operator on the M\\\"obius chain complex, called the M\\\"obius homology Laplacian. M\\\"obius homology categorifies M\\\"obius inversion for persistence modules by replacing integer-valued data with vector-space-valued chain complexes. By equipping these chain complexes with inner products, we define a Laplace operator on the M\\\"obius chain complex whose kernel provides canonical cycle representatives for the associated M\\\"obius homology space. We analyze the spectral properties of this operator in two primary settings: one-parameter persistence modules and birth-death modules arising from filtrations of simplicial complexes. For one-parameter modules, we completely characterize the eigenvalues of the degree-one M\\\"obius homology Laplacian. For birth-death modules, we show that the trace and determinant of the degree-zero M\\\"obius homology Laplacian reflect the combinatorial structure of the persistence diagram.",
    "source": "arxiv"

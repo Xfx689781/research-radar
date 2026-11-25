@@ -1,7 +1,82 @@
 {
  "slug": "cancer-biology",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768122",
+   "title": "A hidden mitotic vulnerability emerges from BCAT1 redox-motif disruption in Ewing sarcoma",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768122v1",
+   "authors": [
+    "Li, J.",
+    "Geyer, F. H.",
+    "Yershova, A.",
+    "Marjanovic, L.",
+    "Zhu, W.",
+    "Cubas, L. d.",
+    "Aljakouch, K.",
+    "Ong, E. C.",
+    "Francois, L.",
+    "Surdez, D.",
+    "Wachtel, M.",
+    "Lego, J.-A. M. T.",
+    "Hahnen, N.",
+    "Taboas, P.",
+    "Gmelin, N.",
+    "Man, K.-H.",
+    "Autry, R. J.",
+    "Schramm, K.",
+    "Dirksen, U.",
+    "Hartmann, W.",
+    "Ohmura, S.",
+    "Cidre-Aranaz, F.",
+    "Jayavelu, A. K.",
+    "Krijgsveld, J.",
+    "Dick, T. P.",
+    "Radlwimmer, B.",
+    "Gruenewald, T. G. P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768122 v1",
+   "primary_category": "cancer biology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "In Ewing sarcoma, disrupting the redox-active CXXC motif of BCAT1 (a metabolic enzyme driven by the EWSR1::FLI1 fusion) causes mitotic and DNA damage defects and sensitizes cells to combined CK2 and AURKB inhibition, which differs from simply removing the protein.",
+    "plain": "Ewing sarcoma is a bone and soft-tissue cancer in young people whose cells already run under high oxidative stress, meaning chemically reactive molecules that can damage cell machinery. The authors studied BCAT1, an enzyme that high-risk tumors express more, and altered just its chemically active site, the redox-active CXXC motif, while leaving its metabolic activity intact. Disrupting that motif made cells more sensitive to oxidative stress, caused errors when chromosomes divide, and reduced tumor growth and spread in animal experiments, whereas deleting the protein entirely had weaker effects.",
+    "why": "The paper suggests that a specific chemical site on a metabolic enzyme, rather than the enzyme itself, can be a target for cell division errors, and it proposes a drug combination (silmitasertib plus barasertib) that uses clinically evaluated inhibitors. Whether this translates to patients is not established by the text, which reports preclinical cell and animal work only.",
+    "background": "- Oxidative stress: an excess of reactive oxygen molecules that can damage DNA and proteins.\n- Redox motif (CXXC): a pair of cysteine amino acids in a protein that can gain and lose electrons, letting it act as a chemical switch.\n- Chromosomal instability (CIN): a state where chromosomes are gained or lost during cell division, often harmful to cells.\n- Mitosis: the stage of cell division where chromosomes are separated into two daughter cells.\n- EWSR1::FLI1: an abnormal fusion protein that drives Ewing sarcoma.\n- Prime editing: a gene-editing technique used here to change specific DNA letters in the cell's own gene.\n- CK2 and Aurora kinase B (AURKB): enzymes that regulate cell division; silmitasertib and barasertib are inhibitors of them.\n- Preclinical: tested in cells and animals, not yet in patient trials.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Cancer cells must keep oxidative stress and chromosome-segregation errors within tolerable limits to sustain rapid proliferation. Because redox homeostasis supports faithful chromosome segregation, disrupting redox-dependent mitotic safeguards could drive chromosomal instability (CIN) beyond cell tolerance and suppress tumor growth. Here, we investigated whether selectively disrupting redox-dependent safeguards could uncouple oxidative-stress adaptation from faithful chromosome segregation, exposing a therapeutic vulnerability at the interface of metabolic regulation and genome maintenance. We used Ewing sarcoma (EwS) as a model because it combines low genomic complexity with elevated oxidative stress and limited redox-buffering capacity. A survival analysis of cell-cycle-associated genes prioritized branched-chain amino acid transaminase 1 (BCAT1), whose high expression was associated with adverse outcomes in both primary and relapsed EwS. Functional genomics analyses revealed that BCAT1 is transcriptionally regulated by the EwS-specific EWSR1::FLI1 fusion oncoprotein through a distal enhancer-like GGAA microsatellite. Using prime-edited endogenous alleles and isogenic cell models, we found that disrupting BCAT1 redox-active CXXC motif increased sensitivity to oxidative stress and impaired recovery from it. Motif disruption also caused chromosome-segregation defects and DNA damage, reduced three-dimensional growth, and suppressed tumor formation and metastasis in vivo. By contrast, catalytic inactivation had limited effects. Although acute BCAT1 protein depletion reduced proliferation and tumor formation, constitutive BCAT1 knockout cells remained viable in culture and reduced tumor formation less than motif disruption. Mechanistically, CXXC motif disruption reduced casein kinase 2 (CK2) activity and increased Aurora kinase B (AURKB) activity, whereas BCAT1 degradation left CK2 activity unchanged and reduced AURKB activity. The enhanced sensitivity of CXXC-mutant cells to AURKB inhibition suggests a therapeutic vulnerability that could be exploited in BCAT1-wild-type EwS cells through combined CK2 and AURKB inhibition with silmitasertib and barasertib, increasing maximal growth inhibition and lowering the barasertib concentration required to suppress proliferation. Collectively, these findings reveal a mitotic vulnerability associated with BCAT1 redox-motif disruption that is not fully reproduced by protein loss and can be therapeutically exploited using clinically evaluated CK2 and AURKB inhibitors.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767767",
+   "title": "CIP2A is a biomarker for progression and poor prognosis in cutaneous squamous cell carcinoma",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767767v1",
+   "authors": [
+    "Nissinen, L.",
+    "Tran, P.",
+    "Heiskanen, L.",
+    "Huvila, J.",
+    "Knuutila, J. S.",
+    "Westermarck, J.",
+    "Kahari, V.-M.",
+    "Riihila, P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767767 v1",
+   "primary_category": "cancer biology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "CIP2A, an inhibitor of the tumor-suppressing phosphatase PP2A, is elevated in cutaneous squamous cell carcinoma, promotes cancer cell growth via the MEK1/ERK1/2 pathway in vitro, and correlates with worse survival in patient samples.",
+    "plain": "This study looks at a common type of skin cancer, cutaneous squamous cell carcinoma, which is becoming more frequent. The researchers examined a protein called CIP2A, which tends to be present at higher levels in these tumors than in normal skin cells. Turning CIP2A down in cancer cells slowed their growth, and patients whose tumors showed strong CIP2A staining had worse disease-specific survival.",
+    "why": "It suggests CIP2A could help flag which skin tumors are likely to spread and may be a possible drug target for advanced cases. These are early-stage findings, though: the text reports laboratory cell experiments and patient tissue data, and does not show that targeting CIP2A helps patients.",
+    "background": "- Cutaneous squamous cell carcinoma (cSCC): a skin cancer arising from the outer layer of skin cells (keratinocytes); it can spread to other parts of the body.\n- Actinic keratoses and in situ cSCC: early or precancerous skin changes, compared here with invasive tumors and metastases.\n- Protein phosphatase 2A (PP2A): an enzyme that switches off signaling proteins and normally acts as a tumor suppressor.\n- CIP2A: a protein that inhibits PP2A, so its high levels can allow cancer-promoting signals to stay on.\n- MEK1 and ERK1/2: part of a cell signaling chain that drives cell growth and division; the study reports that silencing CIP2A reduced their activation.\n- siRNA: short RNA molecules used in the lab to switch off a specific gene.\n- Kaplan-Meier analysis: a standard way of comparing survival over time between patient groups.\n- Biomarker: a measurable marker that indicates disease status or likely outcome.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "The incidence of cutaneous squamous cell carcinoma (cSCC) is rising worldwide, highlighting the need for novel therapeutic options for recurrent and metastatic disease. Protein phosphatase 2A (PP2A) is a keyt tumor suppressor, and its inhibition promotes malignant progression. Here, we investigated the role of the cancerous inhibitor of PP2A (CIP2A) in cSCC progression. RNA-sequencing, oligonucleotide array-based expression, and qRT-PCR analysis demonstrated elevated CIP2A mRNA levels in cSCC cells compared with normal human epidermal keratinocytes (NHEKs). Western blotting confirmed higher CIP2A protein production in cSCC cells than in NHEKs. Analysis of single-cell RNA-sequencing data from cSCC showed CIP2A expression in epithelial cells and fibroblasts. Silencing CIP2A with specific siRNAs reduced cSCC cell growth and viability by inhibiting MEK1 and ERK1/2 phosphorylation. In vivo, strong CIP2A immunostaining was observed in tumor cells of primary cSCCs and cSCC metastases, whereas staining was absent or weak in all actinic keratoses and most cSCC in situ samples. Kaplan-Meier analysis revealed that patients with high CIP2A expression had significantly worse disease-specific survival than those with low expression. These findings identify CIP2A as a clinically relevant oncogene in cSCC progression, with elevated expression in invasive primary tumors and metastases. CIP2A may serve as a biomarker of cSCC progression and metastasis, as well as a potential therapeutic target in advanced and metastatic cSCC.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.18.767665",
    "title": "Media matters: A resource for understanding the determinants of migratory potential of malignant and non-malignant cells",
@@ -31,12 +106,12 @@
    "primary_category": "cancer biology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A high-throughput wound-healing/invasion screen of more than 60 malignant and non-malignant cell lines from six tissues, probing how glycolysis, oxidative phosphorylation, and culture media affect migration and metastatic potential.",
-    "plain": "Cells move around the body to heal wounds, and cancer cells move to spread tumours to new organs. This paper tested dozens of normal and cancer cell lines from the pancreas, colon, skin, breast, prostate and lung to see how fast each kind moves and invades. It found that normal lung, skin and pancreas cells often moved faster than their cancer counterparts, and that the nutrient mix in the culture liquid changed how cancer cells behaved.",
-    "why": "Cell movement is central to both cancer spread and wound healing, and the authors argue that few migration-targeting drugs have reached clinical trials. The screen is offered as a reference resource, and the link to new drug targets is a proposal in the text rather than a demonstrated result.",
+    "ai": true,
     "background": "- Migration/invasion assay: a lab test where cells close a scratch or gap in a dish, or push through a barrier, and researchers measure how fast they do so.\n- Malignant vs non-malignant cells: cancerous cells versus normal cells taken from the same kind of tissue.\n- Glycolysis and oxidative phosphorylation: two ways cells turn sugar into energy, one without oxygen and one using the mitochondria.\n- Metastasis: the spread of cancer from its original site to other organs.\n- Migrastatic/antimetastatic therapy: drugs meant to slow cell movement or spread rather than kill the tumour cells directly.\n- Culture media: the nutrient liquid cells grow in; this paper varied serum, calcium and glucose levels.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A high-throughput wound-healing/invasion screen of more than 60 malignant and non-malignant cell lines from six tissues, probing how glycolysis, oxidative phosphorylation, and culture media affect migration and metastatic potential.",
+    "plain": "Cells move around the body to heal wounds, and cancer cells move to spread tumours to new organs. This paper tested dozens of normal and cancer cell lines from the pancreas, colon, skin, breast, prostate and lung to see how fast each kind moves and invades. It found that normal lung, skin and pancreas cells often moved faster than their cancer counterparts, and that the nutrient mix in the culture liquid changed how cancer cells behaved.",
+    "why": "Cell movement is central to both cancer spread and wound healing, and the authors argue that few migration-targeting drugs have reached clinical trials. The screen is offered as a reference resource, and the link to new drug targets is a proposal in the text rather than a demonstrated result."
    },
    "abstract": "Cell mobility is critical for homeostatic processes such as wound repair and diseases like cancer metastasis. While the advent of migrastatic and antimetastatic therapies has promise, the identification and translation of pathways important for migratory plasticity into druggable targets approved in clinical trials are considerably lacking. To better understand why, we developed an unbiased high-throughput wound-healing/invasion assay to screen for the migratory potential of >60 non-malignant and malignant cell lines derived from the pancreas, colon, skin, breast, prostate, and lung. The goal of this phenotypic screen was to provide a resource of migration/invasion potential and insight into the differential properties not only between malignant and non-malignant cells but also the various carcinomas. Surprisingly, we found non-malignant epithelial cells of the lung, skin, and pancreas migrated/invaded faster than their malignant counterparts. We observed perturbation of glucose metabolism, via inhibition of glycolysis, restricted the migration of non-malignant but not cancer cells, whereas inhibition of oxidative phosphorylation limited the mobility of malignant more than normal cells of the lung, skin, and pancreas. Short-term acclimation of cancer cells in low-nutrient media, containing low/no serum, low calcium, and physiological concentrations of glucose, increased in vitro migration/invasion and in vivo metastatic potential of lung but not pancreatic carcinomas. Phenotypic and metabolic screens presented here could identify prospective therapeutics not only for cancer metastasis, but also diseases driven by the dysregulation of wound-healing/regeneration.",
    "source": "biorxiv"
@@ -52,12 +127,12 @@
    "primary_category": "cancer biology",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Single-cell study showing that metabolic priming (TEPP46, ethyl pyruvate, camptothecin) can push a subset of cancer cells into a transient mitochondrial state that responds to TMRM-based photodynamic damage, with descriptors of the fluorescence response predicting cell fate.",
-    "plain": "Cancer tumours contain mixed populations of cells, and some survive treatments that kill most of the others. This paper asks whether drugs that shift cells' energy metabolism can move a fraction of them into a fragile state in their mitochondria (the cell's energy-producing parts) that is more easily damaged by light-activated dye. The authors tracked the dye's glow in individual cells and found that a measure relative to each cell's own resting level predicted whether the cell would die.",
-    "why": "It proposes a way to find and follow tumour cells that resist treatment one cell at a time, and suggests a timing window for combining drugs. The authors state it is only a proof of concept in cultured cells and human tissue sections, with no in vivo testing, and that the combination results are descriptive and need independent replication.",
+    "ai": true,
     "background": "- Intratumour heterogeneity: cancer cells within one tumour differ, so some survive treatment.\n- Mitochondria: small structures that produce cell energy; their membrane voltage matters for cell survival.\n- TMRM: a fluorescent dye that accumulates in mitochondria depending on membrane voltage and can act as a photosensitizer (light-activated damage agent) producing reactive oxygen species.\n- Photodynamic damage: killing cells with light plus a light-sensitive agent.\n- PKM2 and TEPP46: PKM2 is an enzyme in energy metabolism; TEPP46 is a drug that activates it.\n- Camptothecin and TRAIL: an anticancer drug and a cell-death signalling protein, used here in combination tests.\n- Bliss independence: a standard expected-effect model for combined treatments; survival below this expectation suggests synergy.\n- AUC (area under the ROC curve): a 0.5 score is chance and 1.0 is perfect prediction.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Single-cell study showing that metabolic priming (TEPP46, ethyl pyruvate, camptothecin) can push a subset of cancer cells into a transient mitochondrial state that responds to TMRM-based photodynamic damage, with descriptors of the fluorescence response predicting cell fate.",
+    "plain": "Cancer tumours contain mixed populations of cells, and some survive treatments that kill most of the others. This paper asks whether drugs that shift cells' energy metabolism can move a fraction of them into a fragile state in their mitochondria (the cell's energy-producing parts) that is more easily damaged by light-activated dye. The authors tracked the dye's glow in individual cells and found that a measure relative to each cell's own resting level predicted whether the cell would die.",
+    "why": "It proposes a way to find and follow tumour cells that resist treatment one cell at a time, and suggests a timing window for combining drugs. The authors state it is only a proof of concept in cultured cells and human tissue sections, with no in vivo testing, and that the combination results are descriptive and need independent replication."
    },
    "abstract": "Intratumour heterogeneity allows a fraction of cancer cells to escape otherwise effective treatment. Here we ask whether metabolic priming can recruit heterogeneous tumour cells into a transient mitochondrial state that is selectively vulnerable to photodynamic damage. Tetramethylrhodamine methyl ester (TMRM) has previously been shown to act as a mitochondria targeted photosensitizer; we exploit its voltage-dependent accumulation and dynamic fluorescence during pulsed illumination to quantify vulnerability in single cells. The response is a reproducible fluorescence excursion, a rise to a maximum followed by a decay, accompanied by reactive oxygen species production. Comparing seventeen descriptors of this excursion against subsequent fate in 195 cells across four arms shows that quantities referenced to each cell's own resting value outperform static intensity. The simple difference Fmax F0 predicts death with held-out areas under the curve of approximately 0.75 to 0.79, whereas resting intensity alone carries little transferable information and time to peak does not discriminate fate in the datasets tested. Metabolic priming with the PKM2 activator TEPP46 or with ethyl pyruvate increases the fraction of responding cells; under TEPP46 almost the whole population enters the responding state. PKM2 abundance is associated with faster entry into that state, and PKM2 is heterogeneous in human skin tumour sections. Four hours of camptothecin shifts the response distribution, increasing the fraction of cells above the untreated median from 50% to 76%, identifying a candidate intervention window. In combination experiments, TMRM photodynamic treatment produced survival below the Bliss-independence expectation with camptothecin or TRAIL, in both treatment orders and across three cell lines; these combination measurements are descriptive and require independent replication. The study therefore identifies a perturbation-revealed mitochondrial vulnerability that can be pharmacologically recruited and followed dynamically at single-cell resolution. It is a proof of concept in cultured cells and human tumour sections and has not been tested in vivo.",
    "source": "biorxiv"

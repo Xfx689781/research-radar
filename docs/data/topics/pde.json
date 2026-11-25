@@ -1,7 +1,52 @@
 {
  "slug": "pde",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.31013",
+   "title": "(n-1)-Dimensional Hausdorff Measure Estimates for Free Boundaries of Infinity Laplace Equations",
+   "url": "https://arxiv.org/abs/2611.31013",
+   "authors": [
+    "Yantian Chen",
+    "Feida Jiang"
+   ],
+   "label": "arXiv:2611.31013v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves a sharp distance-to-boundary estimate with an explicit optimal constant for free boundaries of nonnegative viscosity solutions to the infinity Laplace equation with strong absorption (Δ∞u = λu₊^m, 0<m<3), yielding density, Lipschitz covering, and (n-1)-dimensional Hausdorff measure bounds that answer a question of Araújo, Leitão, and Teixeira.",
+    "plain": "The paper studies the boundary between a region where a certain mathematical function is positive and where it is zero, for a nonlinear equation that describes things like optimal extremal behavior and \"absorption\" of a quantity. The authors show that this boundary is never too irregular: at every sufficiently small scale, a ball of fixed size can be fitted inside the positive region touching the boundary. From this they derive measured bounds on how the boundary can be covered by simple pieces and how much area it can have.",
+    "why": "It settles an open question posed in a 2016 paper by Araújo, Leitão, and Teixeira, so it is a targeted advance in a specialized area rather than a broad change. The method, a barrier argument whose constant matches a non-degeneracy estimate, is said by the authors to suggest extensions to more general equations, but the text does not show that.",
+    "background": "- Partial differential equations: equations relating a function to its rates of change in space.\n- Viscosity solutions: a weak notion of solution used for nonlinear equations where classical derivatives may fail to exist.\n- Infinity Laplacian: a highly nonlinear, degenerate version of the Laplace operator, tied to optimal-control and \"steepest slope\" ideas.\n- Free boundary: the interface separating the region where the solution is positive from where it vanishes, which is not fixed in advance.\n- Non-degeneracy estimate: a lower bound saying the solution cannot be too flat near points where it is positive.\n- Tangent ball property: the boundary can be touched from inside by a ball of a given radius.\n- Hausdorff measure: a generalized way of measuring size of sets; (n-1)-dimensional measure is the surface-area analogue for a boundary in n dimensions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the geometric properties of free boundaries associated with nonnegative viscosity solutions to the infinity Laplace equation with strong absorption $$ \\Delta_\\infty u=\\lambda u_+^m, \\qquad \\lambda>0,\\quad 0<m<3. $$ We first establish a sharp distance-to-free-boundary regularity estimate with an explicit optimal coefficient, which coincides with the constant in the non-degeneracy estimate. This exact matching yields a uniform interior tangent ball property at every sufficiently small scale for every free boundary point. As consequences, we obtain a sharp lower density bound of $1/2$ for the positive phase, a locally finite covering of the free boundary by Lipschitz graphs, and quantitative local estimates for its $(n-1)$-dimensional Hausdorff measure, thereby giving an affirmative answer to the question raised by Ara\\'ujo, Leit\\~ao, and Teixeira (J. Funct. Anal. {\\textbf 270} (2016), no. 6, 2249-2267). The underlying barrier mechanism also suggests possible extensions to more general equations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28657",
+   "title": "Global existence and decay estimates for classical solutions to 2D compressible micropolar fluid equations with vacuum",
+   "url": "https://arxiv.org/abs/2611.28657",
+   "authors": [
+    "Guo Houbin",
+    "Zhu Changjiang",
+    "Zhu Qiaolong"
+   ],
+   "label": "arXiv:2611.28657v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Proves global existence and uniqueness of strong and classical solutions for the 2D compressible micropolar fluid equations with far-field vacuum, under a small initial energy assumption but allowing large oscillations, via a priori decay estimates for pressure, velocity gradient and microrotation.",
+    "plain": "This paper studies a mathematical model of a fluid made of tiny particles that can also spin, such as some suspensions or liquid crystals, in a two-dimensional setting where the fluid thins out to empty space (vacuum) far away. The authors show that, if the starting energy of the fluid is small, smooth solutions exist for all time and are unique, even when the starting state varies a lot. Their main tool is to prove that pressure, the rate of flow deformation, and the spin velocity all fade in a controlled way over time.",
+    "why": "Questions of whether fluid equations keep smooth solutions forever are basic to understanding them, and vacuum regions make the analysis much harder. The paper is a theoretical result, so its relevance lies in the mathematical method rather than any direct application mentioned in the text; the text does not discuss specific physical uses.",
+    "background": "- Compressible fluid: a fluid whose density can change, as with gases.\n- Micropolar fluid: a fluid model in which each small volume element can also rotate independently, adding a \"microrotational velocity\" alongside the usual velocity.\n- Vacuum: regions where density is zero; \"far field vacuum\" means the density vanishes at infinity.\n- Global existence: a solution exists for all future times, not just for a short while.\n- Classical/strong solutions: smooth enough that the derivatives in the equations make sense.\n- A priori estimates and bootstrap: bounds derived assuming a solution exists, used to show it cannot blow up and so persists.\n- Partial differential equations (PDEs): equations relating a function to its rates of change in space and time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we consider the Cauchy problem for the two-dimensional compressible micropolar fluid equations with far field vacuum. Under the assumption that the initial energy is sufficiently small, we establish the global existence and uniqueness of strong and classical solutions, allowing for large oscillations in the initial data. The key to the proof is to derive {\\it a priori} decay estimates for the pressure, the velocity gradient, and the microrotational velocity, which enable us to close the bootstrap argument. We also handle the difficulties arising from the coupling between the velocity field and the microrotational velocity.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28530",
    "title": "Global well-posedness and scattering for the fractional inhomogeneous nonlinear Schrodinger equation with time-dependent damping",
@@ -14,12 +59,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves global well-posedness and scattering for a fractional, inhomogeneous nonlinear Schrödinger equation with time-dependent damping, for radial initial data, using Strichartz estimates and mixed-norm bounds on the nonlinear term.",
-    "plain": "The paper studies a wave-type equation that describes how a quantum-style wave spreads out and can lose energy over time. It asks whether solutions exist for all time and eventually behave like free waves that no longer interact. The authors show this holds for solutions that are symmetric around a center (radial data), using a fairly direct argument.",
-    "why": "The result gives a rigorous guarantee that these damped equations are well behaved over infinite time, which matters for the mathematical theory of dispersive equations. The text does not say how the result might be applied outside pure mathematics, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Nonlinear Schrödinger equation: a model for waves whose evolution depends on their own strength, used in quantum physics and optics.\n- Fractional Laplacian: a generalized spreading operator that replaces the usual second-derivative term with a fractional power.\n- Inhomogeneous nonlinearity: the nonlinear term has a spatially varying or power-type coefficient, not a single uniform form.\n- Time-dependent damping: a friction-like term that drains energy at a rate that changes over time.\n- Global well-posedness: solutions exist, are unique, and depend continuously on the starting data, for all times.\n- Scattering: for large times, the solution looks like a free wave with no nonlinear effects.\n- Strichartz estimates: inequalities that control how dispersing waves decay in space and time.\n- Mixed-norm spaces: function spaces that measure size using different norms in space and time.\n- Radial data: starting conditions that depend only on distance from a center.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves global well-posedness and scattering for a fractional, inhomogeneous nonlinear Schrödinger equation with time-dependent damping, for radial initial data, using Strichartz estimates and mixed-norm bounds on the nonlinear term.",
+    "plain": "The paper studies a wave-type equation that describes how a quantum-style wave spreads out and can lose energy over time. It asks whether solutions exist for all time and eventually behave like free waves that no longer interact. The authors show this holds for solutions that are symmetric around a center (radial data), using a fairly direct argument.",
+    "why": "The result gives a rigorous guarantee that these damped equations are well behaved over infinite time, which matters for the mathematical theory of dispersive equations. The text does not say how the result might be applied outside pure mathematics, so its wider significance is uncertain."
    },
    "abstract": "In this paper, we prove the global well-posedness and scattering of solutions for a nonlinear Schrodinger type equation with fractional Laplacian, inhomogeneous nonlinearity and time-dependent damping.We give an elementary proof based on Strichartz estimates combined with estimates of the nonlinear term in mixed-norm spaces. To avoid the loss of regularity in the Strichartz estimates, we consider the radial data.",
    "source": "arxiv"
@@ -35,12 +80,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves sharp global well-posedness for the defocusing nonlinear wave equation with Dirichlet boundary conditions outside a unit ball in R^3, for radial data in the critical homogeneous Sobolev space, for 3<p<5, improving a prior result by Xu, Yang and You (2025).",
-    "plain": "The paper studies how a wave-type equation that includes a nonlinear term evolves over all time, in the region of three-dimensional space outside a fixed sphere, with the boundary held at zero. It considers only initial conditions that are symmetric around the center, and the starting size of the data is set at the \"critical\" level where the equation is scale-balanced. The authors state they prove that solutions exist and are unique for all time in this setting, which they describe as sharp.",
-    "why": "The text itself is a short abstract, so its main value is as a sharpened result in a specialized area of PDE theory: it claims to extend a previous theorem to a sharper range of data. It is not clear from the text what wider applications, if any, it has; I cannot say how it connects to physical or engineering problems.",
+    "ai": true,
     "background": "- Wave equation: a PDE describing propagating disturbances, such as vibrations or waves.\n- Nonlinear term: the equation's behavior depends on the solution's size in a non-proportional way, which makes it harder to analyze.\n- Defocusing: the nonlinearity tends to spread energy out rather than concentrate it, which helps prevent blow-up.\n- Dirichlet boundary condition: the solution is fixed (here, zero) on the boundary of the region, here the sphere of radius 1.\n- Radial data: initial conditions depend only on distance from the center.\n- Global well-posedness: for any starting data in the class, a unique solution exists for all time and depends continuously on the data.\n- Critical space: a function space scaling-matched to the equation, where the problem is at the borderline between easy and hard.\n- Distorted Fourier transform: a generalized Fourier analysis adapted to a region with a boundary, rather than all of space.\n- Energy–Morawetz estimates: integral inequalities that control energy and spread of waves, used to rule out blow-up.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves sharp global well-posedness for the defocusing nonlinear wave equation with Dirichlet boundary conditions outside a unit ball in R^3, for radial data in the critical homogeneous Sobolev space, for 3<p<5, improving a prior result by Xu, Yang and You (2025).",
+    "plain": "The paper studies how a wave-type equation that includes a nonlinear term evolves over all time, in the region of three-dimensional space outside a fixed sphere, with the boundary held at zero. It considers only initial conditions that are symmetric around the center, and the starting size of the data is set at the \"critical\" level where the equation is scale-balanced. The authors state they prove that solutions exist and are unique for all time in this setting, which they describe as sharp.",
+    "why": "The text itself is a short abstract, so its main value is as a sharpened result in a specialized area of PDE theory: it claims to extend a previous theorem to a sharper range of data. It is not clear from the text what wider applications, if any, it has; I cannot say how it connects to physical or engineering problems."
    },
    "abstract": "Let $\\Omega=\\mathbb{R}^3\\setminus\\overline{B(0,1)}$ and $3<p<5$. We prove sharp global well-posedness of the defocusing Dirichlet boundary value problem of nonlinear wave equation with radial data in the critical space $\\dot H^{s_c}_{D,\\mathrm{rad}}(\\Omega)\\times \\dot H^{s_c-1}_{D,\\mathrm{rad}}(\\Omega)$, where $s_c=\\frac32-\\frac{2}{p-1}$, thereby improve the result in \\cite{XuYangYou2025}. The proof combines the distorted Fourier transform in \\cite{LiSZ:NLS,XuYang2024} with the energy--Morawetz estimate by Dodson in \\cite{DodsonCubic2018,Dodson2018}.",
    "source": "arxiv"

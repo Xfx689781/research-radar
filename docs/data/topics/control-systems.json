@@ -1,7 +1,52 @@
 {
  "slug": "control-systems",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30463",
+   "title": "Autonomous UAV Navigation in an Unknown Environment via Multi-Trajectory Model Predictive Control",
+   "url": "https://arxiv.org/abs/2611.30463",
+   "authors": [
+    "Danilo Saccani",
+    "Lorenzo Fagiano"
+   ],
+   "label": "arXiv:2611.30463v1",
+   "primary_category": "eess.SY",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proposes multi-trajectory MPC (mt-MPC), which plans several candidate future state trajectories within one finite-horizon optimal control problem to partly separate obstacle-avoidance constraints from goal-reaching cost, and applies it to a LiDAR-equipped UAV flying in an unknown, time-invariant environment with recursive feasibility guarantees.",
+    "plain": "This paper is about getting a drone to fly to a target while avoiding obstacles it can only partly see, using its laser scanner. The authors built a planning method that considers several possible future flight paths at once, so that staying safe and making progress toward the goal are handled more separately. In simulation, it performed better than a standard version of the same kind of controller.",
+    "why": "Flying safely in places that are not fully mapped is a practical problem for drones and other autonomous vehicles. The text reports a simulation comparison with a standard controller and a formal guarantee under a stated assumption (that the environment does not change over time), but it does not show real-world flight tests, so its practical reach is uncertain.",
+    "background": "- Model predictive control (MPC): at each moment, the controller plans a short future sequence of actions by solving an optimization problem, applies the first step, then re-plans.\n- Finite Horizon Optimal Control Problem: the optimization over a limited look-ahead window that MPC solves repeatedly.\n- Constraints and cost: constraints are rules the path must obey (such as not hitting obstacles); the cost is what is minimized (such as distance to target).\n- Recursive feasibility: the guarantee that if a valid plan exists now, a valid plan will still exist at the next step, so the controller never gets stuck without a safe option.\n- LiDAR: a laser sensor that measures distances to nearby surfaces, giving only a partial view of obstacles.\n- Hierarchical control: low-level loops keep the vehicle stable and follow setpoints, while the high-level MPC chooses where to go.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A novel model predictive control (MPC) formulation, named multi-trajectory MPC (mt-MPC), is presented and applied to the problem of autonomous navigation of an unmanned aerial vehicle (UAV) in an unknown environment. The UAV is equipped with a LiDAR sensor, providing only a partial description of the surroundings and resulting in time-varying constraints as the vehicle navigates among the obstacles. The control system layout is hierarchical: the low-level loops stabilize the vehicle's trajectories and track the set-points commanded by the high-level, mt-MPC controller. The latter is required to plan the UAV trajectory trading off safety, i.e. to avoid collisions with the uncertain obstacles, and exploitation, i.e. to reach an assigned target location. To achieve this goal, mt-MPC considers different future state trajectories in the same Finite Horizon Optimal Control Problem (FHOCP), enabling a partial decoupling between constraint satisfaction (safety) and cost function minimization (exploitation). Recursive feasibility and, consequently, persistent obstacle avoidance guarantees are derived under the assumption of a time invariant environment. The performance of the approach is studied in simulation and compared with that of a standard MPC, showing good improvement.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.29748",
+   "title": "Performance Evaluation of Nonlinear Model Predictive and Sliding Mode Controllers on a 4-Cable Spatial CSPR in Simscape",
+   "url": "https://arxiv.org/abs/2611.29748",
+   "authors": [
+    "Erfun Bayat Sarmadi",
+    "Ali Asadi",
+    "Moosa Ayati"
+   ],
+   "label": "arXiv:2611.29748v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A comparative simulation study of nonlinear model predictive control (NMPC) and sliding mode control (SMC) on a four-cable spatial cable-suspended parallel robot, using both an analytical dynamic model with cable elasticity and friction and a MATLAB Simscape Multibody model.",
+    "plain": "This paper compares two ways of steering a robot that is held up and moved by four cables strung in three-dimensional space. The authors built the robot's behavior two ways, one with equations and one in a physics simulator, and tested two control methods on both. They report that the predictive method (NMPC) tracked the target path more accurately and resisted disturbances better than the sliding mode method, but needed more computing power.",
+    "why": "Cable-driven robots are of interest for large or high-precision motion tasks, and the paper's point that a physics simulator can check a controller before hardware exists is useful. The text does not give the numerical results, so the size of the advantage is unclear from the summary alone.",
+    "background": "- Cable-suspended parallel robot: an end-effector held in place by several cables whose lengths are changed by motors.\n- Control system: the logic that computes motor commands to make the robot follow a planned path.\n- Nonlinear model predictive control (NMPC): at each step, the controller predicts future behavior with a model and optimizes its commands, respecting limits.\n- Sliding mode control (SMC): a robust method that forces the system onto a chosen target behavior using switching commands.\n- Simscape Multibody: a MATLAB tool for simulating mechanical systems with realistic physics.\n- Cable elasticity and friction: real cables stretch and lose energy, which idealized models may omit.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "This paper offers a comprehensive comparative study between Nonlinear Model Predictive Control (NMPC) and Sliding Mode Control (SMC) applied to a spatial Cable-Suspended Parallel Robot (CSPR) actuated by four cables. The robot is modeled in two parallel ways: (i) via an analytical dynamic model with included cable elasticity and frictional losses, and (ii) in MATLAB Simscape Multibody, capturing realistic physical effects. Both controllers are implemented under identical reference trajectories, system constraints, and tuning strategies. Our results show that NMPC achieves superior tracking accuracy and stronger disturbance rejection compared to SMC, but at the cost of higher computational demand. Moreover, both controllers were tested on an analytical model of the robot and a Simscape model. The close agreement between the two, for both control schemes, confirms the accuracy of the analytical formulation and its consistency with the physics-based simulation. The study highlights the value of physics-based simulation as a complementary tool for validating advanced controllers under realistic conditions, and demonstrates that NMPC offers superior performance for the studied high-precision, constrained CSPR.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29857",
    "title": "Context-Aware Proactive Self-Adaptation: A Two-Layer Model Predictive Control Approach",
@@ -17,12 +62,12 @@
    "primary_category": "cs.SE",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes a two-layer control scheme for self-adaptive software that uses a context-aware goal model to set priorities and feeds that into a model predictive controller, which plans adaptations ahead of time.",
-    "plain": "Software systems often need to change how they behave as their surroundings change, such as shifting load or conditions. This paper argues that the surrounding context should also change which goals the system treats as most important, and it builds a method that does this. The authors report that experiments in two scenarios showed better system performance, though the text gives no specific figures.",
-    "why": "It connects control theory with self-adaptive software engineering by treating goal priorities as part of the controller's objective, which may matter for systems that must anticipate change. The abstract does not show how large the gains were or how general the approach is, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Self-adaptive software: systems that monitor themselves and change their behaviour at run time.\n- Context: the conditions around the system, such as workload or environment.\n- Goal model: a diagram of what a system is meant to achieve and how goals relate.\n- Model predictive control (MPC): a control method that uses a model of the system to forecast its future and choose actions over a short horizon, repeating this at each step.\n- Proactive adaptation: acting on predicted future conditions rather than only reacting to current ones.\n- Two-layer control: one layer adapts the system, another adapts the controller itself, here by updating the controller's objective and constraints.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes a two-layer control scheme for self-adaptive software that uses a context-aware goal model to set priorities and feeds that into a model predictive controller, which plans adaptations ahead of time.",
+    "plain": "Software systems often need to change how they behave as their surroundings change, such as shifting load or conditions. This paper argues that the surrounding context should also change which goals the system treats as most important, and it builds a method that does this. The authors report that experiments in two scenarios showed better system performance, though the text gives no specific figures.",
+    "why": "It connects control theory with self-adaptive software engineering by treating goal priorities as part of the controller's objective, which may matter for systems that must anticipate change. The abstract does not show how large the gains were or how general the approach is, so its wider significance is uncertain."
    },
    "abstract": "In self-adaptive software systems, the role of context is paramount, especially for proactive self-adaptation. Current research, however, does not fully explore context's impact, for example on priorities of the requirements. To address this gap, we introduce a novel contextual goal model to capture these factors and their influence on the system. Using this, we propose a two-layer control mechanism with a context-aware model predictive control to achieve proactive adaptation for the software system and adaptation for the controller itself. By contextual prediction and a more accurate system model, our approach utilizes model predictive control to facilitate timely and efficient system adaptations, improving both performance and adaptability. Meanwhile, we perform requirement adaptation to update the contextual goal model, which in turn updates the objective function and constraints of the controller. Our experimental evaluations across two scenarios demonstrate the significant benefits of our approach in enhancing system performance.",
    "source": "arxiv"
@@ -42,12 +87,12 @@
    "primary_category": "eess.SY",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proposes control-barrier-function (CBF)-based motion controllers with continuous dynamics, specialized to integrator plants as CBF-HIGS, and compares them against projection-based controllers and the HIGS design via describing function analysis, simulations and experiments.",
-    "plain": "Precision machines such as positioning stages often use controllers that keep their response inside a chosen range, which helps them beat the limits of simple linear control. The catch is that the method used to do this makes the controller's underlying rules jump abruptly, which can stir up unwanted vibration-like behaviour in the machine. This paper borrows a safety-constraint idea from robotics and proposes a version whose rules change smoothly, and reports that in analysis, simulation and experiments it reduces this unwanted excitation while still improving disturbance rejection.",
-    "why": "Reducing unwanted high-frequency excitation in precision motion systems is a practical concern for manufacturing and instrumentation, and the paper claims to be the first to apply control barrier functions to this performance goal. The text does not establish how broadly the approach would transfer beyond the integrator case studied, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Control system: a feedback rule that adjusts an input (e.g. a motor force) based on measured output, to make a machine follow a desired motion.\n- Integrator: a basic dynamic element whose output accumulates its input over time; used here as a simple model of a motion plant.\n- Projection-based controller: a controller that forces its response into a specified sector (a bounded range of input-output behaviour); the projection makes its rules discontinuous.\n- Control barrier function (CBF): a mathematical tool, originating in safety-critical control, that keeps a system inside a safe set by enforcing a constraint on how its state evolves.\n- Describing function analysis: an approximation that treats a nonlinear element as a gain depending on signal amplitude, used to estimate phase lag and harmonic (overtone) distortion.\n- Harmonics: extra frequency components generated by nonlinearity; higher-order ones can excite unmodelled dynamics in hardware.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes control-barrier-function (CBF)-based motion controllers with continuous dynamics, specialized to integrator plants as CBF-HIGS, and compares them against projection-based controllers and the HIGS design via describing function analysis, simulations and experiments.",
+    "plain": "Precision machines such as positioning stages often use controllers that keep their response inside a chosen range, which helps them beat the limits of simple linear control. The catch is that the method used to do this makes the controller's underlying rules jump abruptly, which can stir up unwanted vibration-like behaviour in the machine. This paper borrows a safety-constraint idea from robotics and proposes a version whose rules change smoothly, and reports that in analysis, simulation and experiments it reduces this unwanted excitation while still improving disturbance rejection.",
+    "why": "Reducing unwanted high-frequency excitation in precision motion systems is a practical concern for manufacturing and instrumentation, and the paper claims to be the first to apply control barrier functions to this performance goal. The text does not establish how broadly the approach would transfer beyond the integrator case studied, so its wider significance is uncertain."
    },
    "abstract": "Projection-based controllers (PBCs) have significant engineering success in industrial high-precision motion systems by restricting their input-output behavior to performance-enhancing sector-sets thereby overcoming fundamental limitations of linear control. The projection results in continuous control signals, but their vector fields are discontinuous, potentially causing unwanted excitation of higher-order dynamics in the plant. Inspired by these projected controllers and the recent interest in control barrier functions (CBFs), we propose a new class of CBF-based motion controllers that (i) can mimic and exceed the performance benefits demonstrated by PBCs and (ii) have continuous dynamics thereby resulting in smooth control signals. We specialize our novel CBF-based control design to integrator dynamics, essentially connecting to a projected integrator, called Hybrid Integrator-Gain System (HIGS), thereby introducing CBF-HIGS. We analyze the CBF-HIGS's behavior using a describing function analysis, which reveals improved phase characteristics and a favorable trade-off in higher-order harmonic distortion compared to HIGS. Simulation and experimental results demonstrate that CBF-HIGS enhances disturbance attenuation and reduces the excitation of higher-order harmonics compared to HIGS due to its continuous vector field, without compromising robustness properties. The paper provides the first use of CBFs for performance improvement of mechatronic motion systems.",
    "source": "arxiv"

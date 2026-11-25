@@ -1,7 +1,63 @@
 {
  "slug": "ai4math",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28819",
+   "title": "Improving semantic equivalence in research-level math formalization",
+   "url": "https://arxiv.org/abs/2611.28819",
+   "authors": [
+    "Ayush Khaitan",
+    "Liam Fowl",
+    "Tom\\`as Ortega",
+    "Alex Kontorovich",
+    "Sanjeev Arora"
+   ],
+   "label": "arXiv:2611.28819v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper studies whether training language models on the differences between research-level natural-language math and its faithful Lean formalization improves in-project Lean writing, reporting higher proof completion and statement agreement on held-out repositories.",
+    "plain": "Mathematicians increasingly write proofs in Lean, a computer language that checks math automatically, but a Lean version of a paper is never a word-for-word copy: it changes definitions, adds helper results, and splits arguments. The authors collected about 4,000 audited examples of these changes from 832 Lean projects and used them to train AI models to write Lean inside large real projects. Training on these differences roughly doubled the share of complete proofs on unseen projects (from 11% to 20%) and raised the share of statements matching the project's own formalization (from 30% to 39%).",
+    "why": "It offers a concrete, measured way to make AI help with formal mathematics more faithful to the source text, which matters if such tools are to assist real research projects. The text does not show how well the gains hold beyond these test repositories or for other formal systems.",
+    "background": "- Lean: a programming language and proof assistant in which mathematical statements and proofs are written and machine-checked.\n- Autoformalization: using AI to translate informal mathematical text into formal Lean code.\n- Formalization project / repository: a large body of Lean code, here tens of thousands of lines, built around one research area.\n- Semantic equivalence: whether the formal statement means the same thing as the intended mathematics, not just whether it compiles.\n- Complete proof rate: the share of tasks where the model produces a proof that the Lean checker accepts.\n- Adapter: a small add-on module trained on top of a larger model, used here as a comparison condition.\n- Train/test split by repository: the test projects were unseen during training, which makes the results a fairer check of generalization.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Formalizing mathematics in Lean is never a word-for-word translation of a paper: a Lean formalization changes definitions, strengthens hypotheses, splits arguments, and adds lemmas the paper never mentions. It stands to reason that a model that is good at autoformalization must be a good predictor of how a natural language source must differ from its faithful Lean formalization. With that in mind, we collect 4{,}076 audited examples of such changes from 832 Lean projects that formalize research-level mathematics, and use them to ask a practical question: how well can a model \\emph{write} Lean inside a real research-level project that may contain tens of thousands of lines of code, and does training on discrepancies between natural language sources and their faithful Lean formalizations help? Our training set consists of 3{,}431 tasks from 141 repositories, and the test set consists of 645 tasks from the remaining 27 repositories. Training on in-project Lean nearly doubles complete proofs ($11\\% \\to 20\\%$) and raises the share of statements in gold agreement with the project's own formalization by nearly a third ($30\\%$ to $39\\%$). The gain comes from the pairs themselves: an adapter trained only to predict how the Lean will differ, or a model told the difference in advance, barely helps. Training on where formalizations depart from their sources is thus an effective way of improving semantic equivalence in research-level formalization.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31033",
+   "title": "AI-Assisted Auto-formalization for Trustworthy Scientific Computing: Case Studies and Lessons Learned",
+   "url": "https://arxiv.org/abs/2611.31033",
+   "authors": [
+    "Mohit Tekriwal",
+    "Het Mankad",
+    "Naifeng Zhang",
+    "Keita Teranishi",
+    "Sahil Bhola",
+    "Daisuke Uchida",
+    "Jean-Baptiste Jeannin",
+    "Franz Franchetti",
+    "Karthik Duraisamy",
+    "Jeffrey Vetter",
+    "Yohann Dudouit"
+   ],
+   "label": "arXiv:2611.31033v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A systematic study of AI-agent-assisted formalization (machine-checked proofs) of numerical and scientific computing results, yielding a cross-layer taxonomy of failure modes and the kinds of expert feedback needed to restore mathematical soundness.",
+    "plain": "Researchers tested whether modern AI coding and math agents can turn applied-math and scientific-computing material into formal, computer-checked proofs. Unlike pure math, these sources often describe a computational procedure or a modeling step rather than a clean theorem, so the AI has more trouble. The paper catalogs where and why the agents failed across several layers of scientific software and proposes a workflow for recurring proof patterns.",
+    "why": "Scientific computing underpins U.S. Department of Energy work, so proofs that software is mathematically sound matter for trust in simulations. The paper is a careful account of limits and failure modes rather than a claim of a general solution, and its practical value is described in the text only in broad terms.",
+    "background": "- Auto-formalization: translating informal math or code descriptions into a formal language a proof checker can verify.\n- Proof assistant / formal library: software (e.g., Lean-style systems) that checks each logical step and provides reusable verified results.\n- Scientific computing: using algorithms and software to simulate physical systems, such as solving equations numerically.\n- Numerical soundness: whether an algorithm's computed output is guaranteed to be accurate within stated assumptions, not just whether it runs.\n- AI agents: coding or math assistants (e.g., Claude Code, Codex, Aristotle) that act through multi-step tool use.\n- Background context: the abstract cites prior successes on Fermat's Last Theorem, Erdős problems, and IMO-level problems, mostly in pure math.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Agentic AI tools have recently had success in mathematical reasoning. Both general purpose coding agents such as Claude Code and Codex, and specialized mathematics agents such as Aristotle, have been used for formalizing mathematical problems such as Fermat's last theorem, Erd\\H{o}s problems and several IMO level math problems. However, much of these efforts are concentrated in the pure mathematics domain, which benefits from relatively self-contained theorem statements, fixed mathematical representation and extensive support in existing formal libraries. Applied mathematics, on the other hand, presents additional challenges because the source may describe a computational procedure or modeling transformation rather than a declarative theorem. In this work, we present a systematic study of AI-assisted auto-formalization for scientific computing (SC), a domain in applied mathematics central to U.S. Department of Energy applications. Through case studies spanning hierarchical abstraction layers in SC software stack, we evaluate not only whether AI agents can complete numerical proofs, but also where and why they fail across the stack. Our primary contribution is a cross-layer taxonomy of failure modes and an analysis of the form of expert feedback required at each layer to recover mathematical soundness. From these observations, we derive a workflow for recurring proof patterns and practical guidance for using AI agents while preserving mathematical soundness. Our results characterize both the practical value and the current limitations of AI-assisted formalization for trustworthy scientific computing.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28430",
    "title": "Lean Census: A Distributional Analysis of AI-Generated Lean Code",
@@ -14,12 +70,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A distributional comparison of code statistics (inline claims, proof length, declaration reuse, instances, private declarations) across two human-written and four AI-generated Lean libraries, benchmarked against the variation within Mathlib.",
-    "plain": "This paper looks at computer code written in Lean, a language for writing mathematical proofs that a computer can check. The authors counted simple features of the code in several libraries: some written by people, and some generated by AI. They then compared these counts against the natural variation seen within Mathlib, the main shared Lean library.",
-    "why": "As AI systems begin producing formal proof code at scale, it helps to have measurable profiles of what that code looks like. The text reports that the AI-generated libraries differ from the human-written ones in several measured ways, but it does not say what those differences mean for proof quality or usefulness. The released analysis package may let others repeat the comparison.",
+    "ai": true,
     "background": "- Lean: a programming language and proof assistant in which mathematical statements and their proofs are checked by computer.\n- Mathlib: a large, community-maintained library of formalized mathematics in Lean.\n- Inline claims: intermediate statements a proof asserts along the way (in Lean, often written with keywords like \"have\").\n- Declarations: named pieces of code such as theorems, definitions, or lemmas.\n- Instances: Lean declarations that tell the system how to automatically apply structures or operations to a type.\n- Private declarations: declarations hidden from other modules.\n- Distributional analysis: comparing the spread or shape of a statistic across many items, not just its average.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A distributional comparison of code statistics (inline claims, proof length, declaration reuse, instances, private declarations) across two human-written and four AI-generated Lean libraries, benchmarked against the variation within Mathlib.",
+    "plain": "This paper looks at computer code written in Lean, a language for writing mathematical proofs that a computer can check. The authors counted simple features of the code in several libraries: some written by people, and some generated by AI. They then compared these counts against the natural variation seen within Mathlib, the main shared Lean library.",
+    "why": "As AI systems begin producing formal proof code at scale, it helps to have measurable profiles of what that code looks like. The text reports that the AI-generated libraries differ from the human-written ones in several measured ways, but it does not say what those differences mean for proof quality or usefulness. The released analysis package may let others repeat the comparison."
    },
    "abstract": "We compare two human-written and four AI-generated Lean libraries with Mathlib through the distributions of simple statistics of their code. For each library we measure inline claims in proofs, proof length, how often each declaration is used, and design choices such as instances and private declarations, and we read each against the variation among Mathlib's own areas. The AI-generated libraries have more inline claims per theorem, longer proofs, fewer instances, and more private declarations than the human-written ones. We release the code for the analysis as a package, lean-census, at https://github.com/project-numina/lean-census.",
    "source": "arxiv"
@@ -38,12 +94,12 @@
    "primary_category": "cs.LO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A hashing-based method that detects duplicate theorems in the Lean/Mathlib library when they differ only in argument order or in how dependent-type arguments are curried, and that scales to over 200k theorems.",
-    "plain": "Large collections of mathematical proofs, like the Lean library Mathlib, sometimes contain the same result written twice in different places, which wastes upkeep effort. This paper describes a way to automatically spot such repeats even when the statements are written with their inputs in a different order or grouped differently. The authors report that the method is cheap to run and works on Mathlib's more than 200,000 theorems.",
-    "why": "Keeping a large formal math library tidy is a real maintenance problem, and the existing duplicate checker misses equivalences that need reordering or regrouping of arguments. The text does not go beyond this practical scope, so its wider impact on AI-for-math work is unclear from the excerpt alone.",
+    "ai": true,
     "background": "- Lean is a programming language and proof assistant in which mathematical theorems are written as checkable code.\n- Mathlib is the large, community-maintained Lean library of mathematics.\n- A theorem's \"type\" is its statement; two theorems can state the same thing in different notations.\n- \"Binders\" are the named inputs of a statement; permuting them means reordering those inputs.\n- Currying means turning a function of several inputs into a chain of single-input functions (and back).\n- Hashing means computing a short fingerprint of an object so that equal objects get equal fingerprints, allowing fast comparison.\n- The paper's scope is detecting equivalence up to argument order and currying, not deeper logical equivalence.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A hashing-based method that detects duplicate theorems in the Lean/Mathlib library when they differ only in argument order or in how dependent-type arguments are curried, and that scales to over 200k theorems.",
+    "plain": "Large collections of mathematical proofs, like the Lean library Mathlib, sometimes contain the same result written twice in different places, which wastes upkeep effort. This paper describes a way to automatically spot such repeats even when the statements are written with their inputs in a different order or grouped differently. The authors report that the method is cheap to run and works on Mathlib's more than 200,000 theorems.",
+    "why": "Keeping a large formal math library tidy is a real maintenance problem, and the existing duplicate checker misses equivalences that need reordering or regrouping of arguments. The text does not go beyond this practical scope, so its wider impact on AI-for-math work is unclear from the excerpt alone."
    },
    "abstract": "Like all code, Lean libraries accumulate technical debt and structural deficiencies over the course of their development. A particular concern is duplicate theorems: different parts of a big library can unwittingly contain and prove the same theorem, duplicating maintenance efforts. Tools can help detect redundancy and clean up. For instance, Mathlib's duplicate-declarations linter compares theorem types syntactically after sorting top-level binders and erasing binder information and universe levels. If detecting an equivalence requires unfolding, reorientation, or logical transformations, it escapes this comparison. In this work, we present a method to detect theorems which are equivalent with regard to argument order and currying/uncurrying of dependent types. We implement our method for Lean. By applying it to Mathlib, a library of more than 200k theorems, we demonstrate that it is computationally cheap and scalable. We discuss how our work may enhance efforts to tackle the maintenance burden of Lean libraries.",
    "source": "arxiv"

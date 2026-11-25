@@ -1,7 +1,55 @@
 {
  "slug": "fluids-plasma",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28898",
+   "title": "Formation of Multiple BGK-like Structures in the Time-asymptotic State of Collisionless Vlasov-Poisson Plasmas",
+   "url": "https://arxiv.org/abs/2611.28898",
+   "authors": [
+    "Hugo A. Carril",
+    "Jorge A. Gidi",
+    "Roberto E. Navarro",
+    "Jaime A. Araneda"
+   ],
+   "label": "arXiv:2611.28898v1",
+   "primary_category": "physics.plasm-ph",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "High-resolution Vlasov-Poisson simulations of a collisionless Maxwellian plasma show the time-asymptotic state evolving into multiple vortex-like phase-space structures, interpreted as a superposition of many BGK-like modes with nearly constant phase speeds, with power-law spectra suggesting a cascade to small scales.",
+    "plain": "This paper studies what a plasma (a gas of charged particles) settles into after a disturbance, when collisions between particles are negligible. The usual picture is two opposing wave-like patterns, but the simulations here show the plasma instead forms many swirling, vortex-like patterns that gradually fill the particle-position-and-speed map and reduce its folding into finer and finer filaments. The spectra of the electric field and the averaged particle distribution follow power laws, which the authors say is consistent with energy moving toward smaller scales.",
+    "why": "It challenges the standard description of how a collisionless plasma relaxes after a large wave is excited, which matters for plasma physics and space or fusion plasmas. The text does not establish how far the result extends beyond the simulated setup, so its wider relevance is uncertain.",
+    "background": "- Plasma: an ionized gas whose charged particles interact through their own electric fields.\n- Collisionless: particles rarely bump into each other, so their motion is governed by the collective field.\n- Vlasov-Poisson equations: the standard model that tracks the particle distribution in position and velocity together with the electric field it generates.\n- Phase space: a map of particle position against velocity; filamentation is the stretching of the distribution into thin folds.\n- BGK mode: an exact, steady wave pattern in a collisionless plasma, named after Bernstein, Greene and Kruskal.\n- Power-law spectrum: a pattern where energy at each scale falls off as a fixed power of the scale, often linked to a cascade of energy from large to small scales.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The time-asymptotic state of a finite-amplitude perturbation in a collisionless and Maxwellian plasma is typically represented as a steady state of two non-linearly superposed, counter-propagating Bernstein-Greene-Kruskal (BGK) modes. Using high-resolution Vlasov-Poisson simulations, we show that the plasma evolves self-consistently into a time-asymptotic state of multiple vortex-like structures that gradually fill the phase-space and reduce filamentation. This occurs without the need for external forcing or the presence of an energetic plasma population. This finding suggests that the time-asymptotic regime of the plasma is rather akin to a non-linear superposition of multiple BGK-like modes associated with nearly constant phase-speed waves. The electric field and the space-averaged particle distribution function exhibit a power-law broad spectrum, which is consistent with an energy cascade towards smaller scales in both position and velocity spaces.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28527",
+   "title": "Numerical Study of Flow and Cavitation in Single-Liquid Injectors with Sharp-Edged and Chamfered Orifice Inlets",
+   "url": "https://arxiv.org/abs/2611.28527",
+   "authors": [
+    "Shreyash Gulati",
+    "Sven R. Walsberg",
+    "Timothy W. Nearhood",
+    "Jeffrey D. Moore"
+   ],
+   "label": "arXiv:2611.28527v1",
+   "primary_category": "physics.flu-dyn",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A CFD study using the SST k-omega turbulence model, the ZGB cavitation model and the VOF method to simulate water flow and cavitation through sharp-edged and chamfered orifice inlets in single-liquid injectors, validated against existing flow-rate data.",
+    "plain": "This paper looks at how water squirts through tiny holes in fuel-injector-style nozzles, and when bubbles form inside the flow (cavitation). The authors ran computer simulations across a range of pressure drops and hole length-to-diameter ratios. They report that bubbles were strongest in sharp-edged holes with a moderate length at higher pressure, that a known \"hydraulic flip\" appeared in one case, and that rounding the inlet (chamfering) changed where bubbles began.",
+    "why": "Cavitation inside injector holes can affect spray quality and wear in engines and similar devices, so simulation results that match experiments may help design choices. The text does not say how far these findings extend beyond the cases studied, so the wider application is uncertain.",
+    "background": "- Cavitation: vapor bubbles that form in a liquid when local pressure drops sharply, then collapse.\n- Orifice: a small hole that a liquid is forced through, such as a nozzle opening.\n- Sharp-edged vs. chamfered inlet: a sharp corner at the hole entrance versus a beveled, angled edge.\n- Length-to-diameter ratio: how long the hole is compared with its width; here 2, 5 and 10.\n- Hydraulic flip: a flow pattern in which the liquid detaches from the hole wall and fills the orifice, which changes the spray.\n- CFD (computational fluid dynamics): simulating fluid flow on a computer.\n- Turbulence model (SST k-omega), cavitation model (ZGB), and VOF (tracking liquid and gas volumes): the computational tools used.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In the current work, the investigators used Computational Fluid Dynamics (CFD) to investigate water flow and cavitation in single-liquid injectors with sharp-edged and chamfered orifice inlets. The k-{\\omega} Shear Stress Transport (SST) turbulence model was used along with the Zwart-Gerber-Belamri (ZGB) cavitation model and the Volume of Fluid (VOF) method. The CFD predictions for the volumetric flow rate were validated against existing experimental data for the sharp-edged and chamfered orifice inlets. Pressure drops ranging between 0.07 MPa and 0.59 MPa were considered along with orifice length-to-diameter ratios of 2, 5, and 10. Strong cavitation was observed for the sharp-edged orifice inlet cases with a length-to-diameter ratio of 5 and a pressure drop larger than 0.2 MPa. A hydraulic flip was observed for the sharp-edged orifice inlet with a length-to-diameter ratio of 5 and a pressure drop of 0.59 MPa, which was consistent with the findings from the previous experimental study. Cavitation inception was observed for the chamfered orifice inlet cases with a length-to-diameter ratio of 5 and pressure drops larger than 0.2 MPa. For the sharp-edged orifice inlet with orifice length-to-diameter ratios of 2 and 10, a strong cavitation was observed inside the orifice.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28546",
    "title": "Statistical Signatures of Velocity-Space Turbulence in the Earth's Magnetosheath",
@@ -23,12 +71,12 @@
    "primary_category": "physics.plasm-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Statistical study of MMS magnetosheath ion velocity-space spectra, reporting isotropic -3/2 and anisotropic -2 populations organized by ion beta and bulk flow, with velocity-space spectral index correlated with estimated real-space energy transfer rates.",
-    "plain": "Space plasmas, the hot electrically charged gas around Earth, often have particles whose speeds are far from a settled, evenly mixed state, which stores energy that can be passed around. This paper uses spacecraft data from NASA's Magnetospheric Multiscale mission, taken in the magnetosheath (the turbulent region just outside Earth's magnetic boundary), to look for signs of energy being passed between particle speeds, not just between locations in space. The authors report two main patterns in how ion speeds are spread out, and that these patterns follow plasma conditions.",
-    "why": "If energy cascades through velocity space as well as through physical space, it could help explain how turbulence heats plasmas and divides energy between thermal and non-thermal particles. The text presents this as observational evidence and notes broad implications for space and astrophysical plasmas, but the scope of those implications is not established in the abstract.",
+    "ai": true,
     "background": "- Plasma: a gas of charged particles, common in space and stars.\n- Magnetosheath: the turbulent region of plasma between Earth's bow shock and magnetopause.\n- Velocity space: a map of how particles are distributed by their speed and direction, rather than by position.\n- Power-law spectrum: a pattern where signal strength falls off as a fixed power of scale; the index (such as -3/2 or -2) describes how steep that fall-off is.\n- Isotropic vs anisotropic: the same in all directions versus stronger in some directions than others.\n- Ion beta: the ratio of particle pressure to magnetic pressure, describing which dominates.\n- Energy cascade: energy moving from large scales to small scales, a standard idea in turbulence.\n- Magnetospheric Multiscale (MMS): a NASA mission of four spacecraft measuring near-Earth plasma.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Statistical study of MMS magnetosheath ion velocity-space spectra, reporting isotropic -3/2 and anisotropic -2 populations organized by ion beta and bulk flow, with velocity-space spectral index correlated with estimated real-space energy transfer rates.",
+    "plain": "Space plasmas, the hot electrically charged gas around Earth, often have particles whose speeds are far from a settled, evenly mixed state, which stores energy that can be passed around. This paper uses spacecraft data from NASA's Magnetospheric Multiscale mission, taken in the magnetosheath (the turbulent region just outside Earth's magnetic boundary), to look for signs of energy being passed between particle speeds, not just between locations in space. The authors report two main patterns in how ion speeds are spread out, and that these patterns follow plasma conditions.",
+    "why": "If energy cascades through velocity space as well as through physical space, it could help explain how turbulence heats plasmas and divides energy between thermal and non-thermal particles. The text presents this as observational evidence and notes broad implications for space and astrophysical plasmas, but the scope of those implications is not established in the abstract."
    },
    "abstract": "In collisionless plasmas, the particle distributions are often far from local thermodynamic equilibrium, providing a significant source of free energy that leads to complex velocity-space dynamics. In turbulent plasmas, the possibility of a cascade of the free energy in velocity space, analogous to the spatial cascade of fluid and electromagnetic field energies, has been suggested. However, observational evidence of plasma turbulence throughout phase space remains limited. Using measurements from the Magnetospheric Multiscale mission in a special campaign in the Earth's magnetosheath, we present the first statistical study of signatures consistent with velocity-space turbulence across a wide range of plasma conditions. We observe two main populations in the ion velocity-space spectrum -- an isotropic $-3/2$ spectrum and an anisotropic $-2$ spectrum organized by the ion $\\beta$ and bulk flow. In addition, the spectral power laws in the spatial and velocity domains are uncorrelated, while the velocity-space spectral index is correlated with estimated real-space energy transfer rates. These results reveal how the ion spectral properties are systematically organized by plasma conditions and related to real-space turbulence. This connection has broad implications for turbulence and the energy partition between thermal and non-thermal particles in space and astrophysical plasmas.",
    "source": "arxiv"
@@ -46,12 +94,12 @@
    "primary_category": "physics.flu-dyn",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper shows that pseudorandom angle commands to downstream vanes in a 768-fan wind tunnel can tune turbulence intensity and integral length scale, with measured spectra and downstream evolution reported for a 60% duty-cycle case.",
-    "plain": "Wind tunnels are used to test objects in moving air, and tests often need gusty air with a specific strength and size of swirls. This paper describes a fan-driven tunnel where rows of movable vanes are tilted by a control signal to create such gusts. The authors found that bigger vane tilts made the air much more turbulent, and changing the shape of the control signal changed how large the swirls were, while the strength stayed similar.",
-    "why": "Being able to set both how strong and how large the gusts are, independently, could make wind-tunnel tests more representative of real conditions such as wind over buildings or vehicles. The text does not establish how far these results transfer to other facilities or to real-world flows, so that link is uncertain.",
+    "ai": true,
     "background": "- Turbulence intensity: the size of random air speed fluctuations relative to the average speed, given as a percentage.\n- Integral length scale: a rough measure of the typical size of the swirling eddies in the flow.\n- Fan-vane wind tunnel: a grid of fans whose output is steered by downstream vanes that can be tilted.\n- Pseudorandom signal: a control signal that looks random but is generated by a fixed rule, so it can be repeated exactly.\n- Power spectrum: a chart showing how much of the fluctuation energy sits at each frequency; low frequencies correspond to large, slow swirls.\n- Hot-wire measurement: a very thin heated wire whose cooling by passing air is used to measure air speed.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper shows that pseudorandom angle commands to downstream vanes in a 768-fan wind tunnel can tune turbulence intensity and integral length scale, with measured spectra and downstream evolution reported for a 60% duty-cycle case.",
+    "plain": "Wind tunnels are used to test objects in moving air, and tests often need gusty air with a specific strength and size of swirls. This paper describes a fan-driven tunnel where rows of movable vanes are tilted by a control signal to create such gusts. The authors found that bigger vane tilts made the air much more turbulent, and changing the shape of the control signal changed how large the swirls were, while the strength stayed similar.",
+    "why": "Being able to set both how strong and how large the gusts are, independently, could make wind-tunnel tests more representative of real conditions such as wind over buildings or vehicles. The text does not establish how far these results transfer to other facilities or to real-world flows, so that link is uncertain."
    },
    "abstract": "Wind-tunnel experiments often require inflows with specific combinations of turbulence intensity and integral length scale because both can influence the measured response. To broaden the range of attainable inflows, this study uses pseudorandom vane excitation to generate large-scale turbulence and examines how both quantities vary with the amplitude and spectral shape of the vane-angle command. In each test, the 15 servo-driven vanes downstream of a 768-fan array received the same angle command, and all fans operated at a common, constant duty cycle. Hot-wire measurements covered twenty heights and selected spanwise and downstream positions. At a fan-control duty cycle of 60%, increasing vane angular amplitude raised profile-mean turbulence intensity from 7.3% to 31.8% under periodic forcing and from 6.2% to 23.0% under pseudorandom forcing. With the normalized pseudorandom command spectrum held fixed, larger angular amplitudes increased the low-frequency share of velocity variance, accompanied by longer correlation times and larger integral scales. At a root-mean-square angular amplitude of 15 degrees, changing the command spectrum yielded profile-mean integral length scales of 0.88-1.67 m at similar turbulence intensities. The principal features of the velocity spectra persisted between 2 and 4 m downstream, while integral scales continued to change. Both forcing types exhibited middle-region minima in turbulence intensity and integral scale. Regional analysis of a representative pseudorandom case linked these minima to weaker low-frequency fluctuations and shorter correlation times. These findings provide a basis for selecting vane inputs according to the turbulence-intensity and integral-scale requirements of the intended test region.",
    "source": "arxiv"

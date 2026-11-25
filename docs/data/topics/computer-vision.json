@@ -1,7 +1,61 @@
 {
  "slug": "computer-vision",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.31237",
+   "title": "Let Vision-Language Models Generate Images through Their Representations",
+   "url": "https://arxiv.org/abs/2611.31237",
+   "authors": [
+    "JB Kim",
+    "Byungwoo Jeon",
+    "Kyungmin Lee",
+    "Hyeonmo Kang",
+    "Cheonbok Park",
+    "Shinyoung Joo",
+    "Jinwoo Shin",
+    "Jeonghoon Kim"
+   ],
+   "label": "arXiv:2611.31237v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Proposes Integral, a method that turns a pretrained vision-language model into a unified model for both image understanding and image generation by building a shared visual representation space, with a lightweight generative branch attached block by block.",
+    "plain": "Researchers want one AI model that can both understand pictures and create new ones, rather than two separate systems. This paper takes an existing model that already understands images and text and adapts it so the same internal visual representations can also be used to generate images. The authors report that sharing these representations between understanding and generation helped image generation learn better than using a separate representation, even though reconstruction quality was comparable.",
+    "why": "Combining understanding and generation in one model is an active goal in the field, and the paper's controlled comparison offers a specific reason, shared representations, that may help generative learning. The text does not establish how it compares with other unified models on standard benchmarks, so its wider significance is not yet clear.",
+    "background": "- Vision-language model: an AI system trained on images paired with text, able to describe or answer questions about pictures.\n- Unified multimodal model: a single model that both reads images and produces them.\n- Visual representation: the internal numerical description a model builds of an image, used as its working \"language\" for pictures.\n- Frozen encoder: a part of the model whose learned weights are kept fixed during further training.\n- Generative learning: training a model to produce new content, such as images, rather than only analyze it.\n- Mixture-of-Transformers (MoT): an architecture where separate transformer streams handle different tasks and share information at certain points; here the generative stream exchanges information with the main model only at block boundaries.\n- Reconstruction fidelity: how accurately an image can be rebuilt from its representation.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this knowledge effectively accessible to visual generation remains nontrivial. We find that a central challenge lies in the heterogeneous visual representations used for understanding and generation. To address this challenge, we introduce Integral, which converts a pretrained vision-language model into a unified multimodal model by constructing a shared visual representation space across the two capabilities. Integral implements this design through two complementary components. Abstraction Fusion constructs shared visual tokens by aggregating hierarchical representations from the frozen vision encoder, while Block-wise MoT introduces a lightweight generative stream that interacts with the vision-language model only at block boundaries. Our approach effectively preserves the pretrained understanding capability while extending it to strong visual generation. Controlled comparisons further demonstrate that sharing visual representations between understanding and generation substantially improves generative learning compared with using a separate visual representation space, despite comparable reconstruction fidelity. These results suggest that representations learned by pretrained vision-language models already provide an effective foundation for visual generation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28608",
+   "title": "VUOD: A Versatile Unsupervised Outlier Detection Framework for Natural, Industrial, Medical Images and Beyond",
+   "url": "https://arxiv.org/abs/2611.28608",
+   "authors": [
+    "Zhonghang Liu",
+    "Siyuan Chen",
+    "Jingwen Yu",
+    "Changshuo Wang",
+    "Kunyang Li",
+    "Jiangbo Lu"
+   ],
+   "label": "arXiv:2611.28608v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "VUOD is an unsupervised outlier detection framework that improves feature discriminativeness using intrinsic distribution priors, aiming to work beyond natural images in industrial and medical settings, and is reported to be plug-and-play in tasks such as image classification and 3D reconstruction.",
+    "plain": "This paper is about spotting images that look unusual without being shown examples of what \"unusual\" means. Most existing tools were built for ordinary photos and work poorly on factory inspection or medical scans. The authors propose a general framework that sharpens the image features the detector uses, and report that it performs best across 14 benchmark datasets in three domains.",
+    "why": "Spotting defective parts or abnormal scans without labeled faults is useful in quality control and healthcare, so a method that transfers beyond natural photos could matter there. The text also claims it can be added to other vision systems to make them more robust, but the abstract gives no details on how much that helps, so the practical value is still unclear.",
+    "background": "- Outlier (anomaly) detection: flagging inputs that differ from the normal data the system learned from, without labeled anomalies.\n- Unsupervised: learning from normal examples only, with no labels marking which items are faulty.\n- Feature extractor: a model, often pre-trained on large photo collections, that converts an image into a list of numbers describing it.\n- Frozen pre-trained features: reusing such a model without changing its weights; the paper argues this limits performance on non-photo images.\n- Feature discriminativeness: how well the features separate normal from unusual images.\n- Distribution priors: assumptions about the statistical shape of the data, used here to guide learning.\n- Plug-and-play: a component that can be added to an existing system without redesigning it.\n- Benchmark datasets: standard public collections used to compare methods fairly.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Unsupervised outlier detection that automatically identifies whether visual systems involve anomalous images is a significant research topic. However, most approaches are limited to natural images because they rely on frozen and pre-trained feature extractors. So that their performance cannot be maintained in practical scenarios, especially for industrial inspection and medical imaging. In this work, we first revisit this task and then introduce a versatile unsupervised outlier detection framework to enrich the application domains. The core idea of this framework is to improve feature discriminativess via exploiting intrinsic distribution priors. Evaluated on 3 domains and 14 benchmark datasets, our proposed solution achieves state-of-the-art performance and significantly outperforms existing methods. More importantly, we show its plug-and-play property that can be integrated into diverse visual applications to improve their robustness, such as image classification and 3D reconstruction.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29934",
    "title": "Benchmarking VLM Medical Hallucination across 5 Modalities",
@@ -14,12 +68,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Introduces Multi-Med, a 1,000-item medical hallucination benchmark spanning five imaging modalities, and uses it to evaluate 10 vision-language models across four question categories.",
-    "plain": "Vision-language models are AI systems that answer questions about images, and they sometimes make up details that the picture does not show. This paper builds a test set of 1,000 medical image and question pairs covering five kinds of medical imaging, then checks how 10 popular models perform. The authors report that accuracy varies a lot by imaging type and question type, while the top models are not clearly different from one another statistically.",
-    "why": "Medical AI tools that describe scans can be wrong in ways that matter, so knowing where they fail is useful for deciding where they can be trusted. The text does not say how the benchmark will be used beyond this study, so its wider impact is unclear.",
+    "ai": true,
     "background": "- Vision-language model (VLM): an AI system that takes both an image and a text question and produces a text answer.\n- Hallucination: when an AI states something confidently that is not supported by its input, such as describing a finding that is absent from a scan.\n- Benchmark: a standard set of test questions used to compare systems fairly.\n- Imaging modality: the type of medical image, such as X-ray, MRI, CT, or ultrasound.\n- Statistical significance: whether a difference in scores is likely real rather than due to chance in a limited test.\n- The abstract does not name the five modalities or the four question categories, so those details are not covered here.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "Introduces Multi-Med, a 1,000-item medical hallucination benchmark spanning five imaging modalities, and uses it to evaluate 10 vision-language models across four question categories.",
+    "plain": "Vision-language models are AI systems that answer questions about images, and they sometimes make up details that the picture does not show. This paper builds a test set of 1,000 medical image and question pairs covering five kinds of medical imaging, then checks how 10 popular models perform. The authors report that accuracy varies a lot by imaging type and question type, while the top models are not clearly different from one another statistically.",
+    "why": "Medical AI tools that describe scans can be wrong in ways that matter, so knowing where they fail is useful for deciding where they can be trusted. The text does not say how the benchmark will be used beyond this study, so its wider impact is unclear."
    },
    "abstract": "Hallucinations in Vision-Language Models (VLMs) within the medical domain remain a difficult and not well-understood problem, and it is still unclear where these models break down. Although several benchmarks targeting medical hallucination have been introduced, they often lack broad coverage across different medical imaging modalities. We introduce Multi-Med, a medical hallucination benchmark containing 1,000 image-question pairs spanning five distinct modalities. Using this benchmark, we perform an in-depth experimental study of 10 widely used VLMs across five modalities and four question categories. Our findings indicate that model performance differs substantially depending on the imaging modality and question type, and that the differences among the best-performing models are not statistically significant.",
    "source": "arxiv"
@@ -50,12 +104,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "SVUBench is a benchmark of about 12,000 questions across ten tasks for testing whether video models can proactively respond to unfolding streaming video, using a new Proactive Response Score that accounts for correctness, timeliness, historical consistency, and content quality.",
-    "plain": "This paper introduces a test set for AI systems that watch live or streaming video and must speak up at the right moment, rather than only answering questions after a clip has finished. The benchmark has over 12,000 questions and about 63,000 answer points, built with help from AI models and checked by humans. The authors also propose a scoring method that judges not just whether answers are right, but whether they arrive on time and stay consistent with earlier events.",
-    "why": "Streaming video assistants, such as those that monitor a camera feed and alert a user, need to act in real time, and standard benchmarks do not measure that well. The paper reports that extensive experiments reveal strengths and limitations of existing models, but the text does not give specific results, so its practical impact is not yet clear from this summary alone.",
+    "ai": true,
     "background": "- Streaming video: video that arrives continuously, so the model sees only the past and present, not the full clip.\n- Proactive response: the model decides on its own when to answer, rather than waiting for a question.\n- Benchmark: a standardized test set used to compare models fairly.\n- Answer window: the time span during which an answer counts as on time.\n- Historical recovery: recalling relevant earlier moments in the video to answer correctly.\n- Duration tiers: the test groups videos by length to see how performance changes as videos get longer.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "SVUBench is a benchmark of about 12,000 questions across ten tasks for testing whether video models can proactively respond to unfolding streaming video, using a new Proactive Response Score that accounts for correctness, timeliness, historical consistency, and content quality.",
+    "plain": "This paper introduces a test set for AI systems that watch live or streaming video and must speak up at the right moment, rather than only answering questions after a clip has finished. The benchmark has over 12,000 questions and about 63,000 answer points, built with help from AI models and checked by humans. The authors also propose a scoring method that judges not just whether answers are right, but whether they arrive on time and stay consistent with earlier events.",
+    "why": "Streaming video assistants, such as those that monitor a camera feed and alert a user, need to act in real time, and standard benchmarks do not measure that well. The paper reports that extensive experiments reveal strengths and limitations of existing models, but the text does not give specific results, so its practical impact is not yet clear from this summary alone."
    },
    "abstract": "Proactive streaming video understanding requires models to interpret unfolding events, respond timely, and retrieve relevant historical evidence. To systematically evaluate these capabilities, we introduce SVUBench, a comprehensive proactive streaming video benchmark comprising 12,131 questions and 62,881 answer points across ten proactive tasks spanning Perception, Understanding, and Reasoning. Constructed through model-assisted annotation and human verification, SVUBench introduces two complementary interaction modes. Basic evaluates sustained proactive responses from video onset, while Trajectory requires historical recovery and continuous response updates following task activation during streaming. A Duration-Scaled Challenge further evaluates these capabilities across four video duration tiers. We develop the Proactive Response Score (PRS) with task-adaptive answer windows to jointly assess answer correctness, response timeliness, historical consistency, and content quality. Extensive experiments and analysis reveal the strengths and limitations of existing models, highlighting directions for advancing proactive streaming video understanding.",
    "source": "arxiv"

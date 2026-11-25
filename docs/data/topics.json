@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "language": "en",
  "fields": [
   "Mathematics",
@@ -671,7 +671,7 @@
    "categories": [
     "pharmacology and toxicology"
    ],
-   "new_today": 1
+   "new_today": 0
   },
   {
    "slug": "biology",
@@ -857,7 +857,7 @@
    "categories": [
     "oncology"
    ],
-   "new_today": 2
+   "new_today": 1
   },
   {
    "slug": "health-informatics",

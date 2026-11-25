@@ -1,7 +1,49 @@
 {
  "slug": "complex-analysis",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.28693",
+   "title": "An extension of Janowski functions with applications",
+   "url": "https://arxiv.org/abs/2611.28693",
+   "authors": [
+    "Kunle Oladeji Babalola"
+   ],
+   "label": "arXiv:2611.28693v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper extends Janowski functions, which are classes of analytic functions subordinate to a Möbius-type function (1+az)/(1+bz), by allowing the parameters a and b to be complex numbers rather than real ones with -1 ≤ b < a ≤ 1, and gives some applications.",
+    "plain": "The paper studies a family of smooth, well-behaved functions of a complex variable that are controlled by two constants. Until now those constants were restricted to real numbers in a certain range. The authors allow the constants to be complex numbers instead and explore what follows from this wider setting, with some applications.",
+    "why": "The text gives only the setup and does not state specific results, so its significance is hard to judge from this excerpt. It belongs to geometric function theory, a field that studies how analytic functions map regions of the complex plane, and the applications may be relevant to that field.",
+    "background": "- Analytic (regular) function: a function of a complex variable z that is differentiable throughout a region, with a power series expansion.\n- Subordination: f is subordinate to g if f(z) = g(w(z)) for some analytic self-map w of the unit disk with w(0)=0; roughly, f takes values in the image region of g.\n- Janowski functions: analytic functions p with p(0)=1 that are subordinate to the Möbius map (1+az)/(1+bz).\n- Möbius map: a ratio of linear expressions in z, which maps circles and lines to circles and lines.\n- The paper's change: the constants a and b are moved from real numbers to complex numbers.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Janowski functions are regular functions of the form $p(z)=1+p_1z+\\cdots$, which are subordinate to $L_0(a,b:z)=(1+az)/(1+bz)$ for real numbers $a,b$ such that $-1\\leq b<a\\leq 1$. In this paper, we expand the space of the constants, $a$ and $b$, of the superordinate function, $L_0(a,b:z)$, to a larger set of complex numbers and provide some applications.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.30985",
+   "title": "Sharpness of the Brjuno Condition for Hyperbolic Bishop Surfaces",
+   "url": "https://arxiv.org/abs/2611.30985",
+   "authors": [
+    "Dijia Chen"
+   ],
+   "label": "arXiv:2611.30985v1",
+   "primary_category": "math.CV",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves a conjecture of Gong and Stolovitch: for a unimodular, non-root-of-unity, non-Brjuno parameter μ, there is a real-analytic surface in C^2 with Moser–Webster invariant μ that is formally but not holomorphically equivalent to the Bishop quadric Q_γ.",
+    "plain": "This is about the local shape of smooth surfaces in two-dimensional complex space, specifically how they can be matched to a simple reference surface (a \"Bishop quadric\") by changing coordinates. The question is whether a surface can be matched on the level of infinite power series but not by any genuinely smooth, convergent change of coordinates. The paper shows that such a surface exists for a certain class of rotation-type parameters, confirming a guess made by Gong and Stolovitch.",
+    "why": "It sharpens our understanding of when local geometric normal forms can be realized convergently, and it shows that an arithmetic condition (the Brjuno condition on μ) is exactly the right dividing line in this setting. The text does not say more about wider applications, so the broader connections are unclear from this excerpt alone.",
+    "background": "- Complex plane C and complex two-dimensional space C^2 (pairs of complex numbers).\n- A real-analytic surface: a real-dimension-based surface that locally has convergent power series description.\n- Bishop quadric: a standard model quadratic surface in C^2 with a parameter γ.\n- Formal vs. holomorphic equivalence: two surfaces match via an infinite power series (formal) versus a convergent, genuine change of coordinates (holomorphic).\n- Moser–Webster invariant: a number μ on the unit circle that measures the local rotation behaviour of the surface at a special point.\n- Root of unity: a number whose power equals 1; these are excluded here.\n- Brjuno condition: a number-theoretic condition on how well μ can be approximated by rationals; it governs convergence of certain iterative procedures.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $\\mu \\in \\mathbb{C}$ satisfy $|\\mu|=1$, and assume that $\\mu$ is not a root of unity and is not Brjuno. Let $Q_\\gamma$ denote the Bishop quadric with $\\gamma = 1/\\sqrt{2+\\mu+\\mu^{-1}} > 1/2$. Gong and Stolovitch conjectured that there exists a real-analytic surface in $\\mathbb{C}^2$ with Moser--Webster invariant $\\mu$ that is formally but not holomorphically equivalent to $Q_\\gamma$. We prove this conjecture.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.30403",
    "title": "Quantum walks and conformal mappings",
@@ -16,12 +58,12 @@
    "primary_category": "math-ph",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper derives uniform asymptotic formulas for the wave function of the discrete quantum walk (Feynman checkers, six-vertex model with special complex weights) across the whole space-time plane, using conformal mappings to handle Airy- and gamma-function transitions.",
-    "plain": "The paper studies a simple discrete model of a quantum particle, an electron hopping step by step along a line, and asks how its wave function behaves at every position and time. It finds the expected change between wavy and fading behaviour, described by the Airy function, and a second change near the speed of light, described by the gamma function. The authors prove two general theorems giving single formulas valid across these transitions, using a change of coordinates in the complex plane.",
-    "why": "Exact, uniform formulas that work across transition regions are useful tools for quantum walks, which appear in quantum computing and physics models, and the authors say the methods apply to other situations. The text does not establish wider impact beyond this, so its reach outside this setting is uncertain.",
+    "ai": true,
     "background": "- Quantum walk: the discrete, step-by-step analogue of a quantum particle moving randomly, with amplitudes rather than probabilities.\n- Wave function: a complex-valued function whose squared size gives the probability of finding the particle at a position.\n- Asymptotic formula: an approximation that becomes accurate for large distances or times.\n- Airy function: a special function describing the boundary between oscillating and exponentially decaying behaviour.\n- Gamma function: a standard special function generalising factorials, here governing behaviour near the maximal speed.\n- Conformal mapping: a smooth change of variables in the complex plane that preserves angles, used to simplify integrals.\n- Six-vertex model: a lattice model from statistical physics, here with special complex weights.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives uniform asymptotic formulas for the wave function of the discrete quantum walk (Feynman checkers, six-vertex model with special complex weights) across the whole space-time plane, using conformal mappings to handle Airy- and gamma-function transitions.",
+    "plain": "The paper studies a simple discrete model of a quantum particle, an electron hopping step by step along a line, and asks how its wave function behaves at every position and time. It finds the expected change between wavy and fading behaviour, described by the Airy function, and a second change near the speed of light, described by the gamma function. The authors prove two general theorems giving single formulas valid across these transitions, using a change of coordinates in the complex plane.",
+    "why": "Exact, uniform formulas that work across transition regions are useful tools for quantum walks, which appear in quantum computing and physics models, and the authors say the methods apply to other situations. The text does not establish wider impact beyond this, so its reach outside this setting is uncertain."
    },
    "abstract": "We study the most elementary discrete model of an electron moving along a line, known as Feynman checkers, quantum walk, or the six-vertex model with special complex weights, and provide a uniform asymptotic formula for the wave function in the whole xt-plane. In addition to the well-known appearance of the Airy function that describes the transition between the oscillating and exponentially decaying regimes, we observe a second transition governed by the gamma function when the electron speed approaches the speed of light. We prove two general theorems producing uniform asymptotic formulae involving the Airy and gamma functions, using conformal mappings associated with the underlying integral representations. They are applicable in several other situations as well.",
    "source": "arxiv"
@@ -37,12 +79,12 @@
    "primary_category": "math.CV",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper proves a central limit theorem for the Green energy, and for the logarithmic energy, of Bergman determinantal point processes on compact Riemann surfaces and complex manifolds, using local Bergman kernel asymptotics and a cumulant expansion.",
-    "plain": "The paper studies random arrangements of N points on a curved complex surface, where the points are shaped by a probabilistic rule that discourages them from clustering. For a measure of how the points interact, called the Green energy, it gives the typical size of that quantity and its spread. It then shows that, once N is large, the fluctuations of this energy behave like the familiar bell-shaped (Gaussian) curve.",
-    "why": "Central limit theorems tell us when random fluctuations become predictable, which matters for understanding how well such random point models can be tested or simulated. The text does not say what wider applications it has, so its broader significance is uncertain from this excerpt alone.",
+    "ai": true,
     "background": "- Point process: a random collection of points, here N points on a surface.\n- Determinantal point process: a random point model where correlations are governed by a kernel (a function describing how strongly points relate), which tends to spread points apart.\n- Bergman kernel and positive line bundle: geometric objects on complex surfaces that define the point model.\n- Riemann surface: a one-dimensional complex surface, such as a sphere or torus.\n- Green function and energy: the Green function measures influence between two points; the energy sums this over all pairs of points.\n- U-statistic: an average over all pairs of sample points.\n- Cumulants: summary quantities of a random variable; a central limit theorem is shown by controlling them.\n- Central limit theorem: the statement that suitably normalized sums of random quantities approach a bell curve.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves a central limit theorem for the Green energy, and for the logarithmic energy, of Bergman determinantal point processes on compact Riemann surfaces and complex manifolds, using local Bergman kernel asymptotics and a cumulant expansion.",
+    "plain": "The paper studies random arrangements of N points on a curved complex surface, where the points are shaped by a probabilistic rule that discourages them from clustering. For a measure of how the points interact, called the Green energy, it gives the typical size of that quantity and its spread. It then shows that, once N is large, the fluctuations of this energy behave like the familiar bell-shaped (Gaussian) curve.",
+    "why": "Central limit theorems tell us when random fluctuations become predictable, which matters for understanding how well such random point models can be tested or simulated. The text does not say what wider applications it has, so its broader significance is uncertain from this excerpt alone."
    },
    "abstract": "We study the Bergman determinantal point process associated with a positive line bundle on a compact Riemann surface. Consider the U-statistic given by the Green function, called the Green energy. For a configuration of $N$ points, the expectation of Green energy is $\\frac12 N\\log N+O(N)$, and the variance is $(\\log 2-\\pi^2/24)N+O(\\log^2 N)$. We prove a central limit theorem for the Green energy by combining local Bergman kernel asymptotics with an expansion for the cumulants. A central limit theorem also holds for the logarithmic energy of Bergman determinantal point process on complex manifolds.",
    "source": "arxiv"

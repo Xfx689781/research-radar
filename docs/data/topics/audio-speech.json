@@ -1,7 +1,60 @@
 {
  "slug": "audio-speech",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.29226",
+   "title": "Tenlai-TTS 2.0: Continuous-Representation LLM-Based TTS System with End-to-End Training",
+   "url": "https://arxiv.org/abs/2611.29226",
+   "authors": [
+    "Changfeng Gao",
+    "Yong Ren",
+    "Jun Yuan",
+    "Zhengkun Tian",
+    "Ye Bai",
+    "Zhao You",
+    "Shidong Shang"
+   ],
+   "label": "arXiv:2611.29226v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Tenlai-TTS 2.0 jointly trains a speech encoder with a Gaussian bottleneck, an LLM with an autoregressive diffusion head, a flow-matching mel decoder, and a recognition model, so that continuous speech latents are learned to suit autoregressive generation rather than frozen beforehand.",
+    "plain": "This paper is about making computers speak from text using a large language model that predicts continuous sound features instead of discrete tokens. Earlier systems learned the sound representation first and then froze it, which can leave it poorly suited for the language model to predict. The authors train the whole system end to end, and report lower error rates on the Seed-TTS-eval benchmark, such as word error rate of 1.08% on English after reinforcement learning.",
+    "why": "It targets a specific trade-off in speech synthesis: keeping enough acoustic detail for high-fidelity audio while keeping the representation predictable for a language model. The reported gains are measured on one benchmark against the authors' own joint-training baseline, so how well they generalize beyond it is not established by this text.",
+    "background": "- Text-to-speech (TTS): software that turns written text into spoken audio.\n- Autoregressive model: a model that generates output one piece at a time, each piece depending on earlier ones.\n- Latent space: a compressed internal representation of the audio.\n- Continuous vs. discrete tokens: continuous values keep fine detail, while discrete tokens round values to a fixed set of symbols, losing some information.\n- Gaussian bottleneck: a narrow channel that adds noise and limits how much information passes through, keeping the representation regularized.\n- Flow matching: a training method for generating data, here used to produce mel-spectrograms (visual-like maps of sound frequency over time).\n- Character/word error rate (CER/WER): share of words or characters a speech recognizer gets wrong on the synthesized audio; lower is better.\n- Speaker similarity: how closely the synthesized voice matches the target speaker.\n- Reinforcement learning: training that adjusts a model based on rewards for good outputs.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Autoregressive text-to-speech (TTS) with continuous speech latents avoids quantization-induced information loss, but typically relies on a latent space that is learned separately and then frozen before language-model training. Such a space must satisfy two competing requirements: it must retain enough acoustic detail for high-fidelity reconstruction, yet be sufficiently structured and regularized to support autoregressive prediction by a language model. We present Tenlai-TTS 2.0, which learns continuous speech representations through end-to-end training to balance acoustic detail with autoregressive predictability. The model comprises a speech encoder with a capacity-controlled Gaussian bottleneck, a large language model (LLM) with an autoregressive diffusion transformer (AR-DiT) head, a flow-matching (FM) mel-spectrogram decoder, and a multi-task recognition model (RM). With energy normalization and fixed-variance Gaussian noise, the bottleneck has a closed-form upper bound on its information rate. Through joint optimization with reconstruction, recognition, and next-patch prediction objectives, we learn continuous speech representations that suit all three tasks and train the LLM and AR-DiT for autoregressive generation. The LLM and AR-DiT are further optimized using differentiable reconstruction and recognition feedback on their predicted latents through the FM decoder and RM. On Seed-TTS-eval, this feedback-based optimization reduces character error rate (CER) from 0.82% to 0.74% on test-zh and from 8.32% to 7.08% on test-hard-zh, and word error rate (WER) from 1.32% to 1.27% on test-en, compared with joint training alone. Subsequent reinforcement learning further reduces CER to 6.29% on test-hard-zh and WER to 1.08% on test-en, with speaker similarity scores of 0.811, 0.766, and 0.784 on test-zh, test-en, and test-hard-zh, respectively.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31055",
+   "title": "CAST: A Deployed Speech-to-Text Cascade for Closed Captioning of Entertainment Television",
+   "url": "https://arxiv.org/abs/2611.31055",
+   "authors": [
+    "Aditya Mishra",
+    "Thanish Bolla",
+    "Bidisha Sharma",
+    "Balaji Pitchaikannu",
+    "Surbhi Sinha",
+    "Anup Kotalwar"
+   ],
+   "label": "arXiv:2611.31055v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "CAST is a deployed speech-to-text pipeline for closed captioning of long-form entertainment TV that wraps a frozen Whisper large-v3 model with hierarchical voice activity detection, language identification, lyrics routing, and hallucination detection and repair, evaluated against a WhisperX baseline on in-house assets and public datasets.",
+    "plain": "Automatic captioning of TV shows is hard because scenes often mix music, sound effects, accents, people talking over each other, and background noise. This paper describes a captioning system, called CAST, built around an existing speech recognition model, with extra steps that decide which parts of the audio to transcribe and fix errors the model invents. On 100 internal TV assets totaling about 60 hours, the authors report lower word error and fewer subtitle edits per hour than the WhisperX baseline, and say the system went into production use in late August 2026.",
+    "why": "Captioning long entertainment video is a practical problem for broadcasters and streaming services, and the paper focuses on the pipeline around the recognition model (segmentation, filtering, error repair) rather than on the model itself. The evidence is limited to the authors' in-house assets plus a deletion-rate gain on public data, so the results should be read as a single deployment report rather than a general benchmark.",
+    "background": "- Automatic speech recognition (ASR): software that turns spoken audio into text.\n- Whisper: a large open speech recognition model; \"frozen\" means its internal weights were not retrained here.\n- Voice activity detection (VAD): a step that finds which parts of audio contain speech and which are silence or noise.\n- Hallucination in autoregressive decoders: the model writes plausible but false text, or repeats phrases, when fed near-silent or unclear audio.\n- Word error rate (WER): the share of words wrongly transcribed; lower is better.\n- Subtitle edit rate: how much human editing a caption file needs, measured per hour of video here.\n- Deletion rate: the share of spoken words the system leaves out entirely.\n- Closed captioning (CC): on-screen text for viewers who are deaf or hard of hearing, or for muted viewing.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Despite rapid progress in automatic speech recognition (ASR), caption generation for long-form entertainment video remains challenging for content dense in music and effects, rich in accents, crosstalk, and noise. The transcript quality depends on segmentation and surrounding modules as much as the acoustic model. A single pass voice activity detection (VAD) can miss faint, low-energy voice while forwarding near-silent segments that induce hallucination and repetition in an autoregressive decoder. These competing errors motivate a hierarchical VAD that revisits rejected segments under semantic and acoustic retention checks. We present Captioning ASR Stack for Television (CAST), an integrated speech-to-text pipeline for closed captioning (CC) combining frozen Whisper large-v3 with segmentation, language identification, lyrics routing, and targeted hallucination detection and repair on a single NVIDIA L4 GPU. On 100 in-house assets spanning 60.46 hours, CAST reduces normalized WER from 6.99% to 5.36% and subtitle edit rate from 254.2 to 221.9 min/hour against the WhisperX pipeline, and improves deletion rate by 11% on public datasets. We also present the behavior of each stage in the pipeline. CAST entered the production speech-to-text (STT) stage of our CC pipeline in late August 2026; we report the evaluation evidence and path to full-scale operation.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.28290",
    "title": "Preserving Prosody in Speaker Anonymization",
@@ -14,12 +67,12 @@
    "primary_category": "eess.AS",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "This paper plugs a pretrained, privacy-preserving prosody encoder into a speech synthesis model so that speaker anonymization keeps intended prosody (rhythm, pitch, emphasis) while hiding the speaker's identity.",
-    "plain": "Voice anonymization tries to hide who is speaking by changing the voice, but the way someone's pitch and timing carry meaning is also tied to their identity, so changing the voice can also scramble that meaning. This work conditions the synthesized speech on prosody features taken from a privacy-preserving encoder, and reports that listeners more reliably perceive the intended prosodic meaning while anonymization stays competitive with earlier methods.",
-    "why": "Speech tools that hide identity are useful for privacy in voice assistants and recordings, and losing emotional or emphasis cues would make them less usable. The text reports only a modest, competitive comparison with prior work rather than a clear leap, so its practical impact is best judged from the full results.",
+    "ai": true,
     "background": "- Speaker anonymization: altering recorded speech so a listener or machine cannot tell who the speaker is, while keeping the words understandable.\n- Prosody: the melody, rhythm, stress and pacing of speech, which signal emotion, questions, and emphasis.\n- Prosody encoder: a neural network that turns prosody into a compact numerical representation.\n- Speech synthesis model: a system that generates audio from a representation such as text or features.\n- Privacy-preserving encoder: one trained so the representation keeps useful prosody but drops identity-revealing information.\n- Tradeoff: improving privacy often costs some naturalness or expressiveness, and the paper aims to reduce that cost.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper plugs a pretrained, privacy-preserving prosody encoder into a speech synthesis model so that speaker anonymization keeps intended prosody (rhythm, pitch, emphasis) while hiding the speaker's identity.",
+    "plain": "Voice anonymization tries to hide who is speaking by changing the voice, but the way someone's pitch and timing carry meaning is also tied to their identity, so changing the voice can also scramble that meaning. This work conditions the synthesized speech on prosody features taken from a privacy-preserving encoder, and reports that listeners more reliably perceive the intended prosodic meaning while anonymization stays competitive with earlier methods.",
+    "why": "Speech tools that hide identity are useful for privacy in voice assistants and recordings, and losing emotional or emphasis cues would make them less usable. The text reports only a modest, competitive comparison with prior work rather than a clear leap, so its practical impact is best judged from the full results."
    },
    "abstract": "Effective prosody modeling is essential in natural speech generation applications, but complications arise in speaker anonymization, since speaker attributes are present in acoustic correlates of prosody. Our work aims to improve previous reported tradeoffs between effective speaker obfuscation and preservation of prosodic content. To this end, we integrate an existing pretrained privacy-preserving prosody encoder into a speech synthesis model, enabling prosody-preserving speaker anonymization. By conditioning speech generation on prosody features, we find that human subjects more reliably perceive intended prosodic meaning, while anonymization performance is competitive with previous work.",
    "source": "arxiv"
@@ -40,12 +93,12 @@
    "primary_category": "eess.AS",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "A cross-language study of prosody (pitch, intensity, timing) in emotional speech in Chinese, German and English, comparing human listeners with self-supervised speech models on emotion recognition and emotion diarization.",
-    "plain": "This paper asks how emotion shows up in the voice across three languages: Chinese, German and English. The authors measured features like loudness and pitch, and compared how well people and AI speech models could recognize the emotion being expressed. They report that humans did better than the AI models on cross-language tasks, but that the models improved considerably after a targeted adjustment (fine-tuning) and came close to native human listeners.",
-    "why": "Emotion recognition that works across languages matters for voice assistants, call-center analysis and health tools that listen to speech. The text suggests that certain features, such as intensity and pitch, may be shared across languages, but the abstract alone does not show how far these findings generalize, so this is best read as a preliminary result.",
+    "ai": true,
     "background": "- Prosody: the rhythm, pitch, loudness and timing of speech, separate from the words themselves.\n- ANOVA and mixed-effects models: standard statistical tests for comparing group differences while accounting for repeated measurements from the same speakers or items.\n- Self-supervised learning (SSL): AI models pretrained on large amounts of unlabeled audio, which can then be adapted to specific tasks.\n- Fine-tuning: a short extra round of training on labeled data to adapt a pretrained model to a new task.\n- Speech emotion recognition (SER): labeling the emotion of an utterance as a whole.\n- Speech emotion diarization (SED): labeling when emotions change within a longer recording, analogous to speaker diarization (\"who spoke when\").\n- Transfer learning: using knowledge learned in one setting (here, mostly one language) in another.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A cross-language study of prosody (pitch, intensity, timing) in emotional speech in Chinese, German and English, comparing human listeners with self-supervised speech models on emotion recognition and emotion diarization.",
+    "plain": "This paper asks how emotion shows up in the voice across three languages: Chinese, German and English. The authors measured features like loudness and pitch, and compared how well people and AI speech models could recognize the emotion being expressed. They report that humans did better than the AI models on cross-language tasks, but that the models improved considerably after a targeted adjustment (fine-tuning) and came close to native human listeners.",
+    "why": "Emotion recognition that works across languages matters for voice assistants, call-center analysis and health tools that listen to speech. The text suggests that certain features, such as intensity and pitch, may be shared across languages, but the abstract alone does not show how far these findings generalize, so this is best read as a preliminary result."
    },
    "abstract": "This study investigates the prosodic patterns of emotional speech across Chinese (CN), German (DE), and English (EN), with a focus on acoustic characteristics. Using ANOVA and mixed-effects modeling, we reveal cross-linguistic and emotion-specific prosodic patterns. A comparative analysis of Speech Emotion Recognition (SER) performance demonstrates that humans outperform Self-Supervised Learning (SSL) models in cross-lingual tasks, while SSL models show significant improvement in cross-lingual SER through an efficient fine-tuning process, achieving performance competitive with native human speakers. The study also analyzes the performance of Speech Emotion Diarization (SED) between models and humans, highlighting the effectiveness of SSL models in transfer learning scenarios. These findings emphasize the interplay between universal prosodic features (e.g., intensity, pitch) and language-specific factors. Moreover, the SSL model's outstanding performance indicates the potential value of these acoustic features in emotion processing, implying possible advancements in cross-lingual emotion recognition through refined training techniques.",
    "source": "arxiv"

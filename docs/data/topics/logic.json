@@ -1,7 +1,50 @@
 {
  "slug": "logic",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "papers": [
+  {
+   "uid": "arxiv:2611.30679",
+   "title": "Equivalence of Cohen generics is hyperfinite",
+   "url": "https://arxiv.org/abs/2611.30679",
+   "authors": [
+    "Iian B. Smythe"
+   ],
+   "label": "arXiv:2611.30679v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper shows that the equivalence relation \"two Cohen generic reals yield the same generic extension\" over a countable model of set theory is hyperfinite, answering a question posed by the author, via asymptotic separation.",
+    "plain": "This is a set-theory paper about \"random-like\" infinite objects called Cohen generic reals, and about when two of them count as giving the same new mathematical universe. The author shows that this sameness relation is \"hyperfinite,\" meaning its classes can be approximated by finite pieces in a controlled way. The text says the proof is a reworked version of an argument first produced by GPT-6, an AI model.",
+    "why": "It settles an open question the author had raised, so it is a concrete result rather than a survey. Its link to AI is notable mainly because the text says the original argument came from GPT-6; the text does not say how much of the final write-up depends on that, so the significance of that claim is hard to judge from this brief alone.",
+    "background": "- Countable model of set theory: a countable collection of sets satisfying the axioms of set theory, used as a stand-in for the universe of sets.\n- Cohen generic real: a real number that avoids all the \"exceptional\" sets one could name in the model, so it is random-like relative to that model.\n- Generic extension: a larger model of set theory obtained by adding a generic real to the original.\n- Equivalence relation: a rule saying two objects are \"the same\" in some respect, splitting objects into classes.\n- Hyperfinite: an equivalence relation whose classes can be handled by a limit of finite approximations, a notion from descriptive set theory.\n- Asymptotic separation: a technique for showing that certain objects can be told apart in the limit, used here as the core proof tool.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "It is shown that the equivalence relation on Cohen generic reals over a countable model of set theory, where two are equivalent if they produce the same generic extension, is hyperfinite, answering a question of the author. The proof uses asymptotic separation and is a digestion of an argument originally produced by GPT-6.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.28226",
+   "title": "Dense ideals in forcing extensions of Nairian models",
+   "url": "https://arxiv.org/abs/2611.28226",
+   "authors": [
+    "Rahman Mohammadpour",
+    "Grigor Sargsyan"
+   ],
+   "label": "arXiv:2611.28226v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper builds forcing extensions of minimal Nairian models (ZF-style models of the Axiom of Determinacy for real-number sets) in which AC and GCH hold and every uncountable regular cardinal carries a precipitous, uniform, κ-dense ideal whose quotient is the regular open algebra of Col(ω,κ).",
+    "plain": "Set theory studies which infinite collections exist and how big they are, and this paper works in a framework where the axiom of choice is dropped and a different axiom, determinacy, is assumed instead. The authors show that, after a further controlled extension of such a model, every uncountable regular infinite size has a particular kind of \"dense ideal\" (a way of sorting subsets of that size into negligible and non-negligible ones). The text presents this as extending a known result of Woodin and placing the consistency strength of the setting relative to a large-cardinal assumption.",
+    "why": "It strengthens and generalizes an existing theorem of Woodin about dense ideals on ω1, and it addresses how strong a large-cardinal assumption is needed for this combination of determinacy and choice-free theory. The text itself does not claim wider consequences, so its reach beyond set theory is unclear from this excerpt.",
+    "background": "- Axiom of Choice (AC): the principle that one can pick an element from every set in a family; Zermelo–Fraenkel set theory (ZF) omits it.\n- Axiom of Determinacy (AD): a principle that every two-player game on natural numbers has a winner determined by a strategy; it conflicts with AC, so models of AD are choice-free.\n- Nairian models: models studied by Blue, Larson, and Sargsyan, built from AD for real numbers; \"minimal\" refers to the smallest such models.\n- Generalized Continuum Hypothesis (GCH): each infinite size is the next-larger size of infinite collection after the one below it, with no sizes in between.\n- Cardinals, uncountable regular cardinal: infinite \"sizes\" that cannot be reached as a countable union of smaller ones.\n- Ideal and dense ideal: a family of \"small\" sets closed under taking subsets and finite unions; density means the non-small sets can be split finely; precipitous and uniform are technical strength conditions.\n- Forcing extension: enlarging a model of set theory by adding new objects in a controlled way.\n- Woodin cardinal: a large-cardinal assumption, an infinite size stronger than ordinary ones; \"consistency strength\" measures how much such an assumption a theory needs.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Complementing the work of Blue, Larson, and Sargsyan~\\cite{NM,NM2}, we obtain forcing extensions of minimal Nairian models in which the Axiom of Choice and the Generalized Continuum Hypothesis hold. In these extensions, every uncountable regular cardinal $\\kappa$ carries a precipitous, uniform, $\\kappa$-dense ideal $\\mathcal{I}_\\kappa$. In fact, $\\mathcal P(\\kappa)/\\mathcal{I}_\\kappa$ is isomorphic to the regular open algebra of $\\textrm{Col}(\\omega,\\kappa)$. This extends Woodin's theorem on the existence of $\\omega_1$-dense ideals on $\\omega_1$ in forcing extensions of models of $\\Theta_{\\rm reg}$ \\cite[Section~2.3]{ASTWZ24}, where $\\Theta_{\\rm reg}$ denotes the theory $\\textrm{ZF}+\\textrm{AD}_{\\mathbb R}+\\text{``$\\Theta$ is regular''}$. Moreover, our work places the consistency strength of the aforementioned theory on generic embeddings below a Woodin cardinal that is a limit of Woodin cardinals, and also complements the seminal work of Eskew and Hayut~\\cite{EH24}.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.29432",
    "title": "$\\Sigma^1_3$ Gandy-Harrington Forcing",
@@ -16,12 +59,12 @@
    "primary_category": "math.LO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "The paper builds a higher-level version of Gandy-Harrington forcing for the projective hierarchy under a local determinacy hypothesis, and uses it for a reverse mathematics result at the Δ^1_2-Determinacy level and an inner-model basis theorem for Σ^1_3 sets.",
-    "plain": "This is a paper in mathematical logic about the structure of \"definable\" sets of infinite sequences of whole numbers, which are the objects studied in descriptive set theory. The authors adapt a known proof technique, Gandy-Harrington forcing, to a more complex level of that hierarchy. The text says this new version lets them prove a result about which axioms are needed for certain determinacy statements, and a new basis theorem for a class of sets.",
-    "why": "The abstract points to two concrete outcomes: a reverse mathematics result (identifying the exact axioms needed for a statement) and a basis theorem for Σ^1_3 sets. Its significance rests on how well the new forcing generalises, which the short text does not show; the connections to wider logic are the authors' claims and I have not checked them.",
+    "ai": true,
     "background": "- Descriptive set theory: the study of definable sets of reals (infinite binary sequences) and their complexity, organised in the projective hierarchy (Σ, Π, Δ levels).\n- Forcing: a technique for building new models of set theory by adding generic objects; Gandy-Harrington forcing is a specific forcing that builds sets with prescribed definability.\n- Silver's dichotomy: a theorem saying that analytic equivalence relations have either countably many classes or a perfect set of inequivalent elements; Harrington's proof used this forcing.\n- Determinacy: the assertion that certain two-player infinite games have a winning strategy for one player; its strength is measured by level in the projective hierarchy.\n- Reverse mathematics: determining which axioms are logically necessary to prove a given theorem.\n- Inner models and basis theorems: results saying that definable sets have members constructible in a suitable inner model (a restricted universe of sets).",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper builds a higher-level version of Gandy-Harrington forcing for the projective hierarchy under a local determinacy hypothesis, and uses it for a reverse mathematics result at the Δ^1_2-Determinacy level and an inner-model basis theorem for Σ^1_3 sets.",
+    "plain": "This is a paper in mathematical logic about the structure of \"definable\" sets of infinite sequences of whole numbers, which are the objects studied in descriptive set theory. The authors adapt a known proof technique, Gandy-Harrington forcing, to a more complex level of that hierarchy. The text says this new version lets them prove a result about which axioms are needed for certain determinacy statements, and a new basis theorem for a class of sets.",
+    "why": "The abstract points to two concrete outcomes: a reverse mathematics result (identifying the exact axioms needed for a statement) and a basis theorem for Σ^1_3 sets. Its significance rests on how well the new forcing generalises, which the short text does not show; the connections to wider logic are the authors' claims and I have not checked them."
    },
    "abstract": "Gandy-Harrington forcing is an important tool in descriptive set theory, first developed by Gandy and later used by Harrington to give a simple proof of Silver's dichotomy theorem. In this paper, we develop a new version of Gandy-Harrington forcing higher up in the projective hierarchy, under an appropriate local determinacy hypothesis. Using this new forcing, we prove a reverse mathematics result at the level of $\\Delta^1_2$-Determinacy as well as new inner-model-theoretic basis theorem for $\\Sigma^1_3$ sets.",
    "source": "arxiv"
@@ -38,12 +81,12 @@
    "primary_category": "math.LO",
    "date": "2026-11-24",
    "summary": {
-    "one_liner": "Under a supercompactness assumption on κ and a diamond-type principle on stationary subsets of λ, the paper shows that small strategically closed forcings are projections of λ-supercompact Prikry forcing, and it studies limits on κ-distributive projections, including size-λ examples that fail to be projections.",
-    "plain": "This is set theory work on the forcing method, a way of extending the universe of sets by adding new objects. The paper asks which kinds of forcing notions can be reproduced, in a precise \"projection\" sense, by one particular forcing called supercompact Prikry forcing. The text reports that, under a set-theoretic guessing principle and a cardinal-size condition, the answer is yes for a broad class, while in some other cases the answer is shown to be independent of the usual axioms, and some specific examples are shown not to fit.",
-    "why": "It maps which forcing notions can be realized inside a single canonical model-building tool, which clarifies the structure of large-cardinal forcing extensions. The abstract gives no wider applications, so its significance beyond this area is unclear from the text alone.",
+    "ai": true,
     "background": "- Forcing: a method for adding new sets to a model of set theory, using a partially ordered set of finite approximations.\n- Cardinals and cofinality: the size of infinite sets and the length of cofinal sequences; \"singular\" cardinals are those that are not regular.\n- Large cardinals: κ being λ-supercompact is a strong infinity axiom about embeddings of the universe; it is a very strong consequence of set theory.\n- Prikry-type forcing: a forcing that changes the cofinality of a measurable-type cardinal without collapsing cardinals.\n- Projection: a map between forcings that preserves generic extensions, so one forcing is essentially a quotient of another.\n- Diamond principle (◇) on stationary sets: a combinatorial guessing principle that holds in some models and fails in others.\n- Strategic closure and distributivity: closure properties of forcings that limit the new sets they add.\n- Independence: a statement neither provable nor refutable from the standard axioms.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Under a supercompactness assumption on κ and a diamond-type principle on stationary subsets of λ, the paper shows that small strategically closed forcings are projections of λ-supercompact Prikry forcing, and it studies limits on κ-distributive projections, including size-λ examples that fail to be projections.",
+    "plain": "This is set theory work on the forcing method, a way of extending the universe of sets by adding new objects. The paper asks which kinds of forcing notions can be reproduced, in a precise \"projection\" sense, by one particular forcing called supercompact Prikry forcing. The text reports that, under a set-theoretic guessing principle and a cardinal-size condition, the answer is yes for a broad class, while in some other cases the answer is shown to be independent of the usual axioms, and some specific examples are shown not to fit.",
+    "why": "It maps which forcing notions can be realized inside a single canonical model-building tool, which clarifies the structure of large-cardinal forcing extensions. The abstract gives no wider applications, so its significance beyond this area is unclear from the text alone."
    },
    "abstract": "Let $\\kappa$ be $\\lambda$-supercompact for a regular $\\lambda>\\kappa$. We show that if $\\lambda$ is not the successor of a singular of cofinality below $\\kappa$, $\\diamondsuit(S^\\lambda_{\\geq\\kappa})$ implies that every ${<}\\kappa$-strategically closed forcing of size at most $\\lambda$ is a projection of the $\\lambda$-supercompact Prikry forcing. We show that the situation for successors of singulars of small cofinality is independent. Finally, we provide more limitations about the class of $\\kappa$-distributive projections of the $\\lambda$-supercompact Prikry forcing and give examples of $\\kappa$-distributive forcings of size $\\lambda$ which cannot be projections of this forcing.",
    "source": "arxiv"
