@@ -3,6 +3,44 @@
  "updated": "2026-11-25",
  "papers": [
   {
+   "uid": "medrxiv:10.64898/2026.11.24.26368506",
+   "title": "Integrated real-world and translational studies nominate CREB binding protein/EP3001 inhibition to overcome androgen receptor pathway modulator resistance in men with prostate cancer",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.24.26368506v1",
+   "authors": [
+    "Somarelli, J. A.",
+    "Dougherty, B. V.",
+    "Beckmann, A. G.",
+    "Dutta, A.",
+    "Thomas, B. C.",
+    "Walsh, A. M.",
+    "Xu, D.",
+    "Calvo Vidal, V.",
+    "Olawuni, P. D.",
+    "Caligiuri, M.",
+    "Soderblom, E. J.",
+    "Guichard, S. M.",
+    "Comella, P.",
+    "Monzon, S.",
+    "Forbes, A. N.",
+    "Renstrup, J.",
+    "Schadt, E. E.",
+    "Armstrong, A. J."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.24.26368506 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Regulatory network models built from multi-omic data of over 10,000 prostate cancer patients nominate EP300/CBP as a target in androgen pathway modulator-resistant disease, supported by preclinical work with the inhibitor pocenbrodib and one clinical case.",
+    "plain": "Prostate cancer often stops responding to hormone-blocking drugs over time, and doctors need new targets for these resistant tumors. The authors used computer models of gene and protein activity from thousands of patients to look for weak points, and the models pointed to a pair of related proteins, CBP and EP300. A new drug that blocks them, pocenbrodib, worked in lab and animal tests, and the authors report that it also helped one patient.",
+    "why": "Resistance to androgen-targeting therapy is nearly universal, so a new, actionable target is clinically relevant. The work connects patient-data modeling with lab and clinical testing, though the clinical evidence described here is a single patient, so the finding is early.",
+    "background": "- Androgen pathway modulators (APMs): drugs that block male sex hormone (androgen) signaling, used in advanced prostate cancer.\n- Resistance: the tumor keeps growing despite these drugs.\n- Androgen receptor: a protein in cells that responds to androgens and drives prostate cancer growth.\n- EP300 / CBP: two closely related proteins that switch genes on or off by adding chemical tags (acetylation) to other proteins.\n- Regulatory network model: a map of which genes and proteins influence which others, built from large datasets.\n- Multi-omic data: measurements across several layers of biology, such as genes, RNA, proteins and modifications.\n- Acetylomics: measuring acetylation changes across many proteins.\n- Oxidative phosphorylation and fatty acid metabolism: cell energy-producing pathways.\n- Preclinical: tested in cells and animals, not yet proven in people.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Androgen pathway modulators (APMs) have significantly improved outcomes for men with metastatic prostate cancer, but the evolution of therapy resistance is nearly universal, and there remains a major clinical need to identify actionable vulnerabilities for therapy-resistant disease. To address this need, we employed regulatory network models that leverage multi-omic data from over 10,000 prostate cancer patients with longitudinal clinical data. Analysis of the architecture of the network models identified EP300 as the top actionable target associated with androgen receptor-mediated therapy resistance. These observations were validated using a novel inhibitor of CBP/EP300, pocenbrodib, which showed preclinical activity in vitro and in vivo. Acetylomics analysis and functional studies pinpointed inhibition of oxidative phosphorylation and fatty acid metabolism as key mechanisms of action for pocenbrodib. Clinical benefit for this agent was demonstrated in a patient with metastatic APM-resistant prostate cancer (NCT04575766), highlighting CBP/EP300 as a key target for further translation.",
+   "source": "medrxiv"
+  },
+  {
    "uid": "medrxiv:10.64898/2026.11.22.26368676",
    "title": "Direct tumour-adipocyte contact / Stroma AReactive Invasion Front Areas (TAC/SARIFA) in advanced oropharyngeal cancer",
    "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368676v1",
@@ -21,9 +59,9 @@
    "date": "2026-11-25",
    "summary": {
     "one_liner": "A monocentric retrospective study of 78 advanced (pT3–pT4) oropharyngeal squamous cell carcinomas assessing whether tumour-adipocyte contact (TAC/SARIFA) on routine H&E slides relates to overall survival, recurrence-free survival, p16 status, and nodal findings.",
-    "plain": "This paper looks at a feature seen under the microscope in throat cancers (oropharyngeal cancer): where the tumour meets fat cells at its outer edge. The researchers examined tissue from 78 patients treated between 2005 and 2023, including their lymph nodes, and checked whether this feature was linked to survival, recurrence and other tumour traits. The feature was linked to shorter overall survival and to spread into lymph nodes and extranodal extension, but the link to recurrence-free survival was not statistically significant.",
-    "why": "If confirmed, a feature that can be read on standard stained slides without extra tests could help flag higher-risk patients. The text is a small single-centre retrospective study, so it shows an association rather than proof that the feature drives worse outcomes, and the authors describe it only as a possible prognostic risk factor.",
-    "background": "- Oropharyngeal cancer: cancer of the throat behind the mouth, including the tonsils and base of the tongue.\n- pT3/pT4: tumour stage categories meaning a larger tumour or one that has grown into nearby structures.\n- H&E staining: routine dye (haematoxylin and eosin) that colours tissue slides so pathologists can read them.\n- SARIFA / TAC: stroma areactive invasion front area; the tumour's edge touches fat cells directly, with no reaction from surrounding tissue. Previously reported as a negative prognostic marker in other cancers.\n- p16: a protein often used as a marker for HPV-linked oropharyngeal cancer.\n- Extranodal extension (ENE): cancer spreading beyond the capsule of a lymph node into surrounding tissue.\n- Overall and recurrence-free survival: time until death from any cause, and time until the cancer returns, respectively.\n- Retrospective: analysis of records and stored tissue from past patients.",
+    "plain": "This paper looks at a pattern seen under the microscope where cancer cells touch fat cells at the edge of a tumour, in throat cancers (oropharyngeal cancer). The researchers reviewed 78 patients treated between 2005 and 2023 and checked whether this pattern was present in the tumour and its lymph nodes. They then compared it with how long patients survived and how long they stayed free of recurrence.",
+    "why": "Among these 78 patients, the pattern was linked to shorter overall survival and was almost always found with extranodal extension (cancer breaking out of a lymph node), which may make it a cheap extra signal from slides already prepared. The recurrence result was not statistically significant, and the single-centre, retrospective design means the finding is a possible risk factor that needs confirmation in larger studies.",
+    "background": "- Oropharyngeal cancer: cancer of the throat behind the mouth, often linked to HPV infection; p16 is a protein marker used as a stand-in for HPV.\n- H&E staining: the standard pink-and-purple stain pathologists use to read tissue slides.\n- SARIFA / TAC: a pattern at the invasive edge of a tumour where cancer cells directly contact fat cells (adipocytes), thought to reflect how tumours invade surrounding tissue.\n- Retrospective study: looks back at existing patient records rather than following patients forward in a controlled trial.\n- Overall survival vs. recurrence-free survival: time until death from any cause vs. time until the cancer returns.\n- Extranodal extension (ENE): cancer spreading beyond the capsule of a lymph node into surrounding tissue, a marker of more aggressive disease.\n- p-value: a measure of how likely a result is to arise by chance; below about 0.05 is usually called statistically significant.",
     "difficulty": "intermediate",
     "ai": true
    },

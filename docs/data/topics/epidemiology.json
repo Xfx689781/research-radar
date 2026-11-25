@@ -3,30 +3,6 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "medrxiv:10.64898/2026.11.23.26368579",
-   "title": "Sources of protein in UK adults following contemporary plant-based diets: findings from the Feeding the Future (FEED) Study",
-   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368579v1",
-   "authors": [
-    "Lawson, I.",
-    "Bell, W.",
-    "Key, T. J.",
-    "Papier, K."
-   ],
-   "label": "medRxiv doi:10.64898/2026.11.23.26368579 v1",
-   "primary_category": "epidemiology",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "Cross-sectional analysis of the UK Feeding the Future (FEED) cohort (n=6,113) quantifying food-group sources of protein intake across omnivore, flexitarian, pescatarian, vegetarian and vegan diets, and the share of each group below the estimated average requirement (EAR) for protein, with and without excluding under-reporters.",
-    "plain": "This study looks at where protein comes from in the diets of about 6,000 UK adults who eat different ways, from meat-eaters to vegans. The researchers used an online food questionnaire to work out which foods supplied the protein and how many people got less than the estimated minimum they need. Grains and dairy were major sources across most groups, while vegans relied more on plant foods such as meat alternatives, legumes, nuts and seeds. Few people fell short, and most of the gap seen in vegetarians and vegans disappeared once people who likely under-reported their eating were removed.",
-    "why": "Plant-based diets are increasingly common, and a common worry is whether they supply enough protein. This paper gives a detailed picture of protein sources in a recent UK sample, and it shows that the apparent shortfall depends heavily on how under-reporting is handled. Its findings come from self-reported questionnaire data, so they describe associations in one cohort rather than establishing how adequate any diet is for health.",
-    "background": "- Protein is needed for building and repairing body tissue; the EAR (estimated average requirement) is the amount that meets the needs of half of people in a group, so \"below EAR\" means a group-level shortfall, not necessarily a deficiency in an individual.\n- Food frequency questionnaire: a survey asking how often people eat listed foods, used to estimate typical intake.\n- Under-reporters: people whose reported energy intake is implausibly low compared with their needs, suggesting they under-recorded what they ate; excluding them changes results.\n- Cross-sectional: data collected at one point in time, so it shows patterns, not cause and effect.\n- Diet groups: omnivores eat everything; flexitarians mostly plant-based with occasional meat; pescatarians eat fish but no meat; vegetarians eat no meat or fish; vegans eat no animal products.\n- Plant-based meat alternatives are processed products (for example, soy or pea-based) designed to resemble meat.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Objective To identify and quantify sources of protein intake in United Kingdom (UK) adults following different diets, and assess how these sources contribute to meeting protein requirements. Design Cross-sectional analysis of the Feeding the Future Study (FEED), a UK cohort recruited in 2022-2023. Dietary intake was assessed using an online food frequency questionnaire. We calculated the percentage contribution of food groups to daily protein intake, and the proportion of participants meeting the estimated average requirement (EAR) for protein, with and without exclusion of under-reporters. Setting A contemporary cohort of UK adults. Participants 6,113 adults: 1,540 omnivores, 1,322 flexitarians, 547 pescatarians, 1,212 vegetarians, and 1,492 vegans. Results Grains contributed 10-30% of total protein intake across all groups. Dairy contributed 12.9-14.2% in non-vegan groups, while plant-based dairy alternatives contributed less in vegans (7%), mainly from soy milk (4.3%). Other major contributors (>10%) were meat for omnivores (33.0%) and flexitarians (13.5%); fish for pescatarians (14.9%); plant-based meat alternatives for vegetarians (12.0%); and plant-based meat alternatives (15.0%), legumes and pulses (10.5%), and nuts and seeds (10.5%) for vegans. The proportion below the protein EAR ranged from 1.9% in omnivores to 14.0% in vegans, falling to 0.01% and 3.6% respectively, after excluding under-reporters. Conclusions Grains were a major contributor to protein intake across all diet groups, as was dairy in all non-vegan groups. Protein sources were more varied in non-omnivorous groups, particularly vegans. Few participants fell below the protein EAR and the higher proportions among vegetarians and vegans were largely attenuated after excluding under-reporters.",
-   "source": "medrxiv"
-  },
-  {
    "uid": "medrxiv:10.64898/2026.11.22.26368688",
    "title": "Disease-anchored organ aging clocks enable multi-organ risk profiling from routine labs",
    "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368688v1",
@@ -45,14 +21,38 @@
    "primary_category": "epidemiology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper trains organ-specific aging clocks on first disease onset using routine blood lab tests (rather than proteomics and chronological age), freezes them, and tests whether they track own-organ disease across UK Biobank, NHANES and JMDC cohorts.",
-    "plain": "Doctors can estimate how old a person's organs are by looking at markers in their blood, but the existing methods rely on expensive protein measurements and are tuned to a person's calendar age, so they do not say much about which organ disease is coming. This study built a set of organ \"clocks\" trained on which people went on to develop disease in each organ, using ordinary lab tests. The authors report that these clocks mainly pick out their own organ's proteins and flag people at higher risk of their own organ's disease, and that they still work in other cohorts.",
-    "why": "If organ-age readings from routine blood tests can flag which organ is at risk, they could be a cheap way to screen for multi-organ disease risk. The text reports the clocks add information to existing clinical risk scores, but it gives no effect sizes here, so the practical value is still unclear.",
-    "background": "- Biological age: an estimate of how worn-out a body is, which can differ from calendar age.\n- Organ clock: a model that estimates the age of one organ from blood measurements.\n- Proteomics: measuring thousands of proteins in blood; costly and not routine.\n- UK Biobank, NHANES, JMDC: large health cohort datasets (UK, US, Japan) used to train and test such models.\n- First onset: the first time a person is diagnosed with a given disease, used as the training outcome.\n- Frozen coefficients: the model's weights are fixed after training and applied unchanged to new data.\n- Random protein panels: size-matched sets of random proteins used as a control to check whether a clock's signal is specific.\n- Clinical risk score: a standard formula that estimates disease risk from routine patient information.",
+    "one_liner": "Organ-specific aging clocks trained on first onset of each organ's disease from routine blood tests (rather than chronological age from proteomics) are shown to flag own-organ disease in UK Biobank, and to retain organ correspondence and add information over clinical risk scores in NHANES and JMDC cohorts.",
+    "plain": "Researchers wanted a way to estimate how \"old\" each organ in the body is, using simple blood tests rather than expensive protein measurements. They trained organ-specific scores on when people in a large UK study first developed diseases of each organ, then fixed those scores so they could be applied elsewhere. The paper reports that the scores picked out disease in the matching organ, and that they carried useful information in two other cohorts, one in the US and one in Japan.",
+    "why": "Organ-level risk from routine lab tests could help flag which organ is at risk before disease appears, if it holds up beyond these cohorts. The text does not report clinical outcomes of acting on these flags, so its practical value is still untested.",
+    "background": "- Biological age: an estimate of how worn-down the body is, which can differ from calendar age.\n- Organ clock: a score that estimates the biological age of one organ, often from blood markers.\n- Proteomics: measuring thousands of proteins in blood; costly and not routinely done.\n- UK Biobank, NHANES (US), JMDC (Japan): large health cohorts with lab data and long follow-up.\n- \"First onset\": the first time a disease is diagnosed in a person.\n- Frozen coefficients: the scoring formula is fixed after training and applied unchanged to new data.\n- Random protein panels: size-matched sets of random proteins used as a control to check that results are not just chance.\n- Clinical risk scores: standard tools that estimate patient risk from common factors.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Organ clocks estimate the biological age of organs from blood, but current clocks assign tissue-enriched proteins to organs and train on chronological age, which requires proteomics and does not yield organ-specific disease risk. In the UK Biobank, we trained organ clocks on first onset of disease of each organ using routine laboratory tests and froze the coefficients. Under an age label, organ-clock readouts arose equally in size-matched random protein panels; with a disease label, clocks selected their own organ's proteins and predicted their own organ's diseases. Defining extreme aging by multiples of disease risk concentrated flags on own-organ disease. Frozen clocks kept organ correspondence in the US NHANES cohort, predicted first onset of own-organ disease in the Japanese JMDC cohort and added more information to clinical risk scores than current organ clocks. Trained once where disease follow-up exists, organ clocks can be used wherever routine laboratory tests are measured.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.23.26368579",
+   "title": "Sources of protein in UK adults following contemporary plant-based diets: findings from the Feeding the Future (FEED) Study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368579v1",
+   "authors": [
+    "Lawson, I.",
+    "Bell, W.",
+    "Key, T. J.",
+    "Papier, K."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.23.26368579 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Cross-sectional analysis of the UK FEED cohort (n=6,113) quantifying food-group sources of protein across omnivore, flexitarian, pescatarian, vegetarian and vegan diets, and the share of each group below the estimated average protein requirement, with and without under-reporters excluded.",
+    "plain": "This study looks at where protein comes from in the diets of about 6,000 UK adults who eat meat, fish, or no animal products in different combinations. The researchers worked out how much each food group adds to daily protein and how many people in each diet group fall short of a standard protein target. Few people fell short overall, and the gap seen among vegetarians and vegans mostly disappeared once people who likely under-reported their eating were removed.",
+    "why": "Plant-based diets are common, and people often ask whether they supply enough protein, so this gives a large, recent UK picture of protein sources. The reported shortfalls shrink sharply after excluding under-reporters, which suggests the conclusion depends heavily on how reliable self-reported diet records are; the text does not show how well that exclusion was done.",
+    "background": "- Protein is needed for building and repairing body tissue; the \"estimated average requirement\" (EAR) is the amount that meets the needs of half a population.\n- A food frequency questionnaire is an online survey asking how often people eat listed foods; it relies on memory and self-report.\n- Under-reporters are people whose recorded energy intake seems implausibly low compared with their likely needs; excluding them is a common sensitivity check.\n- Diet groups compared: omnivores (eat everything), flexitarians (mostly plant-based, sometimes meat), pescatarians (fish but no meat), vegetarians (no meat or fish), vegans (no animal products).\n- Cross-sectional means a single snapshot in time, so it cannot show cause and effect.\n- \"Plant-based meat alternatives\" are processed products designed to resemble meat, such as meat-substitute burgers.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Objective To identify and quantify sources of protein intake in United Kingdom (UK) adults following different diets, and assess how these sources contribute to meeting protein requirements. Design Cross-sectional analysis of the Feeding the Future Study (FEED), a UK cohort recruited in 2022-2023. Dietary intake was assessed using an online food frequency questionnaire. We calculated the percentage contribution of food groups to daily protein intake, and the proportion of participants meeting the estimated average requirement (EAR) for protein, with and without exclusion of under-reporters. Setting A contemporary cohort of UK adults. Participants 6,113 adults: 1,540 omnivores, 1,322 flexitarians, 547 pescatarians, 1,212 vegetarians, and 1,492 vegans. Results Grains contributed 10-30% of total protein intake across all groups. Dairy contributed 12.9-14.2% in non-vegan groups, while plant-based dairy alternatives contributed less in vegans (7%), mainly from soy milk (4.3%). Other major contributors (>10%) were meat for omnivores (33.0%) and flexitarians (13.5%); fish for pescatarians (14.9%); plant-based meat alternatives for vegetarians (12.0%); and plant-based meat alternatives (15.0%), legumes and pulses (10.5%), and nuts and seeds (10.5%) for vegans. The proportion below the protein EAR ranged from 1.9% in omnivores to 14.0% in vegans, falling to 0.01% and 3.6% respectively, after excluding under-reporters. Conclusions Grains were a major contributor to protein intake across all diet groups, as was dairy in all non-vegan groups. Protein sources were more varied in non-omnivorous groups, particularly vegans. Few participants fell below the protein EAR and the higher proportions among vegetarians and vegans were largely attenuated after excluding under-reporters.",
    "source": "medrxiv"
   },
   {
