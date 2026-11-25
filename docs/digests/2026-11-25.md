@@ -7,24 +7,25 @@ New papers posted from about 2026-11-24 to 2026-11-25 (UTC).
 
 ## Highlights
 
-- **[The majority game chromatic number for dense random graphs](https://arxiv.org/abs/2611.32746)** (Combinatorics): The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how few colours are needed. For random graphs where most pairs of vertices are connected (edge probability between 2/3 and 1), the authors show that three colours are enough with high probability, meaning the chance of this holding tends to 1 as the graph grows.
-- **[Tuning evolutionary information in MSAs shapes protein generation and folding](https://www.biorxiv.org/content/10.64898/2026.11.23.768656v1)** (Computational and systems biology): Protein models often learn from a collection of related sequences (an alignment) that is treated as fixed input. This study deliberately changed which rows went into those collections and measured how the designed sequences and predicted structures changed. The authors report that alignments with certain levels of evolutionary information tended to produce more novel generated sequences and lower structural confidence, and that a moderate share of low-information positions was linked to better predictions in a subset of cases.
-- **[Implementation of Machine Translation for the Uzbek Language Based on Transformer Models](https://arxiv.org/abs/2611.32359)** (Large language models): This paper is about building a computer program that translates between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned a large collection of matching Uzbek and English sentences, roughly 3 million pairs, and used it to adapt two existing AI language models. They report that their approach beats older translation methods, measured with a standard similarity score.
+- **[The majority game chromatic number for dense random graphs](https://arxiv.org/abs/2611.32746)** (Combinatorics): The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how many colours are needed. For random graphs that are fairly dense (each pair of vertices is joined with a fixed probability above two-thirds), the authors show that three colours are enough with high probability, meaning the chance of this failing goes to zero as the graph grows.
+- **[Tuning evolutionary information in MSAs shapes protein generation and folding](https://www.biorxiv.org/content/10.64898/2026.11.23.768656v1)** (Computational and systems biology): Researchers who use computer models to design or predict protein shapes feed them a collection of related protein sequences from many species. This study asks whether deliberately choosing which sequences go into that collection, rather than treating the collection as fixed, changes what the models generate and how confidently they predict structures. The authors report that the coherence of the chosen sequences tracked both structure-prediction confidence and how novel the generated sequences were, with the strongest effects near a particular information level.
+- **[Implementation of Machine Translation for the Uzbek Language Based on Transformer Models](https://arxiv.org/abs/2611.32359)** (Large language models): This paper is about building an automatic translator between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned up sentence pairs in both languages, expanded the collection, and then adjusted two existing AI language models to do the translation. They report that the result beats older translation approaches, measured by a standard scoring method.
 
 ## Probability
 
 ### [Sharp estimates for incremental moments of inverse subordinators and approximation errors for time-changed stochastic differential equations](https://arxiv.org/abs/2611.33075)
 *Ivan Bio\v{c}i\'c, Sixian Jin, Kei Kobayashi* · `math.PR` · arXiv:2611.33075v1 · relevance 0.23
 
-- **In one sentence**: The paper proves sharp upper and lower bounds on incremental moments of general inverse subordinators and uses them to derive an error bound, shown to be optimal in general, for numerically approximating time-changed stochastic differential equations on deterministic time grids.
-- **In plain words**: The paper studies a random "clock" that runs slow and in jumps, used to model processes that move more sluggishly than ordinary random motion, such as diffusion through a sticky medium. It gives precise limits on how much this clock can change over short time spans. Those limits are then used to bound the error when a computer simulates such a process on a fixed grid of time steps, and the authors show this error bound cannot be improved in general.
-- **Why it matters**: Simulating subdiffusive models is common in physics, finance and biology, so a guaranteed error rate for the numerical schemes matters for trusting those simulations. The text does not say how the results compare with prior work or which applications would benefit most, so that connection is my inference rather than something the abstract states.
-- **Background needed**: - Stochastic differential equation: a equation describing a quantity evolving under random noise, like a particle jostled by molecules.
-- Subordinator: a random process that only moves forward in time, in jumps; it can serve as a random clock.
-- Inverse subordinator: the "inverse" of that clock, which measures how much real time has passed in terms of the clock's own count; it is the source of the slowed-down, subdiffusive behaviour.
-- Time change: replacing ordinary time in an equation with a random clock.
-- Incremental moments: averages of powers of how much the random clock changes over a short interval.
-- Numerical approximation and order of convergence: computing an approximate solution on a grid of time steps, and how fast the error shrinks as steps get finer. · level: research-level
+- **In one sentence**: The paper proves sharp upper and lower bounds on the incremental moments of inverse subordinators and uses them to derive an error bound, shown to be optimal in general, for numerically approximating stochastic differential equations time-changed by an inverse subordinator.
+- **In plain words**: The paper studies a random "clock" that runs slow and jumpy, used to model processes that move more slowly than usual, such as diffusion through a crowded medium. It establishes precise limits on how much this random clock can change over a short stretch of time. These limits are then used to bound the error when computers approximate such time-changed random processes on a fixed grid of time steps.
+- **Why it matters**: Numerical methods for these time-changed models need reliable error guarantees, and the paper gives one and shows the resulting convergence rate cannot be improved in general. The text does not say which specific applications it targets beyond subdiffusion modelling, so the broader impact is unclear from this abstract alone.
+- **Background needed**: - Stochastic differential equation: a equation describing a quantity that evolves with random noise, such as a jittery price or particle path.
+- Subordinator: a random process that only moves forward in time, built from random jumps; it can act as a random clock.
+- Inverse subordinator: the "inverse" of such a clock, which counts how far real time has advanced relative to the random clock; it has flat stretches and is used to model subdiffusion, i.e. slowed-down random motion.
+- Time change: substituting a random clock for ordinary time in a process.
+- Incremental moments: averages of powers of how much a random quantity changes over a time interval, used to measure size of fluctuations.
+- Order of convergence: how quickly the approximation error shrinks as the time step gets smaller.
+- Deterministic time grid: approximation computed at fixed, evenly or predefined time points. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -35,15 +36,16 @@ This paper establishes precise upper and lower bounds for the incremental moment
 ### [Temporal Inhomogeneous Random Graphs](https://arxiv.org/abs/2611.32717)
 *Sofiya Burova, Francisco Calvillo* · `math.PR` · arXiv:2611.32717v1 · relevance 0.21
 
-- **In one sentence**: This paper extends results on temporal stochastic block models to graphon-based random graphs with a continuous, strictly positive kernel, studying increasing-path reachability in the sparse log n/n regime with uniformly random edge timestamps.
-- **In plain words**: The paper studies random networks where each connection has a timestamp and a path counts only if its timestamps keep increasing, like a message passed along links that always move forward in time. It asks how many people a starting point can reach this way, and how long the shortest and longest such paths are. The text reports first-order (leading-order) asymptotic results for these quantities, meaning the main growth rates for large networks.
-- **Why it matters**: Time-respecting paths matter for modelling how things spread through populations where contacts happen at specific times, such as information or disease transmission. The abstract does not say how the results apply to any specific real-world system, so that link is a plausible motivation rather than a demonstrated one.
-- **Background needed**: - Random graph: a network whose edges are placed at random according to probabilities.
-- Stochastic block model: a random network with groups of vertices whose connection probabilities depend on group membership.
-- Graphon: a continuous limiting description of very large random networks, given by a kernel that sets connection likelihood between positions in [0,1].
-- Sparse regime (connection probability of order log n / n): each vertex has only about log n connections, so the network is just barely connected.
-- Increasing path: a route through the network whose edge timestamps strictly increase along the way.
-- First-order asymptotics: the leading-order behaviour of a quantity as the network grows large. · level: research-level
+- **In one sentence**: Extends results on temporal stochastic block models to graphon-based random graphs with a continuous, strictly positive kernel, studying increasing-path reachability and path-length asymptotics in the sparse regime of connection probabilities of order log n / n with uniformly random edge timestamps.
+- **In plain words**: This paper studies random networks where each pair of nodes is linked with a chance that depends on their positions in a population, and every link gets a random time stamp. It asks how far one can travel from a starting point if each step must use links with strictly later time stamps. The authors find the first-order (leading-order, large-network) size of the set of nodes reachable this way from a fixed node, and the leading-order lengths of the longest and shortest such time-respecting routes.</plain>
+<parameter name="why">Time-respecting routes matter for modeling how things spread through contact networks, where order of contacts changes what can reach whom. The text only motivates this via time-dependent propagation in inhomogeneous populations; it does not show specific applications, so the practical reach is unclear from the abstract alone.</why>
+<parameter name="background">- Random graph: a network whose links are created by chance; here n is the number of nodes.
+- Graphon: a continuous function describing how likely two "types" of nodes are to connect; it generalizes block models where nodes fall into groups.
+- Stochastic block model: a random network with a few groups, with link chances depending on group membership.
+- Increasing path: a route through the network whose link time stamps strictly increase at each step.
+- Log n / n scaling: connection chances sparse enough that each node has on the order of log n links, a regime near where the network becomes connected.
+- First-order asymptotics: the leading term describing how a quantity grows as n becomes large.</background>
+<parameter name="difficulty">research-level
 
 <details><summary>Original abstract</summary>
 
@@ -56,15 +58,16 @@ Motivated by the study of time-dependent propagation processes in inhomogeneous 
 ### [Rotationally symmetric fractional minimal surfaces](https://arxiv.org/abs/2611.32252)
 *Chiara Gambicchia, Matteo Novaga, Matteo Talluri* · `math.DG` · arXiv:2611.32252v1 · relevance 0.20
 
-- **In one sentence**: The paper constructs a nontrivial rotationally symmetric s-minimal surface by studying alternating radial sets bounded by concentric spheres, where the fractional mean curvature H_s vanishes on every free interface, and shows the limit of rescaled radial maximizers gives a properly embedded, rotationally symmetric, locally finite hypersurface with H_s = 0 on its boundary.
-- **In plain words**: The paper studies a generalized version of soap-film-like surfaces, where the usual notion of curvature is replaced by a "fractional" one that depends on the whole surface rather than just its immediate neighbourhood. The authors look at shapes built from nested rings of spheres, with the outer radius fixed at 1, and show that some arrangement of these shapes has zero fractional curvature along every free boundary. They then rescale these shapes and take a limit, obtaining a rotationally symmetric surface with the same zero-curvature property.
-- **Why it matters**: Minimal surfaces are a central object in geometry, and the fractional version is an active area; a concrete nontrivial rotationally symmetric example is useful as a test case for general theory. The text does not indicate applications beyond this, so its wider significance is uncertain from the abstract alone.
+- **In one sentence**: The paper constructs a rotationally symmetric s-minimal surface, built from alternating radial sets bounded by concentric spheres, in which the fractional mean curvature H_s vanishes at every free interface, and shows that a rescaled limit gives a properly embedded locally finite hypersurface with H_s = 0 on its boundary.
+- **In plain words**: The paper studies a generalized version of a soap-film-like surface, where the usual curvature rule is replaced by a "fractional" rule that depends on the whole shape rather than only on nearby points. The authors build an example of such a surface that has rotational symmetry, made of alternating shells bounded by concentric spheres. They then rescale these shapes and take a limit, obtaining a rotationally symmetric surface that satisfies the fractional rule at every point of its boundary.
+- **Why it matters**: Explicit non-trivial examples are rare for fractional minimal surfaces, so a concrete rotationally symmetric case gives the theory something to test against. The text does not say what wider applications it may have, so its broader significance is uncertain.
 - **Background needed**: - Minimal surface: a surface whose mean curvature is zero, like a soap film spanning a wire frame.
-- Mean curvature: a local measure of how a surface bends on average at a point.
-- Fractional (s-) mean curvature: a nonlocal generalization in which the value at a point depends on the surface globally, with a parameter s controlling the range of this influence.
-- Rotational symmetry: the shape looks the same when rotated about an axis; here built from concentric spheres (nested shells of different radii).
-- Locally finite hypersurface: a surface that may be unbounded but has only finitely many pieces within any bounded region.
-- Limit and rescaling: shrinking or enlarging a shape by a factor and taking a limiting shape as the factor changes. · level: research-level
+- Mean curvature: a local measure of how a surface bends on average.
+- Fractional (s-) version: replaces the local curvature with a nonlocal quantity, weighted by a parameter s between 0 and 1, so distant parts of the surface influence each point.
+- Radial set / concentric spheres: regions whose boundaries are nested spheres centered at one point, which makes the problem reduce to one radial variable.
+- Rotational symmetry: the shape looks the same when turned around an axis or center.
+- Locally finite hypersurface: a surface that, in every bounded region, is made of finitely many pieces.
+- Rescaling and limit: shrinking or enlarging a configuration so its innermost radius becomes fixed, then studying what shape the sequence approaches. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -75,17 +78,16 @@ In this paper, we provide a non-trivial example of an $s$-minimal surface that i
 ### [An intrinsic criterion for Pansu differentials to be homomorphisms of nilpotent Lie groups](https://arxiv.org/abs/2611.32893)
 *Cristian Sopio, Francesca Tripaldi* · `math.DG` · arXiv:2611.32893v1 · relevance 0.19
 
-- **In one sentence**: The paper gives an intrinsic criterion, for a suitable grading, for when the Pansu differential of a Lipschitz map from a nilpotent Lie group with a bracket-generating distribution is a group homomorphism, and shows the criterion holds automatically when the target's step is small and that the threshold is sharp.
-- **In plain words**: The paper studies smooth-like "derivatives" of distance-preserving-type maps (Lipschitz maps) between curved spaces with a built-in sideways-moving structure, known as nilpotent Lie groups. Such a map has a local best-approximating version, the Pansu differential, which is a homomorphism (a structure-preserving map) of a simpler model group rather than of the original group. The authors find a checkable condition that tells when this approximation is also structure-preserving on the original group, and they show a concrete example where the condition's threshold cannot be pushed further.
-- **Why it matters**: Pansu's theorem is a standard tool for understanding maps between sub-Riemannian and metric spaces, so a precise test for when its derivative respects the group structure of the original space clarifies where that tool applies cleanly. The text does not say what further applications this may have, so the wider significance is unclear from the abstract alone.
-- **Background needed**: - Lipschitz map: a map that stretches distances by at most a fixed factor.
-- Lie group: a continuous group of transformations that is also a smooth manifold; nilpotent means its commutator brackets eventually vanish.
-- Distribution (sideways directions): a choice of allowed directions at each point; bracket-generating means repeated commutators of these directions span all directions.
-- Carnot group: a nilpotent group with a graded structure, the simplest model of such spaces.
-- Pansu differential: the limiting "derivative" of a Lipschitz map at a point, which is a homomorphism between Carnot groups.
-- Grading: a splitting of the Lie algebra into layers; the osculating Carnot group depends on this choice.
-- Homomorphism: a map that preserves the group operation; ideal: a normal subgroup-like substructure used to form quotients.
-- Step: how many layers of nested brackets are needed before the structure stops growing. · level: research-level
+- **In one sentence**: The paper gives an intrinsic criterion, for a suitable grading, for when the Pansu differential of a Lipschitz map from a nilpotent Lie group with bracket-generating distribution is a group homomorphism, and shows the threshold on target step is sharp.
+- **In plain words**: The paper studies how "smooth-like" maps behave between curved, non-Euclidean spaces built from groups of motions. For a class of such spaces, the best local linear approximation of a map may fail to respect the group structure. The authors identify a condition, phrased using only the space itself, that decides when it does, and show with an example that a size threshold in that condition cannot be loosened.
+- **Why it matters**: Pansu differentiation is a central tool for understanding maps between sub-Riemannian and metric spaces, so a clean test for when the approximation is a true homomorphism is useful to specialists. The text does not claim wider applications, and I am not certain how far the criterion extends beyond the setting described.
+- **Background needed**: - Lie group: a continuous group of transformations, such as rotations and translations, with smooth structure.
+- Nilpotent group: a group whose repeated commutators eventually vanish, making it "almost abelian" in layers.
+- Carnot group: a nilpotent group with a graded structure, the model spaces for Pansu's theorem.
+- Bracket-generating distribution: a family of allowed directions of motion whose commutators span the whole tangent space, so any two points can be connected by paths along those directions.
+- Pansu differential: a limiting linear-like approximation of a Lipschitz map (a map with bounded stretching) at almost every point, which is a group homomorphism when the target is Carnot.
+- Grading and step: a decomposition of the Lie algebra into layers; the step is the number of layers needed.
+- Homomorphism: a map that preserves the group operation. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -98,17 +100,17 @@ By Pansu's theorem, Lipschitz maps between Carnot groups are differentiable almo
 ### [Weighted pointwise estimates for the damped wave equation and global solutions to Nakao's problem in three dimensions](https://arxiv.org/abs/2611.31881)
 *Vladimir Georgiev, Kosuke Kita* · `math.AP` · arXiv:2611.31881v1 · relevance 0.22
 
-- **In one sentence**: The paper derives weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation, combining a parabolic weight with a wave-cone weight, and applies them to prove small-data global existence and uniqueness for Nakao's coupled damped-wave/wave system in weighted L^infinity spaces.
-- **In plain words**: The paper studies a pair of coupled equations that describe how waves and damped (energy-losing) waves spread through space over time, in three dimensions. The authors prove sharper size bounds on one piece of the solution, the part driven by a source, and use them to show that, when the starting disturbance is small and the nonlinear terms meet stated conditions, solutions exist for all time and are unique. The result covers both fast and slower decay rates for each component.
-- **Why it matters**: Global existence results for coupled nonlinear wave systems show when small disturbances stay bounded forever rather than blowing up, which is a basic question in the theory of such equations. The text does not indicate applications beyond this mathematical setting, so its wider significance is unclear from the abstract alone.
-- **Background needed**: - A wave equation describes vibrations or signals travelling through a medium at finite speed.
-- A damped wave equation adds friction, so the energy fades and the solution spreads out and decays over time, somewhat like heat diffusion.
-- Nakao's problem is a named open-style question about a specific pair of such equations coupled together.
-- Duhamel term: the part of a solution produced by a forcing or source term acting over time.
-- Pointwise estimate: a bound on the size of the solution at each individual point, rather than on average.
-- Weighted L^infinity space: a function space that bounds the solution's maximum size while weighting it by a factor that controls decay in space and time.
-- Small-data global existence: if the starting data are small enough, the solution is guaranteed to exist for all times.
-- Contraction argument: a standard method that builds the solution as a fixed point of a map that shrinks distances. · level: research-level
+- **In one sentence**: The paper proves weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation, and uses them to show small-data global existence and uniqueness of mild solutions for Nakao's coupled damped-wave/wave system in weighted L-infinity spaces.
+- **In plain words**: This is a mathematical study of two coupled equations that describe how waves and damped (energy-losing) waves spread through space over time in three dimensions. The authors develop new size bounds on a term that captures how the damped system responds to an external push, combining a parabolic-type decay weight with a wave-type decay weight. Using these bounds, they show that if the starting disturbance is small, solutions exist for all time and are unique, under stated conditions on the powers in the nonlinear terms.
+- **Why it matters**: The text supports only a technical contribution: sharper pointwise bounds for a damped wave Duhamel term, applied to a specific coupled system. It is a targeted result in the well-studied area of nonlinear wave and damped-wave equations, and the text does not claim wider consequences.
+- **Background needed**: - Partial differential equation (PDE): an equation relating a function to its rates of change in space and time; it describes physical processes such as waves and heat flow.
+- Wave equation: describes disturbances that travel at a fixed speed, like sound or ripples; in 3D they weaken as they spread out.
+- Damped wave equation: a wave equation with a friction-like term that drains energy, so over long times it behaves partly like heat diffusion (parabolic decay).
+- Duhamel term: the part of a solution produced by an outside forcing term, accumulated over time.
+- Pointwise estimate: a bound on the size of the solution at each location and time, not just on average.
+- Weighted L-infinity space: a set of functions whose maximum size, multiplied by a decay weight depending on position and time, is bounded.
+- Small-data global existence: if the initial data are small enough, the solution is guaranteed to persist for all time.
+- Contraction argument: a fixed-point method that builds the solution by repeatedly applying a map that shrinks distances. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -119,16 +121,17 @@ In this paper, we establish weighted pointwise estimates for the Duhamel term of
 ### [Large-time existence for the gravity water waves equations](https://arxiv.org/abs/2611.32994)
 *Th\'eo Fradin, Benjamin Melinand* · `math.AP` · arXiv:2611.32994v1 · relevance 0.13
 
-- **In one sentence**: The paper proves local-in-time, long-timescale (lifespan growing like the inverse of the nonlinearity parameter) existence of solutions to the gravity water-waves equations without surface tension, uniformly in the shallow-water parameter and allowing a large but not emerging bathymetry.
-- **In plain words**: The paper studies how waves move on the surface of water over an uneven floor, using the standard mathematical model of an incompressible, irrotational fluid with a free surface and gravity acting, but no surface tension. It shows that, for sufficiently smooth starting conditions, a solution exists for a long stretch of time, and that this stretch gets longer as the waves get smaller. The result holds even when the seabed varies by a sizable amount, though not so much that the bottom breaks through the surface.
-- **Why it matters**: Knowing how long a model of water waves stays well-behaved is a basic question for both theory and for the approximate models used in coastal and ocean studies. The text does not claim wider applications, so its reach beyond this mathematical setting is uncertain.
-- **Background needed**: - Water-waves equations: the standard model of a free water surface under gravity, with the water assumed incompressible (constant density) and irrotational (no swirling).
-- Well-posedness: the question of whether a solution exists, is unique, and depends continuously on the starting data.
-- Sobolev regularity: a measure of how smooth the initial data must be; "high but finite" means the data must be quite smooth but not infinitely so.
-- Nonlinearity parameter: a small number measuring wave amplitude relative to depth; the result's time span scales with its inverse.
-- Shallow-water parameter: a measure of depth relative to wavelength; the result holds uniformly across it.
-- Bathymetry: the shape of the seabed; "large but not emerging" means the bottom varies substantially but stays below the surface.
-- Lifespan: how long the solution is guaranteed to exist. · level: research-level
+- **In one sentence**: The paper proves local-in-time well-posedness for the gravity water-waves equations without surface tension, over a long timescale growing like the inverse of the nonlinearity parameter, uniformly in the shallow-water parameter and allowing a large but non-emerging bathymetry.
+- **In plain words**: This paper is about the mathematics of waves on the surface of water, such as waves moving over a seabed. It shows that, for a finite but fairly smooth starting state, the equations that describe these waves have a solution that persists for a fairly long time. The authors say the time span grows as the wave-size parameter gets smaller, and that the result holds even when the seabed is deep in a varying way, though not so deep that it breaks through the surface.
+- **Why it matters**: Knowing how long water-wave models stay valid is central to coastal and ocean modelling, so a guaranteed time span is a useful mathematical result. The text does not discuss applications or numerical comparisons, so its practical reach beyond the mathematics is unclear.
+- **Background needed**: - Water-waves equations: the standard model of a free water surface over a fluid that is incompressible (volume-preserving) and irrotational (no swirling).
+- Gravity versus surface tension: here only gravity acts to restore the surface; surface tension is dropped.
+- Well-posedness: a solution exists, is unique, and depends continuously on its starting data.
+- Sobolev regularity: a measure of how smooth the solution is; "high but finite" means many derivatives are controlled but not infinitely many.
+- Non-linearity parameter: a size measure of wave amplitude relative to depth; small values mean gentle waves.
+- Shallow-water parameter: the ratio of depth to wavelength; the result holds uniformly across it.
+- Bathymetry: the shape of the seabed.
+- Existence on a timescale: the solution is guaranteed only up to a certain time, here one that grows as the nonlinearity shrinks. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -141,16 +144,16 @@ We provide a new well-posedness result on the gravity water-waves equations, i.e
 ### [Normal and Unitary Operators on Smooth Banach Spaces via the Duality Mapping](https://arxiv.org/abs/2611.31874)
 *Mohammed Shameem, Deepesh K. P* · `math.FA` · arXiv:2611.31874v1 · relevance 0.21
 
-- **In one sentence**: The paper generalises normal and unitary operators, and the self-adjoint subclass, from Hilbert spaces to smooth Banach spaces by using the duality mapping, and studies their characterisations and spectral properties.
-- **In plain words**: Mathematicians have a well-understood family of "nice" transformations on spaces where lengths and angles behave like ordinary geometry (Hilbert spaces). This paper asks how far those ideas stretch to a wider class of spaces, called smooth Banach spaces, where angles are not available but a substitute tool, the duality mapping, is. The authors define normal and unitary operators in this setting, show that self-adjoint operators fit inside the new normal class, and report several equivalent descriptions and spectral properties.
-- **Why it matters**: It tests which familiar results from quantum-style linear algebra survive when the inner product is removed, so it matters mainly to specialists in functional analysis. The text does not indicate applications beyond this theoretical extension, so its wider significance is uncertain.
-- **Background needed**: - Banach space: a complete space with a notion of length (norm) but no required angles.
-- Hilbert space: a Banach space with an inner product, giving angles; the classical setting for normal and unitary operators.
-- Operator: a linear map from a space to itself.
-- Self-adjoint / normal / unitary: classes of operators with special symmetry; normal means commuting with its adjoint, unitary means preserving length and inner products.
-- Duality mapping: a substitute for the inner product that sends each vector to a set of "dual" functionals of matching size; it is set-valued in general.
-- Smoothness: a geometric condition ensuring the duality mapping is single-valued.
-- Spectrum: the set of scalars where an operator fails to be invertible; spectral properties concern its shape and structure. · level: research-level
+- **In one sentence**: The paper extends the notions of normal and unitary operators, and the spectral properties of normal operators, from Hilbert spaces to smooth Banach spaces by using the duality mapping.
+- **In plain words**: Mathematicians have long studied a special class of operators (maps that transform vectors in a space) that behave nicely on Hilbert spaces, which are spaces where lengths and angles work as in ordinary geometry. This paper asks how much of that theory survives in a wider family of spaces called smooth Banach spaces, where a geometric tool called the duality mapping replaces the inner product. The text reports that the authors define normal and unitary operators in this setting, prove several characterisations of them, and find that many classical properties carry over.
+- **Why it matters**: The work is a generalisation of a well-known part of functional analysis, so its value lies in showing which classical results depend on the inner product and which do not. The provided text does not say which specific applications, if any, it connects to, so the wider significance is uncertain.
+- **Background needed**: - Operator: a rule that maps vectors in a space to vectors in the same or another space.
+- Hilbert space: a space with an inner product (a way of measuring angles and lengths), the setting of classical quantum-style operator theory.
+- Banach space: a complete space where lengths are measured by a norm but angles need not be defined.
+- Smooth Banach space: a Banach space in which the norm has no sharp corners, so each vector has a unique supporting direction.
+- Duality mapping: a rule that assigns to each vector a set of matching functionals (linear measuring tools) of the same size, replacing the inner product.
+- Normal and unitary operators: classes of operators that commute with their own adjoint and preserve length, respectively, in Hilbert spaces.
+- Spectrum: the set of scalars for which an operator minus that scalar fails to be invertible. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -161,17 +164,16 @@ This article extends the classical notions of normal and unitary operators from 
 ### [Kernel Estimates and Calder\'{o}n-Zygmund Theory in the $(k,a)$-generalized Laguerre setting](https://arxiv.org/abs/2611.31933)
 *Mingwei Shi, Yongsheng Han, Yu Liu* · `math.FA` · arXiv:2611.31933v1 · relevance 0.13
 
-- **In one sentence**: The paper proves heat and Poisson kernel estimates for the operator ||x||^{2-a}Δ_k in the (k,a)-generalized Laguerre setting (Dunkl Laplacian from a finite reflection group), then develops a (k,a)-Calderón-Zygmund theory with L^p boundedness, weak type (1,1), BMO endpoint estimates, and a T1 characterization of L^2 boundedness.
-- **In plain words**: The paper studies a family of mathematical operators that describe how heat or influence spreads over a space with built-in symmetries. The authors first pin down the detailed size and decay behaviour of the associated heat and Poisson kernels, which are the basic 'spreading patterns' of those operators. Using these estimates, they show that a certain class of singular integral operators that are bounded in one basic sense (L^2) are automatically bounded in a whole range of other standard measures of size.
-- **Why it matters**: Calderón-Zygmund theory is a central toolkit in harmonic analysis, and extending it to this symmetric, generalized setting broadens where its results apply. The T1 criterion gives a practical test for boundedness; the text does not say what applications beyond this setting it may have.
-- **Background needed**: - Heat kernel: a function describing how heat (or a quantity diffusing over time) spreads from a point; it is the fundamental solution of the heat equation.
-- Poisson kernel: a related spreading function, obtained here by "subordination" (a time-change trick that links it to the heat kernel).
-- Laplacian: the operator summing second derivatives; it measures how a function differs from its local average.
-- Dunkl operators: generalized derivatives that respect the symmetries (reflections) of a finite group, used to extend classical analysis to symmetric settings.
-- Singular integral operator: an averaging operator with a kernel that is not integrable near the diagonal; a standard object in harmonic analysis.
-- L^p spaces and weak type (1,1): ways of measuring functions by p-th power integrability; weak type (1,1) is a borderline size bound.
-- BMO (bounded mean oscillation): a space of functions with controlled average fluctuation, the usual endpoint replacement for L^infinity in this theory.
-- T1 theorem: a criterion saying an operator is L^2-bounded if its action on the constant function 1 (and its adjoint's action) is BMO and a weak boundedness condition holds. · level: research-level
+- **In one sentence**: The paper proves heat and Poisson kernel estimates for the operator ||x||^{2-a} Δ_k in the (k,a)-generalized Laguerre setting (Dunkl Laplacian over a finite reflection group), and builds a Calderón–Zygmund singular integral theory on it, including a T1 characterization of L^2 boundedness.
+- **In plain words**: This is a piece of pure mathematics about how heat and diffusion spread under a specific, somewhat unusual rule of motion, one that mixes ordinary spatial change with symmetries given by mirror-like reflections. The authors pin down the size and smoothness of the "spreading" kernel that describes this process. From those estimates they develop a general toolkit for a family of averaging operators on this setting and give a test for when such operators behave well on signals.
+- **Why it matters**: The text presents this as a systematic extension of classical harmonic analysis tools (Calderón–Zygmund theory and the T1 theorem) to a new, symmetry-twisted setting. The text does not state specific applications, so its wider significance is uncertain from the abstract alone.
+- **Background needed**: - Heat kernel: the function describing how heat (or a quantity) spreads from a point over time.
+- Poisson kernel: a related smoothing function, here obtained by "subordination" (averaging heat-type behavior over time).
+- Dunkl Laplacian: a generalized second-derivative operator that incorporates reflection symmetries of a finite group.
+- Laguerre setting: a framework built around Laguerre-type operators, here with an extra power weight parameter a.
+- Calderón–Zygmund operators: singular integral operators whose kernels obey size and smoothness conditions, which yield L^p bounds from L^2 bounds.
+- L^p spaces, weak type (1,1), BMO (functions of bounded mean oscillation): standard measures of size and of boundedness.
+- T1 theorem: a criterion that reduces L^2 boundedness of an operator to checking its action on the constant function 1 (and its adjoint), plus a weak boundedness condition. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -184,15 +186,15 @@ In this paper, we establish heat and Poisson kernel estimates for $\mathfrak L=\
 ### [H\"older continuity of Green functions for Markov sets](https://arxiv.org/abs/2611.33131)
 *Leokadia Bialas-Ciez, Rafa{\l} Pierzcha{\l}a* · `math.CV` · arXiv:2611.33131v1 · relevance 0.13
 
-- **In one sentence**: For a compact set K in C^N, the paper shows the Green function (and the Siciak extremal function) is Hölder continuous exactly when polynomial first derivatives obey Markov's inequality on K, settling the Markov-to-Hölder direction and giving the sharp exponent 1/m in one variable.
-- **In plain words**: The paper studies a measure of how "spread out" a region in the complex plane (or complex space) is, built from polynomials that stay small on that region. It shows that a certain smoothness property of this measure holds exactly when a standard polynomial bound, Markov's inequality, holds for the derivatives of polynomials on the region. The proof compares the measure on the region with its measure on a slightly larger neighborhood.
-- **Why it matters**: The text describes the Markov-to-Hölder implication as settling a longstanding open problem between approximation theory and pluripotential theory, so it is of interest to specialists in those areas. The text does not say what further applications it may have, so beyond that connection I cannot say more.
-- **Background needed**: - Compact set: a closed, bounded region, such as a disk or a segment in the complex plane.
-- Polynomial inequality (Markov's inequality): a bound on how fast a polynomial of degree n can grow on the set; here the bound is of the form A n^m.
-- Green function / Siciak extremal function: a way of measuring how far a point is from the set, using polynomials that stay bounded on it.
-- Hölder continuity: a quantitative smoothness condition; a function is Hölder with exponent α if its change over a small distance d is at most a constant times d^α.
-- Maximum principle and Hörmander's extension theorem: standard tools from complex analysis used in the proof.
-- Several complex variables: the case N>1, where the set lives in C^N. · level: research-level
+- **In one sentence**: For a compact set K in C^N, the paper shows that the Green function (and so the Siciak extremal function) is Hölder continuous exactly when polynomial derivatives satisfy Markov's inequality on K, settling a long-open implication, with a Hölder exponent of 1/m in one variable from a Markov bound of degree m.
+- **In plain words**: The paper studies a measure of how "spread out" a compact set of points is in the complex plane or higher-dimensional complex space, using a function built from polynomials that vanish on the set. It asks when this function varies smoothly in a controlled way (Hölder continuity, a precise limit on how steeply it can change). The authors show this smoothness is equivalent to a bound on how fast polynomial derivatives can grow, and they settle a long-standing open question in one direction.
+- **Why it matters**: The result connects two areas, approximation theory and pluripotential theory, by linking a regularity property of an extremal function to a classical inequality about polynomials. Its value to wider work depends on the specialist applications, which the text does not discuss.
+- **Background needed**: - Compact set: a closed, bounded collection of points, such as a disk or a curve.
+- Polynomial and its derivative: a sum of powers of the variable and the rate at which it changes.
+- Markov's inequality: a bound saying a polynomial of degree n cannot have derivatives larger than about A·n^m times its maximum size on the set.
+- Green function / Siciak extremal function: a function, built from polynomials bounded on K, that measures how far a point is from K.
+- Hölder continuity: a smoothness condition with an exponent; larger exponent means smoother, exponent 1 is Lipschitz.
+- Several complex variables: working with several complex numbers at once; Hörmander's theorem concerns extending holomorphic functions from a point. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -203,15 +205,15 @@ Let $K$ be a nonempty compact subset of $\mathbb C^N$. We prove that its Green f
 ### [Smale's Mean Values And Geometric Mean Values](https://arxiv.org/abs/2611.31546)
 *Yunping Jiang, Zhe Wang* · `math.NT` · arXiv:2611.31546v1 · relevance 0.13
 
-- **In one sentence**: The paper studies Smale's mean values of complex polynomials, showing the geometric mean value alone cannot give the sharpest bound on the minimum of Smale's mean values, verifying Smale's mean value conjecture for some subclasses, and linking the problem to Fekete points.
-- **In plain words**: This paper is about a question concerning polynomials with complex coefficients: how large must a "typical" point's local behavior be in terms of the polynomial's roots and derivative values. The authors show that for every degree above 2 and every positive number L, some polynomial of that degree has a geometric mean value larger than L. They also prove upper bounds for special families of polynomials, which supports Smale's conjecture in those cases.
-- **Why it matters**: The text shows that one natural quantity (the geometric mean value) is not enough by itself to pin down the sharpest bound for Smale's mean values, which narrows how the conjecture can be attacked. The authors also tie the problem to Fekete points, a classical object from potential theory, and propose a new problem about Fekete points; the broader significance of these links is not spelled out in the text.
-- **Background needed**: - A complex polynomial is a sum of powers of a complex variable with complex coefficients; its roots are the points where it equals zero.
-- Smale's mean value conjecture concerns how the values of a polynomial's derivative at its roots relate to the rest of the polynomial, measured by averaged quantities called Smale's mean values.
-- The geometric mean value is one such average, taken as a product rather than a sum, so it is sensitive to very small or very large terms.
-- A "bound" here is a guaranteed upper limit; showing a quantity can exceed every L means no finite bound of that kind holds for it alone.
-- Fekete points are special sets of points, chosen to be maximally spread out, from potential theory and approximation theory.
-- Degree d means the highest power of the variable in the polynomial. · level: research-level
+- **In one sentence**: The paper shows that the geometric mean value of Smale's mean values can be arbitrarily large for polynomials of each degree above 2, derives upper bounds for it under extra assumptions to support Smale's mean value conjecture on several polynomial subclasses, and links Smale's mean values to Fekete points.
+- **In plain words**: The paper studies a quantity that measures how polynomials (formulas like x^3 - 2x + 1) behave near their roots, which is tied to a long-standing conjecture by mathematician Steve Smale. The authors show that one natural version of this quantity, the geometric mean value, can be made larger than any chosen number for polynomials of each degree above 2. That means this quantity alone cannot give the best possible bound on the smaller Smale mean values. They also prove bounds under extra conditions and relate the problem to Fekete points, special arrangements of points that are used in approximation theory.
+- **Why it matters**: Smale's mean value conjecture is a well-known open question in complex analysis, so the paper's result that one tool cannot settle it is informative about which approaches are dead ends. The link to Fekete points suggests a new research direction, though the text does not show how far that connection will carry.
+- **Background needed**: - Polynomial: a sum of powers of a variable, such as x^3 - 2x + 1; its degree is the highest power.
+- Complex numbers and complex analysis: polynomials are studied with complex inputs, where roots and derivatives behave in structured ways.
+- Smale's mean value conjecture: a conjecture about how the derivative of a polynomial at a root relates to the polynomial's other roots, bounding the smallest such "mean value" by a constant.
+- Geometric mean value: a version of the mean built by multiplying terms and taking a root, as opposed to an ordinary average.
+- Fekete points: a set of points chosen to be as spread out as possible in a region, used in approximation and interpolation.
+- Upper bound: a number that a quantity is guaranteed not to exceed. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -224,14 +226,14 @@ We prove that, for every integer $d>2$ and every $L>0$, there exists a polynomia
 ### [The Universal Frame Characterization of C*-algebras](https://arxiv.org/abs/2611.32953)
 *Mohammad B. Asadi, Zahra Hassanpour-Yakhdani* · `math.OA` · arXiv:2611.32953v1 · relevance 0.18
 
-- **In one sentence**: The paper proves that a C*-algebra is exactly one of compact operators if and only if every Hilbert A-module admits a frame, settling a question of Amini, Asadi, Elliott and Khosravi (2017).
-- **In plain words**: This paper is about a precise yes-or-no question in the abstract mathematics of operators, which are rules that act on spaces of functions or vectors. The author shows that a certain class of algebras, the C*-algebras of compact operators, is characterized by a property: every "Hilbert module" over the algebra has a frame, a kind of spanning family of vectors. The result answers a question that earlier researchers had raised.
-- **Why it matters**: It gives a clean converse: a structural property of the algebra is equivalent to a frame-existence property for all its modules, which resolves an open question from the literature. The text does not say what wider applications it may have, so the broader significance is unclear from this text alone.
-- **Background needed**: - C*-algebra: a collection of bounded operators closed under addition, multiplication, scaling and taking adjoints (a kind of conjugate transpose), with a norm compatibility condition.
-- Compact operators: operators that behave like limits of finite-rank matrices; they are the "smallest" nontrivial operator algebras of this type.
-- Hilbert module: a generalization of a Hilbert space in which inner products take values in an algebra rather than in complex numbers.
-- Frame: a family of vectors that spans a space in a stable, possibly redundant way, so every element can be reconstructed from its inner products with the family.
-- Background result: Frank and Larson (2002) raised the underlying problem about frames in Hilbert modules; Amini, Asadi, Elliott and Khosravi (2017) posed the specific question answered here. · level: research-level
+- **In one sentence**: The paper proves that a C*-algebra is exactly one of compact operators if and only if every Hilbert A-module admits a frame, settling a question of Amini, Asadi, Elliott and Khosravi (2017) that goes back to Frank and Larson (2002).
+- **In plain words**: This paper is about a precise yes-or-no question in the mathematics of operators, which are rules that act on spaces of functions or vectors. The authors ask which algebras of such operators have a particular kind of "frame," a way of spreading a space's contents out so every element can be rebuilt from its pieces. They show that this property holds exactly for the algebras made of compact operators, which answers a question posed in 2017.
+- **Why it matters**: The result gives a clean characterization: one structural property of an algebra is equivalent to another, which closes an open question raised by earlier researchers. Its connections to wider areas are not described in the text, so any broader significance is unclear from this abstract alone.
+- **Background needed**: - C*-algebra: a collection of bounded linear operators on a Hilbert space that is closed under addition, multiplication, scalar multiples, and taking adjoints (a kind of conjugate transpose), with a norm compatible with these operations.
+- Compact operators: operators that behave like finite-dimensional matrices in the limit; they form a basic, well-understood special case of C*-algebras.
+- Hilbert module: a generalization of a Hilbert space in which the "scalars" are replaced by elements of a C*-algebra.
+- Frame: a spanning family of vectors that allows any element to be reconstructed from its inner products with the family, though the vectors need not be independent.
+- The question originates in work by Frank and Larson (2002) and was posed further by Amini, Asadi, Elliott and Khosravi (2017). · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -242,15 +244,16 @@ We prove that a C*-algebra A is a C*-algebra of compact operators if and only if
 ### [Algebraic derivations and the first \(L^2\)-cohomology of free group factors](https://arxiv.org/abs/2611.32121)
 *J. Huang, K. Kudaybergenov, F. Sukochev et al.* · `math.OA` · arXiv:2611.32121v1 · relevance 0.16
 
-- **In one sentence**: The paper proves that the first L^2-Betti number of the free group factor of a finite-rank free group is infinite, using algebraic derivations into affiliated operators of the tensor square and a rank identity for Jacobians of polynomial relations.
-- **In plain words**: The paper studies a measure of "how many independent ways a structure can be stretched" for a certain infinite-dimensional algebra built from a free group. The authors show this measure is infinite for the free group algebra, which is a result about the size of a certain cohomology space. They do this by extending values assigned to basic generators to full derivations, using a counting identity for polynomial relations.
-- **Why it matters**: Whether the first L^2-Betti number of free group factors is finite was a known open question in this area, so settling it in the infinite direction matters for the structure theory of these algebras. The text does not show connections to other fields beyond this area, so broader significance is unclear from the summary alone.
-- **Background needed**: - Free group: a group whose elements are words built from generators with no relations other than trivial cancellation.
-- von Neumann algebra / II_1 factor: an infinite-dimensional algebra of bounded operators on Hilbert space, the analogue of a ring of functions for quantum or noncommutative settings.
-- L^2-Betti number: a dimension-like invariant from L^2-cohomology, measuring the size of a space of derivations modulo inner ones.
-- Derivation: a map that obeys the product rule, like differentiation.
-- Semicircular elements: the noncommutative analogue of a Gaussian random variable, used as generators here.
-- Jacobian rank identity: a linear-algebra count of how many independent constraints a system of polynomial equations imposes. · level: research-level
+- **In one sentence**: The paper shows that the first L²-Betti number of the free group factor L(F_n) (in the Connes–Shlyakhtenko sense) is infinite, using algebraic derivations built from assignments on the semicircular generators and a rank identity for Jacobians of polynomial relations.
+- **In plain words**: This paper studies a measure of "how much room" a certain algebraic structure has, called the first L²-Betti number, for the von Neumann algebra built from a free group with a finite number of generators. The authors show this number is infinite. They do this by showing that values assigned to the basic generators can always be extended to a full algebraic derivation (a rule for how things change under products), and they also show that an outer derivation of this kind forces the number to be infinite in any II₁ factor with separable predual.
+- **Why it matters**: Infinite L²-Betti number is a strong structural statement about these algebras, and the paper links derivations to a rank identity for Jacobians, which may connect operator algebra theory to tools from algebraic geometry. The text alone does not show how far the methods reach beyond free group factors, so the wider significance is uncertain.
+- **Background needed**: - Von Neumann algebra: a self-adjoint algebra of bounded operators on Hilbert space, the non-commutative analogue of a space of measurable functions.
+- Free group factor L(F_n): the von Neumann algebra generated by the free group on n generators; a II₁ factor.
+- L²-Betti number (Connes–Shlyakhtenko): a dimension-like invariant measuring the size of the first L²-cohomology of a bimodule-valued derivation problem; infinite means maximally large in this sense.
+- Derivation: a linear map satisfying the Leibniz (product) rule; algebraic means defined by polynomial expressions rather than analytic limits; outer means not of the trivial inner form.
+- Semicircular elements: the non-commutative analogue of Gaussian random variables, the standard generators of free group factors.
+- Jacobian / rank identity: in this setting, the matrix of partial derivatives of polynomial relations and its rank, used to build derivations.
+- II₁ factor with separable predual: a type of infinite-dimensional operator algebra with a faithful trace and a countable dense subset of its predual. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -263,15 +266,15 @@ Let \(M\) be the von Neumann algebra of a nonabelian free group of finite rank. 
 ### [Gorenstein symmetry can fail for noetherian rings](https://arxiv.org/abs/2611.32871)
 *Liran Shaul* · `math.RA` · arXiv:2611.32871v1 · relevance 0.15
 
-- **In one sentence**: The paper constructs a two-sided noetherian ring whose injective dimension is 1 on the left but infinite on the right, showing Gorenstein symmetry can fail for such rings, and examines related properties (dualizing complex, injective generation) over fields of characteristic not 2.
-- **In plain words**: This is a question about algebraic structures called rings, which mathematicians use to describe collections of numbers and transformations. A common expectation is that a ring looks the same whether you view it from the left or the right in terms of a certain "size" measure called injective dimension. The paper builds a counterexample where the two sides differ sharply: finite from the left, infinite from the right.
-- **Why it matters**: It settles a question of whether a symmetry expected for a broad class of rings (Gorenstein symmetry) actually holds, answering it negatively. The text does not say how it bears on wider applications, so its reach beyond this area of algebra is unclear.
+- **In one sentence**: The paper constructs a two-sided noetherian ring whose injective dimension is 1 on the left and infinite on the right, showing that Gorenstein symmetry can fail for such rings, and it also studies dualizing complexes and injective generation over a field of characteristic not 2.
+- **In plain words**: This is a pure-mathematics paper about algebraic structures called rings, which are sets of numbers or objects that can be added and multiplied. The question is whether a certain measure of how "well-behaved" a ring is comes out the same whether you look at the ring from the left or from the right. The authors build an example where the two sides give very different answers, so the expected symmetry does not hold.
+- **Why it matters**: Gorenstein symmetry is a long-standing expected property in ring theory, and the paper shows that it can fail even for rings that are noetherian, a fairly tame and well-studied class. The text does not say what wider applications it has, so its importance beyond this area is unclear.
 - **Background needed**: - Ring: a set with addition and multiplication, where multiplication need not commute.
-- Left and right modules: ways a ring acts on other algebraic objects from the left or the right.
-- Noetherian ring: one where every chain of ideals eventually stops growing; a finiteness condition.
-- Injective dimension: a measure of how far a module is from being "injective" (roughly, how well it can be extended); finite means it stops after finitely many steps.
-- Gorenstein symmetry: the expectation that left and right injective dimensions agree for noetherian rings.
-- Dualizing complex and Rickard-Keller injective generation: technical structures from homological algebra that relate duality properties of the derived category of modules. · level: research-level
+- Left and right modules: ways the ring's elements act on other objects from the left or the right; a ring can behave differently on each side.
+- Noetherian ring: a ring in which every chain of ideals eventually stops growing, a common finiteness condition.
+- Injective dimension: a number measuring how far a module is from being "injective" (a strong extension property); small is nicer, infinite means it never settles.
+- Gorenstein symmetry: the expectation that the left and right injective dimensions of a ring agree when both are finite.
+- Dualizing complex and Rickard-Keller injective generation: more technical structures in the derived category used to study these modules. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -282,16 +285,17 @@ We construct a two-sided noetherian ring $A$ which has injective dimension $1$ a
 ### [The optimal exponent in the Babai-Goodman-Pyber theorem](https://arxiv.org/abs/2611.32149)
 *Shaowu Zheng* · `math.GR` · arXiv:2611.32149v1 · relevance 0.14
 
-- **In one sentence**: The paper determines the optimal exponent c = b_0 = 1 + log_9(168·24^{1/3}) ≈ 3.8141 in the Babai–Goodman–Pyber bound relating the index of the soluble radical of a finite group to the index of any soluble subgroup, with a sharper coefficient 24^{-1/3} for nonsoluble groups and sharpness examples from PSL_2(8).
-- **In plain words**: This is about finite groups, which are collections of symmetries that can be combined, and how "large" a group is compared with its simpler pieces. A known result says the part of a group left after removing its largest simple-to-handle (soluble) normal piece cannot be much bigger than any simple-to-handle subgroup raised to some fixed power. The paper finds the smallest possible value of that power, about 3.81, and shows it cannot be lowered, using an example built from the group PSL_2(8).
-- **Why it matters**: It settles the exact best constant in a known bound, so the question of how sharp the original theorem is now has a precise answer. The text does not say what wider applications it has, and I am not sure of any beyond the specialist area of finite group theory.
-- **Background needed**: - Finite group: a group with finitely many elements, such as the symmetries of a finite object.
-- Subgroup and index: a subgroup is a smaller group inside a larger one; the index is roughly how many copies of the subgroup fit into the whole group.
-- Soluble group: a group that can be built step by step from abelian (commutative) pieces; informally, "simple to handle".
-- Normal subgroup: a subgroup that is preserved under conjugation (a change of viewpoint), so the quotient makes sense.
-- Radical Rad(X): the largest soluble normal subgroup of X.
-- Simple group and automorphism group: simple groups are the indivisible building blocks of finite groups; automorphism groups are the symmetries of a group itself.
-- Exponent and constant: the bound says the index of the radical is at most a power of the index of H; the question is the smallest allowed power. · level: research-level
+- **In one sentence**: The paper determines the optimal exponent c in the Babai-Goodman-Pyber bound [X:Rad(X)] ≤ [X:H]^c for finite groups, showing the least possible c is 1+log_9(168·24^{1/3}) ≈ 3.8141, with a sharper coefficient 24^{-1/3} for nonsoluble groups, and reduces the question to soluble subgroups of automorphism groups of finite simple groups.
+- **In plain words**: This is about finite groups, which are collections of symmetries that can be combined, and how large their non-solvable core is compared with a solvable subgroup (a subgroup whose structure is built up in simple layered steps). The paper gives the smallest exponent for which a known size-comparison inequality holds, and it shows the answer is about 3.81. For groups that are not solvable, it also gives a tighter version of the inequality with a specific constant, and it uses examples based on the group PSL_2(8) to show these values cannot be improved.
+- **Why it matters**: It settles the exact best constant in a known theorem of Babai, Goodman and Pyber, so the question of how sharp that theorem is now has a definite answer. The text does not say what wider applications it has, so any connection beyond group theory is unclear from the text alone.
+- **Background needed**: - Finite group: a set of symmetries (or permutations) with finitely many elements, combined by composition.
+- Subgroup: a smaller group sitting inside a larger one; [X:H] is the index, roughly how many copies of H fill X.
+- Soluble (solvable) group: one that can be built from abelian (commutative) pieces in successive layers; it is the "simple-ish" end of group structure.
+- Normal subgroup: one that is preserved under conjugation (relabeling by group elements); the radical Rad(X) is the largest soluble normal subgroup.
+- Finite simple group: a finite group with no nontrivial normal subgroups; these are the building blocks of all finite groups.
+- Automorphism group: the group of structure-preserving relabelings of a group.
+- Exponent and coefficient: c is the power to which the index is raised; 24^{-1/3} is a multiplicative constant.
+- PSL_2(8): a specific finite simple group used as the extremal example. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -304,15 +308,15 @@ Babai, Goodman and Pyber proved that there exists an absolute constant $c$ such 
 ### [Abelian envelopes and quantum groups in Knop's interpolation categories](https://arxiv.org/abs/2611.33152)
 *Johannes Flake, Peter Mader* · `math.CT` · arXiv:2611.33152v1 · relevance 0.25
 
-- **In one sentence**: The paper shows that large classes of subcategories of Knop's tensor envelopes admit abelian envelopes, which correspond to quantum groups (Hopf algebras) inside Deligne-type interpolation categories, including those of group-theoretical easy quantum groups.
-- **In plain words**: This paper is about a way of taking a family of symmetry structures, described by counting diagrams, and turning it into a more familiar setting where it behaves like a collection of symmetries acting on spaces. The authors prove that for many such families an "abelian envelope" exists, meaning a well-behaved completion in which the structure can be read as a quantum group. They also apply the method to several concrete families, such as wreath products and finite general linear and affine groups.
-- **Why it matters**: It connects two research programs: the interpolation categories that let symmetric groups be treated as if their size were a continuous parameter, and the theory of quantum groups. Its specific scope is the existence result and the correspondence with quantum groups; the text does not say how far beyond these cases the results extend.
-- **Background needed**: - Representation theory: studying groups through the linear actions they have on vector spaces.
-- Tensor category: a collection of objects (such as representations) that can be combined by a tensor product, with morphisms between them.
-- Interpolation category: a category built so that a parameter (such as the size n of a symmetric group) can take arbitrary values, via counting diagrams.
-- Abelian envelope: an enlargement of a category into an abelian one (one where kernels and cokernels behave as in linear algebra), which lets it be studied with standard tools.
-- Hopf algebra / quantum group: a generalization of a group of symmetries, with an algebraic structure that allows multiplication and comultiplication; quantum groups are its noncommutative, deformed versions.
-- Easy quantum group: a quantum symmetry group defined through a category of diagrams (partitions) of a specific kind. · level: research-level
+- **In one sentence**: The paper proves that large classes of subcategories of Knop's tensor envelopes (interpolation categories) admit abelian envelopes, which correspond to quantum groups inside Deligne's interpolation category of symmetric groups, including interpolation categories of group-theoretical easy quantum groups, wreath products, finite general linear groups, and finite affine groups.
+- **In plain words**: Mathematicians study symmetry through categories, which are collections of objects and maps between them that behave like sets of symmetries. This paper asks when such a category can be "completed" into a more structured setting where its symmetries behave like groups, and it shows this is possible for many important families. The authors build the needed pieces explicitly, using a calculus of diagrams (relations) that underlies these categories.
+- **Why it matters**: The work extends a program that links symmetry groups of many kinds to a single unifying framework, which is of interest to specialists in quantum groups and representation theory. The text itself does not say how far the results reach beyond the listed cases, so the wider impact is uncertain.
+- **Background needed**: - Groups and their representations: a group is a set of symmetries with a combining rule; a representation lets it act on vector spaces.
+- Tensor categories: collections of objects that can be combined (tensored), with maps between them, used to encode symmetry.
+- Interpolation categories: categories in which the number of objects (like the size n of a symmetric group) is treated as a continuous-style parameter, in the sense of Deligne and Knop.
+- Abelian envelope: a larger abelian category (one where kernels and cokernels behave like ordinary linear algebra) that contains the original category.
+- Quantum groups and Hopf algebras: algebraic generalizations of groups, with coordinate algebras describing their functions.
+- Easy quantum groups: a classification of quantum symmetry groups via diagrams of pairings. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -323,16 +327,17 @@ We show the existence of abelian envelopes for large classes of subcategories of
 ### [Non-formality of prefactorization algebras](https://arxiv.org/abs/2611.33125)
 *Coline Emprin, Alex Takeda* · `math.AT` · arXiv:2611.33125v1 · relevance 0.14
 
-- **In one sentence**: The paper builds a Poisson bracket on the cohomology of locally constant prefactorization algebras on R^m (for m ≥ 2) that obstructs formality, generalizing the two-dimensional bracket of Bruinsma, Schenkel and Vicedo and extending their non-formality theorem for Lie algebra factorization envelopes to all dimensions.
-- **In plain words**: The paper studies a mathematical structure that assigns algebraic data to regions of space, and asks whether that data can be simplified to a standard form without losing information. The authors build an invariant, a kind of bracket operation on the simplified data, whose non-zero value shows that such simplification is impossible in every dimension two or higher. They use this to show that several families of algebraic objects, including factorization envelopes of Lie algebras and certain physics-inspired field theories, are not formal.
-- **Why it matters**: A non-zero bracket gives a checkable test that a structure cannot be reduced to its simplest form, which matters for classifying these objects. The link to field theories such as Chern-Simons and BF theories suggests relevance to mathematical physics, but the text does not say more about those applications.
-- **Background needed**: - Prefactorization algebra: an assignment of algebraic data to open regions of a space, compatible with placing regions side by side (a local-to-global structure from factorization homology).
-- Locally constant: the data depends only on topology, not on fine geometry, so it behaves like a topological invariant.
-- Cohomology: an algebraic invariant that counts independent 'holes' or obstructions in a structure; here it is the object that carries the bracket.
-- Poisson bracket: an antisymmetric product on functions or classes that satisfies a Leibniz-type rule; it is the 'signal' used to detect non-formality.
-- Formality: the property that a structure is equivalent to its cohomology with trivial higher operations; non-formality means this simplification fails.
-- L-infinity algebra: a generalization of a Lie algebra with a family of higher operations.
-- Lie algebra, BF theory and Chern-Simons theory: standard algebraic and physical structures; only needed at a high level. · level: research-level
+- **In one sentence**: The paper builds a Poisson bracket on the cohomology of locally constant prefactorization algebras on R^m (for m ≥ 2) that obstructs formality, generalizing a two-dimensional bracket of Bruinsma, Schenkel and Vicedo and extending their non-formality result to higher dimensions.
+- **In plain words**: This paper is about a mathematical structure that assigns algebra-like data to regions of space, and whether that data can be simplified to a standard form. The authors define a new kind of bracket (a way of multiplying cohomology classes that gives a Poisson structure) that detects when this simplification is impossible, in every dimension at least two. They use it to show that several families of algebras, including factorization envelopes of Lie algebras and certain physical gauge theories, are not formal.
+- **Why it matters**: The text presents a general obstruction to formality that works in all dimensions, extending an earlier two-dimensional result. Its wider significance beyond this specialist setting is not discussed in the text, so I cannot say more about its impact.
+- **Background needed**: - Prefactorization algebra: a structure assigning algebraic data to open subsets of a space, compatible with placing regions side by side.
+- Locally constant: the data depends only on the topology of the regions, not on fine geometry.
+- Cohomology: an invariant extracted from a chain complex, measuring the "holes" in the structure.
+- Formality: whether an algebraic structure is equivalent to its simplest version (its cohomology with trivial higher operations).
+- Non-formality: a structure that cannot be simplified this way; an obstruction is a computable invariant that proves this.
+- Poisson bracket: a bilinear operation with derivation and Jacobi-type properties, central to classical and quantum mechanics.
+- Lie algebra, L-infinity algebra, BF theory, Chern-Simons theory: standard algebraic and physical structures; only the basic idea is needed.
+- Linking spheres: spheres around a point used to define the construction; a geometric tool. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -345,16 +350,16 @@ We construct a Poisson bracket on the cohomology of locally constant prefactoriz
 ### [An elliptic Lehmer bound of exponent one at a supersingular prime](https://arxiv.org/abs/2611.32749)
 *Jorge Mello* · `math.NT` · arXiv:2611.32749v1 · relevance 0.27
 
-- **In one sentence**: Proves a lower bound on Néron–Tate heights of non-torsion points on elliptic curves with good supersingular reduction at a prime, with exponent one in the degree, which by Elkies' result covers all elliptic curves over Q.
-- **In plain words**: The paper is about how "small" a nonzero point on an elliptic curve (a special kind of curve defined by a cubic equation) can be, measured by a height function that grows with how complicated the point's coordinates are. It shows that such a point cannot have height smaller than a quantity that shrinks only slightly faster than the reciprocal of its degree, which is the number of ways its coordinates are tied to the base number field. The bound is stated for curves with a particular behaviour modulo a prime, and the text says this covers every elliptic curve over the rational numbers.
-- **Why it matters**: This is a sharpened version of a Lehmer-type lower bound, a family of questions asking how small a height can get before it is forced to be zero. The text reports that the exponent improves on earlier results by Masser and by Hindry and Silverman, but the text does not say how much these bounds matter for other problems.
-- **Background needed**: - Elliptic curve: the set of solutions of a cubic equation in two variables, with a natural group structure on its points.
-- Number field: a finite extension of the rational numbers, such as the field generated by a square root.
-- Néron–Tate height: a measure of the arithmetic complexity of a point on an elliptic curve; it is zero exactly for torsion points (points of finite order).
-- Lehmer-type bound: a lower bound saying that nonzero heights cannot be arbitrarily close to zero, given the degree of the field involved.
-- Good supersingular reduction: a condition on how the curve behaves when reduced modulo a prime; supersingular is a special, rare case of this.
-- Degree D: the size of the field generated by the x-coordinate of the point over the base field.
-- Notation o(1): a quantity that tends to zero as D grows. · level: research-level
+- **In one sentence**: Proves a lower bound of the form D^{-1-o(1)} on the Néron–Tate height of non-torsion points on elliptic curves with good supersingular reduction at a prime, which by Elkies covers all elliptic curves over Q, improving earlier exponents due to Masser and to Hindry–Silverman.
+- **In plain words**: The paper studies how small a "height" (a measure of how complicated a point on a curve is) can be for points that are not of finite order. It shows that for elliptic curves with a certain good behaviour modulo a prime, such heights cannot drop below a bound that shrinks only slightly faster than one over the degree of the field generated by the point's coordinate. Via a result of Elkies, this applies to every elliptic curve over the rational numbers.</plain>
+<parameter name="why">Lower bounds on heights of points are a central theme in Diophantine geometry, and this paper sharpens the known exponent from earlier work of Masser and of Hindry and Silverman. The text does not say what further consequences this has, so I cannot say more about its wider reach.
+- **Background needed**: - Elliptic curve: a smooth cubic curve with a group law on its points, studied over number fields (finite extensions of the rational numbers).
+- Néron–Tate height: a canonical way of assigning a non-negative size to a point; it is zero exactly on torsion points (points of finite order).
+- Degree D = [K(x(P)):K]: how many steps of field extension are needed to write down the x-coordinate of the point P; a measure of the point's arithmetic complexity.
+- Lehmer-type bound: a lower bound saying nonzero heights cannot be arbitrarily small, here in terms of D.
+- Good supersingular reduction at a prime: a condition on how the curve behaves when reduced modulo a prime, which is special and makes the curve's reduction unusually rigid.
+- Elkies' result: a statement that every elliptic curve over Q has supersingular reduction at some prime, which is what lets the theorem apply to all curves over Q.
+- Notation o(1): a quantity that tends to zero as D grows, so the bound is D to the power minus one, up to small corrections. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -365,16 +370,15 @@ Let $E$ be an elliptic curve over a number field $K$ with good supersingular red
 ### [Counting elliptic curves by discriminant](https://arxiv.org/abs/2611.31390)
 *Stephanie Chan, Peter Koymans* · `math.NT` · arXiv:2611.31390v1 · relevance 0.27
 
-- **In one sentence**: The paper proves an asymptotic count with a power saving for rational elliptic curves ordered by minimal discriminant, conditionally on the abc conjecture, and unconditionally for curves with a restricted c4 size, via new bounds on integral points (c4, c6) near the cusp c4^3 = c6^2.
-- **In plain words**: The paper studies how many elliptic curves (a standard family of smooth curves defined by cubic equations, used heavily in number theory) have a given size of "discriminant," a number that measures how degenerate the curve is. The authors give a precise formula for how this count grows as the size bound increases. Part of the result assumes the abc conjecture, an unproven statement about how addition and multiplication of whole numbers interact, and part is proved without it under an extra restriction.
-- **Why it matters**: Counting elliptic curves is a central question in arithmetic geometry, and a formula with a power saving (an error term that shrinks polynomially) is a sharper result than an asymptotic alone. The text does not say how it compares with earlier counts, so its wider significance is unclear from the abstract alone.
-- **Background needed**: - Elliptic curve: a smooth cubic curve over the rational numbers, with its rational points forming a group.
-- Q-isomorphism class: curves counted up to a change of coordinates over the rationals, so equivalent curves are counted once.
-- Minimal discriminant: a whole number built from the curve's coefficients that measures degeneracy; smaller means the curve is "nicer."
-- Asymptotic formula: a formula saying how a count grows as the bound X goes to infinity.
-- Power saving: the error in the formula shrinks like a power of X.
-- c4, c6: standard integer invariants of a curve; the cusp c4^3 = c6^2 is where the curve becomes singular.
-- abc conjecture: an unproven conjecture on the sizes of prime factors of integers a+b=c; it is used here as a hypothesis. · level: research-level
+- **In one sentence**: The paper proves an asymptotic count with a power saving for rational elliptic curves ordered by minimal discriminant, conditionally on the abc conjecture, and gives an unconditional version for curves with an extra bound on c_4, using new bounds on integral points (c_4, c_6) near the cusp c_4^3 = c_6^2.
+- **In plain words**: The paper asks how many elliptic curves over the rational numbers exist when they are sorted by a size measure called the minimal discriminant. It gives a precise formula for that count, with an error term that shrinks by a power of X, but the full result assumes the abc conjecture, an unproven statement about whole numbers. Without that assumption, the authors get the same formula only for a restricted subfamily of curves.
+- **Why it matters**: Counting elliptic curves is a central question in arithmetic geometry, and an error term with a power saving is a much sharper statement than a bare asymptotic. The text does not say how these results compare with earlier work or what further applications they have, so the wider significance is unclear from this abstract alone.
+- **Background needed**: - Elliptic curve: a smooth cubic curve with a rational point, the basic object of study in arithmetic geometry; over the rationals it is classified up to isomorphism by invariants c_4 and c_6.
+- Discriminant: a whole number built from the curve's coefficients that measures how "degenerate" it is; the minimal discriminant uses the best integer model of the curve.
+- Asymptotic formula: an expression saying how a count grows as a size bound X grows, here with an error term that is a power of X smaller than the main term ("power saving").
+- abc conjecture: an unproven statement that bounds how often small integers can share large prime factors; it implies strong constraints on rational points and is assumed here.
+- Cusp c_4^3 = c_6^2: the singular locus of the parameter space of curves, where the curves degenerate; counting integral points near it is the technical bottleneck.
+- Q-isomorphism: two curves are counted as the same if they are related by a change of variables defined over the rationals. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -387,16 +391,18 @@ We prove an asymptotic formula with a power saving for the number of $\mathbb{Q}
 ### [Flexible algebraic curves and fake vanishing cycles](https://arxiv.org/abs/2611.31551)
 *Joshua Lehman, Tudur Lewis* · `math.GT` · arXiv:2611.31551v1 · relevance 0.15
 
-- **In one sentence**: The paper proves that complex curves in sufficiently ample linear systems on simply connected projective surfaces (including smooth plane curves) are topologically (spin) flexible, and uses this to produce fake vanishing cycles, with equivariant intersection forms on the surface exterior as the main tool.
-- **In plain words**: The paper studies smooth curves drawn on surfaces (such as the ordinary plane) viewed as shapes in four-dimensional space. It shows that for these curves, any way of re-mapping the curve's underlying real surface can be extended to a re-mapping of the surrounding four-dimensional space. This leads to simple closed loops on the curve that look like they could be the kind that can be shrunk away, yet are not.
-- **Why it matters**: The result gives a clear, checkable answer to whether these curves are topologically flexible, and it produces "fake vanishing cycles," a notion that helps separate topological from algebraic behavior of curves. The text does not state wider consequences, so its connections beyond this area are unclear.
-- **Background needed**: - Complex curve: a one-dimensional complex-algebraic object; its real points form a real surface.
-- Linear system / ample: a family of curves cut out by polynomials of high enough degree on a surface.
-- Simply connected surface: a surface with no non-trivial loops that cannot be shrunk.
-- Mapping class: a way of moving a surface onto itself, considered up to smooth deformation.
-- Topological flexibility: a curve whose surface re-mappings all extend to the ambient 4-dimensional space.
-- Vanishing cycle: a loop that can be collapsed to a point inside a deformation of the curve; a fake one bounds a disk in the complement but is not a true vanishing cycle.
-- Intersection form: a bookkeeping tool counting how surfaces and loops cross each other. · level: research-level
+- **In one sentence**: The paper proves that complex curves in sufficiently ample linear systems on simply connected projective surfaces (including smooth plane curves) are topologically (spin) flexible, which yields fake vanishing cycles and examples of pushed-in Seifert surfaces that need one stabilization to become spin-flexible.
+- **In plain words**: The paper studies smooth curves drawn on surfaces in complex geometry, and how their shapes can be moved around inside the four-dimensional space they sit in. The authors show that for curves of this kind, any allowed rearrangement of the curve's underlying real surface can be extended to a rearrangement of the whole four-dimensional space. They use this to find simple loops on the curve that look like they could be shrunk away inside the space, but do not actually behave that way.
+- **Why it matters**: The results sharpen what topology can and cannot see about algebraic curves, and they make precise the difference between loops that can be cancelled by a disk and loops that genuinely cannot. The text does not say how far the results reach beyond the cases stated, so the wider significance is unclear from this excerpt alone.
+- **Background needed**: - Algebraic curves: solution sets of polynomial equations over the complex numbers; a complex curve is also a real surface.
+- Linear systems and ampleness: families of curves on a surface; "sufficiently ample" means the family is large enough to have good geometric properties.
+- Simply connected surface: a surface in which every loop can be shrunk to a point.
+- Mapping class: a way of moving a surface onto itself, considered up to continuous deformation.
+- Topological flexibility: the property that every such symmetry of the curve extends to a symmetry of the surrounding four-dimensional space.
+- Vanishing cycle: a loop on a surface that can be collapsed by a disk inside the surrounding space; a "fake" one bounds a disk in the complement but is not a true vanishing cycle.
+- Framing and spin structure: extra bookkeeping data attached to surfaces and disks, which the disk-bounding condition refers to.
+- Seifert surface, pushed-in surface, stabilization: standard objects and operations in knot theory in four dimensions.
+- Equivariant intersection form: an algebraic invariant that records how loops intersect, tracked in a setting with a symmetry action. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -408,14 +414,14 @@ We prove that complex curves in sufficiently ample linear systems on simply conn
 *Arkadev Ghosh, Pinakinath Saha* · `math.AG` · arXiv:2611.32752v1 · relevance 0.08
 
 - **In one sentence**: For a connected simply-connected simple complex group G with Borel subgroup B, the paper gives a necessary and sufficient condition for the restriction map Pic(G/B) → Pic(Y) to be an isomorphism, where Y is an irreducible regular semisimple Hessenberg variety inside G/B.
-- **In plain words**: This paper studies a family of geometric shapes, called Hessenberg varieties, sitting inside a standard space built from a symmetry group (the flag variety G/B). It asks when the "line bundles" on the big space (ways of attaching a one-dimensional twisted structure to each point, grouped into a group called the Picard group) carry over exactly to the smaller shape. The main result is a precise test that tells when this carrying-over is a perfect match.
-- **Why it matters**: The text gives only the setup and the main statement, not the proof or examples, so its wider significance is hard to judge from here. It sits in algebraic geometry and relates to the study of Hessenberg varieties, which link to combinatorics and representation theory; that connection is my general understanding rather than something the text spells out.
-- **Background needed**: - Algebraic group: a group of matrices or transformations defined by polynomial equations over the complex numbers.
-- Borel subgroup and flag variety G/B: the space of nested chains of subspaces that the group acts on.
-- Hessenberg variety: a subvariety of G/B defined by a linear-algebra condition involving a fixed matrix and a "Hessenberg" shape constraint.
-- Regular semisimple: a condition on the defining matrix that makes the variety well-behaved (smooth, with nice symmetry).
-- Picard group Pic(X): the group of isomorphism classes of line bundles on X, a way to measure the twisting of the space.
-- Restriction map: taking a line bundle on the big space and restricting it to the smaller subvariety. · level: research-level
+- **In plain words**: The paper studies a family of geometric shapes, called Hessenberg varieties, that sit inside a standard flag space built from a symmetry group. For one especially regular kind of these shapes, it asks when every way of assigning a "line bundle" (a smooth twisting structure over the shape) on the big space carries over exactly to the smaller shape. The text states that the author gives a complete yes-or-no test for when this carries over exactly.
+- **Why it matters**: The result pins down exactly when the big space's line bundles fully determine those on a subvariety, which is a precise structural question about how these shapes sit inside flag spaces. The text does not say what applications it has, so I cannot say more about its wider importance.
+- **Background needed**: - Algebraic group: a group of symmetries described by polynomial equations over the complex numbers.
+- Borel subgroup and flag variety G/B: the space of complete nested flags that the group acts on.
+- Hessenberg variety: a subvariety of G/B cut out by a condition involving a linear operator and a "Hessenberg" shape constraint.
+- Regular semisimple: a generic, well-behaved case where the operator has distinct eigenvalues.
+- Picard group Pic: the group of line bundles (one-dimensional twisting structures) on a variety, up to isomorphism.
+- Restriction map: taking a line bundle on the big space and viewing it on the subvariety. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -428,16 +434,16 @@ Let $G$ be a connected simply-connected simple algebraic group over $\mathbb{C}$
 ### [One monoid to realize them all: a master monoid for homotopy types](https://arxiv.org/abs/2611.32655)
 *Isaac Carcac\'ia-Campos* · `math.AT` · arXiv:2611.32655v1 · relevance 0.17
 
-- **In one sentence**: The paper shows that every homotopy type (CW complex up to homotopy) can be realized as the classifying space of the translation category of an action of a single monoid on a set, obtained by collapsing all objects of the semisimplicial category while keeping its face maps, and it analyzes when such a monoid can serve as a weak test category.
-- **In plain words**: Homotopy theory studies shapes up to continuous deformation, and it is usually described using spaces or using collections of combinatorial building blocks. This paper asks whether all such shapes can instead be encoded by actions of one algebraic object, a monoid (a set with an associative operation and an identity), acting on sets. The authors find that this is possible for every CW complex, and that truncating the construction at dimension n gives a finitely presented object that captures exactly the shapes of dimension at most n.
-- **Why it matters**: It offers a purely algebraic route into homotopy theory, which may matter for researchers interested in combinatorial or computational models of shape. The text also draws a distinction: one object can realize all homotopy types, yet that monoid need not model homotopy theory as a localization, and the obstruction is identifying objects rather than having only one. How far this connects to other frameworks is not established in the text.
-- **Background needed**: - Homotopy type: a shape considered up to continuous deformation (for example, a sphere or a torus).
-- CW complex: a standard way of building spaces by gluing cells of increasing dimension.
-- Classifying space of a category: a space built from a category's objects and arrows, used to link combinatorics to topology.
-- Monoid: a set with an associative binary operation and an identity element; an "action" of it on a set is a way of letting its elements transform that set.
-- Semisimplicial category: a combinatorial category whose objects are ordered sets and whose maps are face operators, used to model spaces.
-- Test category: a small category whose presheaves model homotopy theory; a "weak" test category is a relaxed version of this notion.
-- Coreflective subcategory: a subcategory with a right adjoint-type inclusion, roughly a sub-collection closed under a canonical "best approximation". · level: research-level
+- **In one sentence**: The paper shows that every homotopy type (CW complex up to homotopy) can be realized as the classifying space of the translation category of an action of a single monoid on a set, obtained by collapsing the objects of the semisimplicial category while keeping its face maps, and it situates this within weak test category theory.
+- **In plain words**: The paper asks whether the shapes studied in homotopy theory, which are usually described using topological spaces or structured collections of sets, can instead be captured by the action of one algebraic object, a monoid (a set with an associative operation and an identity). The authors build such a monoid by merging all the objects of a standard combinatorial category while keeping its face maps, and they show every CW homotopy type arises this way. The text presents this as a general algebraic framework rather than a new computation.
+- **Why it matters**: It offers an unusual algebraic route into homotopy theory, connecting it to the theory of test categories and to monoid actions. The abstract's claims about finite presentation and which dimensions are realized are stated in the text, but the wider significance for the field is for specialists to judge.
+- **Background needed**: - Homotopy type: a shape considered up to continuous deformation; CW complexes are a standard class of spaces built from cells.
+- Classifying space of a category: a topological space built from a category's objects and arrows, used to encode its homotopy information.
+- Semisimplicial category: a combinatorial category whose objects are ordered sets and whose maps include face operators (deleting an element).
+- Monoid and monoid action: a monoid is a set with an associative operation and identity; an action assigns to each element a map on a set.
+- Test category: a small category whose presheaves model homotopy types, in Grothendieck's sense.
+- Translation category (action groupoid analogue): the category with objects the set elements and arrows given by the monoid action.
+- Coreflective subcategory: a subcategory where each object has a best map into it from the larger category. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -448,14 +454,14 @@ Homotopy theory has traditionally been approached either through topological spa
 ### [An Introduction to O-minimal Geometry](https://arxiv.org/abs/2611.32426)
 *Michel Coste* · `math.AG` · arXiv:2611.32426v1 · relevance 0.12
 
-- **In one sentence**: Lecture notes covering the core theory of o-minimal structures, including cell decomposition, dimension, definable triangulation, generic fibers, and smoothness.
-- **In plain words**: These are teaching notes on a branch of mathematics that studies "tame" collections of shapes and sets defined by simple rules. The text only lists the six chapters (the basic definitions, splitting shapes into simple pieces, counting dimension, cutting shapes into triangles, studying families of sets, and smoothness), so it does not report any new findings. It is an overview of how the subject is organized.
-- **Why it matters**: The notes are a structured entry point into a field of mathematics concerned with well-behaved geometry, which has links to model theory and real algebraic geometry. The provided text is only a chapter list, so I cannot say more about its specific content or its influence.
-- **Background needed**: - Sets in the plane or space and what "dimension" means for them
-- Basic topology: open and closed sets, continuity, connected pieces
-- Familiarity with real numbers, polynomials, and graphs of functions
-- Some logic vocabulary helps: a "structure" is a collection of sets and functions on the real numbers, and "definable" means describable by a formula in that structure
-- Triangulation means cutting a shape into simplices (triangles, tetrahedra, and their higher analogues) · level: research-level
+- **In one sentence**: Lecture notes covering the foundations of o-minimal geometry, a tame setting for studying real geometric sets, through cell decomposition, dimension, triangulation, generic fibers, and smoothness.
+- **In plain words**: These are lecture notes, not a report of new findings. They teach a branch of mathematics that studies shapes defined by simple rules in a way that keeps them well behaved, and they go through its main tools in six chapters. The text given is only the chapter list, so it does not show the details of any argument.
+- **Why it matters**: The text gives no results or claims of novelty, so its importance cannot be judged from it. Such notes are usually used as a textbook entry point, and o-minimal geometry is known to connect to real algebraic geometry and model theory, though the text itself does not say this.
+- **Background needed**: - Sets: a collection of points, such as a curve or a surface in space.
+- Dimension: the number of independent directions a shape has, such as 1 for a curve and 2 for a surface.
+- Triangulation: cutting a shape into small triangle-like pieces.
+- Smoothness: whether a shape has no sharp corners or cusps.
+- Model theory: the study of which properties can be stated in a formal logical language. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -468,16 +474,16 @@ These lecture notes on o-minimal geometry comprise six chapters: 1 - O minimal S
 ### [Doubly Intermittent Singular Skew Products](https://arxiv.org/abs/2611.31490)
 *Stefano Luzzatto, Rizwan Rizwanullah* · `math.DS` · arXiv:2611.31490v1 · relevance 0.10
 
-- **In one sentence**: The paper studies a class of skew product systems (a uniformly expanding circle map coupled with a full branch interval map having two indifferent fixed points and unbounded derivatives), constructs an induced full branch map, and proves an invariant probability measure equivalent to Lebesgue plus decay of correlations.
-- **In plain words**: This paper studies a mathematical model of a system that evolves step by step, where each step has a random-like driving component. The authors look at a broad family of such systems, which generalizes earlier examples from the literature. They show that these systems settle into a stable long-run pattern that matches ordinary uniform (Lebesgue) spread of points, and that their memory of starting conditions fades over time.
-- **Why it matters**: The work extends a known family of examples (Gouëzel's skew products) to a much wider setting, which helps clarify which features drive the statistical behaviour. The text does not discuss applications, so any connection to physical or other modelling is unclear from this abstract alone.
-- **Background needed**: - Dynamical system: a rule that repeatedly updates a point's position over time.
-- Skew product: a system where one component's evolution depends on a second component, often read as a random dynamical system.
-- Uniformly expanding map: a map that stretches distances by a fixed factor everywhere.
-- Indifferent (neutral) fixed point: a point that the map leaves in place, where nearby points move very slowly; this makes orbits "intermittent," spending long stretches near such points.
-- Invariant measure equivalent to Lebesgue: a long-run distribution of points that has the same null sets as ordinary length, so it is a natural "typical" distribution.
-- Decay of correlations: how quickly the influence of the starting state fades; faster decay means more predictable long-run averages.
-- Induced map: a simpler map obtained by looking only at the times the system returns to a chosen region. · level: research-level
+- **In one sentence**: The paper studies a class of skew product systems (an expanding circle map coupled with a full-branch interval map having two indifferent fixed points and unbounded derivatives), constructs an induced full-branch map, and proves an invariant probability measure equivalent to Lebesgue plus decay of correlations.
+- **In plain words**: The paper looks at a mathematical model of a system that evolves step by step, where one part's motion drives another part's motion. Parts of the system move very slowly near a few special "sticky" points, which makes its long-term behaviour harder to analyse. The authors generalise earlier examples of such systems and show, by building a simpler related map, that the system has a stable long-run pattern and that its memory of the starting point fades over time.
+- **Why it matters**: The text reports a generalisation of earlier skew-product results, namely the Gouëzel skew products, to a broader class of fibre maps with two sticky points and unbounded derivatives. It is a technical contribution to ergodic theory; the text does not say what applications it may have beyond that field.
+- **Background needed**: - Dynamical system: a rule that repeatedly moves points in a space, such as a map of a circle or interval.
+- Skew product: a coupled system where one component drives the evolution of another; equivalently, a random dynamical system.
+- Uniformly expanding map: a map that stretches distances by a fixed factor everywhere, so nearby points separate quickly.
+- Indifferent (neutral) fixed point: a point the map leaves nearly in place, so orbits linger near it. Intermittency maps are the standard example.
+- Invariant probability measure equivalent to Lebesgue: a long-run distribution of points that has the same null sets as ordinary length, so it is not concentrated on a small set.
+- Decay of correlations: how quickly the influence of the starting point on later observations fades.
+- Induced map: a simpler map obtained by recording the system only at return times to a chosen region. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -488,16 +494,17 @@ We study a large class of skew product systems, which can also be thought of as 
 ### [Saddle-focus to saddle transition of 4D heteroclinic orbits resembling oscillatory and regularized shock waves of some dissipative Boussinesq systems](https://arxiv.org/abs/2611.31934)
 *Rezwana Razzaque Angana, Brendan Harding, Dimitrios Mitsotakis* · `math.DS` · arXiv:2611.31934v1 · relevance 0.09
 
-- **In one sentence**: The paper computes traveling-wave solutions of dissipative Bona–Smith Boussinesq systems that resemble oscillatory and regularized shock waves, using heteroclinic orbits in a four-dimensional phase space whose equilibrium changes from a saddle-focus to a saddle as dissipation increases, and introduces a finite-difference numerical method to compute them.
-- **In plain words**: The paper studies the shape of waves that move at a steady speed in shallow water models, such as the bores (wave fronts) that form when a tidal or river surge advances. The authors describe two kinds of wave front, one with ripples and one smooth, and show how the first can turn smoothly into the second as friction-like damping (dissipation) increases. They also present a numerical method for computing these waves.
-- **Why it matters**: The work links a change in the local structure of a mathematical system (a saddle-focus turning into a saddle) to a visible change in wave shape, which is a clear example of how structure governs behavior. The text does not show practical applications beyond undular bore modeling, so its wider impact is uncertain.
-- **Background needed**: - Shallow-water waves: a bore is a sudden rise of water front; "undular" means it has a train of ripples behind it, while "regularized" means it is smooth.
-- Boussinesq-type models: equations approximating water waves that include dispersion (waves of different wavelengths travel at different speeds).
-- Dissipation: energy loss, such as friction, that damps the wave.
-- Traveling wave: a wave that keeps its shape while moving at constant speed, reducing the PDE to an ODE system.
-- Phase space and equilibria: a state space where each point is a possible system state; equilibria are fixed points.
-- Saddle vs. saddle-focus: types of equilibria, classified by how nearby trajectories approach or leave them (saddle-focus includes spiraling).
-- Heteroclinic orbit: a trajectory leaving one equilibrium and arriving at another. · level: research-level
+- **In one sentence**: The paper computes traveling-wave solutions of dissipative Bona–Smith Boussinesq systems, modeled as heteroclinic orbits in a four-dimensional phase space, and tracks how an equilibrium changes from saddle-focus to saddle as dissipation increases, so the wave shifts from oscillatory to regularized shock-like profiles; it also introduces a finite-difference numerical method for these orbits.
+- **In plain words**: The paper studies wave patterns that look like the step-like fronts (bores) seen when a tidal or river surge moves through shallow water. Such waves are shaped by a balance between dispersion (spreading), nonlinearity, and dissipation (energy loss). The authors find these waves as connecting paths in a four-variable mathematical system and show that a key feature changes smoothly as energy loss increases, going from a wavy front to a smooth one.
+- **Why it matters**: It links a fine-grained change in the mathematical structure of a system (a saddle-focus turning into a saddle) to a visible change in the shape of a physical wave, which is useful for understanding undular bores. The text does not indicate its wider impact beyond this model class, so the broader significance is uncertain.
+- **Background needed**: - Traveling wave: a wave that keeps its shape while moving at constant speed.
+- Shock wave / bore: a sharp front where water depth or height changes abruptly; an undular bore has a train of smaller waves behind it.
+- Boussinesq-type model: an approximate equation for water waves in shallow water that includes dispersion.
+- Dissipation: loss of energy, such as through friction, which damps waves.
+- Dynamical system and phase space: a way of describing evolution by a set of variables; here the traveling-wave equations become a system with four variables.
+- Equilibrium point, saddle, focus: fixed points of the system; a saddle attracts along some directions and repels along others, a focus spirals.
+- Heteroclinic orbit: a trajectory that leaves one equilibrium and arrives at another, corresponding to a wave profile connecting two states.
+- Finite-difference method: a numerical technique that approximates derivatives on a grid of points. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -510,15 +517,14 @@ Oscillatory and regularized shock waves have long been studied to understand the
 ### [The majority game chromatic number for dense random graphs](https://arxiv.org/abs/2611.32746)
 *Stijn Cambie, Annika Heckel, Brahadeesh Sankarnarayanan et al.* · `math.CO` · arXiv:2611.32746v1 · relevance 0.33
 
-- **In one sentence**: For fixed edge probability 2/3 < p < 1, the majority game chromatic number of the random graph G(n,p) equals 3 with high probability.
-- **In plain words**: The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how few colours are needed. For random graphs where most pairs of vertices are connected (edge probability between 2/3 and 1), the authors show that three colours are enough with high probability, meaning the chance of this holding tends to 1 as the graph grows.
-- **Why it matters**: It gives a precise answer for a specific, fairly dense range of random graphs, which sharpens what is known about how such games behave. The abstract alone does not say how it connects to wider applications, so any broader significance is uncertain.
-- **Background needed**: - Graph: a set of vertices joined by edges, like people connected by friendships.
-- Proper colouring: giving each vertex a colour so that no two adjacent vertices share one.
+- **In one sentence**: For fixed edge probability 2/3 < p < 1, the majority game chromatic number of the Erdős–Rényi random graph G(n,p) equals 3 with high probability.
+- **In plain words**: The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how many colours are needed. For random graphs that are fairly dense (each pair of vertices is joined with a fixed probability above two-thirds), the authors show that three colours are enough with high probability, meaning the chance of this failing goes to zero as the graph grows.
+- **Why it matters**: It gives a sharp answer for a specific range of densities in a game-version of graph colouring, a classical topic. The text does not say how the result compares with other ranges of p or with related games, so its wider significance is uncertain.
+- **Background needed**: - Graph: vertices joined by edges; a proper colouring gives adjacent vertices different colours.
 - Chromatic number: the fewest colours needed for a proper colouring.
-- Random graph G(n,p): n vertices, each pair joined independently with probability p.
-- Maker-Breaker / game version: two players alternately colour vertices; the "majority" rule is a specific variant of how the game is scored or played (the text does not spell out the rules).
-- "With high probability": the claim holds with probability approaching 1 as n grows. · level: research-level
+- Erdős–Rényi random graph G(n,p): n vertices, each pair joined independently with probability p.
+- "With high probability": the probability of the stated outcome tends to 1 as n grows.
+- Game chromatic number: a variant where two players alternately colour vertices; the "majority" version has a specific set of rules not described in the given text. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -529,16 +535,15 @@ We show that for every fixed $2/3<p<1$ the majority game chromatic number of the
 ### [On some off-diagonal hypergraph Ramsey problems](https://arxiv.org/abs/2611.32594)
 *Eion Mulrenin, Cosmin Pohoata* · `math.CO` · arXiv:2611.32594v1 · relevance 0.11
 
-- **In one sentence**: A short new proof of a lower bound on the off-diagonal 3-uniform Ramsey number r_3(K_4^-, K_n), via a construction linked to Bradač's directed graph, with claimed sharp bounds for higher-uniformity variants that answer questions of Mubayi and Suk.
-- **In plain words**: This paper is about how large a set of items must be before a certain pattern is forced to appear when every group of items is coloured in one of two ways. The authors give a shorter proof of an earlier result by Fox and He, which says the required size grows at least roughly like 2 raised to the power n log n. They build the key example using a directed graph (a network of arrows between points) that Bradač introduced earlier.
-- **Why it matters**: The abstract says the construction also extends naturally to several related problems in higher uniformity and gives sharp bounds there, answering open questions from Mubayi and Suk. The text provided does not say more about the wider significance, so the scope beyond these specific questions is unclear.
-- **Background needed**: - Ramsey number: the smallest size of a structure guaranteeing a given pattern appears whenever its elements are two-coloured.
-- Graph vs. hypergraph: a graph links pairs of points; a 3-uniform hypergraph links triples of points.
-- K_n is the complete graph on n points (every pair linked); K_4^- is four points with all triples-in-pairs links except one.
-- Off-diagonal: the two colour classes are asked to forbid different patterns, here K_4^- and K_n.
-- Lower bound 2^{Ω(n log n)}: a construction showing the number is at least exponentially large in n log n, up to constant factors.
-- Sharp bound: a bound that matches the true value up to constant factors, so cannot be improved in order of magnitude.
-- Directed graph: a graph whose edges have a direction, like one-way arrows. · level: research-level
+- **In one sentence**: A short new proof that the 3-uniform off-diagonal Ramsey number r_3(K_4^-, K_n) is at least 2^{Ω(n log n)}, using a construction linked to a directed graph from Bradač's work on off-diagonal graph Ramsey numbers, with sharp bounds claimed for higher-uniformity extensions.
+- **In plain words**: This paper is about a question in combinatorics: how large a set must be before any way of coloring its groups of items is forced to contain a particular pattern. The authors give a shorter proof of an earlier result by Fox and He about one such case, and the proof uses a construction tied to a directed graph studied by Bradač. They also say the same idea extends to several related problems with more items per group, which answers questions posed by Mubayi and Suk.
+- **Why it matters**: The work simplifies an existing lower-bound argument and, according to the abstract, yields sharp bounds for several generalizations that other researchers had asked about. It is a specialist result, and the text does not say how broadly it will matter beyond this area of Ramsey theory.
+- **Background needed**: - Ramsey number: the smallest size of a structure guaranteed to contain a given pattern when its elements are colored or split in every possible way.
+- Graph vs. hypergraph: a graph links pairs of vertices; a 3-uniform hypergraph links triples of vertices.
+- K_4^- and K_n: K_n is a complete graph on n vertices (every pair linked); K_4^- is four vertices with five of the six links, a small pattern to look for.
+- Off-diagonal: the two patterns searched for are different, so the problem is asymmetric.
+- Lower bound 2^{Ω(n log n)}: a rough growth rate saying the number grows roughly exponentially in n log n; it shows how large the number must be at least.
+- Sharp bound: a bound that matches the known answer up to constant factors. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -551,17 +556,17 @@ We give a new short proof of a theorem of Fox and He that the $3$-uniform Ramsey
 ### [An adaptive finite element method for the interior problem of Helmholtz equations with generalized transmission boundary conditions](https://arxiv.org/abs/2611.32479)
 *Zhe Zhu, Lei Lin, Wei Yang et al.* · `math.NA` · arXiv:2611.32479v1 · relevance 0.26
 
-- **In one sentence**: The paper develops an adaptive finite element method, with a T-coercivity argument via a lifting operator, for the interior transmission problem for Helmholtz equations with generalized transmission boundary conditions involving a surface Laplace-Beltrami operator, including a priori and a posteriori error estimates and interior transmission eigenvalue computations.
-- **In plain words**: This paper is about a numerical method for solving a wave-type equation (the Helmholtz equation) inside a region when the boundary carries a special coupling condition. The authors build a computational scheme that refines its mesh adaptively, where the error is largest, and they prove the scheme's well-posedness and error bounds. They also report numerical tests showing accuracy and convergence, and they extend the method to compute certain special eigenvalues of this interior transmission problem.
-- **Why it matters**: Problems of this type arise in wave scattering and inverse scattering, where interior transmission eigenvalues are studied. The text supports the claims of accuracy and efficiency only through numerical examples, and it does not indicate applications beyond this setting, so the wider significance is uncertain.
-- **Background needed**: - Helmholtz equation: a standard model for time-harmonic waves (sound, light, electromagnetic fields).
-- Interior transmission problem: a coupled system of two wave equations inside a region, with matching conditions on its boundary.
-- Generalized transmission boundary conditions: boundary coupling rules that include a surface Laplace-Beltrami operator, a generalization of the Laplacian that acts along a curved surface.
-- Finite element method: approximating a solution by piecewise simple functions on a mesh of small cells.
-- Adaptive refinement with a posteriori error estimates: computable error indicators guide where the mesh is refined; upper and lower bounds show the indicator tracks the true error.
-- A priori vs. a posteriori error estimates: bounds derived before computing (depending on the unknown solution's smoothness) versus bounds computed from the approximate solution itself.
-- T-coercivity and lifting operator: a technique for proving well-posedness in nonstandard function spaces where the usual coercivity argument does not directly apply.
-- Interior transmission eigenvalues: special frequencies at which the interior transmission problem has nontrivial solutions; they matter in inverse scattering. · level: research-level
+- **In one sentence**: The paper develops and analyzes an adaptive finite element method, with a-priori and a-posteriori error estimates, for the interior transmission problem of Helmholtz equations with generalized transmission boundary conditions involving a surface Laplace-Beltrami operator, using T-coercivity and a lifting operator to establish well-posedness in nonstandard Sobolev spaces.
+- **In plain words**: This paper is about a method for computing wave behavior at the boundary between two materials, where waves can pass through the interface and the interface itself has its own surface behavior. The authors build a computer method that refines its mesh where errors are largest, prove it is mathematically sound, and test it on numerical examples. They also apply the method to find special resonant frequencies (interior transmission eigenvalues) of the problem.
+- **Why it matters**: Computing accurate wave solutions with complicated interface conditions matters for modeling scattering and inverse problems in acoustics and electromagnetics. The text reports numerical examples showing accuracy and convergence, but it does not say how the method compares with existing approaches beyond stating that it is efficient.
+- **Background needed**: - Helmholtz equation: a standard equation describing steady wave behavior (sound, light, water waves) at a fixed frequency.
+- Interior transmission problem: a setup where waves are coupled across the boundary of a region, with conditions on both sides of that boundary.
+- Generalized transmission boundary conditions: rules that specify how the wave and its normal derivative must match across an interface, here including a surface term.
+- Laplace-Beltrami operator: a differential operator describing how a quantity varies along a curved surface, analogous to a Laplacian restricted to the surface.
+- Finite element method: a numerical technique that splits a domain into small pieces (a mesh) and solves for an approximate solution on them.
+- Adaptive / a posteriori error estimates: methods that compute the error from the approximate solution itself and refine the mesh where the error is largest.
+- T-coercivity and lifting operators: advanced functional-analysis tools used to prove that the variational problem has a unique, stable solution.
+- Interior transmission eigenvalues: special frequencies at which the interior transmission problem has nontrivial solutions. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -572,18 +577,18 @@ This paper proposes a new adaptive finite element method for solving the interio
 ### [Upwind finite element approximation of the gradient blow-up time for a viscous Hamilton--Jacobi equation](https://arxiv.org/abs/2611.31859)
 *Yohei Fujishima, Takahiro Yamada* · `math.NA` · arXiv:2611.31859v1 · relevance 0.18
 
-- **In one sentence**: The paper proves maximum-norm convergence of an upwind piecewise-linear finite element scheme for a viscous Hamilton--Jacobi equation with superquadratic gradient source, and shows that discrete gradient-threshold blow-up times converge to the exact blow-up time under stated mesh and regularity assumptions in dimensions one to three.
-- **In plain words**: The paper studies a equation that describes how a quantity's slope can grow without limit in finite time, so the computed solution "blows up." The authors analyze a computer method for approximating this solution on a mesh and prove that the approximation stays close to the true solution until the slope blows up, and that the computed time of blow-up approaches the true time. They also check that the assumptions hold for one example on a disk and show numerical experiments of the blow-up.
-- **Why it matters**: Predicting when a solution breaks down numerically is hard, because simulations can go wrong near the blow-up. The paper gives mathematical guarantees for a specific scheme, which is useful for anyone trusting numerical simulations of such equations; the text does not say how far the results extend beyond this setting.
-- **Background needed**: - Hamilton--Jacobi equation: a partial differential equation describing how a function changes over time, here with a gradient (slope) term.
-- Viscous term: a diffusion/smoothing term that keeps solutions well-behaved for a while.
-- Gradient blow-up: the slope of the solution becomes infinite at a finite time.
-- Superquadratic source: the nonlinear growth term in the slope grows faster than the square of the slope.
-- Finite element method: a numerical technique that approximates a solution by piecewise simple functions on a mesh of small cells.
-- Upwind scheme: a discretization that biases calculations toward the direction the information flows, for stability.
-- Maximum-norm convergence: the error is measured by the largest pointwise difference.
-- Dirichlet boundary condition: the solution is fixed (here zero) on the boundary of the domain.</background>
-<parameter name="difficulty">research-level
+- **In one sentence**: The paper proves maximum-norm convergence of an upwind piecewise-linear finite element scheme, and convergence of computed gradient-blow-up times, for a viscous Hamilton–Jacobi equation with superquadratic gradient source on polytopal approximations of smooth domains in 1–3 dimensions, verified on the disk.
+- **In plain words**: The paper studies a equation describing a quantity whose slope becomes infinitely steep in finite time, a "gradient blow-up." The authors use a computer method that splits the domain into small triangles or segments and uses a directional ("upwind") rule to handle the steep gradients. They prove that the computed solution approaches the true one before the steepening happens, and that the computed time of steepening approaches the true time, under stated conditions, with a worked example on a disk and numerical experiments.
+- **Why it matters**: Getting the timing of a singularity right is hard for numerical methods, since small errors in a steep slope can shift the predicted event. The work gives rigorous error guarantees for this kind of problem rather than only plots, though the text does not say how it compares with other schemes or applications.
+- **Background needed**: - Hamilton–Jacobi equation: a partial differential equation describing how a function evolves, often used for optimal control and front motion.
+- Viscous term: a diffusion (smoothing) term that keeps solutions from becoming discontinuous too early.
+- Gradient blow-up: the slope of the solution grows without bound in finite time, even though the solution itself stays bounded.
+- Superquadratic source: a nonlinear growth term in the slope that grows faster than the square of the slope.
+- Dirichlet boundary condition: the solution is fixed (here zero) on the edge of the domain.
+- Finite element method: approximating a function by simple pieces (e.g., piecewise linear) on a mesh of small cells.
+- Upwind scheme: a discretization that takes information from the direction the flow comes from, for stability.
+- Maximum-norm convergence: the worst-case pointwise error goes to zero as the mesh is refined.
+- Polytopal domain: a domain with straight-edged (polygonal/polyhedral) boundary approximating a smooth one. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -596,15 +601,16 @@ We analyze an upwind finite element method with piecewise linear elements for a 
 ### [Cardinal Transfer Events for Infinitary Logic with Infinitary Quantification](https://arxiv.org/abs/2611.31725)
 *Edgar Valenzuela* · `math.LO` · arXiv:2611.31725v1 · relevance 0.08
 
-- **In one sentence**: Under an assumed theory Φ, the paper solves the Gap-n problem for more than one predicate in infinitary logic with infinitary quantification, as a cardinal transfer result.
-- **In plain words**: This paper is about a kind of logic that allows statements built from infinitely many pieces, where one can also quantify over infinitely many objects at once. It studies "transfer" results, which ask when a property that holds in a large infinite universe also holds in a smaller one. The abstract says that, assuming a certain theory called Φ exists, the authors settle a version of the Gap-n problem for several predicates at once.
-- **Why it matters**: The abstract is very short, so its significance is hard to judge from it alone. It likely matters to specialists in set theory and model theory, who study how infinite cardinal sizes constrain what logical statements can say.
-- **Background needed**: - Logic: a formal language for stating and checking claims, here extended to infinitely long formulas.
-- Predicate: a property or relation that a statement can talk about, such as "is red" or "is less than".
-- Cardinal numbers: measures of infinite size, such as the size of the natural numbers.
-- Transfer result: a claim that a structure of one infinite size with a property implies another structure of a smaller infinite size has it too.
-- Gap-n problem: a specific open question in this area about how such transfers behave, which the text does not define.
-- Assumed theory Φ: the result is conditional on an extra mathematical hypothesis whose details are not given in the text. · level: research-level
+- **In one sentence**: Under the assumption of a certain theory Φ, the paper claims to solve the Gap-n problem for more than one predicate in infinitary logic with infinitary quantification, via cardinal transfer events.
+- **In plain words**: This paper is about a question in the foundations of mathematics: when a logical language can talk about very large infinite sizes (cardinals), and whether certain "transfer" properties of those sizes hold. The text is only a short abstract. It says the authors solve a version of the "Gap-n problem" for more than one predicate, but only under an extra assumption they call the theory Φ.
+- **Why it matters**: The abstract is too brief to show how strong the result is or which open questions it settles, so its importance is hard to judge from this text alone. It likely matters to specialists in infinitary logic and set theory, but the connection to wider mathematics is not stated.
+- **Background needed**: - Infinitary logic: logical languages that allow infinitely long conjunctions or disjunctions, unlike ordinary finite formulas.
+- Infinitary quantification: quantifiers ("for all", "there exists") ranging over infinitely many objects at once, not just finitely many.
+- Cardinals: measures of infinite size, such as how many elements an infinite set has.
+- Predicates: properties or relations that a logical formula can express about objects.
+- Transfer event (cardinal transfer): a statement that a structure with one pair of infinite sizes has a substructure with another pair, a standard tool in model theory.
+- Gap-n problem: a question about whether certain cardinal transfer properties hold at a given level of complexity; the abstract does not define it further.
+- Assumed theory Φ: an extra hypothesis, not identified in the text, on which the results depend. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -615,16 +621,14 @@ Assuming the existence of a certain theory $\Phi$, we solve the Gap-$n$ problem 
 ### [Alpha-Beta Pruning via Monadic Continuations](https://arxiv.org/abs/2611.32320)
 *Mart\'in Escard\'o, Paulo Oliva* · `cs.AI` · arXiv:2611.32320v1 · relevance 0.06
 
-- **In one sentence**: The paper gives a monadic (continuation- and reader-monad based) formulation of alpha-beta pruning for minimax game search, records pruning bounds inside monadic outcomes rather than in move types, extends outcomes to return optimal plays, and proves the result matches exhaustive minimax.
-- **In plain words**: The paper looks at a standard method that lets a game-playing program find the best move while skipping many possible lines of play that cannot change the answer. The authors rewrite this method using abstract programming structures called monads, which keep track of intermediate results in a tidy way. They test it on Tic-Tac-Toe, where it evaluated 39 times fewer plays than checking every possibility, and they formally prove it gives the same answers as the full exhaustive search.
-- **Why it matters**: Alpha-beta pruning is a foundational technique in game AI, so a cleaner, provably correct way to express it within standard functional-programming abstractions may be useful for building and verifying search code. The text reports only a Tic-Tac-Toe example, so its impact on larger games or practical systems is not shown here.
-- **Background needed**: - Minimax: a search where one player maximises and the opponent minimises the final score, over all possible game continuations.
-- Alpha-beta pruning: a speed-up that stops exploring a branch once it is clear it cannot change the decision.
-- Monad: a programming abstraction for chaining computations that carry extra context; used here to organise search results.
-- Continuation monad: a way of passing "what happens next" as a function, letting a search decide how to proceed.
-- Reader monad: a way of passing shared settings (here, the pruning bounds) implicitly through a computation.
-- Selection monad: a related abstraction for choosing moves in games, which the text says is inefficient for alpha-beta search.
-- Formal correctness proof: a mathematical argument, typically checked by a proof assistant, that the program meets its specification. · level: research-level
+- **In one sentence**: The paper gives a monadic (continuation- and reader-monad based) formulation of alpha-beta pruning for minimax game search, records bounds inside outcomes rather than move types, extends the ordinary continuation monad to return optimal plays, and proves the pruned search agrees with exhaustive minimax.
+- **In plain words**: The paper looks at a classic method that lets a game-playing program skip parts of its search tree when those parts cannot change the best move. The authors rewrite this method using a programming pattern called monads, which packages computations in a structured way. They show it finds the same best outcomes and best sequences of moves as checking every option, and they test it on Tic-Tac-Toe, where it evaluated 39 times fewer plays than exhaustive search.
+- **Why it matters**: It offers a compositional, formally verified way to express a foundational AI search algorithm inside functional programming, which may matter for building and checking game-playing software. The text reports only a single Tic-Tac-Toe test, so how well the approach scales to larger games is not shown here.
+- **Background needed**: - Minimax: a search method where one player maximises and the opponent minimises the final score, looking ahead through possible moves.
+- Alpha-beta pruning: an optimisation of minimax that skips branches which cannot affect the final decision.
+- Monad: a programming abstraction for chaining computations with extra context (here, the continuation and reader monads manage control flow and passed-in bounds).
+- Continuation: a way of representing "what happens next" as a function, letting a search decide when to stop early.
+- Formal correctness proof: a mathematical argument that the optimised method always gives the same answer as the simple one. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -638,16 +642,17 @@ Alpha-beta pruning is a fundamental technique in game-playing AI, enabling effic
 *Benjamin Budway, Makiko Sasada, Mykhaylo Shkolnikov* · `math.PR` · arXiv:2611.31453v1 · relevance 0.15
 
 - **In one sentence**: The paper proves a dynamical phase transition for Brownian motion with drift conditioned on upper large deviations of its occupation measure on [-1,1], using a new sharp large deviation estimate for that occupation measure.
-- **In plain words**: The paper studies a random path (Brownian motion with a steady push, or drift) observed over a long stretch of time, and asks what it looks like when we force it to spend unusually much time in a fixed interval. The authors show that the answer changes sharply depending on how unusual the forced event is: for very extreme cases the path behaves one way, and for milder cases it behaves in a different way for part of the time and then acts like an ordinary random path. They prove this using a new, more precise version of a large deviation estimate, which is a bound on how rare such unusual events are.
-- **Why it matters**: The result turns a dynamical phase transition, previously predicted in the physics literature, into a rigorous mathematical theorem, which gives confidence in those predictions. The sharp large deviation estimate is stated to be of independent interest, and the authors note possible extensions to other Markov processes and additive functionals, though the text does not detail those applications.
-- **Background needed**: - Brownian motion: the mathematical model of a random, jittery path, such as a pollen grain's motion in water.
-- Drift: a constant tendency to move in one direction added to the random motion.
-- Occupation measure: the fraction of total time the path spends in a given region (here, the interval [-1,1]).
-- Large deviation: an event that is far less likely than typical behavior, and the study of how fast its probability shrinks.
-- Conditioning (Gibbs-style): looking at how the path behaves given that a rare event has occurred.
-- Phase transition: a sudden qualitative change in behavior as a parameter crosses a threshold, like water freezing.
-- Donsker-Varadhan variational formula: a standard tool for computing the rate of such rare events for time-averaged quantities.
-- Langevin diffusion: a standard random process with a pull toward a preferred state; the conditioned path follows one of these. · level: research-level
+- **In plain words**: The paper studies a random path (Brownian motion, the jittery motion of a particle buffeted at random) that is forced, over a long stretch of time, to spend unusually much time inside a fixed window around zero. It shows that the way the path changes under this forcing depends on how unusual the event is: for a far-out event the path follows one specific modified random motion, while for a milder event it follows a different modified motion only for part of the time and then behaves normally. The authors establish this switch mathematically rather than by experiment.
+- **Why it matters**: The behaviour was predicted in the physics literature, and this text presents a rigorous proof of it, which is the main contribution. The authors also state that the sharp large deviation result they needed is of independent interest and that the approach extends to other Markov processes and additive functionals; the text does not go further than that on applications.
+- **Background needed**: - Brownian motion: a continuous random path whose increments are independent Gaussian noise; the standard model of diffusing particles.
+- Drift: a steady push added to the random motion.
+- Occupation measure: the fraction of a time interval a path spends in each region; here, how much time it spends in [-1,1].
+- Large deviation: an event that is rare but whose probability decays at a known exponential rate; "sharp" means the rate is pinned down with precise constants.
+- Upper tail / near vs far: how far above the typical value the rare event sits; the paper distinguishes a near and a far regime.
+- Donsker-Varadhan variational formula: a standard recipe that gives the exponential rate for occupation-type averages and identifies the optimal modified process.
+- Langevin diffusion: a random process with a steady pull plus noise, here the modified process that the conditioned path converges to.
+- Gibbs conditioning principle: the idea that conditioning a random system on a rare macroscopic event makes it look like the most likely configuration consistent with that event.
+- Phase transition: an abrupt qualitative change in behaviour as a control parameter (here, the severity of the event) crosses a threshold. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -658,16 +663,15 @@ We prove a dynamical phase transition in Brownian motion with drift, a phenomeno
 ### [The role of composition rules in an axiomatic derivation of quantum mechanics](https://arxiv.org/abs/2611.32237)
 *Erkka Haapasalo, Pekka Lahti, Juha-Pekka Pellonp\"a\"a* · `quant-ph` · arXiv:2611.32237v1 · relevance 0.13
 
-- **In one sentence**: The paper revisits how local effects and states of subsystems are embedded into compound-system spaces within D'Ariano et al.'s information-theoretic axiomatization of quantum mechanics, using composition rules from Matolcsi and from Aerts and Daubechies, and proposes weaker purification and local discrimination axioms with tensor-product structure.
-- **In plain words**: This paper looks at one of the rule sets used to rebuild quantum mechanics from basic principles about information and measurement. It asks how the behavior of parts of a combined system should be formally described, instead of simply assuming the standard mathematical "tensor product" construction. The authors add axioms saying that joint states can be told apart by measurements on each part, and they restate a key axiom ("purification") in a weaker form.
-- **Why it matters**: Deriving quantum theory from a few physical principles is a long-running question in foundations of physics, and the composition of subsystems is one of the places where the standard mathematics is usually taken for granted. The text does not show what practical or experimental consequences follow, so its significance is best seen as foundational and technical.
-- **Background needed**: - Quantum mechanics describes systems through "states" (what is known about a system) and "effects" (possible measurement outcomes).
-- An axiomatic derivation starts from a short list of principles and aims to show that quantum theory is the only theory satisfying them.
-- A "compound system" is a combination of parts, such as two particles considered together.
-- The "tensor product" is the standard mathematical way to combine the spaces of two parts into the space of the whole.
-- "Purification" roughly means every mixed (partly random) state can be seen as part of a pure state of a larger system.
-- "Local discriminability" means that different joint states can be distinguished using measurements on each part separately.
-- Projective and injective tensor products are two specific mathematical ways of combining spaces, with different properties. · level: research-level
+- **In one sentence**: The paper revisits how local effects and states of subsystems are embedded into compound-system effect and state spaces within an information-theoretic axiomatization of quantum mechanics, building on earlier work by Matolcsi and by Aerts and Daubechies, and reformulates the local-discrimination and purification axioms of D'Ariano et al.
+- **In plain words**: This paper looks at the mathematical rules that describe how a quantum system made of several parts is built from its individual parts. Quantum theory usually assumes this via a standard construction called the tensor product, and the authors ask how that construction should follow from more basic rules. They restate two of the principles used in a well-known set of axioms for quantum theory in a weaker form, and they propose rules for when different joint states can be told apart by measuring each part separately.
+- **Why it matters**: Deriving the standard mathematics of quantum theory from a few plain, physically motivated principles is an active foundational question, and this work tightens the step that handles composite systems. The text does not show whether the weaker axioms lead to new results; the authors only say they believe the reformulation could be useful for future axiomatizations.
+- **Background needed**: - Quantum theory axiomatization: deriving the mathematical framework of quantum mechanics from a small set of stated principles, rather than taking it as given.
+- States and effects: a state describes what a system is like; an effect describes a measurement outcome (a yes/no test). Both live in mathematical spaces.
+- Compound system: a system made of several parts, such as two particles, whose joint state must be built from the parts.
+- Tensor product: the standard mathematical way to combine two spaces into one for a joint system; the paper refines this by specifying which versions (projective, injective) are needed for states and effects.
+- Local discriminability: the idea that different joint states can be distinguished by measuring each part separately.
+- Purification: the principle that a mixed (partly random) state of a system can be seen as part of a pure state of a larger system. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -680,16 +684,16 @@ Local discriminability and purification are two key axioms in an information-the
 ### [Mirror flow for semimartingale optimal transport](https://arxiv.org/abs/2611.32785)
 *Francois Buet-Golfouse, Ana\"is Despr\'es, Anna Kazeykina et al.* · `math.OC` · arXiv:2611.32785v1 · relevance 0.20
 
-- **In one sentence**: The paper proposes a mirror flow (a preconditioned mirror-descent scheme) for the dual problem of semimartingale optimal transport, proves geometric convergence of the mirror descent sequence, and gives a first-order linearized discrete-time scheme with a uniform-in-time error bound.
-- **In plain words**: The paper looks at a mathematical problem about finding the cheapest way to move random processes from one description to another, a setting that comes up in finance and in some generative AI models. Gradient-style search for the solution is often slow because the problem is badly scaled. The authors replace it with a "mirror" version that reshapes the geometry of the search so it behaves better, and they build a practical step-by-step version of it.
-- **Why it matters**: Slow convergence is a practical bottleneck for these problems, so a better-conditioned search method could matter for computation in finance and flow-based generative modelling. The text reports a substantial efficiency gain on one specific test problem (SEMOT); how far this carries to other problems is not shown in the text.
-- **Background needed**: - Optimal transport: finding the least-cost way to rearrange one distribution into another.
-- Semimartingale: a broad class of random processes (generalising Brownian motion) used in stochastic calculus.
-- Martingale: a process whose best forecast of its future value is its current value; a fair-game condition.
-- Dual energy functional: an equivalent reformulation of the problem in terms of a auxiliary "potential" function whose optimum gives the answer.
-- Gradient descent: iteratively improving a guess by stepping downhill; slow when the landscape is stretched unevenly (poorly conditioned).
-- Mirror descent / mirror flow: a variant of gradient descent that measures steps in a transformed geometry to fix such unevenness.
-- Linearization and discretization: approximating a continuous-time flow by small computable steps, with error from the approximation. · level: research-level
+- **In one sentence**: The paper proposes a mirror flow (a preconditioned mirror-descent scheme) for the dual problem of semimartingale optimal transport, proves geometric convergence of the continuous-time sequence, and gives a discrete first-order linearized scheme with a uniform-in-time error bound on accumulated linearization error under a smallness condition on initial error.
+- **In plain words**: The paper looks at a family of "best way to move one random process into another" problems, which arise in mathematical finance and in some AI image-generation models. Standard gradient-descent solvers for these problems are slow because the function being minimized is badly scaled. The authors use a mirror-descent approach that reshapes the problem so it is easier to optimize, and they build a practical step-by-step version of it.
+- **Why it matters**: Slow solvers are a practical bottleneck for these problems, so a better-conditioned method could matter for finance and generative modelling. The text reports a substantial efficiency gain only for one specific problem (SEMOT), so its wider reach is not established here.
+- **Background needed**: - Optimal transport: finding the cheapest way to reshape one probability distribution into another.
+- Semimartingale: a broad class of random processes (including Brownian-motion-driven ones) used to model prices and paths.
+- Dual problem: an equivalent reformulation in terms of a "potential" function; here the potential is what gets optimized.
+- Gradient descent: iteratively nudging a solution downhill; slow when the landscape is badly scaled (poorly conditioned).
+- Mirror descent: a variant that updates in a transformed space, which can fix poor scaling.
+- Geometric convergence: error shrinks by a fixed factor each step, i.e., exponentially fast.
+- Linearization: replacing a nonlinear update with its first-order approximation to make it computable. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -700,15 +704,16 @@ Semimartingale optimal transport arises in a wide range of applications, includi
 ### [Beyond Classical Minimax Rates: Quantum Sampling in Gradient-Based Simulation Optimization](https://arxiv.org/abs/2611.32004)
 *Hao Cao, Jian-Qiang Hu, Mingjie Hu et al.* · `quant-ph` · arXiv:2611.32004v1 · relevance 0.17
 
-- **In one sentence**: For gradient-based optimization of convex simulation problems with noisy gradient estimates, the paper shows quantum mean estimation applied to paired finite differences improves the query-complexity accuracy exponent from -2/3 to -4/3 (classical minimax rate in the independent case), with coupling-dependent generalizations and matching lower bounds for fixed dimension.
-- **In plain words**: The paper studies how to find the best setting of a quantity when each check is done by a noisy computer simulation and the slope (gradient) must be estimated from those noisy results. It asks how accurately one can optimize for a given number of simulation runs. The authors report that using a quantum method to average the estimates, along with carefully coupling nearby simulation runs, reduces the error faster than classical methods can under the same budget.
-- **Why it matters**: The result is a theoretical claim about how fast error can shrink, and it comes with matching lower bounds that suggest the exponents cannot be beaten for fixed dimension under the stated assumptions. It may matter for anyone who pays for expensive simulations, though the text is purely theoretical and says nothing about practical quantum hardware or real-world runtimes.
-- **Background needed**: - Simulation optimization: finding the input that minimizes an output of a noisy simulator, where each run costs time or money.
-- Gradient: the slope of the objective with respect to inputs; here it is estimated by finite differences (small perturbations of the input and comparing outputs).
-- Convergence rate / query complexity: how the error shrinks as the number of simulation queries N grows; an exponent like -2/3 means error scales roughly as N to the power -2/3.
-- Minimax optimal: no method can do better in the worst case, and a matching lower bound proves this.
-- Variance reduction and coupling: running paired simulations with shared randomness so their difference is less noisy; the parameter kappa measures this.
-- Quantum mean estimation: a quantum-computing technique for estimating an average with fewer samples than classical averaging, here assumed to be available as a subroutine. · level: research-level
+- **In one sentence**: For convex simulation optimization with noisy gradient estimates, the paper shows quantum mean estimation applied to paired finite differences improves the query-complexity exponent from classical N^{-2/3} to N^{-4/3}, with coupling-dependent variants and claimed matching minimax lower bounds for fixed dimension.
+- **In plain words**: The paper looks at how to find the best setting of a system when you can only learn about it through noisy simulations, and each simulation run is expensive. The authors estimate slopes (gradients) by comparing nearby simulation runs, and they use a quantum computing technique for averaging noisy results to get more accurate slopes from the same number of runs. They report that this speeds up how quickly the error shrinks as the budget of runs grows, and that the resulting rates cannot be beaten under the stated assumptions.
+- **Why it matters**: It claims a concrete change in how query budget translates into accuracy, backed by lower bounds, which matters for anyone designing costly simulation-based optimization. Its practical relevance depends on whether quantum sampling hardware can actually supply the required queries; the text does not address that.
+- **Background needed**: - Simulation optimization: tuning inputs to a model that returns noisy outputs rather than exact values.
+- Gradient: the slope of the objective, telling you which direction to adjust inputs.
+- Finite differences: estimating a slope by running the system at two slightly different inputs and comparing.
+- Convex problem: one with a single bowl-shaped optimum, so local search can find it.
+- Convergence rate / query complexity: how fast the error shrinks as the number of simulation runs N grows; a larger exponent means faster improvement.
+- Minimax optimal: the best achievable worst-case rate, and no method can do better for that class of problems.
+- Quantum mean estimation: a quantum-computing method that estimates an average with fewer samples than classical averaging, under the assumption that quantum queries are available. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -721,16 +726,16 @@ We study gradient-based search for a class of convex simulation optimization pro
 ### [Sharp Hellinger Risk of the Multivariate Gaussian NPMLE](https://arxiv.org/abs/2611.31728)
 *Xingzhou Wang, Zheng Li* · `math.ST` · arXiv:2611.31728v1 · relevance 0.11
 
-- **In one sentence**: The paper shows that the unconstrained nonparametric maximum likelihood estimator for multivariate Gaussian location mixtures with sub-Gaussian tails attains the minimax rate (log n)^d/n under squared Hellinger loss, improving an earlier (log n)^{d+1}/n upper bound by a log factor.
-- **In plain words**: The paper studies a standard method for estimating an unknown probability distribution from data, when the data are noisy Gaussian bell-curve draws around hidden centers. It proves that this estimator is as accurate as theoretically possible, up to the stated rate, in any fixed number of dimensions, improving a previous estimate by a logarithmic factor. The main tool is a sharp count of how many small pieces are needed to approximate multivariate polynomials, and the lower bound comes from adapting an existing construction.
-- **Why it matters**: It closes a gap between the known upper and lower bounds for this estimator in the multivariate setting, which matters for understanding how well mixture-density estimation can work in practice. The polynomial bracketing bound may also be useful in other empirical-process arguments, though the text does not establish such uses.
-- **Background needed**: - Gaussian location mixture: data generated by picking a hidden center from some distribution, then adding Gaussian (bell-curve) noise.
-- Nonparametric maximum likelihood estimator (NPMLE): choosing the mixing distribution that makes the observed data most likely, with no fixed shape assumed.
-- Hellinger distance: a way to measure how different two probability densities are, commonly used for squared-error-type loss in density estimation.
-- Minimax rate: the best worst-case error any estimator can guarantee; a matching upper and lower bound means the rate is sharp.
-- Bracketing number: the number of simple upper and lower envelope functions needed to cover a function class at a given precision; a standard measure of complexity.
-- Sub-Gaussian tail: the hidden centers are unlikely to be far from zero, decaying at least as fast as a Gaussian.
-- Log factor: a slowly growing term (log n) that separates the earlier and current rates. · level: research-level
+- **In one sentence**: The paper shows that the unconstrained nonparametric maximum likelihood estimator for multivariate Gaussian location mixtures with sub-Gaussian tails attains the minimax rate (log n)^d/n under squared Hellinger loss, improving an earlier (log n)^{d+1}/n bound by a log factor, via a sharp bracketing bound for multivariate polynomials.
+- **In plain words**: Statisticians often estimate an unknown probability distribution from random samples, and a standard tool for this is the "maximum likelihood" estimate, which picks the distribution that makes the observed data most probable. This paper studies that estimate for a particular family of bell-curve-shaped mixtures in several dimensions. It proves that the estimate is as accurate as theoretically possible, up to the best achievable constant-free rate, and removes an extra logarithmic factor that earlier analyses had left in the error bound.
+- **Why it matters**: The result closes a gap between an upper bound and a matching lower bound for a well-studied estimator, which tells us the estimator is optimal rather than merely good. The main technical tool, a sharp count of how many small pieces are needed to cover polynomial functions, may be useful in other problems about function classes; the text does not show how far it extends beyond this setting.
+- **Background needed**: - Gaussian (bell-curve) location mixture: a distribution formed by averaging normal distributions with different centers drawn from an unknown mixing distribution.
+- Nonparametric maximum likelihood estimator (NPMLE): the mixing distribution that maximizes the likelihood of the observed data, with no fixed parametric shape assumed.
+- Hellinger distance: a way to measure how far apart two probability densities are; squared Hellinger loss is the error measure used.
+- Minimax rate: the best worst-case error any estimator can achieve; a matching lower bound shows no method can do better.
+- Sub-Gaussian tails: the mixing distribution's probability of far-away values decays at least as fast as a normal distribution's.
+- Bracketing number: the number of small "brackets" needed to cover a function class at a given precision; its logarithm measures the class's complexity.
+- Total degree of a polynomial: the highest sum of exponents across its variables. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -741,16 +746,16 @@ For multivariate Gaussian location mixtures whose mixing distributions have coor
 ### [Aalen-Johansen as an augmented IPCW estimator](https://arxiv.org/abs/2611.32026)
 *Lu Mao* · `stat.ME` · arXiv:2611.32026v1 · relevance 0.06
 
-- **In one sentence**: The paper shows the Aalen-Johansen estimator of state occupation probabilities is an augmented inverse-probability-of-censoring-weighted estimator, decomposes its influence function against the semiparametric efficient one, and proposes a model-free least-squares augmentation that narrows the gap under non-Markov processes without raising asymptotic variance.
-- **In plain words**: The paper concerns a standard tool for following people through a sequence of health states (for example healthy, ill, dead) when some people drop out of observation partway through. The authors show that this tool, the Aalen-Johansen estimator, can be rewritten as a weighted correction for dropouts plus a built-in guess about each person's next state based on the state they are in now. They then propose a simple add-on that uses a little of each person's earlier history to improve the estimate, and report that it helps in theory and in simulations.
-- **Why it matters**: Multi-state survival estimates are used widely in medical and actuarial work, so a clearer account of why the standard method is robust, and where it loses efficiency, is useful. The text does not indicate applications beyond simulation studies, so the practical impact is unclear from this summary alone.
-- **Background needed**: - Multi-state model: people move among a set of states over time, and we want the probability of being in each state at a given time.
-- Censoring: some people are lost to follow-up, so their outcome is only partly observed.
-- Inverse probability of censoring weighting (IPCW): re-weights observed people to stand in for those lost to follow-up.
-- Markov assumption: the future depends only on the current state, not on earlier history.
-- Aalen-Johansen estimator: the standard nonparametric estimator for state occupation probabilities.
-- Influence function and asymptotic variance: describe how an estimate responds to individual data and how precise it is in large samples.
-- Semiparametric efficiency: the lowest achievable variance among estimators that do not rely on a fully specified model. · level: research-level
+- **In one sentence**: The paper shows that the Aalen-Johansen estimator of state occupation probabilities is an augmented inverse-probability-of-censoring-weighted estimator, decomposes its influence function against the semiparametric efficient one, and proposes a model-free least-squares augmentation that narrows the gap under non-Markov processes without increasing asymptotic variance.
+- **In plain words**: The paper looks at a standard method for estimating how likely a person is to be in each of several health or event states over time, when some people are lost to follow-up (censored). The authors show that this standard method can be rewritten as a weighted correction that also uses a simple prediction based only on each person's current state. They then propose a small adjustment that uses more of each person's past history, and report that it reduces the gap under non-Markov (history-dependent) processes in theory and in simulations.
+- **Why it matters**: The Aalen-Johansen estimator is widely used in medical and survival studies, so a clearer account of why it holds up when its modelling assumption is wrong is of practical interest. The text does not indicate applications beyond simulations, so its real-world impact is unclear from the abstract alone.
+- **Background needed**: - State occupation probability: the chance a subject is in a given state (e.g., healthy, ill, dead) at a given time.
+- Censoring: when a subject's follow-up ends early, so their outcome is unknown.
+- Inverse probability of censoring weighting (IPCW): reweights observed subjects to account for those censored, by dividing by their estimated chance of remaining under observation.
+- Aalen-Johansen estimator: the standard nonparametric estimator for multi-state survival data, which implicitly assumes a Markov process (future depends only on the current state).
+- Non-Markov process: one where past history beyond the current state affects future transitions.
+- Influence function and semiparametric efficiency: a way of describing how an estimator responds to individual data points, and the lowest achievable variance among a broad class of estimators.
+- Augmentation: adding a correction term with mean zero that can reduce variance or bias without changing the target. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -763,17 +768,17 @@ We show that, in every sample, the widely used Aalen-Johansen estimator of a sta
 ### [Admissibility of Linear Time Series Models under Cone Constraints](https://arxiv.org/abs/2611.32414)
 *Won-Ki Seo* · `math.ST` · arXiv:2611.32414v1 · relevance 0.16
 
-- **In one sentence**: The paper gives necessary and sufficient support conditions for stationary Hilbert-space linear processes to stay almost surely inside a closed convex cone, and studies the consequences for quantiles, densities and covariance matrices.
-- **In plain words**: Many data objects, such as probability densities, quantile curves and covariance matrices, must obey fixed rules (for example, being nonnegative or increasing). The paper asks when a standard additive time-series model, which adds shocks step by step, can respect such rules over time. It finds that with certain shock types, such as Gaussian ones with unbounded lower tails, the randomness is squeezed into a restricted set of directions, and it builds examples that still work with bounded shocks.
-- **Why it matters**: Ordinary linear time-series models are widely used, so knowing when they can be applied to constrained objects without breaking the constraints clarifies their scope. The text does not indicate specific applications or wider connections beyond this theoretical scope.
-- **Background needed**: - Time series: data recorded in sequence over time, where each value depends on earlier ones.
-- Linear process: a model where the current value is a weighted sum of past random shocks (innovations).
-- Stationary: the statistical behaviour does not change over time.
-- Hilbert space: an infinite-dimensional generalisation of ordinary geometry, used for curves or functions as data.
-- Closed convex cone: a set closed under nonnegative scaling and addition, such as nonnegative functions or positive semidefinite matrices; "almost surely" means with probability one.
-- Quantile function: the inverse of a cumulative distribution, describing where a distribution's values fall.
-- Fractional filter: a weighting scheme with slowly decaying coefficients, giving long memory.
-- Random walk: a process that accumulates shocks, so its variance grows over time. · level: research-level
+- **In one sentence**: The paper gives a necessary and sufficient support condition for stationary Hilbert-space linear processes to stay almost surely inside a closed convex cone, and studies what this implies for additive linear models of quantiles, densities and covariance operators.
+- **In plain words**: Many data objects, such as probability densities, quantile curves and covariance matrices, must obey built-in rules (for example, being non-negative or increasing). The paper asks when the usual additive way of modelling a series over time, where each value is a weighted sum of past random shocks, can respect those rules. It finds that with certain shock distributions, including Gaussian ones, the randomness is forced into a restricted subspace, and it constructs working models that avoid this for quantiles, densities and covariance matrices.
+- **Why it matters**: Standard linear time series models are widely used, so knowing exactly when they remain valid for constrained objects matters for applied modelling of distributions and covariances. The text is a theoretical abstract, so its practical reach beyond these model classes is not shown here.
+- **Background needed**: - Stationary time series: a process whose statistical behaviour does not change over time.
+- Linear process: each value is a weighted sum of current and past random shocks (innovations).
+- Hilbert space: an infinite-dimensional vector space, used here so that functions such as densities or quantile curves can be treated as data points.
+- Closed convex cone: a set closed under addition and non-negative scaling, such as non-negative functions or positive semidefinite matrices; the "largest linear subspace" inside it is the part where the cone's constraints act like ordinary equalities.
+- Almost surely: holding with probability one.
+- Fractional filter: a weighting scheme with slowly decaying coefficients, giving long-memory behaviour.
+- Quantile function: the inverse of a cumulative distribution function, describing the spread of a distribution.
+- Mean square boundedness: the average squared size of a quantity stays finite over time. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -784,17 +789,17 @@ Time series analysis extends beyond vector-valued observations to evolving proba
 ### [Exact local queries for pseudo-marginal Markov chains](https://arxiv.org/abs/2611.32955)
 *Zihan Xu* · `stat.CO` · arXiv:2611.32955v1 · relevance 0.14
 
-- **In one sentence**: The paper introduces "decision certificates" built from finite historical parameter ranges that let a pseudo-marginal Markov chain with Gaussian graph priors answer prespecified local queries exactly, with work bounds and experiments on path and grid graphs.
-- **In plain words**: Some statistical sampling methods update a model one piece at a time, but each update can depend on distant earlier updates, which makes it costly to get one local answer. This paper proposes a way to settle each update early, using stored records of past parameter ranges, so that only the needed parts of the chain are computed. The authors report that, under shared random inputs and exact arithmetic, the method recovers the same reference results as the full computation, and that it is faster than the alternatives for sparse queries (few requested answers) but slower than a parallel method when all answers are requested.
-- **Why it matters**: The work targets a practical cost problem in Bayesian computation for large models, with applications to tomography imaging and Gaussian process classification. The text reports speed comparisons and two applications, but the evidence is from controlled experiments and specific examples, so its wider usefulness is not established from this text alone.
-- **Background needed**: - Markov chain: a sequence of random states where each new state depends only on the previous one; used to sample from complicated probability distributions.
-- Pseudo-marginal method: a sampling approach that replaces an exact likelihood (how well a model fits data) with a random estimate of it, while still targeting the right distribution.
-- Gaussian graph prior: a probability model over parameters attached to the nodes of a network or grid, where neighbouring nodes are linked.
-- Auxiliary variables: extra hidden random quantities added to make sampling easier.
-- Local query: asking for the value at one node or a small set of nodes without computing the whole chain.
-- Positron emission tomography (PET): an imaging technique that reconstructs internal tissue activity from detected radiation.
-- Gaussian process classification: a method that predicts categories using a smooth random function as a prior; the Landmine dataset is a standard example.
-- Picard iteration: a repeated-update scheme for solving equations, used here as a comparison method. · level: research-level
+- **In one sentence**: The paper proposes "decision certificates" built from finite historical parameter ranges that let a pseudo-marginal Markov chain on Gaussian graph priors answer prespecified local queries exactly, without resolving all neighbouring updates first, and reports work bounds and experiments on path/grid graphs and two applications.
+- **In plain words**: Markov chain samplers are computer procedures that wander through possible parameter settings to approximate a probability distribution, and often each step depends on earlier steps. This paper looks at how to read off the value of one part of such a chain on demand, without recomputing everything that came before. The authors report that, under their stated assumptions, this selective method recovers the same results as the full computation while doing less work for sparse requests, though full requests were faster with the alternative method.
+- **Why it matters**: It targets a practical cost problem in Bayesian computation, namely how much work is needed to query one piece of a long sampling chain, and it tests the idea on tomography and classification examples. The text does not show how broadly the approach would transfer beyond the stated graph families and models.
+- **Background needed**: - Markov chain: a sequence of random states where each new state depends on the previous one.
+- Pseudo-marginal sampling: a Monte Carlo method where an estimate of a likelihood (how well data fit a setting) replaces its exact value, while still targeting the correct distribution.
+- Gaussian graph prior: a probability model over parameters attached to nodes of a network (graph), where neighbouring nodes are linked.
+- Auxiliary variables: extra randomly introduced variables that make sampling easier.
+- Picard iteration: a method that repeatedly refines a guess until it stops changing, used here as a comparison.
+- Gaussian process classification: a method that learns a flexible function to sort data into classes.
+- Positron emission tomography (PET): an imaging method that reconstructs a spatial map from detected emissions.
+- Monte Carlo uncertainty: the error that comes from using finite random samples. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -807,12 +812,13 @@ Local queries of a Markov chain can depend on past updates outside the queried c
 ### [Where scientists draw the line on AI agents](https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents)
 ** · `huggingface.co` · Hugging Face - Blog · relevance 0.13
 
-- **In one sentence**: A news article titled "Where scientists draw the line on AI agents," but the body text is missing, so its actual content and claims cannot be confirmed.
-- **In plain words**: The article appears to be about how researchers decide what counts as an AI agent, meaning software that takes actions on its own rather than only answering questions. The text provided is empty, so I cannot say what specific views, findings, or events it reports.
-- **Why it matters**: Debates over where AI agents begin and end matter for safety rules, product claims, and accountability, but I cannot tell from the title alone what this article argues. Treat this as unverified until the full text is available.
-- **Background needed**: - AI agent: an AI system that can plan and carry out multi-step tasks, such as browsing websites or running code, with limited human input.
-- Definitions matter: "agent" is used loosely in industry, so researchers often debate which systems qualify and what level of autonomy counts.
-- Title only: this brief is based solely on the headline because no article text was supplied. · level: introductory
+- **In one sentence**: A news article titled "Where scientists draw the line on AI agents" that, as provided, has no body text, so its content on how researchers define or limit AI agents cannot be verified.
+- **In plain words**: This is a news piece about where researchers set boundaries for AI agents, which are AI systems that can take actions on their own, such as browsing the web or running tasks. The text provided is empty, so I cannot tell what specific view, study, or event it covers.
+- **Why it matters**: The topic of limits on autonomous AI systems is an active area of public and research debate, so the subject is relevant. Beyond the title, however, I cannot say what the article claims or how strong its evidence is.
+- **Background needed**: - An "AI agent" is an AI system that does multi-step tasks with little human input, such as booking, searching, or editing files.
+- "Drawing the line" here likely means deciding what such systems should and should not be allowed to do, or how they should be defined.
+- Debates in this area often involve safety, reliability, and who is responsible when an automated system makes a mistake.
+- The article's body text was not available, so the specifics must be checked against the original source. · level: introductory
 
 <details><summary>Original abstract</summary>
 
@@ -823,14 +829,13 @@ Local queries of a Markov chain can depend on past updates outside the queried c
 ### [Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’](https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/)
 *Rebecca Bellan* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.11
 
-- **In one sentence**: Anthropic CEO Dario Amodei rejects rivals' claims that he favors giving up human agency to AI, as leading AI firms increasingly automate their own research and model development.
-- **In plain words**: The article reports on a public dispute in the AI industry. Anthropic's chief executive, Dario Amodei, has called accusations that he wants to hand control to machines "absurd." The text is a short news summary and gives only his response and the broader context, not the full arguments on either side.
-- **Why it matters**: The debate concerns how much people should keep control over AI systems that are increasingly used to build other AI systems. The text is too brief to say how serious the criticism is or what specific actions are involved, so its wider significance is unclear.
-- **Background needed**: - Anthropic is an AI company that develops large language models, the systems behind chatbots like Claude.
-- "Human agency" or "human control" here means people's ability to make and override key decisions about AI.
-- "Automating research and model development" means AI systems are being used to help design, test, and improve other AI models, with less direct human work.
-- The article names rivals' accusations but does not identify who made them or give their exact claims.
-- Public statements by company leaders are not independent evidence of how AI is actually governed. · level: introductory
+- **In one sentence**: Anthropic CEO Dario Amodei publicly rejects rivals' claims that he favors handing human decision-making over to AI, as leading labs increasingly automate parts of their own research and model development.
+- **In plain words**: The article reports on a public dispute between Anthropic's chief executive, Dario Amodei, and critics who say he wants to give up human control to AI systems. Amodei calls that charge "absurd." The piece also notes that top AI companies are increasingly using AI to help build their own AI models and do research.
+- **Why it matters**: The debate touches on a live question: if AI companies hand more of their own development work to AI, how much human oversight remains. The text is short and gives only Amodei's rejection of the accusation, so it does not show who the critics are or what specific plans are at issue.
+- **Background needed**: - Anthropic is an AI company that develops the Claude family of AI models.
+- "Automating research" means using AI systems to carry out parts of the work of designing and testing new AI, rather than only humans doing it.
+- "Human agency" or "human control" refers to people keeping the final say over important decisions, including those made by AI.
+- The article gives no details of the rivals' specific statements, so the exact nature of the accusation is only summarized. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -841,13 +846,13 @@ Anthropic CEO Dario Amodei pushes back against rivals’ accusations that he fav
 ### [An Indic Voice Agent with CUGA](https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga)
 ** · `huggingface.co` · Hugging Face - Blog · relevance 0.10
 
-- **In one sentence**: A news item titled "An Indic Voice Agent with CUGA" that, as provided, has no body text, so its content, results, and claims cannot be verified.
-- **In plain words**: The item appears to be about a voice-based AI assistant built for Indian languages, using a system called CUGA. The text itself is missing, so I cannot say what was built, how well it works, or what was found. Only the title is available.
-- **Why it matters**: Voice assistants that work in many Indian languages could matter for people who do not use English online, but the text provided does not show whether this work does that. Treat this as unverified until the full article is read.
-- **Background needed**: - "Voice agent": an AI program that listens to speech, works out what is wanted, and replies by voice or takes actions.
-- "Indic": refers to languages of the Indian subcontinent, such as Hindi, Bengali, Tamil and others.
-- "CUGA": the name given in the title; the text does not explain what it is. Assume it is a specific software system unless the full article says otherwise.
-- Speech assistants usually combine speech recognition, language understanding, and speech output. · level: intermediate
+- **In one sentence**: A news item titled "An Indic Voice Agent with CUGA" that appears to concern a voice-based AI agent for Indian languages built with a system called CUGA, but the body text is unavailable, so details cannot be confirmed.
+- **In plain words**: The item seems to be about a spoken-word AI assistant designed for languages used in India. The text provided is empty, so I cannot say what was built, how well it works, or what was tested. Only the title is available.
+- **Why it matters**: Voice assistants that handle many Indian languages could matter for reaching users who do not read or speak English well. Beyond the title, I cannot tell whether this is a significant advance or a small project, so the reader should check the original source.
+- **Background needed**: - A "voice agent" is an AI system that listens to speech, works out what is wanted, and replies or takes action by voice.
+- "Indic" refers to the languages of the Indian subcontinent, such as Hindi, Tamil, Bengali and others.
+- "CUGA" is named only in the title; I do not know what it is from this text.
+- Speech systems for less widely studied languages often need more data and testing than English systems do. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -856,15 +861,15 @@ Anthropic CEO Dario Amodei pushes back against rivals’ accusations that he fav
 </details>
 
 ### [Want to buy your kid an AI toy this Christmas? Not in New York](https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/)
-*Rebecca Bellan* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.09
+*Rebecca Bellan* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.10
 
-- **In one sentence**: A news report says New York has banned AI chatbot toys for five years, citing new Common Sense Media research that describes safety failures such as exposure to inappropriate content and risks to emotional development.
-- **In plain words**: New York has put a five-year ban on toys that use AI chatbots, meaning toys that hold conversations like a chatbot. The article says new research from Common Sense Media, a US children's media watchdog group, found serious safety problems with these toys, including children being exposed to inappropriate content and possible harm to emotional development.
-- **Why it matters**: Parents buying holiday gifts and regulators deciding what children's products are allowed may both care about this. The text is short and does not give the study's methods, sample size, or specific findings, so it is hard to judge how strong the evidence is.
-- **Background needed**: - AI chatbot: a program that generates conversational replies to typed or spoken words.
-- Common Sense Media: a US nonprofit that reviews media and technology for children and families.
+- **In one sentence**: New York has reportedly banned AI chatbot toys for five years, citing safety failures found in new Common Sense Media research, including exposure to inappropriate content and risks to emotional development.
+- **In plain words**: New York has put a five-year ban on AI chatbot toys, meaning toys that hold conversations using artificial intelligence. The article says this follows new research from Common Sense Media, a children's media advocacy group, which found safety problems. The research reportedly points to children being exposed to inappropriate content and to possible harm to their emotional development.
+- **Why it matters**: Parents buying gifts and regulators deciding what children can use both depend on evidence like this. The short text does not say how the research was done or how many toys were tested, so the scale of the findings is unclear.
+- **Background needed**: - AI chatbot: a program that holds back-and-forth conversations in natural language, here built into a toy.
+- Common Sense Media: a US nonprofit that rates and reviews media and technology for families and children.
 - Emotional development: how children learn to understand and manage feelings and relationships.
-- The article is brief; it gives no details of the ban's legal basis, the study's design, or the companies involved. · level: introductory
+- The article is brief and reports the ban and the findings without the full details of either. · level: introductory
 
 <details><summary>Original abstract</summary>
 
@@ -875,14 +880,14 @@ New York has banned AI chatbot toys for five years as new research from Common S
 ### [How iFood scales coding agents across 15,000 repositories](https://openai.com/business/customer-stories/ifood)
 ** · `openai.com` · OpenAI News · relevance 0.09
 
-- **In one sentence**: A news piece, titled "How iFood scales coding agents across 15,000 repositories," that appears to describe how the Brazilian food-delivery company iFood runs AI coding agents across a very large set of code repositories, but the article text itself is unavailable.
-- **In plain words**: This item is about how a large food-delivery company, iFood, uses AI software that writes or changes computer code, spread across about 15,000 code projects. The text of the article was not provided, so I cannot say what problems were encountered or what results were reported. The title alone suggests a description of how the approach was expanded to that scale.
-- **Why it matters**: Companies running AI coding tools across thousands of projects is a practical question for software teams, since it touches on quality control, cost, and how much human review is needed. Beyond the title, I cannot confirm any specific outcomes, so treat this as a pointer to a topic rather than evidence of results.
-- **Background needed**: - Coding agent: an AI program that can read, edit, and test software code with some autonomy, rather than only suggesting single lines.
-- Repository (repo): a stored project of source code, usually tracked with version-control software such as Git.
-- Scaling: making a tool work reliably across many teams or projects, not just one trial.
-- iFood: a large online food-delivery platform based in Brazil.
-- Note: the article body was empty, so this brief relies only on the title. · level: introductory
+- **In one sentence**: A news piece titled "How iFood scales coding agents across 15,000 repositories," though the body text is missing, so only the headline's subject (scaling AI coding agents across a very large set of code repositories at the food-delivery company iFood) can be identified.
+- **In plain words**: This item is about how the Brazilian food-delivery company iFood uses AI "coding agents," programs that can write or change software on their own, across about 15,000 code repositories (storage spaces where a project's source code is kept). The text itself is not available, so I cannot say what approach was used or what results were reported.
+- **Why it matters**: Companies running AI tools across thousands of software projects at once is a practical question for engineering teams, but the article's content is unknown here, so its significance cannot be judged from what is provided. It may connect to wider efforts to bring AI assistants into large software organizations.
+- **Background needed**: - Coding agent: an AI system that can read code, make changes, and run tasks with limited human direction.
+- Repository (repo): a stored collection of a software project's code and its change history, often managed with tools like Git.
+- Scaling across many repos: applying the same tool or process to thousands of separate projects, which raises questions about reliability, review, and cost.
+- iFood: a large food-delivery platform based in Brazil.
+- Note: the article text was empty, so no details, figures, or claims from the piece are confirmed here. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -895,16 +900,15 @@ New York has banned AI chatbot toys for five years as new research from Common S
 ### [Eliciting the Recall Capacity of Linear Attention](https://arxiv.org/abs/2611.32969)
 *Johan Lindqvist, Antonio Orvieto* · `cs.LG` · arXiv:2611.32969v1 · relevance 0.32
 
-- **In one sentence**: The paper shows that linear-attention language models have substantial but underused associative-recall capacity, and that adding recall-focused training signals (in-context sentence repetition and context-sensitive loss reweighting) narrows their gap to softmax attention without changing architecture or token budget.
-- **In plain words**: Language models often read text by holding it in a memory, and the usual transformer design (softmax attention) is good at looking things up in that memory. Faster "linear" versions of these models are known to be worse at recalling specific facts from earlier in a text. This paper finds that the weakness is partly about training: the linear models can in principle store thousands of associations, but standard training does not teach them to copy from context, and two training changes help them do so.
-- **Why it matters**: It suggests the recall gap between fast linear models and standard transformers may be narrowed by how they are trained rather than only by redesigning the architecture. The text does not show how far these gains carry over to larger real-world models, so that remains open.
-- **Background needed**: - Associative recall: given a key seen earlier (like a name), retrieving the value attached to it (like a phone number).
-- Softmax attention: the standard transformer mechanism that lets a model look back at every earlier token; accurate but costly for long texts.
-- Linear attention: a cheaper variant that compresses past text into a fixed-size memory ("state"), so its recall is limited by how big that state is.
-- State size: how much information the compressed memory can hold; the paper relates it to how many items can be recalled.
-- Synthetic recall tasks: controlled test puzzles that measure recall without the noise of natural language.
-- Loss reweighting: changing how strongly each training prediction counts, here to emphasize recall-relevant tokens.
-- Token budget: the total amount of training text, held fixed in the comparisons. · level: research-level
+- **In one sentence**: The paper studies why linear-attention language models recall information from context far worse than softmax attention, and shows that targeted training changes (in-context sentence repetition and context-sensitive loss reweighting) narrow that gap without changing the architecture.
+- **In plain words**: Language models often need to look back at earlier text and pull out a specific detail, such as a name paired with a fact. Linear-attention models, which are cheaper to run than the standard kind, are noticeably worse at this. The paper tests this gap with synthetic tasks and natural text, and finds that the models can learn this skill when training is adjusted to reward it.
+- **Why it matters**: Linear attention is an attempt to make language models cheaper on long inputs, so a recall deficit is a real cost of that efficiency. The result suggests the gap may be partly a training problem rather than a fixed limit of the design, though the text does not show how well this carries over to larger or different production models.
+- **Background needed**: - Attention: the mechanism in language models that lets each word look back at earlier words in the input.
+- Softmax attention: the standard form of attention, which is accurate at recall but its cost grows quickly with input length.
+- Linear attention: a cheaper approximation whose cost grows in a straight line with input length, but which keeps a fixed-size memory of past text.
+- Associative recall: a test where the model must output the value linked to a given key, such as a name and its number, seen earlier in the text.
+- State size: how much information the fixed memory can hold; the paper links it to how many items can be recalled.
+- Loss reweighting: changing how much each training prediction counts, so that recall-relevant predictions get more emphasis. · level: research-level
 - Matched keywords: attention, linear attention, architecture
 
 <details><summary>Original abstract</summary>
@@ -916,16 +920,15 @@ Linear attention models exhibit a disproportionate deficit relative to softmax a
 ### [Structure-Aware Transformers for Hierarchical Authorization in Personal AI Agents](https://arxiv.org/abs/2611.32018)
 *Dongyu Cui, Jie Ding, Xuan Bi* · `cs.LG` · arXiv:2611.32018v1 · relevance 0.31
 
-- **In one sentence**: PATH is a transformer-based architecture that predicts a user's allow/deny decisions on hierarchically organized permission requests from personal AI agents, using hierarchy-aware attention masks, a parent-gated probability formulation, and hierarchy-level embeddings, with finite-sample risk bounds and convergence conditions.
-- **In plain words**: Personal AI agents that act for a user often ask for many permissions, and reviewing each one by hand is tedious while approving them all is risky. This paper proposes a model that learns a user's likely yes-or-no answers to these requests, so that routine ones can be handled with less manual review. The authors report strong prediction performance on simulated data, AI-generated user profiles, and real user authorization data, and say the model never produced predictions that contradict the permission hierarchy.
-- **Background needed**: - Personal AI agent: software that carries out multi-step tasks for a user, such as accessing accounts or files.
-- Permission request: the agent asking for access to a specific resource or action.
-- Hierarchical permissions: requests organized in parent-child groups, where a general category contains more specific ones.
-- Transformer: a neural network design that uses attention to weigh relationships among input items.
-- Attention mask: a rule that restricts which items can attend to which, here enforcing the hierarchy.
-- Parent-gated probability: a formulation where a child permission's probability depends on its parent's, so predictions stay consistent with the hierarchy.
-- Finite-sample risk bounds: guarantees on expected prediction error for a given amount of data.
-- Sparse observations: few recorded user decisions relative to the number of possible requests. · level: research-level
+- **In one sentence**: PATH is a transformer-based neural network that predicts users' permission decisions for hierarchically organized authorization requests from personal AI agents, using hierarchy-aware attention masks, a parent-gated probability formulation, and hierarchy-level embeddings, with reported finite-sample risk bounds and zero hierarchy violations in experiments.
+- **In plain words**: Personal AI assistants that act for you often ask for many permissions, and approving each one by hand is tedious while approving everything is risky. This paper proposes a model that learns from a user's past yes-or-no decisions to predict how they would answer new permission requests, so they only need to step in where it matters. The authors report that the model predicts well on simulated data, AI-generated profiles, and real user data, and that its predictions never break the parent-child structure of the permission categories.
+- **Background needed**: - Personal AI agent: software that performs multi-step tasks for a user, such as booking, messaging, or file access, and must ask permission for sensitive actions.
+- Authorization: a user's decision to allow or deny a given permission request.
+- Hierarchical requests: permissions organized in parent-child categories, where a child permission only makes sense if its parent is considered.
+- Transformer: a neural network architecture that uses attention to weigh relationships among items in a sequence; attention masks restrict which items can relate to each other.
+- Parent-gated probability: a prediction for a child category that is conditioned on its parent's prediction, so the two stay consistent.
+- Sparse observations: few recorded user decisions relative to the number of possible permissions.
+- Finite-sample risk bounds and convergence: theoretical guarantees on how prediction error shrinks with more data and whether the training procedure settles on a solution. · level: research-level
 - Matched keywords: transformer, attention, architecture
 
 <details><summary>Original abstract</summary>
@@ -939,16 +942,16 @@ Personal AI agents can carry out complex, multi-step tasks on users' behalf, but
 ### [Instance-Dependent Bandit Convex Optimization in One Dimension](https://arxiv.org/abs/2611.31608)
 *Felix Breuer, Alireza Bakhtiari, Kevin Jamieson* · `stat.ML` · arXiv:2611.31608v1 · relevance 0.32
 
-- **In one sentence**: The paper studies instance-dependent sample complexity for one-dimensional stochastic bandit convex optimization in the fixed-confidence setting, proving a matching-up-to-logs instance-dependent rate for minimizer localization but showing no comparable improvement for simple regret.
-- **In plain words**: The paper looks at a learning problem where an algorithm tries to find the lowest point of a smooth, bowl-shaped function on a line, but can only learn about it by taking noisy measurements at chosen points. It asks how many measurements are needed, and how that depends on how the particular function looks. The authors find that locating the lowest point can be done faster on easier functions, while merely finding a point whose value is close to the lowest value cannot be sped up in the same way.
-- **Why it matters**: The result separates two goals that might seem similar, locating the minimizer versus finding a near-optimal value, and shows they have different statistical costs. The text does not say how far the findings extend beyond one dimension, so their wider relevance is uncertain.
-- **Background needed**: - Stochastic bandit: a learner picks actions and receives noisy rewards or losses, learning only from the outcomes it observes.
-- Convex function: a bowl-shaped function with a single lowest point (the minimizer).
-- Fixed-confidence setting: the algorithm must output an answer that is correct with high probability, and the aim is to minimize the number of samples used.
-- Sample complexity: the number of measurements needed to reach the goal.
-- Instance-dependent versus minimax: instance-dependent bounds depend on the specific function, while minimax bounds are the worst case over all functions in a class.
-- Sublevel set: the set of points where the function is below a given threshold.
-- Simple regret: the gap between the value at the chosen point and the best possible value. · level: research-level
+- **In one sentence**: The paper studies instance-dependent sample complexity for one-dimensional stochastic bandit convex optimization in the fixed-confidence setting, showing a matching-rate result for minimizer localization but no comparable instance-dependent gain for simple regret.
+- **In plain words**: The paper looks at how many noisy measurements are needed to find the lowest point of an unknown curve when each measurement is a costly test at a chosen spot. It asks whether the answer depends on how the specific curve is shaped, not just on worst-case bounds. The authors find that locating the minimizer can be done faster on easier curves, while merely finding a point that is nearly as good as the best one cannot be sped up in the same way.
+- **Why it matters**: The result separates two goals that are often treated as one, which may matter for designing adaptive experiments and sequential testing. The text does not show broader impact beyond this one-dimensional theory, so its reach beyond that setting is unclear.
+- **Background needed**: - Multi-armed bandit: choosing where to sample next and learning from noisy rewards.
+- Fixed-confidence setting: the learner must stop with a guaranteed error level, and the goal is to minimize the number of samples used.
+- Convex function: a bowl-shaped curve with a single lowest point, the minimizer.
+- Sublevel set: the set of points where the curve lies below a given height.
+- Instance-dependent vs. minimax: instance-dependent bounds depend on the specific problem; minimax bounds are worst-case over all problems in a class.
+- Simple regret: how far the chosen point is from the best value.
+- Sample complexity: the number of measurements needed. · level: research-level
 - Matched keywords: sample complexity, minimax
 
 <details><summary>Original abstract</summary>
@@ -960,16 +963,16 @@ We study the instance-dependent sample complexity of one-dimensional stochastic 
 ### [PAC-style Bounds on the Conditional Validity of Conformal Predictors](https://arxiv.org/abs/2611.33023)
 *Nicolo Colombo* · `cs.LG` · arXiv:2611.33023v1 · relevance 0.25
 
-- **In one sentence**: The paper derives PAC-style probabilistic lower bounds on the input-conditional coverage of conformal predictors, using Markov and Cantelli inequalities, and proposes a data-estimable Cantelli bound based on the variance of conditional coverage.
-- **In plain words**: Conformal prediction methods output a set of possible answers rather than a single guess, and they are designed so that the set contains the true answer about as often as promised. That promise holds on average across all inputs, but it can be off for particular kinds of inputs. This paper gives guaranteed lower limits on how often the set is right for a given input, using only a finite amount of calibration data and no assumptions about how the data are distributed.
-- **Why it matters**: Users often need reliability for specific cases, not just on average, so a checkable measure of local reliability matters for safety-sensitive uses. The authors suggest the variance of conditional coverage as a practical signal of how trustworthy a predictor is for different inputs; the text does not show how well this works in practice.
-- **Background needed**: - Prediction set: a range or list of candidate outputs instead of one value.
-- Coverage: the fraction of cases where the true answer falls inside the set; the target here is 1 minus alpha (for example, 90%).
-- Marginal vs. conditional validity: marginal means correct on average over all inputs; conditional means correct for each specific input or group.
+- **In one sentence**: The paper derives PAC-style probabilistic lower bounds on input-conditional coverage of conformal predictors, using Markov and Cantelli inequalities, and proposes conditional-coverage variance as an estimable measure of conditional validity.
+- **In plain words**: Conformal prediction is a way to output a set of likely answers, rather than a single answer, with a promised long-run success rate. That promise holds on average across all inputs, but it can be off for particular kinds of inputs. This paper gives probability-based guarantees on how well the coverage holds for a given input, using only a finite amount of calibration data.
+- **Why it matters**: Guarantees that hold for specific subgroups or individual inputs matter in settings such as medical or safety decisions, where average success can hide failures. The text suggests the variance of conditional coverage could serve as a practical check of this, but the abstract alone does not show how well this works in practice.
+- **Background needed**: - Prediction sets: instead of one predicted value, a model returns a range or set of plausible outcomes.
+- Coverage: the fraction of cases where the true outcome falls inside the set; the target here is 1 minus alpha (for example 90%).
+- Marginal vs. conditional validity: marginal means the rate holds averaged over all inputs; conditional means it holds for each kind of input.
 - Calibration data: a held-out sample used to set the size of the prediction sets.
-- PAC-style bound: a guarantee that holds with high probability over the random calibration sample, not just in expectation.
-- Markov and Cantelli inequalities: classic probability tools that bound how far a random quantity can stray from its average, using only its mean (and variance for Cantelli).
-- Hoeffding argument: a standard concentration result that lets a quantity be estimated from samples with a known confidence level. · level: research-level
+- PAC-style bound: a guarantee of the form "with high probability, the true quantity is at least this large."
+- Markov and Cantelli inequalities: standard probability tools that bound how far a random quantity can stray from its average, using only its mean (and variance for Cantelli).
+- Hoeffding argument: a classic tool giving finite-sample confidence limits on an average. · level: research-level
 - Matched keywords: conformal prediction
 
 <details><summary>Original abstract</summary>
@@ -983,14 +986,15 @@ Conformal prediction sets are guaranteed to be marginally valid over the attribu
 ### [Implementation of Machine Translation for the Uzbek Language Based on Transformer Models](https://arxiv.org/abs/2611.32359)
 *Mukhammadjon Musaev, Mannon Ochilov* · `cs.CL` · arXiv:2611.32359v1 · relevance 0.23
 
-- **In one sentence**: The paper fine-tunes transformer models T5 and mT5 for Uzbek-English machine translation, using a parallel corpus of about 3 million sentence pairs built through data collection, preprocessing and augmentation, and evaluates with BLEU.
-- **In plain words**: This paper is about building a computer program that translates between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned a large collection of matching Uzbek and English sentences, roughly 3 million pairs, and used it to adapt two existing AI language models. They report that their approach beats older translation methods, measured with a standard similarity score.
-- **Why it matters**: Low-resource languages like Uzbek are often poorly served by translation tools, so work that makes them usable online has practical value. The summary gives no detailed comparison numbers, so the size of the improvement cannot be judged from this text alone.
-- **Background needed**: - Machine translation: software that converts text from one language to another.
-- Transformer models: a widely used neural network design behind modern language AI; T5 and mT5 are published examples that can be trained on many languages.
-- Fine-tuning: further training a pre-built model on a specific task or dataset.
-- Parallel corpus: a collection of texts paired with their translations, used as training examples.
-- BLEU score: an automatic metric that compares machine translations with human reference translations; higher is better, but it is an imperfect proxy for quality.
+- **In one sentence**: The paper fine-tunes transformer models (T5 and mT5) on a roughly 3-million-pair Uzbek-English parallel corpus and evaluates translation quality with BLEU, claiming improvement over older methods.
+- **In plain words**: This paper is about building an automatic translator between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned up sentence pairs in both languages, expanded the collection, and then adjusted two existing AI language models to do the translation. They report that the result beats older translation approaches, measured by a standard scoring method.
+- **Why it matters**: Low-resource languages are often poorly served by translation tools, so work that makes them better supported matters for the people who speak them. The text gives only a general claim of improvement and does not show detailed results, so how large the gain is and how well it holds up cannot be judged from this summary alone.
+- **Background needed**: - Machine translation: software that converts text from one language to another automatically.
+- Transformer models: the neural network design behind most modern AI language tools; T5 and mT5 are published transformer models, with mT5 trained on many languages at once.
+- Fine-tuning: further training a pretrained model on a specific task or dataset to improve it there.
+- Parallel corpus: a collection of sentences paired with their translations in another language, used as training material.
+- Data augmentation: artificially expanding a dataset, for example by creating new variants of existing sentences.
+- BLEU score: a common automatic metric that compares machine translations to human reference translations; higher is better, but it is an imperfect proxy for quality.
 - Low-resource language: a language with little available digital text for training AI systems. · level: intermediate
 
 <details><summary>Original abstract</summary>
@@ -1003,16 +1007,15 @@ This research focuses on building a machine translation system for the Uzbek lan
 *Keyu He, Michael Li, Jiarui Liu et al.* · `cs.CL` · arXiv:2611.31821v1 · relevance 0.11
 
 - **In one sentence**: The paper tests whether training small Qwen3 language models with supervised fine-tuning and reinforcement learning on objective game outcomes from three multi-player social games improves their social play, with some held-out-game transfer.
-- **In plain words**: Researchers want AI chatbots that can work with others through conversation, but grading that behavior usually requires other AI models acting as judges, which is costly and easy to game. This paper uses multi-player social games instead, where the game's rules decide who wins, so the win itself serves as the training signal. The reported results: a small model's win rate against a much stronger opponent rose from 33% to 81% on the three games used for training, and from 39% to 54% on three games it was not trained on.
-- **Why it matters**: It offers a way to train social skills without relying on AI judges, which the text describes as expensive, noisy, and open to reward hacking. Whether the gains generalize beyond these games and to real-world social tasks is not shown in the text, so the broader claim should be treated as preliminary.
-- **Background needed**: - Large language model (LLM): an AI system trained on large amounts of text to generate and understand language.
-- Supervised fine-tuning (SFT): further training a model on examples of good behavior.
-- Reinforcement learning with verifiable rewards (RLVR): training by trial and error, where the reward comes from a checkable rule-based result, such as winning a game, rather than a judgment.
-- Reward hacking: when a model finds shortcuts that score well on the reward without doing the intended thing.
-- Win rate: the share of games won against an opponent.
-- Held-out games: games deliberately withheld from training to test whether skills transfer.
-- Qwen3 and Gemma-3-27B: specific open-weight language models; the numbers refer to parameter counts (for example, 4B means about 4 billion parameters).
-- "pp" means percentage points. · level: intermediate
+- **In plain words**: Researchers want AI models that can communicate and cooperate socially, but grading that behavior usually needs expensive AI judges that can be gamed. They used multi-player social games, where the rules themselves decide who wins, as a training ground. Small Qwen3 models trained this way won far more often against a much larger Gemma-3-27B model, and the gains partly carried over to games they had not been trained on.
+- **Why it matters**: The approach offers a way to train social skills without relying on judge models that can be fooled, which matters for building agents that work with people or other agents. Whether these gains reflect general social intelligence, rather than skill at these specific games, is not settled by the text, and the held-out gain is smaller (39% to 54%) than the in-game gain.
+- **Background needed**: - Large language model (LLM): a text-predicting AI system such as Qwen3 or Gemma-3.
+- Supervised fine-tuning (SFT): further training a model on example responses that show the desired behavior.
+- Reinforcement learning with verifiable rewards (RLVR): training where the model is rewarded by an objective, checkable result (here, the game's outcome) rather than a judge's opinion.
+- Reward hacking: when a model finds a way to score well on the reward signal without actually doing the intended task.
+- Win rate: the share of games won against an opponent; "pp" means percentage points.
+- Held-out games: games not used during training, used to test whether skills transfer.
+- Multi-player social games: games like hidden-role party games that require talking, coordinating and inferring others' hidden roles. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1025,14 +1028,15 @@ The training of socially intelligent language models often relies on large langu
 ### [Visual-State Graph Memory for Streaming Video Understanding](https://arxiv.org/abs/2611.32369)
 *Ailar Mahdizadeh, Pritam Sarkar, Xiangteng He et al.* · `cs.CV` · arXiv:2611.32369v1 · relevance 0.14
 
-- **In one sentence**: Proposes Visual-State Graph (VSG), a training-free memory for streaming video that stores objects, their relations, and a timestamped event log, retrieved alongside recent frames under a fixed input budget.
-- **In plain words**: Video models often need to answer questions about something that happened long before the current moment, but only a short window of recent frames is kept. This paper builds a compact running memory of what is in the video: each object is kept as one entry with a dated history of how it changed, plus a log of events. When a question comes in, the relevant parts of this memory are pulled out and given to the model together with recent frames.
-- **Why it matters**: Reasoning about the past is a practical limit for systems that watch live video, such as monitoring or assistive tools, where storing every frame is not feasible. The text reports gains on four benchmarks with seven open-source vision-language models (7B to 32B parameters) under matched input budgets, but the summary gives no further detail on size of gains, so its broader significance is unclear.
-- **Background needed**: - Streaming video: video that arrives continuously, so the system sees each frame once and cannot look ahead.
-- Vision-language model: an AI model that takes images or video plus text and answers questions about them.
-- Scene graph: a structured description of objects in a scene and how they relate (for example, "cup on table").
+- **In one sentence**: Proposes Visual-State Graph (VSG), a training-free memory for streaming video that stores objects, their relations, and an event log as a persistent, dynamically updated scene graph, and retrieves from it alongside recent frames under a fixed input budget.
+- **In plain words**: Video models often need to answer questions about something that happened earlier in a long live video, but the important moment may have scrolled out of their short window of recent frames. This paper proposes a memory that keeps a running summary of the scene instead of every frame: each object gets one lasting entry with a dated history of how it changed, plus a log of events. When a question arrives, the system pulls out the relevant objects and events together with the latest frames.
+- **Why it matters**: Streaming video applications such as monitoring or assistive devices need to recall the past without storing unlimited footage, so a compact memory of scene state is a practical design question. The text reports that, across four benchmarks and seven open-source vision-language models (7B to 32B parameters), VSG improved reasoning about the past under matched input budgets while keeping real-time operation; the size and consistency of these gains beyond the abstract are not described here.
+- **Background needed**: - Vision-language model (VLM): an AI system that answers questions about images or video given as input.
+- Streaming video: video that arrives continuously, so the model sees it frame by frame and cannot look ahead.
+- Scene graph: a structured description of a scene as nodes (objects) connected by edges (relations such as "holding" or "next to").
 - Training-free: the method is added on top of existing models without retraining them.
-- Input budget: a fixed limit on how much information (frames, text) the model can receive at once. · level: research-level
+- Input budget: a fixed limit on how much information (e.g., number of frames or tokens) the model can take in at once.
+- Retrieval: selecting only the stored items relevant to the current question. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1043,17 +1047,16 @@ In streaming video understanding, the evidence needed to answer a question may h
 ### [DOPER: Deep Object Pose Estimation Revisited](https://arxiv.org/abs/2611.32846)
 *Hugo Hadfield, Alperen Degirmenci, Jonathan Tremblay* · `cs.CV` · arXiv:2611.32846v1 · relevance 0.14
 
-- **In one sentence**: DOPER is an RGB-only framework that shares one visual backbone across detection, segmentation, and keypoint prediction to estimate the 6D pose of known objects via Perspective-n-Point, trained from synthetic data and adapted to real images with partial supervision and multi-view geometric constraints.
-- **In plain words**: This paper is about working out where a known object is and how it is turned in a camera image, using only ordinary color pictures and no depth sensor. The method first learns from computer-generated images, then adapts to real photos, and it refines a rough 3D model of the object as it goes. The authors report that it reaches top detection scores on several public benchmark datasets and runs at about 35 times per second per object.
-- **Why it matters**: Reliable pose estimation from ordinary cameras matters for robots that pick up objects and for spacecraft or similar systems that need to know an object's orientation. The text reports benchmark results and speed, but it does not show how the system performs in deployed robots or spacecraft, so its practical reach is unclear.
-- **Background needed**: - Pose estimation: finding an object's position and rotation (6D: three for location, three for orientation) relative to the camera.
-- Keypoints: specific points on an object, such as corners, whose image locations are predicted and then matched to the 3D model.
-- Perspective-n-Point (PnP): a standard geometric calculation that gives the object's pose from matched 2D image points and known 3D points.
-- Synthetic training: learning from computer-rendered images instead of real photos, which then need adapting to real conditions.
-- CAD model: a digital 3D drawing of an object; "underspecified" means it lacks some detail.
-- Multi-view and calibrated cameras: several cameras with known positions, which constrain 3D geometry.
-- Average precision (AP): a standard score for how well detections match the true objects.
-- Benchmarks named: SPEED+ (spacecraft images), SHIRT, HANDAL, HOPEv2, HOT3D, and T-LESS (object datasets). · level: research-level
+- **In one sentence**: DOPER is an RGB-only framework that shares one visual backbone across detection, segmentation, and keypoint prediction to estimate 6D object poses via Perspective-n-Point, trained from synthetic data and adapted to real images with partial supervision and multi-view geometric constraints.
+- **In plain words**: This paper is about working out where a known object is and how it is turned in 3D, using only ordinary color camera images. The method first learns from computer-generated images, then adapts to real photos, and it locates points on the object to compute its position and orientation. The authors report state-of-the-art detection scores on four benchmark datasets and real-time speed (about 35 times per second per object).
+- **Why it matters**: Estimating object pose from a plain camera matters for robotics and spacecraft or warehouse tasks where depth sensors are not available. The text claims state-of-the-art detection accuracy and real-time speed, but the summary alone does not show how these compare to other methods in detail.
+- **Background needed**: - Pose estimation: finding an object's 3D position and rotation (6D pose) relative to the camera.
+- Keypoints and heatmaps: a few marked points on the object, and a map of how likely each point is to be at each pixel.
+- Perspective-n-Point (PnP): a standard calculation that turns matched 2D image points and known 3D model points into a pose.
+- Synthetic training: learning from computer-rendered images rather than real photos, then adapting to real ones.
+- CAD model: a digital 3D design of the object.
+- Multi-view and calibration: using several cameras whose positions are precisely known.
+- Average precision (AP): a standard score for how well detections match the true objects. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1066,17 +1069,17 @@ We present DOPER, an RGB pose estimation framework that shares a visual backbone
 ### [To Critic Or Not To Critic](https://arxiv.org/abs/2611.32013)
 *Jason Wei, George Pu, Jingxuan Fan et al.* · `cs.LG` · arXiv:2611.32013v1 · relevance 0.26
 
-- **In one sentence**: An empirical study of when a learned critic (PPO) beats critic-free group-based advantage estimation (GRPO) in RL, framed as a bias-variance tradeoff in gradient direction across batch sizes, tasks, and horizons.
-- **In plain words**: Training AI systems with reinforcement learning often requires a "critic," a separate model that estimates how good each situation is. This paper asks whether that extra model is worth its cost, comparing a critic-based method (PPO) with a method that skips the critic (GRPO). The authors report that the answer depends on factors such as batch size, task length, and complexity, rather than one method always winning.
-- **Why it matters**: Choosing between these methods affects how expensive it is to train large language models on long, multi-step tasks. The text reports results across more than 1,200 training runs, including 96 with LLMs, but I have not checked the details behind those numbers.
-- **Background needed**: - Reinforcement learning (RL): training by trial and error, using rewards as feedback.
-- Policy gradient: adjusting a model's behavior in the direction that earns more reward.
-- Critic / value function: a model that predicts expected future reward, used to judge how good an action was.
-- Variance vs. bias: noisy estimates (high variance) versus systematically off estimates (bias). A critic can reduce noise but can add bias if its predictions are wrong.
+- **In one sentence**: An empirical study of when a learned critic (PPO) beats critic-free group-based advantage estimation (GRPO) in RL, framed as a bias-variance tradeoff in gradient direction across batch sizes, horizons, and domains including LLM tasks.
+- **In plain words**: Training AI systems with trial-and-error rewards often uses one of two methods: one trains a helper "critic" that estimates how good each step is, and the other skips the helper and compares a group of attempts instead. This paper asks when the helper is worth its cost. Across more than 1,200 training runs, the authors find that the helper-based method tends to win when batches of training data are small, while the simpler group method catches up as batches grow, and needs bigger batches on longer, harder tasks.
+- **Why it matters**: Many recent language-model training results compare these two methods without a clear rule for which to use, so a set of conditions for the choice is useful to practitioners. The text reports the trends but does not show how far they generalize beyond the tasks tested.
+- **Background needed**: - Reinforcement learning (RL): training by rewards from trial and error.
+- Policy gradient: the direction in which to nudge a model so it earns more reward.
+- Critic / value function: a learned estimate of expected future reward, used to judge actions.
+- Advantage: how much better an action was than expected.
+- Bias vs. variance: a noisy estimate (high variance) versus one that is systematically off (bias). Critics reduce noise but can introduce bias when they are wrong.
 - Bootstrapping: updating estimates using other estimates, which can propagate errors.
-- PPO (Proximal Policy Optimization): a common RL method that uses a critic.
-- GRPO (Group Relative Policy Optimization): a method that drops the critic and compares several sampled answers to each other instead.
-- Batch size: how many samples are used per update; larger batches give less noisy gradients. · level: research-level
+- Batch size: how many examples are used per update; larger batches give less noisy gradients.
+- PPO and GRPO: two popular RL algorithms; GRPO scores each attempt relative to its group, with no critic. · level: research-level
 - Matched keywords: reinforcement learning, policy gradient
 
 <details><summary>Original abstract</summary>
@@ -1088,17 +1091,17 @@ As large language models tackle longer and more complex tasks, understanding whe
 ### [Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe](https://arxiv.org/abs/2611.32884)
 *Richmond Sin Jing Xuan, Peilin Feng, Wenbin Wang et al.* · `cs.AI` · arXiv:2611.32884v1 · relevance 0.21
 
-- **In one sentence**: The paper proposes RLVB, a reinforcement learning reward that uses the simulator's exact posterior over answers to teach vision-language agents when to stop gathering evidence and commit, and introduces the Pro Worlds visual-puzzle benchmark.
-- **In plain words**: AI agents solving long tasks often give an answer too early, before they have gathered enough evidence. The authors train agents with a reward that checks, during training only, how much evidence the agent actually has, so it can reward continuing to look when several answers remain possible and reward committing once the evidence is enough. Across three vision-language models and three benchmarks, the trained agents answered with sufficient evidence far more often than the base model.
-- **Why it matters**: Premature guessing is a practical failure in agents that act over many steps, and the paper shows that a reward based on exact evidence, rather than only the final answer, can change when the agent commits. The text reports gains against standard outcome-reward training and an LLM-judge baseline, but the results come from the authors' own benchmarks and setup, so how far they carry to other tasks is unclear.
-- **Background needed**: - Reinforcement learning: training by trial and reward, where an agent learns which actions lead to higher scores.
-- Outcome reward: a score given only at the end of an episode, based on whether the final answer is correct.
-- Process reward: a score given along the way, here from an LLM judge that grades intermediate steps.
-- Posterior: the probability of each possible answer given the evidence so far; the simulator can compute it exactly during training.
+- **In one sentence**: The paper proposes RLVB, a reinforcement learning reward that uses the simulator's exact posterior over the answer to teach vision-language agents when to stop gathering evidence and commit, and introduces the Pro Worlds visual-puzzle benchmark.
+- **In plain words**: AI agents solving multi-step tasks often give an answer too early, before they have seen enough evidence. The authors train agents with a reward that checks, during training only, whether the evidence so far already settles the answer, and rewards the agent for exploring when it does not and for answering when it does. They report gains over the base model on nine test settings, with some of the tests using tasks not seen in training.
+- **Why it matters**: Premature guessing is a practical failure for agents that work through long tasks, and the paper's point that a final-answer-only reward cannot teach timing is a clear, testable claim. The approach's reliance on a simulator that can compute the exact answer probability during training limits where it applies, so its wider relevance is uncertain.
+- **Background needed**: - Reinforcement learning: training by rewarding actions that lead to good outcomes.
+- Reward signal: the score the agent gets; an end-of-episode reward only scores the final answer.
+- Posterior: the probability distribution over possible answers given the evidence seen so far.
 - Vision-language model: an AI model that takes both images and text as input.
-- GRPO and PPO: two common reinforcement learning algorithms used to fine-tune language models.
-- Episode: one complete attempt at a task, from start to final answer.
-- Out-of-distribution benchmark: a test set not seen during training, used to check generalization. · level: research-level
+- GRPO and PPO: two common reinforcement learning training algorithms; the paper compares against them.
+- Process reward from an LLM judge: a score on intermediate steps given by another language model.
+- GPU-hours: a measure of computing cost.
+- Laziness here means committing to an answer before the evidence supports it. · level: research-level
 - Matched keywords: reinforcement learning, reward model
 
 <details><summary>Original abstract</summary>
@@ -1112,17 +1115,15 @@ AI agents working on long tasks often commit to an answer before they have enoug
 ### [SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment](https://arxiv.org/abs/2611.33030)
 *Shivank Rajput, Himanshu Singh, A. V. Subramanyam* · `cs.CL` · arXiv:2611.33030v1 · relevance 0.22
 
-- **In one sentence**: SALSA trains a generative model on optimization-derived jailbreak suffixes so that new adversarial suffixes can be sampled quickly, reporting comparable attack success on open-source models and higher transfer success on GPT-3.5-Turbo and GPT-4o than the strongest baseline at equal budget.
-- **In plain words**: Chatbots are trained to refuse harmful requests, but attackers can add a string of odd words to a prompt that gets the model to ignore that training. This paper proposes SALSA, which learns the pattern of those attack strings from examples and then generates new ones on demand instead of searching for each one from scratch. The authors report that this is much faster and still works often, including against some commercial chatbots.
-- **Why it matters**: Making attack generation cheap matters for safety testing, since it lets red-teamers probe models at scale, and it also raises the stakes for defenses. The text reports results only from the authors, and the comparisons depend on their chosen baselines and budgets, so the findings should be treated as preliminary until independently checked.
-- **Background needed**: - LLM (large language model): an AI system that generates text, such as a chatbot.
-- Safety alignment: training that makes a model refuse harmful requests.
-- Jailbreak: a prompt crafted to make a model bypass its safety training.
-- Adversarial suffix: a string of text appended to a prompt to trigger the bypass.
-- GCG-style attack: an attack that searches for a suffix by repeated automated optimization, which is slow at test time.
-- Attack success rate (ASR): the share of attack attempts that get a harmful response.
-- Transfer / black-box: a suffix found on one model is tried on a different model whose internals the attacker cannot see.
-- Sampling budget: the number of candidate suffixes an attacker is allowed to try. · level: intermediate
+- **In one sentence**: SALSA trains a generative model on optimization-derived jailbreak suffixes so that new adversarial suffixes can be sampled quickly, and reports attack success comparable to GCG-style baselines on open models and higher transfer to GPT-3.5-Turbo and GPT-4o.
+- **In plain words**: Chatbots are trained to refuse harmful requests, but attackers can add a string of odd words to a prompt that tricks them into complying. Finding such strings with current methods is slow, and strings that work on one model often fail on others. This paper describes SALSA, which learns the pattern of these strings from examples and then samples new ones quickly.
+- **Why it matters**: It matters for AI safety because cheap, transferable attack generation is a way to test whether models are robust before release. The text reports speed gains and black-box success rates, but these are the authors' own results and have not been independently checked; the broader significance for safety evaluation is a reasonable reading rather than something the text establishes.
+- **Background needed**: - Jailbreak attack: a prompt crafted to make an AI model ignore its safety training.
+- Adversarial suffix: a string of text appended to a prompt to push the model toward a harmful reply.
+- GCG-style attack: an optimization method that searches for effective suffixes, usually slow per prompt.
+- Attack success rate (ASR): the share of attempts that get the model to comply with a harmful request.
+- Transfer / black-box: attacks built on open models that are then tried on closed commercial models without access to their internals.
+- Generative model / sampling: a model that learns a distribution over outputs and draws new samples from it. · level: research-level
 - Matched keywords: alignment, jailbreak
 
 <details><summary>Original abstract</summary>
@@ -1134,15 +1135,15 @@ Large language models (LLMs) remain vulnerable to jailbreak attacks, where adver
 ### [Monitorable-by-design architectures for a post-Astra world: a compartmentalization-based approach](https://arxiv.org/abs/2611.31610)
 *Jake Watts, Joel Sokol* · `cs.AI` · arXiv:2611.31610v1 · relevance 0.21
 
-- **In one sentence**: The paper proposes modifying LLM architectures, building on methods such as GRAM, SGTM, DEMix and BTS, to compartmentalize dangerous capabilities so their use can be monitored more cheaply than reading chain-of-thought reasoning.
-- **In plain words**: Today, safety teams often check how AI models reason by reading their written step-by-step notes, called chain of thought, but those notes are becoming harder to read and are often checked only occasionally to save money. This paper proposes building AI models so that risky abilities sit in separate, identifiable parts of the model, which would be easier and cheaper to watch. The text describes several versions of this design and says it could also help remove certain abilities from a model, but it does not report experimental results.
-- **Why it matters**: It addresses a concern that monitoring AI reasoning through its written text may stop working as models get more capable, so it is worth attention as a possible alternative. Whether it works in practice is not shown in the text, which only describes a proposal and its variants.
-- **Background needed**: - Chain of thought: the step-by-step text a language model writes while reasoning, which overseers can read to spot problems.
+- **In one sentence**: A proposal for language model architectures that compartmentalize dangerous capabilities so their use can be monitored more cheaply than reading chain-of-thought, building on methods such as GRAM, SGTM, DEMix and BTS.
+- **In plain words**: The paper addresses a worry that AI systems may increasingly reason in ways humans cannot read, so watching their written reasoning ("chain of thought") may stop working. Its authors propose changing how models are built, so that risky abilities sit in separate, identifiable parts of the network that can be checked more cheaply. They describe several versions of this design meant to trade off different costs, and mention extra benefits such as the possibility of removing a capability. The text does not report experimental results.
+- **Why it matters**: If reading an AI's reasoning stops being a reliable safety check, designs that make dangerous abilities easier to watch could matter for oversight. The text is a proposal without shown results, so its practical value is unconfirmed, and it is unclear how well these methods would work at scale.
+- **Background needed**: - Chain of thought: the step-by-step reasoning a language model writes out, which overseers can read to spot problems.
 - Monitorability: how easily humans or automated tools can check what an AI is doing and why.
-- Compartmentalization: splitting a model's internal parts so specific abilities are confined to identifiable sections.
-- Named methods (GRAM, SGTM, DEMix, BTS) are prior techniques the paper builds on; the text does not explain them, so their details are unknown here.
-- "GPT-6 Astra" is named in the text as an example of a frontier model; no further claims about it are given.
-- Capability removal: deliberately reducing a model's ability to do certain tasks. · level: research-level
+- Compartmentalization: keeping certain capabilities in separate parts of a model, so they can be isolated and inspected.
+- Asynchronous monitoring: checking a system's activity after the fact or in batches, rather than in real time, to save cost.
+- The named methods (GRAM, SGTM, DEMix, BTS) are prior techniques for training models with separable parts; this paper builds on them, and the text does not explain them in detail.
+- "GPT-6 Astra" is a model name used in the text; the text gives no further details about it. · level: research-level
 - Matched keywords: dangerous capabilities
 
 <details><summary>Original abstract</summary>
@@ -1156,16 +1157,16 @@ Frontier models like GPT-6 Astra are increasingly able to do substantial reasoni
 ### [Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis](https://arxiv.org/abs/2611.32685)
 *Lance Calvin Lim Gamboa, Yue Feng, Mark Lee* · `cs.CL` · arXiv:2611.32685v1 · relevance 0.27
 
-- **In one sentence**: This paper applies two mechanistic interpretability methods (activation probability entropy and integrated gap gradients) to locate "social bias neurons" in three instruction-tuned multilingual language models across four languages and seven bias dimensions.
-- **In plain words**: Language models trained on many languages can reproduce social stereotypes, and this paper asks where inside the model that bias is stored. The authors search for individual internal units (neurons) that respond to biased content, then switch them off to see whether the bias drops. They report that one of the two search methods works better and that the bias-linked units sit mostly in the deepest layers.
-- **Why it matters**: Finding specific internal components tied to bias could make it possible to reduce bias more directly than retraining the whole model. The text does not show how well these results carry over to other models, languages, or real-world uses, so the practical impact is uncertain.
-- **Background needed**: - Language model: a program trained on large amounts of text to predict and generate language.
-- Neuron: a single numerical unit inside the model whose activity rises or falls with the input.
-- Mechanistic interpretability: the study of which internal parts of a model do which jobs, rather than only judging its outputs.
-- Activation probability entropy and integrated gap gradients: two scoring methods for ranking neurons by how strongly they relate to biased inputs (the text does not give their formulas).
-- Instruction-tuned: a model further trained to follow user instructions.
-- Deepest layers: the final processing stages of the network, closest to the output.
-- High- vs low-resource languages: languages with much vs little text available for training. · level: research-level
+- **In one sentence**: This paper applies mechanistic interpretability methods to locate "social bias neurons" in three instruction-tuned multilingual language models across four languages and seven bias dimensions, comparing two identification methods.
+- **In plain words**: AI language models can reflect social stereotypes, and this paper looks for the specific internal units inside these models that carry that bias. The authors tested two ways of finding such units across several languages and kinds of stereotypes. They report that one method, integrated gap gradients, found units whose suppression reduced bias more sharply, and that these units sit mostly in the model's deepest layers.
+- **Why it matters**: Being able to point to the parts of a model that carry bias could support targeted fixes instead of retraining everything. The paper also reports that bias patterns differ between high- and low-resource languages and overlap most for gender, nationality, and social class, though the text gives no evidence on how far these findings generalize beyond the models tested.
+- **Background needed**: - Language models are AI systems trained on large amounts of text to predict and generate language.
+- "Neurons" here means individual numerical units inside the network whose activation levels can be measured.
+- Mechanistic interpretability is the effort to understand which internal parts of a model do which jobs.
+- Instruction-tuned models are models further trained to follow user instructions.
+- Multilingual means the model handles many languages; high-resource languages have far more training text than low-resource ones.
+- Activation probability entropy and integrated gap gradients are two scoring methods for ranking how strongly a neuron relates to bias; the text does not describe their details.
+- Suppressing a neuron means switching off or dampening its output to test whether bias drops. · level: research-level
 - Matched keywords: interpretability, mechanistic interpretability
 
 <details><summary>Original abstract</summary>
@@ -1177,16 +1178,18 @@ Multilingual models exhibit social bias when processing inputs pertaining to soc
 ### [Capability and Interpretability of Transformers on Multi-task Recurrence](https://arxiv.org/abs/2611.31260)
 *Xiamin Chen, Linyu Liu, Jiachen Hu et al.* · `cs.CL` · arXiv:2611.31260v1 · relevance 0.24
 
-- **In one sentence**: A controlled study of how Transformers learn and execute linear recurrence rules over finite cyclic groups, covering single fixed rules, latent rule identification, and explicit rule switching with and without input masking, probed with linear probing and input patching.
-- **In plain words**: This paper asks how Transformer neural networks, the kind behind many language AI systems, handle sequences that follow a repeating rule. The authors build a set of simple, fully controlled puzzles based on repeating arithmetic patterns, from following one fixed rule to working out a hidden rule from context and switching between rules. They report that switching between rules that are stated explicitly is easier for the models than inferring a hidden rule, and they examine how depth, width, and the arithmetic structure of the rule affect generalization.
-- **Why it matters**: The controlled setup makes it possible to inspect what the model stores internally, which is hard to do with real language data. The text does not say how these toy findings transfer to large language models, so any link to natural language is a hypothesis rather than a result shown here.
-- **Background needed**: - Transformer: the neural network architecture used in most modern language AI.
-- Recurrence: a rule where each item in a sequence is computed from earlier items.
-- Cyclic group: a set of numbers that wraps around, like hours on a clock, used here for arithmetic.
-- Generalization: how well a model handles cases it was not trained on.
-- Linear probing: training a simple readout to check whether information is stored inside the network.
-- Input patching: swapping parts of the input or internal activations to see which parts affect the output.
-- Curriculum training: teaching the model easier tasks first and gradually harder ones. · level: research-level
+- **In one sentence**: A controlled study of how Transformers learn, identify, and switch between linear recurrence rules over finite cyclic groups, probed with linear probes and input patching.
+- **In plain words**: This paper asks how Transformer neural networks, the kind behind many language AI systems, handle rules that repeat in a sequence. The authors built a set of simple, controlled puzzles where each output depends on earlier items through a fixed arithmetic rule. They then tested which rule-handling tasks the models could learn and what internal representations they used.
+- **Why it matters**: Language often follows recurring structures, so understanding how a model represents and switches between rules may help explain its behavior, though the text does not show how far these toy results carry over to real language. The work uses standard interpretability tools, which makes its findings checkable in principle.
+- **Background needed**: - Transformer: the neural network architecture used in most modern language models.
+- Linear recurrence: a sequence where each new value is a fixed combination of earlier values, like a rule applied step by step.
+- Finite cyclic group: a set of numbers that wraps around (like clock arithmetic), used here as a clean testbed.
+- Latent rule: a rule that is not stated explicitly and must be inferred from context.
+- Input masking: hiding some of the input during training or testing.
+- Mechanistic interpretability: reverse-engineering what a network computes internally.
+- Linear probing: training a simple classifier on internal activations to test what information they contain.
+- Input patching: swapping internal activations between runs to see which parts causally affect the output.
+- Curriculum training: teaching the model easier examples or tasks first, then harder ones. · level: research-level
 - Matched keywords: interpretability, mechanistic interpretability
 
 <details><summary>Original abstract</summary>
@@ -1200,15 +1203,17 @@ Transformers are widely used in various language tasks, with limited understandi
 ### [Safe Autoformalization: Sufficiency and Necessity with Entailment Graphs](https://arxiv.org/abs/2611.31571)
 *Umut A. Acar, Eli Goldweber* · `cs.AI` · arXiv:2611.31571v1 · relevance 0.26
 
-- **In one sentence**: The paper proposes a graph-based method for autoformalization (turning natural-language statements into logic formulas) that uses LLM-generated candidate formulas, a solver-checked entailment order, and frontier searches to certify one-sided logical adequacy, with soundness and completeness results for the LLM oracle and Lean-checked proofs.
-- **In plain words**: Turning a plain-English requirement into a precise logical formula is useful but error-prone, and language models give answers with no guarantees. This paper describes a way to organize several candidate formulas by how strong they are, so that some of them can be certified as safe to enforce (they imply the intended meaning) or safe to rely on (the intended meaning implies them). On security-related AWS properties, the authors report that their approach was safe in all 20 cases of an expert-reviewed study, while two simpler baselines were unsafe in 25% and 10% of cases.
-- **Why it matters**: Formal checks of AI-written specifications matter most where a wrong translation could leave a security gap, so a method that can flag when it is unsure is of interest. The evidence is a small expert-adjudicated study and the text does not say how large or varied it was, so its broader reach is unclear.
-- **Background needed**: - Autoformalization: converting a natural-language statement into a precise logical formula.
-- Logical entailment: formula A entails B if whenever A holds, B must hold; a solver can check this.
-- Sufficient vs. necessary: a formula sufficient for an intent implies it; a necessary one is implied by it.
-- Soundness and completeness of an oracle: sound means it only approves checks that truly hold; complete means it approves all checks that truly hold.
-- Lean: a proof assistant used here to machine-check the proofs.
-- Baselines named: majority vote over equivalence clusters and Universal Self-Consistency (ways of picking an answer from many LLM samples). · level: research-level
+- **In one sentence**: The paper proposes a graph-based method for autoformalization (turning natural-language statements into logic formulas) that uses LLM-generated candidate formulas, solver-checked entailment orderings, and LLM entailment oracles to certify one-sided logical adequacy, with soundness and completeness results and a Lean machine-checked proof.
+- **In plain words**: The paper is about turning ordinary English statements, such as security requirements, into precise logical formulas that a computer can check. Language models produce such formulas, but with no guarantee they match what the statement means. The authors arrange candidate formulas in a graph ordered by how strong they are, and use checks to find formulas that safely bound the intended meaning from above and below.
+- **Why it matters**: Formal checking is only as trustworthy as the translation it starts from, so a method that certifies when a translation is safe to rely on matters for AI-assisted verification. The text reports a small expert-adjudicated study on AWS security properties, where the graph method was safe in all 20 cases while two baselines were unsafe in 25% and 10%; the scale of that study is small, so the broader applicability is not established by the text.
+- **Background needed**: - Autoformalization: translating natural-language statements into formal logic.
+- Entailment: statement A entails B if whenever A holds, B must also hold.
+- Sufficient vs. necessary formula: a sufficient formula implies the intended meaning (safe to enforce); a necessary formula is implied by it (safe to rely on).
+- Entailment graph: nodes are candidate formulas, edges record logical strength; a solver (automated logic checker) decides the ordering.
+- Residual and co-residual: the two adjoint operations of an ordering, used here to define the local checks.
+- Sound vs. complete oracle: sound accepts only true entailments; complete accepts all true entailments.
+- Lean: a proof assistant used to machine-check the mathematical proofs.
+- AWS: Amazon Web Services; the security properties tested come from its setting. · level: research-level
 - Matched keywords: Lean, autoformalization
 
 <details><summary>Original abstract</summary>
@@ -1220,14 +1225,15 @@ Autoformalization translates a natural-language statement into a formula that ca
 ### [How Far Apart Are Two Proofs? Measuring Proof Dissimilarity in a Proof Kernel and in Lean/Mathlib](https://arxiv.org/abs/2611.31811)
 *Nikolaos Nikolaou* · `cs.LO` · arXiv:2611.31811v1 · relevance 0.25
 
-- **In one sentence**: The paper defines 19 measures of how different two formal proofs of the same theorem are, groups them into six families, and tests them on proofs that the primes are infinite in a Curry-Howard kernel and in Lean 4/Mathlib.
-- **In plain words**: As AI systems produce more mathematical proofs than people can read, it becomes useful to know whether a proof is really new or just a rewording of an old one. The authors propose many ways to measure how far apart two proofs are and check how well each matches human intuition, using proofs that infinitely many primes exist. They report that measures based on which earlier results a proof depends on track intuition best, while measures based on meaning can give surprising answers.
-- **Why it matters**: Checking whether AI-generated proofs are duplicates or genuinely new, and relating them to human arguments, depends on having a sound way to measure proof distance. The text presents this as a foundation for such uses but does not show any of these applications in practice.
-- **Background needed**: - A proof is a formal argument that a machine can check step by step; Lean/Mathlib is a widely used library of such checked mathematics.
-- Curry-Howard correspondence: proofs and programs are treated as the same kind of object, which lets proofs be compared like code.
-- Hilbert's 24th problem asks for a general theory of what makes proofs simple or similar; the identity-of-proofs problem asks when two proofs should count as the same.
-- "Proof irrelevance" means that any two proofs of the same statement are treated as equal in some formal systems.
-- Euclid's proof, Furstenberg's topological proof and Goldbach-style arguments are different routes to the same fact that there are infinitely many primes. · level: research-level
+- **In one sentence**: The paper defines 19 measures of how different two formal proofs of the same theorem are, groups them into six families, and tests them on machine-checked proofs in a Curry-Howard kernel and in Lean 4/Mathlib.
+- **In plain words**: As AI systems produce more mathematical proofs than people can read, the authors ask how to tell whether a proof is genuinely new or just a rewrite of an existing one. They define a set of ways to measure how far apart two proofs are, and test them on several computer-checked proofs that there are infinitely many primes. Their findings include that measures based on which earlier results a proof relies on tend to match intuition, while measures based on meaning can rank proofs in surprising ways.
+- **Why it matters**: Checking whether AI-generated proofs are duplicates or truly new ideas is a practical problem as machine-generated mathematics grows, and the paper ties this to Hilbert's 24th problem on the theory of proofs. The text reports small test sets (5 proofs in one kernel, 3 theorems and 19 proofs in Lean), so the measures are better seen as a starting framework than as settled tools.
+- **Background needed**: - A proof is a step-by-step argument that a statement is true; in formal systems such as Lean, each step is checked by a computer.
+- Curry-Howard correspondence: a view in which proofs are treated as programs, which lets proof-checking systems be studied as type-theory kernels.
+- Lean 4 and Mathlib: a proof assistant and its large community library of formalised mathematics.
+- "Proof irrelevance": the idea that all proofs of the same statement count as equal in some logical systems.
+- Dissimilarity measure: a number saying how far apart two objects are; here, how different two proofs are, measured at several levels (text, structure, dependencies, meaning, information content).
+- The infinitude of primes: a classical result, proved by Euclid, with later proofs such as Goldbach's and Furstenberg's topological one. · level: research-level
 - Matched keywords: Lean, mathlib
 
 <details><summary>Original abstract</summary>
@@ -1241,17 +1247,17 @@ We now live in the age of machine-generated mathematics: AI systems produce rese
 ### [PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents](https://arxiv.org/abs/2611.33144)
 *Feixiang Ruan, Guodong Lv, Kewei Zhang et al.* · `cs.RO` · arXiv:2611.33144v1 · relevance 0.20
 
-- **In one sentence**: PyRUA-Dex uses multiple coding agents to write programmatic (code-based) control policies for dexterous bimanual robot manipulation without human demonstrations, evaluated on Bench2Dex and DexJoCo in simulation and on a two-hand real robot.
-- **In plain words**: Teaching robot hands to do fine tasks like playing piano usually requires many examples from people, and those examples are hard to collect well. This paper describes a method where AI coding agents explore possible actions in parallel, keep the attempts that work, and condense them into a reusable code program that is then refined under randomized conditions. The authors report strong simulated scores and real-robot results on piano and calligraphy, including learning a new piece from sheet music in as little as 30 minutes.
-- **Why it matters**: It offers an alternative to demonstration-heavy robot learning, which may matter for scaling dexterous manipulation. The text reports benchmark and hardware results but does not establish how well the approach generalizes beyond the tasks shown, so its broader significance is unclear.
-- **Background needed**: - Dexterous manipulation: robot hands with many joints doing fine motor tasks.
-- Bimanual: using two hands or arms at once.
-- Programmatic policy: a robot controller written as code rather than as a neural network's learned weights.
-- Demonstrations: recorded examples of a human doing the task, used to train robots; the paper's point is avoiding them.
-- Teleoperation and retargeting: ways of controlling or mapping human motion onto a robot hand to collect examples.
-- Randomized layouts: varying object positions and conditions during training so the policy is robust.
-- Benchmarks (Bench2Dex, DexJoCo): standard simulated test suites for dexterous tasks; scores are as reported by the authors.
-- SOTA: state of the art, the best published result on a benchmark. · level: research-level
+- **In one sentence**: PyRUA-Dex uses coding agents to write programmatic robot policies for bimanual dexterous manipulation without human demonstrations, evaluated on Bench2Dex and DexJoCo benchmarks and on a real two-hand robot.
+- **In plain words**: Teaching robot hands to do fine tasks usually needs many examples from humans, and those examples are hard to collect well. This paper has AI coding agents write the robot's control program instead: several agents try out skills in parallel, a summarizing agent keeps the successful ones as a reusable library and one program, and that program is then refined on randomized setups. The authors report strong scores in simulation and real-world demos on a robot with two 22-joint hands, including playing piano and writing calligraphy.
+- **Why it matters**: It offers an alternative to collecting human demonstrations, which the authors say is the main bottleneck for dexterous robots. Whether this approach generalizes beyond the tasks shown is not established by the text, so its wider significance is still uncertain.
+- **Background needed**: - Dexterous manipulation: using multi-fingered robot hands for fine, precise object handling.
+- Bimanual: using two hands or arms together.
+- Degrees of freedom (DoF): independent joints or movement directions; 22-DoF hands are highly articulated.
+- Demonstrations and retargeting: learning from recorded human examples, including mapping human hand motion onto a robot hand.
+- Programmatic policy: a robot controller written as readable code rather than a neural network.
+- Coding agents: AI systems that write and run software to solve a task.
+- Simulation benchmarks: standardized virtual test suites (Bench2Dex, DexJoCo) used to compare methods; scores are as reported by the authors.
+- Domain randomization: varying object positions and conditions during training so the controller is robust. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1262,16 +1268,16 @@ Learning for dexterous manipulation is limited by the scarcity of high-quality d
 ### [Ego2Real: Learning Bimanual Dexterous Manipulation from Egocentric Visuo-Tactile Demonstrations](https://arxiv.org/abs/2611.32101)
 *Ange Bao, Haishan Zhang, Lingzi Xie et al.* · `cs.RO` · arXiv:2611.32101v1 · relevance 0.17
 
-- **In one sentence**: Ego2Real uses egocentric human demonstrations recorded with tactile gloves to refine hand-object reconstructions and to add contact-based rewards for reinforcement learning, so anthropomorphic bimanual robot hands can learn dexterous manipulation.
-- **In plain words**: Robots can learn skills by watching people, but cameras alone miss how hard a person is touching an object and where contact happens. This paper adds touch sensing through gloves worn by the demonstrator, and uses that touch data in two places: to correct the estimated hand poses and contact shapes, and to reward a robot's learning when its fingers make similar contacts. The authors report that adding touch information to both steps gives higher success rates on manipulation tasks.
-- **Why it matters**: It targets a known gap in learning from human video: vision cannot reliably show force or contact, and this work tests whether touch data can make human demonstrations more useful for robot hands. The text does not give enough detail to judge how broadly the gains would carry over to other tasks or robots.
-- **Background needed**: - Egocentric demonstration: video recorded from a head- or chest-mounted camera showing a person's own hands doing a task.
-- Bimanual dexterous manipulation: using both hands with many finger joints to handle objects.
-- Tactile sensing: measuring touch and contact pressure, here through instrumented gloves.
-- Hand-object reconstruction: estimating the 3D shape and pose of a hand and the object it holds from images.
-- Reinforcement learning: a robot learns by trial and error, guided by a reward signal; here, contact patterns from the human define part of that reward.
-- Anthropomorphic robotic hand: a robot hand shaped roughly like a human hand, with a different body and motors than a person's.
-- Sim-to-real style transfer: the learned policy must adapt to the robot's own morphology and actuation rather than copy human motion exactly. · level: research-level
+- **In one sentence**: Ego2Real transfers bimanual dexterous manipulation from egocentric human videos paired with tactile gloves to anthropomorphic robot hands, using tactile signals both to refine hand-object reconstructions and to define contact rewards for reinforcement learning.
+- **In plain words**: Teaching robot hands to handle objects by watching people is cheaper than programming them by hand, but video alone misses how hard a person is pressing and where contact happens. This paper adds touch sensors worn as gloves on the demonstrator, and uses that touch data in two places: to correct the estimated hand poses from video, and to reward a robot's training when its contacts match the human's. The paper reports that adding touch data to both steps yields higher task success rates.
+- **Why it matters**: Robots that learn from human demonstration need better data about physical contact, which is the hard part of dexterous work. The approach may matter for scaling robot skill learning, but the text gives no details on the size of the gains, the tasks, or how it compares with other methods, so its wider significance is uncertain.
+- **Background needed**: - Egocentric demonstration: video recorded from the person's own head or chest camera, showing their hands doing a task.
+- Bimanual dexterous manipulation: using two multi-fingered hands together to handle objects.
+- Tactile sensing: measuring touch and pressure, here through sensor gloves.
+- Hand-object reconstruction: estimating the 3D positions of a hand and an object from images.
+- Reinforcement learning: a robot learns by trial and error, guided by a reward signal.
+- Contact reward: a bonus given when the robot's fingertips touch an object as the human's did.
+- Anthropomorphic hand: a robot hand shaped roughly like a human hand, with a different body and motors than a person's. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1284,17 +1290,16 @@ Learning dexterous manipulation from egocentric human demonstrations offers a sc
 ### [Trustworthy Edge AI: Security, Privacy, and Resilience for Distributed Intelligence](https://arxiv.org/abs/2611.31331)
 *Jaydip Sen, Subhasis Dasgupta* · `cs.CR` · arXiv:2611.31331v1 · relevance 0.11
 
-- **In one sentence**: A book chapter surveying security, privacy, and resilience mechanisms for Edge AI systems, with a call for cross-layer design that treats these properties together.
-- **In plain words**: This chapter is an overview of how to keep AI running on devices near the user, such as sensors, vehicles, and factory equipment, rather than only in distant data centers. It covers how to protect data and devices from attack, how to let devices learn together without sharing raw data, and how to keep systems working when parts fail or conditions are uncertain. It illustrates these trade-offs with examples from smart cities, self-driving cars, healthcare, and industrial monitoring.
-- **Why it matters**: Moving AI onto many small, varied devices widens the ways a system can be attacked or fail, so a survey that ties security, privacy, and reliability together may help readers plan such systems. The text itself is a broad review and does not report new experimental results, so its value lies in organizing the field rather than in any specific finding.
-- **Background needed**: - Edge AI: running AI models on local devices instead of in a central cloud.
-- Federated learning: training a shared model where each device keeps its own data and only sends model updates.
-- Secure aggregation: a method that lets a server combine device updates without seeing any single device's update.
-- Differential privacy: adding controlled noise to data or results so individuals cannot be identified.
-- Zero-trust: a security approach that checks every device and connection instead of trusting anything inside a network by default.
-- Attestation: a device proving to others that its software is genuine and unmodified.
-- Adversarial robustness: how well a model resists inputs deliberately crafted to fool it.
-- Cross-layer design: building protections across hardware, software, and network layers together. · level: intermediate
+- **In one sentence**: A book chapter surveying security, privacy, and resilience mechanisms for Edge AI systems, with a call for cross-layer design, drawing on case studies from smart cities, autonomous vehicles, healthcare, and industrial IoT.
+- **In plain words**: This is an overview chapter about keeping AI running on local devices (such as sensors, cars, and hospital equipment) rather than in distant data centers. It explains the ways such systems can be attacked or fail, and reviews protective methods like trusted hardware, checking device identity, and training AI on shared data without pooling the raw data in one place. The text is a survey and argument rather than a report of new experimental results.
+- **Why it matters**: Edge AI is spreading into cities, vehicles, and healthcare, so how these systems protect data and keep working under attack matters to many fields. The text itself gives no measured findings, so it is best read as a guide to open questions and trade-offs rather than evidence for any specific method.
+- **Background needed**: - Edge AI: running AI models on or near the device that collects the data, instead of only in the cloud.
+- Attack surface: the number of points where an attacker could get in; more varied devices means more of these points.
+- Zero-trust: a model where no device or connection is trusted by default and each must be verified.
+- Attestation: a device proving to others that its software is genuine and unaltered.
+- Federated learning: several devices improve a shared model by sending back model updates instead of their raw data.
+- Differential privacy: adding controlled noise so that results reveal little about any single person's data.
+- Adversarial robustness: how well a model resists inputs deliberately crafted to fool it. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1305,14 +1310,17 @@ This chapter examines the principles and emerging research directions for buildi
 ### [Your bids are showing: re-identifying power plants in anonymized market data, and a differentially private alternative](https://arxiv.org/abs/2611.31681)
 *Nikhil Ravi* · `eess.SY` · arXiv:2611.31681v1 · relevance 0.07
 
-- **In one sentence**: The paper shows that PJM-style masking of power plant offer curves in ERCOT data can be undone by matching public plant data, and proposes a differentially private monthly release of aggregated offers calibrated with zero-concentrated differential privacy.
-- **In plain words**: Electricity grid operators publish how much each power generator offers to sell at each price, but some hide the generator names, assuming that keeps the bids confidential. The authors tested this on Texas data where the names are public, and found that public fuel and emissions records could match about a quarter of the masked units to their actual plants. They then propose publishing only monthly totals with carefully sized random noise, which keeps the overall market picture usable while making it much harder to learn about any single unit.
-- **Why it matters**: Offer data is used by market monitors to look for withholding of power, so how it is released matters for market oversight and for fairness among sellers. The text reports that the masked feed of PJM, another US grid operator, has the same fields, so the authors expect the same weakness there, but they did not test PJM's data directly.
-- **Background needed**: - Electricity markets: generators submit offers (price and quantity) for each hour; the cheapest offers are dispatched first, and the price is set by the last unit needed (the clearing price).
-- Merit order: the ranking of generators from cheapest to most expensive; the supply curve is the cumulative offered quantity by price.
-- Re-identification: linking "anonymous" records to real identities using other public data such as outage dates and emissions reports.
-- Differential privacy: a method that adds calibrated random noise so that the presence or data of any one person (here, one unit's year of offers) cannot be confidently inferred. Zero-concentrated differential privacy (zCDP) is a specific accounting method for measuring this privacy loss; epsilon is the privacy budget, where smaller means more privacy.
-- Correlation: a measure from -1 to 1 of how closely two series move together. · level: research-level
+- **In one sentence**: The paper shows that PJM-style masking of power-plant offer curves in anonymized electricity market data can be undone by matching against public plant data, and proposes a differentially private monthly aggregate release with stated accuracy trade-offs.
+- **In plain words**: Electricity markets publish how much each power plant is willing to sell at each price, so analysts can study prices and spot possible manipulation. Some grid operators hide plant names with codes, assuming this keeps the offers private. Using Texas (ERCOT) data where the names are public as a test, the authors found that public fuel and emissions records could still match many coded units back to their plants.
+- **Why it matters**: It matters for how grid regulators and market monitors decide what data to publish and how much privacy they can actually promise. The paper also offers a noisy aggregate release that keeps the main market measures usable, though its results come from one market and its own simulations, and the claim that PJM's feed would fail the same way is an expectation rather than a tested result.
+- **Background needed**: - Offer curve: a plant's stated willingness to sell power at each price level, by hour.
+- Merit order: ranking plants from cheapest to most expensive offer to build the market supply curve.
+- Clearing price: the price where supply meets demand in the market.
+- Masking/anonymization: replacing names with codes; the paper tests whether this hides identity.
+- Re-identification: linking anonymous records back to real plants using other public data.
+- Differential privacy: a guarantee that the published output barely changes whether any one unit's data is included; adds calibrated random noise. Zero-concentrated differential privacy (zCDP) is one formal way to measure this, and epsilon (ε) sets the strength (smaller is stronger).
+- Fuel group: a category such as gas, coal, wind or hydro.
+- Combined-cycle: a type of gas plant. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1325,15 +1333,15 @@ ERCOT publishes every generator's hourly offer curve 60 days after the operating
 ### [Improved Lower Bounds for Online Parallel Machine Scheduling](https://arxiv.org/abs/2611.32565)
 *Junwen Xiao, Zhiyi Tan* · `cs.DS` · arXiv:2611.32565v1 · relevance 0.24
 
-- **In one sentence**: The paper proves improved lower bounds on the competitive ratio of online algorithms for makespan minimization on parallel identical machines, using a bin-packing-based estimate of the optimal makespan and a direct construction for five machines.
-- **In plain words**: The paper studies how well a scheduler can assign jobs to several identical machines when jobs arrive one at a time and the scheduler cannot see future jobs, with the goal of finishing all work as early as possible. The authors show that no online method can do better than a ratio of about 1.887 compared with the best possible schedule. For the special case of five machines, they give a separate, direct argument that the ratio is at least 1.749.
-- **Why it matters**: The text reports that these bounds improve on the best known lower bounds from about twenty years ago, so it updates how close current online methods can be to optimal. The text does not say whether the bounds are tight, and it does not discuss practical applications.
-- **Background needed**: - Online algorithm: makes decisions as inputs arrive, without knowing what comes later.
-- Makespan: the finish time of the last job, i.e. the total length of the schedule.
-- Competitive ratio: the worst-case factor by which an online method's makespan exceeds the best offline schedule's makespan.
-- Lower bound: a proof that no method can beat a given ratio; a larger lower bound means a harder problem.
-- Parallel identical machines: several interchangeable processors that can each run one job at a time.
-- Bin packing: the related problem of fitting items into the fewest containers; the paper uses it to estimate the optimal schedule length. · level: research-level
+- **In one sentence**: The paper proves improved lower bounds on the competitive ratio of online algorithms for makespan minimization on parallel identical machines, using a bin-packing-based estimate of the optimum and a direct construction for five machines.
+- **In plain words**: This paper studies a scheduling problem: jobs arrive one at a time and must be assigned to one of several identical machines without knowing what jobs come later, with the goal of finishing all work as early as possible. The authors show that no method for doing this can do better than a certain worst-case factor, 1.887111 times the best possible finish time in general. For the special case of five machines, they give a separate, smaller bound of 1.74916.
+- **Why it matters**: Lower bounds say how well any online method could ever perform, so raising them narrows the gap between what is known to be achievable and what is known to be impossible. The text says the new bounds beat results that are about two decades old, but it does not compare them to the best upper bounds, so the size of the remaining gap is not stated here.
+- **Background needed**: - Makespan: the finish time of the last job; the goal is to minimize it.
+- Parallel identical machines: several machines that run jobs at the same speed.
+- Online algorithm: it must decide on each job immediately, without seeing future jobs.
+- Competitive ratio: the worst-case ratio between an online method's makespan and the best offline (all-knowing) makespan.
+- Lower bound: a proof that no algorithm can achieve a ratio below a given value.
+- Bin packing: packing items into fixed-size bins with as few bins as possible; used here to estimate the optimal makespan. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1344,16 +1352,16 @@ This paper establishes new lower bounds for online parallel machine scheduling a
 ### [Better-than-3 Approximation for 2ECSS Using the Primal-Dual Method](https://arxiv.org/abs/2611.32924)
 *Ana Cezara Danciu, Sharat Ibrahimpur* · `cs.DS` · arXiv:2611.32924v1 · relevance 0.14
 
-- **In one sentence**: This paper gives a single-phase primal-dual algorithm for the 2-edge-connected spanning subgraph problem with approximation ratio sqrt(3)+1 (about 2.74), improving on the previously best primal-dual ratio of 3, measured against the natural linear relaxation.
-- **In plain words**: The paper studies how to cheaply build a network in which every link can fail without disconnecting any pair of points, given a menu of links with prices. The authors give a method that finds such a network whose cost is guaranteed to be at most about 2.74 times the best possible, down from the previous guarantee of 3 for this style of method. The approach works by gradually raising "prices" on groups of points and buying links once their prices become fully paid.
-- **Why it matters**: Approximation ratios for this classic network-design problem have stayed at 2 or 3 for years, so a measured improvement for the primal-dual approach is a notable technical step. The text does not claim it beats the best 2-approximations, and its practical or wider impact is not discussed.
-- **Background needed**: - Graph: points (vertices) joined by links (edges), each with a cost.
-- 2-edge-connected: removing any single link leaves the graph connected.
-- Spanning subgraph: a subset of links that still reaches every point.
-- Approximation ratio: the worst-case factor by which an algorithm's cost can exceed the optimum.
-- Linear relaxation: a looser, solvable version of the problem (here, each cut must be crossed by total weight at least 2) that gives a lower bound on the optimum.
-- Primal-dual method: an algorithm that grows dual "prices" on sets of vertices and buys an edge when its dual constraint becomes tight, then prunes redundant edges.
-- Contraction: merging a group of vertices into one node to simplify the problem. · level: research-level
+- **In one sentence**: This paper gives a single-phase primal-dual algorithm for the 2-edge-connected spanning subgraph problem with approximation ratio sqrt(3)+1 (about 2.74), improving on the previous best primal-dual ratio of 3, measured against the natural linear relaxation.
+- **In plain words**: The paper studies how to build the cheapest network in which every link can fail without cutting off any city from the rest, where links have costs. The authors give a method that finds such a network whose cost is guaranteed to be within about 2.74 times the best possible, improving the previous guarantee of 3 for this style of method. The method works by gradually raising "prices" on groups of nodes and buying links once their prices become fully paid, then discarding unneeded links.
+- **Why it matters**: Approximation ratios for a classic network design problem are a measure of how close a fast algorithm can get to the true optimum, and this paper narrows the gap for one specific technique. The text does not say how it compares to the other known 2-approximation methods, so its wider practical or theoretical reach is unclear.
+- **Background needed**: - Graph: nodes joined by edges (links); a multigraph allows parallel edges.
+- 2-edge-connected: removing any single edge leaves the graph connected.
+- Approximation ratio: worst-case factor by which an algorithm's cost can exceed the optimal cost.
+- Linear relaxation: a continuous version of the problem, used as a lower bound on the optimum.
+- Primal-dual method: an algorithm design approach that grows dual "prices" on sets of nodes and buys edges when their dual constraints become tight.
+- Cut: a split of the nodes into two sides; every cut must be crossed by enough chosen edges.
+- Contraction: merging a group of nodes into one node to simplify the graph. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1366,16 +1374,16 @@ In the $2$-edge-connected spanning subgraph problem (2ECSS), we are given an und
 ### [Verifying Type Soundness for Nontransitive Information Flow Security](https://arxiv.org/abs/2611.32123)
 *Chenyi Zhang* · `cs.PL` · arXiv:2611.32123v1 · relevance 0.15
 
-- **In one sentence**: A machine-checked (Dafny) soundness proof for a type system enforcing nontransitive noninterference, an information-flow security property, extended to an imperative language.
-- **In plain words**: This paper is about checking, with a computer proof assistant, that a set of rules for keeping secret information from leaking through a program is actually correct. The property studied is called nontransitive noninterference, which controls how information may flow between parts of a software system. The authors report a machine-checked proof that the type system, which checks programs against these rules, is sound for an imperative (step-by-step, state-changing) language.
-- **Why it matters**: Security rules enforced by type checkers are only as trustworthy as their underlying proofs, and the text notes that existing enforcement mechanisms have not been formally verified to a high level of assurance. The work may matter to people building secure component-based software, though the text does not discuss practical deployment or performance.
-- **Background needed**: - Noninterference: a security property saying secret inputs cannot affect publicly visible outputs.
-- Information flow: tracking how data moves through a program so that secrets do not leak.
-- Nontransitive policy: information may flow from A to B and from B to C without necessarily flowing from A to C, unlike simple "chain" rules.
-- Type system: a set of checking rules, applied before a program runs, that rejects programs that could break a security policy.
-- Soundness proof: a mathematical argument that the checking rules guarantee the property for every accepted program.
-- Machine-checked proof: a proof written in a formal language and verified by software (here Dafny), so that human error in the argument is less likely.
-- Imperative language: a programming style built on sequences of commands that change stored values. · level: research-level
+- **In one sentence**: A machine-checked (Dafny) soundness proof for a type system enforcing nontransitive noninterference, an information flow security property, extended to an imperative language.
+- **In plain words**: This paper is about checking that a set of rules for keeping secret information from leaking through a program is itself correct. The authors used a proof assistant-style tool, Dafny, to mechanically verify that the rule system guarantees its security property, rather than relying on paper arguments alone. The text presents this as the first such machine-checked proof for this kind of type-enforced security property.
+- **Why it matters**: Software that claims to keep data private is only as trustworthy as the rules checking it, so formally verifying those rules gives stronger assurance. The text's main claim is the absence of prior machine-checked proofs for this property, and it does not report wider applications or measured effects beyond that.
+- **Background needed**: - Information flow security: tracking whether secret data can influence publicly visible outputs.
+- Noninterference: the property that high-security inputs have no observable effect on low-security outputs.
+- Nontransitive policies: security rules where information may flow from A to B and from B to C without permitting a flow from A to C.
+- Type system: a set of static rules that classify program parts and reject insecure ones before the program runs.
+- Imperative language: a programming style built on sequences of statements that change memory.
+- Machine-checked proof: a proof whose every step is verified by software, reducing reliance on human error.
+- Dafny: a programming language and verifier used to write and automatically check formal proofs. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1386,15 +1394,18 @@ We present a machine-checked soundness proof of a type system for the nontransit
 ### [Denotational Results in Compiler Correctness and Comparisons with Operational Approaches](https://arxiv.org/abs/2611.31724)
 *Jeremy G. Siek, Matthew Heimerdinger, Tianyu Chen et al.* · `cs.PL` · arXiv:2611.31724v1 · relevance 0.13
 
-- **In one sentence**: The paper gives the first denotational (meaning-based) proofs that closure conversion, a compiler pass for a Turing-complete functional language, is semantically reflecting, using a graph model and a Scott-domain model, and compares mechanized compiler-correctness proofs across five semantic styles.
-- **In plain words**: This paper is about how to prove that a compiler, the program that translates code from one language to another, keeps the meaning of the code intact. The authors ask whether "denotational" semantics, which describe a program by the mathematical value it stands for, can be used for such proofs, as an alternative to "operational" semantics, which describe step-by-step execution. They work with a compiler from a functional language down to a simpler low-level form, and they compare the size of the proofs written in five different styles.
-- **Why it matters**: Compiler correctness is a central goal in programming language research, and the text reports that closure conversion (a specific translation step) had no earlier denotational correctness proof for a Turing-complete language. The comparison of proof sizes is a first step toward guidance on choosing a semantic style, and the text presents it as only a first step.
-- **Background needed**: - A compiler translates source code into a lower-level target language; correctness means the translated program behaves as the original should.
-- Semantics is a precise description of what programs mean. Operational semantics describes step-by-step execution; denotational semantics maps programs to mathematical objects.
-- Closure conversion turns nested functions that capture variables from their surroundings into flat, first-order code with explicit captured data.
-- Preservation and reflection: a correct compiler must keep meanings (preservation) and must not create new meanings for programs that had none (reflection). The text says reflection is the harder direction here.
-- Turing-complete means the language can express any computation, including ones that may not terminate.
-- Logical relations are a proof technique relating values across two languages or models; graph models and Scott domains are two mathematical frameworks for denotational meaning. · level: research-level
+- **In one sentence**: The paper gives the first denotational (meaning-based) proofs that closure conversion for a Turing-complete functional language is semantically reflected, using a graph model and a Scott-domain model, and compares mechanized compiler-correctness proofs across five semantic styles, two denotational and three operational.
+- **In plain words**: This paper is about proving that a compiler, the program that translates code from one language into another, does not change what the code means. The authors ask whether "denotational" semantics, which describe a program by the mathematical value it stands for, can be used for such proofs as well as the "operational" styles, which describe a program by the steps it takes when run. They test this on a compiler from a small functional language to a low-level language, and report which style gave shorter proofs for which step.
+- **Why it matters**: Correctness proofs for compilers are costly, and the choice of semantic style affects how hard they are. The text reports that no single style was best for every pass, and that proof size depends on how different the source and target runs are (operational) or whether a pass needs a logical relation (denotational). This is a measured comparison of tradeoffs rather than a claim that one approach wins.
+- **Background needed**: - Compiler: a program that translates source code into another language, such as machine-level code.
+- Semantics: a precise mathematical description of what programs mean.
+- Operational semantics: describes meaning by the step-by-step execution of a program (for example, abstract machines or interpreters).
+- Denotational semantics: describes meaning by a mathematical object the program stands for, such as a function in a model.
+- Compiler correctness: the target program must behave as the source does; "preserved" means meaning carries over, "reflected" means meaning of the output implies meaning of the input.
+- Closure conversion: a translation that turns nested functions, which capture variables from their surroundings, into flat first-order code.
+- Turing-complete: powerful enough to express any computation, including ones that never halt.
+- Logical relation: a proof technique that relates source and target values across types, often used for functions.
+- Mechanized proof: a proof checked by a computer proof assistant. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1407,16 +1418,15 @@ Anyone setting out to prove a compiler correct must choose a style of semantics.
 ### [Real-Time AI Acceleration on a 2D Spatial Dataflow Architecture](https://arxiv.org/abs/2611.31556)
 *Shriram Raja, Anton Njavro, Richard West* · `cs.DC` · arXiv:2611.31556v1 · relevance 0.11
 
-- **In one sentence**: The paper profiles the Tenstorrent Blackhole spatial dataflow accelerator and builds a worst-case execution time model, expressed as a Homogeneous Synchronous Dataflow Graph, extended with NoC contention delays for multi-core workloads.
-- **In plain words**: Machine learning is being put into systems that must respond on strict deadlines, such as vehicles or industrial controllers, so engineers need to predict the longest time a computation could take. This paper studies an open-design AI chip, the Tenstorrent Blackhole, made of a grid of small processor cores linked by on-chip communication networks, and proposes a way to estimate that worst-case time. The authors tested the estimate across 12,567 task configurations and report that it was always above the slowest observed run.
-- **Why it matters**: Commercial GPUs are hard to analyze for timing because some of their scheduling and memory behavior is undocumented, so an open, analyzable accelerator could matter for real-time AI. The reported overestimates (under 100% in most single-core cases, under 500% for multi-core with pessimistic contention analysis) are sizable, so the work is best read as a foundation rather than a finished guarantee.
-- **Background needed**: - Worst-case execution time (WCET): the longest a task can take; real-time systems need a safe upper bound.
-- ML accelerator: specialized chip (beyond a CPU) for running neural networks.
-- GPU scheduling: GPUs run many threads in lockstep groups; how they are scheduled is not fully documented, complicating timing analysis.
-- Spatial dataflow: a design where many cores each do fixed work and pass data to neighbors through a grid, with the programmer controlling data movement.
-- Network-on-Chip (NoC): the on-chip communication network linking cores; sharing it causes delays (contention).
-- Synchronous dataflow graph: a model of tasks and data flows with fixed rates, used to reason about timing.
-- Overestimate percentage: how far the predicted bound exceeds the observed worst case. · level: research-level
+- **In one sentence**: The paper profiles the Tenstorrent Blackhole spatial dataflow accelerator and builds a worst-case execution time task model, expressed as a Homogeneous Synchronous Dataflow Graph, extended with a pessimistic NoC contention analysis for multi-core workloads.
+- **In plain words**: Machine learning is being built into systems that must respond on strict schedules, so engineers need to be able to guarantee how long each computation can take. This paper studies an open-design AI chip, the Tenstorrent Blackhole, as an alternative to GPUs, whose internal timing is poorly documented. The authors measured the chip, built a model that estimates the longest time a task can take, and tested it across 12,567 task configurations.
+- **Why it matters**: Predictable timing is a precondition for using AI accelerators in safety-critical real-time systems such as robotics or vehicles, and the open software stack makes this platform easier to study than closed GPUs. The text reports that the model's estimates always sat above the observed worst case, but the overheads are sizeable (up to 200% for single-core and 500% for multi-core), and the authors describe the work as laying foundations rather than a finished solution.
+- **Background needed**: - Worst-case execution time (WCET): an upper bound on how long a task can take, used to check that deadlines are met.
+- Real-time system: one that must finish work by fixed deadlines.
+- Spatial dataflow accelerator: a chip with a grid of small processing cores that pass data to each other, with the programmer controlling where data goes.
+- Network-on-Chip (NoC): the on-chip communication network that links the cores; contention means cores compete for it and slow each other down.
+- Synchronous dataflow graph: a way of describing a program as tasks that consume and produce fixed amounts of data, which makes timing easier to bound.
+- GPU scheduling: GPUs group threads in ways that are not fully documented, which makes their timing hard to analyze. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1427,16 +1437,15 @@ Machine Learning (ML) is increasingly being integrated into real-time systems, w
 ### [The Recycler: In-Transit Machine Learning on High-Fidelity Data from Simulation Campaigns as an Optimized Approach for Building Frontier Models](https://arxiv.org/abs/2611.31434)
 *Nikhil Rao, Mark Berrill, Ankush Checkervarty et al.* · `cs.DC` · arXiv:2611.31434v1 · relevance 0.10
 
-- **In one sentence**: The paper reports a first demonstration of in-transit machine learning, where a large model trains on data streamed live from several parallel simulations in a campaign on an exascale supercomputer, instead of reading data saved to files.
-- **In plain words**: Scientists often run many computer simulations at once to explore a system, such as a particle accelerator or a fusion reactor, but these runs produce far more data than storage systems can keep. This paper describes a workflow that sends the data straight from the running simulations into an AI model as it is being trained, skipping most of the saving to disk. The text presents this as a demonstration on a large supercomputer, and it reports the approach can use much more high-fidelity data for training than file storage allows.
-- **Why it matters**: Storage limits force scientists to throw away most simulation output, so a way to learn from the full data stream could matter for fields that rely on large simulation campaigns. The text claims this could enable AI-guided feedback that steers simulations and cuts total computing time, but it gives no detailed measured results in the excerpt, so those benefits remain claims to be checked against the full paper.
-- **Background needed**: - Simulation campaign: many simulation runs executed in parallel with different settings, rather than one run.
-- Exascale high-performance computing: supercomputers capable of more than a quintillion (10^18) calculations per second.
-- In-transit machine learning: training an AI model on data while it is moving between the simulation and storage, rather than after it is saved to files.
+- **In one sentence**: The paper describes an in-transit machine learning workflow that streams data from several parallel simulations in a simulation campaign directly into training of a large model on an exascale supercomputer, instead of writing it to files first.
+- **In plain words**: Scientists often run many large computer simulations at once, such as variations of a particle accelerator or climate model, and they produce far more detailed data than disks can store. This paper reports a setup that sends that data straight from the running simulations into the training of an AI model, skipping most of the saving to files. The text presents this as a first demonstration on a very large supercomputer and says it can use much more of the detailed data than file storage allows.
+- **Why it matters**: Storage limits often force researchers to throw away most simulation output, so training AI on live data could make better use of expensive computing time. The text suggests this could help steer simulation campaigns with AI feedback, though it gives no performance figures here, so the practical size of the benefit is not yet clear from this text alone.
+- **Background needed**: - Simulation campaign: many related simulations run in parallel with different settings.
+- Exascale supercomputer: a machine capable of about a billion billion calculations per second.
+- In-transit machine learning: training an AI model on data while it is still moving from simulation to storage, rather than after it is saved.
 - File I/O: reading and writing data to disk, which is slow and capacity-limited at this scale.
-- High-fidelity data: detailed, accurate simulation output, which is usually compressed heavily before saving.
 - Frontier model: a very large, state-of-the-art AI model.
-- Surrogate/feedback loop: using a trained model to guide which simulations to run next. · level: research-level
+- High-fidelity data: detailed, accurate simulation output with fine resolution. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1449,15 +1458,14 @@ We report on the first realization of in-transit machine learning using data str
 ### [Emerging International Best Practices for AI Model Specs](https://arxiv.org/abs/2611.32768)
 *Edward Kembery, Nathan Lambert, Robert McCarthy et al.* · `cs.CY` · arXiv:2611.32768v1 · relevance 0.06
 
-- **In one sentence**: A position-style paper that offers a taxonomy, practical writing guidance, and a list of open problems for "model specs," the public documents in which frontier AI developers describe intended model behaviour.
-- **In plain words**: AI companies are beginning to publish documents that explain how their chatbots and AI models are meant to behave. This paper argues that little independent advice exists on how to write such documents, so it sets out the benefits of writing them, a way of classifying them, practical steps for writing and applying them, and eight unresolved questions. It ends with recommendations for AI companies, governments, and researchers and civil society groups.
-- **Why it matters**: As AI systems take on more roles, publicly stated behaviour rules may shape how developers are held accountable and how governments approach oversight. The text itself does not show how widely these documents are adopted or how well they work in practice, so their real-world impact remains uncertain.
-- **Background needed**: - A "model spec" is a written document from an AI developer stating how its model should respond and what it should prioritise.
-- "Frontier AI developers" means the companies building the most capable AI systems.
-- A "taxonomy" is a structured classification of types of documents, here used to group different spec designs.
-- "Open problems" are questions the field has not yet settled.
-- Governance refers to the rules, norms and oversight that guide how AI is built and used.
-- The paper is a guidance and position piece, not an experiment; the summary is based only on its abstract-level description. · level: introductory
+- **In one sentence**: This paper offers a five-part guide to writing "model specs" (public documents stating how frontier AI models should behave), covering benefits, a taxonomy, practical writing and implementation guidance, eight open problems, and recommendations for companies, governments and civil society.
+- **In plain words**: AI companies are starting to publish documents that describe how their AI systems are meant to behave, and there has been little independent advice on how to write them. This paper tries to fill that gap by explaining why such documents help, sorting them into a rough classification, suggesting how to write and apply them, and listing unresolved questions. The text provided is a summary of the paper's structure; it does not show the specific content of the guidance or the taxonomy.
+- **Why it matters**: As AI systems become more influential, publicly stated behaviour rules are becoming part of how these systems are developed and governed, so practical guidance on them may matter to developers, regulators and the public. The text does not show how widely the proposals have been adopted or tested, so their real impact is unclear.
+- **Background needed**: - A "model spec" is a written document from an AI developer describing the intended behaviour of its AI model, including what it should and should not do.
+- "Frontier AI developers" means the organisations building the most capable, cutting-edge AI models.
+- A "taxonomy" is a structured classification of types or categories, here of model specs.
+- "Governance" refers to the rules, oversight and institutions that guide how a technology is developed and used.
+- Model specs are a fairly new kind of document, so there is no settled standard for them yet. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1468,15 +1476,15 @@ Frontier AI developers from around the world have begun to publish documents tha
 ### [Calm Agent: Reframing Agent Interaction around Intermittent Human Attention](https://arxiv.org/abs/2611.32009)
 *Dian Jin, Zixun Fu, Guan Wang et al.* · `cs.HC` · arXiv:2611.32009v1 · relevance 0.05
 
-- **In one sentence**: This position paper proposes "Calm Agent," a design framework for AI agents running ongoing background tasks around intermittent human attention, linking Delegate, Adjust, and Check interaction modes through a persistent task representation, and illustrates it with a desktop prototype called Orvlet.
-- **In plain words**: AI helpers can now keep working on side jobs while a person focuses on something else. This paper argues that such helpers should be built around the fact that people only glance back at them now and then, so the work keeps going between visits and the person can quickly see what is happening and change it. The authors describe a three-part approach (hand off a task, adjust it, check on it) and show it through a desktop prototype, Orvlet, but the text does not report user studies or measured results.
-- **Why it matters**: As AI agents take on longer background work, how people re-enter and supervise that work while protecting focus on primary tasks is an open interface question. The paper mainly sets out a design position and lists challenges, so its value depends on how far the prototype and later work develop these ideas.
-- **Background needed**: - AI agent: software that carries out multi-step tasks on a user's behalf, rather than answering a single question.
-- Intermittent attention: a person's focus comes and goes, so they check in briefly instead of watching continuously.
-- Persistent task representation: a stored, always-updated record of what the agent is doing, its status, and its options, so the user can pick up where they left off.
-- Generative interface: an interface the AI builds on the fly to fit an open-ended goal, as opposed to fixed buttons and menus.
-- Background execution: a task that keeps running without occupying the user's screen or focus.
-- Human-computer interaction (HCI): the field studying how people use and design computer systems. · level: intermediate
+- **In one sentence**: This position paper proposes "Calm Agent," a design framework for AI agents running ongoing background tasks that organizes three on-demand interaction modes (Delegate, Adjust, Check) around a persistent task representation, and illustrates it with a desktop prototype called Orvlet.
+- **In plain words**: The paper argues that AI helpers doing side tasks should be designed for people who only check in now and then, because their attention is elsewhere. The authors describe a way to structure this: users hand off a task, tune it, or glance at its status, with the task's state kept in one continuing record. They show the ideas through a desktop prototype, Orvlet, but the text does not report user testing or measured results.
+- **Why it matters**: As AI agents start running tasks for long stretches in the background, how people keep track of and steer them without being pulled away from their main work is an open design question. The paper's framing may be relevant to interface design and attention research, though its evidence is a position and prototype description rather than a study.
+- **Background needed**: - AI agent: software that carries out multi-step tasks on a user's behalf with some autonomy.
+- Intermittent attention: a person who looks at a task only occasionally while doing other work.
+- Persistent task representation: a continuing internal record of what a task is, its status, and its settings, so users can pick it up again.
+- Generative interaction: interfaces an AI creates on the fly to fit an open-ended goal, versus fixed, pre-built controls.
+- Human-computer interaction (HCI): the field studying how people use and design computer systems.
+- Position paper: a text that argues for a viewpoint and proposes a framework, typically without a full empirical evaluation. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1489,16 +1497,16 @@ AI agents can carry out auxiliary tasks while users focus on other work. Yet use
 ### [Multi-User Linear Precoder Optimization for Obfuscation-Aided Mixed Regular and Wiretap Coding](https://arxiv.org/abs/2611.31840)
 *Bastian Loss, Ahmad Nimr, Gerhard Fettweis* · `cs.IT` · arXiv:2611.31840v1 · relevance 0.19
 
-- **In one sentence**: The paper proposes a generalized obfuscation-aided mixed wiretap/regular coding system built on multi-user linear precoding, formulates a precoder optimization under a minimum secrecy rate constraint, and reports simulation results for a geometric two-user line-of-sight channel.
-- **In plain words**: The paper looks at how to send information securely over a wireless link so that an eavesdropper cannot easily read it. Standard secure ("wiretap") coding can be slow when the eavesdropper's channel is nearly as good as the intended receiver's, so the authors use a mixed scheme: a short secret is protected with secure coding, and that secret scrambles (obfuscates) a larger payload sent with ordinary coding. Using simulations of a two-user line-of-sight channel, they study how the secrecy requirement sets the balance between the two coding modes and how antenna beam shaping can be tuned for each layer.
-- **Why it matters**: Mixed coding aims to recover data rate that pure secure coding loses on poor channels, which matters for physical-layer security as an complement to classical encryption. The text is limited to simulations of one geometric channel model, so its general applicability is not established from this description alone.
-- **Background needed**: - Wiretap coding: a method that exploits the gap between the legitimate receiver's channel and the eavesdropper's channel to keep messages secret without a shared key.
-- Regular channel coding: standard error-correcting coding that maximizes reliable data rate, with no secrecy guarantee.
-- Obfuscation: scrambling a payload with a secret so it is useless without that secret.
-- Secrecy rate: the rate at which information is delivered to the intended receiver while the eavesdropper learns essentially nothing.
-- Linear precoding: multiplying signals by a matrix before transmission across multiple antennas, to steer beams toward users.
-- Multi-user line-of-sight (LoS) channel: a wireless link with a direct path, where user positions set the channel geometry.
-- Beampattern: a map of how much transmit power goes in each direction. · level: research-level
+- **In one sentence**: The paper proposes a generalized obfuscation-aided mixed wiretap/regular coding system built on multi-user linear precoding, formulates the precoder optimization with a minimum secrecy rate constraint, and studies it with simulations on a geometric two-user line-of-sight channel.
+- **In plain words**: Wireless signals can be overheard by an eavesdropper, and a common defense is "wiretap coding," which hides data by exploiting the fact that the intended receiver has a better channel than the eavesdropper. When that advantage is small, this defense sharply cuts how much data can be sent. This paper studies a mixed scheme: a short secret is protected with wiretap coding, and that secret is used to scramble the main data, which is then sent with ordinary error-correcting code. The authors design how the transmitter aims its signals for two users and report simulation results on how the scheme behaves.
+- **Why it matters**: It addresses a practical limit of physical-layer security, where secrecy is provided by the channel itself rather than by encryption, and it may matter for future wireless systems. The text reports simulation results only, so its practical significance beyond the modeled geometric channel is not established.
+- **Background needed**: - Wiretap coding: a way to send data so an eavesdropper learns almost nothing, relying on the receiver having a better channel.
+- Regular (ordinary) channel coding: standard error-correction that maximizes data rate without secrecy.
+- Secrecy rate: the amount of data per use of the channel that stays hidden from the eavesdropper.
+- Obfuscation: scrambling the data with a secret key so it is unreadable without that key.
+- Linear precoding: the transmitter weights signals across multiple antennas to aim beams at chosen users.
+- Beampattern: a map of how signal strength varies with direction, used to see where a transmitter sends energy.
+- Line-of-sight (LoS) channel: a channel dominated by a direct path between transmitter and receiver, modeled from geometry. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1509,19 +1517,15 @@ Physical-layer security has attracted considerable research interest with the de
 ### [Self-Orthogonal Minimal Codes from n-to-1 Mappings](https://arxiv.org/abs/2611.32192)
 *Qin Du, Ziling Heng, Jun Zhang* · `cs.IT` · arXiv:2611.32192v1 · relevance 0.15
 
-- **In one sentence**: Using right greatest common divisors of skew polynomials to compute kernel dimensions of linearized polynomials, the paper derives exact weight distributions for linear codes from three families of n-to-1 mappings and shows the codes are minimal and self-orthogonal.
-- **In plain words**: This paper is about error-correcting codes, the mathematical recipes used to protect data from corruption. The authors study codes built from certain functions over finite fields, which are small number systems, and find a way to count how their codewords are distributed without checking each one. They then show that three families of these codes have two useful properties that let one code serve both quantum error correction and secret sharing.
-- **Why it matters**: Codes that are both self-orthogonal and minimal can feed two applications at once: building quantum error-correcting codes and defining secret-sharing schemes. The text presents a new algebraic method for getting exact weight counts where direct computation is hard, which may help future work on such codes, though its wider impact is not shown in the text.
-- **Background needed**: - Linear code: a set of vectors closed under addition, used to add redundancy so errors can be detected or fixed.
-- Finite field: a number system with finitely many elements, the arithmetic base for these codes.
-- n-to-1 mapping: a function where exactly n inputs share each output; its structure determines the code.
-- Weight distribution: how many codewords have each number of nonzero entries; it governs code performance.
-- Walsh spectrum: a transform of a function that encodes the same weight information.
-- Self-orthogonal code: a code whose vectors are orthogonal to each other, a requirement for many quantum code constructions.
-- Minimal code: no codeword's support is contained in another's; this makes it usable for secret sharing.
-- Secret-sharing scheme: a way to split a secret among participants so only approved groups can recover it.
-- Skew polynomial ring: a polynomial algebra where variables do not commute, used here as the main tool.
-- Right greatest common divisor: the largest common right factor of two skew polynomials, used to find kernel dimensions. · level: research-level
+- **In one sentence**: Using right greatest common divisors of skew polynomials to find kernel dimensions of linearized polynomials, the paper derives exact weight distributions and proves minimality and self-orthogonality for linear codes from three families of n-to-1 mappings over finite fields.
+- **In plain words**: This paper is about error-correcting codes, the mathematical recipes used to protect data from corruption. It studies codes built from certain functions that map many inputs to one output, and it is hard to count how often their codewords have each weight for complicated functions. The authors use an algebraic tool called skew polynomial rings to work out those counts for two new function families and one known family, and they show the resulting codes have two useful properties.
+- **Why it matters**: The codes are claimed to be both self-orthogonal, which is the property used in building quantum error-correcting codes, and minimal, which is the property used in secret-sharing schemes, so one family could serve both purposes. The text does not say how these codes would perform in practice, so the practical significance is unclear from this text alone.
+- **Background needed**: - Linear code: a set of vectors over a finite field (a number system with finitely many elements) closed under addition and scaling; its weight is the count of nonzero entries in a codeword.
+- Weight distribution: how many codewords have each possible weight; it reveals a code's error-correcting behaviour.
+- Self-orthogonal code: a code whose codewords are orthogonal to one another, a property needed for quantum error-correcting codes.
+- Minimal code: a code where no codeword's support is contained in another's; this lets its supports define access rules for secret sharing.
+- n-to-1 mapping: a function where exactly n inputs share each output value; Walsh spectrum and linearized polynomials are standard tools for analysing such functions.
+- Skew polynomial ring: a generalisation of ordinary polynomials in which variables do not commute, with a "right greatest common divisor" used as the key computational tool. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1534,17 +1538,16 @@ Self-orthogonal codes are central to the construction of quantum error-correctin
 ### [Free hyperboloidal evolution in 3D: gauge waves and constraint-violating gravitational waves](https://arxiv.org/abs/2611.31379)
 *Alex Va\~n\'o-Vi\~nuales* · `gr-qc` · arXiv:2611.31379v1 · relevance 0.22
 
-- **In one sentence**: This paper extends the conformal compactification approach with BSSN/Z4 formulations of general relativity from spherical symmetry to full 3D, demonstrating free hyperboloidal evolution that reaches future null infinity, tested on gauge waves and constraint-violating gravitational waves in Minkowski spacetime.
-- **In plain words**: Physicists who simulate gravity on computers usually stop their simulated space short of the far future edge, where gravitational waves finally escape to infinity. This paper describes a way to use slanted, hyperboloid-shaped time slices that reach that far edge, and extends the method from simple spherical setups to fully three-dimensional simulations. The authors tested it on simple waves moving through empty flat space and report that the code behaves reliably and that signals can be read off at the far edge.
-- **Why it matters**: Reading gravitational-wave signals directly at future null infinity avoids errors from cutting the simulation off at an artificial boundary, which matters for predicting signals that detectors such as LIGO could see. The text only covers tests in flat spacetime with a first step, so its wider usefulness for realistic black hole or merger simulations is not shown here.
-- **Background needed**: - General relativity describes gravity as curved spacetime; numerical relativity solves its equations on computers.
-- Gravitational waves are ripples in spacetime that carry energy outward.
-- Future null infinity is the idealized boundary where outgoing light and gravitational waves end up as time goes to infinity.
-- Hyperboloidal slices are time slices that reach that boundary, unlike ordinary constant-time slices that stop short of it.
-- Conformal compactification rescales space so that infinity becomes a finite, reachable location.
-- BSSN and Z4 are standard formulations of Einstein's equations used in simulations; constraints are equations that must stay satisfied, and "constraint-violating" waves are test perturbations that break them on purpose.
-- Gauge waves are coordinate-only ripples that test how the simulation handles choices of time and space labels.
-- Minkowski spacetime is flat, empty space with no gravity, used as a simple test background. · level: research-level
+- **In one sentence**: This paper extends hyperboloidal (conformally compactified) evolution with the BSSN/Z4 formulation of general relativity from spherical symmetry to full 3D, demonstrating free evolution of gauge waves and constraint-violating gravitational waves on Minkowski spacetime with signal extraction at future null infinity.
+- **In plain words**: Scientists who simulate gravity on computers usually have to cut off their simulated universe at a finite distance, which can distort the gravitational waves they want to study. This paper describes a way to carry the simulation all the way out to "future null infinity," the far-away boundary where outgoing waves can be read off cleanly, and it does so for full three-dimensional simulations. The authors test it on simple disturbances in empty flat space and report that the code runs reliably and the signals can be extracted at that far boundary.
+- **Why it matters**: Clean access to waves at infinity matters for predicting the gravitational-wave signals that detectors such as LIGO and Virgo are meant to catch, so a working 3D tool is a useful building block. The text only covers tests in flat spacetime with simple perturbations, so it does not yet show how the method performs for realistic sources such as merging black holes.
+- **Background needed**: - General relativity describes gravity as the curvature of spacetime; numerical relativity solves its equations on computers.
+- Gravitational waves are ripples in spacetime produced by accelerating massive objects.
+- "Minkowski spacetime" is empty, flat spacetime, the simplest test background.
+- "Future null infinity" is the idealized far-away region where outgoing light and gravitational waves end up; hyperboloidal slices are time slices that reach it.
+- Conformal compactification maps infinite distance onto a finite boundary so the whole region can be simulated.
+- BSSN and Z4 are standard formulations of Einstein's equations used in simulations; "free evolution" means the constraint equations are not enforced exactly during the run, so small constraint violations can appear.
+- Gauge waves are coordinate-choice disturbances that do not carry physical energy. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1555,16 +1558,16 @@ Hyperboloidal evolution allows to reach future null infinity within numerical re
 ### [NS5-branes and the black hole/string transition](https://arxiv.org/abs/2611.31945)
 *Asad Fayiz, Emil J. Martinec* · `hep-th` · arXiv:2611.31945v1 · relevance 0.21
 
-- **In one sentence**: The paper extends a family of 6d BPS supergravity solutions (built from slightly separated fundamental strings and NS5-branes near the BTZ black hole threshold) to include gauge excitations of the fivebranes, and studies D-string soliton energetics relative to the deconfinement transition of little strings.
-- **In plain words**: The paper looks at a hypothetical setting in string theory where a black hole-like object begins to form from a bundle of strings and five-dimensional membranes called branes. The authors extend a set of known mathematical descriptions of this setting so they include extra internal "gauge" excitations on the branes. They then compare the energy cost of certain brane-bound solitons (localized lumps of energy) with the point at which the tangled strings switch from a confined to a free, black-hole-like state.
-- **Why it matters**: The transition between a string-like state and a black hole is a long-standing question about how gravity and strings fit together, so the question is of interest to specialists. The text does not report a definitive result, and its wider significance beyond this framework is not stated in the abstract.
-- **Background needed**: - String theory: a framework where fundamental particles are tiny vibrating strings, requiring extra dimensions.
-- Black hole/string transition: the idea that highly excited strings and black holes may be two sides of one phase change.
-- BTZ black hole: a simple black hole solution in three-dimensional gravity, used as a toy model.
-- NS5-branes: five-dimensional extended objects in string theory; "little strings" are the strings living on them.
-- Supergravity and BPS solutions: low-energy gravity theories and special, highly symmetric solutions that are stable because of supersymmetry.
-- Deconfinement: a phase change where bound constituents become free, similar to melting or boiling in ordinary matter.
-- Gauge excitations and solitons: internal field configurations and stable localized lumps of energy. · level: research-level
+- **In one sentence**: The paper extends a family of 6d BPS supergravity solutions (fundamental strings plus NS5-branes near the BTZ black hole threshold) to include gauge excitations of the fivebranes, and studies the energetics of D-string solitons relative to the deconfinement transition of little strings.
+- **In plain words**: This paper is about a theoretical question in string theory: when does a tangle of strings turn into a black hole, and what happens at the tipping point between the two. The authors build more detailed model geometries that describe a set of strings and five-dimensional membranes (fivebranes) sitting very close to that tipping point. They then examine how much energy certain small objects called D-string solitons carry, and how that relates to the point where the little strings stop being confined.
+- **Why it matters**: The black hole/string transition is a long-standing topic linking gravity and string theory, so the work matters to specialists studying that connection. The provided text only gives the aims and setup, not the specific results, so its broader significance is unclear from this summary alone.
+- **Background needed**: - BTZ black hole: a simple black hole solution in three-dimensional spacetime, used as a toy model in gravity research.
+- Supergravity solution: a classical geometry of gravity that solves the equations of a supersymmetric theory, often used to model string theory objects.
+- BPS state: a special, highly symmetric configuration whose energy is fixed by its charges, making it easier to analyse.
+- Fundamental string and NS5-brane: basic extended objects in string theory; branes are higher-dimensional generalisations of points or strings.
+- Little strings: non-gravitational strings that live on NS5-branes and behave as the basic non-abelian degrees of freedom in the relevant theory.
+- Deconfinement transition: a phase change, analogous to melting, in which the constituents of a bound state become free.
+- D-string soliton: a stable, particle-like lump of energy built from D-strings, a class of branes that carry charge for open strings. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1577,16 +1580,16 @@ Near to the onset of BTZ black hole formation in string theory is a large ensemb
 ### [Parametric neural-network wavefunctions across a bosonic phase transition](https://arxiv.org/abs/2611.33150)
 *Daniil S. Antonenko, Liang Fu, Leonid I. Glazman* · `cond-mat.quant-gas` · arXiv:2611.33150v1 · relevance 0.26
 
-- **In one sentence**: The paper introduces Boseformer, an attention-based neural-network ansatz that represents bosonic many-body wavefunctions as a function of a Hamiltonian parameter, trained via variational Monte Carlo across a superfluid-to-crystal quantum phase transition in 2D bosons with 1/r^3 repulsion.
-- **In plain words**: The paper looks at a group of identical quantum particles (bosons) that can either flow without friction as a superfluid or lock into a regular crystal, depending on how strongly they repel each other. The authors built a neural network, called Boseformer, that encodes the particles' quantum state, and trained it so that one network covers a whole range of interaction strengths rather than being retrained for each value. They report this on a simulated two-dimensional system with a particular long-range repulsion.
-- **Why it matters**: Describing the transition with one trained model instead of many separate calculations could make it cheaper to map out phase diagrams of quantum materials and cold-atom systems. The text is short and gives no quantitative comparisons, so how well the approach works relative to existing methods cannot be judged from it.
-- **Background needed**: - Wavefunction: the mathematical description of a quantum system's state; its square gives probabilities of finding particles in various arrangements.
-- Bosons: particles (such as atoms of certain types) that can share the same quantum state and obey Bose statistics.
-- Superfluid vs. crystal: a superfluid flows with zero viscosity; a crystal has particles fixed in a repeating lattice. Moving between them is a quantum phase transition, driven by a parameter in the energy function rather than temperature.
-- Hamiltonian: the energy rule of the system; here one of its parameters is varied.
-- Variational Monte Carlo: a method that tunes a trial wavefunction by random sampling to lower its energy, used when exact solutions are impossible.
-- Neural-network wavefunction: using a machine-learning model as the trial wavefunction; attention is the mechanism in modern networks that weighs relationships between inputs.
-- 1/r^3 interaction: a repulsion that falls off with distance r as the inverse cube, longer-ranged than ordinary contact forces. · level: research-level
+- **In one sentence**: The paper introduces Boseformer, an attention-based neural-network ansatz that is trained over a Hamiltonian parameter to represent bosonic wavefunctions across a superfluid-to-crystal quantum phase transition in 2D bosons with 1/r^3 repulsion.
+- **In plain words**: The paper looks at how a gas of particles that follow bosonic quantum rules behaves as it shifts between a flowing superfluid state and an ordered crystal state. The authors build a single neural network that describes the quantum wavefunction (the mathematical object encoding the system's state) for many strength settings of the interaction at once. Once trained, it can be used across the transition without retraining for each setting.
+- **Why it matters**: Describing phase transitions in quantum matter is computationally hard, and a model that works across a range of parameters without retraining could reduce that cost. The text is a short abstract, so it does not show how accurate the results are or how the method compares with existing approaches, and its wider significance is not yet established.
+- **Background needed**: - Bosons: particles (such as some atoms) that can share the same quantum state, unlike electrons.
+- Wavefunction: the mathematical function that gives the full quantum description of a system.
+- Phase transition: an abrupt change in a material's state, such as melting or freezing, here between flowing (superfluid) and ordered (crystal) forms.
+- Hamiltonian parameter: a tunable setting in the system's energy rules, here the strength of interactions.
+- Variational Monte Carlo: a method that tunes an approximate wavefunction using random sampling to lower its energy.
+- Neural-network wavefunction: using a neural network as a flexible, trainable guess for the wavefunction.
+- Attention: a neural-network mechanism that lets each part of the input weigh other parts, widely used in modern AI models. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1597,16 +1600,15 @@ We propose Boseformer, a universal attention-based neural-network architecture f
 ### [Polar Streams through Active Condensation in Flocks](https://arxiv.org/abs/2611.33007)
 *Lauritz Hahn, Xinyu Dou, Ziqi Zhou et al.* · `cond-mat.soft` · arXiv:2611.33007v1 · relevance 0.18
 
-- **In one sentence**: Experiments on self-propelled Janus colloid dimers, backed by particle simulations and coarse-grained hydrodynamic theory, show that a flock can phase-separate into elongated dense polar streams via an "active nematic condensation" mechanism that goes beyond the standard Toner-Tu description.
-- **In plain words**: Researchers studied tiny self-propelled particles that move together as a flock. They found that the flock can split into dense, elongated streams that all move along their own length, unlike the sideways bands seen near the flocking transition. The authors attribute this to denser regions becoming more strongly aligned, which pulls in more particles and feeds the condensation.
-- **Why it matters**: The paper suggests that collective motion and clustering can reinforce each other rather than compete, and that nematic (rod-like, head-to-tail-free) alignment can shape flocks, which the usual Toner-Tu equations do not include. Its wider relevance to biological or synthetic swarms is plausible but not established by the text.
-- **Background needed**: - Active matter: systems of self-propelled units that consume energy to move, such as colloids, cells, or animals.
-- Flocking: particles align their movement direction so the group moves coherently.
-- Motility-induced phase separation: self-propulsion alone can make particles bunch into dense clusters, without any attraction between them.
-- Janus colloids: microparticles with two faces of different chemistry, which can be propelled by a chemical or field gradient; dimers are pairs of linked particles.
-- Polar order: all particles point the same way. Nematic order: particles share an axis but not a direction.
-- Toner-Tu equations: a standard continuum theory of flocks that describes the average direction and density of motion.
-- Coarse-graining: deriving large-scale equations from microscopic particle rules. · level: research-level
+- **In one sentence**: Experiments on self-propelled Janus colloid dimers, backed by simulations and coarse-grained hydrodynamic theory, show that flocks can phase-separate into elongated polar streams via an "active nematic condensation" mechanism in which denser regions gain stronger polar and nematic order that draws in more particle flux.
+- **In plain words**: Researchers studied tiny self-propelled particles that move together as a group, called a flock. They found that the flock can split into dense, elongated streams that move along their long axis, instead of the sideways bands usually seen near the point where flocking begins. The text attributes this to a feedback loop: denser parts of the flock align more strongly, which pulls in even more particles.
+- **Why it matters**: The paper proposes that flocking and clustering can work together rather than only compete, and that nematic order (alignment without a preferred direction, like rods lying side by side) can shape flocks, which the standard Toner-Tu flocking equations do not include. Its wider relevance to natural or engineered swarms is suggested by the authors as a generic mechanism, but the text itself does not test that beyond this system.
+- **Background needed**: - Active matter: systems whose units consume energy to move on their own, such as colloids, cells or animals.
+- Janus colloid dimers: pairs of micron-scale particles with two faces of different chemistry, which self-propel when driven (here, the experimental model).
+- Flocking: particles aligning their directions so the group moves coherently; the Toner-Tu equations are the standard continuum description.
+- Motility-induced phase separation: self-propelled particles bunch together into dense clusters even without attraction between them.
+- Polar vs. nematic order: polar order means all particles point the same way; nematic order means they share an axis but may point either way.
+- Coarse-graining: replacing individual particles with smooth density and orientation fields to derive a hydrodynamic theory. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1619,15 +1621,17 @@ Two of the most paradigmatic phenomena in active matter are flocking, where part
 ### [Detecting Topological Phases Through Dynamics of Chiral Density in Momentum-space Lattices](https://arxiv.org/abs/2611.31878)
 *Rui Tian, Xiayao He, Tianhao Wu et al.* · `cond-mat.quant-gas` · arXiv:2611.31878v1 · relevance 0.21
 
-- **In one sentence**: The paper proposes a spectroscopic protocol that uses the time evolution of a chiral-operator density in a momentum-space Su-Schrieffer-Heeger chain to reconstruct the local and total density of states and detect zero-energy edge modes and bulk-boundary correspondence.
-- **In plain words**: Researchers study how to tell whether a simulated quantum material is in a special "topological" state, which can carry protected signals at its edges. They propose watching how a particular measured quantity changes over time after the system is disturbed, then applying a Fourier transform (a standard way of turning a time signal into an energy spectrum). According to the abstract, this recovers the energy-resolved information needed to spot edge modes.
-- **Why it matters**: The approach is a proposed diagnostic for quantum simulators built from momentum-space lattices, which are a flexible experimental platform. Its practical value depends on whether it can be realized and works beyond the simple model studied here; the text alone does not show that.
-- **Background needed**: - Topological phase: a state of matter whose key properties are robust to small changes, often shown by special states at the edges.
-- Su-Schrieffer-Heeger (SSH) chain: a simple one-dimensional model of particles hopping along a chain, used as a standard testbed for topology.
-- Momentum-space lattice: a lattice in which the sites correspond to momentum values rather than physical positions, allowing quantum simulation with cold atoms or photons.
-- Density of states and local density of states: how many energy levels exist overall, and how many are concentrated at a given location.
-- Zero-energy edge modes: states pinned at zero energy at the ends of a topological chain.
-- Fourier transform: converting a signal recorded over time into its frequency or energy content. · level: research-level
+- **In one sentence**: A theoretical proposal to detect topological edge modes and bulk-boundary correspondence in a momentum-space Su-Schrieffer-Heeger chain by Fourier-transforming the time evolution of the chiral density, which is linked to the local density of states.
+- **In plain words**: This paper is about a way to tell whether a simulated quantum system has special "topological" features, namely states stuck at its edges with zero energy. The authors use a lattice whose sites are arranged in momentum rather than in real space, and they watch how a particular quantity (the chiral density) changes over time. Applying a Fourier transform to that signal recovers the energy-resolved picture of the system, which shows the edge states.
+- **Why it matters**: Momentum-space lattices are a practical platform for quantum simulation, so a dynamical readout that can identify topological edge states could be a useful diagnostic for such experiments. The text presents this as a proposal; it does not report an experiment, so how well it works in practice is not shown here.
+- **Background needed**: - Topological phase: a property of a material's overall structure that stays fixed under small changes, and that often shows up as special states at the edges.
+- Edge modes with zero energy: states localized at the boundary of a system that sit at zero energy, a hallmark of topology.
+- Su-Schrieffer-Heeger (SSH) chain: a simple one-dimensional chain of sites with alternating coupling strengths, a standard toy model for topological edge states.
+- Bulk-boundary correspondence: the principle that topological edge states appear at the boundary whenever the interior of the system is topological.
+- Density of states and local density of states: measures of how many energy levels exist overall, and how they are distributed in space; they are usually probed by spectroscopy.
+- Chiral operator: a symmetry-related operator whose expectation value the paper tracks over time.
+- Quantum simulation: using a controllable quantum system to mimic another system that is hard to study directly.
+- Fourier transform: a mathematical step that converts a signal in time into a spectrum of frequencies (here, energies). · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1638,17 +1642,17 @@ Momentum-space lattices offer a versatile platform for quantum simulation in par
 ### [Intrinsic longitudinal Hall effect in ferroaxial metals with high-order rotation axes](https://arxiv.org/abs/2611.32709)
 *Eleni Chatzikyriakou, Stepan Tsirkin, Fernando Pe\~naranda et al.* · `cond-mat.mes-hall` · arXiv:2611.32709v1 · relevance 0.20
 
-- **In one sentence**: The paper argues that the intrinsic (quantum, Berry-curvature-based) longitudinal Hall effect in ferroaxial metals can be isolated in the eight ferroaxial groups that have a 3-, 4- or 6-fold rotation axis, where the classical Lorentz-force term vanishes, and identifies Ni3P via first-principles calculation as a candidate.
-- **In plain words**: When an electric current flows through a metal in a magnetic field, the sideways voltage (the Hall effect) usually comes mostly from a classical force on moving electrons, which hides a smaller quantum contribution. This paper looks at crystals with a special kind of hidden twist symmetry, called ferroaxial, where the voltage measured along the current direction can be set up so the classical part cancels. The authors list candidate metals with high-order rotation symmetry and calculate the effect for Ni3P, which they suggest is a promising material for measuring the quantum part on its own.
-- **Why it matters**: Separating a quantum contribution from a classical one is what makes such a measurement informative about the electronic structure of a metal. The text does not show experimental confirmation, so the practical value depends on whether Ni3P or similar materials can be measured as predicted.
-- **Background needed**: - Hall effect: a voltage produced perpendicular to an electric current when a magnetic field is applied.
-- Longitudinal Hall effect here: the voltage response lies along the current direction, which is unusual and occurs only in certain crystal symmetries.
-- Lorentz force: the classical push on moving charges from a magnetic field; it is normally the dominant Hall signal.
-- Berry curvature: a geometric property of electron wavefunctions in a crystal that acts like an internal magnetic field in momentum space.
-- Fermi surface: the boundary in momentum space separating occupied and unoccupied electron states in a metal; the effect is set by states near it.
-- Ferroaxial crystals: crystals lacking certain mirror and inversion symmetries, with a rotational "axial" order that is not magnetic.
-- Rotation axis of order 3, 4 or 6: a symmetry where rotating the crystal by 120, 90 or 60 degrees leaves it unchanged.
-- First-principles calculation: computing material properties directly from quantum mechanics without fitted parameters. · level: research-level
+- **In one sentence**: The paper shows that the intrinsic (quantum) longitudinal Hall effect in ferroaxial metals should be isolated in the eight ferroaxial groups that have a 3-, 4- or 6-fold rotation axis, where the classical Lorentz-force term vanishes, and proposes Ni3P as a candidate for measurement.
+- **In plain words**: When a metal carries electric current and sits in a magnetic field, it produces a sideways voltage called the Hall effect. Part of this comes from a quantum property of the electrons' motion, but the ordinary push of the magnetic field on moving charges usually hides it. The authors find that in certain crystal families with high-order rotational symmetry, the ordinary part cancels for a specific sideways-measured setup, which would leave the quantum part visible; they calculated this for several materials and suggest Ni3P as the best one to test.
+- **Why it matters**: Being able to measure the quantum contribution without the much larger classical background would give a cleaner test of how electron band structure produces transport signals. The text presents this as a theoretical proposal supported by first-principles calculations; it does not report an experiment, so the practical payoff is still to be shown.
+- **Background needed**: - Hall effect: a voltage generated perpendicular to both current and magnetic field in a conductor.
+- Lorentz force: the classical push a magnetic field exerts on moving charges; it is the usual, larger source of the Hall signal.
+- Berry curvature: a geometric property of electron wavefunctions in a crystal that acts like an internal magnetic field in momentum space; it can produce a quantum Hall-type contribution.
+- Fermi surface: the surface in momentum space separating occupied from unoccupied electron states, which controls most metallic transport.
+- Ferroaxial crystals: crystals lacking certain mirror and inversion symmetries in a way that allows a rotation-like ("axial") order parameter; the paper classifies them by their rotation axes.
+- Rotation axis order (3-, 4-, 6-fold): how many times a crystal looks unchanged under a full turn divided by the number of such turns; higher order means more symmetry.
+- First-principles calculation: computing material properties directly from quantum mechanics and known atomic structure, without fitted parameters.
+- Units: S/m/T means siemens per metre per tesla, a measure of Hall conductivity per unit magnetic field. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1661,16 +1665,16 @@ The low-field Hall resistivity of non-magnetic metals has an intrinsic quantum c
 ### [Dark vector meson effects on composite dark matter](https://arxiv.org/abs/2611.31368)
 *Tomohiro Abe, Ryosuke Sato, Ozan Semin et al.* · `hep-ph` · arXiv:2611.31368v1 · relevance 0.20
 
-- **In one sentence**: Extends prior work on G-parity-odd dark pion dark matter in a QCD-like SU(N_c) dark sector by adding dark rho vector mesons, which enable resonant enhancement in relic abundance and mix with Standard Model gauge bosons, and recasts LHC searches and projects FCC-hh and muon collider reach.
-- **In plain words**: This paper studies a hypothetical hidden sector, a dark version of the strong force with its own quarks, whose lightest particles could make up dark matter. Earlier work looked only at the dark "pions" as the dark matter; this study adds the heavier dark "rho" particles. The authors find that these heavier particles can noticeably change how much dark matter is left over from the early universe, and they outline how existing collider searches and future machines could detect them.
-- **Why it matters**: It offers a concrete, testable route for a dark matter candidate that could show up at colliders, not only in cosmic or underground detectors. The text gives only the headline claims (resonant enhancement, mixing with Standard Model bosons, FCC-hh reach up to 40 TeV), so the strength of these results should be checked against the full calculations.
-- **Background needed**: - Dark matter: unseen matter that makes up most of the mass of galaxies; its amount is set by how it was produced and thinned out in the early universe (the "relic abundance").
-- Relic abundance and resonant enhancement: when a particle's mass is near a particle-pair energy, interactions are boosted, changing how much survives.
-- Hidden or dark sector: particles that interact with ordinary matter only weakly, here via a QCD-like strong force with dark quarks.
-- Dark pions and rho mesons: bound states of dark quarks, analogous to ordinary pions and rho mesons; the rho is a heavier "vector" partner.
-- G-parity: a symmetry property that determines which decays and couplings are allowed.
-- Mixing with Standard Model gauge bosons: the dark rho can blend with W, Z or photon-like particles, giving it new ways to decay.
-- Colliders: LHC (ATLAS, CMS) searches are reinterpreted; FCC-hh (a proposed 100 TeV proton collider) and muon colliders are future machines. · level: research-level
+- **In one sentence**: Extends studies of G-parity-odd dark pion dark matter in a QCD-like dark sector by adding dark rho vector mesons, examining their effects on relic abundance, their mixing with Standard Model gauge bosons, and collider reach at ATLAS/CMS recasts and future FCC-hh and muon colliders.
+- **In plain words**: This paper looks at a hypothetical hidden sector, a dark version of the strong force with its own quarks, whose lightest particles could make up dark matter. It adds a heavier "dark rho" particle to earlier models and finds that it can change how much dark matter would be left over from the early universe, and that it can mix with ordinary force carriers so it decays in new ways. The authors also estimate how far future colliders could search for these particles, reporting that the FCC-hh could probe rho masses up to about 40 TeV.
+- **Why it matters**: If dark matter is a composite particle from a hidden strong force, heavier partner particles can alter the cosmological calculation and the collider signals, so this sets concrete targets for future experiments. The connection to real dark matter remains a hypothesis; the text does not show that such a sector exists.
+- **Background needed**: - Dark matter: unseen matter whose gravity shapes galaxies; its "relic abundance" is the amount left over after the early universe cooled.
+- QCD-like gauge theory: a model of a strong force like the one binding quarks in protons, here assumed to exist in a hidden sector.
+- Pions and rho mesons: bound states of dark quarks; pions are the lightest, rho mesons are heavier vector (spin-1) partners.
+- G-parity: a symmetry-like label that determines which decays and interactions are allowed.
+- Resonant enhancement: a sharp increase in interaction rate when a particle's mass matches the energy of colliding particles.
+- Mixing with Standard Model gauge bosons: the dark rho can partly turn into ordinary W, Z or photon-like particles, opening decay routes.
+- Collider terms: ATLAS and CMS are LHC experiments; FCC-hh is a proposed future proton collider; muon colliders are a proposed lepton machine; "recast" means reinterpreting existing searches for a new model. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1681,18 +1685,17 @@ We extend previous studies of $\mathcal{G}$-parity-odd dark pion dark matter in 
 ### [Dark Matter Assisted Axion-Magnetic Resonance](https://arxiv.org/abs/2611.32906)
 *Chen Sun, Si-Yu Wu, Seokhoon Yun* · `hep-ph` · arXiv:2611.32906v1 · relevance 0.18
 
-- **In one sentence**: A proposed resonance in which an oscillating axion dark matter background boosts the conversion of stellar axions into X-rays in a magnetic field, tested against NuSTAR data from the starburst galaxy M82.
-- **In plain words**: The paper looks for a hypothetical light particle called the axion, which could make up dark matter and could also be made in stars. In a magnetic field, such axions can turn into X-ray photons, and the authors show that the dark matter background can make this conversion much stronger at certain particle masses. They apply this idea to X-ray observations of the galaxy M82 from the NuSTAR telescope.
-- **Why it matters**: If correct, the effect would tighten limits on how strongly axions couple to light over part of the mass range where ordinary conversion is suppressed, which matters for dark matter searches. The authors report only a moderate preference for their features in the data, which is still consistent with statistical noise, so the result needs confirmation.
-- **Background needed**: - Axion: a hypothetical, very light particle proposed to solve a problem in particle physics and a candidate for dark matter.
-- Dark matter: unseen matter that makes up most of the mass of galaxies, detected only through gravity.
-- Photon-axion conversion: an axion turning into a photon (particle of light) when passing through a magnetic field.
-- Resonance: a condition where two effects match up so a process is strongly amplified, like pushing a swing at its natural rhythm.
-- Dispersion relation: how a particle's energy depends on its momentum and mass; mismatch between photons and axions normally suppresses conversion.
-- Stellar axions: axions expected to be produced in the hot cores of stars.
-- M82: a starburst galaxy with intense star formation, used as a bright source.
-- NuSTAR: an X-ray space telescope whose existing data is reanalysed here.
-- Upper limit / constraint: a bound saying a coupling must be smaller than some value given no signal was seen. · level: research-level
+- **In one sentence**: A proposed resonance in which an oscillating axion dark matter background boosts the conversion of stellar axions into X-ray photons in magnetic fields, tested against NuSTAR observations of the starburst galaxy M82.
+- **In plain words**: The paper looks at a hypothetical particle called the axion, which might make up dark matter and might also be produced inside stars. The authors propose that the invisible dark matter background can help a stellar axion turn into a detectable X-ray photon when it passes through a magnetic field. They apply this idea to the starburst galaxy M82 and use existing X-ray data from the NuSTAR telescope to set limits.
+- **Why it matters**: If the mechanism is right, it could raise the expected X-ray signal by a factor of roughly 100 in some axion mass ranges where ordinary conversion is weak, tightening limits on how strongly axions couple to photons. The text reports only a moderate preference over the background-only model that is still consistent with statistical fluctuations, so the result is suggestive rather than a detection.
+- **Background needed**: - Axions: hypothetical, very light particles proposed to solve a puzzle in particle physics and considered a dark matter candidate.
+- Dark matter: unseen matter that makes up most of the mass in galaxies; here it is modeled as an oscillating axion field.
+- Photon-axion conversion: the process by which an axion turns into a photon in a magnetic field, and the reverse.
+- Resonance: a condition where two effects match up so a signal is strongly amplified, similar to a swing pushed at the right rhythm.
+- Dispersion relation mismatch: photons and axions travel with different energy-momentum relations, so they normally convert poorly; the dark matter background is said to compensate for this difference.
+- Stellar axions: axions expected to be produced in the hot cores of stars, here those of M82.
+- NuSTAR: a NASA X-ray space telescope whose existing data are reanalyzed.
+- Coupling limits: upper bounds on how strongly axions interact with photons, given as constraints over a range of masses. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1705,17 +1708,16 @@ An oscillating axion dark matter (DM) background can enhance the conversion of a
 ### [Elastic polar oscillations and nuclear parameters](https://arxiv.org/abs/2611.31819)
 *Hajime Sotani* · `astro-ph.HE` · arXiv:2611.31819v1 · relevance 0.12
 
-- **In one sentence**: A review-style summary of how crustal elastic oscillation modes (s- and i-modes) of neutron stars, potentially seen in short gamma-ray burst precursors, could be used to constrain nuclear saturation parameters K0 and L via compactness-based fitting formulas.
-- **In plain words**: Neutron stars are extremely dense stellar remnants, and when two of them merge they may make the crust ring like a bell before a short gamma-ray burst. This paper summarizes earlier work on the ringing frequencies tied to the crust's elasticity, which could in principle reveal how the star's matter behaves. The authors report that, for a given set of nuclear properties, certain scaled frequencies depend mainly on the star's compactness, and they give fitting formulas linking those frequencies to two nuclear parameters, K0 and L.
-- **Why it matters**: If such oscillations were observed, matching them to these formulas could help narrow the possible values of nuclear properties that are hard to measure in the laboratory, which is why the approach is of interest to neutron-star seismology. The text does not report any observation of these modes, so the practical payoff remains conditional on future detections.
-- **Background needed**: - Neutron star: a collapsed star roughly 1.4 times the Sun's mass packed into about 20 km across.
-- Oscillation modes: ways a star can vibrate; the fundamental, pressure, and gravity modes are the usual ones, while shear and interface modes arise from the crust's elasticity.
-- s-mode and i-mode: crust-related vibration modes named in the paper; the text does not define them in detail.
-- Asteroseismology: inferring a star's interior properties from its vibration frequencies, similar to how seismologists use earthquake waves.
-- Compactness: the ratio of a star's mass to its radius, a measure of how strongly gravity compresses it.
-- Equation of state (EOS): the relation between pressure and density that describes the matter inside the star.
-- Nuclear saturation parameters: K0 (incompressibility of symmetric nuclear matter, how stiff it is to squeezing) and L (slope of the nuclear symmetry energy, how the energy cost of neutron-proton imbalance changes with density).
-- Short gamma-ray burst precursors: brief high-energy flashes that may come just before a merger. · level: research-level
+- **In one sentence**: A review of how crustal elasticity shapes neutron-star polar oscillation modes (s- and i-modes), and how their frequencies, if observed in short gamma-ray burst precursors, could constrain nuclear saturation parameters K0 and L via fitting formulas that depend on stellar compactness.
+- **In plain words**: Neutron stars are extremely dense stellar remnants, and they can ring like a bell with several vibration patterns. This paper summarizes earlier work on the vibrations that depend on the star's solid crust, and suggests that if such vibrations were detected (possibly in the bursts of gamma rays that come just before a merger of two neutron stars), their frequencies could reveal properties of the dense matter. The authors report that, for a given set of nuclear properties, certain scaled frequencies follow a formula depending mainly on how compact the star is.
+- **Why it matters**: Reading a neutron star's vibrations is one of the few proposed ways to learn about nuclear matter under conditions that cannot be recreated in laboratories, so it links astrophysics and nuclear physics. The text is a summary of previous studies and says observations are still challenging, so the practical payoff is uncertain and depends on future detections.
+- **Background needed**: - Neutron star: a collapsed star roughly 1.4 times the Sun's mass packed into about 20 km across, with a solid crust over a fluid core.
+- Oscillation modes: patterns in which the star vibrates, like the notes of a struck bell. Named families include fundamental, pressure, gravity, shear, and interface modes; s- and i-modes involve the crust's elasticity.
+- Short gamma-ray burst: a brief, intense flash of gamma rays, here thought possibly to be preceded by signals from a binary neutron star merger.
+- Asteroseismology: inferring a star's interior structure from its oscillation frequencies, as seismologists do with earthquakes.
+- Equation of state (EOS): the relation between pressure and density of dense matter.
+- Nuclear saturation parameters: properties of ordinary nuclear matter, here the incompressibility K0 (resistance to squeezing) and the slope L of nuclear symmetry energy.
+- Compactness: the ratio of a star's mass to its radius (a dimensionless measure of how strongly gravity compresses it). · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1727,16 +1729,15 @@ Owing to the elasticity of a neutron star, the shear and interface modes are exc
 *Kishora Nayak* · `nucl-ex` · arXiv:2611.32516v1 · relevance 0.07
 
 - **In one sentence**: Compares ATLAS charged-hadron transverse-momentum spectra in O+O and Ne+Ne collisions at equal charged-particle multiplicity (rather than equal centrality), finding Ne+Ne spectra softer, and tests the same procedure on Xe+Xe and Pb+Pb.
-- **In plain words**: Heavy-ion collisions at the Large Hadron Collider smash nuclei together and spray out many particles. This paper takes published measurements of oxygen-on-oxygen and neon-on-neon collisions and compares them when both have the same number of produced particles, instead of the same overlap "centrality" class. At equal particle counts, the neon-on-neon sprays are found to have a somewhat gentler energy distribution, with a lower average transverse momentum.
-- **Why it matters**: It bears on whether the spread of particle energies in these tiny collisions is set by how many particles are made or by how large the fireball is, a question relevant to how the quark-gluon plasma forms in small systems. The text reports the effect with explicit statistical significance, but the interpretation (larger transverse area gives softer spectra) is only described as the expected ordering, so it should be read as a measured tendency rather than a settled explanation.
-- **Background needed**: - Heavy-ion collisions: nuclei smashed together at high energy to create a hot, dense state of matter.
-- Centrality: how head-on a collision is; more central collisions produce more particles.
-- Multiplicity: the number of charged particles produced in one collision.
-- Transverse momentum (pT): the sideways momentum of a particle relative to the beam; a spectrum shows how many particles occur at each pT.
-- Mean pT: the average sideways momentum; a lower value means a "softer" spectrum.
-- Stretch factor: a single scaling of the pT axis used to match one spectrum to another.
-- Standard deviations (sigma): how many measurement uncertainties a difference is from no difference.
-- Pseudorapidity: a measure of angle from the beam direction; "forward" means closer to the beam. · level: research-level
+- **In plain words**: Heavy-ion collisions at the Large Hadron Collider smash nuclei together and spray out many particles. This paper asks whether the energy spread of those particles depends on how big the colliding nuclei are, once you compare collisions that produce the same number of particles. The authors find that neon-on-neon collisions give slightly gentler (softer) particle energy distributions than oxygen-on-oxygen collisions at the same particle count, and that this difference is modest and statistically significant under the stated uncertainties.
+- **Why it matters**: If the collision region is larger at the same particle count, the particles should spread out less in momentum, which connects the observed shape to the geometry of the collision. This is a careful reanalysis of published ATLAS data; the text does not establish the cause beyond the proposed area explanation, and the significance depends on how systematic uncertainties are treated.
+- **Background needed**: - Heavy-ion collisions: nuclei collided at very high energy (5.36 TeV per nucleon pair here) to create a hot, dense state of matter.
+- Centrality: how head-on a collision is; 3-4% centrality means very central (near head-on) events.
+- Charged-particle multiplicity: the number of electrically charged particles produced in one collision, used as a proxy for collision size.
+- Transverse momentum (pT): the sideways momentum of a particle relative to the beam; its spectrum is the distribution of pT values.
+- Mean pT and "stretch factor": a summary average, and a single scaling of the pT axis that makes one spectrum match another.
+- Pseudorapidity: a measure of angle from the beam direction; "forward" means closer to the beam.
+- Standard deviations (sigma): how many uncertainty widths a difference lies from zero. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1749,16 +1750,15 @@ Charged-hadron spectra measured by the ATLAS Collaboration in O+O and Ne+Ne coll
 ### [On the concentration of the ambiguity function on centered balls](https://arxiv.org/abs/2611.31326)
 *Fabio Nicola* · `math.FA` · arXiv:2611.31326v1 · relevance 0.20
 
-- **In one sentence**: The paper proves that Gaussian functions maximize the L^2 concentration of the ambiguity function on every centered ball, up to time-frequency shifts and unimodular constants, using ideas from quantum information theory.
-- **In plain words**: The paper studies a mathematical "fingerprint" of a signal, called the ambiguity function, which shows how a signal's time and frequency content overlap. It asks how tightly that fingerprint can be packed into a disk around the origin, and it shows that the bell-shaped Gaussian signal does this best, apart from trivial shifts and changes of phase.
-- **Why it matters**: Results of this kind sharpen uncertainty principles, which limit how precisely a signal can be localized in time and frequency at once. The abstract says the proof draws on quantum information theory, which may be the more interesting link for readers in that area; the text provided is only the abstract, so the wider significance is not clear from it.
-- **Background needed**: - Signal: a function of time (or of position), such as a sound wave or a radio pulse.
-- Ambiguity function: a two-variable function built from a signal that measures how it correlates with shifted and frequency-modulated copies of itself; widely used in radar and signal analysis.
-- Concentration on a ball: the fraction of the function's squared size (its L^2 energy) that lies inside a disk of a given radius centered at the origin.
-- Gaussian: the bell-shaped function, which is the standard extremal example in uncertainty principles.
-- Time-frequency shift: moving a signal in time or changing its frequency; these do not change how concentrated it is.
-- Unimodular constant: a complex number of size one, i.e. a pure change of phase.
-- Quantum information theory: the field studying information in quantum systems; the paper says its techniques were used in the proof. · level: research-level
+- **In one sentence**: The paper proves that Gaussian functions maximize the L^2 concentration of the ambiguity function on every centered ball, up to time-frequency shifts and unimodular phase factors, using tools from quantum information theory.
+- **In plain words**: The paper studies a mathematical tool that describes a signal's time and frequency content at once. It asks how much of that tool's energy can be squeezed into a small region centered at the origin, and it shows that the bell-shaped Gaussian signal does this best. The argument borrows ideas from quantum information theory.
+- **Why it matters**: The result sharpens a known kind of limit on how tightly a signal can be localized in time and frequency together, which matters for signal processing and harmonic analysis. The text does not say what further applications it has, so its wider importance is uncertain from this summary alone.
+- **Background needed**: - The ambiguity function: a two-variable function of time shift and frequency shift that encodes a signal's time-frequency structure.
+- L^2 concentration: the fraction of a function's total energy (squared size) that lies inside a given region.
+- Centered ball: a disk-like region around the origin in the time-frequency plane.
+- Gaussian: the bell-shaped function, which is the usual extremal example in uncertainty-type inequalities.
+- Time-frequency shifts and unimodular constants: moving a signal in time or frequency, and multiplying by a complex phase of size one; these do not change the concentration, so they are ignored in the statement.
+- Quantum information theory: the field that studies information in quantum systems; the paper says its ideas were used in the proof. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1769,16 +1769,16 @@ We show that the Gaussian uniquely maximizes the $L^2$ concentration of the ambi
 ### [Benchmarking Quantum Machine Learning for Power-System Attack Detection: Evaluation Choices Can Decide the Outcome](https://arxiv.org/abs/2608.15617)
 *Md Rezwanul Islam, ASM Shihavuddin* · `cs.LG` · arXiv:2608.15617v2 · relevance 0.18
 
-- **In one sentence**: A benchmark comparing two quantum and six classical detectors for power-grid cyberattacks finds that evaluation choices such as row-level versus file-level splits, and how attacks are generated, can change reported results more than the choice of model.
-- **In plain words**: The paper looks at whether quantum machine learning can spot cyberattacks on electricity grids better than ordinary computer methods. The authors tested two quantum detectors and six classical ones on public attack datasets, giving each the same tuning effort. Their main point is that small decisions in how the test is set up, such as how data is split and how attacks are simulated, can flip the apparent winner, and on their data neither quantum detector was more accurate or more consistently robust than the classical ones.</plain>
-<parameter name="why">Quantum machine learning is being proposed for critical infrastructure security, so claims about it need careful testing. The paper's warning that evaluation design can outweigh model choice applies to security benchmarking more broadly, though the results come from specific public datasets and a limited set of models.
-- **Background needed**: - Machine learning detector: a program trained on labelled examples to flag attacks.
-- Quantum kernel: a quantum-computed similarity measure used as part of a classifier.
-- Macro-averaged F1: a score combining precision and recall, averaged equally over classes; 0.50 is chance for the two-class task described.
-- White-box attack: an attacker who knows the model's internals and crafts inputs to fool it; transfer attack uses a substitute model's attacks; black-box attack has no internal access.
-- Row-level versus file-level split: whether test rows come from the same recordings seen in training (which can inflate scores) or from entirely held-out files.
+- **In one sentence**: A benchmark comparing two quantum and six classical machine-learning detectors for power-grid cyberattacks finds that evaluation choices such as row-level versus whole-file splits, and per-model attack design, can change the reported outcome.
+- **In plain words**: The paper looks at whether quantum computing methods can spot cyberattacks on electric grids and gas pipelines better than ordinary computer methods. The authors ran two quantum and six classical detectors on public attack data under the same tuning effort. They found that how the test is set up, for example splitting data by individual rows instead of by whole files, can make a method look much better than it is, and that neither quantum detector was more accurate or consistently more robust on the grid and pipeline data.
+- **Why it matters**: Quantum machine learning is being proposed for infrastructure security, so claims of advantage need careful testing. The paper's main point is methodological: small changes in evaluation design shifted results, which may matter for any benchmark claim in this area; the text does not show how widely these findings generalize beyond the datasets used.
+- **Background needed**: - Machine learning detector: a program trained on labeled examples to flag attacks.
+- Quantum machine learning: methods that run parts of a model on quantum hardware or simulated quantum circuits.
+- Macro-averaged F1: a score balancing precision and recall across classes; chance is 0.50 for the binary task described.
+- White-box attack: an attacker who knows the model's internals and can craft inputs against it; black-box and transfer attacks use a substitute model instead.
+- Row-level vs file-level split: whether test rows can come from the same recordings as training rows (which inflates scores) or whether whole files are held out.
 - Random label flips: deliberately corrupting some training labels to test robustness.
-- Upper bound: because tree models have no gradient for gradient-based attacks, their attacked scores can only be stated as upper limits. · level: intermediate
+- Gradient-based attack: an attack that uses the model's gradients; tree models do not admit this, so their attacked scores are only upper bounds. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1791,15 +1791,16 @@ Quantum machine learning is proposed to detect grid cyberattacks, but no study w
 ### [Integrated lasing and dual-band gain in neodymium-implanted silicon nitride](https://arxiv.org/abs/2611.32935)
 *Jan de Haan, Arturo Fern\'andez Gamez, Nina Zdravkovi\'c et al.* · `physics.optics` · arXiv:2611.32935v1 · relevance 0.15
 
-- **In one sentence**: Demonstrates neodymium-implanted LPCVD silicon nitride waveguide amplifiers with gain near 920 nm and 1100 nm, and a ring laser built on a 200 mm commercial wafer platform.
-- **In plain words**: The paper concerns making small, chip-scale lasers that emit light near 1 micrometer, the infrared range used in quantum experiments, precision measurement, and sensing. The authors took standard silicon nitride optical circuits made on a commercial wafer line, implanted neodymium ions into selected chips, and built waveguide amplifiers and a ring-shaped laser from them. They report that the amplifiers boost light in two wavelength bands, around 920 nm and 1100 nm, and that the ring laser does lase.
-- **Why it matters**: Getting light amplification and lasing on a chip with a rare-earth dopant that is compatible with a standard foundry-style process is a step toward cheaper, scalable on-chip light sources. The text does not report output power, efficiency, or linewidth, so its practical reach is not yet clear.
-- **Background needed**: - Integrated photonics: light is guided in tiny waveguides etched on a chip, similar in spirit to electrical wiring on a microchip.
-- Silicon nitride (LPCVD): a common, low-loss material for these waveguides, deposited in a furnace-style process.
-- Rare-earth gain: certain elements (here neodymium) emit light when pumped with energy; adding them to a material lets it amplify light.
-- Ion implantation: firing dopant ions into a material to place them at controlled depths and concentrations.
-- Ring resonator: a looped waveguide that selects specific wavelengths; a laser built on one is a compact cavity.
-- Amplifier vs. laser: an amplifier boosts an input signal; a laser adds feedback so it generates light on its own. · level: research-level
+- **In one sentence**: Demonstrates neodymium-ion-implanted LPCVD silicon nitride waveguide amplifiers with gain in two bands near 920 nm and 1100 nm, and a ring laser built on the same platform, fabricated on 200 mm commercial wafers.
+- **In plain words**: This paper is about building tiny laser circuits on a chip for light near 1 micrometer, a wavelength used in quantum technology, precise measurement, and sensing. The authors took standard silicon nitride chip waveguides made on a commercial wafer, implanted neodymium ions (a rare-earth element) into individual chips to add light-amplifying material, and tested them. They report that the amplifiers boost light in two wavelength bands, and that a ring-shaped resonator on the chip lases.
+- **Why it matters**: Making lasers on standard chip-manufacturing lines could make them smaller and easier to produce at scale, which matters for quantum and sensing devices. The text does not report output power, efficiency, or how stable the lasers are, so the practical significance is still open.
+- **Background needed**: - Photonic integrated circuit: a chip that guides light through tiny channels (waveguides), similar to electrical wiring for light.
+- Silicon nitride (LPCVD): a common chip material deposited from gas at low pressure; a standard, mass-producible platform.
+- Rare-earth gain: rare-earth ions such as neodymium emit light at specific wavelengths when pumped with energy, which can amplify light passing through them.
+- Ion implantation: firing ions into a material at high energy to add them to its surface layer.
+- Waveguide amplifier: a guided-light channel that increases the signal passing through it.
+- Ring resonator: a looped waveguide that selects specific wavelengths; a laser cavity can be built from it.
+- Lasing: the point where amplification overcomes losses and the device emits coherent light. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1810,15 +1811,17 @@ Lasers at wavelengths near 1 micrometer are used in quantum technologies, precis
 ### [Temporal Soliton Waves in Modern Fiber Laser Systems](https://arxiv.org/abs/2611.31799)
 *Shilong Liu, Boris Malomed* · `physics.optics` · arXiv:2611.31799v1 · relevance 0.10
 
-- **In one sentence**: A survey chapter reviewing theory, experiments, generation, characterization, and control of temporal soliton families (dissipative solitons, soliton molecules, and dispersion-managed solitons) in mode-locked fiber lasers.
-- **In plain words**: This is an overview chapter about tiny, stable pulses of light that keep their shape while travelling through special glass-fiber laser setups. It collects the underlying theory, lab results, and methods for making, measuring, and steering these pulses, including newer approaches that use machine learning. The text describes the topics covered but does not present new experimental results of its own.
-- **Why it matters**: Fiber lasers that produce such pulses are used in fields such as precision measurement and optical communications, so a consolidated review may help newcomers orient themselves. The text does not say how directly these results feed into any specific application.
-- **Background needed**: - A laser "mode-locked" state emits light as a train of very short pulses, often lasting picoseconds or femtoseconds (trillionths or quadrillionths of a second).
-- A "soliton" is a pulse that holds its shape because two effects, such as dispersion (colors spreading apart) and nonlinearity (light changing the glass), cancel out.
-- "Dissipative solitons" depend on a balance of gain (light amplification) and loss, not only on the fiber's physics.
-- "Soliton molecules" are several pulses locked together at fixed spacing, like a bound pair.
-- "Dispersion-managed solitons" are pulses whose shape stretches and squeezes periodically along a cavity with alternating fiber types.
-- Machine learning here means algorithms used to adjust or predict laser behaviour automatically. · level: research-level
+- **In one sentence**: A survey chapter reviewing theory, experiments, generation and control methods for temporal soliton families (dissipative solitons, soliton molecules, dispersion-managed solitons) in mode-locked fiber lasers.
+- **In plain words**: This is an overview chapter about tiny, self-sustaining pulses of light that keep their shape as they travel through optical fiber inside a laser. The chapter gathers the underlying theory, experimental results, and ways to create, measure, and steer these pulses. It also covers newer work that uses machine learning to help control them.
+- **Why it matters**: Stable ultrashort light pulses are used in precision measurement, communications and materials processing, so a consolidated review of how they form and how they can be controlled is useful for people entering the field. The text does not indicate any single new result, and its claims about recent progress are only described at a general level.
+- **Background needed**: - Mode-locked laser: a laser that emits a train of very short light pulses instead of a steady beam.
+- Optical fiber: a thin glass strand that guides light; the laser cavity is typically a loop of it.
+- Soliton: a pulse that holds its shape because the fiber's nonlinear response balances its tendency to spread out.
+- Dispersion: the effect where different colors of light travel at slightly different speeds, stretching pulses.
+- Gain and loss: light is amplified in the fiber and lost elsewhere; "dissipative" solitons depend on this balance.
+- Soliton molecules: several pulses locked together at fixed spacing, like a bound pair.
+- Breathing state: a pulse that periodically changes its width or energy while traveling.
+- Machine learning control: using trained algorithms to adjust laser settings to reach desired pulse behavior. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1831,17 +1834,17 @@ This chapter provides a comprehensive survey of temporal soliton-wave in modern 
 ### [Toward divertor plasma detachment in pure D-T plasma in fusion reactor with H-mode-like plasma confinement](https://arxiv.org/abs/2611.31616)
 *S. I. Krasheninnikov, R. D. Smirnov, M. V. Umansky* · `physics.plasm-ph` · arXiv:2611.31616v1 · relevance 0.09
 
-- **In one sentence**: A theoretical estimate of the plasma density and heat-flux conditions under which a tokamak divertor can reach ultimate detachment in pure hydrogen-isotope plasma while keeping H-mode confinement, checked against present-day machines and AUG data.
-- **In plain words**: Fusion reactors must get rid of intense heat at the edge of the hot plasma without damaging the walls. One way is "detachment," where the plasma cools down in front of the exhaust plate (the divertor). This paper works out the conditions for reaching this cooled state in pure deuterium-tritium plasma while keeping the good-confinement mode (H-mode). The estimates fit some current tokamaks and the AUG data, but for ITER, ARC and EU-DEMO they suggest the required density would be above the empirical density limit.
-- **Why it matters**: Divertor heat handling is a central obstacle for future fusion power plants, so the gap it identifies between present machines and reactors matters. The text names possible remedies (operating above the density limit, turbulence-broadened heat flux, reduced parallel heat flux in long-leg divertors) but only outlines them, so their feasibility is not established here.
-- **Background needed**: - Tokamak: a doughnut-shaped magnetic-confinement device for fusion.
+- **In one sentence**: Analytical estimates of the separatrix density and scrape-off-layer heat flux conditions needed for ultimate divertor plasma detachment under H-mode confinement in pure deuterium, tritium, or D-T plasmas, checked against present tokamaks and AUG data.
+- **In plain words**: The paper looks at how to cool down the hot exhaust plasma in a fusion reactor before it damages the walls. The divertor is the part of the reactor that catches this exhaust, and "detachment" means the plasma there cools enough to pull away from the target plates. The authors estimate the conditions under which this can happen while the core still runs in a high-performance mode, and find it is reachable on some current machines but would need denser plasma than the empirical density limit in future reactors such as ITER, ARC and EU-DEMO.
+- **Why it matters**: Divertor heat load is a central obstacle to designing a practical fusion power plant, so a clear statement of the density and heat-flux conditions for detachment helps frame reactor design. The text suggests possible routes (operating above the density limit, turbulence-broadened heat flux width, reduced parallel heat flux in long-leg divertors), but these are proposals described in the abstract, and the text does not show how well they would work in practice.
+- **Background needed**: - Tokamak: a doughnut-shaped magnetic fusion device that confines hot plasma.
+- Divertor: the exhaust region where charged particles and heat are directed onto target plates.
+- Scrape-off layer and separatrix: the thin edge layer of plasma outside the confined core, and the boundary between core and edge.
+- Detachment: a state where the plasma in front of the target cools and loses its power to the target, reducing damage.
 - H-mode: a high-confinement operating regime with better energy containment.
-- Divertor: the region where exhaust heat and particles are directed onto plates.
-- Scrape-off layer and separatrix: the thin edge layer outside the confined plasma, and the boundary between the two.
-- Detachment: the plasma cools and detaches from the divertor plates, reducing heat load.
-- Empirical density limit: an observed density above which plasma performance degrades.
-- D-T plasma: a mix of deuterium and tritium, the fuel for fusion reactors.
-- ITER, ARC, EU-DEMO: planned or proposed fusion devices. · level: research-level
+- Empirical density limit: an observed upper limit on plasma density beyond which confinement typically degrades.
+- D-T: the deuterium-tritium fuel mix used in fusion reactors.
+- AUG: ASDEX Upgrade, a German tokamak where detachment was achieved in pure deuterium. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1852,16 +1855,16 @@ The conditions between the separatrix plasma density and the heat flux into the 
 ### [The effects of closure parameter on the properties of kinetic range plasma turbulence](https://arxiv.org/abs/2611.31769)
 *Jago V. H. Edyvean, Andrea F. Irwin, Tulasi N. Parashar* · `physics.plasm-ph` · arXiv:2611.31769v1 · relevance 0.09
 
-- **In one sentence**: A study of how the free "closure parameter" in a 10-moment fluid model of plasma (the solar-wind-like medium) changes heating between ion and electron species and the compressive versus incompressive parts of kinetic-range turbulence, across artificial ion-electron mass ratios.
-- **In plain words**: Space plasmas such as the solar wind are too collisionless to model perfectly with simple fluid equations, and full particle-by-particle simulations are too expensive for large regions. This paper uses a middle-ground fluid model, the 10-moment model, which needs an approximation for heat flow; that approximation contains an adjustable number called the closure parameter. The authors vary this number and the ion-to-electron mass ratio to see how it changes how energy is shared between ions and electrons in turbulence.
-- **Why it matters**: The sharing of turbulent heating between ions and electrons is a central question for understanding how the solar wind heats up, so the finding that the modelling choice alone shifts these heating rates matters for trusting such simulations. The text reports that the effect persists at realistic mass ratios, though it weakens as the ratio approaches realistic values; the broader implications beyond this model are not stated in the text.
-- **Background needed**: - Plasma: a gas of charged particles (ions and electrons) that carries magnetic fields.
-- Turbulence: chaotic, swirling fluctuations that cascade energy from large to small scales.
-- Kinetic range: small scales where particle motion, not just fluid flow, matters; collisions are too rare for simple fluid behaviour.
-- Fluid moments: averaged quantities (density, velocity, pressure, heat flux) used to describe a plasma; the 10-moment model keeps moments up to the pressure tensor and must approximate higher ones (the heat flux) to close the equations.
-- Closure parameter: the adjustable constant in that approximation.
-- Compressive vs incompressive heating: energy going into density/pressure changes versus into swirling, divergence-free motions.
-- Mass ratio: ion mass divided by electron mass; realistic is about 1836 for hydrogen, and simulations often use smaller artificial values. · level: research-level
+- **In one sentence**: A numerical study of how the free "closure parameter" in a 10-moment fluid model of plasma turbulence changes heating of ions versus electrons, across artificial ion-electron mass ratios.
+- **In plain words**: Plasmas such as the solar wind are too costly to simulate with the most detailed kinetic methods, so researchers use simpler fluid approximations that still track some particle behaviour. This paper examines how one tunable setting in such an approximation, the "closure parameter," changes the way turbulent energy is shared between the two charged species, ions and electrons. The authors report that the choice of this setting affects the heating of each species, and that the effect is strongest when the ion-to-electron mass ratio is artificially low and shrinks as it approaches the real value.
+- **Why it matters**: Knowing how much energy goes into ions versus electrons matters for explaining the temperatures observed in the solar wind, but the text suggests that results from this fluid model may depend on a modelling choice rather than on physics alone. The text does not say how well the model matches spacecraft observations, so its relevance to real plasmas is not established here.
+- **Background needed**: - Plasma: a gas of charged particles (ions and electrons), common in space and fusion devices.
+- Kinetic vs fluid description: kinetic methods track the full distribution of particle velocities; fluid methods track averaged quantities such as density, flow and pressure, which is cheaper.
+- Moments: successive averages of the particle velocity distribution (density, velocity, pressure, heat flux). A "10-moment" model keeps moments up to second order.
+- Closure: an approximation for the higher moments (here the heat flux) so the set of equations can be solved.
+- Closure parameter: a free number in that approximation, chosen by the modeller.
+- Mass ratio: ion mass divided by electron mass; simulations often use smaller values than reality for computational reasons.
+- Compressive vs incompressive turbulence: fluctuations that change plasma density/pressure versus those that mainly swirl without compressing it. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1874,15 +1877,14 @@ Simulations of plasmas such as the solar wind require an accurate representation
 ### [Geometry and topology of DNA defects](https://arxiv.org/abs/2611.32850)
 *A. Fassino, E. Carlon, D. Marenduzzo* · `cond-mat.soft` · arXiv:2611.32850v1 · relevance 0.09
 
-- **In one sentence**: The paper defines a geometric order parameter (a backbone-to-base polar vector plus a base-orientation quaternion) to classify DNA defects into flip, stacking, and composite types, and tests it on real DNA structures and biased atomistic simulations.
-- **In plain words**: DNA is normally a tidy double helix, but damage, proteins binding to it, or enzymes such as RNA polymerase can locally disturb how its building blocks sit. This paper offers a precise way to describe these local disturbances using geometry, and checks it against real DNA structures and computer simulations. It reports three kinds of defect: a flip of the direction of a strand's backbone-to-base arrow, a stacking defect where bases shift out of their neat layering, and a combination of both.
-- **Why it matters**: The text says all three defect types appear in realistic DNA structures and have functional relevance, and that the approach might extend to RNA and nucleosome arrays. Whether this becomes a standard tool depends on follow-up work the text does not show.
-- **Background needed**: - DNA is a double helix; each strand has a sugar-phosphate backbone with a base attached.
-- Bases stack on top of each other inside the helix, and this stacking helps hold the structure together.
-- A "defect" here means a local departure from the normal regular geometry.
-- A quaternion is a compact mathematical way to describe 3D orientation (rotation), used here for how a base is oriented.
-- Atomistic molecular dynamics simulates every atom's motion over time; "biased" simulations push the molecule in a chosen direction to force deformations.
-- Nucleosomes are DNA wrapped around protein spools, which package the genome. · level: research-level
+- **In one sentence**: The paper defines a geometric order parameter (a backbone-to-base polar vector plus a base-orientation quaternion) to classify DNA defects as flips, stacking defects, or composites, and examines their occurrence in real structures and in biased molecular dynamics simulations.
+- **In plain words**: DNA is normally a tidy double helix, but its strands can be locally disturbed by damage, by proteins sitting on it, or by enzymes such as RNA polymerase. This paper gives a precise geometric way to describe these local disturbances and how they change over time. The authors combine this description with computer simulations and with analysis of experimentally determined DNA structures.
+- **Why it matters**: A quantitative, shared description of defects could help connect the shape of DNA to its chemical function, and the authors suggest it could be extended to RNA and nucleosome arrays. The text does not show how far these applications would go, so their practical value remains to be tested.
+- **Background needed**: - DNA is a double helix of two strands; each strand has a sugar-phosphate backbone and attached bases (A, T, G, C).
+- Normally the bases stack neatly on top of each other and point in a consistent direction relative to the backbone.
+- A "defect" here means a local departure from that regular arrangement, such as a base flipping out or bases stacking imperfectly.
+- A "polar vector" is an arrow with a direction, here running from backbone to base; a "quaternion" is a compact mathematical way to encode 3D orientation.
+- Atomistic simulations model every atom and its motion; biased molecular dynamics pushes the system toward a chosen deformation to study it. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1893,17 +1895,16 @@ DNA defects arise frequently, either as a result of damage, protein binding or t
 ### [Lattice models of chiral random motion: A short review](https://arxiv.org/abs/2611.32743)
 *E. Kalz, J. Wojcik, N. Sherf et al.* · `cond-mat.stat-mech` · arXiv:2611.32743v1 · relevance 0.06
 
-- **In one sentence**: A short review that recasts several lattice random-walk models with a rotational bias (chiral walks) as one framework, using an internal state for the walker as the carrier of memory, and surveys their effects on diffusion, edge transport, and self-avoiding paths.
-- **In plain words**: This paper reviews computer models of random movement on a grid, where the walker has a built-in tendency to turn one way, as seen in swimming bacteria, spinning particles, and charges moving in magnetic fields. The authors argue that on a grid this sideways bias only works if the walker remembers its recent direction, and they use a recently proposed chiral walk model as a template to bring several earlier, separately developed models together. The text describes where this memory shows up: in the surrounding environment, in the path the walker traces, and in the transport along edges.
-- **Why it matters**: The review ties together lattice models that have been introduced in different fields since 1960 without a shared language, which may help researchers working on active matter, odd transport, and programmable robots see common structure. The text is a review and does not itself report new experimental results, so its practical impact is best judged by the cited literature.
-- **Background needed**: - Random walk: a path built from repeated random steps; its spread grows with the number of steps.
-- Diffusion tensor: a table of numbers describing how spreading differs by direction; an "antisymmetric" part means a sideways, swirling component.
-- Chirality: a handedness, a systematic tendency to turn one way (like a left or right hand).
-- Odd transport: transport that gains a sideways (Hall-like) component, with currents that flow across rather than only along gradients.
-- Lattice model: movement restricted to grid points, which makes it exactly solvable on paper and easy to simulate.
-- Memory: the walker's dependence on its previous step or internal state, which the review argues chirality requires on a lattice.
-- Run-and-tumble: motion alternating between straight runs and random reorientations, as in E. coli.
-- Self-avoiding walk: a path that never revisits a site. · level: research-level
+- **In one sentence**: A short review that frames lattice random walks with a rotational (chiral) bias around a memory-carrying internal state, using the recently introduced chiral random walk as a template and linking persistent, chiral, run-and-tumble and cyclic walks, odd diffusion in environments, and spiral self-avoiding walks.
+- **In plain words**: This review looks at random movement on a grid where the walker has a built-in tendency to turn one way, as with bacteria that swim in circles near surfaces or charged particles bent by a magnetic field. The authors argue that on a lattice this sideways bias only works if the walker remembers something about its recent direction, and they organise many scattered earlier models around that idea. The text describes the framework and where the memory shows up: in the walker, the surrounding environment, and the path traced out.
+- **Why it matters**: Chiral random motion appears in biology, active matter and magnetic transport, and lattice models are simple enough to solve exactly, so a common framework could help researchers in several fields see related work. The text does not report new experimental results, and its practical reach beyond these communities is not stated.
+- **Background needed**: - A random walk is a path built from repeated random steps; diffusion is its large-scale spreading.
+- A lattice is a regular grid of points that a walker hops between.
+- Mean-squared displacement measures how far, on average, a walker has spread from its start.
+- Chirality means a systematic left or right rotational bias.
+- The diffusion tensor describes how spreading depends on direction; an antisymmetric part produces sideways (odd) transport that does not change the spreading distance.
+- Persistent walks keep their heading for a while; run-and-tumble motion alternates straight runs with random reorientations, as in E. coli.
+- Self-avoiding walks are paths that never revisit a site. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1916,16 +1917,18 @@ Chirality, a systematic rotational bias, is ubiquitous in many random motion pat
 ### [Evaluation of Machine-Learning Weather Models in Reproducing Mesoscale Tornado-Favorable Convective Environments](https://arxiv.org/abs/2611.31564)
 *Yiding Luo (University of Washington), Rui Yuan (University of Washington), Shetian Xia (University of Washington) et al.* · `physics.ao-ph` · arXiv:2611.31564v1 · relevance 0.14
 
-- **In one sentence**: This paper benchmarks three machine-learning weather models (Pangu-Weather, FengWu v1/v2, FuXi Weather) on tornado-favorable convective parameters for ten strong-tornado events in Oklahoma, using reanalysis data as input and ground truth across lead times of 24 to 168 hours.
-- **In plain words**: Some tornadoes form when the air near the ground is warm and humid and the winds change speed and direction with height. This study asks whether newer AI-based weather forecasting models can reproduce those conditions for ten past tornado outbreaks in Oklahoma. The authors found that performance depended on the weather variable, the model, and the event, and that forecasts lost accuracy for extreme values and fine spatial detail as the lead time grew.
-- **Why it matters**: AI weather models are already used operationally and are cheap to run, so checking whether they capture the specific ingredients of tornado-prone weather matters for severe-weather forecasting. The text does not show direct effects on warnings or public safety, so the practical impact remains uncertain.
-- **Background needed**: - Numerical weather prediction (NWP): forecasts made by solving physics equations on a computer grid, the traditional approach.
-- Machine-learning (ML) weather models: neural networks trained on past atmospheric data to forecast the weather; much cheaper to run than NWP.
-- Grid spacing (0.25 degrees): the distance between points in the model's map, roughly 25 km; coarse grids can miss small features.
-- Reanalysis data: a gridded historical record that blends observations with a model, used here as the "truth" to compare against.
-- Lead time: how far ahead the forecast goes (here 1 to 7 days).
-- Convective parameters: measurable quantities such as storm-relative helicity (a measure of rotation potential in the wind) and thermodynamic variables (temperature and moisture) that indicate whether storms can form and rotate.
-- Cold pool: a pocket of cool air spreading out from a storm, a fine-scale feature. · level: research-level
+- **In one sentence**: This paper benchmarks three machine-learning weather models (Pangu-Weather, FengWu v1/v2, FuXi Weather) against reanalysis data on eight tornado-relevant parameters across ten Oklahoma tornado events and lead times of 24 to 168 hours.
+- **In plain words**: Tornadoes form when specific atmospheric conditions line up, such as wind shear and warm, moist air near the ground. This study asks whether newer AI-based weather forecasting models can reproduce those conditions for ten past severe-tornado events in Oklahoma. It finds that performance varies by model, variable, and event: one model does better on a rotation-related measure, another on temperature and moisture measures, though it tends to exaggerate their strength, and forecasts lose accuracy for extremes and fine spatial detail as lead time grows.
+- **Why it matters**: Machine-learning forecasts are being used operationally and are much cheaper to run than traditional models, but most were trained on coarse global data that may miss the small-scale conditions behind tornadoes. The paper suggests that headline forecast scores alone can hide model-specific biases and errors in extreme values, which matters for anyone relying on these tools for severe-weather guidance.</why>
+<parameter name="background">- Numerical weather prediction (NWP): forecasting by solving physics equations on a grid of the atmosphere.
+- Machine-learning (ML) weather models: systems trained on past data to predict the next atmospheric state; much faster to run than NWP.
+- Reanalysis: a gridded reconstruction of past weather combining observations with a model, used here as both input and "truth."
+- Grid spacing (0.25 degrees): roughly 25 km between grid points, too coarse to resolve many small storm features.
+- Lead time: how far ahead the forecast goes (here 24 to 168 hours, i.e., 1 to 7 days).
+- Storm-relative helicity: a measure of how much the wind rotates with height, linked to storm rotation.
+- Cold pool: a pocket of cool air spreading out from a thunderstorm, often at the surface.
+- Overprediction/extreme-value fidelity: whether a model gets the strength of the largest values right, not just the average pattern.</background>
+<parameter name="difficulty">intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -1936,15 +1939,16 @@ Machine-learning (ML)-based weather prediction models have developed rapidly in 
 ### [Critical ocean physics on the edge of AMOC instability](https://arxiv.org/abs/2611.31448)
 *Reyk B\"orner, Anna S. von der Heydt, Robbin Bastiaansen et al.* · `physics.ao-ph` · arXiv:2611.31448v1 · relevance 0.08
 
-- **In one sentence**: In a 1-degree global ocean model, the authors compute an unstable saddle equilibrium (an "AMOC edge state") that marks the boundary between AMOC recovery and collapse, and find that the regional net surface buoyancy flux tracks the onset of tipping.
-- **In plain words**: The Atlantic overturning circulation, a large system of ocean currents that carries warm water north and cold water south, is expected to weaken as the planet warms. This paper asks whether that weakening will recover on its own or tip into a collapse that does not reverse. The authors locate the dividing line between those two outcomes in a global ocean model and study the balanced state that sits on that line.
-- **Why it matters**: Whether the overturning circulation can recover or will tip into collapse matters for projections of climate in the Atlantic region. The paper suggests a possible early-warning signal, the regional net surface buoyancy flux (a measure of how much the surface water is becoming denser or lighter), but the text reports this from one model, so how well it transfers to other models or to the real ocean is not established here.
-- **Background needed**: - The AMOC is a large-scale overturning current in the Atlantic; it moves heat northward and is driven by water getting denser and sinking, mainly in the far North Atlantic.
-- A "tipping transition" is a shift that, once triggered, continues on its own rather than reversing when the cause eases.
-- A "saddle equilibrium" is a balanced state that is unstable: a small push sends the system toward either recovery or collapse, so it sits on the boundary between them.
-- Surface buoyancy flux is the net effect of heating/cooling (thermal) and evaporation/rain/ice melt (haline, related to salt) on how dense surface water is.
-- Freshwater and heat balances are accounting of how much fresh water and heat enter or leave a region.
-- A global ocean model at 1-degree resolution is a computer simulation dividing the ocean into grid cells about 100 km across. · level: research-level
+- **In one sentence**: In a 1-degree global ocean model, the authors compute an unstable saddle equilibrium (an "AMOC edge state") that sits on the boundary between AMOC recovery and collapse, and analyze North Atlantic freshwater and heat balances near it.
+- **In plain words**: The Atlantic overturning circulation is a large system of ocean currents that carries warm water north and cold, dense water south, and climate models suggest it may weaken as the planet warms. This paper asks whether that weakening would be temporary or would tip into a collapse that does not reverse. The authors used a global ocean model to find a special, unstable state that marks the dividing line between the circulation recovering and collapsing. They report that near this state, warming and saltiness effects on surface water density roughly cancel out, and that surface density loss lines up with recovery while density gain lines up with collapse.
+- **Why it matters**: Whether the Atlantic circulation can recover or will tip into collapse matters for regional climate and sea level, so a physical marker of the tipping boundary is useful. The authors suggest the regional net surface buoyancy flux (a measure of how much the surface water is made lighter or denser) could serve as an early indicator, though the text does not test this as a forecasting tool.
+- **Background needed**: - AMOC: the Atlantic Meridional Overturning Circulation, a conveyor-like system of ocean currents that moves heat northward in the Atlantic.
+- Deep water formation: surface water in cold regions (here the Nordic Seas) becomes dense enough to sink, driving the circulation.
+- Buoyancy flux: the rate at which surface water is made lighter or denser by heat exchange (thermal) and by salt or freshwater exchange (haline).
+- Tipping transition vs. transient response: a tipping transition is a shift to a different state that does not reverse when conditions return; a transient response reverses once forcing eases.
+- Saddle equilibrium: a steady state that is unstable; small nudges push the system toward either recovery or collapse, so it marks the boundary between them.
+- Edge state: the unstable state lying on the boundary between the two basins of attraction.
+- Global ocean model at 1-degree resolution: a simulation whose grid cells are about 1 degree across. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1957,16 +1961,16 @@ The Atlantic Meridional Overturning Circulation (AMOC) is expected to weaken und
 ### [Learning to find cosmic filaments with graph neural networks](https://arxiv.org/abs/2611.31494)
 *Alexis Tastet, Daniela Gal\'arraga-Espinosa, Leander Thiele* · `astro-ph.CO` · arXiv:2611.31494v1 · relevance 0.17
 
-- **In one sentence**: A generative model built from flow matching and graph neural networks learns to produce probabilistic maps of cosmic filaments conditioned on sparse galaxy tracers, reproducing key statistics of the target filament distribution.
-- **In plain words**: Galaxies are spread through space in a web-like pattern, with long thread-like filaments linking dense clusters. The paper asks how to estimate where these filaments are from a sparse set of galaxy positions, where the answer is always uncertain. The authors train a machine-learning model that generates many possible filament layouts, rather than a single best guess, and report that these layouts match key statistical properties of the target filaments.
-- **Why it matters**: Mapping the cosmic web from galaxy surveys matters for understanding how matter is distributed on the largest scales. The text presents this as a first step toward probabilistic inference directly from survey data, and the approach may also apply to other sparse-tracer reconstruction problems, though the text does not test those.
-- **Background needed**: - Cosmic web: the large-scale network of galaxies, filaments, walls and voids in the Universe.
-- Galaxy survey: a catalog of galaxy positions in 3D space, which is discrete and incomplete.
-- Filament: a thread-like structure of matter linking galaxy clusters.
-- Generative model: a model that learns a data distribution and produces new samples from it.
-- Flow matching: a training method that learns to transform random noise into realistic samples.
-- Graph neural network: a neural network that operates on nodes and connections, suited to networks of points.
-- Probabilistic inference: estimating a range of plausible answers with their likelihoods, not one fixed answer. · level: research-level
+- **In one sentence**: A generative model built from flow matching and graph neural networks learns to produce probabilistic samples of cosmic filament networks from sparse galaxy tracer positions.
+- **In plain words**: Astronomers want to map the large-scale threads of matter, called cosmic filaments, that link galaxy clusters together. Galaxy catalogs give only scattered points, so the exact shape of these threads cannot be read off directly. This paper trains a machine-learning model to generate many plausible filament layouts consistent with the galaxies, and reports that the outputs match key statistics of the target filaments while varying across samples.
+- **Why it matters**: Filaments are a major part of the cosmic web, and a method that reports uncertainty about them could matter for future galaxy surveys. The text describes this as a first step, so its practical value for real survey data is not yet shown.
+- **Background needed**: - Cosmic web: the large-scale pattern of galaxies, filaments, walls and voids in the Universe.
+- Galaxy survey: a catalog of galaxy positions, which is incomplete and sparse.
+- Filament finding: algorithms that trace these threads through galaxy positions.
+- Generative model: a model that learns a distribution and can produce new samples from it, here giving many possible filament networks.
+- Flow matching: a training method that learns to transform random noise into samples resembling the target data.
+- Graph neural network: a neural network operating on nodes and connections, suited to networks of points.
+- Conditional model: one whose outputs depend on given inputs, here the observed tracers. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1977,17 +1981,17 @@ Inferring the large-scale structure of the Universe from galaxy surveys is a fun
 ### [Resolving the Hubble Tension at $0.1\sigma$ with Early Dark Energy: Key Role of the Highest-redshift Galaxies from JWST Observations](https://arxiv.org/abs/2611.32552)
 *Guo-Hong Du, Tian-Nuo Li, Jing-Fei Zhang et al.* · `astro-ph.CO` · arXiv:2611.32552v1 · relevance 0.15
 
-- **In one sentence**: This paper reports that an axion-type early dark energy model, fit to CMB and DESI BAO data plus JWST high-redshift galaxy UV luminosity functions, yields H0 = 72.76 ± 1.00 km/s/Mpc consistent with SH0ES at 0.1σ, and that allowing running of the spectral index raises H0 further to 73.75 ± 1.04 km/s/Mpc.
-- **In plain words**: The universe seems to expand at two different rates depending on how it is measured: nearby stars and galaxies give a faster rate than the early-universe afterglow (the cosmic microwave background). This paper tests a proposed extra ingredient, "early dark energy," that briefly changes the early universe, and finds that galaxy counts from the James Webb Space Telescope (JWST) in the very distant, early universe help bring the two rates into agreement. The authors also report that adding a small extra tilt to how structure size varies pushes the inferred rate slightly above the nearby measurement.
-- **Why it matters**: The Hubble tension is one of the most discussed open problems in cosmology, and this paper suggests early-universe galaxy observations could be relevant to it. However, the result depends on modelling choices (reference cosmologies used by JWST analyses, and a model extension with running of the spectral index), so it should be treated as one proposed resolution under test rather than a settled answer.
+- **In one sentence**: A cosmology paper arguing that early dark energy (axion EDE) combined with CMB, DESI BAO, and JWST high-redshift galaxy UV luminosity functions can bring the inferred Hubble constant to within 0.1σ of SH0ES, with a running of the spectral index (α_s) pushing H0 higher still.
+- **In plain words**: The universe is expanding at a rate that different measurement methods disagree on: measurements from the early universe give a lower value than direct measurements from nearby stars and galaxies (SH0ES). This paper tests whether a modified model with an extra, short-lived "early dark energy" component, combined with new JWST counts of very distant galaxies, can close that gap. The authors report that it can, with the result depending strongly on how the most distant galaxies are counted and on how the model's power spectrum is allowed to vary with scale.
+- **Why it matters**: The Hubble tension is one of the most discussed open problems in cosmology, and the paper ties it to new JWST observations of early galaxies and to the settings of the primordial matter spectrum. It is worth watching because the result depends on modelling choices, so it is an interesting proposal rather than a settled resolution; whether it holds up will depend on independent data and reanalyses.
 - **Background needed**: - Hubble constant (H0): the present expansion rate of the universe, in km/s per megaparsec.
-- Hubble tension: local measurements (e.g. SH0ES, about 73) disagree with values inferred from the early universe via the cosmic microwave background (about 67-68).
-- Early dark energy (EDE): an extra component that acts briefly just before recombination, shifting the inferred expansion rate; the "axion" version is one specific model.
-- CMB (cosmic microwave background): the faint light left from about 380,000 years after the Big Bang.
-- BAO (baryon acoustic oscillations): a preferred clustering scale in galaxy maps used as a cosmic ruler; DESI is a survey that measures it.
-- JWST UV luminosity function: counts of galaxies at different brightnesses in ultraviolet light, used here to probe galaxies at redshift z of about 11-12.5, roughly 400 million years after the Big Bang.
-- Spectral index n_s and running alpha_s: describe how the strength of primordial density fluctuations varies with physical scale; running is the scale-dependence of that variation.
-- sigma (σ): a measure of statistical tension; 0.1σ means the values agree very closely. · level: research-level
+- Hubble tension: early-universe measurements (CMB) and local measurements (SH0ES, using nearby Cepheid stars and supernovae) give different H0 values.
+- Early dark energy (EDE): a hypothetical extra component active briefly before recombination, which changes the expansion history; the axion version is one specific model.
+- CMB: the cosmic microwave background, the afterglow of the early universe.
+- DESI baryon acoustic oscillations (BAO): a standard-ruler measurement of galaxy clustering from the DESI survey.
+- JWST UV luminosity function: counts of galaxies by ultraviolet brightness at high redshift (very distant, early galaxies); converting these counts to physical quantities requires assuming a reference cosmology.
+- Spectral index n_s and running α_s: describe how the primordial density fluctuations vary with physical scale; α_s measures the scale dependence of that tilt.
+- σ (sigma): the standard unit of statistical significance; 0.1σ means the two values agree very closely. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2000,16 +2004,16 @@ We show that the Hubble tension can be resolved at the $0.1\sigma$ level within 
 ### [Euclid: Discovery of a quasar at z = 8.13 hosting a 360-million-solar-mass black hole](https://arxiv.org/abs/2611.31385)
 *J. Wolf, S. Belladitta, D. Yang et al.* · `astro-ph.GA` · arXiv:2611.31385v1 · relevance 0.19
 
-- **In one sentence**: Discovery and spectroscopic confirmation of the quasar EUCL J150452.291+625224.39 (J1504+6252) at z = 8.129, the first quasar confirmed at z > 8, with black hole mass and Eddington-ratio estimates from H-beta and Mg II broad lines.
-- **In plain words**: This paper reports a very distant quasar, a bright object powered by a supermassive black hole, seen as it was about 630 million years after the Big Bang. The object was spotted in Euclid survey images and then confirmed with several telescopes, including JWST. The authors estimate the black hole weighs a few hundred million times the Sun's mass, while it is currently feeding on gas at a rate below its maximum.
-- **Why it matters**: It pushes the known redshift record for quasars back by about 39 million years and suggests that more massive black holes from this early era may exist unseen. Whether it changes how black holes form is not settled by the text; it says the object needs either a heavy starting seed or unusually efficient early growth.
-- **Background needed**: - Redshift (z): how much light from a distant object is stretched to longer wavelengths by cosmic expansion; larger z means further away and earlier in time. z = 8.13 is roughly 630 million years after the Big Bang.
-- Quasar: a very luminous core of a galaxy powered by a supermassive black hole swallowing surrounding gas.
-- Broad emission lines: bright spectral lines from fast-moving gas near the black hole; their width (FWHM) is used to estimate black hole mass.
-- Mass estimates: these rely on empirical calibrations between line width, brightness and mass, so they carry large uncertainties (here about 0.4 dex, a factor of roughly 2.5).
-- Eddington ratio: the current accretion rate relative to the maximum rate a black hole can sustain; "sub-Eddington" means feeding below that limit.
-- Reionisation era: the period when the first luminous objects ionised the hydrogen fog filling the early universe.
-- Euclid, JWST, Keck, HST, LBT: telescopes and surveys used for the discovery and follow-up. · level: research-level
+- **In one sentence**: Discovery and spectroscopic confirmation of quasar J1504+6252 at z = 8.13, the first quasar confirmed beyond z = 8, with a black hole estimated at log10(M/Msun) of roughly 8.3–8.9 from H-beta and Mg II line widths.
+- **In plain words**: This paper reports a very distant quasar, a bright object powered by a supermassive black hole, seen as it was about 630 million years after the Big Bang. The object was first picked out in images from the Euclid space telescope and then confirmed with several large telescopes, including JWST. The authors estimate its central black hole holds several hundred million times the Sun's mass, which is surprisingly large for such an early time.
+- **Why it matters**: It moves the record for the most distant confirmed quasar by about 39 million years, and it raises the question of how black holes grew so massive so early. The text suggests that either very heavy starting seeds or unusually efficient early growth would be needed, and that similar objects may still be undiscovered; how general that conclusion is remains to be seen.
+- **Background needed**: - Quasar: an extremely bright galactic core where a supermassive black hole is actively pulling in gas.
+- Redshift (z): how much light from a distant object has been stretched by cosmic expansion; larger z means further away and earlier in time. z = 8.13 is roughly 630 million years after the Big Bang.
+- Broad emission lines: light emitted by fast-moving gas near the black hole; their width is used to estimate the black hole's mass.
+- Single-epoch calibration: an empirical formula that converts one spectrum's line width and brightness into a mass estimate, which carries large uncertainty (here about ±0.4 in log10).
+- Eddington ratio: how fast a black hole is feeding compared with the theoretical maximum; 'sub-Eddington' means feeding slower than that limit.
+- Reionisation era: the period when the first luminous objects ionised the hydrogen filling the universe.
+- Seed: the initial black hole from which a supermassive one grows. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2020,16 +2024,17 @@ Quasars powered by rapid accretion onto supermassive black holes (SMBHs) have be
 ### [Tidally Induced Coda: Double Transients from Black Hole-Star Binary Encounters with Massive Black Holes](https://arxiv.org/abs/2611.31361)
 *Konstantinos Kritos, Rosalba Perna* · `astro-ph.HE` · arXiv:2611.31361v1 · relevance 0.12
 
-- **In one sentence**: Few-body scattering simulations (SpaceHub) of stellar-mass black hole–star binaries passing near a massive black hole, quantifying outcomes including a tidally triggered micro-tidal disruption event and fitting formulae for its cross section and the delay between two flares.
-- **In plain words**: This paper looks at what happens when a pair of objects, a stellar-mass black hole orbiting a normal star, flies close to a much heavier black hole at the centre of a galaxy. The gravity of the heavy black hole can stretch the pair's orbit into a very elongated shape, which may cause the star to be torn apart by its black hole partner. The authors ran many computer simulations to estimate how often each outcome happens and how long apart two resulting flashes of light would appear.
-- **Why it matters**: The paper proposes that such events would show up as two flares separated by months, which could serve as a distinctive signature to look for in surveys. The abstract's estimated event rates (a few to about 100 per year within 40 Gpc) are model predictions that depend on the simulation assumptions, so they should be read as estimates rather than confirmed numbers.
-- **Background needed**: - Massive black hole (MBH): a black hole with millions to billions of times the Sun's mass, typically at a galaxy's centre.
-- Stellar-mass black hole: a black hole formed from a collapsed massive star, a few times to tens of times the Sun's mass.
-- Binary: two objects orbiting each other under mutual gravity.
-- Eccentricity: how stretched an orbit is; 0 is a circle, near 1 is a very long thin ellipse.
-- Tidal disruption event (TDE): a star torn apart by the gravity of a black hole, producing a flash of light. The "micro" version here involves a stellar-mass black hole doing the tearing.
-- Few-body scattering experiment: a numerical simulation of a small number of gravitating bodies interacting at close range.
-- Cross section: an effective target area describing how likely an interaction is. · level: research-level
+- **In one sentence**: Few-body scattering simulations (SpaceHub) of stellar-mass black hole–star binaries passing near a massive black hole, quantifying outcomes including a micro-tidal disruption event that yields a double flare, with fitted cross-section and time-delay formulae and event-rate estimates.
+- **In plain words**: This paper studies what happens when a pair of objects, a black hole and a star orbiting each other, flies close to a much larger black hole at the centre of a galaxy. The huge black hole's pull can stretch the pair's orbit so much that the star is torn apart by its black hole partner. The debris then falls onto the large black hole, producing two bursts of light separated in time.
+- **Why it matters**: The authors suggest the two-flare pattern, with a delay of months for a black hole of about a million solar masses, could be a distinctive signature for identifying these small disruption events. They estimate rates of a few to about 100 per year within 40 gigaparsecs, but the text does not show how well these rates would hold up against observations.
+- **Background needed**: - Massive black hole (MBH): a black hole with a mass of roughly a million or more Suns, typically at galaxy centres.
+- Stellar-mass black hole: a black hole formed from a dead massive star, a few to tens of Suns in mass.
+- Binary: two objects orbiting each other.
+- Tidal disruption event (TDE): a star torn apart by a black hole's gravity, whose debris lights up as a flare when it falls in. A micro-TDE (μTDE) is the same process where the tearing force comes from a companion black hole rather than the large one.
+- Eccentricity: how stretched out an orbit is; extreme values mean a very elongated orbit.
+- Few-body scattering experiment: a direct numerical simulation of a small number of gravitating bodies interacting over a close encounter.
+- Cross section: an effective target area describing how likely an event is for a given encounter.
+- Luminosity distance: the distance inferred from how bright a source appears. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2042,17 +2047,17 @@ Dense stellar environments surrounding massive black holes (MBHs) provide a natu
 ### [From residuals to warps: Probing disk geometry with gas kinematics](https://arxiv.org/abs/2611.31408)
 *C. N. Kimmig, G. P. Rosotti, A. J. Winter et al.* · `astro-ph.EP` · arXiv:2611.31408v1 · relevance 0.17
 
-- **In one sentence**: Using CO gas velocity residuals from a Keplerian disk model, the authors test when radiative-transfer mock observations can recover the three-dimensional warp shape of protoplanetary disks, and where the method fails.
-- **In plain words**: This paper asks how to measure the tilt and twist of young, planet-forming disks of gas and dust around newborn stars. The authors simulated disks with a built-in warp, made synthetic ALMA maps of carbon monoxide gas emission, and checked whether a fitting method could recover the true warp from how the gas moves. They found the warp can be recovered for nearly face-on disks with slight misalignments of a few degrees, but the method breaks down for steeper disks (inclination above 40 degrees), high emission layers, and sharp warp transitions.
-- **Why it matters**: Warps are suggested by shadows seen in many disks, and their shape bears on how disks evolve and why they bend. The work sets out the conditions under which a kinematic method can be trusted, which matters for interpreting future observations, though the text does not show that the method has been applied to real data.
-- **Background needed**: - Protoplanetary disks: rotating disks of gas and dust around young stars, where planets may form.
-- Warp: a bend or tilt in a disk, so its orientation changes with distance from the star.
-- Keplerian disk model: the standard model in which gas orbits the star with speed set by gravity; deviations from it reveal extra motion or tilt.
-- Inclination and position angle: how tilted the disk is toward our line of sight, and the direction of its tilt on the sky.
-- Shadowing: dark regions cast on the outer disk by an inner warped part, used as evidence for warps.
-- CO rotational line emission: radio light from carbon monoxide molecules, observed with ALMA, that traces gas motion.
-- Radiative transfer simulation: a computer calculation of how light travels through and is emitted by a model object.
-- Spectral resolution: how finely velocity is sampled in the data (here, down to 0.8 km/s). · level: research-level
+- **In one sentence**: Using CO line kinematics from synthetic radiative-transfer maps, this paper tests when residuals from a Keplerian disk model can recover the three-dimensional warp shape of protoplanetary disks, and where the method fails.
+- **In plain words**: Young stars are often surrounded by spinning disks of gas and dust that may be bent out of flat, like a warped record. Measuring that bend from light is hard because a warp can look much like other features, such as shadows. The authors simulated disks with known bends, produced fake telescope maps of carbon monoxide gas, and checked how well a simple method could recover the bend from how the gas moves.
+- **Why it matters**: Warps may shape how disks evolve and where planets form, and shadows cast by warped disks have been seen in observations, so a reliable way to measure warps matters. The text reports the method works for nearly face-on disks with small warps but breaks down at high inclinations, high emission heights, and sharp transitions, so its use on real disks is still limited.
+- **Background needed**: - Protoplanetary disks: gas and dust disks around young stars, where planets may form.
+- Keplerian disk: a disk whose gas orbits in the simple pattern set by gravity; deviations from this pattern carry information about the disk's shape.
+- Inclination and position angle: how tilted the disk is to our line of sight and its orientation on the sky.
+- Warp: a change in tilt or orientation with distance from the star, so the disk is not flat.
+- Shadows: dark bands in scattered light caused by parts of a warped disk blocking starlight.
+- CO rotational line emission observed with ALMA: radio light from carbon monoxide molecules, used to trace gas motion via Doppler shifts.
+- Radiative transfer simulation: computing how light travels through and is emitted by a modeled object.
+- Spectral resolution: how finely velocities are resolved in the data. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2063,17 +2068,16 @@ Evidence of shadowing among protoplanetary disks suggests that warped protoplane
 ### [Kepler-404: A near-resonant pair of sub-Neptunes. Reinterpreting a false-positive signal with the novel detection method RIVERS.radon](https://arxiv.org/abs/2611.32298)
 *Yannick Eyholzer, Marylyn Rosenqvist, Adrien Leleu et al.* · `astro-ph.EP` · arXiv:2611.32298v1 · relevance 0.09
 
-- **In one sentence**: The paper shows that transit timing variations can hide low signal-to-noise planets from standard searches, introduces the RIVERS.radon 2D cross-correlation method, and uses it to re-identify a false-positive Kepler signal as a planet in a near-5:4 resonance with a companion, with a photodynamical fit giving radii, masses and orbit-plane constraints.
-- **In plain words**: Planets are often found by watching for small, regular dips in a star's brightness when a planet passes in front of it. Gravitational tugs from neighbouring planets can shift these dips around, so a standard search may miss weak signals. This paper presents a new search method that does not assume the dips are perfectly regular, and uses it to show that a signal previously labelled a false alarm around the star Kepler-404 is in fact a real planet.
-- **Why it matters**: Pairs of planets locked in near-resonant orbits are expected to be common, yet few have been observed, and this work suggests detection bias may be part of the reason. The reported result, a pair of similar small planets with lower-than-typical densities, is a single-system case study, so its wider significance rests on whether the method finds other hidden planets.
-- **Background needed**: - Transit method: a planet is detected when its orbit carries it in front of its star, causing a small periodic dimming in the light curve.
-- Signal-to-noise ratio (S/N): how strong a signal is compared with random background fluctuation; weak signals are easily missed.
-- Transit timing variations (TTVs): shifts in when transits occur, caused by gravitational interactions between planets.
-- Resonance (e.g. 5:4): two planets whose orbital periods form a ratio of small whole numbers, so they tug on each other regularly.
-- Sub-Neptunes: planets with radii between Earth's and Neptune's.
-- False positive: a signal that looks like a planet but is caused by something else, such as an eclipsing binary star.
-- Photodynamical fit: a model fitting the light curve together with the gravitational dynamics of the planets to estimate their masses and radii.
-- Density: mass divided by volume; lower density suggests a larger share of light gases or a different composition. · level: research-level
+- **In one sentence**: The paper shows that transit-timing variations can hide low-signal planets from standard transit searches, and uses a new 2D cross-correlation detector (RIVERS.radon) to recover Kepler-404b from a false-positive flag, finding it in a near 5:4 resonance with Kepler-404c and fitting both planets' radii and masses.
+- **In plain words**: Planets that pass in front of their star cause tiny regular dips in its brightness, and a planet's own gravitational tugs on its neighbour can shift those dips in time, which makes standard searches miss faint signals. The authors built a new search method that does not assume the dips arrive on a strict schedule, and applied it to the star Kepler-404. They found that a signal previously labelled a false positive is a real planet, and that it and a companion planet orbit in a near-resonant pattern with similar size and mass.</plain>
+<parameter name="why">Near-resonant planet pairs are expected to be common by planet-formation theory, yet few are observed, and this work suggests detection bias from timing shifts may partly explain the gap. The link to that broader population question is the paper's own argument; the text alone does not show how general the bias is.
+- **Background needed**: - Transit method: a planet crossing its star dims the starlight slightly; the dips reveal the planet.
+- Transit timing variations (TTVs): when planets gravitationally perturb each other, their transits arrive earlier or later than a fixed schedule.
+- Resonance: two planets whose orbital periods form a simple whole-number ratio (here near 5:4), so they regularly tug on each other.
+- Signal-to-noise ratio: how strong a signal is relative to random noise; low values make detection hard.
+- Photodynamical fit: a model that simulates the gravitational dynamics and the light curve together to estimate planet masses and radii.
+- False positive: a signal flagged as a planet candidate that later turns out to come from something else.
+- Kepler mission: NASA telescope whose light curves are the data source here. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2086,15 +2090,16 @@ According to the current understanding of planet formation and evolution, (near)
 ### [Cosmic ray protons from 40 GeV to 10 EeV due to star formation?](https://arxiv.org/abs/2611.32671)
 *Timur Dzhatdoev, Ilya Kudryashov, Anatoly Semenov* · `astro-ph.HE` · arXiv:2611.32671v1 · relevance 0.18
 
-- **In one sentence**: The paper proposes that cosmic ray protons from about 40 GeV to 10 EeV can be modeled as the sum of three supernova-remnant populations, tested under a supergalactic diffusion scenario (halo radius 1–20 Mpc) and a cosmological scenario (source redshift up to 6).
-- **In plain words**: Cosmic rays are very fast charged particles that rain onto Earth from space. This paper asks whether the observed spectrum of these protons, across an enormous range of energies, can be explained by debris from exploding stars formed during star formation. The authors report that a sum of three components, each tied to a different population of supernova remnants, reasonably describes the observed spectrum, under two possible scenarios for where the particles come from.
-- **Why it matters**: The highest-energy end of the cosmic ray spectrum has unresolved questions about its origin, so linking it to the known population of stellar explosions is of interest. The text does not show how well the fit compares with alternative explanations, so its significance remains uncertain.
-- **Background needed**: - Cosmic rays: high-energy atomic nuclei (here protons) arriving from space; energies are often quoted in electron volts (GeV = billion, TeV = trillion, EeV = quintillion eV).
-- Supernova remnants: expanding gas shells left after stars explode; their shock waves are thought to accelerate cosmic rays up to roughly 10 TeV, and possibly about 1 EeV for hypernovae (more energetic explosions) or slower shocks.
-- Spectrum: how the number of particles varies with energy; fitting it constrains where particles come from.
-- Diffusion and magnetic halo: particles wander through magnetic fields, so the size of the field region (here 1–20 megaparsecs) affects what reaches us.
-- Redshift: a measure of distance and look-back time in the expanding universe; z = 6 corresponds to sources very early in cosmic history.
-- Supergalactic vs cosmological scenario: whether the particles come from nearby structure or from sources spread across the universe. · level: research-level
+- **In one sentence**: The paper proposes that cosmic-ray protons from about 40 GeV to 10 EeV could be described as a sum of three components from three distinct populations of supernova remnants, tested under a supergalactic diffusion scenario (halo size 1-20 Mpc) and a cosmological scenario (source redshift up to 6).
+- **In plain words**: Cosmic rays are very fast charged particles that arrive at Earth from space, and their energy spectrum (how many arrive at each energy) has a shape that still needs explaining. This paper asks whether the particles at energies from about 40 billion electron-volts up to 10 billion billion electron-volts could come from exploding stars, and it tests two broad pictures of where they travel from. The text reports that a sum of three contributions, one for each of three groups of exploding-star remnants, reasonably matches the observed spectrum.
+- **Why it matters**: Knowing where the highest-energy cosmic rays come from is an open question in astrophysics, and linking them to star formation would connect them to the life cycle of galaxies. The text gives only the framing and a summary claim of a reasonable fit; I cannot judge from it how strong or unique that fit is, so its significance remains uncertain.
+- **Background needed**: - Cosmic rays: high-energy atomic nuclei (here protons) that travel through space and hit Earth's atmosphere.
+- Energy units: GeV is a billion electron-volts, EeV is a billion billion electron-volts.
+- Supernova remnant: the expanding debris and shock wave left after a massive star explodes; shocks can accelerate particles.
+- Hypernova: an especially energetic supernova, which the paper suggests can push particle energies to about 1 EeV.
+- Energy spectrum: the count of particles at each energy; its shape (breaks, slopes) is what models try to reproduce.
+- Diffusion in a magnetic field: particles wander randomly through magnetic structures before escaping; the paper's halo size H (1-20 Mpc) sets how far they wander.
+- Redshift: a measure of cosmic distance and age; z = 6 corresponds to sources existing very early in the universe. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2105,17 +2110,18 @@ The formation of massive stars eventually results in supernovae explosions. Typi
 ### [Super-Eddington Neutron Star Accretion Columns: Comparing GRRMHD Simulations with Spectral Models](https://arxiv.org/abs/2611.32865)
 *Fatemeh Kayanikhoo, Marios Kouzis* · `astro-ph.HE` · arXiv:2611.32865v1 · relevance 0.17
 
-- **In one sentence**: Four axisymmetric general relativistic radiation magnetohydrodynamic simulations of super-Eddington accretion onto magnetized neutron stars (surface fields 3×10^10 to 1×10^11 G) measure accretion column width and estimated radiation shock height, and compare these to column radii inferred from spectral modeling of Be/X-ray binary outbursts using the bwcycl model.
-- **In plain words**: Some neutron stars pull in gas faster than the usual brightness limit allows, and the gas funnels onto small spots at the magnetic poles, where it glows in X-rays. This paper uses detailed computer simulations of that funnel flow for four different magnetic field strengths. It then checks whether the funnel sizes they produce match the sizes that X-ray spectra from real outbursts suggest.
-- **Why it matters**: Matching simulated funnel geometry against X-ray spectral fits is a way to test whether the models used to read outburst data are physically sound. The text reports that three of the four simulated column radii fall in the upper part of the range inferred from spectra, but it does not say how well the match holds overall, so the agreement should be read cautiously.
-- **Background needed**: - Neutron star: a very dense collapsed star, about the mass of the Sun packed into a city-sized ball, with a strong magnetic field.
-- Accretion: gas falling onto a compact object from a companion star or disk.
-- Eddington limit: a rough brightness ceiling where outward radiation pressure balances gravity; super-Eddington means accretion exceeds it.
-- Accretion column: the funnel-shaped region where gas follows magnetic field lines onto the star's magnetic poles.
-- Radiation shock: a sharp boundary where infalling gas abruptly slows down because of radiation pressure, near the stellar surface.
-- Be/X-ray binary: a system with a rapidly spinning Be star and a neutron star companion, which can have bright outbursts.
-- General relativistic radiation magnetohydrodynamics: computer simulations of magnetized, radiating gas under Einstein's gravity; axisymmetric means the model assumes rotational symmetry around an axis.
-- Spectral modeling: fitting a theoretical model to the measured spread of X-ray energies to infer physical properties. · level: research-level
+- **In one sentence**: Four axisymmetric general relativistic radiation magnetohydrodynamic simulations of super-Eddington accretion onto magnetized neutron stars (surface fields 3×10^10 to 1×10^11 G) measure accretion column width and estimated radiation shock height, and compare the resulting column radii with spectral fits from Be/X-ray binary outbursts using the bwcycl model.
+- **In plain words**: A neutron star is a very dense, collapsed star, and when it pulls in gas faster than radiation pressure can comfortably balance, the gas lands on its magnetic poles in a narrow column that glows in X-rays. This paper uses computer simulations of that gas flow for four strengths of the star's magnetic field. It reports how wide the column is, how tall the braking region above the surface is, and how these compare with values inferred from X-ray observations of outbursts in Be/X-ray binaries.
+- **Why it matters**: Understanding the shape of these columns matters for interpreting the X-ray light from bright outbursts, since the observed spectra are fit with models that assume a geometry. The paper finds that three of its four column radii fall in the upper part of the range the spectral fits suggest, which offers a rough cross-check between simulation and observation. The text does not show how strongly this agreement constrains the models, so it should be read as a consistency check rather than a settled answer.
+- **Background needed**: - Accretion: matter falling onto a compact object such as a neutron star, releasing energy as it falls.
+- Eddington limit: the rough brightness ceiling where outward radiation pressure balances gravity; "super-Eddington" means the inflow exceeds it.
+- Neutron star: an extremely dense stellar remnant with a very strong magnetic field that can channel infalling gas to its poles.
+- Accretion column: the narrow, funnel-shaped stream of gas hitting the magnetic pole.
+- Be/X-ray binary: a system pairing a rapidly spinning, gas-emitting Be star with a neutron star; outbursts occur when the neutron star pulls in extra gas.
+- General relativistic radiation magnetohydrodynamics (GRRMHD): simulations combining Einstein's gravity, magnetic fields, fluid flow and radiation transport.
+- Axisymmetric: simulated as symmetric around one axis, which simplifies the calculation.
+- Radiation shock: a boundary where fast infalling gas is abruptly slowed by radiation pressure.
+- Spectral modeling: fitting a model to the measured X-ray energy distribution to infer physical parameters. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2128,17 +2134,18 @@ The geometry and structure of neutron star accretion columns affect the X-ray em
 ### [Constraining the Binary Fraction and Mass-Ratio Distribution of FGK Dwarfs with Gaia XP Spectra: Metallicity, $\alpha$-Element, and Age Dependencies](https://arxiv.org/abs/2611.32656)
 *Yinuo Zhang, Zexi Niu, Haibo Yuan et al.* · `astro-ph.SR` · arXiv:2611.32656v1 · relevance 0.06
 
-- **In one sentence**: Using the Stellar Locus Outlier method on synthetic Gaia XP photometry and LAMOST DR9 stellar parameters, this paper estimates the binary fraction and high-mass-ratio power-law slope for about 200,000 FGK dwarfs within 1 kpc and examines how these depend on metallicity, alpha-element abundances, and age.
-- **In plain words**: Many Sun-like stars are actually pairs of stars orbiting each other. This study looks at roughly 200,000 nearby stars of that type and uses their precise colors, measured from a satellite's spectra, to estimate how many are binaries and how their partner masses are distributed. It then checks how these numbers change with the stars' chemical makeup and estimated age.
-- **Why it matters**: Knowing how often Sun-like stars have companions, and what those companions tend to be, feeds into theories of how stars form and how their chemistry and dynamics evolve. The text reports correlations with chemistry and age, but it describes the age trend as likely reflecting underlying chemical correlations, so the causal link is not established here.
-- **Background needed**: - Binary star: two stars orbiting a common center of mass; a "binary fraction" is the share of stars that have a companion.
-- Mass ratio: the companion's mass divided by the primary's; a distribution of mass ratios describes how likely different partner masses are.
-- FGK dwarfs: main-sequence stars somewhat cooler or similar to the Sun (spectral types F, G, K).
-- Gaia XP spectra: low-resolution color-like spectra from the Gaia space telescope, used here as synthetic photometry.
-- Stellar locus: the tight color-versus-brightness band that single stars follow; unresolved binaries sit off this band, which is what the method exploits.
-- Metallicity and alpha-elements: the share of elements heavier than helium, and the subset (such as magnesium, silicon, calcium) produced in certain stellar processes; these trace a star's chemical history.
-- Thin vs. thick disk: two populations of stars in the Milky Way's disk, differing in age and chemistry.
-- LAMOST DR9: a spectroscopic survey data release providing the stellar parameters used. · level: research-level
+- **In one sentence**: Using the Stellar Locus Outlier method on synthetic Gaia XP photometry plus LAMOST DR9 stellar parameters, this paper estimates the binary fraction and high-mass-ratio power-law slope for about 200,000 FGK dwarfs within 1 kpc and examines their dependence on metallicity, alpha-element abundances, and age.
+- **In plain words**: The paper asks how often Sun-like stars have a companion star, and what kinds of companions they tend to have. The authors used colour measurements from the Gaia satellite's low-resolution spectra, for nearly 200,000 nearby stars, and looked for the tell-tale colour offset that a hidden companion adds to a star's light. They then compared the results with each star's chemical makeup and estimated age.
+- **Why it matters**: Knowing how many stars come in pairs, and how their masses are matched, constrains how stars form and evolve. The text links the chemistry trends to possible dynamical or formation processes, but it does not establish a causal mechanism, so that link remains a suggestion.
+- **Background needed**: - Binary fraction: the share of stars that have a companion star.
+- Mass ratio (q): the companion's mass divided by the primary's mass; the distribution describes how common different pairings are.
+- FGK dwarfs: main-sequence stars somewhat cooler or similar to the Sun, which are the most common stars nearby.
+- Gaia XP spectra: low-resolution light spectra from the Gaia space telescope, used here as synthetic colour photometry.
+- LAMOST DR9: a spectroscopic survey data release that supplies stellar parameters such as metallicity and element abundances.
+- Metallicity: how much of a star's mass is made of elements heavier than helium.
+- Alpha elements (Mg, Si, Ca): elements formed mainly in massive-star deaths; their ratios help trace stellar populations.
+- Thin and thick disk: two stellar populations of the Milky Way, with the thick disk generally older and more metal-poor.
+- Stellar locus: the main curve on a colour-colour plot where single stars lie; binaries appear as outliers displaced from it. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2149,17 +2156,18 @@ We present a study of the binary fraction and mass-ratio distribution for near 2
 ### [A Study of Three Intrinsically Luminous Long Period Interacting Eclipsing Binaries in the Galaxy and the Small Magellanic Cloud](https://arxiv.org/abs/2611.33002)
 *T. J. Davidge* · `astro-ph.SR` · arXiv:2611.33002v1 · relevance 0.05
 
-- **In one sentence**: A study of three long-period (hundreds of days) interacting eclipsing binaries, two in the Small Magellanic Cloud and one in the Galaxy (PW Pup), using archival visible and mid-infrared photometry and spectroscopy to constrain masses, mass transfer history, and the light from the hidden secondary.
-- **In plain words**: This paper looks at three pairs of stars that orbit each other in periods of hundreds of days and pass in front of each other, causing regular dimming. The authors reanalyzed old telescope measurements of brightness and starlight spectra for these systems. They estimate the minimum masses of the companion stars and suggest that all three have transferred material between stars in the past.
-- **Why it matters**: Long-period binaries of evolved giant stars are useful tests of how stars change when they share mass, and the Small Magellanic Cloud offers a distant, well-measured sample. The text does not establish wider implications beyond these three systems, and the findings are described as preliminary in places.
-- **Background needed**: - Eclipsing binary: two stars orbiting each other, whose regular dimming when one passes in front of the other reveals their sizes, temperatures and orbits.
-- Orbital period of hundreds of days: the stars take many months to complete one orbit, much longer than most known binaries.
-- Giant stars (K and M type): cool, large, evolved stars that have burned through core hydrogen and swelled up.
-- Mass function: a value from the orbit and radial-velocity (Doppler shift) data that sets a minimum mass for the unseen companion.
-- Mass transfer: one star feeding material to its partner, which changes both stars' masses and evolution.
-- Mid-infrared (MIR) light: longer-wavelength light that can reveal cool dust or disks that are faint in visible light.
-- Main sequence and B spectral type: a hot, bright, young-star stage; the text says the components started as B-type stars.
-- Small Magellanic Cloud (SMC): a small satellite galaxy of the Milky Way. · level: research-level
+- **In one sentence**: A study of three long-period (hundreds of days), interacting eclipsing binary stars with highly evolved giant components, two in the Small Magellanic Cloud and one (PW Pup) in the Galaxy, using archival visible and mid-infrared photometry and spectroscopy to constrain masses, mass ratios and mass transfer history.
+- **In plain words**: This paper looks at three pairs of stars that orbit each other and periodically pass in front of one another, making their combined brightness dip. Two of the pairs are in the Small Magellanic Cloud, a neighbouring galaxy, and one is in our own Galaxy. Using old observations already in archives, the authors estimate how heavy the hidden companion stars must be and suggest that these systems have already passed material between them.
+- **Why it matters**: Systems like these are useful test cases for how stars evolve when they exchange mass, and the text says some of the companions may be hard to detect directly, so the findings point to where future infrared observations could help. The text itself does not claim wider consequences beyond these three systems.
+- **Background needed**: - Eclipsing binary: two stars orbiting each other whose alignment with us makes them dim periodically; the dips reveal their sizes, temperatures and orbits.
+- Orbital period of hundreds of days: the stars circle each other slowly, so they are far apart compared with close binaries.
+- Giant (K and M type): cool, large, evolved stars that have swollen after using up core fuel.
+- Mass transfer: one star feeding material onto its partner, which changes both stars' evolution.
+- Mass function and minimum mass: an estimate, from orbital motion alone, of the least mass a hidden companion can have.
+- Mass ratio: the ratio of the two stars' masses, which light-curve models must assume or fit.
+- Mid-infrared (MIR): longer-wavelength light that is invisible to the eye and can reveal cooler dust or disks.
+- Main sequence and B spectral type: B-type stars are hot, massive stars burning hydrogen; the paper says the stars began as B-type stars.
+- Small Magellanic Cloud: a satellite galaxy of the Milky Way, with stars at a different chemical makeup than ours. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2172,16 +2180,17 @@ The properties of the eclipsing binaries SMC004701.39-732645.8, SMC005609.41-722
 ### [Current-Dependent Meta-GGA and Local Hybrid Functionals for Relativistic NMR Shifts](https://arxiv.org/abs/2611.31432)
 *Yannick J. Franzke, Christof Holzer* · `physics.chem-ph` · arXiv:2611.31432v1 · relevance 0.22
 
-- **In one sentence**: The paper derives and implements a two-component relativistic version of the current-dependent kinetic-energy density for meta-GGA and local hybrid density functionals in NMR shielding calculations, using SAP-X2C to treat relativistic effects.
-- **In plain words**: Chemists use computer simulations to predict NMR spectra, which help identify new molecules, especially those containing heavy atoms where relativistic effects matter. This paper addresses a gap: the more advanced families of density functionals (the approximations used in these simulations) were not well supported in relativistic calculations, and a particular gauge-invariant form of them had not been presented. The authors build that form for relativistic two-component calculations and state that it respects the required symmetries of the spinor wavefunctions.
-- **Why it matters**: Heavy-element compounds are hard to characterize, and NMR predictions are often used alongside experiment, so a more reliable functional form could matter for that work. The text describes a formal derivation and implementation; it does not report benchmark accuracy numbers, so its practical benefit is not shown in this excerpt.
-- **Background needed**: - NMR chemical shift: the frequency at which a nucleus responds in a magnetic field; it reflects the local electronic environment.
-- Density functional theory (DFT): a computational method that approximates a molecule's energy from its electron density.
-- Meta-GGA and local hybrid functionals: more elaborate DFT approximations that also use kinetic-energy density or local exact-exchange terms.
-- Current density: the flow of electrons induced by a magnetic field; spin-orbit coupling can also induce it.
-- Gauge invariance: the requirement that physical results do not depend on the arbitrary choice of reference origin for the magnetic vector potential.
-- Relativistic two-component theory (X2C, SAP-X2C): a way to include relativistic effects of heavy atoms in a compact form, with spinors instead of four-component wavefunctions.
-- Kramers-restricted Kohn–Sham: a reference-state formulation that respects time-reversal symmetry for electrons. · level: research-level
+- **In one sentence**: The paper derives and implements a two-component relativistic version of the current-dependent kinetic-energy density for meta-GGA and local hybrid density functionals in NMR shielding and shift calculations, using a Kramers-restricted Kohn-Sham reference and SAP-X2C relativistic treatment.
+- **In plain words**: Chemists use computer models to predict NMR spectra, the fingerprint signals that show how atoms sit in a molecule. For compounds with heavy atoms, relativistic effects matter, and the standard software support for the more accurate modern calculation methods is limited. This paper presents a way to include a more gauge-consistent form of one such method in relativistic NMR calculations.</plain>
+<parameter name="why">Predicting NMR shifts for heavy-element compounds is useful for checking and interpreting experiments, so a more reliable calculation method could help. The text presents the formulation and its gauge invariance, but it does not report benchmark accuracy numbers in the excerpt, so its practical gain is not established here.</plain>
+<parameter name="background">- NMR chemical shift: the frequency at which a nucleus resonates, sensitive to its local electronic environment.
+- Density functional theory (DFT): a computational method that gets molecular energies and properties from electron density instead of full wavefunctions.
+- Meta-GGA and local hybrid functionals: refined DFT approximations that use extra density information (such as kinetic-energy density) to improve accuracy.
+- Gauge invariance: results do not depend on the arbitrary choice of reference origin for the magnetic vector potential; this is needed for reliable magnetic properties.
+- Relativistic effects and spin-orbit coupling: important for heavy atoms; they make electron currents and spin mix, so the calculation must treat current densities in the ground state.
+- Two-component (X2C) theory: a simplified relativistic framework that approximates the full four-component Dirac treatment.
+- Kramers-restricted Kohn-Sham: a reference-state formalism for systems with time-reversal symmetry in relativistic calculations.
+- **Background needed**:  · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2192,16 +2201,16 @@ NMR chemical shifts are key for the characterization of novel compounds. Especia
 ### [Spin-adapted state preparation for quantum chemistry](https://arxiv.org/abs/2611.30014)
 *Matthew L. Sims-Goh, Fredrik Hasselgren, Hamza Jnane* · `quant-ph` · arXiv:2611.30014v1 · relevance 0.14
 
-- **In one sentence**: The paper shows that spin-adapted DMRG matrix product states, indexed by unitary group approach steps, form an abelian-symmetric MPS that block-sparse protocols can prepare on a quantum computer at a cost set by the number of spin multiplets, followed by one Clebsch-Gordan-determined rotation per site to recover the occupation basis, with resource estimates for iron-sulphur active space models.
-- **In plain words**: Quantum computers could one day estimate the energy of molecules whose electrons are strongly interacting, but they first need a good starting guess of the molecule's ground state, and building that guess is expensive. This paper proposes a way to build the starting guess that takes advantage of the molecule's total electron spin, so the circuit stores one value per spin group rather than one per individual arrangement. The authors give cost estimates for circuits applied to iron-sulphur cluster models, reporting fewer Toffoli gates (a costly building block in fault-tolerant quantum circuits) and fewer helper qubits than the comparison methods.
-- **Why it matters**: Preparing a good initial state is a stated bottleneck for quantum phase estimation on strongly correlated molecules, so reducing its cost bears on whether such calculations become practical on fault-tolerant hardware. The reported gains are resource estimates from the authors' own calculations on specific model systems, not measured hardware runs, so their practical size remains to be tested.
-- **Background needed**: - Ground state: the lowest-energy quantum state of a molecule, which determines its chemical properties.
-- Quantum phase estimation: a quantum algorithm for finding energies, which needs an initial state with high overlap (similarity) to the true ground state.
-- Fault-tolerant cost: counting expensive operations (such as Toffoli gates) and helper qubits (ancillas) needed for error-corrected quantum computers.
-- Matrix product state (MPS) and DMRG: a compact, chain-like way to represent many-electron states, and the classical algorithm used to find them.
-- Spin and symmetry: electrons have total spin; states related by spin symmetry can be grouped into multiplets, so fewer numbers are needed to describe them.
-- Block-sparse protocols: circuit methods that exploit conserved quantities (symmetries) so that only allowed blocks of the state are stored and prepared.
-- Unitary group approach (UGA) and Clebsch-Gordan coefficients: standard tools from quantum angular momentum theory used to label and rotate spin states. · level: research-level
+- **In one sentence**: The paper shows that spin-adapted DMRG matrix product states, indexed by unitary group approach steps, form an abelian-symmetric MPS that block-sparse protocols can load at a cost set by the spin-multiplet count, followed by a per-site Clebsch-Gordan rotation, and gives Toffoli and ancilla resource estimates for singlet ground states of iron-sulphur active space models.
+- **In plain words**: Quantum computers could in principle estimate the energy of molecules that are hard to model on ordinary computers, but they first need a good starting state, and building that state is expensive. This paper proposes a way to prepare a starting state that respects the total spin of the molecule, which lets the circuit store fewer amplitudes. The authors estimate the cost of their circuits for model iron-sulphur clusters and report lower Toffoli-gate counts and fewer ancilla qubits than the comparison methods they name.
+- **Why it matters**: Preparing the initial state is a major fault-tolerant cost for phase estimation on strongly correlated molecules, so cheaper preparation bears directly on whether such calculations become practical. The results are resource estimates from the paper's own circuit designs, not hardware demonstrations, so the size of the practical gain remains to be tested.
+- **Background needed**: - Quantum phase estimation: a quantum algorithm for finding the energy of a molecule, which needs a good approximate starting state.
+- Fault-tolerant cost: the count of expensive error-corrected operations (such as Toffoli gates) and the number of ancilla (helper) qubits a circuit needs.
+- Matrix product state (MPS): a chain-like way of compactly writing a quantum state of many particles, built with the density matrix renormalisation group (DMRG) method.
+- Spin and symmetry: a molecule's total spin is conserved, and exploiting that conservation reduces the number of amplitudes to store; "block-sparse" means storing only the nonzero blocks that respect a symmetry.
+- Unitary group approach: a standard way of labelling electron configurations and spin states in quantum chemistry.
+- Clebsch-Gordan coefficient: a number from angular momentum theory that tells how spin states combine.
+- Active space model: a reduced set of orbitals and electrons chosen to capture the strongly correlated part of a molecule. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2214,16 +2223,16 @@ Quantum phase estimation for strongly-correlated molecules requires an initial s
 ### [Magic-layer scenario for predicting non-van der Waals two-dimensional materials: The case of double-layer honeycomb structures](https://arxiv.org/abs/2611.31748)
 *Shota Ono* · `cond-mat.mtrl-sci` · arXiv:2611.31748v1 · relevance 0.15
 
-- **In one sentence**: Using first-principles calculations, the authors propose a "magic-layer" stability criterion, based on excess energies of thin films at different thicknesses, to predict which non-van der Waals compounds (III-V, II-VI, I-VII and Mn-based) can form stable double-layer honeycomb 2D films.
-- **In plain words**: Some flat, sheet-like materials can be peeled off a bulk crystal, but many compounds cannot be separated that way. This paper borrows the idea of "magic" cluster sizes, which are unusually stable sizes, and asks whether certain thin-film thicknesses are unusually stable for several families of compounds. The authors calculated the energy of films of different thicknesses and found extra stability at specific thicknesses that correspond to a double-layer honeycomb structure.
-- **Why it matters**: The text says the stability measure separates experimentally synthesized systems from unrealized ones, which suggests it could serve as a screening tool for finding new 2D materials before they are attempted in the lab. This is a proposed descriptor tested on a set of cases in the paper; its broader reliability beyond those cases is not shown in the text provided.
-- **Background needed**: - Van der Waals (vdW) bonding: weak attractions between layers that let some crystals be peeled into single sheets (for example graphene).
-- Non-vdW 2D material: a sheet-like material whose layers are held by stronger bonds, so it is hard to exfoliate from its 3D parent crystal.
-- Magic number: a size of a cluster that is unusually stable compared with neighboring sizes.
-- Honeycomb structure: a hexagonal lattice of atoms, like graphene's pattern.
-- III-V, II-VI, I-VII: families of compounds built from elements in those groups of the periodic table (e.g., GaAs, ZnO, NaCl-type salts).
-- First-principles calculation: computing material properties from quantum mechanics without fitted experimental parameters.
-- Excess energy: energy of a structure relative to a reference; lower values mean more stable. · level: research-level
+- **In one sentence**: Using first-principles calculations, the authors propose a "magic-layer" stability criterion, based on excess energies of thin films at different thicknesses, to predict which non-van der Waals compounds (III-V, II-VI, I-VII and Mn-based) can form stable double-layer honeycomb 2D structures.
+- **In plain words**: Some flat, one-atom-or-few-atom-thick sheets can be peeled off a bulk crystal easily because their layers are held together weakly. Many other materials are not like this, and making their thin sheets is hard. This paper borrows an idea from cluster physics, where certain "magic" sizes are unusually stable, and checks which thicknesses of several compound crystals are energetically favoured.
+- **Why it matters**: The text reports that the stability measure separates compounds that have been experimentally synthesized from those that have not, which suggests it could be a screening tool for finding new 2D materials. The text does not show how well this generalises beyond the studied families, so its predictive reach remains to be tested.
+- **Background needed**: - Van der Waals (vdW) bonding: weak attraction between layers, which lets sheets be peeled off (exfoliated), as with graphene.
+- Non-vdW 2D material: a sheet-like material whose layers are held by stronger chemical bonds, so it is hard to separate from its bulk crystal.
+- First-principles calculations: computer simulations of material energies starting from basic quantum mechanics, with no fitted experimental inputs.
+- Excess energy: how much higher in energy a thin film is than the bulk crystal; lower values indicate a more stable film.
+- Magic number: a size of a cluster that is unusually stable compared with neighbouring sizes.
+- Honeycomb structure: a hexagonal lattice pattern of atoms, like graphene's.
+- III-V, II-VI, I-VII: groups of compounds built from elements in those columns of the periodic table (e.g., GaAs, ZnS, NaCl-type salts). · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2234,17 +2243,17 @@ A magic number is a specific size of a van der Waals (vdW) cluster that shows pr
 ### [Compositionally Tunable Synthesis of High-Entropy Transition Metal Dichalcogenides Exhibiting Above-Room-Temperature Magnetism](https://arxiv.org/abs/2611.33115)
 *Chen Zhang, Xiahua Zhong, Dejia Kong et al.* · `cond-mat.mtrl-sci` · arXiv:2611.33115v1 · relevance 0.15
 
-- **In one sentence**: The paper reports a two-step, solution-based route to ultrathin high-entropy transition metal dichalcogenides containing many magnetic metals, with the (VCrFeCoNi)S2-x composition showing magnetism above room temperature.
-- **In plain words**: Computer chips are nearing the limits of how small silicon-based circuits can get, so researchers are looking at ultrathin magnetic materials for future electronics. This paper describes a way to make such flat, sheet-like materials by first building a layered precursor that mixes many metal types evenly at the atomic scale, then converting it into a sulfur-containing compound. The example material, made from five metals and sulfur, is reported to stay magnetic above room temperature.
-- **Why it matters**: Magnetism that survives at room temperature is a practical requirement for many magnetic device ideas, so a tunable way to make such 2D magnets could widen the set of usable materials. The text does not give magnetic strength data or device tests, so its practical impact is still uncertain.
-- **Background needed**: - Two-dimensional (2D) materials: crystals only a few atomic layers thick, with very different properties from bulk material.
-- Transition metals: the metal elements in the middle of the periodic table (e.g., V, Cr, Fe, Co, Ni), often magnetic.
-- Dichalcogenides: compounds of a metal with a chalcogen such as sulfur, selenium or tellurium.
-- High-entropy materials: materials that mix five or more elements in roughly comparable amounts, with the mixing itself stabilizing the structure.
-- Layered double hydroxides: layered mineral-like precursors that can be made in water and used as a template for the target material.
-- Hydrothermal coprecipitation: making solids by mixing dissolved salts in water in a sealed heated vessel, so they precipitate together.
-- Chalcogenization: reacting a precursor with a chalcogen (here, sulfur) to convert it into the target compound.
-- Curie-type magnetism above room temperature: magnetic ordering that persists at roughly 20–25 °C or higher. · level: research-level
+- **In one sentence**: The paper reports a two-step, solution-based route to ultrathin high-entropy transition metal dichalcogenides, using a mixed-metal layered hydroxide precursor that is then chalcogenized, with a representative (VCrFeCoNi)S2-x composition showing magnetism above room temperature.
+- **In plain words**: Researchers want very thin, flat magnetic materials that keep working at ordinary room temperature, since such materials could support future electronics and data-storage technologies. This paper describes a way to make thin layered sheets that mix five or more different metals at the atomic level. The team first builds a mixed-metal layered hydroxide precursor by chemical precipitation in a sealed heated vessel, then converts it into a sulfur-based layered compound, and reports that one example stays magnetic above room temperature.
+- **Why it matters**: Magnetic two-dimensional materials are a active research area for spintronics and low-power information technology, and a method that can tune their composition is potentially useful. The text does not show device performance or how widely the approach extends beyond the representative composition, so its practical impact remains to be tested.
+- **Background needed**: - Two-dimensional (2D) materials: crystals only a few atoms thick, arranged in sheets.
+- Transition metals: elements such as iron, cobalt, nickel, chromium and vanadium, whose electrons often give rise to magnetism.
+- Dichalcogenides: compounds of a metal with a chalcogen (sulfur, selenium or tellurium).
+- High-entropy materials: materials that mix five or more elements in roughly comparable amounts, often in one uniform structure.
+- Layered double hydroxides: layered mineral-like solids that can host mixed metal ions between their sheets; used here as a precursor.
+- Hydrothermal coprecipitation: making a solid by mixing dissolved salts in water in a heated, sealed container so the solid forms.
+- Chalcogenization: reacting a material with a chalcogen to convert it into the sulfide or similar compound.
+- Magnetism above room temperature: magnetic order that persists at roughly 20–25 °C, which matters for practical devices. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2257,15 +2266,16 @@ As silicon-based electronics approach their physical limits, low-dimensional mag
 ### [Long-Range Hydrodynamic Communication in Active Matter](https://arxiv.org/abs/2611.32867)
 *Abhishek Thakur, Bibaswan Ghosh* · `cond-mat.soft` · arXiv:2611.32867v1 · relevance 0.17
 
-- **In one sentence**: A symmetric passive rotor inside a circular domain is set into persistent unidirectional rotation by the hydrodynamic flow from a boundary-confined flock of Marangoni swimmers, with no contact between them, and larger flocks suppress reverse-torque events.
-- **In plain words**: Tiny self-propelled swimmers, driven by surface-tension (Marangoni) forces, are placed around the edge of a circular pool, and a freely turning rotor sits in the middle. The swimmers never touch the rotor, yet their combined fluid flow makes it spin in one direction. Single swimmers sometimes push the rotor backward, but a larger group produces a steady circulating flow that keeps the spinning consistent.
-- **Why it matters**: Most schemes for directed motion in active matter rely on built-in asymmetry such as ratchets or gears; this text reports a route without that bias, transmitted through fluid flow alone. Its relevance to practical contact-free actuation is suggested by the authors but not tested beyond the systems described.
-- **Background needed**: - Active matter: systems of self-propelled units (here, swimmers) that consume energy to move on their own.
-- Marangoni swimmers: objects that move by releasing surface-active material, which changes surface tension and drives flow along the liquid surface.
-- Hydrodynamic coupling: one moving object alters the surrounding fluid, which pushes or turns other objects without direct contact.
-- Rotor and torque: a freely turning body; torque is the twisting push that spins it, and reverse torque means spinning backward.
-- Ratchet: a structure with built-in asymmetry that rectifies random motion into a preferred direction.
-- Particle image velocimetry (PIV): an imaging method that tracks tracer particles in a fluid to map its flow field. · level: intermediate
+- **In one sentence**: A symmetric passive rotor inside a circular domain is driven into steady one-way rotation by the collective hydrodynamic flow of a boundary-confined flock of Marangoni swimmers, with no physical contact, and the authors attribute the stabilization to suppression of reverse-torque events and a minimal flow-superposition model.
+- **In plain words**: Tiny self-propelled swimmers that move along a liquid surface by a chemical-driven surface-tension effect (the Marangoni effect) can set a free-floating, symmetric wheel spinning in one direction without touching it. The authors report that single swimmers give occasional backward kicks, but larger groups create a steady circulating flow that keeps the wheel turning consistently. Velocimetry measurements of the fluid flow show that this push carries over long distances.
+- **Why it matters**: It shows that directed mechanical motion can arise from collective fluid flow alone, without the built-in shapes (ratchets or gears) normally used to rectify random motion, which may matter for remote actuation in active matter. The text is a brief abstract only, so the strength of the evidence, the experimental details, and how general the effect is cannot be judged from it.
+- **Background needed**: - Active matter: systems whose units consume energy to move on their own, such as swimmers or self-propelled particles.
+- Marangoni effect: fluid flow driven by gradients of surface tension, often produced by a chemical released at a liquid surface.
+- Passive rotor: an object that does not propel itself but can be turned by fluid around it.
+- Ratchet: a asymmetric structure that turns random jiggling into net one-way motion; this paper claims to avoid needing one.
+- Hydrodynamic coupling: the way one moving body pushes the surrounding fluid, which then moves other bodies.
+- Particle image velocimetry (PIV): an imaging method that tracks tracer particles to map fluid velocity.
+- Torque: a twisting force; reverse torque means a momentary push in the opposite rotational direction. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2277,12 +2287,12 @@ Directed transport in active matter is typically achieved by introducing geometr
 *Lorenzo Agosta, Alfredo Metere, Mikhail Dzugutov* · `cond-mat.mes-hall` · arXiv:2611.32273v1 · relevance 0.12
 
 - **In one sentence**: A Perspective reviewing molecular-dynamics simulations of microphase separation in single-component simple liquids whose pair potentials combine short-range attraction with long-range repulsion (SALR), and the periodic and quasiperiodic structures these produce.
-- **In plain words**: When a liquid's particles attract at short range but repel at long range, they cannot simply clump into one big droplet; instead they settle into repeating patterns on a scale much larger than the particles themselves. This Perspective reviews recent computer simulations showing that simple, single-component particle models can reproduce the kinds of patterns seen in block copolymers and liquid crystals. The authors also describe new periodic structures that these simulations produce.
-- **Why it matters**: The text suggests the simulations show that chemically complex molecules are not required to form these mesoscale patterns, which is a conceptual point about how such structures arise. The authors also suggest the simulated patterns could serve as templates for topology-governed metamaterials, but the text gives no details of such devices, so that application remains speculative.
-- **Background needed**: - Phase separation: a mixture splitting into distinct regions, like oil and water.
-- Microphase separation: competing forces stop this splitting at large scale, so regions form only at a fixed, small scale, giving repeating patterns.
-- SALR potential: a rule for how particles push and pull, with short-range attraction and long-range repulsion.
-- Block copolymers: long molecules made of chemically different segments joined together, which self-assemble into periodic patterns.
+- **In plain words**: When two opposing forces act on the same particles, a liquid can avoid splitting into two large regions and instead form a repeating pattern of small-scale domains. This review looks at computer simulations of simple particles that do this using only one type of particle, with a short-range attraction and a long-range repulsion. The authors report that these simple models can reproduce patterns seen in block copolymers and liquid crystals, and they suggest such patterns could serve as templates for metamaterials.
+- **Why it matters**: It suggests that the complex molecular structure of real materials is not required to form these ordered patterns, which matters for understanding how such patterns arise. The suggested link to topology-governed metamaterials is a proposal in the text, and its practical value is not demonstrated here.
+- **Background needed**: - Phase separation: a mixture or liquid splitting into distinct regions, such as oil and water.
+- Microphase separation: because competing forces stop large-scale splitting, the separation happens on a small, repeating length scale instead.
+- Short-range attraction plus long-range repulsion (SALR): particles stick to close neighbours but push back against more distant ones.
+- Block copolymers: long molecules made of chemically different segments that cannot separate fully, so they form nanoscale patterns.
 - Mesophases: intermediate ordered states between liquid and crystal, such as those in liquid crystals.
 - Molecular dynamics: computer simulation that tracks how each particle moves over time.
 - Metamaterials: engineered materials whose behaviour comes from their structure rather than their chemistry. · level: research-level
@@ -2298,14 +2308,14 @@ Competing interactions can generate frustration which suppresses macroscopic-sca
 ### [Evolutionary constraints on protein fold diversity](https://arxiv.org/abs/2611.33104)
 *Harutyun Sahakyan, Eugene V. Koonin* · `q-bio.BM` · arXiv:2611.33104v1 · relevance 0.32
 
-- **In one sentence**: A review-style abstract arguing that natural proteins use only a small fraction of the folds that secondary-structure arrangements could theoretically produce, and asking whether biophysics or evolutionary history limits fold diversity.
-- **In plain words**: Proteins are chains that fold into 3D shapes, and in principle their building blocks could be arranged into a huge number of shapes. This paper asks why nature uses only a limited set of these shapes, whether physics or the messy history of evolution is the cause. The text reports that natural proteins take up only a small fraction of possible folds and discusses how evolution restricts which new folds can arise.
-- **Why it matters**: Knowing which fold shapes are reachable matters for designing new proteins and for predicting structures from sequence. The text is only an abstract, so it does not show the specific evidence, and the link to AI-driven design is mentioned only in passing.
-- **Background needed**: - Protein fold: the overall 3D shape a protein chain settles into.
-- Secondary structures: local building blocks such as alpha helices and beta strands, which pack together to form a fold.
-- Topology: how those blocks are connected and arranged in space.
-- Structure prediction and cryo-electron microscopy: computational and imaging methods used to determine protein shapes.
-- Evolutionary contingency: the idea that past historical accidents, not just physical rules, shape which forms exist. · level: intermediate
+- **In one sentence**: A review-style abstract arguing that natural proteins use only a small fraction of the folds that their secondary-structure arrangements could in principle form, and asking whether biophysics or evolutionary history sets that limit.
+- **In plain words**: Proteins are chains that fold into 3D shapes, and in principle many more shapes are possible than nature actually uses. This short piece asks whether that gap comes from physical limits on what can fold or from the accidents of evolutionary history. The text says recent structure-prediction tools, protein comparison methods, and cryo-electron microscopy have helped map this space, and that natural proteins occupy only a small fraction of it.
+- **Why it matters**: Knowing which shapes are reachable matters for designing new proteins and enzymes, and it bears on how evolution explores possibilities. The text is only an abstract, so it does not show the specific evidence or how strongly the constraints are established; the full paper would be needed to judge that.
+- **Background needed**: - Proteins are chains of amino acids that fold into 3D shapes; the shape largely determines function.
+- Secondary structures are local building blocks such as alpha helices and beta strands; their arrangement defines a fold's topology.
+- A "fold" is a broad category of 3D architecture shared by proteins with a similar overall layout.
+- Structure prediction and cryo-electron microscopy (a method that images molecules frozen in thin ice) let researchers see many more protein shapes than before.
+- The open question is whether physics or evolutionary contingency (the role of chance and history) limits which folds exist. · level: intermediate
 - Matched keywords: molecular, protein
 
 <details><summary>Original abstract</summary>
@@ -2317,15 +2327,17 @@ Arrangements of secondary structures in proteins yield a wide variety of possibl
 ### [OMNI-P3x universal neural network potential for large-scale computational photochemistry workflows](https://arxiv.org/abs/2611.32133)
 *Miko{\l}aj Martyka, Joanna Jankowska, Pavlo O. Dral* · `physics.chem-ph` · arXiv:2611.32133v1 · relevance 0.24
 
-- **In one sentence**: The paper introduces OMNI-P3x, a universal machine-learned interatomic potential trained on ground- and singlet excited-state geometries of neutral and charged organic molecules, and applies it to high-throughput photochemical screening of flavylium and xanthene dyes.
-- **In plain words**: Designing light-responsive molecules, such as dyes that glow at particular colours, normally requires slow quantum calculations for each candidate, which makes checking large libraries too costly. The authors built a machine-learning model that imitates those calculations for both the resting and light-excited states of organic molecules. They used it to screen about 234,000 flavylium dyes without new quantum calculations, then fine-tuned it and screened about 163,000 xanthene dyes, flagging candidates that may emit red, near-infrared and short-wavelength infrared light.
-- **Why it matters**: It shows a machine-learned shortcut can handle full photochemistry workflows, not just ground-state chemistry, at very large scale, which could speed up searching for new dyes and emitters. Whether the predicted candidates work in practice is not established by the text, and its accuracy is described only as "approaching" TD-DFT, a standard but approximate excited-state method.
-- **Background needed**: - Interatomic potential: a model that predicts the energy and forces on atoms from their positions, so molecular shapes can be simulated without solving quantum equations each time.
-- Machine-learned potential (MLIP): such a potential learned from reference quantum calculations; "universal" means it is meant to cover many kinds of molecules.
-- Excited state: the state a molecule enters after absorbing light; photochemistry studies how molecules behave in it.
-- TD-DFT (time-dependent density functional theory): a common, moderately expensive quantum method for computing excited-state energies and absorption colours.
+- **In one sentence**: The paper presents OMNI-P3x, a universal machine-learned interatomic potential trained on ground- and singlet excited-state geometries of neutral and charged organic molecules, and applies it to screen flavylium and xanthene dye libraries for photochemical properties.
+- **In plain words**: Designing light-responsive molecules, such as dyes that glow at particular colours, usually requires slow quantum calculations for every candidate, which makes testing huge lists of molecules impractical. The authors built a trained computer model that stands in for those calculations: it estimates molecular shapes and how strongly a molecule absorbs light without running new quantum calculations for each one. They used it to screen about 234,000 flavylium derivatives and, after fine-tuning, about 163,000 xanthene-based dyes, which they report as identifying new candidates for red, near-infrared and short-wavelength infrared emission.
+- **Why it matters**: Faster screening could narrow down which molecules are worth synthesising and testing for applications such as imaging or light-harvesting materials. The text claims accuracy "approaching" TD-DFT (a standard but costly quantum method), but the abstract alone does not give the size of that error, so the practical reliability should be checked in the full paper.
+- **Background needed**: - Photochemistry: how molecules change when they absorb light and enter an excited electronic state.
+- Ground vs. excited state: the molecule's resting arrangement versus its arrangement after light absorption.
+- Quantum-mechanical (QM) calculations: accurate but computationally expensive simulations of electrons and atoms.
+- TD-DFT: time-dependent density functional theory, a widely used, moderately expensive method for excited states; here it serves as the accuracy benchmark.
+- Machine-learned interatomic potential (MLIP): a neural network trained on quantum results that predicts atomic forces and energies far faster.
+- Fine-tuning: adjusting a pretrained model on a narrower dataset to improve performance on a specific class of molecules.
 - Flavylium and xanthene dyes: families of coloured organic molecules used as dyes and fluorescent markers.
-- Partial (atomic) charges: how electron density is shared among atoms; here the charges are learned without reference charge data and used to show charge shifts on excitation. · level: research-level
+- Near-infrared / short-wavelength infrared: light wavelengths just beyond visible red, useful for imaging through tissue. · level: research-level
 - Matched keywords: molecular, interatomic potential
 
 <details><summary>Original abstract</summary>
@@ -2339,17 +2351,17 @@ Computational photochemistry supports the design and understanding of new materi
 ### [Resolving Hepatic Metabolic Flux During Ex Vivo Liver Perfusion Reveals Compartment-Specific Constraints](https://www.biorxiv.org/content/10.64898/2026.11.24.769061v1)
 *Amin, A. M.; Mcleod, M.; Browder, N. et al.* · `biochemistry` · bioRxiv doi:10.64898/2026.11.24.769061 v1 · relevance 0.10
 
-- **In one sentence**: Using staged ex vivo perfusion of mouse livers with 13C-labelled tracers, the authors test whether simplified glucose-fragment flux models hold for intact liver and find that a two-compartment model fits substantially better than a one-compartment model.
-- **In plain words**: Surgeons keep donor livers alive outside the body on a machine before transplant, and they currently judge liver health with broad measures. This study asks whether tracking how labelled sugar and related fuels move through individual liver cells could give a more detailed picture of liver metabolism. The authors found that treating the liver as one uniform unit did not explain most of their measurements, but splitting it into a sugar-making part and a sugar-using part did fit most of the data.
-- **Why it matters**: Donor liver viability assessment is a practical clinical problem, so a more mechanistic readout could matter if it proves usable. The link to transplant decisions is only implied by the text; the paper itself is a mouse study and does not report clinical outcomes.
+- **In one sentence**: Using 13C-labelled tracers in staged ex vivo perfused mouse livers and serial lobectomies, the authors test whether a simple glucose-fragment flux model holds and find that a two-compartment model (glycolytic plus gluconeogenic) fits intracellular isotopomer data better than a one-compartment model, with partial agreement between the two flux estimates.
+- **In plain words**: Surgeons keep donor livers alive outside the body on a perfusion machine and currently judge them with broad measures. This study asks whether tracking how labelled sugars and fuels move inside liver cells can give a more detailed picture of how the liver is working. In mouse livers, a simple one-region model failed to fit most data, especially for TCA cycle intermediates such as malate, while a model split into two cell regions fit 41 of 45 datasets.
+- **Why it matters**: Better intracellular measures could eventually help judge whether a donor liver is healthy enough to transplant, though the text is limited to mouse work and does not show any clinical use. The finding that liver compartmentation limits whole-liver flux estimates matters for how such tracer studies are interpreted, and the authors say simplified models still support quantitative assessment.
 - **Background needed**: - Normothermic machine perfusion: keeping an organ warm and circulating fluid through it outside the body.
 - Metabolic flux: the rate at which molecules are converted through biochemical pathways.
-- 13C tracers: fuels (lactate, pyruvate, glucose) made with heavy carbon atoms so their path through metabolism can be tracked by measuring labelled molecules.
-- Isotopomers: versions of a molecule that differ in which carbon atoms carry the heavy label.
+- 13C tracers: fuels (lactate, pyruvate, glucose) with heavy carbon atoms, so their path through cells can be followed.
+- Isotopomers: versions of a molecule that differ in where or how many heavy atoms they carry.
 - TCA cycle: the central energy-producing cycle in mitochondria; malate is one of its intermediates.
-- Gluconeogenesis: making new glucose from non-sugar sources.
-- Compartmentation: separating a tissue's metabolism into distinct functional zones or cell groups, modelled as separate units.
-- Lobectomy: surgical removal of a lobe of the liver, used here in a serial design. · level: research-level
+- Gluconeogenesis: the liver making new glucose from non-sugar precursors.
+- Compartmentation: dividing a tissue into functional regions with different metabolic behaviour.
+- Lobectomy: surgical removal of a lobe of the liver. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2360,17 +2372,17 @@ Normothermic machine perfusion (NMP) is used to preserve and assess donor livers
 ### [Albumin alleviates pressure overload-induced heart failure by improving mitochondrial homeostasis via PKA-LKB1-AMPK axis](https://www.biorxiv.org/content/10.64898/2026.11.21.768247v1)
 *AN, Q.; Ma, B.; Fu, Y. et al.* · `biochemistry` · bioRxiv doi:10.64898/2026.11.21.768247 v1 · relevance 0.06
 
-- **In one sentence**: In a mouse model of pressure-overload heart failure, recombinant serum albumin improved cardiac function and mitochondrial energy metabolism, reportedly via a PKA-LKB1-AMPK signaling axis.
-- **In plain words**: Heart failure is a condition where the heart gradually loses its ability to pump blood well, and it carries a high rate of death and cost. This study asked whether albumin, the most abundant protein in blood, plays a protective role, since people with heart failure often have low albumin. In mice whose aortas were narrowed to overload the heart, giving them extra mouse albumin improved heart pumping, reduced thickening and scarring, and eased inflammation.
-- **Why it matters**: Low albumin is already known to track with worse heart failure outcomes, but the cause-and-effect link has been unclear, so this work tries to test it directly. It may point toward albumin, or the pathway it reportedly activates, as a treatment target, though the evidence here is from mice and the text alone does not show whether this would work in people.
-- **Background needed**: - Heart failure: the heart cannot pump enough blood to meet the body's needs; pressure overload (for example from high blood pressure or a narrowed aortic valve) is one cause.
-- Transverse aortic constriction (TAC): a surgical method that narrows the main artery leaving the heart in mice to mimic pressure overload.
-- Serum albumin: the most common protein in blood, which carries molecules and helps maintain fluid balance; here it was given as a recombinant (lab-made) mouse version.
-- Knockout (AKO) mice: animals genetically engineered to lack the albumin gene, used to test whether albumin is needed.
-- Mitochondria: the cell's energy-producing structures; "mitochondrial homeostasis" means keeping them healthy and functioning.
-- Fatty acid oxidation and oxidative phosphorylation: ways cells burn fats and produce energy (ATP).
-- PKA, LKB1, AMPK: cellular signaling proteins that relay energy-status and hormone signals; AMPK acts as a cell's energy sensor.
-- Hypertrophy: enlargement of heart muscle cells; phenylephrine (PE) is a drug used in cell experiments to trigger this. · level: research-level
+- **In one sentence**: In a mouse model of pressure-overload heart failure, recombinant mouse serum albumin improved cardiac function and mitochondrial energy metabolism, with the authors proposing a PKA-LKB1-AMPK signaling axis as the mechanism.
+- **In plain words**: Heart failure is a condition where the heart cannot pump blood well, and patients with it often have low levels of albumin, the most common protein in blood. This study used mice whose hearts were put under extra pressure by constricting the aorta, and found that giving them recombinant (lab-made) mouse albumin improved heart function, reduced thickening and scarring of the heart muscle, and eased inflammation. Mice lacking albumin did worse, and the albumin treatment helped them too.
+- **Why it matters**: Low albumin is already linked to worse outcomes in heart failure, so this work tests whether albumin is a cause rather than just a marker, and suggests a possible treatment direction. The evidence comes from mice and cultured heart cells only, so it does not show that albumin would work in patients; the abstract also gives no detail on dosing or clinical testing.
+- **Background needed**: - Heart failure: the heart pumps too weakly to meet the body's needs; it is common, deadly and costly.
+- Serum albumin: the main protein in blood plasma, which carries molecules around the body and helps maintain fluid balance; low levels are a known warning sign in heart disease.
+- Transverse aortic constriction (TAC): a surgical method that narrows the main artery from the heart to create pressure overload, a standard way to model heart failure in mice.
+- Cardiac hypertrophy and fibrosis: enlargement of heart muscle cells and build-up of scar-like tissue, both signs of heart damage.
+- Mitochondria: the cell's energy-producing structures; "mitochondrial homeostasis" means keeping them healthy and balanced.
+- Fatty acid oxidation and oxidative phosphorylation: the processes by which cells burn fats and sugars to make energy.
+- AMPK and LKB1, PKA: cellular signaling proteins that sense energy status and coordinate responses; the paper proposes they form a chain activated by albumin.
+- Knockout mice (AKO): mice genetically engineered to lack the albumin gene, used to test whether the protein is needed. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2387,17 +2399,16 @@ Nothing notable this time.
 ### [Tuning evolutionary information in MSAs shapes protein generation and folding](https://www.biorxiv.org/content/10.64898/2026.11.23.768656v1)
 *Richardson, G.; Colliandre, L.* · `bioinformatics` · bioRxiv doi:10.64898/2026.11.23.768656 v1 · relevance 0.15
 
-- **In one sentence**: The paper tests whether changing which homologous sequences are included in a protein multiple sequence alignment (MSA), and thereby its per-site information content, steers generative protein design and structure prediction outcomes, using matched random-row controls across 45 proteins and a separate structure-prediction benchmark.
-- **In plain words**: Protein models often learn from a collection of related sequences (an alignment) that is treated as fixed input. This study deliberately changed which rows went into those collections and measured how the designed sequences and predicted structures changed. The authors report that alignments with certain levels of evolutionary information tended to produce more novel generated sequences and lower structural confidence, and that a moderate share of low-information positions was linked to better predictions in a subset of cases.
-- **Why it matters**: If the composition of the input alignment measurably shapes what protein generators and structure predictors output, alignment choice becomes a design variable rather than a background detail. The text does not establish how general these effects are beyond the cohorts studied, so the practical reach remains unclear.
-- **Background needed**: - Multiple sequence alignment (MSA): a table lining up many evolutionarily related protein sequences so that matching positions appear in the same column.
-- Rows: individual sequences in the alignment; "row selection" means choosing which homologues to keep.
-- Information (bits per site): a measure of how strongly a column's amino acids are constrained; low-information columns look close to random.
-- Lower-tail information: the least-constrained part of the distribution of column information.
-- Structure-prediction confidence: the model's self-reported certainty about a predicted 3D fold.
-- Decoder uncertainty: how unsure a generative model is when choosing each next residue.
-- Matched-depth random-row control: a comparison alignment with the same number of sequences but chosen at random, to separate the effect of information from the effect of size.
-- Confidence-gated subset: the subset of cases kept based on a confidence threshold before evaluation. · level: research-level
+- **In one sentence**: The paper tests whether changing which homologous sequences are included in a protein multiple sequence alignment (MSA), and thereby its per-site information content, steers generative protein design and structure prediction outcomes.
+- **In plain words**: Researchers who use computer models to design or predict protein shapes feed them a collection of related protein sequences from many species. This study asks whether deliberately choosing which sequences go into that collection, rather than treating the collection as fixed, changes what the models generate and how confidently they predict structures. The authors report that the coherence of the chosen sequences tracked both structure-prediction confidence and how novel the generated sequences were, with the strongest effects near a particular information level.
+- **Why it matters**: It suggests that the input alignment, often treated as a fixed preprocessing step, is a lever that can change model behaviour, which matters for anyone relying on these tools for design. The text does not show how broadly the effects generalise beyond the 45-protein cohort and the benchmark named, so the scale of the practical impact is unclear.
+- **Background needed**: - Multiple sequence alignment (MSA): a table lining up many related protein sequences so that matching positions sit in the same column.
+- Homologues: sequences related by shared evolutionary ancestry.
+- Information content (bits per site): a measure of how strongly a column is conserved; low values mean the position varies a lot across sequences.
+- Structure prediction confidence: the model's own score of how sure it is about a predicted 3D shape.
+- Generative protein models: systems that propose new amino acid sequences; "decoder uncertainty" refers to how unsure the generator is when choosing residues.
+- Matched-depth control: a comparison set with the same number of sequences but chosen at random, to separate the effect of selection from the effect of size.
+- The text is an abstract-level summary; methods and effect sizes are not given, so the findings should be read as preliminary. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2408,17 +2419,17 @@ Protein multiple sequence alignments are widely regarded as fixed artifacts of h
 ### [Microbiome complexity shapes host transcriptional networks across the ileum-liver axis](https://www.biorxiv.org/content/10.64898/2026.11.16.767119v1)
 *Halkhoree, A. C.; Grannell, A.; Pearson, C. et al.* · `systems biology` · bioRxiv doi:10.64898/2026.11.16.767119 v1 · relevance 0.09
 
-- **In one sentence**: Transcriptomic survey of mouse terminal ileum across germ-free, defined 12-strain microbiota (MM12), and specific-pathogen-free conditions, examining how microbiome complexity shapes host gene co-expression networks along the ileum-liver axis.
-- **In plain words**: This study asks how the community of microbes living in the gut changes the way genes switch on and off in the last part of the small intestine, called the ileum, and possibly in the liver. The researchers compared mice with no microbes at all, mice carrying a simple set of 12 known bacterial strains, and mice with a full, diverse normal microbiome, with 15 animals in each group. The provided text describes the design and aims only; it does not report the results.
-- **Why it matters**: Gut microbes are known to affect digestion, immunity and liver function, so mapping how their diversity tunes host gene activity could help explain gut-liver links. The text does not show findings, so the size or direction of any effect is unknown from this excerpt.
+- **In one sentence**: Transcriptomic survey of mouse terminal ileum across germ-free, defined 12-strain microbiota (MM12), and specific-pathogen-free conditions, examining how microbiome complexity shapes co-expression networks linked to the ileum-liver axis.
+- **In plain words**: This paper asks how much the community of microbes living in the gut changes the genes that are switched on in the lower small intestine (the terminal ileum) of mice, and whether that reaches the liver. The researchers compared mice with no microbes (germ-free), mice with a simple set of 12 known bacterial strains, and mice with a normal, diverse microbiome, with 15 animals in each group. The text provided ends at the study design, so the actual findings are not described here.
+- **Why it matters**: Gut microbes are known to influence the immune system, bile acid handling and liver function, so tracing how their complexity tunes gene activity in the gut could help explain gut-liver links. The available text does not report results, so its significance beyond the stated aim cannot yet be judged.
 - **Background needed**: - Microbiome: the community of bacteria and other microbes living in the gut.
-- Germ-free (GF) mice: raised without any microbes, used as a baseline.
-- MM12 (Oligo-Mouse-Microbiota-12): a defined community of 12 bacterial strains, a simpler stand-in for a microbiome.
-- SPF (specific pathogen free): standard lab mice with a normal, diverse microbiome but no listed pathogens.
-- Transcriptome: the full set of gene activity readouts (RNA) in a tissue.
+- Germ-free mouse: raised with no microbes at all, used as a baseline.
+- Oligo-Mouse-Microbiota-12 (MM12): a defined, simplified community of 12 bacterial strains.
+- Specific pathogen free (SPF): mice with a normal, diverse microbiome but free of known pathogens.
+- Terminal ileum: the last section of the small intestine, where nutrients and bile acids are absorbed.
+- Transcriptome: the full set of gene activity readings in a tissue sample.
 - Co-expression network: a map of genes whose activity rises and falls together, suggesting shared regulation.
-- Ileum and liver: the small intestine's final segment (nutrient absorption, immune tissue) and the liver, linked through blood and bile.
-- Bile acids: digestive molecules modified by gut bacteria and involved in gut-liver signaling. · level: research-level
+- Gut-liver axis: the two-way communication between the intestine and the liver, partly via bile acids and immune cells. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2431,16 +2442,17 @@ The microbiome plays an increasingly recognised role in development, metabolism 
 ### [Benchmarking machine learning across development reveals stage-specific neuroanatomical sex signatures.](https://www.biorxiv.org/content/10.64898/2026.11.24.768941v1)
 *Poon, E.; Honari, H.; Ansarifar, J. et al.* · `neuroscience` · bioRxiv doi:10.64898/2026.11.24.768941 v1 · relevance 0.10
 
-- **In one sentence**: A benchmark of linear and nonlinear machine learning models for classifying sex from structural brain MRI in children and adolescents (ages 8–21), testing how age affects accuracy, feature stability, and SHAP/LIME-based attributions of which regions drive predictions.
-- **In plain words**: Researchers trained computer models to guess a person's sex from brain scans of children and young adults aged 8 to 21. They compared several model types and checked how well the models worked at different ages and which brain regions they relied on. The simpler and more complex models performed about the same, but the brain features the models used shifted with developmental stage.
-- **Why it matters**: The paper argues that high accuracy alone does not show a model is biologically meaningful, and that results can change across development. This matters for anyone using AI to interpret brain imaging, though the text does not establish what the specific regional findings mean biologically.
-- **Background needed**: - Machine learning: software that learns patterns from labeled examples, here brain scans labeled by sex.
-- Structural neuroimaging (MRI): scans of brain size, shape and tissue, not activity.
-- Linear vs nonlinear models: simple weighted-sum rules versus more flexible models that can capture complex interactions.
-- Cross-age generalization: training a model on one age group and testing it on another, to see whether patterns carry over.
-- SHAP and LIME: explanation tools that estimate how much each input feature pushed a prediction up or down.
-- Feature stability: whether the same brain regions are consistently identified as important across runs or groups.
-- Sex classification is a research tool here; it is not a measure of a person's sex identity. · level: research-level
+- **In one sentence**: A benchmark of linear and nonlinear machine-learning classifiers for sex prediction from structural brain MRI in children and adolescents (ages 8–21), examining how age affects accuracy, feature stability, and SHAP/LIME-based attributions of sex-discriminative regions.
+- **In plain words**: Researchers trained computer models to guess a person's sex from brain scans taken across childhood and adolescence. They compared several model types and checked how well the models worked at different ages and whether the brain regions the models relied on stayed consistent. The text reports that simple and complex models performed about the same, but that the patterns the models used changed with developmental stage.
+- **Why it matters**: Sex differences in brain structure are a common but contested topic, and models that look accurate can still rely on unreliable features. The paper's emphasis on checking whether explanations are stable across development is a useful caution for anyone interpreting brain-imaging AI; the text does not establish what the regions mean biologically.
+- **Background needed**: - Machine learning (ML): computer methods that learn patterns from example data to make predictions.
+- Classification: predicting a category, here sex, from measurements.
+- Structural neuroimaging: MRI scans that measure brain size and shape (e.g., cortical thickness, subcortical volumes), not activity.
+- Linear vs. nonlinear models: simple weighted-sum models versus more flexible models that capture complex interactions.
+- Cross-age generalization: testing whether a model trained on one age group works on another.
+- SHAP and LIME: explainability tools that estimate how much each input feature pushed a prediction one way or another.
+- Feature stability: whether the same features are chosen or weighted similarly across training runs or age groups.
+- Cortical/subcortical: outer brain layer versus deeper brain structures. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2451,16 +2463,16 @@ Machine learning (ML) offers powerful approaches for identifying multivariate pa
 ### [Jump: Making Large-Scale Connectomics Accessible](https://www.biorxiv.org/content/10.64898/2026.11.12.765999v1)
 *Morris, G. P.; Mohamed, H. F.; Selim, R. S. et al.* · `neuroscience` · bioRxiv doi:10.64898/2026.11.12.765999 v1 · relevance 0.09
 
-- **In one sentence**: The paper presents Jump, a set of web-based tools (with uJump for the MICrONS mouse visual cortex EM dataset as the worked example) for exploring, reviewing, and quantifying cell classifications in large volumetric electron microscopy connectomics datasets, with a pericyte and endothelial cell case study on cortical vasculature.
-- **In plain words**: Scientists have mapped the wiring of brain tissue using very detailed microscope images, producing huge databases of cells, but computer-generated labels for those cells are hard to check and hard to analyse. This paper describes Jump, a set of user-friendly websites that let researchers browse these datasets, have experts review and correct cell labels, and measure things like cell counts, shapes, and spacing. The authors show how this works on one mouse brain dataset and use blood-vessel cells as a test case.
-- **Why it matters**: Large brain-mapping datasets are only useful if their automated labels can be trusted, and this work aims to make that checking and sharing easier for more people. The text does not report independent measures of how much faster or more accurate the approach is, so its practical impact is still to be seen.
-- **Background needed**: - Electron microscopy (EM): imaging at very high resolution, used here to photograph thin slices of brain tissue and stack them into 3D.
-- Connectomics: mapping the connections between nerve cells in a tissue.
-- Segmentation: automatically outlining each cell or structure in the images.
-- Cell classification: using software to label what type each cell is (for example, a pericyte or endothelial cell).
-- Pericytes and endothelial cells: support and lining cells of small blood vessels.
-- MICrONS: a large public dataset of mouse visual cortex mapped with EM.
-- Web-based platform: a tool run in a browser, so no special local software is needed. · level: intermediate
+- **In one sentence**: The paper presents Jump, a set of web-based tools (demonstrated through uJump on the MICrONS mouse visual cortex EM dataset) for exploring, community-reviewing, and quantitatively analysing large volume electron microscopy connectomics data, with a case study reclassifying pericytes and endothelial cells in cortical vasculature.
+- **In plain words**: Scientists who map the brain with electron microscope images now have huge libraries of cell shapes and connections, but computers label many of the cells automatically and those labels are hard to check. This paper describes Jump, a set of web tools that let people search these libraries, inspect individual cells, measure their shapes and locations, and have experts review and correct labels so the corrections can be shared. The authors show the approach on blood-vessel cells as an example.
+- **Why it matters**: As connectomic datasets grow to hundreds of thousands of cells, checking automated labels becomes a bottleneck, so tools that lower that barrier could matter for many labs. The text does not report measured gains in accuracy or speed, so the practical impact is still to be shown by use over time.
+- **Background needed**: - Connectomics: mapping the wiring of neurons and other cells, usually from very thin slices imaged with electron microscopy (EM).
+- Volumetric EM: 3D electron microscope imaging of tissue, producing datasets of hundreds of thousands of cells.
+- Automated segmentation and classification: software that outlines cells and assigns them types, which then needs human checking.
+- MICrONS: a large public mouse visual cortex dataset used here as the example.
+- Pericytes and endothelial cells: cell types that line and support blood vessels in the brain.
+- Web platform: a tool used through a browser, without needing to install specialised software.
+- The paper says the platforms were generated using Claude, an AI model, which is relevant to how the software was built. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2473,18 +2485,16 @@ Large-scale connectomic resources generated from volumetric electron microscopy 
 ### [Functional interrogation of osteoarthritis-associated regulatory variants and effector genes.](https://www.biorxiv.org/content/10.64898/2026.11.23.768666v1)
 *Piedade, A. P.; Stuppy, S. R.; Shine, J. et al.* · `genomics` · bioRxiv doi:10.64898/2026.11.23.768666 v1 · relevance 0.11
 
-- **In one sentence**: Functional genomics in primary human chondrocytes (MPRA, CRISPR activation/interference, chromatin and conformation data) that nominates rs1895062 at the 9q33 locus as a likely causal variant regulating PAPPA expression in osteoarthritis risk.
-- **In plain words**: Genetic studies have linked hundreds of spots in the genome to osteoarthritis, a common joint disease, but for most of them it is unclear which DNA change matters and which nearby gene it affects. This paper tested candidate DNA regions in cartilage-forming cells, using lab assays that measure how strongly each version of a sequence switches genes on. For one variant, rs1895062, the researchers found that the version linked to higher risk drives more activity, and that switching on its region raises the expression of the PAPPA gene.
-- **Why it matters**: It moves beyond association to suggest a specific variant and gene that could be studied as a mechanism in joint disease. The text presents this as convergent evidence rather than proof, and the link to actual osteoarthritis in patients is not directly tested here.
-- **Background needed**: - Osteoarthritis: wear-and-tear joint disease of cartilage.
-- GWAS (genome-wide association study): scans that find genetic variants statistically linked to a disease; they rarely identify the causal variant or gene.
-- Variant / allele: a single-letter DNA difference at one position; the "G allele" is one version of it.
-- Regulatory element: a stretch of DNA that controls how much a gene is turned on, often far from the gene itself.
-- Chondrocyte: cartilage cell.
-- MPRA (massively parallel reporter assay): tests thousands of DNA sequences at once for how strongly they drive gene activity.
-- CRISPR activation/interference: tools that switch a gene up or down at a chosen DNA location.
-- Chromatin accessibility, H3K27ac, chromatin looping: lab signals showing DNA that is open and active, and which distant DNA segments physically contact a gene's promoter.
-- PAPPA: a protein-cleaving enzyme involved in growth-factor signalling; SPRY4 is a signalling regulator also studied as a target. · level: research-level
+- **In one sentence**: Functional genomics in primary human chondrocytes (MPRA, CRISPR activation/interference, chromatin and conformation data) that links osteoarthritis GWAS loci to regulatory variants and target genes, centred on rs1895062 and PAPPA at 9q33.
+- **In plain words**: Genetic studies have linked hundreds of spots in the human genome to osteoarthritis, a common joint disease, but in most cases it is unclear which DNA letter matters or which gene it affects. The authors tested candidate regions in cartilage cells grown in the lab, using methods that measure how strongly each DNA version switches genes on and off. They report that one variant, rs1895062, appears to raise activity of a nearby gene called PAPPA, with the risk version showing higher activity.
+- **Why it matters**: It moves beyond association by combining several lines of evidence to suggest a likely causal variant and gene for one osteoarthritis risk locus, which could help prioritise follow-up work. The text does not show whether PAPPA is a viable drug target or how it affects joint health in people, so those links remain open.
+- **Background needed**: - GWAS (genome-wide association study): scans of many people's genomes to find DNA regions statistically linked to a disease; such regions rarely point to the exact causal change.
+- Regulatory variant: a DNA change that alters how much a gene is switched on, rather than changing the protein itself.
+- Chondrocyte: the cell type that makes and maintains cartilage.
+- MPRA (massively parallel reporter assay): a test that puts many DNA sequences into cells at once to measure which ones drive gene activity.
+- CRISPR activation/interference: tools that turn a target gene's regulatory region up or down, to see the effect on gene expression.
+- Chromatin accessibility, H3K27ac and chromatin conformation: markers of open, active DNA regions and of physical loops that bring distant DNA into contact with gene promoters.
+- PAPPA: a protease involved in growth-factor signalling and extracellular matrix remodelling. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2495,18 +2505,17 @@ Background: Genome-wide association studies (GWAS) have identified hundreds of l
 ### [isoGS: A genomic method to navigate the breeder's dilemma of diversity versus eliteness](https://www.biorxiv.org/content/10.64898/2026.11.23.768689v1)
 *Monyak, T.; Fall, S. T.; Opare-Obuobi, K. et al.* · `genetics` · bioRxiv doi:10.64898/2026.11.23.768689 v1 · relevance 0.09
 
-- **In one sentence**: A simulation study proposes an isoeliteness score for founder lines and an isoeliteness-guided genomic selection (isoGS) method to manage the trade-off between adding genetic diversity and preserving favorable epistatic haplotypes in recurrent crop breeding.
-- **In plain words**: Plant breeders often share seed lines across public programs to bring in new genetic variety, but mixing lines can break up gene combinations that already work well together, making the resulting populations harder to improve with computer-predicted selection. This paper uses breeding simulations of a self- and cross-pollinating annual crop to measure how genetically compatible founder lines are and to test a modified selection method. The authors report that low-compatibility founders gained less under standard genomic selection in early cycles, and that their adjusted method gave more gain after 4 and 20 cycles.
-- **Why it matters**: Crop breeding networks need to balance new diversity against keeping elite traits intact, and this work offers a way to score that trade-off trait by trait before lines are combined. Because the results come from simulations rather than field trials, how well they carry over to real breeding programs is not established by the text.
-- **Background needed**: - Genomic selection (GS): predicting which plants will perform well from their DNA markers, then using those predictions to choose parents.
-- Founder lines: the starting parent lines that a breeding program crosses to create new populations.
-- Elite gene pool: the set of high-performing lines a breeder keeps improving.
-- Epistasis: when genes interact, so a combination of gene variants works well together but not separately.
-- Haplotype: a block of linked gene variants inherited together from one parent.
-- Transgressive segregation: offspring that show traits beyond either parent, which can be good or undesired.
-- Hamming distance: a count of positions where two sequences differ; here weighted by how strongly each marker affects the trait.
-- Quantitative trait loci (QTL): chromosome regions linked to measurable traits such as yield.
-- Genetic gain: the improvement in average trait value over successive breeding cycles. · level: research-level
+- **In one sentence**: A simulation study proposing an isoeliteness score (an effect-size-weighted Hamming distance over QTL markers) between founder lines, and an isoeliteness-guided genomic selection (isoGS) method, to manage the diversity-versus-eliteness trade-off in admixed crop germplasm.
+- **In plain words**: Public crop breeding programs swap seed lines with one another to add genetic variety, but mixing lines can break up gene combinations that already make a crop good. This paper uses computer simulations of a self-pollinating annual crop to test when such mixing hurts the gains that genomic selection (choosing plants by their DNA markers) can deliver. The authors score how genetically different founder lines are in the traits that matter most, and find that less compatible pairs gain less early on; a modified selection method, isoGS, recovers some of that loss.
+- **Why it matters**: Breeders must balance adding new genetic diversity against keeping the traits that make elite varieties valuable, and this work offers a way to measure and manage that trade-off trait by trait. Because the results come only from simulations, how far they carry over to real breeding programs is not established by this text.
+- **Background needed**: - Crop breeding: developing new plant varieties by crossing and selecting lines with desired traits.
+- Elite germplasm: the best-performing breeding lines and seeds already in use.
+- Genomic selection (GS): predicting a plant's value from its DNA markers so that breeders can pick plants without growing every one to maturity.
+- Genetic gain: the improvement in a trait over successive breeding cycles.
+- QTL (quantitative trait loci): stretches of DNA linked to a trait that is controlled by many genes.
+- Epistasis and haplotypes: genes interacting with one another, and blocks of DNA inherited together; breaking up favorable combinations can reduce performance.
+- Transgressive segregation: offspring that show traits more extreme than either parent, which can be useful or undesirable.
+- Hamming distance: a count of positions where two DNA sequences differ, here weighted by how strongly each position affects the trait. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2519,18 +2528,18 @@ Global networks of public crop breeding programs exchange germplasm to share tra
 ### [Allele-specific open chromatin analysis revealed allelic bias of alcohol-induced gene expression in human microglia](https://www.biorxiv.org/content/10.64898/2026.11.23.768544v1)
 *Li, X.; Green, N.; Messenger, J. S. et al.* · `cell biology` · bioRxiv doi:10.64898/2026.11.23.768544 v1 · relevance 0.10
 
-- **In one sentence**: Integrates microglia-specific allele-specific open chromatin mapping with GWAS, eQTL, expression and ATAC-seq data to prioritize a non-coding AUD risk variant (rs7307261) and tests its effect on ethanol-induced CD163 expression and phagocytosis in iPSC-derived microglial-like cells.
-- **In plain words**: Genetic studies have linked alcohol use disorder to many DNA variants, but most sit in stretches of DNA that do not code for proteins, so it is unclear which ones actually matter. This paper combines several existing datasets from human brain immune cells (microglia) and lab-grown look-alike cells to narrow the list, then tests one candidate variant, rs7307261, in the lab. The authors report that its minor allele is linked to higher CD163 expression after ethanol exposure, and that editing the variant changes both that response and how the cells engulf material.
-- **Why it matters**: It offers one concrete example of tracing a common genetic association for alcohol use disorder to a specific regulatory variant, target gene and cell behavior, which is the step that GWAS alone rarely provides. The work is still early: it rests on one candidate variant and cell-culture assays, so its relevance to alcohol use disorder in people is not yet established.
-- **Background needed**: - GWAS (genome-wide association study): a scan of many people's DNA to find variants that occur more often in people with a trait or disease.
-- Non-coding DNA: regions that do not make proteins directly but help control when and how much genes are switched on.
-- Allele: one of the alternative versions of a DNA letter at a given position; a variant such as rs7307261 has two alleles (A and G here).
-- Open chromatin / ATAC-seq: DNA regions packed loosely enough for regulatory proteins to bind; ATAC-seq is a test that maps them.
-- Allele-specific open chromatin (ASoC): checking which allele of a variant sits in an open region, to see if the variant affects regulation.
-- eQTL: a variant associated with the expression level of a nearby gene.
-- Microglia: immune cells of the brain; iPSC-derived microglial-like cells are similar cells grown from reprogrammed skin or blood cells.
-- Transcription factors (e.g., ETS family, FLI1, ELF2): proteins that bind DNA motifs to switch genes on or off.
-- CD163: a gene/protein involved in immune cell function; phagocytosis means cells engulfing debris or particles. · level: research-level
+- **In one sentence**: Integrating microglia-specific allele-specific open chromatin mapping with GWAS, eQTL, and expression data, the authors prioritize the AUD-associated non-coding variant rs7307261 and report that its minor allele is linked to higher ethanol-induced CD163 expression and altered phagocytosis in microglia-like cells.
+- **In plain words**: Alcohol use disorder is influenced by many genetic variants, most of which sit in stretches of DNA that do not code for proteins, so it is unclear which ones actually matter. This study combined several datasets from human brain immune cells (microglia) and lab-grown microglia-like cells to narrow down candidates, then tested one variant, rs7307261, in experiments. The authors report that this variant's minor allele was tied to higher CD163 expression after alcohol exposure, and that changing the variant altered both that response and the cells' ability to engulf material.
+- **Why it matters**: It offers a concrete example of moving from a genetic association found in population studies to a specific regulatory variant, target gene, and cell behavior, which is a hard step in psychiatric genetics. The text does not establish how these cellular changes relate to drinking behavior or disease in people, so its clinical relevance remains unclear.
+- **Background needed**: - GWAS (genome-wide association study): a scan of many people's genomes to find variants statistically linked to a trait or disease.
+- Non-coding variant: a DNA change outside protein-coding genes that can still affect how much a gene is switched on.
+- Allele: one of the alternative forms of a DNA letter at a given position; a person carries two copies, and the minor allele is the less common form.
+- Open chromatin / ATAC-seq: regions where DNA is loosely packed and accessible to regulatory proteins, often marking active control elements.
+- eQTL: a genetic variant associated with the level of expression of a nearby gene.
+- Transcription factor motif: a short DNA sequence that a regulatory protein binds; ETS-family factors such as FLI1 and ELF2 are examples.
+- Microglia: immune cells of the brain that clear debris and respond to injury; CD163 is a marker associated with some of their states.
+- iPSC-derived cells: cells made by reprogramming adult cells into stem-like cells and then coaxing them into a target cell type.
+- Phagocytosis: a cell engulfing and digesting particles or debris. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2541,15 +2550,15 @@ Alcohol use disorder (AUD) is a polygenic disorder. Most AUD-associated variants
 ### [Spatiotemporal Dynamics of Vascular Wall Cells during Ductus Arteriosus Development and Closure](https://www.biorxiv.org/content/10.64898/2026.11.23.768583v1)
 *Sanderson, C.; Dahal, I.; Sinha, A. et al.* · `developmental biology` · bioRxiv doi:10.64898/2026.11.23.768583 v1 · relevance 0.09
 
-- **In one sentence**: Spatial transcriptomic profiling of mouse ductus arteriosus (DA) and aorta from E14.5 to P2.5, with a human postnatal DA comparison, mapping temporal changes in mural, endothelial and fibroblast transcriptional programs during DA closure.
-- **In plain words**: Shortly after birth, a temporary blood vessel near the heart called the ductus arteriosus must close so that blood flows to the lungs. This study tracked the cells in that vessel wall in mice across late pregnancy and the first days after birth, and compared them with the nearby aorta and a few human samples. The authors report that cells in the duct were more active in dividing and more contractile before birth, then shifted after birth toward a remodeling state that builds and breaks down the wall's structural material.
-- **Why it matters**: Closure of this vessel is a normal part of the newborn's circulation change, and problems with it are clinically important in premature infants. The paper offers a spatial, stage-by-stage map of the cell types involved, which may help frame future work on vascular remodeling, though the text does not establish a direct clinical application.
-- **Background needed**: - Ductus arteriosus: a fetal blood vessel linking the pulmonary artery and aorta, which normally closes after birth.
-- Mural cells: smooth muscle-like cells that wrap the vessel wall; "contractile" means they tighten, while "synthetic" means they make structural material such as extracellular matrix.
-- Extracellular matrix: the scaffold of proteins (such as collagen and elastic fibers) that gives vessel walls strength and flexibility.
-- Transcriptome: the set of gene activity readouts in cells; spatial transcriptomics keeps this information tied to tissue location.
-- Single-cell RNA sequencing: a method that measures gene activity in individual cells, used here as an independent comparison dataset.
-- Embryonic day (E) and postnatal day (P): time markers counted from conception and from birth, respectively. · level: research-level
+- **In one sentence**: Spatial transcriptomic profiling of mouse ductus arteriosus (DA) and aorta from E14.5 to P2.5, with a human DA comparison, mapping temporal changes in mural, endothelial and fibroblast gene programs during DA closure.
+- **In plain words**: Before birth, a short blood vessel called the ductus arteriosus lets blood bypass the lungs; after birth it must close so that blood flows to the lungs. This study followed the mouse version of this vessel, and the nearby aorta, at five stages from late pregnancy to two days after birth, measuring which genes were active in different cell types within tissue slices. The authors also looked at a human postnatal ductus and an external mouse single-cell dataset to check selected findings.
+- **Why it matters**: Failure of this vessel to close is a known cause of heart defects in newborns, so a map of how its wall cells change over time may be useful background for that problem. The text does not show clinical applications, so any link to treatment is speculative.
+- **Background needed**: - Ductus arteriosus: a fetal blood vessel connecting the main artery from the heart (aorta) and the lung artery; it normally closes after birth.
+- Vascular wall cells: smooth muscle-like "mural" cells, endothelial cells lining the inside, and fibroblasts in the outer layer.
+- Contractile vs. synthetic cell states: contractile cells squeeze the vessel; synthetic cells make structural material and remodel tissue.
+- Extracellular matrix and elastic lamellae: the scaffolding and elastic sheets that give vessel walls strength and stretch.
+- Spatial transcriptomics: measuring which genes are active at specific locations in a tissue slice, so each result can be tied to a position.
+- Single-cell RNA sequencing: measuring gene activity in individual cells, used here as a comparison dataset. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2562,16 +2571,16 @@ Background: The transition from fetal to postnatal circulation requires closure 
 ### [mRNA-1273.262 and mRNA-1283.262 Vaccines Expressing XFG Antigens Neutralize Relevant Circulating Variants](https://www.biorxiv.org/content/10.64898/2026.11.18.767652v1)
 *Nasir, A.; Ogega, C.; Lee, D. W. et al.* · `immunology` · bioRxiv doi:10.64898/2026.11.18.767652 v1 · relevance 0.15
 
-- **In one sentence**: Preclinical mRNA vaccine candidates encoding XFG-variant SARS-CoV-2 spike antigens (full-length and linked subdomain formats) are reported to elicit neutralizing responses against relevant JN.1-family variants in animal primary and booster models.
-- **In plain words**: COVID-19 vaccines have to be updated each year to match the version of the virus that is spreading. This paper describes preclinical tests of new mRNA vaccines built around the XFG variant, which is proposed for the 2026-2027 season. In animals, the authors report that these vaccines produced strong antibody responses that neutralized related virus variants from the JN.1 family.
-- **Why it matters**: Annual strain selection decides what millions of people are vaccinated against, so evidence supporting a specific choice matters for public health planning. The text is a brief summary, so the size of the effects, the comparison groups and the animal details are not available here, and it should be read as early evidence rather than a settled result.
+- **In one sentence**: Preclinical report on mRNA vaccine candidates encoding XFG-variant SARS-CoV-2 spike antigens (full-length and linked subdomain formats), showing neutralizing responses against JN.1-family variants in primary and booster animal models, to support XFG as the 2026-2027 season vaccine strain.
+- **In plain words**: Every year, COVID-19 vaccines have to be updated to match the version of the virus that is spreading. This paper reports animal experiments on new mRNA vaccines built around a virus variant called XFG, which the authors propose for the 2026-2027 season. In the animals, the vaccines produced antibodies that neutralized (blocked) related variants from the JN.1 family.
+- **Why it matters**: Choosing which viral version a vaccine targets each year affects how well people are protected, so this shows the preclinical basis for one such choice. The text is a short summary, so it does not give the sample sizes, comparison groups, or how the choice was validated against other candidates; the broader value depends on the full study.
 - **Background needed**: - SARS-CoV-2 is the virus that causes COVID-19; it is now endemic, meaning it keeps circulating.
-- The spike protein on the virus surface is the main target of mRNA vaccines, which give cells instructions to make this protein so the immune system learns to recognize it.
-- Variants evolve over time; JN.1 is a widely circulating lineage, and XFG is a descendant variant of the JN.1 family.
-- Neutralizing responses are antibodies that block the virus from infecting cells.
-- "Primary series" means the initial vaccine doses; "booster" means later doses given to people already vaccinated.
-- "Subdomain" antigens are smaller pieces of the spike protein used instead of the whole thing.
-- Preclinical means tested in the lab or in animals, before human trials. · level: intermediate
+- The spike protein is the viral surface protein that vaccines teach the immune system to recognize.
+- mRNA vaccines deliver a genetic message that cells use to make the antigen (the target protein) temporarily.
+- Neutralizing antibodies are immune proteins that block the virus from infecting cells.
+- JN.1 and XFG are named lineages (variants) of the Omicron family of SARS-CoV-2.
+- "Preclinical" means tested in cells and animals, not yet in human trials.
+- "Primary series" is the initial vaccination; "booster" is a later extra dose. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2582,16 +2591,17 @@ SARS-CoV-2 continues to circulate and causes substantial disease burden as an en
 ### [Longitudinal multiomics analysis in blood from individuals before and after HIV acquisition](https://www.biorxiv.org/content/10.64898/2026.11.23.767218v1)
 *Moron-Lopez, S.; Garrido-Sanz, L.; Soriaga, L. et al.* · `immunology` · bioRxiv doi:10.64898/2026.11.23.767218 v1 · relevance 0.13
 
-- **In one sentence**: A small longitudinal study combining single-nucleus chromatin and transcriptome profiling of blood cells with plasma metabolomic, lipidomic and cytokine measurements in five people sampled before HIV acquisition, during early infection, and after at least six months of antiretroviral therapy.
-- **In plain words**: The paper follows five people's blood before they became infected with HIV, during the early weeks of infection, and after at least six months of suppressive drug treatment. Researchers measured gene activity in about 150,000 individual immune cells, along with small molecules in the blood such as metabolites, fats and inflammatory signals. They found that infection temporarily boosted some immune cell groups and inflammatory signals, while some changes in gene activity and in certain energy- and amino-acid-related molecules lasted even after treatment.
-- **Why it matters**: Samples taken before HIV infection are rare, so a paired before-and-after view like this is unusual and can separate short-lived inflammation from lasting changes. Because the group is only five people, the findings are best read as a detailed case-level description that may generate hypotheses for HIV cure research rather than as firm general conclusions.
-- **Background needed**: - HIV infects immune cells, mainly CD4 T cells, and antiretroviral therapy (ART) suppresses the virus but does not remove it from the body; a "cure" means eliminating or controlling the remaining virus.
-- PBMCs are peripheral blood mononuclear cells, the white blood cells drawn from a blood sample (T cells, NK cells, monocytes and others).
-- Single-nucleus multiome sequencing measures, in each cell, which DNA regions are open (chromatin accessibility) and which genes are active (transcription).
-- Interferon and TNF-NF-κB are inflammatory signalling pathways the immune system uses to respond to threats.
-- IP-10 is an inflammatory signalling protein (a chemokine) that rises during viral infection.
-- Metabolome and lipidome are the full sets of small molecules and fats measured in plasma.
-- "Nominal" decreases means changes that looked notable before correcting for multiple comparisons, so they need confirmation. · level: research-level
+- **In one sentence**: A longitudinal single-nucleus multiome and multiomics study of PBMCs and plasma from five people sampled before HIV acquisition, during early infection, and after at least six months of ART, reporting cell-type-specific chromatin and transcriptional changes, rare HIV-positive cells, and transient versus persistent inflammatory and metabolic signals.
+- **In plain words**: This study follows five people through the period before they became infected with HIV, the early weeks of infection, and then after months of antiretroviral drugs that suppress the virus. The researchers measured immune cells at the level of individual cell nuclei, looking at which genes are switched on and how the DNA is packaged, along with chemicals in the blood. They found that some immune changes faded after treatment began, while others, including certain metabolic shifts, lasted.
+- **Why it matters**: Samples taken before HIV infection are rare, so a paired before-and-after view of the same people is unusual and can show which changes come from the infection itself. The small number of participants (five) limits how far the findings can be generalized, and the text does not say how these changes relate to HIV cure strategies beyond framing them as relevant to that field.
+- **Background needed**: - PBMCs: peripheral blood mononuclear cells, the white blood cells found in circulating blood.
+- Single-nucleus multiome: a method that reads, in the same cell nucleus, which DNA regions are open for gene activity (chromatin accessibility) and which genes are being expressed (transcription).
+- Multiomics: combining several layers of biological measurement (genes, proteins, metabolites, lipids) in one study.
+- ART: antiretroviral therapy, daily drugs that keep HIV at undetectable levels but do not remove it from the body.
+- HIV cure research: work aiming to eliminate or permanently control the virus after treatment stops.
+- Interferon and NF-kB programs: standard immune alarm and inflammation gene sets.
+- IP-10, IFI44L, ATAD3A: a blood signaling protein and two genes named in the study.
+- Nominal decrease: a drop that reached a threshold of statistical significance on its own, without correction for testing many measures, so it should be read cautiously. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2604,16 +2614,16 @@ A comprehensive understanding of cellular immunity is essential for controlling 
 ### [Fishing for new immunotherapy compounds to boost innate tumor rejection](https://www.biorxiv.org/content/10.64898/2026.11.15.766748v1)
 *Machado, A. B.; Labao-Almeida, C.; Oliveira, I. et al.* · `cancer biology` · bioRxiv doi:10.64898/2026.11.15.766748 v1 · relevance 0.10
 
-- **In one sentence**: A zebrafish xenograft phenotypic screen of over 500 FDA-approved drugs identified tiotropium bromide, a muscarinic antagonist, which reprograms tumor-associated macrophages and synergizes with anti-PD-1 in a syngeneic CT26 mouse model.
-- **In plain words**: Some tumors are cleared by the immune system when transplanted into zebrafish, while others take hold. The authors screened hundreds of approved drugs for ones that help the fish's innate immune system clear human colorectal and breast cancer cells. They report that tiotropium, an inhaled asthma and COPD drug, stood out, and that it works through immune cells called macrophages.
-- **Why it matters**: It suggests a route to drug repurposing for immunotherapy resistance and points to the nervous system's influence on immunity as a possible target. The text reports mouse results with anti-PD-1 but does not show clinical use, so the translational value is still unproven.
-- **Background needed**: - Innate immunity is the body's first-line, non-specific defense, including macrophages that engulf (phagocytose) cells.
-- Zebrafish xenografts: human tumor cells transplanted into young zebrafish, which are transparent and allow fast in vivo imaging.
-- Phenotypic screen: testing many compounds by their observable effect (here, tumor clearance) without knowing the target beforehand.
-- Muscarinic receptors are nerve-signal receptors that respond to acetylcholine; antagonists block them.
-- Anti-PD-1 is an immune checkpoint antibody that releases the brakes on T cells.
-- CT26 is a mouse colon tumor line; NSG mice lack functional immune cells, so the drug's effect disappearing there implies immune involvement.
-- Results so far come from preclinical models (fish and mice), not human patients. · level: research-level
+- **In one sentence**: In vivo phenotypic screen of over 500 FDA-approved drugs in zebrafish xenografts of human colorectal and breast tumors identifies tiotropium (a muscarinic antagonist) as a myeloid-reprogramming compound that synergizes with anti-PD-1 in a syngeneic CT26 mouse model.
+- **In plain words**: Some tumors are cleared by the immune system when transplanted into zebrafish, while others take hold, and the researchers used this difference to test existing approved drugs for ones that help the body clear tumors. They screened over 500 drugs and found 23 hits, with drugs acting on the nerves that control involuntary body functions (especially cholinergic ones) overrepresented. The lead, tiotropium, appeared to shift tumor-associated macrophages (immune cells) toward an inflammatory, anti-tumor state, and in mice it worked better together with an anti-PD-1 checkpoint drug than either alone.
+- **Why it matters**: It proposes a new route for drug discovery, using whole-animal screening to find innate immune targets, and points to the nerve-immune connection as a possible lever against immunotherapy resistance. The evidence so far comes from zebrafish and one mouse model, and the text does not establish that the effect carries over to patients.
+- **Background needed**: - Innate immunity: the body's first-line immune defense, which does not need prior training; macrophages are a key cell type in it.
+- Xenograft: transplanting human tumor cells into another animal (here, zebrafish embryos or larvae).
+- Phenotypic screen: testing many compounds and looking for a visible outcome (here, tumor clearance) without knowing the target in advance.
+- Muscarinic/cholinergic: relating to receptors that respond to acetylcholine, a nerve signaling chemical; antagonists block these receptors.
+- Anti-PD-1: an immunotherapy antibody that releases a brake on T cells.
+- Syngeneic model: mice with a tumor from the same genetic background, so the immune system is intact; NSG mice lack much of their immune system and were used as a control.
+- Phagocytosis: immune cells engulfing debris or cancer cells. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2624,17 +2634,16 @@ Despite significant advances in cancer immunotherapy, tackling immunosuppression
 ### [Beyond IgG: Oral Secretory IgA as a new efficient modality for cancer immunotherapy](https://www.biorxiv.org/content/10.64898/2026.11.23.768496v1)
 *Brousse, M.; Pintat, A.; Favre-Bulle, O. et al.* · `cancer biology` · bioRxiv doi:10.64898/2026.11.23.768496 v1 · relevance 0.09
 
-- **In one sentence**: A preclinical study in mice testing an orally delivered, mucosal-type secretory IgA antibody against CEACAM5 in colorectal and gastric cancer models, compared with an IgG1 version and cetuximab, alone and with chemotherapy.
-- **In plain words**: Most cancer antibody drugs are given by injection into the bloodstream. This paper tests whether an antibody taken by mouth, in a form normally found in the gut lining (secretory IgA), can reach colorectal tumors and their spread to other sites and slow them down. In mouse models, the oral antibody (called ABC-101) concentrated in CEACAM5-positive tumors while staying at low levels in the rest of the body, and it did better than the comparison antibodies in slowing tumor growth and spread.
-- **Why it matters**: If an oral antibody can work safely and selectively, it could offer a non-injected option for cancer treatment and a new way to use the immune system's mucosal defenses. The text reports only mouse experiments, so whether any of this carries over to people is unknown.
-- **Background needed**: - Antibodies: immune proteins that bind a specific target; most cancer antibody drugs are IgG and given intravenously.
-- Secretory IgA (SIgA): the antibody type the body uses on mucosal surfaces such as the gut; it is more resistant to digestion than IgG.
-- CEACAM5: a protein often found at high levels on colorectal and gastric cancer cells, used here as the target.
-- Cetuximab: an approved antibody drug used as a comparison.
-- FOLFIRI and irinotecan: standard chemotherapy regimens for colorectal cancer.
-- FcRI (CD89): a receptor on certain immune cells (neutrophils, monocytes, macrophages, dendritic cells) that the authors say the antibody helps recruit.
-- Orthotopic model: human cancer cells implanted in the organ where the cancer naturally arises, in mice.
-- Preclinical: tested in cells and animals, not yet in people. · level: research-level
+- **In one sentence**: Preclinical study testing an orally delivered anti-CEACAM5 secretory IgA antibody (ABC-101) in human colorectal and gastric cancer mouse models, alone and with chemotherapy, compared with an IgG1 version and cetuximab.
+- **In plain words**: Most cancer antibody drugs are given by injection into the bloodstream. This paper tests whether an antibody swallowed as a pill-like oral dose could reach and act on colorectal tumors in mice. The authors report that the oral antibody built up in CEACAM5-positive tumors and metastases while staying at low levels in the rest of the body, and that it slowed tumor growth and spread more than the comparison antibodies.
+- **Why it matters**: Oral antibodies would be a new route for cancer drugs, and the paper suggests the gut's mucosal immune system could be used to treat distant tumors. The results come only from animal models described in this summary, so it is not yet clear whether they will hold in people; the text does not report any human testing.
+- **Background needed**: - Antibodies (IgG) are Y-shaped immune proteins; many cancer drugs are built from them and given intravenously.
+- Secretory IgA (SIgA) is the main antibody type found in mucus and gut secretions, and it is normally resistant to digestion.
+- CEACAM5 is a protein found at high levels on many colorectal and gastric cancer cells; it is the drug's target.
+- Cetuximab is an approved antibody drug used against colorectal cancer; it serves here as a comparator.
+- Irinotecan and FOLFIRI are standard chemotherapy regimens for colorectal cancer.
+- CD89 (FcαRI) is a receptor on innate immune cells such as neutrophils and macrophages, which the antibody appears to recruit into tumors.
+- Orthotopic models place human tumor cells in the matching organ of a mouse, which better mimics real disease than tumors under the skin. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2647,15 +2656,16 @@ Monoclonal antibody therapies have revolutionized cancer treatment but are almos
 ### [Social information use promotes breeding synchrony but constrains adaptation to rapid environmental changes](https://www.biorxiv.org/content/10.64898/2026.11.20.767538v1)
 *Zheng, J.; Kuijper, B.; Aplin, L. M. et al.* · `animal behavior and cognition` · bioRxiv doi:10.64898/2026.11.20.767538 v1 · relevance 0.09
 
-- **In one sentence**: An evolutionary individual-based model shows that breeding birds (or similar animals) copying neighbours' timing of breeding produces population-level synchrony that speeds adaptation in stable or abrupt-change settings but lags behind directional climate change.
-- **In plain words**: Many animals decide when to breed partly by watching their neighbours, and this paper asks what that habit does to whether a population can keep up with a changing climate. Using a computer simulation of animals living in territories with resources that peak at certain times, the authors compared individuals that use neighbours' information with those that rely only on their own sensing. Copying neighbours made breeding times line up across the population, which helped under stable conditions but made the population slow to shift when the climate changed steadily.
-- **Why it matters**: Timing of breeding is central to how wild populations respond to warming, so a mechanism that trades synchrony against flexibility could matter for predicting which species fall behind. The text only reports simulation results, so how far it applies to real species is not established here.
-- **Background needed**: - Breeding phenology: the timing of reproduction within the year, often matched to when food peaks.
-- Private information: cues an individual gathers itself (e.g., temperature, food).
+- **In one sentence**: An evolutionary individual-based model shows that breeders using neighbours' timing cues synchronise their breeding, which speeds adaptation in stable or fluctuating conditions but lags behind under directional climate change.
+- **In plain words**: The paper asks how animals that nest in territories decide when to breed, and whether watching their neighbours helps or hurts when the climate is shifting. Using a computer simulation of populations that evolve over time, the authors compare individuals that use only their own sensing with individuals that also copy cues from nearby neighbours. Copying neighbours makes breeding times line up across the population, which helps under stable conditions but makes the population slow to follow a steadily warming climate.
+- **Why it matters**: Timing of breeding is shifting with climate in many species, and this work suggests that social learning, often assumed to be beneficial, can become a liability when conditions change quickly. It is a modelling study, so its conclusions depend on the assumptions built into the simulation and would need testing against field data.
+- **Background needed**: - Phenology: the timing of seasonal events such as breeding or flowering.
 - Social information: cues gained by observing others, such as neighbours starting to breed.
-- Individual-based model: a simulation where each animal is tracked separately and can evolve over generations.
-- Synchrony and lag: when many individuals act at the same time, and when a population trails a moving target (the environmental optimum).
-- Information pooling: averaging many noisy signals to get a more accurate estimate. · level: research-level
+- Private information: cues an individual gathers itself, such as local temperature or food.
+- Individual-based model: a simulation where each animal is tracked separately and the population evolves through selection on traits.
+- Synchrony: many individuals acting at the same time, which can build through positive feedback when each copies the others.
+- Adaptive lag: the population's timing trails behind a moving environmental optimum.
+- Peaked resources: food availability that is highest at one point in the season and falls off either side. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2666,10 +2676,15 @@ Animals use social information to make decisions, yet how such processes influen
 ### [Stomatal conductance and net photosynthesis depend on nitrogen supply in drought-limited boreal forest](https://www.biorxiv.org/content/10.64898/2026.11.23.768591v1)
 *Dulamsuren, C.; Amarjargal, D.; Bazar, D. et al.* · `ecology` · bioRxiv doi:10.64898/2026.11.23.768591 v1 · relevance 0.09
 
-- **In one sentence**: In drought-limited Larix sibirica stands in Mongolia, nitrogen fertilization raised stomatal conductance as hypothesized, but net photosynthesis followed a non-linear pattern, peaking at a mid-level N dose and declining at the highest dose.
-- **In plain words**: Boreal forests are shifting from being limited by cold to being limited by drought as the climate warms. This study fertilized Siberian larch trees in a dry Mongolian forest with different amounts of nitrogen and measured how their leaves exchanged carbon dioxide and water vapour. Stomatal conductance (how widely the tiny leaf pores open) rose with nitrogen, but photosynthesis did not simply rise with it: it fell at the lowest dose, peaked at the middle dose, and fell again at the highest dose.
-- **Why it matters**: The results suggest that nutrient availability, not only temperature and rainfall, may shape how boreal trees cope with drought, which matters for forecasts of forest carbon uptake. The text does not show how far these branch-level measurements extend to whole forests or other years, so the broader significance is still to be tested.
-- **Background needed**: Boreal forest: cold northern coniferous forest, here dominated by larch. Stomata: microscopic pores on leaves that let in carbon dioxide and let out water vapour. Stomatal conductance: how easily gas passes through those pores. Net photosynthesis: carbon gained by the leaf after subtracting carbon lost to respiration. Respiration: the energy-using process that releases carbon, which here rises with the cost of taking up nitrogen. Vapour pressure deficit: how dry the air is, which pulls water out of leaves. Nitrogen fertilization: adding nitrogen to soil as a plant nutrient, used here as an experimental treatment. Long-term experiment: a plot study run over years to compare treatments. · level: intermediate
+- **In one sentence**: In drought-limited Larix sibirica stands in Mongolia, branch gas-exchange measurements show stomatal conductance rises with nitrogen supply, while net photosynthesis peaks at a moderate fertilization rate and falls at the highest.
+- **In plain words**: Boreal forests, the cold northern woodlands, are becoming drier as the climate warms, and this study asks whether soil nutrients change how trees cope with that dryness. Researchers fertilized larch trees in a dry Mongolian forest at three nitrogen levels and measured how the branches exchanged carbon dioxide and water vapor. They found that the pores on leaves opened wider with more nitrogen, but carbon gain was lowest at the lowest dose, highest at the middle dose, and dropped at the highest dose.
+- **Why it matters**: The authors argue that climate studies of boreal drought tolerance should include nitrogen availability, which they say may be falling in remote forests because of rising atmospheric CO2 and can be shifted locally by land use. The text does not show how far these branch-level results apply to whole forests or over longer periods.
+- **Background needed**: - Boreal forest: cold-climate forest dominated by conifers such as larch; historically limited by cold, now increasingly by drought.
+- Nitrogen fertilization experiment: plots given measured doses of nitrogen, a nutrient plants need, to see how growth and physiology respond.
+- Stomata: tiny pores on leaves that let in CO2 and let out water vapor; stomatal conductance measures how open they are.
+- Net photosynthesis: the net rate at which a plant takes up CO2 to make sugars, after subtracting CO2 released by respiration.
+- Vapor pressure deficit: how strongly dry the air is, which pulls water out of leaves.
+- Gas exchange measurements: sensors clamped on branches that record CO2 and water vapor flows. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2682,15 +2697,13 @@ Transition from cold limitation to drought limitation due to climate change is w
 ### [Restoring beneficial ancestral genomic sites enhances broad disease resistance in rice](https://www.biorxiv.org/content/10.64898/2026.11.22.768253v1)
 *Wang, J.; Liu, S.; Duan, Y. et al.* · `plant biology` · bioRxiv doi:10.64898/2026.11.22.768253 v1 · relevance 0.16
 
-- **In one sentence**: The paper proposes restoring conserved ancestral acidic residues at phosphorylatable sites in plant proteins, and reports that doing so in the NADPH oxidases OsRbohB and OsRbohI raises broad-spectrum disease resistance in rice.
-- **In plain words**: Crops have been bred mostly from the genetic variants found in cultivated plants and their wild relatives, which cover only part of the diversity that evolution has produced over time. This work looks back at older versions of plant proteins and tries to bring back one specific feature, a negatively charged amino acid at sites where a protein can be chemically tagged to switch it on or off. The authors report that restoring this feature in two immune-related rice proteins increased resistance to several diseases.
-- **Why it matters**: If the approach holds up, it suggests a way to improve crops using variation from deep evolutionary history rather than only from existing breeding material, which could matter for disease control. The text also says field tests were used to examine whether growth and defense trade off against each other, but the summary alone does not show the size or consistency of these effects, so the strength of the claims is not yet clear.
-- **Background needed**: - Proteins are chains of amino acids; some amino acids are negatively charged ("acidic").
-- Phosphorylation is the addition of a phosphate tag to a protein, often acting as an on/off switch for its activity.
+- **In one sentence**: The paper proposes "Beneficial Ancestral Genomic Sites," restoring ancestral acidic residues at phosphorylatable sites in plant proteins, and reports that doing so in the rice NADPH oxidases OsRbohB and OsRbohI raised broad-spectrum disease resistance, with field tests of growth-defense tradeoff models.
+- **In plain words**: Crop breeders usually work only with the genetic variation already present in farmed plants and their wild relatives. This paper proposes going back further in evolutionary history: restoring an older, ancestral version of specific chemical sites in plant proteins. The authors tested this in rice by changing two immune-related enzymes so they resemble their ancestral form, and report that this raised resistance to several diseases.
+- **Background needed**: - Proteins are chains of amino acids; some amino acids can have a phosphate group attached (phosphorylation), which can switch a protein's activity on or off.
+- Acidic residues carry a negative charge and can sometimes mimic a phosphate group at these sites.
 - NADPH oxidases (Rboh enzymes) produce reactive oxygen molecules that plants use as part of their immune response.
-- Growth-defense tradeoff: plants that invest heavily in defense may grow less, and the reverse.
-- Ancestral sequence reconstruction: inferring what a gene's protein looked like in past species.
-- The text is an abstract-level summary only; methods, sample sizes and detailed results are not included, so the claims cannot be checked from it. · level: research-level
+- Growth-defense tradeoff: resources spent on defense can reduce growth or yield, and the paper tests competing models of this tradeoff in the field.
+- Ancestral sequence reconstruction: inferring what a gene looked like in ancient ancestors, which is the source of the "ancestral" sites here. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2701,15 +2714,15 @@ Crop improvement has long been constrained to genetic variations within cultivat
 ### [GnotoBag: A versatile peat-based gnotobiotic system for plant microbiome research beyond model species](https://www.biorxiv.org/content/10.64898/2026.11.22.768464v1)
 *Wu, N.; Cheng, Y. T.; Paasch, B. C. et al.* · `plant biology` · bioRxiv doi:10.64898/2026.11.22.768464 v1 · relevance 0.06
 
-- **In one sentence**: The paper describes GnotoBag, a bag-based, peat-substrate gnotobiotic growth system that extends a previously published method to keep plants sterile or microbially defined for longer periods, with added ventilation and built-in water and nutrient delivery.
-- **In plain words**: Scientists studying how plants interact with the microbes living around and in them need plants grown under tightly controlled conditions, free of unwanted microbes. This paper presents a improved growing setup, a sealed bag filled with peat, that keeps plants in this controlled state for longer, with better airflow and a way to feed them water and nutrients. The authors report that it supports the model plant Arabidopsis through flowering and can also hold larger plants such as rice and tomato for at least four weeks.
-- **Why it matters**: Much of what is known about plant-microbe partnerships comes from small, simple model plants, and a reliable way to grow bigger crops under controlled microbes could let researchers test those findings on plants that matter for farming. The text does not report yield, crop-performance or field results, so its practical impact remains to be shown.
-- **Background needed**: - Gnotobiotic: grown with a known, controlled set of microbes, or none at all (axenic), so effects of specific microbes can be isolated.
-- Microbiome: the community of bacteria, fungi and other microbes living with a plant, including in its roots.
-- Arabidopsis thaliana: a small flowering weed widely used as a laboratory model plant.
-- Peat: a soil-like organic material used here as the growing medium.
-- Vegetative vs. reproductive growth: the leafy growth phase compared with the flowering and seed-producing phase.
-- The text gives no numbers beyond the timelines mentioned, and it does not show the detailed methods, so the description here is limited to the abstract. · level: intermediate
+- **In one sentence**: The paper presents GnotoBag, a bag-based, peat-substrate gnotobiotic (germ-controlled) growth system that extends a prior platform to allow longer, sterile-condition cultivation of Arabidopsis and larger crops such as rice and tomato.
+- **In plain words**: Scientists who study how microbes living around plant roots affect plant growth need plants that can be grown without unwanted microbes for long periods. This paper describes a modified growing setup, made from bags filled with peat, that improves airflow and adds a built-in way to supply water and nutrients. The authors report that it keeps small model plants growing through flowering and gives bigger plants like rice and tomato room to grow for at least four weeks.
+- **Why it matters**: Controlled, microbe-free growth makes it easier to tell which effects come from specific microbes rather than from background noise, which matters for future work on crop productivity. The text does not report any measured benefit to crop yield, so the link to agriculture is a stated goal rather than a shown result.
+- **Background needed**: - Gnotobiotic means growing organisms in a setting where the microbial community is fully known, usually by starting from sterile conditions and adding back chosen microbes.
+- Axenic means free of all other organisms; keeping it that way is hard over weeks or months.
+- The plant microbiome is the community of bacteria, fungi and other microbes living on and inside plants, especially in the roots.
+- Arabidopsis thaliana is a small flowering plant widely used as a laboratory model.
+- The previous platform had a 6.5-week workflow; GnotoBag aims to go beyond that.
+- Peat is an organic growing medium; the "headspace" is the air space above the growing material. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2722,15 +2735,16 @@ Plants and their microbial communities form a symbiotic system, where microbial 
 ### [Extracellular matrix-enriched human induced chondrocyte organoids as living building blocks for scalable cartilage tissue engineering](https://www.biorxiv.org/content/10.64898/2026.11.23.768121v1)
 *Menssen, D. M. A.; Mazzini, G.; Abinzano, F. et al.* · `bioengineering` · bioRxiv doi:10.64898/2026.11.23.768121 v1 · relevance 0.13
 
-- **In one sentence**: Stem-cell-derived chondrocytes (hiCHOs) are matured in spinner flasks, then dissociated and recultured with a tissue-derived matrix supplement to form matrix-rich cartilage organoids that fuse into larger constructs.
-- **In plain words**: Cartilage damage often leads to painful arthritis, and cartilage heals poorly, so repair treatments need large numbers of cells. This paper describes a way to grow cartilage-like clusters, called organoids, from an off-the-shelf stem-cell-derived cell source in stirred flasks. Adding a natural matrix supplement made the clusters form quickly and uniformly, and the authors report that 1 million cells yielded over 27,000 organoids in two weeks, which could then join into larger pieces of cartilage.
-- **Why it matters**: Cell numbers are a practical bottleneck for cartilage repair, so a method that multiplies cells and produces uniform building blocks addresses a real unmet need. The text reports only lab-scale results, so whether this approach works in patients or for clinical repair is not shown here.
-- **Background needed**: - Articular cartilage is the smooth tissue covering joint ends; it has very limited ability to heal itself.
-- Organoids are small, self-organizing 3D clusters of cells that mimic aspects of a tissue.
-- Induced pluripotent or progenitor cells are adult cells reprogrammed to a stem-like state, which can then be guided into a specific cell type such as chondrocytes (cartilage cells).
-- Spinner flasks are stirred culture vessels that keep cells suspended and allow growth in larger volumes.
-- Extracellular matrix is the network of proteins and sugars cells secrete around themselves; it provides structure and signals.
-- Scalability means producing the same material reliably in much larger quantities. · level: intermediate
+- **In one sentence**: Human induced chondrocytes (hiCHOs), matured in spinner flasks and then reaggregated with a tissue-derived matrix supplement, self-assemble into matrix-rich cartilage organoids that can fuse into larger constructs.
+- **In plain words**: Cartilage damage in joints often leads to painful arthritis, and current repair methods need many of a patient's own cells and scale poorly. This paper describes growing cartilage-like clusters, called organoids, from stem-cell-derived cartilage cells in a spinning culture flask, with a natural matrix supplement added to help them form. The authors report that one million cells gave over 27,000 organoids in two weeks, and that these organoids could join together into larger pieces of cartilage.
+- **Why it matters**: The main claim is about scalability: making many cartilage building blocks from an off-the-shelf cell source could matter for future joint repair. The text does not show clinical testing, so its relevance to patients is still a possibility to be tested rather than a demonstrated result.
+- **Background needed**: - Articular cartilage: the smooth tissue covering joint ends; it heals poorly, and damage can progress to osteoarthritis.
+- Tissue engineering: growing tissue in the lab to repair or replace damaged body parts.
+- Induced pluripotent or progenitor cells: adult cells reprogrammed into a stem-like state, then guided to become a target cell type (here, chondrocytes, the cartilage-making cells).
+- Organoid: a small 3D cell cluster that self-organizes and mimics aspects of a tissue.
+- Spinner flask: a stirred culture vessel that keeps cells suspended and moving, allowing larger batches.
+- Extracellular matrix: the protein-and-sugar scaffolding cells secrete; here, a tissue-derived supplement is added to support it.
+- Autologous: taken from the patient themselves; off-the-shelf means a ready-made, donor-independent supply. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2741,17 +2755,17 @@ Articular cartilage defects are common and often develop into painful and debili
 ### [Plasma-Polymerized Polyurethane/Reduced Graphene Oxide Electrospun Patch for Cardiac Tissue Engineering](https://www.biorxiv.org/content/10.64898/2026.11.22.768432v1)
 *Jugie, C.; Mousavi, A.; Nemati, A. et al.* · `bioengineering` · bioRxiv doi:10.64898/2026.11.22.768432 v1 · relevance 0.12
 
-- **In one sentence**: Electrospun polyurethane fiber patches containing reduced graphene oxide, surface-coated with a nitrogen-rich plasma polymer, are characterized for structure, strength, conductivity, and cytotoxicity toward primary cardiac fibroblasts as a cardiac tissue engineering scaffold.
-- **In plain words**: Heart disease is a leading cause of death, and donor hearts are scarce, so researchers are trying to build patches that could support damaged heart muscle. This paper describes a flexible mesh-like patch made from a plastic-like polymer (polyurethane) mixed with a conductive carbon material (reduced graphene oxide), with a thin chemical coating to help cells stick. The authors report that the patch was tested for structure, stretch strength, electrical conductivity, and whether it was safe for heart-derived cells in the lab.
-- **Why it matters**: Heart tissue conducts electrical signals, so a patch that is both stretchy enough and electrically conductive could be useful for repairing it. The text supports only early laboratory characterization and a basic cell-safety test; it does not show that the patch repairs heart tissue in animals or people.
-- **Background needed**: - Cardiac patch: a thin scaffold placed on the heart to provide support and a surface for new tissue to grow.
-- Electrospinning: a method that uses an electric field to draw polymer solutions into very fine fibers that form a mesh.
-- Polyurethane: a flexible, durable plastic often used in medical devices.
-- Graphene oxide / reduced graphene oxide: carbon sheets, one atom thick; the reduced form conducts electricity better.
-- Plasma polymerization: exposing a surface to ionized gas to deposit a thin polymer coating.
-- Cytotoxicity assay: a lab test checking whether a material harms living cells.
-- Fibroblasts: common connective-tissue cells; primary cells are taken directly from tissue.
-- Tensile testing: pulling a sample to measure how strong and stretchy it is. · level: intermediate
+- **In one sentence**: Electrospun polyurethane fiber patches containing reduced graphene oxide, surface-coated with a nitrogen-rich plasma polymer, are characterized for structure, strength, conductivity, and cytotoxicity toward primary cardiac fibroblasts as a candidate cardiac tissue engineering scaffold.
+- **In plain words**: Heart disease is a leading cause of death, and heart transplants are limited by few donors and lifelong immune-suppressing drugs. This paper describes a thin, flexible mesh-like patch meant to support heart tissue and conduct electrical signals, made from a plastic-like polymer mixed with a conductive carbon material. The authors report physical, electrical, and mechanical measurements and show the patch was not toxic to heart fibroblast cells in lab tests.
+- **Why it matters**: Cardiac patches that are both strong and electrically conductive could matter for repairing damaged heart muscle, which must contract in coordinated electrical waves. The text reports only material characterization and a single cytotoxicity assay, so it does not show whether the patch helps heart tissue repair or works in living animals.
+- **Background needed**: - Cardiac patch: a sheet placed on damaged heart tissue to provide support and help regrowth.
+- Electrospinning: a method that uses an electric field to draw polymer solutions into very fine fibers, forming a mesh.
+- Polyurethane (PU): a flexible, durable plastic often used in medical devices.
+- Graphene oxide and reduced graphene oxide (rGO): sheets of carbon atoms; the reduced form conducts electricity better.
+- Low-pressure plasma polymerization: treating a surface with ionized gas to deposit a thin coating; here nitrogen-rich, meant to help cells stick.
+- Cytotoxicity assay: a lab test checking whether a material harms cells.
+- Primary cardiac fibroblasts: connective-tissue cells taken directly from heart tissue.
+- X-ray photoelectron spectroscopy and tensile testing: surface chemistry analysis and stretch-to-break strength testing. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2764,16 +2778,15 @@ Cardiovascular diseases remain the leading cause of mortality worldwide. Traditi
 ### [Turbulent Epidemics: Scale-dependent Fluctuations as a Probe of Population Heterogeneity](https://arxiv.org/abs/2611.31334)
 *Bernhard Mueller, Michael Lorke, M. Gabriela M. Gomes et al.* · `q-bio.PE` · arXiv:2611.31334v1 · relevance 0.13
 
-- **In one sentence**: The paper adapts turbulence-style scale decomposition of fluctuation spectra to disaggregated COVID-19 data from Germany's 2020/21 winter wave and compares them with a network-based simulation (Epimetheus) of structured populations with clustering, heterogeneous susceptibility and superspreading.
-- **In plain words**: Infections often spread unevenly, with some groups or places driving most cases. This paper borrows a mathematical tool from fluid dynamics that splits fluctuations into different size scales, and applies it to detailed case data from Germany's COVID-19 winter wave. The authors then run computer simulations of an idealized structured population to see which mixtures of clustering and uneven susceptibility could produce the same patterns.
-- **Why it matters**: It offers a way to use the scale-by-scale pattern of case counts as a test of models that assume uniform mixing, which matters for predicting outbreaks and judging interventions. The text reports qualitative agreement only, and its claim that uniform transmission reduction alone does not explain the data is a model-based inference, so the findings should be read as suggestive rather than settled.
-- **Background needed**: - Heterogeneity: infection risk differs between people, places or groups, rather than being the same for everyone.
-- Superspreading: a small share of infected people cause a large share of new infections.
+- **In one sentence**: The paper adapts turbulence-style scale-dependent fluctuation analysis to disaggregated COVID-19 case data from Germany's 2020/21 winter wave and uses a new network simulator (Epimetheus) to test which heterogeneity mechanisms, such as clustering and variable susceptibility, could reproduce the observed patterns.
+- **In plain words**: Infections rarely spread evenly: some people and groups pass on far more virus than others. This paper borrows a tool from fluid physics, which breaks turbulent motion into fluctuations at different sizes, and applies it to case data from Germany's COVID-19 winter wave of 2020/21. The authors then run computer simulations of an idealized structured population to see which combinations of clustering and variation in susceptibility can reproduce the observed patterns.
+- **Why it matters**: The approach offers a way to use the spatial and group-level structure in case data to constrain models of heterogeneous spread, which matters for prediction and for judging the effects of interventions. The text reports only a qualitative comparison between simulation and data, so the conclusions, such as the estimated 0.2 to 0.35 population limit on the outbreak, are tentative and depend on the chosen model.
+- **Background needed**: - Heterogeneity in epidemics: individuals and groups differ in how many people they infect (for example, superspreading events).
 - Secondary attack rate: the fraction of close contacts of an infected person who become infected.
-- Overdispersion: case counts vary more widely than a simple random model would predict.
-- Fluctuation spectrum: a breakdown of how much variation occurs at each size scale, borrowed from turbulence analysis in fluid dynamics.
-- Network-based simulation: a model in which individuals are nodes linked by contacts, and infection spreads along those links.
-- Self-limiting effects: the epidemic slows on its own as people become immune or the susceptible pool shrinks. · level: research-level
+- Overdispersion: a measure of how much more variable case counts are than a simple random model would predict.
+- Fluctuation spectrum: a breakdown of how much variation occurs at each size scale, borrowed from turbulence studies in fluid dynamics.
+- Network-based simulation: modeling a population as nodes (people or groups) connected by contacts, and simulating transmission across those links.
+- Self-limiting effects: mechanisms such as depletion of susceptible people that slow an outbreak without deliberate intervention. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2785,13 +2798,14 @@ Heterogeneous dynamics, including phenomena such as superspreading and clusterin
 *Marcus Ghosh, John S. Butler* · `q-bio.NC` · arXiv:2611.32829v1 · relevance 0.06
 
 - **In one sentence**: A review that organizes models of multisensory integration into normative (hypothesis-driven, statistically optimal) and neural network (circuit-emulating) classes, with accompanying equations and Python code.
-- **In plain words**: This review looks at how brains combine signals from different senses, such as smell, sight and sound, into one picture. It sorts the many mathematical and computer models built to explain this into two groups: those that start from what the brain should ideally do, and those that try to mimic how real networks of neurons might do it. It also gives a beginner-friendly walkthrough of these models, with simple equations and code.
-- **Why it matters**: Combining senses is a basic problem for both animals and artificial systems, so a clear comparison of the two modeling traditions may help researchers in neuroscience and machine learning see how their approaches connect. The text itself does not give specific new results, so its value lies mainly in synthesis and teaching.
-- **Background needed**: - Multisensory integration: the brain merging information from several senses about the same event.
-- Statistically optimal combination: weighting each cue by its reliability, as in Bayesian inference, so that the combined estimate is as precise as possible.
-- Normative model: a model derived from a stated goal of how a system should behave, rather than from its physical wiring.
-- Neural network model: a simulated network of simple units whose connections are tuned, here used to ask how circuits could do the same task.
-- Basic familiarity with probability and simple equations is helpful; the review includes Python code. · level: intermediate
+- **In plain words**: This review looks at how brains combine signals from different senses, such as smell, sight and sound, into one picture. It sorts the many existing mathematical and computer models of this process into two groups: those that start from what the brain ideally should do, and those that try to mimic how real networks of neurons could do it. The authors also provide a step-by-step guide with simple equations and Python code, and compare what each approach explains.
+- **Why it matters**: Combining senses is a common problem for animals and for artificial systems, so a clear comparison of the two modelling styles may help researchers in neuroscience and AI relate their work. The text does not show specific new results, so its value lies mainly in organizing and teaching existing ideas.
+- **Background needed**: - Multisensory integration: merging information from several senses about the same event.
+- Statistically optimal integration: weighting each cue by its reliability, so the combined estimate is as precise as possible.
+- Normative model: a model built from a hypothesis about what the brain should compute, rather than from its wiring.
+- Neural network model: a simulated set of connected units, loosely inspired by neurons, that learns or processes inputs; artificial networks can have billions of parameters.
+- Neuron response profile: how a cell's firing rate changes with the stimulus it receives.
+- Python code: a programming language; the review includes examples to run. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2804,16 +2818,17 @@ Animals continuously detect scents, sights and sounds, which their brains combin
 ### [Improving Prediction of Patient-Reported Health Outcomes Among Older Adults With Diabetes Across Diverse Populations Through Transfer Learning](https://www.medrxiv.org/content/10.64898/2026.11.24.26368865v1)
 *Wang, X.; Chen, Y.; Shao, W. et al.* · `epidemiology` · medRxiv doi:10.64898/2026.11.24.26368865 v1 · relevance 0.08
 
-- **In one sentence**: A regression-based transfer learning framework was tested for predicting patient-reported health outcomes in older adults with diabetes, borrowing information from international aging cohorts (Gateway) and across race/ethnicity groups in RAND HRS, with gains evaluated by AUC and Brier score.
-- **In plain words**: Prediction models often work less well when moved to a new group of people. This paper asks whether borrowing information from other, related groups can help predict how older adults with diabetes rate their own health. The authors report that the borrowing helped in 6 of 8 international cohorts and in all four US race/ethnicity groups, though the gains were small (about 0.1% to 3.1% in AUC, a measure of how well a model separates cases from non-cases).
-- **Why it matters**: Many prediction tools are built on one population and then applied to others, so a way to transfer information safely is relevant to public health. The gains reported are modest, and the text does not show how much they would matter in practice, so the value of the approach remains to be tested.
-- **Background needed**: - Prediction model: a statistical rule that estimates a future outcome (here, a self-reported health outcome) from risk factors such as age, sex, and clinical measures.
-- Transfer learning: reusing information from related datasets to improve a model in a target dataset, rather than building it from scratch.
-- Target-only vs. pooled models: a model fit only on the group of interest versus one fit on all groups combined; the paper compares transfer learning against both.
-- AUC: area under the ROC curve; ranges from 0.5 (no better than chance) to 1 (perfect separation). Gains are reported in percentage points.
-- Brier score: a measure of prediction error, where lower values mean predictions closer to what happened.
-- Bootstrap resampling: repeatedly resampling the data to estimate uncertainty in results.
-- Gateway and RAND HRS: international aging cohort consortium and a US longitudinal survey of older adults, respectively. · level: intermediate
+- **In one sentence**: A regression-based transfer learning approach was tested for predicting patient-reported health outcomes in older adults with diabetes, borrowing information from international aging cohorts (Gateway) and race/ethnicity groups in the RAND HRS, with gains evaluated by AUC and Brier score.
+- **In plain words**: Prediction models built on one group of people often work less well on another group that differs in background or health setting. This paper tests whether a method called transfer learning, which borrows useful information from other related datasets, can make predictions for older adults with diabetes more accurate. The authors compared it with models built only on the target group and with models pooling all the data, across eight international cohorts and four race/ethnicity groups in a US study.
+- **Why it matters**: Many prediction tools are developed on one population and may not transfer to others, which matters for fairness and for public health planning. The reported gains are small (about 0.1% to 3.1% in AUC), and the text itself describes them as modest, so the practical value is still an open question rather than a settled result.
+- **Background needed**: - Diabetes: a long-term condition in which blood sugar regulation is impaired; common in older adults.
+- Prediction model: a statistical formula that estimates the chance of an outcome from risk factors such as age or clinical measures.
+- Transfer learning: reusing information from related datasets to improve a model built on a smaller target dataset.
+- Transportability: whether a model that works in one population still works in another.
+- AUC: a 0 to 1 score for how well a model separates people who will have an outcome from those who will not; higher is better.
+- Brier score: a measure of how close predicted probabilities are to what actually happened; lower is better.
+- Bootstrap resampling: repeatedly resampling the data to estimate how uncertain a result is.
+- Patient-reported outcomes: health measures reported by participants themselves rather than by clinicians. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2824,16 +2839,17 @@ Population heterogeneity challenges the transportability of prediction models. T
 ### [Disease-anchored organ aging clocks enable multi-organ risk profiling from routine labs](https://www.medrxiv.org/content/10.64898/2026.11.22.26368688v1)
 *Shi, C.; Sun, Y.; Ruan, X. et al.* · `epidemiology` · medRxiv doi:10.64898/2026.11.22.26368688 v1 · relevance 0.05
 
-- **In one sentence**: The paper trains organ-specific aging clocks on first onset of disease in each organ using routine blood lab tests, then tests whether the frozen clocks select their own organ's proteins, predict own-organ disease, and add information to clinical risk scores across UK Biobank, NHANES and JMDC cohorts.
-- **In plain words**: Doctors can estimate how old a person's organs are biologically by looking at blood markers, but existing methods mostly rely on chronological age and specialised protein tests. This paper builds "organ clocks" that are trained directly on which people later developed disease in a given organ, using ordinary lab tests. The authors report that the clocks pick out proteins from their own organ, predict disease in that organ across three cohorts, and add some information beyond standard clinical risk scores.
-- **Why it matters**: Organ-specific risk from cheap, routine blood tests could help flag which organ is at risk, if the approach holds up outside the original study. The text does not show how large the gain over existing risk scores is, so the practical value remains to be judged.
-- **Background needed**: - Biological age: how old tissues function, which can differ from calendar age.
-- Organ clock: a model that estimates an organ's biological age from blood measurements.
-- Proteomics: measuring thousands of proteins in blood; more costly than routine tests.
-- Random protein panels: size-matched sets of random proteins used as a control to check that results are not just a generic effect.
-- UK Biobank, NHANES (US), JMDC (Japan): large population cohorts with health records and follow-up.
-- "Frozen" coefficients: the model is trained once and then applied without refitting to new cohorts.
-- Clinical risk scores: standard tools that estimate disease risk from common factors; the test is whether organ clocks add to them. · level: research-level
+- **In one sentence**: The paper trains organ-specific "aging clocks" on first onset of each organ's disease using routine blood lab tests from UK Biobank, freezes the coefficients, and tests whether they track own-organ disease risk in NHANES (US) and JMDC (Japan) cohorts.
+- **In plain words**: Doctors can estimate how old a person's organs are behaving, not just their calendar age, by looking at blood markers. Existing methods of doing this need expensive protein measurements and are trained on age rather than disease. This paper builds organ "clocks" trained directly on when each organ's disease first appears, using ordinary lab tests, and then checks whether they flag the right organ's disease.
+- **Why it matters**: The approach aims to make organ-level risk estimates possible from routine blood tests rather than specialised proteomics, which could matter for screening. The text reports that the frozen clocks kept organ correspondence in a second country's cohort, predicted own-organ disease in a third, and added information beyond current organ clocks to clinical risk scores; whether this improves care is not shown in the text.
+- **Background needed**: - Biological age: an estimate of how well body systems are functioning, which can differ from chronological age.
+- Organ clocks: models that estimate the biological age of a specific organ (e.g., heart, kidney) from blood measurements.
+- Proteomics: measuring large numbers of proteins in blood; costly and not routine.
+- Routine laboratory tests: common blood tests (e.g., cholesterol, glucose, liver enzymes) done in standard clinical care.
+- Frozen coefficients: the model's fitted weights are fixed after training and then applied unchanged to new cohorts.
+- Negative control: random protein panels of matching size are used to check that results are not just due to panel size.
+- Cohorts: UK Biobank (training), NHANES (US) and JMDC (Japan) (external tests).
+- Clinical risk scores: standard tools that combine factors such as age and sex to estimate disease risk. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2846,18 +2862,18 @@ Organ clocks estimate the biological age of organs from blood, but current clock
 ### [Efficacy, Immunogenicity, and Safety of an Inactivated Bivalent EV-A71-CVA16 Vaccine in Children: A Randomized Phase 3 Trial](https://www.medrxiv.org/content/10.64898/2026.11.23.26368796v1)
 *Tong, Y.; Liang, H.; Tang, J. et al.* · `infectious diseases` · medRxiv doi:10.64898/2026.11.23.26368796 v1 · relevance 0.09
 
-- **In one sentence**: A randomized phase 3 trial in about 8,000 children aged 6-71 months reports that a single inactivated vaccine targeting both enterovirus A71 and coxsackievirus A16 met its prespecified efficacy and EV-A71 immunogenicity noninferiority criteria against hand, foot, and mouth disease (HFMD).
-- **In plain words**: Hand, foot, and mouth disease is a common childhood illness caused by several viruses, two of the main ones being enterovirus A71 and coxsackievirus A16. This trial tested a combined vaccine against both viruses, comparing it with an existing licensed EV-A71-only vaccine in young children. The combined vaccine prevented most of the coxsackievirus A16 cases seen in the comparison group, and its immune response to EV-A71 was not worse than the licensed vaccine's.
-- **Why it matters**: Hand, foot, and mouth disease spreads widely among young children, and a vaccine covering both main causes could be useful for public health. The text reports efficacy and immune-response results, but it does not show long-term protection, and the trial's full data would be needed to judge how it compares with other approaches.
-- **Background needed**: - Hand, foot, and mouth disease (HFMD): a usually mild childhood infection with fever, blisters on hands, feet, and mouth; rarely it becomes severe.
-- Enteroviruses: a family of viruses that spread easily among young children; EV-A71 and CVA16 are two key causes of HFMD.
-- Inactivated vaccine: a vaccine made from viruses killed so they cannot replicate, but still able to trigger an immune response.
-- Bivalent vaccine: a vaccine containing two targets (here, two viruses) in one product.
-- Randomized, double-blind trial: participants are assigned to groups by chance, and neither they nor the researchers know which vaccine is given, reducing bias.
-- Vaccine efficacy: the percentage reduction in cases among vaccinated versus comparison children (here about 91%, with a 95% confidence interval of 75-98%).
-- Seroconversion and geometric mean titer (GMT): measures of antibody response; seroconversion is the share of people who develop a detectable antibody rise, and GMT is the average antibody level on a log scale.
-- Noninferiority: a test showing a new product is not meaningfully worse than an existing one.
-- Phase 3: the large late-stage trial type used before regulatory review. · level: intermediate
+- **In one sentence**: A randomized, double-blind phase 3 trial in 8,000 children aged 6-71 months reports that a bivalent inactivated EV-A71/CVA16 vaccine met its prespecified efficacy endpoint against CVA16-associated hand, foot and mouth disease and its noninferiority endpoint for EV-A71 immunogenicity versus a licensed EV-A71 vaccine.
+- **In plain words**: Hand, foot and mouth disease is a common illness in young children, caused mainly by two viruses, EV-A71 and CVA16. This trial gave a new vaccine that targets both viruses at once to thousands of children, and compared it with a vaccine already licensed against EV-A71 alone. The reported results suggest the two-dose vaccine protected against CVA16 illness and produced antibody responses against EV-A71 that were at least as good as the licensed vaccine.
+- **Why it matters**: Currently licensed vaccines cover only EV-A71, so CVA16 has been a gap in protection; a single product covering both viruses could address that. The text reports only the trial's own results, and the efficacy estimate rests on a small number of cases (4 versus 44), so the findings should be seen as preliminary until independent confirmation and longer follow-up are available.
+- **Background needed**: - Hand, foot and mouth disease (HFMD): a viral infection causing fever, blisters on hands, feet and mouth, mostly in young children.
+- Enterovirus A71 (EV-A71) and coxsackievirus A16 (CVA16): two viruses that are major causes of HFMD.
+- Inactivated vaccine: a vaccine made from virus particles killed so they cannot replicate, but still able to trigger immunity.
+- Bivalent vaccine: a single vaccine containing two strains or types of target.
+- Randomized, double-blind trial: participants are assigned to groups by chance and neither they nor the researchers know which vaccine is given.
+- Vaccine efficacy: the percentage reduction in cases among vaccinated versus control participants.
+- Seroconversion and geometric mean titer (GMT): measures of antibody response; seroconversion is the share of people who develop detectable antibodies, and GMT is the average antibody level on a log scale.
+- Noninferiority: showing a new vaccine is not meaningfully worse than an existing one.
+- RT-PCR: a lab test that detects viral genetic material. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2868,14 +2884,16 @@ Background Enterovirus A71 (EVA71) and coxsackievirus A16 (CVA16) cause hand, fo
 ### [Deep Learning-based Phylodynamic Inference of Oropouche Virus Transmission Dynamics in Brazil Between 2023 and 2025](https://www.medrxiv.org/content/10.64898/2026.11.24.26368826v1)
 *Arantes, I.; Bello, G.; Naveca, F. et al.* · `infectious diseases` · medRxiv doi:10.64898/2026.11.24.26368826 v1 · relevance 0.09
 
-- **In one sentence**: A deep-learning birth-death model with explicit exposed stages for vectors and humans is used to estimate Oropouche virus transmission reproduction numbers (RHH) and infection durations across three Brazilian genomic clusters from 2023-2025.
-- **In plain words**: Oropouche is a mosquito-borne virus that caused a large outbreak across the Americas in 2023 to 2025. The authors built a computer model that follows the virus as it passes back and forth between mosquitoes and people, and used it to reconstruct how the virus spread in Brazil from viral genome sequences. They report that the model gives more accurate estimates than a standard approach in simulations, and that the estimated spread was substantial in both an area where the virus is already common (Amazon) and one where it is not (Atlantic Forest).
-- **Why it matters**: Oropouche has spread to new areas, so estimates of how easily it passes between people and mosquitoes matter for public health planning. The method is a modelling advance that may help other vector-borne viruses, but the text is only an abstract, so the results have not been checked here in full detail.
-- **Background needed**: - Phylodynamics: inferring how an outbreak spread over time from the genetic differences between viral genome sequences.
-- Birth-death model: a standard statistical model in which lineages "branch" (transmission) and "end" (recovery or sampling) over time.
-- Reproduction number (R): the average number of new infections caused by one infected case. Here RVH and RHV are the steps from human to mosquito and back, and RHH is their product, the expected new human infections per infected person per full cycle.
-- Exposed (E) stage: the incubation period after infection, before a host becomes infectious.
-- Reassortant lineage M1L2S2: a virus variant formed when segments of two viral strains are swapped.
+- **In one sentence**: A deep-learning phylodynamic model (BDEIVH) that explicitly represents alternating human-vector transmission and incubation is applied to Oropouche virus genomic clusters in Brazil (2023–2025), estimating vector and human infection durations and reproduction numbers.
+- **In plain words**: Oropouche virus, spread by biting midges and mosquitoes, caused a large outbreak across the Americas from 2023 to 2025. The authors built a computer model that tracks how the virus passes back and forth between people and insects, and used it to read the family trees of viral genomes collected in Brazil. They report that the model estimates the virus spread more accurately than standard models in simulated tests, and that each infected person typically passed it on to about 1.15 to 1.81 others across the three main Brazilian clusters.
+- **Why it matters**: Understanding how fast a vector-borne virus spreads in both endemic and non-endemic areas can inform surveillance and control planning. The text does not describe any public-health intervention or validation against field case counts, so its practical impact is not established from this text alone.
+- **Background needed**: - Phylodynamics: inferring how an epidemic spreads by analysing the family tree (phylogeny) of viral genome sequences.
+- Birth-death model: a standard statistical model of how lineages branch and die out over time, used here as a baseline.
+- Reproduction number (R): the average number of new infections caused by one infected individual; here R_HH is the human-to-human value over one full human-vector-human cycle.
+- Vector: an organism, such as a midge or mosquito, that carries the pathogen between hosts.
+- Incubation period (exposed stage): the time between being infected and becoming able to transmit.
+- Reassortant lineage: a virus strain formed when segments of its genome mix with another strain.
+- Endemic vs non-endemic: whether a disease is regularly present in a region versus newly appearing there.
 - Deep learning: machine-learning methods using layered neural networks, here used to make the inference. · level: research-level
 
 <details><summary>Original abstract</summary>
@@ -2889,17 +2907,16 @@ Oropouche virus caused an unprecedented epidemic across the Americas during 2023
 ### [Procedure composition, age and race/color in gender-affirming surgical authorizations of the Brazilian public health system, 2014-2025](https://www.medrxiv.org/content/10.64898/2026.11.23.26368723v1)
 *dos Santos, J.; Amorim Costa, C. M.* · `public and global health` · medRxiv doi:10.64898/2026.11.23.26368723 v1 · relevance 0.09
 
-- **In one sentence**: A nationwide descriptive study of 1,375 Brazilian Unified Health System (SUS) hospital admission authorizations for gender-affirming surgery from 2014 to 2025, classified by procedure code direction, reporting shifts in feminizing versus masculinizing procedure mix, recorded age and race/color, and hospital habilitation counts.
-- **In plain words**: This paper looks at records of surgeries that Brazil's public health system paid for to help people align their body with their gender, covering 2014 to 2025. The authors sorted billed procedure codes by whether they feminize or masculinize the body, then counted them over time. They found the share of feminizing procedures fell from about 82% in 2014–2018 to 50% in 2024–2025, and that the two groups relied on very different types of surgery.
-- **Why it matters**: Public health-system billing records are increasingly used to describe gender-affirming care, so the paper's point that these codes show procedure type but not identity, clinical need or access is useful for anyone reading such counts. The authors suggest monitoring should use procedure-specific indicators and versioned code definitions, but the records cannot answer equity questions by themselves.
+- **In one sentence**: A nationwide descriptive study of 1,375 Brazilian Unified Health System (SUS) hospital admission authorizations for gender-affirming surgery from 2014 to 2025, classifying procedures by a versioned code list and reporting procedure mix, age, race/color, and hospital counts.
+- **In plain words**: This paper looks at records of surgeries that Brazil's public health system paid for to help people align their bodies with their gender, from 2014 to 2025. The records are billing forms, so they show which procedures were paid for, not who the patients are or why they had them. The authors found that the share of feminizing surgeries fell over time, and that the two groups of surgeries were made up of very different procedures.
+- **Why it matters**: Public health records like these are increasingly used to describe gender-affirming care, so the paper's point that billing codes cannot show identity, need, or access is a useful caution for monitoring. The authors say that questions of access and equity would need person-level or patient-reported data, which this design does not have.
 - **Background needed**: - SUS (Sistema Único de Saúde): Brazil's publicly funded national health system.
-- AIH (hospital admission authorization): a billing record for a hospital admission paid by the public system; it does not identify the person or record their gender identity.
-- Hospital Information System (SIH): the national database holding these monthly billing files.
-- Procedure codes: standardized billing codes whose meaning can change over time, so the study used a versioned classification.
-- Feminizing vs. masculinizing procedures: the direction a surgery is inferred to move the body; this is read from the code, not from the patient.
-- Descriptive study: it reports counts and proportions; it does not test causes or estimate population rates.
-- Habilitation: official accreditation of a hospital to provide a specific service.
-- Parda: an official Brazilian census category for mixed race/color, recorded here in pooled, unadjusted comparisons. · level: intermediate
+- Hospital admission authorization (AIH): a billing record for a hospital stay or procedure, filed through the Hospital Information System (SIH).
+- Procedure codes: standard billing codes for surgeries; the paper uses a version-tracked list to decide whether each code is feminizing or masculinizing.
+- Descriptive study: it counts and summarizes what happened, without testing causes.
+- Median: the middle value of a set of numbers.
+- "Parda": a Brazilian census category for mixed-race people, used in self-reported race/color.
+- Composition vs. rate: the shares reported describe the mix of records in each period, not the rate of surgery in the population. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2910,16 +2927,16 @@ Hospital admission authorizations from publicly financed health systems are incr
 ### [Developing a Stakeholder-Driven One Health Collaboration Framework for Bovine Tuberculosis Control at the Human-Animal Interface in Lundazi and Monze Districts, Zambia](https://www.medrxiv.org/content/10.64898/2026.11.23.26368721v1)
 *Phiri, A.; Zulu, M.; Phiri, M. et al.* · `public and global health` · medRxiv doi:10.64898/2026.11.23.26368721 v1 · relevance 0.07
 
-- **In one sentence**: A qualitative study of 104 focus-group participants and 10 key informants in two Zambian districts that identifies barriers to veterinary-medical collaboration on bovine tuberculosis and proposes a five-pillar One Health framework for district-level action.
-- **In plain words**: This paper looks at bovine tuberculosis, a cattle disease that can pass to people through raw milk, undercooked meat, and handling infected animals. Researchers in two rural Zambian districts held group discussions and interviews with farmers, abattoir workers, vets, doctors, and government officials. They found that the animal and human health sectors work largely separately, and they drafted a framework for closer teamwork built from the participants' own suggestions.
-- **Why it matters**: Zoonotic diseases that spread between animals and people are often under-reported in rural areas, and the paper ties this to a gap between national policy and what happens in districts. The authors say the framework may also suit other zoonoses such as brucellosis, anthrax and rabies, but the study itself covers only tuberculosis in two districts, so that wider applicability is untested.
-- **Background needed**: - One Health: the idea that human, animal and environmental health are linked and should be tackled together.
-- Zoonosis: an infection that moves between animals and people.
-- Mycobacterium bovis: the bacterium that causes bovine tuberculosis in cattle; it is related to the human tuberculosis bacterium but is a different organism.
-- Qualitative study: research based on interviews and group discussions rather than numerical measurements.
-- Focus group discussion: a guided conversation with a small group of people about a topic.
-- Thematic analysis: sorting interview content into recurring themes.
-- Abattoir and carcass condemnation: slaughterhouse processing, and removal of meat from sale when it is found to be unfit. · level: intermediate
+- **In one sentence**: A qualitative study in two Zambian districts (Lundazi and Monze) that used focus groups and key informant interviews to identify barriers to veterinary-medical collaboration on bovine tuberculosis and proposes a five-pillar One Health collaboration framework.
+- **In plain words**: Bovine tuberculosis is a cattle disease that can spread to people through raw milk, undercooked meat, and handling infected carcasses. Researchers held group discussions with 104 people, including farmers, abattoir workers, vets, doctors and officials, in two rural Zambian districts in 2022. They found that human and animal health workers mostly work separately, with little formal coordination, and they proposed a framework for better teamwork.
+- **Why it matters**: The paper addresses a neglected disease that spreads between animals and people, and it shows how gaps between national policy and district-level practice can leave frontline workers isolated. The authors suggest the framework could also apply to other zoonoses such as brucellosis, anthrax and rabies, but the text does not test this, so that claim remains untested.
+- **Background needed**: - Zoonosis: a disease that passes between animals and people.
+- Mycobacterium bovis: the bacterium that causes bovine tuberculosis in cattle; it is related to the human tuberculosis bacterium, which the paper notes district hospitals often cannot tell apart from it.
+- One Health: an approach that brings human, animal and environmental health workers together to tackle shared diseases.
+- Qualitative study: research based on group discussions and interviews rather than numerical measurement.
+- Focus group discussion (FGD) and key informant interview (KII): structured conversations with groups or with selected experts.
+- Thematic analysis: a method for finding recurring themes in transcribed conversations.
+- Abattoir: a slaughterhouse; carcass condemnation means meat is rejected as unfit. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -2932,16 +2949,15 @@ Background: Bovine tuberculosis, caused by Mycobacterium bovis, is a neglected z
 ### [Plasma proteomic markers of cognitive and brain aging in a multi-ethnic cohort](https://www.medrxiv.org/content/10.64898/2026.11.22.26368682v1)
 *Wood, B.; Wood Alexander, M.; Clappison, A. et al.* · `neurology` · medRxiv doi:10.64898/2026.11.22.26368682 v1 · relevance 0.09
 
-- **In one sentence**: A plasma proteomics study of 250 older adults from three ethnic groups links blood levels of 220 neurology-related proteins to cognition, brain MRI markers, and cognitive decline, with selected findings replicated in 1,381 ADNI participants.
-- **In plain words**: Researchers measured 220 proteins in blood samples from 250 older adults of Chinese, South Asian, and non-Hispanic White backgrounds. They looked for links between these proteins and thinking ability, brain scan measures, and heart and metabolic health. Several proteins tied to Alzheimer's-type tau, brain synapses, oxidative stress, and inflammation were linked to poorer cognition, and some findings were checked in a separate larger US cohort.
-- **Why it matters**: Blood tests that reflect brain aging could be cheaper and easier than brain scans or spinal fluid tests, and including ethnically diverse participants addresses a gap in Alzheimer's research. The text does not show whether these markers would be useful for diagnosis or treatment, so that remains open.
-- **Background needed**: - Plasma proteomics: measuring many proteins at once in a blood sample.
-- Tau (pTau, BDpTau): a protein that forms tangles in Alzheimer's disease; phosphorylated forms are studied as blood markers.
-- Entorhinal thickness: thickness of a brain region involved in memory, measured on MRI.
-- Cerebral small vessel disease: damage to tiny blood vessels in the brain, visible on imaging.
-- Cross-sectional vs. longitudinal: the main sample is a single snapshot; the ADNI replication tracks people over time.
-- ADNI (Alzheimer's Disease Neuroimaging Initiative): a large, mostly US research cohort.
-- Associations shown here do not establish that a protein causes brain aging. · level: research-level
+- **In one sentence**: A plasma proteomics study measuring 220 blood proteins in 250 older adults of Chinese, South Asian, and non-Hispanic White background, with replication in 1,381 ADNI participants, linking protein levels to cognition, brain MRI markers, and cognitive decline.
+- **In plain words**: Researchers measured about 220 proteins in blood samples from 250 older adults from three ethnic groups, and checked how those levels related to thinking skills and brain scans. Several proteins tied to brain disease, nerve connections, oxidative stress, and inflammation were linked to poorer cognition, and a tau-related protein was linked to a thinner area of the brain involved in memory. The main findings were then checked in a much larger US cohort of 1,381 people, where some of the same proteins were associated with cognitive decline and progression toward clinical disease.
+- **Why it matters**: Blood tests that reflect brain aging could be easier and cheaper to use than brain scans or spinal fluid tests, and the study includes ethnic groups that are usually underrepresented in Alzheimer's research. Whether these proteins will prove useful as clinical markers is not established by this text; it reports associations, not diagnostic performance.
+- **Background needed**: - Plasma proteomics: measuring many proteins at once in a blood sample; "ultrasensitive" means very low concentrations can be detected.
+- Tau (pTau): a protein that forms tangles in Alzheimer's disease; phosphorylated forms are chemically modified versions used as disease markers.
+- Entorhinal cortex: a brain region near the hippocampus important for memory, often one of the first affected in Alzheimer's.
+- Cerebral small vessel disease: damage to the tiny blood vessels of the brain, often seen as white matter changes on MRI.
+- Cohort study: following a defined group of people over time; ADNI is a large US Alzheimer's research cohort.
+- Associations are correlational; they do not by themselves show that a protein causes brain changes. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2952,16 +2968,16 @@ Advances in ultrasensitive proteomics offer opportunities to characterize molecu
 ### [Nigral volume as a marker for Lewy body copathology in Alzheimer's disease](https://www.medrxiv.org/content/10.64898/2026.11.23.26368759v1)
 *langley, j.; Hwang, K. S.; Hu, X. P.* · `neurology` · medRxiv doi:10.64898/2026.11.23.26368759 v1 · relevance 0.09
 
-- **In one sentence**: In 73 ADNI participants with clinical AD or MCI, lower antemortem neuromelanin-MRI substantia nigra volume was associated with autopsy-confirmed Lewy body copathology and with greater nigral hypopigmentation at autopsy, in a single-cohort analysis.
-- **In plain words**: Some people diagnosed with Alzheimer's disease or mild cognitive impairment also have Lewy body deposits in the brain, a second protein problem that tends to bring earlier symptoms and faster memory and thinking decline. This study checked whether a brain scan of a midbrain region called the substantia nigra, read with a special MRI that picks up its dark pigment, could flag those people while they were still alive. Scans taken before death were compared with brain examinations after death, and smaller nigral volume was linked to Lewy body presence.
-- **Why it matters**: If confirmed, a non-invasive scan could help identify Alzheimer's patients who also carry Lewy body pathology, which may matter for diagnosis and for how their decline is expected to go. The study is small, comes from one cohort, and the gap of several years between scan and autopsy limits how closely the findings reflect the brain at the time of scanning, so it is best read as an early signal.
-- **Background needed**: - Alzheimer's disease (AD): the most common dementia, marked by amyloid and tau protein deposits in the brain.
-- Mild cognitive impairment (MCI): noticeable memory or thinking problems that are not yet severe enough to count as dementia.
-- Lewy bodies: clumps of the alpha-synuclein protein; they are the hallmark of Parkinson's disease and dementia with Lewy bodies, and can co-occur with AD.
-- Substantia nigra: a midbrain area that makes dopamine and contains dark pigment (neuromelanin); losing it is a known feature of Parkinson's disease.
-- Neuromelanin-sensitive MRI: a scan technique that highlights this pigment so the region's size and darkness can be measured in living people.
-- Autopsy confirmation: the brain is examined after death, which is the reference standard for whether Lewy bodies were present.
-- ADNI: the Alzheimer's Disease Neuroimaging Initiative, a research database of scans and clinical data. · level: research-level
+- **In one sentence**: In 73 ADNI participants with clinical AD or MCI, lower antemortem neuromelanin-MRI substantia nigra volume was associated with autopsy-confirmed Lewy body copathology and with greater nigral hypopigmentation at autopsy, though the study is single-cohort and modest in size.
+- **In plain words**: Many people diagnosed with Alzheimer's disease also have Lewy body deposits, clumps of a protein called alpha-synuclein in the brain, and these are linked to earlier symptoms and faster memory and thinking decline. This study asked whether a special brain scan measuring the size of a midbrain region called the substantia nigra, taken while people were alive, could help flag those cases. Among 73 people whose brains were examined after death, those with Lewy body deposits tended to have a smaller nigral region on the scan and paler (less pigmented) tissue at autopsy.
+- **Why it matters**: A scan-based marker that hints at hidden Lewy body pathology in Alzheimer's patients could help clinicians and researchers sort patients during life, which matters for prognosis and trial selection. The result is preliminary: it comes from one small cohort, the scans were taken years before autopsy, and the predictive value shown (area under the curve about 0.77) is moderate and was not tested in separate data.
+- **Background needed**: - Alzheimer's disease (AD): the most common cause of dementia, defined by amyloid and tau brain changes.
+- Mild cognitive impairment (MCI): noticeable memory or thinking problems that do not yet meet the full dementia threshold.
+- Lewy bodies: abnormal clumps of alpha-synuclein protein; they define Parkinson's disease and dementia with Lewy bodies, and often co-occur with AD.
+- Substantia nigra: a midbrain area that makes dopamine; its pigmented cells are lost in Parkinson's disease.
+- Neuromelanin-sensitive MRI: a scan that picks up the dark pigment in the substantia nigra, used as a proxy for its health.
+- Autopsy confirmation: the diagnosis of Lewy body pathology was made on tissue after death, which is the reference standard here.
+- ADNI: the Alzheimer's Disease Neuroimaging Initiative, a large shared research database. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2974,16 +2990,17 @@ Background: Lewy body (LB) copathology in Alzheimer's disease (AD) is associated
 ### [The cellular neighbourhoods of adult gliomas and their clinical associations](https://www.medrxiv.org/content/10.64898/2026.11.24.26368523v1)
 *Mathioudaki, A.; Rutz, S.; Seferbekova, Z. et al.* · `oncology` · medRxiv doi:10.64898/2026.11.24.26368523 v1 · relevance 0.06
 
-- **In one sentence**: A single-cell spatial transcriptomic atlas of 275 adult glioma patients (about 2.6 million cells) reports recurrent multicellular neighbourhoods across glioma types, with some neighbourhood abundances linked to survival in astrocytoma.
-- **In plain words**: Adult brain tumours called gliomas come in several types that behave differently, yet they grow in the same part of the body. This study mapped where different cell types sit inside 275 tumours, using a method that measures which genes are active in each cell and where it is located. The authors found that tumour cells group into repeating local "neighbourhoods" with characteristic mixes of immune and support cells, and that some of these neighbourhoods relate to patient survival.
-- **Why it matters**: It suggests a spatial layout of tumour cells that goes beyond the standard microscope-based grading, which could in principle inform prognosis. The text does not show that these neighbourhoods would change treatment, and the survival link is reported for astrocytoma only, so clinical use remains unproven.
-- **Background needed**: - Gliomas: the most common primary malignant brain tumours in adults, with several molecular types (glioblastoma, oligodendroglioma, astrocytoma, ependymoma).
-- IDH mutation and 1p/19q codeletion: molecular markers that define tumour subtypes and affect outcome.
-- WHO grade: a standard score from tissue examination that indicates how aggressive a tumour looks.
-- Spatial transcriptomics: a method that measures gene activity in cells while keeping their physical positions in a tissue slice.
-- Cellular neighbourhood: a group of nearby cells with a recurring mix of cell types.
-- AC-like: astrocyte-like tumour cell state, a type of support-cell-like state.
-- H&E: routine hematoxylin and eosin stain used to view tissue under a microscope. · level: research-level
+- **In one sentence**: A single-cell spatial transcriptomic atlas of 275 adult glioma patients (2.6 million cells) reports recurrent cellular neighbourhoods across glioma types, with some neighbourhood abundances linked to survival in astrocytoma.
+- **In plain words**: This study looks at the most common malignant brain tumours in adults, gliomas, and asks whether the different types of cells inside them are arranged in repeating local groups. The researchers mapped the position and activity of about 2.6 million cells from 275 patients, using a technique that measures which genes are switched on in each cell while keeping its location in the tissue. They found recurring cell "neighbourhoods" with particular immune and support-cell mixes, some shared across tumour types and some linked to clinical features.
+- **Why it matters**: It suggests that the spatial layout of tumour cells, not only their molecular type, may carry information about prognosis, and the authors report that in astrocytoma neighbourhood abundance was associated with survival independently of WHO grade. Whether this could guide treatment or diagnosis is not shown in the text and would need further study.
+- **Background needed**: - Gliomas are tumours arising from glial cells, the support cells of the brain; glioblastoma is the most aggressive common type.
+- IDH mutations and 1p/19q codeletion are genetic markers used to classify these tumours.
+- WHO grade is a standard pathology scale of how aggressive a tumour looks under the microscope.
+- Single-cell spatial transcriptomics measures gene activity in individual cells while retaining their positions in a tissue slice.
+- A "neighbourhood" here means a recurring group of nearby cells with a characteristic mix of cell types.
+- AC-like (astrocyte-like) refers to a cell state resembling normal astrocytes, a type of glial cell.
+- H&E is the routine stain used to view tissue sections under a microscope.
+- Multiplexed protein imaging labels many proteins at once in the same tissue section. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -2995,16 +3012,16 @@ Glial tumours are the most common primary malignant brain tumours in adults and 
 *Somarelli, J. A.; Dougherty, B. V.; Beckmann, A. G. et al.* · `oncology` · medRxiv doi:10.64898/2026.11.24.26368506 v1 · relevance 0.06
 
 - **In one sentence**: Regulatory network models built from multi-omic data of over 10,000 prostate cancer patients point to EP300/CBP as a target in androgen pathway modulator-resistant disease, supported by preclinical work with the inhibitor pocenbrodib and one clinical case.
-- **In plain words**: Hormone-blocking drugs for advanced prostate cancer usually stop working over time, and doctors need new targets for cancers that have become resistant. The authors used computer models of gene regulation, fed with genetic and molecular data from many patients, to find a protein called EP300 (and its close partner CBP) that seemed linked to resistance. They then tested a new drug that blocks these proteins, pocenbrodib, in lab and animal studies, and report one patient who benefited.
-- **Why it matters**: Resistance to hormone-pathway drugs is nearly universal in metastatic prostate cancer, so a new candidate target is of interest. The evidence is still early: it rests on lab and animal experiments and a single patient, so whether it helps patients in general is not yet shown.
-- **Background needed**: - Androgen pathway modulators (APMs): drugs that block male hormone (androgen) signalling, which fuels prostate cancer growth.
-- Androgen receptor: the protein that androgens bind to; it switches on genes that drive tumour growth.
-- Therapy resistance: when a cancer stops responding to a drug that once worked.
-- EP300 / CBP: two related proteins that add chemical tags (acetyl groups) to other proteins and help control gene activity.
-- Multi-omic data: measurements across several layers of biology (genes, RNA, proteins, etc.) from the same samples.
-- Regulatory network model: a computer map of which genes and proteins influence one another.
-- Oxidative phosphorylation and fatty acid metabolism: the cell's energy-producing processes that the inhibitor was found to suppress.
-- Preclinical: tested in cells and animals, not yet proven in people. · level: research-level
+- **In plain words**: Prostate cancer drugs that block male hormone signalling often stop working over time, and doctors need new targets for these resistant tumours. The authors used computer models of gene regulation, built from large sets of patient molecular data, to find a protein called EP300 (and its close relative CBP) linked to resistance. They then tested a new inhibitor of these proteins, pocenbrodib, in lab and animal studies, and report benefit in one patient.
+- **Why it matters**: Resistance to hormone-blocking drugs is nearly universal in advanced prostate cancer, so a new candidate target is of interest. The evidence is limited: the human benefit rests on a single patient, so the finding is a lead for further testing rather than an established treatment.
+- **Background needed**: - Androgen pathway modulators (APMs): drugs that block male hormones such as testosterone from driving prostate cancer growth through the androgen receptor.
+- Therapy resistance: when tumours keep growing despite treatment.
+- Multi-omic data: measurements across several layers of biology (genes, proteins, and so on) from the same patients.
+- Regulatory network model: a computer map of which genes and proteins control others.
+- EP300 / CBP: related proteins that switch genes on by adding chemical tags (acetylation) to histones and other proteins.
+- Acetylomics: measuring these acetyl tags across the proteome.
+- Oxidative phosphorylation and fatty acid metabolism: cell processes that produce energy; the paper links the drug to suppressing them.
+- In vitro / in vivo: lab-dish and living-animal experiments; a single-patient clinical report is far weaker evidence than a trial. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3017,16 +3034,16 @@ Androgen pathway modulators (APMs) have significantly improved outcomes for men 
 ### [Effect of a feedback loop on clinical prediction model performance](https://www.medrxiv.org/content/10.64898/2026.11.23.26368745v1)
 *Pacynko, S.; Sperrin, M.; Jenkins, D.* · `health informatics` · medRxiv doi:10.64898/2026.11.23.26368745 v1 · relevance 0.17
 
-- **In one sentence**: A simulation study of how clinical prediction models that guide treatment decisions degrade when refitted on data generated by their own use, with and without treatment included as a predictor and with unmeasured confounding.
-- **In plain words**: Medical risk calculators can change the care patients receive, and that care can then change the outcomes the calculator was built to predict. This paper uses computer simulations, based on cardiovascular disease prediction and treatment, to test what happens when such a model is updated with data from patients it helped treat. Without hidden factors affecting both treatment and outcome, leaving treatment out of the model made it miscalibrated, while including treatment fixed this fully. When hidden confounders were present, performance got worse even with treatment included.
-- **Why it matters**: Prediction tools that are retrained on their own outcomes can quietly lose accuracy after deployment, which matters for patient safety. The authors suggest causal inference methods and post-deployment monitoring as possible responses, though the text does not test these.
-- **Background needed**: - Clinical prediction model: a formula that estimates a patient's chance of an outcome (e.g., a heart attack) from measured factors.
-- Calibration: whether predicted risks match observed event rates; calibration-in-the-large checks overall average level, calibration slope checks whether predictions spread too widely or narrowly.
-- C-statistic: a measure of how well a model ranks patients from higher to lower risk.
-- Treatment threshold: the risk level above which treatment is recommended.
-- Feedback loop: when a model's decisions change the data it is later updated on.
-- Unmeasured confounding: a hidden factor that influences both who gets treated and the outcome, biasing results.
-- Simulation study: generating artificial data with known rules to test a method under controlled conditions. · level: research-level
+- **In one sentence**: A simulation study of how updating a clinical prediction model with data generated by its own treatment recommendations (a feedback loop) degrades calibration and discrimination, and whether including treatment as a predictor or unmeasured confounding changes this.
+- **In plain words**: Medical risk calculators can change the care patients receive, and that care then changes the outcomes the calculator learns from. This paper uses computer simulations, with settings based on cardiovascular disease, to see how much a model's accuracy drops when it is retrained on data from patients it helped treat. It also checks whether adding the treatment itself as an input to the model helps.
+- **Why it matters**: Prediction tools that guide treatment may quietly lose accuracy after they are updated, which could affect patient outcomes without anyone noticing. The authors say the findings agree with earlier work and point to the need for monitoring methods after a model is deployed; the text does not report how widespread the problem is in real clinical use.
+- **Background needed**: - Clinical prediction model: a formula that estimates a patient's chance of a future event (here, a bad cardiovascular outcome) from measured details such as age or blood pressure.
+- Feedback loop: the model's own recommendations change who gets treated, so the data later used to update the model no longer reflect the original situation.
+- Calibration: whether predicted risks match observed event rates (calibration-in-the-large is the overall level; calibration slope is whether the spread of risks is right).
+- C-statistic: how well the model ranks patients who will have the event above those who will not.
+- Unmeasured confounding: a hidden factor that affects both treatment and outcome, which the model cannot see.
+- Simulation study: the researchers generate artificial patient data with known rules, so they can test the model under controlled conditions.
+- Causal inference: statistical methods for estimating the effect of a treatment rather than just associations. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -3037,18 +3054,17 @@ Clinical prediction models (CPMs) that guide treatment-initiation, and therefore
 ### [STREAM: Sequential Transformer for Risk Estimation from Asynchronous Medical Events for Dynamic Postoperative AKI Prediction](https://www.medrxiv.org/content/10.64898/2026.11.21.26368665v1)
 *Lu, S.; Ruan, X.; Wang, L. et al.* · `health informatics` · medRxiv doi:10.64898/2026.11.21.26368665 v1 · relevance 0.11
 
-- **In one sentence**: STREAM is a Transformer model that treats irregular electronic health record data as a chronological stream of clinical events to predict postoperative acute kidney injury (PO-AKI) at surgery completion and after each new event, reporting AUROC/AUPRC and macro-AUPRC comparisons against a Time-series Transformer and GRU-D in a retrospective cohort of 167,078 noncardiac surgical episodes.
-- **In plain words**: Doctors want to know how likely a patient is to develop kidney injury after surgery, and that estimate should change as new test results and notes arrive. This paper describes a model, STREAM, that reads a patient's health records as a time-ordered list of events and updates its risk estimate each time a new event appears. In a retrospective set of about 167,000 non-heart surgeries, it scored somewhat higher than two comparison models on the measures reported.
-- **Why it matters**: Risk estimates that update as information arrives could matter for timing kidney-protecting care after surgery, and the paper suggests the model could be one part of a future perioperative "digital twin" (a computer model of a patient). The reported gains over the comparators are modest, the study is retrospective, and the text does not show that it improves patient outcomes, so its clinical value remains unproven.
-- **Background needed**: - Acute kidney injury (AKI): a sudden drop in kidney function, a common complication after surgery.
-- Electronic health record (EHR): the hospital's digital chart, with labs, medications, vitals and notes recorded at irregular times.
+- **In one sentence**: STREAM is a Transformer model that treats irregular electronic health record data as a time-ordered stream of clinical events to predict postoperative acute kidney injury (PO-AKI) at surgery completion and after each new event, reporting AUROC/AUPRC and calibration against Time-series Transformer and GRU-D baselines in a 167,078-episode retrospective noncardiac surgery cohort.
+- **In plain words**: Doctors need to know how likely a patient is to develop kidney injury after surgery, and that estimate should change as new test results and notes arrive. This paper describes a model, STREAM, that reads a patient's records as a chronological list of events rather than fixed time blocks, and updates its risk estimate as each new event comes in. In a retrospective set of about 167,000 non-heart surgeries, it scored somewhat higher than two comparison models, and the authors say its risk estimates were more consistent across the postoperative period.
+- **Why it matters**: Risk estimates that update as information accumulates could matter for timing clinical checks after surgery, and the text suggests the event-level explanations may help clinicians see what drove a change. The gains over the comparators are modest in the reported numbers, and the study is retrospective, so its clinical value is not yet shown; the link to "perioperative digital twins" is described by the authors as a potential component, not a demonstrated one.
+- **Background needed**: - Acute kidney injury (AKI): a sudden drop in kidney function, here studied after surgery.
+- Electronic health record (EHR): the digital hospital chart, including labs, medications, and notes, often recorded at irregular times.
 - Transformer: a neural network architecture that weighs relationships among items in a sequence; widely used in language models.
-- GRU-D: a recurrent neural network designed for data with gaps and irregular timing; used here as a comparison.
-- AUROC / AUPRC: scores from 0 to 1 for how well a model separates patients who will and will not have the outcome; AUPRC is especially informative when the outcome is rare.
-- Calibration: whether predicted probabilities match observed event rates.
-- Retrospective cohort: a study using past records rather than a new prospective trial.
-- Permutation analysis: shuffling the order of inputs to test whether the order affects the prediction.
-- Digital twin: a continuously updated computer model of an individual patient. · level: research-level
+- GRU-D: a recurrent neural network designed for data with gaps and irregular timing.
+- AUROC / AUPRC: measures of how well a model ranks patients who will and will not develop the outcome; AUPRC is more informative when the outcome is rare.
+- Calibration: whether predicted probabilities match observed frequencies.
+- Retrospective cohort: a study using past records rather than a prospective trial.
+- Digital twin: a computer model of a patient updated with their data over time. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3061,16 +3077,16 @@ Postoperative acute kidney injury (PO-AKI) risk estimates evolve as clinical inf
 ### [Training decision models for simulating human respondents](https://arxiv.org/abs/2611.31613)
 *Davood Wadi, Yu Ma* · `cs.CL` · arXiv:2611.31613v1 · relevance 0.05
 
-- **In one sentence**: The paper tests whether fine-tuning language-model "decision models" on historical respondent-level choice data, before any target-study data is seen, reduces bias when LLMs are used as synthetic survey respondents in econometric analysis.
-- **In plain words**: Researchers are starting to use AI language models in place of real people in surveys and experiments, but answers from ready-made models tend to distort the conclusions drawn from them. This paper trains a model on past records of how real people chose between options, then tests it on four new studies covering topics like vaccines and nutrition labels. The training reduced the error in estimated treatment effects by 22% to 89%, and a small trained model beat a much larger untrained one on three of the four studies.
-- **Why it matters**: Using simulated respondents could make research cheaper and faster, but only if the simulated answers lead to correct conclusions. The paper's finding that training on a single study can lower prediction error while making treatment-effect estimates worse is a useful caution, and the authors present choice training as complementary to calibration rather than a full fix.
-- **Background needed**: - Synthetic respondent (silicon sampling): using an AI model to generate survey or experiment answers in place of human participants.
-- Discrete choice experiment: a study where people pick one option from a set, used to learn how much they value features such as price or labels.
-- Treatment effect: the measured difference an intervention makes, such as how much a label changes choices.
-- Conditional maximum likelihood: a statistical method that adjusts model settings so the observed choices become as probable as possible.
-- Cross-entropy: a measure of how well a model's predicted probabilities match actual outcomes; lower is better.
+- **In one sentence**: The paper tests whether fine-tuning language-model "decision models" on historical respondent-level choice data, before any target-study data is seen, reduces the bias that off-the-shelf LLMs introduce when used as synthetic survey respondents for econometric inference.
+- **In plain words**: Researchers are increasingly using AI language models in place of real people in surveys and experiments, but these stand-ins choose differently from humans and distort the conclusions drawn from them. This paper trains such models on past records of how real people made choices, so they start out closer to human behavior. Across four new held-out studies on topics like vaccines and nutrition labels, the trained models cut the error in estimated treatment effects by 22% to 89%.
+- **Why it matters**: Synthetic respondents are cheap and fast, so whether they can be made to give unbiased estimates matters for market research and experimental economics. The paper also reports a caveat: training on a single study can lower prediction loss while worsening treatment-effect error, so the approach is not a simple fix, and the text does not show how well it generalizes beyond the studies tested.
+- **Background needed**: - Synthetic respondents: AI models asked to answer survey or experiment questions as if they were people ("silicon sampling").
+- Discrete choice experiment: a study where participants pick one option from a set, used to measure preferences; conjoint analysis is a common version.
+- Treatment effect: the difference in outcomes caused by an intervention, such as a changed label or message.
+- Conditional maximum likelihood: a standard statistical method for fitting model weights so that observed choices become as probable as possible.
+- Cross-entropy: a measure of how well a model predicts observed outcomes; lower is better, but not the same as unbiased estimates.
 - Post-inference calibration: correcting estimates after the model has produced them.
-- Held-out studies: datasets kept back from training and used only for testing. · level: research-level
+- Held-out studies: studies withheld from training and used only for testing. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3081,17 +3097,17 @@ Researchers increasingly use large language models (LLMs) as synthetic responden
 ### [Worth the Wait? How Response Time and Streaming Shape Judgments of Generative AI Answers and Chatbot Engagement](https://arxiv.org/abs/2611.33050)
 *Zihan Chen, Di Zhu, Lei Nico Zheng* · `cs.CL` · arXiv:2611.33050v1 · relevance 0.03
 
-- **In one sentence**: Using a French government chatbot arena, WildChat logs, and random assignment of streamed versus cached replies, this paper tests how response speed and streaming affect blind preference votes on LLM answers and whether users keep chatting.
-- **In plain words**: AI chatbots now reply at very different speeds: some think for a long time, while others return a saved answer instantly. This paper asks whether that delivery speed changes how people rate the answers, and whether waiting changes whether they keep chatting. The authors found that, in a French government chatbot arena, the same stored text won more votes when it was streamed word by word than when it was replayed at once, and that slow replies made users less likely to ask follow-up questions.
-- **Why it matters**: Preference leaderboards that rank chatbots are usually read as judgments of text alone, so a delivery effect would matter for how models are compared and how services budget speed and caching. The link to the broader literature on the "labor illusion" (people value effort they can see) is suggested by the authors, but how far the findings generalise beyond these settings is not established by the text provided.
-- **Background needed**: - Large language model (LLM): the AI system that generates text for chatbots.
-- Blind preference vote: a user compares two anonymous answers and picks the better one; these votes build model rankings.
-- Streaming: showing text as it is generated, rather than all at once.
-- Caching: storing and reusing an earlier answer instead of generating a new one.
-- Labor illusion: the tendency to value outputs more when the effort behind them is visible.
-- Percentage points: the difference between two percentages (e.g., 57% vs 29% is 28 points).
-- Congestion: slowdowns caused by heavy server load.
-- WildChat: a public dataset of real conversations with ChatGPT. · level: intermediate
+- **In one sentence**: Using a French government chatbot arena, WildChat logs, and congestion-driven latency variation, the paper finds that streaming a fresh answer as it is written wins more blind votes than replaying the same stored text at once, while waiting reduces users' follow-up questions.
+- **In plain words**: AI chatbots now reply at very different speeds, from a long pause while the model "thinks" to an instant reply from a stored copy. This paper asks whether the speed or the way an answer appears changes how people judge it, which matters because public rankings of chatbots come from people voting blind on answers. The authors found that the same stored text won more votes when it was typed out live (57% of decisive votes) than when it was shown instantly (29%), and that slow replies made users less likely to ask a follow-up question.
+- **Why it matters**: It suggests that preference leaderboards may partly reward how an answer is delivered rather than what it says, and that latency has a real cost in user engagement. The text reports observational and arena data only, so the scope of these effects across other services and tasks is unclear.
+- **Background needed**: - Large language models (LLMs): AI systems that generate text in response to prompts.
+- Reasoning models: models that take extra time to work through a problem before answering.
+- Response cache: a stored earlier answer that can be sent back instantly instead of generating a new one.
+- Blind preference vote: a user compares two anonymous answers and picks the better one; these votes are used to rank models.
+- Decisive vote: a vote where one answer is clearly preferred (not a tie or both-bad judgment).
+- Labor illusion: the idea that people value outputs more when they can see effort going into them.
+- Streaming: showing text word by word as it is generated, rather than all at once.
+- Randomized comparison: assigning conditions by chance so differences can be attributed to the condition. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -3104,15 +3120,16 @@ Answers from generative AI chatbots built on large language models (LLMs) now ar
 ### [Contests versus Contracts in Innovation Procurement](https://arxiv.org/abs/2611.31829)
 *Xiaoyun Qiu, Christopher Snyder* · `econ.TH` · arXiv:2611.31829v1 · relevance 0.08
 
-- **In one sentence**: A mechanism-design study comparing independent contracts, contests, and "interdependent" contracts for a funder who pays several competing approaches to an uncertain innovation, where feasibility is learned through experimentation.
-- **In plain words**: This paper looks at how a government or other buyer should pay several teams that are all trying to develop the same new technology, when it is not known in advance which approaches will work. The authors compare three designs: paying each team separately, running a prize contest, and a newer hybrid where each team's payment and whether it keeps experimenting depend on what its rivals achieve. They find that the best hybrid designs can match the optimum, and that the cheaper option between contests and contracts depends on how long the experimentation period lasts.
-- **Why it matters**: Public funders such as defence and science agencies often split money across competing projects, so the question of how much rivalry to build into the payment scheme has practical weight. The text is a theory paper with no empirical data, so its results apply to modelled conditions rather than to any specific programme.
-- **Background needed**: - Innovation procurement: a buyer pays firms to develop a new technology rather than buying an existing product.
-- Contract vs. contest: a contract pays each firm under its own terms; a contest pays only the winner(s) of a race to a goal, such as a fixed prize.
-- Mechanism design: the study of how to set up rules and payments so that self-interested participants behave in the way the designer wants.
-- Breakthrough vs. breakdown: a breakthrough is a success; a breakdown is a clear failure that signals an approach is infeasible. "Contractable" means the buyer can write payments conditional on it being observed and verified.
-- Experimentation: firms try approaches over time, learning whether each one works; the buyer can stop experiments at a cutoff or deadline.
-- Rent extraction: the buyer reduces the extra profit firms would otherwise keep above their costs. · level: research-level
+- **In one sentence**: A mechanism-design study of how a funder should structure competition among firms pursuing uncertain technological approaches, comparing independent contracts, contests, and interdependent contracts under different contractability, heterogeneity, and payment-flexibility assumptions.
+- **In plain words**: The paper asks how much competition a government or other buyer should create when it pays several teams to develop innovations whose feasibility is only learned by trying. It compares three kinds of arrangement: separate contracts for each team, prize contests, and a middle option where each team's reward also depends on how rivals are doing and whether experimentation continues. The authors report that the best arrangement depends on whether failures can be written into contracts, whether the approaches differ in difficulty, and whether payments can change over time.
+- **Why it matters**: Innovation procurement is a real policy question for public agencies funding research, and the paper gives formal results on when a contest is cheaper than contracts. It is a theory paper, so its claims hold under its modeling assumptions and have not been tested against real procurement data in the text provided.
+- **Background needed**: - Mechanism design: designing payment rules so that self-interested firms reveal information or act as the buyer wants.
+- Contest: a setup where a prize goes to the best performer (for example, the first to succeed or the top-ranked finisher).
+- Contract: a payment agreement tied to specified outcomes, here breakthroughs (successes) and possibly breakdowns (confirmed failures).
+- Contractable: outcomes that can be verified and enforced in a contract.
+- Experimentation under uncertainty: firms learn whether an approach is feasible only by trying it, so stopping and continuing decisions matter.
+- Success cutoff and deadline: rules for stopping the whole process after a set number of successes or at a fixed time.
+- Rents: extra profit a firm earns above its costs, which a buyer tries to limit. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3123,15 +3140,16 @@ How much competition should a designer introduce when procuring innovation? We s
 ### [What it is to Obey](https://arxiv.org/abs/2611.32741)
 *Mark Whitmeyer* · `econ.TH` · arXiv:2611.32741v1 · relevance 0.06
 
-- **In one sentence**: In simultaneous-move games, a designer who commits in advance to a signaling device and evaluates the resulting equilibria with a Hausdorff-continuous function is shown to be without loss in restricting to direct obedient devices under incomplete information exactly when she assumes her preferred equilibrium will be played, and the monotone evaluations are characterized under complete information.
-- **In plain words**: The paper studies a setting where a planner sets up a private messaging scheme before players make simultaneous choices, sending each player a signal that may recommend what to do. The planner judges the set of resulting equilibrium outcomes with a continuous scoring rule. The text reports conditions under which it is safe to limit attention to "obedient" schemes, where players are told what to do and find it in their interest to follow, and it classifies which scoring rules behave in a consistent (monotone) way in games where everyone knows the payoffs.
-- **Why it matters**: This is a theory result about how much a designer can gain from recommendations, and whether simple obedient recommendations lose nothing. It connects to the literature on Bayesian persuasion and correlated equilibrium, and its relevance beyond those models is not established by the text.
-- **Background needed**: - Simultaneous-move game: players choose at the same time, without seeing each other's choices.
-- Equilibrium: a set of strategies where no player gains by switching alone.
-- Signaling device / recommendation: a private message to each player suggesting an action; "obedient" means following it is optimal for the player.
-- Designer's evaluation: a scoring function over the set of equilibria; "Hausdorff-continuous" means small changes in the equilibrium set cause small changes in the score.
-- Incomplete vs. complete information: whether players know each other's payoffs.
-- Monotone evaluation: a scoring rule that does not fall when the set of equilibria grows, roughly; the optimistic and pessimistic extremes are the best and worst case over equilibria. · level: research-level
+- **In one sentence**: In simultaneous-move games, a designer who commits to a signaling device and evaluates the resulting equilibria with a Hausdorff-continuous function; the paper shows that restricting to direct obedient devices is without loss of optimality under incomplete information exactly when the designer assumes her preferred equilibrium is played, and characterizes monotone evaluations under complete information.
+- **In plain words**: This paper studies a setting where a planner sends private hints to players who are about to act at the same time, such as a recommendation to each firm or driver about what to do. The question is when the planner can limit herself to a simple kind of hint, one that players want to follow, without losing anything in the best outcome she can reach. The text says this holds under incomplete information exactly when the planner assumes her preferred equilibrium (a stable pattern of play that no one wants to leave) will actually be played.
+- **Why it matters**: Signaling devices that recommend actions are a central idea in the study of how outside coordination can shape strategic behavior, so the result clarifies when simple recommendations are enough. The text is brief and I cannot judge how the results relate to the wider literature beyond what is stated.
+- **Background needed**: - Simultaneous-move game: players choose actions at the same time without seeing each other's choice.
+- Equilibrium: a set of actions where no player gains by switching alone.
+- Signaling device: a mechanism that sends each player a private message, often a suggested action.
+- Obedient device: one where following the recommendation is each player's best response, so players want to obey.
+- Incomplete vs. complete information: whether players lack or share knowledge of each other's payoffs.
+- Hausdorff continuity: a way of saying that small changes in the set of equilibria cause only small changes in the designer's evaluation.
+- Monotone evaluation: an evaluation that rises when the set of equilibria gets better in a consistent ordering sense; the maximally optimistic and pessimistic evaluations are special cases. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3144,15 +3162,15 @@ Prior to agents taking part in a simultaneous-move game, a designer commits a de
 ### [Optimal Signaling Mechanisms for One-round Matching Markets](https://arxiv.org/abs/2611.31517)
 *Varsha Dani, David G. Harris, Thomas P. Hayes et al.* · `cs.GT` · arXiv:2611.31517v1 · relevance 0.19
 
-- **In one sentence**: The paper derives optimal deterministic and randomized signaling mechanisms for a one-round matching market with n applicants and n firms, where each applicant signals k firms, and gives limiting efficiency values as k grows.
-- **In plain words**: The paper studies how job seekers can send signals of interest to employers so that matches happen more often, a setting like job or dating markets where many people compete for limited slots. The authors work out the best possible signaling rules for a simple model with equal numbers of applicants and firms, including rules that use randomness. They report that as the number of signals per applicant grows large, about 75.45% of applicants get offers under the best deterministic rule and about 78.2% under the best randomized rule.
-- **Why it matters**: It gives precise limits on how much signaling can improve matching in a stylized model, and it shows that randomization can beat the best deterministic rule. The text does not say how these results transfer to real job or dating markets, so the practical reach is unclear.
-- **Background needed**: - Matching market: a setting where applicants and firms pair up, such as jobs or dating.
-- Signaling: a costly or limited way for applicants to show real interest in a firm, so firms can prioritize.
-- Deterministic vs randomized mechanism: a fixed rule versus a rule that uses chance to decide which signals or outcomes occur.
-- Limit as k goes to infinity: the result when each applicant may send an ever-larger number of signals.
-- Incentive compatibility: whether firms gain by following the prescribed rule rather than deviating.
-- Optimal here means best achievable within the model's assumptions, not best in practice. · level: research-level
+- **In one sentence**: The paper derives optimal deterministic and randomized signaling mechanisms for a one-round matching market with n applicants and n firms, where each applicant signals k firms, and characterizes their limiting efficiency as k grows.
+- **In plain words**: The paper studies how job seekers can use signals, like a limited number of special "I'm interested" tokens, to show employers which firms they really want, so that matches are more likely to happen. The authors work out the best possible signaling rules for a simple market with equal numbers of applicants and firms. They report that, as the number of signals per applicant grows large, the best deterministic rule gets about 75.45% of applicants a job offer, and the best randomized rule gets about 78.20%.
+- **Why it matters**: Signaling is used in real job and dating markets, and this work gives exact limits on how well such schemes can do in a stylized model, including a comparison between fixed and randomized rules. It is a theory result, so its relevance to real markets depends on how closely the simple model matches them.
+- **Background needed**: - Matching markets: two sides (applicants and firms) are paired, such as jobs and workers or dating partners.
+- Signaling: a costly or limited way for one side to show real interest, so the other side can prioritize it.
+- Deterministic vs. randomized mechanisms: a fixed rule for assigning signals versus one that uses chance.
+- Limit as k goes to infinity: the result when each applicant may signal very many firms, used to state the best achievable rate.
+- Incentive compatibility: whether firms gain by following the prescribed mechanism rather than deviating.
+- The paper's key figures are stated as approximate percentages in the abstract; the full proofs are not in the given text. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3163,17 +3181,15 @@ Signaling mechanisms are used in various types of matching markets so that appli
 ### [Heterogeneous Risk-Sensitive Evolutionary Learning in Coordination Games: Polarization, Welfare Loss, and Intervention for Efficiency](https://arxiv.org/abs/2611.31568)
 *Solaleh Mohammadi, Yiman Fong, Kaiqing Zhang* · `eess.SY` · arXiv:2611.31568v1 · relevance 0.09
 
-- **In one sentence**: In a finite population playing coordination games under risk-sensitive best-response learning with mutations, two subpopulations with different fixed entropic-risk attitudes can settle into a polarized, Pareto-dominated state, and interventions that shift risk parameters for a share of agents can restore the payoff-dominant equilibrium only when both intervention share and intensity are large enough.
-- **In plain words**: The paper studies how a group of players who learn by trial and adjustment ends up when they play a game where everyone does best by matching choices, and when the players differ in how cautious they are about risk. The authors find that a split outcome, where the two groups pick different actions, can be the long-run result and that it leads to lower average payoffs than the best available agreement. They also test ways to nudge some players toward less cautious attitudes, and find that both how many players are nudged and how strongly must be large enough to bring the best outcome back.
-- **Why it matters**: It offers a formal account of how differences in risk attitudes alone, without any change in the game, can make a group's learning settle on a worse outcome, which may bear on coordination problems in markets, social norms, or policy. The text does not show how well the model matches real populations, so its practical reach is unclear from this summary alone.
-- **Background needed**: - Coordination game: each player gains when they pick the same action as others; several agreements can exist.
-- Payoff-dominant equilibrium: the agreement where everyone gets the highest payoff.
-- Risk-dominant equilibrium: the agreement that is safest to aim for when unsure what others will do.
-- Pareto dominance: one outcome is better for everyone than another.
-- Entropic risk measure: a way to score gambles that penalizes bad outcomes more heavily, with a parameter setting how cautious a player is.
-- Stochastic stability: the state a learning process tends to spend most of its time in when rare random mutations occur.
-- Best response with mutations: players usually pick the best reply to recent play, but sometimes experiment at random.
-- Polarized state: a stable split in which the two subpopulations choose different actions. · level: research-level
+- **In one sentence**: In a finite population playing coordination games under risk-sensitive best response with mutations, the paper characterizes when a polarized state with heterogeneous risk attitudes (entropic risk measure) is uniquely stochastically stable, shows its welfare can fall below the risk-dominant equilibrium, and analyzes intervention shares and intensities that restore the payoff-dominant equilibrium.
+- **In plain words**: The paper studies how a group of people who repeatedly learn from experience can end up split, with one subgroup choosing one option and the other subgroup choosing a different one, even when both would do better by coordinating on a single option. Each person's attitude toward risk is built into how they judge outcomes, and the two subgroups differ in that attitude. The authors identify when this split state is the one the learning process settles into in the long run, show it can leave everyone worse off, and test policies that nudge some agents' risk attitudes to steer the group back to the best coordinated outcome.
+- **Why it matters**: The result suggests that differences in risk attitude alone, with no difference in payoffs, can lock a population into an inefficient outcome, which is relevant to questions of polarization and coordination failure. The text is limited to the abstract and does not show empirical tests or applications, so its relevance to real-world settings is an open question.
+- **Background needed**: - Coordination game: each player gains most when they pick the same action as others, but there are several such matching outcomes with different payoffs.
+- Payoff-dominant vs. risk-dominant equilibrium: the first gives the highest payoff to everyone; the second is the safer choice when people are unsure what others will do.
+- Evolutionary learning with mutations: players repeatedly switch to best responses, with occasional random experimentation; the stochastically stable state is the one the process spends most time in over the long run.
+- Entropic risk measure: a way of valuing uncertain payoffs that penalizes or favors risk depending on a risk parameter; higher parameter means more risk-sensitive.
+- Pareto dominance: one outcome is Pareto dominated by another if every agent is at least as well off and some are strictly better off in the other.
+- Intervention share and intensity: the fraction of agents whose risk parameter is changed, and by how much. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3186,18 +3202,17 @@ We study evolutionary learning in coordination games in a finite population of a
 ### [Rough log-normal stochastic volatility with quadratic drift: second-moment stability and the martingale property under positive correlation](https://arxiv.org/abs/2611.32791)
 *Artur Sepp, Parviz Rakhmonov* · `q-fin.MF` · arXiv:2611.32791v1 · relevance 0.14
 
-- **In one sentence**: The paper extends a log-normal stochastic volatility model with quadratic drift to a rough (fractional Volterra) setting and studies second-moment stability, expected integrated variance, and when the discounted price is a true martingale under positive correlation.
-- **In plain words**: The paper studies a mathematical model of how the randomly changing "volatility" (the size of price swings) of an asset such as Bitcoin or Ether evolves over time. It shows the model has a unique non-negative solution with finite moments on any finite time horizon, and gives exact conditions under which its second moment stays bounded. It also checks the model against option prices for those assets and against exact moment formulas in simulations.
-- **Why it matters**: Rough volatility models are an active area in quantitative finance, and results on when a model's moments stay bounded and when prices are true martingales matter for pricing and risk checks. The abstract reports these results for the paper's own model; its practical use beyond that setting is not established in the text.
-- **Background needed**: - Volatility: how strongly an asset's price moves; here modeled as a random process that must stay non-negative.
-- Stochastic volatility model: a model where volatility itself follows a random process rather than being fixed.
-- Log-normal: volatility is modeled as the exponential of a Gaussian-type process, which keeps it positive.
-- Rough / fractional Volterra equation: a model where volatility is driven by a noise with memory, with roughness set by the Hurst exponent.
-- Moments: averages of powers of a random quantity; "second moment" relates to average squared size.
-- Martingale: a process whose expected future value equals its current value, i.e. no predictable drift in a fair game.
-- Share measure: a change of pricing viewpoint (numeraire) used in finance.
-- VIX: a published index of expected market volatility derived from option prices.
-- Implied volatility smile: how option-implied volatility varies with strike price. · level: research-level
+- **In one sentence**: The paper extends a log-normal stochastic volatility model with quadratic drift to a rough (fractional Volterra) setting, derives second-moment stability thresholds and a martingale condition under the share measure, and reports calibration to Bitcoin and Ether option smiles under positive correlation.
+- **In plain words**: The paper studies a mathematical model of how the price swings of an asset (here, the size of its fluctuations over time) evolve randomly. The authors show the model has a well-behaved, non-negative solution over any finite period, and they work out when its average squared size stays bounded and when a price built on it is a fair "martingale" (no expected drift). They also test the model against option prices for Bitcoin and Ether and link it to a simple model of trades pushing prices.
+- **Why it matters**: Volatility models of this kind are used to price options and volatility indices such as the VIX, so exact conditions for stability and fairness matter for pricing and simulation. The text does not show how the results compare with existing rough-volatility models in practice, and the claim that the martingale condition is necessary is proved only for one class of kernels, with the singular-kernel case left open.
+- **Background needed**: - Stochastic volatility: a model in which the size of price fluctuations is itself random and evolves over time.
+- Log-normal model: volatility is modelled as the exponential of a random process, so it stays positive.
+- Rough volatility and fractional kernels: a memory term with a fractional (Volterra) kernel, which makes volatility paths rougher than standard diffusions; the Hurst exponent sets the roughness.
+- Moments: the expected value of a power of a random quantity, e.g. the second moment is the expected squared value; boundedness of moments indicates stability.
+- Martingale: a process whose expected future value equals its current value, i.e. no predictable drift; a "fair" game.
+- Share measure: a change of probability viewpoint (numéraire) used in pricing, under which the asset price is a martingale.
+- VIX: a market index of expected short-term volatility derived from option prices.
+- Implied volatility smile: the pattern of option implied volatilities across strikes. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3208,17 +3223,17 @@ We extend the log-normal stochastic volatility model with quadratic drift to a f
 ### [Delta-Vega Hedging with Deep Reinforcement Learning: From Simulation to Reality](https://arxiv.org/abs/2611.32790)
 *Michele Colombi, Marco Di Francesco, Pietro Rossi* · `q-fin.CP` · arXiv:2611.32790v1 · relevance 0.10
 
-- **In one sentence**: The paper trains a PPO deep reinforcement learning agent to delta-vega hedge option portfolios under discrete trading and transaction costs, using the underlying asset and a longer-dated option, with validation in a stochastic volatility simulator and on historical S&P 500 index option data.
-- **In plain words**: Options sellers need to protect their books from price moves and from swings in how volatile the market is expected to be. This paper asks whether a learning algorithm can decide how much of the underlying asset and a second, longer-dated option to trade to do that job, while keeping trading costs in mind. The authors train it on simulated markets, then test it on real S&P 500 option data and compare it with standard textbook hedging rules.
-- **Why it matters**: Hedging volatility risk is costly, and the paper reports that the learned policy beats a standard delta-vega rule as trading costs rise and cuts profit-and-loss spread roughly in half versus a simple delta hedge on historical data. It may matter for derivatives desks and for work applying reinforcement learning to finance, though the text gives no evidence about live trading performance beyond the backtest-style comparison.
-- **Background needed**: - Option: a contract giving the right to buy or sell an asset at a set price later; its value depends on price and volatility.
-- Hedging: taking offsetting positions so that losses in one holding are cancelled by gains in another.
-- Delta: sensitivity of an option's value to the underlying price; delta hedging means holding the matching amount of the asset.
-- Vega: sensitivity of an option's value to volatility; delta-vega hedging also uses a second option to offset volatility risk.
-- Stochastic volatility model: a model in which volatility itself moves randomly over time.
-- Reinforcement learning: training an agent to choose actions by trial and reward; PPO (Proximal Policy Optimization) is a common algorithm for this.
-- Transaction costs: fees and price impact paid on each trade, which discourage frequent rebalancing.
-- Profit-and-loss (P&L) dispersion: how widely the hedged portfolio's gains and losses vary; lower is steadier. · level: research-level
+- **In one sentence**: The paper trains a PPO deep reinforcement learning agent to delta-vega hedge option portfolios under discrete trading and transaction costs, using the underlying asset and a longer-dated option, with simulation tests and an out-of-sample check on S&P 500 index option data.
+- **In plain words**: Traders who sell options need to offset the risk that prices move, and also the risk that market volatility (how much prices swing) changes. This paper asks whether a learning-based trading agent can do that using the underlying asset plus a second, longer-dated option, while keeping trading costs in mind. The authors train the agent on simulated data, restrict it to inputs a trader could see in the market, and then test it on historical S&P 500 option data.
+- **Why it matters**: Hedging volatility risk is costly and is a practical concern for option desks, so an approach that holds up on real market data under transaction costs is relevant to derivatives practice. The paper reports that its advantage appears mainly in high-volatility periods and at higher costs; how far these results generalise beyond the tested data is not established by the text.
+- **Background needed**: - Option: a contract giving the right to buy or sell an asset at a set price later; its value depends on the asset price and its volatility.
+- Hedging: taking offsetting positions so that a portfolio's losses from market moves are reduced.
+- Delta hedge: offsetting price risk by holding the underlying asset in proportion to the option's price sensitivity (delta).
+- Vega: an option's sensitivity to volatility; a delta-vega hedge also trades a second option to offset volatility risk.
+- Stochastic volatility model: a price model in which volatility itself changes randomly over time.
+- Transaction costs and discrete-time trading: trades cost money and happen at fixed intervals rather than continuously.
+- Reinforcement learning: an agent learns a trading rule by trial and error against a reward signal; PPO is a common training algorithm.
+- Profit-and-loss (P&L) dispersion: the spread of outcomes, used here as a measure of hedging risk. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3231,18 +3246,19 @@ Hedging an option portfolio with the underlying asset alone leaves the position 
 ### [Semivariance and Semivolatility in Portfolio Selection: A Unified Framework for Downside-Risk Portfolio Models](https://arxiv.org/abs/2611.32638)
 *Francesco Cesarone, Massimiliano Corradini, Nicol\`o Giunta* · `q-fin.PM` · arXiv:2611.32638v1 · relevance 0.07
 
-- **In one sentence**: The paper classifies downside-risk portfolio models (semivariance and semivolatility) by the positive homogeneity degree of the risk measure, states a non-degeneracy condition under which risk-parity, most-diversified and Sortino-ratio problems are well posed, and tests seventeen long-only strategies out of sample on Dow Jones and Nasdaq-100 constituents.</one_liner>
-<parameter name="plain">This paper looks at how to build investment portfolios that focus on the bad side of returns, meaning losses below a chosen threshold, rather than all ups and downs. The authors argue that these downside-risk measures should not simply copy the standard variance-based versions, because different portfolio problems need different mathematical properties. They then compare seventeen portfolio strategies on real stock index data, rebuilding them over time and checking whether differences in performance are statistically meaningful.
-- **Why it matters**: Many investors and fund managers judge risk by losses rather than by overall variability, so a clearer framework for when downside measures behave well matters for how portfolios are built. The text does not show how widely these methods are used in practice, and its empirical results are only described in general terms here.
-- **Background needed**: - Portfolio selection: choosing the share of money put into each asset (the "weights").
-- Variance and volatility: standard measures of how much returns spread out; volatility is the square root of variance.
-- Downside risk: only counts returns falling below a threshold, such as the mean return, zero, or a market index return.
-- Semivariance and semivolatility: downside versions of variance and volatility.
-- Positive homogeneity: if all weights are doubled, the risk doubles (degree one), which keeps risk contributions adding up to total risk.
-- Risk parity, most-diversified and risk budgeting: strategies that spread risk across holdings in set proportions.
+- **In one sentence**: The paper classifies downside-risk portfolio models (semivariance and semivolatility) by the positive homogeneity degree of the risk measure, states a non-degeneracy condition under which risk-parity, most-diversified and Sortino-ratio problems are well posed, and runs a rolling-window out-of-sample comparison of seventeen long-only strategies on Dow Jones and Nasdaq-100 total returns.
+- **In plain words**: This paper is about how investors measure risk when they care mainly about losses rather than all ups and downs. It looks at a risk measure called semivariance, which counts only returns that fall below a chosen threshold, and its square root, semivolatility. The authors argue these measures should be chosen according to the type of portfolio problem being solved, and they test many investment strategies on past stock index data.
+- **Why it matters**: Many downside-risk models are presented as simple extensions of standard variance-based models, and this paper argues that the extension needs care for certain portfolio goals. The empirical comparison on two index datasets gives a practical check, though its results are limited to the periods and indexes studied and say little beyond them.
+- **Background needed**: - Portfolio: a mix of investments with weights that add up to one.
+- Variance and volatility: standard ways to measure how much returns spread out; volatility is the square root of variance.
+- Downside risk: risk measured only through losses or returns below a threshold (here the mean, zero, or a market index return).
+- Semivariance / semivolatility: downside versions of variance and volatility.
+- Positive homogeneity of degree one: if all weights are doubled, risk doubles; this is what makes risk contributions add up to total risk.
+- Risk parity and risk budgeting: spreading risk evenly, or in prescribed shares, across holdings.
+- Most-diversified portfolio: maximizes diversification as a ratio of weighted volatilities to portfolio volatility.
 - Sortino ratio: a reward-to-risk measure using downside risk instead of total volatility.
-- Convex program: an optimization problem with a single best solution that standard solvers can find reliably.
-- Out-of-sample backtest and block bootstrap: testing a strategy on data not used to design it, and using resampled blocks of time series to judge statistical significance. · level: research-level
+- Convex program: an optimization problem that can be solved reliably.
+- Rolling-window backtest and block bootstrap: testing a strategy on repeated past windows of data and using resampling to judge whether differences are statistically meaningful. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3253,17 +3269,16 @@ In this paper, we study downside risk in portfolio selection beyond minimum-risk
 ### [Large-Scale Streaming Portfolio Optimization with Pauli Correlation Encoding](https://arxiv.org/abs/2611.32769)
 *Vicente P. Soloviev, Josh Kirsopp* · `quant-ph` · arXiv:2611.32769v1 · relevance 0.06
 
-- **In one sentence**: This paper tests Pauli Correlation Encoding (PCE), a qubit-efficient quantum-style heuristic for clustering-based portfolio selection, in a rolling streaming setup against a Buy & Hold baseline, and compares a joint multi-cut variant (dPCE) on portfolios of up to several thousand assets.
-- **In plain words**: Choosing which stocks to hold from a very large list is a hard combinatorial puzzle, and existing shortcut methods handle it poorly at scale. This paper takes an earlier static test of a quantum-inspired method (PCE) and runs it as a live system that keeps re-estimating correlations and rebalancing over time. The authors report that both PCE and a joint variant beat a simple buy-and-hold strategy, and that PCE lost noticeably less during a market downturn, while the joint variant becomes more costly as portfolios grow.
-- **Why it matters**: It matters for anyone asking whether specialized quantum-style optimization can be used in realistic, repeated trading decisions rather than one-off tests. The text does not show how results hold outside the study's own data and settings, so its practical value should be treated as provisional.
-- **Background needed**: - Portfolio optimization: choosing which assets to hold and in what amounts to balance return against risk.
-- Combinatorial selection: picking a best subset from a huge number of possibilities, which becomes very hard as the list grows.
-- Correlation structure: how assets move together; clustering groups similar assets to shrink the problem.
-- Qubit: the basic unit of a quantum computer; PCE uses far fewer qubits than one per asset.
-- Rolling re-estimation / rebalancing: periodically recomputing correlations and adjusting holdings using recent data.
-- Buy & Hold: a passive baseline that buys assets and keeps them without trading.
-- Shots: repeated measurements of a quantum circuit; the shot budget is how many are used.
-- Transaction costs and risk aversion: trading fees and how strongly the strategy penalizes volatility. · level: research-level
+- **In one sentence**: This paper extends Pauli Correlation Encoding (PCE), a qubit-efficient quantum-style clustering approach to portfolio selection, into a rolling-window streaming setting and compares PCE and a joint multi-cut variant (dPCE) against a Buy & Hold baseline on portfolios of up to several thousand assets.
+- **In plain words**: Choosing which stocks to hold from a very large pool is a hard selection puzzle, and this paper tests a quantum-inspired method for it under conditions closer to real trading, where the data and the portfolio are updated repeatedly over time rather than set once. The authors report that both versions beat a simple buy-and-hold strategy, and that the main method, PCE, lost noticeably less than the baseline during a market downturn. They also say the joint variant, dPCE, becomes harder to run as the portfolio grows.
+- **Why it matters**: Portfolio selection over thousands of assets is a practical problem for asset managers, and the paper checks a promising method against repeated rebalancing rather than a single snapshot. Its relevance to real quantum hardware is not established by the text, which describes the method as using far fewer qubits than assets but does not show results on actual quantum devices.
+- **Background needed**: - Portfolio optimization: choosing asset weights to balance expected return against risk (risk aversion) and trading costs.
+- Buy & Hold: a passive baseline that buys assets and keeps them without active rebalancing.
+- Rolling window / streaming: re-estimating correlations and the portfolio repeatedly as new price data arrives.
+- Clustering as selection: grouping correlated assets so that one representative per group can be chosen, shrinking the problem.
+- Qubit: the basic unit of quantum computing; PCE encodes many assets into fewer qubits than one per asset.
+- Measurement shots: the number of repeated quantum measurements used to estimate results; a shot budget is the cap on these repeats.
+- Rebalancing cadence: how often the portfolio is adjusted. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3276,17 +3291,17 @@ Classical portfolio construction over large asset universes is a combinatorial s
 ### [Score-Based Diffusion for Hypergraph Signals in the t-Spectral Domain](https://arxiv.org/abs/2611.33026)
 *Zhiyuan Dong, Carlos Mundo-Levano, Daniel L. Lau et al.* · `cs.LG` · arXiv:2611.33026v1 · relevance 0.09
 
-- **In one sentence**: A score-based diffusion generative model for signals living on a fixed hypergraph, built in the spectral domain of t-product hypergraph signal processing, using a per-mode frequency shift to make the forward diffusion well-posed and a closed-form score for inactive modes.
-- **In plain words**: The paper studies how to generate new data values that live on the nodes of a hypergraph, a network where one connection can link more than two items at once. The authors build a diffusion-style generator that adds noise in a frequency-like representation of the network, learns how to reverse that noise, and then uses the same machinery to fill in missing nodes. They report that it beats a clique-expansion baseline (a method that turns the hypergraph into an ordinary graph) on networks of up to 500 nodes.
-- **Why it matters**: Many real systems, such as group interactions or multi-way relations, are better described by hypergraphs than by ordinary graphs, so generative tools for signals on them could matter for data imputation and simulation. The text reports specific gains on its own benchmarks, but it does not show how the approach performs on real-world datasets or against stronger recent methods, so its wider significance is unclear.
-- **Background needed**: - Signal on a graph: a value attached to each node, such as a sensor reading or user attribute.
-- Hypergraph: a generalization of a graph in which an edge can join any number of nodes.
-- Graph/hypergraph Laplacian: a matrix describing how connected nodes differ; its eigenvectors act like frequencies for the network.
-- Tensor product (t-product): a way of multiplying multi-dimensional arrays that the paper uses to define its spectral domain.
-- Diffusion model: a generator that learns to reverse a gradual noising process; the "score" is the gradient of the log probability that guides this reversal.
-- Ornstein-Uhlenbeck process: a noising process that drifts back toward a fixed average while adding random noise, with a known stationary distribution.
-- Posterior sampling / guidance: generating samples consistent with partial observations, here used to recover missing nodes.
-- NMSE (normalized mean squared error): a scale-free measure of reconstruction error, where lower is better. · level: research-level
+- **In one sentence**: A score-based diffusion generative model for signals living on a fixed hypergraph, built in the spectral domain of t-product hypergraph signal processing, with a per-mode frequency shift to keep the forward diffusion well-posed and a posterior-sampling method for recovering missing nodes.
+- **In plain words**: The paper studies how to generate new realistic data values on a network where connections can join more than two nodes at once (a hypergraph). The authors convert the problem into a frequency-like representation, add a small shift so the noising process behaves properly, and train a small neural denoiser on that representation. They report that their method beats a simpler clique-expansion baseline on hypergraphs of up to 500 nodes and can fill in missing nodes with lower error than classical baselines.
+- **Why it matters**: Many real systems, such as group interactions or multi-way relations, are better described by hypergraphs than by ordinary graphs, so generative tools for signals on them could matter for tasks like imputing missing data. The text reports numbers on its own benchmarks but does not show how it performs on real-world datasets or against stronger modern hypergraph methods, so its broader significance is unclear.
+- **Background needed**: - Signal on a graph or hypergraph: a value attached to each node, such as a sensor reading or user attribute.
+- Hypergraph: a network where an edge can link any number of nodes, not just two.
+- Clique expansion: a common workaround that turns each hyperedge into ordinary pairwise edges, losing some structure.
+- Spectral domain: describing a signal by its components along the network's natural vibration modes, analogous to frequencies.
+- Diffusion model: a generative method that learns to reverse a gradual noising process; the "score" is the gradient of the log-probability that guides denoising.
+- Ornstein-Uhlenbeck process: a mean-reverting random process whose noising has closed-form statistics.
+- Posterior sampling / guidance: generating data consistent with partial observations, here used to fill in missing nodes.
+- NMSE (normalized mean squared error): a scaled measure of reconstruction error where lower is better. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3297,18 +3312,17 @@ We introduce the first score-based generative model for signals on a fixed hyper
 ### [Multiple-Input Multiple-Output Forward Scatter Radar](https://arxiv.org/abs/2611.32546)
 *Abdollah Ajorloo, Stefano Amato Ciciretti, Fabiola Colone* · `eess.SP` · arXiv:2611.32546v1 · relevance 0.09
 
-- **In one sentence**: This paper proposes a multiple-input multiple-output forward scatter radar that estimates a target's departure and arrival angles from amplitude-only, non-coherent measurements, using frequency- or time-division multiplexing, and validates it with simulations and outdoor software-defined radio experiments.
-- **In plain words**: Forward scatter radar detects objects that are hard to see by catching the strong signal they reflect when they pass directly between a transmitter and a receiver. This paper extends that idea by using arrays of antennas at both ends, so the system can estimate the target's position in two angular directions without needing the signals to be phase-synchronized. The authors describe two ways to separate the signals, simulate their performance, and report outdoor proof-of-concept tests.
-- **Why it matters**: It offers a way to locate targets with simpler, unsynchronized hardware, which may matter for low-cost or integrated sensing and communications systems. The text reports simulations and outdoor tests, but these are described only at a proof-of-concept level, so its practical reach is not yet established.
-- **Background needed**: - Radar: sends radio waves and measures echoes to detect and locate objects.
+- **In one sentence**: The paper proposes a multiple-input multiple-output forward scatter radar that jointly estimates target departure and arrival angles from amplitude-only measurements, using FDM and TDM multiplexing with analytical resolution and ambiguity results and outdoor software-defined-radio proof-of-concept tests.
+- **In plain words**: Forward scatter radar detects objects that pass directly between a transmitter and a receiver, where they reflect strongly. This paper extends that idea to use arrays of antennas at both ends, so the system can estimate a target's position as two angles without needing the transmitter and receiver to be phase-synchronized. The authors describe the principle, two ways of separating the signals, simulations, and outdoor experiments with software-defined radios.
+- **Why it matters**: Avoiding phase synchronization between distributed antennas could make radar-style sensing cheaper and easier to deploy, which may matter for integrated sensing and communications. The text reports simulations and outdoor proof-of-concept tests, but it is a limited demonstration, so the practical reach of the approach is not yet established.
+- **Background needed**: - Radar: sends radio waves and infers objects from the echoes or signals they affect.
+- Forward scatter radar: transmitter and receiver sit on opposite sides of an area; a target crossing the line between them scatters strongly, making it easier to detect.
 - Radar cross section: how strongly an object reflects radio waves.
-- Forward scatter: detection when a target sits on the straight line between transmitter and receiver, where reflection is unusually strong.
-- Transmitter-receiver baseline: the line between the two units.
-- Direction of departure (DoD) and direction of arrival (DoA): the angles at which the signal leaves the transmitter and reaches the receiver.
-- Coherent vs. non-coherent: coherent systems use the signal's phase; non-coherent systems use only its strength (amplitude).
-- Antenna array and MIMO: several antennas at each end, transmitting and receiving multiple signals.
-- Multiplexing (FDM/TDM): sharing the channel by assigning different frequencies or time slots to each signal.
-- Software-defined radio: radio hardware whose behaviour is set by software. · level: research-level
+- SISO / SIMO / MIMO: single or multiple antennas at transmitter (input) and receiver (output).
+- Direction of departure (DoD) and direction of arrival (DoA): the angles at which signals leave the transmitter array and reach the receiver array.
+- Amplitude-only, non-coherent measurements: only signal strength is used, not its phase, so no precise timing or phase link between devices is needed.
+- FDM / TDM: frequency-division or time-division multiplexing, ways of letting several transmit channels share the medium without interfering.
+- Integrated sensing and communications: systems that use one set of radio hardware for both sensing and data transfer. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3321,17 +3335,15 @@ Forward Scatter Radar (FSR) enhances the detection of low-observable targets by 
 ### [Cif-query bridging for audio-native asr transfer to visual speech recognition](https://arxiv.org/abs/2611.32697)
 *Chang Sun, Dongliang Xie, Wanpeng Xie et al.* · `cs.SD` · arXiv:2611.32697v1 · relevance 0.16
 
-- **In one sentence**: A lightweight cross-attention bridge, seeded by a CIF predictor's adaptive token-rate queries, connects a Paraformer visual speech recognition encoder to the Qwen3-ASR audio-native decoder, reporting 7.97% CER versus 11.78% for native Paraformer on CMLR.
-- **In plain words**: Lip-reading systems turn video of a talking face into text. This paper takes a speech recognizer built for sound and reuses its language knowledge to read lips, by adding a small connecting module between a visual front end and the pretrained sound-based model. On the CMLR test set, the authors report that this setup makes fewer character errors than the original visual system (7.97% versus 11.78%).
-- **Why it matters**: Reusing a large pretrained speech model for silent video could help lip-reading where visual data is scarce, and the bridge is designed to keep detail from many video frames without making the model read them all directly. The text reports only one dataset and a comparison against one baseline, so the size of the gain in other settings is unknown.
-- **Background needed**: - Visual speech recognition (VSR): transcribing speech from silent video of lips and face.
-- ASR (automatic speech recognition): software that turns audio into text.
-- Character error rate (CER): share of characters wrongly transcribed; lower is better.
-- Continuous integrate-and-fire (CIF): a method that groups frame-level features into a variable number of token-sized chunks.
-- Cross-attention: a mechanism that lets one sequence of vectors look up relevant information in another.
-- Adapter/projector: small trainable layers that map one model's output format into another's input format.
-- CTC: a training objective for aligning sequences of frames with text without explicit alignment.
-- CMLR: a Chinese lip-reading dataset used as the benchmark here. · level: research-level
+- **In one sentence**: A lightweight cross-attention bridge, driven by adaptive queries from a continuous integrate-and-fire predictor, connects a Paraformer visual speech recognition encoder to the pretrained Qwen3-ASR language decoder, reporting 7.97% CER on CMLR versus 11.78% for native Paraformer.
+- **In plain words**: This paper is about reading speech from lip movements (video only, no sound) by reusing a model that was built for listening to audio. The lip-reading model produces many video frames, which do not fit neatly into the compact input the audio model expects, so the authors add a small connector that condenses the video into a shorter set of query points and refines them against the full frame sequence. On the CMLR test set, the reported character error rate drops from 11.78% for the original Paraformer system to 7.97% for the combined system.
+- **Why it matters**: Transferring the strong language knowledge of audio speech models to silent lip reading is a practical route to better visual speech recognition, which matters for accessibility and noisy settings. The text reports ablations on bridge depth, projector initialization, adapter size and CTC supervision, but the evidence comes from one dataset (CMLR), so how far the gain generalizes is not established here.
+- **Background needed**: - Visual speech recognition (VSR): transcribing speech from video of lips, without audio.
+- Automatic speech recognition (ASR): converting speech to text; Qwen3-ASR is a pretrained audio model with a large language-model decoder.
+- Paraformer: a non-autoregressive speech recognition architecture; its CIF (continuous integrate-and-fire) predictor estimates how many text tokens each stretch of input corresponds to.
+- Cross-attention: a mechanism that lets one set of vectors look up and weigh information from another set.
+- Character error rate (CER): share of characters transcribed wrongly; lower is better.
+- CTC: a training loss that aligns input frames to output characters without explicit alignment labels. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3342,15 +3354,14 @@ Audio-native automatic speech recognition (ASR) models provide strong speech-lan
 ### [SoundWeaver: Compositional Warm-Starting for Text-to-Audio Diffusion Serving](https://arxiv.org/abs/2603.07865)
 *Ayush Barik, Sofia Stoica, Nikhil Sarda et al.* · `cs.SD` · arXiv:2603.07865v2 · relevance 0.07
 
-- **In one sentence**: SoundWeaver is a training-free method that speeds up text-to-audio diffusion by warm-starting generation from acoustic segments reused across a cache of previously generated clips, with an adaptive bandit choosing the skip depth per request.
-- **In plain words**: Generating sound from a text description with modern diffusion models is slow, because the model must refine noise step by step through many passes. This paper proposes SoundWeaver, which reuses pieces of sound from a small library of already-generated clips, stitches them into a rough starting point that fits the prompt, and then begins the refinement partway through instead of from pure static. The authors report speedups of 1.48 to 3.74 times on several text-to-audio backbones, using a cache of only 1,000 clips, and say generation quality also improved.
-- **Why it matters**: Faster audio generation without retraining matters for anyone deploying these models at scale, where latency and compute cost add up. The idea of reusing structure across past outputs, rather than treating each request in isolation, may also be relevant to caching and serving systems more broadly, though the text does not address that connection.
-- **Background needed**: - Diffusion models generate output by starting from random noise and removing it over many steps (neural function evaluations, or NFEs, are these model passes).
-- Warm-starting means beginning the process from a partly formed guess instead of pure noise, so fewer steps are needed.
-- Neural audio codecs compress audio into compact numerical representations that can be compared.
-- A contextual bandit is an online decision method that picks among options (here, how many steps to skip) and learns from feedback.
-- Signal-to-noise ratio (SNR) describes how much signal remains relative to noise at a given step.
-- The paper's error bound is a theoretical guarantee on how far the warm start can be skipped before quality suffers. · level: research-level
+- **In one sentence**: SoundWeaver is a training-free method that speeds up text-to-audio diffusion by warm-starting generation from a prompt-conditioned acoustic prior assembled from segments of cached audio clips, with an adaptive bandit choosing the skip depth per request.
+- **In plain words**: Generating sound from a text description with modern diffusion models takes many slow refinement steps, which adds latency. This paper proposes reusing pieces of audio that were already generated earlier: it stitches segments from a small cache of about 1,000 clips into a starting point that matches the prompt, then begins the denoising process partway through instead of from pure static. The authors report speedups of 1.48 to 3.74 times across several backbone models, with quality said to improve.
+- **Why it matters**: Cutting the number of model evaluations needed per clip matters for making generative audio practical in real-time or large-scale serving. The idea of reusing acoustic structure across requests, rather than treating each generation independently, may be of interest to people working on efficient inference and caching for generative models, though the text alone does not show how well it holds up outside the reported benchmarks.
+- **Background needed**: - Diffusion models generate output by starting from random noise and removing it step by step; each step is a "neural function evaluation" (NFE), and fewer steps means faster generation.
+- "Warm-starting" means beginning the process from a partly denoised state instead of pure noise, so fewer steps remain.
+- Neural codecs are learned compressors that turn audio into compact numerical representations.
+- A contextual bandit is an adaptive method that picks among options (here, how deep to skip) based on feedback from past choices.
+- Training-free means the method works on existing pretrained models without any new training. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3363,16 +3374,16 @@ Text-to-audio (T2A) diffusion models generate high-quality audio but require ten
 ### [Automated Design and Evaluation Pipeline for Optimal Control Transcriptions in Model Predictive Control](https://arxiv.org/abs/2611.32558)
 *Fabio Schneider, Peter K\"otting, Renato Loureiro* · `eess.SY` · arXiv:2611.32558v1 · relevance 0.18
 
-- **In one sentence**: An automated pipeline uses Bayesian Optimization to pick the best pseudospectral Legendre-Gauss-Radau transcription and mesh configuration for a given Model Predictive Control formulation, minimizing user-defined metrics such as computation time or closed-loop performance, and is demonstrated on spacecraft on-orbit servicing scenarios.
-- **In plain words**: Model Predictive Control is a method where a computer repeatedly plans the best sequence of actions over a short future window and applies the first step, but the planning can be too slow for real-time use. This paper describes an automated tool that searches for the most efficient way to set up that planning problem, judged by criteria the user chooses such as speed or control quality. The authors test it on spacecraft tasks, such as moving satellites for servicing in orbit, and report that it improves MPC performance in those scenarios.
-- **Why it matters**: Computational cost is a stated bottleneck for deploying MPC in real-time systems, so a tool that automates the search for faster problem setups could help engineers in robotics, aerospace and process control. The text does not give quantitative results, so the size of the improvement and how well it generalizes beyond the presented scenarios are not clear from this summary.
-- **Background needed**: - Model Predictive Control (MPC): repeatedly solving a short-horizon optimal planning problem and acting on the first step.
-- Optimal control transcription: converting a continuous-time planning problem into a finite set of equations a solver can handle.
-- Pseudospectral / Legendre-Gauss-Radau method: a transcription that places sample points at special positions in time to represent the trajectory accurately with few points.
-- Forward Euler and implicit collocation: simple and more accurate ways of approximating how a system changes over time; the paper says its one formulation covers both.
-- Mesh configuration: how the time interval is divided into segments and points.
-- Bayesian Optimization: a method for tuning settings by testing promising options and learning from past results, useful when each test is expensive.
-- On-orbit servicing: robotic or autonomous maintenance of spacecraft in orbit, such as repair, refueling or repositioning. · level: research-level
+- **In one sentence**: An automated pipeline that uses Bayesian optimization to search over pseudospectral Legendre-Gauss-Radau transcription settings, including mesh configurations, to minimize user-defined computation-time or closed-loop performance metrics for Model Predictive Control, demonstrated on spacecraft on-orbit servicing scenarios.
+- **In plain words**: Model Predictive Control is a method where a computer repeatedly plans the best next moves for a machine, but the planning can be too slow for real-time use. This paper describes a semi-automatic way to choose how that planning problem is set up so it runs faster or performs better, instead of relying on expert trial and error. The authors test it on spacecraft that move and control themselves while servicing other satellites in orbit.
+- **Why it matters**: Slow onboard computation is a practical limit on using advanced control in fast or resource-limited systems, such as spacecraft. The text reports improvements in MPC performance in the spacecraft scenarios, but it does not give the size of those gains in the provided excerpt, so the scale of the benefit is unclear from this text alone.
+- **Background needed**: - Model Predictive Control (MPC): at each time step, solve an optimization problem to pick control inputs over a short future horizon, then apply only the first step and repeat.
+- Transcription: converting a continuous control problem into a finite set of equations a solver can handle.
+- Pseudospectral / collocation methods: approximating a trajectory with polynomials evaluated at chosen points (the "mesh"); Legendre-Gauss-Radau is one such point pattern.
+- Forward Euler and implicit collocation: simple versus higher-accuracy ways of stepping a system forward in time.
+- Bayesian optimization: a strategy for tuning settings with expensive evaluations by building a model of how settings affect the outcome.
+- Closed-loop performance: how well the controller actually performs when it is running on the system.
+- On-orbit servicing: spacecraft performing tasks like inspecting, refueling, or repairing other spacecraft. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3383,15 +3394,17 @@ The computational burden of Model Predictive Control represents a bottleneck lim
 ### [From Safety-Driven Redundancy to Value-Driven Architecture: An ODD-Based Rationalization Framework for Level 4 Autonomous Vehicles](https://arxiv.org/abs/2611.32960)
 *Tiago Sim\~ao Ferreira (Federal Institute of Minas Gerais - IFMG), Farzad Fallahi (University of Luxembourg)* · `eess.SY` · arXiv:2611.32960v1 · relevance 0.13
 
-- **In one sentence**: A safety-constrained, ODD-based systems-engineering framework that screens and ranks architecture transformations (removal, relocation, reassignment, consolidation) for a generic synthetic Level 4 autonomous vehicle, using lifecycle-cost sensitivity and robust multiobjective Pareto analysis.
-- **In plain words**: Self-driving cars need backup systems so they can keep driving safely when sensors, computers, power, or steering parts fail, but those backups add cost and complexity. This paper proposes a method for trimming or rearranging that hardware only where the car would still be safe in its intended driving conditions. The authors tested it on a made-up, generic vehicle design rather than a real one, and found that simply removing parts had little room to help, while moving and combining functions produced more safe options, with the best option cutting normalized lifecycle cost by 5.55%.
-- **Why it matters**: Cost and validation effort are real obstacles to scaling up autonomous vehicles, so a principled way to check whether redundancy can be reduced without losing safety may be useful to engineers. The results rest on illustrative, synthetic assumptions and are explicitly described as design candidates, not validated production architectures, so their practical weight is limited until tested on real systems.
-- **Background needed**: - Level 4 autonomous vehicle: a car that drives itself fully within defined conditions, without a human backup.
-- Operational Design Domain (ODD): the set of road, weather, and traffic conditions a system is designed to handle.
-- Fault-tolerant architecture: a system design that keeps working when some parts fail, usually through redundancy.
-- Non-compensatory constraint: a safety requirement that cannot be traded off against cost savings; a design failing it is rejected regardless of other benefits.
-- Pareto analysis: a way of finding options that cannot be improved in one goal (e.g., cost) without worsening another (e.g., risk); "non-dominated" means on that frontier.
-- Ablation: testing a design by removing components one at a time to see the effect. · level: research-level
+- **In one sentence**: An ODD-based, safety-constrained systems-engineering framework that screens and ranks architecture transformations (removal, relocation, reassignment, consolidation) for a generic synthetic Level 4 autonomous vehicle, using lifecycle-cost sensitivity and robust multiobjective Pareto analysis.
+- **In plain words**: Self-driving cars need backup systems so they keep working safely when sensors, computers, power, or steering/braking parts fail, but those backups add cost and complexity. This paper proposes a method for trimming or rearranging a car's system design while first checking that every change still meets safety limits for the conditions the car is meant to operate in. The authors tested it on a made-up, generic car design, not a real product, and found that simply removing parts gave little room for savings, while moving and combining functions produced more safe options, with the best option cutting modeled lifecycle cost by 5.55%.
+- **Why it matters**: Cost and validation effort are becoming central concerns as self-driving vehicles move toward mass production, so a structured way to tie design choices to operating conditions could be useful to engineers. The results depend on an illustrative cost model and synthetic parameters, so they show what the method can do rather than what a real vehicle would save.
+- **Background needed**: - Level 4 autonomous vehicle: a car that drives itself without a human backup within a defined area or set of conditions.
+- Operational Design Domain (ODD): the specific roads, weather, speeds and situations a self-driving system is designed to handle.
+- Fault-tolerant architecture: a system layout that keeps essential functions running when some components fail.
+- Redundancy: duplicate components kept as backups.
+- Safety-feasibility gate: a check that rejects any design change that would break safety requirements; safety is treated as a hard pass/fail limit, not something to trade off against cost.
+- Lifecycle cost: total cost over the product's life, including design, validation, integration and maintenance.
+- Pareto analysis: finding designs where no option is better on one goal (e.g., cost) without being worse on another (e.g., performance); these are the "non-dominated" solutions.
+- Ablation: testing a design by removing one component at a time to see its effect. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -3460,9 +3473,9 @@ Level 4 autonomous vehicles require fault-tolerant architectures that preserve c
 | Biochemistry | 21 | 18 | 2 |
 | Pharmacology and drug discovery | 8 | 7 | 0 |
 | Computational and systems biology | 132 | 127 | 2 |
-| Neuroscience | 87 | 82 | 2 |
-| Genetics and genomics | 49 | 46 | 2 |
-| Cell and molecular biology | 60 | 58 | 2 |
+| Neuroscience | 88 | 83 | 2 |
+| Genetics and genomics | 50 | 47 | 2 |
+| Cell and molecular biology | 63 | 61 | 2 |
 | Immunology and microbiology | 76 | 70 | 2 |
 | Cancer biology | 32 | 28 | 2 |
 | Ecology and evolution | 61 | 58 | 2 |
