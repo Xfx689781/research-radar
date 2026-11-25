@@ -3,46 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29797",
-   "title": "Shadow economy as a null set. Measure-theoretic approach to shadow economy",
-   "url": "https://arxiv.org/abs/2611.29797",
+   "uid": "arxiv:2611.31829",
+   "title": "Contests versus Contracts in Innovation Procurement",
+   "url": "https://arxiv.org/abs/2611.31829",
    "authors": [
-    "Rados\\l{}aw A. Kycia",
-    "Andrzej Buszko"
+    "Xiaoyun Qiu",
+    "Christopher Snyder"
    ],
-   "label": "arXiv:2611.29797v1",
-   "primary_category": "econ.EM",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "The paper proposes modeling the shadow economy as a null set relative to institutional measurement devices, and combines Banach lattices, Lebesgue decomposition, copula theory, Kullback-Leibler divergence and compressed sensing into three regimes for underreporting, hidden flows and audit sampling.",
-    "plain": "The paper asks whether the informal, unreported part of an economy can be defined as something that official measuring systems simply fail to see. It proposes a mathematical framework built around that idea and describes three methods: combining incomplete tax or registry records, estimating hidden money flows from indirect signals such as physical or technological indicators, and sampling audits efficiently to catch large evasion networks. The provided text describes the framework and methods but does not report numerical results or validation.",
-    "why": "Measuring the shadow economy is a long-standing problem for tax authorities and economists, and the paper argues that conventional definitions mix up the real activity with the limits of what institutions can observe. Its relevance depends on whether the framework can be tested against real data, which the text only describes as a goal (\"testable framework\") without showing results.",
-    "background": "- Shadow (informal or hidden) economy: economic activity that is not recorded by official bodies, such as unreported cash work or untaxed sales.\n- Null set: in measure theory, a set that is so small it has zero measure; here, a metaphor for activity that instruments cannot register.\n- Measure and measurement instrument: a way of assigning sizes to sets of transactions; \"institutional measures\" are the counts that tax or registry systems produce.\n- Banach lattice / supremum operator: an ordered space of functions; the supremum operator takes the largest value across several partial records to combine them.\n- Lebesgue decomposition: splitting a measure into a part that is smooth with respect to a reference and a part that is not.\n- Copula: a function that describes how variables are linked, separately from their individual distributions.\n- Kullback-Leibler divergence: a measure of how far one probability distribution is from another.\n- Compressed sensing: a technique for recovering a sparse signal (one with few nonzero entries) from a small number of random measurements.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "In this paper we asked if the shadow economy can be defined as a system of null sets for institutional measures or sensors that measure economic transactions. As an answer a measure-theoretic testable framework to redefine and quantify the shadow economy was designed. Traditional economic definitions frequently conflate the actual shadow economy with the observational limitations of state institutions. To resolve this, we model the shadow economy as a null set relative to institutional measures and analyze three complementary economic regimes. We explore in this context how standard mathematical tools can be given economic meaning. First, in the low-resolution regime, we apply Banach Lattices and Lebesgue decomposition of a measure to address transaction underreporting by aggregating incomplete institutional registries using a supremum fusion operator. Second, for hidden economic dimensions, we utilize Copula theory and Kullback-Leibler divergence optimization to reconstruct unobserved financial flows from technological and physical indicators. Third, we address audit scalability by modeling the shadow economy as a sparse vector, applying Compressed Sensing to detect high-volume sparse evasion networks through random, incoherent, and privacy-preserving sampling.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.30612",
-   "title": "Principal Revelations of the Revelation Principle",
-   "url": "https://arxiv.org/abs/2611.30612",
-   "authors": [
-    "Mark Whitmeyer"
-   ],
-   "label": "arXiv:2611.30612v1",
+   "label": "arXiv:2611.31829v1",
    "primary_category": "econ.TH",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves a converse to the revelation principle, showing it implicitly requires the designer to assume agents coordinate on her most-preferred equilibrium, and that with private values, independent types and quasilinear payoffs, unrestricted transfers let a principal approximate any mechanism's equilibrium payoff using a direct mechanism with a unique truthful equilibrium.",
-    "plain": "This paper is about how an organizer (the \"principal\") who designs a game or set of rules for private participants can predict how those participants will behave. The author shows that the standard shortcut for this, the revelation principle, only works if the organizer assumes participants settle on the outcome that is best for the organizer. The paper also finds that when money transfers are unrestricted, the organizer can get close to any achievable result using a simple truthful-reporting scheme.",
-    "why": "The revelation principle is a standard tool in mechanism design, used in auctions, contracts and regulation, so a result about what it quietly assumes bears on how those models should be read. The text does not indicate its wider applications, so the reach beyond theory is uncertain.",
-    "background": "- Mechanism design: building the rules of a game so that self-interested players produce a desired outcome (for example, an auction).\n- Principal and agents: the principal is the designer; the agents are the participants whose private information matters.\n- Equilibrium: a set of strategies where no participant gains by changing alone; a game can have several equilibria.\n- Revelation principle: the claim that one may restrict attention to mechanisms where participants simply report their private information truthfully.\n- Private values and independent types: each participant's valuation depends only on their own information, and participants' information is statistically unrelated.\n- Quasilinear payoffs: utility is value minus money paid, so money transfers can be traded one-for-one against outcomes.\n- Prior: the designer's probability beliefs about participants' private information.",
+    "one_liner": "A mechanism-design study comparing independent contracts, contests, and \"interdependent\" contracts for a funder who pays several competing approaches to an uncertain innovation, where feasibility is learned through experimentation.",
+    "plain": "This paper looks at how a government or other buyer should pay several teams that are all trying to develop the same new technology, when it is not known in advance which approaches will work. The authors compare three designs: paying each team separately, running a prize contest, and a newer hybrid where each team's payment and whether it keeps experimenting depend on what its rivals achieve. They find that the best hybrid designs can match the optimum, and that the cheaper option between contests and contracts depends on how long the experimentation period lasts.",
+    "why": "Public funders such as defence and science agencies often split money across competing projects, so the question of how much rivalry to build into the payment scheme has practical weight. The text is a theory paper with no empirical data, so its results apply to modelled conditions rather than to any specific programme.",
+    "background": "- Innovation procurement: a buyer pays firms to develop a new technology rather than buying an existing product.\n- Contract vs. contest: a contract pays each firm under its own terms; a contest pays only the winner(s) of a race to a goal, such as a fixed prize.\n- Mechanism design: the study of how to set up rules and payments so that self-interested participants behave in the way the designer wants.\n- Breakthrough vs. breakdown: a breakthrough is a success; a breakdown is a clear failure that signals an approach is infeasible. \"Contractable\" means the buyer can write payments conditional on it being observed and verified.\n- Experimentation: firms try approaches over time, learning whether each one works; the buyer can stop experiments at a cutoff or deadline.\n- Rent extraction: the buyer reduces the extra profit firms would otherwise keep above their costs.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "I prove a converse to the revelation principle, arguing that it is a principle of optimism: if it must hold for all environments (in fact, even just those with private values and independent types) the principal must assume her favorite equilibrium is played by the agents. When the principal knows only that the prior lies in some set, she must additionally assume it is her favorite one. With private values, independent types, and quasilinear payoffs, however, unrestricted transfers allow the principal to approximate any mechanism's equilibrium payoff via a direct mechanism whose unique equilibrium is truthful.",
+   "abstract": "How much competition should a designer introduce when procuring innovation? We study a designer funding multiple technological approaches whose feasibility is learned through experimentation. Between independent contracts and contests, we introduce interdependent contracts, which combine approach-specific rewards with continuation decisions that depend on rivals' outcomes. When both breakthroughs and breakdowns are contractable, these contracts implement the optimum by extracting firms' rents and coordinating experimentation across approaches. When only breakthroughs are contractable, we compare simple mechanisms with constant contractual payments. Under technological symmetry, optimal interdependent contracts terminate experimentation at a success cutoff or deadline. Fixed-prize contests can implement the same innovation outcomes, but their relative expenditure depends on the experimentation horizon: for interior success cutoffs, contests are more expensive when the horizon is short and less expensive when it is sufficiently long. Rank-contingent contests can weakly outperform constant-payment interdependent contracts, but technological heterogeneity can reverse this ranking because individualized contracts better tailor incentives to different approaches. We further characterize optimal interdependent contracts with time-varying payments, extending the comparison beyond simple mechanisms. Our results show how outcome contractability, technological heterogeneity, and payment flexibility shape the desirable form of competition in innovation procurement.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32741",
+   "title": "What it is to Obey",
+   "url": "https://arxiv.org/abs/2611.32741",
+   "authors": [
+    "Mark Whitmeyer"
+   ],
+   "label": "arXiv:2611.32741v1",
+   "primary_category": "econ.TH",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "In simultaneous-move games, a designer who commits in advance to a signaling device and evaluates the resulting equilibria with a Hausdorff-continuous function is shown to be without loss in restricting to direct obedient devices under incomplete information exactly when she assumes her preferred equilibrium will be played, and the monotone evaluations are characterized under complete information.",
+    "plain": "The paper studies a setting where a planner sets up a private messaging scheme before players make simultaneous choices, sending each player a signal that may recommend what to do. The planner judges the set of resulting equilibrium outcomes with a continuous scoring rule. The text reports conditions under which it is safe to limit attention to \"obedient\" schemes, where players are told what to do and find it in their interest to follow, and it classifies which scoring rules behave in a consistent (monotone) way in games where everyone knows the payoffs.",
+    "why": "This is a theory result about how much a designer can gain from recommendations, and whether simple obedient recommendations lose nothing. It connects to the literature on Bayesian persuasion and correlated equilibrium, and its relevance beyond those models is not established by the text.",
+    "background": "- Simultaneous-move game: players choose at the same time, without seeing each other's choices.\n- Equilibrium: a set of strategies where no player gains by switching alone.\n- Signaling device / recommendation: a private message to each player suggesting an action; \"obedient\" means following it is optimal for the player.\n- Designer's evaluation: a scoring function over the set of equilibria; \"Hausdorff-continuous\" means small changes in the equilibrium set cause small changes in the score.\n- Incomplete vs. complete information: whether players know each other's payoffs.\n- Monotone evaluation: a scoring rule that does not fall when the set of equilibria grows, roughly; the optimistic and pessimistic extremes are the best and worst case over equilibria.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Prior to agents taking part in a simultaneous-move game, a designer commits a device that sends signals to each of the agents, evaluating the resulting set of equilibria according to a (Hausdorff-)continuous function. In games of incomplete information I show that it must be without loss of optimality for the designer to restrict attention to direct obedient devices if and only if she assumes her preferred equilibrium will be played. In games of complete information, I characterize the monotone evaluations, which include both the maximally optimistic one and the maximally pessimistic one.",
    "source": "arxiv"
   },
   {

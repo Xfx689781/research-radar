@@ -3,52 +3,50 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29368",
-   "title": "SAE-Audit: Clinical-Trial Prediction via Inference-Time Optimization of Black-Box LLMs Audited by Sparse Autoencoder Evidence",
-   "url": "https://arxiv.org/abs/2611.29368",
+   "uid": "arxiv:2611.32685",
+   "title": "Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis",
+   "url": "https://arxiv.org/abs/2611.32685",
    "authors": [
-    "Junbo Shen"
+    "Lance Calvin Lim Gamboa",
+    "Yue Feng",
+    "Mark Lee"
    ],
-   "label": "arXiv:2611.29368v1",
-   "primary_category": "cs.AI",
+   "label": "arXiv:2611.32685v1",
+   "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "SAE-Audit uses concept features from a frozen sparse autoencoder on an open Llama-3.1-8B model, filtered by sparse probes trained on past trials, to write concept-level evidence into prompts that steer black-box LLMs toward better clinical-trial outcome predictions.",
-    "plain": "Clinical trials take years and often fail or stop early, so predicting how a trial will turn out is useful for planning. This paper tests whether giving large AI models a structured list of clinical concepts, drawn from a smaller open model's internal features and linked to past trial outcomes, helps them make better predictions. The authors report that this raised the balanced accuracy of the audited models by roughly 8 to 12 points on the tasks they tried.",
-    "why": "Predicting trial outcomes is a costly planning problem, and the approach aims to make AI predictions more checkable by tying them to specific concepts rather than unexplained answers. The text reports gains only on the authors' own tasks and models, so its wider value is unclear until other groups test it.",
-    "background": "- Clinical trial: a structured study testing a medical treatment; \"completes\" versus \"terminates early\" is the outcome being predicted.\n- Large language model (LLM): an AI system that generates text; \"black-box\" means its internals cannot be inspected, only its inputs and outputs.\n- Sparse autoencoder (SAE): a tool that decomposes a model's internal activity into many separate, more interpretable features, here treated as clinical concepts.\n- Sparse probe: a simple, selective classifier that checks which features predict an outcome.\n- Balanced accuracy: an accuracy score that averages performance across outcome classes, so a model cannot score well by always guessing the majority class.\n- Inference-time optimization: improving answers by changing the prompt or procedure at use time, without retraining the model.\n- Biomni: a biomedical AI agent system named in the paper as a possible host for the method.",
+    "one_liner": "This paper applies two mechanistic interpretability methods (activation probability entropy and integrated gap gradients) to locate \"social bias neurons\" in three instruction-tuned multilingual language models across four languages and seven bias dimensions.",
+    "plain": "Language models trained on many languages can reproduce social stereotypes, and this paper asks where inside the model that bias is stored. The authors search for individual internal units (neurons) that respond to biased content, then switch them off to see whether the bias drops. They report that one of the two search methods works better and that the bias-linked units sit mostly in the deepest layers.",
+    "why": "Finding specific internal components tied to bias could make it possible to reduce bias more directly than retraining the whole model. The text does not show how well these results carry over to other models, languages, or real-world uses, so the practical impact is uncertain.",
+    "background": "- Language model: a program trained on large amounts of text to predict and generate language.\n- Neuron: a single numerical unit inside the model whose activity rises or falls with the input.\n- Mechanistic interpretability: the study of which internal parts of a model do which jobs, rather than only judging its outputs.\n- Activation probability entropy and integrated gap gradients: two scoring methods for ranking neurons by how strongly they relate to biased inputs (the text does not give their formulas).\n- Instruction-tuned: a model further trained to follow user instructions.\n- Deepest layers: the final processing stages of the network, closest to the output.\n- High- vs low-resource languages: languages with much vs little text available for training.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Clinical trials are costly and often take years to complete, making early outcome prediction valuable for trial planning. Large language models (LLMs) are increasingly used to forecast clinical-trial outcomes, yet their predictions remain unreliable and their rationales may not faithfully reflect the evidence underlying their answers. On tasks such as predicting whether a registered clinical trial will complete or terminate early, frontier LLMs perform only modestly above chance in our experiments. We introduce SAE-Audit, which optimizes a black-box LLM at inference time with evidence obtained from a deployable open model. A frozen sparse autoencoder (SAE) on Llama-3.1-8B-Instruct is converted into a vocabulary of clinical concepts. Sparse probes fitted on past trials determine which concepts are associated with the outcome. For a new protocol, the concepts detected by the probe are written as evidence, each with the direction and strength of its association with the outcome, and the LLM being audited optimizes its answer in the light of this evidence. Without additional training, SAE-Audit raises balanced accuracy of deepseek-v4-flash by 9.6--12.0 points on five clinical-trial prediction tasks and raises GPT-5.6-terra by 8.0 points on trial completion, exceeding other agentic inference-time optimization methods by a large margin. As an auxiliary, SAE probes module within SAE-Audit is itself accurate and auditable, providing natural-language explanations directly derived from verified concept contributions and protocol evidence, without requiring additional LLMs at inference time. SAE-Audit provides verifiable, concept-level evidence for more accurate and auditable clinical-trial prediction. It can also be embedded into biomedical AI agents such as Biomni to optimize their performance.",
+   "abstract": "Multilingual models exhibit social bias when processing inputs pertaining to societal stereotypes. We adapt emerging mechanistic interpretability methods to pinpoint and characterize model components that encode this bias. We conduct our analysis across three instruction-tuned models, four languages, and seven bias dimensions. Specifically, we leverage multilingual bias benchmarks in implementing two methods for identifying social bias neurons: activation probability entropy and integrated gap gradients. We find the latter method to be more effective, as the neurons it isolates (which are largely concentrated at the model's deepest layers) lead to sharper decreases in model bias when suppressed. Further analysis reveals neuron distribution patterns differ between high- and low-resourced languages, suggesting that a language's representation in pretraining data influences how its biases are represented within model internals. Our results also indicate that neurons linked to gender, nationality, and social class biases overlap the most with neurons related to other bias dimensions, pointing to the pivotal role these three dimensions play in how models learn and handle bias.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.29936",
-   "title": "SAEPO: Sparse-Autoencoder-Guided Credit Assignment for Policy Optimization",
-   "url": "https://arxiv.org/abs/2611.29936",
+   "uid": "arxiv:2611.31260",
+   "title": "Capability and Interpretability of Transformers on Multi-task Recurrence",
+   "url": "https://arxiv.org/abs/2611.31260",
    "authors": [
-    "Yusong Zhao",
-    "Zihao Zhao",
-    "Zirui Zhang",
-    "Tunyu Zhang",
-    "Ziyan Wang",
-    "Yi Wang",
-    "Chengzhi Mao",
-    "Hao Wang"
+    "Xiamin Chen",
+    "Linyu Liu",
+    "Jiachen Hu",
+    "Pinyan Lu"
    ],
-   "label": "arXiv:2611.29936v1",
-   "primary_category": "cs.AI",
+   "label": "arXiv:2611.31260v1",
+   "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "SAEPO uses concepts from a pretrained sparse autoencoder to assign token-level credit in outcome-supervised policy optimization (GRPO and GSPO) for LLM reasoning, reporting gains on math and code benchmarks.",
-    "plain": "Language models are often trained to reason using only a final right-or-wrong score for the whole answer, which does not show which individual steps helped or hurt. This paper proposes SAEPO, which uses a tool that finds recurring concepts inside a model's internal activations to score each word-piece of a reasoning attempt, so that good reasoning steps get more credit and wrong final-answer pieces get penalized. The authors report that this improves average scores on six math and two code benchmarks across three model backbones, with gains of up to 6.63% (math) and 5.57% (code).",
-    "why": "Better credit assignment could make reinforcement-learning training of reasoning models more efficient, which matters because such training is costly. The text does not establish how broadly the gains hold beyond the reported benchmarks and models, so its significance is still uncertain.",
-    "background": "- Reinforcement learning with verifiable rewards (RLVR): training a model by giving it a score only when its final answer can be checked as correct.\n- Credit assignment: deciding which steps in a long attempt deserve credit or blame for the result.\n- Policy optimization (e.g., GRPO, GSPO): families of algorithms that adjust a model's output probabilities based on rewards.\n- Sparse autoencoder (SAE): a tool trained without labels to break a model's internal activations into a set of recurring, interpretable features or \"concepts.\"\n- Advantage shaping: modifying the reward signal per token so training pushes harder on some tokens than others.\n- Base model: a pretrained model before instruction tuning.",
+    "one_liner": "A controlled study of how Transformers learn and execute linear recurrence rules over finite cyclic groups, covering single fixed rules, latent rule identification, and explicit rule switching with and without input masking, probed with linear probing and input patching.",
+    "plain": "This paper asks how Transformer neural networks, the kind behind many language AI systems, handle sequences that follow a repeating rule. The authors build a set of simple, fully controlled puzzles based on repeating arithmetic patterns, from following one fixed rule to working out a hidden rule from context and switching between rules. They report that switching between rules that are stated explicitly is easier for the models than inferring a hidden rule, and they examine how depth, width, and the arithmetic structure of the rule affect generalization.",
+    "why": "The controlled setup makes it possible to inspect what the model stores internally, which is hard to do with real language data. The text does not say how these toy findings transfer to large language models, so any link to natural language is a hypothesis rather than a result shown here.",
+    "background": "- Transformer: the neural network architecture used in most modern language AI.\n- Recurrence: a rule where each item in a sequence is computed from earlier items.\n- Cyclic group: a set of numbers that wraps around, like hours on a clock, used here for arithmetic.\n- Generalization: how well a model handles cases it was not trained on.\n- Linear probing: training a simple readout to check whether information is stored inside the network.\n- Input patching: swapping parts of the input or internal activations to see which parts affect the output.\n- Curriculum training: teaching the model easier tasks first and gradually harder ones.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has demonstrated strong performance in improving large language model (LLM) reasoning, yet its credit-assignment signal remains coarse. Outcome verifiers provide scalable supervision by judging whether a completed response is correct, but they do not directly indicate which intermediate reasoning tokens contribute to success or failure. As a result, policy optimization can be inefficient, especially when training base models directly from sparse outcome feedback. In this paper, we introduce SAEPO, a Sparse AutoEncoder-guided token-level credit assignment method for outcome-supervised Policy Optimization. Rather than treating correctness only as a rollout-level (sequence-level) signal, SAEPO uses a pretrained sparse autoencoder (SAE) to build token-level semantic representations within reasoning trajectories; it scores each token based on the SAE concepts (e.g., penalizing wrong \"final-answer\" tokens but rewarding correct \"reasoning-process\" tokens), learned in an unsupervised manner, to achieve fine-grained credit assignment. SAEPO is a plug-in advantage-shaping module compatible with various policy optimization algorithms. We instantiate SAEPO with both GRPO and GSPO, covering token-ratio and sequence-ratio policy-gradient objectives, and evaluate SAEPO across three LLM backbones on six math and two code benchmarks. Empirical results show that SAEPO improves both the math and code benchmark averages over the matched baselines, with gains of up to 6.63% and 5.57%, respectively. On Qwen3-1.7B-Base, training curves also show faster early accuracy growth. Feature and token-level analyses suggest that the SAE-derived signal favors question-relevant concepts and reasoning tokens.",
+   "abstract": "Transformers are widely used in various language tasks, with limited understanding of their internal mechanisms. Motivated by the recurrent structure of many linguistic rules, we study the capability and interpretability of Transformers through a controlled family of linear recurrence tasks over finite cyclic groups. These tasks range from executing a single fixed rule to identifying a latent rule from context and switching between explicitly specified rules, with and without input masking. Through extensive experiments across different configurations, we find that switching specified rules is simpler than identifying latent rules for Transformers in general. We also identify how several key factors affect the generalization capability of Transformers, including the depth, width, and the algebraic structure of the linear recurrence. Curriculum training is extremely useful when the number of rules is large. With standard tools in mechanistic interpretability like linear probing and input patching, our study reveals how Transformers represent, identify, and execute multiple rules.",
    "source": "arxiv"
   },
   {

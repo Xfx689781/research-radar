@@ -3,51 +3,52 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28558",
-   "title": "From Reward Engineering to Data-Centric Reinforcement Learning for Effective Agentic Visual Tool Use",
-   "url": "https://arxiv.org/abs/2611.28558",
+   "uid": "arxiv:2611.32359",
+   "title": "Implementation of Machine Translation for the Uzbek Language Based on Transformer Models",
+   "url": "https://arxiv.org/abs/2611.32359",
    "authors": [
-    "Jin Cui",
-    "Xinyue Long",
-    "Jiepeng Zhou",
-    "Boran Zhao",
-    "Pengju Ren",
-    "Hao Dong"
+    "Mukhammadjon Musaev",
+    "Mannon Ochilov"
    ],
-   "label": "arXiv:2611.28558v1",
+   "label": "arXiv:2611.32359v1",
    "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "AOVO proposes a data-centric reinforcement learning framework (perception attribution plus policy-adaptive data sampling, PADS) that teaches multimodal LLMs when to call visual tools using only final-answer correctness rather than tool-specific rewards.",
-    "plain": "Some AI models can call outside tools, such as image-inspecting helpers, while they reason about a picture. Teaching them when a tool call actually helps is hard, and past methods often added extra reward bonuses for calling tools, which can warp the model's behavior. This paper instead tries to find which questions a tool would actually fix, and shifts the training questions toward those, rewarding only correct final answers.",
-    "why": "It offers an alternative to hand-designed reward bonuses for tool use, a design choice that can cause odd behaviors, and the authors report consistent gains over competing tool-using models on visual benchmarks. The text does not give enough detail to judge how broadly the approach generalizes beyond the tested benchmarks.",
-    "background": "- Multimodal large language model (MLLM): an AI system that handles both text and images.\n- Tool use: the model pauses mid-reasoning to call an external helper, such as a zoom or crop function, to get more visual evidence.\n- Reinforcement learning (RL): training by trial and error, where good outcomes are rewarded and the model adjusts its behavior.\n- Reward engineering: adding extra, hand-designed bonuses to the reward signal to steer behavior; these can distort the actual goal.\n- Counterfactual probing: testing how the model's answer changes when its inputs or tool observations are altered, to see whether the tool made a difference.\n- Data-centric approach: improving learning mainly by choosing which training examples to use, rather than changing the reward or model design.",
-    "difficulty": "research-level",
+    "one_liner": "The paper fine-tunes transformer models T5 and mT5 for Uzbek-English machine translation, using a parallel corpus of about 3 million sentence pairs built through data collection, preprocessing and augmentation, and evaluates with BLEU.",
+    "plain": "This paper is about building a computer program that translates between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned a large collection of matching Uzbek and English sentences, roughly 3 million pairs, and used it to adapt two existing AI language models. They report that their approach beats older translation methods, measured with a standard similarity score.",
+    "why": "Low-resource languages like Uzbek are often poorly served by translation tools, so work that makes them usable online has practical value. The summary gives no detailed comparison numbers, so the size of the improvement cannot be judged from this text alone.",
+    "background": "- Machine translation: software that converts text from one language to another.\n- Transformer models: a widely used neural network design behind modern language AI; T5 and mT5 are published examples that can be trained on many languages.\n- Fine-tuning: further training a pre-built model on a specific task or dataset.\n- Parallel corpus: a collection of texts paired with their translations, used as training examples.\n- BLEU score: an automatic metric that compares machine translations with human reference translations; higher is better, but it is an imperfect proxy for quality.\n- Low-resource language: a language with little available digital text for training AI systems.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Multimodal large language models (MLLMs) increasingly use external visual tools to acquire evidence during reasoning, yet learning when to invoke these tools remains challenging. Existing tool-use reinforcement learning (RL) methods often rely on call-contingent rewards to encourage beneficial tool use, but such reward engineering can distort the task objective and lead to degenerate calling behaviors. We argue that effective tool-use learning requires identifying not merely which questions are difficult, but which failures are attributable to missing visual evidence and can therefore be corrected through tool observations. We propose AOVO, a data-centric framework that enables MLLMs to learn effective tool use through perception attribution and policy-adaptive data sampling (PADS), without introducing tool-specific rewards. It counterfactually probes the model's reasoning states to identify observation-sensitive questions, distinguishing them from reasoning-dominated ones. PADS then periodically estimates category-level observation effects from recent policy rollouts and dynamically reallocates the training distribution toward questions where visual observations provide informative learning signals, while optimizing solely for final-answer correctness. Experiments across diverse visual perception and multimodal reasoning benchmarks demonstrate consistent improvements over competitive tool-use MLLMs, with causal analysis further validating the data-centric perspective for learning effective visual tool use.",
+   "abstract": "This research focuses on building a machine translation system for the Uzbek language using transformer models such as T5 and mT5. Because of the limited data and the complexity of the Uzbek language, we collect, preprocess and augment data to create a strong Uzbek-English parallel corpus of about 3 million sentence pairs. The models are fine-tuned for optimal translation performance, and we use the BLEU score to evaluate the results. This study shows that our approach significantly improves upon older methods and helps promote the Uzbek language in the digital world.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28929",
-   "title": "Definition-Guided In-Context Learning for Zero-Shot Spoken Language Understanding",
-   "url": "https://arxiv.org/abs/2611.28929",
+   "uid": "arxiv:2611.31821",
+   "title": "Exploring Multi-Player Social Games as Verifiable Training Grounds for Large Language Models",
+   "url": "https://arxiv.org/abs/2611.31821",
    "authors": [
-    "Neeraj Agrawala",
-    "Sriram Ganapathy"
+    "Keyu He",
+    "Michael Li",
+    "Jiarui Liu",
+    "Mingqian Zheng",
+    "Koichi Onoue",
+    "Tongshuang Wu",
+    "Maarten Sap"
    ],
-   "label": "arXiv:2611.28929v1",
+   "label": "arXiv:2611.31821v1",
    "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proposes Definition-Guided In-Context Learning (DG-ICL), a fine-tuning method that trains speech-text models to classify spoken input using natural-language label definitions instead of fixed label names, with randomized labels to block shortcuts, and reports zero-shot gains on held-out tasks with novel symbols across three audio-language models.",
-    "plain": "Voice systems that sort spoken words into categories, such as intents or topics, usually need new labeled examples and retraining whenever the category list changes. This paper tests whether a plain-language description of each category, given in the instructions, is enough for an audio-capable language model to handle new categories without any examples. The authors train models with labels replaced by random made-up tokens or shuffled words, and report higher scores than standard instruction tuning on new label sets across three models.",
-    "why": "If a model can take a new category from a written definition alone, spoken-language tools could be adapted without collecting and labeling fresh data, which is a practical bottleneck. The text reports gains on three models and a counterfactual test, but the evaluation covers only the tasks described, so how far the approach generalizes beyond them is unclear.",
-    "background": "- Spoken language understanding (SLU): turning speech into structured meaning, such as the intent behind a request.\n- Macro-F1: an accuracy-style score that averages performance across categories, so rare categories count equally.\n- In-context learning: a model learns a task from instructions or examples placed in its input, without changing its weights.\n- Instruction tuning: further training a language model on instruction-and-answer pairs so it follows directions.\n- Zero-shot: handling a task or category never seen during training, with no examples given.\n- Audio-language models: language models extended to accept sound as input (here Audio Flamingo 3, Qwen2-Audio, SALMONN).\n- Lexical shortcut: a model relying on the familiar meaning of a label name rather than the definition it was given.",
-    "difficulty": "research-level",
+    "one_liner": "The paper tests whether training small Qwen3 language models with supervised fine-tuning and reinforcement learning on objective game outcomes from three multi-player social games improves their social play, with some held-out-game transfer.",
+    "plain": "Researchers want AI chatbots that can work with others through conversation, but grading that behavior usually requires other AI models acting as judges, which is costly and easy to game. This paper uses multi-player social games instead, where the game's rules decide who wins, so the win itself serves as the training signal. The reported results: a small model's win rate against a much stronger opponent rose from 33% to 81% on the three games used for training, and from 39% to 54% on three games it was not trained on.",
+    "why": "It offers a way to train social skills without relying on AI judges, which the text describes as expensive, noisy, and open to reward hacking. Whether the gains generalize beyond these games and to real-world social tasks is not shown in the text, so the broader claim should be treated as preliminary.",
+    "background": "- Large language model (LLM): an AI system trained on large amounts of text to generate and understand language.\n- Supervised fine-tuning (SFT): further training a model on examples of good behavior.\n- Reinforcement learning with verifiable rewards (RLVR): training by trial and error, where the reward comes from a checkable rule-based result, such as winning a game, rather than a judgment.\n- Reward hacking: when a model finds shortcuts that score well on the reward without doing the intended thing.\n- Win rate: the share of games won against an opponent.\n- Held-out games: games deliberately withheld from training to test whether skills transfer.\n- Qwen3 and Gemma-3-27B: specific open-weight language models; the numbers refer to parameter counts (for example, 4B means about 4 billion parameters).\n- \"pp\" means percentage points.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Adapting spoken language understanding (SLU) systems to novel or revised label taxonomies conventionally requires additional labeled data and retraining, creating a bottleneck for real world deployment. While in-context learning with few-shot demonstrations offers an alternative, multi-modal generalization and scaling has been challenging. In this work, we investigate whether natural-language definitions alone can guide zero-shot SLU without demonstration exemplars, finding that symbolic definitions serve as the primary supervisory driver for adapting speech-text models. We operationalize this principle as Definition-Guided In-Context Learning (DG-ICL), a fine-tuning framework that decouples semantic categories from fixed lexical names. By replacing labels with dynamically randomized definitions (arbitrary synthetic tokens in DG-ICL-Sym or permuted vocabulary words in DG-ICL-Flip), DG-ICL avoids lexical shortcuts and encourages the model to ground acoustic representations in contextual definitions. Novel categories can thus be introduced at inference simply by defining them through the instructions. Across three speech-text models (AUDIO FLAMINGO 3, QWEN2-AUDIO, and SALMONN), DG-ICL outperforms standard instruction tuning on held-out tasks under novel symbols (0.663 vs. 0.449 macro-F1 on Audio Flamingo 3; 0.703 vs. 0.620 on Qwen2-Audio; 0.582 vs. 0.399 on SALMONN), while remaining competitive on original labels. Furthermore, counterfactual evaluations demonstrate instruction following abilities, where it is shown that DG-ICL-Sym retains 68% of its performance when definitions contradict pre-trained lexical priors, whereas standard instruction tuning elicits significantly reduced retention of 21%. Finally, we show that DG-ICL enables zero-shot speech clustering into user-defined categories specified on the fly",
+   "abstract": "The training of socially intelligent language models often relies on large language model (LLM) judges, which are expensive, noisy, and vulnerable to reward hacking. Multi-player social games offer a natural alternative: they require open-ended communication to coordinate with teammates and infer hidden roles, while their rules provide an objective outcome which can serve as a verifiable reward for training. Using three social games, we explore how much social intelligence Qwen3 models can acquire through supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR). Results show that against a much stronger Gemma-3-27B model, SFT and RLVR raise the win rate of Qwen3-4B from 33% to 81% on the three trained games, and from 39% to 54% on three additional held-out games. In contrast, in-context strategies such as prompting improve the win rate of Qwen3-4B by only about 6 pp across the same games we train and evaluate on. Furthermore, we show that the gains from SFT and RLVR hold across the model sizes 1.7B, 4B, and 32B. Qualitative analyses of agent behavior show signs of stronger social intelligence; for example, trained agents tend to share information more openly, check each other's claims against public evidence, and coordinate their votes. More broadly, our results demonstrate that training LLMs on verifiable outcomes in social games can cultivate generalizable social behaviors, which offers a scalable path for building socially intelligent agents.",
    "source": "arxiv"
   },
   {

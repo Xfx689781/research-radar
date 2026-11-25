@@ -3,48 +3,52 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28824",
-   "title": "Statistical mechanics of linear classification on hierarchical tree data",
-   "url": "https://arxiv.org/abs/2611.28824",
+   "uid": "arxiv:2611.33150",
+   "title": "Parametric neural-network wavefunctions across a bosonic phase transition",
+   "url": "https://arxiv.org/abs/2611.33150",
    "authors": [
-    "Jerome Garnier-Brun",
-    "Federica Kulka",
-    "Carlo Lucibello"
+    "Daniil S. Antonenko",
+    "Liang Fu",
+    "Leonid I. Glazman"
    ],
-   "label": "arXiv:2611.28824v1",
-   "primary_category": "cond-mat.dis-nn",
+   "label": "arXiv:2611.33150v1",
+   "primary_category": "cond-mat.quant-gas",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A replica-theory analysis of a linear classifier trained to recover the root of a tree-structured broadcast process from its leaves, showing a two-stage double descent with well-separated sample-size scales below the reconstruction threshold.",
-    "plain": "The paper studies a simple learning problem where a hidden root value spreads down a branching tree and the learner only sees the values at the leaves, then must guess the root. The authors find that the data is not well described by the usual Gaussian (bell-curve) assumptions along the label-carrying direction, so they keep that direction's exact statistics and approximate the rest as Gaussian. This gives a theory that matches measured learning curves and reveals a two-step pattern of error going down, then up, then down as more samples arrive.",
-    "why": "Many theoretical tools for learning from structured data assume Gaussian statistics, and this work shows a controlled case where that assumption breaks and a more careful theory still works. It may serve as a starting point for studying deeper networks and generative models on hierarchical data, though the text itself does not establish that connection.",
-    "background": "- Broadcast process on a tree: a value at the root is randomly copied and noisily passed down branches, so leaves carry noisy information about the root.\n- Reconstruction threshold: the noise level above which the root can no longer be inferred from the leaves at all.\n- Linear classifier: a weighted sum of the inputs followed by a threshold, trained on labeled examples.\n- Learning curve: how test error changes as the number of training samples grows.\n- Double descent: test error first falls, rises to a peak (often near the point where samples match parameters), then falls again.\n- Replica method: a statistical-physics technique for computing average-case error of learning rules in high dimensions.\n- Gaussian equivalence: the assumption that complicated data can be replaced by Gaussian data with the same mean and covariance for analysis.\n- Regularization: a penalty that discourages overly large weights.",
+    "one_liner": "The paper introduces Boseformer, an attention-based neural-network ansatz that represents bosonic many-body wavefunctions as a function of a Hamiltonian parameter, trained via variational Monte Carlo across a superfluid-to-crystal quantum phase transition in 2D bosons with 1/r^3 repulsion.",
+    "plain": "The paper looks at a group of identical quantum particles (bosons) that can either flow without friction as a superfluid or lock into a regular crystal, depending on how strongly they repel each other. The authors built a neural network, called Boseformer, that encodes the particles' quantum state, and trained it so that one network covers a whole range of interaction strengths rather than being retrained for each value. They report this on a simulated two-dimensional system with a particular long-range repulsion.",
+    "why": "Describing the transition with one trained model instead of many separate calculations could make it cheaper to map out phase diagrams of quantum materials and cold-atom systems. The text is short and gives no quantitative comparisons, so how well the approach works relative to existing methods cannot be judged from it.",
+    "background": "- Wavefunction: the mathematical description of a quantum system's state; its square gives probabilities of finding particles in various arrangements.\n- Bosons: particles (such as atoms of certain types) that can share the same quantum state and obey Bose statistics.\n- Superfluid vs. crystal: a superfluid flows with zero viscosity; a crystal has particles fixed in a repeating lattice. Moving between them is a quantum phase transition, driven by a parameter in the energy function rather than temperature.\n- Hamiltonian: the energy rule of the system; here one of its parameters is varied.\n- Variational Monte Carlo: a method that tunes a trial wavefunction by random sampling to lower its energy, used when exact solutions are impossible.\n- Neural-network wavefunction: using a machine-learning model as the trial wavefunction; attention is the mechanism in modern networks that weighs relationships between inputs.\n- 1/r^3 interaction: a repulsion that falls off with distance r as the inverse cube, longer-ranged than ordinary contact forces.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Deep networks owe much of their success to their ability to exploit the structure in data, from the grammar of language to the multi-scale organization of images. Yet, many statistical mechanics approaches to structured data rely on Gaussian equivalence, whose assumptions can fail when a few latent variables influence all input coordinates. In this work, we take a step beyond this setting with a simple setup, in which a linear classifier is trained to infer the root of the classical broadcast process on a tree from its $N$ leaves. Despite this simplicity, the data already display non-Gaussian statistics along the direction carrying the label, as well as strong finite-size effects. By retaining the exact law along this direction and approximating the transverse fluctuations as Gaussian, we obtain a finite-depth replica theory that accurately describes the measured learning curves. At large depth and sufficiently weak regularization, we uncover a double descent whose two stages are separated in scale. In a range of broadcast noise below the reconstruction threshold, the first descent occurs at a number of samples scaling as $N^\\omega$, with $0<\\omega<1$ set by the data statistics, whereas the overfitting peak occurs at order $N$ samples. Beyond linear classifiers, this setup could serve as a controlled starting point to study deeper architectures and generative models on hierarchical data.",
+   "abstract": "We propose Boseformer, a universal attention-based neural-network architecture for representing the wavefunctions of particles with bosonic quantum statistics, including superfluid and crystal phases. The model is trained to generate the wavefunction as a function of a Hamiltonian parameter across the quantum phase transition between these phases. Once trained with variational Monte Carlo optimization, it can serve as a foundation model describing the phase transition without the need to retrain it for individual parameter values. We demonstrate our method on a system of two-dimensional bosons with $1/r^3$ repulsive interaction.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.29351",
-   "title": "A Novel Algebraic Approach to Medium-Range Solvable Models",
-   "url": "https://arxiv.org/abs/2611.29351",
+   "uid": "arxiv:2611.33007",
+   "title": "Polar Streams through Active Condensation in Flocks",
+   "url": "https://arxiv.org/abs/2611.33007",
    "authors": [
-    "Yuan Miao",
-    "Kohei Fukai"
+    "Lauritz Hahn",
+    "Xinyu Dou",
+    "Ziqi Zhou",
+    "Jie Zhang",
+    "Marin Bukov",
+    "Ricard Alert"
    ],
-   "label": "arXiv:2611.29351v1",
-   "primary_category": "math-ph",
+   "label": "arXiv:2611.33007v1",
+   "primary_category": "cond-mat.soft",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper extends Jones' algebraic Baxterisation to quantum spin chains with medium-range interactions, using an extended Yang-Baxter equation solved by the chromatic algebra of 3-colouring, yielding four representations that reproduce the folded XXZ and hard-rod deformed XXZ models and give new medium-range models.",
-    "plain": "The paper studies chains of interacting quantum spins, the simplified models physicists use to understand magnets and similar materials. Most solvable models only let each spin interact with its immediate neighbours, and this work builds solvable models where interactions reach further along the chain. The authors use an algebraic recipe, starting from the rules of a specific mathematical structure (the chromatic algebra of 3-colouring), to produce four such models, two of which reproduce known models and two of which are new.",
-    "why": "Exactly solvable models give rare exact answers about how many-body quantum systems behave, so a systematic way to generate new ones is useful to the field. The paper also reports that two of the four models have non-invertible symmetries, a less common kind of symmetry; the text does not show what physical consequences follow from this.",
-    "background": "- Quantum spin chain: a line of quantum spins (tiny magnetic moments) where each interacts with nearby ones; a simple model of magnetism.\n- Yang-Baxter equation: an algebraic consistency condition that makes a model exactly solvable, i.e. its behaviour can be worked out exactly.\n- R matrix and Lax operator: the building blocks used to construct transfer matrices, which generate conserved quantities of the model.\n- Medium-range interaction: spins interact with others beyond their immediate neighbours.\n- XXZ model: a standard solvable spin-chain model; folded XXZ and hard-rod deformed XXZ are variants of it.\n- Chromatic algebra / Rep(S_3): mathematical structures tied to counting colourings of graphs and to the symmetry group of three objects; the link to the physics is only sketched in the text.\n- Non-invertible symmetry: a generalised symmetry whose operations cannot be undone, as the fusion-category framework describes.",
+    "one_liner": "Experiments on self-propelled Janus colloid dimers, backed by particle simulations and coarse-grained hydrodynamic theory, show that a flock can phase-separate into elongated dense polar streams via an \"active nematic condensation\" mechanism that goes beyond the standard Toner-Tu description.",
+    "plain": "Researchers studied tiny self-propelled particles that move together as a flock. They found that the flock can split into dense, elongated streams that all move along their own length, unlike the sideways bands seen near the flocking transition. The authors attribute this to denser regions becoming more strongly aligned, which pulls in more particles and feeds the condensation.",
+    "why": "The paper suggests that collective motion and clustering can reinforce each other rather than compete, and that nematic (rod-like, head-to-tail-free) alignment can shape flocks, which the usual Toner-Tu equations do not include. Its wider relevance to biological or synthetic swarms is plausible but not established by the text.",
+    "background": "- Active matter: systems of self-propelled units that consume energy to move, such as colloids, cells, or animals.\n- Flocking: particles align their movement direction so the group moves coherently.\n- Motility-induced phase separation: self-propulsion alone can make particles bunch into dense clusters, without any attraction between them.\n- Janus colloids: microparticles with two faces of different chemistry, which can be propelled by a chemical or field gradient; dimers are pairs of linked particles.\n- Polar order: all particles point the same way. Nematic order: particles share an axis but not a direction.\n- Toner-Tu equations: a standard continuum theory of flocks that describes the average direction and density of motion.\n- Coarse-graining: deriving large-scale equations from microscopic particle rules.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We extend Jones' Baxterisation, which produces solutions to the Yang-Baxter equation directly from the generators of an algebra, to quantum spin chains with medium-range interactions. The key ingredient is an extended Yang-Baxter equation for R matrices that are built from the generators attached to two neighbouring sites. Together with the accompanying Lax operator, it gives rise to transfer matrices that are in involution up to boundary terms, exactly as in Jones' construction. We find a solution to the extended Yang-Baxter equation, of non-difference form, in terms of the generators of the chromatic algebra of 3-colouring, and obtain from it two families of medium-range lattice Hamiltonians. Thus, each representation of the algebra provides a medium-range solvable model. Using the relation between the chromatic algebra of 3-colouring and the fusion category $\\mathrm{Rep}(S_3)$, we construct four such representations. They reproduce the folded XXZ model and the hard-rod deformed XXZ model, and give new medium-range models of a three-state antiferromagnet and of a Rydberg-blockade ladder. Two of the four models possess non-invertible symmetries.",
+   "abstract": "Two of the most paradigmatic phenomena in active matter are flocking, where particles align to move collectively, and motility-induced phase separation, where self-propulsion causes particles to condense even without attractive interactions. Here, using experiments on self-propelled Janus colloid dimers, we show that flocks can phase separate to form polar streams. These structures are elongated dense clusters of particles that flock along the stream's long axis, in contrast to the well-known transverse bands that form close to the flocking transition. We use particle-based simulations and hydrodynamic theory obtained through coarse-graining to identify the underlying mechanism, which we call active nematic condensation: Denser regions of the flock develop stronger polar and hence nematic order, which leads to further particle fluxes into the dense region. These results reveal a generic mechanism whereby flocks can condense into streams. Our findings uncover that flocks can be shaped by nematic order, which is usually not accounted for in the standard Toner-Tu equations. More broadly, our work shows that collective motion and phase separation can not only coexist but also cooperate in active matter.",
    "source": "arxiv"
   },
   {

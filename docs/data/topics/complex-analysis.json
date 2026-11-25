@@ -3,45 +3,47 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28693",
-   "title": "An extension of Janowski functions with applications",
-   "url": "https://arxiv.org/abs/2611.28693",
+   "uid": "arxiv:2611.33131",
+   "title": "H\\\"older continuity of Green functions for Markov sets",
+   "url": "https://arxiv.org/abs/2611.33131",
    "authors": [
-    "Kunle Oladeji Babalola"
+    "Leokadia Bialas-Ciez",
+    "Rafa{\\l} Pierzcha{\\l}a"
    ],
-   "label": "arXiv:2611.28693v1",
+   "label": "arXiv:2611.33131v1",
    "primary_category": "math.CV",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper extends Janowski functions, which are classes of analytic functions subordinate to a Möbius-type function (1+az)/(1+bz), by allowing the constants a and b to be complex numbers instead of real numbers in [-1,1] with b<a.",
-    "plain": "This paper is about a family of well-behaved mathematical functions, called Janowski functions, that are defined by comparing them to a simple fraction with two constants. The authors let those two constants take complex values (numbers with an imaginary part) rather than only real values. The text says they study this larger setting and give some applications, but the excerpt does not list the specific results.",
-    "why": "Generalizing a classical class of functions from real to complex parameters is a standard way to widen what a known theory covers. Whether it matters further depends on the applications, which the excerpt does not describe, so its wider significance is uncertain.",
-    "background": "- Analytic (regular) function: a function of a complex variable that is smooth and differentiable throughout a region.\n- Subordination: one function is \"subordinate\" to another if it behaves like the other after a suitable reparametrization of the domain.\n- Janowski functions: analytic functions subordinate to (1+az)/(1+bz), with real a, b satisfying -1 ≤ b < a ≤ 1.\n- Complex numbers: numbers of the form x+iy, extending the real line to a plane.",
+    "one_liner": "For a compact set K in C^N, the paper shows the Green function (and the Siciak extremal function) is Hölder continuous exactly when polynomial first derivatives obey Markov's inequality on K, settling the Markov-to-Hölder direction and giving the sharp exponent 1/m in one variable.",
+    "plain": "The paper studies a measure of how \"spread out\" a region in the complex plane (or complex space) is, built from polynomials that stay small on that region. It shows that a certain smoothness property of this measure holds exactly when a standard polynomial bound, Markov's inequality, holds for the derivatives of polynomials on the region. The proof compares the measure on the region with its measure on a slightly larger neighborhood.",
+    "why": "The text describes the Markov-to-Hölder implication as settling a longstanding open problem between approximation theory and pluripotential theory, so it is of interest to specialists in those areas. The text does not say what further applications it may have, so beyond that connection I cannot say more.",
+    "background": "- Compact set: a closed, bounded region, such as a disk or a segment in the complex plane.\n- Polynomial inequality (Markov's inequality): a bound on how fast a polynomial of degree n can grow on the set; here the bound is of the form A n^m.\n- Green function / Siciak extremal function: a way of measuring how far a point is from the set, using polynomials that stay bounded on it.\n- Hölder continuity: a quantitative smoothness condition; a function is Hölder with exponent α if its change over a small distance d is at most a constant times d^α.\n- Maximum principle and Hörmander's extension theorem: standard tools from complex analysis used in the proof.\n- Several complex variables: the case N>1, where the set lives in C^N.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Janowski functions are regular functions of the form $p(z)=1+p_1z+\\cdots$, which are subordinate to $L_0(a,b:z)=(1+az)/(1+bz)$ for real numbers $a,b$ such that $-1\\leq b<a\\leq 1$. In this paper, we expand the space of the constants, $a$ and $b$, of the superordinate function, $L_0(a,b:z)$, to a larger set of complex numbers and provide some applications.",
+   "abstract": "Let $K$ be a nonempty compact subset of $\\mathbb C^N$. We prove that its Green function (and consequently, the Siciak extremal function) is H\\\"older continuous if and only if the first derivatives of polynomials satisfy Markov's inequality on $K$. The implication from Markov's inequality to H\\\"older continuity of the associated Green function settles a longstanding open problem at the intersection of approximation theory and pluripotential theory. A Markov bound $An^m$ in degree $n$ gives every H\\\"older exponent below $1/m$. In one complex variable it gives the exponent $1/m$ itself. The proof compares the extremal functions of two neighborhoods of $K$. For $N>1$ we use H\\\"ormander's theorem on holomorphic extension from a point. For $N=1$ the comparison follows from the maximum principle.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.30985",
-   "title": "Sharpness of the Brjuno Condition for Hyperbolic Bishop Surfaces",
-   "url": "https://arxiv.org/abs/2611.30985",
+   "uid": "arxiv:2611.31546",
+   "title": "Smale's Mean Values And Geometric Mean Values",
+   "url": "https://arxiv.org/abs/2611.31546",
    "authors": [
-    "Dijia Chen"
+    "Yunping Jiang",
+    "Zhe Wang"
    ],
-   "label": "arXiv:2611.30985v1",
-   "primary_category": "math.CV",
+   "label": "arXiv:2611.31546v1",
+   "primary_category": "math.NT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves a conjecture of Gong and Stolovitch: for a unimodular, non-root-of-unity, non-Brjuno parameter μ, there is a real-analytic surface in C^2 with Moser–Webster invariant μ that is formally but not holomorphically equivalent to the Bishop quadric Q_γ with γ = 1/√(2+μ+μ⁻¹) > 1/2.",
-    "plain": "This paper is about when two smooth surfaces sitting in two-dimensional complex space can be matched by a change of coordinates. Some surfaces can be matched by a formal, power-series change of coordinates but not by a genuine convergent one. The author shows that a specific surface, built from a number μ on the unit circle that fails a certain number-theoretic condition (the Brjuno condition), is of this kind, which settles a conjecture by Gong and Stolovitch.",
-    "why": "The result shows that a number-theoretic condition (the Brjuno condition) is sharp in this setting: when it fails, the convergence of the transformation can break down. This marks a boundary for a known positive result, and it bears on the broader question of when local geometric normal forms converge, which links complex dynamics and the geometry of real surfaces. The text alone does not show further consequences beyond this.",
-    "background": "- Complex plane C and complex two-dimensional space C^2; a real surface in C^2 is a 2-dimensional real object sitting in 4 real dimensions.\n- Holomorphic maps: smooth maps that respect complex structure; a convergent power series gives one.\n- Formal equivalence: matching two objects using power series that may not converge; holomorphic equivalence requires a convergent change of coordinates.\n- Root of unity: a complex number that is a whole-number power of 1; excluded here.\n- |μ|=1: μ lies on the unit circle, so it describes a rotation.\n- Brjuno condition: a number-theoretic growth condition on how well μ is approximated by roots of unity; it governs convergence of linearization in holomorphic dynamics.\n- Moser–Webster invariant: a number attached to a real surface's local complex structure that controls its normal form.\n- Bishop quadric: a standard model quadric surface in C^2 used as a reference example.",
+    "one_liner": "The paper studies Smale's mean values of complex polynomials, showing the geometric mean value alone cannot give the sharpest bound on the minimum of Smale's mean values, verifying Smale's mean value conjecture for some subclasses, and linking the problem to Fekete points.",
+    "plain": "This paper is about a question concerning polynomials with complex coefficients: how large must a \"typical\" point's local behavior be in terms of the polynomial's roots and derivative values. The authors show that for every degree above 2 and every positive number L, some polynomial of that degree has a geometric mean value larger than L. They also prove upper bounds for special families of polynomials, which supports Smale's conjecture in those cases.",
+    "why": "The text shows that one natural quantity (the geometric mean value) is not enough by itself to pin down the sharpest bound for Smale's mean values, which narrows how the conjecture can be attacked. The authors also tie the problem to Fekete points, a classical object from potential theory, and propose a new problem about Fekete points; the broader significance of these links is not spelled out in the text.",
+    "background": "- A complex polynomial is a sum of powers of a complex variable with complex coefficients; its roots are the points where it equals zero.\n- Smale's mean value conjecture concerns how the values of a polynomial's derivative at its roots relate to the rest of the polynomial, measured by averaged quantities called Smale's mean values.\n- The geometric mean value is one such average, taken as a product rather than a sum, so it is sensitive to very small or very large terms.\n- A \"bound\" here is a guaranteed upper limit; showing a quantity can exceed every L means no finite bound of that kind holds for it alone.\n- Fekete points are special sets of points, chosen to be maximally spread out, from potential theory and approximation theory.\n- Degree d means the highest power of the variable in the polynomial.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $\\mu \\in \\mathbb{C}$ satisfy $|\\mu|=1$, and assume that $\\mu$ is not a root of unity and is not Brjuno. Let $Q_\\gamma$ denote the Bishop quadric with $\\gamma = 1/\\sqrt{2+\\mu+\\mu^{-1}} > 1/2$. Gong and Stolovitch conjectured that there exists a real-analytic surface in $\\mathbb{C}^2$ with Moser--Webster invariant $\\mu$ that is formally but not holomorphically equivalent to $Q_\\gamma$. We prove this conjecture.",
+   "abstract": "We prove that, for every integer $d>2$ and every $L>0$, there exists a polynomial of degree $d$ whose geometric mean value exceeds $L$. This result demonstrates that the geometric mean value alone is insufficient to establish the smallest upper bound for the minimum of Smale's mean values. Under certain additional assumptions, we derive upper bounds for the geometric mean value, thereby verifying Smale's mean value conjecture for several subclasses of polynomials. Furthermore, we connect Smale's mean values to Fekete points. Motivated by this connection, we formulate a new problem concerning Fekete points in the spirit of Smale's mean values.",
    "source": "arxiv"
   },
   {

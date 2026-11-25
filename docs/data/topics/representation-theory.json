@@ -3,46 +3,47 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29234",
-   "title": "M\\\"obius Fusion Algebra",
-   "url": "https://arxiv.org/abs/2611.29234",
+   "uid": "arxiv:2611.33152",
+   "title": "Abelian envelopes and quantum groups in Knop's interpolation categories",
+   "url": "https://arxiv.org/abs/2611.33152",
    "authors": [
-    "Ippo Orii",
-    "Yuji Tachikawa"
+    "Johannes Flake",
+    "Peter Mader"
    ],
-   "label": "arXiv:2611.29234v1",
-   "primary_category": "math.QA",
+   "label": "arXiv:2611.33152v1",
+   "primary_category": "math.CT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper defines a generally non-commutative \"Möbius fusion algebra\" from a pseudo-unitary modular tensor category with an anti-monoidal involution, proves it is semisimple, and gives a dimension formula for its simple modules in terms of the modular S-matrix and data from the involution.",
-    "plain": "This paper is about a mathematical structure built from rules for combining topological \"particles\" drawn as graphs on a Möbius band, a surface with only one side. The authors define an algebra from these rules and show it behaves well in a precise technical sense (it is semisimple). They also give a formula for the sizes of its basic building blocks, which is meant to be a counterpart of the Verlinde formula for surfaces that are not orientable.",
-    "why": "The Verlinde formula is a central tool linking topological quantum field theory and fusion rules, and this paper aims at an analogue for non-orientable manifolds. The text only states this as an expectation (\"is expected to play the role\"), so its eventual connections remain to be seen.",
-    "background": "- Topological quantum field theory: a framework where physical quantities depend only on the shape of a space, not on measurements of distances.\n- Modular tensor category: an algebraic structure of anyon-like objects and how they fuse and braid; used to build such theories.\n- Fusion algebra: an algebra recording how objects combine, with multiplication given by fusion rules.\n- S-matrix: a matrix describing how the basic objects transform under changes of viewpoint on a surface; it controls the Verlinde formula.\n- Orientable vs non-orientable surfaces: orientable surfaces have a consistent notion of left and right; the Möbius band does not.\n- Semisimple algebra: an algebra that decomposes cleanly into simple pieces, with no hidden nilpotent parts.\n- Involution: a map that applied twice returns the original; here, an anti-monoidal one acting on the category.",
+    "one_liner": "The paper shows that large classes of subcategories of Knop's tensor envelopes admit abelian envelopes, which correspond to quantum groups (Hopf algebras) inside Deligne-type interpolation categories, including those of group-theoretical easy quantum groups.",
+    "plain": "This paper is about a way of taking a family of symmetry structures, described by counting diagrams, and turning it into a more familiar setting where it behaves like a collection of symmetries acting on spaces. The authors prove that for many such families an \"abelian envelope\" exists, meaning a well-behaved completion in which the structure can be read as a quantum group. They also apply the method to several concrete families, such as wreath products and finite general linear and affine groups.",
+    "why": "It connects two research programs: the interpolation categories that let symmetric groups be treated as if their size were a continuous parameter, and the theory of quantum groups. Its specific scope is the existence result and the correspondence with quantum groups; the text does not say how far beyond these cases the results extend.",
+    "background": "- Representation theory: studying groups through the linear actions they have on vector spaces.\n- Tensor category: a collection of objects (such as representations) that can be combined by a tensor product, with morphisms between them.\n- Interpolation category: a category built so that a parameter (such as the size n of a symmetric group) can take arbitrary values, via counting diagrams.\n- Abelian envelope: an enlargement of a category into an abelian one (one where kernels and cokernels behave as in linear algebra), which lets it be studied with standard tools.\n- Hopf algebra / quantum group: a generalization of a group of symmetries, with an algebraic structure that allows multiplication and comultiplication; quantum groups are its noncommutative, deformed versions.\n- Easy quantum group: a quantum symmetry group defined through a category of diagrams (partitions) of a specific kind.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Given a pseudo-unitary modular tensor category $\\mathcal{C}$ with an anti-monoidal involution $\\mathsf{P}$, we define a generally non-commutative algebra from this data, which we call the M\\\"obius fusion algebra $\\mathfrak{M}$ of $(\\mathcal{C},\\mathsf{P})$, in terms of ribbon graphs drawn on the M\\\"obius band, where the orientation-reversal of the M\\\"obius band acts on the graphs by $\\mathsf{P}$. We show that this algebra is semisimple, and give a formula for the dimensions of its simple modules, in terms of the modular $S$-matrix of $\\mathcal{C}$ and a certain set of quantities extracted from the action of $\\mathsf{P}$. This formula is expected to play the role of a non-orientable analogue of the Verlinde formula, in the context of Reshetikhin-Turaev-type topological quantum field theories on non-orientable manifolds.",
+   "abstract": "We show the existence of abelian envelopes for large classes of subcategories of Knop's tensor envelopes. It follows that these abelian envelopes correspond to groups or more generally Hopf algebras (``quantum groups'') in their parent interpolation categories. As a special case, we obtain that the interpolation categories in the sense of Flake--Maassen (2022) of all so-called group-theoretical easy quantum groups have abelian envelopes given by quantum groups in Deligne's interpolation category of the symmetric groups. Similarly, we apply our theory to interpolation categories of wreath products, finite general linear groups, and finite affine groups. Our main technique is an explicit construction of objects corresponding to coordinate algebras using the calculus of relations that Knop's categories are based on.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28814",
-   "title": "Inner derivations and automorphism groups of vertex operator algebras",
-   "url": "https://arxiv.org/abs/2611.28814",
+   "uid": "arxiv:2611.33125",
+   "title": "Non-formality of prefactorization algebras",
+   "url": "https://arxiv.org/abs/2611.33125",
    "authors": [
-    "Jianzhi Han"
+    "Coline Emprin",
+    "Alex Takeda"
    ],
-   "label": "arXiv:2611.28814v1",
-   "primary_category": "math.QA",
+   "label": "arXiv:2611.33125v1",
+   "primary_category": "math.AT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "For a simple, rational, C_2-cofinite vertex operator algebra of CFT type, the zero-mode map from weight-one vectors to derivations is shown to be a Lie algebra isomorphism, which identifies inner automorphisms as the identity component of the full automorphism group and gives dim Aut(V) = dim V_1.",
-    "plain": "This paper is about the symmetries of a particular algebraic structure that appears in conformal field theory, a branch of physics and mathematics that studies idealized quantum systems. The author shows that a certain natural correspondence between the structure's weight-one part and its derivations (rules that behave like differentiation) is exact in both directions. From this, the symmetry group is pinned down: its size is set by the dimension of the weight-one part, and it is finite only when that part is zero.",
-    "why": "The result gives a precise count of the symmetries of these structures in terms of a single dimension, which is the kind of classification statement specialists look for. The text does not say how far it extends beyond the stated hypotheses, so its wider reach is unclear from this excerpt alone.",
-    "background": "- Vertex operator algebra (VOA): an algebraic object from conformal field theory, a model of symmetry in two-dimensional quantum physics.\n- Weight grading: the VOA splits into pieces V_n indexed by a \"weight\" (roughly an energy level); V_1 is the weight-one piece.\n- Lie algebra: a vector space with a bracket operation, here built from derivations.\n- Derivation: a linear map obeying a product rule, like the ordinary derivative.\n- Automorphism group Aut(V): the structure-preserving symmetries of V; Inn(V) are those generated by exponentiating derivations.\n- Identity component: the connected piece of a continuous group containing the identity.\n- Hypotheses: simple, rational, C_2-cofinite, CFT type are technical finiteness and niceness conditions.\n- Zhu's algebra and characters: tools that encode the structure through a finite-dimensional algebra and generating functions counting dimensions.",
+    "one_liner": "The paper builds a Poisson bracket on the cohomology of locally constant prefactorization algebras on R^m (for m ≥ 2) that obstructs formality, generalizing the two-dimensional bracket of Bruinsma, Schenkel and Vicedo and extending their non-formality theorem for Lie algebra factorization envelopes to all dimensions.",
+    "plain": "The paper studies a mathematical structure that assigns algebraic data to regions of space, and asks whether that data can be simplified to a standard form without losing information. The authors build an invariant, a kind of bracket operation on the simplified data, whose non-zero value shows that such simplification is impossible in every dimension two or higher. They use this to show that several families of algebraic objects, including factorization envelopes of Lie algebras and certain physics-inspired field theories, are not formal.",
+    "why": "A non-zero bracket gives a checkable test that a structure cannot be reduced to its simplest form, which matters for classifying these objects. The link to field theories such as Chern-Simons and BF theories suggests relevance to mathematical physics, but the text does not say more about those applications.",
+    "background": "- Prefactorization algebra: an assignment of algebraic data to open regions of a space, compatible with placing regions side by side (a local-to-global structure from factorization homology).\n- Locally constant: the data depends only on topology, not on fine geometry, so it behaves like a topological invariant.\n- Cohomology: an algebraic invariant that counts independent 'holes' or obstructions in a structure; here it is the object that carries the bracket.\n- Poisson bracket: an antisymmetric product on functions or classes that satisfies a Leibniz-type rule; it is the 'signal' used to detect non-formality.\n- Formality: the property that a structure is equivalent to its cohomology with trivial higher operations; non-formality means this simplification fails.\n- L-infinity algebra: a generalization of a Lie algebra with a family of higher operations.\n- Lie algebra, BF theory and Chern-Simons theory: standard algebraic and physical structures; only needed at a high level.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $V$ be a simple, rational, $C_2$-cofinite vertex operator algebra of CFT type. We prove that the zero mode map $V_1\\to\\operatorname{Der}(V)$, $h\\mapsto h_0$, is an isomorphism of Lie algebras. We prove surjectivity using traces on finite sums of weight spaces and Li's module construction, and injectivity using the vacuum character of Zhu's algebra. It follows that $\\operatorname{Inn}(V)$ is the identity component of $\\operatorname{Aut}(V)$ and has finite index in $\\operatorname{Aut}(V)$. Moreover, $\\operatorname{dim}\\operatorname{Aut}(V)=\\dim V_1$, so $\\operatorname{Aut}(V)$ is finite if and only if $V_1=0$.",
+   "abstract": "We construct a Poisson bracket on the cohomology of locally constant prefactorization algebras on $\\mathbb{R}^m$ that provides an obstruction to formality in every dimension $m\\geqslant 2$. Our construction combines colored obstruction sequences to formality with linking spheres and generalizes the two-dimensional bracket of Bruinsma, Schenkel, and Vicedo. We use it to extend their non-formality theorem for Lie algebra factorization envelopes to all higher dimensions. We also establish new non-formality results for factorization envelopes of Lie algebras, their compactifications and generalizations to $L_\\infty$-algebras, free BF-type theories, higher abelian Chern-Simons theories and their compactifications.",
    "source": "arxiv"
   },
   {

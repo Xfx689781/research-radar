@@ -3,56 +3,55 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29226",
-   "title": "Tenlai-TTS 2.0: Continuous-Representation LLM-Based TTS System with End-to-End Training",
-   "url": "https://arxiv.org/abs/2611.29226",
+   "uid": "arxiv:2611.32697",
+   "title": "Cif-query bridging for audio-native asr transfer to visual speech recognition",
+   "url": "https://arxiv.org/abs/2611.32697",
    "authors": [
-    "Changfeng Gao",
-    "Yong Ren",
-    "Jun Yuan",
-    "Zhengkun Tian",
-    "Ye Bai",
-    "Zhao You",
-    "Shidong Shang"
+    "Chang Sun",
+    "Dongliang Xie",
+    "Wanpeng Xie",
+    "Bo Qin",
+    "Hong Yang"
    ],
-   "label": "arXiv:2611.29226v1",
+   "label": "arXiv:2611.32697v1",
    "primary_category": "cs.SD",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Tenlai-TTS 2.0 trains a continuous speech-latent encoder, an LLM with an autoregressive diffusion head, a flow-matching mel decoder and a recognition model jointly end to end, then refines predictions with reconstruction and recognition feedback and reinforcement learning, evaluated on Seed-TTS-eval.",
-    "plain": "This paper is about making computer-generated speech from text using a language model that works on smooth, continuous \"speech codes\" rather than discrete tokens. The usual approach learns these codes separately and then freezes them, which can make them a poor fit for the language model. The authors instead train the whole pipeline together and report lower error rates on the Seed-TTS-eval benchmark, such as character error rate falling from 8.32% to 7.08% on the hard Chinese test set.",
-    "why": "It addresses a real design trade-off in modern speech synthesis: codes must keep enough acoustic detail for good audio yet stay predictable for a language model. The reported gains are modest, and the text does not compare against other systems, so its wider significance is unclear.",
-    "background": "- Text-to-speech (TTS): software that turns written text into spoken audio.\n- Large language model (LLM): a neural network that predicts the next item in a sequence; here it predicts speech pieces in order.\n- Continuous latents vs. discrete tokens: continuous latents are smooth numeric vectors that avoid rounding information away; discrete tokens are picked from a fixed list.\n- Autoregressive: generating one step at a time, each based on the previous ones.\n- Diffusion / flow matching: methods that generate data by gradually refining noise into a clean signal; a mel-spectrogram is a standard picture of sound frequencies over time.\n- Gaussian bottleneck: a narrow layer that adds noise and limits how much information passes through.\n- Character / word error rate (CER/WER): share of words or characters a speech recognizer gets wrong on the synthesized audio; lower is better.\n- Speaker similarity: how closely the synthesized voice matches a reference speaker.\n- Reinforcement learning: tuning a model using reward signals rather than fixed correct answers.",
+    "one_liner": "A lightweight cross-attention bridge, seeded by a CIF predictor's adaptive token-rate queries, connects a Paraformer visual speech recognition encoder to the Qwen3-ASR audio-native decoder, reporting 7.97% CER versus 11.78% for native Paraformer on CMLR.",
+    "plain": "Lip-reading systems turn video of a talking face into text. This paper takes a speech recognizer built for sound and reuses its language knowledge to read lips, by adding a small connecting module between a visual front end and the pretrained sound-based model. On the CMLR test set, the authors report that this setup makes fewer character errors than the original visual system (7.97% versus 11.78%).",
+    "why": "Reusing a large pretrained speech model for silent video could help lip-reading where visual data is scarce, and the bridge is designed to keep detail from many video frames without making the model read them all directly. The text reports only one dataset and a comparison against one baseline, so the size of the gain in other settings is unknown.",
+    "background": "- Visual speech recognition (VSR): transcribing speech from silent video of lips and face.\n- ASR (automatic speech recognition): software that turns audio into text.\n- Character error rate (CER): share of characters wrongly transcribed; lower is better.\n- Continuous integrate-and-fire (CIF): a method that groups frame-level features into a variable number of token-sized chunks.\n- Cross-attention: a mechanism that lets one sequence of vectors look up relevant information in another.\n- Adapter/projector: small trainable layers that map one model's output format into another's input format.\n- CTC: a training objective for aligning sequences of frames with text without explicit alignment.\n- CMLR: a Chinese lip-reading dataset used as the benchmark here.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Autoregressive text-to-speech (TTS) with continuous speech latents avoids quantization-induced information loss, but typically relies on a latent space that is learned separately and then frozen before language-model training. Such a space must satisfy two competing requirements: it must retain enough acoustic detail for high-fidelity reconstruction, yet be sufficiently structured and regularized to support autoregressive prediction by a language model. We present Tenlai-TTS 2.0, which learns continuous speech representations through end-to-end training to balance acoustic detail with autoregressive predictability. The model comprises a speech encoder with a capacity-controlled Gaussian bottleneck, a large language model (LLM) with an autoregressive diffusion transformer (AR-DiT) head, a flow-matching (FM) mel-spectrogram decoder, and a multi-task recognition model (RM). With energy normalization and fixed-variance Gaussian noise, the bottleneck has a closed-form upper bound on its information rate. Through joint optimization with reconstruction, recognition, and next-patch prediction objectives, we learn continuous speech representations that suit all three tasks and train the LLM and AR-DiT for autoregressive generation. The LLM and AR-DiT are further optimized using differentiable reconstruction and recognition feedback on their predicted latents through the FM decoder and RM. On Seed-TTS-eval, this feedback-based optimization reduces character error rate (CER) from 0.82% to 0.74% on test-zh and from 8.32% to 7.08% on test-hard-zh, and word error rate (WER) from 1.32% to 1.27% on test-en, compared with joint training alone. Subsequent reinforcement learning further reduces CER to 6.29% on test-hard-zh and WER to 1.08% on test-en, with speaker similarity scores of 0.811, 0.766, and 0.784 on test-zh, test-en, and test-hard-zh, respectively.",
+   "abstract": "Audio-native automatic speech recognition (ASR) models provide strong speech-language priors, but their compact acoustic interfaces are mismatched with long, frame-level visual features. We propose CIF-Query Bridge, a lightweight connection from a Paraformer visual speech recognition (VSR) encoder to Qwen3-ASR. The existing visual continuous integrate-and-fire (CIF) predictor produces an input-dependent number of token-rate queries; a two-layer cross-attention bridge refines them against the complete frame sequence, and a linear adapter feeds the pretrained ASR projector and decoder. This design preserves access to uncompressed visual context while avoiding direct autoregressive processing of hundreds of video frames. On CMLR, the complete visual-only transfer system achieves 7.97% character error rate, compared with 11.78% for native Paraformer under the same test split and scoring protocol---a 3.81-point absolute and 32.3% relative reduction. Controlled ablations characterize bridge depth, projector initialization, adapter capacity, and CTC supervision. The results show that CIF-derived adaptive queries provide a compact interface for transferring audio-native ASR capability to VSR.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31055",
-   "title": "CAST: A Deployed Speech-to-Text Cascade for Closed Captioning of Entertainment Television",
-   "url": "https://arxiv.org/abs/2611.31055",
+   "uid": "arxiv:2603.07865",
+   "title": "SoundWeaver: Compositional Warm-Starting for Text-to-Audio Diffusion Serving",
+   "url": "https://arxiv.org/abs/2603.07865",
    "authors": [
-    "Aditya Mishra",
-    "Thanish Bolla",
-    "Bidisha Sharma",
-    "Balaji Pitchaikannu",
-    "Surbhi Sinha",
-    "Anup Kotalwar"
+    "Ayush Barik",
+    "Sofia Stoica",
+    "Nikhil Sarda",
+    "Arnav Kethana",
+    "Abhinav Khanduja",
+    "Muchen Xu",
+    "Fan Lai"
    ],
-   "label": "arXiv:2611.31055v1",
+   "label": "arXiv:2603.07865v2",
    "primary_category": "cs.SD",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "CAST is a deployed speech-to-text pipeline for closed captioning of long-form entertainment TV that wraps a frozen Whisper large-v3 model with a hierarchical voice activity detector, language identification, lyrics routing, and hallucination detection and repair, evaluated against a WhisperX baseline on in-house and public data.",
-    "plain": "Automatic speech recognition, the software that turns spoken audio into text, struggles with TV shows full of music, sound effects, accents, and overlapping voices. This paper describes a captioning system built around an existing speech model that adds extra steps to find quiet speech, skip silent stretches that cause the model to invent or repeat words, and fix those errors. On 100 internal assets totaling about 60 hours, the authors report lower word error rate and fewer subtitle edits per hour than the WhisperX baseline.",
-    "why": "Captioning long entertainment video is a practical, high-volume problem, and the paper argues that segmentation and surrounding steps matter as much as the core model. Its reported production deployment gives it some real-world weight, though the evidence comes from the authors' own in-house data and the public-dataset result is described only briefly.",
-    "background": "- Word error rate (WER): share of words the system gets wrong; lower is better.\n- Voice activity detection (VAD): a step that decides which parts of audio contain speech and which are silence or noise.\n- Whisper: an open speech recognition model from OpenAI; \"frozen\" means its internal weights are not retrained here.\n- Hallucination in speech models: when a model outputs plausible-sounding text that was never spoken, often repeating phrases over silence.\n- Subtitle edit rate: the human effort, in minutes, needed to correct captions per hour of video.\n- Deletion rate: share of spoken words the system drops entirely.\n- Closed captioning (CC): on-screen text transcripts for viewers who are deaf or hard of hearing, or who need subtitles.",
-    "difficulty": "intermediate",
+    "one_liner": "SoundWeaver is a training-free method that speeds up text-to-audio diffusion by warm-starting generation from acoustic segments reused across a cache of previously generated clips, with an adaptive bandit choosing the skip depth per request.",
+    "plain": "Generating sound from a text description with modern diffusion models is slow, because the model must refine noise step by step through many passes. This paper proposes SoundWeaver, which reuses pieces of sound from a small library of already-generated clips, stitches them into a rough starting point that fits the prompt, and then begins the refinement partway through instead of from pure static. The authors report speedups of 1.48 to 3.74 times on several text-to-audio backbones, using a cache of only 1,000 clips, and say generation quality also improved.",
+    "why": "Faster audio generation without retraining matters for anyone deploying these models at scale, where latency and compute cost add up. The idea of reusing structure across past outputs, rather than treating each request in isolation, may also be relevant to caching and serving systems more broadly, though the text does not address that connection.",
+    "background": "- Diffusion models generate output by starting from random noise and removing it over many steps (neural function evaluations, or NFEs, are these model passes).\n- Warm-starting means beginning the process from a partly formed guess instead of pure noise, so fewer steps are needed.\n- Neural audio codecs compress audio into compact numerical representations that can be compared.\n- A contextual bandit is an online decision method that picks among options (here, how many steps to skip) and learns from feedback.\n- Signal-to-noise ratio (SNR) describes how much signal remains relative to noise at a given step.\n- The paper's error bound is a theoretical guarantee on how far the warm start can be skipped before quality suffers.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Despite rapid progress in automatic speech recognition (ASR), caption generation for long-form entertainment video remains challenging for content dense in music and effects, rich in accents, crosstalk, and noise. The transcript quality depends on segmentation and surrounding modules as much as the acoustic model. A single pass voice activity detection (VAD) can miss faint, low-energy voice while forwarding near-silent segments that induce hallucination and repetition in an autoregressive decoder. These competing errors motivate a hierarchical VAD that revisits rejected segments under semantic and acoustic retention checks. We present Captioning ASR Stack for Television (CAST), an integrated speech-to-text pipeline for closed captioning (CC) combining frozen Whisper large-v3 with segmentation, language identification, lyrics routing, and targeted hallucination detection and repair on a single NVIDIA L4 GPU. On 100 in-house assets spanning 60.46 hours, CAST reduces normalized WER from 6.99% to 5.36% and subtitle edit rate from 254.2 to 221.9 min/hour against the WhisperX pipeline, and improves deletion rate by 11% on public datasets. We also present the behavior of each stage in the pipeline. CAST entered the production speech-to-text (STT) stage of our CC pipeline in late August 2026; we report the evaluation evidence and path to full-scale operation.",
+   "abstract": "Text-to-audio (T2A) diffusion models generate high-quality audio but require tens of neural function evaluations (NFEs), resulting in substantial inference latency. Existing acceleration methods primarily optimize each generation trajectory independently, even when reusable acoustic structure exists in prior examples. We introduce SoundWeaver, the first training-free framework for compositional cross example acoustic reuse. Rather than generating from pure noise, SoundWeaver constructs a prompt-conditioned acoustic prior from segments distributed across cached audios and warm-starts diffusion from an intermediate noise level. We introduce an Acoustic Composition Graph (ACG), which uses neural codec representations and segment-level identification to identify candidate cross-cache transitions and structured path search to jointly optimize prompt relevance and acoustic continuity. We further establish a warm-start error bound showing how prior quality and diffusion SNR jointly govern the admissible skip depth, motivating an adaptive contextual-bandit Skip Gater that selects the warm-start level for each request. Across T2A diffusion backbones, SoundWeaver achieves 1.48-3.74x generation speedup with only a 1K-clip cache while improving generation quality.",
    "source": "arxiv"
   },
   {

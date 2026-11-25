@@ -3,48 +3,58 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28186",
-   "title": "Updated View on Titan's Habitability: Interior and Surface Aqueous Environments",
-   "url": "https://arxiv.org/abs/2611.28186",
+   "uid": "arxiv:2611.31408",
+   "title": "From residuals to warps: Probing disk geometry with gas kinematics",
+   "url": "https://arxiv.org/abs/2611.31408",
    "authors": [
-    "Diogo Gon\\c{c}alves",
-    "L\\'igia F. Coelho",
-    "Catarina Miranda",
-    "Zita Martins"
+    "C. N. Kimmig",
+    "G. P. Rosotti",
+    "A. J. Winter",
+    "G. Lodato",
+    "E. Ragusa",
+    "S. Facchini",
+    "A. F. Izquierdo",
+    "F. Zagaria",
+    "M. Benisty",
+    "T. Birnstiel"
    ],
-   "label": "arXiv:2611.28186v1",
+   "label": "arXiv:2611.31408v1",
    "primary_category": "astro-ph.EP",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A review of the prebiotic chemistry potential of three aqueous settings on Saturn's moon Titan (its interior ocean, cryovolcanic flows, and impact-melt pools), framed around the upcoming Dragonfly mission.",
-    "plain": "This paper looks at whether Titan, Saturn's large moon, could have conditions where the chemistry leading toward life's building blocks might happen. The authors review three kinds of places where liquid water might meet carbon-based molecules: a hidden underground ocean, icy lava-like flows erupting from the surface, and pools of melted rock left by meteorite impacts. For each, they list what helps this chemistry along and what holds it back.",
-    "why": "NASA's Dragonfly mission is planned to visit Titan and study its organic chemistry directly, so a current map of the open questions helps decide what to measure. The text also notes that the longevity of Titan's interior water has recently been questioned, which is a live uncertainty rather than a settled result.",
-    "background": "- Titan: Saturn's largest moon, with a thick nitrogen atmosphere and surface lakes of hydrocarbons, and likely an ice shell over a salty or ammonia-rich water layer.\n- Prebiotic chemistry: chemistry that produces molecules (such as amino acids or sugars) that were precursors to life, not life itself.\n- Organic molecules: carbon-containing compounds.\n- Ammonia: a nitrogen-hydrogen compound that lowers water's freezing point, keeping liquid water longer.\n- Cryovolcanism: eruption of icy, water-based material instead of molten rock.\n- Impact-melt pool: a pocket of rock melted by a meteorite strike, which can stay warm for a long time.\n- Dragonfly: a NASA rotorcraft lander planned to fly across Titan's surface.\n- This is a review synthesis; the text given does not include new measurements or specific numbers.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Saturn's moon Titan is the only world beyond Earth where abundant organic molecules and liquid water are expected to interact. Crucially, these interactions yield prebiotic molecules central to terrestrial biochemistry. Characterizing this prebiotic chemistry is one of the main science goals of NASA's upcoming Dragonfly mission. Here we synthesize the current state of knowledge on the habitability and prebiotic potential of Titan's three aqueous settings: its interior hydrosphere, its putative cryovolcanic flows, and its impact-melt pools. For each setting, we identify the enabling factors and the principal bottlenecks that limit prebiotic complexification. Titan's interior is likely pervaded by liquid water in contact with organic material delivered from the surface and released from the core, though the longevity of its liquid water has recently been called into question. Cryovolcanic regions transiently expose surface organics to ammonia-bearing aqueous melts but are constrained by short freezing timescales. Impact-melt pools, by contrast, are warm and long-lived environments whose prebiotic chemistry is limited by the scarcity of ammonia. Dragonfly will return ground-truth data not only for Titan's habitability, but also for organic-rich aqueous environments across the Solar System and beyond. The years before its arrival are the last in which predictive work can still shape Dragonfly's investigations.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.31181",
-   "title": "Probabilistic, facility-specific prioritisation of temperate exoplanets for atmospheric characterisation with JWST and the ELT",
-   "url": "https://arxiv.org/abs/2611.31181",
-   "authors": [
-    "Effy Viridis"
-   ],
-   "label": "arXiv:2611.31181v1",
-   "primary_category": "astro-ph.EP",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "A public Monte Carlo framework (UHI v6.1) builds facility-specific, probabilistic priority lists of 6,112 NASA-archived planets for JWST transit spectroscopy and ELT reflected-light observations, with Sobol sensitivity analysis showing the XUV shoreline dominates rocky-planet rankings and Hycean results are only indicative.",
-    "plain": "The paper asks which temperate planets outside our solar system should be looked at first with the James Webb Space Telescope and the planned Extremely Large Telescope, which can only spend limited time on each target. Instead of producing one ranking, the authors run 10,000 simulated draws that account for uncertain measurements, and they report how often each planet lands near the top. They find that whether a planet survives basic habitability checks matters most for whether it makes the lists, and that one assumption about how much stellar radiation a planet's atmosphere can withstand drives much of the rocky-planet results.",
-    "why": "Observing time on the largest telescopes is scarce, so a transparent, rerunnable way to rank targets could guide which atmospheres get studied first. The text does not show that these lists have been tested against actual observations, so their practical value remains to be seen.",
-    "background": "- Transit spectroscopy: measuring starlight filtered through a planet's atmosphere as it passes in front of its star; works for planets that transit.\n- Reflected-light observations: measuring starlight bounced off a non-transiting planet, the approach planned for the ELT's planet-finding instrument (PCS).\n- Temperate planet: a planet whose surface temperature could allow liquid water.\n- Hycean planet: a hypothetical world with a deep water layer under a hydrogen-rich atmosphere.\n- XUV shoreline: the boundary in stellar X-ray and extreme-UV flux below which a planet's atmosphere is likely to be kept.\n- Monte Carlo: repeating a calculation many times with randomly drawn inputs to see the spread of outcomes.\n- Sobol sensitivity indices: numbers showing how much each input assumption contributes to the variation in results; a higher total-order index means more influence.\n- Sigma (5σ, 3σ): confidence thresholds for detection; 5σ is a stricter detection standard.",
+    "one_liner": "Using CO gas velocity residuals from a Keplerian disk model, the authors test when radiative-transfer mock observations can recover the three-dimensional warp shape of protoplanetary disks, and where the method fails.",
+    "plain": "This paper asks how to measure the tilt and twist of young, planet-forming disks of gas and dust around newborn stars. The authors simulated disks with a built-in warp, made synthetic ALMA maps of carbon monoxide gas emission, and checked whether a fitting method could recover the true warp from how the gas moves. They found the warp can be recovered for nearly face-on disks with slight misalignments of a few degrees, but the method breaks down for steeper disks (inclination above 40 degrees), high emission layers, and sharp warp transitions.",
+    "why": "Warps are suggested by shadows seen in many disks, and their shape bears on how disks evolve and why they bend. The work sets out the conditions under which a kinematic method can be trusted, which matters for interpreting future observations, though the text does not show that the method has been applied to real data.",
+    "background": "- Protoplanetary disks: rotating disks of gas and dust around young stars, where planets may form.\n- Warp: a bend or tilt in a disk, so its orientation changes with distance from the star.\n- Keplerian disk model: the standard model in which gas orbits the star with speed set by gravity; deviations from it reveal extra motion or tilt.\n- Inclination and position angle: how tilted the disk is toward our line of sight, and the direction of its tilt on the sky.\n- Shadowing: dark regions cast on the outer disk by an inner warped part, used as evidence for warps.\n- CO rotational line emission: radio light from carbon monoxide molecules, observed with ALMA, that traces gas motion.\n- Radiative transfer simulation: a computer calculation of how light travels through and is emitted by a model object.\n- Spectral resolution: how finely velocity is sampled in the data (here, down to 0.8 km/s).",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Deciding which temperate exoplanets to observe first matters for JWST transit spectroscopy and for planned ELT reflected-light instruments, yet signal-to-noise metrics ignore habitability and similarity indices ignore observability. We present an open Monte Carlo framework (UHI v6.1) that builds probabilistic priority lists separately for each facility and composition class, never as a single ranking. For each of 6,112 planets in the NASA Exoplanet Archive, 10,000 draws carry catalogue uncertainties through climate, cumulative stellar-XUV atmospheric retention, per-draw rocky, Hycean or gas-rich classes, and a JWST (transiting) or ELT/PCS (non-transiting) detection model, giving each planet a survival probability, a conditional score and a top-N probability. At $5\\sigma$, 255 rocky and 71 Hycean candidates remain viable. A Saltelli--Sobol analysis of 32 assumptions ($N = 512$) shows that the location and width of the XUV shoreline dominate the rocky lists, with total-order indices of 0.22 and 0.12 at $5\\sigma$ (0.25 and 0.14 at $3\\sigma$), and all ten leading indices have 95% bootstrap half-widths below 0.05. For Hycean planets most outputs are degenerate and the analysis does not converge, so that branch is reported as indicative. Membership of these lists is limited mainly by whether a planet survives the habitability vetoes: at $5\\sigma$, 3 of the nominal JWST and 4 of the nominal ELT rocky top-10 targets enter the top 10 in at least half of all draws, yet every one of them stays in the top 10 in more than half of the draws in which it survives. Code, per-planet posterior summaries, sensitivity tables and maps are public, so observers can rerun the lists under their own instrument assumptions and see which inputs would most change a target's priority.",
+   "abstract": "Evidence of shadowing among protoplanetary disks suggests that warped protoplanetary disks are widespread, making it crucial to constrain their three-dimensional shape in order to understand their dynamical evolution and origin. Yet, inferring this warp shape from observations is challenging, as the typical signatures of a warp, especially shadows, are often degenerate with the warp shape. Kinematics of disks may provide a method to recover the shape by interpreting the residuals from a Keplerian disk model as local changes in inclination and position angle. In this work, we test its applicability and limitations. We perform radiative transfer simulations of disks with a parametrized warp shape to create synthetic maps of $^{12}\\mathrm{CO}$ rotational line emission at ALMA wavelengths and compare the fitted warp with the true warp shape. We find that the warp shape can be recovered for nearly face-on disks with small warp misalignments of a few degrees, even without knowledge about disk properties such as emission height. The overall warp shape remains traceable even at moderate spectral resolutions up to $0.8\\,\\mathrm{km/s}$. However, we identify regimes where the method breaks down, including disks with an inclination higher than $40^\\circ$, a high emission height of the tracer, and sharp warp transitions. In addition, radial and vertical motions can introduce apparent warps and twists, motivating extensions of the method to account for these effects.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32298",
+   "title": "Kepler-404: A near-resonant pair of sub-Neptunes. Reinterpreting a false-positive signal with the novel detection method RIVERS.radon",
+   "url": "https://arxiv.org/abs/2611.32298",
+   "authors": [
+    "Yannick Eyholzer",
+    "Marylyn Rosenqvist",
+    "Adrien Leleu",
+    "Vitaliy Kinakh",
+    "Slava Voloshynovskiy"
+   ],
+   "label": "arXiv:2611.32298v1",
+   "primary_category": "astro-ph.EP",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper shows that transit timing variations can hide low signal-to-noise planets from standard searches, introduces the RIVERS.radon 2D cross-correlation method, and uses it to re-identify a false-positive Kepler signal as a planet in a near-5:4 resonance with a companion, with a photodynamical fit giving radii, masses and orbit-plane constraints.",
+    "plain": "Planets are often found by watching for small, regular dips in a star's brightness when a planet passes in front of it. Gravitational tugs from neighbouring planets can shift these dips around, so a standard search may miss weak signals. This paper presents a new search method that does not assume the dips are perfectly regular, and uses it to show that a signal previously labelled a false alarm around the star Kepler-404 is in fact a real planet.",
+    "why": "Pairs of planets locked in near-resonant orbits are expected to be common, yet few have been observed, and this work suggests detection bias may be part of the reason. The reported result, a pair of similar small planets with lower-than-typical densities, is a single-system case study, so its wider significance rests on whether the method finds other hidden planets.",
+    "background": "- Transit method: a planet is detected when its orbit carries it in front of its star, causing a small periodic dimming in the light curve.\n- Signal-to-noise ratio (S/N): how strong a signal is compared with random background fluctuation; weak signals are easily missed.\n- Transit timing variations (TTVs): shifts in when transits occur, caused by gravitational interactions between planets.\n- Resonance (e.g. 5:4): two planets whose orbital periods form a ratio of small whole numbers, so they tug on each other regularly.\n- Sub-Neptunes: planets with radii between Earth's and Neptune's.\n- False positive: a signal that looks like a planet but is caused by something else, such as an eclipsing binary star.\n- Photodynamical fit: a model fitting the light curve together with the gravitational dynamics of the planets to estimate their masses and radii.\n- Density: mass divided by volume; lower density suggests a larger share of light gases or a different composition.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "According to the current understanding of planet formation and evolution, (near)-resonant systems should be a common occurrence in nature. However, pairs of planets with period ratios close to commensurability are rarely observed. In this paper, we discuss how observational bias caused by transit timing variations (TTVs) can affect the detection of low signal-to-noise ratio (S/N) planets in transit surveys, playing a role in the lack of representation of these systems. We present an alternative detection method, RIVERS.radon, which overcomes the effect of TTVs on planet detectability by not relying on an exact periodic solution for the transit signal. It leverages 2D representations of the light curve and approximates the transits with a set of local periodic solutions with the use of 2D cross-correlation. We present an application of RIVERS.radon to the near-resonant system Kepler-404, showing that the signal of the false-positive candidate KOI-2768.03 belongs to the planet Kepler-404b and that it is in a near 5:4 resonance with its companion Kepler-404c, causing TTVs of amplitudes 117.64 and 110.09 minutes, respectively. With a photodynamical fit, we retrieve a pair of similar planets, respectively of radii $1.68^{+0.09}_{-0.09}$ and $1.69^{+0.10}_{-0.10}\\,R_\\oplus$ and of masses $1.91^{+0.41}_{-0.33}$ and $2.34^{+0.47}_{-0.40}\\,M_\\oplus$. We find that these planets exhibit typical (near)-resonant features: their densities are lower than the bulk population of exoplanets, and their orbits are nearly coplanar. Interestingly, the planets are found outside the resonance but at a significant distance from the equilibrium point of the $(X_{\\rm res}, \\delta)$ plane of the Hamiltonian, which is consistent with post-disk instability but somewhat at odds with the observed coplanarity.",
    "source": "arxiv"
   },
   {

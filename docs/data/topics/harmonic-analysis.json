@@ -3,45 +3,48 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28895",
-   "title": "Multipliers and integration operators on Hardy--Bloch type tent spaces",
-   "url": "https://arxiv.org/abs/2611.28895",
+   "uid": "arxiv:2611.31874",
+   "title": "Normal and Unitary Operators on Smooth Banach Spaces via the Duality Mapping",
+   "url": "https://arxiv.org/abs/2611.31874",
    "authors": [
-    "Jiale Chen"
+    "Mohammed Shameem",
+    "Deepesh K. P"
    ],
-   "label": "arXiv:2611.28895v1",
+   "label": "arXiv:2611.31874v1",
    "primary_category": "math.FA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper characterizes when integration operators J_g and I_g and pointwise multipliers M_g are bounded between Hardy–Bloch type tent spaces BT^p, with complete results for I_g and for J_g and M_g when p<q, and separate conditions when p≥q.",
-    "plain": "The paper studies a family of function spaces made of holomorphic (complex-differentiable) functions on a disc, defined by controlling a maximal average of their derivative near the boundary. It asks when certain simple operations, such as integrating a function or multiplying it by a fixed function g, keep a function inside these spaces in a controlled way. The authors give a full answer for one operator across all exponents, and for the other two operators in one range of exponents, with separate but not fully matching conditions in the other range.",
-    "why": "Operators of this kind are a standard way to compare function spaces in complex analysis, so the results clarify how these spaces relate to each other. The text does not claim applications beyond this area, so any wider significance is uncertain.",
-    "background": "- Holomorphic function: a complex-valued function that is complex-differentiable on an open region, here the unit disc.\n- Bloch-type space: functions whose derivative is controlled (bounded in a weighted sense) near the boundary.\n- Hardy space: a space of functions whose boundary behaviour is measured by an integral power p.\n- Tent space: a space built from functions on the disc through a maximal function taken over cones (\"tents\") reaching the boundary.\n- Non-tangential maximal function: the largest value a function takes over approach regions that meet the boundary at an angle, used to measure boundary behaviour.\n- Integration operator J_g, I_g and multiplier M_g: operations that respectively integrate f against g, integrate f times g, or multiply f pointwise by g.\n- Boundedness: the operator maps the space into the target space with output size controlled by input size.\n- Fractional maximal function: a averaging tool that measures local size with a power-law weight; used as an estimate in the proofs.\n- Exponents p, q: parameters indexing the spaces; p<q and p≥q are the two regimes treated differently.",
+    "one_liner": "The paper generalises normal and unitary operators, and the self-adjoint subclass, from Hilbert spaces to smooth Banach spaces by using the duality mapping, and studies their characterisations and spectral properties.",
+    "plain": "Mathematicians have a well-understood family of \"nice\" transformations on spaces where lengths and angles behave like ordinary geometry (Hilbert spaces). This paper asks how far those ideas stretch to a wider class of spaces, called smooth Banach spaces, where angles are not available but a substitute tool, the duality mapping, is. The authors define normal and unitary operators in this setting, show that self-adjoint operators fit inside the new normal class, and report several equivalent descriptions and spectral properties.",
+    "why": "It tests which familiar results from quantum-style linear algebra survive when the inner product is removed, so it matters mainly to specialists in functional analysis. The text does not indicate applications beyond this theoretical extension, so its wider significance is uncertain.",
+    "background": "- Banach space: a complete space with a notion of length (norm) but no required angles.\n- Hilbert space: a Banach space with an inner product, giving angles; the classical setting for normal and unitary operators.\n- Operator: a linear map from a space to itself.\n- Self-adjoint / normal / unitary: classes of operators with special symmetry; normal means commuting with its adjoint, unitary means preserving length and inner products.\n- Duality mapping: a substitute for the inner product that sends each vector to a set of \"dual\" functionals of matching size; it is set-valued in general.\n- Smoothness: a geometric condition ensuring the duality mapping is single-valued.\n- Spectrum: the set of scalars where an operator fails to be invertible; spectral properties concern its shape and structure.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We investigate the boundedness of integration operators $J_g$ and $I_g$ and pointwise multipliers $M_g$ on Hardy--Bloch type tent spaces $\\mathcal{BT}^p$. The main difficulty is that these spaces are defined through a non-tangential maximal function of the radial derivative, which places the problem at the interface of holomorphic function theory and harmonic analysis. We completely characterize the boundedness of $I_g:\\mathcal{BT}^p\\to\\mathcal{BT}^q$ for all $0<p,q<\\infty$, and obtain a complete characterization for $J_g$ and $M_g$ when $p<q$. For $p\\geq q$, we establish separate necessary and sufficient conditions. The proofs in the case $p\\leq q$ are mainly based on some fractional maximal function estimates, whereas those in the case $p>q$ are mainly based on a synthesis lemma. We also give examples showing that several converse implications in the range $p\\geq q$ fail.",
+   "abstract": "This article extends the classical notions of normal and unitary operators from Hilbert spaces to smooth Banach spaces through the duality mapping. The class of normal operators introduced in this setting contains, as a special case, the self-adjoint operators on smooth Banach spaces defined via the duality mapping. We establish several characterisations of these operators and investigate their fundamental properties. In particular, we examine various spectral properties of normal operators on smooth Banach spaces. These results demonstrate that many fundamental aspects of the classical theory of normal and unitary operators on Hilbert spaces persist in the smooth Banach space setting.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28400",
-   "title": "Perturbed Nevo--Thangavelu maximal functions on two-step nilpotent groups",
-   "url": "https://arxiv.org/abs/2611.28400",
+   "uid": "arxiv:2611.31933",
+   "title": "Kernel Estimates and Calder\\'{o}n-Zygmund Theory in the $(k,a)$-generalized Laguerre setting",
+   "url": "https://arxiv.org/abs/2611.31933",
    "authors": [
-    "Jaehyeon Ryu"
+    "Mingwei Shi",
+    "Yongsheng Han",
+    "Yu Liu"
    ],
-   "label": "arXiv:2611.28400v1",
-   "primary_category": "math.CA",
+   "label": "arXiv:2611.31933v1",
+   "primary_category": "math.FA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper studies L^p boundedness of maximal averages over parabolically dilated, curved convex hypersurfaces lying in a tilted subspace of a two-step nilpotent Lie group, in the low-rank regime, with a sharp range of p for m=1 and a Łojasiewicz-exponent criterion for m≥2.",
-    "plain": "The paper concerns a mathematical averaging tool: it looks at how averages of a function over curved surfaces, taken at many scales, can be controlled in size. The setting is a special kind of curved geometric space (a two-step nilpotent group, identified with ordinary coordinate space). The authors determine exactly which range of exponents p makes this averaging tool well behaved when the extra dimension m equals 1, and for m at least 2 they give a condition, stated through a Łojasiewicz exponent, for when a known necessary range is also enough.",
-    "why": "Maximal function bounds are a standard way to test how well averages behave, and sharp results of this kind shape the broader theory of averages on curved spaces. The text does not say more about applications, so the wider connections are uncertain from this excerpt alone.",
-    "background": "- Maximal function: the supremum over many scales of averages of a function over a set; boundedness on L^p means the result stays controlled in an L^p size measure for inputs in that space.\n- L^p spaces: a family of size measures indexed by p; the question is which p work.\n- Nilpotent Lie group: a curved, non-commutative generalization of Euclidean space with layered (step-two) structure; exponential coordinates give it a concrete coordinate form.\n- Parabolic dilates: scalings that stretch different coordinate directions by different amounts.\n- Gaussian curvature: the product of principal curvatures of a surface; nonvanishing means the surface is curved everywhere in every direction.\n- Tilted subspace: a flat slice of the space that is not aligned with the standard coordinate axes.\n- Łojasiewicz exponent: a number measuring how flat or degenerate a real-analytic function is near its zeros, used here as a geometric quantity controlling the answer.",
+    "one_liner": "The paper proves heat and Poisson kernel estimates for the operator ||x||^{2-a}Δ_k in the (k,a)-generalized Laguerre setting (Dunkl Laplacian from a finite reflection group), then develops a (k,a)-Calderón-Zygmund theory with L^p boundedness, weak type (1,1), BMO endpoint estimates, and a T1 characterization of L^2 boundedness.",
+    "plain": "The paper studies a family of mathematical operators that describe how heat or influence spreads over a space with built-in symmetries. The authors first pin down the detailed size and decay behaviour of the associated heat and Poisson kernels, which are the basic 'spreading patterns' of those operators. Using these estimates, they show that a certain class of singular integral operators that are bounded in one basic sense (L^2) are automatically bounded in a whole range of other standard measures of size.",
+    "why": "Calderón-Zygmund theory is a central toolkit in harmonic analysis, and extending it to this symmetric, generalized setting broadens where its results apply. The T1 criterion gives a practical test for boundedness; the text does not say what applications beyond this setting it may have.",
+    "background": "- Heat kernel: a function describing how heat (or a quantity diffusing over time) spreads from a point; it is the fundamental solution of the heat equation.\n- Poisson kernel: a related spreading function, obtained here by \"subordination\" (a time-change trick that links it to the heat kernel).\n- Laplacian: the operator summing second derivatives; it measures how a function differs from its local average.\n- Dunkl operators: generalized derivatives that respect the symmetries (reflections) of a finite group, used to extend classical analysis to symmetric settings.\n- Singular integral operator: an averaging operator with a kernel that is not integrable near the diagonal; a standard object in harmonic analysis.\n- L^p spaces and weak type (1,1): ways of measuring functions by p-th power integrability; weak type (1,1) is a borderline size bound.\n- BMO (bounded mean oscillation): a space of functions with controlled average fluctuation, the usual endpoint replacement for L^infinity in this theory.\n- T1 theorem: a criterion saying an operator is L^2-bounded if its action on the constant function 1 (and its adjoint's action) is BMO and a weak boundedness condition holds.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Consider a step-two nilpotent Lie group $G$ identified with $\\mathbb R^d\\times \\mathbb R^m$ in exponential coordinates. We study maximal operators associated with parabolic dilates of smooth convex hypersurfaces with nonvanishing Gaussian curvature in a tilted $d$-dimensional subspace of $G$. We focus on the low-rank regime, where the rank is determined by the group law and the tilt. When $m=1$, we determine the optimal range of $p$ for which the maximal operator is bounded on $L^p(G)$. For $m\\ge2$, we characterize, in terms of a {\\L}ojasiewicz exponent, when the known necessary condition on $p$ is also sufficient.",
+   "abstract": "In this paper, we establish heat and Poisson kernel estimates for $\\mathfrak L=\\|x\\|^{2-a}\\Delta_k$ in the $(k,a)$-generalized Laguerre setting, where $\\Delta_k$ is the Dunkl Laplacian associated with a finite reflection group. The heat kernel is nonnegative, symmetric, and conservative, and satisfies a Gaussian bound in the orbit distance together with polynomial decay in the distance between the transformed coordinates. The Poisson kernel, obtained by subordination, satisfies corresponding size and time-derivative estimates, while $-t\\partial_t p_t$ has integral zero in each variable. Motivated by these estimates, we introduce a class of $(k,a)$-Calder\\'{o}n-Zygmund singular integral operators and show that $L^2_{k,a}$-boundedness implies $L^p_{k,a}$-boundedness for $1<p<\\infty$, together with weak type $(1,1)$ and $L^\\infty$-to-$\\BMO$ estimates. Finally, we establish a $T1$ theorem characterizing the $L^2$-boundedness of such operators by the conditions $T1\\in BMO$, $T^*1\\in BMO$, and the weak boundedness property.",
    "source": "arxiv"
   },
   {

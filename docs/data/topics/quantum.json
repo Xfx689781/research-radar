@@ -3,50 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30187",
-   "title": "Quantum simulation of low-temperature impurity models",
-   "url": "https://arxiv.org/abs/2611.30187",
+   "uid": "arxiv:2611.31326",
+   "title": "On the concentration of the ambiguity function on centered balls",
+   "url": "https://arxiv.org/abs/2611.31326",
    "authors": [
-    "Jiaqing Jiang",
-    "Nathan Ju"
+    "Fabio Nicola"
    ],
-   "label": "arXiv:2611.30187v1",
-   "primary_category": "quant-ph",
+   "label": "arXiv:2611.31326v1",
+   "primary_category": "math.FA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives quantum algorithms for preparing thermal and ground states of fermionic quantum impurity models, using global jump operators in quantum Gibbs samplers to avoid exponential-in-inverse-temperature overhead.",
-    "plain": "The paper looks at a standard model in materials physics: a small, strongly interacting piece of a system attached to a large, simpler surrounding bath. It describes quantum computer procedures for preparing this system's state at a chosen low temperature, and for estimating its properties, with the running time growing polynomially in system size and inverse temperature.",
-    "why": "Impurity models are the core computation inside dynamical mean field theory, a common tool for simulating strongly correlated materials, so faster low-temperature methods could matter there. The text does not show any hardware demonstration, so practical impact is unclear.",
-    "background": "- Quantum impurity model: a small strongly interacting subsystem coupled to a large non-interacting bath.\n- Dynamical mean field theory: a method for approximating strongly correlated materials by solving impurity models.\n- Thermal state at inverse temperature β: the quantum state of a system in equilibrium; larger β means colder.\n- Fermionic modes: the basic units of storage for fermions (particles such as electrons) in a quantum computer.\n- Quantum Gibbs sampler: a quantum analogue of Markov chain Monte Carlo, a method for sampling from a target distribution by a random walk.\n- Spectral gap: the energy difference between the ground state and the first excited state; a larger gap makes the ground state easier to prepare.\n- Purification: an enlarged quantum state whose reduced state is the thermal state, allowing properties to be estimated.\n- Heisenberg scaling: error decreasing as 1/δ in runtime, a quadratic improvement over the usual 1/δ² scaling.",
+    "one_liner": "The paper proves that Gaussian functions maximize the L^2 concentration of the ambiguity function on every centered ball, up to time-frequency shifts and unimodular constants, using ideas from quantum information theory.",
+    "plain": "The paper studies a mathematical \"fingerprint\" of a signal, called the ambiguity function, which shows how a signal's time and frequency content overlap. It asks how tightly that fingerprint can be packed into a disk around the origin, and it shows that the bell-shaped Gaussian signal does this best, apart from trivial shifts and changes of phase.",
+    "why": "Results of this kind sharpen uncertainty principles, which limit how precisely a signal can be localized in time and frequency at once. The abstract says the proof draws on quantum information theory, which may be the more interesting link for readers in that area; the text provided is only the abstract, so the wider significance is not clear from it.",
+    "background": "- Signal: a function of time (or of position), such as a sound wave or a radio pulse.\n- Ambiguity function: a two-variable function built from a signal that measures how it correlates with shifted and frequency-modulated copies of itself; widely used in radar and signal analysis.\n- Concentration on a ball: the fraction of the function's squared size (its L^2 energy) that lies inside a disk of a given radius centered at the origin.\n- Gaussian: the bell-shaped function, which is the standard extremal example in uncertainty principles.\n- Time-frequency shift: moving a signal in time or changing its frequency; these do not change how concentrated it is.\n- Unimodular constant: a complex number of size one, i.e. a pure change of phase.\n- Quantum information theory: the field studying information in quantum systems; the paper says its techniques were used in the proof.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Quantum impurity models, which describe a small but strongly-interacting subsystem coupled to a large noninteracting bath, are the computational core of dynamical mean field theory and play an important role in simulating strongly correlated materials. We develop quantum algorithms for efficiently simulating these models at low temperatures and with high precision. For any impurity model on $n$ fermionic modes with fixed impurity size: (1) We give a quantum algorithm that prepares the thermal state at inverse temperature $\\beta$ to precision $\\delta$ in time $\\mathrm{poly}(n,\\beta,\\log(1/\\delta))$. This algorithm is the first to achieve both polynomial scaling in the inverse temperature and polylogarithmic scaling in the precision. When the Hamiltonian has an inverse-polynomial spectral gap, our quantum algorithm prepares its ground state to precision $\\delta$ in time $\\mathrm{poly}(n,\\log(1/\\delta))$. (2) We further give a quantum algorithm that prepares a purification of the thermal state in time $\\mathrm{poly}(n,\\beta,\\log(1/\\delta))$. Using this purification, we estimate static and dynamical properties with error $\\delta$ in time polynomial in $n$ and $\\beta$ and linear in $1/\\delta$ up to polylogarithmic factors, achieving the Heisenberg scaling. Our algorithms build on quantum Gibbs samplers, which are quantum analogues of Markov chain Monte Carlo methods. By using global jump operators instead of local ones, we avoid the $\\exp(\\beta)$ overhead commonly associated with quantum Gibbs samplers, making them efficient for impurity models even at low temperatures.",
+   "abstract": "We show that the Gaussian uniquely maximizes the $L^2$ concentration of the ambiguity function on every centered ball, up to time-frequency shifts and multiplication by a unimodular constant. The proof relies on ideas from quantum information theory.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28361",
-   "title": "Incompressible quantum information",
-   "url": "https://arxiv.org/abs/2611.28361",
+   "uid": "arxiv:2608.15617",
+   "title": "Benchmarking Quantum Machine Learning for Power-System Attack Detection: Evaluation Choices Can Decide the Outcome",
+   "url": "https://arxiv.org/abs/2608.15617",
    "authors": [
-    "Lasse H. Wolff",
-    "Matthias Christandl",
-    "Bergfinnur Durhuus",
-    "Christoph Hirche",
-    "Andreas Winter"
+    "Md Rezwanul Islam",
+    "ASM Shihavuddin"
    ],
-   "label": "arXiv:2611.28361v1",
-   "primary_category": "quant-ph",
+   "label": "arXiv:2608.15617v2",
+   "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that, unlike the classical case, a small classical system correlated with a large quantum system cannot always be matched by compressing the quantum system without losing a significant amount of mutual information.",
-    "plain": "The paper asks whether a large data set can always be shrunk while keeping the links between it and a small summary of it. For classical data the answer is yes, but the authors show that for some quantum systems it is not: any sizeable compression destroys a significant share of the correlation. The result is stated in terms of mutual information, a standard measure of how much two systems tell you about each other.",
-    "why": "The result points to a limit on information-bottleneck methods used in quantum machine learning: a small summary of the relevant features does not guarantee a compact encoding of the quantum data that keeps those features. The text itself does not discuss practical consequences beyond this, so the wider impact is unclear from the abstract alone.",
-    "background": "- Mutual information: a measure of how much knowing one system reduces uncertainty about another.\n- Correlation between two systems: how strongly their states are linked.\n- Compression (in this context): replacing a large system with a smaller one that still preserves its relevant links to a third system.\n- Information bottleneck: a machine learning method that seeks a compact representation keeping only information relevant to a target.\n- Quantum versus classical: quantum systems can be entangled and cannot always be described by classical probabilities, which is why classical compression results may fail.\n- Bipartite state: a joint quantum state of two subsystems.",
-    "difficulty": "research-level",
+    "one_liner": "A benchmark comparing two quantum and six classical detectors for power-grid cyberattacks finds that evaluation choices such as row-level versus file-level splits, and how attacks are generated, can change reported results more than the choice of model.",
+    "plain": "The paper looks at whether quantum machine learning can spot cyberattacks on electricity grids better than ordinary computer methods. The authors tested two quantum detectors and six classical ones on public attack datasets, giving each the same tuning effort. Their main point is that small decisions in how the test is set up, such as how data is split and how attacks are simulated, can flip the apparent winner, and on their data neither quantum detector was more accurate or more consistently robust than the classical ones.</plain>\n<parameter name=\"why\">Quantum machine learning is being proposed for critical infrastructure security, so claims about it need careful testing. The paper's warning that evaluation design can outweigh model choice applies to security benchmarking more broadly, though the results come from specific public datasets and a limited set of models.",
+    "why": "",
+    "background": "- Machine learning detector: a program trained on labelled examples to flag attacks.\n- Quantum kernel: a quantum-computed similarity measure used as part of a classifier.\n- Macro-averaged F1: a score combining precision and recall, averaged equally over classes; 0.50 is chance for the two-class task described.\n- White-box attack: an attacker who knows the model's internals and crafts inputs to fool it; transfer attack uses a substitute model's attacks; black-box attack has no internal access.\n- Row-level versus file-level split: whether test rows come from the same recordings seen in training (which can inflate scores) or from entirely held-out files.\n- Random label flips: deliberately corrupting some training labels to test robustness.\n- Upper bound: because tree models have no gradient for gradient-based attacks, their attacked scores can only be stated as upper limits.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "For a small classical system correlated with a large one, it is always possible to compress the large system down to a size only dependent on the size of the smaller one, while preserving all correlations up to a given controllable error. Here, we show that such a statement does not hold at all when the large system is quantum mechanical. More precisely, we show that there are bipartite states such that any compression of the large system, by a non-trivial relative factor, will necessarily lead to the destruction of a significant amount of correlation, measured in mutual information. Our results therefore identify a limitation of information-bottleneck approaches to quantum machine learning, showing that a small system specifying the relevant features contained in a large quantum data set does not guarantee a compact encoding of the latter that preserves the relevant correlations.",
+   "abstract": "Quantum machine learning is proposed to detect grid cyberattacks, but no study we could read tests quantum and classical detectors under white-box, transfer, and black-box attacks and random label flips in one protocol. We compare two quantum and six classical detectors on public grid-attack data under equal tuning budgets. Our main finding: evaluation choices can decide the outcome. On these data, seven choices each changed a reported result with model families fixed. Row-level splits inflate our best score by 0.31 macro-averaged F1 over held-out files, where matched-dimensionality classical and quantum models barely clear chance. Under its own white-box attack the quantum kernel's score falls from 0.56 to 0.01 (chance 0.50), while a transferred attack in the same run leaves 0.52. Trees admit no gradient-based white-box attack, so their attacked scores are upper bounds. These attack results use eight-dimension detectors under row-level splits. On gas-pipeline and simulated-grid data, neither quantum detector is more accurate or consistently more robust; three of the seven choices reproduce fully on gas data with one pressure feature log-scaled (two within noise), and none of the four checked on the grids does. Benchmarks should hold out whole files and give every model its own attack where possible. We release code and checklist.",
    "source": "arxiv"
   },
   {

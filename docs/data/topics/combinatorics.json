@@ -3,45 +3,49 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29504",
-   "title": "The maximum number of edges in minimal $k$-extendable bipartite graphs",
-   "url": "https://arxiv.org/abs/2611.29504",
+   "uid": "arxiv:2611.32746",
+   "title": "The majority game chromatic number for dense random graphs",
+   "url": "https://arxiv.org/abs/2611.32746",
    "authors": [
-    "Xiaoling He"
+    "Stijn Cambie",
+    "Annika Heckel",
+    "Brahadeesh Sankarnarayanan",
+    "Gabri\\\"elle Zwaneveld"
    ],
-   "label": "arXiv:2611.29504v1",
+   "label": "arXiv:2611.32746v1",
    "primary_category": "math.CO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper confirms a conjectured edge-count upper bound, (2k+1)(|V|-2k)/2, for minimal k-extendable bipartite graphs when k is at least 3, and shows the bound is sharp for even orders at least 6k.",
-    "plain": "This paper is about graphs, which are networks of dots joined by lines, and about how many lines such a network can have while still having a robust pairing structure. A graph is \"k-extendable\" if any k non-overlapping pairings can always be completed to a full pairing of all dots, and \"minimal\" means that removing any single line destroys this property. The authors prove a conjectured maximum on the number of lines for the bipartite (two-sided) case when k is at least 3, and show the maximum is actually reached.",
-    "why": "It settles a open conjecture from a recent paper and extends earlier results for k=1 and k=2 to all larger k from 3 onward. It is a precise, self-contained result in extremal graph theory, and its relevance beyond that field is not addressed in the text.",
-    "background": "- Graph: dots (vertices) joined by lines (edges).\n- Matching: a set of lines that share no dots; a perfect matching pairs up every dot.\n- Bipartite graph: dots split into two sides, with lines only between sides.\n- k-extendable: every matching of size k extends to a perfect matching; the graph must also be connected with at least 2k+2 dots.\n- Minimal: removing any one line breaks k-extendability.\n- Extremal bound: a formula giving the largest possible number of lines; \"sharp\" means some graph actually attains it.\n- Known prior results: the k=1 bound (Lovász and Plummer, 1977) and the k=2 bound (Fabres, Kothari and Carvalho, 2021).",
+    "one_liner": "For fixed edge probability 2/3 < p < 1, the majority game chromatic number of the random graph G(n,p) equals 3 with high probability.",
+    "plain": "The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how few colours are needed. For random graphs where most pairs of vertices are connected (edge probability between 2/3 and 1), the authors show that three colours are enough with high probability, meaning the chance of this holding tends to 1 as the graph grows.",
+    "why": "It gives a precise answer for a specific, fairly dense range of random graphs, which sharpens what is known about how such games behave. The abstract alone does not say how it connects to wider applications, so any broader significance is uncertain.",
+    "background": "- Graph: a set of vertices joined by edges, like people connected by friendships.\n- Proper colouring: giving each vertex a colour so that no two adjacent vertices share one.\n- Chromatic number: the fewest colours needed for a proper colouring.\n- Random graph G(n,p): n vertices, each pair joined independently with probability p.\n- Maker-Breaker / game version: two players alternately colour vertices; the \"majority\" rule is a specific variant of how the game is scored or played (the text does not spell out the rules).\n- \"With high probability\": the claim holds with probability approaching 1 as n grows.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "A connected graph of order at least $2k+2$ is {\\em $k$-extendable} if it has a matching of size $k$ and every such matching extends to a perfect matching. In particular, a 1-extendable graph is also called a {\\em matching covered graph}. A $k$-extendable graph $G$ is {\\em minimal} if $G-e$ is not $k$-extendable for every $e\\in E(G)$. Lov\\'asz and Plummer [J. Combin. Theory Ser. B 23 (1977), 127--138] proved that every minimal matching covered bipartite graph $G$ with $|V(G)|\\ge6$ satisfies $|E(G)|\\le(3|V(G)|-6)/2$, and this bound is sharp for every even order at least 6. Fabres, Kothari and Carvalho [J. Graph Theory 96 (2021), 490--509] proved that every minimal 2-extendable bipartite graph $G$ with $|V(G)|\\ge12$ satisfies $|E(G)|\\le(5|V(G)|-20)/2$. Very recently, Mallik, Diwan and Kothari [J. Combin. 17 (2026), 559--606] characterized minimal matching covered bipartite graphs $G$ with $|E(G)|=(3|V(G)|-6)/2$ in terms of special trees. They also conjectured that, for every integer $k\\ge1$, there exists an integer $N_k\\le4k^2+2k$ such that every minimal $k$-extendable bipartite graph $G$ with $|V(G)|\\ge N_k$ satisfies $|E(G)|\\le(2k+1)(|V(G)|-2k)/2$. In this paper, we confirm this conjecture for $k\\ge3$ and prove that the upper bound is sharp for every even order at least $6k$ ($k\\ge3$).",
+   "abstract": "We show that for every fixed $2/3<p<1$ the majority game chromatic number of the Erd\\H{o}s--R\\'enyi random graph $G_{n,p}$ is $3$ with high probability.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.29929",
-   "title": "Local Limits and Structures of Nearest-Predecessor Random Graphs",
-   "url": "https://arxiv.org/abs/2611.29929",
+   "uid": "arxiv:2611.32594",
+   "title": "On some off-diagonal hypergraph Ramsey problems",
+   "url": "https://arxiv.org/abs/2611.32594",
    "authors": [
-    "Xiaoyao Huang"
+    "Eion Mulrenin",
+    "Cosmin Pohoata"
    ],
-   "label": "arXiv:2611.29929v1",
-   "primary_category": "math.PR",
+   "label": "arXiv:2611.32594v1",
+   "primary_category": "math.CO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper constructs infinite local limits of two random \"nearest-predecessor\" graph models built from uniformly random insertion orders, proves Benjamini–Schramm convergence, and settles Ponomarenko's maximum-degree question for the two-sided version.",
-    "plain": "The paper studies a random network grown one vertex at a time: points arrive in a random order, and each new point links to the nearest point that arrived earlier (on each side, or among the K nearest earlier points in the second model). It shows that as the network gets large, what a typical neighborhood looks like converges to a fixed infinite random graph, and it gives results about that infinite graph's connectivity, recurrence, and degrees.",
-    "why": "The paper answers an open question posed by Ponomarenko, namely the growth rate of the maximum degree, with an explicit asymptotic of log n / log(3/2). Its local-limit approach is a standard way to connect finite random structures to infinite ones, but the text does not say how far the methods reach beyond these models.",
-    "background": "- A graph is a set of vertices joined by edges; the degree of a vertex is how many edges it has.\n- Benjamini–Schramm convergence: a way of saying a large random graph looks, locally around a typical vertex, like a fixed infinite graph.\n- \"Quenched\" means the convergence holds for almost every fixed realization of the randomness, not just on average.\n- One-ended: removing a finite set of vertices leaves exactly one infinite piece. Recurrent: a random walk on the graph returns to its start with probability one.\n- Planar: can be drawn on a plane without crossing edges. Nonplanar is the opposite.\n- Insertion times: i.i.d. continuous random values that give each vertex its arrival order.\n- Probability generating function and CLT (central limit theorem): tools describing the distribution of a count and its approximate bell-curve behavior for large samples.",
+    "one_liner": "A short new proof of a lower bound on the off-diagonal 3-uniform Ramsey number r_3(K_4^-, K_n), via a construction linked to Bradač's directed graph, with claimed sharp bounds for higher-uniformity variants that answer questions of Mubayi and Suk.",
+    "plain": "This paper is about how large a set of items must be before a certain pattern is forced to appear when every group of items is coloured in one of two ways. The authors give a shorter proof of an earlier result by Fox and He, which says the required size grows at least roughly like 2 raised to the power n log n. They build the key example using a directed graph (a network of arrows between points) that Bradač introduced earlier.",
+    "why": "The abstract says the construction also extends naturally to several related problems in higher uniformity and gives sharp bounds there, answering open questions from Mubayi and Suk. The text provided does not say more about the wider significance, so the scope beyond these specific questions is unclear.",
+    "background": "- Ramsey number: the smallest size of a structure guaranteeing a given pattern appears whenever its elements are two-coloured.\n- Graph vs. hypergraph: a graph links pairs of points; a 3-uniform hypergraph links triples of points.\n- K_n is the complete graph on n points (every pair linked); K_4^- is four points with all triples-in-pairs links except one.\n- Off-diagonal: the two colour classes are asked to forbid different patterns, here K_4^- and K_n.\n- Lower bound 2^{Ω(n log n)}: a construction showing the number is at least exponentially large in n log n, up to constant factors.\n- Sharp bound: a bound that matches the true value up to constant factors, so cannot be improved in order of magnitude.\n- Directed graph: a graph whose edges have a direction, like one-way arrows.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study the two-sided nearest-predecessor graph on $[n]$, where vertices arrive in a uniformly random order and each new vertex connects to its nearest earlier vertex on each side. We construct an infinite graph on $\\mathbb{Z}$ from i.i.d. continuous insertion times and prove quenched Benjamini--Schramm convergence to it almost surely. The limit is almost surely one-ended and recurrent. We resolve an open problem of Ponomarenko by proving that the maximum degree is asymptotic in probability to $\\log n/\\log(3/2)$ as $n\\to\\infty$. We obtain the probability generating function and a CLT for the number of edges crossing the boundary of $[n]$ in the infinite limit. We also study the $K$-nearest-predecessor graph, in which each new vertex attaches to its $K$ nearest earlier vertices without regard to side. For every fixed $K\\geq1$, we construct the infinite limit, prove almost sure quenched Benjamini--Schramm convergence, and show that it is almost surely connected, one-ended, and recurrent, as well as nonplanar when $K\\geq2$.",
+   "abstract": "We give a new short proof of a theorem of Fox and He that the $3$-uniform Ramsey number $r_3(K_4^-, K_n)$ is at least $2^{\\Omega(n \\log n)}$. The construction exploits a new connection with a directed graph recently introduced by Brada\\v{c} in his work on off-diagonal graph Ramsey numbers. Moreover, it generalizes naturally to give sharp bounds for several extensions of this problem in higher uniformity, answering questions raised by Mubayi and Suk.",
    "source": "arxiv"
   },
   {

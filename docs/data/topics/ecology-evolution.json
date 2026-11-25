@@ -17,10 +17,10 @@
    "primary_category": "animal behavior and cognition",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "An evolutionary individual-based model shows that breeding animals copying their neighbours' timing synchronises populations, speeding adaptation in stable or abrupt-change settings but lagging behind steady directional climate change.",
-    "plain": "The paper asks whether birds or other animals that time their breeding by watching their neighbours do better or worse than those that rely only on their own senses, especially as climate shifts. Using a computer simulation of populations living in territories with fluctuating, peaked resources, the authors found that copying neighbours makes individuals' timing converge, which helps populations adapt quickly in stable conditions. But when the climate changes steadily in one direction, the same convergence makes the population lag behind the shifting best timing and reduces its reproduction.",
-    "why": "",
-    "background": "- Breeding phenology: the timing of reproduction within the year (e.g., when a bird lays eggs).\n- Social information: cues gained by observing others' behaviour, as opposed to private information from one's own senses.\n- Individual-based model: a computer simulation where each animal is tracked separately and its traits can evolve over generations.\n- Synchrony: individuals acting at roughly the same time, which can emerge from copying each other.\n- Positive feedback: when early copying makes others copy more, reinforcing the pattern.\n- Environmental optimum: the best timing for a given environment, which can shift under climate change.\n- Trade-off: gaining one benefit (coordination) at the cost of another (flexibility).",
+    "one_liner": "An evolutionary individual-based model shows that breeding birds (or similar animals) copying neighbours' timing of breeding produces population-level synchrony that speeds adaptation in stable or abrupt-change settings but lags behind directional climate change.",
+    "plain": "Many animals decide when to breed partly by watching their neighbours, and this paper asks what that habit does to whether a population can keep up with a changing climate. Using a computer simulation of animals living in territories with resources that peak at certain times, the authors compared individuals that use neighbours' information with those that rely only on their own sensing. Copying neighbours made breeding times line up across the population, which helped under stable conditions but made the population slow to shift when the climate changed steadily.",
+    "why": "Timing of breeding is central to how wild populations respond to warming, so a mechanism that trades synchrony against flexibility could matter for predicting which species fall behind. The text only reports simulation results, so how far it applies to real species is not established here.",
+    "background": "- Breeding phenology: the timing of reproduction within the year, often matched to when food peaks.\n- Private information: cues an individual gathers itself (e.g., temperature, food).\n- Social information: cues gained by observing others, such as neighbours starting to breed.\n- Individual-based model: a simulation where each animal is tracked separately and can evolve over generations.\n- Synchrony and lag: when many individuals act at the same time, and when a population trails a moving target (the environmental optimum).\n- Information pooling: averaging many noisy signals to get a more accurate estimate.",
     "difficulty": "research-level",
     "ai": true
    },
@@ -28,27 +28,33 @@
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.23.768529",
-   "title": "No evidence of evolution of male fitness components in response to yeast deprivation: Putative female specific nutrient dependent reproductive adaptation",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768529v1",
+   "uid": "biorxiv:10.64898/2026.11.23.768591",
+   "title": "Stomatal conductance and net photosynthesis depend on nitrogen supply in drought-limited boreal forest",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768591v1",
    "authors": [
-    "Adhikary, S.",
-    "Pal, R. S.",
-    "Halder, S.",
-    "Nandy, B."
+    "Dulamsuren, C.",
+    "Amarjargal, D.",
+    "Bazar, D.",
+    "Uitumen, T.",
+    "Munkhzul, T.",
+    "Saindovdon, D.",
+    "Byambatsogt, B.",
+    "Naranbayar, E.",
+    "Batsaikhan, G.",
+    "Hauck, M."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.23.768529 v1",
-   "primary_category": "evolutionary biology",
+   "label": "bioRxiv doi:10.64898/2026.11.23.768591 v1",
+   "primary_category": "ecology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Experimental evolution of Drosophila melanogaster under adult live-yeast deprivation for over 140 generations found no change in measured male pre- and post-copulatory fitness traits, suggesting the nutrient-driven adaptation is female-specific and genetically decoupled between sexes.",
-    "plain": "Researchers asked whether fruit flies that were bred for many generations on a diet without live yeast changed in ways that affect males, not just females. Female flies had previously evolved to lay more eggs early in life under this diet, so the question was whether males would also change, either directly or because the sexes share genes. The team measured a range of male competitive traits and found none had changed.",
-    "why": "It bears on a long-standing question in evolutionary biology: whether genes shared between the sexes limit how each sex can adapt separately. The text reports a null result in four populations, so it supports the idea of decoupled sex-specific genetics for this particular diet stress, but it does not establish this more broadly.",
-    "background": "- Experimental evolution: populations are kept under a fixed challenge for many generations and then compared with controls.\n- Intersexual genetic correlation: when genes that affect one sex also affect the other, so changes in one can drag the other along.\n- Sexual antagonism: a trait that helps one sex but harms the other.\n- Pre- and post-copulatory fitness: success in attracting or competing for mates before mating, and success in sperm competition or fertilization after mating.\n- Drosophila melanogaster: the common fruit fly, widely used in genetics.\n- Live yeast is a protein source that female flies need to produce eggs.",
+    "one_liner": "In drought-limited Larix sibirica stands in Mongolia, nitrogen fertilization raised stomatal conductance as hypothesized, but net photosynthesis followed a non-linear pattern, peaking at a mid-level N dose and declining at the highest dose.",
+    "plain": "Boreal forests are shifting from being limited by cold to being limited by drought as the climate warms. This study fertilized Siberian larch trees in a dry Mongolian forest with different amounts of nitrogen and measured how their leaves exchanged carbon dioxide and water vapour. Stomatal conductance (how widely the tiny leaf pores open) rose with nitrogen, but photosynthesis did not simply rise with it: it fell at the lowest dose, peaked at the middle dose, and fell again at the highest dose.",
+    "why": "The results suggest that nutrient availability, not only temperature and rainfall, may shape how boreal trees cope with drought, which matters for forecasts of forest carbon uptake. The text does not show how far these branch-level measurements extend to whole forests or other years, so the broader significance is still to be tested.",
+    "background": "Boreal forest: cold northern coniferous forest, here dominated by larch. Stomata: microscopic pores on leaves that let in carbon dioxide and let out water vapour. Stomatal conductance: how easily gas passes through those pores. Net photosynthesis: carbon gained by the leaf after subtracting carbon lost to respiration. Respiration: the energy-using process that releases carbon, which here rises with the cost of taking up nitrogen. Vapour pressure deficit: how dry the air is, which pulls water out of leaves. Nitrogen fertilization: adding nitrogen to soil as a plant nutrient, used here as an experimental treatment. Long-term experiment: a plot study run over years to compare treatments.",
     "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Intersexual genetic correlation (IGC) is pervasive in sexually reproducing organisms and can constrain sex-specific adaptive evolution. Nevertheless, sexes frequently undergo adaptive divergence in response to novel ecological challenges. Here, we investigated whether adaptation to nutritional stress is sex-limited or constrained by shared genetic architecture. We utilized four laboratory-adapted populations of Drosophila melanogaster subjected to experimental evolution under adult-stage live-yeast deprivation for over 140 generations - a regime that previously drove adaptive female reproductive evolution, particularly enhancing early-life fecundity and ovarian function. Because female D. melanogaster rely heavily on dietary yeast for protein-dependent egg production, this evolutionary response may be female-limited. Alternatively, male fitness traits could respond either through direct selection or via correlated response driven by IGC. To distinguish between these hypotheses, we evaluated a comprehensive suite of pre- and post-copulatory male competitive fitness components. We found that all measured male fitness traits remained unchanged following experimental evolution, demonstrating that nutrient-dependent adaptation in these populations is strictly female-specific, with no evidence of correlated responses or sexually antagonistic trade-offs. Our results indicate that the genetic architecture underlying nutrient-dependent reproductive adaptation is largely decoupled between the sexes, allowing each sex to independently approach its sex-specific fitness optimum.",
+   "abstract": "Transition from cold limitation to drought limitation due to climate change is widespread in boreal forests. We explored in the scope of the Dry Boreal Forest Long-Term Nitrogen Fertilization Experiment (DryBoreal-LTNE) in southern boreal forests of Mongolia how N supply interacts with tree water and C relations in forests of Larix sibirica, which are naturally drought-limited. Using branches of mature L. sibirica subjected to N fertilization of 6.25-25 kg N ha-1 a-1, we conducted CO2/H2O gas exchange measurements to examine how N availability interferes with the climatic control of stomatal conductance (gs) in L. sibirica. We tested the hypotheses that gs increases with increasing N availability and that this increase can be translated into increased net photosynthesis (A) in L. sibirica even under the dry continental climate of Mongolia. We could confirm the first hypothesis and found that A decreased at low fertilization (6.25 kg N ha-1 a-1) probably caused by increases in respiration due to metabolic costs of intensified N uptake. A attained the highest values at 12.5 kg N ha-1 a-1, but declined at the highest fertilization level of 25 kg N ha-1 a-1. Our results demonstrate that research on the drought tolerance of boreal forests under climate change should not only focus on changes in temperature, vapor pressure deficit, and precipitation, but should take N availability into account, especially as N availability is thought to decrease in remote boreal forests due to elevated atmospheric CO2 concentrations and can be locally influenced by land use.",
    "source": "biorxiv"
   },
   {

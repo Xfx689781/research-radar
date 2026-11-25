@@ -3,45 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29380",
-   "title": "On the number theory of the Greeks. I. The Fundamental Theorem of Arithmetic",
-   "url": "https://arxiv.org/abs/2611.29380",
+   "uid": "arxiv:2611.32749",
+   "title": "An elliptic Lehmer bound of exponent one at a supersingular prime",
+   "url": "https://arxiv.org/abs/2611.32749",
    "authors": [
-    "Franz Lemmermeyer"
+    "Jorge Mello"
    ],
-   "label": "arXiv:2611.29380v1",
+   "label": "arXiv:2611.32749v1",
    "primary_category": "math.NT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A historical study arguing that Euclid's version of the fundamental theorem of arithmetic (unique prime factorization) was widely known to pre-Gauss number theorists, despite being largely forgotten today.",
-    "plain": "This paper is about the history of a basic math idea: every whole number larger than one can be built from prime numbers in only one way. The author says Euclid stated this long ago, and that it was as familiar to mathematicians before Gauss as Gauss's later version is to us today. The text is a short introduction, so it does not show the detailed evidence it promises.",
-    "why": "It challenges the common story that this theorem entered number theory mainly through Gauss, which matters for how we credit and understand the history of mathematics. The excerpt gives only the opening claim, so the strength of the evidence cannot be judged from it alone.",
-    "background": "- Prime number: a whole number greater than 1 with no divisors other than 1 and itself (e.g., 2, 3, 5, 7).\n- Fundamental theorem of arithmetic: every whole number above 1 is a product of primes, and that product is unique apart from the order of the factors (e.g., 12 = 2×2×3 and no other way).\n- Euclid: ancient Greek mathematician whose \"Elements\" (around 300 BCE) is a foundational geometry and number theory text.\n- Gauss: Carl Friedrich Gauss, who in 1801 gave a rigorous, widely cited statement and proof of the theorem in modern form.\n- Historiography: the study of how mathematical ideas were recorded, credited and forgotten over time.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "In this article we present Euclid's fundamental theorem of number theory and give evidence for the claim that this theorem, which is largely unknown today, was as familiar to number theorists before Gauss as the Gaussian version of the fundamental theorem is to us.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.30908",
-   "title": "A Classification of Low Genus Modular Curves",
-   "url": "https://arxiv.org/abs/2611.30908",
-   "authors": [
-    "Eray Karabiyik"
-   ],
-   "label": "arXiv:2611.30908v1",
-   "primary_category": "math.NT",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "The paper classifies modular curves X_G of a fixed genus g (for open G in GL_2 of the profinite integers with full determinant and -I in G), shows they fall into finitely many families of Q^ab-twists, and gives an algorithm for computing these families and projective models, implemented for g ≤ 12.",
-    "plain": "The paper studies a family of geometric shapes, called modular curves, that encode how elliptic curves (smooth curves defined by cubic equations) can carry extra structure. The authors show that for any fixed \"size\" of shape, measured by genus (roughly the number of holes), all such curves belong to a finite number of families. They also describe a computer procedure for listing these families and writing down equations for them, which they have run for genus up to 12.",
-    "why": "Knowing which modular curves have low genus matters for questions about rational points and elliptic curves over number fields, so a complete classification is a useful reference point. The text does not say what specific consequences the authors expect, so the wider impact is uncertain from this abstract alone.",
-    "background": "- Elliptic curve: a smooth plane cubic curve with a group law; the basic object being parametrized.\n- Modular curve: a curve whose points correspond to elliptic curves together with a chosen kind of extra structure (a level structure), indexed by a subgroup G of GL_2 of the profinite integers.\n- Genus: a whole-number measure of a curve's shape, roughly how many holes it has; genus 0 curves are spheres-like and are easiest to handle.\n- Twist: a related curve obtained by changing the defining equations by a twisting factor; Q^ab-twists use abelian extensions of the rational numbers.\n- Projective model: writing the curve as the zero set of polynomial equations in projective space.\n- Determinant condition and -I in G: technical constraints on the group G that fix which curves are considered.",
+    "one_liner": "Proves a lower bound on Néron–Tate heights of non-torsion points on elliptic curves with good supersingular reduction at a prime, with exponent one in the degree, which by Elkies' result covers all elliptic curves over Q.",
+    "plain": "The paper is about how \"small\" a nonzero point on an elliptic curve (a special kind of curve defined by a cubic equation) can be, measured by a height function that grows with how complicated the point's coordinates are. It shows that such a point cannot have height smaller than a quantity that shrinks only slightly faster than the reciprocal of its degree, which is the number of ways its coordinates are tied to the base number field. The bound is stated for curves with a particular behaviour modulo a prime, and the text says this covers every elliptic curve over the rational numbers.",
+    "why": "This is a sharpened version of a Lehmer-type lower bound, a family of questions asking how small a height can get before it is forced to be zero. The text reports that the exponent improves on earlier results by Masser and by Hindry and Silverman, but the text does not say how much these bounds matter for other problems.",
+    "background": "- Elliptic curve: the set of solutions of a cubic equation in two variables, with a natural group structure on its points.\n- Number field: a finite extension of the rational numbers, such as the field generated by a square root.\n- Néron–Tate height: a measure of the arithmetic complexity of a point on an elliptic curve; it is zero exactly for torsion points (points of finite order).\n- Lehmer-type bound: a lower bound saying that nonzero heights cannot be arbitrarily close to zero, given the degree of the field involved.\n- Good supersingular reduction: a condition on how the curve behaves when reduced modulo a prime; supersingular is a special, rare case of this.\n- Degree D: the size of the field generated by the x-coordinate of the point over the base field.\n- Notation o(1): a quantity that tends to zero as D grows.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $G$ be an open subgroup of $\\mathrm{GL}_2(\\widehat{\\mathbb{Z}})$ satisfying $\\det(G)=\\widehat{\\mathbb{Z}}^{\\times}$ and $-I\\in G$. Associated to $G$, there is a modular curve $X_G$ defined over $\\mathbb{Q}$ which parametrizes elliptic curves with $G$-level structure. We give a classification of modular curves with genus equal to a fixed nonnegative integer $g$. In particular, we show that all modular curves of genus $g$ lie in finitely many families of $\\mathbb{Q}^{\\mathrm{ab}}$-twists of modular curves. We also describe an algorithm for computing all families of modular curves of a fixed genus $g$ and use this to compute projective models for these modular curves. This algorithm has been fully implemented for $g \\leq 12$. In an appendix with Yongyuan Huang and Rakvi, we describe two algorithms, one for computing rational functions on modular curves given as quotients of two modular forms of the same weight, and the other for computing models for the generic fibers of universal elliptic curves $\\mathcal{E}_G$, where $G\\subset \\mathrm{GL}_2(\\widehat{\\mathbb{Z}})$ is an open subgroup satisfying $\\det(G)=\\widehat{\\mathbb{Z}}^{\\times}$ and $-I\\notin G$.",
+   "abstract": "Let $E$ be an elliptic curve over a number field $K$ with good supersingular reduction at a prime $\\p$. We prove that the N\\'eron--Tate height of every non-torsion $P\\in E(\\Kbar)$ satisfies $\\hh_E(P)\\ge c\\,D^{-1}(\\log3D)^{-1}\\exp(-c'\\sqrt{\\log3D})$, where $D=[K(x(P)):K]$ and $c,c'>0$ depend only on $E$, $K$ and $\\p$; so $\\hh_E(P)\\ge D^{-1-o(1)}$. By a result of Elkies this applies to every elliptic curve over $\\QQ$, and it improves the exponents of Masser and of Hindry and Silverman.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31390",
+   "title": "Counting elliptic curves by discriminant",
+   "url": "https://arxiv.org/abs/2611.31390",
+   "authors": [
+    "Stephanie Chan",
+    "Peter Koymans"
+   ],
+   "label": "arXiv:2611.31390v1",
+   "primary_category": "math.NT",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves an asymptotic count with a power saving for rational elliptic curves ordered by minimal discriminant, conditionally on the abc conjecture, and unconditionally for curves with a restricted c4 size, via new bounds on integral points (c4, c6) near the cusp c4^3 = c6^2.",
+    "plain": "The paper studies how many elliptic curves (a standard family of smooth curves defined by cubic equations, used heavily in number theory) have a given size of \"discriminant,\" a number that measures how degenerate the curve is. The authors give a precise formula for how this count grows as the size bound increases. Part of the result assumes the abc conjecture, an unproven statement about how addition and multiplication of whole numbers interact, and part is proved without it under an extra restriction.",
+    "why": "Counting elliptic curves is a central question in arithmetic geometry, and a formula with a power saving (an error term that shrinks polynomially) is a sharper result than an asymptotic alone. The text does not say how it compares with earlier counts, so its wider significance is unclear from the abstract alone.",
+    "background": "- Elliptic curve: a smooth cubic curve over the rational numbers, with its rational points forming a group.\n- Q-isomorphism class: curves counted up to a change of coordinates over the rationals, so equivalent curves are counted once.\n- Minimal discriminant: a whole number built from the curve's coefficients that measures degeneracy; smaller means the curve is \"nicer.\"\n- Asymptotic formula: a formula saying how a count grows as the bound X goes to infinity.\n- Power saving: the error in the formula shrinks like a power of X.\n- c4, c6: standard integer invariants of a curve; the cusp c4^3 = c6^2 is where the curve becomes singular.\n- abc conjecture: an unproven conjecture on the sizes of prime factors of integers a+b=c; it is used here as a hypothesis.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove an asymptotic formula with a power saving for the number of $\\mathbb{Q}$-isomorphism classes of elliptic curves $E/\\mathbb{Q}$ ordered by minimal discriminant, assuming the $abc$ conjecture. Unconditionally, we obtain the same asymptotic for the curves with $|\\Delta_{\\min}(E)| \\le X$ and $c_4(E) \\le X^{8/3 - \\delta}$ for any fixed $\\delta > 0$, by obtaining new bounds for the number of integral points $(c_4, c_6)$ near the cusp $c_4^3 = c_6^2$.",
    "source": "arxiv"
   },
   {

@@ -3,52 +3,48 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29853",
-   "title": "Landscape and Taxonomy of Prompt Engineering Patterns in Software Engineering",
-   "url": "https://arxiv.org/abs/2611.29853",
+   "uid": "arxiv:2611.32123",
+   "title": "Verifying Type Soundness for Nontransitive Information Flow Security",
+   "url": "https://arxiv.org/abs/2611.32123",
    "authors": [
-    "Yuya Sasaki",
-    "Hironori Washizaki",
-    "Jialong Li",
-    "Nobukazu Yoshioka",
-    "Naoyasu Ubayashi",
-    "Yoshiaki Fukazawa"
+    "Chenyi Zhang"
    ],
-   "label": "arXiv:2611.29853v1",
-   "primary_category": "cs.SE",
+   "label": "arXiv:2611.32123v1",
+   "primary_category": "cs.PL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A systematic literature review, conducted in early 2023, that builds a taxonomy of prompt engineering patterns for software engineering tasks involving large language models.",
-    "plain": "Large language models are AI systems that respond to written instructions, called prompts. This paper looks at published research on the reusable ways people word those prompts to get better results for software development work. It sorts these techniques into a organized catalogue, or taxonomy, based on a literature review done in early 2023.",
-    "why": "The text argues that good prompt design still matters for usability and reliability, even as models improve. The text does not say how much the patterns help in practice, and because the review reflects early-2023 models, some findings may be dated.",
-    "background": "- Large language model (LLM): an AI system trained on large amounts of text that generates responses to instructions.\n- Prompt: the written instruction or input given to an LLM.\n- Prompt pattern: a reusable template or strategy for structuring prompts.\n- Software engineering: the work of designing, building, and maintaining software.\n- Systematic literature review: a structured method for finding and summarizing existing published studies.\n- Taxonomy: a classification scheme that groups items into categories.\n- Context length: how much text a model can consider at once.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Advancements in large language models (LLMs) have enhanced their ability to handle ambiguous user instructions. However, effective prompt patterns remain crucial for usability and comprehension. This article presents a taxonomy of prompt engineering patterns for software engineering. It is based on a systematic literature review that was conducted in early 2023, when LLMs still faced significant limitations in context length and inference capabilities. Our study explores techniques that enhance the usability and reliability of LLMs, emphasizing the ongoing importance of well-designed prompts in optimizing task performance. Our findings highlight the critical role of prompt patterns in maximizing LLM's potential, even as their capabilities continue to evolve.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.30692",
-   "title": "Sheaf Semantics of Probabilistic Programs",
-   "url": "https://arxiv.org/abs/2611.30692",
-   "authors": [
-    "Shing Hin Ho",
-    "Nicolas Wu",
-    "Azalea Raad"
-   ],
-   "label": "arXiv:2611.30692v1",
-   "primary_category": "cs.LO",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "The paper gives a monadic denotational semantics, built on Simpson's probability sheaves and the internal logic of atomic sheaves, for higher-order probabilistic programs with continuous distributions, proves it models the ν-calculus, and derives a higher-order probabilistic Hoare logic that handles continuous random variables, higher-order functions, and independence.",
-    "plain": "Probabilistic programs are software that makes random choices, such as drawing numbers from a bell curve. This paper gives a rigorous mathematical meaning to such programs, including programs that pass functions around and sample from continuous ranges of values. It then uses that meaning to build a logical system for proving claims about the programs, such as what their outputs look like and whether outputs are independent of each other.",
-    "why": "Reasoning about randomness in programs is hard once values are continuous and functions are first-class, and the text claims this is the first Hoare-style logic that handles all of these together with rigorous treatment. Its relevance beyond this formal setting is not established by the text, which does not discuss applications.",
-    "background": "- Denotational semantics: assigning each program a precise mathematical object representing what it computes.\n- Hoare logic: a method of proving that a program satisfies a stated condition before and after it runs.\n- Monads: a standard way in functional programming to structure computations that have side effects, here randomness.\n- Measure theory: the branch of mathematics that makes probabilities over continuous values rigorous.\n- Sheaves and toposes: structures from category theory that organise local information consistently; the \"internal logic\" is the logic a topos supports.\n- Probabilistic independence: two random outputs do not influence each other's distribution.",
+    "one_liner": "A machine-checked (Dafny) soundness proof for a type system enforcing nontransitive noninterference, an information-flow security property, extended to an imperative language.",
+    "plain": "This paper is about checking, with a computer proof assistant, that a set of rules for keeping secret information from leaking through a program is actually correct. The property studied is called nontransitive noninterference, which controls how information may flow between parts of a software system. The authors report a machine-checked proof that the type system, which checks programs against these rules, is sound for an imperative (step-by-step, state-changing) language.",
+    "why": "Security rules enforced by type checkers are only as trustworthy as their underlying proofs, and the text notes that existing enforcement mechanisms have not been formally verified to a high level of assurance. The work may matter to people building secure component-based software, though the text does not discuss practical deployment or performance.",
+    "background": "- Noninterference: a security property saying secret inputs cannot affect publicly visible outputs.\n- Information flow: tracking how data moves through a program so that secrets do not leak.\n- Nontransitive policy: information may flow from A to B and from B to C without necessarily flowing from A to C, unlike simple \"chain\" rules.\n- Type system: a set of checking rules, applied before a program runs, that rejects programs that could break a security policy.\n- Soundness proof: a mathematical argument that the checking rules guarantee the property for every accepted program.\n- Machine-checked proof: a proof written in a formal language and verified by software (here Dafny), so that human error in the argument is less likely.\n- Imperative language: a programming style built on sequences of commands that change stored values.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Finding denotational models of probabilistic languages that support sampling from continuous distributions is difficult: the existence of continuous distributions means that measure-theoretic objects are needed to define the semantics. A challenging task on top of this is logical reasoning with respect to the semantic model: in the case of probabilistic programs, the desired properties to reason about include the distributions, expected value and the probabilistic (in)dependence of outputs. This paper introduces a monadic semantics for higher-order probabilistic programs with continuous distributions based on Simpson's theory of probability sheaves and the internal logic of atomic sheaves. We prove that our semantics forms a model of the $\\nu$-calculus. Furthermore, using the well-behavedness of the semantic domain and the internal logic of the topos, we derive the first higher-order probabilistic Hoare logic with rigorous treatment of continuous random variables, higher-order functions, and independence.",
+   "abstract": "We present a machine-checked soundness proof of a type system for the nontransitive noninterference (NTNI) information flow security property in an imperative programming language using Dafny. The original formulation of NTNI was developed for a functional programming language augmented with memory access operators, where security policies are expressed as coarse-grained information flow constraints over component-based software systems. Although subsequent research has extended NTNI type systems in various directions, to the best of our knowledge, no prior work has established a machine-checked soundness proof for type-enforced NTNI. As a result, the correctness of existing NTNI enforcement mechanisms has not been formally verified with a high degree of assurance.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31724",
+   "title": "Denotational Results in Compiler Correctness and Comparisons with Operational Approaches",
+   "url": "https://arxiv.org/abs/2611.31724",
+   "authors": [
+    "Jeremy G. Siek",
+    "Matthew Heimerdinger",
+    "Tianyu Chen",
+    "Darshal Shetty"
+   ],
+   "label": "arXiv:2611.31724v1",
+   "primary_category": "cs.PL",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper gives the first denotational (meaning-based) proofs that closure conversion, a compiler pass for a Turing-complete functional language, is semantically reflecting, using a graph model and a Scott-domain model, and compares mechanized compiler-correctness proofs across five semantic styles.",
+    "plain": "This paper is about how to prove that a compiler, the program that translates code from one language to another, keeps the meaning of the code intact. The authors ask whether \"denotational\" semantics, which describe a program by the mathematical value it stands for, can be used for such proofs, as an alternative to \"operational\" semantics, which describe step-by-step execution. They work with a compiler from a functional language down to a simpler low-level form, and they compare the size of the proofs written in five different styles.",
+    "why": "Compiler correctness is a central goal in programming language research, and the text reports that closure conversion (a specific translation step) had no earlier denotational correctness proof for a Turing-complete language. The comparison of proof sizes is a first step toward guidance on choosing a semantic style, and the text presents it as only a first step.",
+    "background": "- A compiler translates source code into a lower-level target language; correctness means the translated program behaves as the original should.\n- Semantics is a precise description of what programs mean. Operational semantics describes step-by-step execution; denotational semantics maps programs to mathematical objects.\n- Closure conversion turns nested functions that capture variables from their surroundings into flat, first-order code with explicit captured data.\n- Preservation and reflection: a correct compiler must keep meanings (preservation) and must not create new meanings for programs that had none (reflection). The text says reflection is the harder direction here.\n- Turing-complete means the language can express any computation, including ones that may not terminate.\n- Logical relations are a proof technique relating values across two languages or models; graph models and Scott domains are two mathematical frameworks for denotational meaning.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Anyone setting out to prove a compiler correct must choose a style of semantics. The CakeML and CompCert projects, among others, show that operational semantics such as abstract machines and interpreters are viable choices. In this paper we explore whether denotational semantics can also be used in proofs of compiler correctness and evaluate the tradeoffs. We focus on a compiler from FPC, a language with lexically scoped functions and recursive types, to a first-order low-level intermediate language. This compiler includes closure conversion, but no prior proof of correctness with respect to denotational semantics covers closure conversion for a Turing-complete language. Compiler correctness requires that the denotation of a program be both preserved and reflected by the compiler. For closure conversion, reflection is the hard direction. We present the first denotational proofs of semantic reflection for closure conversion applied to a Turing-complete language, one proof with respect to a graph model and one with respect to Scott domains. For the graph-model proof we develop a new logical relation, the approximant logical relation, and for the Scott-domain proof we adapt a logical relation of Reynolds. As a first step in evaluating the tradeoffs, we compare mechanized correctness proofs of an eight-pass compiler, from FPC down to a typed low-level intermediate language, in five semantic styles. Two of the styles are denotational and three are operational. We find that no one semantics yields the shortest proofs for every compiler pass. We identify two factors that influence proof size. For operational semantics, proof size tends to grow with how much the runs of the source and target differ. For denotational semantics, the proofs are succinct when the correctness of a pass is an equation between meanings, and lengthy when a pass needs a logical relation.",
    "source": "arxiv"
   },
   {

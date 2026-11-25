@@ -3,49 +3,48 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29444",
-   "title": "RumiFold: Teaching an LLM to Natively Fold Proteins and Reason About Their Function",
-   "url": "https://arxiv.org/abs/2611.29444",
+   "uid": "arxiv:2611.33104",
+   "title": "Evolutionary constraints on protein fold diversity",
+   "url": "https://arxiv.org/abs/2611.33104",
    "authors": [
-    "Kevin Lu",
-    "David Bau",
-    "Wengong Jin"
+    "Harutyun Sahakyan",
+    "Eugene V. Koonin"
    ],
-   "label": "arXiv:2611.29444v1",
-   "primary_category": "cs.LG",
+   "label": "arXiv:2611.33104v1",
+   "primary_category": "q-bio.BM",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "RumiFold is a pretrained chat-style language model that learns to predict protein 3D structures from its own hidden states and then uses those folded representations to answer natural-language questions about protein function.",
-    "plain": "Researchers asked whether a general-purpose language model, the kind that chats in text, can also learn to predict how a protein folds into its 3D shape. Their model, RumiFold, does this inside its own internal computations and then answers questions about what the protein does. The abstract reports that its folding accuracy is comparable to a dedicated folding model, and that it performs best on certain protein function tasks.",
-    "why": "It suggests that protein structure and language-based reasoning could be combined in a single model rather than handled by separate tools. The abstract's claims rest on its own benchmarks, so how well this holds up on wider tasks is not yet clear from the text.",
-    "background": "- Proteins are chains of amino acids that fold into 3D shapes, and the shape largely determines what they do.\n- Protein structure prediction: computationally guessing that 3D shape from the sequence.\n- Language models: AI systems trained on text that generate and answer in natural language.\n- Hidden states: the internal numerical values a model computes at each step, here tied to individual amino acid positions (\"per-residue\").\n- Gene Ontology: a standard vocabulary of labels describing protein functions, used to score function prediction.\n- Causal interventions: experiments that alter internal parts of a model to test whether they actually drive its output.",
-    "difficulty": "research-level",
+    "one_liner": "A review-style abstract arguing that natural proteins use only a small fraction of the folds that secondary-structure arrangements could theoretically produce, and asking whether biophysics or evolutionary history limits fold diversity.",
+    "plain": "Proteins are chains that fold into 3D shapes, and in principle their building blocks could be arranged into a huge number of shapes. This paper asks why nature uses only a limited set of these shapes, whether physics or the messy history of evolution is the cause. The text reports that natural proteins take up only a small fraction of possible folds and discusses how evolution restricts which new folds can arise.",
+    "why": "Knowing which fold shapes are reachable matters for designing new proteins and for predicting structures from sequence. The text is only an abstract, so it does not show the specific evidence, and the link to AI-driven design is mentioned only in passing.",
+    "background": "- Protein fold: the overall 3D shape a protein chain settles into.\n- Secondary structures: local building blocks such as alpha helices and beta strands, which pack together to form a fold.\n- Topology: how those blocks are connected and arranged in space.\n- Structure prediction and cryo-electron microscopy: computational and imaging methods used to determine protein shapes.\n- Evolutionary contingency: the idea that past historical accidents, not just physical rules, shape which forms exist.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Can we teach a general-purpose language model to fold proteins? And if so, what does learning to fold enable beyond structure prediction itself? We introduce RumiFold, a pretrained chat model that learns to predict protein structures directly from its own hidden states. RumiFold processes proteins through repeated folding passes, then uses these folded representations to answer questions in natural language. It achieves folding accuracy comparable to dedicated single-representation models such as SimpleFold, alongside state-of-the-art performance on Gene Ontology protein function prediction and free-text function description. We find that folding pretraining organizes the model's hidden states around protein function, creating an internal per-residue workspace that is biologically grounded. Causal interventions show that this folded workspace links structure and language when RumiFold predicts function, providing rich representations for biomolecular reasoning. We see RumiFold as a step toward native biomolecular intelligence: where protein-based computations and language-based reasoning become integrated capabilities of general-purpose language models. Code, data, and models are available at: https://rumifold.baulab.info",
+   "abstract": "Arrangements of secondary structures in proteins yield a wide variety of possible topologies, yet the protein folds observed in nature are limited in their diversity. Is the number of protein folds limited by biophysical constraints or by evolutionary contingency? In recent years, the development of new methods for protein structure prediction and comparison, molecular design, and the rapid progress of cryo-electron microscopy revealed new insights into the protein fold space. Here, we present recent findings demonstrating that natural proteins adopt only a small fraction of all possible folds and discuss how evolutionary processes limit the diversity of evolving protein folds.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28096",
-   "title": "Auditing two-stage MS/MS molecular retrieval on MassSpecGym v1.5: Reranking gains, candidate priors and spectrum dependence",
-   "url": "https://arxiv.org/abs/2611.28096",
+   "uid": "arxiv:2611.32133",
+   "title": "OMNI-P3x universal neural network potential for large-scale computational photochemistry workflows",
+   "url": "https://arxiv.org/abs/2611.32133",
    "authors": [
-    "Jiaqi Xue",
-    "Yutong Wu",
-    "Qiang Zhang"
+    "Miko{\\l}aj Martyka",
+    "Joanna Jankowska",
+    "Pavlo O. Dral"
    ],
-   "label": "arXiv:2611.28096v1",
+   "label": "arXiv:2611.32133v1",
    "primary_category": "physics.chem-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "An audit of a two-stage deep-learning retrieval system that ranks candidate molecules for tandem mass spectra on the MassSpecGym v1.5 benchmark, separating genuine spectrum-based signal from candidate priors, replicate spectra, precursor-mass effects and training-set overlap.",
-    "plain": "The paper looks at how computers try to identify an unknown chemical from its mass spectrum, a fingerprint made by breaking molecules into fragments and weighing them. The authors build a two-step system: first a shortlist of likely candidate molecules, then a reranker that reorders them using mass-consistency checks. They then test how much of the reported accuracy really comes from the spectrum itself versus shortcuts, such as the candidate list or the molecules' mass.",
-    "why": "Identifying molecules from mass spectra is a bottleneck in chemistry and metabolomics, so benchmark claims about it matter for how much trust to place in such tools. The paper's main value is its caution: it shows that a sizable share of the score can come without reading the spectrum at all, which is useful for anyone designing fair evaluations in this area.",
-    "background": "- Tandem mass spectrometry (MS/MS): an instrument technique that breaks molecules into fragments and records their masses, producing a \"spectrum.\"\n- Molecular retrieval: picking the correct molecule from a database of candidate structures that matches a spectrum.\n- Recall@k: the fraction of test spectra where the correct molecule appears in the top k ranked candidates.\n- Two-stage retrieval: a fast first pass that shortlists candidates, followed by a slower reranker that reorders them.\n- Fingerprints: numerical codes describing which structural features a molecule contains.\n- Adduct and precursor mass: how the measured ion was formed and its total mass, both used to filter feasible candidates.\n- Candidate priors: biases where some molecules are easier to guess regardless of the spectrum, e.g. because they appear often in training data.\n- Benchmark audit: a check of whether reported gains hold up under control experiments.",
+    "one_liner": "The paper introduces OMNI-P3x, a universal machine-learned interatomic potential trained on ground- and singlet excited-state geometries of neutral and charged organic molecules, and applies it to high-throughput photochemical screening of flavylium and xanthene dyes.",
+    "plain": "Designing light-responsive molecules, such as dyes that glow at particular colours, normally requires slow quantum calculations for each candidate, which makes checking large libraries too costly. The authors built a machine-learning model that imitates those calculations for both the resting and light-excited states of organic molecules. They used it to screen about 234,000 flavylium dyes without new quantum calculations, then fine-tuned it and screened about 163,000 xanthene dyes, flagging candidates that may emit red, near-infrared and short-wavelength infrared light.",
+    "why": "It shows a machine-learned shortcut can handle full photochemistry workflows, not just ground-state chemistry, at very large scale, which could speed up searching for new dyes and emitters. Whether the predicted candidates work in practice is not established by the text, and its accuracy is described only as \"approaching\" TD-DFT, a standard but approximate excited-state method.",
+    "background": "- Interatomic potential: a model that predicts the energy and forces on atoms from their positions, so molecular shapes can be simulated without solving quantum equations each time.\n- Machine-learned potential (MLIP): such a potential learned from reference quantum calculations; \"universal\" means it is meant to cover many kinds of molecules.\n- Excited state: the state a molecule enters after absorbing light; photochemistry studies how molecules behave in it.\n- TD-DFT (time-dependent density functional theory): a common, moderately expensive quantum method for computing excited-state energies and absorption colours.\n- Flavylium and xanthene dyes: families of coloured organic molecules used as dyes and fluorescent markers.\n- Partial (atomic) charges: how electron density is shared among atoms; here the charges are learned without reference charge data and used to show charge shifts on excitation.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Two-stage retrieval of molecular structures from tandem mass spectra (MS/MS) can benefit from candidate reranking, but benchmark gains may also reflect candidate priors, replicate spectra, precursor mass, and training-set coverage. We audit a two-stage retrieval system on the official MassSpecGym v1.5 split (17,556 test spectra). A data-safe DreaMS encoder and composite molecular fingerprints provide an initial shortlist; a support-gated reranker combines pair scores, candidate-relative peak coverage, and mass-feasibility features. The final system achieves 31.05% Recall@1, a 10.05-point gain over its Stage 1 ensemble, while preserving its 72.62% Recall@20. Replacing the query spectrum with one from a different molecule matched on adduct and precursor mass reduces Recall@1 by 9.0 points (15.3 points under molecule-balanced weighting); nevertheless, a training-mean spectrum retains 13.75% Recall@1, indicating substantial spectrum-independent signal. Mass-feasibility features improve Recall@1 beyond score and coverage controls, while learned peak-fragment similarities do not outperform constant coverage. Errors cluster by molecule, and removing close training neighbours causes a large decline in Stage 1 shortlist recall among initially well-covered molecules. We conclude that candidate-relative mass-feasibility evidence improves front-rank retrieval and spectrum dependence, but does not establish learned structural discrimination or eliminate candidate priors. Evaluation should separately assess shortlist reachability, spectrum dependence, and molecule-level generalization.",
+   "abstract": "Computational photochemistry supports the design and understanding of new materials. However, the high cost of excited-state quantum-mechanical (QM) calculations makes screening large molecular libraries prohibitively expensive. To address this limitation, we introduce OMNI-P3x, a universal machine-learned interatomic potential (MLIP) for singlet ground- and excited-state simulations of neutral and charged organic molecules. Trained on both ground- and excited-state conformations, it performs complete computational photochemistry workflows with accuracy approaching TD-DFT. We demonstrate its practical applicability by screening a combinatorial library of 234,375 flavylium derivatives, where the pretrained model performs ground-state geometry optimization and predicts absorption properties without additional QM calculations. Following fine-tuning, we further screen 162,960 xanthene-based dyes, identifying new candidates for red, near-infrared and short-wavelength infrared emission. Furthermore, state-dependent neural charges, learned without reference atomic charges, provide an interpretable picture of intramolecular charge redistribution upon excitation.",
    "source": "arxiv"
   },
   {

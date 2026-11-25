@@ -3,50 +3,48 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28587",
-   "title": "KAM theory for contact Hamiltonian systems",
-   "url": "https://arxiv.org/abs/2611.28587",
+   "uid": "arxiv:2611.31490",
+   "title": "Doubly Intermittent Singular Skew Products",
+   "url": "https://arxiv.org/abs/2611.31490",
    "authors": [
-    "Zhicheng Tong",
-    "Yong Li",
-    "Xuefeng Zhao"
+    "Stefano Luzzatto",
+    "Rizwan Rizwanullah"
    ],
-   "label": "arXiv:2611.28587v1",
+   "label": "arXiv:2611.31490v1",
    "primary_category": "math.DS",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves frequency-preserving KAM theorems for full-dimensional Legendrian tori in analytic contact Hamiltonian families, in both finite and infinite dimensions, and links the resulting invariant tori to analytic solutions of stationary Hamilton–Jacobi equations and weak KAM theory.",
-    "plain": "The paper studies damped or dissipative mechanical-type systems whose motion is quasi-periodic, meaning it runs on a torus with several incommensurate rhythms, and asks whether such motion survives small perturbations. The authors show that, after suitable tuning of parameters, these invariant tori persist with the same rhythms, and the motion on each torus can be written in a clean analytic form. In finite dimensions they add that, under extra convexity assumptions, the torus solution is the unique weak KAM solution in both time directions.",
-    "why": "Persistence of quasi-periodic motion under perturbation is a central question in dynamics, and extending KAM-type results to contact (dissipative-like) systems is a less-studied direction. The link to weak KAM theory, which connects dynamics with solutions of Hamilton–Jacobi equations, is the main conceptual bridge; the text does not establish applications beyond this.",
-    "background": "- Hamiltonian system: a model of motion (from mechanics) described by energy-like functions and their rates of change.\n- Contact Hamiltonian system: a generalization that includes a damping or dissipation term via an extra \"contact\" variable.\n- KAM theory: results showing that quasi-periodic motion on invariant tori survives small perturbations, provided the rhythms are suitably non-resonant.\n- Torus and quasi-periodic flow: motion winding around a donut-shaped surface with rhythms that never exactly repeat.\n- Legendrian torus: a special half-dimensional-type geometric object compatible with the contact structure.\n- Analytic: smooth in a strong sense (locally given by convergent power series).\n- Hamilton–Jacobi equation and weak KAM solution: a partial differential equation whose solutions describe the long-run behavior of the dynamics.\n- Tonelli assumptions: convexity and growth conditions on the energy function, standard in this field.",
+    "one_liner": "The paper studies a class of skew product systems (a uniformly expanding circle map coupled with a full branch interval map having two indifferent fixed points and unbounded derivatives), constructs an induced full branch map, and proves an invariant probability measure equivalent to Lebesgue plus decay of correlations.",
+    "plain": "This paper studies a mathematical model of a system that evolves step by step, where each step has a random-like driving component. The authors look at a broad family of such systems, which generalizes earlier examples from the literature. They show that these systems settle into a stable long-run pattern that matches ordinary uniform (Lebesgue) spread of points, and that their memory of starting conditions fades over time.",
+    "why": "The work extends a known family of examples (Gouëzel's skew products) to a much wider setting, which helps clarify which features drive the statistical behaviour. The text does not discuss applications, so any connection to physical or other modelling is unclear from this abstract alone.",
+    "background": "- Dynamical system: a rule that repeatedly updates a point's position over time.\n- Skew product: a system where one component's evolution depends on a second component, often read as a random dynamical system.\n- Uniformly expanding map: a map that stretches distances by a fixed factor everywhere.\n- Indifferent (neutral) fixed point: a point that the map leaves in place, where nearby points move very slowly; this makes orbits \"intermittent,\" spending long stretches near such points.\n- Invariant measure equivalent to Lebesgue: a long-run distribution of points that has the same null sets as ordinary length, so it is a natural \"typical\" distribution.\n- Decay of correlations: how quickly the influence of the starting state fades; faster decay means more predictable long-run averages.\n- Induced map: a simpler map obtained by looking only at the times the system returns to a chosen region.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In both finite and infinite dimensions, we establish the first frequency-preserving KAM theorems for full-dimensional Legendrian tori in contact Hamiltonian families with general analytic coupling between the momenta and the contact variable. After adjustment of external parameters, the flow on each torus is analytically conjugate in the original time to the prescribed translation, with estimates uniform as the damping parameter crosses zero. This coupling can generate nonzero mean damping at first order even when the damping parameter vanishes. In finite dimensions, nonzero mean damping yields a time-preserving analytic contact linearization near the torus. In both settings the invariant graphs give global analytic solutions of stationary Hamilton--Jacobi equations whose characteristic flows are conjugate to the prescribed translation. A novel consequence in finite dimensions is that, under global Tonelli assumptions and strict increase in the contact variable, this analytic solution is both the unique forward and the unique backward weak KAM solution, and its associated Legendrian graph is an invariant torus carrying quasi-periodic dynamics.",
+   "abstract": "We study a large class of skew product systems, which can also be thought of as random dynamical systems, coupling a uniformly expanding circle map with a full branch interval map with two indifferent fixed points and unbounded derivatives. This significantly generalizes the setting of several skew products considered in the literature, in particular the Gou\\\"ezel skew products [Gou\\\"ezel, Statistical properties of a skew product with a curve of neutral points, Erg. Th. & Dyn. Sys. (2007)], in which the fibre maps are intermittency maps with a single indifferent fixed point and bounded derivatives. Through the construction of an induced full branch map, we prove various statistical properties of the skew products, including existence of an invariant probability measure equivalent to Lebesgue and decay of correlations.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.30470",
-   "title": "One-shot identification of analytic systems",
-   "url": "https://arxiv.org/abs/2611.30470",
+   "uid": "arxiv:2611.31934",
+   "title": "Saddle-focus to saddle transition of 4D heteroclinic orbits resembling oscillatory and regularized shock waves of some dissipative Boussinesq systems",
+   "url": "https://arxiv.org/abs/2611.31934",
    "authors": [
-    "Nicolas Boull\\'e",
-    "Diana Halikias",
-    "Samuel E. Otto",
-    "Alex Townsend"
+    "Rezwana Razzaque Angana",
+    "Brendan Harding",
+    "Dimitrios Mitsotakis"
    ],
-   "label": "arXiv:2611.30470v1",
-   "primary_category": "math.NA",
+   "label": "arXiv:2611.31934v1",
+   "primary_category": "math.DS",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives a zero-one law for when the coefficients of a linearly parameterized analytic system can be recovered from one input-solution pair, with the failure set shown to be negligible unless it is the whole input space, and applies this to matrices, continuous-time dynamical systems, and differential operators.",
-    "plain": "The paper asks whether the unknown settings of a system, such as the numbers inside a set of equations describing how something changes over time, can be worked out from just one recorded input and the output it produces. The authors show that for almost every input the answer is yes, unless the answer is no for every input. For several classes of differential equations they also describe exactly which inputs fail and suggest specific inputs that are guaranteed to work.",
-    "why": "Identifying a system from a single experiment is useful when repeated experiments are costly or impossible. The text does not say how these results compare with existing identification methods or what practical applications are planned, so the wider significance is unclear from this text alone.",
-    "background": "- A dynamical system is a rule describing how a state evolves over time, often written as an ordinary differential equation (ODE) or a partial differential equation (PDE).\n- \"Analytic\" means the functions involved are smooth enough to be written as convergent power series.\n- \"Linearly parameterized\" means the unknown coefficients enter the system in a linear way, so recovery reduces to solving a linear map.\n- Injective means that different coefficient choices always produce different outputs, so the coefficients can be uniquely recovered.\n- A set is \"negligible\" here if it has zero measure, meaning it takes up no volume under random Gaussian sampling of inputs.\n- Gaussian measure is a standard way of randomly choosing inputs, with a bell-shaped distribution.",
+    "one_liner": "The paper computes traveling-wave solutions of dissipative Bona–Smith Boussinesq systems that resemble oscillatory and regularized shock waves, using heteroclinic orbits in a four-dimensional phase space whose equilibrium changes from a saddle-focus to a saddle as dissipation increases, and introduces a finite-difference numerical method to compute them.",
+    "plain": "The paper studies the shape of waves that move at a steady speed in shallow water models, such as the bores (wave fronts) that form when a tidal or river surge advances. The authors describe two kinds of wave front, one with ripples and one smooth, and show how the first can turn smoothly into the second as friction-like damping (dissipation) increases. They also present a numerical method for computing these waves.",
+    "why": "The work links a change in the local structure of a mathematical system (a saddle-focus turning into a saddle) to a visible change in wave shape, which is a clear example of how structure governs behavior. The text does not show practical applications beyond undular bore modeling, so its wider impact is uncertain.",
+    "background": "- Shallow-water waves: a bore is a sudden rise of water front; \"undular\" means it has a train of ripples behind it, while \"regularized\" means it is smooth.\n- Boussinesq-type models: equations approximating water waves that include dispersion (waves of different wavelengths travel at different speeds).\n- Dissipation: energy loss, such as friction, that damps the wave.\n- Traveling wave: a wave that keeps its shape while moving at constant speed, reducing the PDE to an ODE system.\n- Phase space and equilibria: a state space where each point is a possible system state; equilibria are fixed points.\n- Saddle vs. saddle-focus: types of equilibria, classified by how nearby trajectories approach or leave them (saddle-focus includes spiraling).\n- Heteroclinic orbit: a trajectory leaving one equilibrium and arriving at another.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study when the coefficients of a linearly parameterized analytic system can be identified from a single input-solution pair. Given a finite dictionary of analytic operators, each admissible input induces a finite-dimensional linear recovery map from coefficients to observed outputs. Coefficient recovery is possible exactly when this map is injective. We define the degenerate input set as the set of inputs for which injectivity fails and prove a zero-one law: either every admissible input is degenerate, or the degenerate set is negligible in the sense that it is compactly slice-null and has zero measure under every nondegenerate Gaussian measure. We then apply this framework to the recovery of matrices, analytic continuous-time dynamical systems, and differential operators. For several ODE and PDE classes, we further characterize the degenerate sets explicitly and identify deterministic choices of inputs that guarantee recovery.",
+   "abstract": "Oscillatory and regularized shock waves have long been studied to understand the formation and dynamics of undular bores in shallow waters, phenomena that typically arise from the interplay between dispersion, nonlinearity, and dissipation. In this work, we investigate and describe the nature and shape of traveling wave solutions that resemble oscillatory and regularized shock waves of some Boussinesq-type water wave models known as Bona--Smith systems in the presence of dissipation. The associated traveling wave equations are solutions of four-dimensional dynamical systems, leading to both computational challenges and rich structural behavior. In particular, to describe the properties of these traveling waves, we analyze heteroclinic orbits that connect two distinct equilibria, one of which undergoes a transition in the four-dimensional phase space from a saddle-focus to a saddle point as the dissipation parameter increases. This transition governs the nature of the wave profile, which evolves smoothly from an oscillatory shock wave to a regularized (non-oscillatory) shock wave. To compute such solutions, we introduce a finite-difference-based numerical method tailored for this class of problems.",
    "source": "arxiv"
   },
   {

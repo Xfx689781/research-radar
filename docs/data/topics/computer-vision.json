@@ -3,57 +3,50 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.31237",
-   "title": "Let Vision-Language Models Generate Images through Their Representations",
-   "url": "https://arxiv.org/abs/2611.31237",
+   "uid": "arxiv:2611.32369",
+   "title": "Visual-State Graph Memory for Streaming Video Understanding",
+   "url": "https://arxiv.org/abs/2611.32369",
    "authors": [
-    "JB Kim",
-    "Byungwoo Jeon",
-    "Kyungmin Lee",
-    "Hyeonmo Kang",
-    "Cheonbok Park",
-    "Shinyoung Joo",
-    "Jinwoo Shin",
-    "Jeonghoon Kim"
+    "Ailar Mahdizadeh",
+    "Pritam Sarkar",
+    "Xiangteng He",
+    "Leonid Sigal"
    ],
-   "label": "arXiv:2611.31237v1",
+   "label": "arXiv:2611.32369v1",
    "primary_category": "cs.CV",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Proposes Integral, a method that turns a pretrained vision-language model into a unified model for both image understanding and image generation by sharing one visual representation space between the two tasks.",
-    "plain": "Many AI systems can either understand pictures (answer questions about them) or create pictures, but rarely both well in one model. This paper starts from an existing model that already understands images and adds the ability to generate them, reusing what it has already learned. The authors report that using the same visual representations for understanding and generation helps generation learn better than using a separate visual representation, even though reconstruction quality was similar.",
-    "why": "It suggests that the internal representations learned for understanding images can also serve as a foundation for generating them, which bears on how future single models might be built. The text does not show how broadly this holds beyond the controlled comparisons described.",
-    "background": "- Vision-language model: an AI model trained to connect images and text, used here to understand pictures.\n- Visual generation: producing new images, for example from a text prompt.\n- Unified multimodal model: a single model that handles both understanding and generation.\n- Visual representation / encoder: the internal numerical description an AI builds of an image; the encoder that produces it is here kept frozen (not retrained).\n- Hierarchical representations: descriptions taken from several layers of the network, from low-level detail to high-level meaning.\n- Mixture-of-Transformers (MoT): a design where separate processing streams share some layers; the \"block-wise\" variant connects them only at block boundaries.\n- Reconstruction fidelity: how faithfully an image can be recreated from its representation.",
+    "one_liner": "Proposes Visual-State Graph (VSG), a training-free memory for streaming video that stores objects, their relations, and a timestamped event log, retrieved alongside recent frames under a fixed input budget.",
+    "plain": "Video models often need to answer questions about something that happened long before the current moment, but only a short window of recent frames is kept. This paper builds a compact running memory of what is in the video: each object is kept as one entry with a dated history of how it changed, plus a log of events. When a question comes in, the relevant parts of this memory are pulled out and given to the model together with recent frames.",
+    "why": "Reasoning about the past is a practical limit for systems that watch live video, such as monitoring or assistive tools, where storing every frame is not feasible. The text reports gains on four benchmarks with seven open-source vision-language models (7B to 32B parameters) under matched input budgets, but the summary gives no further detail on size of gains, so its broader significance is unclear.",
+    "background": "- Streaming video: video that arrives continuously, so the system sees each frame once and cannot look ahead.\n- Vision-language model: an AI model that takes images or video plus text and answers questions about them.\n- Scene graph: a structured description of objects in a scene and how they relate (for example, \"cup on table\").\n- Training-free: the method is added on top of existing models without retraining them.\n- Input budget: a fixed limit on how much information (frames, text) the model can receive at once.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this knowledge effectively accessible to visual generation remains nontrivial. We find that a central challenge lies in the heterogeneous visual representations used for understanding and generation. To address this challenge, we introduce Integral, which converts a pretrained vision-language model into a unified multimodal model by constructing a shared visual representation space across the two capabilities. Integral implements this design through two complementary components. Abstraction Fusion constructs shared visual tokens by aggregating hierarchical representations from the frozen vision encoder, while Block-wise MoT introduces a lightweight generative stream that interacts with the vision-language model only at block boundaries. Our approach effectively preserves the pretrained understanding capability while extending it to strong visual generation. Controlled comparisons further demonstrate that sharing visual representations between understanding and generation substantially improves generative learning compared with using a separate visual representation space, despite comparable reconstruction fidelity. These results suggest that representations learned by pretrained vision-language models already provide an effective foundation for visual generation.",
+   "abstract": "In streaming video understanding, the evidence needed to answer a question may have already left the recent-frame window. Keeping all frames does not scale with video length, while dropping older frames limits the model's ability to reason about the past. We propose Visual-State Graph (VSG), a training-free memory that stores the state of a stream rather than the raw sequence of frames. VSG represents the stream as a graph of objects and their relations, together with a log of events; similar to a dynamically evolving scene graph. An object observed repeatedly is represented by one persistent node, with a timestamped history of how its state changes. To determine whether a newly mentioned object already exists in the graph, we compare the relations it takes part in with those of stored objects. We build this memory as the video arrives, before the questions are known. When a question arrives, we retrieve relevant objects and events alongside recent frames under a fixed input budget. Our evaluation spans four streaming-video benchmarks and seven open-source vision-language models ranging from 7B to 32B parameters. Under matched input budgets, VSG improves reasoning about the past while preserving real-time understanding.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28608",
-   "title": "VUOD: A Versatile Unsupervised Outlier Detection Framework for Natural, Industrial, Medical Images and Beyond",
-   "url": "https://arxiv.org/abs/2611.28608",
+   "uid": "arxiv:2611.32846",
+   "title": "DOPER: Deep Object Pose Estimation Revisited",
+   "url": "https://arxiv.org/abs/2611.32846",
    "authors": [
-    "Zhonghang Liu",
-    "Siyuan Chen",
-    "Jingwen Yu",
-    "Changshuo Wang",
-    "Kunyang Li",
-    "Jiangbo Lu"
+    "Hugo Hadfield",
+    "Alperen Degirmenci",
+    "Jonathan Tremblay"
    ],
-   "label": "arXiv:2611.28608v1",
+   "label": "arXiv:2611.32846v1",
    "primary_category": "cs.CV",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "VUOD proposes an unsupervised outlier detection framework that improves feature discriminativeness using intrinsic distribution priors, aiming to work beyond natural images on industrial and medical images, and reports state-of-the-art results across 14 benchmarks in 3 domains.",
-    "plain": "The paper is about spotting images that look unusual, such as a defective part on a factory line or an abnormal scan, without being given labeled examples of what is faulty. Many existing tools work well on everyday photos but lose accuracy on factory and medical images. The authors describe a general method that improves how the system represents images so it can separate normal from unusual ones, and report that it performs best on the 14 test datasets they used.",
-    "why": "Reliable detection of unusual images without labeled defects matters for industrial inspection and medical screening, where faulty or abnormal examples are rare. The text also says the method can be added to other vision tasks such as image classification and 3D reconstruction to improve robustness, though the text gives no details on those experiments.",
-    "background": "- Unsupervised outlier detection: flagging inputs that differ from a set of normal examples, with no labels marking which are abnormal.\n- Feature extractor: a model that turns an image into a list of numbers (features) summarizing it; \"frozen and pre-trained\" means a model trained on other data whose weights are not updated.\n- Feature discriminativeness: how well the features separate normal from unusual images.\n- Distribution priors: assumptions about how normal data is statistically shaped, used to guide learning.\n- Benchmark datasets: standard public test collections used to compare methods.\n- Plug-and-play: a component that can be added to an existing system without redesigning it.\n- The text is a short abstract; it does not give the method's details, the specific scores, or the exact datasets.",
+    "one_liner": "DOPER is an RGB-only framework that shares one visual backbone across detection, segmentation, and keypoint prediction to estimate the 6D pose of known objects via Perspective-n-Point, trained from synthetic data and adapted to real images with partial supervision and multi-view geometric constraints.",
+    "plain": "This paper is about working out where a known object is and how it is turned in a camera image, using only ordinary color pictures and no depth sensor. The method first learns from computer-generated images, then adapts to real photos, and it refines a rough 3D model of the object as it goes. The authors report that it reaches top detection scores on several public benchmark datasets and runs at about 35 times per second per object.",
+    "why": "Reliable pose estimation from ordinary cameras matters for robots that pick up objects and for spacecraft or similar systems that need to know an object's orientation. The text reports benchmark results and speed, but it does not show how the system performs in deployed robots or spacecraft, so its practical reach is unclear.",
+    "background": "- Pose estimation: finding an object's position and rotation (6D: three for location, three for orientation) relative to the camera.\n- Keypoints: specific points on an object, such as corners, whose image locations are predicted and then matched to the 3D model.\n- Perspective-n-Point (PnP): a standard geometric calculation that gives the object's pose from matched 2D image points and known 3D points.\n- Synthetic training: learning from computer-rendered images instead of real photos, which then need adapting to real conditions.\n- CAD model: a digital 3D drawing of an object; \"underspecified\" means it lacks some detail.\n- Multi-view and calibrated cameras: several cameras with known positions, which constrain 3D geometry.\n- Average precision (AP): a standard score for how well detections match the true objects.\n- Benchmarks named: SPEED+ (spacecraft images), SHIRT, HANDAL, HOPEv2, HOT3D, and T-LESS (object datasets).",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Unsupervised outlier detection that automatically identifies whether visual systems involve anomalous images is a significant research topic. However, most approaches are limited to natural images because they rely on frozen and pre-trained feature extractors. So that their performance cannot be maintained in practical scenarios, especially for industrial inspection and medical imaging. In this work, we first revisit this task and then introduce a versatile unsupervised outlier detection framework to enrich the application domains. The core idea of this framework is to improve feature discriminativess via exploiting intrinsic distribution priors. Evaluated on 3 domains and 14 benchmark datasets, our proposed solution achieves state-of-the-art performance and significantly outperforms existing methods. More importantly, we show its plug-and-play property that can be integrated into diverse visual applications to improve their robustness, such as image classification and 3D reconstruction.",
+   "abstract": "We present DOPER, an RGB pose estimation framework that shares a visual backbone across object detection, segmentation, and keypoint prediction to recover the 6D pose of known objects through Perspective-n-Point. Starting from synthetic training, DOPER adapts to real observations using partial supervision while retaining synthetic keypoint labels. Calibrated multi-view observations provide geometric constraints for keypoint supervision. During inference, optional heatmap refinement fits a rigid pose directly to the predicted keypoint distributions, resolving ambiguous correspondences without depth input or a learned pose refiner. Starting from underspecified CAD models, DOPER progressively refines the object representation and pose estimator. Results on SPEED+ and SHIRT further demonstrate effective adaptation to illumination changes and accurate temporal pose estimation. Across the evaluated single-view and multi-view configurations, DOPER achieves state-of-the-art detection AP results on HANDAL, HOPEv2, HOT3D, and T-LESS while using only RGB and running in real time (35 Hz per object model on one GB300). These results demonstrate the effectiveness of jointly learning detection and pose keypoints, with real observations and geometric constraints.",
    "source": "arxiv"
   },
   {

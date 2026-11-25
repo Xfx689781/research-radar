@@ -3,48 +3,48 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30214",
-   "title": "Support monotonicity for quadratically regularized optimal transport",
-   "url": "https://arxiv.org/abs/2611.30214",
+   "uid": "arxiv:2611.33075",
+   "title": "Sharp estimates for incremental moments of inverse subordinators and approximation errors for time-changed stochastic differential equations",
+   "url": "https://arxiv.org/abs/2611.33075",
    "authors": [
-    "Johannes Wiesel",
-    "Xingyu Xu"
+    "Ivan Bio\\v{c}i\\'c",
+    "Sixian Jin",
+    "Kei Kobayashi"
    ],
-   "label": "arXiv:2611.30214v1",
-   "primary_category": "math.OC",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "This paper proves that, for quadratic-cost entropic-style (quadratically regularized) optimal transport between compactly supported marginals, the support of the regularized optimizer is nested in the interior as the regularization parameter decreases, under regularity assumptions.",
-    "plain": "The paper studies a way of matching two spread-out distributions of mass, such as moving a pile of sand into a hole, where a small penalty term makes the matching smooth. The question is which locations carry any mass in the smoothed matching, and whether those locations only grow as the penalty is reduced. The authors show that, in the interior of the region and under stated regularity conditions, the set of active locations for a smaller penalty contains the set for a larger one, up to a fixed scaling factor.",
-    "why": "The text does not say what applications this has beyond the mathematics of optimal transport, so its wider relevance is uncertain. It concerns how an approximation behaves as a parameter goes to zero, a theme that matters for numerical methods and for the limit of the unregularized Monge problem.",
-    "background": "- Optimal transport: finding the cheapest way to move one probability distribution onto another, here with squared-distance cost.\n- Monge coupling: the exact, unregularized transport map that the regularized solution approaches as the penalty goes to zero.\n- Quadratic regularization: adding a squared-density penalty to the cost so the optimal plan is smoother and spread out.\n- Support of a measure: the set of points where the plan puts positive mass.\n- Brenier map: the convex-gradient map that gives the optimal transport for quadratic cost.\n- Marginals and densities: the two input distributions and how their mass is spread over space.\n- Interior inclusion and rescaling: the claim holds away from the boundary, with a density bound of order epsilon to the power 2/(d+2).</background>\n<parameter name=\"difficulty\">research-level",
-    "difficulty": "",
-    "ai": true
-   },
-   "abstract": "We study the support of the optimizer $\\pi_\\varepsilon$ of the quadratically regularized optimal transport problem for quadratic cost and compactly supported marginals. As $\\varepsilon$ tends to zero, this support converges to the support of the Monge coupling. We investigate whether the regularized supports are nested as $\\varepsilon $ decreases. Under regularity assumptions on the marginal densities, their domains, and the Brenier map, we establish interior support inclusions in every dimension. More precisely, for each compact $K\\subset\\operatorname{int}X$ and fixed $\\theta\\in(0,1)$, we prove that $\\mathrm{spt}\\pi_\\delta\\cap(K\\times Y) \\subseteq\\mathrm{spt}\\pi_\\varepsilon\\cap(K\\times Y)$ whenever $0<\\delta\\le\\theta\\varepsilon $ and $\\varepsilon$ is sufficiently small. On these points, the rescaled density $\\varepsilon d\\pi_\\varepsilon/d(\\mu\\otimes\\nu)$ is bounded below by a positive multiple of $\\varepsilon^{2/(d+2)}$. Our analysis combines sharp potential estimates with affine rescaling and a Liouville theorem that identifies the unique limiting density of the rescaled problem.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.28268",
-   "title": "Fermat costs and path-dependent first-passage percolation",
-   "url": "https://arxiv.org/abs/2611.28268",
-   "authors": [
-    "Sandro Gallo",
-    "Matthieu Jonckheere",
-    "Alejandro H. Wences"
-   ],
-   "label": "arXiv:2611.28268v1",
+   "label": "arXiv:2611.33075v1",
    "primary_category": "math.PR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper defines a continuum first-passage percolation model on a Riemannian manifold in which the step-cost exponent grows along the path under a control rule, and proves a shape theorem showing the costs converge to deterministic space-time integrals that define a quasi-distance.",
-    "plain": "The paper studies the cheapest way to travel between two places when you are scattered among random points, where the cost of each hop depends on its length and on how far along the route you already are. The authors show that, as the number of random points grows, the cheapest costs settle down to a fixed, predictable formula along each curve. The resulting measure is not a true distance, because going one way can cost more than going back.",
-    "why": "The asymmetry of the limiting cost, where moving from dense regions to sparse ones tends to be cheaper, may be relevant to machine learning settings that use random point samples and graph-like geometry. The text does not show any concrete application or experiment, so this connection is a suggestion by the authors rather than a demonstrated result.",
-    "background": "- First-passage percolation: a random-geometry model where each hop between random points has a cost, and one studies the cheapest total cost between points.\n- Shape theorem: a result saying that, at large scale, such random minimum costs converge to a deterministic limiting shape or formula.\n- Riemannian manifold: a smooth curved space in which lengths and distances are defined locally.\n- Density function: describes how likely points are to appear in each region; here the points are denser in some regions than others.\n- Quasi-distance: like a distance but possibly not symmetric, so cost from A to B can differ from cost from B to A.\n- Exponent alpha > 1: a hop of length r costs roughly r raised to alpha, so long hops are penalized more than short ones.",
+    "one_liner": "The paper proves sharp upper and lower bounds on incremental moments of general inverse subordinators and uses them to derive an error bound, shown to be optimal in general, for numerically approximating time-changed stochastic differential equations on deterministic time grids.",
+    "plain": "The paper studies a random \"clock\" that runs slow and in jumps, used to model processes that move more sluggishly than ordinary random motion, such as diffusion through a sticky medium. It gives precise limits on how much this clock can change over short time spans. Those limits are then used to bound the error when a computer simulates such a process on a fixed grid of time steps, and the authors show this error bound cannot be improved in general.",
+    "why": "Simulating subdiffusive models is common in physics, finance and biology, so a guaranteed error rate for the numerical schemes matters for trusting those simulations. The text does not say how the results compare with prior work or which applications would benefit most, so that connection is my inference rather than something the abstract states.",
+    "background": "- Stochastic differential equation: a equation describing a quantity evolving under random noise, like a particle jostled by molecules.\n- Subordinator: a random process that only moves forward in time, in jumps; it can serve as a random clock.\n- Inverse subordinator: the \"inverse\" of that clock, which measures how much real time has passed in terms of the clock's own count; it is the source of the slowed-down, subdiffusive behaviour.\n- Time change: replacing ordinary time in an equation with a random clock.\n- Incremental moments: averages of powers of how much the random clock changes over a short interval.\n- Numerical approximation and order of convergence: computing an approximate solution on a grid of time steps, and how fast the error shrinks as steps get finer.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We introduce a path-dependent and space-inhomogeneous first-passage percolation (FPP) model in the continuum. Inspired by Euclidean FPP, it is defined through a sample of points drawn from a common density function on a Riemannian manifold. In Euclidean FPP, the cost of each step in a discrete path is given by its length raised to the power $\\alpha>1$. In our model, the power $\\alpha$ increases as the path progresses, governed by a control mechanism. Consequently, the resulting percolation cost is not a distance. However, we prove a shape theorem showing that, as the number of points goes to infinity, the percolation costs converge to deterministic space-time integrals along curves in the manifold. This limit defines a quasi-distance with the property that traversing a curve from a high-density region towards a low-density one is generally cheaper than in the reverse direction; thus highlighting its potential use in machine learning applications.",
+   "abstract": "This paper establishes precise upper and lower bounds for the incremental moments of general inverse subordinators. Such processes are used as random time changes to model subdiffusive phenomena. The upper and lower bounds provide the foundation for a general framework for analyzing numerical approximation of time-changed stochastic differential equations on deterministic time grids. We derive an upper bound for the approximation error and further prove that the resulting order of convergence cannot be improved in general.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32717",
+   "title": "Temporal Inhomogeneous Random Graphs",
+   "url": "https://arxiv.org/abs/2611.32717",
+   "authors": [
+    "Sofiya Burova",
+    "Francisco Calvillo"
+   ],
+   "label": "arXiv:2611.32717v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "This paper extends results on temporal stochastic block models to graphon-based random graphs with a continuous, strictly positive kernel, studying increasing-path reachability in the sparse log n/n regime with uniformly random edge timestamps.",
+    "plain": "The paper studies random networks where each connection has a timestamp and a path counts only if its timestamps keep increasing, like a message passed along links that always move forward in time. It asks how many people a starting point can reach this way, and how long the shortest and longest such paths are. The text reports first-order (leading-order) asymptotic results for these quantities, meaning the main growth rates for large networks.",
+    "why": "Time-respecting paths matter for modelling how things spread through populations where contacts happen at specific times, such as information or disease transmission. The abstract does not say how the results apply to any specific real-world system, so that link is a plausible motivation rather than a demonstrated one.",
+    "background": "- Random graph: a network whose edges are placed at random according to probabilities.\n- Stochastic block model: a random network with groups of vertices whose connection probabilities depend on group membership.\n- Graphon: a continuous limiting description of very large random networks, given by a kernel that sets connection likelihood between positions in [0,1].\n- Sparse regime (connection probability of order log n / n): each vertex has only about log n connections, so the network is just barely connected.\n- Increasing path: a route through the network whose edge timestamps strictly increase along the way.\n- First-order asymptotics: the leading-order behaviour of a quantity as the network grows large.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Motivated by the study of time-dependent propagation processes in inhomogeneous populations, we extend Burova, Lugosi and Perarnau's results on the temporal stochastic block model to graphon-based random graphs with a continuous and strictly positive kernel. We consider such a graph in the regime where connection probabilities are of the order of $\\log n/n$, and equip its edges with a uniformly random ordering, interpreted as timestamps. We study the size of reachable sets via increasing paths (that is, paths whose edge timestamps are strictly increasing). We establish tight first-order asymptotics for the size of the reachable set from a fixed vertex, and also determine the first-order asymptotics of the lengths of the longest and shortest increasing paths with one or two fixed endpoints.",
    "source": "arxiv"
   },
   {

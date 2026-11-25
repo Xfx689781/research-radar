@@ -3,47 +3,51 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29080",
-   "title": "The dimension of optimal plans in multi-marginal optimal transport",
-   "url": "https://arxiv.org/abs/2611.29080",
+   "uid": "arxiv:2611.32785",
+   "title": "Mirror flow for semimartingale optimal transport",
+   "url": "https://arxiv.org/abs/2611.32785",
    "authors": [
-    "Camilla Brizzi",
-    "Gero Friesecke"
+    "Francois Buet-Golfouse",
+    "Ana\\\"is Despr\\'es",
+    "Anna Kazeykina",
+    "Zhenjie Ren"
    ],
-   "label": "arXiv:2611.29080v1",
+   "label": "arXiv:2611.32785v1",
    "primary_category": "math.OC",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper determines the maximal dimension on which optimal solutions of multi-marginal optimal transport with absolutely continuous marginals are concentrated, using a new characteristic integer tied to the Hessian of the cost function, with applications to Wasserstein barycenters, Wasserstein cubic splines and Brenier's generalized Euler equations.</one_liner>\n<parameter name=\"plain\">The paper studies the problem of matching several probability distributions together at the lowest possible total cost, where each way of matching has a cost. It asks how \"spread out\" the best matchings can be, that is, on how many dimensions the optimal solutions live. The authors give a general answer for a broad class of cost functions, using a newly defined integer computed from second derivatives of the cost.",
-    "plain": "",
-    "why": "Knowing the dimension of optimal solutions tells you whether they can be described by a simpler map rather than a general spread-out plan, which matters for both theory and computation. The text links the result to several named problems (barycenters, splines, Euler-type equations), but it does not show further practical impact, so its wider significance is unclear from the abstract alone.",
-    "background": "- Optimal transport: finding the cheapest way to move one probability distribution onto another, the classic \"moving piles of earth\" problem.\n- Multi-marginal version: more than two distributions are matched at once, with a joint plan whose cost depends on all of them together.\n- Marginals: the given probability distributions that the plan must respect.\n- Absolutely continuous: the distributions have smooth densities, not concentrated on isolated points.\n- Concentrated on a dimension: optimal plans live on a lower-dimensional set (for example a surface or curve) rather than filling the whole space.\n- Hessian: the matrix of second derivatives of the cost function, which measures how it curves.\n- Wasserstein barycenter: an \"average\" of several distributions defined through optimal transport.\n- Brenier's generalized Euler equations: a geometric reformulation of fluid-flow equations via optimal transport.",
+    "one_liner": "The paper proposes a mirror flow (a preconditioned mirror-descent scheme) for the dual problem of semimartingale optimal transport, proves geometric convergence of the mirror descent sequence, and gives a first-order linearized discrete-time scheme with a uniform-in-time error bound.",
+    "plain": "The paper looks at a mathematical problem about finding the cheapest way to move random processes from one description to another, a setting that comes up in finance and in some generative AI models. Gradient-style search for the solution is often slow because the problem is badly scaled. The authors replace it with a \"mirror\" version that reshapes the geometry of the search so it behaves better, and they build a practical step-by-step version of it.",
+    "why": "Slow convergence is a practical bottleneck for these problems, so a better-conditioned search method could matter for computation in finance and flow-based generative modelling. The text reports a substantial efficiency gain on one specific test problem (SEMOT); how far this carries to other problems is not shown in the text.",
+    "background": "- Optimal transport: finding the least-cost way to rearrange one distribution into another.\n- Semimartingale: a broad class of random processes (generalising Brownian motion) used in stochastic calculus.\n- Martingale: a process whose best forecast of its future value is its current value; a fair-game condition.\n- Dual energy functional: an equivalent reformulation of the problem in terms of a auxiliary \"potential\" function whose optimum gives the answer.\n- Gradient descent: iteratively improving a guess by stepping downhill; slow when the landscape is stretched unevenly (poorly conditioned).\n- Mirror descent / mirror flow: a variant of gradient descent that measures steps in a transformed geometry to fix such unevenness.\n- Linearization and discretization: approximating a continuous-time flow by small computable steps, with error from the approximation.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "For general cost functions, we determine the maximal dimension on which solutions to the multi-marginal optimal transport problem with absolutely continuous marginals are concentrated. The dimension is obtained via a novel characteristic integer associated with the Hessian of the cost function. Applications are given to important examples of multi-marginal problems like Wasserstein barycenters, Wasserstein cubic splines and Brenier's generalized Euler equations.",
+   "abstract": "Semimartingale optimal transport arises in a wide range of applications, including mathematical finance and flow-based generative models. A recurring computational challenge is that the dual energy functional is often poorly conditioned with respect to the dual potential, leading to slow convergence of gradient descent algorithms. To address this issue, we investigate a mirror flow approach that effectively preconditions the dual energy functional. We establish the geometric convergence of the mirror descent sequence. To obtain a practical numerical algorithm, we introduce a feasible discrete-time scheme based on first-order linearization. We prove that the scheme is well-defined and establish a uniform-in-time error bound for the accumulated linearization error, under a suitable smallness condition on the initial error. Finally, we apply the proposed mirror flow scheme to the specific-entropic martingale optimal transport (SEMOT) problem \\cite{BuetGolfouseEtAl2026SEMOT} and observe a substantial improvement in computational efficiency.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.30984",
-   "title": "Convergence of potential-preserving annealed Sinkhorn algorithm",
-   "url": "https://arxiv.org/abs/2611.30984",
+   "uid": "arxiv:2611.32004",
+   "title": "Beyond Classical Minimax Rates: Quantum Sampling in Gradient-Based Simulation Optimization",
+   "url": "https://arxiv.org/abs/2611.32004",
    "authors": [
-    "Dawid Lipinski",
-    "Maciej Buze"
+    "Hao Cao",
+    "Jian-Qiang Hu",
+    "Mingjie Hu",
+    "Qixin Wang"
    ],
-   "label": "arXiv:2611.30984v1",
-   "primary_category": "math.OC",
+   "label": "arXiv:2611.32004v1",
+   "primary_category": "quant-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves convergence results for a potential-preserving annealed Sinkhorn algorithm for entropic optimal transport, under non-increasing regularisation schedules tending to zero, including sharpness of a non-summability condition and convergence rates for polynomial inverse-temperature schedules.",
-    "plain": "The paper studies a step-by-step numerical method for finding the cheapest way to move one distribution of material onto another, a problem called optimal transport. The method gradually lowers a smoothing \"temperature\" parameter while keeping one set of internal variables (dual potentials) fixed in form. The authors show that if the temperature drops slowly enough in a specific sense, the method reaches a correct solution along some subsequence, and they give an example showing the condition cannot be weakened.",
-    "why": "Optimal transport underlies many tools in machine learning and statistics, and the choice of how to anneal the smoothing parameter affects whether the algorithm gives the right answer. The text reports that linear schedules, where recent work found the alternative scaling-preserving variant fails, do satisfy the new conditions, but it does not say how this bears on practical applications.",
-    "background": "- Optimal transport: finding a lowest-cost way to map one probability distribution onto another, subject to fixed marginals (the amounts at each source and target).\n- Entropic regularisation: adding a penalty that smooths the problem; a parameter (inverse temperature) controls how strongly it applies.\n- Sinkhorn algorithm: an iterative method alternating rescalings of rows and columns of a matrix until the marginal constraints are approximately met.\n- Annealing: gradually changing the smoothing parameter over iterations, akin to slowly cooling a system.\n- Dual potentials: auxiliary functions tied to the constraints, used alongside the transport plan.\n- Summable vs non-summable sequences: whether the total of the step sizes over all iterations is finite; non-summable means the total grows without bound.\n- Convergence rate: how quickly the error shrinks as iterations proceed.",
+    "one_liner": "For gradient-based optimization of convex simulation problems with noisy gradient estimates, the paper shows quantum mean estimation applied to paired finite differences improves the query-complexity accuracy exponent from -2/3 to -4/3 (classical minimax rate in the independent case), with coupling-dependent generalizations and matching lower bounds for fixed dimension.",
+    "plain": "The paper studies how to find the best setting of a quantity when each check is done by a noisy computer simulation and the slope (gradient) must be estimated from those noisy results. It asks how accurately one can optimize for a given number of simulation runs. The authors report that using a quantum method to average the estimates, along with carefully coupling nearby simulation runs, reduces the error faster than classical methods can under the same budget.",
+    "why": "The result is a theoretical claim about how fast error can shrink, and it comes with matching lower bounds that suggest the exponents cannot be beaten for fixed dimension under the stated assumptions. It may matter for anyone who pays for expensive simulations, though the text is purely theoretical and says nothing about practical quantum hardware or real-world runtimes.",
+    "background": "- Simulation optimization: finding the input that minimizes an output of a noisy simulator, where each run costs time or money.\n- Gradient: the slope of the objective with respect to inputs; here it is estimated by finite differences (small perturbations of the input and comparing outputs).\n- Convergence rate / query complexity: how the error shrinks as the number of simulation queries N grows; an exponent like -2/3 means error scales roughly as N to the power -2/3.\n- Minimax optimal: no method can do better in the worst case, and a matching lower bound proves this.\n- Variance reduction and coupling: running paired simulations with shared randomness so their difference is less noisy; the parameter kappa measures this.\n- Quantum mean estimation: a quantum-computing technique for estimating an average with fewer samples than classical averaging, here assumed to be available as a subroutine.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The annealed Sinkhorn algorithm is an iterative method for approximating solutions of optimal transport problems, in which the entropic regularisation parameter is progressively decreased. As this parameter decreases, one may preserve either the multiplicative scaling factors or the corresponding dual potentials. We study the potential-preserving iterates under positive, non-increasing regularisation schedules tending to zero. We prove that, if the schedule is non-summable, the iterates admit a subsequence converging to a solution of the corresponding optimal transport problem. The non-summability condition is sharp, as for every summable schedule in this class we construct an example in which the iterates converge to a plan violating the prescribed source marginal. We further establish convergence of the entire sequence if the relative inverse-temperature increments are also square-summable, and show by example that non-summability alone does not guarantee full convergence. Our convergence conditions are satisfied by linear inverse-temperature schedules, under which recent work has shown that the scaling-preserving iterates fail to converge to a solution of the optimal transport problem. We also derive convergence rates for polynomial inverse-temperature schedules up to and including linear growth, extending the marginal KL bound obtained by mirror-descent analysis at fixed temperature. Our best rate for the transport cost gap after rounding improves on that established for scaling-preserving annealing. Simple numerical illustrations accompany these convergence results.",
+   "abstract": "We study gradient-based search for a class of convex simulation optimization problems with gradients estimated from noisy outputs. With independent outputs, the optimal classical convergence rate for the expected objective gap is of order $O(N^{-2/3})$, where $N$ is the query budget. We apply quantum mean estimation to paired finite differences and progressively increase their estimation accuracy as the perturbations shrink, improving the convergence rate to $O(N^{-4/3})$. Furthermore, we show that coupling nearby evaluations improves the classical and quantum convergence rates to $O(N^{-2/(3-\\kappa)})$ and $O(N^{-4/(3-\\kappa)})$, respectively, where $\\kappa\\in[0,1]$ describes the variance reduction in paired outputs. Thus, quantum estimation halves the accuracy exponent in query complexity across coupling orders. Moreover, we establish matching lower bounds and show that these accuracy exponents are minimax optimal for fixed decision dimension, even when query locations and batch sizes are adaptive. Reconstruction from feasible differences retains the exponents when every simulation query must be feasible and accommodates boundary optima.",
    "source": "arxiv"
   },
   {

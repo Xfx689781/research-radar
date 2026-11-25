@@ -3,50 +3,47 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30506",
-   "title": "Functionals commuting with reparametrizations",
-   "url": "https://arxiv.org/abs/2611.30506",
+   "uid": "arxiv:2611.31551",
+   "title": "Flexible algebraic curves and fake vanishing cycles",
+   "url": "https://arxiv.org/abs/2611.31551",
    "authors": [
-    "Pierre-Emmanuel Chaput",
-    "David Dos Santos Ferreira",
-    "Valentin F\\'eray"
+    "Joshua Lehman",
+    "Tudur Lewis"
    ],
-   "label": "arXiv:2611.30506v1",
-   "primary_category": "math.AG",
+   "label": "arXiv:2611.31551v1",
+   "primary_category": "math.GT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper classifies the algebraic functionals from n-tuples of polynomials vanishing at 0 to such polynomials that commute with right-composition (reparametrization), introducing a \"semi-product\" operation and linking the problem to polyharmonic functions on the positive discrete orthant and the type A co-invariant algebra.",
-    "plain": "The authors study rules that take several functions and combine them into one, in a way that stays consistent when you change the parameter of the curves involved. They restrict to polynomials that vanish at zero and give a complete description of the algebraic rules of this kind. The description uses a new operation they call the \"semi-product\".",
-    "why": "The problem is motivated by tangent curve bundles of algebraic varieties, so it sits at the meeting point of algebraic geometry and combinatorial algebra. The text also mentions a generalization to colored permutations and open versions for truncated polynomials and smooth functions, so the work is a starting point rather than a closed topic; the broader significance beyond these links is not stated in the text.",
-    "background": "- Polynomials: finite sums of powers of a variable; \"vanishing at 0\" means the constant term is zero.\n- Reparametrization: replacing a parameter t by a function of t, i.e. composing a curve with another function.\n- Functional: a rule that takes functions as inputs and returns a function.\n- Polyharmonic function: a discrete function on a grid whose repeated discrete Laplacian (a \"smoothness\" operator) vanishes.\n- Co-invariant algebra of type A: a finite-dimensional algebra built from the symmetric group acting on variables, a standard object in combinatorics.\n- Tangent curve bundle: a family of curves attached to each point of an algebraic variety, describing its local directions.",
+    "one_liner": "The paper proves that complex curves in sufficiently ample linear systems on simply connected projective surfaces (including smooth plane curves) are topologically (spin) flexible, and uses this to produce fake vanishing cycles, with equivariant intersection forms on the surface exterior as the main tool.",
+    "plain": "The paper studies smooth curves drawn on surfaces (such as the ordinary plane) viewed as shapes in four-dimensional space. It shows that for these curves, any way of re-mapping the curve's underlying real surface can be extended to a re-mapping of the surrounding four-dimensional space. This leads to simple closed loops on the curve that look like they could be the kind that can be shrunk away, yet are not.",
+    "why": "The result gives a clear, checkable answer to whether these curves are topologically flexible, and it produces \"fake vanishing cycles,\" a notion that helps separate topological from algebraic behavior of curves. The text does not state wider consequences, so its connections beyond this area are unclear.",
+    "background": "- Complex curve: a one-dimensional complex-algebraic object; its real points form a real surface.\n- Linear system / ample: a family of curves cut out by polynomials of high enough degree on a surface.\n- Simply connected surface: a surface with no non-trivial loops that cannot be shrunk.\n- Mapping class: a way of moving a surface onto itself, considered up to smooth deformation.\n- Topological flexibility: a curve whose surface re-mappings all extend to the ambient 4-dimensional space.\n- Vanishing cycle: a loop that can be collapsed to a point inside a deformation of the curve; a fake one bounds a disk in the complement but is not a true vanishing cycle.\n- Intersection form: a bookkeeping tool counting how surfaces and loops cross each other.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Motivated by the study of tangent curve bundles of algebraic varieties, we consider the following simple-looking problem: given a space $E$ of functions, describe functionals from $E^n$ to $E$ which commutes with reparametrizations, i.e. with the right-composition with an element of $E$. Our main result is a complete description of the algebraic solutions of this problem when $E$ is the space of polynomials vanishing in $0$, which we denote by $\\mathbb C[T]_0$. This description involves a simple operation, which we call semi-product, with interesting algebraic and geometric properties. The proof involves the study of polyharmonic functions on the positive discrete orthant $\\mathbb Z^n_{>0}$, and a relation with the co-invariant algebra of type $A$. We also provide a generalization connected to colored permutations, and discuss the analogue problems where $E=\\mathbb C[T]_0/(T^\\ell)$ for some $\\ell >0$, and where $E$ consists of infinitely differentiable functions. Finding a complete description of algebraic solutions in these settings is still open.",
+   "abstract": "We prove that complex curves in sufficiently ample linear systems on simply connected projective surfaces are topologically (spin) flexible: any (spin) mapping class of the underlying real surface extends to a topological mapping class of the ambient 4-manifold. As a corollary, we prove that smooth curves in the complex projective plane are topologically (spin) flexible. A consequence of topological flexibility is the existence of fake vanishing cycles, that is, simple closed curves on the underlying real surface that are not vanishing cycles, yet still bound a topologically embedded $(\\pm1)$-framed disk in the surface exterior. We also give examples of pushed in Seifert surfaces in $D^4$ that are not topologically spin-flexible, but become spin-flexible after a single internal stabilization. Our methods utilize the equivariant intersection form on the surface exterior.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.29599",
-   "title": "The generalized Franchetta conjecture for some hyper-K\\\"ahler varieties, III",
-   "url": "https://arxiv.org/abs/2611.29599",
+   "uid": "arxiv:2611.32752",
+   "title": "Line bundles on regular semisimple Hessenberg varieties",
+   "url": "https://arxiv.org/abs/2611.32752",
    "authors": [
-    "Lie Fu",
-    "Robert Laterveer",
-    "Carl Mazzanti",
-    "Charles Vial"
+    "Arkadev Ghosh",
+    "Pinakinath Saha"
    ],
-   "label": "arXiv:2611.29599v1",
+   "label": "arXiv:2611.32752v1",
    "primary_category": "math.AG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "This paper proves the generalized Franchetta conjecture (injectivity of the cycle class map on generically defined cycles) for the families of double EPW sextics and double EPW cubes, and shows multiplicativity of the Chow-Künneth decomposition for special Gushel-Mukai fourfolds and all Gushel-Mukai sixfolds.",
-    "plain": "The paper is about families of higher-dimensional geometric shapes called hyper-Kähler varieties, which are studied through the algebraic \"cycles\" (sub-shapes such as points, curves and surfaces) that sit inside them. The authors check a conjecture for two specific families, asking whether these sub-shapes can be told apart by their cohomology, a coarser topological fingerprint of the shape. The method works by relating these families to Gushel-Mukai fourfolds, using a construction in which the varieties are moduli spaces of stable objects in a derived category.",
-    "why": "Results of this kind test how much algebraic information about a family is captured by its topological invariants, a central question in the study of algebraic cycles. The text does not state wider consequences beyond the relation between double EPW sextics and Gushel-Mukai fourfolds on the level of motives, so the broader impact is uncertain from this excerpt alone.",
-    "background": "- Algebraic geometry studies solutions of polynomial equations as geometric objects (varieties).\n- A hyper-Kähler variety is a higher-dimensional analogue of a K3 surface, with special symmetry and structure.\n- A family or moduli space parametrizes many such varieties at once; the \"universal family\" sits over the parameter space.\n- Cycles are algebraic sub-varieties (of a given dimension) inside a variety; the cycle class map sends each cycle to its cohomology class, a topological invariant.\n- The generalized Franchetta conjecture says these cycle classes on a generic fiber remain distinct in cohomology, i.e. the map is injective.\n- A Chow-Künneth decomposition splits the motive of a variety into pieces; \"multiplicative\" means it respects products of varieties.\n- Gushel-Mukai fourfolds and sixfolds, double EPW sextics and cubes are specific families studied in this area; Bridgeland stability is a tool from derived categories.\n- This is the third paper in a series.",
+    "one_liner": "For a connected simply-connected simple complex group G with Borel subgroup B, the paper gives a necessary and sufficient condition for the restriction map Pic(G/B) → Pic(Y) to be an isomorphism, where Y is an irreducible regular semisimple Hessenberg variety inside G/B.",
+    "plain": "This paper studies a family of geometric shapes, called Hessenberg varieties, sitting inside a standard space built from a symmetry group (the flag variety G/B). It asks when the \"line bundles\" on the big space (ways of attaching a one-dimensional twisted structure to each point, grouped into a group called the Picard group) carry over exactly to the smaller shape. The main result is a precise test that tells when this carrying-over is a perfect match.",
+    "why": "The text gives only the setup and the main statement, not the proof or examples, so its wider significance is hard to judge from here. It sits in algebraic geometry and relates to the study of Hessenberg varieties, which link to combinatorics and representation theory; that connection is my general understanding rather than something the text spells out.",
+    "background": "- Algebraic group: a group of matrices or transformations defined by polynomial equations over the complex numbers.\n- Borel subgroup and flag variety G/B: the space of nested chains of subspaces that the group acts on.\n- Hessenberg variety: a subvariety of G/B defined by a linear-algebra condition involving a fixed matrix and a \"Hessenberg\" shape constraint.\n- Regular semisimple: a condition on the defining matrix that makes the variety well-behaved (smooth, with nice symmetry).\n- Picard group Pic(X): the group of isomorphism classes of line bundles on X, a way to measure the twisting of the space.\n- Restriction map: taking a line bundle on the big space and restricting it to the smaller subvariety.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The generalized Franchetta conjecture states that for a locally complete family of polarized hyper-K\\\"ahler varieties, the generically defined cycles on any fiber of the universal family over the moduli stack inject into cohomology via the cycle class map. We prove the generalized Franchetta conjecture for the family of double EPW sextics discovered by O'Grady and for the family of double EPW cubes discovered by Iliev-Kapustka-Kapustka-Ranestad. We also prove a Franchetta-type result for the relative square of the universal family of double EPW sextics, which allows to relate double EPW sextics and Gushel-Mukai fourfolds on the level of motives. The proof involves the geometry of Gushel-Mukai fourfolds, whose Kuznetsov component allows to realize double EPW sextics and cubes as moduli spaces of Bridgeland-stable objects, relatively over the parameter space of Gushel-Mukai fourfolds. A key step is that the canonical Chow-K\\\"unneth decomposition of special Gushel-Mukai fourfolds is multiplicative; we use this to show that generically defined cycles on the third power of a special Gushel-Mukai fourfold inject into cohomology via the cycle class map. Along the way, we also show that the canonical Chow-K\\\"unneth decomposition of any Gushel-Mukai sixfold is multiplicative.",
+   "abstract": "Let $G$ be a connected simply-connected simple algebraic group over $\\mathbb{C}$ and $B$ be a Borel subgroup of $G$. Let $Y$ be an irreducible regular semisimple Hessenberg variety in $G/B$. In this article, we give a necessary and sufficient condition for the natural restriction map $\\mathrm{res}: \\mathrm{Pic}(G/B)\\longrightarrow \\mathrm{Pic}(Y)$ of Picard groups induced by the inclusion $Y\\subseteq G/B$ to be an isomorphism.",
    "source": "arxiv"
   },
   {

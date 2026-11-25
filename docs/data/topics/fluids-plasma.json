@@ -3,51 +3,49 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28898",
-   "title": "Formation of Multiple BGK-like Structures in the Time-asymptotic State of Collisionless Vlasov-Poisson Plasmas",
-   "url": "https://arxiv.org/abs/2611.28898",
+   "uid": "arxiv:2611.31616",
+   "title": "Toward divertor plasma detachment in pure D-T plasma in fusion reactor with H-mode-like plasma confinement",
+   "url": "https://arxiv.org/abs/2611.31616",
    "authors": [
-    "Hugo A. Carril",
-    "Jorge A. Gidi",
-    "Roberto E. Navarro",
-    "Jaime A. Araneda"
+    "S. I. Krasheninnikov",
+    "R. D. Smirnov",
+    "M. V. Umansky"
    ],
-   "label": "arXiv:2611.28898v1",
+   "label": "arXiv:2611.31616v1",
    "primary_category": "physics.plasm-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "High-resolution Vlasov-Poisson simulations of a collisionless Maxwellian plasma show the time-asymptotic state consisting of multiple vortex-like BGK-like structures filling phase space, rather than the usual two counter-propagating BGK modes, with power-law spectra suggesting an energy cascade.",
-    "plain": "This paper studies what a hot, nearly collisionless electrified gas (a plasma) settles into after a strong disturbance. The usual textbook picture is that it ends up as two opposing wave-like patterns in particle velocity and position. Using very detailed computer simulations, the authors report instead that many swirl-like patterns form and gradually fill the available space, and the electric field and averaged particle distribution show a broad range of scales.",
-    "why": "It challenges the standard two-wave picture of how plasma relaxes after a perturbation, and the reported power-law spectra hint at an energy cascade similar to turbulence in fluids. The text does not say how far these results apply to real space or laboratory plasmas, so the connection is uncertain.",
-    "background": "- Plasma: an ionized gas whose charged particles respond collectively to electric fields.\n- Collisionless: particles interact mainly through the shared field, not by frequent direct collisions.\n- Vlasov-Poisson equations: the kinetic model that tracks the particle distribution in position and velocity space together with the self-consistent electric field.\n- Phase space: a map of each particle's position and velocity; filamentation means the distribution becomes increasingly fine-grained in this map.\n- BGK mode: a known steady, wave-like solution (Bernstein-Greene-Kruskal) in which particles are trapped in the wave's potential, forming vortex-like swirls in phase space.\n- Power-law spectrum: energy spread across scales following a simple power law, a common signature of turbulence-like cascades.",
+    "one_liner": "A theoretical estimate of the plasma density and heat-flux conditions under which a tokamak divertor can reach ultimate detachment in pure hydrogen-isotope plasma while keeping H-mode confinement, checked against present-day machines and AUG data.",
+    "plain": "Fusion reactors must get rid of intense heat at the edge of the hot plasma without damaging the walls. One way is \"detachment,\" where the plasma cools down in front of the exhaust plate (the divertor). This paper works out the conditions for reaching this cooled state in pure deuterium-tritium plasma while keeping the good-confinement mode (H-mode). The estimates fit some current tokamaks and the AUG data, but for ITER, ARC and EU-DEMO they suggest the required density would be above the empirical density limit.",
+    "why": "Divertor heat handling is a central obstacle for future fusion power plants, so the gap it identifies between present machines and reactors matters. The text names possible remedies (operating above the density limit, turbulence-broadened heat flux, reduced parallel heat flux in long-leg divertors) but only outlines them, so their feasibility is not established here.",
+    "background": "- Tokamak: a doughnut-shaped magnetic-confinement device for fusion.\n- H-mode: a high-confinement operating regime with better energy containment.\n- Divertor: the region where exhaust heat and particles are directed onto plates.\n- Scrape-off layer and separatrix: the thin edge layer outside the confined plasma, and the boundary between the two.\n- Detachment: the plasma cools and detaches from the divertor plates, reducing heat load.\n- Empirical density limit: an observed density above which plasma performance degrades.\n- D-T plasma: a mix of deuterium and tritium, the fuel for fusion reactors.\n- ITER, ARC, EU-DEMO: planned or proposed fusion devices.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The time-asymptotic state of a finite-amplitude perturbation in a collisionless and Maxwellian plasma is typically represented as a steady state of two non-linearly superposed, counter-propagating Bernstein-Greene-Kruskal (BGK) modes. Using high-resolution Vlasov-Poisson simulations, we show that the plasma evolves self-consistently into a time-asymptotic state of multiple vortex-like structures that gradually fill the phase-space and reduce filamentation. This occurs without the need for external forcing or the presence of an energetic plasma population. This finding suggests that the time-asymptotic regime of the plasma is rather akin to a non-linear superposition of multiple BGK-like modes associated with nearly constant phase-speed waves. The electric field and the space-averaged particle distribution function exhibit a power-law broad spectrum, which is consistent with an energy cascade towards smaller scales in both position and velocity spaces.",
+   "abstract": "The conditions between the separatrix plasma density and the heat flux into the scrape-off layer region allowing reaching an ultimate divertor plasma detachment with H-mode confinement in pure hydrogen (deuterium or the mixture of deuterium and tritium) plasma are obtained. Estimates for a number of present-day tokamaks show that this regime is accessible at separatrix plasma densities below or around the empirical density limit. Moreover, they are in reasonable agreement with the data from the AUG tokamak, where detachment was reached in pure deuterium plasma. However, in future reactors, such as ITER, ARC, and EU-DEMO, it would require densities exceeding this empirical density limit. Therefore, additional measures are needed for future reactors, such as operation above the density limit, which, according to recent experimental data, may not be a hard operational boundary, turbulence induced broadening of the heat flux width and reduction of the parallel heat flux in the long legs of advanced divertor configurations. Their successful implementation would open the possibility for a more efficient reactor design.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28527",
-   "title": "Numerical Study of Flow and Cavitation in Single-Liquid Injectors with Sharp-Edged and Chamfered Orifice Inlets",
-   "url": "https://arxiv.org/abs/2611.28527",
+   "uid": "arxiv:2611.31769",
+   "title": "The effects of closure parameter on the properties of kinetic range plasma turbulence",
+   "url": "https://arxiv.org/abs/2611.31769",
    "authors": [
-    "Shreyash Gulati",
-    "Sven R. Walsberg",
-    "Timothy W. Nearhood",
-    "Jeffrey D. Moore"
+    "Jago V. H. Edyvean",
+    "Andrea F. Irwin",
+    "Tulasi N. Parashar"
    ],
-   "label": "arXiv:2611.28527v1",
-   "primary_category": "physics.flu-dyn",
+   "label": "arXiv:2611.31769v1",
+   "primary_category": "physics.plasm-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A CFD study (k-omega SST turbulence model, ZGB cavitation model, VOF interface tracking) of water flow and cavitation in single-liquid injector orifices with sharp-edged versus chamfered inlets, validated against existing flow-rate data across pressure drops of 0.07 to 0.59 MPa and L/D ratios of 2, 5 and 10.</one_liner>\n<parameter name=\"plain\">This paper uses computer simulations to study how water squeezes through the tiny holes of a fuel-style injector nozzle. It looks at whether bubbles form inside the hole (cavitation), and how the shape of the hole's entrance (sharp corner or a beveled edge) and the hole's length change that. The simulated flow rates were checked against earlier lab measurements.</plain>\n<why>Cavitation in nozzle orifices affects how a spray forms, which matters for engines and other injection systems. The text reports that the simulations matched earlier experiments, including a known \"hydraulic flip\" case, but it does not state applications or broader implications, so the wider significance is unclear from this text alone.</why>\n<background>\n- Orifice: a small hole that a liquid flows through; its length-to-diameter (L/D) ratio describes how long the hole is relative to its width.\n- Cavitation: when pressure in a flowing liquid drops low enough, vapor bubbles form and collapse.\n- Hydraulic flip: a flow pattern in which the liquid detaches from the hole walls and fills the hole, a known effect seen in earlier experiments.\n- Chamfered inlet: an inlet edge that is beveled rather than a sharp corner.\n- CFD (computational fluid dynamics): numerical simulation of fluid flow on a computer.\n- Turbulence and VOF models: standard computational tools for modeling swirling flow and tracking the liquid-gas boundary.\n- MPa (megapascal): a unit of pressure; 0.1 MPa is roughly atmospheric pressure.\n</background>\n<difficulty>research-level</difficulty>\n</invoke>",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
+    "one_liner": "A study of how the free \"closure parameter\" in a 10-moment fluid model of plasma (the solar-wind-like medium) changes heating between ion and electron species and the compressive versus incompressive parts of kinetic-range turbulence, across artificial ion-electron mass ratios.",
+    "plain": "Space plasmas such as the solar wind are too collisionless to model perfectly with simple fluid equations, and full particle-by-particle simulations are too expensive for large regions. This paper uses a middle-ground fluid model, the 10-moment model, which needs an approximation for heat flow; that approximation contains an adjustable number called the closure parameter. The authors vary this number and the ion-to-electron mass ratio to see how it changes how energy is shared between ions and electrons in turbulence.",
+    "why": "The sharing of turbulent heating between ions and electrons is a central question for understanding how the solar wind heats up, so the finding that the modelling choice alone shifts these heating rates matters for trusting such simulations. The text reports that the effect persists at realistic mass ratios, though it weakens as the ratio approaches realistic values; the broader implications beyond this model are not stated in the text.",
+    "background": "- Plasma: a gas of charged particles (ions and electrons) that carries magnetic fields.\n- Turbulence: chaotic, swirling fluctuations that cascade energy from large to small scales.\n- Kinetic range: small scales where particle motion, not just fluid flow, matters; collisions are too rare for simple fluid behaviour.\n- Fluid moments: averaged quantities (density, velocity, pressure, heat flux) used to describe a plasma; the 10-moment model keeps moments up to the pressure tensor and must approximate higher ones (the heat flux) to close the equations.\n- Closure parameter: the adjustable constant in that approximation.\n- Compressive vs incompressive heating: energy going into density/pressure changes versus into swirling, divergence-free motions.\n- Mass ratio: ion mass divided by electron mass; realistic is about 1836 for hydrogen, and simulations often use smaller artificial values.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In the current work, the investigators used Computational Fluid Dynamics (CFD) to investigate water flow and cavitation in single-liquid injectors with sharp-edged and chamfered orifice inlets. The k-{\\omega} Shear Stress Transport (SST) turbulence model was used along with the Zwart-Gerber-Belamri (ZGB) cavitation model and the Volume of Fluid (VOF) method. The CFD predictions for the volumetric flow rate were validated against existing experimental data for the sharp-edged and chamfered orifice inlets. Pressure drops ranging between 0.07 MPa and 0.59 MPa were considered along with orifice length-to-diameter ratios of 2, 5, and 10. Strong cavitation was observed for the sharp-edged orifice inlet cases with a length-to-diameter ratio of 5 and a pressure drop larger than 0.2 MPa. A hydraulic flip was observed for the sharp-edged orifice inlet with a length-to-diameter ratio of 5 and a pressure drop of 0.59 MPa, which was consistent with the findings from the previous experimental study. Cavitation inception was observed for the chamfered orifice inlet cases with a length-to-diameter ratio of 5 and pressure drops larger than 0.2 MPa. For the sharp-edged orifice inlet with orifice length-to-diameter ratios of 2 and 10, a strong cavitation was observed inside the orifice.",
+   "abstract": "Simulations of plasmas such as the solar wind require an accurate representation of kinetic physics given the lack of frequent collisions. Fully kinetic treatments are computationally expensive and necessarily confine simulations to small domain sizes. A good compromise is to utilise higher-order fluid-moment models such as the 10-moment model. This model retains all physics up to the second moment, with the moment hierarchy closed by approximating the heat flux. One choice is to use a model for the divergence of the heat flux, $\\partial_m q_{ijm} \\approx v_t |k_0|(\\mathbf{P}_{ij}-p\\delta_{ij})$, with a free parameter $k_0$, called the ``closure parameter''. We study the effects of this closure parameter on the properties of turbulence, combined with artificial ion-electron mass ratios. We show that the heating of the two plasma species is affected by the choice of the closure parameter. For all combinations of closure parameters, the relative compressive and incompressive heating rates are affected even for realistic mass ratios. The effects are more prominent for lower mass ratios and diminish when approaching realistic mass ratios.",
    "source": "arxiv"
   },
   {

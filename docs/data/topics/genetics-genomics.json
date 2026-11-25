@@ -3,51 +3,65 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.19.767897",
-   "title": "The 'near T2T' Canton-S assembly is inconsistent with other Canton-S genomes",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767897v1",
+   "uid": "biorxiv:10.64898/2026.11.23.768666",
+   "title": "Functional interrogation of osteoarthritis-associated regulatory variants and effector genes.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768666v1",
    "authors": [
-    "Emerson, J. J."
+    "Piedade, A. P.",
+    "Stuppy, S. R.",
+    "Shine, J.",
+    "Klein, E. R.",
+    "Butler, J. E.",
+    "Frantzeskos, A.",
+    "Engelbert, J.",
+    "Rice, S. J.",
+    "Eyre, S.",
+    "Rosen, J. D.",
+    "Loeser, R. F.",
+    "Biant, L. C.",
+    "Phanstiel, D. H.",
+    "Diekman, B. O.",
+    "Orozco, G."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.19.767897 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.23.768666 v1",
    "primary_category": "genomics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A commentary argues that the recently published \"near T2T\" genome assembly of the Drosophila Canton-S strain differs from three other independently sequenced Canton-S assemblies by an amount comparable to differences between distinct strains, raising doubts about its genetic identity.",
-    "plain": "Canton-S is a fruit fly lineage that scientists have used for decades as a standard reference animal. A newly published, very high-quality map of its genetic code (the \"near T2T\" assembly) is meant to give the research community a better reference, but this short comment says that map does not match three other independent maps of the same strain. The author concludes that the mismatch is about as large as the differences seen between genuinely different fly strains, so the new map's identity is in question.",
-    "why": "Many fly studies, including behavior and trait-mapping work, rely on Canton-S as the baseline, so whether a reference genome really represents that strain affects how results are interpreted and reused. The text does not show how the comparison was done in detail, so the strength of the claim rests on the author's analysis, which readers should check against the full paper.",
-    "background": "- Drosophila melanogaster is the common fruit fly, a major model organism in genetics.\n- A \"strain\" is a line of flies kept inbred so members are genetically very similar; \"wild-type\" means a standard reference line.\n- A genome assembly is a reconstructed, letter-by-letter sequence of an organism's DNA.\n- \"T2T\" (telomere-to-telomere) means an assembly covering complete chromosomes end to end, including hard-to-sequence repeats; \"near T2T\" means nearly complete.\n- Comparing independent assemblies of the same strain is a way to check whether a reference is accurate and represents the intended line.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Canton-S is among the most widely used Drosophila melanogaster strains, underlying substantial community infrastructure, including serving as a wild-type strain for: genetics studies; studying phenotypes, especially in behavioral studies; and complex trait mapping studies among many others. The recent 'near T2T' assembly of Canton-S (LIU et al.) is presented as delivering modern sequencing and assembly quality to the Drosophila community via this important strain. I find that this assembly is inconsistent with three other independently sequenced Canton-S genome assemblies on a magnitude comparable to differences between distinct strains, raising concerns about its genetic identity that the community should consider when choosing whether to adopt it as a resource.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.20.768178",
-   "title": "Genomics of the diversification of Heliconius cydno (Lepidoptera: Nymphalidae) in northern South America: geographic and phenotypic patterns",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768178v1",
-   "authors": [
-    "Arias Cardenas, A.",
-    "Rueda-M, N.",
-    "Arias, C. F.",
-    "Ravinet, M.",
-    "McMillan, O.",
-    "Pardo-Diaz, C.",
-    "Salazar, C."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.20.768178 v1",
-   "primary_category": "genomics",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "Whole-genome analysis of 133 Heliconius cydno butterflies across Central and northern South America, testing how Andean mountain uplift, geography and introgression shaped its wing-pattern diversification and identifying ivory:mir-193 as the locus behind the hindwing white band.",
-    "plain": "This study looks at a group of colourful, toxic-tasting butterflies that have split into many local forms across Central and northern South America. The researchers sequenced the complete genomes of 133 butterflies to trace how these forms are related and how mountains and geography shaped their spread. They also pinpointed a specific genetic region that controls a white band on the back wings and found signs that this trait passed into a related species.",
-    "why": "The work shows how geography, gene flow between species and a few key genes can together drive fast evolutionary change in visible traits. It may matter for understanding how warning-colour mimicry rings form, though the text does not establish broader implications beyond these butterflies.",
-    "background": "- Heliconius are tropical butterflies known for warning colours (aposematism) that signal toxicity to predators.\n- Mimicry: unrelated or related species evolve similar patterns so predators learn to avoid them as a group.\n- Subspecies are local geographic forms of one species; monophyletic lineages are groups that all descend from a single common ancestor.\n- Andean orogeny: the uplift of the Andes mountains, which can split populations and shape where species live.\n- Introgression: transfer of genes between species through occasional interbreeding.\n- Cis-regulatory elements: DNA stretches that switch genes on or off, rather than encoding proteins; mir-193 is a small RNA molecule that regulates gene activity.\n- Whole-genome sequencing reads the full genetic code of each individual, allowing comparisons across populations.",
+    "one_liner": "Functional genomics in primary human chondrocytes (MPRA, CRISPR activation/interference, chromatin and conformation data) that nominates rs1895062 at the 9q33 locus as a likely causal variant regulating PAPPA expression in osteoarthritis risk.",
+    "plain": "Genetic studies have linked hundreds of spots in the genome to osteoarthritis, a common joint disease, but for most of them it is unclear which DNA change matters and which nearby gene it affects. This paper tested candidate DNA regions in cartilage-forming cells, using lab assays that measure how strongly each version of a sequence switches genes on. For one variant, rs1895062, the researchers found that the version linked to higher risk drives more activity, and that switching on its region raises the expression of the PAPPA gene.",
+    "why": "It moves beyond association to suggest a specific variant and gene that could be studied as a mechanism in joint disease. The text presents this as convergent evidence rather than proof, and the link to actual osteoarthritis in patients is not directly tested here.",
+    "background": "- Osteoarthritis: wear-and-tear joint disease of cartilage.\n- GWAS (genome-wide association study): scans that find genetic variants statistically linked to a disease; they rarely identify the causal variant or gene.\n- Variant / allele: a single-letter DNA difference at one position; the \"G allele\" is one version of it.\n- Regulatory element: a stretch of DNA that controls how much a gene is turned on, often far from the gene itself.\n- Chondrocyte: cartilage cell.\n- MPRA (massively parallel reporter assay): tests thousands of DNA sequences at once for how strongly they drive gene activity.\n- CRISPR activation/interference: tools that switch a gene up or down at a chosen DNA location.\n- Chromatin accessibility, H3K27ac, chromatin looping: lab signals showing DNA that is open and active, and which distant DNA segments physically contact a gene's promoter.\n- PAPPA: a protein-cleaving enzyme involved in growth-factor signalling; SPRY4 is a signalling regulator also studied as a target.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The interplay between natural selection, gene flow, and geography is a key driver of population differentiation. This study investigates their influence on the recent adaptive radiation of Heliconius cydno, a mimetic and aposematic butterfly with striking variation in wing color pattern across its distribution in Central and northern South America. The genetic basis of this phenotypic diversity has a modular architecture, whereby a few key genes and cis-regulatory elements control differences among morphotypes. Using whole-genome sequences from 133 individuals representing all subspecies of H. cydno, we investigated (1) the role of Andean orogeny in its diversification and (2) the genetic basis of the variation in the hindwing white submarginal band, which to date, had remained unknown. First, we found that five of the fourteen described subspecies correspond to distinct monophyletic lineages and well-defined genetic clusters that originated in northwestern South America and later expanded into Central America and the Colombian inter-Andean valleys. Second, we observed signatures of genetic structure that were consistent with geographic patterns, particularly those associated with the inter-Andean region and Gorgona Island. Third, we identified ivory:mir-193 as the locus underlying variation in the white submarginal band on the hindwing. We also detected evidence of introgression suggesting that this trait was likely transferred from H. cydno to H. melpomene, contributing to the establishment of a novel mimicry ring with H. erato. Altogether, these findings highlight the roles of geography, genomic architecture, and introgression in the diversification of H. cydno.",
+   "abstract": "Background: Genome-wide association studies (GWAS) have identified hundreds of loci associated with osteoarthritis (OA); however, the regulatory variants and effector genes underlying most associations remain unresolved. Results: We used complementary functional genomic approaches in chondrocytes to resolve prioritized OA risk loci. Massively parallel reporter assays (MPRAs) in primary human chondrocytes identified allele-specific regulatory activity at variants across multiple loci, two of which were independently validated using low-throughput reporter assays. In parallel, integration of OA GWAS signals with chromatin accessibility, H3K27ac CUT&Tag, and chromatin conformation data prioritised candidate regulatory elements for CRISPR based perturbation. CRISPR activation and interference supported functional regulatory relationships between OA risk regions and Pappalysin 1 (PAPPA) and Sprouty RTK signaling antagonist 4 (SPRY4) as target genes. At the 9q33 locus, multiple independent lines of evidence converged on rs1895062, which resides in an accessible region that loops to the PAPPA promoter. The OA risk G allele at rs1895062 results in higher regulatory activity by MPRA and low throughput reporter assay. Activation of this region by CRISPR increases PAPPA gene expression and induces widespread transcriptional changes involving extracellular matrix remodelling and other OA-relevant pathways. Conclusion: Integrating genetic association, genomic and epigenomic data, and functional perturbation in disease-relevant cells can resolve the regulatory mechanisms underlying OA risk loci. Using this multi-faceted approach, we provide convergent functional evidence for rs1895062 as a likely causal variant that controls PAPPA gene expression and OA risk.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.23.768689",
+   "title": "isoGS: A genomic method to navigate the breeder's dilemma of diversity versus eliteness",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768689v1",
+   "authors": [
+    "Monyak, T.",
+    "Fall, S. T.",
+    "Opare-Obuobi, K.",
+    "Esguerra, M. Q.",
+    "Fritz, A.",
+    "Cruet-Burgos, C.",
+    "Morris, G. P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.23.768689 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A simulation study proposes an isoeliteness score for founder lines and an isoeliteness-guided genomic selection (isoGS) method to manage the trade-off between adding genetic diversity and preserving favorable epistatic haplotypes in recurrent crop breeding.",
+    "plain": "Plant breeders often share seed lines across public programs to bring in new genetic variety, but mixing lines can break up gene combinations that already work well together, making the resulting populations harder to improve with computer-predicted selection. This paper uses breeding simulations of a self- and cross-pollinating annual crop to measure how genetically compatible founder lines are and to test a modified selection method. The authors report that low-compatibility founders gained less under standard genomic selection in early cycles, and that their adjusted method gave more gain after 4 and 20 cycles.",
+    "why": "Crop breeding networks need to balance new diversity against keeping elite traits intact, and this work offers a way to score that trade-off trait by trait before lines are combined. Because the results come from simulations rather than field trials, how well they carry over to real breeding programs is not established by the text.",
+    "background": "- Genomic selection (GS): predicting which plants will perform well from their DNA markers, then using those predictions to choose parents.\n- Founder lines: the starting parent lines that a breeding program crosses to create new populations.\n- Elite gene pool: the set of high-performing lines a breeder keeps improving.\n- Epistasis: when genes interact, so a combination of gene variants works well together but not separately.\n- Haplotype: a block of linked gene variants inherited together from one parent.\n- Transgressive segregation: offspring that show traits beyond either parent, which can be good or undesired.\n- Hamming distance: a count of positions where two sequences differ; here weighted by how strongly each marker affects the trait.\n- Quantitative trait loci (QTL): chromosome regions linked to measurable traits such as yield.\n- Genetic gain: the improvement in average trait value over successive breeding cycles.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Global networks of public crop breeding programs exchange germplasm to share traits and increase diversity for genetic gain. There is a fundamental dilemma in crop breeding between the need to expand the genetic variation in elite gene pools while avoiding disruptions to essential traits required for eliteness. One particular challenge in admixed germplasm is the release of undesired transgressive segregation due to the disruption of favorable epistatic haplotypes of essential traits, which may stymie deployment of genomic selection (GS) In this study, we used breeding simulations to model recurrent population improvement for an annual crop species that can be selfed and crossed to examine the effectiveness of GS in admixed germplasm. We quantified the genetic heterogeneity between founder lines with an isoeliteness score, an effect size-weighted Hamming distance using quantitative trait loci markers. Populations with low founder isoeliteness (i.e. low genetic compatibility) had lower genetic gain with GS in early cycles than those with high founder isoeliteness (63% and 27% lower after 2 and 4 cycles). To mitigate this, we developed an isoeliteness-guided GS (isoGS) method to recover favorable epistatic haplotypes in a segregating population, which enabled 31% and 15% more genetic gain after 4 and 20 cycles. Our results suggest that founder isoeliteness scores and isoGS are valuable tools for overcoming the diversity vs. eliteness dilemma by managing the introduction of genetic diversity in a trait-specific manner.",
    "source": "biorxiv"
   },
   {

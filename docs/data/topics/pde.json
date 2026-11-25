@@ -3,48 +3,47 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.31013",
-   "title": "(n-1)-Dimensional Hausdorff Measure Estimates for Free Boundaries of Infinity Laplace Equations",
-   "url": "https://arxiv.org/abs/2611.31013",
+   "uid": "arxiv:2611.31881",
+   "title": "Weighted pointwise estimates for the damped wave equation and global solutions to Nakao's problem in three dimensions",
+   "url": "https://arxiv.org/abs/2611.31881",
    "authors": [
-    "Yantian Chen",
-    "Feida Jiang"
+    "Vladimir Georgiev",
+    "Kosuke Kita"
    ],
-   "label": "arXiv:2611.31013v1",
+   "label": "arXiv:2611.31881v1",
    "primary_category": "math.AP",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves a sharp distance-to-free-boundary estimate with an explicit optimal constant for nonnegative viscosity solutions of the infinity Laplace equation with strong absorption, yielding a tangent-ball property, a 1/2 density bound, Lipschitz covering, and local (n-1)-dimensional Hausdorff measure estimates for the free boundary.",
-    "plain": "This is a mathematical study of the boundary between two regions in a certain type of equation: one where a solution is positive and one where it is zero. The authors show that the boundary is well behaved in a precise, quantified way, with a sharp constant that matches a known non-degeneracy estimate. From this they derive geometric consequences, such as the boundary being locally covered by Lipschitz graphs and having controlled surface size, which answers a question posed by Araújo, Leitão, and Teixeira in 2016.",
-    "why": "The result settles an open question from a 2016 paper in the same area, so it matters to specialists in nonlinear elliptic equations and free boundary problems. The text suggests the barrier argument may extend to more general equations, but it does not show this, so that wider reach is only a possibility.",
-    "background": "- A partial differential equation (PDE) describes how a quantity varies in space; a solution is a function satisfying it.\n- The infinity Laplacian is a nonlinear, degenerate operator tied to the steepest slope of a function, used in optimal transport and game-theoretic settings.\n- Viscosity solutions are a weak notion of solution suited to nonlinear equations where classical derivatives may not exist.\n- A free boundary is the interface separating the region where a solution is positive from the region where it vanishes.\n- Non-degeneracy estimates say a positive solution cannot decay too fast near its free boundary; the sharp constant here is the optimal value of such a bound.\n- Lipschitz graphs are boundaries locally written as functions with bounded slope; the (n-1)-dimensional Hausdorff measure is the generalized surface area of an n-1 dimensional set.\n- A tangent ball property means every boundary point has a ball touching it from inside, with a controlled radius.",
+    "one_liner": "The paper derives weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation, combining a parabolic weight with a wave-cone weight, and applies them to prove small-data global existence and uniqueness for Nakao's coupled damped-wave/wave system in weighted L^infinity spaces.",
+    "plain": "The paper studies a pair of coupled equations that describe how waves and damped (energy-losing) waves spread through space over time, in three dimensions. The authors prove sharper size bounds on one piece of the solution, the part driven by a source, and use them to show that, when the starting disturbance is small and the nonlinear terms meet stated conditions, solutions exist for all time and are unique. The result covers both fast and slower decay rates for each component.",
+    "why": "Global existence results for coupled nonlinear wave systems show when small disturbances stay bounded forever rather than blowing up, which is a basic question in the theory of such equations. The text does not indicate applications beyond this mathematical setting, so its wider significance is unclear from the abstract alone.",
+    "background": "- A wave equation describes vibrations or signals travelling through a medium at finite speed.\n- A damped wave equation adds friction, so the energy fades and the solution spreads out and decays over time, somewhat like heat diffusion.\n- Nakao's problem is a named open-style question about a specific pair of such equations coupled together.\n- Duhamel term: the part of a solution produced by a forcing or source term acting over time.\n- Pointwise estimate: a bound on the size of the solution at each individual point, rather than on average.\n- Weighted L^infinity space: a function space that bounds the solution's maximum size while weighting it by a factor that controls decay in space and time.\n- Small-data global existence: if the starting data are small enough, the solution is guaranteed to exist for all times.\n- Contraction argument: a standard method that builds the solution as a fixed point of a map that shrinks distances.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We investigate the geometric properties of free boundaries associated with nonnegative viscosity solutions to the infinity Laplace equation with strong absorption $$ \\Delta_\\infty u=\\lambda u_+^m, \\qquad \\lambda>0,\\quad 0<m<3. $$ We first establish a sharp distance-to-free-boundary regularity estimate with an explicit optimal coefficient, which coincides with the constant in the non-degeneracy estimate. This exact matching yields a uniform interior tangent ball property at every sufficiently small scale for every free boundary point. As consequences, we obtain a sharp lower density bound of $1/2$ for the positive phase, a locally finite covering of the free boundary by Lipschitz graphs, and quantitative local estimates for its $(n-1)$-dimensional Hausdorff measure, thereby giving an affirmative answer to the question raised by Ara\\'ujo, Leit\\~ao, and Teixeira (J. Funct. Anal. {\\textbf 270} (2016), no. 6, 2249-2267). The underlying barrier mechanism also suggests possible extensions to more general equations.",
+   "abstract": "In this paper, we establish weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation. The estimates combine the parabolic weight $\\langle t+|x|^2\\rangle$ with the wave-cone weight $\\langle t-|x|\\rangle$, and thereby account for both the diffusive part of the damped wave flow and source terms with wave-like decay. As an application, we study Nakao's problem, a weakly coupled system consisting of one semilinear damped wave equation and one semilinear wave equation. Under explicit conditions on the exponents of nonlinear terms, we prove small-data global existence and uniqueness of mild solutions in weighted $L^\\infty$ spaces. The result covers both the full parabolic decay and slower pointwise decay for the damped-wave component, and allows either the standard wave decay or slower pointwise decay for the wave component. The proof combines the new Duhamel estimate with weighted estimates for the free wave equation and a contraction argument.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28657",
-   "title": "Global existence and decay estimates for classical solutions to 2D compressible micropolar fluid equations with vacuum",
-   "url": "https://arxiv.org/abs/2611.28657",
+   "uid": "arxiv:2611.32994",
+   "title": "Large-time existence for the gravity water waves equations",
+   "url": "https://arxiv.org/abs/2611.32994",
    "authors": [
-    "Guo Houbin",
-    "Zhu Changjiang",
-    "Zhu Qiaolong"
+    "Th\\'eo Fradin",
+    "Benjamin Melinand"
    ],
-   "label": "arXiv:2611.28657v1",
+   "label": "arXiv:2611.32994v1",
    "primary_category": "math.AP",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Proves global existence and uniqueness of strong and classical solutions to the 2D compressible micropolar fluid equations with far-field vacuum, for small initial energy but possibly large oscillations, via a priori decay estimates on pressure, velocity gradient and microrotation that close a bootstrap argument.",
-    "plain": "This paper studies a mathematical model of a squeezable fluid in two dimensions, where tiny particles can also spin on their own, and where the fluid thins out to nothing far away (a \"vacuum\"). The authors show that, when the total initial energy is small, smooth solutions exist for all time and are unique, even if the starting data fluctuate a lot. The main work is proving that the pressure, the flow's velocity gradient and the spin velocity all fade in a controlled way over time.",
-    "why": "Global well-posedness for compressible fluids with vacuum is a hard, active topic in PDE theory, and the paper addresses the extra coupling between flow velocity and microrotation that makes micropolar models harder than standard compressible Navier–Stokes. The text does not say how it compares with prior results or what applications it may have, so its wider significance is best judged by specialists.",
-    "background": "- Compressible fluid: a fluid whose density can change, described by PDEs for density, velocity and pressure.\n- Micropolar fluid: a richer fluid model in which small internal particles can rotate independently; the \"microrotational velocity\" is their spin.\n- Vacuum: regions where the density is zero; \"far-field vacuum\" means the fluid thins to zero at infinity.\n- Cauchy problem: an initial-value problem on the whole space, with data given at time zero.\n- Global existence: solutions do not blow up and exist for all time.\n- A priori estimates and bootstrap: bounds assumed on a solution and then improved, to show it stays regular.\n- Strong/classical solutions: solutions with enough derivatives to satisfy the equations pointwise.",
+    "one_liner": "The paper proves local-in-time, long-timescale (lifespan growing like the inverse of the nonlinearity parameter) existence of solutions to the gravity water-waves equations without surface tension, uniformly in the shallow-water parameter and allowing a large but not emerging bathymetry.",
+    "plain": "The paper studies how waves move on the surface of water over an uneven floor, using the standard mathematical model of an incompressible, irrotational fluid with a free surface and gravity acting, but no surface tension. It shows that, for sufficiently smooth starting conditions, a solution exists for a long stretch of time, and that this stretch gets longer as the waves get smaller. The result holds even when the seabed varies by a sizable amount, though not so much that the bottom breaks through the surface.",
+    "why": "Knowing how long a model of water waves stays well-behaved is a basic question for both theory and for the approximate models used in coastal and ocean studies. The text does not claim wider applications, so its reach beyond this mathematical setting is uncertain.",
+    "background": "- Water-waves equations: the standard model of a free water surface under gravity, with the water assumed incompressible (constant density) and irrotational (no swirling).\n- Well-posedness: the question of whether a solution exists, is unique, and depends continuously on the starting data.\n- Sobolev regularity: a measure of how smooth the initial data must be; \"high but finite\" means the data must be quite smooth but not infinitely so.\n- Nonlinearity parameter: a small number measuring wave amplitude relative to depth; the result's time span scales with its inverse.\n- Shallow-water parameter: a measure of depth relative to wavelength; the result holds uniformly across it.\n- Bathymetry: the shape of the seabed; \"large but not emerging\" means the bottom varies substantially but stays below the surface.\n- Lifespan: how long the solution is guaranteed to exist.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this paper, we consider the Cauchy problem for the two-dimensional compressible micropolar fluid equations with far field vacuum. Under the assumption that the initial energy is sufficiently small, we establish the global existence and uniqueness of strong and classical solutions, allowing for large oscillations in the initial data. The key to the proof is to derive {\\it a priori} decay estimates for the pressure, the velocity gradient, and the microrotational velocity, which enable us to close the bootstrap argument. We also handle the difficulties arising from the coupling between the velocity field and the microrotational velocity.",
+   "abstract": "We provide a new well-posedness result on the gravity water-waves equations, i.e. the free-surface, incompressible and irrotational Euler equations, in the absence of surface tension. Our main contribution is to provide the existence of solutions, in high enough but finite Sobolev regularity, on a timescale that grows like the inverse of the non-linearity parameter. Our result is also uniform in the shallow-water parameter. The main difficulty is that we allow for the presence of a large (though not emerging) bathymetry.",
    "source": "arxiv"
   },
   {

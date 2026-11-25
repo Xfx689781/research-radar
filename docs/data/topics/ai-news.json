@@ -3,6 +3,86 @@
  "updated": "2026-11-25",
  "papers": [
   {
+   "uid": "news:37b5c9ba93266751",
+   "title": "Where scientists draw the line on AI agents",
+   "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+   "authors": [],
+   "label": "Hugging Face - Blog",
+   "primary_category": "huggingface.co",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A news article titled \"Where scientists draw the line on AI agents,\" but the body text is missing, so its actual content and claims cannot be confirmed.",
+    "plain": "The article appears to be about how researchers decide what counts as an AI agent, meaning software that takes actions on its own rather than only answering questions. The text provided is empty, so I cannot say what specific views, findings, or events it reports.",
+    "why": "Debates over where AI agents begin and end matter for safety rules, product claims, and accountability, but I cannot tell from the title alone what this article argues. Treat this as unverified until the full text is available.",
+    "background": "- AI agent: an AI system that can plan and carry out multi-step tasks, such as browsing websites or running code, with limited human input.\n- Definitions matter: \"agent\" is used loosely in industry, so researchers often debate which systems qualify and what level of autonomy counts.\n- Title only: this brief is based solely on the headline because no article text was supplied.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:00d3c793baf99b8f",
+   "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
+   "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+   "authors": [
+    "Rebecca Bellan"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Anthropic CEO Dario Amodei rejects rivals' claims that he favors giving up human agency to AI, as leading AI firms increasingly automate their own research and model development.",
+    "plain": "The article reports on a public dispute in the AI industry. Anthropic's chief executive, Dario Amodei, has called accusations that he wants to hand control to machines \"absurd.\" The text is a short news summary and gives only his response and the broader context, not the full arguments on either side.",
+    "why": "The debate concerns how much people should keep control over AI systems that are increasingly used to build other AI systems. The text is too brief to say how serious the criticism is or what specific actions are involved, so its wider significance is unclear.",
+    "background": "- Anthropic is an AI company that develops large language models, the systems behind chatbots like Claude.\n- \"Human agency\" or \"human control\" here means people's ability to make and override key decisions about AI.\n- \"Automating research and model development\" means AI systems are being used to help design, test, and improve other AI models, with less direct human work.\n- The article names rivals' accusations but does not identify who made them or give their exact claims.\n- Public statements by company leaders are not independent evidence of how AI is actually governed.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Anthropic CEO Dario Amodei pushes back against rivals’ accusations that he favors surrendering human agency to AI, even as leading AI companies increasingly automate their own research and model development.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:d0a3a7f662b58965",
+   "title": "An Indic Voice Agent with CUGA",
+   "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+   "authors": [],
+   "label": "Hugging Face - Blog",
+   "primary_category": "huggingface.co",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A news item titled \"An Indic Voice Agent with CUGA\" that, as provided, has no body text, so its content, results, and claims cannot be verified.",
+    "plain": "The item appears to be about a voice-based AI assistant built for Indian languages, using a system called CUGA. The text itself is missing, so I cannot say what was built, how well it works, or what was found. Only the title is available.",
+    "why": "Voice assistants that work in many Indian languages could matter for people who do not use English online, but the text provided does not show whether this work does that. Treat this as unverified until the full article is read.",
+    "background": "- \"Voice agent\": an AI program that listens to speech, works out what is wanted, and replies by voice or takes actions.\n- \"Indic\": refers to languages of the Indian subcontinent, such as Hindi, Bengali, Tamil and others.\n- \"CUGA\": the name given in the title; the text does not explain what it is. Assume it is a specific software system unless the full article says otherwise.\n- Speech assistants usually combine speech recognition, language understanding, and speech output.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "",
+   "source": "rss"
+  },
+  {
+   "uid": "news:4f0b7bfbd5a5d08e",
+   "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
+   "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
+   "authors": [
+    "Rebecca Bellan"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A news report says New York has banned AI chatbot toys for five years, citing new Common Sense Media research that describes safety failures such as exposure to inappropriate content and risks to emotional development.",
+    "plain": "New York has put a five-year ban on toys that use AI chatbots, meaning toys that hold conversations like a chatbot. The article says new research from Common Sense Media, a US children's media watchdog group, found serious safety problems with these toys, including children being exposed to inappropriate content and possible harm to emotional development.",
+    "why": "Parents buying holiday gifts and regulators deciding what children's products are allowed may both care about this. The text is short and does not give the study's methods, sample size, or specific findings, so it is hard to judge how strong the evidence is.",
+    "background": "- AI chatbot: a program that generates conversational replies to typed or spoken words.\n- Common Sense Media: a US nonprofit that reviews media and technology for children and families.\n- Emotional development: how children learn to understand and manage feelings and relationships.\n- The article is brief; it gives no details of the ban's legal basis, the study's design, or the companies involved.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "New York has banned AI chatbot toys for five years as new research from Common Sense Media reveals troubling safety failures, including exposure to inappropriate content and risks to emotional development.",
+   "source": "rss"
+  },
+  {
    "uid": "news:7a6462e387eb267a",
    "title": "How iFood scales coding agents across 15,000 repositories",
    "url": "https://openai.com/business/customer-stories/ifood",
@@ -11,96 +91,14 @@
    "primary_category": "openai.com",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A news piece titled \"How iFood scales coding agents across 15,000 repositories,\" but the body text is missing, so only the headline's claim about iFood (a Brazilian food-delivery company) applying AI coding agents to about 15,000 code repositories can be noted.",
-    "plain": "This item is about how the food-delivery company iFood uses AI \"coding agents,\" which are programs that can write and change software on their own, across a very large set of software projects, about 15,000 repositories. The article text is not available, so I cannot say what approach was taken or what results were reported. The headline alone does not tell us how well it worked.",
-    "why": "Large companies using AI tools to change code across thousands of projects is a practical question for software teams, since it touches on speed, reliability and oversight. Without the body text, I cannot say what was actually learned, so treat this as a pointer to a topic rather than a finding.",
-    "background": "- Code repository: a stored collection of a software project's files and their change history, often shared by a team.\n- Coding agent: an AI system that reads code, makes edits, and runs tasks with some autonomy, rather than only suggesting single lines.\n- Scaling across repositories: applying the same tool or process to many separate projects at once, which raises questions about consistency, testing and review.\n- iFood: a Brazilian food-delivery platform; the headline names it as the organization involved.\n- Note: the source text is empty, so no methods, results or figures are verified here.",
-    "difficulty": "intermediate",
+    "one_liner": "A news piece, titled \"How iFood scales coding agents across 15,000 repositories,\" that appears to describe how the Brazilian food-delivery company iFood runs AI coding agents across a very large set of code repositories, but the article text itself is unavailable.",
+    "plain": "This item is about how a large food-delivery company, iFood, uses AI software that writes or changes computer code, spread across about 15,000 code projects. The text of the article was not provided, so I cannot say what problems were encountered or what results were reported. The title alone suggests a description of how the approach was expanded to that scale.",
+    "why": "Companies running AI coding tools across thousands of projects is a practical question for software teams, since it touches on quality control, cost, and how much human review is needed. Beyond the title, I cannot confirm any specific outcomes, so treat this as a pointer to a topic rather than evidence of results.",
+    "background": "- Coding agent: an AI program that can read, edit, and test software code with some autonomy, rather than only suggesting single lines.\n- Repository (repo): a stored project of source code, usually tracked with version-control software such as Git.\n- Scaling: making a tool work reliably across many teams or projects, not just one trial.\n- iFood: a large online food-delivery platform based in Brazil.\n- Note: the article body was empty, so this brief relies only on the title.",
+    "difficulty": "introductory",
     "ai": true
    },
    "abstract": "",
-   "source": "rss"
-  },
-  {
-   "uid": "news:27065c561fbc5a7f",
-   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
-   "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
-   "authors": [
-    "Sarah Perez"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "Anthropic has announced \"Claude Ship,\" developer tools that let AI agents review, fix, and approve code changes, aimed at easing the approval backlog created by growing volumes of AI-generated code.",
-    "plain": "Software teams are producing more code than ever with AI help, and the human step of checking and approving each change is becoming a slow point. This article reports that Anthropic has launched new developer tools that let AI agents handle some of that routine checking, fixing, and approving. The text is brief and does not describe how the tools work in detail or how well they perform.",
-    "why": "If AI systems can safely take over routine sign-off on code, it could change how fast software gets released and who checks it. The article gives no performance data or safety details, so how much this matters in practice is unclear.",
-    "background": "- \"Code changes\" are edits to a software project, usually reviewed by a colleague before being merged into the main version.\n- \"AI agents\" are AI systems that carry out multi-step tasks on their own, rather than only answering one prompt at a time.\n- \"Bottleneck\" means a stage that slows down everything after it; here, human review of code.\n- Anthropic is an AI company that makes the Claude family of AI models.\n- The article is a short news item; it does not include technical specifics, benchmarks, or independent evaluation.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
-   "source": "rss"
-  },
-  {
-   "uid": "news:26c3ceae08944feb",
-   "title": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
-   "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
-   "authors": [
-    "Ivan Mehta"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "Music streaming service Tidal says it will ban and remove millions of fully AI-generated tracks while still allowing songs that used AI only as an assistant.",
-    "plain": "Streaming services are being flooded with low-quality music made entirely by AI, often called \"AI slop.\" Tidal, a music streaming app, says it will remove millions of these fully AI-generated tracks. Songs where AI only helped a human artist are still allowed.",
-    "why": "This is a concrete platform policy on how streaming services will handle AI-made content, which affects artists, listeners and royalties. The source text is very short, so it does not say how Tidal will detect these tracks or how the policy will be enforced; those details are unknown from this text alone.",
-    "background": "- \"AI slop\" is a slang term for low-effort, mass-produced content generated by AI, often with little human involvement.\n- Streaming services like Tidal host catalogs of songs and pay rights holders based on plays.\n- \"Fully generated\" music means the AI produced the song itself, while \"AI-assisted\" means a human made the work and used AI for some part of it.\n- The article gives only the headline claim and one sentence on the policy; the full article may contain more detail.",
-    "difficulty": "introductory",
-    "ai": true
-   },
-   "abstract": "The company said it will still accept songs that were made with AI assistance, but not fully generated.",
-   "source": "rss"
-  },
-  {
-   "uid": "news:eaadf2423721fd74",
-   "title": "Meta brings its Muse AI assistant directly into Instagram DMs",
-   "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
-   "authors": [
-    "Aisha Malik"
-   ],
-   "label": "AI News & Artificial Intelligence | TechCrunch",
-   "primary_category": "techcrunch.com",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "Meta has integrated its Muse AI assistant directly into Instagram direct messages, so users no longer need to switch to the separate Muse app to use the agent.",
-    "plain": "Meta, the company that owns Instagram, is letting people use its Muse AI assistant from inside Instagram's private messaging feature. Before this change, people who wanted to use the assistant had to leave Instagram and open a separate Muse app. The article is short and mainly describes this convenience change.",
-    "why": "It shows how AI assistants are being built into everyday apps rather than kept as standalone products, which may affect how many people use them. The article gives no usage figures or details on how well it works, so its wider significance is unclear.",
-    "background": "- Meta owns Instagram and develops the Muse AI assistant, described here as an \"AI agent\".\n- An AI agent is a program that can carry out tasks for a user, such as answering questions or taking actions, rather than only chatting.\n- Direct messages (DMs) are private one-to-one or group messages between Instagram users.\n- \"Integration\" here means building one product into another so users do not have to switch apps.\n- The article does not describe what Muse can do, its capabilities, or any privacy or safety details.",
-    "difficulty": "introductory",
-    "ai": true
-   },
-   "abstract": "The new integration gets rid of the need for users to toggle between Instagram and the Muse app when they want to interact with the AI agent.",
-   "source": "rss"
-  },
-  {
-   "uid": "news:ec442b764e041cd2",
-   "title": "How Intentful uses dots to make more time for growth",
-   "url": "https://openai.com/business/customer-stories/intentful-dots",
-   "authors": [],
-   "label": "OpenAI News",
-   "primary_category": "openai.com",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "A short company feature describing how Intentful uses an AI assistant called \"dot\" (named Aria in this case, used by Marina Petrova) for research, proposal drafting, proactive message flagging, and issue resolution.",
-    "plain": "This is a brief feature about a person at a company, Marina Petrova, who uses an AI assistant named Aria, built on a product called dot, to speed up her work. According to the text, Aria helps look up information on websites, drafts proposals, points out messages that may need attention, and helps resolve problems. The text gives no measured results or detailed explanation of how it works.",
-    "why": "It offers a small, concrete example of an AI tool being used for everyday office tasks, which is a common trend in workplace AI. The text is too thin to show how well it works or whether the claims hold beyond this one user.",
-    "background": "- \"Dot\" appears to be the name of an AI assistant product; Aria is one assistant instance named in the text.\n- An AI assistant is software that carries out tasks such as searching, drafting text, and sorting messages, often after being given instructions.\n- \"Proactively flagging\" means the tool raises issues on its own rather than waiting to be asked.\n- This is a company-style feature, so it likely presents the tool favorably and offers no independent evaluation.",
-    "difficulty": "introductory",
-    "ai": true
-   },
-   "abstract": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
    "source": "rss"
   },
   {

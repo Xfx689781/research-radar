@@ -3,47 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29908",
-   "title": "Identification multiplicity across study designs",
-   "url": "https://arxiv.org/abs/2611.29908",
+   "uid": "arxiv:2611.31728",
+   "title": "Sharp Hellinger Risk of the Multivariate Gaussian NPMLE",
+   "url": "https://arxiv.org/abs/2611.31728",
    "authors": [
-    "Carlos Garc\\'ia Meixide",
-    "David R\\'ios Insua"
+    "Xingzhou Wang",
+    "Zheng Li"
    ],
-   "label": "arXiv:2611.29908v1",
-   "primary_category": "stat.ME",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "A conceptual framework for collections of causal analyses that answer one question through different observed-data translations, separating identification discrepancies from differences in causal targets and examining when averaging retains a causal meaning.",
-    "plain": "Researchers often can answer a cause-and-effect question in several legitimate ways, depending on which variables they adjust for, which comparison groups they use, or which data they draw on. This paper offers a way to organize that set of analyses, asking what each one actually estimates, which assumptions they share, and how their estimates are linked by sampling. It illustrates the ideas with fourteen examples across many study designs.",
-    "why": "The paper argues that agreement among several analyses is evidence only about the assumptions that differ between them, not about assumptions they all share, which is a useful caution for anyone relying on consistent results. It connects to established ideas such as instrumental variables, triangulation, transportability, and model-uncertainty inference, though the text alone does not show how widely these ideas will be adopted in practice.",
-    "background": "- Causal question: asking what would happen to an outcome if a factor were changed, as opposed to what is merely associated with it.\n- Identification: whether a causal quantity can be recovered from observed data given stated assumptions.\n- Adjustment set: the variables one controls for to make groups comparable.\n- Instrument: a variable that influences the treatment but affects the outcome only through it.\n- Mediator: a variable on the causal path between treatment and outcome.\n- Regression discontinuity and staggered adoption: designs that exploit cutoffs or timing of treatment rollout.\n- Transportability: moving a causal finding from one population to another.\n- Sampling dependence: how estimates computed from the same data are correlated with each other.\n- Multiple testing is a different issue: it concerns the risk of false positives from many hypothesis tests, not the choice among valid-looking causal translations.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The answer to a causal question often admits several translations in terms of observed data. These may differ in adjustment sets, comparison groups, instruments, mediators, cutoffs, eligibility occasions, or data sources. We describe the resulting collection of analyses by three structures: the causal target that each analysis identifies under its assumptions, the assumptions that the analyses share, and the sampling dependence among their estimates. A single decomposition separates identification discrepancies from differences in causal targets, and we make both terms explicit in fourteen examples spanning adjustment, comparative panels, proxies, mediators, instruments, discontinuities, staggered adoption, sequential trials, and source combination. Comparisons within a collection can reveal differential violations of assumptions but not a bias common to all analyses; agreement is therefore evidence about the assumptions that differ, not about those that are shared. Averaging retains a causal interpretation in three ways: efficient combination of analyses that identify one target, a projection of a causal curve with a declared approximating family and weighting measure, and inference under weaker premises such as validity of at least one analysis or a known sign of its bias. Precision weights, regression-implied weights, and hierarchical models do not supply these interpretations by themselves. We relate this account to triangulation, overidentification, marginal treatment effects, transportability, and recent methods for inference under model uncertainty, and distinguish identification multiplicity from multiple testing.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.28967",
-   "title": "Limit theorems for almost conditionally identically distributed random variables",
-   "url": "https://arxiv.org/abs/2611.28967",
-   "authors": [
-    "Marco Battiston",
-    "Lorenzo Cappello"
-   ],
-   "label": "arXiv:2611.28967v1",
+   "label": "arXiv:2611.31728v1",
    "primary_category": "math.ST",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Extends strong law of large numbers, absolute-continuity conditions for the asymptotic directing measure, and three central limit theorems from exchangeable and conditionally identically distributed sequences to the more general ξ-almost conditionally identically distributed (ξ-a.c.i.d.) setting.",
-    "plain": "The paper studies sequences of random quantities that are almost, but not exactly, \"identically distributed given the past,\" a relaxed version of the exchangeable setting where the order of observations does not matter. A parameter sequence ξ measures how far the sequence departs from that ideal. The authors prove a law-of-large-numbers result and give conditions on when the limiting distribution has a density relative to a given reference measure, then derive three central limit theorems (describing fluctuations around the limit) for the predictive, empirical and asymptotic directing distributions.",
-    "why": "The results are aimed at Bayesian predictive inference, where they are said to support constructing asymptotic credible intervals, and they cover settings such as recursive algorithms and heteroskedastic data. The text does not report numerical examples or comparisons, so the practical reach beyond the stated applications is not something I can judge from it.",
-    "background": "- Exchangeable sequence: a sequence whose joint distribution is unchanged by reordering its terms.\n- Conditionally identically distributed (c.i.d.): each new term has the same conditional distribution given the past, a generalization of exchangeability.\n- Directing measure: the random distribution that, conditional on it, the sequence behaves like independent draws; its limit is the \"asymptotic directing measure.\"\n- Law of large numbers: sample averages converge to a limit as the sample grows.\n- Central limit theorem: after centering and scaling, fluctuations around the limit approach a normal (bell-shaped) distribution.\n- Absolute continuity with respect to a σ-finite measure: the limit has a density relative to a reference measure.\n- Predictive distribution: the distribution of the next observation given those seen so far.",
+    "one_liner": "The paper shows that the unconstrained nonparametric maximum likelihood estimator for multivariate Gaussian location mixtures with sub-Gaussian tails attains the minimax rate (log n)^d/n under squared Hellinger loss, improving an earlier (log n)^{d+1}/n upper bound by a log factor.",
+    "plain": "The paper studies a standard method for estimating an unknown probability distribution from data, when the data are noisy Gaussian bell-curve draws around hidden centers. It proves that this estimator is as accurate as theoretically possible, up to the stated rate, in any fixed number of dimensions, improving a previous estimate by a logarithmic factor. The main tool is a sharp count of how many small pieces are needed to approximate multivariate polynomials, and the lower bound comes from adapting an existing construction.",
+    "why": "It closes a gap between the known upper and lower bounds for this estimator in the multivariate setting, which matters for understanding how well mixture-density estimation can work in practice. The polynomial bracketing bound may also be useful in other empirical-process arguments, though the text does not establish such uses.",
+    "background": "- Gaussian location mixture: data generated by picking a hidden center from some distribution, then adding Gaussian (bell-curve) noise.\n- Nonparametric maximum likelihood estimator (NPMLE): choosing the mixing distribution that makes the observed data most likely, with no fixed shape assumed.\n- Hellinger distance: a way to measure how different two probability densities are, commonly used for squared-error-type loss in density estimation.\n- Minimax rate: the best worst-case error any estimator can guarantee; a matching upper and lower bound means the rate is sharp.\n- Bracketing number: the number of simple upper and lower envelope functions needed to cover a function class at a given precision; a standard measure of complexity.\n- Sub-Gaussian tail: the hidden centers are unlikely to be far from zero, decaying at least as fast as a Gaussian.\n- Log factor: a slowly growing term (log n) that separates the earlier and current rates.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "$\\xi$-Almost Conditional Identically Distributed ($\\xi$-a.c.i.d.) random variables are generalizations of conditional identically distributed (c.i.d.) and exchangeable ones. $\\xi$-a.c.i.d. random variables arise naturally in applications in statistics, such as in recursive algorithms and heteroskedastic observations, and are parametrized by a sequence $\\xi=(\\xi_{n})_{n\\geq 0}$ that quantifies departure from the c.i.d. property. In this work, we extend limit theorems for exchangeable and c.i.d. random variables to the more general setting of $\\xi$-a.c.i.d. random variables. After proving a Strong Law of Large Numbers, we provide necessary and sufficient conditions for the asymptotic directing measure of the sequence to be absolutely continuous with respect to a given $\\sigma$-finite measure. Then, under regularity assumptions on the parameter $\\xi$, three different Central Limit Theorems for $\\xi$-a.c.i.d. sequences are derived, involving the predictive, empirical and asymptotic directing distributions. These theorems have several statistical applications, including the construction of asymptotic credible intervals in Bayesian predictive inference.",
+   "abstract": "For multivariate Gaussian location mixtures whose mixing distributions have coordinatewise sub-Gaussian tails, we prove that the unconstrained nonparametric maximum likelihood estimator attains the minimax rate $(\\log n)^d/n$ under squared Hellinger loss. This holds for every fixed dimension $d\\geq2$ and every fixed tail parameter $\\sigma>0$. The upper bound applies to every measurable choice of a global likelihood maximizer and improves the earlier bound of order $(\\log n)^{d+1}/n$ by a factor of $\\log n$. A key step is a sharp bracketing bound for multivariate polynomials. For the $L^2(\\rho)$ unit ball of real polynomials in $d$ variables with total degree at most $m$, the log bracketing number at width $\\varepsilon$ is at most $\\binom{m+d}{d}\\log(C_d/\\varepsilon)$ for $0<\\varepsilon\\leq1$. The constant $C_d$ depends only on $d$. The bound holds for every positive Borel measure $\\rho$ under which each nonzero polynomial in the space has a finite, positive $L^2(\\rho)$ norm. We prove the bound using volume estimates for a complex Veronese cone and Gaussian small-ball probabilities, then apply it to bound the local Hellinger bracketing entropy of Gaussian mixture densities. We obtain the matching minimax lower bound by adapting the Hermite perturbation construction of Kim and Guntuboyina.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32026",
+   "title": "Aalen-Johansen as an augmented IPCW estimator",
+   "url": "https://arxiv.org/abs/2611.32026",
+   "authors": [
+    "Lu Mao"
+   ],
+   "label": "arXiv:2611.32026v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper shows the Aalen-Johansen estimator of state occupation probabilities is an augmented inverse-probability-of-censoring-weighted estimator, decomposes its influence function against the semiparametric efficient one, and proposes a model-free least-squares augmentation that narrows the gap under non-Markov processes without raising asymptotic variance.",
+    "plain": "The paper concerns a standard tool for following people through a sequence of health states (for example healthy, ill, dead) when some people drop out of observation partway through. The authors show that this tool, the Aalen-Johansen estimator, can be rewritten as a weighted correction for dropouts plus a built-in guess about each person's next state based on the state they are in now. They then propose a simple add-on that uses a little of each person's earlier history to improve the estimate, and report that it helps in theory and in simulations.",
+    "why": "Multi-state survival estimates are used widely in medical and actuarial work, so a clearer account of why the standard method is robust, and where it loses efficiency, is useful. The text does not indicate applications beyond simulation studies, so the practical impact is unclear from this summary alone.",
+    "background": "- Multi-state model: people move among a set of states over time, and we want the probability of being in each state at a given time.\n- Censoring: some people are lost to follow-up, so their outcome is only partly observed.\n- Inverse probability of censoring weighting (IPCW): re-weights observed people to stand in for those lost to follow-up.\n- Markov assumption: the future depends only on the current state, not on earlier history.\n- Aalen-Johansen estimator: the standard nonparametric estimator for state occupation probabilities.\n- Influence function and asymptotic variance: describe how an estimate responds to individual data and how precise it is in large samples.\n- Semiparametric efficiency: the lowest achievable variance among estimators that do not rely on a fully specified model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We show that, in every sample, the widely used Aalen-Johansen estimator of a state occupation probability is an inverse probability of censoring weighted estimator augmented by a working Markov prediction from each subject's current state. This identity explains the robustness of the Aalen-Johansen against departures from the Markov assumption. It also reveals that its influence function differs from the semiparametric efficient one by two orthogonal components: the information in earlier history beyond the current state, and the error of the Markov prediction. Based on this decomposition, we propose a practical, model-free least-squares augmentation of the Aalen-Johansen that regresses the outcome on a history score, narrowing the gap under non-Markov processes without increasing the asymptotic variance. Its advantages are validated both theoretically and in simulations.",
    "source": "arxiv"
   },
   {

@@ -3,51 +3,49 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30553",
-   "title": "Irreducible shallow tanh neural networks are a manifold",
-   "url": "https://arxiv.org/abs/2611.30553",
+   "uid": "arxiv:2611.32479",
+   "title": "An adaptive finite element method for the interior problem of Helmholtz equations with generalized transmission boundary conditions",
+   "url": "https://arxiv.org/abs/2611.32479",
    "authors": [
-    "Ivan Bioli",
-    "Isabella Carla Gonnella",
-    "Carlo Marcati",
-    "Federico Pichi"
+    "Zhe Zhu",
+    "Lei Lin",
+    "Wei Yang",
+    "Tao Yin"
    ],
-   "label": "arXiv:2611.30553v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "The paper proves that shallow tanh neural networks with no redundant neurons (irreducible in Sussmann's sense) form a smooth embedded submanifold of Sobolev spaces on bounded sets, and counts its connected components (n+1 for scalar input and output, connected otherwise).",
-    "plain": "The paper studies the collection of all functions that a small neural network with a particular kind of smooth \"switch\" function (tanh) can produce. It looks only at networks where no neuron is wasted or duplicated, and shows that this collection forms a smooth, curved surface-like shape inside a larger space of functions. It also counts how many separate pieces that shape falls into.",
-    "why": "Knowing the geometry of the set of functions a network can represent helps explain how training and approximation behave, since optimization runs over this shape. The text does not say what practical consequences follow, so the broader impact is uncertain.",
-    "background": "- A neural network here is a function built from n hidden neurons, each applying tanh to a weighted sum of inputs, then combined linearly.\n- Tanh is a smooth S-shaped function; \"shallow\" means one hidden layer.\n- Sussmann's \"irreducible\" networks are those with no redundant neurons, e.g. no two neurons that cancel or merge.\n- A smooth embedded submanifold is a curved shape without self-intersections that locally looks like flat space.\n- Sobolev spaces W^{l,p} are function spaces measuring a function's size together with the sizes of its derivatives up to order l, in an L^p sense.\n- Connected components are separate pieces; a shape with n+1 components cannot be reached from one piece to another by continuous paths.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Neural networks (NNs) have been increasingly used as function approximators, motivating the study of the geometry of their function spaces. We study the set of functions represented by shallow neural networks with hyperbolic tangent activation, fixed input and output dimensions, and $n$ hidden neurons. In particular, we prove that the subset represented by irreducible networks in the sense of Sussmann (Neural Networks, 1992), i.e., networks with no redundant neurons, is a smooth embedded submanifold of the Sobolev spaces $\\mathrm{W}^{\\ell,p}$ on bounded sets for any $\\ell\\in\\mathbb{N}$ and $p\\in[1,+\\infty]$. The key step is to show that if a sequence of networks converges in $\\mathrm{W}^{\\ell,p}$ to an irreducible network with the same number of hidden neurons, then the parameters of the approximating networks remain bounded. Finally, we show that this manifold has exactly $n+1$ connected components when both the input and output are scalar, and is connected otherwise.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.30010",
-   "title": "Hierarchical randomized neural networks for efficiently and accurately finding multiple solutions of semilinear elliptic equations",
-   "url": "https://arxiv.org/abs/2611.30010",
-   "authors": [
-    "Jingying Hu",
-    "Jiao Li",
-    "Yufeng Xu",
-    "Jinyong Ying"
-   ],
-   "label": "arXiv:2611.30010v1",
+   "label": "arXiv:2611.32479v1",
    "primary_category": "math.NA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A randomized-neural-network method, with SVD-based initialization, exponential-deflation Gauss-Newton optimization, and a hierarchical multilevel acceleration, for finding multiple solutions of semilinear elliptic PDEs.",
-    "plain": "This paper addresses a common problem in scientific computing: a certain class of equations describing physical systems can have several different solutions, and it is hard to find all of them. The authors propose a computational method that uses a neural network with randomly fixed internal parts, plus a search procedure that steers away from solutions already found. According to the text, the method finds multiple solutions without prior knowledge of them, reaches relative errors around 10^-16 in numerical tests, and does so at under one-tenth of the computational cost in the best case.",
-    "why": "Finding all solutions of nonlinear equations matters for modeling pattern formation and similar physical problems, where different solutions can correspond to different states. The text reports numerical tests only, so its practical reach beyond the tested problems is not established here.",
-    "background": "- Semilinear elliptic equation: a type of partial differential equation describing steady-state physical behavior, such as heat or diffusion with a nonlinear term.\n- Multiple solutions: one equation can have several distinct valid answers, and finding all of them is the goal.\n- Randomized neural network: a network whose hidden-layer weights are set randomly and only the output layer is fitted, which makes training cheaper.\n- Gauss-Newton method: an iterative numerical method for solving nonlinear equations.\n- Deflation: a technique that modifies the equation so already-found solutions are avoided, letting the search find new ones.\n- Singular value decomposition (SVD): a matrix factorization used here to pick search directions.\n- Multilevel method: solving the problem on coarse and fine versions in sequence to speed up computation and improve accuracy.\n- Relative error: the size of the error compared with the size of the true answer.",
+    "one_liner": "The paper develops an adaptive finite element method, with a T-coercivity argument via a lifting operator, for the interior transmission problem for Helmholtz equations with generalized transmission boundary conditions involving a surface Laplace-Beltrami operator, including a priori and a posteriori error estimates and interior transmission eigenvalue computations.",
+    "plain": "This paper is about a numerical method for solving a wave-type equation (the Helmholtz equation) inside a region when the boundary carries a special coupling condition. The authors build a computational scheme that refines its mesh adaptively, where the error is largest, and they prove the scheme's well-posedness and error bounds. They also report numerical tests showing accuracy and convergence, and they extend the method to compute certain special eigenvalues of this interior transmission problem.",
+    "why": "Problems of this type arise in wave scattering and inverse scattering, where interior transmission eigenvalues are studied. The text supports the claims of accuracy and efficiency only through numerical examples, and it does not indicate applications beyond this setting, so the wider significance is uncertain.",
+    "background": "- Helmholtz equation: a standard model for time-harmonic waves (sound, light, electromagnetic fields).\n- Interior transmission problem: a coupled system of two wave equations inside a region, with matching conditions on its boundary.\n- Generalized transmission boundary conditions: boundary coupling rules that include a surface Laplace-Beltrami operator, a generalization of the Laplacian that acts along a curved surface.\n- Finite element method: approximating a solution by piecewise simple functions on a mesh of small cells.\n- Adaptive refinement with a posteriori error estimates: computable error indicators guide where the mesh is refined; upper and lower bounds show the indicator tracks the true error.\n- A priori vs. a posteriori error estimates: bounds derived before computing (depending on the unknown solution's smoothness) versus bounds computed from the approximate solution itself.\n- T-coercivity and lifting operator: a technique for proving well-posedness in nonstandard function spaces where the usual coercivity argument does not directly apply.\n- Interior transmission eigenvalues: special frequencies at which the interior transmission problem has nontrivial solutions; they matter in inverse scattering.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Being able to find multiple solutions of a semilinear elliptic equation is a fundamental problem in scientific computing. In this paper, fully taking the advantages of randomized neural networks, we propose a new efficient and accurate method for identifying potentially as many solutions as possible. The new method is constructed from three aspects--initialization, optimization, a technique for acceleration and improving accuracy, two of which are innovative developments. Firstly, based on the basis functions of a randomized network and the sampling points, a characteristic matrix is introduced so that its singular value decomposition can be used to determine weakly variant search directions, followed by a newly developed algorithm to generate effective initial candidates. Then the good deflated Gauss-Newton method [see {\\em A. Riley, et al., SIAM Journal on Scientific Computing 47~(5) (2025) A2963-A2987}] using an exponential deflation operator is adapted as the optimization to search for all multiple solutions. Local error estimate of a particular solution under some proper condition is given in terms of the neurons in the hidden layer and the sampling points for this newly designed method. Furthermore, to accelerate the computation and improve the solution accuracy, a new multilevel method based on hierarchical networks is designed. Without using any {\\em a priori} information, several numerical tests show together with the multilevel method, the new method can not only accurately find multiple solutions with relative errors reaching $10^{-16}$ only in less than one-tenth computational cost for the best case, but also preserve the inherent symmetries of multiple solutions.",
+   "abstract": "This paper proposes a new adaptive finite element method for solving the interior transmission problem with generalized transmission boundary conditions (GTBCs) involving a surface Laplace-Beltrami operator. A $\\mathbb{T}$-coercivity technique relying on a lifting operator is established to show the well-posedness of the variational problem in appropriate nonstandard Sobolev spaces. Then both the a priori error estimates and a posteriori error estimates including the upper bound and local lower bound of the finite element discretization are constructed. Numerical examples are presented to illustrate the accuracy and convergence of the adaptive finite element method. Extension and high efficiency of the proposed method for the computation of the interior transmission eigenvalues for the problem with GTBCs are also discussed numerically.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31859",
+   "title": "Upwind finite element approximation of the gradient blow-up time for a viscous Hamilton--Jacobi equation",
+   "url": "https://arxiv.org/abs/2611.31859",
+   "authors": [
+    "Yohei Fujishima",
+    "Takahiro Yamada"
+   ],
+   "label": "arXiv:2611.31859v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper proves maximum-norm convergence of an upwind piecewise-linear finite element scheme for a viscous Hamilton--Jacobi equation with superquadratic gradient source, and shows that discrete gradient-threshold blow-up times converge to the exact blow-up time under stated mesh and regularity assumptions in dimensions one to three.",
+    "plain": "The paper studies a equation that describes how a quantity's slope can grow without limit in finite time, so the computed solution \"blows up.\" The authors analyze a computer method for approximating this solution on a mesh and prove that the approximation stays close to the true solution until the slope blows up, and that the computed time of blow-up approaches the true time. They also check that the assumptions hold for one example on a disk and show numerical experiments of the blow-up.",
+    "why": "Predicting when a solution breaks down numerically is hard, because simulations can go wrong near the blow-up. The paper gives mathematical guarantees for a specific scheme, which is useful for anyone trusting numerical simulations of such equations; the text does not say how far the results extend beyond this setting.",
+    "background": "- Hamilton--Jacobi equation: a partial differential equation describing how a function changes over time, here with a gradient (slope) term.\n- Viscous term: a diffusion/smoothing term that keeps solutions well-behaved for a while.\n- Gradient blow-up: the slope of the solution becomes infinite at a finite time.\n- Superquadratic source: the nonlinear growth term in the slope grows faster than the square of the slope.\n- Finite element method: a numerical technique that approximates a solution by piecewise simple functions on a mesh of small cells.\n- Upwind scheme: a discretization that biases calculations toward the direction the information flows, for stability.\n- Maximum-norm convergence: the error is measured by the largest pointwise difference.\n- Dirichlet boundary condition: the solution is fixed (here zero) on the boundary of the domain.</background>\n<parameter name=\"difficulty\">research-level",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "We analyze an upwind finite element method with piecewise linear elements for a viscous Hamilton--Jacobi equation with a superquadratic gradient source term, subject to homogeneous Dirichlet boundary conditions. On polytopal inner approximations of smooth bounded domains in dimensions $N=1,2,3$, we prove maximum-norm convergence of the numerical solution to the exact solution before gradient blow-up and convergence of gradient-threshold times to the blow-up time under explicit mesh and regularity assumptions. We also verify the regularity assumption and finite-time gradient blow-up for an example on the disk, to which the main theorem therefore applies. Numerical experiments illustrate this gradient blow-up.",
    "source": "arxiv"
   },
   {

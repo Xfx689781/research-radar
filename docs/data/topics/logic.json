@@ -3,46 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30679",
-   "title": "Equivalence of Cohen generics is hyperfinite",
-   "url": "https://arxiv.org/abs/2611.30679",
+   "uid": "arxiv:2611.31725",
+   "title": "Cardinal Transfer Events for Infinitary Logic with Infinitary Quantification",
+   "url": "https://arxiv.org/abs/2611.31725",
    "authors": [
-    "Iian B. Smythe"
+    "Edgar Valenzuela"
    ],
-   "label": "arXiv:2611.30679v1",
+   "label": "arXiv:2611.31725v1",
    "primary_category": "math.LO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that the equivalence relation \"two Cohen generic reals yield the same generic extension\" over a countable model of set theory is hyperfinite, answering a question posed by the author, via asymptotic separation.",
-    "plain": "This is a result in mathematical logic about \"random-like\" real numbers that are generic over a countable model of set theory, a kind of carefully chosen random object used to build new mathematical universes. The question is when two such numbers generate the same new universe. The paper shows that this sameness relation is \"hyperfinite,\" meaning it can be approximated by a sequence of finite-level pieces, which answers a question the author had asked.",
-    "why": "The result settles an open question in the classification theory of equivalence relations, a area that studies how hard it is to decide when two objects count as the same. The text does not say how far the method reaches beyond this specific case, so wider connections are uncertain.",
-    "background": "- Real numbers and countable models: a countable model of set theory is a countable collection of sets obeying the usual axioms, used as a base for building bigger universes.\n- Cohen generic real: a real number that avoids all the sets that could be named inside the model; it is the standard way to add new objects to a universe (\"forcing\").\n- Generic extension: the larger universe obtained by adding a generic real to the model.\n- Equivalence relation: a rule saying when two objects are \"the same\" for a given purpose, splitting objects into classes.\n- Hyperfiniteness: a measure of simplicity for equivalence relations; such a relation can be approximated by finite pieces arbitrarily well.\n- Asymptotic separation: a technique for showing that certain sequences of sets or events become distinguishable in the limit; the text names it as the main tool without detailing it.",
+    "one_liner": "Under an assumed theory Φ, the paper solves the Gap-n problem for more than one predicate in infinitary logic with infinitary quantification, as a cardinal transfer result.",
+    "plain": "This paper is about a kind of logic that allows statements built from infinitely many pieces, where one can also quantify over infinitely many objects at once. It studies \"transfer\" results, which ask when a property that holds in a large infinite universe also holds in a smaller one. The abstract says that, assuming a certain theory called Φ exists, the authors settle a version of the Gap-n problem for several predicates at once.",
+    "why": "The abstract is very short, so its significance is hard to judge from it alone. It likely matters to specialists in set theory and model theory, who study how infinite cardinal sizes constrain what logical statements can say.",
+    "background": "- Logic: a formal language for stating and checking claims, here extended to infinitely long formulas.\n- Predicate: a property or relation that a statement can talk about, such as \"is red\" or \"is less than\".\n- Cardinal numbers: measures of infinite size, such as the size of the natural numbers.\n- Transfer result: a claim that a structure of one infinite size with a property implies another structure of a smaller infinite size has it too.\n- Gap-n problem: a specific open question in this area about how such transfers behave, which the text does not define.\n- Assumed theory Φ: the result is conditional on an extra mathematical hypothesis whose details are not given in the text.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "It is shown that the equivalence relation on Cohen generic reals over a countable model of set theory, where two are equivalent if they produce the same generic extension, is hyperfinite, answering a question of the author. The proof uses asymptotic separation and is a digestion of an argument originally produced by GPT-6.",
+   "abstract": "Assuming the existence of a certain theory $\\Phi$, we solve the Gap-$n$ problem for more than one predicate. This will be done for infinitary logic with infinitary quantification.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28226",
-   "title": "Dense ideals in forcing extensions of Nairian models",
-   "url": "https://arxiv.org/abs/2611.28226",
+   "uid": "arxiv:2611.32320",
+   "title": "Alpha-Beta Pruning via Monadic Continuations",
+   "url": "https://arxiv.org/abs/2611.32320",
    "authors": [
-    "Rahman Mohammadpour",
-    "Grigor Sargsyan"
+    "Mart\\'in Escard\\'o",
+    "Paulo Oliva"
    ],
-   "label": "arXiv:2611.28226v1",
-   "primary_category": "math.LO",
+   "label": "arXiv:2611.32320v1",
+   "primary_category": "cs.AI",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper builds forcing extensions of minimal Nairian models (ZF-style models with the Axiom of Determinacy for sets of reals) in which AC and GCH hold and every uncountable regular cardinal carries a precipitous, uniform, kappa-dense ideal whose quotient algebra is the regular open algebra of Col(omega, kappa).",
-    "plain": "This is set theory: mathematicians study which infinite sizes exist and which \"ideals\" (collections of small sets that can be ignored) can exist on them. The paper shows that, in certain forcing extensions of a family of models where choice fails in a controlled way, every uncountable regular infinite size has a particularly well-behaved ideal of this kind. The authors also place the consistency strength of the relevant theory relative to large-cardinal hypotheses.",
-    "why": "It extends a theorem of Woodin, which gave such ideals only on omega_1, to every uncountable regular cardinal, and it adds to related work by Eskew and Hayut. The text itself does not say more about wider applications, so the broader significance is uncertain from this excerpt alone.",
-    "background": "- Axiom of Choice (AC): the principle that one can pick an element from every set in a collection; it is independent of the other standard axioms.\n- Axiom of Determinacy (AD) and AD_R: a strong alternative to choice stating that certain infinite two-player games are determined, applied to sets of real numbers.\n- Forcing: a technique for extending a model of set theory by adding new sets, used to show what is and is not consistent.\n- Cardinals, regular cardinals, and the Generalized Continuum Hypothesis (GCH): measures of infinite size and a conjecture about how sizes of power sets grow.\n- Ideals and dense ideals: collections of \"negligible\" sets closed under certain operations; density and precipitousness are strong regularity properties of such ideals.\n- Woodin cardinal: a large-cardinal assumption, a strong form of infinity used to measure consistency strength.",
+    "one_liner": "The paper gives a monadic (continuation- and reader-monad based) formulation of alpha-beta pruning for minimax game search, records pruning bounds inside monadic outcomes rather than in move types, extends outcomes to return optimal plays, and proves the result matches exhaustive minimax.",
+    "plain": "The paper looks at a standard method that lets a game-playing program find the best move while skipping many possible lines of play that cannot change the answer. The authors rewrite this method using abstract programming structures called monads, which keep track of intermediate results in a tidy way. They test it on Tic-Tac-Toe, where it evaluated 39 times fewer plays than checking every possibility, and they formally prove it gives the same answers as the full exhaustive search.",
+    "why": "Alpha-beta pruning is a foundational technique in game AI, so a cleaner, provably correct way to express it within standard functional-programming abstractions may be useful for building and verifying search code. The text reports only a Tic-Tac-Toe example, so its impact on larger games or practical systems is not shown here.",
+    "background": "- Minimax: a search where one player maximises and the opponent minimises the final score, over all possible game continuations.\n- Alpha-beta pruning: a speed-up that stops exploring a branch once it is clear it cannot change the decision.\n- Monad: a programming abstraction for chaining computations that carry extra context; used here to organise search results.\n- Continuation monad: a way of passing \"what happens next\" as a function, letting a search decide how to proceed.\n- Reader monad: a way of passing shared settings (here, the pruning bounds) implicitly through a computation.\n- Selection monad: a related abstraction for choosing moves in games, which the text says is inefficient for alpha-beta search.\n- Formal correctness proof: a mathematical argument, typically checked by a proof assistant, that the program meets its specification.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Complementing the work of Blue, Larson, and Sargsyan~\\cite{NM,NM2}, we obtain forcing extensions of minimal Nairian models in which the Axiom of Choice and the Generalized Continuum Hypothesis hold. In these extensions, every uncountable regular cardinal $\\kappa$ carries a precipitous, uniform, $\\kappa$-dense ideal $\\mathcal{I}_\\kappa$. In fact, $\\mathcal P(\\kappa)/\\mathcal{I}_\\kappa$ is isomorphic to the regular open algebra of $\\textrm{Col}(\\omega,\\kappa)$. This extends Woodin's theorem on the existence of $\\omega_1$-dense ideals on $\\omega_1$ in forcing extensions of models of $\\Theta_{\\rm reg}$ \\cite[Section~2.3]{ASTWZ24}, where $\\Theta_{\\rm reg}$ denotes the theory $\\textrm{ZF}+\\textrm{AD}_{\\mathbb R}+\\text{``$\\Theta$ is regular''}$. Moreover, our work places the consistency strength of the aforementioned theory on generic embeddings below a Woodin cardinal that is a limit of Woodin cardinals, and also complements the seminal work of Eskew and Hayut~\\cite{EH24}.",
+   "abstract": "Alpha-beta pruning is a fundamental technique in game-playing AI, enabling efficient minimax search by avoiding the exploration of branches that cannot affect the optimal decision. We present a monadic formulation of alpha-beta pruning based on the combination of the continuation monad and the reader monad. Unlike previous approaches that encode alpha-beta bounds into the types of available moves, our construction records these bounds within monadic outcomes, leaving the move types unchanged. We further show that the ordinary continuation monad suffices to compute not only optimal outcomes but also optimal plays, by extending the outcome type to include the corresponding sequences of moves. This provides an alternative to generalisations of the continuation monad proposed to address the inefficiencies associated with the selection monad in alpha-beta search. We illustrate our approach with an implementation of Tic-Tac-Toe, observing a 39-fold reduction in the number of plays evaluated, compared with exhaustive search, in computing an optimal play. Finally, we formally establish the correctness of our construction by proving that the monadic alpha-beta search computes the same optimal outcomes and plays as exhaustive minimax search. Our results demonstrate how a foundational algorithm in AI can be expressed and verified using standard monadic abstractions, providing a basis for further development of compositional approaches to adversarial search.",
    "source": "arxiv"
   },
   {

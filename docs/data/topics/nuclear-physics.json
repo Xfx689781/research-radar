@@ -3,63 +3,45 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30434",
-   "title": "Effect of dark matter and scalar-cut potential on the macroscopic properties of neutron stars: A chiral quark mean field approach",
-   "url": "https://arxiv.org/abs/2611.30434",
+   "uid": "arxiv:2611.31819",
+   "title": "Elastic polar oscillations and nuclear parameters",
+   "url": "https://arxiv.org/abs/2611.31819",
    "authors": [
-    "Hrishika P",
-    "Arvind Kumar"
+    "Hajime Sotani"
    ],
-   "label": "arXiv:2611.30434v1",
-   "primary_category": "hep-ph",
+   "label": "arXiv:2611.31819v1",
+   "primary_category": "astro-ph.HE",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A chiral SU(3) quark mean-field study of neutron stars that adds fermionic dark matter (two-fluid TOV) and a scalar-cut potential, examining how these change the equation of state, mass-radius relation, tidal deformability and gravitational redshift.",
-    "plain": "This paper asks how a hypothetical invisible component, dark matter, might change the inside of a neutron star, the extremely dense collapsed remnant of a massive star. The authors build a computer model of the star's ordinary matter and a separate dark matter fluid that interacts with it only through gravity. They report that adding a particular potential stiffens the matter's pressure response, while more dark matter generally softens it and alters the star's size, mass and related observable properties.",
-    "why": "Neutron star mass, size and how easily they are tidally squeezed are measurable, so models like this can in principle be checked against observations, which is why dark matter inside stars is studied. The text does not show how strongly these effects compare with current observational limits, so their real-world significance remains uncertain.",
-    "background": "- Neutron star: a city-sized, extremely dense star left after a massive star's core collapses.\n- Equation of state (EOS): the rule linking pressure to density in a material; a \"stiffer\" EOS resists compression more and supports more mass.\n- Mass-radius relation: how a star's radius changes with its mass; it is a key test against observations.\n- Tidal deformability: how much a star is stretched out of shape by a companion's gravity, which affects gravitational-wave signals from merging stars.\n- Gravitational redshift: the shift of light to longer wavelengths as it escapes a strong gravitational field.\n- Chiral quark mean-field model: a theoretical framework describing nuclear matter in terms of quarks bound in particles and exchanged force-carrying fields.\n- Two-fluid TOV: the standard stellar-structure equations extended to two fluids that share only gravity.\n- Dark matter halo vs. core: dark matter may sit in a dense central core or in a diffuse outer cloud, depending on its mass and interactions.",
+    "one_liner": "A review-style summary of how crustal elastic oscillation modes (s- and i-modes) of neutron stars, potentially seen in short gamma-ray burst precursors, could be used to constrain nuclear saturation parameters K0 and L via compactness-based fitting formulas.",
+    "plain": "Neutron stars are extremely dense stellar remnants, and when two of them merge they may make the crust ring like a bell before a short gamma-ray burst. This paper summarizes earlier work on the ringing frequencies tied to the crust's elasticity, which could in principle reveal how the star's matter behaves. The authors report that, for a given set of nuclear properties, certain scaled frequencies depend mainly on the star's compactness, and they give fitting formulas linking those frequencies to two nuclear parameters, K0 and L.",
+    "why": "If such oscillations were observed, matching them to these formulas could help narrow the possible values of nuclear properties that are hard to measure in the laboratory, which is why the approach is of interest to neutron-star seismology. The text does not report any observation of these modes, so the practical payoff remains conditional on future detections.",
+    "background": "- Neutron star: a collapsed star roughly 1.4 times the Sun's mass packed into about 20 km across.\n- Oscillation modes: ways a star can vibrate; the fundamental, pressure, and gravity modes are the usual ones, while shear and interface modes arise from the crust's elasticity.\n- s-mode and i-mode: crust-related vibration modes named in the paper; the text does not define them in detail.\n- Asteroseismology: inferring a star's interior properties from its vibration frequencies, similar to how seismologists use earthquake waves.\n- Compactness: the ratio of a star's mass to its radius, a measure of how strongly gravity compresses it.\n- Equation of state (EOS): the relation between pressure and density that describes the matter inside the star.\n- Nuclear saturation parameters: K0 (incompressibility of symmetric nuclear matter, how stiff it is to squeezing) and L (slope of the nuclear symmetry energy, how the energy cost of neutron-proton imbalance changes with density).\n- Short gamma-ray burst precursors: brief high-energy flashes that may come just before a merger.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We investigate the effects of fermionic dark matter (DM) and scalar-cut potential ($U_{\\text{cut}}(\\phi)$) on the equation of state (EOS) and macroscopic properties of neutron stars. The baryonic matter consists of neutrons, protons, electrons, and muons under the $\\beta$-equilibrium and is described within the chiral SU(3) quark mean-field (CQMF) model. In this framework, quarks are confined within baryons, whose properties are modified through the exchange of scalar fields $\\sigma$, $\\zeta$, and $\\delta$, and vector fields $\\omega$ and $\\rho$. The DM is modelled as a self-interacting fermionic fluid with scalar $\\varphi_D$ and vector $V_D^\\mu$ mediators. The baryonic and DM fluids interact only through gravity and are treated within a two-fluid Tolman-Oppenheimer-Volkoff formalism. We examine the resulting mass-radius relation and tidal deformability, along with the gravitational redshift, to investigate the effects of DM on neutron star structure and observable properties. The inclusion of $U_{\\text{cut}}(\\phi)$ stiffens the EOS, whereas increasing the DM fraction generally softens the EOS and modifies the mass-radius relation, tidal deformability, and gravitational redshift. The magnitude and nature of these modifications depend on the DM particle mass and mediator interactions, which determine whether the resulting configurations exhibit compact DM cores or extended DM halos.",
+   "abstract": "Owing to the elasticity of a neutron star, the shear and interface modes are excited, in addition to the fundamental, pressure, and gravity modes. While direct observations of the oscillation spectrum remain challenging, potential resonance signatures from these modes could be manifested in the precursors of short gamma-ray bursts from binary neutron star mergers. If the oscillation spectrum is observed, this is a good opportunity to extract the physical properties through the technique of asteroseismology. In particular, we focus on the crustal elasticity and examine the $s$- and $i$-mode frequencies. We find that, for a given EOS specified by the nuclear saturation parameters, the radius-scaled $s$-mode frequencies and the mass-scaled $i$-mode frequencies can be expressed as a function of the stellar compactness, independently of the stiffness of the core EOS, at least when the EOS in a higher-density region can be characterized only by the specific constant sound velocity. Then, we could derive the fitting formula for the $s_i$-mode for $i=1-4$ and $i_1$-mode frequencies as a function of the stellar compactness and the combination of the incompressibility of symmetric nuclear matter, $K_0$, and the slope parameter for the nuclear symmetry energy, $L$. If the $s$- and/or $i$-mode oscillation frequencies were observed, one may get the relation between these properties by identifying the observed frequencies with specific modes, using our fitting formula, which offers useful insights into the nuclear saturation parameters and stellar properties. By combining the other observational data, it may be possible to narrow the parameter space of EOS parameters and stellar properties. We emphasize that this article summarizes the results presented in our previous studies and discusses their implications for neutron star seismology.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.30439",
-   "title": "Bypassing the Nanoampere Limit: A Thick-Target Methodology for Ultra-Low-Energy Resonances in the $^{11}$B(p,$\\alpha$)2$\\alpha$ Reaction",
-   "url": "https://arxiv.org/abs/2611.30439",
+   "uid": "arxiv:2611.32516",
+   "title": "Softer charged-hadron spectra in Ne+Ne than in O+O collisions at the same multiplicity at $\\sqrt{s_{\\rm NN}} = 5.36$ TeV",
+   "url": "https://arxiv.org/abs/2611.32516",
    "authors": [
-    "Xu-Yang Luo",
-    "Wen-Qing Wei",
-    "Shi-zheng Zhang",
-    "Wen Jiang",
-    "Bu-bo Ma",
-    "Zi-qian Zhao",
-    "Zhao Wang",
-    "Guo-Dong Wang",
-    "Lu-Lin Shi",
-    "Rui Cheng",
-    "Yan-Shi Zhang",
-    "Di Luo",
-    "Xiao Xiao",
-    "Guan-Chao Zhao",
-    "Bing Liu",
-    "Dieter H. H. Hoffmann",
-    "Jie-Ru Ren",
-    "Yong-Tao Zhao"
+    "Kishora Nayak"
    ],
-   "label": "arXiv:2611.30439v1",
+   "label": "arXiv:2611.32516v1",
    "primary_category": "nucl-ex",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper introduces a thick-target method, using beam currents of 20–60 µA with Monte Carlo yield calculations, to measure the very small cross section of the 11B(p,α)2α reaction and search for low-energy resonances below 100 keV.",
-    "plain": "Scientists want to know how often protons and boron-11 nuclei react at very low energies, because this reaction matters for stars and for possible clean fusion power. The reaction is so unlikely at these energies that older experiments could only use very weak proton beams, which gave too few events to measure well. This paper describes a way to use beams about a thousand times stronger, with computer simulations to convert the counts into an absolute reaction yield.",
-    "why": "Better measurements of this reaction at low energy would help nuclear astrophysics and fusion research, which depend on how often it occurs. The authors say the method may be a practical tool for searching for unknown resonances, though the text reports only preliminary checks at 75 and 100 keV, so its wider usefulness is not yet shown.",
-    "background": "- Cross section: a measure of how likely a nuclear reaction is for a given collision energy; tiny values mean rare events.\n- Resonance: an energy at which a reaction is strongly enhanced, like a pitch at which a system responds most strongly.\n- Center-of-mass (c.m.) energy: the collision energy measured in the frame moving with the two colliding particles.\n- Thin vs. thick target: a thin target lets the beam pass through with little slowing, while a thick target slows the beam inside the material, so the reaction happens across a range of energies.\n- Beam current (nanoampere, microampere): the flow of charged particles; a microampere is a thousand times larger than a nanoampere.\n- Monte Carlo simulation: random-sampling computer modeling used here to predict the reaction yield from the full kinematics.\n- Astrophysical and fusion relevance: p-11B fusion produces helium nuclei without neutrons, which is why it is studied for energy and why stellar reaction rates are of interest.",
+    "one_liner": "Compares ATLAS charged-hadron transverse-momentum spectra in O+O and Ne+Ne collisions at equal charged-particle multiplicity (rather than equal centrality), finding Ne+Ne spectra softer, and tests the same procedure on Xe+Xe and Pb+Pb.",
+    "plain": "Heavy-ion collisions at the Large Hadron Collider smash nuclei together and spray out many particles. This paper takes published measurements of oxygen-on-oxygen and neon-on-neon collisions and compares them when both have the same number of produced particles, instead of the same overlap \"centrality\" class. At equal particle counts, the neon-on-neon sprays are found to have a somewhat gentler energy distribution, with a lower average transverse momentum.",
+    "why": "It bears on whether the spread of particle energies in these tiny collisions is set by how many particles are made or by how large the fireball is, a question relevant to how the quark-gluon plasma forms in small systems. The text reports the effect with explicit statistical significance, but the interpretation (larger transverse area gives softer spectra) is only described as the expected ordering, so it should be read as a measured tendency rather than a settled explanation.",
+    "background": "- Heavy-ion collisions: nuclei smashed together at high energy to create a hot, dense state of matter.\n- Centrality: how head-on a collision is; more central collisions produce more particles.\n- Multiplicity: the number of charged particles produced in one collision.\n- Transverse momentum (pT): the sideways momentum of a particle relative to the beam; a spectrum shows how many particles occur at each pT.\n- Mean pT: the average sideways momentum; a lower value means a \"softer\" spectrum.\n- Stretch factor: a single scaling of the pT axis used to match one spectrum to another.\n- Standard deviations (sigma): how many measurement uncertainties a difference is from no difference.\n- Pseudorapidity: a measure of angle from the beam direction; \"forward\" means closer to the beam.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Precise measurements of the low-energy cross section for the $^{11}$B(p,$\\alpha$)2$\\alpha$ reaction is critical for nuclear astrophysics and fusion energy research, yet such measurements are experimentally demanding due to the reaction's extremely small cross section. Conventional thin-target experiments are fundamentally limited to nanoampere beam currents, which restrict count rates to impractical levels at ultra-low proton energies. To overcome this limitation, we report a correction-free thick-target methodology capable of operating at beam currents of 20-60 microamperes, corresponding to a gain of over three orders of magnitude. Monte Carlo simulations of the full reaction kinematics are employed to determine the absolute reaction yield, eliminating the requirement for empirical normalization factors. At the well-known 148~keV (c.m.) resonance peak, our extracted resonance energy ($E_{\\mathrm{r}} = 148.0$~keV) and level width ($\\Gamma_{\\mathrm{cm}} = 5.3$~keV) are demonstrated in good agreement with published data. A scheme via comparing the measured reaction probability with a theoretical extrapolation result is furtherly presented to probe low-energy resonances below 100~keV region. Preliminary measurements at proton energies of 75~keV and 100~keV reveal no evidence for additional low-energy resonances. This work provides a robust new methodology to measure cross section and resonance parameters for the p$^{11}$B reaction and offers a highly efficient tool for systematic resonance searches in the ultra-low-energy regime.",
+   "abstract": "Charged-hadron spectra measured by the ATLAS Collaboration in O+O and Ne+Ne collisions at $\\sqrt{s_{\\rm NN}} = 5.36$ TeV are compared at the same charged-particle multiplicity instead of at the same centrality, to test whether the shape of the transverse-momentum spectrum at a given multiplicity depends on the size of the colliding system. At equal multiplicity, Ne+Ne collisions have a lower mean transverse momentum $\\langle p_{\\rm T}\\rangle$ than O+O collisions. Without any spectral fit, the published $\\langle p_{\\rm T}\\rangle$ values give a Ne+Ne/O+O ratio of 0.9822 at 3-4% centrality, 6.6 standard deviations below unity even if the O+O systematic uncertainties are taken as uncorrelated between centrality classes. At $0.4 < p_{\\rm T} < 2$ GeV the Ne+Ne spectrum is described by the O+O spectrum with the transverse-momentum axis compressed by a single stretch factor, $\\lambda_{\\rm Ne/O} = 0.969$ in the 3-4% class. It lies 9.5 or 3.3 standard deviations below unity, depending on whether the common part of the O+O systematic uncertainties cancels between centrality classes. This ordering is expected if Ne+Ne collisions have a larger transverse area at the same multiplicity and a larger area gives a softer spectrum. The softening decreases towards peripheral collisions and is the same at forward pseudorapidity. In central collisions the spectral shape follows the centrality class more closely than the multiplicity. The same procedure is tested in Xe+Xe and Pb+Pb collisions.",
    "source": "arxiv"
   },
   {

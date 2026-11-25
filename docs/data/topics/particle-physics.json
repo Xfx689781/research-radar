@@ -3,50 +3,50 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30113",
-   "title": "Superheavy gravitational dark matter from runaway bubble collisions",
-   "url": "https://arxiv.org/abs/2611.30113",
+   "uid": "arxiv:2611.31368",
+   "title": "Dark vector meson effects on composite dark matter",
+   "url": "https://arxiv.org/abs/2611.31368",
    "authors": [
-    "Cheng-Wei Chiang",
-    "Van Que Tran"
+    "Tomohiro Abe",
+    "Ryosuke Sato",
+    "Ozan Semin",
+    "Takumu Yamanaka"
    ],
-   "label": "arXiv:2611.30113v1",
+   "label": "arXiv:2611.31368v1",
    "primary_category": "hep-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proposes that a very heavy, stable particle coupling only gravitationally could be pair-produced by graviton exchange in collisions of runaway bubble walls during a first-order vacuum transition, yielding a flat production rate up to masses near (H/β)M_P/ν² and dark matter up to about 10^17 GeV.",
-    "plain": "The paper asks how a dark matter particle could be made in the early universe if it interacts with ordinary matter only through gravity. It proposes that particles can be created when the walls of expanding bubbles of a new vacuum state collide at high speed, with gravity acting as the link. The text reports a yield formula for Dirac fermions and says gravity alone could account for dark matter up to very large masses, in cases where the usual freeze-in mechanism would not work.",
-    "why": "It offers a production route for extremely heavy dark matter that depends only on gravity, which is relevant because such particles would be hard to detect directly. The connection to specific observations is not addressed in the text, so its relevance beyond this scenario is uncertain.",
-    "background": "- Dark matter: unseen matter that makes up most of the matter in the universe, inferred from its gravitational effects.\n- Gravitational coupling: the particle interacts with other things only through gravity, not through the electromagnetic or other forces.\n- Pair production: creating a particle and its antiparticle from energy in a collision.\n- Graviton: the hypothetical quantum carrier of gravity, analogous to a photon for electromagnetism.\n- Vacuum bubble walls: in some models the universe's vacuum can decay, forming expanding bubbles whose boundaries (walls) can collide and release energy.\n- Runaway walls: bubble walls that keep accelerating rather than settling to a steady speed.\n- Freeze-in: a production mechanism where a dark matter particle is slowly created by collisions of other particles in the hot early universe; it fails for very heavy particles at low reheating temperatures.\n- Reheating temperature: the temperature the universe reached after inflation ended and its energy was converted into hot particles.\n- Hubble rate: the rate at which the universe is expanding; H/β compares it to the speed of the wall transition.\n- Reduced Planck mass: the natural mass scale of gravity, about 2.4×10^18 GeV.",
+    "one_liner": "Extends prior work on G-parity-odd dark pion dark matter in a QCD-like SU(N_c) dark sector by adding dark rho vector mesons, which enable resonant enhancement in relic abundance and mix with Standard Model gauge bosons, and recasts LHC searches and projects FCC-hh and muon collider reach.",
+    "plain": "This paper studies a hypothetical hidden sector, a dark version of the strong force with its own quarks, whose lightest particles could make up dark matter. Earlier work looked only at the dark \"pions\" as the dark matter; this study adds the heavier dark \"rho\" particles. The authors find that these heavier particles can noticeably change how much dark matter is left over from the early universe, and they outline how existing collider searches and future machines could detect them.",
+    "why": "It offers a concrete, testable route for a dark matter candidate that could show up at colliders, not only in cosmic or underground detectors. The text gives only the headline claims (resonant enhancement, mixing with Standard Model bosons, FCC-hh reach up to 40 TeV), so the strength of these results should be checked against the full calculations.",
+    "background": "- Dark matter: unseen matter that makes up most of the mass of galaxies; its amount is set by how it was produced and thinned out in the early universe (the \"relic abundance\").\n- Relic abundance and resonant enhancement: when a particle's mass is near a particle-pair energy, interactions are boosted, changing how much survives.\n- Hidden or dark sector: particles that interact with ordinary matter only weakly, here via a QCD-like strong force with dark quarks.\n- Dark pions and rho mesons: bound states of dark quarks, analogous to ordinary pions and rho mesons; the rho is a heavier \"vector\" partner.\n- G-parity: a symmetry property that determines which decays and couplings are allowed.\n- Mixing with Standard Model gauge bosons: the dark rho can blend with W, Z or photon-like particles, giving it new ways to decay.\n- Colliders: LHC (ATLAS, CMS) searches are reinterpreted; FCC-hh (a proposed 100 TeV proton collider) and muon colliders are future machines.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "A stable particle that couples only through gravity is pair-produced in collisions of runaway bubble walls by graviton exchange. For a transition of duration $1/\\beta$, a Dirac fermion reaches the yield $Y_X\\simeq6.8\\times10^{-3}(H/\\beta)(T_{\\rm reh}/M_{\\rm P})^3$, where $H$ is the Hubble rate of the vacuum energy, $T_{\\rm reh}$ the reheating temperature and $M_{\\rm P}$ the reduced Planck mass. The yield is flat up to masses near $(H/\\beta)M_{\\rm P}/\\nu^2$, where $\\nu$ of order one sets the wall-field excursion. Gravity alone then gives dark matter up to about $10^{17}$~GeV at reheating temperatures far below its mass, where freeze-in fails.",
+   "abstract": "We extend previous studies of $\\mathcal{G}$-parity-odd dark pion dark matter in a QCD-like $\\mathrm{SU}(N_c)$ gauge theory with electroweakly interacting dark quarks to include the effects of $\\rho$ mesons. We show that vector mesons can substantially affect relic abundance calculations through resonant enhancement, significantly affecting the conditions required to reproduce the observed relic abundance. Electroweak interactions further induce mixing between the dark $\\rho$ mesons and Standard Model gauge bosons, opening new decay channels for the dark $\\rho$ and modifying the effective interactions of the dark pions. We recast existing ATLAS and CMS searches to constrain the model, and perform a collider phenomenology study targeting the future FCC-hh and muon colliders, focusing on the resonant enhancement of cross sections in the $e^+e^-$, $\\mu^+\\mu^-$, and $W^+W^-$ final states for the latter. We show that the FCC-hh could probe $\\rho$ mesons whose mass is up to 40 TeV.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28217",
-   "title": "WIMPs as FIMPs: the Inert Doublet Model and low-temperature reheating",
-   "url": "https://arxiv.org/abs/2611.28217",
+   "uid": "arxiv:2611.32906",
+   "title": "Dark Matter Assisted Axion-Magnetic Resonance",
+   "url": "https://arxiv.org/abs/2611.32906",
    "authors": [
-    "Genevi\\`eve B\\'elanger",
-    "Nicol\\'as Bernal",
-    "Andreas Goudelis",
-    "Alexander Pukhov",
-    "Thomas Reggio"
+    "Chen Sun",
+    "Si-Yu Wu",
+    "Seokhoon Yun"
    ],
-   "label": "arXiv:2611.28217v1",
+   "label": "arXiv:2611.32906v1",
    "primary_category": "hep-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper revisits the Inert Doublet Model and shows that, with low reheating temperatures, a WIMP dark matter candidate can reach its observed relic abundance via freeze-in instead of the usual freeze-out, including finite-duration reheating and annihilation backreaction effects.",
-    "plain": "The paper asks how dark matter, the invisible material that makes up most of the universe's matter, gets its present-day amount. The usual textbook story assumes the particles were once in thermal balance with everything else and then \"froze out\" as the universe cooled. The authors show that if the universe was reheated to only a fairly low temperature after inflation, a heavy particle of this type may never reach that balance and can instead build up slowly, a process called freeze-in.",
-    "why": "Most searches for WIMP dark matter assume freeze-out, so a viable WIMP model that is ruled out under that assumption may survive under a different early-universe history. The text does not claim any experimental test or detection; its link to observations is only through the idea that the relic abundance constraint can be relaxed.",
-    "background": "- Dark matter: unseen matter inferred from gravity; its total amount is measured.\n- WIMP (weakly interacting massive particle): a heavy dark matter candidate that interacts through weak-force-like couplings.\n- Freeze-out: particles are in thermal equilibrium early on, then annihilation stops as the universe expands and cools, leaving a fixed leftover amount.\n- Freeze-in: particles are produced very weakly and slowly, never reaching equilibrium; the leftover builds up over time. FIMPs are the feebly interacting analogue.\n- Reheating: the period after inflation when the universe's hot plasma of particles is re-established; its final temperature is the reheating temperature.\n- Inert Doublet Model: an extension of the Standard Model with an extra Higgs-like doublet whose lightest neutral component can be dark matter.\n- Relic abundance: the density of dark matter left over today.",
+    "one_liner": "A proposed resonance in which an oscillating axion dark matter background boosts the conversion of stellar axions into X-rays in a magnetic field, tested against NuSTAR data from the starburst galaxy M82.",
+    "plain": "The paper looks for a hypothetical light particle called the axion, which could make up dark matter and could also be made in stars. In a magnetic field, such axions can turn into X-ray photons, and the authors show that the dark matter background can make this conversion much stronger at certain particle masses. They apply this idea to X-ray observations of the galaxy M82 from the NuSTAR telescope.",
+    "why": "If correct, the effect would tighten limits on how strongly axions couple to light over part of the mass range where ordinary conversion is suppressed, which matters for dark matter searches. The authors report only a moderate preference for their features in the data, which is still consistent with statistical noise, so the result needs confirmation.",
+    "background": "- Axion: a hypothetical, very light particle proposed to solve a problem in particle physics and a candidate for dark matter.\n- Dark matter: unseen matter that makes up most of the mass of galaxies, detected only through gravity.\n- Photon-axion conversion: an axion turning into a photon (particle of light) when passing through a magnetic field.\n- Resonance: a condition where two effects match up so a process is strongly amplified, like pushing a swing at its natural rhythm.\n- Dispersion relation: how a particle's energy depends on its momentum and mass; mismatch between photons and axions normally suppresses conversion.\n- Stellar axions: axions expected to be produced in the hot cores of stars.\n- M82: a starburst galaxy with intense star formation, used as a bright source.\n- NuSTAR: an X-ray space telescope whose existing data is reanalysed here.\n- Upper limit / constraint: a bound saying a coupling must be smaller than some value given no signal was seen.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Weakly Interacting Massive Particles (WIMPs) are conventionally assumed to acquire their dark matter relic abundance through thermal freeze-out. However, this association relies on assumptions concerning the thermal history of the early Universe. We revisit the Inert Doublet Model (IDM), a representative WIMP framework in which dark matter interacts with the Standard Model through electroweak gauge interactions, even when its Higgs-portal coupling vanishes. We demonstrate that sufficiently low reheating temperatures can prevent chemical equilibrium, allowing a genuine WIMP to acquire its relic abundance through freeze-in rather than freeze-out. Considering both instantaneous and finite-duration reheating, we identify different production histories, including freeze-out during radiation domination, freeze-out during reheating, and freeze-in with potentially significant annihilation backreactions. These scenarios open regions of the IDM parameter space that would otherwise be excluded by dark matter overabundance. Our results demonstrate that WIMPs can behave as FIMPs, depending on the thermal history of the Universe.",
+   "abstract": "An oscillating axion dark matter (DM) background can enhance the conversion of another relativistic axion into photons when traversing a magnetic field. The DM background rotates photon polarization relative the magnetic orientation, which compensates the photon's and the propagating axion's dispersion relation mismatch. We relate this mechanism to Axion Magnetic Resonance (AMR) and apply it to stellar axions in the starburst galaxy M82. We analyze its enhancement to the resulting X-ray signals while accounting for the finite magnetic domain size, dark matter coherence length, DM density morphology, plasma profiles, and the detector response. We derive strong constraints using existing X-ray data from NuSTAR. We show that this resonant conversion can lead to $\\mathcal O(10^2)$ enhancement in the photon-axion conversion probability, improving the upper limits on axion's photon coupling over part of the mass range where ordinary conversion is suppressed. We also show that this type of resonance predicts distinctive features in the hard X-ray spectrum, which is moderately favored by the data over the background only model, yet it is currently still consistent with statistical fluctuations.",
    "source": "arxiv"
   },
   {

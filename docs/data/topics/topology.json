@@ -3,50 +3,45 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30095",
-   "title": "A complete knot invariant from grid diagrams",
-   "url": "https://arxiv.org/abs/2611.30095",
+   "uid": "arxiv:2611.32655",
+   "title": "One monoid to realize them all: a master monoid for homotopy types",
+   "url": "https://arxiv.org/abs/2611.32655",
    "authors": [
-    "Agnese Barbensi",
-    "Daniele Celoria",
-    "Lavender Marshall",
-    "Finn Thompson"
+    "Isaac Carcac\\'ia-Campos"
    ],
-   "label": "arXiv:2611.30095v1",
-   "primary_category": "math.GT",
+   "label": "arXiv:2611.32655v1",
+   "primary_category": "math.AT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper builds an infinite graph from grid diagrams of a knot and proves that its isomorphism class is a complete invariant of the knot up to mirror image, with finite algorithmically determinable portions of the graph sufficing to identify the knot type.",
-    "plain": "A knot is a closed loop tangled in three-dimensional space, like a tangled shoelace with the ends joined. This paper studies a way to describe any knot by a mathematical graph built from a square grid drawing of it. The authors show that this graph captures the knot completely, up to reflection in a mirror, and that only a finite, computable piece of the graph is needed to pin down which knot it is.",
-    "why": "Deciding whether two knots are the same is a classic hard problem in topology, so a complete invariant that can be computed algorithmically is of interest to specialists. The text does not say how practical the method is or how it compares with existing knot invariants, so its wider significance is uncertain.",
-    "background": "- Knot: a closed loop in space that cannot be untangled without cutting it; two knots are the same if one can be deformed into the other without cutting.\n- Knot invariant: a property or number computed from a knot that is the same for equivalent knots; a complete invariant determines the knot fully.\n- Grid diagram: a knot drawn on an n-by-n square grid, with vertical segments always passing over horizontal ones, which lets a knot be encoded as a finite combinatorial object.\n- Graph: a set of points (vertices) joined by edges; isomorphism means two graphs have the same structure up to relabeling.\n- Mirror image: the reflected version of a knot; the result identifies knots only up to mirroring, so left- and right-handed versions are not distinguished.\n- Algorithmic: computable by a step-by-step procedure in finite time.",
+    "one_liner": "The paper shows that every homotopy type (CW complex up to homotopy) can be realized as the classifying space of the translation category of an action of a single monoid on a set, obtained by collapsing all objects of the semisimplicial category while keeping its face maps, and it analyzes when such a monoid can serve as a weak test category.",
+    "plain": "Homotopy theory studies shapes up to continuous deformation, and it is usually described using spaces or using collections of combinatorial building blocks. This paper asks whether all such shapes can instead be encoded by actions of one algebraic object, a monoid (a set with an associative operation and an identity), acting on sets. The authors find that this is possible for every CW complex, and that truncating the construction at dimension n gives a finitely presented object that captures exactly the shapes of dimension at most n.",
+    "why": "It offers a purely algebraic route into homotopy theory, which may matter for researchers interested in combinatorial or computational models of shape. The text also draws a distinction: one object can realize all homotopy types, yet that monoid need not model homotopy theory as a localization, and the obstruction is identifying objects rather than having only one. How far this connects to other frameworks is not established in the text.",
+    "background": "- Homotopy type: a shape considered up to continuous deformation (for example, a sphere or a torus).\n- CW complex: a standard way of building spaces by gluing cells of increasing dimension.\n- Classifying space of a category: a space built from a category's objects and arrows, used to link combinatorics to topology.\n- Monoid: a set with an associative binary operation and an identity element; an \"action\" of it on a set is a way of letting its elements transform that set.\n- Semisimplicial category: a combinatorial category whose objects are ordered sets and whose maps are face operators, used to model spaces.\n- Test category: a small category whose presheaves model homotopy theory; a \"weak\" test category is a relaxed version of this notion.\n- Coreflective subcategory: a subcategory with a right adjoint-type inclusion, roughly a sub-collection closed under a canonical \"best approximation\".",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Using grid diagrams, we define an infinite graph associated to each knot type. We prove that the isomorphism class of this grid graph is a complete invariant of the knot, up to mirroring. Even more, we prove that algorithmically determinable finite parts of this graph are enough to determine the knot type.",
+   "abstract": "Homotopy theory has traditionally been approached either through topological spaces or through categories of presheaves on suitable combinatorial categories, a perspective subsumed by Grothendieck's theory of test categories. In this paper, we develop a more algebraic viewpoint: homotopy types can be represented by actions of a single monoid on sets. This monoid is obtained by identifying all the objects of the semisimplicial category while retaining its face operators. Every CW homotopy type is the classifying space of the translation category of one of its actions, and its truncation at dimension n is finitely presented and realizes exactly the homotopy types of dimension at most n. The construction rests on a general result: every set-valued functor on a small category freely generates an action of its universal monoid, and its category of elements is a full coreflective subcategory of the resulting translation category. Hence every weak test category gives rise to a monoid whose actions realize all homotopy types; when the category has more than one object, however, this monoid is not itself a weak test category, so that a single monoid may realize all homotopy types without modelling homotopy theory as a localization. The obstruction lies in identifying objects, not in having a single one: there are strict test categories with a single object, such as the monoid of all self-maps of an infinite set and a countable monoid of primitive recursive functions.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.29233",
-   "title": "Unknotting number is strictly subadditive for the trefoil",
-   "url": "https://arxiv.org/abs/2611.29233",
+   "uid": "arxiv:2611.32426",
+   "title": "An Introduction to O-minimal Geometry",
+   "url": "https://arxiv.org/abs/2611.32426",
    "authors": [
-    "Anne Dranowski",
-    "Yura Kabkov",
-    "Daniel Tubbenhauer"
+    "Michel Coste"
    ],
-   "label": "arXiv:2611.29233v1",
-   "primary_category": "math.GT",
+   "label": "arXiv:2611.32426v1",
+   "primary_category": "math.AG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that the unknotting number is strictly subadditive for the trefoil: a trefoil paired with a certain fourteen-crossing knot needs fewer total crossing changes to unknot together than separately, and this saving extends to infinitely many prime partners and to positive braid knots and torus knots.",
-    "plain": "This paper is about knots, the tangled loops of string studied in topology. For a knot, the unknotting number counts the fewest times you must pass one strand through another to turn it into a plain loop. The paper checks whether combining two knots can ever be cheaper to undo than handling each one separately, and finds that it can, using the trefoil (the simplest non-trivial knot) and a specific fourteen-crossing knot as the example.",
-    "why": "The question of whether this quantity adds up exactly when knots are joined was an open question in knot theory, so a clear counterexample family is of interest to specialists. The text does not indicate further applications, and I am not sure how far the result reaches beyond knot theory.",
-    "background": "- A knot is a closed loop of string embedded in space, considered up to bending and stretching but not cutting.\n- The unknot is the plain circle with no tangles.\n- A crossing change swaps which strand passes over at one crossing.\n- The unknotting number is the minimum number of crossing changes needed to reach the unknot.\n- Subadditivity means the unknotting number of a combined knot is at most the sum of the parts; strict subadditivity means it is sometimes strictly less.\n- The trefoil is the simplest non-trivial knot; positive braid knots and torus knots are standard families of knots.\n- A prime knot cannot be split as a connected sum of two non-trivial knots.",
+    "one_liner": "Lecture notes covering the core theory of o-minimal structures, including cell decomposition, dimension, definable triangulation, generic fibers, and smoothness.",
+    "plain": "These are teaching notes on a branch of mathematics that studies \"tame\" collections of shapes and sets defined by simple rules. The text only lists the six chapters (the basic definitions, splitting shapes into simple pieces, counting dimension, cutting shapes into triangles, studying families of sets, and smoothness), so it does not report any new findings. It is an overview of how the subject is organized.",
+    "why": "The notes are a structured entry point into a field of mathematics concerned with well-behaved geometry, which has links to model theory and real algebraic geometry. The provided text is only a chapter list, so I cannot say more about its specific content or its influence.",
+    "background": "- Sets in the plane or space and what \"dimension\" means for them\n- Basic topology: open and closed sets, continuity, connected pieces\n- Familiarity with real numbers, polynomials, and graphs of functions\n- Some logic vocabulary helps: a \"structure\" is a collection of sets and functions on the real numbers, and \"definable\" means describable by a formula in that structure\n- Triangulation means cutting a shape into simplices (triangles, tetrahedra, and their higher analogues)",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "A trefoil and a certain fourteen-crossing knot take four crossing changes to unknot separately and at most three together. We extend this example to infinitely many prime partners and show that the same partners give a saving for every nontrivial positive braid knot and, up to mirror, every nontrivial torus knot.",
+   "abstract": "These lecture notes on o-minimal geometry comprise six chapters: 1 - O minimal Structures. 2 - Cell Decomposition. 3 - Connected Components and Dimension. 4 - Definable Triangulation. 5 - Generic Fibers for Definable Families. 6 - Smoothness.",
    "source": "arxiv"
   },
   {

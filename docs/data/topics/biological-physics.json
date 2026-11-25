@@ -3,48 +3,51 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28961",
-   "title": "Estimating Extrapolation Factors in Time-Resolved Crystallography",
-   "url": "https://arxiv.org/abs/2611.28961",
+   "uid": "arxiv:2611.32850",
+   "title": "Geometry and topology of DNA defects",
+   "url": "https://arxiv.org/abs/2611.32850",
    "authors": [
-    "Sebastian Bielfeldt",
-    "Henry N. Chapman",
-    "Thomas J. Lane"
+    "A. Fassino",
+    "E. Carlon",
+    "D. Marenduzzo"
    ],
-   "label": "arXiv:2611.28961v1",
-   "primary_category": "physics.bio-ph",
+   "label": "arXiv:2611.32850v1",
+   "primary_category": "cond-mat.soft",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper reviews and benchmarks methods for estimating the extrapolation factor (the hidden fraction of triggered molecules) in two-state time-resolved crystallography, and introduces a voxel-by-voxel \"Vacuum Level Matching\" method with quality-control metrics and a Python package.",
-    "plain": "Time-resolved crystallography takes snapshots of proteins as they change shape after a trigger such as a light pulse, but only some molecules in the crystal actually respond, so the measured signal is a mix that has to be untangled. This paper compares the existing ways of doing that untangling on simulated data, finds that they are not always accurate, especially when the noise is high or few molecules have been triggered. It then proposes a new method that uses the physical rule that electron density cannot go below zero, and reports that it does better on simulated data and gives reasonable results on two real datasets while flagging where the data are too weak.",
-    "why": "Accurate separation of triggered and untriggered molecules determines whether the structural changes read from these experiments can be trusted. The paper's explicit quality-control flags and reusable software may help other groups judge their own datasets, though the text does not show how widely the method will be adopted.",
-    "background": "- Crystallography: X-ray diffraction from a protein crystal yields an electron density map showing where atoms are.\n- Time-resolved crystallography: a crystal is triggered (e.g., by light) and imaged at set time points to watch structural change.\n- Mixed population: only a fraction of molecules respond to the trigger, so each map is a blend of \"changed\" and \"unchanged\" protein.\n- Extrapolation factor: a fitted scaling parameter that the paper argues is related to, but not the same as, the true fraction of triggered molecules (called occupancy).\n- Voxel: one small 3D cell of the density map; the method works on each cell separately.\n- Nonnegativity: electron density cannot be less than zero, which sets a floor (\"vacuum level\") used as the constraint.",
+    "one_liner": "The paper defines a geometric order parameter (a backbone-to-base polar vector plus a base-orientation quaternion) to classify DNA defects into flip, stacking, and composite types, and tests it on real DNA structures and biased atomistic simulations.",
+    "plain": "DNA is normally a tidy double helix, but damage, proteins binding to it, or enzymes such as RNA polymerase can locally disturb how its building blocks sit. This paper offers a precise way to describe these local disturbances using geometry, and checks it against real DNA structures and computer simulations. It reports three kinds of defect: a flip of the direction of a strand's backbone-to-base arrow, a stacking defect where bases shift out of their neat layering, and a combination of both.",
+    "why": "The text says all three defect types appear in realistic DNA structures and have functional relevance, and that the approach might extend to RNA and nucleosome arrays. Whether this becomes a standard tool depends on follow-up work the text does not show.",
+    "background": "- DNA is a double helix; each strand has a sugar-phosphate backbone with a base attached.\n- Bases stack on top of each other inside the helix, and this stacking helps hold the structure together.\n- A \"defect\" here means a local departure from the normal regular geometry.\n- A quaternion is a compact mathematical way to describe 3D orientation (rotation), used here for how a base is oriented.\n- Atomistic molecular dynamics simulates every atom's motion over time; \"biased\" simulations push the molecule in a chosen direction to force deformations.\n- Nucleosomes are DNA wrapped around protein spools, which package the genome.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Time-resolved crystallography (TRX) captures macromolecules in action, but a triggered crystal contains a mixture of triggered proteins in an unknown state and untriggered proteins in the reference state. Separating these is necessary to isolate the dynamics of interest and is an underdetermined data-analysis task. For the simplest case, with one triggered state and one reference state, a range of methods exists, but their assumptions, accuracy, and domains of applicability have not been systematically investigated. Here, we deconstruct and review the methods in current use, employing a unified notation. We make their assumptions explicit and benchmark each on a simulated dataset. A key point is that many of these methods do not estimate the fraction of all triggered molecules in the crystal, but instead estimate a latent parameter we call the extrapolation factor, which is related to but distinct from the so-called \"occupancy\". As our simulations make apparent, current methods do not always yield accurate results, in particular with noisy data and when the fraction of triggered protein is low. Inspired by previous work, we introduce Vacuum Level Matching, a method that grounds the estimate in the physical constraint that electron density is a nonnegative quantity: it cannot fall below a vacuum level. Operating voxel by voxel, Vacuum Level Matching replaces the manual choices of previous methods with a data-driven procedure and reports quality-control metrics that flag data unable to support a confident prediction. On the same simulated data, it outperforms state-of-the-art methods, and on two experimental datasets, rsEGFP2 and a multi-time-point photolyase series, it recovers known structural changes while flagging issues where the data are weak. Finally, we report an implementation of Vacuum Level Matching in the form of a small, reusable Python package.",
+   "abstract": "DNA defects arise frequently, either as a result of damage, protein binding or the action of molecular enzymes such as an RNA polymerase. Here we combine geometry, atomistic simulations and an analysis of real DNA structures to provide a quantitative characterisation of DNA defects and their dynamics. The composite order parameter describing defects geometrically is a backbone-to-base polar vector, together with a quaternion capturing 3D base orientation in a single strand. There are three types of defects: flips of the polar vector, stacking defects of bases, and composite defects encompassing both. All types of defects feature in realistic structures for DNA and have functional relevance. Additionally, biased molecular dynamics simulations of DNA with an imposed elastic deformation form flip or stacking defects whose abundance and dynamics strongly depend on sequence and type of deformation. Our results provide a link between geometry and biochemistry, and could also be applied, for instance, to identify defects in RNA molecules and nucleosome arrays.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28225",
-   "title": "Nonequilibrium fluctuations could explain the hot mitochondria paradox",
-   "url": "https://arxiv.org/abs/2611.28225",
+   "uid": "arxiv:2611.32743",
+   "title": "Lattice models of chiral random motion: A short review",
+   "url": "https://arxiv.org/abs/2611.32743",
    "authors": [
-    "Matthew P. Leighton",
-    "Benjamin B. Machta"
+    "E. Kalz",
+    "J. Wojcik",
+    "N. Sherf",
+    "Y. Roichman",
+    "R. Metzler"
    ],
-   "label": "arXiv:2611.28225v1",
+   "label": "arXiv:2611.32743v1",
    "primary_category": "cond-mat.stat-mech",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A proposed explanation for reported ~10 K temperature excesses inside mitochondria, arguing that nonequilibrium fluctuations combined with frequency-selective molecular thermometers could produce apparent temperature differences without a true steady-state gradient.",
-    "plain": "Several experiments have reported that the inside of mitochondria, the energy-producing parts of cells, appears up to about 10 degrees warmer than the surrounding cell. Heat conduction physics seems to rule out such a steady difference unless the cell spends far more energy than it can. This paper proposes that rapid, random fluctuations in the cell, read by molecular probes that respond only to certain frequency ranges, could make the measurements show a 10 K difference while staying within a biologically plausible energy budget.",
-    "why": "The reported temperature gap has gone unexplained for nearly a decade, and it matters for how we interpret temperature-sensitive measurements in cells. The text only sketches the idea; it does not show that the proposed mechanism matches the actual experiments, so the claim should be treated as a hypothesis.",
-    "background": "- Mitochondria: small structures inside cells that produce most of the cell's usable chemical energy.\n- Temperature in a cell: normally a uniform value; a real steady temperature difference would need a constant heat source and a way to keep it from leaking away.\n- Heat conduction: heat flows from hot to cold and spreads out quickly in small, watery spaces, so large steady gradients are hard to sustain.\n- Steady state vs. fluctuations: a steady state is a settled condition; fluctuations are random short-lived changes. Nonequilibrium means the system is continuously driven by energy flow, so its fluctuations need not behave like those in equilibrium.\n- Molecular temperature probes: fluorescent or similar molecules whose signal changes with temperature; their readout can depend on the timescale over which they respond.\n- Power budget: the rate of energy use the cell can afford.",
+    "one_liner": "A short review that recasts several lattice random-walk models with a rotational bias (chiral walks) as one framework, using an internal state for the walker as the carrier of memory, and surveys their effects on diffusion, edge transport, and self-avoiding paths.",
+    "plain": "This paper reviews computer models of random movement on a grid, where the walker has a built-in tendency to turn one way, as seen in swimming bacteria, spinning particles, and charges moving in magnetic fields. The authors argue that on a grid this sideways bias only works if the walker remembers its recent direction, and they use a recently proposed chiral walk model as a template to bring several earlier, separately developed models together. The text describes where this memory shows up: in the surrounding environment, in the path the walker traces, and in the transport along edges.",
+    "why": "The review ties together lattice models that have been introduced in different fields since 1960 without a shared language, which may help researchers working on active matter, odd transport, and programmable robots see common structure. The text is a review and does not itself report new experimental results, so its practical impact is best judged by the cited literature.",
+    "background": "- Random walk: a path built from repeated random steps; its spread grows with the number of steps.\n- Diffusion tensor: a table of numbers describing how spreading differs by direction; an \"antisymmetric\" part means a sideways, swirling component.\n- Chirality: a handedness, a systematic tendency to turn one way (like a left or right hand).\n- Odd transport: transport that gains a sideways (Hall-like) component, with currents that flow across rather than only along gradients.\n- Lattice model: movement restricted to grid points, which makes it exactly solvable on paper and easy to simulate.\n- Memory: the walker's dependence on its previous step or internal state, which the review argues chirality requires on a lattice.\n- Run-and-tumble: motion alternating between straight runs and random reorientations, as in E. coli.\n- Self-avoiding walk: a path that never revisits a site.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Several different experiments have found apparent temperature differences of up to 10 K between the interior of mitochondria and the rest of the cellular environment. The physics of heat conduction, however, precludes the steady-state existence of a temperature difference greater than the microkelvin scale within the cell, absent a far greater energy budget. Nearly a decade after the first reported measurement, this apparent paradox remains unexplained. Here, we propose an explanation which allows the elevated temperature measurements to coexist with the theoretical impossibility of a true 10 K steady-state temperature difference. We suggest that nonequilibrium fluctuations within the cellular environment, combined with molecular temperature probes sensitive to specific ranges of frequencies, can lead to apparent 10 K temperature differences with a biologically attainable power budget.",
+   "abstract": "Chirality, a systematic rotational bias, is ubiquitous in many random motion patterns, from bacteria cells, that swim in circles near surfaces and spinning colloids, to charged particles diffusing under the influence of magnetic fields. In two dimensions, chirality renders random transport \\textit{odd}: the diffusion tensor acquires an antisymmetric part that leaves the mean-squared displacement invariant but modifies fluxes and boundary currents. Lattice models for random motion are a natural setting to study chirality, since they are exactly solvable, connect directly to heterogeneous media, cellular automata, and programmable robots, and in discrete time admit fully chiral limits with a localised bulk and edge transport. Lattice walks with a rotational bias have been introduced in different communities several times since 1960, yet without a common language or conceptual connection between them. Here we review these models from the perspective that on the lattice, chirality requires memory. Taking the recently introduced chiral random walk model as a template, we describe the walker with an internal degree of freedom. With a chiral biased updating rule, the full diffusion tensor of this chiral walker turns odd. Within this picture, we can unite persistent and chiral walks, run-and-tumble motion, and cyclic random motions in one framework. We discuss how the memory is followed into the environment; in Lorentz lattice gases, kinetic and rotor walks, and random odd environments; and into the path; in spiral self-avoiding walks.",
    "source": "arxiv"
   },
   {

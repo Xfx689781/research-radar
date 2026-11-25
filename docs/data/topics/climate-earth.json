@@ -3,54 +3,52 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29086",
-   "title": "Tipping cascades may lock the Earth system on a pathway towards a melthouse",
-   "url": "https://arxiv.org/abs/2611.29086",
+   "uid": "arxiv:2611.31564",
+   "title": "Evaluation of Machine-Learning Weather Models in Reproducing Mesoscale Tornado-Favorable Convective Environments",
+   "url": "https://arxiv.org/abs/2611.31564",
    "authors": [
-    "Victor Couplet",
-    "Wim Thiery",
-    "Michel Crucifix"
+    "Yiding Luo (University of Washington)",
+    "Rui Yuan (University of Washington)",
+    "Shetian Xia (University of Washington)",
+    "Royce Lee (University of Washington)",
+    "Alexandra Anderson-Frey (University of Washington)"
    ],
-   "label": "arXiv:2611.29086v1",
+   "label": "arXiv:2611.31564v1",
    "primary_category": "physics.ao-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A reduced-complexity Earth system model with a dynamic carbon cycle and interacting tipping elements finds no single threshold for a hothouse state, but suggests tipping cascades could lead to an irreversible melthouse with over 10 m of sea-level rise, possibly even under low-emission scenarios.",
-    "plain": "This paper asks whether the planet could slide past a point of no return into a much hotter, \"hothouse\" state, and what happens to sea level if it does. Using a simplified computer model of the climate, carbon cycle and large natural systems such as ice sheets, the authors report that they found no single planetary threshold for a hothouse. Instead, one tipping event can set off others in a chain, which they say could push the system toward a melthouse with more than 10 metres of sea-level rise.",
-    "why": "Sea-level rise of this size would threaten coastal cities and communities, and the paper argues that the risk comes from chains of tipping events rather than from one tipping point, which affects how emission targets should be judged. The text does not show how sensitive the result is to the model's simplifications, so its size should be treated as model-based rather than a firm projection.",
-    "background": "- Tipping elements: parts of the Earth system (such as ice sheets, permafrost, or forest systems) that can shift abruptly and often irreversibly once a threshold is crossed.\n- Tipping cascade: one tipping element changing and pushing other elements past their own thresholds, so the chain continues even if warming is later reduced.\n- Hothouse Earth: a proposed very warm, stable state of the planet that is hard to reverse, often discussed in climate research.\n- Melthouse: the paper's term for a state where large-scale ice loss has driven sea level up by over 10 metres and remains there.\n- Reduced-complexity model: a simplified climate model that runs quickly and captures key processes but with less detail than the large models used for official projections.\n- Dynamic carbon cycle: the model includes how land and ocean absorb or release carbon as the climate changes, rather than fixing carbon levels in advance.",
+    "one_liner": "This paper benchmarks three machine-learning weather models (Pangu-Weather, FengWu v1/v2, FuXi Weather) on tornado-favorable convective parameters for ten strong-tornado events in Oklahoma, using reanalysis data as input and ground truth across lead times of 24 to 168 hours.",
+    "plain": "Some tornadoes form when the air near the ground is warm and humid and the winds change speed and direction with height. This study asks whether newer AI-based weather forecasting models can reproduce those conditions for ten past tornado outbreaks in Oklahoma. The authors found that performance depended on the weather variable, the model, and the event, and that forecasts lost accuracy for extreme values and fine spatial detail as the lead time grew.",
+    "why": "AI weather models are already used operationally and are cheap to run, so checking whether they capture the specific ingredients of tornado-prone weather matters for severe-weather forecasting. The text does not show direct effects on warnings or public safety, so the practical impact remains uncertain.",
+    "background": "- Numerical weather prediction (NWP): forecasts made by solving physics equations on a computer grid, the traditional approach.\n- Machine-learning (ML) weather models: neural networks trained on past atmospheric data to forecast the weather; much cheaper to run than NWP.\n- Grid spacing (0.25 degrees): the distance between points in the model's map, roughly 25 km; coarse grids can miss small features.\n- Reanalysis data: a gridded historical record that blends observations with a model, used here as the \"truth\" to compare against.\n- Lead time: how far ahead the forecast goes (here 1 to 7 days).\n- Convective parameters: measurable quantities such as storm-relative helicity (a measure of rotation potential in the wind) and thermodynamic variables (temperature and moisture) that indicate whether storms can form and rotate.\n- Cold pool: a pocket of cool air spreading out from a storm, a fine-scale feature.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The potential for the Earth system to transition irreversibly into a hothouse Earth has attracted considerable scientific and media attention but remains insufficiently explored in modeling studies. Using a reduced-complexity Earth system model that includes a dynamic carbon cycle and interacting tipping elements, we find no planetary threshold beyond which the Earth system irreversibly shifts into a hothouse state. Instead, tipping cascades can drive the system towards an irreversible melthouse state with over 10 m of sea-level rise. Such cascades may occur even under low-emission scenarios, preventing long-term stabilization of sea level at intermediate values. Our results overall highlight the substantial risk of a melthouse rather than a hothouse Earth, and call for drastic emission reductions to avert dramatic impacts on coastal cities and communities.",
+   "abstract": "Machine-learning (ML)-based weather prediction models have developed rapidly in recent years and are already being used in operational weather forecasting. These ML-based models' performance has exceeded that of traditional numerical weather prediction (NWP) methods in certain implementations, with substantially lower computational cost. However, most ML-based models were trained on global data at a horizontal grid spacing of 0.25 degrees, which may be too coarse to capture tornado-favorable parameters. The ability of these ML-based models to predict the parameters relevant for tornado-favorable convection remains unclear. Here, we compare the performance of three ML-based models, Pangu-Weather, FengWu (versions 1 and 2), and FuXi Weather, in forecasting ten distinct convective events associated with strong tornadoes that occurred in Oklahoma, USA. The proposed methodology incorporates five lead times, ranging from 24 to 168 h, for each event and uses reanalysis data as both model input and ground truth. We evaluate the models by forecasting eight tornado-relevant parameters and by conducting spatial and value-consistency checks between model outputs and ground truth. Performance varies across parameters, models, and events. Pangu-Weather performs well for positive storm-relative helicity, while FuXi Weather performs well for several thermodynamic parameters, albeit with some overprediction of magnitude. Increasing lead time is associated with loss of extreme-value and spatial-structure fidelity. In the Global Forecast System (GFS) case study, ML-based models retain convective signals at longer lead times but poorly represent fine-scale structures such as cold pool-like features. These findings indicate that model-specific biases and spatial extremes should be assessed alongside domain-wide forecast scores.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.30866",
-   "title": "An exact and differentiable rewrite of a coupled weather and fire model",
-   "url": "https://arxiv.org/abs/2611.30866",
+   "uid": "arxiv:2611.31448",
+   "title": "Critical ocean physics on the edge of AMOC instability",
+   "url": "https://arxiv.org/abs/2611.31448",
    "authors": [
-    "John S. Schreck",
-    "John Dennis",
-    "Iris Linck",
-    "Maria Frediani",
-    "Pedro A. Jimenez Munoz",
-    "Matthew Rehme",
-    "Nihanth Cherukuru",
-    "David John Gagne II"
+    "Reyk B\\\"orner",
+    "Anna S. von der Heydt",
+    "Robbin Bastiaansen",
+    "Henk A. Dijkstra"
    ],
-   "label": "arXiv:2611.30866v1",
+   "label": "arXiv:2611.31448v1",
    "primary_category": "physics.ao-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "AI coding agents rebuilt selected configurations of the WRF atmospheric model and its coupled fire-spread physics in PyTorch, matching the corrected Fortran code bit for bit over a 12-hour Marshall Fire simulation, with a GPU speed route and a backward pass giving fire sensitivity to wind.",
-    "plain": "This paper looks at whether an established weather-and-fire simulation can be rewritten in a modern machine-learning framework without changing its results. The authors used AI coding agents to rebuild parts of the Weather Research and Forecasting model, including how fire spreads, and checked it against the original Fortran code over 12 hours of the Marshall Fire. The rebuilt version matched the original exactly at all 365 checkpoints, and ran about five times faster on one GPU than the original on a 128-core CPU node.",
-    "why": "Being able to compute how a fire forecast changes with wind and moisture, and to swap in learned components while keeping the tested physics, could matter for fire and weather prediction. The text reports these capabilities in synthetic tests and short forecasts, so their value for real operational use is not yet shown.",
-    "background": "- WRF: a widely used open-source weather model that simulates the atmosphere on a grid.\n- Coupled fire model: a component that simulates a wildfire's spread and its heat and smoke feeding back into the air, including firebrands (burning particles carried by wind).\n- Fortran: an older programming language common in scientific simulation code.\n- PyTorch: a machine-learning software library that can run on GPUs and compute derivatives automatically.\n- Bit-for-bit agreement: the two codes produce numerically identical outputs, not just similar ones.\n- Differentiable model: one where you can calculate how much the output changes when an input is nudged, via a backward pass.\n- Double precision: a high-accuracy number format used in the Fortran reference.\n- Marshall Fire: a 2021 wildfire near Boulder, Colorado, used here as a test case.",
+    "one_liner": "In a 1-degree global ocean model, the authors compute an unstable saddle equilibrium (an \"AMOC edge state\") that marks the boundary between AMOC recovery and collapse, and find that the regional net surface buoyancy flux tracks the onset of tipping.",
+    "plain": "The Atlantic overturning circulation, a large system of ocean currents that carries warm water north and cold water south, is expected to weaken as the planet warms. This paper asks whether that weakening will recover on its own or tip into a collapse that does not reverse. The authors locate the dividing line between those two outcomes in a global ocean model and study the balanced state that sits on that line.",
+    "why": "Whether the overturning circulation can recover or will tip into collapse matters for projections of climate in the Atlantic region. The paper suggests a possible early-warning signal, the regional net surface buoyancy flux (a measure of how much the surface water is becoming denser or lighter), but the text reports this from one model, so how well it transfers to other models or to the real ocean is not established here.",
+    "background": "- The AMOC is a large-scale overturning current in the Atlantic; it moves heat northward and is driven by water getting denser and sinking, mainly in the far North Atlantic.\n- A \"tipping transition\" is a shift that, once triggered, continues on its own rather than reversing when the cause eases.\n- A \"saddle equilibrium\" is a balanced state that is unstable: a small push sends the system toward either recovery or collapse, so it sits on the boundary between them.\n- Surface buoyancy flux is the net effect of heating/cooling (thermal) and evaporation/rain/ice melt (haline, related to salt) on how dense surface water is.\n- Freshwater and heat balances are accounting of how much fresh water and heat enter or leave a region.\n- A global ocean model at 1-degree resolution is a computer simulation dividing the ocean into grid cells about 100 km across.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "AI is changing weather and climate prediction by replacing physical models with learned ones. Here we show a different path, in which AI coding agents rebuild the physical model itself in a machine-learning framework and reproduce its forecast bit for bit. We reconstruct selected configurations of the Weather Research and Forecasting model and its coupled fire physics in PyTorch, treating every difference from the corrected Fortran code as a bug. Across twelve hours of a Marshall Fire simulation, the two independently advancing codes agree bit for bit at all 365 checkpoints, in the atmosphere, fire and firebrand particles. This agreement holds when the code runs one operation at a time, with the Fortran code's mathematical library. On a separate fast route, the reconstructed model runs about five times faster on one GPU than the double-precision Fortran code on a 128-core CPU node. One backward pass maps the fire's sensitivity to the wind at every grid point. In synthetic tests, its derivatives show how to change wind and fuel moisture to correct a misplaced fire front. Neural networks replace the radiation and fire-spread calculations in 24-hour coupled forecasts, and we measure their effect against the physical calculation. An established model thus becomes fast, differentiable and open to learned components, with its tested calculation intact.",
+   "abstract": "The Atlantic Meridional Overturning Circulation (AMOC) is expected to weaken under global warming, but whether this signifies a transient response or a tipping transition remains unclear. Distinguishing between these cases requires a physical understanding of the boundary separating ocean states leading to AMOC recovery from those leading to collapse. In a global ocean model with 1{\\deg} resolution, we compute an AMOC edge state -- an unstable saddle equilibrium that anchors this instability boundary. The edge state maintains weak overturning sourced by marginal deep water formation in the Nordic Seas. Analyzing the North Atlantic freshwater and heat balances that govern the edge state dynamics, we show that near the edge state, thermal and haline components of the surface buoyancy flux approximately compensate. Surface buoyancy loss (gain) coincides with AMOC recovery (collapse). Our findings support using the regional net surface buoyancy flux as an indicator for the onset of AMOC tipping.",
    "source": "arxiv"
   },
   {

@@ -3,55 +3,54 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.20.768070",
-   "title": "Investigating Motor Skill Acquisition in Mice and Humans: Towards A Cross-Species Paradigm",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768070v1",
+   "uid": "biorxiv:10.64898/2026.11.24.768941",
+   "title": "Benchmarking machine learning across development reveals stage-specific neuroanatomical sex signatures.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768941v1",
    "authors": [
-    "Hille, M.",
-    "Justus, L. C.",
-    "Zocher, S.",
-    "Stark, T.",
-    "Bonhoeffer, M.",
-    "Lerch, J. P.",
-    "Czisch, M.",
-    "Kühn, S.",
-    "Lindenberger, U.",
-    "Bonhoeffer, T."
+    "Poon, E.",
+    "Honari, H.",
+    "Ansarifar, J.",
+    "Hong, D. S."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.20.768070 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.24.768941 v1",
    "primary_category": "neuroscience",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A cross-species study that uses a matched chopstick grasping task in mice and humans, with structural and quantitative MRI before, during and after training, to compare early motor-learning brain changes.",
-    "plain": "Researchers wanted a way to link brain scans of people learning a skill to the cell-level changes seen in animal studies. They built a chopstick-grasping task for humans that mirrors a reaching task used with mice, then scanned trained and untrained mice and men over time. Mice showed shrinking volume in the motor area of the brain on the side opposite the trained hand, while humans showed no reliable volume change but did show signs of changed tissue properties in a similar region.",
-    "why": "It offers a possible bridge for translating non-invasive human brain imaging into findings that can be tested in animals at the cellular level. The text itself says it is unclear whether the changes in the two species share a common biological mechanism, so the link is a starting point rather than a established result.",
-    "background": "- MRI (magnetic resonance imaging) is a non-invasive scan that measures brain structure and tissue properties.\n- Gray matter volume is the amount of brain tissue made of nerve cell bodies, measured as size of a region.\n- Motor cortex is the brain area that plans and controls movement; the contralateral side controls the opposite hand.\n- Myelin is the fatty insulation around nerve fibers; quantitative MRI measures such as MTsat and R1 are sensitive to it, though they do not measure it directly.\n- Single-pellet reaching task: a standard test in which rodents reach for and grasp a small food pellet.\n- Cross-species research compares the same kind of process in different animals, here mice and people.",
+    "one_liner": "A benchmark of linear and nonlinear machine learning models for classifying sex from structural brain MRI in children and adolescents (ages 8–21), testing how age affects accuracy, feature stability, and SHAP/LIME-based attributions of which regions drive predictions.",
+    "plain": "Researchers trained computer models to guess a person's sex from brain scans of children and young adults aged 8 to 21. They compared several model types and checked how well the models worked at different ages and which brain regions they relied on. The simpler and more complex models performed about the same, but the brain features the models used shifted with developmental stage.",
+    "why": "The paper argues that high accuracy alone does not show a model is biologically meaningful, and that results can change across development. This matters for anyone using AI to interpret brain imaging, though the text does not establish what the specific regional findings mean biologically.",
+    "background": "- Machine learning: software that learns patterns from labeled examples, here brain scans labeled by sex.\n- Structural neuroimaging (MRI): scans of brain size, shape and tissue, not activity.\n- Linear vs nonlinear models: simple weighted-sum rules versus more flexible models that can capture complex interactions.\n- Cross-age generalization: training a model on one age group and testing it on another, to see whether patterns carry over.\n- SHAP and LIME: explanation tools that estimate how much each input feature pushed a prediction up or down.\n- Feature stability: whether the same brain regions are consistently identified as important across runs or groups.\n- Sex classification is a research tool here; it is not a measure of a person's sex identity.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Relating non-invasive observations of human brain plasticity to cellular processes identified in animal models remains a major challenge in neuroscience. We address this challenge by introducing a paradigm for studying motor skill acquisition across species. We designed a human chopstick grasping task modeled after the rodent single-pellet reaching task, resulting in a comparable sequence of reach-to-grasp movements across species. We studied 48 young adult male C57BL/6N mice and 71 young men, comparing trained groups with untrained controls. In both mice and humans, structural magnetic resonance imaging (MRI) was performed before, during, and after motor training. The functional form of behavioral performance gains on the trained task was highly similar across species. In trained compared to control mice, analysis of the early learning interval revealed decreases in regional volume in contralateral primary motor and forelimb somatosensory cortices, with greater volume reductions in primary motor cortex associated with better reaching performance. In humans, performance gains transferred to other chopstick tasks but not to general dexterity, and no reliable changes in gray matter volume were observed. Quantitative MRI, however, revealed early training-related changes in tissue-sensitive measures, including increases in magnetization transfer saturation (MTsat) and longitudinal relaxation rate (R1) in contralateral motor and frontal regions, potentially reflecting an increase in intracortical myelin. Thus, early structural changes in the contralateral motor cortex were detected in both species, but the degree to which these changes reflect a common biological mechanism is unclear. We conclude that the present cross-species paradigm provides a viable starting point for studying brain plasticity across species. Future work needs to relate macroscopic structural changes more directly to cellular processes by applying longitudinal microscopic imaging and MRI in the same animals.",
+   "abstract": "Machine learning (ML) offers powerful approaches for identifying multivariate patterns in neuroimaging data, yet the biological validity and interpretability of the discriminative patterns learned by such models remain incompletely understood. Here, we benchmarked multiple ML approaches for sex classification across development (8-21 years) on structural neuroimaging data and investigated the effects of age on model performance and feature stability. Linear and nonlinear models demonstrated comparable classification performance, indicating that high predictive accuracy can be achieved without relying on highly complex architectures; however, age-stratified analyses and cross-age generalization tests demonstrated that developmental stage influences classification performance, and consistency of learned neuroanatomical features. To assess biological interpretability, we applied SHAP and LIME explainability methods and developed a comprehensive framework for translating feature attributions into biologically interpretable patterns. Sex-discriminative regions were distributed across multiple cortical and subcortical structures and exhibited marked developmental variation. Together, these findings demonstrate the utility of interpretable ML for developmental neuroimaging and highlight the importance of evaluating predictive performance while simultaneously taking biological validity, developmental specificity, and attribution stability into consideration.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.23.768231",
-   "title": "Sex differences in the effects of enhanced adult hippocampal neurogenesis on pattern discrimination and Intellicage spatial learning in Bax-knockout mice",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768231v1",
+   "uid": "biorxiv:10.64898/2026.11.12.765999",
+   "title": "Jump: Making Large-Scale Connectomics Accessible",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.765999v1",
    "authors": [
-    "Tunc-Ozcan, E.",
-    "Rodriguez, A. M."
+    "Morris, G. P.",
+    "Mohamed, H. F.",
+    "Selim, R. S.",
+    "Eyo, U.",
+    "Bonney, S. K.",
+    "Mughal, A.",
+    "Grubb, S."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.23.768231 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.12.765999 v1",
    "primary_category": "neuroscience",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "In mice with Bax genetically deleted to boost survival of newborn hippocampal granule cells, enhanced adult neurogenesis produced sex- and task-dependent changes in Intellicage place/reversal learning and an A/B context discrimination task, only partly matching the hypothesis that males would benefit more.",
-    "plain": "Scientists asked whether making more new brain cells survive in the memory region of the brain (the hippocampus) helps learning equally in male and female mice. They used a genetic change that stops newborn cells from self-destructing, then tested the mice on several learning tasks. The benefits were uneven: they depended on sex, the task, and the day of testing.",
-    "why": "It matters because it suggests that a single brain manipulation may not help males and females in the same way, which is relevant to how sex is handled in neuroscience studies of memory. The text does not establish how these mouse findings would translate to people, so that link remains uncertain.",
-    "background": "- Adult hippocampal neurogenesis: the birth of new nerve cells (dentate granule cells) in the hippocampus, a region involved in memory and navigation in adult brains.\n- Bax: a pro-apoptotic gene that drives programmed cell death; knocking it out in newborn cells lets more of them survive.\n- Conditional knockout: a genetic change switched on only in certain cells or at certain times, so the effect is targeted.\n- tdTomato: a fluorescent marker used to label and count the newborn cells.\n- IntelliCage: an automated home-cage system where mice perform learning tasks by visiting corners and licking sensors, without handling by researchers.\n- Place learning and reversal learning: learning a rewarded location, then learning a new one after the rule changes.\n- A/B context discrimination: telling apart two similar environments or patterns.\n- Results are mixed and described only briefly in the source; no effect sizes or statistics are given here.",
-    "difficulty": "research-level",
+    "one_liner": "The paper presents Jump, a set of web-based tools (with uJump for the MICrONS mouse visual cortex EM dataset as the worked example) for exploring, reviewing, and quantifying cell classifications in large volumetric electron microscopy connectomics datasets, with a pericyte and endothelial cell case study on cortical vasculature.",
+    "plain": "Scientists have mapped the wiring of brain tissue using very detailed microscope images, producing huge databases of cells, but computer-generated labels for those cells are hard to check and hard to analyse. This paper describes Jump, a set of user-friendly websites that let researchers browse these datasets, have experts review and correct cell labels, and measure things like cell counts, shapes, and spacing. The authors show how this works on one mouse brain dataset and use blood-vessel cells as a test case.",
+    "why": "Large brain-mapping datasets are only useful if their automated labels can be trusted, and this work aims to make that checking and sharing easier for more people. The text does not report independent measures of how much faster or more accurate the approach is, so its practical impact is still to be seen.",
+    "background": "- Electron microscopy (EM): imaging at very high resolution, used here to photograph thin slices of brain tissue and stack them into 3D.\n- Connectomics: mapping the connections between nerve cells in a tissue.\n- Segmentation: automatically outlining each cell or structure in the images.\n- Cell classification: using software to label what type each cell is (for example, a pericyte or endothelial cell).\n- Pericytes and endothelial cells: support and lining cells of small blood vessels.\n- MICrONS: a large public dataset of mouse visual cortex mapped with EM.\n- Web-based platform: a tool run in a browser, so no special local software is needed.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Adult hippocampal neurogenesis has been implicated in learning and memory. Although increasing neurogenesis has been associated with improved spatial learning and pattern discrimination, whether these benefits differ between male and female mice remains unclear. The goal of this study was to see if increasing adult hippocampal neurogenesis improves learning in male and female mice, and whether the benefit is the same in both sexes. We used conditional deletion of the pro-apoptotic gene Bax to increase the survival of newborn dentate granule cells. Male and female BAX knockout (KO) and wild-type (WT) mice were tested in Intellicage place learning and reversal learning tasks, and an A/B context discrimination task. BAX KO mice had more tdTomato-positive newborn dentate granule cells than BAX WT mice, with no significant effect of sex. During Intellicage adaptation, there were no differences between genotypes or sexes in total visits and licks. During place learning, male mice had a higher percent correct response than female mice, while female mice showed increases in licks and correct visits from day 1 to day 4. BAX KO mice made more visits overall but had a lower percent correct response than BAX WT mice on day 4. During reversal learning, male BAX KO mice showed a decrease in visits and had fewer visits with a lick than male BAX WT mice on day 4. In the A/B task, male BAX KO mice had higher discrimination scores than male BAX WT mice on day 5, while female BAX KO mice showed an initial advantage over female BAX WT mice. These results partially support our hypothesis that increasing neurogenesis would benefit male mice more. Overall, increasing the survival of newborn dentate granule cells does not improve learning in the same way across sexes and tasks.",
+   "abstract": "Large-scale connectomic resources generated from volumetric electron microscopy (EM) have transformed neuroscience by enabling detailed 3D reconstructions of cellular and subcellular morphology and connectivity across hundreds of thousands of cells in diverse tissues and organisms. Recent advances in machine learning-based cell classification and automated segmentation have enabled large-scale annotation of these datasets, yet barriers remain in validating automated classifications and extracting biological insights. To address these challenges, we developed Jump, a suite of user-friendly web-based platforms generated using Claude. These platforms support interactive exploration, expert-guided community review, and quantitative analysis of multiple publicly available EM datasets, while building a growing repository of community-generated annotations. Using uJump, which hosts data from the MICrONS mouse visual cortex dataset, as an example, we demonstrate rapid retrieval of specific cell populations, region-of-interest filtering, biological inspection of cells, and extraction of quantitative morphological and spatial metrics. We showcase analytical features including cell abundance and spatial organisation, connectivity, local cellular neighbourhoods, and volumetric measurements. Using pericytes and endothelial cells as a case study on the cortical vasculature, we further demonstrate how manual review and reclassification can generate accurately identified cell populations for downstream analyses. Consistent with the open-science principles underpinning many large-scale EM resources, Jump is designed to enable broad community participation. By lowering technical barriers to the use of EM datasets, Jump increases analytical efficiency and promotes collaborative efforts to accurately classify cells and structures. Expert-reviewed annotations can be shared across the community, allowing users to build on existing work rather than repeatedly validating the same automated classifications. Collectively, Jump will help researchers to accelerate biological discovery from connectomic datasets.",
    "source": "biorxiv"
   },
   {

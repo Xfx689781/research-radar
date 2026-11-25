@@ -3,46 +3,45 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29140",
-   "title": "Blocks with one simple module and solvable groups",
-   "url": "https://arxiv.org/abs/2611.29140",
+   "uid": "arxiv:2611.32871",
+   "title": "Gorenstein symmetry can fail for noetherian rings",
+   "url": "https://arxiv.org/abs/2611.32871",
    "authors": [
-    "Kun Zhang",
-    "Yuanyang Zhou"
+    "Liran Shaul"
    ],
-   "label": "arXiv:2611.29140v1",
-   "primary_category": "math.GR",
+   "label": "arXiv:2611.32871v1",
+   "primary_category": "math.RA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that a block with a single simple module of a finite group is Morita equivalent over a suitable complete discrete valuation ring to a block of a finite solvable group, and that a block Morita equivalent to a p-group algebra is nilpotent, using equivariant bimodules and a derivation-and-transfer criterion for twisted group algebras.",
-    "plain": "This paper is about the internal structure of finite groups, studied through the algebra objects (blocks) that group representations are built from. The authors show that when such a block has only one kind of simple building piece in characteristic p, it behaves, in the precise sense of being \"Morita equivalent\" (having the same representation theory), like a block of a simpler kind of group called a solvable group. They also show that if such a block matches the algebra of a p-group, it must have a particularly simple, nilpotent form.",
-    "why": "Reducing a hard family of groups to solvable ones is a recurring goal in finite group theory and modular representation theory, so the result connects two important areas. The text does not indicate further consequences, so the wider impact is uncertain from the abstract alone.",
-    "background": "- Finite group: a group with finitely many elements.\n- Modular representation theory: studying how a group acts on vector spaces over a field whose characteristic p divides the group order.\n- Block: an indecomposable piece of the group algebra, a basic building unit of representation theory.\n- Simple module: an irreducible representation, the smallest non-trivial building piece.\n- Morita equivalence: two algebras have the same module categories, so their representation theory is essentially identical.\n- Solvable group: a group built step by step from abelian groups; simpler than general finite groups.\n- Nilpotent block: a block whose structure is as close as possible to that of a p-group.\n- Complete discrete valuation ring: a ring used to lift results from characteristic p to characteristic zero.\n- Derivation and group transfer: algebraic tools for measuring twists and relating subgroup structure.",
+    "one_liner": "The paper constructs a two-sided noetherian ring whose injective dimension is 1 on the left but infinite on the right, showing Gorenstein symmetry can fail for such rings, and examines related properties (dualizing complex, injective generation) over fields of characteristic not 2.",
+    "plain": "This is a question about algebraic structures called rings, which mathematicians use to describe collections of numbers and transformations. A common expectation is that a ring looks the same whether you view it from the left or the right in terms of a certain \"size\" measure called injective dimension. The paper builds a counterexample where the two sides differ sharply: finite from the left, infinite from the right.",
+    "why": "It settles a question of whether a symmetry expected for a broad class of rings (Gorenstein symmetry) actually holds, answering it negatively. The text does not say how it bears on wider applications, so its reach beyond this area of algebra is unclear.",
+    "background": "- Ring: a set with addition and multiplication, where multiplication need not commute.\n- Left and right modules: ways a ring acts on other algebraic objects from the left or the right.\n- Noetherian ring: one where every chain of ideals eventually stops growing; a finiteness condition.\n- Injective dimension: a measure of how far a module is from being \"injective\" (roughly, how well it can be extended); finite means it stops after finitely many steps.\n- Gorenstein symmetry: the expectation that left and right injective dimensions agree for noetherian rings.\n- Dualizing complex and Rickard-Keller injective generation: technical structures from homological algebra that relate duality properties of the derived category of modules.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $b$ be a block of a finite group with one isomorphism class of simple modules in characteristic $p$. We construct, over a sufficiently large complete discrete valuation ring of characteristic zero, a Morita equivalence between $b$ and a block of a finite solvable group. The proof uses equivariant Morita bimodules for the quasisimple blocks that occur in the component reduction. We also prove that a block over an algebraically closed field of characteristic $p$ is nilpotent whenever it is Morita equivalent to the group algebra of a finite $p$-group. For the latter result, we establish a criterion for twisted group algebras using derivations of the basic algebra and group transfer.",
+   "abstract": "We construct a two-sided noetherian ring $A$ which has injective dimension $1$ as a left module over itself and infinite injective dimension as a right module over itself. This shows that Gorenstein symmetry can fail for two-sided noetherian rings. It is further shown that there is such an example over any field of characteristic different than $2$, that it has a dualizing complex, and that its derived category of right modules does not satisfy injective-generation in the sense of Rickard-Keller.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.29478",
-   "title": "On a question of A.N. Skiba concerning the modularity of the lattice of $\\sigma$-permutable subgroups",
-   "url": "https://arxiv.org/abs/2611.29478",
+   "uid": "arxiv:2611.32149",
+   "title": "The optimal exponent in the Babai-Goodman-Pyber theorem",
+   "url": "https://arxiv.org/abs/2611.32149",
    "authors": [
-    "Chenxiao Lin"
+    "Shaowu Zheng"
    ],
-   "label": "arXiv:2611.29478v1",
+   "label": "arXiv:2611.32149v1",
    "primary_category": "math.GR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper characterizes finite groups whose lattice of σ-permutable subgroups is modular, answering part of a question of A.N. Skiba, and shows that when all Hall σ_i-subgroups are nilpotent, modularity is equivalent to every two members of the lattice being permutable.",
-    "plain": "The paper is about finite groups, which are collections of symmetries that can be combined, and about the subgroups inside them. The authors sort out exactly which such groups have a particular tidy structure, called a modular lattice, when we look at the family of subgroups that \"mix well\" with a chosen partition of the prime numbers. This answers one half of a question posed by mathematician A.N. Skiba.",
-    "why": "The result settles a specific open question raised by Skiba, so it matters mainly to specialists in the theory of finite groups and subgroup lattices. The text gives no wider applications, and I cannot say from it how far the ideas reach beyond this area.",
-    "background": "- Finite group: a finite set of symmetries closed under combining them.\n- Subgroup: a smaller group sitting inside a group.\n- Partition of primes: splitting the prime numbers into disjoint sets σ_i.\n- Hall σ_i-subgroup: a subgroup whose order involves only primes from one set σ_i, and which is maximal in that sense.\n- Permutable subgroup: one that commutes, as a set, with another subgroup (A·H = H·A).\n- Lattice: a partially ordered family of subgroups, with ways to take intersections and joins.\n- Modular lattice: a lattice obeying a particular consistency rule about how its elements order and combine.\n- Nilpotent group: a group built up in a stepwise, well-behaved way.",
+    "one_liner": "The paper determines the optimal exponent c = b_0 = 1 + log_9(168·24^{1/3}) ≈ 3.8141 in the Babai–Goodman–Pyber bound relating the index of the soluble radical of a finite group to the index of any soluble subgroup, with a sharper coefficient 24^{-1/3} for nonsoluble groups and sharpness examples from PSL_2(8).",
+    "plain": "This is about finite groups, which are collections of symmetries that can be combined, and how \"large\" a group is compared with its simpler pieces. A known result says the part of a group left after removing its largest simple-to-handle (soluble) normal piece cannot be much bigger than any simple-to-handle subgroup raised to some fixed power. The paper finds the smallest possible value of that power, about 3.81, and shows it cannot be lowered, using an example built from the group PSL_2(8).",
+    "why": "It settles the exact best constant in a known bound, so the question of how sharp the original theorem is now has a precise answer. The text does not say what wider applications it has, and I am not sure of any beyond the specialist area of finite group theory.",
+    "background": "- Finite group: a group with finitely many elements, such as the symmetries of a finite object.\n- Subgroup and index: a subgroup is a smaller group inside a larger one; the index is roughly how many copies of the subgroup fit into the whole group.\n- Soluble group: a group that can be built step by step from abelian (commutative) pieces; informally, \"simple to handle\".\n- Normal subgroup: a subgroup that is preserved under conjugation (a change of viewpoint), so the quotient makes sense.\n- Radical Rad(X): the largest soluble normal subgroup of X.\n- Simple group and automorphism group: simple groups are the indivisible building blocks of finite groups; automorphism groups are the symmetries of a group itself.\n- Exponent and constant: the bound says the index of the radical is at most a power of the index of H; the question is the smallest allowed power.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $\\sigma=\\{\\sigma_i\\mid i\\in I\\}$ be some partition of the set of all primes and let $G$ be a finite group. A subgroup $A$ of $G$ is said to be $\\sigma$-permutable in $G$ if $G$ has a Hall $\\sigma_i$-subgroup for every $i\\in I$ and $A$ permutes with every Hall $\\sigma_i$-subgroup of $G$ for all $i\\in I$. We describe the finite groups $G$ for which the lattice $\\Lper(G)$ of all $\\sigma$-permutable subgroups of $G$ is modular. This answers the first part of a question of A.N. Skiba. We also prove that if every Hall $\\sigma_i$-subgroup of $G$ is nilpotent, then $\\Lper(G)$ is modular if and only if every two members of $\\Lper(G)$ are permutable.",
+   "abstract": "Babai, Goodman and Pyber proved that there exists an absolute constant $c$ such that $[X:\\operatorname{Rad}(X)]\\le [X:H]^c$ for every finite group $X$ and every soluble subgroup $H\\le X$, where $\\operatorname{Rad}(X)$ denotes the largest soluble normal subgroup of $X$. We prove that the least possible value of $c$ is $b_0=1+\\log_9(168\\cdot 24^{1/3})\\approx3.8141$. For nonsoluble $X$, we obtain the stronger inequality $[X:\\operatorname{Rad}(X)]\\le 24^{-1/3}[X:H]^{b_0}$, and the coefficient $24^{-1/3}$ is optimal for this exponent. We reduce the problem to bounds on soluble subgroups of automorphism groups of finite simple groups. Examples based on $\\operatorname{PSL}_2(8)$ establish sharpness.",
    "source": "arxiv"
   },
   {

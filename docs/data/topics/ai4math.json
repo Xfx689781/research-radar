@@ -3,59 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28819",
-   "title": "Improving semantic equivalence in research-level math formalization",
-   "url": "https://arxiv.org/abs/2611.28819",
+   "uid": "arxiv:2611.31571",
+   "title": "Safe Autoformalization: Sufficiency and Necessity with Entailment Graphs",
+   "url": "https://arxiv.org/abs/2611.31571",
    "authors": [
-    "Ayush Khaitan",
-    "Liam Fowl",
-    "Tom\\`as Ortega",
-    "Alex Kontorovich",
-    "Sanjeev Arora"
+    "Umut A. Acar",
+    "Eli Goldweber"
    ],
-   "label": "arXiv:2611.28819v1",
+   "label": "arXiv:2611.31571v1",
    "primary_category": "cs.AI",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper builds a dataset of 4,076 audited differences between research-level natural-language math and its Lean formalizations, and tests whether training on those differences improves a model's ability to write Lean inside large real projects.",
-    "plain": "Mathematicians often write proofs in ordinary language, and computer proof assistants need them restated in a strict formal code called Lean. This paper collects examples of how the formal versions quietly differ from the originals, and checks whether teaching an AI model from those differences helps it write better formal math. The reported results: complete proofs rose from 11% to 20%, and statements matching the project's own formalization rose from 30% to 39%.",
-    "why": "Writing formal proofs for research-level mathematics is slow and hard, so a more reliable AI assistant for it would matter. The paper also reports that the gain came from the difference examples themselves, not from simply telling the model the differences in advance, which is a useful finding about what training signal helps; its broader significance beyond these benchmarks is not established by the text.",
-    "background": "- Autoformalization: translating informal math text into a formal language a computer can check.\n- Lean: a programming language and proof assistant in which proofs are checked by the computer.\n- Semantic equivalence: whether a formal statement means the same thing as the intended informal one, not just whether it compiles.\n- Lean projects/repositories: large collections of formalized math code, here tens of thousands of lines.\n- Train/test split here is by repository, so test projects are unseen during training.\n- Complete proof rate and gold agreement are the two reported measures; the text does not detail how they are scored.",
+    "one_liner": "The paper proposes a graph-based method for autoformalization (turning natural-language statements into logic formulas) that uses LLM-generated candidate formulas, a solver-checked entailment order, and frontier searches to certify one-sided logical adequacy, with soundness and completeness results for the LLM oracle and Lean-checked proofs.",
+    "plain": "Turning a plain-English requirement into a precise logical formula is useful but error-prone, and language models give answers with no guarantees. This paper describes a way to organize several candidate formulas by how strong they are, so that some of them can be certified as safe to enforce (they imply the intended meaning) or safe to rely on (the intended meaning implies them). On security-related AWS properties, the authors report that their approach was safe in all 20 cases of an expert-reviewed study, while two simpler baselines were unsafe in 25% and 10% of cases.",
+    "why": "Formal checks of AI-written specifications matter most where a wrong translation could leave a security gap, so a method that can flag when it is unsure is of interest. The evidence is a small expert-adjudicated study and the text does not say how large or varied it was, so its broader reach is unclear.",
+    "background": "- Autoformalization: converting a natural-language statement into a precise logical formula.\n- Logical entailment: formula A entails B if whenever A holds, B must hold; a solver can check this.\n- Sufficient vs. necessary: a formula sufficient for an intent implies it; a necessary one is implied by it.\n- Soundness and completeness of an oracle: sound means it only approves checks that truly hold; complete means it approves all checks that truly hold.\n- Lean: a proof assistant used here to machine-check the proofs.\n- Baselines named: majority vote over equivalence clusters and Universal Self-Consistency (ways of picking an answer from many LLM samples).",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Formalizing mathematics in Lean is never a word-for-word translation of a paper: a Lean formalization changes definitions, strengthens hypotheses, splits arguments, and adds lemmas the paper never mentions. It stands to reason that a model that is good at autoformalization must be a good predictor of how a natural language source must differ from its faithful Lean formalization. With that in mind, we collect 4{,}076 audited examples of such changes from 832 Lean projects that formalize research-level mathematics, and use them to ask a practical question: how well can a model \\emph{write} Lean inside a real research-level project that may contain tens of thousands of lines of code, and does training on discrepancies between natural language sources and their faithful Lean formalizations help? Our training set consists of 3{,}431 tasks from 141 repositories, and the test set consists of 645 tasks from the remaining 27 repositories. Training on in-project Lean nearly doubles complete proofs ($11\\% \\to 20\\%$) and raises the share of statements in gold agreement with the project's own formalization by nearly a third ($30\\%$ to $39\\%$). The gain comes from the pairs themselves: an adapter trained only to predict how the Lean will differ, or a model told the difference in advance, barely helps. Training on where formalizations depart from their sources is thus an effective way of improving semantic equivalence in research-level formalization.",
+   "abstract": "Autoformalization translates a natural-language statement into a formula that captures its intent, which depends on the statement's context: the background that disambiguates it. LLMs make autoformalization practical, but their probabilistic output carries no formal guarantees. We propose techniques for safe autoformalization that certify one-sided logical adequacy: a formula sufficient for the intent is safe to enforce, and a formula necessary for it is safe to rely on. We use LLMs to generate candidate formulas and order them by logical strength in an Entailment Graph (EG), an ordering a solver decides. Each edge carries a residual and a co-residual, the two adjoints of the entailment order, all fixed by the candidate pool alone. In a context, two searches return the sufficient frontier, the weakest candidates that entail the statement, and the necessary frontier, the strongest candidates the statement entails; each step is one local check against an edge's residual or co-residual. The frontiers bracket the statement and yield the ambiguity residue, which holds exactly of the situations the candidates certify neither as satisfying nor as violating it; the statement is ambiguous precisely when the residue is satisfiable. For natural-language statements and contexts, an LLM entailment oracle decides the checks; it is sound if it accepts only checks that hold, and complete if it accepts every check that holds. We prove that a sound oracle makes the search safe regardless of pool quality, and that a complete one makes the frontiers tight. On security-critical AWS properties, EGs are safe in all 20 cases of an expert-adjudicated study, where majority vote over equivalence clusters and Universal Self-Consistency are unsafe in 25% and 10%. An ablation with the same oracle but no graph is unsafe in 25% and rejects every candidate in another 30%. We machine-checked our proofs in Lean.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31033",
-   "title": "AI-Assisted Auto-formalization for Trustworthy Scientific Computing: Case Studies and Lessons Learned",
-   "url": "https://arxiv.org/abs/2611.31033",
+   "uid": "arxiv:2611.31811",
+   "title": "How Far Apart Are Two Proofs? Measuring Proof Dissimilarity in a Proof Kernel and in Lean/Mathlib",
+   "url": "https://arxiv.org/abs/2611.31811",
    "authors": [
-    "Mohit Tekriwal",
-    "Het Mankad",
-    "Naifeng Zhang",
-    "Keita Teranishi",
-    "Sahil Bhola",
-    "Daisuke Uchida",
-    "Jean-Baptiste Jeannin",
-    "Franz Franchetti",
-    "Karthik Duraisamy",
-    "Jeffrey Vetter",
-    "Yohann Dudouit"
+    "Nikolaos Nikolaou"
    ],
-   "label": "arXiv:2611.31033v1",
-   "primary_category": "cs.AI",
+   "label": "arXiv:2611.31811v1",
+   "primary_category": "cs.LO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A systematic study of AI agents auto-formalizing (translating into machine-checkable proofs) numerical and scientific computing results, yielding a cross-layer taxonomy of failure modes and a workflow for recurring proof patterns.",
-    "plain": "This paper asks whether AI coding and math agents can turn applied-science computing methods into formal proofs that a computer can check, not just the abstract theorems that mathematicians usually formalize. The authors ran case studies across several layers of scientific computing software and recorded where and why the agents went wrong. They report a taxonomy of failure types, the kind of expert guidance each layer needed, and practical advice for using such agents while keeping the math sound.",
-    "why": "Most recent reports of AI formalizing mathematics concern pure math, so this work tests the harder applied case, which matters for U.S. Department of Energy scientific software. The text does not show how large or general the findings are, so their broader reach is uncertain.",
-    "background": "- Formalization: writing a mathematical argument in a formal language (such as Lean or Coq) so a computer can verify every step.\n- Auto-formalization: using AI to do this translation automatically or semi-automatically.\n- Scientific computing: numerical methods that approximate solutions to equations arising in physics, engineering and modeling, where results depend on algorithms and software layers.\n- Pure vs. applied math: pure math proves abstract theorems; applied math often describes procedures or modeling choices, which are harder to state as clean theorems.\n- Failure modes: the recurring ways an AI's attempted proof or translation goes wrong.",
+    "one_liner": "The paper defines 19 measures of how different two formal proofs of the same theorem are, groups them into six families, and tests them on proofs that the primes are infinite in a Curry-Howard kernel and in Lean 4/Mathlib.",
+    "plain": "As AI systems produce more mathematical proofs than people can read, it becomes useful to know whether a proof is really new or just a rewording of an old one. The authors propose many ways to measure how far apart two proofs are and check how well each matches human intuition, using proofs that infinitely many primes exist. They report that measures based on which earlier results a proof depends on track intuition best, while measures based on meaning can give surprising answers.",
+    "why": "Checking whether AI-generated proofs are duplicates or genuinely new, and relating them to human arguments, depends on having a sound way to measure proof distance. The text presents this as a foundation for such uses but does not show any of these applications in practice.",
+    "background": "- A proof is a formal argument that a machine can check step by step; Lean/Mathlib is a widely used library of such checked mathematics.\n- Curry-Howard correspondence: proofs and programs are treated as the same kind of object, which lets proofs be compared like code.\n- Hilbert's 24th problem asks for a general theory of what makes proofs simple or similar; the identity-of-proofs problem asks when two proofs should count as the same.\n- \"Proof irrelevance\" means that any two proofs of the same statement are treated as equal in some formal systems.\n- Euclid's proof, Furstenberg's topological proof and Goldbach-style arguments are different routes to the same fact that there are infinitely many primes.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Agentic AI tools have recently had success in mathematical reasoning. Both general purpose coding agents such as Claude Code and Codex, and specialized mathematics agents such as Aristotle, have been used for formalizing mathematical problems such as Fermat's last theorem, Erd\\H{o}s problems and several IMO level math problems. However, much of these efforts are concentrated in the pure mathematics domain, which benefits from relatively self-contained theorem statements, fixed mathematical representation and extensive support in existing formal libraries. Applied mathematics, on the other hand, presents additional challenges because the source may describe a computational procedure or modeling transformation rather than a declarative theorem. In this work, we present a systematic study of AI-assisted auto-formalization for scientific computing (SC), a domain in applied mathematics central to U.S. Department of Energy applications. Through case studies spanning hierarchical abstraction layers in SC software stack, we evaluate not only whether AI agents can complete numerical proofs, but also where and why they fail across the stack. Our primary contribution is a cross-layer taxonomy of failure modes and an analysis of the form of expert feedback required at each layer to recover mathematical soundness. From these observations, we derive a workflow for recurring proof patterns and practical guidance for using AI agents while preserving mathematical soundness. Our results characterize both the practical value and the current limitations of AI-assisted formalization for trustworthy scientific computing.",
+   "abstract": "We now live in the age of machine-generated mathematics: AI systems produce research-level proofs faster than the human mathematical community can read them. Verification is only part of the challenge. We also need to know whether a \"new proof\" is indeed new, whether a thousand generated proofs contain one idea or many, and where each sits relative to human mathematics. All of these require measuring distances between proofs. Following Hilbert's 24th problem and the identity-of-proofs problem, we ask how far apart two proofs of one theorem are, and what shape the proof space they inhabit has. We define 19 dissimilarity measures in 6 families (syntactic, structural, dependency & resource, semantic, information-theoretic, higher-categorical) and 10 desirable properties, which we argue are the conditions for safely optimising a measure. In a Curry-Howard kernel, 5 machine-checked proofs that the primes are infinite show that raw syntax cannot tell a rewrite from a new argument, that dependency-based and structural measures reproduce the intuitive ordering (Euclid rewritten < Goldbach < Furstenberg), and that semantic measures invert it: Furstenberg's topological proof produces exactly Euclid's witness. A replication in Lean 4/Mathlib (3 theorems, 19 proofs, 18 measures) confirms that dependency-closure measures track intuition best, and shows that equality of normal forms never holds between differently written versions of the same argument, that proofs by citation look unlike the arguments they cite, and that proof irrelevance cannot distinguish any two proofs. We argue for reporting dissimilarity as a multi-level profile, extend the measures to proofs of different theorems, and discuss uses, from detecting duplicated AI proofs and orchestrating prover agents to interpreting AI proofs via their nearest human-understandable counterparts. Code, Lean sources and data are released.",
    "source": "arxiv"
   },
   {

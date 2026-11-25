@@ -3,51 +3,54 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29115",
-   "title": "Reconfigurable Microwave Photonic All-Pass Filters based on Optical Kerr Microcombs",
-   "url": "https://arxiv.org/abs/2611.29115",
+   "uid": "arxiv:2611.32935",
+   "title": "Integrated lasing and dual-band gain in neodymium-implanted silicon nitride",
+   "url": "https://arxiv.org/abs/2611.32935",
    "authors": [
-    "David J. Moss"
+    "Jan de Haan",
+    "Arturo Fern\\'andez Gamez",
+    "Nina Zdravkovi\\'c",
+    "Kevin Kwock",
+    "Ulrich Kentsch",
+    "Rene Heller",
+    "Alberto Curto",
+    "Bart Kuyken",
+    "Kasper Van Gasse"
    ],
-   "label": "arXiv:2611.29115v1",
+   "label": "arXiv:2611.32935v1",
    "primary_category": "physics.optics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper demonstrates microwave photonic all-pass filters (1st and 2nd order) built from an optical Kerr microcomb driven transversal filter, with reconfiguration done by changing tap coefficients in software rather than hardware.",
-    "plain": "The paper is about filters that change the timing (phase) of radio-frequency signals without making them louder or quieter. The authors build such filters using light from a special optical comb, and they report measured results for first- and second-order versions. They also show the filter's behavior can be adjusted by changing settings in software, without rebuilding the hardware.",
-    "why": "Phase control of high-bandwidth microwave signals matters for radar and communications signal processing, so a reconfigurable way to build these filters could be useful. The text reports measured figures, but it does not compare them with other systems, so its standing relative to existing approaches cannot be judged from this text alone.",
-    "background": "- All-pass filter: a filter that leaves signal strength unchanged and only shifts its phase (timing of the wave).\n- Group delay: how much a signal's envelope is delayed by the filter; larger values mean stronger timing shifts.\n- Microwave photonics: processing radio-frequency signals using light, then converting back to electronics.\n- Optical Kerr microcomb: a set of evenly spaced optical frequencies (colors) generated in a micro-resonator through a nonlinear optical effect.\n- Transversal filter: a filter that sums delayed, weighted copies of a signal; the weights are the \"tap coefficients.\"\n- Order of a filter: roughly how many independent phase-shifting stages it has; higher order gives more phase shift.\n- Reported metrics: maximum amplitude variation (MAV, ripple in signal strength in dB) and maximum group delay (MGD, in picoseconds).",
+    "one_liner": "Demonstrates neodymium-implanted LPCVD silicon nitride waveguide amplifiers with gain near 920 nm and 1100 nm, and a ring laser built on a 200 mm commercial wafer platform.",
+    "plain": "The paper concerns making small, chip-scale lasers that emit light near 1 micrometer, the infrared range used in quantum experiments, precision measurement, and sensing. The authors took standard silicon nitride optical circuits made on a commercial wafer line, implanted neodymium ions into selected chips, and built waveguide amplifiers and a ring-shaped laser from them. They report that the amplifiers boost light in two wavelength bands, around 920 nm and 1100 nm, and that the ring laser does lase.",
+    "why": "Getting light amplification and lasing on a chip with a rare-earth dopant that is compatible with a standard foundry-style process is a step toward cheaper, scalable on-chip light sources. The text does not report output power, efficiency, or linewidth, so its practical reach is not yet clear.",
+    "background": "- Integrated photonics: light is guided in tiny waveguides etched on a chip, similar in spirit to electrical wiring on a microchip.\n- Silicon nitride (LPCVD): a common, low-loss material for these waveguides, deposited in a furnace-style process.\n- Rare-earth gain: certain elements (here neodymium) emit light when pumped with energy; adding them to a material lets it amplify light.\n- Ion implantation: firing dopant ions into a material to place them at controlled depths and concentrations.\n- Ring resonator: a looped waveguide that selects specific wavelengths; a laser built on one is a compact cavity.\n- Amplifier vs. laser: an amplifier boosts an input signal; a laser adds feedback so it generates light on its own.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Microwave photonic (MWP) all pass filters (APFs), which enable phase manipulation without altering signal amplitudes, are essential for phase engineering in high bandwidth microwave signal processing. However, achieving a high degree of reconfigurability in the filter order and characteristic parameters of APFs remains challenging for conventional methods. Here, we propose and experimentally demonstrate a new strategy for realizing MWP APFs based on a microcomb driven transversal filter system, enabling high reconfigurability, sharp phase transitions with high group delays, and low loss. We experimentally demonstrate both 1st and 2nd order APFs, achieving a maximum amplitude variation (MAV) of 1.95 dB and a maximum group delay (MGD) of 580 ps for the former, and a MAV of 2.01 dB and an MGD of 1740 ps for the latter. In addition, both independent and joint tuning of APF characteristic parameters are demonstrated by simply programming the tap coefficients without changing any hardware, enabling highly reconfigurable filter response for diverse phase engineering functionalities. These results highlight the potential of our approach for implementing MWP APFs with both high performance and reconfigurability for practical applications requiring dynamic and versatile phase control.",
+   "abstract": "Lasers at wavelengths near 1 micrometer are used in quantum technologies, precision metrology, and sensing. Rare-earth gain at these wavelengths in photonic integrated circuits can reduce the size and enable the scalable fabrication of these lasers. We fabricate neodymium-based integrated waveguide amplifiers and a ring laser using neodymium-implanted LPCVD silicon nitride. The photonic integrated circuits were fabricated on a 200 mm commercial wafer platform, and individual dies were implanted with neodymium ions. We show that the amplifiers provide gain in two bands around wavelengths of 920 nm and 1100 nm, and we show lasing in a ring resonator. This demonstrates that neodymium-implanted LPCVD silicon nitride is a suitable gain material for integrated lasers.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28458",
-   "title": "Anisoplanatic Blind Deconvolution using Phase Diversity",
-   "url": "https://arxiv.org/abs/2611.28458",
+   "uid": "arxiv:2611.31799",
+   "title": "Temporal Soliton Waves in Modern Fiber Laser Systems",
+   "url": "https://arxiv.org/abs/2611.31799",
    "authors": [
-    "Shubhankar Jape",
-    "Seungman Choi",
-    "Peter Menart",
-    "Andrew Schramka",
-    "Pratyush Uppuluri",
-    "Vaneet Aggarwal",
-    "Zubin Jacob"
+    "Shilong Liu",
+    "Boris Malomed"
    ],
-   "label": "arXiv:2611.28458v1",
+   "label": "arXiv:2611.31799v1",
    "primary_category": "physics.optics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A simulation study proposing coded anisoplanatic blind deconvolution (CA-BD), which uses a pupil-plane spatial light modulator to apply known phase codes across short measurement bursts to jointly recover a scene and spatially varying atmospheric phase, compared against tuned multiframe blind deconvolution.",
-    "plain": "Air turbulence bends light from distant objects, so images of stars or ground targets come out blurry, and the blur differs from one part of the view to another and changes over time. This paper proposes a way to undo that blur during fast imaging by placing a programmable light-modifying device in the optical path that applies a known pattern to each frame. In simulations, the method estimated the phase distortion more accurately than a tuned existing approach, with the authors reporting about 3.5 times lower phase error for steady turbulence and 2 to 3 times lower for changing turbulence.",
-    "why": "Turbulence blur limits telescopes and long-range cameras, and the paper targets the case where a wide field and fast imaging make standard computational deblurring fall short. The results are from simulation only, and the text notes the benefit depends on faster modulators, so practical impact is uncertain until hardware tests are reported.",
-    "background": "- Atmospheric turbulence: random variations in air density that distort light wavefronts, blurring images.\n- Isoplanatic angle: the angular range over which the distortion can be treated as the same; wider fields see different distortions.\n- Phase / wavefront: the shape of the light wave's peaks; distortions here are phase errors.\n- Blind deconvolution: recovering a sharp image when the blurring function is unknown, using multiple frames.\n- Phase diversity: taking measurements with known, different phase patterns so the unknowns can be separated.\n- Spatial light modulator (SLM): a programmable device that changes the phase of light pixel by pixel.\n- Cramér-Rao bound: a theoretical lower limit on how precisely a quantity can be estimated.\n- Coherence time: how long the turbulence stays roughly unchanged.",
+    "one_liner": "A survey chapter reviewing theory, experiments, generation, characterization, and control of temporal soliton families (dissipative solitons, soliton molecules, and dispersion-managed solitons) in mode-locked fiber lasers.",
+    "plain": "This is an overview chapter about tiny, stable pulses of light that keep their shape while travelling through special glass-fiber laser setups. It collects the underlying theory, lab results, and methods for making, measuring, and steering these pulses, including newer approaches that use machine learning. The text describes the topics covered but does not present new experimental results of its own.",
+    "why": "Fiber lasers that produce such pulses are used in fields such as precision measurement and optical communications, so a consolidated review may help newcomers orient themselves. The text does not say how directly these results feed into any specific application.",
+    "background": "- A laser \"mode-locked\" state emits light as a train of very short pulses, often lasting picoseconds or femtoseconds (trillionths or quadrillionths of a second).\n- A \"soliton\" is a pulse that holds its shape because two effects, such as dispersion (colors spreading apart) and nonlinearity (light changing the glass), cancel out.\n- \"Dissipative solitons\" depend on a balance of gain (light amplification) and loss, not only on the fiber's physics.\n- \"Soliton molecules\" are several pulses locked together at fixed spacing, like a bound pair.\n- \"Dispersion-managed solitons\" are pulses whose shape stretches and squeezes periodically along a cavity with alternating fiber types.\n- Machine learning here means algorithms used to adjust or predict laser behaviour automatically.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Atmospheric turbulence distorts the wavefront of light from a distant scene and blurs its image. Over a field of view wider than the isoplanatic angle, the distortion varies with direction and evolves in time, so no single wavefront describes the blur. Multiframe blind deconvolution (MFBD) can recover the scene from measurements spread over a long acquisition, but falls short during fast imaging because of limited diversity across measurements. We present coded anisoplanatic blind deconvolution (CA-BD), in which a pupil-plane spatial light modulator (SLM) applies a different known phase code to every measurement, with no wavefront sensor or deformable mirror, so that the measurements carry diversity even within a short acquisition. A per-pixel single-layer estimator recovers the object and spatially varying phases from the coded measurements. In simulation, a Cram\\'er-Rao bound analysis shows that under anisoplanatism direct imaging needs about 41 times the photons of coded imaging for equal phase precision in strong turbulence. At the stronger of two turbulence strengths, CA-BD outperforms tuned MFBD on average at every burst length. It reduces the phase mean squared error 3.5x for stationary turbulence and 2-3x for time-varying turbulence. Measurements taken within a few coherence times benefit most from the known coded SLM patterns, making faster SLMs the key to its full advantage in time-varying turbulence.",
+   "abstract": "This chapter provides a comprehensive survey of temporal soliton-wave in modern fiber systems. Temporal soliton waves constitute a broad class of nonlinear localized structures in modern fiber laser systems, arising from different balances among dispersion, nonlinearity, gain, loss, spectral filtering, and various forms of cavity coupling. We review the underlying theory, basic experimental findings, and practical methods for the generation, real-time characterization, and active control of soliton families, with a particular focus on recent progress reported for mode-locked fiber-laser platforms. The families covered in the chapter include dissipative solitons, soliton molecules (bound states), and dispersion-managed solitons. For each species, we focus on the pulse energy, duration, stationary and breathing states, and emerging intelligent (machine-learning-assisted) control strategies.",
    "source": "arxiv"
   },
   {

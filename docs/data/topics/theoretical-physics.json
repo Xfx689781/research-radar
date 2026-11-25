@@ -3,50 +3,46 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29622",
-   "title": "Scattering amplitudes in AdS$_5\\times$ S$^5$ from the pure spinor superstring",
-   "url": "https://arxiv.org/abs/2611.29622",
+   "uid": "arxiv:2611.31379",
+   "title": "Free hyperboloidal evolution in 3D: gauge waves and constraint-violating gravitational waves",
+   "url": "https://arxiv.org/abs/2611.31379",
    "authors": [
-    "Luis F. Alday",
-    "Thiago Fleury",
-    "Tobias Hansen",
-    "Lucas N. S. Martins",
-    "Dennis Zavaleta"
+    "Alex Va\\~n\\'o-Vi\\~nuales"
    ],
-   "label": "arXiv:2611.29622v1",
-   "primary_category": "hep-th",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "The paper gives a BRST-invariant rule for integrating over zero modes in the pure spinor superstring on AdS5×S5, valid for genus-zero amplitudes, and uses it to compute two- and three-point supergravity amplitudes directly on the worldsheet.",
-    "plain": "The paper tackles a technical obstacle in string theory: calculating how strings scatter in a curved background, AdS5×S5, which is the setting of a well-known duality with a gauge theory. The authors propose a consistent way to handle certain \"zero modes\" (directions in which the string's position does not change) so that the calculation can be carried out. Using this, they compute simple scattering quantities for supergravity particles directly from the string's worldsheet, and report that the properly normalised three-point results match those of planar N=4 super Yang-Mills theory.",
-    "why": "The text says this removes a central obstacle to amplitude computations in this background, which matters for testing the AdS/CFT correspondence from the string side. The text does not say how far the method extends beyond the low-point cases shown, so its wider impact is uncertain.",
-    "background": "- Scattering amplitude: a quantity giving the probability-like weight for particles to interact in a given way.\n- String worldsheet: the two-dimensional surface swept out by a string as it moves through spacetime.\n- AdS5×S5: a curved spacetime (anti-de Sitter times a sphere) that is the background of the AdS/CFT duality.\n- Pure spinor superstring: a formulation of superstring theory that keeps supersymmetry manifest.\n- Zero modes: parts of the string's motion that do not change its shape, which must be integrated over with care.\n- BRST invariance: a symmetry used to ensure that unphysical gauge-related degrees of freedom do not affect results.\n- Genus zero: the simplest topology of the worldsheet (a sphere), corresponding to tree-level interactions.\n- Half-BPS supergravity states: special, highly symmetric particle states that are protected from quantum corrections.\n- N=4 super Yang-Mills: a supersymmetric gauge theory that is dual to string theory on AdS5×S5.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We formulate a BRST-invariant prescription for the integration of zero modes in the pure spinor superstring on $AdS_5\\times S^5$. The measure includes contributions absent in flat space and admits a description in terms of picture changing operators or a non-minimal regulator. The prescription is valid for genus-zero amplitudes with arbitrary multiplicity and external states and removes a central obstacle to amplitude computations in this background. We use it to perform the first direct worldsheet computation of two and three-point amplitudes of half-BPS supergravity states. The properly normalised three-point amplitudes exactly reproduce the results of planar ${\\mathcal N}=4$ super Yang-Mills theory.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.28150",
-   "title": "Primordial black holes production in Einstein-Gauss-Bonnet gravity",
-   "url": "https://arxiv.org/abs/2611.28150",
-   "authors": [
-    "Ekaterina O. Pozdeeva",
-    "Sergey Yu. Vernov"
-   ],
-   "label": "arXiv:2611.28150v1",
+   "label": "arXiv:2611.31379v1",
    "primary_category": "gr-qc",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Proposes an inflation model in Einstein-Gauss-Bonnet gravity, with the Gauss-Bonnet term coupled to a scalar field, that the authors argue can produce primordial black holes and agree with ACT data for some parameter values.",
-    "plain": "This paper looks at the very early universe, when space expanded rapidly in a period called inflation. The authors modify the gravity equations with an extra term that depends on a scalar field, and they propose a version of this early expansion that could form primordial black holes. They report that, for certain parameter choices, the predictions match observations from the Atacama Cosmology Telescope, and they suggest these black holes could account for all or part of dark matter.",
-    "why": "If primordial black holes formed in the early universe, they could be a candidate for some or all of dark matter, which is a major open question. The link to ACT data gives the model a testable check, but the text gives few details, so the strength of the claim is unclear from the abstract alone.",
-    "background": "- Inflation: a brief, rapid expansion of the universe just after the Big Bang, which is thought to seed later structure.\n- Primordial black holes: black holes that could have formed in the early universe, not from collapsed stars.\n- Gauss-Bonnet term: an extra term in the equations of gravity, beyond Einstein's standard version, that comes from higher-dimensional or quantum-motivated theories.\n- Scalar field: a field that takes a single value at each point in space, often used to drive inflation.\n- ACT (Atacama Cosmology Telescope): a telescope that measures the cosmic microwave background, the faint afterglow of the Big Bang, and constrains inflation models.\n- Dark matter: unseen matter that makes up most of the matter in the universe and is inferred from its gravitational effects.",
+    "one_liner": "This paper extends the conformal compactification approach with BSSN/Z4 formulations of general relativity from spherical symmetry to full 3D, demonstrating free hyperboloidal evolution that reaches future null infinity, tested on gauge waves and constraint-violating gravitational waves in Minkowski spacetime.",
+    "plain": "Physicists who simulate gravity on computers usually stop their simulated space short of the far future edge, where gravitational waves finally escape to infinity. This paper describes a way to use slanted, hyperboloid-shaped time slices that reach that far edge, and extends the method from simple spherical setups to fully three-dimensional simulations. The authors tested it on simple waves moving through empty flat space and report that the code behaves reliably and that signals can be read off at the far edge.",
+    "why": "Reading gravitational-wave signals directly at future null infinity avoids errors from cutting the simulation off at an artificial boundary, which matters for predicting signals that detectors such as LIGO could see. The text only covers tests in flat spacetime with a first step, so its wider usefulness for realistic black hole or merger simulations is not shown here.",
+    "background": "- General relativity describes gravity as curved spacetime; numerical relativity solves its equations on computers.\n- Gravitational waves are ripples in spacetime that carry energy outward.\n- Future null infinity is the idealized boundary where outgoing light and gravitational waves end up as time goes to infinity.\n- Hyperboloidal slices are time slices that reach that boundary, unlike ordinary constant-time slices that stop short of it.\n- Conformal compactification rescales space so that infinity becomes a finite, reachable location.\n- BSSN and Z4 are standard formulations of Einstein's equations used in simulations; constraints are equations that must stay satisfied, and \"constraint-violating\" waves are test perturbations that break them on purpose.\n- Gauge waves are coordinate-only ripples that test how the simulation handles choices of time and space labels.\n- Minkowski spacetime is flat, empty space with no gravity, used as a simple test background.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We consider models with the Gauss-Bonnet term multiplied to a function of the scalar field and propose a new inflationary model which provides a mechanism for the formation of primordial black holes (PBHs). For certain values of the model parameters, the predictions of this model agree with observational data from the Atacama Cosmology Telescope (ACT). Due to estimation of possiable PBHs masses, we demonstrate that they can be considered as a possible source for all or part of dark matter.",
+   "abstract": "Hyperboloidal evolution allows to reach future null infinity within numerical relativity simulations. This work extends the conformal compactification approach with BSSN/Z4 from spherical symmetry to full 3D simulations. This is the first free numerical hyperboloidal evolution in 3D with a common formulation of general relativity. In this first step, gauge waves and constraint-violating gravitational waves perturbing Minkowski spacetime are evolved nonlinearly and show that the implementation is reliable and signals can be successfully extracted at future null infinity.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31945",
+   "title": "NS5-branes and the black hole/string transition",
+   "url": "https://arxiv.org/abs/2611.31945",
+   "authors": [
+    "Asad Fayiz",
+    "Emil J. Martinec"
+   ],
+   "label": "arXiv:2611.31945v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "The paper extends a family of 6d BPS supergravity solutions (built from slightly separated fundamental strings and NS5-branes near the BTZ black hole threshold) to include gauge excitations of the fivebranes, and studies D-string soliton energetics relative to the deconfinement transition of little strings.",
+    "plain": "The paper looks at a hypothetical setting in string theory where a black hole-like object begins to form from a bundle of strings and five-dimensional membranes called branes. The authors extend a set of known mathematical descriptions of this setting so they include extra internal \"gauge\" excitations on the branes. They then compare the energy cost of certain brane-bound solitons (localized lumps of energy) with the point at which the tangled strings switch from a confined to a free, black-hole-like state.",
+    "why": "The transition between a string-like state and a black hole is a long-standing question about how gravity and strings fit together, so the question is of interest to specialists. The text does not report a definitive result, and its wider significance beyond this framework is not stated in the abstract.",
+    "background": "- String theory: a framework where fundamental particles are tiny vibrating strings, requiring extra dimensions.\n- Black hole/string transition: the idea that highly excited strings and black holes may be two sides of one phase change.\n- BTZ black hole: a simple black hole solution in three-dimensional gravity, used as a toy model.\n- NS5-branes: five-dimensional extended objects in string theory; \"little strings\" are the strings living on them.\n- Supergravity and BPS solutions: low-energy gravity theories and special, highly symmetric solutions that are stable because of supersymmetry.\n- Deconfinement: a phase change where bound constituents become free, similar to melting or boiling in ordinary matter.\n- Gauge excitations and solitons: internal field configurations and stable localized lumps of energy.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Near to the onset of BTZ black hole formation in string theory is a large ensemble of 6d BPS supergravity solutions sourced by slightly separated fundamental strings and Neveu-Schwarz fivebranes. We extend the construction of these geometries to include gauge excitations of the fivebranes, and then study the energetics of D-string solitons in relation to the deconfinement transition of little strings, which are the natural non-abelian degrees of freedom that deconfine in the transition to the black hole phase.",
    "source": "arxiv"
   },
   {

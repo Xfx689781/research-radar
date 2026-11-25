@@ -3,52 +3,55 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.31137",
-   "title": "Anomalous Field-induced Coherence beyond Single-ion Kondo Physics",
-   "url": "https://arxiv.org/abs/2611.31137",
+   "uid": "arxiv:2611.31878",
+   "title": "Detecting Topological Phases Through Dynamics of Chiral Density in Momentum-space Lattices",
+   "url": "https://arxiv.org/abs/2611.31878",
    "authors": [
-    "Arushi",
-    "Konstantin Semeniuk",
-    "Manuel Brando",
-    "Javier F. Landaeta",
-    "Elena Hassinger",
-    "Christoph Geibel"
+    "Rui Tian",
+    "Xiayao He",
+    "Tianhao Wu",
+    "Dongdong Pu",
+    "Shuai Li",
+    "Bo Liu"
    ],
-   "label": "arXiv:2611.31137v1",
-   "primary_category": "cond-mat.str-el",
+   "label": "arXiv:2611.31878v1",
+   "primary_category": "cond-mat.quant-gas",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "In the heavy fermion compound Ce2Rh3Ga5, a magnetic field suppresses the residual resistivity and restores T^2 coherent metallic transport that is absent at zero field, a behavior the authors argue cannot be explained by single-ion Kondo physics alone and which resembles the anomalous magnetotransport of UBe13.</one_liner>\n<parameter name=\"plain\">Some metals conduct electricity poorly even at very low temperature, and the reason is not well understood. This paper studies one such metal, Ce2Rh3Ga5, and finds that applying a magnetic field lowers its electrical resistance a lot and makes it behave like a well-ordered metal again. The authors report that the field's effect on heat storage can be described with a standard model, but its effect on resistance cannot.",
-    "plain": "",
-    "why": "The result points to an extra source of electron scattering beyond the usual textbook picture for these materials, which matters for understanding why some strongly correlated metals behave oddly. The comparison with UBe13, a long-studied material, suggests the mechanism may be shared, though the text itself does not establish the microscopic cause.",
-    "background": "- Heavy fermion metals: materials containing rare-earth atoms (here cerium) whose electrons behave as if they have very large effective mass.\n- Kondo effect: local magnetic atoms get screened by conduction electrons, which can form heavy quasiparticles at low temperature.\n- Coherence: when scattering weakens at low temperature, electrical resistivity drops and follows a simple T^2 law.\n- Specific heat coefficient C/T: a measure of how strongly electrons store heat; large values signal heavy electrons.\n- Magnetoresistance: change in electrical resistance caused by a magnetic field; negative means resistance falls as field rises.\n- Residual resistivity: the resistance remaining as temperature approaches zero, set by impurities and other defects.\n- UBe13: a uranium heavy fermion compound known for unusual transport and superconductivity.",
+    "one_liner": "The paper proposes a spectroscopic protocol that uses the time evolution of a chiral-operator density in a momentum-space Su-Schrieffer-Heeger chain to reconstruct the local and total density of states and detect zero-energy edge modes and bulk-boundary correspondence.",
+    "plain": "Researchers study how to tell whether a simulated quantum material is in a special \"topological\" state, which can carry protected signals at its edges. They propose watching how a particular measured quantity changes over time after the system is disturbed, then applying a Fourier transform (a standard way of turning a time signal into an energy spectrum). According to the abstract, this recovers the energy-resolved information needed to spot edge modes.",
+    "why": "The approach is a proposed diagnostic for quantum simulators built from momentum-space lattices, which are a flexible experimental platform. Its practical value depends on whether it can be realized and works beyond the simple model studied here; the text alone does not show that.",
+    "background": "- Topological phase: a state of matter whose key properties are robust to small changes, often shown by special states at the edges.\n- Su-Schrieffer-Heeger (SSH) chain: a simple one-dimensional model of particles hopping along a chain, used as a standard testbed for topology.\n- Momentum-space lattice: a lattice in which the sites correspond to momentum values rather than physical positions, allowing quantum simulation with cold atoms or photons.\n- Density of states and local density of states: how many energy levels exist overall, and how many are concentrated at a given location.\n- Zero-energy edge modes: states pinned at zero energy at the ends of a topological chain.\n- Fourier transform: converting a signal recorded over time into its frequency or energy content.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The emergence of coherent heavy quasiparticles in Kondo lattices is generally accompanied by a reduction in electrical resistivity at low temperatures. However, certain strongly correlated metals exhibit anomalously large resistivities that persist to very low temperatures, raising fundamental questions about the mechanisms governing charge transport. Here, we report an unusual magnetic field-induced evolution of electronic transport and thermodynamic properties in a Ce-based heavy fermion compound, Ce$_{2}$Rh$_{3}$Ga$_{5}$. At zero field, Ce$_{2}$Rh$_{3}$Ga$_{5}$ undergoes a magnetic transition at $T$$_{0}$ = 0.45 K and exhibits a strongly enhanced low temperature specific heat coefficient, reaching $C$/$T$ = 2.2 J/mol$_{Ce}$-K$^{2}$, but no discernible coherence in its electrical resistivity. Remarkably, applying a magnetic field produces a large negative magnetoresistance and restores coherent metallic behavior, characterized by low-temperature $T$$^2$ resistivity. Although the field dependence of the electronic specific heat coefficient can be described phenomenologically within a single-ion Kondo framework, the same description fails to account for the strong suppression of the residual resistivity and the overall magnetoresistance. These results point to an additional field-sensitive scattering contribution beyond conventional single-ion Kondo physics. The striking resemblance to the long-standing anomalous magnetotransport behavior of UBe$_{13}$, without the complications introduced by superconductivity, establishes Ce$_{2}$Rh$_{3}$Ga$_{5}$ as a platform for investigating the microscopic origin of anomalous scattering and field-induced coherent transport in strongly correlated electron systems.",
+   "abstract": "Momentum-space lattices offer a versatile platform for quantum simulation in particular emulating topological states of matter.In this work, we propose a spectroscopic protocol via utilizing the dynamics of the chiral operator to detect the topological properties of a momentum-space Su-Schrieffer-Heeger chain. We show that the time evolution of the chiral density is directly linked to the local density of state (LDOS). By performing a Fourier transformation of that, we reconstruct both the LDOS and density of states of the system, enabling the unambiguous signature of zero-energy edge modes and the bulk-boundary correspondence. This dynamical approach provides a diagnostic tool for exploring topological phases in synthetic quantum matter.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.30781",
-   "title": "Perfect Spin-to-Charge Signal Conversion via Inverse Spin Hall Effect in a Superconductor",
-   "url": "https://arxiv.org/abs/2611.30781",
+   "uid": "arxiv:2611.32709",
+   "title": "Intrinsic longitudinal Hall effect in ferroaxial metals with high-order rotation axes",
+   "url": "https://arxiv.org/abs/2611.32709",
    "authors": [
-    "Rodrigo de las Heras",
-    "Ilya V. Tokatly",
-    "F. Sebastian Bergeret"
+    "Eleni Chatzikyriakou",
+    "Stepan Tsirkin",
+    "Fernando Pe\\~naranda",
+    "Oscar Pozo",
+    "Ivo Souza",
+    "Fernando de Juan"
    ],
-   "label": "arXiv:2611.30781v1",
-   "primary_category": "cond-mat.supr-con",
+   "label": "arXiv:2611.32709v1",
+   "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A theoretical proposal that, in a superconductor below its gap, the inverse spin Hall effect could convert injected spin accumulation into a charge voltage with near-unity efficiency despite a small spin Hall angle, testable via temperature- and spin-bias-dependent nonlocal measurements.",
-    "plain": "Spintronics uses the spin of electrons, a tiny magnetic property, to carry information, and it usually needs to turn that spin into an electrical voltage. Normally this conversion is weak. This paper proposes that a superconductor, a material that carries current with no resistance, can make the conversion far more efficient, because below its energy gap very few unpaired electrons can carry current, so the spin-driven charge imbalance shows up as a comparable voltage.",
-    "why": "If the effect holds, it could offer a much stronger electrical readout of spin signals than conventional heavy-metal spin Hall detectors. The text is a theory paper with predictions only; it does not report experiments, so the claim of near-unity conversion depends on the model and its assumptions.",
-    "background": "- Spin: a quantum property of electrons that acts like a tiny magnet; spintronics uses it alongside or instead of charge.\n- Spin Hall effect: a spin current flowing through a material deflects sideways and produces a transverse charge voltage. The inverse effect goes the other way, turning spin into charge.\n- Spin Hall angle: a number measuring how efficiently a material makes this conversion; typical values are small.\n- Nonlocal spin valve: a device where spin is injected at one point and detected at a separate point, so the signal is not mixed with ordinary charge current.\n- Superconductor and energy gap: below a critical temperature, electrons pair up and there is an energy gap; quasiparticles (unpaired excitations) are suppressed below the gap.\n- Charge imbalance: a mismatch between electron-like and hole-like excitations in a superconductor, which can produce a voltage.\n- Spectral broadening: a finite smearing of the energy levels, a realistic correction to the idealized model.",
+    "one_liner": "The paper argues that the intrinsic (quantum, Berry-curvature-based) longitudinal Hall effect in ferroaxial metals can be isolated in the eight ferroaxial groups that have a 3-, 4- or 6-fold rotation axis, where the classical Lorentz-force term vanishes, and identifies Ni3P via first-principles calculation as a candidate.",
+    "plain": "When an electric current flows through a metal in a magnetic field, the sideways voltage (the Hall effect) usually comes mostly from a classical force on moving electrons, which hides a smaller quantum contribution. This paper looks at crystals with a special kind of hidden twist symmetry, called ferroaxial, where the voltage measured along the current direction can be set up so the classical part cancels. The authors list candidate metals with high-order rotation symmetry and calculate the effect for Ni3P, which they suggest is a promising material for measuring the quantum part on its own.",
+    "why": "Separating a quantum contribution from a classical one is what makes such a measurement informative about the electronic structure of a metal. The text does not show experimental confirmation, so the practical value depends on whether Ni3P or similar materials can be measured as predicted.",
+    "background": "- Hall effect: a voltage produced perpendicular to an electric current when a magnetic field is applied.\n- Longitudinal Hall effect here: the voltage response lies along the current direction, which is unusual and occurs only in certain crystal symmetries.\n- Lorentz force: the classical push on moving charges from a magnetic field; it is normally the dominant Hall signal.\n- Berry curvature: a geometric property of electron wavefunctions in a crystal that acts like an internal magnetic field in momentum space.\n- Fermi surface: the boundary in momentum space separating occupied and unoccupied electron states in a metal; the effect is set by states near it.\n- Ferroaxial crystals: crystals lacking certain mirror and inversion symmetries, with a rotational \"axial\" order that is not magnetic.\n- Rotation axis of order 3, 4 or 6: a symmetry where rotating the crystal by 120, 90 or 60 degrees leaves it unchanged.\n- First-principles calculation: computing material properties directly from quantum mechanics without fitted parameters.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Spin-to-charge conversion is central to spintronics, but conventional spin Hall mechanisms are intrinsically limited by the small spin Hall angle. Here we show that superconductivity can overcome this limitation and enable near-unity spin-to-charge signal conversion. We consider a nonlocal spin-valve geometry in which a spin accumulation is injected into a superconductor and converted into a transverse charge signal through the inverse spin Hall effect. In the superconducting state, the strongly suppressed quasiparticle conductance below the gap allows the resulting charge imbalance to generate a voltage comparable to the injected spin bias, despite a small spin Hall angle. We derive the full nonequilibrium response including finite spectral broadening and finite temperature, and propose temperature and spin-bias-dependent measurements of the detector voltage to test our predictions.",
+   "abstract": "The low-field Hall resistivity of non-magnetic metals has an intrinsic quantum contribution that derives from the field-corrected Berry curvature and intrinsic magnetic moment of the Bloch states near the Fermi surface. However, its effect is usually overshadowed by the classical Lorentz-force contribution. Here we show that for the longitudinal Hall effect, which occurs in ferroaxial crystals when the applied magnetic field lies in the Hall plane, the Lorentz force contribution vanishes for the eight ferroaxial groups with a 3,4 or 6-fold rotation axis. This provides an opportunity to measure the quantum correction in isolation, but so far all measured instances of the effect fall in the remaining five ferroaxial groups of lower symmetry, where the Lorentz force dominates the signal. We compile a list of candidate ferroaxial metals with such high-order rotation axis and compute the Hall effect from first principles for representative candidates, identifying Ni$_3$P with $\\sigma^{\\rm H}_{xzx} = 28.4$ S/m/T as a promising material to unambiguously measure the intrinsic longitudinal Hall effect.",
    "source": "arxiv"
   },
   {

@@ -3,6 +3,32 @@
  "updated": "2026-11-25",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.24.769061",
+   "title": "Resolving Hepatic Metabolic Flux During Ex Vivo Liver Perfusion Reveals Compartment-Specific Constraints",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769061v1",
+   "authors": [
+    "Amin, A. M.",
+    "Mcleod, M.",
+    "Browder, N.",
+    "Inigo-Vollmer Massey, M.",
+    "Fletcher, J. M.",
+    "Burgess, S. C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.769061 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "Using staged ex vivo perfusion of mouse livers with 13C-labelled tracers, the authors test whether simplified glucose-fragment flux models hold for intact liver and find that a two-compartment model fits substantially better than a one-compartment model.",
+    "plain": "Surgeons keep donor livers alive outside the body on a machine before transplant, and they currently judge liver health with broad measures. This study asks whether tracking how labelled sugar and related fuels move through individual liver cells could give a more detailed picture of liver metabolism. The authors found that treating the liver as one uniform unit did not explain most of their measurements, but splitting it into a sugar-making part and a sugar-using part did fit most of the data.",
+    "why": "Donor liver viability assessment is a practical clinical problem, so a more mechanistic readout could matter if it proves usable. The link to transplant decisions is only implied by the text; the paper itself is a mouse study and does not report clinical outcomes.",
+    "background": "- Normothermic machine perfusion: keeping an organ warm and circulating fluid through it outside the body.\n- Metabolic flux: the rate at which molecules are converted through biochemical pathways.\n- 13C tracers: fuels (lactate, pyruvate, glucose) made with heavy carbon atoms so their path through metabolism can be tracked by measuring labelled molecules.\n- Isotopomers: versions of a molecule that differ in which carbon atoms carry the heavy label.\n- TCA cycle: the central energy-producing cycle in mitochondria; malate is one of its intermediates.\n- Gluconeogenesis: making new glucose from non-sugar sources.\n- Compartmentation: separating a tissue's metabolism into distinct functional zones or cell groups, modelled as separate units.\n- Lobectomy: surgical removal of a lobe of the liver, used here in a serial design.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Normothermic machine perfusion (NMP) is used to preserve and assess donor livers, but current viability criteria rely on global measures that do not resolve intracellular metabolism, which would provide a more mechanistic measure of donor liver function. We combined staged ex vivo perfusion of mouse livers, serial lobectomy and 13C tracers ([U-13C3]lactate, [U-13C3]pyruvate and [U-13C6]glucose) to test whether glucose fragment-based flux models used in vivo describe intact hepatic metabolism. With intracellular metabolite isotopomers as constraints, a homogeneous one-compartment model failed to fit most datasets, and the lack of fit centered on TCA cycle intermediates such as malate. A two-compartment model, in which a glycolytic compartment takes up glucose from the sinusoidal pool, including glucose released by a gluconeogenic compartment, fitted 41 of 45 datasets. Flux partitioning between compartments depended on nutritional state, which influenced hepatic metabolism more than perfusate glucose. Nevertheless, glucose fragment and two-compartment flux estimates correlated (R2 = 0.68-0.89). Intracellular isotope tracing thus shows that hepatic compartmentation constrains whole-liver flux estimation, while supporting simplified models for quantitative assessment during perfusion.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.21.768247",
    "title": "Albumin alleviates pressure overload-induced heart failure by improving mitochondrial homeostasis via PKA-LKB1-AMPK axis",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.768247v1",
@@ -16,37 +42,14 @@
    "primary_category": "biochemistry",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "In a mouse model of pressure-overload heart failure, recombinant mouse serum albumin improved cardiac function and mitochondrial energy metabolism, reportedly via a PKA-LKB1-AMPK signalling axis, and albumin-knockout mice fared worse.",
-    "plain": "Heart failure is a condition where the heart cannot pump blood well, and patients with low levels of the blood protein albumin tend to do worse. This study tested in mice whether albumin actually helps the heart, by giving them a purified form of mouse albumin after a surgery that squeezes the aorta and strains the heart. Treated mice had better heart pumping, less enlargement and scarring, and less inflammation, and the authors link this to improved energy production inside heart cells.",
-    "why": "Low albumin is a known warning sign in heart failure, but it was unclear whether albumin itself is protective; this work suggests it may be a treatment target, though the evidence is from mice and a single model. It may connect to how energy supply in heart muscle cells is maintained, but the text alone does not show how well the findings transfer to people.",
-    "background": "- Heart failure: the heart pumps too weakly to meet the body's needs; often follows long-term strain such as high blood pressure.\n- Pressure overload / transverse aortic constriction (TAC): a surgery that narrows the aorta in mice to mimic this strain.\n- Serum albumin: the most abundant protein in blood, which carries molecules and helps maintain fluid balance.\n- Knockout (Alb-/-) mice: animals genetically engineered to lack a gene, here the albumin gene, to test its role.\n- Mitochondria: the cell's power plants that produce energy, partly by burning fats and sugars.\n- Fatty acid oxidation: breaking down fats to release energy; a key fuel for the heart.\n- AMPK, LKB1, PKA: cellular signalling proteins that sense energy status and regulate metabolism.\n- Phenylephrine (PE): a drug used in the lab to make heart muscle cells enlarge, mimicking hypertrophy.",
+    "one_liner": "In a mouse model of pressure-overload heart failure, recombinant serum albumin improved cardiac function and mitochondrial energy metabolism, reportedly via a PKA-LKB1-AMPK signaling axis.",
+    "plain": "Heart failure is a condition where the heart gradually loses its ability to pump blood well, and it carries a high rate of death and cost. This study asked whether albumin, the most abundant protein in blood, plays a protective role, since people with heart failure often have low albumin. In mice whose aortas were narrowed to overload the heart, giving them extra mouse albumin improved heart pumping, reduced thickening and scarring, and eased inflammation.",
+    "why": "Low albumin is already known to track with worse heart failure outcomes, but the cause-and-effect link has been unclear, so this work tries to test it directly. It may point toward albumin, or the pathway it reportedly activates, as a treatment target, though the evidence here is from mice and the text alone does not show whether this would work in people.",
+    "background": "- Heart failure: the heart cannot pump enough blood to meet the body's needs; pressure overload (for example from high blood pressure or a narrowed aortic valve) is one cause.\n- Transverse aortic constriction (TAC): a surgical method that narrows the main artery leaving the heart in mice to mimic pressure overload.\n- Serum albumin: the most common protein in blood, which carries molecules and helps maintain fluid balance; here it was given as a recombinant (lab-made) mouse version.\n- Knockout (AKO) mice: animals genetically engineered to lack the albumin gene, used to test whether albumin is needed.\n- Mitochondria: the cell's energy-producing structures; \"mitochondrial homeostasis\" means keeping them healthy and functioning.\n- Fatty acid oxidation and oxidative phosphorylation: ways cells burn fats and produce energy (ATP).\n- PKA, LKB1, AMPK: cellular signaling proteins that relay energy-status and hormone signals; AMPK acts as a cell's energy sensor.\n- Hypertrophy: enlargement of heart muscle cells; phenylephrine (PE) is a drug used in cell experiments to trigger this.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Aims Heart failure (HF) is a global health challenge due to its high incidence, mortality, and socioeconomic burden. Despite medical advancements, HF prognosis remains poor, highlighting the need for enhanced understanding and treatment strategies. Serum albumin, a key circulatory protein, has gained attention as a biomarker in cardiovascular diseases. Low serum albumin levels are linked to HF incidence, progression, and prognosis, suggesting its regulatory role, though mechanisms remain unclear. This study aimed to elucidate the role of serum albumin in HF pathogenesis and investigate its potential therapeutic effects. Methods and results A mouse model of pressure overload-induced HF was established via transverse aortic constriction (TAC). Serum albumin levels were significantly decreased in HF mice. Administration of recombinant mouse serum albumin (rMSA) effectively restored serum albumin concentrations, improved cardiac systolic function, alleviated cardiac hypertrophy and fibrosis, and reduced inflammatory responses, collectively attenuating disease progression. In contrast, albumin-knockout (Alb-/-, AKO) HF mice displayed aggravated pathological manifestations compared with wild-type (WT) controls, whereas rMSA supplementation markedly ameliorated these impairments. In vitro experiments demonstrated that rMSA protected against phenylephrine (PE)-induced hypertrophy in cardiomyocytes. To elucidate the underlying mechanism, transcriptomic analyses of cardiac tissues revealed that albumin played a critical role in improving mitochondrial homeostasis. Experimental validation further demonstrated that albumin activated the PKA-LKB1-AMPK signaling axis, leading to improved mitochondrial respiratory function and oxidative phosphorylation, as well as enhanced mitochondrial quality control. These changes promoted fatty acid oxidation and optimized energy metabolism, thereby reversing the energy imbalance underlying cardiac dysfunction. Conclusion Our study suggests that serum albumin exerts a protective effect in HF by improving mitochondrial dysfunction and energy metabolism disorders, thus reversing energy imbalance and mitigating disease progression. These results support recombinant serum albumin as a promising therapeutic for HF, with its mechanism involving the critical improvement of mitochondrial homeostasis.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.19.767663",
-   "title": "A Shifting Landscape: Deconvoluting the Effect of Mg2+ and pH on Base Triple Formation in 7SK SL-1",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767663v1",
-   "authors": [
-    "Fallon, L.",
-    "Venkatesh, H.",
-    "Jones, A."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.19.767663 v1",
-   "primary_category": "biochemistry",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "A combined simulation, NMR and SAXS study of how Mg2+ ions and pH reshape the base-triple network in the 7SK SL-1 RNA hairpin, which helps it bind the HEXIM protein.",
-    "plain": "This paper looks at a small RNA molecule, 7SK, that helps control how a cell's main gene-copying enzyme works. The authors ask how the acidity of the surroundings and the presence of magnesium ions change the way one part of this RNA folds and holds together. They combine computer simulations, magnetic-resonance measurements and X-ray scattering, and report that pH and magnesium each shift the molecule's shape in different ways, favoring the formation of stabilizing base triples.",
-    "why": "Base triples are small three-way contacts between RNA building blocks that help set the shape the RNA presents to its partner protein, HEXIM. The authors suggest that this shape-shifting could be a way for the cell to tune the RNA's grip on HEXIM and thereby the output of RNA polymerase II, though the text presents this as a possibility rather than a demonstrated mechanism.",
-    "background": "- RNA is a chain of four chemical letters that can fold into 3D shapes, much like a protein.\n- 7SK is a non-coding RNA that regulates transcription, the copying of genes into messenger RNA, by RNA polymerase II.\n- HEXIM and P-TEFb are proteins that 7SK interacts with to control transcription elongation.\n- A stem-loop is a hairpin-shaped RNA fold; SL-1 is the first such hairpin in 7SK.\n- Base triples are three-way hydrogen-bonded contacts among RNA bases that stabilize particular folds.\n- Mg2+ (magnesium ions) and pH (acidity) affect how charged RNA folds and holds together.\n- Methods: molecular dynamics (computer simulation of atomic motion), free energy calculations, NMR (nuclear magnetic resonance spectroscopy) and SAXS (small-angle X-ray scattering, which measures overall molecular shape in solution).",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The small-nuclear RNA (snRNA) 7SK is essential for regulating the transcription of genes by RNA polymerase II through its interactions with Hexamethylene Bisacetamide Inducible Protein (HEXIM) and positive transcription elongation factor b (P-TEFb). High-resolution structures of 7SK stem-loop 1 (SL-1) reveal the presence of several base triples that coordinate the interaction with HEXIM. However, different high-resolution structures of 7SK SL-1 exhibit different conformations, each with unique base triple configurations. Previous NMR studies show that the conformation of 7SK SL-1 is sensitive to changes in pH and Mg2+ concentration. However, the exact mechanism by which Mg2+ and pH influence the formation and stability of base triples in 7SK SL-1 at an atomic level remains unclear. We combine molecular dynamics (MD) simulations, free energy calculations, nuclear magnetic resonance (NMR), and small angle X-ray scattering (SAXS) to conduct a detailed investigation into the mechanism and dynamics of base triple formation in 7SK SL-1, and deconvolute the effects of pH and Mg2+. We find that the conformational landscape of 7SK SL-1 dramatically changes depending on the pH and presence of Mg2+, and that pH and Mg2+ act orthogonally to favor the formation of base triples. We discuss how the dynamic behavior of the base triples may provide a means for 7SK to regulate its interactions with HEXIM, modulating the transcriptional output of RNA polymerase II.",
    "source": "biorxiv"
   },
   {

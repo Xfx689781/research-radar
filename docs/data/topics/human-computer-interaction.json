@@ -3,49 +3,62 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.28007",
-   "title": "The Agent Is Not Your Driver: Clarifying the Implied Capabilities of In-Vehicle Anthropomorphic Agents",
-   "url": "https://arxiv.org/abs/2611.28007",
+   "uid": "arxiv:2611.32768",
+   "title": "Emerging International Best Practices for AI Model Specs",
+   "url": "https://arxiv.org/abs/2611.32768",
    "authors": [
-    "Benjamin Hardin"
+    "Edward Kembery",
+    "Nathan Lambert",
+    "Robert McCarthy",
+    "Jinge Wang",
+    "Peng Xu",
+    "Naying Hu",
+    "Clement Neo",
+    "Xu Jia",
+    "Miro Pluckebaum",
+    "Se\\'an \\'O h\\'Eigeartaigh",
+    "S\\\"oren Mindermann",
+    "Christoph Winter",
+    "Lujain Ibrahim",
+    "Yawen Duan",
+    "Saad Siddiqui"
    ],
-   "label": "arXiv:2611.28007v1",
-   "primary_category": "cs.HC",
+   "label": "arXiv:2611.32768v1",
+   "primary_category": "cs.CY",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A position paper arguing that anthropomorphic in-vehicle agents can overstate their knowledge of the car's automated driving system, creating risks of user dependence and betrayal, and proposing a research agenda to study and narrow that gap safely.",
-    "plain": "The paper looks at talking, human-like assistants inside self-driving cars. The concern is that such an assistant may seem to be part of the car's driving system when it is not, so riders may trust it too much or feel misled when it gets something wrong. The authors do not report new experiments; they lay out the problem and propose questions and a research plan for future work.",
-    "why": "As cars add conversational assistants, what the assistant appears to know about driving could shape how much people rely on it, which bears on safety. The text does not give evidence of harm, so the concern is a proposed research direction rather than a established finding.",
-    "background": "- Anthropomorphic agent: a voice or on-screen character designed to seem human-like, with a name, personality, or social cues.\n- Automated driving system (ADS): the car's underlying software that actually steers, brakes, and monitors the road.\n- Gap: the difference between what the friendly assistant can really do or know and what it appears to do or know.\n- Dependence and betrayal: over-reliance on a trusted helper, and the sense of being let down when that trust proves unwarranted.\n- Position paper: an argument and agenda for future work, not a report of new experimental results.\n- Safety assurance: methods for showing a system is safe enough to use.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "This position paper considers how the gap between an anthropomorphic agent in an autonomous vehicle and the automated driving system of the vehicle can create psychological risks if the agent inaccurately presents itself as integrated into the driving system. This gap is under-explored both because of the evolving nature of these agents and because of study limitations in Human-Computer Interaction (HCI) research. Nevertheless, this gap may cause the agent to misrepresent itself as more knowledgeable about the car than it is, creating a risk of dependence and, in the worst case, betrayal if the occupant feels that the agent has misled them. This paper proposes a research agenda for future work to understand the psychological risk that exists in the gap between agents and driving systems and to narrow this gap in a manner aligned with safety assurance. As these agents evolve to hold greater capabilities and increased anthropomorphism, future research must investigate risks which may emerge from richer interaction with them. The impact of how an agent presents itself and its knowledge becomes greater.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2606.28090",
-   "title": "Typing Behavior in Human-LLM Interaction: Keystroke Dynamics Reveal Cognitive Effort During Prompting",
-   "url": "https://arxiv.org/abs/2606.28090",
-   "authors": [
-    "Laura Sch\\\"utz",
-    "Yousri Cherif",
-    "Clara Sayffaerth",
-    "Thomas Weber",
-    "Francesco Chiossi"
-   ],
-   "label": "arXiv:2606.28090v1",
-   "primary_category": "cs.HC",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "A 36-person user study finds that keystroke timing and volume track self-reported mental workload when people write prompts for an LLM, but do not predict how useful users rate the output.",
-    "plain": "When people type requests to an AI chatbot, how they type may reveal how hard they are thinking. The researchers had 36 participants write prompts for easy and hard tasks on desktop and mobile devices, then recorded their keystrokes and asked them to rate their workload. Harder tasks produced more typing, slower typing, and longer pauses, but the typing patterns did not tell whether people found the AI's answers useful.",
-    "why": "Typing signals could offer a cheap, real-time way to notice when a user is struggling during an AI interaction, without interrupting them with questionnaires. The text also shows a clear limit: typing reflected effort but not perceived success, so it is not a complete measure of how well the collaboration is going.",
-    "background": "- LLM (large language model): an AI system that generates text in response to written prompts, such as chatbots.\n- Keystroke dynamics: the measurable details of typing, such as how many keys are pressed, how fast, and how long the pauses between them are.\n- NASA-TLX: a standard questionnaire that asks people to rate mental workload (effort, frustration, time pressure and similar factors).\n- Human-computer interaction (HCI): the field that studies how people use and experience computers and software.\n- The study is a small lab experiment (N = 36); the text does not describe the specific tasks, sample details, or statistical methods, so findings should be read as preliminary.",
+    "one_liner": "A position-style paper that offers a taxonomy, practical writing guidance, and a list of open problems for \"model specs,\" the public documents in which frontier AI developers describe intended model behaviour.",
+    "plain": "AI companies are beginning to publish documents that explain how their chatbots and AI models are meant to behave. This paper argues that little independent advice exists on how to write such documents, so it sets out the benefits of writing them, a way of classifying them, practical steps for writing and applying them, and eight unresolved questions. It ends with recommendations for AI companies, governments, and researchers and civil society groups.",
+    "why": "As AI systems take on more roles, publicly stated behaviour rules may shape how developers are held accountable and how governments approach oversight. The text itself does not show how widely these documents are adopted or how well they work in practice, so their real-world impact remains uncertain.",
+    "background": "- A \"model spec\" is a written document from an AI developer stating how its model should respond and what it should prioritise.\n- \"Frontier AI developers\" means the companies building the most capable AI systems.\n- A \"taxonomy\" is a structured classification of types of documents, here used to group different spec designs.\n- \"Open problems\" are questions the field has not yet settled.\n- Governance refers to the rules, norms and oversight that guide how AI is built and used.\n- The paper is a guidance and position piece, not an experiment; the summary is based only on its abstract-level description.",
     "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "As Large Language Models (LLMs) become increasingly integrated into daily routines, understanding how users interact with these systems is crucial for effective human-AI collaboration. This work investigates keystroke dynamics as a behavioral measure of user mental effort and perceived output usefulness in human-LLM interaction. We conducted a user study (N = 36) to examine how task difficulty (easy vs. hard) and device type (desktop vs. mobile) influence typing behavior and workload (NASA-TLX) during interactions. Our results indicate that hard tasks led to significantly more keystrokes, slower typing, increased pauses, and higher self-reported workload. Device type had weaker effects, with mobile use slightly reducing input length and typing speed. While keystrokes captured differences in cognitive effort, they did not predict perceived LLM output usefulness. These findings highlight the potential of keystroke dynamics as real-time indicators of cognitive effort during LLM prompting, while also showing their limitations in capturing perceived collaboration success.",
+   "abstract": "Frontier AI developers from around the world have begun to publish documents that describe how their AI models are intended to behave. Although these 'model specifications'-or 'model specs', for short-are increasingly important in AI development and governance, little independent guidance exists for writing them. This paper addresses this gap in five main sections. First, we outline the advantages of writing a model spec for AI developers and society at large. Second, we introduce a taxonomy for model specs that developers can take inspiration from. Third, we propose guidance for writing and implementing a spec in practice. Fourth, we note eight open problems related to writing model specs for safe and desirable behaviour. We conclude with recommendations for frontier AI companies, governments, and research and civil society organisations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32009",
+   "title": "Calm Agent: Reframing Agent Interaction around Intermittent Human Attention",
+   "url": "https://arxiv.org/abs/2611.32009",
+   "authors": [
+    "Dian Jin",
+    "Zixun Fu",
+    "Guan Wang",
+    "Yancheng Yuan"
+   ],
+   "label": "arXiv:2611.32009v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "This position paper proposes \"Calm Agent,\" a design framework for AI agents running ongoing background tasks around intermittent human attention, linking Delegate, Adjust, and Check interaction modes through a persistent task representation, and illustrates it with a desktop prototype called Orvlet.",
+    "plain": "AI helpers can now keep working on side jobs while a person focuses on something else. This paper argues that such helpers should be built around the fact that people only glance back at them now and then, so the work keeps going between visits and the person can quickly see what is happening and change it. The authors describe a three-part approach (hand off a task, adjust it, check on it) and show it through a desktop prototype, Orvlet, but the text does not report user studies or measured results.",
+    "why": "As AI agents take on longer background work, how people re-enter and supervise that work while protecting focus on primary tasks is an open interface question. The paper mainly sets out a design position and lists challenges, so its value depends on how far the prototype and later work develop these ideas.",
+    "background": "- AI agent: software that carries out multi-step tasks on a user's behalf, rather than answering a single question.\n- Intermittent attention: a person's focus comes and goes, so they check in briefly instead of watching continuously.\n- Persistent task representation: a stored, always-updated record of what the agent is doing, its status, and its options, so the user can pick up where they left off.\n- Generative interface: an interface the AI builds on the fly to fit an open-ended goal, as opposed to fixed buttons and menus.\n- Background execution: a task that keeps running without occupying the user's screen or focus.\n- Human-computer interaction (HCI): the field studying how people use and design computer systems.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "AI agents can carry out auxiliary tasks while users focus on other work. Yet users still need to understand task state, make changes, and respond when help is required. We argue that agents for ongoing auxiliary tasks should be designed around intermittent human attention: tasks should continue between interactions, and users should be able to return with little effort to understand and control them. We develop this position as Calm Agent. It connects three on-demand interaction modes: Delegate, Adjust, and Check, through a persistent task representation. Generative interaction provides controls and feedback suited to open-ended goals, while existing controls support routine actions. We illustrate these principles with Orvlet, a desktop prototype for background execution and compact task interfaces. We identify challenges in adapting interfaces while preserving continuity, coordinating attention across tasks, providing responsive interaction, and learning user habits over time. The aim is to support continuing task control while protecting attention for primary work.",
    "source": "arxiv"
   },
   {

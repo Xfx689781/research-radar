@@ -3,54 +3,51 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.29291",
-   "title": "Asteroseismic investigation of intermediate age open star cluster NGC 2126",
-   "url": "https://arxiv.org/abs/2611.29291",
+   "uid": "arxiv:2611.32656",
+   "title": "Constraining the Binary Fraction and Mass-Ratio Distribution of FGK Dwarfs with Gaia XP Spectra: Metallicity, $\\alpha$-Element, and Age Dependencies",
+   "url": "https://arxiv.org/abs/2611.32656",
    "authors": [
-    "Athul Dileep",
-    "Santosh Joshi",
-    "Patricia Lampens",
-    "Chenglong Lv",
-    "David Mkrtichian",
-    "Peter De Cat",
-    "Abhay Pratap Yadav",
-    "Arjun Dawn",
-    "Ali Esamdin"
+    "Yinuo Zhang",
+    "Zexi Niu",
+    "Haibo Yuan",
+    "Ning-Chen Sun",
+    "Jia-Hui Wang",
+    "C\\'esar Rojas-Bravo",
+    "Jifeng Liu"
    ],
-   "label": "arXiv:2611.29291v1",
+   "label": "arXiv:2611.32656v1",
    "primary_category": "astro-ph.SR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A preliminary asteroseismic study of delta Scuti pulsators and the binary V551 Aur in the intermediate-age open cluster NGC 2126, using TESS full-frame images and earlier ground-based photometry.",
-    "plain": "Astronomers studied the rhythmic brightness wobbles of a group of pulsating stars in NGC 2126, a cluster of stars several hundred million years old. By comparing the pulsation patterns with models of how stars vibrate, they tentatively identified the vibration modes of three stars and firmly identified a second overtone in one. They also found that a pulsating star in a close binary pair seems to be affected by its companion's gravity, and that one star shows chemical features resembling an Am star.</plain>\n<parameter name=\"why\">Stars that pulse in a cluster share an age and origin, so their vibrations can test stellar models more tightly than single stars alone. The finding that the main pulsator in the binary V551 Aur does not match a fundamental radial mode is an open puzzle the text does not resolve, and the authors describe the work as preliminary.",
-    "why": "",
-    "background": "- Open star cluster: a loose group of stars born together from the same cloud; NGC 2126 is intermediate in age.\n- Delta Scuti star: a type of pulsating star whose brightness rises and falls over minutes to hours as its outer layers swell and shrink.\n- Asteroseismology: inferring a star's interior structure from the frequencies of its vibrations, much as seismology reads Earth's interior from earthquake waves.\n- Radial mode / overtone: a vibration in which the star expands and contracts uniformly; the fundamental is the simplest, and overtones are higher-order versions with more nodes.\n- Period-luminosity relation: an empirical link between how fast a pulsator oscillates and how bright it is, used to estimate which mode is present.\n- TESS: NASA's space telescope that surveys large areas of sky for changes in starlight.\n- Binary star (eclipsing): two stars orbiting each other, dimming periodically when one passes in front of the other.\n- Am star: a type of star with unusual surface chemistry, such as enhanced metals and depleted calcium-group elements.",
+    "one_liner": "Using the Stellar Locus Outlier method on synthetic Gaia XP photometry and LAMOST DR9 stellar parameters, this paper estimates the binary fraction and high-mass-ratio power-law slope for about 200,000 FGK dwarfs within 1 kpc and examines how these depend on metallicity, alpha-element abundances, and age.",
+    "plain": "Many Sun-like stars are actually pairs of stars orbiting each other. This study looks at roughly 200,000 nearby stars of that type and uses their precise colors, measured from a satellite's spectra, to estimate how many are binaries and how their partner masses are distributed. It then checks how these numbers change with the stars' chemical makeup and estimated age.",
+    "why": "Knowing how often Sun-like stars have companions, and what those companions tend to be, feeds into theories of how stars form and how their chemistry and dynamics evolve. The text reports correlations with chemistry and age, but it describes the age trend as likely reflecting underlying chemical correlations, so the causal link is not established here.",
+    "background": "- Binary star: two stars orbiting a common center of mass; a \"binary fraction\" is the share of stars that have a companion.\n- Mass ratio: the companion's mass divided by the primary's; a distribution of mass ratios describes how likely different partner masses are.\n- FGK dwarfs: main-sequence stars somewhat cooler or similar to the Sun (spectral types F, G, K).\n- Gaia XP spectra: low-resolution color-like spectra from the Gaia space telescope, used here as synthetic photometry.\n- Stellar locus: the tight color-versus-brightness band that single stars follow; unresolved binaries sit off this band, which is what the method exploits.\n- Metallicity and alpha-elements: the share of elements heavier than helium, and the subset (such as magnesium, silicon, calcium) produced in certain stellar processes; these trace a star's chemical history.\n- Thin vs. thick disk: two populations of stars in the Milky Way's disk, differing in age and chemistry.\n- LAMOST DR9: a spectroscopic survey data release providing the stellar parameters used.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We present a preliminary asteroseismic investigation of the pulsating stars in the intermediate-age open cluster NGC 2126. The TESS Full Frame Images and ground-based photometry from the previous study, Dileep et al. (2025), were used to identify the pulsation modes of {\\delta} Scuti member stars using period-luminosity relations and pulsation modelling. Our analysis resulted in a tentative identification up to the first radial overtone in stars N1, N2 and ZV1. Additionally, the second radial overtone was secured in N1. The disentangled pulsation and eclipse light curves of the binary star V551 Aur (V6) from our previous research were employed to study pulsation amplitude and phase modulations across the orbital period. The primary component of V6 exhibits pulsations showing amplitude and phase modulations, indicating tidal influence on the oscillations. Modelling the pulsation as the fundamental radial mode reveals that in order for the mode to be radial, the star must be significantly brighter than observed. Hence, the mode is not the fundamental radial mode or the overtones. Low-resolution spectroscopy was used to search for chemical peculiarities in the pulsating members, and we found that star ID 143 has features similar to an Am star.",
+   "abstract": "We present a study of the binary fraction and mass-ratio distribution for near 200,000 FGK dwarf stars within 1 kpc, utilizing the Stellar Locus Outlier (SLOT) method applied to synthetic Gaia XP photometry and stellar parameters from LAMOST DR9. By modeling the asymmetric color residuals relative to a metallicity-dependent single-star locus, we measure the binary fraction $f_b$ and constrain the power-law slope $\\gamma_{\\rm large\\,q}$ of the mass-ratio distribution at high mass ratio $q$. Higher metallicity is associated with a steeper (more negative) $\\gamma_{{\\rm large}q}$, indicating a larger proportion of low-mass-ratio systems. For $\\alpha$-elements, [Mg/H] and [Si/H] are anticorrelated with $f_b$ in thin-disk-dominated subsamples; conversely, [Ca/H] shows a positive correlation with $f_b$ in thin-disk-dominated subsamples. No correlation is found between $f_b$ and $\\alpha$-element abundances in thick-disk-dominated subsamples. The binary fraction increases modestly toward older ages in the thin-disk population, a trend that likely reflects underlying correlations with chemistry. Our results shed light on how chemical composition and dynamical processes shape the binary properties of solar-type stars.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28229",
-   "title": "Empirical Mass and Radius Relations for Main-sequence Stars from Detached Eclipsing Binaries",
-   "url": "https://arxiv.org/abs/2611.28229",
+   "uid": "arxiv:2611.33002",
+   "title": "A Study of Three Intrinsically Luminous Long Period Interacting Eclipsing Binaries in the Galaxy and the Small Magellanic Cloud",
+   "url": "https://arxiv.org/abs/2611.33002",
    "authors": [
-    "D. M. Rowan",
-    "C. S. Kochanek"
+    "T. J. Davidge"
    ],
-   "label": "arXiv:2611.28229v1",
+   "label": "arXiv:2611.33002v1",
    "primary_category": "astro-ph.SR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Empirical polynomial relations, calibrated on 605 main-sequence stars in detached eclipsing binaries, that predict stellar mass and radius from spectroscopic temperature, surface gravity/density and metallicity, with a comparison against MIST and PARSEC stellar models.",
-    "plain": "Stars in pairs that pass in front of each other, seen as eclipses, let astronomers measure their masses and sizes very precisely. This paper uses 605 such stars to build formulas that estimate a star's mass and radius from quickly measured properties like temperature and composition. The formulas predict the Sun's mass and radius to within a few tenths of a percent and fit the calibrator stars to within about 4% in radius and 8% in mass.",
-    "why": "Mass and radius estimates feed into work on planets orbiting other stars, where a star's size and mass set the size of any planet found, so better formulas matter for that work. The text also reports that two widely used stellar model sets differ systematically from the formulas, with hot stars' radii overestimated and cool stars' underestimated by several percent; the text does not say how this affects specific planet results.",
-    "background": "- Main-sequence star: a star in the stable, long-lived phase of hydrogen burning, like the Sun.\n- Detached eclipsing binary: two stars orbiting each other without touching, whose light dims periodically as one passes in front of the other; this allows direct measurement of mass and radius.\n- Spectroscopic parameters: properties inferred from a star's light spectrum, such as effective temperature, surface gravity, and metal content (metallicity).\n- Surface gravity and mean density: related ways of describing how tightly a star's mass is packed into its size.\n- Empirical relation: a formula fitted to observed data rather than derived from physical theory.\n- RMS scatter and dex: the typical size of prediction errors; a dex is a logarithmic unit, where 0.01 dex is roughly 2.3%.\n- Stellar model grids (MIST, PARSEC): theoretical computer models of how stars evolve, used as a reference for comparison.",
+    "one_liner": "A study of three long-period (hundreds of days) interacting eclipsing binaries, two in the Small Magellanic Cloud and one in the Galaxy (PW Pup), using archival visible and mid-infrared photometry and spectroscopy to constrain masses, mass transfer history, and the light from the hidden secondary.",
+    "plain": "This paper looks at three pairs of stars that orbit each other in periods of hundreds of days and pass in front of each other, causing regular dimming. The authors reanalyzed old telescope measurements of brightness and starlight spectra for these systems. They estimate the minimum masses of the companion stars and suggest that all three have transferred material between stars in the past.",
+    "why": "Long-period binaries of evolved giant stars are useful tests of how stars change when they share mass, and the Small Magellanic Cloud offers a distant, well-measured sample. The text does not establish wider implications beyond these three systems, and the findings are described as preliminary in places.",
+    "background": "- Eclipsing binary: two stars orbiting each other, whose regular dimming when one passes in front of the other reveals their sizes, temperatures and orbits.\n- Orbital period of hundreds of days: the stars take many months to complete one orbit, much longer than most known binaries.\n- Giant stars (K and M type): cool, large, evolved stars that have burned through core hydrogen and swelled up.\n- Mass function: a value from the orbit and radial-velocity (Doppler shift) data that sets a minimum mass for the unseen companion.\n- Mass transfer: one star feeding material to its partner, which changes both stars' masses and evolution.\n- Mid-infrared (MIR) light: longer-wavelength light that can reveal cool dust or disks that are faint in visible light.\n- Main sequence and B spectral type: a hot, bright, young-star stage; the text says the components started as B-type stars.\n- Small Magellanic Cloud (SMC): a small satellite galaxy of the Milky Way.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Detached eclipsing binaries have long served as fundamental calibrators for stellar models because they provide precise measurements of stellar masses and radii. Given a sample of detached eclipsing binaries, we can derive empirical relations between spectroscopic parameters (effective temperatures, surface gravities and abundances) and stellar masses and radii. We use a sample of 605 stars (330 with metallicities) in detached eclipsing binaries to update and refine these empirical models for main-sequence stars. An eight-term polynomial model reproduces the radii and masses of the eclipsing binary calibrators with an RMS scatter of $\\sigma_{\\log R} = 0.0161$ dex (3.8%) and $\\sigma_{\\log M} = 0.0322$ dex (7.7%), respectively. Most of this scatter is explained by the parameter uncertainties - the estimated intrinsic scatters in the radius and mass are only $\\sigma_{\\rm int}=0.0085$ and $0.017$ dex (2.0% and 4.0%). The predicted mass and radius of the Sun are $(1.028\\pm0.004)\\ M_\\odot$ and $(1.014\\pm0.002)\\ R_\\odot$. A 14-term model, while formally preferred, explains little more of the intrinsic scatter. We additionally provide the equivalent relations in terms of the mean stellar density instead of the surface gravity for use with exoplanet host stars. If we compare the 8-term model to MIST and PARSEC model stars with closely matched spectroscopic parameters, we find systematic differences. For example, the radii of hot (cool) stars are systematically over- (under-)estimated in both models by several percent.",
+   "abstract": "The properties of the eclipsing binaries SMC004701.39-732645.8, SMC005609.41-722809.2 and PW Pup are examined using archival photometric and spectroscopic observations. These systems have orbital periods of hundreds of days, and contain highly evolved components with temperature differences of at least 1000 - 2000K. The SMC systems are among the brightest eclipsing binaries in that galaxy at visible wavelengths, and show excess thermal emission that appears to be typical for luminous K and M giants in that galaxy. A preliminary mass function for SMC004701 suggests a minimum mass for the secondary of 3.8 +/- 0.8 Msolar, whereas the PW Pup mass function indicates a minimum mass for the secondary of 3.2 +/- 0.3 Msolar. Light curve elements are examined for a range of mass ratios using observations at visible and mid-infrared (MIR) wavelengths. The results suggest that SMC004701 may prove to be a double line spectroscopic binary at visible wavelengths. However, with the possible exception of emission from a circumstellar disk, infrared observations will likely be required to detect light from the secondary in the other two systems. All three systems have likely experienced mass transfer, and had components with initial masses that correspond to B spectral types on the main sequence. The light associated with the secondary likely originates from a shell or disk that obscures a hotter central star.",
    "source": "arxiv"
   },
   {

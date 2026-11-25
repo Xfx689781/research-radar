@@ -3,50 +3,47 @@
  "updated": "2026-11-25",
  "papers": [
   {
-   "uid": "arxiv:2611.30003",
-   "title": "Statistically Optimal and Near Linear Time Hypothesis Selection",
-   "url": "https://arxiv.org/abs/2611.30003",
+   "uid": "arxiv:2611.31608",
+   "title": "Instance-Dependent Bandit Convex Optimization in One Dimension",
+   "url": "https://arxiv.org/abs/2611.31608",
    "authors": [
-    "Satyen Kale",
-    "Amirreza Shaeiri",
-    "Kunal Talwar"
+    "Felix Breuer",
+    "Alireza Bakhtiari",
+    "Kevin Jamieson"
    ],
-   "label": "arXiv:2611.30003v1",
+   "label": "arXiv:2611.31608v1",
    "primary_category": "stat.ML",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives a hypothesis selection learner that reaches the optimal factor-2 guarantee with O(log(n/δ)/ε²) samples, removing the log factors of an earlier factor-2 result, and runs in near-linear oracle complexity.",
-    "plain": "Suppose you have a list of n candidate probability distributions and some samples from an unknown one. The task is to pick a distribution (possibly one not on the list) that is nearly as close to the unknown one as the best candidate, within a factor of 2 plus a small error. The paper shows how to do this with a number of samples that grows only logarithmically in the number of candidates, and it counts cost by how many times the algorithm queries the candidates.",
-    "why": "The factor of 2 is the best possible for methods whose sample count does not depend on the size of the domain, and the paper matches the sample cost of a classic factor-3 estimator while removing extra logarithmic factors from the earlier factor-2 result. It is a theory result about the best achievable guarantees; the text does not describe practical applications, so its wider relevance is uncertain.",
-    "background": "- Probability distribution: a rule assigning probabilities to possible outcomes.\n- Total variation (TV) distance: a standard measure of how far apart two distributions are, from 0 (identical) to 1 (completely different).\n- Hypothesis selection: choosing a good candidate from a list of candidate models using samples from the true one.\n- Approximation factor α: a multiplier on the best candidate's error; α = 2 is the target here.\n- Sample complexity: how many samples are needed as a function of accuracy and failure probability.\n- Proper vs. improper learner: a proper learner outputs one of the candidates; an improper one may output something new.\n- Multiplicative weights: an iterative method that reweights constraints over rounds.",
+    "one_liner": "The paper studies instance-dependent sample complexity for one-dimensional stochastic bandit convex optimization in the fixed-confidence setting, proving a matching-up-to-logs instance-dependent rate for minimizer localization but showing no comparable improvement for simple regret.",
+    "plain": "The paper looks at a learning problem where an algorithm tries to find the lowest point of a smooth, bowl-shaped function on a line, but can only learn about it by taking noisy measurements at chosen points. It asks how many measurements are needed, and how that depends on how the particular function looks. The authors find that locating the lowest point can be done faster on easier functions, while merely finding a point whose value is close to the lowest value cannot be sped up in the same way.",
+    "why": "The result separates two goals that might seem similar, locating the minimizer versus finding a near-optimal value, and shows they have different statistical costs. The text does not say how far the findings extend beyond one dimension, so their wider relevance is uncertain.",
+    "background": "- Stochastic bandit: a learner picks actions and receives noisy rewards or losses, learning only from the outcomes it observes.\n- Convex function: a bowl-shaped function with a single lowest point (the minimizer).\n- Fixed-confidence setting: the algorithm must output an answer that is correct with high probability, and the aim is to minimize the number of samples used.\n- Sample complexity: the number of measurements needed to reach the goal.\n- Instance-dependent versus minimax: instance-dependent bounds depend on the specific function, while minimax bounds are the worst case over all functions in a class.\n- Sublevel set: the set of points where the function is below a given threshold.\n- Simple regret: the gap between the value at the chosen point and the best possible value.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In hypothesis selection we are given $n$ distributions $q_1,\\dots,q_n$ on a countable domain $\\mathcal{X}$ and samples from an unknown distribution $p$. The goal is a distribution $q$ with $\\mathrm{TV}(p,q)\\le\\alpha\\min_i\\mathrm{TV}(p,q_i)+\\epsilon$. The factor $\\alpha=2$ is optimal for algorithms using a number of samples from $p$ that is independent of $|\\mathcal{X}|$, and in general only improper learners achieve it. We give a learner that achieves $\\alpha=2$ with $O(\\log(n/\\delta)/\\epsilon^2)$ samples of $p$, with probability at least $1-\\delta$. This matches the sample complexity of Yatracos's factor-$3$ estimator, and it removes the logarithmic factors in the factor-$2$ bound of Bousquet et al. (FOCS 2021). The learner accesses the $q_i$ only through sampling and pointwise comparisons. We measure its running time by its oracle complexity, the number of oracle calls. In expectation it makes $O((n\\epsilon^{-2}+\\epsilon^{-4}\\log(1/\\epsilon))\\log(n/\\delta))$ oracle calls, independent of $\\mathcal{X}$. It runs multiplicative weights over the constraints $\\mathrm{TV}(q,q_i)\\le\\mathrm{TV}(p,q_i)$ and uses at most one sample of $p$ per round.",
+   "abstract": "We study the instance-dependent sample complexity of one-dimensional stochastic bandit convex optimization in the fixed-confidence setting. First, we consider minimizer localization, where the learner seeks to identify a point within distance $\\varepsilon$ of the unique minimizer. We introduce a new instance-dependent quantity $\\Delta_\\varepsilon(f)$, corresponding to the threshold for which the sublevel set of $f-\\min f$ has length $2\\varepsilon$. We prove a lower bound of order $\\Delta_\\varepsilon(f)^{-2}$ and give a bisection-style algorithm that matches this rate up to logarithmic factors. We then revisit the simple-regret setting, where the goal is to identify an $\\varepsilon$-optimal point. Surprisingly, no comparable instance-dependent improvement is possible: every correct algorithm has sample complexity of order $\\varepsilon^{-2}$ on every instance, matching the minimax rate up to constants. Together, these results separate the statistical complexity of minimizer localization from that of simple-regret optimization in one-dimensional convex bandits.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.28399",
-   "title": "Data-Dependent Probability Estimation via Sample Amplification",
-   "url": "https://arxiv.org/abs/2611.28399",
+   "uid": "arxiv:2611.33023",
+   "title": "PAC-style Bounds on the Conditional Validity of Conformal Predictors",
+   "url": "https://arxiv.org/abs/2611.33023",
    "authors": [
-    "Vitaly Feldman",
-    "Satyen Kale",
-    "Mahbod Majid",
-    "Kunal Talwar"
+    "Nicolo Colombo"
    ],
-   "label": "arXiv:2611.28399v1",
+   "label": "arXiv:2611.33023v1",
    "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives a sample-efficient estimator for the probability of an event chosen after seeing the data, combining sample amplification with online-optimization-based distribution learning, and proves matching-up-to-logs bounds for discrete domains.",
-    "plain": "The question is how to estimate how likely some event is when the event itself was picked after looking at the data, so the usual count of how often it happened in the sample can be badly misleading. The authors show that roughly the square root of the domain size many samples is enough for a constant-accuracy estimate, when the rule that picks the event is known, instead of the roughly domain-size many needed to learn the whole distribution. The text also gives a matching lower bound up to logarithmic factors, and separate results for Gaussian distributions and a smoothed sample-size setting.",
-    "why": "The result answers an open question posed in a related paper and shows the sample cost is essentially tight up to logarithms, which makes it a clean theoretical answer. Its relevance to practical adaptive data analysis or statistics after data-driven selection is plausible but not established by the text.",
-    "background": "- Empirical probability: the fraction of sample points where an event occurred.\n- Distribution learning: estimating the full probability distribution over a domain of size d; needs about d samples to do so to constant accuracy.\n- Data-dependent queries: the event or quantity is chosen after seeing the sample, which can bias naive estimates.\n- Mean squared error: the average squared gap between estimate and truth; lower is better.\n- Sample amplification: techniques that produce more effective samples from fewer ones, used here as a tool.\n- Online optimization: a framework for sequentially updating a estimate; used to learn the distribution.\n- Big-O notation with tilde: ignores logarithmic factors.",
+    "one_liner": "The paper derives PAC-style probabilistic lower bounds on the input-conditional coverage of conformal predictors, using Markov and Cantelli inequalities, and proposes a data-estimable Cantelli bound based on the variance of conditional coverage.",
+    "plain": "Conformal prediction methods output a set of possible answers rather than a single guess, and they are designed so that the set contains the true answer about as often as promised. That promise holds on average across all inputs, but it can be off for particular kinds of inputs. This paper gives guaranteed lower limits on how often the set is right for a given input, using only a finite amount of calibration data and no assumptions about how the data are distributed.",
+    "why": "Users often need reliability for specific cases, not just on average, so a checkable measure of local reliability matters for safety-sensitive uses. The authors suggest the variance of conditional coverage as a practical signal of how trustworthy a predictor is for different inputs; the text does not show how well this works in practice.",
+    "background": "- Prediction set: a range or list of candidate outputs instead of one value.\n- Coverage: the fraction of cases where the true answer falls inside the set; the target here is 1 minus alpha (for example, 90%).\n- Marginal vs. conditional validity: marginal means correct on average over all inputs; conditional means correct for each specific input or group.\n- Calibration data: a held-out sample used to set the size of the prediction sets.\n- PAC-style bound: a guarantee that holds with high probability over the random calibration sample, not just in expectation.\n- Markov and Cantelli inequalities: classic probability tools that bound how far a random quantity can stray from its average, using only its mean (and variance for Cantelli).\n- Hoeffding argument: a standard concentration result that lets a quantity be estimated from samples with a known confidence level.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Can we estimate the probability of an event chosen after seeing the data, without using any fresh samples? Its empirical probability can be arbitrarily misleading, while learning the entire distribution to constant accuracy requires $\\Theta(d)$ samples on a domain of size $d$. We show that $\\widetilde{O}(\\sqrt{d})$ samples suffice for constant mean squared error, provided the rule choosing the event is known. More generally, our estimator handles arbitrary $[0,1]$-valued queries and runs in polynomial time given evaluation access to the rule. This sample complexity matches the known lower bound up to logarithmic factors and resolves the open question posed by Feldman, Kale, Raman, Talwar, and Tewari (arXiv:2610.41244). Our estimation framework relies on a new combination of sample amplification (arXiv:1904.12053 and arXiv:2201.04315) with distribution learning via online optimization. Our estimator achieves mean squared error $O(d^{3/4}/n)$ when $d\\leq n$ and $\\widetilde{O}(d^{1/4}/\\sqrt{n})$ when $d>n$. We complement this with a lower bound of $\\Omega(\\min\\{1,\\sqrt{d}/n\\})$ on the mean squared error. Using our framework, we also design an efficient estimator for data-dependent queries on Gaussian distributions with unknown mean and identity covariance. Finally, we show that a smoothed variant of the problem is much (exponentially) easier. For discrete distributions, if the sample size is chosen uniformly from $\\{n,\\ldots,2n-1\\}$, then $n=O(\\log d)$ suffices for constant mean squared error.",
+   "abstract": "Conformal prediction sets are guaranteed to be marginally valid over the attribute space, but local coverage can diverge from the user-defined target $1-\\alpha$. Constructing conditionally valid prediction sets with finite calibration data is impossible for a general data-generating distribution. We derive PAC-type probabilistic lower bounds on the input-conditional coverage of any conformal predictor, without assumptions on the data distribution. They are based on the Markov and Cantelli inequalities and adapt to both calibration-marginal and calibration-conditional setups. A tighter, model-dependent Cantelli bound depends on the variance of the conditional coverage and is estimable from data using a fully non-asymptotic Hoeffding argument. The results suggest conditional-coverage variance as a scalable and theoretically motivated empirical measure of conditional validity.",
    "source": "arxiv"
   },
   {

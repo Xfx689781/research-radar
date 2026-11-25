@@ -3,6 +3,31 @@
  "updated": "2026-11-25",
  "papers": [
   {
+   "uid": "medrxiv:10.64898/2026.11.24.26368865",
+   "title": "Improving Prediction of Patient-Reported Health Outcomes Among Older Adults With Diabetes Across Diverse Populations Through Transfer Learning",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.24.26368865v1",
+   "authors": [
+    "Wang, X.",
+    "Chen, Y.",
+    "Shao, W.",
+    "Beasley, J. M.",
+    "Lee, T.-F."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.24.26368865 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-25",
+   "summary": {
+    "one_liner": "A regression-based transfer learning framework was tested for predicting patient-reported health outcomes in older adults with diabetes, borrowing information from international aging cohorts (Gateway) and across race/ethnicity groups in RAND HRS, with gains evaluated by AUC and Brier score.",
+    "plain": "Prediction models often work less well when moved to a new group of people. This paper asks whether borrowing information from other, related groups can help predict how older adults with diabetes rate their own health. The authors report that the borrowing helped in 6 of 8 international cohorts and in all four US race/ethnicity groups, though the gains were small (about 0.1% to 3.1% in AUC, a measure of how well a model separates cases from non-cases).",
+    "why": "Many prediction tools are built on one population and then applied to others, so a way to transfer information safely is relevant to public health. The gains reported are modest, and the text does not show how much they would matter in practice, so the value of the approach remains to be tested.",
+    "background": "- Prediction model: a statistical rule that estimates a future outcome (here, a self-reported health outcome) from risk factors such as age, sex, and clinical measures.\n- Transfer learning: reusing information from related datasets to improve a model in a target dataset, rather than building it from scratch.\n- Target-only vs. pooled models: a model fit only on the group of interest versus one fit on all groups combined; the paper compares transfer learning against both.\n- AUC: area under the ROC curve; ranges from 0.5 (no better than chance) to 1 (perfect separation). Gains are reported in percentage points.\n- Brier score: a measure of prediction error, where lower values mean predictions closer to what happened.\n- Bootstrap resampling: repeatedly resampling the data to estimate uncertainty in results.\n- Gateway and RAND HRS: international aging cohort consortium and a US longitudinal survey of older adults, respectively.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Population heterogeneity challenges the transportability of prediction models. Transfer learning may improve prediction through information borrowing, but its utility across population settings remains unclear. We evaluated a regression-based transfer learning framework across international aging cohorts (Gateway) and race/ethnicity groups within the RAND Health and Retirement Study (RAND HRS). Gateway included 19,879 adults with diabetes from eight cohorts, while RAND HRS included 3,926 participants across four race/ethnicity groups. Prediction models for patient-reported health outcomes were developed using demographic and clinical risk factors. Transfer learning was compared with target-only and pooled models using AUC and Brier score, with bootstrap resampling to assess uncertainty. Transfer learning improved prediction in 75% (6/8) of Gateway cohorts, with AUC gains of 0.1%-0.6%, and in all four RAND HRS race/ethnicity groups, with gains of 0.8%-3.1%. Improvements were greater and more consistent across within-cohort groups. These findings demonstrate the potential of regression-based transfer learning to improve prediction across heterogeneous populations. Information borrowing from sufficiently transferable external data may enhance prediction performance and provide meaningful public health benefits, even when improvements are modest, particularly in large population-based cohorts.",
+   "source": "medrxiv"
+  },
+  {
    "uid": "medrxiv:10.64898/2026.11.22.26368688",
    "title": "Disease-anchored organ aging clocks enable multi-organ risk profiling from routine labs",
    "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368688v1",
@@ -21,38 +46,14 @@
    "primary_category": "epidemiology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Organ-specific aging clocks trained on first onset of each organ's disease from routine blood tests (rather than chronological age from proteomics) are shown to flag own-organ disease in UK Biobank, and to retain organ correspondence and add information over clinical risk scores in NHANES and JMDC cohorts.",
-    "plain": "Researchers wanted a way to estimate how \"old\" each organ in the body is, using simple blood tests rather than expensive protein measurements. They trained organ-specific scores on when people in a large UK study first developed diseases of each organ, then fixed those scores so they could be applied elsewhere. The paper reports that the scores picked out disease in the matching organ, and that they carried useful information in two other cohorts, one in the US and one in Japan.",
-    "why": "Organ-level risk from routine lab tests could help flag which organ is at risk before disease appears, if it holds up beyond these cohorts. The text does not report clinical outcomes of acting on these flags, so its practical value is still untested.",
-    "background": "- Biological age: an estimate of how worn-down the body is, which can differ from calendar age.\n- Organ clock: a score that estimates the biological age of one organ, often from blood markers.\n- Proteomics: measuring thousands of proteins in blood; costly and not routinely done.\n- UK Biobank, NHANES (US), JMDC (Japan): large health cohorts with lab data and long follow-up.\n- \"First onset\": the first time a disease is diagnosed in a person.\n- Frozen coefficients: the scoring formula is fixed after training and applied unchanged to new data.\n- Random protein panels: size-matched sets of random proteins used as a control to check that results are not just chance.\n- Clinical risk scores: standard tools that estimate patient risk from common factors.",
+    "one_liner": "The paper trains organ-specific aging clocks on first onset of disease in each organ using routine blood lab tests, then tests whether the frozen clocks select their own organ's proteins, predict own-organ disease, and add information to clinical risk scores across UK Biobank, NHANES and JMDC cohorts.",
+    "plain": "Doctors can estimate how old a person's organs are biologically by looking at blood markers, but existing methods mostly rely on chronological age and specialised protein tests. This paper builds \"organ clocks\" that are trained directly on which people later developed disease in a given organ, using ordinary lab tests. The authors report that the clocks pick out proteins from their own organ, predict disease in that organ across three cohorts, and add some information beyond standard clinical risk scores.",
+    "why": "Organ-specific risk from cheap, routine blood tests could help flag which organ is at risk, if the approach holds up outside the original study. The text does not show how large the gain over existing risk scores is, so the practical value remains to be judged.",
+    "background": "- Biological age: how old tissues function, which can differ from calendar age.\n- Organ clock: a model that estimates an organ's biological age from blood measurements.\n- Proteomics: measuring thousands of proteins in blood; more costly than routine tests.\n- Random protein panels: size-matched sets of random proteins used as a control to check that results are not just a generic effect.\n- UK Biobank, NHANES (US), JMDC (Japan): large population cohorts with health records and follow-up.\n- \"Frozen\" coefficients: the model is trained once and then applied without refitting to new cohorts.\n- Clinical risk scores: standard tools that estimate disease risk from common factors; the test is whether organ clocks add to them.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Organ clocks estimate the biological age of organs from blood, but current clocks assign tissue-enriched proteins to organs and train on chronological age, which requires proteomics and does not yield organ-specific disease risk. In the UK Biobank, we trained organ clocks on first onset of disease of each organ using routine laboratory tests and froze the coefficients. Under an age label, organ-clock readouts arose equally in size-matched random protein panels; with a disease label, clocks selected their own organ's proteins and predicted their own organ's diseases. Defining extreme aging by multiples of disease risk concentrated flags on own-organ disease. Frozen clocks kept organ correspondence in the US NHANES cohort, predicted first onset of own-organ disease in the Japanese JMDC cohort and added more information to clinical risk scores than current organ clocks. Trained once where disease follow-up exists, organ clocks can be used wherever routine laboratory tests are measured.",
-   "source": "medrxiv"
-  },
-  {
-   "uid": "medrxiv:10.64898/2026.11.23.26368579",
-   "title": "Sources of protein in UK adults following contemporary plant-based diets: findings from the Feeding the Future (FEED) Study",
-   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368579v1",
-   "authors": [
-    "Lawson, I.",
-    "Bell, W.",
-    "Key, T. J.",
-    "Papier, K."
-   ],
-   "label": "medRxiv doi:10.64898/2026.11.23.26368579 v1",
-   "primary_category": "epidemiology",
-   "date": "2026-11-25",
-   "summary": {
-    "one_liner": "Cross-sectional analysis of the UK FEED cohort (n=6,113) quantifying food-group sources of protein across omnivore, flexitarian, pescatarian, vegetarian and vegan diets, and the share of each group below the estimated average protein requirement, with and without under-reporters excluded.",
-    "plain": "This study looks at where protein comes from in the diets of about 6,000 UK adults who eat meat, fish, or no animal products in different combinations. The researchers worked out how much each food group adds to daily protein and how many people in each diet group fall short of a standard protein target. Few people fell short overall, and the gap seen among vegetarians and vegans mostly disappeared once people who likely under-reported their eating were removed.",
-    "why": "Plant-based diets are common, and people often ask whether they supply enough protein, so this gives a large, recent UK picture of protein sources. The reported shortfalls shrink sharply after excluding under-reporters, which suggests the conclusion depends heavily on how reliable self-reported diet records are; the text does not show how well that exclusion was done.",
-    "background": "- Protein is needed for building and repairing body tissue; the \"estimated average requirement\" (EAR) is the amount that meets the needs of half a population.\n- A food frequency questionnaire is an online survey asking how often people eat listed foods; it relies on memory and self-report.\n- Under-reporters are people whose recorded energy intake seems implausibly low compared with their likely needs; excluding them is a common sensitivity check.\n- Diet groups compared: omnivores (eat everything), flexitarians (mostly plant-based, sometimes meat), pescatarians (fish but no meat), vegetarians (no meat or fish), vegans (no animal products).\n- Cross-sectional means a single snapshot in time, so it cannot show cause and effect.\n- \"Plant-based meat alternatives\" are processed products designed to resemble meat, such as meat-substitute burgers.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Objective To identify and quantify sources of protein intake in United Kingdom (UK) adults following different diets, and assess how these sources contribute to meeting protein requirements. Design Cross-sectional analysis of the Feeding the Future Study (FEED), a UK cohort recruited in 2022-2023. Dietary intake was assessed using an online food frequency questionnaire. We calculated the percentage contribution of food groups to daily protein intake, and the proportion of participants meeting the estimated average requirement (EAR) for protein, with and without exclusion of under-reporters. Setting A contemporary cohort of UK adults. Participants 6,113 adults: 1,540 omnivores, 1,322 flexitarians, 547 pescatarians, 1,212 vegetarians, and 1,492 vegans. Results Grains contributed 10-30% of total protein intake across all groups. Dairy contributed 12.9-14.2% in non-vegan groups, while plant-based dairy alternatives contributed less in vegans (7%), mainly from soy milk (4.3%). Other major contributors (>10%) were meat for omnivores (33.0%) and flexitarians (13.5%); fish for pescatarians (14.9%); plant-based meat alternatives for vegetarians (12.0%); and plant-based meat alternatives (15.0%), legumes and pulses (10.5%), and nuts and seeds (10.5%) for vegans. The proportion below the protein EAR ranged from 1.9% in omnivores to 14.0% in vegans, falling to 0.01% and 3.6% respectively, after excluding under-reporters. Conclusions Grains were a major contributor to protein intake across all diet groups, as was dairy in all non-vegan groups. Protein sources were more varied in non-omnivorous groups, particularly vegans. Few participants fell below the protein EAR and the higher proportions among vegetarians and vegans were largely attenuated after excluding under-reporters.",
    "source": "medrxiv"
   },
   {
