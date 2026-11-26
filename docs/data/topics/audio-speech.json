@@ -1,7 +1,53 @@
 {
  "slug": "audio-speech",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32458",
+   "title": "VividAudio: Multi-Event Reference-Conditioned Video-to-Audio Generation",
+   "url": "https://arxiv.org/abs/2611.32458",
+   "authors": [
+    "You Li",
+    "Dewei Zhou",
+    "Fan Ma",
+    "Dongliang He",
+    "Yi Yang"
+   ],
+   "label": "arXiv:2611.32458v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Proposes Mr-V2A, a video-to-audio task where each sound event in a video is conditioned on its own audio reference and time span, with a data-pair construction method (IntraEvtVar), a composite reference design (TACO-Ref) with local and global pathways, and a router (TRR) to limit cross-event acoustic leakage.",
+    "plain": "Video-to-audio systems generate sound effects for a silent video. This paper asks whether a user can instead say which sound should appear for each event in the video, by supplying an example sound and a time window for each one. The authors report a training-data trick, a way of combining the example sounds over time, and a routing step meant to stop the sounds from bleeding into each other, and say it gives better control than existing methods on two benchmarks while keeping sound quality competitive.",
+    "why": "Giving users control over the specific sound of each event in a video could matter for film sound design and Foley work, where creators currently edit sounds by hand. The text does not show how large or practical the gain is, and it is an arXiv-style method paper rather than a product release.",
+    "background": "- Video-to-audio (V2A): generating a soundtrack or sound effects from video frames.\n- Foley: sound effects added to film or video to match on-screen actions.\n- Reference-conditioned generation: steering output with an example audio clip rather than only a text prompt.\n- Time-aligned reference: example sounds placed on a timeline matching when each event occurs.\n- Q-Former: a small module that compresses a stream of features into a fixed set of summary tokens.\n- Attention and routing: mechanisms that decide which parts of the input influence which parts of the output.\n- Acoustic leakage: one event's sound characteristics wrongly appearing in another event's sound.\n- Benchmarks used: VGGSound-Ref and VividBench, as named in the text.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Existing video-to-audio (V2A) methods have achieved promising results in synthesizing high-quality audios. However, as V2A advances toward more flexible user-directed creation, existing methods remain notably limited in controlling the distinct acoustic identities of multiple events within a video. We therefore formulate multi-event reference-conditioned V2A (Mr-V2A), where each event is assigned a specific audio reference and target time span. Mr-V2A presents three key challenges. First, event-level reference-target training pairs are scarce. We introduce Intra-Video Event Variation (IntraEvtVar), which constructs non-oracle pairs through four variation modes of events mined within each video. Second, we organize the references into a Time-Aligned COmposite Reference (TACO-Ref) and inject it through local and global pathways: the local pathway retains time-resolved event cues, while an Audio Q-Former provides a clip-level acoustic-context condition. Third, jointly conditioning on multiple references can cause acoustic-attribute leakage across events. Localized reference attention and the TACO-Ref Router (TRR) explicitly constrain event-to-reference correspondence to reduce such interference. Experiments on VGGSound-Ref and VividBench demonstrate stronger reference controllability than existing V2A and exemplar-based methods while maintaining competitive Foley generation quality.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32286",
+   "title": "Reproducing the Speech Labels of Qwen3-Omni's Talker: Mimi in bf16, and a Last-Frame Pitfall",
+   "url": "https://arxiv.org/abs/2611.32286",
+   "authors": [
+    "Yuxuan Chen"
+   ],
+   "label": "arXiv:2611.32286v1",
+   "primary_category": "cs.SD",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper identifies the unreleased audio encoder behind Qwen3-Omni's speech-output labels as kyutai's Mimi codec (bf16 weights, moshi package), and reports a last-frame encoding mismatch in transformers' MimiModel that causes noise bursts after fine-tuning unless inputs are padded to a multiple of 1920 samples.",
+    "plain": "Qwen3-Omni is a speech-producing AI model, but the tool that turned its training audio into the compact codes it learns from was never published, so people cannot easily train new voices in the same format. The authors work backwards from the released model's behavior and conclude the missing tool is very likely kyutai's Mimi audio codec, and they find that a common open-source version of Mimi handles the final fraction of a recording differently, which makes fine-tuned speech end in a noise burst.",
+    "why": "It matters for anyone who wants to fine-tune open speech-generation models, since matching the label encoder is a precondition for that work. The padding issue may also affect other systems built on Mimi, though the text reports this only for the CSM-1B model and the authors release a checker and toolkit for others to verify.",
+    "background": "- Audio codec: a tool that compresses sound into a short sequence of discrete codes and back again.\n- Codebooks: lookup tables of codes; a 16-codebook setup uses 16 codes per time step, here at 12.5 time steps per second.\n- Talker: the part of Qwen3-Omni that generates the speech codes.\n- Teacher-forced likelihood: scoring how probable the model finds a given label sequence when it is fed the correct previous steps.\n- bf16: a reduced-precision number format used to store model weights.\n- LoRA fine-tuning: a cheap way of adapting a large model by training small add-on weights.\n- Nats: a unit of information, used here to score how surprising data is to a model.\n- Calibration: checking that a test reliably distinguishes cases it should distinguish.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Qwen3-Omni speaks through a Talker predicting 16 codebooks of a 12.5 Hz audio codec, but the encoder that made its training labels was not released, so new voices cannot be trained on matching labels. We identify this encoder from the released model's behavior. White-box regression shows that the codebook embeddings of the Talker, its multi-token predictor and the Code2Wav decoder match the first 16 codebooks of kyutai's Mimi layer by layer. A decoder-based test looks convincing but fails calibration: decoders trained on known labels cannot tell them apart. Teacher-forced Talker likelihoods, calibrated with 13 code language models trained on known labels, do tell implementations apart: the Talker prefers labels from kyutai's moshi package with bf16 weights over every other variant we tried. Loudness normalization and band-limiting of 20% or more of the data are ruled out. Separately, transformers' MimiModel encodes the last frame differently from kyutai's encoder unless the input length is a multiple of 1920 samples. After LoRA fine-tuning on its labels, 44--55% of generated sentences end in a noise burst, and the same frame costs the Mimi-based CSM-1B 119 nats; padding the input removes both. We release the encoding recipe, a label checker and a Talker fine-tuning toolkit.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32697",
    "title": "Cif-query bridging for audio-native asr transfer to visual speech recognition",
@@ -17,12 +63,12 @@
    "primary_category": "cs.SD",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A lightweight cross-attention bridge, driven by adaptive queries from a continuous integrate-and-fire predictor, connects a Paraformer visual speech recognition encoder to the pretrained Qwen3-ASR language decoder, reporting 7.97% CER on CMLR versus 11.78% for native Paraformer.",
-    "plain": "This paper is about reading speech from lip movements (video only, no sound) by reusing a model that was built for listening to audio. The lip-reading model produces many video frames, which do not fit neatly into the compact input the audio model expects, so the authors add a small connector that condenses the video into a shorter set of query points and refines them against the full frame sequence. On the CMLR test set, the reported character error rate drops from 11.78% for the original Paraformer system to 7.97% for the combined system.",
-    "why": "Transferring the strong language knowledge of audio speech models to silent lip reading is a practical route to better visual speech recognition, which matters for accessibility and noisy settings. The text reports ablations on bridge depth, projector initialization, adapter size and CTC supervision, but the evidence comes from one dataset (CMLR), so how far the gain generalizes is not established here.",
+    "ai": true,
     "background": "- Visual speech recognition (VSR): transcribing speech from video of lips, without audio.\n- Automatic speech recognition (ASR): converting speech to text; Qwen3-ASR is a pretrained audio model with a large language-model decoder.\n- Paraformer: a non-autoregressive speech recognition architecture; its CIF (continuous integrate-and-fire) predictor estimates how many text tokens each stretch of input corresponds to.\n- Cross-attention: a mechanism that lets one set of vectors look up and weigh information from another set.\n- Character error rate (CER): share of characters transcribed wrongly; lower is better.\n- CTC: a training loss that aligns input frames to output characters without explicit alignment labels.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A lightweight cross-attention bridge, driven by adaptive queries from a continuous integrate-and-fire predictor, connects a Paraformer visual speech recognition encoder to the pretrained Qwen3-ASR language decoder, reporting 7.97% CER on CMLR versus 11.78% for native Paraformer.",
+    "plain": "This paper is about reading speech from lip movements (video only, no sound) by reusing a model that was built for listening to audio. The lip-reading model produces many video frames, which do not fit neatly into the compact input the audio model expects, so the authors add a small connector that condenses the video into a shorter set of query points and refines them against the full frame sequence. On the CMLR test set, the reported character error rate drops from 11.78% for the original Paraformer system to 7.97% for the combined system.",
+    "why": "Transferring the strong language knowledge of audio speech models to silent lip reading is a practical route to better visual speech recognition, which matters for accessibility and noisy settings. The text reports ablations on bridge depth, projector initialization, adapter size and CTC supervision, but the evidence comes from one dataset (CMLR), so how far the gain generalizes is not established here."
    },
    "abstract": "Audio-native automatic speech recognition (ASR) models provide strong speech-language priors, but their compact acoustic interfaces are mismatched with long, frame-level visual features. We propose CIF-Query Bridge, a lightweight connection from a Paraformer visual speech recognition (VSR) encoder to Qwen3-ASR. The existing visual continuous integrate-and-fire (CIF) predictor produces an input-dependent number of token-rate queries; a two-layer cross-attention bridge refines them against the complete frame sequence, and a linear adapter feeds the pretrained ASR projector and decoder. This design preserves access to uncompressed visual context while avoiding direct autoregressive processing of hundreds of video frames. On CMLR, the complete visual-only transfer system achieves 7.97% character error rate, compared with 11.78% for native Paraformer under the same test split and scoring protocol---a 3.81-point absolute and 32.3% relative reduction. Controlled ablations characterize bridge depth, projector initialization, adapter capacity, and CTC supervision. The results show that CIF-derived adaptive queries provide a compact interface for transferring audio-native ASR capability to VSR.",
    "source": "arxiv"
@@ -44,12 +90,12 @@
    "primary_category": "cs.SD",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "SoundWeaver is a training-free method that speeds up text-to-audio diffusion by warm-starting generation from a prompt-conditioned acoustic prior assembled from segments of cached audio clips, with an adaptive bandit choosing the skip depth per request.",
-    "plain": "Generating sound from a text description with modern diffusion models takes many slow refinement steps, which adds latency. This paper proposes reusing pieces of audio that were already generated earlier: it stitches segments from a small cache of about 1,000 clips into a starting point that matches the prompt, then begins the denoising process partway through instead of from pure static. The authors report speedups of 1.48 to 3.74 times across several backbone models, with quality said to improve.",
-    "why": "Cutting the number of model evaluations needed per clip matters for making generative audio practical in real-time or large-scale serving. The idea of reusing acoustic structure across requests, rather than treating each generation independently, may be of interest to people working on efficient inference and caching for generative models, though the text alone does not show how well it holds up outside the reported benchmarks.",
+    "ai": true,
     "background": "- Diffusion models generate output by starting from random noise and removing it step by step; each step is a \"neural function evaluation\" (NFE), and fewer steps means faster generation.\n- \"Warm-starting\" means beginning the process from a partly denoised state instead of pure noise, so fewer steps remain.\n- Neural codecs are learned compressors that turn audio into compact numerical representations.\n- A contextual bandit is an adaptive method that picks among options (here, how deep to skip) based on feedback from past choices.\n- Training-free means the method works on existing pretrained models without any new training.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "SoundWeaver is a training-free method that speeds up text-to-audio diffusion by warm-starting generation from a prompt-conditioned acoustic prior assembled from segments of cached audio clips, with an adaptive bandit choosing the skip depth per request.",
+    "plain": "Generating sound from a text description with modern diffusion models takes many slow refinement steps, which adds latency. This paper proposes reusing pieces of audio that were already generated earlier: it stitches segments from a small cache of about 1,000 clips into a starting point that matches the prompt, then begins the denoising process partway through instead of from pure static. The authors report speedups of 1.48 to 3.74 times across several backbone models, with quality said to improve.",
+    "why": "Cutting the number of model evaluations needed per clip matters for making generative audio practical in real-time or large-scale serving. The idea of reusing acoustic structure across requests, rather than treating each generation independently, may be of interest to people working on efficient inference and caching for generative models, though the text alone does not show how well it holds up outside the reported benchmarks."
    },
    "abstract": "Text-to-audio (T2A) diffusion models generate high-quality audio but require tens of neural function evaluations (NFEs), resulting in substantial inference latency. Existing acceleration methods primarily optimize each generation trajectory independently, even when reusable acoustic structure exists in prior examples. We introduce SoundWeaver, the first training-free framework for compositional cross example acoustic reuse. Rather than generating from pure noise, SoundWeaver constructs a prompt-conditioned acoustic prior from segments distributed across cached audios and warm-starts diffusion from an intermediate noise level. We introduce an Acoustic Composition Graph (ACG), which uses neural codec representations and segment-level identification to identify candidate cross-cache transitions and structured path search to jointly optimize prompt relevance and acoustic continuity. We further establish a warm-start error bound showing how prior quality and diffusion SNR jointly govern the admissible skip depth, motivating an adaptive contextual-bandit Skip Gater that selects the warm-start level for each request. Across T2A diffusion backbones, SoundWeaver achieves 1.48-3.74x generation speedup with only a 1K-clip cache while improving generation quality.",
    "source": "arxiv"

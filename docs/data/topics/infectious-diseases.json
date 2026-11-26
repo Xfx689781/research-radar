@@ -1,7 +1,65 @@
 {
  "slug": "infectious-diseases",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.23.26368629",
+   "title": "Impact of expanded influenza vaccination programs in children and adults in Australia: a mathematical modelling study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368629v1",
+   "authors": [
+    "Leung, T.",
+    "Stopard, I. J.",
+    "Wood, J. G.",
+    "Hogan, A. B."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.23.26368629 v1",
+   "primary_category": "infectious diseases",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A mathematical model calibrated to Australian surveillance data compares live-attenuated influenza vaccine (LAIV) programs for school-aged children with strategies that raise inactivated vaccine (IIV) uptake in adults, measuring cases, hospitalisations and deaths averted per dose.",
+    "plain": "Seasonal flu causes serious illness, especially in very young children and older adults. This study used a computer model of how flu spreads and is vaccinated in Australia to test whether giving a nasal-spray flu vaccine to children would add useful protection beyond the injected vaccine already used mainly for older adults. The model estimated that a program vaccinating children aged 5 to 17 would cut flu hospitalisations by about 16% and deaths by about 13%, assuming 55% coverage.",
+    "why": "Australia's flu programs mostly protect older adults directly, so the question is whether vaccinating children also helps the wider community, which matters for planning public health budgets and vaccine supply. The results are model predictions rather than trial or real-world outcomes, so they depend on the model's assumptions, and the text alone does not show how sensitive they are to those assumptions.",
+    "background": "- Influenza (flu) is a common viral respiratory infection that can be severe, especially in young children and people over 65.\n- Inactivated influenza vaccine (IIV) is the standard injected flu shot, mainly used in older adults in Australia's program.\n- Live-attenuated influenza vaccine (LAIV) is a weakened live virus given as a nasal spray; it is now approved for children aged 2 to 17.\n- \"Coverage\" means the share of a population vaccinated; \"dose efficiency\" means how much health benefit each vaccine dose buys.\n- Mathematical modelling uses equations and simulated populations to estimate how an intervention would change disease numbers; results depend on the assumptions built in.\n- \"Number needed to vaccinate\" (NNV) is how many people must be vaccinated to prevent one hospitalisation.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Background: Seasonal influenza is a common cause of severe illness, particularly in young children and older adults. In Australia, influenza vaccination programs using the inactivated influenza vaccine (IIV) largely focus on direct protection of older adults. Live-attenuated influenza vaccine (LAIV) is now available for children aged 2-17 years, offering an opportunity to complement existing IIV programs. Methods: We developed a mathematical model of seasonal influenza transmission and vaccination in Australia, calibrated to surveillance data. We evaluated the health impact of LAIV programs on influenza burden relative to a baseline IIV-only scenario that assumed current coverage levels. We compared the dose efficiency of LAIV programs targeting school-aged children with strategies that increased IIV uptake in adults. Findings: An LAIV program targeting children aged 5-17 years was estimated to have the largest population-level impact, reducing influenza hospitalisations by 16% and deaths by 13%, assuming 55% coverage. An IIV program achieving 55% coverage in adults aged 50 years and older was predicted to have a similar population-level reduction in hospitalisations to a primary school-aged LAIV program (around 9.5%). Based only on doses administered, LAIV programs were more efficient at averting cases, hospitalisations, and deaths than strategies that expanded IIV uptake in adults. However, for outcomes in adults [&ge;]65 years old, increasing IIV uptake in this age group was estimated to be the most efficient strategy, with a number needed to vaccinate of 1811 to avert one hospitalisation. Interpretation: Our results support the potential use of LAIV as an additional tool in the prevention of seasonal influenza in Australia.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.23.26368772",
+   "title": "Distinct pulmonary transcriptomic and proteomic host signatures enable accurate diagnosis of severe lower respiratory tract infection",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368772v1",
+   "authors": [
+    "Lydon, E.",
+    "Sax, P. K.",
+    "Van Phan, H.",
+    "Osborne, C.",
+    "Maddux, A. B.",
+    "Leroue, M. K.",
+    "Yehya, N.",
+    "Gunn-Sandell, L.",
+    "Zinter, M. S.",
+    "DeRisi, J. L.",
+    "Wagner, B.",
+    "Ambroggio, L.",
+    "Mourani, P. M.",
+    "Langelier, C. R."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.23.26368772 v1",
+   "primary_category": "infectious diseases",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Paired transcriptomic (RNA) and proteomic (protein) profiling of tracheal aspirates from critically ill children distinguishes microbiologically confirmed lower respiratory tract infection from noninfectious causes, with similar global pathways but poor gene-protein concordance and different top biomarkers.",
+    "plain": "Doctors often struggle to tell whether a severely ill child's breathing failure is caused by a lung infection or by something non-infectious. This study looked at fluid sampled from the windpipe of 105 critically ill children, comparing the genetic messages (RNA) and the proteins in the same samples. Both approaches picked out a clear pattern of infection with similar underlying immune activity, even though the individual genes and their matching proteins often did not track each other.",
+    "why": "It suggests that measuring either RNA or protein from the lower airways can classify infection about equally well, which matters for choosing how future diagnostic tests are developed. The text does not show that either approach is ready for clinical use, and the study's sample is a single group of children.",
+    "background": "- Lower respiratory tract infection: infection of the lungs and airways below the throat, a major cause of serious breathing illness.\n- Tracheal aspirate: fluid suctioned from the windpipe of a ventilated patient, used as a lower-airway sample.\n- Transcriptomics: measuring RNA, the short-lived copies of genes that show which genes are active.\n- Proteomics: measuring the proteins themselves, the molecules that do most of the work in cells.\n- Host response: the body's own immune reaction to an infection, used as a diagnostic signal instead of finding the microbe directly.\n- Biomarker: a measurable signal (gene or protein) that indicates a condition.\n- AUC (area under the curve): a 0 to 1 accuracy score for a classifier; above 0.90 is considered high.\n- Concordance: how well RNA levels and protein levels for the same gene agree; here it was largely poor.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Lower respiratory tract infection (LRTI) is a leading cause of acute respiratory illness, yet distinguishing it from noninfectious conditions remains a clinical challenge. Measuring the host immune response in the blood or lower airways, rather than exclusively detecting pathogens, has emerged as an alternative diagnostic strategy. However, it remains unclear whether RNA or protein measurements yield greater diagnostic information, or whether the two capture the same underlying biology. To address this, we performed paired transcriptomics and proteomics on tracheal aspirate specimens from 105 critically ill children with respiratory failure, 72 with microbiologically confirmed LRTI and 33 with noninfectious causes. Both approaches detected a clear host signature of LRTI which converged on similar core immune pathways including interferon signaling, inflammation, and complement activation. Despite this, agreement between individual genes and their corresponding proteins was largely poor. Diagnostic classifiers built from either RNA or protein data identified LRTI with similarly high accuracy (AUC>0.90), but selected different top biomarkers, and yielded discordant classifications for 12% of patients. Taken together, we find that lower airway transcriptomics and proteomics capture similar global biological features of LRTI despite poor correlation between gene and protein expression, providing fresh insight into approaches for biomarker discovery and clinical translation.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.23.26368796",
    "title": "Efficacy, Immunogenicity, and Safety of an Inactivated Bivalent EV-A71-CVA16 Vaccine in Children: A Randomized Phase 3 Trial",
@@ -47,12 +105,12 @@
    "primary_category": "infectious diseases",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A randomized, double-blind phase 3 trial in 8,000 children aged 6-71 months reports that a bivalent inactivated EV-A71/CVA16 vaccine met its prespecified efficacy endpoint against CVA16-associated hand, foot and mouth disease and its noninferiority endpoint for EV-A71 immunogenicity versus a licensed EV-A71 vaccine.",
-    "plain": "Hand, foot and mouth disease is a common illness in young children, caused mainly by two viruses, EV-A71 and CVA16. This trial gave a new vaccine that targets both viruses at once to thousands of children, and compared it with a vaccine already licensed against EV-A71 alone. The reported results suggest the two-dose vaccine protected against CVA16 illness and produced antibody responses against EV-A71 that were at least as good as the licensed vaccine.",
-    "why": "Currently licensed vaccines cover only EV-A71, so CVA16 has been a gap in protection; a single product covering both viruses could address that. The text reports only the trial's own results, and the efficacy estimate rests on a small number of cases (4 versus 44), so the findings should be seen as preliminary until independent confirmation and longer follow-up are available.",
+    "ai": true,
     "background": "- Hand, foot and mouth disease (HFMD): a viral infection causing fever, blisters on hands, feet and mouth, mostly in young children.\n- Enterovirus A71 (EV-A71) and coxsackievirus A16 (CVA16): two viruses that are major causes of HFMD.\n- Inactivated vaccine: a vaccine made from virus particles killed so they cannot replicate, but still able to trigger immunity.\n- Bivalent vaccine: a single vaccine containing two strains or types of target.\n- Randomized, double-blind trial: participants are assigned to groups by chance and neither they nor the researchers know which vaccine is given.\n- Vaccine efficacy: the percentage reduction in cases among vaccinated versus control participants.\n- Seroconversion and geometric mean titer (GMT): measures of antibody response; seroconversion is the share of people who develop detectable antibodies, and GMT is the average antibody level on a log scale.\n- Noninferiority: showing a new vaccine is not meaningfully worse than an existing one.\n- RT-PCR: a lab test that detects viral genetic material.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A randomized, double-blind phase 3 trial in 8,000 children aged 6-71 months reports that a bivalent inactivated EV-A71/CVA16 vaccine met its prespecified efficacy endpoint against CVA16-associated hand, foot and mouth disease and its noninferiority endpoint for EV-A71 immunogenicity versus a licensed EV-A71 vaccine.",
+    "plain": "Hand, foot and mouth disease is a common illness in young children, caused mainly by two viruses, EV-A71 and CVA16. This trial gave a new vaccine that targets both viruses at once to thousands of children, and compared it with a vaccine already licensed against EV-A71 alone. The reported results suggest the two-dose vaccine protected against CVA16 illness and produced antibody responses against EV-A71 that were at least as good as the licensed vaccine.",
+    "why": "Currently licensed vaccines cover only EV-A71, so CVA16 has been a gap in protection; a single product covering both viruses could address that. The text reports only the trial's own results, and the efficacy estimate rests on a small number of cases (4 versus 44), so the findings should be seen as preliminary until independent confirmation and longer follow-up are available."
    },
    "abstract": "Background Enterovirus A71 (EVA71) and coxsackievirus A16 (CVA16) cause hand, foot, and mouth disease (HFMD). We evaluated the efficacy, immunogenicity, and safety of a bivalent EVA71-CVA16 vaccine. Methods In this multicenter, double-blind, phase 3 trial, 8,000 healthy children aged 6-71 months were randomly assigned (1:1) to two doses of the bivalent or a licensed EVA71 vaccine, 1 month apart. The primary efficacy endpoint was RT-PCR-confirmed CVA16-associated HFMD with onset at least 14 days after dose 2. EVA71 immunogenicity noninferiority was assessed among baseline-seronegative participants without previous EVA71 vaccination. Results Of 7,975 participants receiving at least one dose, 7,419 underwent the primary efficacy analysis. CVA16-associated HFMD occurred in 4 bivalent-group versus 44 EVA71-group participants (vaccine efficacy, 90.91%; 95% CI, 75.03-97.63). At 30 days after dose 2, the EVA71 geometric mean titer (GMT) ratio was 2.04 (95% CI, 1.71-2.44) among baseline-seronegative participants without previous EVA71 vaccination. In the humoral immunogenicity population at this time point, CVA16 seroconversion rates were 96.94% versus 8.68%, and GMTs were 918.96 versus 3.88 U/mL. Adverse reactions within 30 days after either dose occurred in 46.73% versus 36.07% of reactogenicity-subgroup participants. In the overall safety population, serious adverse events occurred in 6.22% versus 7.55% from dose 1 through 6 months after dose 2; one bivalent-group event was considered possibly vaccine-related. No deaths occurred. Conclusions The bivalent EVA71-CVA16 vaccine met the prespecified efficacy criterion against CVA16-associated HFMD and the EVA71 immunogenicity noninferiority criterion in children aged 6-71 months (ClinicalTrials.gov: NCT06734832).",
    "source": "medrxiv"
@@ -74,12 +132,12 @@
    "primary_category": "infectious diseases",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A deep-learning phylodynamic model (BDEIVH) that explicitly represents alternating human-vector transmission and incubation is applied to Oropouche virus genomic clusters in Brazil (2023–2025), estimating vector and human infection durations and reproduction numbers.",
-    "plain": "Oropouche virus, spread by biting midges and mosquitoes, caused a large outbreak across the Americas from 2023 to 2025. The authors built a computer model that tracks how the virus passes back and forth between people and insects, and used it to read the family trees of viral genomes collected in Brazil. They report that the model estimates the virus spread more accurately than standard models in simulated tests, and that each infected person typically passed it on to about 1.15 to 1.81 others across the three main Brazilian clusters.",
-    "why": "Understanding how fast a vector-borne virus spreads in both endemic and non-endemic areas can inform surveillance and control planning. The text does not describe any public-health intervention or validation against field case counts, so its practical impact is not established from this text alone.",
+    "ai": true,
     "background": "- Phylodynamics: inferring how an epidemic spreads by analysing the family tree (phylogeny) of viral genome sequences.\n- Birth-death model: a standard statistical model of how lineages branch and die out over time, used here as a baseline.\n- Reproduction number (R): the average number of new infections caused by one infected individual; here R_HH is the human-to-human value over one full human-vector-human cycle.\n- Vector: an organism, such as a midge or mosquito, that carries the pathogen between hosts.\n- Incubation period (exposed stage): the time between being infected and becoming able to transmit.\n- Reassortant lineage: a virus strain formed when segments of its genome mix with another strain.\n- Endemic vs non-endemic: whether a disease is regularly present in a region versus newly appearing there.\n- Deep learning: machine-learning methods using layered neural networks, here used to make the inference.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A deep-learning phylodynamic model (BDEIVH) that explicitly represents alternating human-vector transmission and incubation is applied to Oropouche virus genomic clusters in Brazil (2023–2025), estimating vector and human infection durations and reproduction numbers.",
+    "plain": "Oropouche virus, spread by biting midges and mosquitoes, caused a large outbreak across the Americas from 2023 to 2025. The authors built a computer model that tracks how the virus passes back and forth between people and insects, and used it to read the family trees of viral genomes collected in Brazil. They report that the model estimates the virus spread more accurately than standard models in simulated tests, and that each infected person typically passed it on to about 1.15 to 1.81 others across the three main Brazilian clusters.",
+    "why": "Understanding how fast a vector-borne virus spreads in both endemic and non-endemic areas can inform surveillance and control planning. The text does not describe any public-health intervention or validation against field case counts, so its practical impact is not established from this text alone."
    },
    "abstract": "Oropouche virus caused an unprecedented epidemic across the Americas during 2023-2025, associated with the expansion of the reassortant M1L2S2 lineage. To investigate its dissemination, we develop the Birth-Death Exposed-Infectious Vector-Human (BDEIVH) model within a deep-learning framework that explicitly represents alternating human-vector transmission and incubation periods. The model defines two directional reproduction numbers, RVH and RHV, whose product, RHH, quantifies the expected number of secondary human infections generated by a single infectious human through one complete transmission cycle. In simulations, BDEIVH provides more accurate RHH estimates than conventional birth-death models, with predictive accuracy improving with phylogeny size and remaining robust under reduced phylogenetic resolution. Across three major Brazilian OROV genomic clusters, estimated durations of infection range from 15.4 to 18.5 days in vectors and from 9.42 to 12.3 days in humans, whereas whole-cluster RHH estimates range from 1.15 to 1.81. RHH estimates reached a peak of 4.4 in the endemic Amazon region and 3.0 in the non-endemic Atlantic Forest region. These findings show that explicitly modelling vector-mediated transmission improves phylodynamic inference and reveals substantial OROV transmission in both endemic and non-endemic regions.",
    "source": "medrxiv"

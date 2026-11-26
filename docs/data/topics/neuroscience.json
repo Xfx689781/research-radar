@@ -1,7 +1,61 @@
 {
  "slug": "neuroscience",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.769047",
+   "title": "Human iPSC-derived Olfactory Sensory Organoids model olfactory function and drug response",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769047v1",
+   "authors": [
+    "Singh, V.",
+    "Pantula, A.",
+    "Joshi, K.",
+    "Sadul, O.",
+    "Lagadapati, N.",
+    "Srikumar, A. K.",
+    "Li, N.",
+    "Zhu, X.",
+    "Mahairaki, V.",
+    "Kathuria, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.769047 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Human iPSC-derived olfactory sensory organoids are shown to develop olfactory-like neurons and glia, network electrical activity, and distinct functional responses to three glioma-relevant kinase inhibitors (Dasatinib, Trametinib, Selumetinib).",
+    "plain": "Some drugs for brain diseases may be given through the nose, which could bypass the barrier that normally keeps many drugs out of the brain. But little is known about how those drugs affect the tissue inside the nose. The researchers grew small three-dimensional clusters of human cells from stem cells that resemble developing smell tissue, then tested how they respond to electrical activity and three cancer-related drugs.",
+    "why": "A lab model of human nasal smell tissue could offer a way to screen how intranasally delivered treatments might affect the nose before they reach patients. The text reports the model's features and drug responses, but it does not show how well these responses predict effects in people, so its usefulness for that purpose remains to be tested.",
+    "background": "- Organoid: a small, lab-grown 3D cell cluster that imitates some features of a real organ.\n- Induced pluripotent stem cells (iPSCs): adult cells reprogrammed to an early, flexible state, which can then be coaxed into other cell types.\n- Olfactory sensory neurons: nerve cells in the nose that detect smells and send signals to the brain.\n- Intranasal drug delivery: giving medicine through the nose, a possible route to the brain that avoids the blood-brain barrier.\n- Single-nuclei RNA sequencing: a method that reads which genes are active in individual cells, used to identify cell types.\n- Kinase inhibitors: drugs that block enzymes (kinases) involved in cell growth signalling; here they are relevant to glioma, a brain tumour.\n- Network bursting: coordinated bursts of electrical firing across many cells, measured as a sign of functional connectivity.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Intranasal drug delivery is being explored as an alternative approach to overcome the blood-brain barrier in the treatment of central nervous system diseases. However, little is known about how therapeutics administered through this route affect human olfactory tissue. Here, we develop human induced pluripotent stem cell-derived olfactory sensory organoids that reproduce key cellular and functional features of the developing olfactory system. Over three months of differentiation, the organoids acquire diverse neuronal and glial-associated populations, including cells expressing markers of olfactory sensory neurons and interneurons. Single-nuclei RNA sequencing shows changes in cellular composition and lineage-associated transcriptional programs during maturation, while comparison with a human fetal nasal atlas identifies shared neural populations and developmental signatures. Alongside these molecular changes, the organoids develop spontaneous electrical activity and coordinated network bursting. Exposure to the glioma-relevant kinase inhibitors Dasatinib, Trametinib, and Selumetinib produces distinct changes in neuronal network activity, demonstrating the ability of the model to capture compound-associated functional responses. Together, these findings establish a human Olfactory Sensory Organoid system for investigating olfactory development and evaluating how therapeutics may affect olfactory neural tissue during intranasal drug administration.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.768980",
+   "title": "Brain pericyte lineages converge on a shared molecular profile",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768980v1",
+   "authors": [
+    "Durkan, A. F.",
+    "Levey, J.",
+    "Shankar, M.",
+    "O'Brown, N. M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.768980 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Zebrafish lineage-tracing shows that brain pericytes from neural crest and mesoderm origins occupy distinct regions early on, yet converge on a largely shared gene-expression profile in adults, with only 30 differentially expressed genes between lineages.",
+    "plain": "Pericytes are cells that wrap around the brain's small blood vessels and help regulate them. This study asks whether cells that come from two different embryonic sources end up as different types of cells in the brain. Using genetically labeled zebrafish, the researchers tracked where each group sits from larval to adult stages and compared their gene activity in adult fish.",
+    "why": "It tests a basic question about whether developmental origin shapes the identity of brain support cells, which matters for understanding vessel biology and brain disease. The text does not show whether the regional differences or the few distinct genes have functional consequences, so the broader significance is not established here.",
+    "background": "- Pericytes: cells that wrap around small blood vessels (capillaries) and help control blood flow and the blood-brain barrier.\n- Embryonic lineages: groups of cells traced back to the early tissue they came from; here, neural crest (a migratory embryonic tissue) and mesoderm (a tissue that forms muscle, blood, and connective tissue).\n- Lineage tracing: genetically labeling cells at an early stage so their descendants can be followed later.\n- Zebrafish: a small fish widely used in research because its embryos are transparent and easy to image.\n- Bulk RNA sequencing: measuring the average gene activity of a sorted population of cells, which reveals which genes are switched on.\n- FACS: a method that sorts cells by fluorescent labels; in situ hybridization: a method that shows where specific RNA is present within tissue.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Brain pericytes arise from two embryonic lineages, neural crest and mesoderm, but it is unknown whether these origins produce molecularly distinct pericyte populations. Using zebrafish lineage-tracing transgenics, we mapped neural crest- and mesoderm-derived pericytes across the brain from larval to adult stages. Neural crest-derived pericytes occupied the forebrain and mesoderm-derived pericytes occupied the midbrain and hindbrain at early stages. A population of neural crest-derived pericytes then appeared in the dorsal midbrain by 10 days post-fertilization and persisted into adulthood. A small population of mesoderm-derived pericytes also appeared in the ventral forebrain of juvenile and adult fish. Bulk RNA sequencing of FACS-isolated adult pericytes showed that the two lineages share expression of canonical pericyte genes, with only 30 genes differentially expressed. Fluorescent in situ hybridization validated one neural crest-enriched gene, plpp3, and several mesoderm-enriched genes, including loxl2b. Together, these data suggest that despite distinct embryonic origins and regional bias, brain pericyte lineages converge on a largely shared molecular profile.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.24.768941",
    "title": "Benchmarking machine learning across development reveals stage-specific neuroanatomical sex signatures.",
@@ -16,12 +70,12 @@
    "primary_category": "neuroscience",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A benchmark of linear and nonlinear machine-learning classifiers for sex prediction from structural brain MRI in children and adolescents (ages 8–21), examining how age affects accuracy, feature stability, and SHAP/LIME-based attributions of sex-discriminative regions.",
-    "plain": "Researchers trained computer models to guess a person's sex from brain scans taken across childhood and adolescence. They compared several model types and checked how well the models worked at different ages and whether the brain regions the models relied on stayed consistent. The text reports that simple and complex models performed about the same, but that the patterns the models used changed with developmental stage.",
-    "why": "Sex differences in brain structure are a common but contested topic, and models that look accurate can still rely on unreliable features. The paper's emphasis on checking whether explanations are stable across development is a useful caution for anyone interpreting brain-imaging AI; the text does not establish what the regions mean biologically.",
+    "ai": true,
     "background": "- Machine learning (ML): computer methods that learn patterns from example data to make predictions.\n- Classification: predicting a category, here sex, from measurements.\n- Structural neuroimaging: MRI scans that measure brain size and shape (e.g., cortical thickness, subcortical volumes), not activity.\n- Linear vs. nonlinear models: simple weighted-sum models versus more flexible models that capture complex interactions.\n- Cross-age generalization: testing whether a model trained on one age group works on another.\n- SHAP and LIME: explainability tools that estimate how much each input feature pushed a prediction one way or another.\n- Feature stability: whether the same features are chosen or weighted similarly across training runs or age groups.\n- Cortical/subcortical: outer brain layer versus deeper brain structures.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A benchmark of linear and nonlinear machine-learning classifiers for sex prediction from structural brain MRI in children and adolescents (ages 8–21), examining how age affects accuracy, feature stability, and SHAP/LIME-based attributions of sex-discriminative regions.",
+    "plain": "Researchers trained computer models to guess a person's sex from brain scans taken across childhood and adolescence. They compared several model types and checked how well the models worked at different ages and whether the brain regions the models relied on stayed consistent. The text reports that simple and complex models performed about the same, but that the patterns the models used changed with developmental stage.",
+    "why": "Sex differences in brain structure are a common but contested topic, and models that look accurate can still rely on unreliable features. The paper's emphasis on checking whether explanations are stable across development is a useful caution for anyone interpreting brain-imaging AI; the text does not establish what the regions mean biologically."
    },
    "abstract": "Machine learning (ML) offers powerful approaches for identifying multivariate patterns in neuroimaging data, yet the biological validity and interpretability of the discriminative patterns learned by such models remain incompletely understood. Here, we benchmarked multiple ML approaches for sex classification across development (8-21 years) on structural neuroimaging data and investigated the effects of age on model performance and feature stability. Linear and nonlinear models demonstrated comparable classification performance, indicating that high predictive accuracy can be achieved without relying on highly complex architectures; however, age-stratified analyses and cross-age generalization tests demonstrated that developmental stage influences classification performance, and consistency of learned neuroanatomical features. To assess biological interpretability, we applied SHAP and LIME explainability methods and developed a comprehensive framework for translating feature attributions into biologically interpretable patterns. Sex-discriminative regions were distributed across multiple cortical and subcortical structures and exhibited marked developmental variation. Together, these findings demonstrate the utility of interpretable ML for developmental neuroimaging and highlight the importance of evaluating predictive performance while simultaneously taking biological validity, developmental specificity, and attribution stability into consideration.",
    "source": "biorxiv"
@@ -43,12 +97,12 @@
    "primary_category": "neuroscience",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper presents Jump, a set of web-based tools (demonstrated through uJump on the MICrONS mouse visual cortex EM dataset) for exploring, community-reviewing, and quantitatively analysing large volume electron microscopy connectomics data, with a case study reclassifying pericytes and endothelial cells in cortical vasculature.",
-    "plain": "Scientists who map the brain with electron microscope images now have huge libraries of cell shapes and connections, but computers label many of the cells automatically and those labels are hard to check. This paper describes Jump, a set of web tools that let people search these libraries, inspect individual cells, measure their shapes and locations, and have experts review and correct labels so the corrections can be shared. The authors show the approach on blood-vessel cells as an example.",
-    "why": "As connectomic datasets grow to hundreds of thousands of cells, checking automated labels becomes a bottleneck, so tools that lower that barrier could matter for many labs. The text does not report measured gains in accuracy or speed, so the practical impact is still to be shown by use over time.",
+    "ai": true,
     "background": "- Connectomics: mapping the wiring of neurons and other cells, usually from very thin slices imaged with electron microscopy (EM).\n- Volumetric EM: 3D electron microscope imaging of tissue, producing datasets of hundreds of thousands of cells.\n- Automated segmentation and classification: software that outlines cells and assigns them types, which then needs human checking.\n- MICrONS: a large public mouse visual cortex dataset used here as the example.\n- Pericytes and endothelial cells: cell types that line and support blood vessels in the brain.\n- Web platform: a tool used through a browser, without needing to install specialised software.\n- The paper says the platforms were generated using Claude, an AI model, which is relevant to how the software was built.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper presents Jump, a set of web-based tools (demonstrated through uJump on the MICrONS mouse visual cortex EM dataset) for exploring, community-reviewing, and quantitatively analysing large volume electron microscopy connectomics data, with a case study reclassifying pericytes and endothelial cells in cortical vasculature.",
+    "plain": "Scientists who map the brain with electron microscope images now have huge libraries of cell shapes and connections, but computers label many of the cells automatically and those labels are hard to check. This paper describes Jump, a set of web tools that let people search these libraries, inspect individual cells, measure their shapes and locations, and have experts review and correct labels so the corrections can be shared. The authors show the approach on blood-vessel cells as an example.",
+    "why": "As connectomic datasets grow to hundreds of thousands of cells, checking automated labels becomes a bottleneck, so tools that lower that barrier could matter for many labs. The text does not report measured gains in accuracy or speed, so the practical impact is still to be shown by use over time."
    },
    "abstract": "Large-scale connectomic resources generated from volumetric electron microscopy (EM) have transformed neuroscience by enabling detailed 3D reconstructions of cellular and subcellular morphology and connectivity across hundreds of thousands of cells in diverse tissues and organisms. Recent advances in machine learning-based cell classification and automated segmentation have enabled large-scale annotation of these datasets, yet barriers remain in validating automated classifications and extracting biological insights. To address these challenges, we developed Jump, a suite of user-friendly web-based platforms generated using Claude. These platforms support interactive exploration, expert-guided community review, and quantitative analysis of multiple publicly available EM datasets, while building a growing repository of community-generated annotations. Using uJump, which hosts data from the MICrONS mouse visual cortex dataset, as an example, we demonstrate rapid retrieval of specific cell populations, region-of-interest filtering, biological inspection of cells, and extraction of quantitative morphological and spatial metrics. We showcase analytical features including cell abundance and spatial organisation, connectivity, local cellular neighbourhoods, and volumetric measurements. Using pericytes and endothelial cells as a case study on the cortical vasculature, we further demonstrate how manual review and reclassification can generate accurately identified cell populations for downstream analyses. Consistent with the open-science principles underpinning many large-scale EM resources, Jump is designed to enable broad community participation. By lowering technical barriers to the use of EM datasets, Jump increases analytical efficiency and promotes collaborative efforts to accurately classify cells and structures. Expert-reviewed annotations can be shared across the community, allowing users to build on existing work rather than repeatedly validating the same automated classifications. Collectively, Jump will help researchers to accelerate biological discovery from connectomic datasets.",
    "source": "biorxiv"

@@ -1,7 +1,51 @@
 {
  "slug": "pde",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32784",
+   "title": "Convergence of Implicit Particle Methods for Wasserstein Gradient Flows",
+   "url": "https://arxiv.org/abs/2611.32784",
+   "authors": [
+    "Yunhong Deng",
+    "Wilfrid Gangbo",
+    "Li Wang"
+   ],
+   "label": "arXiv:2611.32784v1",
+   "primary_category": "math.NA",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves that implicit JKO time-stepping schemes for Wasserstein gradient flows with nonlinear internal energies converge to the continuum solution when the evolving measure is approximated by N particles (and, for the blob method, when the regularization parameter also vanishes under N ε_N^d → ∞), using Γ-convergence and compactness.",
+    "plain": "This paper studies a way of simulating how a cloud of material spreads out over time, using a large number of particles to stand in for a smooth density. The authors show that, as the number of particles grows, the particle-based computation settles toward the true continuous answer. The hard part is estimating the internal energy, which depends on the density in a nonlinear way and cannot be computed directly from scattered particle positions, so they try three ways of reconstructing the density from the particles.",
+    "why": "Gradient flows in Wasserstein distance model many diffusion-like processes, so a rigorous link between particle simulations and the continuous equation gives the numerical methods a firmer footing. The text presents this as complementing classical dynamical mean-field theory; how far it reaches beyond the stated settings is not something the text details.",
+    "background": "- Probability measure: a way of describing where a population or mass sits; a density is a smooth special case.\n- Wasserstein distance: a way to measure how far apart two distributions are by the cost of moving mass between them.\n- Gradient flow: a continuous evolution that steadily decreases an energy, here in the Wasserstein geometry.\n- JKO scheme: a time-discretization where each step minimizes energy plus a transport-distance penalty.\n- Particle approximation: replacing a continuous distribution with N point masses.\n- Internal energy: a functional (for example, entropy-like) of the density that drives diffusion.\n- Γ-convergence: a notion of convergence for minimization problems that guarantees minimizers converge to minimizers of the limit.\n- Blob method: smoothing particles with a kernel of width ε to reconstruct a density.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we establish the convergence of implicit particle methods for Wasserstein gradient flows as the number of particles tends to infinity, with the time step held fixed. The schemes combine the Jordan--Kinderlehrer--Otto (JKO) variational time discretization with particle approximations of the evolving probability measure. The main challenge lies in approximating the internal energy, which depends nonlinearly on the probability density and cannot, in general, be evaluated directly on empirical measures. We consider three approaches: a one-dimensional density reconstruction based on the spacings between ordered particles; a blob method using kernel-based density reconstruction; and a transport-map formulation in which the density is recovered from the pushforward relation through the change-of-variables formula. The latter two approaches apply in arbitrary spatial dimensions without requiring the spatial domain to be compact. For the blob method, we also establish simultaneous convergence as the particle number tends to infinity and the regularization parameter vanishes, under the scaling $N\\varepsilon_N^d\\to\\infty$. Our analysis combines $\\Gamma$-convergence and compactness arguments to establish convergence of the discrete variational problems and their minimizers. These results complement classical dynamical mean-field theory by providing a variational particle-to-continuum limit for implicit JKO schemes involving nonlinear internal energies.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32870",
+   "title": "Finite-time blowup in the inviscid GOY and Sabra models",
+   "url": "https://arxiv.org/abs/2611.32870",
+   "authors": [
+    "Taehun Kim"
+   ],
+   "label": "arXiv:2611.32870v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper constructs finite-time blowup of vorticity amplitudes in the inviscid GOY and Sabra shell models, stable under small perturbations, using a travelling wave of renormalized equations, a modulation argument, and computer-assisted interval arithmetic.",
+    "plain": "The paper studies simplified mathematical models of fluid turbulence, where a quantity that measures spinning motion (vorticity) could in principle grow without bound in a finite time. The authors build initial conditions for which the vorticity amplitudes become infinitely large at a set time, growing at a self-similar rate, and show this behaviour survives small changes to the starting state. Parts of the argument are checked by computer using rigorous interval arithmetic.",
+    "why": "Whether ideal (inviscid) fluid flow can develop singularities in finite time is a central open question in fluid mathematics, so results on simplified shell models are a test bed for ideas that might later apply to the full equations. The text does not claim any direct consequence for the Navier-Stokes or Euler equations, and the connection is uncertain.",
+    "background": "- Shell models: simplified turbulence models that keep only a sequence of energy levels (\"shells\") with couplings between neighbouring shells, instead of full 3D fluid flow.\n- Inviscid: no viscosity (no friction-like internal damping).\n- Vorticity: a measure of local spinning in a fluid.\n- Blowup: a solution whose size becomes unbounded in finite time.\n- Self-similar rate (T-t)^{-1}: the growth speed is set by the time remaining until the blowup time T, with the same shape at each scale.\n- Travelling wave: a solution that keeps its shape while moving at constant speed in a suitable rescaled frame.\n- Modulation argument: correcting for known symmetries (time shifts, phase shifts) at each step so the remaining error shrinks.\n- Computer-assisted proof: rigorous numerical verification using interval arithmetic, which tracks guaranteed error bounds.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "For the inviscid GOY and Sabra shell models with zero boundary conditions at the lowest shells, we construct strong solutions with finitely supported initial data whose vorticity amplitudes blow up in the supremum norm in finite time, at the self-similar rate $(T-t)^{-1}$. The blowup is stable under small perturbations of the initial data in the same norm, including complex-valued ones. Guided by the work of Mailybaev, we use a travelling wave of the renormalized equations to obtain blowup in the original variables. We construct such a wave for the equations extended to all integer shells, decaying in both directions. We then show that the dynamics near this wave contract once the directions generated by time-translation and phase symmetries are removed by adjusting the symmetry parameters at each step (a modulation argument). This yields blowup solutions on the positive shells satisfying the original boundary conditions. Computer-assisted interval arithmetic is used to establish the existence of the travelling wave and the contraction estimate needed for the modulation argument.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31881",
    "title": "Weighted pointwise estimates for the damped wave equation and global solutions to Nakao's problem in three dimensions",
@@ -14,12 +58,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation, and uses them to show small-data global existence and uniqueness of mild solutions for Nakao's coupled damped-wave/wave system in weighted L-infinity spaces.",
-    "plain": "This is a mathematical study of two coupled equations that describe how waves and damped (energy-losing) waves spread through space over time in three dimensions. The authors develop new size bounds on a term that captures how the damped system responds to an external push, combining a parabolic-type decay weight with a wave-type decay weight. Using these bounds, they show that if the starting disturbance is small, solutions exist for all time and are unique, under stated conditions on the powers in the nonlinear terms.",
-    "why": "The text supports only a technical contribution: sharper pointwise bounds for a damped wave Duhamel term, applied to a specific coupled system. It is a targeted result in the well-studied area of nonlinear wave and damped-wave equations, and the text does not claim wider consequences.",
+    "ai": true,
     "background": "- Partial differential equation (PDE): an equation relating a function to its rates of change in space and time; it describes physical processes such as waves and heat flow.\n- Wave equation: describes disturbances that travel at a fixed speed, like sound or ripples; in 3D they weaken as they spread out.\n- Damped wave equation: a wave equation with a friction-like term that drains energy, so over long times it behaves partly like heat diffusion (parabolic decay).\n- Duhamel term: the part of a solution produced by an outside forcing term, accumulated over time.\n- Pointwise estimate: a bound on the size of the solution at each location and time, not just on average.\n- Weighted L-infinity space: a set of functions whose maximum size, multiplied by a decay weight depending on position and time, is bounded.\n- Small-data global existence: if the initial data are small enough, the solution is guaranteed to persist for all time.\n- Contraction argument: a fixed-point method that builds the solution by repeatedly applying a map that shrinks distances.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation, and uses them to show small-data global existence and uniqueness of mild solutions for Nakao's coupled damped-wave/wave system in weighted L-infinity spaces.",
+    "plain": "This is a mathematical study of two coupled equations that describe how waves and damped (energy-losing) waves spread through space over time in three dimensions. The authors develop new size bounds on a term that captures how the damped system responds to an external push, combining a parabolic-type decay weight with a wave-type decay weight. Using these bounds, they show that if the starting disturbance is small, solutions exist for all time and are unique, under stated conditions on the powers in the nonlinear terms.",
+    "why": "The text supports only a technical contribution: sharper pointwise bounds for a damped wave Duhamel term, applied to a specific coupled system. It is a targeted result in the well-studied area of nonlinear wave and damped-wave equations, and the text does not claim wider consequences."
    },
    "abstract": "In this paper, we establish weighted pointwise estimates for the Duhamel term of the three-dimensional damped wave equation. The estimates combine the parabolic weight $\\langle t+|x|^2\\rangle$ with the wave-cone weight $\\langle t-|x|\\rangle$, and thereby account for both the diffusive part of the damped wave flow and source terms with wave-like decay. As an application, we study Nakao's problem, a weakly coupled system consisting of one semilinear damped wave equation and one semilinear wave equation. Under explicit conditions on the exponents of nonlinear terms, we prove small-data global existence and uniqueness of mild solutions in weighted $L^\\infty$ spaces. The result covers both the full parabolic decay and slower pointwise decay for the damped-wave component, and allows either the standard wave decay or slower pointwise decay for the wave component. The proof combines the new Duhamel estimate with weighted estimates for the free wave equation and a contraction argument.",
    "source": "arxiv"
@@ -36,12 +80,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves local-in-time well-posedness for the gravity water-waves equations without surface tension, over a long timescale growing like the inverse of the nonlinearity parameter, uniformly in the shallow-water parameter and allowing a large but non-emerging bathymetry.",
-    "plain": "This paper is about the mathematics of waves on the surface of water, such as waves moving over a seabed. It shows that, for a finite but fairly smooth starting state, the equations that describe these waves have a solution that persists for a fairly long time. The authors say the time span grows as the wave-size parameter gets smaller, and that the result holds even when the seabed is deep in a varying way, though not so deep that it breaks through the surface.",
-    "why": "Knowing how long water-wave models stay valid is central to coastal and ocean modelling, so a guaranteed time span is a useful mathematical result. The text does not discuss applications or numerical comparisons, so its practical reach beyond the mathematics is unclear.",
+    "ai": true,
     "background": "- Water-waves equations: the standard model of a free water surface over a fluid that is incompressible (volume-preserving) and irrotational (no swirling).\n- Gravity versus surface tension: here only gravity acts to restore the surface; surface tension is dropped.\n- Well-posedness: a solution exists, is unique, and depends continuously on its starting data.\n- Sobolev regularity: a measure of how smooth the solution is; \"high but finite\" means many derivatives are controlled but not infinitely many.\n- Non-linearity parameter: a size measure of wave amplitude relative to depth; small values mean gentle waves.\n- Shallow-water parameter: the ratio of depth to wavelength; the result holds uniformly across it.\n- Bathymetry: the shape of the seabed.\n- Existence on a timescale: the solution is guaranteed only up to a certain time, here one that grows as the nonlinearity shrinks.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves local-in-time well-posedness for the gravity water-waves equations without surface tension, over a long timescale growing like the inverse of the nonlinearity parameter, uniformly in the shallow-water parameter and allowing a large but non-emerging bathymetry.",
+    "plain": "This paper is about the mathematics of waves on the surface of water, such as waves moving over a seabed. It shows that, for a finite but fairly smooth starting state, the equations that describe these waves have a solution that persists for a fairly long time. The authors say the time span grows as the wave-size parameter gets smaller, and that the result holds even when the seabed is deep in a varying way, though not so deep that it breaks through the surface.",
+    "why": "Knowing how long water-wave models stay valid is central to coastal and ocean modelling, so a guaranteed time span is a useful mathematical result. The text does not discuss applications or numerical comparisons, so its practical reach beyond the mathematics is unclear."
    },
    "abstract": "We provide a new well-posedness result on the gravity water-waves equations, i.e. the free-surface, incompressible and irrotational Euler equations, in the absence of surface tension. Our main contribution is to provide the existence of solutions, in high enough but finite Sobolev regularity, on a timescale that grows like the inverse of the non-linearity parameter. Our result is also uniform in the shallow-water parameter. The main difficulty is that we allow for the presence of a large (though not emerging) bathymetry.",
    "source": "arxiv"

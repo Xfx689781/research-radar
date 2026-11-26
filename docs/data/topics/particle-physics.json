@@ -1,7 +1,59 @@
 {
  "slug": "particle-physics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32925",
+   "title": "Multi-Component Axion Dark Matter Revisited and the Role of Ultralight ALPs",
+   "url": "https://arxiv.org/abs/2611.32925",
+   "authors": [
+    "Hai-Jun Li"
+   ],
+   "label": "arXiv:2611.32925v1",
+   "primary_category": "hep-ph",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "This paper revisits multi-component axion dark matter, using a stochastic (randomized) mixing mechanism to relax the uniform hierarchy of axion decay constants and examining how this affects the QCD axion and ultralight axion-like particles (ALPs) in a two- and multi-component setting.",
+    "plain": "The paper asks whether dark matter, the invisible material making up most of the mass of galaxies, could be made of several kinds of very light particles called axions instead of one. It starts from a known \"maximal mixing\" picture and generalizes it with a randomized mixing rule. The authors report that either the standard QCD axion or a lighter cousin, the ALP, can end up supplying most of the dark matter depending on the parameters.",
+    "why": "If dark matter is a mix of axion-like particles, that would change where experiments should look for it, and the paper points to specific ultralight candidates that upcoming searches could test. The text presents these as model-based predictions. Whether they hold up depends on experiments that are not described here.",
+    "background": "- Dark matter: unseen matter whose gravity shapes galaxies; its particle identity is unknown.\n- Axion: a hypothetical very light particle proposed to solve a puzzle in the strong nuclear force (the strong CP problem); the QCD axion is the version tied to that puzzle.\n- ALP (axion-like particle): a similar light particle not tied to that puzzle, with a free mass and coupling.\n- Decay constant: a parameter setting the energy scale at which an axion's properties appear; larger values mean weaker couplings.\n- Mixing: several axion fields can combine, sharing a dark matter abundance among them.\n- Cold dark matter: dark matter moving slowly compared with light, which is what galaxy formation requires.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this work, we revisit the multi-component axion dark matter (DM) scenario and explore the role of ultralight axion-like particles (ALPs). After briefly reviewing maximal axion mixing, we incorporate a stochastic axion mixing mechanism that generalizes it by relaxing the requirement of a uniform hierarchy among the axion decay constants. We find that, depending on the parameters, either the QCD axion or an ALP can dominate the DM abundance after mixing; once axion mass contributions are included, the heaviest ALPs tend to prevail. In a two-component framework, stochastic mixing significantly enlarges the allowed parameter space for the QCD axion decay constant, enabling the QCD axion to constitute the entirety of cold DM. The corresponding ALP mass range remains largely unconstrained by current experiments and is within reach of future searches. In the multi-component case, a larger ALP population leads to the emergence of more ultralight ALPs with large decay constants. These ultralight ALPs represent compelling targets for upcoming axion searches.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31810",
+   "title": "Intrinsic Soft Function in the Continuum and Physical Mass Limit from Lattice QCD",
+   "url": "https://arxiv.org/abs/2611.31810",
+   "authors": [
+    "Zhi-Chao Gong",
+    "Min-Huan Chu",
+    "Jun Hua",
+    "Xiangdong Ji",
+    "Andreas Sch\\\"afer",
+    "Jin-Xin Tan",
+    "Han-Zhang Wang",
+    "Wei Wang",
+    "Jian-Hui Zhang",
+    "Mu-Hua Zhang",
+    "Qi-An Zhang"
+   ],
+   "label": "arXiv:2611.31810v1",
+   "primary_category": "hep-lat",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A lattice QCD calculation extracts the nonperturbative intrinsic soft function of TMD factorization at the physical pion mass, in the continuum and infinite-momentum limits, using large-momentum effective theory and axial-vector interpolators.",
+    "plain": "This paper is about a hard-to-compute piece of how the internal momentum of quarks inside protons and pions is described. The authors used supercomputer simulations of quarks on a discrete grid (lattice QCD) to estimate this piece directly from the underlying theory. They report results using pions at their real physical mass, across six simulation setups with four grid spacings, reaching separations of about 1.1 femtometers.",
+    "why": "Precision studies of how quark momentum is distributed in hadrons depend on this input, so a determination that controls the continuum, physical-mass and infinite-momentum limits together is useful for that field. The text reports that the results agree with perturbative predictions at short distances and give an approximately exponential decay with an effective scale of about 0.7 GeV, but it does not spell out the wider implications beyond being a benchmark.",
+    "background": "- QCD: the theory of quarks and gluons that binds protons and pions.\n- Lattice QCD: computing QCD numerically on a discrete four-dimensional grid of space and time.\n- TMD (transverse-momentum-dependent) factorization: a framework that splits high-energy scattering into separate pieces, one of which is the soft function.\n- Soft function: a quantity describing soft (low-momentum) gluon effects; its nonperturbative part cannot be computed with standard perturbation theory.\n- Large-momentum effective theory: a method for getting quantities at infinite momentum from simulations at finite momentum.\n- Physical pion mass limit: simulations run with the pion's real mass, rather than heavier, easier-to-simulate pions.\n- Transverse distance b⊥: the separation perpendicular to the motion of the particle; 1 fm is 10^-15 m.\n- Effective scale Λ: a fitted parameter setting how fast the quantity falls off with distance; it is not a fundamental constant.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The intrinsic soft function is a universal nonperturbative ingredient of transverse-momentum-dependent (TMD) factorization. Despite substantial progress in lattice QCD studies, a determination with simultaneous control of the continuum, physical-pion-mass, and infinite-momentum limits has remained unavailable. In this work we present the first lattice determination incorporating all these limits within large-momentum effective theory, extracting the intrinsic soft function from a light-meson form factor and quasi-TMD wave functions. A key advance is the use of power-counting-guided axial-vector interpolators, which substantially improve the signal and enable a direct calculation at the physical pion mass. Combined with results from six ensembles spanning four lattice spacings, this improvement allows a precise determination extending to $b_\\perp\\simeq1.1~\\mathrm{fm}$, while remaining consistent with perturbative predictions at short distances. The resulting transverse-distance dependence exhibits an approximately exponential decay, with the decay rate being characterized by an effective scale $\\Lambda\\simeq0.7~\\mathrm{GeV}$ at $\\mu=2~\\mathrm{GeV}$, providing a quantitative benchmark for nonperturbative Wilson-line dynamics and essential input for precision TMD studies.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31368",
    "title": "Dark vector meson effects on composite dark matter",
@@ -16,12 +68,12 @@
    "primary_category": "hep-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Extends studies of G-parity-odd dark pion dark matter in a QCD-like dark sector by adding dark rho vector mesons, examining their effects on relic abundance, their mixing with Standard Model gauge bosons, and collider reach at ATLAS/CMS recasts and future FCC-hh and muon colliders.",
-    "plain": "This paper looks at a hypothetical hidden sector, a dark version of the strong force with its own quarks, whose lightest particles could make up dark matter. It adds a heavier \"dark rho\" particle to earlier models and finds that it can change how much dark matter would be left over from the early universe, and that it can mix with ordinary force carriers so it decays in new ways. The authors also estimate how far future colliders could search for these particles, reporting that the FCC-hh could probe rho masses up to about 40 TeV.",
-    "why": "If dark matter is a composite particle from a hidden strong force, heavier partner particles can alter the cosmological calculation and the collider signals, so this sets concrete targets for future experiments. The connection to real dark matter remains a hypothesis; the text does not show that such a sector exists.",
+    "ai": true,
     "background": "- Dark matter: unseen matter whose gravity shapes galaxies; its \"relic abundance\" is the amount left over after the early universe cooled.\n- QCD-like gauge theory: a model of a strong force like the one binding quarks in protons, here assumed to exist in a hidden sector.\n- Pions and rho mesons: bound states of dark quarks; pions are the lightest, rho mesons are heavier vector (spin-1) partners.\n- G-parity: a symmetry-like label that determines which decays and interactions are allowed.\n- Resonant enhancement: a sharp increase in interaction rate when a particle's mass matches the energy of colliding particles.\n- Mixing with Standard Model gauge bosons: the dark rho can partly turn into ordinary W, Z or photon-like particles, opening decay routes.\n- Collider terms: ATLAS and CMS are LHC experiments; FCC-hh is a proposed future proton collider; muon colliders are a proposed lepton machine; \"recast\" means reinterpreting existing searches for a new model.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Extends studies of G-parity-odd dark pion dark matter in a QCD-like dark sector by adding dark rho vector mesons, examining their effects on relic abundance, their mixing with Standard Model gauge bosons, and collider reach at ATLAS/CMS recasts and future FCC-hh and muon colliders.",
+    "plain": "This paper looks at a hypothetical hidden sector, a dark version of the strong force with its own quarks, whose lightest particles could make up dark matter. It adds a heavier \"dark rho\" particle to earlier models and finds that it can change how much dark matter would be left over from the early universe, and that it can mix with ordinary force carriers so it decays in new ways. The authors also estimate how far future colliders could search for these particles, reporting that the FCC-hh could probe rho masses up to about 40 TeV.",
+    "why": "If dark matter is a composite particle from a hidden strong force, heavier partner particles can alter the cosmological calculation and the collider signals, so this sets concrete targets for future experiments. The connection to real dark matter remains a hypothesis; the text does not show that such a sector exists."
    },
    "abstract": "We extend previous studies of $\\mathcal{G}$-parity-odd dark pion dark matter in a QCD-like $\\mathrm{SU}(N_c)$ gauge theory with electroweakly interacting dark quarks to include the effects of $\\rho$ mesons. We show that vector mesons can substantially affect relic abundance calculations through resonant enhancement, significantly affecting the conditions required to reproduce the observed relic abundance. Electroweak interactions further induce mixing between the dark $\\rho$ mesons and Standard Model gauge bosons, opening new decay channels for the dark $\\rho$ and modifying the effective interactions of the dark pions. We recast existing ATLAS and CMS searches to constrain the model, and perform a collider phenomenology study targeting the future FCC-hh and muon colliders, focusing on the resonant enhancement of cross sections in the $e^+e^-$, $\\mu^+\\mu^-$, and $W^+W^-$ final states for the latter. We show that the FCC-hh could probe $\\rho$ mesons whose mass is up to 40 TeV.",
    "source": "arxiv"
@@ -39,12 +91,12 @@
    "primary_category": "hep-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A proposed resonance in which an oscillating axion dark matter background boosts the conversion of stellar axions into X-ray photons in magnetic fields, tested against NuSTAR observations of the starburst galaxy M82.",
-    "plain": "The paper looks at a hypothetical particle called the axion, which might make up dark matter and might also be produced inside stars. The authors propose that the invisible dark matter background can help a stellar axion turn into a detectable X-ray photon when it passes through a magnetic field. They apply this idea to the starburst galaxy M82 and use existing X-ray data from the NuSTAR telescope to set limits.",
-    "why": "If the mechanism is right, it could raise the expected X-ray signal by a factor of roughly 100 in some axion mass ranges where ordinary conversion is weak, tightening limits on how strongly axions couple to photons. The text reports only a moderate preference over the background-only model that is still consistent with statistical fluctuations, so the result is suggestive rather than a detection.",
+    "ai": true,
     "background": "- Axions: hypothetical, very light particles proposed to solve a puzzle in particle physics and considered a dark matter candidate.\n- Dark matter: unseen matter that makes up most of the mass in galaxies; here it is modeled as an oscillating axion field.\n- Photon-axion conversion: the process by which an axion turns into a photon in a magnetic field, and the reverse.\n- Resonance: a condition where two effects match up so a signal is strongly amplified, similar to a swing pushed at the right rhythm.\n- Dispersion relation mismatch: photons and axions travel with different energy-momentum relations, so they normally convert poorly; the dark matter background is said to compensate for this difference.\n- Stellar axions: axions expected to be produced in the hot cores of stars, here those of M82.\n- NuSTAR: a NASA X-ray space telescope whose existing data are reanalyzed.\n- Coupling limits: upper bounds on how strongly axions interact with photons, given as constraints over a range of masses.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A proposed resonance in which an oscillating axion dark matter background boosts the conversion of stellar axions into X-ray photons in magnetic fields, tested against NuSTAR observations of the starburst galaxy M82.",
+    "plain": "The paper looks at a hypothetical particle called the axion, which might make up dark matter and might also be produced inside stars. The authors propose that the invisible dark matter background can help a stellar axion turn into a detectable X-ray photon when it passes through a magnetic field. They apply this idea to the starburst galaxy M82 and use existing X-ray data from the NuSTAR telescope to set limits.",
+    "why": "If the mechanism is right, it could raise the expected X-ray signal by a factor of roughly 100 in some axion mass ranges where ordinary conversion is weak, tightening limits on how strongly axions couple to photons. The text reports only a moderate preference over the background-only model that is still consistent with statistical fluctuations, so the result is suggestive rather than a detection."
    },
    "abstract": "An oscillating axion dark matter (DM) background can enhance the conversion of another relativistic axion into photons when traversing a magnetic field. The DM background rotates photon polarization relative the magnetic orientation, which compensates the photon's and the propagating axion's dispersion relation mismatch. We relate this mechanism to Axion Magnetic Resonance (AMR) and apply it to stellar axions in the starburst galaxy M82. We analyze its enhancement to the resulting X-ray signals while accounting for the finite magnetic domain size, dark matter coherence length, DM density morphology, plasma profiles, and the detector response. We derive strong constraints using existing X-ray data from NuSTAR. We show that this resonant conversion can lead to $\\mathcal O(10^2)$ enhancement in the photon-axion conversion probability, improving the upper limits on axion's photon coupling over part of the mass range where ordinary conversion is suppressed. We also show that this type of resonance predicts distinctive features in the hard X-ray spectrum, which is moderately favored by the data over the background only model, yet it is currently still consistent with statistical fluctuations.",
    "source": "arxiv"

@@ -1,7 +1,52 @@
 {
  "slug": "algebraic-geometry",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.33025",
+   "title": "Bloch Discriminants of Discrete Periodic Operators",
+   "url": "https://arxiv.org/abs/2611.33025",
+   "authors": [
+    "Margaret H. Regan",
+    "Frank Sottile",
+    "Simon Telen"
+   ],
+   "label": "arXiv:2611.33025v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper adapts computational algebraic geometry to study how critical points of Bloch varieties, which link the spectrum of an operator on a Z^2-periodic graph to its group action, change qualitatively with parameters, for three example graphs.",
+    "plain": "The paper studies a mathematical object that describes the allowed energy levels of a wave-like process on a repeating network of points and connections, such as a crystal-like lattice. The authors ask at which parameter values the shape of this object changes in a qualitative way, and they answer this for three specific two-directional periodic graphs using computer-algebra methods. The set of such turning-point parameter values is called the Bloch discriminant.",
+    "why": "The critical points of these objects correspond to edges of the spectrum, so knowing when their behavior shifts bears on how spectra of periodic structures change. The authors also note that the critical points are real-algebraic under a non-standard real structure, which they present as a first step toward computational tools for such varieties; the text does not say more about wider applications.",
+    "background": "- Operator on a graph: a rule for passing values between connected points of a network; its spectrum is the set of energies or values it can take.\n- Periodic graph: a network that repeats in a regular pattern, here indexed by two integer directions (Z^2).\n- Bloch variety: a geometric object (a set of solutions to polynomial equations) that records how spectrum depends on the repeat (group) action.\n- Critical point: a point where the geometry is not smooth or where the local shape changes; these mark edges of the spectrum.\n- Algebraic geometry: the study of shapes defined by polynomial equations.\n- Real structure: a rule that selects which points of a complex-number setting count as \"real\"; the standard one is ordinary real numbers, the paper uses a non-standard one.\n- Discriminant: the set of parameter values where the qualitative type of a solution set changes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The Bloch variety of an operator on a periodic graph encodes the relation between its spectrum and the group action on the graph, with critical points corresponding to edges of the spectrum. We adapt methods from computational algebraic geometry to describe how the qualitative behavior of critical points of Bloch varieties depends upon parameters for three Z^2-periodic graphs. The set of parameters where the qualitative behavior changes is the Bloch discriminant. As the critical points are real-algebraic with respect to a non-standard real structure on the complex torus, this is also a first step towards developing computational tools for varieties with a non-standard real structure.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31552",
+   "title": "On the unirationality of anticanonical weighted complete intersection surfaces: the infinite families",
+   "url": "https://arxiv.org/abs/2611.31552",
+   "authors": [
+    "Giulia Gugiatti",
+    "Alex Massarenti"
+   ],
+   "label": "arXiv:2611.31552v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper shows that anticanonical weighted complete intersection surfaces in the four infinite families are unirational over their field of definition, and that over a Hilbertian field a Hilbert subset of these surfaces is nonrational.",
+    "plain": "The paper studies a classification of certain curved geometric surfaces, defined by polynomial equations with weighted variables, that come from a specific \"anticanonical\" setup. The known list splits into finitely many special cases and four infinite families, and this work deals with the infinite families. The authors show that surfaces in these families can be described by rational parametrization over their base field, and that, over a suitable kind of field, most members of these families are not rational.",
+    "why": "Rationality questions ask whether a geometric object can be parametrized by rational functions, which is a basic way of telling how simple it is. The result settles this for the infinite families in the text, and it is a specialist contribution that the text does not place in any wider application.",
+    "background": "- Algebraic surface: the solution set of polynomial equations in three variables, viewed over a field such as the rationals or complex numbers.\n- Weighted complete intersection: a surface cut out by several polynomial equations where variables carry positive integer weights, which act like a generalised projective space.\n- Anticanonical: refers to a canonical class of divisors on the surface (the anticanonical class), a standard invariant used to sort surfaces by how curved or constrained they are.\n- Rational surface: one birational to the projective plane, i.e. parametrizable by rational functions of two variables.\n- Unirational: a weaker notion; the surface is covered by a rational parametrization that may be many-to-one, rather than one-to-one.\n- Field of definition and Hilbertian field: the number field or other base field of the coefficients, and a class of fields where Hilbert's irreducibility theorem holds, so that \"most\" specializations behave generically.\n- Hilbert subset: a set of parameter values large enough in the sense of Hilbert's irreducibility theorem.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Anticanonical weighted complete intersection surfaces fall into finitely many sporadic families and four infinite families. We prove that the anticanonical surfaces lying in the infinite families are unirational over their field of definition. Over a Hilbertian field, we further prove that a Hilbert subset of members consists of nonrational surfaces.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31551",
    "title": "Flexible algebraic curves and fake vanishing cycles",
@@ -14,12 +59,12 @@
    "primary_category": "math.GT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves that complex curves in sufficiently ample linear systems on simply connected projective surfaces (including smooth plane curves) are topologically (spin) flexible, which yields fake vanishing cycles and examples of pushed-in Seifert surfaces that need one stabilization to become spin-flexible.",
-    "plain": "The paper studies smooth curves drawn on surfaces in complex geometry, and how their shapes can be moved around inside the four-dimensional space they sit in. The authors show that for curves of this kind, any allowed rearrangement of the curve's underlying real surface can be extended to a rearrangement of the whole four-dimensional space. They use this to find simple loops on the curve that look like they could be shrunk away inside the space, but do not actually behave that way.",
-    "why": "The results sharpen what topology can and cannot see about algebraic curves, and they make precise the difference between loops that can be cancelled by a disk and loops that genuinely cannot. The text does not say how far the results reach beyond the cases stated, so the wider significance is unclear from this excerpt alone.",
+    "ai": true,
     "background": "- Algebraic curves: solution sets of polynomial equations over the complex numbers; a complex curve is also a real surface.\n- Linear systems and ampleness: families of curves on a surface; \"sufficiently ample\" means the family is large enough to have good geometric properties.\n- Simply connected surface: a surface in which every loop can be shrunk to a point.\n- Mapping class: a way of moving a surface onto itself, considered up to continuous deformation.\n- Topological flexibility: the property that every such symmetry of the curve extends to a symmetry of the surrounding four-dimensional space.\n- Vanishing cycle: a loop on a surface that can be collapsed by a disk inside the surrounding space; a \"fake\" one bounds a disk in the complement but is not a true vanishing cycle.\n- Framing and spin structure: extra bookkeeping data attached to surfaces and disks, which the disk-bounding condition refers to.\n- Seifert surface, pushed-in surface, stabilization: standard objects and operations in knot theory in four dimensions.\n- Equivariant intersection form: an algebraic invariant that records how loops intersect, tracked in a setting with a symmetry action.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that complex curves in sufficiently ample linear systems on simply connected projective surfaces (including smooth plane curves) are topologically (spin) flexible, which yields fake vanishing cycles and examples of pushed-in Seifert surfaces that need one stabilization to become spin-flexible.",
+    "plain": "The paper studies smooth curves drawn on surfaces in complex geometry, and how their shapes can be moved around inside the four-dimensional space they sit in. The authors show that for curves of this kind, any allowed rearrangement of the curve's underlying real surface can be extended to a rearrangement of the whole four-dimensional space. They use this to find simple loops on the curve that look like they could be shrunk away inside the space, but do not actually behave that way.",
+    "why": "The results sharpen what topology can and cannot see about algebraic curves, and they make precise the difference between loops that can be cancelled by a disk and loops that genuinely cannot. The text does not say how far the results reach beyond the cases stated, so the wider significance is unclear from this excerpt alone."
    },
    "abstract": "We prove that complex curves in sufficiently ample linear systems on simply connected projective surfaces are topologically (spin) flexible: any (spin) mapping class of the underlying real surface extends to a topological mapping class of the ambient 4-manifold. As a corollary, we prove that smooth curves in the complex projective plane are topologically (spin) flexible. A consequence of topological flexibility is the existence of fake vanishing cycles, that is, simple closed curves on the underlying real surface that are not vanishing cycles, yet still bound a topologically embedded $(\\pm1)$-framed disk in the surface exterior. We also give examples of pushed in Seifert surfaces in $D^4$ that are not topologically spin-flexible, but become spin-flexible after a single internal stabilization. Our methods utilize the equivariant intersection form on the surface exterior.",
    "source": "arxiv"
@@ -36,12 +81,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "For a connected simply-connected simple complex group G with Borel subgroup B, the paper gives a necessary and sufficient condition for the restriction map Pic(G/B) → Pic(Y) to be an isomorphism, where Y is an irreducible regular semisimple Hessenberg variety inside G/B.",
-    "plain": "The paper studies a family of geometric shapes, called Hessenberg varieties, that sit inside a standard flag space built from a symmetry group. For one especially regular kind of these shapes, it asks when every way of assigning a \"line bundle\" (a smooth twisting structure over the shape) on the big space carries over exactly to the smaller shape. The text states that the author gives a complete yes-or-no test for when this carries over exactly.",
-    "why": "The result pins down exactly when the big space's line bundles fully determine those on a subvariety, which is a precise structural question about how these shapes sit inside flag spaces. The text does not say what applications it has, so I cannot say more about its wider importance.",
+    "ai": true,
     "background": "- Algebraic group: a group of symmetries described by polynomial equations over the complex numbers.\n- Borel subgroup and flag variety G/B: the space of complete nested flags that the group acts on.\n- Hessenberg variety: a subvariety of G/B cut out by a condition involving a linear operator and a \"Hessenberg\" shape constraint.\n- Regular semisimple: a generic, well-behaved case where the operator has distinct eigenvalues.\n- Picard group Pic: the group of line bundles (one-dimensional twisting structures) on a variety, up to isomorphism.\n- Restriction map: taking a line bundle on the big space and viewing it on the subvariety.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "For a connected simply-connected simple complex group G with Borel subgroup B, the paper gives a necessary and sufficient condition for the restriction map Pic(G/B) → Pic(Y) to be an isomorphism, where Y is an irreducible regular semisimple Hessenberg variety inside G/B.",
+    "plain": "The paper studies a family of geometric shapes, called Hessenberg varieties, that sit inside a standard flag space built from a symmetry group. For one especially regular kind of these shapes, it asks when every way of assigning a \"line bundle\" (a smooth twisting structure over the shape) on the big space carries over exactly to the smaller shape. The text states that the author gives a complete yes-or-no test for when this carries over exactly.",
+    "why": "The result pins down exactly when the big space's line bundles fully determine those on a subvariety, which is a precise structural question about how these shapes sit inside flag spaces. The text does not say what applications it has, so I cannot say more about its wider importance."
    },
    "abstract": "Let $G$ be a connected simply-connected simple algebraic group over $\\mathbb{C}$ and $B$ be a Borel subgroup of $G$. Let $Y$ be an irreducible regular semisimple Hessenberg variety in $G/B$. In this article, we give a necessary and sufficient condition for the natural restriction map $\\mathrm{res}: \\mathrm{Pic}(G/B)\\longrightarrow \\mathrm{Pic}(Y)$ of Picard groups induced by the inclusion $Y\\subseteq G/B$ to be an isomorphism.",
    "source": "arxiv"

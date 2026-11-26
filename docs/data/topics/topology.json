@@ -1,7 +1,49 @@
 {
  "slug": "topology",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.33107",
+   "title": "An internal approach to symmetric monoidal $(\\infty,n)$-categories",
+   "url": "https://arxiv.org/abs/2611.33107",
+   "authors": [
+    "Arghan Dutta"
+   ],
+   "label": "arXiv:2611.33107v1",
+   "primary_category": "math.CT",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proposes an \"internal\" definition of symmetric monoidal (∞,n)-categories as special left double (∞,n)-fibrations over finite pointed sets, builds model structures for it in left proper combinatorial models, and shows that for n=1 it is Quillen equivalent to Lurie's special coCartesian fibrations description.",
+    "plain": "This paper is about a precise way to describe \"higher categories\" in which objects, arrows, arrows between arrows and so on can be combined in a symmetric way, the way products of numbers or sets can be combined in any order. The authors give a new definition of these structures and check it against an existing, established definition in the simplest case of one-level (∞,1) structures. They show the two descriptions have equivalent homotopy theories, meaning they behave the same way for the purposes of abstract comparison, and they supply two explicit translation constructions between them.",
+    "why": "The work gives a definition that applies in a general setting for (∞,n)-categories, and it is checked to agree with a known framework when n=1. It may matter for researchers who need symmetric monoidal higher categories in homotopy theory, though the abstract alone does not show how widely it will be used.",
+    "background": "- Categories: collections of objects and arrows (maps) between them, with rules for composing arrows.\n- Higher categories (∞,n): categories where the comparison between arrows is itself organised in levels, up to a notion of equivalence.\n- Monoidal category: a category with a way of combining objects, like multiplying numbers; \"symmetric\" means the order of combining does not matter up to equivalence.\n- Finite pointed sets: finite sets with a distinguished base point, used here as a basic index shape.\n- Fibration / coCartesian fibration: a way of packaging one structure as a family indexed over another, used to encode the combining operation.\n- Model structure and Quillen equivalence: tools from homotopy theory that make \"same up to equivalence\" precise and transfer it between two frameworks.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We propose a definition of symmetric monoidal $(\\infty,n)$-categories as special left double $(\\infty,n)$-fibrations over the category of finite pointed sets. The definition makes sense in a general model of $(\\infty,n)$-categories, under a mild condition on its discrete objects, and when the model is left proper and combinatorial we construct model structures whose fibrant objects are exactly these fibrations. For $n=1$ we show that the definition recovers Lurie's symmetric monoidal $(\\infty,1)$-categories: the homotopy theory of special left double $(\\infty,1)$-fibrations is equivalent to that of special coCartesian fibrations over the category of finite pointed sets. The equivalence is realized by an explicit Quillen equivalence, and two constructions, the staircase and coCartesian strings, translate between the two descriptions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31778",
+   "title": "10/8-inequality for a spin 4-orbifold with boundary and its application",
+   "url": "https://arxiv.org/abs/2611.31778",
+   "authors": [
+    "Masaaki Ue"
+   ],
+   "label": "arXiv:2611.31778v1",
+   "primary_category": "math.GT",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves a 10/8-type inequality for spin 4-orbifolds with boundary and uses it to give criteria under which certain homology 3-spheres, specified by framed links, have infinite order in the homology cobordism group.",
+    "plain": "This work is about sorting three-dimensional shapes (homology 3-spheres) by whether they can be smoothly connected to each other through a four-dimensional \"bridge\" without the connection being trivial. The authors prove a constraint, a 10/8-type inequality, for a certain kind of four-dimensional space with singular points, and use it to identify families of such shapes that never become trivial when combined repeatedly. The examples named in the text include certain plumbed manifolds, certain knot surgeries, Montesinos knots, and cable knots.",
+    "why": "Showing that a family of three-dimensional shapes has infinite order in the homology cobordism group is a way of showing these shapes are genuinely distinct from one another in a precise sense. The text does not say how far the criteria reach beyond the listed examples, so the broader significance is uncertain from this summary alone.",
+    "background": "- Homology 3-sphere: a closed 3-dimensional space with the same homology (hole-counting invariants) as the ordinary 3-sphere.\n- Homology cobordism: two such spaces are equivalent if they bound a 4-dimensional piece together; the equivalence classes form a group.\n- Infinite order: repeatedly combining a shape with itself never returns it to the trivial class.\n- Spin 4-manifold / 10/8 inequality: a constraint from Seiberg–Witten gauge theory relating a four-dimensional space's intersection form to a count of its topological features; it is a known tool in this area.\n- Orbifold: a space with controlled cone-shaped singularities.\n- Framed link, surgery, knot, Montesinos knot, cable knot, plumbing: standard ways of building 3-manifolds from knots or links in 3-space.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "As an application of 10/8 inequality for a spin 4-orbifold with boundary, we give criteria of homology 3-spheres represented by certain framed links for having infinite order in the homology cobordism group of homology 3-spheres. Such a class of homology 3-spheres includes certain plumbed 3-manifolds, 1/odd surgeries along certain knots with many twists, for example, certain Montesinos knots, $(p,q)$ cable knots of any knot with some large $p$, $q$, etc.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32655",
    "title": "One monoid to realize them all: a master monoid for homotopy types",
@@ -13,12 +55,12 @@
    "primary_category": "math.AT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that every homotopy type (CW complex up to homotopy) can be realized as the classifying space of the translation category of an action of a single monoid on a set, obtained by collapsing the objects of the semisimplicial category while keeping its face maps, and it situates this within weak test category theory.",
-    "plain": "The paper asks whether the shapes studied in homotopy theory, which are usually described using topological spaces or structured collections of sets, can instead be captured by the action of one algebraic object, a monoid (a set with an associative operation and an identity). The authors build such a monoid by merging all the objects of a standard combinatorial category while keeping its face maps, and they show every CW homotopy type arises this way. The text presents this as a general algebraic framework rather than a new computation.",
-    "why": "It offers an unusual algebraic route into homotopy theory, connecting it to the theory of test categories and to monoid actions. The abstract's claims about finite presentation and which dimensions are realized are stated in the text, but the wider significance for the field is for specialists to judge.",
+    "ai": true,
     "background": "- Homotopy type: a shape considered up to continuous deformation; CW complexes are a standard class of spaces built from cells.\n- Classifying space of a category: a topological space built from a category's objects and arrows, used to encode its homotopy information.\n- Semisimplicial category: a combinatorial category whose objects are ordered sets and whose maps include face operators (deleting an element).\n- Monoid and monoid action: a monoid is a set with an associative operation and identity; an action assigns to each element a map on a set.\n- Test category: a small category whose presheaves model homotopy types, in Grothendieck's sense.\n- Translation category (action groupoid analogue): the category with objects the set elements and arrows given by the monoid action.\n- Coreflective subcategory: a subcategory where each object has a best map into it from the larger category.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that every homotopy type (CW complex up to homotopy) can be realized as the classifying space of the translation category of an action of a single monoid on a set, obtained by collapsing the objects of the semisimplicial category while keeping its face maps, and it situates this within weak test category theory.",
+    "plain": "The paper asks whether the shapes studied in homotopy theory, which are usually described using topological spaces or structured collections of sets, can instead be captured by the action of one algebraic object, a monoid (a set with an associative operation and an identity). The authors build such a monoid by merging all the objects of a standard combinatorial category while keeping its face maps, and they show every CW homotopy type arises this way. The text presents this as a general algebraic framework rather than a new computation.",
+    "why": "It offers an unusual algebraic route into homotopy theory, connecting it to the theory of test categories and to monoid actions. The abstract's claims about finite presentation and which dimensions are realized are stated in the text, but the wider significance for the field is for specialists to judge."
    },
    "abstract": "Homotopy theory has traditionally been approached either through topological spaces or through categories of presheaves on suitable combinatorial categories, a perspective subsumed by Grothendieck's theory of test categories. In this paper, we develop a more algebraic viewpoint: homotopy types can be represented by actions of a single monoid on sets. This monoid is obtained by identifying all the objects of the semisimplicial category while retaining its face operators. Every CW homotopy type is the classifying space of the translation category of one of its actions, and its truncation at dimension n is finitely presented and realizes exactly the homotopy types of dimension at most n. The construction rests on a general result: every set-valued functor on a small category freely generates an action of its universal monoid, and its category of elements is a full coreflective subcategory of the resulting translation category. Hence every weak test category gives rise to a monoid whose actions realize all homotopy types; when the category has more than one object, however, this monoid is not itself a weak test category, so that a single monoid may realize all homotopy types without modelling homotopy theory as a localization. The obstruction lies in identifying objects, not in having a single one: there are strict test categories with a single object, such as the monoid of all self-maps of an infinite set and a countable monoid of primitive recursive functions.",
    "source": "arxiv"
@@ -34,12 +76,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Lecture notes covering the foundations of o-minimal geometry, a tame setting for studying real geometric sets, through cell decomposition, dimension, triangulation, generic fibers, and smoothness.",
-    "plain": "These are lecture notes, not a report of new findings. They teach a branch of mathematics that studies shapes defined by simple rules in a way that keeps them well behaved, and they go through its main tools in six chapters. The text given is only the chapter list, so it does not show the details of any argument.",
-    "why": "The text gives no results or claims of novelty, so its importance cannot be judged from it. Such notes are usually used as a textbook entry point, and o-minimal geometry is known to connect to real algebraic geometry and model theory, though the text itself does not say this.",
+    "ai": true,
     "background": "- Sets: a collection of points, such as a curve or a surface in space.\n- Dimension: the number of independent directions a shape has, such as 1 for a curve and 2 for a surface.\n- Triangulation: cutting a shape into small triangle-like pieces.\n- Smoothness: whether a shape has no sharp corners or cusps.\n- Model theory: the study of which properties can be stated in a formal logical language.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Lecture notes covering the foundations of o-minimal geometry, a tame setting for studying real geometric sets, through cell decomposition, dimension, triangulation, generic fibers, and smoothness.",
+    "plain": "These are lecture notes, not a report of new findings. They teach a branch of mathematics that studies shapes defined by simple rules in a way that keeps them well behaved, and they go through its main tools in six chapters. The text given is only the chapter list, so it does not show the details of any argument.",
+    "why": "The text gives no results or claims of novelty, so its importance cannot be judged from it. Such notes are usually used as a textbook entry point, and o-minimal geometry is known to connect to real algebraic geometry and model theory, though the text itself does not say this."
    },
    "abstract": "These lecture notes on o-minimal geometry comprise six chapters: 1 - O minimal Structures. 2 - Cell Decomposition. 3 - Connected Components and Dimension. 4 - Definable Triangulation. 5 - Generic Fibers for Definable Families. 6 - Smoothness.",
    "source": "arxiv"

@@ -1,7 +1,52 @@
 {
  "slug": "ml-theory",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.33024",
+   "title": "Best Arm Identification with Unknown Post-Action Context Distribution",
+   "url": "https://arxiv.org/abs/2611.33024",
+   "authors": [
+    "Amir Mohammad Abouei",
+    "Mohammad Shahverdikondori",
+    "Emad Emamjomeh",
+    "Negar Kiyavash"
+   ],
+   "label": "arXiv:2611.33024v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "This paper extends fixed-confidence best arm identification to settings where a post-action context is observed after each action, with the context distribution unknown, deriving a lower bound, a Track-and-Stop algorithm, a new concentration inequality, and a convex relaxation.",
+    "plain": "The paper studies how to find the best option among several choices while spending as few trials as possible. After each choice, the learner also sees an extra piece of information (a \"post-action context\") that is linked to the reward, and the paper addresses the harder case where how that extra information is distributed is itself unknown. The authors report a theoretical lower bound on the number of samples needed, an algorithm that matches it asymptotically given an optimization oracle, and experiments suggesting that using the extra information still lowers the number of samples compared with methods that ignore it.",
+    "why": "Adaptive testing of options, such as in clinical trials or A/B testing, is a common practical problem, and using side information that arrives after each choice could save data. The text does not discuss specific applications, so the practical reach is uncertain; the work is best read as a theoretical advance with experimental support.",
+    "background": "- Multi-armed bandit: a setting where you repeatedly pick one of several options (arms) and see a noisy reward.\n- Best arm identification (fixed confidence): run experiments until you can declare the best option with a set error probability, minimizing the number of trials.\n- Sample complexity: how many trials are needed; an instance-dependent lower bound gives the minimum that any method could need for a specific problem.\n- Track-and-Stop: an algorithm that tracks an optimal allocation of trials and stops once a statistical test is confident.\n- Concentration inequality: a probability bound on how far estimates can be from true values, used to justify stopping.\n- Convex relaxation: replacing a hard nonconvex optimization with an easier convex one that gives approximate answers.\n- Gaussian instance: a test case where rewards follow a normal (bell-shaped) distribution.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study best arm identification (BAI) with post-action context in the fixed-confidence setting. After choosing an action, the learner observes a post-action context together with a reward whose distribution depends only on this context. Incorporating such intermediate information can substantially reduce the sample complexity of identifying the best arm. While Shahverdikondori et al. (2026a) analyzed the case where the distribution of contexts given actions is known, we address the more challenging and practically relevant case where this distribution is unknown. We derive an instance-dependent sample complexity lower bound and propose a Track-and-Stop algorithm that matches it asymptotically with access to an optimization oracle. Our stopping rule uses a new concentration inequality that jointly controls uncertainty in the context distributions and reward means, removing the factor of two incurred by separate concentration bounds. Implementing the algorithm generally requires solving nonconvex optimization problems. We propose a convex relaxation with instance-dependent approximation guarantees, including asymptotic tightness on hard Gaussian instances. Experiments demonstrate that exploiting post-action context reduces the sample complexity relative to baselines that ignore it, even when the context distributions are unknown.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32812",
+   "title": "Breaking the Joint Action Space Dependence in Distributionally Robust Multi-Agent Reinforcement Learning",
+   "url": "https://arxiv.org/abs/2611.32812",
+   "authors": [
+    "Yue Wang"
+   ],
+   "label": "arXiv:2611.32812v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper gives a sample-complexity bound for learning robust coarse correlated equilibria in finite-horizon, general-sum, distributionally robust Markov games under a generative model, where the bound depends on the joint action space only through the largest individual action-set size rather than the product of all players' action counts.",
+    "plain": "The paper studies how many simulated samples are needed to learn a stable strategy profile for several decision-makers acting in a changing environment, where each one plans for the worst plausible outcome. The usual guarantees get much more expensive as the number of players grows, because they scale with the number of all possible combined actions. The authors give an algorithm whose cost depends only on the largest number of options any single player has.",
+    "why": "The text shows a concrete improvement: removing the exponential dependence on the number of joint actions, which the authors call the curse of multiagency, while keeping the same standard uncertainty set. This matters for multi-agent learning where many players are involved, though the text does not discuss applications or empirical tests, so its practical reach is unclear.",
+    "background": "- Markov game: a repeated multi-player decision problem where the state changes over time based on everyone's actions.\n- Coarse correlated equilibrium (CCE): a stable outcome where no player gains by unilaterally switching to a fixed alternative strategy, a relaxed form of Nash equilibrium.\n- Distributionally robust: each player assumes the true environment may differ from the estimated one, within a set of plausible alternatives, and optimizes for the worst case.\n- Total-variation (TV) ball: the set of probability distributions within a given distance from a reference distribution, with radius controlling how much deviation is allowed.\n- Generative model: a setting where the learner can query a simulator for samples from any state-action pair.\n- Sample complexity: how much data or number of queries is needed to reach a target accuracy epsilon with high probability.\n- Rectangular uncertainty set: the uncertainty is chosen separately for each state and action pair.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the sample complexity of learning robust coarse correlated equilibria (CCE) in finite-horizon, general-sum, distributionally robust Markov games with known rewards and a generative model of the nominal transitions. Each player evaluates a policy by its worst-case return over total-variation (TV) balls centered at the nominal transition distribution of every stage, state, and joint action; this is the standard $(s,a)$-rectangular uncertainty set. Existing generative-model guarantees for this model scale with the number $\\prod_iA_i$ of joint actions, where $A_i$ is the number of actions of player~$i$. Since this number grows exponentially with the number of players, these guarantees suffer from the curse of multiagency. We design an algorithm whose sample complexity depends on the action sets only through the largest individual action-set size $A_*:=\\max_iA_i$. The algorithm uses $\\widetilde O(SA_*H^5D^4/\\varepsilon^4)$ transition samples and, with probability at least $1-\\delta$, returns a Markov policy that is an $\\varepsilon$-robust CCE from every initial state. Here $S$ is the number of states, $H$ is the horizon, and $D:=\\max_i\\min\\{H,1/\\rho_i\\}$, where $\\rho_i$ is the TV radius of player~$i$. Two ingredients make this possible: a plug-in estimate of the robust backup whose mean error does not depend on the number of states, and a single batch of samples per round that serves as bandit feedback for all players at once. The result shows that the dependence on $\\prod_iA_i$ can be avoided without modifying the $(s,a)$-rectangular uncertainty set.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31608",
    "title": "Instance-Dependent Bandit Convex Optimization in One Dimension",
@@ -15,12 +60,12 @@
    "primary_category": "stat.ML",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper studies instance-dependent sample complexity for one-dimensional stochastic bandit convex optimization in the fixed-confidence setting, showing a matching-rate result for minimizer localization but no comparable instance-dependent gain for simple regret.",
-    "plain": "The paper looks at how many noisy measurements are needed to find the lowest point of an unknown curve when each measurement is a costly test at a chosen spot. It asks whether the answer depends on how the specific curve is shaped, not just on worst-case bounds. The authors find that locating the minimizer can be done faster on easier curves, while merely finding a point that is nearly as good as the best one cannot be sped up in the same way.",
-    "why": "The result separates two goals that are often treated as one, which may matter for designing adaptive experiments and sequential testing. The text does not show broader impact beyond this one-dimensional theory, so its reach beyond that setting is unclear.",
+    "ai": true,
     "background": "- Multi-armed bandit: choosing where to sample next and learning from noisy rewards.\n- Fixed-confidence setting: the learner must stop with a guaranteed error level, and the goal is to minimize the number of samples used.\n- Convex function: a bowl-shaped curve with a single lowest point, the minimizer.\n- Sublevel set: the set of points where the curve lies below a given height.\n- Instance-dependent vs. minimax: instance-dependent bounds depend on the specific problem; minimax bounds are worst-case over all problems in a class.\n- Simple regret: how far the chosen point is from the best value.\n- Sample complexity: the number of measurements needed.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies instance-dependent sample complexity for one-dimensional stochastic bandit convex optimization in the fixed-confidence setting, showing a matching-rate result for minimizer localization but no comparable instance-dependent gain for simple regret.",
+    "plain": "The paper looks at how many noisy measurements are needed to find the lowest point of an unknown curve when each measurement is a costly test at a chosen spot. It asks whether the answer depends on how the specific curve is shaped, not just on worst-case bounds. The authors find that locating the minimizer can be done faster on easier curves, while merely finding a point that is nearly as good as the best one cannot be sped up in the same way.",
+    "why": "The result separates two goals that are often treated as one, which may matter for designing adaptive experiments and sequential testing. The text does not show broader impact beyond this one-dimensional theory, so its reach beyond that setting is unclear."
    },
    "abstract": "We study the instance-dependent sample complexity of one-dimensional stochastic bandit convex optimization in the fixed-confidence setting. First, we consider minimizer localization, where the learner seeks to identify a point within distance $\\varepsilon$ of the unique minimizer. We introduce a new instance-dependent quantity $\\Delta_\\varepsilon(f)$, corresponding to the threshold for which the sublevel set of $f-\\min f$ has length $2\\varepsilon$. We prove a lower bound of order $\\Delta_\\varepsilon(f)^{-2}$ and give a bisection-style algorithm that matches this rate up to logarithmic factors. We then revisit the simple-regret setting, where the goal is to identify an $\\varepsilon$-optimal point. Surprisingly, no comparable instance-dependent improvement is possible: every correct algorithm has sample complexity of order $\\varepsilon^{-2}$ on every instance, matching the minimax rate up to constants. Together, these results separate the statistical complexity of minimizer localization from that of simple-regret optimization in one-dimensional convex bandits.",
    "source": "arxiv"
@@ -36,12 +81,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper derives PAC-style probabilistic lower bounds on input-conditional coverage of conformal predictors, using Markov and Cantelli inequalities, and proposes conditional-coverage variance as an estimable measure of conditional validity.",
-    "plain": "Conformal prediction is a way to output a set of likely answers, rather than a single answer, with a promised long-run success rate. That promise holds on average across all inputs, but it can be off for particular kinds of inputs. This paper gives probability-based guarantees on how well the coverage holds for a given input, using only a finite amount of calibration data.",
-    "why": "Guarantees that hold for specific subgroups or individual inputs matter in settings such as medical or safety decisions, where average success can hide failures. The text suggests the variance of conditional coverage could serve as a practical check of this, but the abstract alone does not show how well this works in practice.",
+    "ai": true,
     "background": "- Prediction sets: instead of one predicted value, a model returns a range or set of plausible outcomes.\n- Coverage: the fraction of cases where the true outcome falls inside the set; the target here is 1 minus alpha (for example 90%).\n- Marginal vs. conditional validity: marginal means the rate holds averaged over all inputs; conditional means it holds for each kind of input.\n- Calibration data: a held-out sample used to set the size of the prediction sets.\n- PAC-style bound: a guarantee of the form \"with high probability, the true quantity is at least this large.\"\n- Markov and Cantelli inequalities: standard probability tools that bound how far a random quantity can stray from its average, using only its mean (and variance for Cantelli).\n- Hoeffding argument: a classic tool giving finite-sample confidence limits on an average.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives PAC-style probabilistic lower bounds on input-conditional coverage of conformal predictors, using Markov and Cantelli inequalities, and proposes conditional-coverage variance as an estimable measure of conditional validity.",
+    "plain": "Conformal prediction is a way to output a set of likely answers, rather than a single answer, with a promised long-run success rate. That promise holds on average across all inputs, but it can be off for particular kinds of inputs. This paper gives probability-based guarantees on how well the coverage holds for a given input, using only a finite amount of calibration data.",
+    "why": "Guarantees that hold for specific subgroups or individual inputs matter in settings such as medical or safety decisions, where average success can hide failures. The text suggests the variance of conditional coverage could serve as a practical check of this, but the abstract alone does not show how well this works in practice."
    },
    "abstract": "Conformal prediction sets are guaranteed to be marginally valid over the attribute space, but local coverage can diverge from the user-defined target $1-\\alpha$. Constructing conditionally valid prediction sets with finite calibration data is impossible for a general data-generating distribution. We derive PAC-type probabilistic lower bounds on the input-conditional coverage of any conformal predictor, without assumptions on the data distribution. They are based on the Markov and Cantelli inequalities and adapt to both calibration-marginal and calibration-conditional setups. A tighter, model-dependent Cantelli bound depends on the variance of the conditional coverage and is estimable from data using a fully non-asymptotic Hoeffding argument. The results suggest conditional-coverage variance as a scalable and theoretically motivated empirical measure of conditional validity.",
    "source": "arxiv"

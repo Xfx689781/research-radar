@@ -1,7 +1,55 @@
 {
  "slug": "interpretability",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31640",
+   "title": "Reward Basis Decomposition for Interpreting Preference Heterogeneity",
+   "url": "https://arxiv.org/abs/2611.31640",
+   "authors": [
+    "Mohamed I. Eldagla",
+    "Ifesi Onubogu",
+    "Prerana Rane",
+    "Harsh Sharma",
+    "Rachel Freedman"
+   ],
+   "label": "arXiv:2611.31640v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Reward Basis Decomposition splits per-user reward-model weights into a shared population direction and per-user directions, then analyzes each with concept alignment and sparse autoencoders, validated on a synthetic control and applied to PRISM and Community Alignment.",
+    "plain": "Reward models are the scoring systems that tell an AI which answers people prefer, and they can encode whose values count and how much. This paper proposes a way to split those scores into a part that everyone shares and a part that differs from person to person. The authors first check that the method can find planted individual differences in synthetic data, then run it on two real datasets of multiple human preferences.",
+    "why": "Knowing which preferences are shared and which are individual matters for aligning AI to diverse users. The reported finding is negative: on these two real datasets, the per-user parts added no reliable predictive benefit beyond one shared direction, so the work is best read as a careful null result under its specific setup rather than evidence about human values in general.",
+    "background": "- Reward model: a learned scoring function that ranks AI outputs according to human preference data.\n- Preference heterogeneity: the fact that different people prefer different things.\n- Embedding space: the numerical coordinates a model uses to represent text; a \"direction\" is a line through this space.\n- Concept alignment: checking whether a direction matches human-understandable concepts.\n- Sparse autoencoder: a tool that breaks a model's internal representation into a small set of more interpretable features.\n- Synthetic control: test data with known, planted answers used to check that a method works.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Canonical reward models specify the optimization target for AI policies, so understanding the values they encode is important for ensuring AI alignment. Existing interpretability techniques interpret reward models with a single reward head, which cannot distinguish between the values that a population shares and those that vary among individuals. We introduce Reward Basis Decomposition (RBD), which splits per-user weights into a population term and a per-user term. This yields a shared population direction and individual user directions that are analyzed separately via concept alignment and sparse autoencoder decomposition. We verify that RBD can recover artificially planted per-user directions on a synthetic control, then apply it to two real-world multi-preference datasets, PRISM and Community Alignment. In both, we find no individual-user structure, suggesting that a single direction in the reward embedding space accounts for most preferences. We verify that RBD can recover artificially planted per-user directions on a synthetic control, then apply it to two real-world multi-preference datasets, PRISM and Community Alignment. In both, we find no reliable predictive benefit from the fitted per-user terms beyond the shared population direction under our setup. Code and the synthetic dataset are available at https://github.com/RachelFreedman/RBD.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31795",
+   "title": "Constructive Causal Abstraction and a Case Study in Mechanistic Interpretability",
+   "url": "https://arxiv.org/abs/2611.31795",
+   "authors": [
+    "Yuchen Zhu",
+    "Sergio Hernan Garrido Mejia",
+    "Dominik Janzing"
+   ],
+   "label": "arXiv:2611.31795v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proposes Constructive Causal Abstraction (CCA), which builds a high-level causal model that is consistent with a low-level model by adding a complementary variable that captures state lost when macro interventions are ill-defined, and applies it to auditing versus editing neural networks.",
+    "plain": "Researchers who want to explain how a complicated system works often describe it with a simpler high-level model and check that the two models agree. The authors point out that the usual simple \"high-level action\" often means different things at the detailed level, so the check fails before it starts. They fix this by adding one extra variable that keeps track of the detail being dropped, and they give linear-case conditions and a nonlinear construction method for doing this.",
+    "why": "It offers a more principled way to make simplified explanations of AI models match what the models actually do, and it is applied to a gender-bias case study on the Bias-in-Bios dataset. The text does not establish how widely the approach will generalize beyond the examples it reports, so its broader significance is still open.",
+    "background": "- Causal model: a description of how variables influence one another, where you can \"intervene\" by forcing a variable to a value.\n- Abstraction: a simpler high-level model that should behave like a detailed low-level model under matching interventions.\n- Intervention: deliberately setting a variable (for example, switching off a part of a network) and observing the effect.\n- Mechanistic interpretability: reverse-engineering which internal parts of a neural network perform which computations.\n- Subspace editing vs. auditing: changing a model's internal directions to alter behavior versus inspecting them to detect problems such as bias.\n- Interpretability illusion: a situation where a direction that looks like it carries a signal is not the one the model actually uses to produce its output.\n- ODE (ordinary differential equation): an equation describing how a quantity changes over time, used here in the nonlinear construction.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Existing frameworks in causal abstraction first propose a high-level causal model, and then verify whether its interventional effects agree with those of a given micro-level model - the two models are declared causally consistent when the discrepancy is zero. However, proposing a consistent macro causal model is difficult, because macro causal relations are almost never well-defined, since distinct micro-level interventions associated with the same apparent macro intervention can produce different effects. Our central insight is that causally consistent macro-level models can be obtained constructively: ill-defined macro interventions can be interpreted as missing variables on the macro level, and can be accounted for by introducing a complementary variable q that retains omitted causally relevant state. In the linear case, q has a unique form and we provide sufficient conditions for valid implementations to exist; in the nonlinear case, we provide an ODE-based algorithm for constructing implementations. We call this framework Constructive Causal Abstraction (CCA), and use CCA to formulate the difference between machine-learning model auditing and editing. With the Bias-in-Bios biographies dataset, we demonstrate that CCA allows practitioners to articulate assumptions when detecting the model's gender bias. Finally, CCA resolves a well-known paradox known as \"interpretability illusion\" which points to a mismatch between the subspace for editing and the one where the model implements a signal-to-output pathway.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32685",
    "title": "Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis",
@@ -15,12 +63,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "This paper applies mechanistic interpretability methods to locate \"social bias neurons\" in three instruction-tuned multilingual language models across four languages and seven bias dimensions, comparing two identification methods.",
-    "plain": "AI language models can reflect social stereotypes, and this paper looks for the specific internal units inside these models that carry that bias. The authors tested two ways of finding such units across several languages and kinds of stereotypes. They report that one method, integrated gap gradients, found units whose suppression reduced bias more sharply, and that these units sit mostly in the model's deepest layers.",
-    "why": "Being able to point to the parts of a model that carry bias could support targeted fixes instead of retraining everything. The paper also reports that bias patterns differ between high- and low-resource languages and overlap most for gender, nationality, and social class, though the text gives no evidence on how far these findings generalize beyond the models tested.",
+    "ai": true,
     "background": "- Language models are AI systems trained on large amounts of text to predict and generate language.\n- \"Neurons\" here means individual numerical units inside the network whose activation levels can be measured.\n- Mechanistic interpretability is the effort to understand which internal parts of a model do which jobs.\n- Instruction-tuned models are models further trained to follow user instructions.\n- Multilingual means the model handles many languages; high-resource languages have far more training text than low-resource ones.\n- Activation probability entropy and integrated gap gradients are two scoring methods for ranking how strongly a neuron relates to bias; the text does not describe their details.\n- Suppressing a neuron means switching off or dampening its output to test whether bias drops.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper applies mechanistic interpretability methods to locate \"social bias neurons\" in three instruction-tuned multilingual language models across four languages and seven bias dimensions, comparing two identification methods.",
+    "plain": "AI language models can reflect social stereotypes, and this paper looks for the specific internal units inside these models that carry that bias. The authors tested two ways of finding such units across several languages and kinds of stereotypes. They report that one method, integrated gap gradients, found units whose suppression reduced bias more sharply, and that these units sit mostly in the model's deepest layers.",
+    "why": "Being able to point to the parts of a model that carry bias could support targeted fixes instead of retraining everything. The paper also reports that bias patterns differ between high- and low-resource languages and overlap most for gender, nationality, and social class, though the text gives no evidence on how far these findings generalize beyond the models tested."
    },
    "abstract": "Multilingual models exhibit social bias when processing inputs pertaining to societal stereotypes. We adapt emerging mechanistic interpretability methods to pinpoint and characterize model components that encode this bias. We conduct our analysis across three instruction-tuned models, four languages, and seven bias dimensions. Specifically, we leverage multilingual bias benchmarks in implementing two methods for identifying social bias neurons: activation probability entropy and integrated gap gradients. We find the latter method to be more effective, as the neurons it isolates (which are largely concentrated at the model's deepest layers) lead to sharper decreases in model bias when suppressed. Further analysis reveals neuron distribution patterns differ between high- and low-resourced languages, suggesting that a language's representation in pretraining data influences how its biases are represented within model internals. Our results also indicate that neurons linked to gender, nationality, and social class biases overlap the most with neurons related to other bias dimensions, pointing to the pivotal role these three dimensions play in how models learn and handle bias.",
    "source": "arxiv"
@@ -39,12 +87,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A controlled study of how Transformers learn, identify, and switch between linear recurrence rules over finite cyclic groups, probed with linear probes and input patching.",
-    "plain": "This paper asks how Transformer neural networks, the kind behind many language AI systems, handle rules that repeat in a sequence. The authors built a set of simple, controlled puzzles where each output depends on earlier items through a fixed arithmetic rule. They then tested which rule-handling tasks the models could learn and what internal representations they used.",
-    "why": "Language often follows recurring structures, so understanding how a model represents and switches between rules may help explain its behavior, though the text does not show how far these toy results carry over to real language. The work uses standard interpretability tools, which makes its findings checkable in principle.",
+    "ai": true,
     "background": "- Transformer: the neural network architecture used in most modern language models.\n- Linear recurrence: a sequence where each new value is a fixed combination of earlier values, like a rule applied step by step.\n- Finite cyclic group: a set of numbers that wraps around (like clock arithmetic), used here as a clean testbed.\n- Latent rule: a rule that is not stated explicitly and must be inferred from context.\n- Input masking: hiding some of the input during training or testing.\n- Mechanistic interpretability: reverse-engineering what a network computes internally.\n- Linear probing: training a simple classifier on internal activations to test what information they contain.\n- Input patching: swapping internal activations between runs to see which parts causally affect the output.\n- Curriculum training: teaching the model easier examples or tasks first, then harder ones.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A controlled study of how Transformers learn, identify, and switch between linear recurrence rules over finite cyclic groups, probed with linear probes and input patching.",
+    "plain": "This paper asks how Transformer neural networks, the kind behind many language AI systems, handle rules that repeat in a sequence. The authors built a set of simple, controlled puzzles where each output depends on earlier items through a fixed arithmetic rule. They then tested which rule-handling tasks the models could learn and what internal representations they used.",
+    "why": "Language often follows recurring structures, so understanding how a model represents and switches between rules may help explain its behavior, though the text does not show how far these toy results carry over to real language. The work uses standard interpretability tools, which makes its findings checkable in principle."
    },
    "abstract": "Transformers are widely used in various language tasks, with limited understanding of their internal mechanisms. Motivated by the recurrent structure of many linguistic rules, we study the capability and interpretability of Transformers through a controlled family of linear recurrence tasks over finite cyclic groups. These tasks range from executing a single fixed rule to identifying a latent rule from context and switching between explicitly specified rules, with and without input masking. Through extensive experiments across different configurations, we find that switching specified rules is simpler than identifying latent rules for Transformers in general. We also identify how several key factors affect the generalization capability of Transformers, including the depth, width, and the algebraic structure of the linear recurrence. Curriculum training is extremely useful when the number of rules is large. With standard tools in mechanistic interpretability like linear probing and input patching, our study reveals how Transformers represent, identify, and execute multiple rules.",
    "source": "arxiv"

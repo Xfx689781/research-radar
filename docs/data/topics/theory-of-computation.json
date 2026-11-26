@@ -1,7 +1,51 @@
 {
  "slug": "theory-of-computation",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32524",
+   "title": "A Tight Superlinear Lower Bound on the Sketching Dimension of Weighted Spectral Sparsification",
+   "url": "https://arxiv.org/abs/2611.32524",
+   "authors": [
+    "Yanyu Chen",
+    "Yu Chen",
+    "Mingji Yang"
+   ],
+   "label": "arXiv:2611.32524v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves that any linear sketch giving a (1±O(1))-spectral sparsifier of weighted n-vertex graphs needs dimension Ω(n^{6/5}), matching the known Õ(n^{6/5}) upper bound up to polylog factors and removing the earlier restriction to incidence sketches.",
+    "plain": "The paper studies how much compressed information is needed to summarize a network (a graph of nodes and weighted links) so that its overall connection structure can still be approximated. The authors show that for weighted graphs, any such compressed summary of a certain kind must be at least roughly n^{6/5} numbers in size, where n is the number of nodes. This matches an existing upper bound up to small logarithmic factors.",
+    "why": "The result closes a gap left by earlier work, which had only proven a weaker lower bound for a restricted class of sketches. It also sharpens a contrast: the same setting admits near-linear compression for cut sparsification, so the difference between cut and spectral approximation is now shown to be sharp. The text does not say what wider applications this may have.",
+    "background": "- Graph: nodes joined by weighted edges.\n- Sparsifier: a smaller weighted graph that approximates the original; a cut sparsifier preserves the total weight across every split of nodes, while a spectral sparsifier preserves a stronger set of quadratic measurements tied to the graph's Laplacian matrix.\n- Linear sketch: a compressed summary computed by taking fixed linear combinations (measurements) of the graph's edge weights; its dimension is the number of measurements.\n- Lower bound vs. upper bound: a lower bound shows no method can do better; an upper bound is a construction that achieves a given size.\n- Leverage score: a measure of how much a single column of a matrix contributes that cannot be replaced by the others.\n- Big-O/Omega/polylog notation: n^{6/5} describes growth in n; polylog factors are powers of log n that are ignored.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We show that any linear sketch that computes a $\\bigl(1 \\pm O(1)\\bigr)$-spectral sparsifier of $n$-vertex weighted graphs with polynomially bounded weights must have dimension $\\Omega\\bigl(n^{6/5}\\bigr)$. Previously, Chen, Khanna, and Li (FOCS 2022) gave a sketching dimension upper bound of $\\widetilde{O}\\bigl(n^{6/5}\\bigr)$ and a lower bound of $\\Omega\\bigl(n^{21/20 - o(1)}\\bigr)$ for incidence sketches, in which each measurement examines edges incident on a single vertex. Our lower bound removes this restriction and matches the upper bound up to polylogarithmic factors. Together with their $\\widetilde{O}(n)$ upper bound for weighted cut sparsification, our result also gives a sharp separation between cut and spectral sparsification. In our hard distributions, we randomly permute vertices into blocks on a cycle and construct a complete graph whose edge weights decrease with cyclic block distance. We reduce the problem to showing that the sketch column of an edge between opposite blocks has a small leverage score relative to other columns scaled by the edge weights. For incidence sketches, we obtain this bound from a routing decomposition on the block cycle that uses few columns between distant blocks. We then add a separate clique to reduce arbitrary sketches to incidence sketches with expected dimension linear in the original dimension.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32048",
+   "title": "Minimizing Total Busy Time with Bounded Parallelism: A $3/2$-Approximation for Parallelism Two and a Forest Characterization for General Parallelism",
+   "url": "https://arxiv.org/abs/2611.32048",
+   "authors": [
+    "Chi-Yeh Chen"
+   ],
+   "label": "arXiv:2611.32048v1",
+   "primary_category": "cs.DS",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper gives a combinatorial 3/2-approximation for minimum total busy time with parallelism g=2 (improving the previous ratio of 2), extends it to temporal bin packing with large items, and characterizes optimal schedules for general g via maximum-weight \"g-caterpillar forests.\"",
+    "plain": "The problem asks how to assign jobs, each occupying a fixed time window, to machines that can run at most g jobs at once, so that the total time the machines are switched on is as small as possible. The authors give a method that, when g=2, is guaranteed to come within a factor of 1.5 of the best possible schedule, where the best previously known guarantee for general instances was 2. For general g they show that optimal schedules have a precise structure that yields an exact integer program and a polynomial-size relaxation for each fixed g.",
+    "why": "Scheduling with bounded parallelism is an NP-hard problem, so guaranteed approximation ratios are the main way to get provably good schedules, and this paper tightens the ratio for g=2 from 2 to 3/2. The random-instance experiments (average ratio about 1.07 to 1.075 against optimal or tight lower bounds) are reported in the text, but their broader significance for practical scheduling is not established here.",
+    "background": "- Approximation algorithm: a polynomial-time method guaranteed to produce a solution within a known factor of the optimum.\n- NP-hard: a class of problems believed not to admit fast exact algorithms in general.\n- Busy time: total time machines are running at least one job; jobs sharing a machine save time.\n- Parallelism g: maximum number of jobs a machine can run simultaneously.\n- Linear relaxation / integrality gap: replacing whole-number choices with fractional ones to get a lower bound, and the worst-case ratio between that bound and the true optimum.\n- Local-ratio technique: an analysis method that reduces weights step by step to bound solution quality.\n- Temporal bin packing: packing items with time intervals into bins of fixed capacity, a close relative of the scheduling problem.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the minimum total busy time problem: jobs with fixed processing intervals must be assigned to identical machines, each of which can process at most g jobs at a time, so that the total time during which the machines are busy is minimized. The problem is NP-hard already for g=2, and, to the best of our knowledge, no approximation ratio below 2 was known for general instances with g=2, where the ratio 2 is attained by giving every job its own machine. We present a combinatorial 3/2-approximation algorithm for g=2. The algorithm applies the two-phase local-ratio technique to the known pair formulation of the problem, processing the overlapping job pairs in order of the right ends of their overlaps. The cost of its schedule is at most $L-\\lambda/2$, where L is the total processing time and $\\lambda$ is the optimal value of the linear relaxation of the pair formulation; hence the integrality gaps of this relaxation and of the configuration LP are at most 3/2. The result extends to temporal bin packing with items larger than one third of the bin capacity. For general g, we show that optimal schedules correspond exactly to maximum-weight forests of a special kind, which we call g-caterpillar forests; this yields an exact integer program and a linear relaxation of polynomial size for every fixed g. We also observe that securing a (1-1/g) fraction of the optimal savings suffices for a (2-1/g)-approximation. On random instances with g=2, evaluated with exact optima or tight lower bounds obtained from the pair formulation, the average ratio of the algorithm to the optimum is at most 1.075 for 100 jobs and at most 1.070 for 200 jobs.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32565",
    "title": "Improved Lower Bounds for Online Parallel Machine Scheduling",
@@ -14,12 +58,12 @@
    "primary_category": "cs.DS",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves improved lower bounds on the competitive ratio of online algorithms for makespan minimization on parallel identical machines, using a bin-packing-based estimate of the optimum and a direct construction for five machines.",
-    "plain": "This paper studies a scheduling problem: jobs arrive one at a time and must be assigned to one of several identical machines without knowing what jobs come later, with the goal of finishing all work as early as possible. The authors show that no method for doing this can do better than a certain worst-case factor, 1.887111 times the best possible finish time in general. For the special case of five machines, they give a separate, smaller bound of 1.74916.",
-    "why": "Lower bounds say how well any online method could ever perform, so raising them narrows the gap between what is known to be achievable and what is known to be impossible. The text says the new bounds beat results that are about two decades old, but it does not compare them to the best upper bounds, so the size of the remaining gap is not stated here.",
+    "ai": true,
     "background": "- Makespan: the finish time of the last job; the goal is to minimize it.\n- Parallel identical machines: several machines that run jobs at the same speed.\n- Online algorithm: it must decide on each job immediately, without seeing future jobs.\n- Competitive ratio: the worst-case ratio between an online method's makespan and the best offline (all-knowing) makespan.\n- Lower bound: a proof that no algorithm can achieve a ratio below a given value.\n- Bin packing: packing items into fixed-size bins with as few bins as possible; used here to estimate the optimal makespan.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves improved lower bounds on the competitive ratio of online algorithms for makespan minimization on parallel identical machines, using a bin-packing-based estimate of the optimum and a direct construction for five machines.",
+    "plain": "This paper studies a scheduling problem: jobs arrive one at a time and must be assigned to one of several identical machines without knowing what jobs come later, with the goal of finishing all work as early as possible. The authors show that no method for doing this can do better than a certain worst-case factor, 1.887111 times the best possible finish time in general. For the special case of five machines, they give a separate, smaller bound of 1.74916.",
+    "why": "Lower bounds say how well any online method could ever perform, so raising them narrows the gap between what is known to be achievable and what is known to be impossible. The text says the new bounds beat results that are about two decades old, but it does not compare them to the best upper bounds, so the size of the remaining gap is not stated here."
    },
    "abstract": "This paper establishes new lower bounds for online parallel machine scheduling aimed at minimizing the makespan. By leveraging bin packing algorithms to estimate the optimal makespan, we prove that the competitive ratio of any online algorithm is at least 1.887111. Additionally, via a direct construction, we demonstrate a lower bound of 1.74916 for the case of five machines. Our results improve upon the best known lower bounds established two decades ago.",
    "source": "arxiv"
@@ -36,12 +80,12 @@
    "primary_category": "cs.DS",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "This paper gives a single-phase primal-dual algorithm for the 2-edge-connected spanning subgraph problem with approximation ratio sqrt(3)+1 (about 2.74), improving on the previous best primal-dual ratio of 3, measured against the natural linear relaxation.",
-    "plain": "The paper studies how to build the cheapest network in which every link can fail without cutting off any city from the rest, where links have costs. The authors give a method that finds such a network whose cost is guaranteed to be within about 2.74 times the best possible, improving the previous guarantee of 3 for this style of method. The method works by gradually raising \"prices\" on groups of nodes and buying links once their prices become fully paid, then discarding unneeded links.",
-    "why": "Approximation ratios for a classic network design problem are a measure of how close a fast algorithm can get to the true optimum, and this paper narrows the gap for one specific technique. The text does not say how it compares to the other known 2-approximation methods, so its wider practical or theoretical reach is unclear.",
+    "ai": true,
     "background": "- Graph: nodes joined by edges (links); a multigraph allows parallel edges.\n- 2-edge-connected: removing any single edge leaves the graph connected.\n- Approximation ratio: worst-case factor by which an algorithm's cost can exceed the optimal cost.\n- Linear relaxation: a continuous version of the problem, used as a lower bound on the optimum.\n- Primal-dual method: an algorithm design approach that grows dual \"prices\" on sets of nodes and buys edges when their dual constraints become tight.\n- Cut: a split of the nodes into two sides; every cut must be crossed by enough chosen edges.\n- Contraction: merging a group of nodes into one node to simplify the graph.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper gives a single-phase primal-dual algorithm for the 2-edge-connected spanning subgraph problem with approximation ratio sqrt(3)+1 (about 2.74), improving on the previous best primal-dual ratio of 3, measured against the natural linear relaxation.",
+    "plain": "The paper studies how to build the cheapest network in which every link can fail without cutting off any city from the rest, where links have costs. The authors give a method that finds such a network whose cost is guaranteed to be within about 2.74 times the best possible, improving the previous guarantee of 3 for this style of method. The method works by gradually raising \"prices\" on groups of nodes and buying links once their prices become fully paid, then discarding unneeded links.",
+    "why": "Approximation ratios for a classic network design problem are a measure of how close a fast algorithm can get to the true optimum, and this paper narrows the gap for one specific technique. The text does not say how it compares to the other known 2-approximation methods, so its wider practical or theoretical reach is unclear."
    },
    "abstract": "In the $2$-edge-connected spanning subgraph problem (2ECSS), we are given an undirected multigraph whose edges have nonnegative costs, and the goal is to find a $2$-edge-connected spanning subgraph with minimum total cost. Two distinct approaches yield $2$-approximation algorithms: a reduction to the minimum-cost rooted $2$-arborescence problem and iterative rounding. Despite significant efforts, the best known approximation ratio using the primal-dual method has remained at $3$. Our main result in this work is a primal-dual algorithm for 2ECSS that achieves an approximation ratio of $\\sqrt{3}+1 (\\leq 2.74)$. The algorithm runs in a single phase and the approximation guarantee is relative to the natural linear relaxation, which requires the sum of the edge variables across every cut to be at least $2$. The algorithm follows the standard template of growing dual variables corresponding to minimal violated sets, albeit at non-uniform rates, until the dual constraint for an edge becomes tight, at which point the edge is temporarily purchased. Once feasibility is attained, redundant edges are dropped in the reverse order in which they were purchased. Our choice of dual growth rates is inspired by the single-phase $3$-approximation algorithm of Beyer, Chimani, and Spoerhase (COCOON 2020). As in their work, our algorithm maintains a forest of purchased edges by repeatedly contracting $2$-edge-connected subgraphs, and dual variables corresponding to leaves and isolated vertices of this forest are grown at a rate of $1$. Our main modification is to additionally grow dual variables corresponding to nontrivial connected components at rate $(\\sqrt{3}-1)/2 \\approx 0.37$, when the forest is disconnected.",
    "source": "arxiv"

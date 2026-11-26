@@ -1,7 +1,52 @@
 {
  "slug": "differential-geometry",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31936",
+   "title": "A Spectral Zoo of Genus-Zero Free Boundary Minimal Surfaces with Many Boundary Components",
+   "url": "https://arxiv.org/abs/2611.31936",
+   "authors": [
+    "Haoyu Chen",
+    "Braxton Osting"
+   ],
+   "label": "arXiv:2611.31936v1",
+   "primary_category": "math.SP",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A numerical and asymptotic study of critical points of the length-normalized first Steklov eigenvalue on genus-zero surfaces with many boundary components, linking them to free boundary minimal surfaces and free curve limits.",
+    "plain": "The paper looks at special curved surfaces that sit inside a ball and meet its edge at right angles, and at the \"best\" versions of them measured by a number tied to how a drum vibrates at its lowest mode. The authors computed 268 such surfaces numerically, with up to 2252 boundary holes, and checked their symmetries and stability. They also describe how families of these surfaces appear to approach simpler limit shapes made of flat disks and catenoid-like tubes, and give an estimate of the limiting value for large numbers of holes.",
+    "why": "It gives a large, numerically certified catalogue of candidate extremal surfaces and connects them to explicit limit shapes, which may help map out the landscape of free boundary minimal surfaces. How far the numerical picture holds in general is not settled by the text: the large-b asymptotic is described as a formal evaluation, and the families are said to \"appear\" to converge.",
+    "background": "- Minimal surface: a surface with zero mean curvature, locally shaped like a soap film.\n- Free boundary minimal surface: a minimal surface inside a ball whose edge lies on the sphere and meets it at right angles.\n- Steklov eigenvalue: a vibration-type number attached to a surface's boundary, measuring how a harmonic function's energy leaks out through the edge; the first one is the lowest nontrivial such value.\n- Length normalization: rescaling by the boundary length so the number does not depend on the size of the surface.\n- Critical point: a shape where small changes do not change the value to first order; the Morse index counts the directions in which it can be decreased.\n- Uniformization: mapping a surface conformally onto a standard shape, here a sphere with round caps removed.\n- Catenoid: the tube-like minimal surface formed by a soap film between two rings.\n- Logarithmic energy: a standard quantity from potential theory measuring how points repel each other through a logarithm of distance.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study critical points of the length-normalized first Steklov eigenvalue $\\bar\\sigma_1$ on genus-zero surfaces with $b$ boundary components. By a theorem of Fraser and Schoen, their first eigenfunctions give free boundary minimal surfaces in the unit ball. After uniformization, the domain is the round sphere minus $b$ round caps, with a weight on the boundary circles. A layer potential formulation gives the eigenvalues, their derivatives and a certificate for each critical point, and an exact multipole system for the caps. We compute a spectral zoo of 268 numerically certified critical points with up to $b=2252$ boundary components, including the $27$ embedded examples listed by Schulz. With their symmetry groups and Morse indices, the critical points satisfy a signed count for $3\\le b\\le10$. Most belong to families built from rings of boundary components. As the rings fill in, these appear to converge to the free curve minimal surfaces of Karpukhin and Noutchegueme, unions of flat disks and catenoidal annuli that meet along circles on the sphere. We construct these limits, among them the critical drum and the cake stand, a flat disk with a catenoidal horn. The families approach their limits like $j^{-1}$ for rings of $j$ caps, and the equatorial family approaches $4\\pi$ with deficit $4\\pi b^{-1}e^{-b}$. For large $b$, the leading terms of the multipole system reduce to the logarithmic energy of the cap centers and a formal evaluation gives $\\bar\\sigma_1^\\star(b)=8\\pi-16\\pi\\,b^{-1}\\log b+O(b^{-1})$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31447",
+   "title": "Sub-Riemannian Distances on Lie Groups: Tangent Asymptotics and Hermitian Matrix Formulas",
+   "url": "https://arxiv.org/abs/2611.31447",
+   "authors": [
+    "Wolfram Bauer",
+    "Zhicheng Han",
+    "Zhipeng Yang"
+   ],
+   "label": "arXiv:2611.31447v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper gives small-scale asymptotics of Carnot–Carathéodory (sub-Riemannian) distance on two-step Lie groups, comparing it to the nilpotent tangent group, with precise error orders and a Hermitian-matrix formula for block subgroups of SU(N).",
+    "plain": "The paper studies shortest paths in a curved space where only certain directions of motion are allowed, such as steering a vehicle that can only move forward and turn. It asks how the length of these shortest routes behaves when the points are very close to the starting point. The authors show that, for small distances, the squared distance matches a simpler model space up to a known error, and they give explicit formulas for a special family of groups.",
+    "why": "Sub-Riemannian distances appear in control theory, robotics and the geometry of quantum systems, so precise small-scale approximations can be useful there. The text does not say how the results will be applied elsewhere, so any wider connection is uncertain.",
+    "background": "- Lie group: a smooth space with a compatible group multiplication, such as rotations of a body.\n- Sub-Riemannian (Carnot–Carathéodory) distance: shortest path length when only some directions of motion are permitted.\n- Two-step: the allowed directions generate the full space after one level of brackets (commutators).\n- Nilpotent tangent group: a simpler model group that approximates the space near a point.\n- Asymptotic expansion: writing a quantity as a main term plus an error term that shrinks at a stated rate as the scale r goes to 0.\n- Cut point and abnormal endpoint: places where shortest paths stop being unique or fail to follow the usual rules.\n- Hermitian matrix and trace norm: square complex matrices equal to their conjugate transpose, and a standard size measure for them.\n- Trigonometric polynomial: a finite sum of sine and cosine terms, here describing a minimizing closed loop.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $d_{\\mathrm{SR}}$ be the Carnot--Carath\\'{e}odory distance associated with a two-step Lie pair and let $d_0$ be the distance on its nilpotent tangent group. For compact Lie pairs we prove, locally uniformly in $(X,Z)$, \\[ d_{\\mathrm{SR}}\\!\\left(e,\\exp(rX+r^2Z)\\right)^2 =r^2d_0(e,(X,Z))^2+O(r^3). \\] For symmetric pairs, the remainder improves to $O(r^4)$. This order is sharp in general, and the estimate remains uniform at cut points, abnormal endpoints, and points where the tangent endpoint map changes rank. If the tangent minimizer is unique, the endpoint differential is onto, and the constrained Hessian is coercive, we determine the coefficient of $r^4$ with remainder $O(r^6)$. For block subgroups of $\\mathrm{SU}(N)$, we express the vertical squared distance on the tangent group as the attained minimum of a finite-dimensional functional on Hermitian matrices subject to linear constraints on their partial traces. Every minimizer gives a minimizing loop represented by a trigonometric polynomial. For one $m$-dimensional block and $q$ scalar blocks, the coefficient has weights $\\lceil j/q\\rceil$ and reduces to a trace norm formula when $q\\ge\\lfloor m/2\\rfloor$.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32252",
    "title": "Rotationally symmetric fractional minimal surfaces",
@@ -15,12 +60,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper constructs a rotationally symmetric s-minimal surface, built from alternating radial sets bounded by concentric spheres, in which the fractional mean curvature H_s vanishes at every free interface, and shows that a rescaled limit gives a properly embedded locally finite hypersurface with H_s = 0 on its boundary.",
-    "plain": "The paper studies a generalized version of a soap-film-like surface, where the usual curvature rule is replaced by a \"fractional\" rule that depends on the whole shape rather than only on nearby points. The authors build an example of such a surface that has rotational symmetry, made of alternating shells bounded by concentric spheres. They then rescale these shapes and take a limit, obtaining a rotationally symmetric surface that satisfies the fractional rule at every point of its boundary.",
-    "why": "Explicit non-trivial examples are rare for fractional minimal surfaces, so a concrete rotationally symmetric case gives the theory something to test against. The text does not say what wider applications it may have, so its broader significance is uncertain.",
+    "ai": true,
     "background": "- Minimal surface: a surface whose mean curvature is zero, like a soap film spanning a wire frame.\n- Mean curvature: a local measure of how a surface bends on average.\n- Fractional (s-) version: replaces the local curvature with a nonlocal quantity, weighted by a parameter s between 0 and 1, so distant parts of the surface influence each point.\n- Radial set / concentric spheres: regions whose boundaries are nested spheres centered at one point, which makes the problem reduce to one radial variable.\n- Rotational symmetry: the shape looks the same when turned around an axis or center.\n- Locally finite hypersurface: a surface that, in every bounded region, is made of finitely many pieces.\n- Rescaling and limit: shrinking or enlarging a configuration so its innermost radius becomes fixed, then studying what shape the sequence approaches.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper constructs a rotationally symmetric s-minimal surface, built from alternating radial sets bounded by concentric spheres, in which the fractional mean curvature H_s vanishes at every free interface, and shows that a rescaled limit gives a properly embedded locally finite hypersurface with H_s = 0 on its boundary.",
+    "plain": "The paper studies a generalized version of a soap-film-like surface, where the usual curvature rule is replaced by a \"fractional\" rule that depends on the whole shape rather than only on nearby points. The authors build an example of such a surface that has rotational symmetry, made of alternating shells bounded by concentric spheres. They then rescale these shapes and take a limit, obtaining a rotationally symmetric surface that satisfies the fractional rule at every point of its boundary.",
+    "why": "Explicit non-trivial examples are rare for fractional minimal surfaces, so a concrete rotationally symmetric case gives the theory something to test against. The text does not say what wider applications it may have, so its broader significance is uncertain."
    },
    "abstract": "In this paper, we provide a non-trivial example of an $s$-minimal surface that is invariant under rotations. More precisely, we study alternating radial sets whose boundaries are finite or locally finite unions of concentric spheres and prove that, fixing the outer radius to $r=1$, there exists a radial configuration for which the fractional mean curvature $H_s$ vanishes at every free interface. We then show that rescaling radial maximizers by their innermost radius and passing to the limit yields a properly embedded, rotationally symmetric, locally finite hypersurface satisfying $H_s=0$ at every point of the boundary.",
    "source": "arxiv"
@@ -37,12 +82,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives an intrinsic criterion, for a suitable grading, for when the Pansu differential of a Lipschitz map from a nilpotent Lie group with bracket-generating distribution is a group homomorphism, and shows the threshold on target step is sharp.",
-    "plain": "The paper studies how \"smooth-like\" maps behave between curved, non-Euclidean spaces built from groups of motions. For a class of such spaces, the best local linear approximation of a map may fail to respect the group structure. The authors identify a condition, phrased using only the space itself, that decides when it does, and show with an example that a size threshold in that condition cannot be loosened.",
-    "why": "Pansu differentiation is a central tool for understanding maps between sub-Riemannian and metric spaces, so a clean test for when the approximation is a true homomorphism is useful to specialists. The text does not claim wider applications, and I am not certain how far the criterion extends beyond the setting described.",
+    "ai": true,
     "background": "- Lie group: a continuous group of transformations, such as rotations and translations, with smooth structure.\n- Nilpotent group: a group whose repeated commutators eventually vanish, making it \"almost abelian\" in layers.\n- Carnot group: a nilpotent group with a graded structure, the model spaces for Pansu's theorem.\n- Bracket-generating distribution: a family of allowed directions of motion whose commutators span the whole tangent space, so any two points can be connected by paths along those directions.\n- Pansu differential: a limiting linear-like approximation of a Lipschitz map (a map with bounded stretching) at almost every point, which is a group homomorphism when the target is Carnot.\n- Grading and step: a decomposition of the Lie algebra into layers; the step is the number of layers needed.\n- Homomorphism: a map that preserves the group operation.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives an intrinsic criterion, for a suitable grading, for when the Pansu differential of a Lipschitz map from a nilpotent Lie group with bracket-generating distribution is a group homomorphism, and shows the threshold on target step is sharp.",
+    "plain": "The paper studies how \"smooth-like\" maps behave between curved, non-Euclidean spaces built from groups of motions. For a class of such spaces, the best local linear approximation of a map may fail to respect the group structure. The authors identify a condition, phrased using only the space itself, that decides when it does, and show with an example that a size threshold in that condition cannot be loosened.",
+    "why": "Pansu differentiation is a central tool for understanding maps between sub-Riemannian and metric spaces, so a clean test for when the approximation is a true homomorphism is useful to specialists. The text does not claim wider applications, and I am not certain how far the criterion extends beyond the setting described."
    },
    "abstract": "By Pansu's theorem, Lipschitz maps between Carnot groups are differentiable almost everywhere, and their differentials are group homomorphisms. When the domain is instead a nilpotent Lie group with a bracket-generating left-invariant distribution, the Pansu differential is a homomorphism of an osculating Carnot group, which depends on an auxiliary choice of grading, and it need not be a homomorphism of the original group. We give an intrinsic criterion for when it is one, for a suitable choice of grading: the differential must vanish on an ideal that depends only on the group and its distribution, and comes from a universal quotient onto a Carnot group. The criterion holds automatically when the step of the target is small enough, and an explicit example shows that this threshold is sharp. Along the way, we determine exactly how the obstruction depends on the choice of grading.",
    "source": "arxiv"

@@ -1,7 +1,66 @@
 {
  "slug": "soft-matter",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.33091",
+   "title": "A model colloidal gel former for the measurement of inter-particle forces",
+   "url": "https://arxiv.org/abs/2611.33091",
+   "authors": [
+    "Rui Cheng",
+    "Kristian Thijssen",
+    "Abraham Mauleon Amieva",
+    "Tanniemola B. Liverpool",
+    "Malcolm A. Faers",
+    "Robert L. Jack",
+    "C. Patrick Royall"
+   ],
+   "label": "arXiv:2611.33091v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper extends an emulsion-droplet model system so that droplet contacts and compressive forces can be measured in depletion gels by 3D confocal imaging, and compares these measured stresses with computer simulations of the same system.",
+    "plain": "Researchers built a model of a \"gel\" made from tiny oil droplets suspended in liquid, a stand-in for materials such as paints, foods, or creams. Because the droplets can be seen in 3D and their pushing forces on each other can be estimated, the team could study how the gel's structure relates to the stress inside it. They matched the experiment carefully to a computer simulation and report that tightly locked, low-energy droplet clusters tend to sit in regions of higher stress.",
+    "why": "Knowing how forces are carried through a soft gel network helps explain why such materials hold their shape or fail, which matters for many industrial products. The text reports only a single qualitative finding, and its link to real-world materials is not stated, so the broader significance is uncertain.",
+    "background": "- Colloids: microscopic particles (here oil droplets) suspended in a liquid, big enough to see under a microscope but small enough to jiggle from thermal motion.\n- Emulsion: a mixture of two liquids that do not mix, such as oil droplets in water.\n- Depletion gel: droplets that stick together because smaller particles dissolved in the liquid push them into contact, forming a loose, space-spanning network.\n- Density mismatch: the droplets should have about the same density as the liquid, so they do not sink or float.\n- Refractive index contrast: matching how light bends in droplets and liquid lets the microscope see through the sample in 3D.\n- Confocal microscopy: an imaging method that builds sharp 3D pictures by scanning a laser through a sample.\n- Stress tensor: a mathematical description of how forces push and pull inside a material in different directions.\n- Minimum energy clusters: small groups of particles arranged in the most stable, lowest-energy shape.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Tracking of particle coordinates in colloidal model systems is an established technique. Recently, an emulsion system has been introduced where not only the coordinates, but also contacts and compressive forces between the droplets can be determined [Dong <em>et al. J. Chem. Phys.</em> <strong>156</strong> 214907 (2022). Here we develop this system to control both the density mismatch and refractive index contrast between the emulsion droplets and the solvent. The former is important in minimizing sedimentation due to gravity and the latter is necessary for 3d imaging with confocal microscopy. By mapping our system carefully to computer simulation, we quantify interdroplet forces and packing geometries in depletion gels and probe the relationship between local structure and compressive stress. The simulations also provide ensemble measurements of the attractive part of the force between droplets and related quantities such as the stress tensor. Finally, we implement an improved measure of local stress in our experiments, which can be directly compared with the corresponding quantity in simulations. We find that locally rigid minimum energy clusters are associated with regions of higher stress in the gel network.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32349",
+   "title": "X-ray induced structural and dynamical changes in supramolecular polymer networks",
+   "url": "https://arxiv.org/abs/2611.32349",
+   "authors": [
+    "Niels C. Gie{\\ss}elmann",
+    "Yasothaa Thavayogarajah",
+    "Tobias Eklund",
+    "Louisa E. Kraft",
+    "Isabell Zick",
+    "Yizhi Liu",
+    "Fiona Berner",
+    "Felix Lehmk\\\"uhler",
+    "Fabian Westermeier",
+    "Mostafa Ahmadi",
+    "Sebastian Seiffert",
+    "Katrin Amann-Winkel"
+   ],
+   "label": "arXiv:2611.32349v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "X-ray exposure at varying dose rates is shown to restructure a metallo-supramolecular tetra-PEG network across length scales and slow its dynamics, probed by WAXS, SAXS and XPCS.",
+    "plain": "X-ray beams used to study soft materials can themselves change the material they are meant to observe. This paper examines a self-healing gel-like polymer network, made of branched polymer arms held together by temporary metal-based links, and tracks how X-ray exposure at different intensities reorganises its chains. The authors report that the chains rearrange at several scales, water is pushed out, and the motion inside the network first speeds up and then slows during the change.",
+    "why": "Beam damage is a practical concern for anyone using X-ray scattering to study soft matter, so the findings help define when measurements reflect the unperturbed sample. The text does not establish how general these effects are beyond this network, so broader implications remain unclear.",
+    "background": "- Soft matter: materials such as gels, polymers and networks that deform easily under small forces.\n- Tetra-PEG network: a polymer built from four-armed poly(ethylene glycol) chains linked into a 3D mesh.\n- Metallo-supramolecular links: temporary bonds between polymer arms formed via metal ions; they break and reform, enabling self-healing.\n- X-ray scattering (WAXS/SAXS): measures how X-rays bounce off a sample to reveal arrangement of atoms (wide angle) or larger structures (small angle).\n- X-ray photon correlation spectroscopy (XPCS): tracks tiny speckle fluctuations over time to measure slow internal motion.\n- Dose rate: how much X-ray energy the sample absorbs per unit time; ionizing radiation can break chemical bonds and drive rearrangements.\n- Pre-crystallization: early stage where molecules begin ordering before forming crystals.\n- Two-time correlation: a comparison of the sample's state at pairs of times, used to reveal how motion changes over time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Beam-induced effects are key considerations in X-ray scattering studies of soft matter. Because these experiments typically aim to probe the unperturbed system, the structural and dynamic changes induced by the beam often remain underexplored. In the study at hand, the influence of X-rays on metallo-supramolecular tetra-arm poly(ethylene glycol) (tetra-PEG) networks is studied in dependence of the dose rate. Based on their transient interlinkage, such materials have the ability to reconnect and self-heal mechanical damage. Here, wide- and small-angle X-ray Scattering were employed to understand the effect of X-rays on the micro- and mesoscale structure of such polymer networks. Dynamical effects were probed using X-ray photon correlation spectroscopy. A restructuring of the polymer chains in the network is observed over several length scales, indicating a pre-crystallization step induced by the ionizing radiation, accompanied by expulsion of water from the network. In conjunction, a complex dynamical behavior is observed, consisting of an initial fast process, followed by an overall slow-down during the restructuring process. The two-time correlation functions exhibit an oscillatory behavior related to the development of multiple dynamic populations in the polymer network.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32867",
    "title": "Long-Range Hydrodynamic Communication in Active Matter",
@@ -14,12 +73,12 @@
    "primary_category": "cond-mat.soft",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A symmetric passive rotor inside a circular domain is driven into steady one-way rotation by the collective hydrodynamic flow of a boundary-confined flock of Marangoni swimmers, with no physical contact, and the authors attribute the stabilization to suppression of reverse-torque events and a minimal flow-superposition model.",
-    "plain": "Tiny self-propelled swimmers that move along a liquid surface by a chemical-driven surface-tension effect (the Marangoni effect) can set a free-floating, symmetric wheel spinning in one direction without touching it. The authors report that single swimmers give occasional backward kicks, but larger groups create a steady circulating flow that keeps the wheel turning consistently. Velocimetry measurements of the fluid flow show that this push carries over long distances.",
-    "why": "It shows that directed mechanical motion can arise from collective fluid flow alone, without the built-in shapes (ratchets or gears) normally used to rectify random motion, which may matter for remote actuation in active matter. The text is a brief abstract only, so the strength of the evidence, the experimental details, and how general the effect is cannot be judged from it.",
+    "ai": true,
     "background": "- Active matter: systems whose units consume energy to move on their own, such as swimmers or self-propelled particles.\n- Marangoni effect: fluid flow driven by gradients of surface tension, often produced by a chemical released at a liquid surface.\n- Passive rotor: an object that does not propel itself but can be turned by fluid around it.\n- Ratchet: a asymmetric structure that turns random jiggling into net one-way motion; this paper claims to avoid needing one.\n- Hydrodynamic coupling: the way one moving body pushes the surrounding fluid, which then moves other bodies.\n- Particle image velocimetry (PIV): an imaging method that tracks tracer particles to map fluid velocity.\n- Torque: a twisting force; reverse torque means a momentary push in the opposite rotational direction.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A symmetric passive rotor inside a circular domain is driven into steady one-way rotation by the collective hydrodynamic flow of a boundary-confined flock of Marangoni swimmers, with no physical contact, and the authors attribute the stabilization to suppression of reverse-torque events and a minimal flow-superposition model.",
+    "plain": "Tiny self-propelled swimmers that move along a liquid surface by a chemical-driven surface-tension effect (the Marangoni effect) can set a free-floating, symmetric wheel spinning in one direction without touching it. The authors report that single swimmers give occasional backward kicks, but larger groups create a steady circulating flow that keeps the wheel turning consistently. Velocimetry measurements of the fluid flow show that this push carries over long distances.",
+    "why": "It shows that directed mechanical motion can arise from collective fluid flow alone, without the built-in shapes (ratchets or gears) normally used to rectify random motion, which may matter for remote actuation in active matter. The text is a brief abstract only, so the strength of the evidence, the experimental details, and how general the effect is cannot be judged from it."
    },
    "abstract": "Directed transport in active matter is typically achieved by introducing geometric asymmetry, such as ratchets or gears, that rectify the stochastic motion of active particles. Here we demonstrate a fundamentally different route in which persistent mechanical motion emerges without any geometric bias. A symmetric passive rotor placed at the center of a circular domain undergoes spontaneous unidirectional rotation driven solely by the hydrodynamic flow generated by a boundary-confined flocks of Marangoni swimmers, despite the absence of direct physical contact. While individual swimmers produce intermittent torque reversals arising from transient hydrodynamic backflow, increasing the size of the flock establishes coherent circulation that stabilizes the rotor dynamics. Particle image velocimetry (PIV) reveals that the collectively generated flow transmits momentum over macroscopic distances, converting local active forcing into robust mechanical transport. Together with a minimal flow superposition model, our results identify the suppression of reverse-torque events as a collective signature of hydrodynamic coupling between active swimmers and a passive body, providing a contact-free mechanism for remote mechanical actuation in active matter.",
    "source": "arxiv"
@@ -37,12 +96,12 @@
    "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A Perspective reviewing molecular-dynamics simulations of microphase separation in single-component simple liquids whose pair potentials combine short-range attraction with long-range repulsion (SALR), and the periodic and quasiperiodic structures these produce.",
-    "plain": "When two opposing forces act on the same particles, a liquid can avoid splitting into two large regions and instead form a repeating pattern of small-scale domains. This review looks at computer simulations of simple particles that do this using only one type of particle, with a short-range attraction and a long-range repulsion. The authors report that these simple models can reproduce patterns seen in block copolymers and liquid crystals, and they suggest such patterns could serve as templates for metamaterials.",
-    "why": "It suggests that the complex molecular structure of real materials is not required to form these ordered patterns, which matters for understanding how such patterns arise. The suggested link to topology-governed metamaterials is a proposal in the text, and its practical value is not demonstrated here.",
+    "ai": true,
     "background": "- Phase separation: a mixture or liquid splitting into distinct regions, such as oil and water.\n- Microphase separation: because competing forces stop large-scale splitting, the separation happens on a small, repeating length scale instead.\n- Short-range attraction plus long-range repulsion (SALR): particles stick to close neighbours but push back against more distant ones.\n- Block copolymers: long molecules made of chemically different segments that cannot separate fully, so they form nanoscale patterns.\n- Mesophases: intermediate ordered states between liquid and crystal, such as those in liquid crystals.\n- Molecular dynamics: computer simulation that tracks how each particle moves over time.\n- Metamaterials: engineered materials whose behaviour comes from their structure rather than their chemistry.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A Perspective reviewing molecular-dynamics simulations of microphase separation in single-component simple liquids whose pair potentials combine short-range attraction with long-range repulsion (SALR), and the periodic and quasiperiodic structures these produce.",
+    "plain": "When two opposing forces act on the same particles, a liquid can avoid splitting into two large regions and instead form a repeating pattern of small-scale domains. This review looks at computer simulations of simple particles that do this using only one type of particle, with a short-range attraction and a long-range repulsion. The authors report that these simple models can reproduce patterns seen in block copolymers and liquid crystals, and they suggest such patterns could serve as templates for metamaterials.",
+    "why": "It suggests that the complex molecular structure of real materials is not required to form these ordered patterns, which matters for understanding how such patterns arise. The suggested link to topology-governed metamaterials is a proposal in the text, and its practical value is not demonstrated here."
    },
    "abstract": "Competing interactions can generate frustration which suppresses macroscopic-scale phase separation, superseding it with separation patterns on the microscopic scale. This phenomenon, referred to as microphase separation, produces thermodynamically stable mesoscopic-scale periodic patterns in systems of different physical nature. The studies of this effect follow two paradigms. First, in block copolymers, the macroscopic-scale separation of chemically distinct components is prevented by the covalent bonds between them. In the other, the microscopic-scale separation is produced in simple single-component liquids by the competition between a short-range attraction and a long-range repulsion (SALR) in the pair potential, the separation occurring between a dense phase and a gas. The interest in the simple liquid models with SALR interaction was inspired by the apparent universality of the modulated structures generated by competing interactions in different systems. Simple particle models are tractable by theory and thereby make it possible to discern the microscopic mechanisms of pattern formation; particle-based simulations give access to systems beyond the reach of experiments. In this Perspective we review the recent advances in the molecular-dynamics simulation of microphase separation in single-component simple liquids using SALR potentials. We show that these simulations reproduce the mesophases typical of block copolymers and liquid crystals, which demonstrates that the complexity of the constituent particles of real liquids is not a necessary condition for their formation, and that they produce novel periodic morphologies of both conceptual interest and technological relevance; we discuss how simulated mesophases can serve as templates for metamaterials whose properties are governed by topology.",
    "source": "arxiv"

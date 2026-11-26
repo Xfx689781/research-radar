@@ -1,7 +1,53 @@
 {
  "slug": "quantum",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31867",
+   "title": "A machine learning architecture for scaling of holographic quantum circuits",
+   "url": "https://arxiv.org/abs/2611.31867",
+   "authors": [
+    "Cliff Sun",
+    "Michael L. Wall"
+   ],
+   "label": "arXiv:2611.31867v1",
+   "primary_category": "quant-ph",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proposes a machine-learning workflow that learns the gate syntax and angle parameters of small holographic quantum circuits from a dataset and extrapolates them to longer or more expressive circuits, demonstrated on a vector-valued generalization of the W-state.",
+    "plain": "Quantum computers can be programmed with circuits, and this paper looks at a specific style of circuit that reuses a few measured qubits while keeping a register of persistent helper qubits. The authors train a machine-learning method on small examples of such circuits and use it to build larger ones, both in their structure and in their settings. They test the approach on a case with a known exact answer, a generalized version of the W-state, to check that it works.",
+    "why": "The text suggests the approach could help scale up a way of representing large quantum states with few physical qubits, which may matter for quantum simulation. The text does not report how well it performs beyond the single demonstration case, so its wider usefulness remains to be seen.",
+    "background": "- Qubit: the basic unit of quantum information, which can hold superpositions of 0 and 1.\n- Quantum circuit: a sequence of operations (gates) applied to qubits, analogous to a program.\n- Mid-circuit measurement and reset: reading out a qubit during the computation and returning it to a standard state so it can be reused.\n- Ancilla qubits: helper qubits that persist across measurements and carry correlations between them.\n- Tensor network: a compressed way of describing large many-body systems using linked arrays of numbers; \"bond dimension\" measures how much information the links can carry.\n- W-state: a specific entangled state of several qubits, used here as a test case with a known answer.\n- Machine learning here means fitting a model to example circuits and using it to propose new ones.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We describe an architecture and workflow for learning and generalizing the syntax and parameters of holographic quantum circuits (HQCs), which are natural quantum circuit analogs of classical tensor networks. An HQC uses mid-circuit measurements and resets on a small subset of \"physical\" qubits whose measurement outcomes become correlated through coupling with a register of persistent \"ancilla\" qubits, analogous to the physical and bond indices of a tensor network. Hence, an HQC with fixed qubit resources can efficiently generate samples from a large quantum state, and adding qubits to the HQC ansatz has the effect of exponentially increasing the effective bond dimension. Our machine learning approach provides mechanisms for harnessing both features of HQCs by extrapolating the syntax (e.g., a sequence of gates, measurements, and resets) and parameters (e.g., the angles appearing in single-qubit rotations) from a dataset of HQCs to longer or more expressive HQCs. We demonstrate the methodology and its performance on an analytically solvable dataset formed by a vector-valued generalization of the W-state. Finally, we provide an outlook for usage of the methodology for scaling the effective bond dimensions of HQCs in quantum simulation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33138",
+   "title": "Prospects and limitations of adaptive variational quantum algorithms for lattice field theories: a case study in 2+1 dimensions",
+   "url": "https://arxiv.org/abs/2611.33138",
+   "authors": [
+    "Nico Dichter",
+    "Andrea Bulgarelli",
+    "Lena Funcke",
+    "Stefan K\\\"{u}hn"
+   ],
+   "label": "arXiv:2611.33138v1",
+   "primary_category": "hep-lat",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "This paper tests whether the adaptive variational quantum algorithm ADAPT-VQE can prepare the vacuum state of a 2+1D lattice field theory (free Wilson fermions), identifies two limitations of the method, and reports that adding charge conjugation symmetry to the operator pool and combining pools with suitable initial states recovers the ground and first excited states across the full mass range.",
+    "plain": "Physicists want quantum computers to simulate the basic \"empty\" state of particle theories on a grid, and a method called ADAPT-VQE has worked for one-dimensional versions. This paper asks whether it also works in two space dimensions plus time, and finds two problems: for certain real-valued setups, the method's building blocks never get chosen, and it can settle on excited states instead of the lowest-energy one. The authors show that adding a symmetry to the building-block pool and choosing suitable starting states gets around these problems in their test case.",
+    "why": "Simulating lattice field theories on quantum hardware is a long-term goal, and this paper gives concrete, checkable guidelines for when an adaptive method will and will not work beyond 1+1 dimensions. Its significance for practical quantum simulations depends on how far the free-fermion test case generalizes to interacting theories, which the text does not establish.",
+    "background": "- Lattice field theory: particle physics formulated on a discrete grid of space and time, so it can be simulated numerically.\n- Qubit: the basic unit of quantum information in a quantum computer.\n- Variational quantum algorithm: a hybrid method where a quantum computer prepares a trial state with adjustable settings and a classical computer tunes those settings to lower the energy.\n- ADAPT-VQE: a variant that grows the circuit one building block at a time, picking the block from a pool according to its energy gradient.\n- Vacuum / ground state: the lowest-energy state of the system; the first excited state is the next lowest.\n- Time-reversal and charge conjugation: symmetries; here they matter because they determine which building blocks have zero gradient.\n- Wilson fermions: a standard lattice discretization of fermions (matter particles) that includes a term suppressing unphysical doublers.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The variational quantum algorithm ADAPT-VQE has previously been used to prepare the vacuum of lattice gauge theories in $1+1D$. In this paper, we study whether it extends to higher dimensions. We identify two general limitations of ADAPT-VQE. First, if the qubit Hamiltonian and the initial state are real, i.e., invariant under qubit-level time-reversal, all real-valued pool operators have vanishing gradients and are never selected. Second, the algorithm can converge to excited eigenstates. We illustrate both limitations, also providing examples from literature, and present a first application of ADAPT-VQE to a lattice field theory in $2+1D$, namely free Wilson fermions, where both obstacles occur. Adding charge conjugation symmetry to the operator pool improves the results, and combining different pools with suitable initial states recovers the ground and first excited states over the full mass range. These findings give practical guidelines for applying ADAPT-VQE to lattice field theories beyond $1+1D$.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31326",
    "title": "On the concentration of the ambiguity function on centered balls",
@@ -13,12 +59,12 @@
    "primary_category": "math.FA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves that Gaussian functions maximize the L^2 concentration of the ambiguity function on every centered ball, up to time-frequency shifts and unimodular phase factors, using tools from quantum information theory.",
-    "plain": "The paper studies a mathematical tool that describes a signal's time and frequency content at once. It asks how much of that tool's energy can be squeezed into a small region centered at the origin, and it shows that the bell-shaped Gaussian signal does this best. The argument borrows ideas from quantum information theory.",
-    "why": "The result sharpens a known kind of limit on how tightly a signal can be localized in time and frequency together, which matters for signal processing and harmonic analysis. The text does not say what further applications it has, so its wider importance is uncertain from this summary alone.",
+    "ai": true,
     "background": "- The ambiguity function: a two-variable function of time shift and frequency shift that encodes a signal's time-frequency structure.\n- L^2 concentration: the fraction of a function's total energy (squared size) that lies inside a given region.\n- Centered ball: a disk-like region around the origin in the time-frequency plane.\n- Gaussian: the bell-shaped function, which is the usual extremal example in uncertainty-type inequalities.\n- Time-frequency shifts and unimodular constants: moving a signal in time or frequency, and multiplying by a complex phase of size one; these do not change the concentration, so they are ignored in the statement.\n- Quantum information theory: the field that studies information in quantum systems; the paper says its ideas were used in the proof.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that Gaussian functions maximize the L^2 concentration of the ambiguity function on every centered ball, up to time-frequency shifts and unimodular phase factors, using tools from quantum information theory.",
+    "plain": "The paper studies a mathematical tool that describes a signal's time and frequency content at once. It asks how much of that tool's energy can be squeezed into a small region centered at the origin, and it shows that the bell-shaped Gaussian signal does this best. The argument borrows ideas from quantum information theory.",
+    "why": "The result sharpens a known kind of limit on how tightly a signal can be localized in time and frequency together, which matters for signal processing and harmonic analysis. The text does not say what further applications it has, so its wider importance is uncertain from this summary alone."
    },
    "abstract": "We show that the Gaussian uniquely maximizes the $L^2$ concentration of the ambiguity function on every centered ball, up to time-frequency shifts and multiplication by a unimodular constant. The proof relies on ideas from quantum information theory.",
    "source": "arxiv"
@@ -35,12 +81,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A benchmark comparing two quantum and six classical machine-learning detectors for power-grid cyberattacks finds that evaluation choices such as row-level versus whole-file splits, and per-model attack design, can change the reported outcome.",
-    "plain": "The paper looks at whether quantum computing methods can spot cyberattacks on electric grids and gas pipelines better than ordinary computer methods. The authors ran two quantum and six classical detectors on public attack data under the same tuning effort. They found that how the test is set up, for example splitting data by individual rows instead of by whole files, can make a method look much better than it is, and that neither quantum detector was more accurate or consistently more robust on the grid and pipeline data.",
-    "why": "Quantum machine learning is being proposed for infrastructure security, so claims of advantage need careful testing. The paper's main point is methodological: small changes in evaluation design shifted results, which may matter for any benchmark claim in this area; the text does not show how widely these findings generalize beyond the datasets used.",
+    "ai": true,
     "background": "- Machine learning detector: a program trained on labeled examples to flag attacks.\n- Quantum machine learning: methods that run parts of a model on quantum hardware or simulated quantum circuits.\n- Macro-averaged F1: a score balancing precision and recall across classes; chance is 0.50 for the binary task described.\n- White-box attack: an attacker who knows the model's internals and can craft inputs against it; black-box and transfer attacks use a substitute model instead.\n- Row-level vs file-level split: whether test rows can come from the same recordings as training rows (which inflates scores) or whether whole files are held out.\n- Random label flips: deliberately corrupting some training labels to test robustness.\n- Gradient-based attack: an attack that uses the model's gradients; tree models do not admit this, so their attacked scores are only upper bounds.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A benchmark comparing two quantum and six classical machine-learning detectors for power-grid cyberattacks finds that evaluation choices such as row-level versus whole-file splits, and per-model attack design, can change the reported outcome.",
+    "plain": "The paper looks at whether quantum computing methods can spot cyberattacks on electric grids and gas pipelines better than ordinary computer methods. The authors ran two quantum and six classical detectors on public attack data under the same tuning effort. They found that how the test is set up, for example splitting data by individual rows instead of by whole files, can make a method look much better than it is, and that neither quantum detector was more accurate or consistently more robust on the grid and pipeline data.",
+    "why": "Quantum machine learning is being proposed for infrastructure security, so claims of advantage need careful testing. The paper's main point is methodological: small changes in evaluation design shifted results, which may matter for any benchmark claim in this area; the text does not show how widely these findings generalize beyond the datasets used."
    },
    "abstract": "Quantum machine learning is proposed to detect grid cyberattacks, but no study we could read tests quantum and classical detectors under white-box, transfer, and black-box attacks and random label flips in one protocol. We compare two quantum and six classical detectors on public grid-attack data under equal tuning budgets. Our main finding: evaluation choices can decide the outcome. On these data, seven choices each changed a reported result with model families fixed. Row-level splits inflate our best score by 0.31 macro-averaged F1 over held-out files, where matched-dimensionality classical and quantum models barely clear chance. Under its own white-box attack the quantum kernel's score falls from 0.56 to 0.01 (chance 0.50), while a transferred attack in the same run leaves 0.52. Trees admit no gradient-based white-box attack, so their attacked scores are upper bounds. These attack results use eight-dimension detectors under row-level splits. On gas-pipeline and simulated-grid data, neither quantum detector is more accurate or consistently more robust; three of the seven choices reproduce fully on gas data with one pressure feature log-scaled (two within noise), and none of the four checked on the grids does. Benchmarks should hold out whole files and give every model its own attack where possible. We release code and checklist.",
    "source": "arxiv"

@@ -1,7 +1,54 @@
 {
  "slug": "fluids-plasma",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32287",
+   "title": "Plasma Heating by Magnetic Reconnection and Alfven Waves in Collisionless Shocks",
+   "url": "https://arxiv.org/abs/2611.32287",
+   "authors": [
+    "Masahiro Hoshino",
+    "Shuichi Matsukiyo",
+    "Takanobu Amano"
+   ],
+   "label": "arXiv:2611.32287v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Using particle-in-cell simulations, this paper examines how large-amplitude Alfvén waves from shock-reflected ions drive both ordinary wave-particle heating and reconnection-driven preferential ion heating in current sheets behind high-Mach-number collisionless shocks.",
+    "plain": "In space and astrophysical shock waves, the ions and electrons often end up at different temperatures, and it is not fully understood how the energy gets split between them. This study looks at strong waves, called Alfvén waves, that are launched when some ions bounce back from the shock front. The authors report that ions tend to be heated where the magnetic field forms X-shaped patterns downstream, which they link to magnetic reconnection and annihilation in thin current sheets.",
+    "why": "Splitting energy between ions and electrons in shocks affects how particles are accelerated and how much heat the plasma holds, which matters for shocks in space, supernova remnants, and similar settings. The text presents a correlation from simulations and suggests a role for reconnection; it does not establish how large that role is.",
+    "background": "- Collisionless shock: a shock wave in a plasma (ionized gas) where particles interact through electromagnetic fields rather than collisions.\n- Temperature in a plasma: the average random motion of its ions or electrons; ion and electron temperatures can differ.\n- Alfvén wave: a low-frequency wave that travels along magnetic field lines, like a vibration on a stretched string made of magnetic field.\n- Magnetic reconnection: a process where magnetic field lines break and reconnect, releasing stored energy into particles, often in thin current sheets.\n- Mach number: the ratio of the shock's speed to the local wave speed; high Mach number means a very strong shock.\n- Particle-in-cell (PIC) simulation: a computer method that tracks many individual charged particles together with their electromagnetic fields.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In collisionless shock waves, the ion and electron temperatures generally differ, and the mechanisms governing their energy partitioning remain one of the central unresolved problems in shock physics. Although energy can be exchanged through various plasma waves generated upstream and downstream of the shock, large-amplitude Alfven waves excited by ions reflected at the shock front play a particularly important role in high-Mach-number shocks. In this study, we focus on these large-amplitude Alfven waves and examine not only plasma heating through conventional wave-particle interactions but also preferential ion heating driven by magnetic reconnection within current sheets formed by trains of such waves. Using particle-in-cell (PIC) simulations, we find a correlation between ion heating and X-type magnetic field structures in the downstream region, and we suggest that magnetic reconnection and magnetic annihilation within these current sheets influence the energy partitioning between ions and electrons.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31603",
+   "title": "Exact force-free three-dimensional toroidal equilibria and the sawtooth q(0) problem",
+   "url": "https://arxiv.org/abs/2611.31603",
+   "authors": [
+    "W. Sengupta",
+    "A. Bhattacharjee",
+    "T. J. Klotz",
+    "A. O. Brown"
+   ],
+   "label": "arXiv:2611.31603v1",
+   "primary_category": "physics.plasm-ph",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper constructs exact closed-form force-free (curl B = lambda B) toroidal magnetic equilibria with nested flux surfaces and no continuous symmetry, shows they are Taylor minimum-energy states within a bounded radius, and applies them to the tokamak sawtooth q(0) problem.",
+    "plain": "The paper concerns the magnetic fields that confine hot plasma in donut-shaped fusion devices called tokamaks, and a long-standing puzzle about the \"sawtooth\" instability that periodically disrupts the core. The authors write down exact mathematical solutions for magnetic fields that wrap around a closed loop in nested layers, without needing any rotational or other continuous symmetry. They report that some of these fixed-boundary states have the central safety factor q(0) below 1 while the wall value is above 1, reaching 0.84 at tight aspect ratio and about 0.94 at conventional aspect ratio, without an island or current sheet.",
+    "why": "The work offers explicit counterexamples to Grad's conjecture in its pressureless form, which bears on how plasma relaxes to equilibrium. It may bear on the sawtooth problem, where the central safety factor dipping below one is usually tied to instability, but the text does not establish whether these states can actually be reached dynamically or how they match the surrounding plasma, and the authors say those questions remain open.",
+    "background": "- Magnetic field lines and flux surfaces: nested surfaces like layers of an onion, each enclosing the magnetic axis.\n- Force-free field: a magnetic field where the current runs parallel to the field (curl B = lambda B), so magnetic forces balance without pressure.\n- Taylor state: a relaxed magnetic configuration reached by minimizing magnetic energy while conserving toroidal flux and magnetic helicity.\n- Rotational transform and safety factor q: how many times a field line winds poloidally per toroidal turn; q = 1 is a key stability threshold.\n- Sawtooth oscillation: a periodic crash of the tokamak core temperature linked to q on axis dropping below 1.\n- Grad's conjecture: a claim that toroidal plasma equilibria with nested surfaces and no symmetry do not exist without pressure.\n- Aspect ratio: ratio of the torus's major radius to its minor radius; \"tight\" means a thin donut.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We construct exact, closed-form solutions of curl of B=lambda B with nested toroidal flux surfaces around a closed magnetic axis, finite rotational transform and, in general, no continuous Euclidean symmetry. They are counterexamples to Grad's conjecture in its pressureless form. Inside a regular flux surface that fits in a ball of radius r_b with |lambda| r_b<4.49, each is the unique minimum of magnetic energy at fixed toroidal flux and helicity, so each is a Taylor state. The rotational transform is a ratio of one-dimensional integrals. Our primary application is the sawtooth q(0) problem in tokamaks. In one configuration, q crosses unity on a smooth torus of closed field lines, with no island and no current sheet. Across the family, minimum-energy fixed-boundary states with q(0)<1<q_wall exist; in our scans q(0) reaches 0.84 at tight aspect ratio and about 0.94 at conventional aspect ratio. At comparable helicity-to-flux ratio, configurations with different boundary shapes have either sign of the magnetic shear. These fixed-boundary equilibria are candidates for relaxed cores, which need not be axisymmetric. Their dynamical accessibility and their matching to the surrounding plasma remain open.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31616",
    "title": "Toward divertor plasma detachment in pure D-T plasma in fusion reactor with H-mode-like plasma confinement",
@@ -15,12 +62,12 @@
    "primary_category": "physics.plasm-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Analytical estimates of the separatrix density and scrape-off-layer heat flux conditions needed for ultimate divertor plasma detachment under H-mode confinement in pure deuterium, tritium, or D-T plasmas, checked against present tokamaks and AUG data.",
-    "plain": "The paper looks at how to cool down the hot exhaust plasma in a fusion reactor before it damages the walls. The divertor is the part of the reactor that catches this exhaust, and \"detachment\" means the plasma there cools enough to pull away from the target plates. The authors estimate the conditions under which this can happen while the core still runs in a high-performance mode, and find it is reachable on some current machines but would need denser plasma than the empirical density limit in future reactors such as ITER, ARC and EU-DEMO.",
-    "why": "Divertor heat load is a central obstacle to designing a practical fusion power plant, so a clear statement of the density and heat-flux conditions for detachment helps frame reactor design. The text suggests possible routes (operating above the density limit, turbulence-broadened heat flux width, reduced parallel heat flux in long-leg divertors), but these are proposals described in the abstract, and the text does not show how well they would work in practice.",
+    "ai": true,
     "background": "- Tokamak: a doughnut-shaped magnetic fusion device that confines hot plasma.\n- Divertor: the exhaust region where charged particles and heat are directed onto target plates.\n- Scrape-off layer and separatrix: the thin edge layer of plasma outside the confined core, and the boundary between core and edge.\n- Detachment: a state where the plasma in front of the target cools and loses its power to the target, reducing damage.\n- H-mode: a high-confinement operating regime with better energy containment.\n- Empirical density limit: an observed upper limit on plasma density beyond which confinement typically degrades.\n- D-T: the deuterium-tritium fuel mix used in fusion reactors.\n- AUG: ASDEX Upgrade, a German tokamak where detachment was achieved in pure deuterium.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Analytical estimates of the separatrix density and scrape-off-layer heat flux conditions needed for ultimate divertor plasma detachment under H-mode confinement in pure deuterium, tritium, or D-T plasmas, checked against present tokamaks and AUG data.",
+    "plain": "The paper looks at how to cool down the hot exhaust plasma in a fusion reactor before it damages the walls. The divertor is the part of the reactor that catches this exhaust, and \"detachment\" means the plasma there cools enough to pull away from the target plates. The authors estimate the conditions under which this can happen while the core still runs in a high-performance mode, and find it is reachable on some current machines but would need denser plasma than the empirical density limit in future reactors such as ITER, ARC and EU-DEMO.",
+    "why": "Divertor heat load is a central obstacle to designing a practical fusion power plant, so a clear statement of the density and heat-flux conditions for detachment helps frame reactor design. The text suggests possible routes (operating above the density limit, turbulence-broadened heat flux width, reduced parallel heat flux in long-leg divertors), but these are proposals described in the abstract, and the text does not show how well they would work in practice."
    },
    "abstract": "The conditions between the separatrix plasma density and the heat flux into the scrape-off layer region allowing reaching an ultimate divertor plasma detachment with H-mode confinement in pure hydrogen (deuterium or the mixture of deuterium and tritium) plasma are obtained. Estimates for a number of present-day tokamaks show that this regime is accessible at separatrix plasma densities below or around the empirical density limit. Moreover, they are in reasonable agreement with the data from the AUG tokamak, where detachment was reached in pure deuterium plasma. However, in future reactors, such as ITER, ARC, and EU-DEMO, it would require densities exceeding this empirical density limit. Therefore, additional measures are needed for future reactors, such as operation above the density limit, which, according to recent experimental data, may not be a hard operational boundary, turbulence induced broadening of the heat flux width and reduction of the parallel heat flux in the long legs of advanced divertor configurations. Their successful implementation would open the possibility for a more efficient reactor design.",
    "source": "arxiv"
@@ -38,12 +85,12 @@
    "primary_category": "physics.plasm-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A numerical study of how the free \"closure parameter\" in a 10-moment fluid model of plasma turbulence changes heating of ions versus electrons, across artificial ion-electron mass ratios.",
-    "plain": "Plasmas such as the solar wind are too costly to simulate with the most detailed kinetic methods, so researchers use simpler fluid approximations that still track some particle behaviour. This paper examines how one tunable setting in such an approximation, the \"closure parameter,\" changes the way turbulent energy is shared between the two charged species, ions and electrons. The authors report that the choice of this setting affects the heating of each species, and that the effect is strongest when the ion-to-electron mass ratio is artificially low and shrinks as it approaches the real value.",
-    "why": "Knowing how much energy goes into ions versus electrons matters for explaining the temperatures observed in the solar wind, but the text suggests that results from this fluid model may depend on a modelling choice rather than on physics alone. The text does not say how well the model matches spacecraft observations, so its relevance to real plasmas is not established here.",
+    "ai": true,
     "background": "- Plasma: a gas of charged particles (ions and electrons), common in space and fusion devices.\n- Kinetic vs fluid description: kinetic methods track the full distribution of particle velocities; fluid methods track averaged quantities such as density, flow and pressure, which is cheaper.\n- Moments: successive averages of the particle velocity distribution (density, velocity, pressure, heat flux). A \"10-moment\" model keeps moments up to second order.\n- Closure: an approximation for the higher moments (here the heat flux) so the set of equations can be solved.\n- Closure parameter: a free number in that approximation, chosen by the modeller.\n- Mass ratio: ion mass divided by electron mass; simulations often use smaller values than reality for computational reasons.\n- Compressive vs incompressive turbulence: fluctuations that change plasma density/pressure versus those that mainly swirl without compressing it.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A numerical study of how the free \"closure parameter\" in a 10-moment fluid model of plasma turbulence changes heating of ions versus electrons, across artificial ion-electron mass ratios.",
+    "plain": "Plasmas such as the solar wind are too costly to simulate with the most detailed kinetic methods, so researchers use simpler fluid approximations that still track some particle behaviour. This paper examines how one tunable setting in such an approximation, the \"closure parameter,\" changes the way turbulent energy is shared between the two charged species, ions and electrons. The authors report that the choice of this setting affects the heating of each species, and that the effect is strongest when the ion-to-electron mass ratio is artificially low and shrinks as it approaches the real value.",
+    "why": "Knowing how much energy goes into ions versus electrons matters for explaining the temperatures observed in the solar wind, but the text suggests that results from this fluid model may depend on a modelling choice rather than on physics alone. The text does not say how well the model matches spacecraft observations, so its relevance to real plasmas is not established here."
    },
    "abstract": "Simulations of plasmas such as the solar wind require an accurate representation of kinetic physics given the lack of frequent collisions. Fully kinetic treatments are computationally expensive and necessarily confine simulations to small domain sizes. A good compromise is to utilise higher-order fluid-moment models such as the 10-moment model. This model retains all physics up to the second moment, with the moment hierarchy closed by approximating the heat flux. One choice is to use a model for the divergence of the heat flux, $\\partial_m q_{ijm} \\approx v_t |k_0|(\\mathbf{P}_{ij}-p\\delta_{ij})$, with a free parameter $k_0$, called the ``closure parameter''. We study the effects of this closure parameter on the properties of turbulence, combined with artificial ion-electron mass ratios. We show that the heating of the two plasma species is affected by the choice of the closure parameter. For all combinations of closure parameters, the relative compressive and incompressive heating rates are affected even for realistic mass ratios. The effects are more prominent for lower mass ratios and diminish when approaching realistic mass ratios.",
    "source": "arxiv"

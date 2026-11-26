@@ -1,7 +1,60 @@
 {
  "slug": "epidemiology",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.23.26368579",
+   "title": "Sources of protein in UK adults following contemporary plant-based diets: findings from the Feeding the Future (FEED) Study",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368579v1",
+   "authors": [
+    "Lawson, I.",
+    "Bell, W.",
+    "Key, T. J.",
+    "Papier, K."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.23.26368579 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Cross-sectional analysis of the FEED cohort (6,113 UK adults across omnivore, flexitarian, pescatarian, vegetarian and vegan diets) quantifying food-group sources of protein intake and the share of each group meeting the estimated average requirement (EAR) for protein, with and without excluding under-reporters.",
+    "plain": "This study looks at where protein comes from in the diets of about 6,100 UK adults who eat in different ways, from meat-eaters to vegans. Researchers used an online food questionnaire to work out which food groups supplied the most protein and how many people got less than the estimated minimum they need. Grains and dairy were major sources across most groups, while vegans relied more on meat alternatives, legumes, nuts and seeds. Very few people fell short of the minimum, and most of the apparent shortfall in vegetarians and vegans disappeared once people who likely under-reported their eating were removed.",
+    "why": "Plant-based eating is increasingly common, and people often ask whether it provides enough protein. The findings suggest that, in this sample, shortfalls were rare and may partly reflect how diet is reported rather than real intake, though the study is cross-sectional and self-reported, so it cannot show cause and effect.",
+    "background": "- Protein is made of amino acids; the body needs a minimum amount daily.\n- The estimated average requirement (EAR) is the intake that meets the needs of half of a population group; a share of people below it is a rough measure of inadequacy, not a diagnosis.\n- Food frequency questionnaire: a survey asking how often people eat listed foods, used here to estimate intake.\n- Under-reporters: people whose reported energy intake looks implausibly low compared with their needs, so their diet records are likely incomplete.\n- Cross-sectional: data collected at one point in time, so it shows associations, not causes.\n- Diet groups: omnivore (eats everything), flexitarian (mostly plants, sometimes meat), pescatarian (fish but no meat), vegetarian (no meat or fish), vegan (no animal foods).",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Objective To identify and quantify sources of protein intake in United Kingdom (UK) adults following different diets, and assess how these sources contribute to meeting protein requirements. Design Cross-sectional analysis of the Feeding the Future Study (FEED), a UK cohort recruited in 2022-2023. Dietary intake was assessed using an online food frequency questionnaire. We calculated the percentage contribution of food groups to daily protein intake, and the proportion of participants meeting the estimated average requirement (EAR) for protein, with and without exclusion of under-reporters. Setting A contemporary cohort of UK adults. Participants 6,113 adults: 1,540 omnivores, 1,322 flexitarians, 547 pescatarians, 1,212 vegetarians, and 1,492 vegans. Results Grains contributed 10-30% of total protein intake across all groups. Dairy contributed 12.9-14.2% in non-vegan groups, while plant-based dairy alternatives contributed less in vegans (7%), mainly from soy milk (4.3%). Other major contributors (>10%) were meat for omnivores (33.0%) and flexitarians (13.5%); fish for pescatarians (14.9%); plant-based meat alternatives for vegetarians (12.0%); and plant-based meat alternatives (15.0%), legumes and pulses (10.5%), and nuts and seeds (10.5%) for vegans. The proportion below the protein EAR ranged from 1.9% in omnivores to 14.0% in vegans, falling to 0.01% and 3.6% respectively, after excluding under-reporters. Conclusions Grains were a major contributor to protein intake across all diet groups, as was dairy in all non-vegan groups. Protein sources were more varied in non-omnivorous groups, particularly vegans. Few participants fell below the protein EAR and the higher proportions among vegetarians and vegans were largely attenuated after excluding under-reporters.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.23.26368185",
+   "title": "Meta-analysis of Sequencing Data Identifies Candidate Endometrial Cancer Susceptibility Genes",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.23.26368185v1",
+   "authors": [
+    "Laker, M.",
+    "O'Mara, T. A.",
+    "Spurdle, A. B.",
+    "Tischkowitz, M.",
+    "Pharoah, P. A.",
+    "Davidson, E. J.",
+    "Easton, D.",
+    "Antoniou, A. C.",
+    "Yang, X."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.23.26368185 v1",
+   "primary_category": "epidemiology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A burden-test meta-analysis of rare protein-truncating and missense variants in 2,675 endometrial cancer cases and 160,654 controls from UK Biobank and the 100,000 Genomes Project, reporting established and candidate susceptibility genes.",
+    "plain": "Endometrial cancer is the most common gynaecological cancer in wealthy countries, but its inherited causes are only partly known. The researchers looked for rare genetic changes that differ between women who had the cancer and those who did not, using genetic data from two large UK databases. They report that known cancer genes such as MSH6, MLH1 and MSH2 stood out, along with PTEN and about 27 other genes that had not been firmly linked to the disease before.",
+    "why": "Knowing which genes raise endometrial cancer risk could help identify people who should be screened more closely. The new genes are only candidates, though: the text itself says they need replication in further studies before they can be considered established, and the very wide confidence intervals suggest the estimates are imprecise.",
+    "background": "- Endometrial cancer: cancer of the lining of the womb (uterus).\n- Rare variants: uncommon spelling changes in a gene's DNA, as opposed to common variants shared by many people.\n- Protein-truncating variants (PTVs): changes that cut a gene's protein short, usually disabling it.\n- Missense variants (MSVs): changes that swap one building block in a protein, which may or may not be harmful; here only those predicted to be damaging were studied.\n- Burden test: a statistical test that asks whether carriers of rare variants in a given gene (taken together) are more common among cases than controls.\n- Relative risk (RR): how many times more likely carriers are to develop the disease than non-carriers; wide confidence intervals (CI) mean the estimate is uncertain.\n- Exome-wide significance: a strict threshold for statistical significance applied across all protein-coding genes, to limit false positives.\n- MSH2, MSH6 and MLH1 are DNA mismatch-repair genes already linked to Lynch syndrome.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "BackgroundEndometrial cancer is the most common gynaecological malignancy in high-income countries, yet its genetic architecture remains incompletely understood. While pathogenic variants in mismatch repair genes are well-established contributors, the role of rare variants in other genes has not been systematically characterized. MethodsWe evaluated associations between rare genetic variants and endometrial cancer risk based on 2,675 cases and 160,654 controls from the UK Biobank and the 100,000 Genomes Project. Gene-level associations were assessed using burden tests, with protein-truncating variants (PTVs) and missense variants (MSVs) predicted to be deleterious analysed separately. ResultsEndometrial cancer (EC) risk associations were observed for three established EC susceptibility genes in the rare PTV analysis: MSH6 (RR = 36.6, 95% CI 25.9-51.8), MLH1 (RR = 52.5, 95% CI 21.3-129.4) and MSH2 (RR = 13.0, 95% CI 6.0-28.2). In the rare MSV analysis, PTEN was also significantly associated with EC risk (RR = 9.7, 95% CI 4.0-23.7). Beyond these established susceptibility genes, exome-wide significance was observed for 19 additional genes in the PTV analysis, including PHKG2 (RR = 29.8, 95% CI 9.6-92.8), and eight additional genes in the MSV analysis. ConclusionThis study identifies novel candidate genes associated with endometrial cancer risk, providing a foundation for future replication studies.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.24.26368865",
    "title": "Improving Prediction of Patient-Reported Health Outcomes Among Older Adults With Diabetes Across Diverse Populations Through Transfer Learning",
@@ -17,12 +70,12 @@
    "primary_category": "epidemiology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A regression-based transfer learning approach was tested for predicting patient-reported health outcomes in older adults with diabetes, borrowing information from international aging cohorts (Gateway) and race/ethnicity groups in the RAND HRS, with gains evaluated by AUC and Brier score.",
-    "plain": "Prediction models built on one group of people often work less well on another group that differs in background or health setting. This paper tests whether a method called transfer learning, which borrows useful information from other related datasets, can make predictions for older adults with diabetes more accurate. The authors compared it with models built only on the target group and with models pooling all the data, across eight international cohorts and four race/ethnicity groups in a US study.",
-    "why": "Many prediction tools are developed on one population and may not transfer to others, which matters for fairness and for public health planning. The reported gains are small (about 0.1% to 3.1% in AUC), and the text itself describes them as modest, so the practical value is still an open question rather than a settled result.",
+    "ai": true,
     "background": "- Diabetes: a long-term condition in which blood sugar regulation is impaired; common in older adults.\n- Prediction model: a statistical formula that estimates the chance of an outcome from risk factors such as age or clinical measures.\n- Transfer learning: reusing information from related datasets to improve a model built on a smaller target dataset.\n- Transportability: whether a model that works in one population still works in another.\n- AUC: a 0 to 1 score for how well a model separates people who will have an outcome from those who will not; higher is better.\n- Brier score: a measure of how close predicted probabilities are to what actually happened; lower is better.\n- Bootstrap resampling: repeatedly resampling the data to estimate how uncertain a result is.\n- Patient-reported outcomes: health measures reported by participants themselves rather than by clinicians.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A regression-based transfer learning approach was tested for predicting patient-reported health outcomes in older adults with diabetes, borrowing information from international aging cohorts (Gateway) and race/ethnicity groups in the RAND HRS, with gains evaluated by AUC and Brier score.",
+    "plain": "Prediction models built on one group of people often work less well on another group that differs in background or health setting. This paper tests whether a method called transfer learning, which borrows useful information from other related datasets, can make predictions for older adults with diabetes more accurate. The authors compared it with models built only on the target group and with models pooling all the data, across eight international cohorts and four race/ethnicity groups in a US study.",
+    "why": "Many prediction tools are developed on one population and may not transfer to others, which matters for fairness and for public health planning. The reported gains are small (about 0.1% to 3.1% in AUC), and the text itself describes them as modest, so the practical value is still an open question rather than a settled result."
    },
    "abstract": "Population heterogeneity challenges the transportability of prediction models. Transfer learning may improve prediction through information borrowing, but its utility across population settings remains unclear. We evaluated a regression-based transfer learning framework across international aging cohorts (Gateway) and race/ethnicity groups within the RAND Health and Retirement Study (RAND HRS). Gateway included 19,879 adults with diabetes from eight cohorts, while RAND HRS included 3,926 participants across four race/ethnicity groups. Prediction models for patient-reported health outcomes were developed using demographic and clinical risk factors. Transfer learning was compared with target-only and pooled models using AUC and Brier score, with bootstrap resampling to assess uncertainty. Transfer learning improved prediction in 75% (6/8) of Gateway cohorts, with AUC gains of 0.1%-0.6%, and in all four RAND HRS race/ethnicity groups, with gains of 0.8%-3.1%. Improvements were greater and more consistent across within-cohort groups. These findings demonstrate the potential of regression-based transfer learning to improve prediction across heterogeneous populations. Information borrowing from sufficiently transferable external data may enhance prediction performance and provide meaningful public health benefits, even when improvements are modest, particularly in large population-based cohorts.",
    "source": "medrxiv"
@@ -46,12 +99,12 @@
    "primary_category": "epidemiology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper trains organ-specific \"aging clocks\" on first onset of each organ's disease using routine blood lab tests from UK Biobank, freezes the coefficients, and tests whether they track own-organ disease risk in NHANES (US) and JMDC (Japan) cohorts.",
-    "plain": "Doctors can estimate how old a person's organs are behaving, not just their calendar age, by looking at blood markers. Existing methods of doing this need expensive protein measurements and are trained on age rather than disease. This paper builds organ \"clocks\" trained directly on when each organ's disease first appears, using ordinary lab tests, and then checks whether they flag the right organ's disease.",
-    "why": "The approach aims to make organ-level risk estimates possible from routine blood tests rather than specialised proteomics, which could matter for screening. The text reports that the frozen clocks kept organ correspondence in a second country's cohort, predicted own-organ disease in a third, and added information beyond current organ clocks to clinical risk scores; whether this improves care is not shown in the text.",
+    "ai": true,
     "background": "- Biological age: an estimate of how well body systems are functioning, which can differ from chronological age.\n- Organ clocks: models that estimate the biological age of a specific organ (e.g., heart, kidney) from blood measurements.\n- Proteomics: measuring large numbers of proteins in blood; costly and not routine.\n- Routine laboratory tests: common blood tests (e.g., cholesterol, glucose, liver enzymes) done in standard clinical care.\n- Frozen coefficients: the model's fitted weights are fixed after training and then applied unchanged to new cohorts.\n- Negative control: random protein panels of matching size are used to check that results are not just due to panel size.\n- Cohorts: UK Biobank (training), NHANES (US) and JMDC (Japan) (external tests).\n- Clinical risk scores: standard tools that combine factors such as age and sex to estimate disease risk.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper trains organ-specific \"aging clocks\" on first onset of each organ's disease using routine blood lab tests from UK Biobank, freezes the coefficients, and tests whether they track own-organ disease risk in NHANES (US) and JMDC (Japan) cohorts.",
+    "plain": "Doctors can estimate how old a person's organs are behaving, not just their calendar age, by looking at blood markers. Existing methods of doing this need expensive protein measurements and are trained on age rather than disease. This paper builds organ \"clocks\" trained directly on when each organ's disease first appears, using ordinary lab tests, and then checks whether they flag the right organ's disease.",
+    "why": "The approach aims to make organ-level risk estimates possible from routine blood tests rather than specialised proteomics, which could matter for screening. The text reports that the frozen clocks kept organ correspondence in a second country's cohort, predicted own-organ disease in a third, and added information beyond current organ clocks to clinical risk scores; whether this improves care is not shown in the text."
    },
    "abstract": "Organ clocks estimate the biological age of organs from blood, but current clocks assign tissue-enriched proteins to organs and train on chronological age, which requires proteomics and does not yield organ-specific disease risk. In the UK Biobank, we trained organ clocks on first onset of disease of each organ using routine laboratory tests and froze the coefficients. Under an age label, organ-clock readouts arose equally in size-matched random protein panels; with a disease label, clocks selected their own organ's proteins and predicted their own organ's diseases. Defining extreme aging by multiples of disease risk concentrated flags on own-organ disease. Frozen clocks kept organ correspondence in the US NHANES cohort, predicted first onset of own-organ disease in the Japanese JMDC cohort and added more information to clinical risk scores than current organ clocks. Trained once where disease follow-up exists, organ clocks can be used wherever routine laboratory tests are measured.",
    "source": "medrxiv"

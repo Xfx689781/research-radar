@@ -1,7 +1,55 @@
 {
  "slug": "ecology-evolution",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.22.767446",
+   "title": "Species turnover dominates plant trait variation along continental climate gradients",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.767446v1",
+   "authors": [
+    "Britton, T. G.",
+    "Towers, I.",
+    "Falster, D. S.",
+    "Wiliams, L. J.",
+    "Gallagher, R. V.",
+    "Wright, I. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.22.767446 v1",
+   "primary_category": "ecology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Partitioning plant trait variation along Australian precipitation and temperature gradients (seven traits, 1867 taxa) into among-species turnover versus within-species adjustment, finding turnover dominant and within-species adjustment stronger in non-woody taxa.",
+    "plain": "Plants growing in wetter or hotter places often differ in traits such as leaf size, wood density and seed mass. This study asks how much of that difference comes from different species replacing one another across climates, and how much comes from individual species changing their traits to suit local conditions. Using data on seven traits and 1867 plant types from across mainland Australia, the authors found that swapping species was the main driver, especially for wood density and seed mass.",
+    "why": "Knowing whether plant communities change mainly by species replacement or by individual plants adapting in place affects how well we can forecast vegetation and ecosystem function under climate change. The text does not show how these findings compare with other regions or models, so their wider reach is not established here.",
+    "background": "- Plant functional traits: measurable features such as leaf traits, wood density and seed mass that relate to how a plant grows and survives.\n- Climate gradients: steady changes in rainfall or temperature across a landscape.\n- Species turnover: the replacement of one species by another with different trait values as conditions change.\n- Within-species adjustment (trait plasticity or local adaptation): the same species changing its traits across environments.\n- Woody vs non-woody taxa: trees and shrubs versus herbs and grasses, which differ in stem structure.\n- Variance partitioning: a statistical way of splitting total variation into separate sources.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Variation in plant functional traits along climate gradients chiefly arises from two processes: turnover of species with different trait values, and trait adjustment within species across environments. Yet, the relative contributions of these processes remain poorly quantified, limiting our ability to predict how traits, species distributions and, in turn, ecosystem properties will respond to climate change. Across seven functional traits and 1867 plant taxa from continental Australia, we provide a unified assessment of among- versus within-species contributions across multiple dimensions of plant function. Species turnover emerged as the dominant process driving trait variation along both precipitation and temperature gradients. Nevertheless, the contribution of within-species adjustment to climate differed substantially among traits and was generally greater in non-woody than woody taxa, these patterns being most clearly expressed along precipitation gradients. Our findings imply that plant traits will track changing climatic conditions primarily through species replacement, particularly for traits such as wood density and seed mass. Species may also respond in situ through adjustments in leaf physiology and morphology and, in woody taxa, through shifts in relative allocation between leaves and stem tissues. This knowledge has potential to improve predictions of the structure and function of future plant communities.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.23.768693",
+   "title": "pyMultiVideo: Open-source, Python-based, software for acquiring, synchronising, and compressing video from multiple cameras",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768693v1",
+   "authors": [
+    "Aziz, A.",
+    "Akam, T."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.23.768693 v1",
+   "primary_category": "animal behavior and cognition",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper presents pyMultiVideo, an open-source Python application with a GUI for acquiring, synchronising, and GPU-compressing video from multiple cameras, with a camera-API layer separated from the interface code, validated at high frame rates on modest hardware.",
+    "plain": "Scientists who study animal behaviour or moving machines often film with several cameras at once, and keeping those recordings in step and saving them efficiently is harder than it sounds. This paper describes a free, open-source program called pyMultiVideo that handles this job, including recording and compressing video on the fly. The authors report test recordings from multi-camera setups at high frame rates with no dropped frames on ordinary computer hardware.",
+    "why": "Reliable, low-cost recording tools can make field and lab video studies easier to reproduce and share, which matters for behavioural and movement research. The text is a software description with validation tests, so its wider impact on research practice is not something it claims to show.",
+    "background": "- Frame rate: how many images per second a camera records; higher rates capture faster movement.\n- Dropped frames: images lost during recording, which can corrupt timing data.\n- Synchronisation: making sure several cameras (or cameras and other instruments) record the same moment.\n- GPIO pins: simple electrical input/output connections on a computer or device used to send or log timing signals.\n- GPU compression: using the graphics chip to shrink video files while they are being recorded, to save disk space.\n- Camera API: the software interface a program uses to control a specific camera model; separating it from the GUI makes it easier to add new camera types.\n- Open-source Python: free software written in a widely used programming language, which others can inspect and modify.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Video acquisition plays a critical role in many scientific experiments, enabling the quantification of human or animal behaviour, and movement of physical systems. Scientific applications place exacting demands on video acquisition, often requiring multiple cameras, high frame rates, synchronisation between cameras or with other hardware, control of camera parameters, and efficient data storage with comprehensive metadata. Here we present pyMultiVideo, an open-source Python application for scientific video acquisition. Features of the software include a graphical user interface (GUI) for efficiently configuring and running multi-camera experiments, online video compression using the computer's GPU, and synchronisation through recording GPIO pins states or external frame triggering. The code-base is simple and modular, with a separation of camera API from GUI code to facilitate adding support for additional camera systems. We outline the design and functionality of the software and present validation experiments demonstrating simultaneous recording and compression from multi-camera setups, at high frame rates without dropped frames on modest computer hardware.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.20.767538",
    "title": "Social information use promotes breeding synchrony but constrains adaptation to rapid environmental changes",
@@ -17,12 +65,12 @@
    "primary_category": "animal behavior and cognition",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "An evolutionary individual-based model shows that breeders using neighbours' timing cues synchronise their breeding, which speeds adaptation in stable or fluctuating conditions but lags behind under directional climate change.",
-    "plain": "The paper asks how animals that nest in territories decide when to breed, and whether watching their neighbours helps or hurts when the climate is shifting. Using a computer simulation of populations that evolve over time, the authors compare individuals that use only their own sensing with individuals that also copy cues from nearby neighbours. Copying neighbours makes breeding times line up across the population, which helps under stable conditions but makes the population slow to follow a steadily warming climate.",
-    "why": "Timing of breeding is shifting with climate in many species, and this work suggests that social learning, often assumed to be beneficial, can become a liability when conditions change quickly. It is a modelling study, so its conclusions depend on the assumptions built into the simulation and would need testing against field data.",
+    "ai": true,
     "background": "- Phenology: the timing of seasonal events such as breeding or flowering.\n- Social information: cues gained by observing others, such as neighbours starting to breed.\n- Private information: cues an individual gathers itself, such as local temperature or food.\n- Individual-based model: a simulation where each animal is tracked separately and the population evolves through selection on traits.\n- Synchrony: many individuals acting at the same time, which can build through positive feedback when each copies the others.\n- Adaptive lag: the population's timing trails behind a moving environmental optimum.\n- Peaked resources: food availability that is highest at one point in the season and falls off either side.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "An evolutionary individual-based model shows that breeders using neighbours' timing cues synchronise their breeding, which speeds adaptation in stable or fluctuating conditions but lags behind under directional climate change.",
+    "plain": "The paper asks how animals that nest in territories decide when to breed, and whether watching their neighbours helps or hurts when the climate is shifting. Using a computer simulation of populations that evolve over time, the authors compare individuals that use only their own sensing with individuals that also copy cues from nearby neighbours. Copying neighbours makes breeding times line up across the population, which helps under stable conditions but makes the population slow to follow a steadily warming climate.",
+    "why": "Timing of breeding is shifting with climate in many species, and this work suggests that social learning, often assumed to be beneficial, can become a liability when conditions change quickly. It is a modelling study, so its conclusions depend on the assumptions built into the simulation and would need testing against field data."
    },
    "abstract": "Animals use social information to make decisions, yet how such processes influence predictions in reproductive timing and population adaptation under environmental change remains unclear. While social information can improve decision accuracy through information pooling, spatiotemporal heterogeneity in conditions and patterns of environmental changes creates noise that potentially limits the value of social information use among breeding individuals. Here, we established an evolutionary individual-based model to examine how social and private sensing interact to shape breeding phenology in species distributed across territories with peaked resources and facing annual fluctuations and rapid climate change. We show that when individuals incorporate social information from neighbours, behavioural responses become increasingly synchronised through positive feedback in decision-making. This emergent synchrony helps populations to adapt faster and can increase reproductive output under stable environmental conditions relative to relying only on private information. However, under directional climate change, the same mechanism reduces population responsiveness by constraining variation in individual responses, leading to systematic lag in tracking shifting environmental optima and reduced population reproductive output. Our results demonstrate that social information use can produce a general trade-off at the population level between synchronisation and adaptive flexibility across environmental contexts. Social interaction enhances population performance when environments are either consistent or changing drastically across both spatial and temporal scales. Rather than uniformly improving performance, social interaction may create conditions under which collective behaviour becomes maladaptive when environments change rapidly.",
    "source": "biorxiv"
@@ -47,12 +95,12 @@
    "primary_category": "ecology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "In drought-limited Larix sibirica stands in Mongolia, branch gas-exchange measurements show stomatal conductance rises with nitrogen supply, while net photosynthesis peaks at a moderate fertilization rate and falls at the highest.",
-    "plain": "Boreal forests, the cold northern woodlands, are becoming drier as the climate warms, and this study asks whether soil nutrients change how trees cope with that dryness. Researchers fertilized larch trees in a dry Mongolian forest at three nitrogen levels and measured how the branches exchanged carbon dioxide and water vapor. They found that the pores on leaves opened wider with more nitrogen, but carbon gain was lowest at the lowest dose, highest at the middle dose, and dropped at the highest dose.",
-    "why": "The authors argue that climate studies of boreal drought tolerance should include nitrogen availability, which they say may be falling in remote forests because of rising atmospheric CO2 and can be shifted locally by land use. The text does not show how far these branch-level results apply to whole forests or over longer periods.",
+    "ai": true,
     "background": "- Boreal forest: cold-climate forest dominated by conifers such as larch; historically limited by cold, now increasingly by drought.\n- Nitrogen fertilization experiment: plots given measured doses of nitrogen, a nutrient plants need, to see how growth and physiology respond.\n- Stomata: tiny pores on leaves that let in CO2 and let out water vapor; stomatal conductance measures how open they are.\n- Net photosynthesis: the net rate at which a plant takes up CO2 to make sugars, after subtracting CO2 released by respiration.\n- Vapor pressure deficit: how strongly dry the air is, which pulls water out of leaves.\n- Gas exchange measurements: sensors clamped on branches that record CO2 and water vapor flows.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "In drought-limited Larix sibirica stands in Mongolia, branch gas-exchange measurements show stomatal conductance rises with nitrogen supply, while net photosynthesis peaks at a moderate fertilization rate and falls at the highest.",
+    "plain": "Boreal forests, the cold northern woodlands, are becoming drier as the climate warms, and this study asks whether soil nutrients change how trees cope with that dryness. Researchers fertilized larch trees in a dry Mongolian forest at three nitrogen levels and measured how the branches exchanged carbon dioxide and water vapor. They found that the pores on leaves opened wider with more nitrogen, but carbon gain was lowest at the lowest dose, highest at the middle dose, and dropped at the highest dose.",
+    "why": "The authors argue that climate studies of boreal drought tolerance should include nitrogen availability, which they say may be falling in remote forests because of rising atmospheric CO2 and can be shifted locally by land use. The text does not show how far these branch-level results apply to whole forests or over longer periods."
    },
    "abstract": "Transition from cold limitation to drought limitation due to climate change is widespread in boreal forests. We explored in the scope of the Dry Boreal Forest Long-Term Nitrogen Fertilization Experiment (DryBoreal-LTNE) in southern boreal forests of Mongolia how N supply interacts with tree water and C relations in forests of Larix sibirica, which are naturally drought-limited. Using branches of mature L. sibirica subjected to N fertilization of 6.25-25 kg N ha-1 a-1, we conducted CO2/H2O gas exchange measurements to examine how N availability interferes with the climatic control of stomatal conductance (gs) in L. sibirica. We tested the hypotheses that gs increases with increasing N availability and that this increase can be translated into increased net photosynthesis (A) in L. sibirica even under the dry continental climate of Mongolia. We could confirm the first hypothesis and found that A decreased at low fertilization (6.25 kg N ha-1 a-1) probably caused by increases in respiration due to metabolic costs of intensified N uptake. A attained the highest values at 12.5 kg N ha-1 a-1, but declined at the highest fertilization level of 25 kg N ha-1 a-1. Our results demonstrate that research on the drought tolerance of boreal forests under climate change should not only focus on changes in temperature, vapor pressure deficit, and precipitation, but should take N availability into account, especially as N availability is thought to decrease in remote boreal forests due to elevated atmospheric CO2 concentrations and can be locally influenced by land use.",
    "source": "biorxiv"

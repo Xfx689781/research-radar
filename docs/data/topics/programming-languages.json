@@ -1,7 +1,52 @@
 {
  "slug": "programming-languages",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32374",
+   "title": "Validating Multi-Model AI-Generated Acceptance Criteria in Requirements Engineering",
+   "url": "https://arxiv.org/abs/2611.32374",
+   "authors": [
+    "Mateen Ahmed Abbasi",
+    "Petri Ihantola",
+    "Tommi Mikkonen",
+    "Niko M\\\"akitalo"
+   ],
+   "label": "arXiv:2611.32374v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A prototype workflow that uses retrieval-augmented generation and several LLMs to draft acceptance criteria from user stories, with a logged, human-finalized review step, framed as an operationalized validation process rather than an accuracy improvement.",
+    "plain": "Software teams often write short user stories describing what a feature should do, and the tests or \"acceptance criteria\" that say when it is done. This paper describes a tool where several AI language models draft those criteria, a reviewer compares and edits the suggestions, and every step is recorded. The authors built a working prototype; the text does not report any measured results on how accurate the outputs were.",
+    "why": "AI-written requirements can carry errors forward into design, coding and testing, so checking them matters. The paper's contribution is a way to make human review explicit and auditable, which may matter to teams adopting AI tools, though the text offers no evidence yet of how well it works in practice.",
+    "background": "- User story: a short statement of a feature from an end user's view, such as \"as a customer, I want to reset my password.\"\n- Acceptance criteria: the conditions a feature must meet to be considered complete.\n- Large language model (LLM): an AI system that generates text from patterns learned in training data; it can produce plausible but wrong content (\"hallucination\").\n- Retrieval-augmented generation (RAG): the model is given relevant documents retrieved from a collection before it writes, to ground its output.\n- Human-in-the-loop: a workflow where a person reviews and approves AI output before it is used.\n- Traceability: being able to link each requirement back to its source and later artifacts.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Large language models (LLMs) are increasingly used in software engineering to generate artifacts such as requirements, user stories, acceptance criteria, documentation, and code. Their use in requirements engineering raises important questions about correctness, traceability, and hallucination, especially because flawed specifications can affect later design, implementation, and verification activities. While much recent work on AI-assisted software engineering has focused on code generation and code-level validation, the validation of AI-generated specifications has received less attention. This paper addresses this gap by presenting a validation-oriented approach for AI-generated acceptance criteria. The approach combines retrieval-augmented generation (RAG), multi-model generation, and an explicitly structured human-in-the-loop workflow. We describe a working prototype that allows users to prepare or enter user stories, generate acceptance criteria using several LLMs, optionally augment generation with retrieved requirements-related examples, compare outputs side by side, inspect retrieved context, and select, edit, or regenerate candidate criteria before explicitly submitting a reviewer-finalized version. The system also records model outputs, user interventions, retrieval settings, and final criteria as part of a logged decision process. Rather than claiming that generation accuracy is already improved, the contribution of this work is to operationalize validation as an explicit, inspectable, and accountable process for AI-generated requirements artifacts.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31858",
+   "title": "Functional Programming with Hypergraph Transformation",
+   "url": "https://arxiv.org/abs/2611.31858",
+   "authors": [
+    "Jin Sano"
+   ],
+   "label": "arXiv:2611.31858v1",
+   "primary_category": "cs.PL",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A dissertation presenting λ_GT, a call-by-value functional language built on port-hypergraph transformation (via HyperLMNtal), with a core type system, a linear-implication extension for incomplete graphs, and Isabelle/HOL mechanisation of the meta-theory.",
+    "plain": "Programs often store data as trees, but some data is better described as a network where items connect to several others at once. This dissertation proposes a functional programming language, λ_GT, that lets programmers rewrite such networks by pattern matching while using types to state rules the network must always obey. The author builds an interpreter, proves the type system sound, and checks the core definitions with a computer proof assistant.",
+    "why": "Combining the clean reasoning of functional languages with graph-shaped data could help tools that must keep complex structures valid during manipulation. The text does not show practical adoption or performance results, so its wider impact is uncertain.",
+    "background": "- Functional programming: computing by applying and combining functions, without mutable state.\n- Pattern matching: selecting a program branch by the shape of a value.\n- Graph / hypergraph: nodes joined by links, where a link (hyperedge) can join more than two nodes.\n- Graph transformation: rewriting a graph by replacing matched parts according to rules.\n- Type system: static rules that classify values and rule out errors before running; soundness means well-typed programs do not go wrong.\n- Call-by-value: arguments are evaluated before a function is applied.\n- Linear types: types where a resource is used exactly once, here used to describe partly built graphs.\n- Isabelle/HOL: a proof assistant used to check mathematical proofs by machine.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Complex data structures are difficult to manipulate declaratively while preserving their shape invariants. Functional languages offer pattern matching and strong static guarantees, but their type systems primarily describe tree-shaped data. Graph transformation languages support richer structures, yet their state-oriented models do not integrate naturally with value- and function-based programming. This dissertation introduces $\\lambda_{GT}$, a functional language that integrates port-hypergraph transformation. It represents complex data as port hypergraphs, manipulates them by pattern matching, and uses types to specify global shape invariants. We formalise HyperLMNtal as a term-based graph transformation formalism, then define the syntax and call-by-value semantics of untyped $\\lambda_{GT}$ and implement a prototype interpreter. We develop a core type system for $\\lambda_{GT}$, prove its soundness, and relate it to graph-grammar-based typing. We extend the system with linear implication types to describe incomplete graphs arising during pattern matching. The extended system is sound with dynamic pattern-matching checks and is conservative over complete graph types. We also identify a statically safe fragment in which these checks can be eliminated. Finally, we mechanise the definitions and meta-theory in Isabelle/HOL.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32123",
    "title": "Verifying Type Soundness for Nontransitive Information Flow Security",
@@ -13,12 +58,12 @@
    "primary_category": "cs.PL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A machine-checked (Dafny) soundness proof for a type system enforcing nontransitive noninterference, an information flow security property, extended to an imperative language.",
-    "plain": "This paper is about checking that a set of rules for keeping secret information from leaking through a program is itself correct. The authors used a proof assistant-style tool, Dafny, to mechanically verify that the rule system guarantees its security property, rather than relying on paper arguments alone. The text presents this as the first such machine-checked proof for this kind of type-enforced security property.",
-    "why": "Software that claims to keep data private is only as trustworthy as the rules checking it, so formally verifying those rules gives stronger assurance. The text's main claim is the absence of prior machine-checked proofs for this property, and it does not report wider applications or measured effects beyond that.",
+    "ai": true,
     "background": "- Information flow security: tracking whether secret data can influence publicly visible outputs.\n- Noninterference: the property that high-security inputs have no observable effect on low-security outputs.\n- Nontransitive policies: security rules where information may flow from A to B and from B to C without permitting a flow from A to C.\n- Type system: a set of static rules that classify program parts and reject insecure ones before the program runs.\n- Imperative language: a programming style built on sequences of statements that change memory.\n- Machine-checked proof: a proof whose every step is verified by software, reducing reliance on human error.\n- Dafny: a programming language and verifier used to write and automatically check formal proofs.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A machine-checked (Dafny) soundness proof for a type system enforcing nontransitive noninterference, an information flow security property, extended to an imperative language.",
+    "plain": "This paper is about checking that a set of rules for keeping secret information from leaking through a program is itself correct. The authors used a proof assistant-style tool, Dafny, to mechanically verify that the rule system guarantees its security property, rather than relying on paper arguments alone. The text presents this as the first such machine-checked proof for this kind of type-enforced security property.",
+    "why": "Software that claims to keep data private is only as trustworthy as the rules checking it, so formally verifying those rules gives stronger assurance. The text's main claim is the absence of prior machine-checked proofs for this property, and it does not report wider applications or measured effects beyond that."
    },
    "abstract": "We present a machine-checked soundness proof of a type system for the nontransitive noninterference (NTNI) information flow security property in an imperative programming language using Dafny. The original formulation of NTNI was developed for a functional programming language augmented with memory access operators, where security policies are expressed as coarse-grained information flow constraints over component-based software systems. Although subsequent research has extended NTNI type systems in various directions, to the best of our knowledge, no prior work has established a machine-checked soundness proof for type-enforced NTNI. As a result, the correctness of existing NTNI enforcement mechanisms has not been formally verified with a high degree of assurance.",
    "source": "arxiv"
@@ -37,12 +82,12 @@
    "primary_category": "cs.PL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives the first denotational (meaning-based) proofs that closure conversion for a Turing-complete functional language is semantically reflected, using a graph model and a Scott-domain model, and compares mechanized compiler-correctness proofs across five semantic styles, two denotational and three operational.",
-    "plain": "This paper is about proving that a compiler, the program that translates code from one language into another, does not change what the code means. The authors ask whether \"denotational\" semantics, which describe a program by the mathematical value it stands for, can be used for such proofs as well as the \"operational\" styles, which describe a program by the steps it takes when run. They test this on a compiler from a small functional language to a low-level language, and report which style gave shorter proofs for which step.",
-    "why": "Correctness proofs for compilers are costly, and the choice of semantic style affects how hard they are. The text reports that no single style was best for every pass, and that proof size depends on how different the source and target runs are (operational) or whether a pass needs a logical relation (denotational). This is a measured comparison of tradeoffs rather than a claim that one approach wins.",
+    "ai": true,
     "background": "- Compiler: a program that translates source code into another language, such as machine-level code.\n- Semantics: a precise mathematical description of what programs mean.\n- Operational semantics: describes meaning by the step-by-step execution of a program (for example, abstract machines or interpreters).\n- Denotational semantics: describes meaning by a mathematical object the program stands for, such as a function in a model.\n- Compiler correctness: the target program must behave as the source does; \"preserved\" means meaning carries over, \"reflected\" means meaning of the output implies meaning of the input.\n- Closure conversion: a translation that turns nested functions, which capture variables from their surroundings, into flat first-order code.\n- Turing-complete: powerful enough to express any computation, including ones that never halt.\n- Logical relation: a proof technique that relates source and target values across types, often used for functions.\n- Mechanized proof: a proof checked by a computer proof assistant.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives the first denotational (meaning-based) proofs that closure conversion for a Turing-complete functional language is semantically reflected, using a graph model and a Scott-domain model, and compares mechanized compiler-correctness proofs across five semantic styles, two denotational and three operational.",
+    "plain": "This paper is about proving that a compiler, the program that translates code from one language into another, does not change what the code means. The authors ask whether \"denotational\" semantics, which describe a program by the mathematical value it stands for, can be used for such proofs as well as the \"operational\" styles, which describe a program by the steps it takes when run. They test this on a compiler from a small functional language to a low-level language, and report which style gave shorter proofs for which step.",
+    "why": "Correctness proofs for compilers are costly, and the choice of semantic style affects how hard they are. The text reports that no single style was best for every pass, and that proof size depends on how different the source and target runs are (operational) or whether a pass needs a logical relation (denotational). This is a measured comparison of tradeoffs rather than a claim that one approach wins."
    },
    "abstract": "Anyone setting out to prove a compiler correct must choose a style of semantics. The CakeML and CompCert projects, among others, show that operational semantics such as abstract machines and interpreters are viable choices. In this paper we explore whether denotational semantics can also be used in proofs of compiler correctness and evaluate the tradeoffs. We focus on a compiler from FPC, a language with lexically scoped functions and recursive types, to a first-order low-level intermediate language. This compiler includes closure conversion, but no prior proof of correctness with respect to denotational semantics covers closure conversion for a Turing-complete language. Compiler correctness requires that the denotation of a program be both preserved and reflected by the compiler. For closure conversion, reflection is the hard direction. We present the first denotational proofs of semantic reflection for closure conversion applied to a Turing-complete language, one proof with respect to a graph model and one with respect to Scott domains. For the graph-model proof we develop a new logical relation, the approximant logical relation, and for the Scott-domain proof we adapt a logical relation of Reynolds. As a first step in evaluating the tradeoffs, we compare mechanized correctness proofs of an eight-pass compiler, from FPC down to a typed low-level intermediate language, in five semantic styles. Two of the styles are denotational and three are operational. We find that no one semantics yields the shortest proofs for every compiler pass. We identify two factors that influence proof size. For operational semantics, proof size tends to grow with how much the runs of the source and target differ. For denotational semantics, the proofs are succinct when the correctness of a pass is an equation between meanings, and lengthy when a pass needs a logical relation.",
    "source": "arxiv"

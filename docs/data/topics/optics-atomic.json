@@ -1,7 +1,66 @@
 {
  "slug": "optics-atomic",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32704",
+   "title": "AI-Assisted Topological High-Harmonic Spectroscopy for Characterizing Crystal Symmetries and Nonlinear Responses",
+   "url": "https://arxiv.org/abs/2611.32704",
+   "authors": [
+    "David Hervalejo-Sancho",
+    "Sergio Mart\\'in-Domene",
+    "Rodrigo Mart\\'in-Hern\\'andez",
+    "Antonio Pic\\'on",
+    "Luis Plaja",
+    "Jos\\'e M. Caridad",
+    "Javier Serrano",
+    "Carlos Hern\\'andez-Garc\\'ia"
+   ],
+   "label": "arXiv:2611.32704v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper combines topological high-harmonic spectroscopy with a convolutional neural network to infer the anisotropic nonlinear response and crystal symmetry of atomically thin materials from far-field harmonic intensity profiles, validated against microscopic and macroscopic simulations.",
+    "plain": "Shining intense laser light on a thin crystal can make it emit light at multiples of the original frequency, and the pattern of that emitted light carries clues about the crystal's internal symmetry. This paper trains an AI model to read those spatial patterns and work backward to the material's direction-dependent response and its symmetry type. The authors test it on simulated graphene, bilayer graphene with different stacking orders, and monolayer hexagonal boron nitride.",
+    "why": "The authors suggest the method could be a fast, contactless way to characterize materials without needing phase-resolved measurements, with possible extension to polycrystals and van der Waals heterostructures. These are claims about future applications; the text reports only simulation-based validation, so experimental performance remains untested here.",
+    "background": "- High-harmonic generation: intense laser light converts into emitted light at integer multiples (harmonics) of the driving frequency.\n- Anisotropic material: a material whose properties depend on direction, as crystals often do.\n- Crystal symmetry: the rotational arrangement of atoms in a lattice (e.g., hexagonal in graphene), which constrains how the material responds to light.\n- Topological high-harmonic spectroscopy: using the spatial shape of the emitted harmonic beam, rather than just its strength, to read out material properties.\n- Convolutional neural network: an AI model that learns patterns in images, here used to map intensity images to material parameters.\n- Phase-resolved measurement: detecting both amplitude and phase of light, which is harder experimentally; the method aims to avoid it.\n- Van der Waals heterostructure: layered stacks of two-dimensional materials held together by weak forces.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Structured light has emerged as a unique tool for probing nonlinear light-matter interactions. Particularly interesting is its interaction with anisotropic media, such as crystalline materials, whose anisotropic responses encode information about their electronic properties. Recently, topological high-harmonic spectroscopy was introduced as an all-optical approach to extract the anisotropic nonlinear response of graphene from harmonic spatial intensity profiles. Here, topological high-harmonic spectroscopy is combined with artificial intelligence (AI) to retrieve the anisotropic non-linear response and crystal symmetry of atomically thin materials. A convolutional neural network is trained and validated to learn the inverse mapping between harmonic far-field intensity profiles and the nonlinear response of materials exhibiting different rotational symmetries. Comparisons with microscopic high-harmonic-generation simulations demonstrate the accurate retrieval of distinct effective nonlinear responses in single-symmetry crystals, such as single-layer graphene and bilayer graphene with different stacking orders, and in crystals exhibiting multiple symmetry components, such as monolayer hexagonal boron nitride. Macroscopic high-harmonic-generation simulations assess the robustness and applicability limits of the technique. These results establish AI-assisted topological high-harmonic spectroscopy as a fast, contactless tool for characterizing nonlinear optical responses and crystal symmetries without phase-resolved measurements, opening prospects for applications to complex systems such as polycrystals and van der Waals heterostructures.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32586",
+   "title": "Topological terahertz fields from tunable vectorial currents",
+   "url": "https://arxiv.org/abs/2611.32586",
+   "authors": [
+    "Jacob Pettine",
+    "Tae Gwan Park",
+    "Yanhe Lyu",
+    "Wangke Yu",
+    "John B. Maier",
+    "Matthew Yeung",
+    "Rujuta Sane",
+    "Chun-Chieh Chang",
+    "Nuh Gedik",
+    "Yijie Shen",
+    "Hou-Tong Chen"
+   ],
+   "label": "arXiv:2611.32586v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper reports an optoelectronic metasurface in which polarized ultrafast light drives tunable vectorial photocurrents in patterned graphene, emitting single-cycle terahertz toroidal pulses with time-evolving skyrmion textures.",
+    "plain": "The paper is about making and controlling a special kind of light pulse whose electric and magnetic fields twist into a donut-like (toroidal) shape. The researchers used a flat, patterned surface made of graphene that converts a short laser flash into tiny electrical currents, and changing the laser's polarization steers those currents. The resulting terahertz pulses were measured in space and time, and the authors report that their structure could be followed through a single oscillation cycle.",
+    "why": "Topological light pulses are proposed as a way to carry information with more capacity and robustness to noise, so a controllable way to generate them is of interest. The text is a claim of a platform for higher-dimensional information processing and material spectroscopy; these applications are suggested by the authors, not demonstrated in the text.",
+    "background": "- Terahertz (THz) radiation: electromagnetic waves between microwaves and infrared, with oscillation periods around a trillionth of a second.\n- Graphene: a single layer of carbon atoms that responds very quickly to light and conducts electricity.\n- Photocurrent: an electric current driven by light absorption.\n- Metasurface: a flat array of tiny engineered structures (here nanoplasmonic resonators) that shapes how light interacts with a material.\n- Polarization: the direction in which a light wave's electric field oscillates; here linear polarization sets the current direction.\n- Toroidal pulse: a field pattern whose field lines loop around in a donut-like shape rather than simply spreading outward.\n- Skyrmion texture: a swirling, knot-like pattern of field directions; skyrmion number and helicity are quantities that describe its twist and handedness.\n- Single-cycle pulse: a burst containing essentially one oscillation of the field.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Future information processing calls for photonic architectures with greater capacity, intrinsic resilience to noise, and direct integration with quantum materials and devices. Topological light pulses have recently emerged as promising candidates to meet these demands, yet the complexity underlying their unique properties also makes them challenging to generate, tune, and fully resolve in space and time. Here, we generate and actively tune topological light fields through transient vectorial currents in an optoelectronic metasurface. Incident linear polarization steers the local direction of photocurrents in graphene via nanoplasmonic resonators with triangular symmetry, while a global winding pattern enables continuous tuning between compressional and circulating charge flows. Under ultrafast excitation, these currents radiate single-cycle terahertz toroidal pulses spanning electric- and magnetic-dominant modes with dynamically evolving skyrmion textures. Full spatiotemporal mapping and reconstruction provide a complete visualization of the toroidal structure of light, directly tracing the closed field surfaces while continuously tracking skyrmion number and helicity throughout a single cycle. These results connect two-dimensional vectorial currents to rich three-dimensional electromagnetic field structures, while establishing a versatile integrated platform for higher-dimensional photonic information processing and emerging material spectroscopies.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32935",
    "title": "Integrated lasing and dual-band gain in neodymium-implanted silicon nitride",
@@ -21,12 +80,12 @@
    "primary_category": "physics.optics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Demonstrates neodymium-ion-implanted LPCVD silicon nitride waveguide amplifiers with gain in two bands near 920 nm and 1100 nm, and a ring laser built on the same platform, fabricated on 200 mm commercial wafers.",
-    "plain": "This paper is about building tiny laser circuits on a chip for light near 1 micrometer, a wavelength used in quantum technology, precise measurement, and sensing. The authors took standard silicon nitride chip waveguides made on a commercial wafer, implanted neodymium ions (a rare-earth element) into individual chips to add light-amplifying material, and tested them. They report that the amplifiers boost light in two wavelength bands, and that a ring-shaped resonator on the chip lases.",
-    "why": "Making lasers on standard chip-manufacturing lines could make them smaller and easier to produce at scale, which matters for quantum and sensing devices. The text does not report output power, efficiency, or how stable the lasers are, so the practical significance is still open.",
+    "ai": true,
     "background": "- Photonic integrated circuit: a chip that guides light through tiny channels (waveguides), similar to electrical wiring for light.\n- Silicon nitride (LPCVD): a common chip material deposited from gas at low pressure; a standard, mass-producible platform.\n- Rare-earth gain: rare-earth ions such as neodymium emit light at specific wavelengths when pumped with energy, which can amplify light passing through them.\n- Ion implantation: firing ions into a material at high energy to add them to its surface layer.\n- Waveguide amplifier: a guided-light channel that increases the signal passing through it.\n- Ring resonator: a looped waveguide that selects specific wavelengths; a laser cavity can be built from it.\n- Lasing: the point where amplification overcomes losses and the device emits coherent light.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "Demonstrates neodymium-ion-implanted LPCVD silicon nitride waveguide amplifiers with gain in two bands near 920 nm and 1100 nm, and a ring laser built on the same platform, fabricated on 200 mm commercial wafers.",
+    "plain": "This paper is about building tiny laser circuits on a chip for light near 1 micrometer, a wavelength used in quantum technology, precise measurement, and sensing. The authors took standard silicon nitride chip waveguides made on a commercial wafer, implanted neodymium ions (a rare-earth element) into individual chips to add light-amplifying material, and tested them. They report that the amplifiers boost light in two wavelength bands, and that a ring-shaped resonator on the chip lases.",
+    "why": "Making lasers on standard chip-manufacturing lines could make them smaller and easier to produce at scale, which matters for quantum and sensing devices. The text does not report output power, efficiency, or how stable the lasers are, so the practical significance is still open."
    },
    "abstract": "Lasers at wavelengths near 1 micrometer are used in quantum technologies, precision metrology, and sensing. Rare-earth gain at these wavelengths in photonic integrated circuits can reduce the size and enable the scalable fabrication of these lasers. We fabricate neodymium-based integrated waveguide amplifiers and a ring laser using neodymium-implanted LPCVD silicon nitride. The photonic integrated circuits were fabricated on a 200 mm commercial wafer platform, and individual dies were implanted with neodymium ions. We show that the amplifiers provide gain in two bands around wavelengths of 920 nm and 1100 nm, and we show lasing in a ring resonator. This demonstrates that neodymium-implanted LPCVD silicon nitride is a suitable gain material for integrated lasers.",
    "source": "arxiv"
@@ -43,12 +102,12 @@
    "primary_category": "physics.optics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A survey chapter reviewing theory, experiments, generation and control methods for temporal soliton families (dissipative solitons, soliton molecules, dispersion-managed solitons) in mode-locked fiber lasers.",
-    "plain": "This is an overview chapter about tiny, self-sustaining pulses of light that keep their shape as they travel through optical fiber inside a laser. The chapter gathers the underlying theory, experimental results, and ways to create, measure, and steer these pulses. It also covers newer work that uses machine learning to help control them.",
-    "why": "Stable ultrashort light pulses are used in precision measurement, communications and materials processing, so a consolidated review of how they form and how they can be controlled is useful for people entering the field. The text does not indicate any single new result, and its claims about recent progress are only described at a general level.",
+    "ai": true,
     "background": "- Mode-locked laser: a laser that emits a train of very short light pulses instead of a steady beam.\n- Optical fiber: a thin glass strand that guides light; the laser cavity is typically a loop of it.\n- Soliton: a pulse that holds its shape because the fiber's nonlinear response balances its tendency to spread out.\n- Dispersion: the effect where different colors of light travel at slightly different speeds, stretching pulses.\n- Gain and loss: light is amplified in the fiber and lost elsewhere; \"dissipative\" solitons depend on this balance.\n- Soliton molecules: several pulses locked together at fixed spacing, like a bound pair.\n- Breathing state: a pulse that periodically changes its width or energy while traveling.\n- Machine learning control: using trained algorithms to adjust laser settings to reach desired pulse behavior.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A survey chapter reviewing theory, experiments, generation and control methods for temporal soliton families (dissipative solitons, soliton molecules, dispersion-managed solitons) in mode-locked fiber lasers.",
+    "plain": "This is an overview chapter about tiny, self-sustaining pulses of light that keep their shape as they travel through optical fiber inside a laser. The chapter gathers the underlying theory, experimental results, and ways to create, measure, and steer these pulses. It also covers newer work that uses machine learning to help control them.",
+    "why": "Stable ultrashort light pulses are used in precision measurement, communications and materials processing, so a consolidated review of how they form and how they can be controlled is useful for people entering the field. The text does not indicate any single new result, and its claims about recent progress are only described at a general level."
    },
    "abstract": "This chapter provides a comprehensive survey of temporal soliton-wave in modern fiber systems. Temporal soliton waves constitute a broad class of nonlinear localized structures in modern fiber laser systems, arising from different balances among dispersion, nonlinearity, gain, loss, spectral filtering, and various forms of cavity coupling. We review the underlying theory, basic experimental findings, and practical methods for the generation, real-time characterization, and active control of soliton families, with a particular focus on recent progress reported for mode-locked fiber-laser platforms. The families covered in the chapter include dissipative solitons, soliton molecules (bound states), and dispersion-managed solitons. For each species, we focus on the pulse energy, duration, stationary and breathing states, and emerging intelligent (machine-learning-assisted) control strategies.",
    "source": "arxiv"

@@ -1,7 +1,49 @@
 {
  "slug": "logic",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31342",
+   "title": "Idempotent generically stable measures in NSOP$_1$ groups",
+   "url": "https://arxiv.org/abs/2611.31342",
+   "authors": [
+    "Daniel Max Hoffmann"
+   ],
+   "label": "arXiv:2611.31342v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves the Idempotent Measure Conjecture for type-definable groups in NSOP$_1$ theories, showing that global idempotent generically stable (frequency interpretation) measures are unique left- and right-invariant measures concentrating on the type-definable stabilizer.",
+    "plain": "This is a result in model theory, the branch of logic that studies which structures and definable sets behave well. The authors consider groups defined by logical formulas in a class of theories called NSOP$_1$ and show that a certain kind of \"averaging\" measure on such a group is essentially unique, and that its support has a simple algebraic structure. The argument also relies on an announced theorem by Ben Yaacov, Chernikov and Ramsey, whose proof is given in an appendix, to extend the conclusion to all such groups.</plain>\n<parameter name=\"why\">It settles a conjecture about how measures on definable groups behave in a broad class of theories, which bears on the structure theory of groups in model theory. Its wider connections are not spelled out in the text, so I cannot say more with confidence.",
+    "why": "",
+    "background": "- Group: a set with an associative operation, identity and inverses; here the group is defined by logical formulas.\n- Type-definable: described by a (possibly infinite) collection of logical conditions.\n- Stabilizer: the subgroup of elements that preserve a given type under the group action.\n- Measure (probability measure): an assignment of \"sizes\" or weights to definable sets, here used to average over the group.\n- Left/right-invariant: unchanged when the group acts on the left or right.\n- Idempotent: a measure that is equal to its own convolution (self-combination).\n- NSOP$_1$: a dividing-independence property from stability-theory classification, a broad class of theories generalizing stable ones.\n- Randomization: a construction that turns a theory into one about random variables/measures; the text cites a theorem that it preserves NSOP$_1$.\n- Minimal left ideal and left-simple semigroup: standard algebraic notions from semigroup theory.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove the Idempotent Measure Conjecture for type-definable groups in theories whose Keisler randomization is NSOP$_1$. More precisely, every global idempotent frequency interpretation measure on such a group is the unique left-invariant and the unique right-invariant measure concentrating on its type-definable stabilizer. In particular, its support is a left-simple convolution semigroup and has a unique minimal left ideal. The announced theorem of Ben Yaacov, Chernikov and Ramsey that randomization preserves NSOP$_1$ (proof in the appendix) yields the corresponding conclusion for all type-definable groups in NSOP$_1$ theories.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31591",
+   "title": "Provability of Consistency: A New Foundational Landscape",
+   "url": "https://arxiv.org/abs/2611.31591",
+   "authors": [
+    "Sergei Artemov"
+   ],
+   "label": "arXiv:2611.31591v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A survey-style paper arguing that Hilbertian consistency of Peano Arithmetic, unlike the standard Gödelian consistency formula, can be proved inside PA itself, and claiming this refutes the Unprovability of Consistency Thesis.",
+    "plain": "The paper concerns a long-standing belief in logic: that a formal arithmetic system cannot prove, within itself, that it is free of contradictions. The authors claim that the usual formula for \"consistency\" used in Gödel's argument differs from the older, Hilbert-style notion, and that a proof of the older notion can be carried out inside the system. The text as given states this claim and summarizes its consequences but does not show the detailed proof.",
+    "why": "If correct, the claim would challenge a widely held result in the foundations of mathematics and bear on old philosophical arguments (such as the Lucas-Penrose argument about minds and machines) and on the design of self-checking theorem provers. The text alone does not let me judge whether the proof holds, and the claim is contested in its framing, so it should be read with that caution.",
+    "background": "- Peano Arithmetic (PA): a standard formal system for the natural numbers and their basic arithmetic.\n- Consistency: a theory is consistent if it never proves both a statement and its negation.\n- Gödel's second incompleteness theorem: a consistent system of this strength cannot prove its own consistency formula, which is the basis of the \"unprovability\" thesis.\n- Hilbert's consistency program: the early 20th-century aim to prove mathematics consistent using only safe, finitary methods.\n- Gödelian vs. Hilbertian consistency: two different formal statements that both get called \"consistency\"; the paper's central claim is that they are not equivalent.\n- Lucas-Penrose argument: a philosophical argument that human minds surpass any formal machine because machines cannot verify their own consistency.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper surveys recent developments on the provability of consistency. For nearly a century, the Unprovability of Consistency Thesis (UCT) has held that sufficiently rich systems, such as Peano Arithmetic (PA), cannot formalize a proof of their own consistency. Recent studies show that the standard G\\\"odelian consistency formula, Con_PA, on which the UCT argument rests, represents a non-equivalent redefinition of the original Hilbertian notion of consistency. We construct a rigorous mathematical proof of the Hilbertian consistency of PA that is formalizable within PA itself, thereby refuting UCT. While G\\\"odelian consistency formulas remain indispensable for comparing the relative strengths of theories, Hilbertian consistency enables internal self-verification. Beyond vindicating Hilbert's consistency program, these findings dismantle the Lucas-Penrose argument and remove perceived logical barriers to self-verifying Automated Theorem Proving and Artificial Intelligence.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31725",
    "title": "Cardinal Transfer Events for Infinitary Logic with Infinitary Quantification",
@@ -13,12 +55,12 @@
    "primary_category": "math.LO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Under the assumption of a certain theory Φ, the paper claims to solve the Gap-n problem for more than one predicate in infinitary logic with infinitary quantification, via cardinal transfer events.",
-    "plain": "This paper is about a question in the foundations of mathematics: when a logical language can talk about very large infinite sizes (cardinals), and whether certain \"transfer\" properties of those sizes hold. The text is only a short abstract. It says the authors solve a version of the \"Gap-n problem\" for more than one predicate, but only under an extra assumption they call the theory Φ.",
-    "why": "The abstract is too brief to show how strong the result is or which open questions it settles, so its importance is hard to judge from this text alone. It likely matters to specialists in infinitary logic and set theory, but the connection to wider mathematics is not stated.",
+    "ai": true,
     "background": "- Infinitary logic: logical languages that allow infinitely long conjunctions or disjunctions, unlike ordinary finite formulas.\n- Infinitary quantification: quantifiers (\"for all\", \"there exists\") ranging over infinitely many objects at once, not just finitely many.\n- Cardinals: measures of infinite size, such as how many elements an infinite set has.\n- Predicates: properties or relations that a logical formula can express about objects.\n- Transfer event (cardinal transfer): a statement that a structure with one pair of infinite sizes has a substructure with another pair, a standard tool in model theory.\n- Gap-n problem: a question about whether certain cardinal transfer properties hold at a given level of complexity; the abstract does not define it further.\n- Assumed theory Φ: an extra hypothesis, not identified in the text, on which the results depend.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Under the assumption of a certain theory Φ, the paper claims to solve the Gap-n problem for more than one predicate in infinitary logic with infinitary quantification, via cardinal transfer events.",
+    "plain": "This paper is about a question in the foundations of mathematics: when a logical language can talk about very large infinite sizes (cardinals), and whether certain \"transfer\" properties of those sizes hold. The text is only a short abstract. It says the authors solve a version of the \"Gap-n problem\" for more than one predicate, but only under an extra assumption they call the theory Φ.",
+    "why": "The abstract is too brief to show how strong the result is or which open questions it settles, so its importance is hard to judge from this text alone. It likely matters to specialists in infinitary logic and set theory, but the connection to wider mathematics is not stated."
    },
    "abstract": "Assuming the existence of a certain theory $\\Phi$, we solve the Gap-$n$ problem for more than one predicate. This will be done for infinitary logic with infinitary quantification.",
    "source": "arxiv"
@@ -35,12 +77,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper gives a monadic (continuation- and reader-monad based) formulation of alpha-beta pruning for minimax game search, records bounds inside outcomes rather than move types, extends the ordinary continuation monad to return optimal plays, and proves the pruned search agrees with exhaustive minimax.",
-    "plain": "The paper looks at a classic method that lets a game-playing program skip parts of its search tree when those parts cannot change the best move. The authors rewrite this method using a programming pattern called monads, which packages computations in a structured way. They show it finds the same best outcomes and best sequences of moves as checking every option, and they test it on Tic-Tac-Toe, where it evaluated 39 times fewer plays than exhaustive search.",
-    "why": "It offers a compositional, formally verified way to express a foundational AI search algorithm inside functional programming, which may matter for building and checking game-playing software. The text reports only a single Tic-Tac-Toe test, so how well the approach scales to larger games is not shown here.",
+    "ai": true,
     "background": "- Minimax: a search method where one player maximises and the opponent minimises the final score, looking ahead through possible moves.\n- Alpha-beta pruning: an optimisation of minimax that skips branches which cannot affect the final decision.\n- Monad: a programming abstraction for chaining computations with extra context (here, the continuation and reader monads manage control flow and passed-in bounds).\n- Continuation: a way of representing \"what happens next\" as a function, letting a search decide when to stop early.\n- Formal correctness proof: a mathematical argument that the optimised method always gives the same answer as the simple one.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives a monadic (continuation- and reader-monad based) formulation of alpha-beta pruning for minimax game search, records bounds inside outcomes rather than move types, extends the ordinary continuation monad to return optimal plays, and proves the pruned search agrees with exhaustive minimax.",
+    "plain": "The paper looks at a classic method that lets a game-playing program skip parts of its search tree when those parts cannot change the best move. The authors rewrite this method using a programming pattern called monads, which packages computations in a structured way. They show it finds the same best outcomes and best sequences of moves as checking every option, and they test it on Tic-Tac-Toe, where it evaluated 39 times fewer plays than exhaustive search.",
+    "why": "It offers a compositional, formally verified way to express a foundational AI search algorithm inside functional programming, which may matter for building and checking game-playing software. The text reports only a single Tic-Tac-Toe test, so how well the approach scales to larger games is not shown here."
    },
    "abstract": "Alpha-beta pruning is a fundamental technique in game-playing AI, enabling efficient minimax search by avoiding the exploration of branches that cannot affect the optimal decision. We present a monadic formulation of alpha-beta pruning based on the combination of the continuation monad and the reader monad. Unlike previous approaches that encode alpha-beta bounds into the types of available moves, our construction records these bounds within monadic outcomes, leaving the move types unchanged. We further show that the ordinary continuation monad suffices to compute not only optimal outcomes but also optimal plays, by extending the outcome type to include the corresponding sequences of moves. This provides an alternative to generalisations of the continuation monad proposed to address the inefficiencies associated with the selection monad in alpha-beta search. We illustrate our approach with an implementation of Tic-Tac-Toe, observing a 39-fold reduction in the number of plays evaluated, compared with exhaustive search, in computing an optimal play. Finally, we formally establish the correctness of our construction by proving that the monadic alpha-beta search computes the same optimal outcomes and plays as exhaustive minimax search. Our results demonstrate how a foundational algorithm in AI can be expressed and verified using standard monadic abstractions, providing a basis for further development of compositional approaches to adversarial search.",
    "source": "arxiv"

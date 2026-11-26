@@ -1,7 +1,68 @@
 {
  "slug": "stars-sun",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31363",
+   "title": "Refining the Architecture of the Quadruple Pre-main-sequence System HD 98800: Improved Orbits, Dynamical Masses, and a Transiting Circumbinary Disk",
+   "url": "https://arxiv.org/abs/2611.31363",
+   "authors": [
+    "Guillermo Torres (CfA)",
+    "John D. Monnier",
+    "Gail H. Schaefer",
+    "Andrew F. Boden",
+    "Matthew J. Holman",
+    "Stefan Kraus",
+    "Noura Ibrahim",
+    "James W. Davidson",
+    "Jr.",
+    "Elliott P. Horch",
+    "Lisa Prato",
+    "David W. Latham",
+    "Robert P. Stefanik",
+    "Narsireddy Anugu",
+    "Claire L. Davies"
+   ],
+   "label": "arXiv:2611.31363v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "New radial-velocity and interferometric observations refine the orbits and dynamical masses (to within 2.6%) of the four stars in the young quadruple system HD 98800, and use the currently transiting circumbinary disk around binary B to probe the disk with an expected decade-long eclipse by binary A.",
+    "plain": "This paper studies HD 98800, a young system of four stars arranged as two pairs of two, all orbiting one another. The authors combined over 36 years of velocity measurements with new and older images of the two pairs to pin down the orbits and the masses of all four stars very precisely. They also report that one pair is currently passing behind a disk of dust and gas that surrounds the other pair, which should dim the light for about a decade.",
+    "why": "Precise masses of young stars help test whether current models of how stars form and age are right. The eclipse by the disk gives a rare chance to look inside a disk that may be forming planets, though the text does not show what that will reveal.",
+    "background": "- HD 98800 is a young, pre-main-sequence star system, still contracting toward its adult stage.\n- It belongs to the TW Hydrae association, a nearby group of young stars.\n- A hierarchical quadruple means four stars in nested orbits: two close pairs (binaries A and B) orbit each other on a wider path.\n- The outer orbit lasts about 240 years, so only part of it has been observed.\n- Radial velocity: measuring how fast a star moves toward or away from us via its spectrum, which reveals orbital motion.\n- Interferometry: combining light from several telescopes to resolve objects that look like single points, here the separate stars.\n- Dynamical mass: a mass derived from how bodies orbit each other, using Newton's gravity, rather than from models.\n- Circumbinary disk: a disk of gas and dust orbiting around a pair of stars; this one is tilted to a polar (perpendicular) orientation.\n- Optical extinction: dimming of starlight by dust in the line of sight.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present new spectroscopic and interferometric observations of the pre-main-sequence hierarchical quadruple system HD 98800, a member of the nearby TW Hya association. Our radial velocity monitoring extends the total coverage to over 36 years, sampling the periastron passage in the $\\sim$240-yr outer orbit. By combining these velocities with new and archival interferometric observations of both inner binaries (A and B), we significantly refine the system orbits and constrain the dynamical masses of all four stars to $\\leq$ 2.6 percent. The resulting stellar properties (masses, effective temperatures, and absolute magnitudes) are found to agree well with current stellar evolution models. Notably, binary B hosts a known circumbinary disk in a polar orientation. Our interferometric imaging, as well as ground-based photometry by others, capture binary A currently passing directly behind the disk, a striking alignment given the outer orbit's long period. We use the photometry to infer the optical extinction produced by the disk material. The eclipse is expected to last about a decade, and offers an unprecedented opportunity to probe the structure and composition of the potentially planet-forming disk. Our refined orbits and component masses provide a robust dynamical framework to support ongoing and future studies of this unique event.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32296",
+   "title": "Photometric Characterisation and Evolutionary State Investigation of the Low Mass-Ratio Contact Binary FASTT 1558",
+   "url": "https://arxiv.org/abs/2611.32296",
+   "authors": [
+    "Anurag Baruah (IIT Hyderabad)",
+    "Mayukh Pahari (IIT Hyderabad)",
+    "Kumar Pranshu (ARIES)",
+    "Nihal Mohamed Thalakkott (IIT Hyderabad)",
+    "Kuntal Misra (ARIES)",
+    "Ikyatha Tummalapalli (Osmania University)"
+   ],
+   "label": "arXiv:2611.32296v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A photometric and spectroscopic study of FASTT 1558, a totally eclipsing contact binary with an extreme low mass ratio (q≈0.154), combining TESS and ASAS-SN light curves, 3.6m Devasthal spectra, period-change analysis, MESA evolution models and a Darwin-stability check.",
+    "plain": "This paper looks at a pair of stars that orbit so closely they share a common outer envelope, with one star far less massive than the other. The authors tracked how the system's brightness dips during eclipses, measured its spectrum at different orbital phases, and compared its history to computer models of how such pairs evolve. They report that the pair's orbit appears to be shrinking slowly, possibly because material is flowing from the heavier star to the lighter one.",
+    "why": "Low mass-ratio contact binaries are considered possible precursors of stellar mergers, so a well-measured example can serve as a test for evolutionary models. The authors say the models they ran stopped before reaching the observed mass ratio, so the match between theory and this system is only partial; the wider significance is for the authors' stated benchmark role rather than an established result.",
+    "background": "- Binary star: two stars orbiting a common centre of mass.\n- Contact binary: a close pair whose stars fill their gravitational boundaries and share an envelope.\n- Mass ratio q: the less massive star's mass divided by the more massive star's mass; here about 0.15.\n- Total eclipse: one star is fully hidden behind the other during part of the orbit, so brightness dips are measured precisely.\n- Photometry: measuring brightness over time; TESS and ASAS-SN are sky surveys providing such data.\n- Spectroscopy: splitting light into its colours to read chemical and activity signatures; H-alpha and Ca II lines are used as activity indicators (chromosphere, the star's outer atmosphere).\n- Orbital period change: a slow drift in the time between eclipses, used to infer mass transfer.\n- Roche lobe / L2 overflow: material escaping through the inner Lagrange point between the stars.\n- MESA: a widely used open-source stellar evolution code.\n- Darwin stability: a criterion for whether the system can avoid runaway mass transfer, depending on the spin-to-orbit angular momentum ratio.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Contact binaries with low mass ratios, as potential progenitors of stellar mergers, offer important insights into the physical processes governing mass and energy transfer. In this work, we present the first spectro-photometry based evolutionary investigation of FASTT 1558, a totally eclipsing, low mass-ratio contact binary. We combine TESS and ASAS-SN photometry with phase-resolved spectroscopy obtained with the 3.6m Devasthal Optical Telescope. The lightcurve modeling with PHOEBE shows that the system has an exceptionally low secondary-to-primary mass ratio of $q=0.1544\\pm0.0013$, with a deep contact degree of $f=0.61\\pm0.01$. Our analysis yields a total system mass of $1.92\\pm0.31\\,M_\\odot$, while the distance to the system is estimated to be $648.45\\pm29.85$ pc. Analysis of long-term eclipse timings reveals an apparent orbital period decrease of $\\dot{P}=-(3.03\\pm0.26) \\times 10^{-7}$ ${\\rm day\\,yr^{-1}}$, which may be associated with mass-transfer from the primary to the secondary on a thermal timescale. The spectra show phase-dependent H$\\alpha$ and CaII equivalent widths, indicating a dynamically evolving chromosphere. Binary evolution calculations with MESA terminates through L2 overflow before reaching the observed low mass-ratio. Despite its extreme mass ratio, the system is presently Darwin stable, with $J_{\\rm spin}/J_{\\rm orb}=0.15\\pm0.02$. FASTT 1558 therefore provides a robust observational benchmark for evolutionary models of low mass-ratio contact binaries.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32656",
    "title": "Constraining the Binary Fraction and Mass-Ratio Distribution of FGK Dwarfs with Gaia XP Spectra: Metallicity, $\\alpha$-Element, and Age Dependencies",
@@ -19,12 +80,12 @@
    "primary_category": "astro-ph.SR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Using the Stellar Locus Outlier method on synthetic Gaia XP photometry plus LAMOST DR9 stellar parameters, this paper estimates the binary fraction and high-mass-ratio power-law slope for about 200,000 FGK dwarfs within 1 kpc and examines their dependence on metallicity, alpha-element abundances, and age.",
-    "plain": "The paper asks how often Sun-like stars have a companion star, and what kinds of companions they tend to have. The authors used colour measurements from the Gaia satellite's low-resolution spectra, for nearly 200,000 nearby stars, and looked for the tell-tale colour offset that a hidden companion adds to a star's light. They then compared the results with each star's chemical makeup and estimated age.",
-    "why": "Knowing how many stars come in pairs, and how their masses are matched, constrains how stars form and evolve. The text links the chemistry trends to possible dynamical or formation processes, but it does not establish a causal mechanism, so that link remains a suggestion.",
+    "ai": true,
     "background": "- Binary fraction: the share of stars that have a companion star.\n- Mass ratio (q): the companion's mass divided by the primary's mass; the distribution describes how common different pairings are.\n- FGK dwarfs: main-sequence stars somewhat cooler or similar to the Sun, which are the most common stars nearby.\n- Gaia XP spectra: low-resolution light spectra from the Gaia space telescope, used here as synthetic colour photometry.\n- LAMOST DR9: a spectroscopic survey data release that supplies stellar parameters such as metallicity and element abundances.\n- Metallicity: how much of a star's mass is made of elements heavier than helium.\n- Alpha elements (Mg, Si, Ca): elements formed mainly in massive-star deaths; their ratios help trace stellar populations.\n- Thin and thick disk: two stellar populations of the Milky Way, with the thick disk generally older and more metal-poor.\n- Stellar locus: the main curve on a colour-colour plot where single stars lie; binaries appear as outliers displaced from it.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using the Stellar Locus Outlier method on synthetic Gaia XP photometry plus LAMOST DR9 stellar parameters, this paper estimates the binary fraction and high-mass-ratio power-law slope for about 200,000 FGK dwarfs within 1 kpc and examines their dependence on metallicity, alpha-element abundances, and age.",
+    "plain": "The paper asks how often Sun-like stars have a companion star, and what kinds of companions they tend to have. The authors used colour measurements from the Gaia satellite's low-resolution spectra, for nearly 200,000 nearby stars, and looked for the tell-tale colour offset that a hidden companion adds to a star's light. They then compared the results with each star's chemical makeup and estimated age.",
+    "why": "Knowing how many stars come in pairs, and how their masses are matched, constrains how stars form and evolve. The text links the chemistry trends to possible dynamical or formation processes, but it does not establish a causal mechanism, so that link remains a suggestion."
    },
    "abstract": "We present a study of the binary fraction and mass-ratio distribution for near 200,000 FGK dwarf stars within 1 kpc, utilizing the Stellar Locus Outlier (SLOT) method applied to synthetic Gaia XP photometry and stellar parameters from LAMOST DR9. By modeling the asymmetric color residuals relative to a metallicity-dependent single-star locus, we measure the binary fraction $f_b$ and constrain the power-law slope $\\gamma_{\\rm large\\,q}$ of the mass-ratio distribution at high mass ratio $q$. Higher metallicity is associated with a steeper (more negative) $\\gamma_{{\\rm large}q}$, indicating a larger proportion of low-mass-ratio systems. For $\\alpha$-elements, [Mg/H] and [Si/H] are anticorrelated with $f_b$ in thin-disk-dominated subsamples; conversely, [Ca/H] shows a positive correlation with $f_b$ in thin-disk-dominated subsamples. No correlation is found between $f_b$ and $\\alpha$-element abundances in thick-disk-dominated subsamples. The binary fraction increases modestly toward older ages in the thin-disk population, a trend that likely reflects underlying correlations with chemistry. Our results shed light on how chemical composition and dynamical processes shape the binary properties of solar-type stars.",
    "source": "arxiv"
@@ -40,12 +101,12 @@
    "primary_category": "astro-ph.SR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A study of three long-period (hundreds of days), interacting eclipsing binary stars with highly evolved giant components, two in the Small Magellanic Cloud and one (PW Pup) in the Galaxy, using archival visible and mid-infrared photometry and spectroscopy to constrain masses, mass ratios and mass transfer history.",
-    "plain": "This paper looks at three pairs of stars that orbit each other and periodically pass in front of one another, making their combined brightness dip. Two of the pairs are in the Small Magellanic Cloud, a neighbouring galaxy, and one is in our own Galaxy. Using old observations already in archives, the authors estimate how heavy the hidden companion stars must be and suggest that these systems have already passed material between them.",
-    "why": "Systems like these are useful test cases for how stars evolve when they exchange mass, and the text says some of the companions may be hard to detect directly, so the findings point to where future infrared observations could help. The text itself does not claim wider consequences beyond these three systems.",
+    "ai": true,
     "background": "- Eclipsing binary: two stars orbiting each other whose alignment with us makes them dim periodically; the dips reveal their sizes, temperatures and orbits.\n- Orbital period of hundreds of days: the stars circle each other slowly, so they are far apart compared with close binaries.\n- Giant (K and M type): cool, large, evolved stars that have swollen after using up core fuel.\n- Mass transfer: one star feeding material onto its partner, which changes both stars' evolution.\n- Mass function and minimum mass: an estimate, from orbital motion alone, of the least mass a hidden companion can have.\n- Mass ratio: the ratio of the two stars' masses, which light-curve models must assume or fit.\n- Mid-infrared (MIR): longer-wavelength light that is invisible to the eye and can reveal cooler dust or disks.\n- Main sequence and B spectral type: B-type stars are hot, massive stars burning hydrogen; the paper says the stars began as B-type stars.\n- Small Magellanic Cloud: a satellite galaxy of the Milky Way, with stars at a different chemical makeup than ours.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A study of three long-period (hundreds of days), interacting eclipsing binary stars with highly evolved giant components, two in the Small Magellanic Cloud and one (PW Pup) in the Galaxy, using archival visible and mid-infrared photometry and spectroscopy to constrain masses, mass ratios and mass transfer history.",
+    "plain": "This paper looks at three pairs of stars that orbit each other and periodically pass in front of one another, making their combined brightness dip. Two of the pairs are in the Small Magellanic Cloud, a neighbouring galaxy, and one is in our own Galaxy. Using old observations already in archives, the authors estimate how heavy the hidden companion stars must be and suggest that these systems have already passed material between them.",
+    "why": "Systems like these are useful test cases for how stars evolve when they exchange mass, and the text says some of the companions may be hard to detect directly, so the findings point to where future infrared observations could help. The text itself does not claim wider consequences beyond these three systems."
    },
    "abstract": "The properties of the eclipsing binaries SMC004701.39-732645.8, SMC005609.41-722809.2 and PW Pup are examined using archival photometric and spectroscopic observations. These systems have orbital periods of hundreds of days, and contain highly evolved components with temperature differences of at least 1000 - 2000K. The SMC systems are among the brightest eclipsing binaries in that galaxy at visible wavelengths, and show excess thermal emission that appears to be typical for luminous K and M giants in that galaxy. A preliminary mass function for SMC004701 suggests a minimum mass for the secondary of 3.8 +/- 0.8 Msolar, whereas the PW Pup mass function indicates a minimum mass for the secondary of 3.2 +/- 0.3 Msolar. Light curve elements are examined for a range of mass ratios using observations at visible and mid-infrared (MIR) wavelengths. The results suggest that SMC004701 may prove to be a double line spectroscopic binary at visible wavelengths. However, with the possible exception of emission from a circumstellar disk, infrared observations will likely be required to detect light from the secondary in the other two systems. All three systems have likely experienced mass transfer, and had components with initial masses that correspond to B spectral types on the main sequence. The light associated with the secondary likely originates from a shell or disk that obscures a hotter central star.",
    "source": "arxiv"

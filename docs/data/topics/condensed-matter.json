@@ -1,7 +1,62 @@
 {
  "slug": "condensed-matter",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32331",
+   "title": "Angular Momentum Hall Effect of Axial Ferrons in Ferroelectrics",
+   "url": "https://arxiv.org/abs/2611.32331",
+   "authors": [
+    "Xiyin Ye",
+    "Tao Yu"
+   ],
+   "label": "arXiv:2611.32331v1",
+   "primary_category": "cond-mat.mes-hall",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proposes \"axial ferrons,\" terahertz soft modes in uniaxial displacive ferroelectrics with polarization-momentum locking, and argues they show phonon-like thermal Hall and angular-momentum Hall effects, with numerical estimates for LiNbO3 and van der Waals ferroelectrics.",
+    "plain": "Heat and spin-like motion can sometimes be steered sideways inside insulating crystals, a effect known for ordinary vibrations of atoms. This paper asks whether the soft, terahertz-frequency wobbles of electric polarization in certain ferroelectric crystals (called ferrons) can do the same. The authors report that a temperature gradient can drive a sideways flow of angular momentum without any magnetic field, and that a magnetic field perpendicular to the sample switches on a sideways heat flow.",
+    "why": "The work extends known sideways-transport effects from atomic vibrations to a different class of excitations in ferroelectrics, and the authors suggest edge magnetization or polarization could switch nearby magnets or ferroelectrics using heat currents. These are model-based numerical predictions from the text alone, so their size and practical use remain to be confirmed by experiment.",
+    "background": "- Ferroelectric: a crystal with a spontaneous electric polarization that can be reversed.\n- Phonon: a quantized vibration of a crystal lattice; carries heat.\n- Soft mode: a vibration whose frequency drops toward zero near a structural phase transition.\n- Thermal Hall effect: heat flowing sideways, perpendicular to a temperature gradient.\n- Angular momentum (AM) Hall effect: a sideways flow of rotational \"spin-like\" quantity, perpendicular to the driving force.\n- Berry curvature: a geometric property of wave states that acts like a sideways force on moving excitations.\n- Circular modes: wave motion that rotates in a definite sense, carrying a magnetic moment.\n- Polarization-momentum locking: the direction of electric polarization is tied to the direction the excitation travels.\n- LiNbO3: lithium niobate, a common ferroelectric crystal.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Phonon thermal and angular-momentum (AM) Hall effects are known in non-ferroelectric insulators, yet whether terahertz soft modes of displacive ferroelectrics, i.e., ``ferrons\", share them remains open. We report axial ferrons that hold polarization-momentum locking in uniaxial ferroelectrics and show that both effects exist: a longitudinal temperature gradient drives a transverse AM flow without any field, whereas an out-of-plane magnetic field switches on the thermal Hall response. Two competitive channels emerge for the AM Hall effect: self-radiated magnetic fields hybridize two branches into circular modes whose momentum-locked Berry curvature deflects opposite magnetic moments to opposite edges, while temperature-gradient-induced mode quantum coherence adds a magnetic-moment dipole that leads to an opposite transverse AM current. An out-of-plane magnetic field breaks the exact polarization-momentum locking and yields a polarization Hall current. Numerical calculations show these effects are significant in both LiNbO$_3$ and van der Waals ferroelectrics. Edge magnetization or polarization accumulation can switch adjacent magnets or ferroelectrics, enabling low-power magnetoelectric functionality by thermal current in the future.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33085",
+   "title": "Signatures of Kitaev quantum spin liquid states in $\\alpha$-RuCl$_3$ revealed by nitrogen-vacancy spin-noise spectroscopy",
+   "url": "https://arxiv.org/abs/2611.33085",
+   "authors": [
+    "Jitender Kumar",
+    "Sehrish Iqbal",
+    "Himani Saraswat",
+    "Benjamin Hammons",
+    "Tianlin Li",
+    "Ariel Smooha",
+    "Rupak Timalsina",
+    "Arnab K. Pariari",
+    "Sy-Hwang Liou",
+    "Xia Hong",
+    "Markus H\\\"ucker",
+    "Amit Finkler",
+    "Abdelghani Laraoui"
+   ],
+   "label": "arXiv:2611.33085v1",
+   "primary_category": "cond-mat.str-el",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Diamond nitrogen-vacancy (NV) spin-noise spectroscopy on α-RuCl3 nanoflakes (8–150 nm, 4.3–250 K) reports a drop in NV spin-lattice relaxation time T1 below about 100 K and a bi-exponential T1 decay in thicker flakes below 50 K, which the authors interpret as possible signatures of Kitaev quantum spin liquid behavior.",
+    "plain": "Researchers studied tiny flakes of a layered magnetic material, α-RuCl3, that may host an exotic magnetic state called a quantum spin liquid, where magnetic spins stay constantly fluctuating instead of freezing in order. They used a tiny diamond sensor with a defect (a nitrogen next to an empty atomic site) as a magnetic \"microphone\" placed near the flakes. The sensor's signal showed faster relaxation at low temperatures near the flakes, and thicker flakes gave a more complicated pattern, which the authors link to a spin-liquid state.",
+    "why": "Spin liquids are sought after because their excitations may behave in unusual ways that could matter for future quantum technologies, but direct local evidence has been hard to get. This paper offers a non-invasive, nanoscale probe of the material's low-energy magnetic noise; the link to Kitaev physics is an interpretation of temperature scales and noise patterns, not a direct identification of the state.",
+    "background": "- α-RuCl3 is a layered magnetic material; it is a leading candidate for a Kitaev quantum spin liquid, a state where spins are highly entangled and fluctuate without ordering.\n- Spin liquid excitations are described as \"fractionalized\": they behave like pieces of a spin rather than whole spins.\n- An NV center is a defect in diamond that acts as a very sensitive quantum magnetic sensor.\n- T1 (spin-lattice relaxation time) is how long the sensor's spin state takes to relax; faster relaxation means stronger magnetic fluctuations at the sensor's frequency (GHz range) nearby.\n- Bi-exponential decay means the relaxation has two distinct rates, suggesting more than one kind of noise source; single-exponential means one rate.\n- Kitaev interaction energy scale of about 8 meV is quoted in the text; the ~100 K onset is said to be consistent with it.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Bond-dependent magnetic interactions, strong spin-orbit coupling, and quantum fluctuations in $\\alpha$-RuCl$_3$ make it an archetypical candidate for exotic Kitaev quantum spin liquid (QSL) states. While electronic transport, neutron scattering, optical and tunneling spectroscopies were used to probe global QSL signatures in large scale $\\alpha$-RuCl$_3$ samples, nanoscale evidence of local QSL behavior via a non-invasive experimental probe is still missing. Here, we use diamond nitrogen-vacancy (NV) spin-noise spectroscopy to probe QSL states in {\\alpha}-RuCl3 nanoflakes with thicknesses ranging from 8 to 150 nm over a temperature range of 4.3-250 K. Our measurements reveal a pronounced decrease in the NV spin-lattice relaxation time ($T_{1}$) below ~100 K in proximity to the $\\alpha$-RuCl$_3$ flakes, indicating enhanced GHz-frequency magnetic fluctuations. This temperature scale is consistent with the energy scale associated with Kitaev interactions (~8 meV) and the emergence of low-energy fractionalized excitations. Below 50 K, thicker (> 90 nm) flakes exhibit a distinct bi-exponential $T_{1}$ decay, unlike the single-exponential behavior observed for off-flake and thinner (8 nm) flake measurements, suggesting an increasingly heterogeneous magnetic noise environment. These results establish NV spin-noise spectroscopy as a local, non-invasive probe of low-energy spin dynamics in $\\alpha$-RuCl$_3$ nanoflakes and open a route to testing predicted noise signatures of fractionalized excitations in atomically thin QSL candidates.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31878",
    "title": "Detecting Topological Phases Through Dynamics of Chiral Density in Momentum-space Lattices",
@@ -18,12 +73,12 @@
    "primary_category": "cond-mat.quant-gas",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A theoretical proposal to detect topological edge modes and bulk-boundary correspondence in a momentum-space Su-Schrieffer-Heeger chain by Fourier-transforming the time evolution of the chiral density, which is linked to the local density of states.",
-    "plain": "This paper is about a way to tell whether a simulated quantum system has special \"topological\" features, namely states stuck at its edges with zero energy. The authors use a lattice whose sites are arranged in momentum rather than in real space, and they watch how a particular quantity (the chiral density) changes over time. Applying a Fourier transform to that signal recovers the energy-resolved picture of the system, which shows the edge states.",
-    "why": "Momentum-space lattices are a practical platform for quantum simulation, so a dynamical readout that can identify topological edge states could be a useful diagnostic for such experiments. The text presents this as a proposal; it does not report an experiment, so how well it works in practice is not shown here.",
+    "ai": true,
     "background": "- Topological phase: a property of a material's overall structure that stays fixed under small changes, and that often shows up as special states at the edges.\n- Edge modes with zero energy: states localized at the boundary of a system that sit at zero energy, a hallmark of topology.\n- Su-Schrieffer-Heeger (SSH) chain: a simple one-dimensional chain of sites with alternating coupling strengths, a standard toy model for topological edge states.\n- Bulk-boundary correspondence: the principle that topological edge states appear at the boundary whenever the interior of the system is topological.\n- Density of states and local density of states: measures of how many energy levels exist overall, and how they are distributed in space; they are usually probed by spectroscopy.\n- Chiral operator: a symmetry-related operator whose expectation value the paper tracks over time.\n- Quantum simulation: using a controllable quantum system to mimic another system that is hard to study directly.\n- Fourier transform: a mathematical step that converts a signal in time into a spectrum of frequencies (here, energies).",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A theoretical proposal to detect topological edge modes and bulk-boundary correspondence in a momentum-space Su-Schrieffer-Heeger chain by Fourier-transforming the time evolution of the chiral density, which is linked to the local density of states.",
+    "plain": "This paper is about a way to tell whether a simulated quantum system has special \"topological\" features, namely states stuck at its edges with zero energy. The authors use a lattice whose sites are arranged in momentum rather than in real space, and they watch how a particular quantity (the chiral density) changes over time. Applying a Fourier transform to that signal recovers the energy-resolved picture of the system, which shows the edge states.",
+    "why": "Momentum-space lattices are a practical platform for quantum simulation, so a dynamical readout that can identify topological edge states could be a useful diagnostic for such experiments. The text presents this as a proposal; it does not report an experiment, so how well it works in practice is not shown here."
    },
    "abstract": "Momentum-space lattices offer a versatile platform for quantum simulation in particular emulating topological states of matter.In this work, we propose a spectroscopic protocol via utilizing the dynamics of the chiral operator to detect the topological properties of a momentum-space Su-Schrieffer-Heeger chain. We show that the time evolution of the chiral density is directly linked to the local density of state (LDOS). By performing a Fourier transformation of that, we reconstruct both the LDOS and density of states of the system, enabling the unambiguous signature of zero-energy edge modes and the bulk-boundary correspondence. This dynamical approach provides a diagnostic tool for exploring topological phases in synthetic quantum matter.",
    "source": "arxiv"
@@ -44,12 +99,12 @@
    "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that the intrinsic (quantum) longitudinal Hall effect in ferroaxial metals should be isolated in the eight ferroaxial groups that have a 3-, 4- or 6-fold rotation axis, where the classical Lorentz-force term vanishes, and proposes Ni3P as a candidate for measurement.",
-    "plain": "When a metal carries electric current and sits in a magnetic field, it produces a sideways voltage called the Hall effect. Part of this comes from a quantum property of the electrons' motion, but the ordinary push of the magnetic field on moving charges usually hides it. The authors find that in certain crystal families with high-order rotational symmetry, the ordinary part cancels for a specific sideways-measured setup, which would leave the quantum part visible; they calculated this for several materials and suggest Ni3P as the best one to test.",
-    "why": "Being able to measure the quantum contribution without the much larger classical background would give a cleaner test of how electron band structure produces transport signals. The text presents this as a theoretical proposal supported by first-principles calculations; it does not report an experiment, so the practical payoff is still to be shown.",
+    "ai": true,
     "background": "- Hall effect: a voltage generated perpendicular to both current and magnetic field in a conductor.\n- Lorentz force: the classical push a magnetic field exerts on moving charges; it is the usual, larger source of the Hall signal.\n- Berry curvature: a geometric property of electron wavefunctions in a crystal that acts like an internal magnetic field in momentum space; it can produce a quantum Hall-type contribution.\n- Fermi surface: the surface in momentum space separating occupied from unoccupied electron states, which controls most metallic transport.\n- Ferroaxial crystals: crystals lacking certain mirror and inversion symmetries in a way that allows a rotation-like (\"axial\") order parameter; the paper classifies them by their rotation axes.\n- Rotation axis order (3-, 4-, 6-fold): how many times a crystal looks unchanged under a full turn divided by the number of such turns; higher order means more symmetry.\n- First-principles calculation: computing material properties directly from quantum mechanics and known atomic structure, without fitted parameters.\n- Units: S/m/T means siemens per metre per tesla, a measure of Hall conductivity per unit magnetic field.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that the intrinsic (quantum) longitudinal Hall effect in ferroaxial metals should be isolated in the eight ferroaxial groups that have a 3-, 4- or 6-fold rotation axis, where the classical Lorentz-force term vanishes, and proposes Ni3P as a candidate for measurement.",
+    "plain": "When a metal carries electric current and sits in a magnetic field, it produces a sideways voltage called the Hall effect. Part of this comes from a quantum property of the electrons' motion, but the ordinary push of the magnetic field on moving charges usually hides it. The authors find that in certain crystal families with high-order rotational symmetry, the ordinary part cancels for a specific sideways-measured setup, which would leave the quantum part visible; they calculated this for several materials and suggest Ni3P as the best one to test.",
+    "why": "Being able to measure the quantum contribution without the much larger classical background would give a cleaner test of how electron band structure produces transport signals. The text presents this as a theoretical proposal supported by first-principles calculations; it does not report an experiment, so the practical payoff is still to be shown."
    },
    "abstract": "The low-field Hall resistivity of non-magnetic metals has an intrinsic quantum contribution that derives from the field-corrected Berry curvature and intrinsic magnetic moment of the Bloch states near the Fermi surface. However, its effect is usually overshadowed by the classical Lorentz-force contribution. Here we show that for the longitudinal Hall effect, which occurs in ferroaxial crystals when the applied magnetic field lies in the Hall plane, the Lorentz force contribution vanishes for the eight ferroaxial groups with a 3,4 or 6-fold rotation axis. This provides an opportunity to measure the quantum correction in isolation, but so far all measured instances of the effect fall in the remaining five ferroaxial groups of lower symmetry, where the Lorentz force dominates the signal. We compile a list of candidate ferroaxial metals with such high-order rotation axis and compute the Hall effect from first principles for representative candidates, identifying Ni$_3$P with $\\sigma^{\\rm H}_{xzx} = 28.4$ S/m/T as a promising material to unambiguously measure the intrinsic longitudinal Hall effect.",
    "source": "arxiv"

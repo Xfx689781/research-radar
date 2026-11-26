@@ -1,7 +1,74 @@
 {
  "slug": "oncology",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.24.26365856",
+   "title": "Non-Blood Liquid Biopsy of Nipple Discharge to Decode Tumor-Derived CNV Signatures for Breast Cancer Detection and Prognostication",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.24.26365856v1",
+   "authors": [
+    "Li, Y.",
+    "Pu, P.",
+    "Xu, H.",
+    "Zhou, R.",
+    "Tang, P.",
+    "Wen, W.",
+    "Qiao, G.",
+    "Zhou, Y.",
+    "Gao, G.",
+    "Liu, Y.",
+    "Huang, Y.",
+    "Guo, Z.",
+    "Shang, T.",
+    "Cong, L.",
+    "Xiang, J.",
+    "Wu, J.",
+    "Ma, D.",
+    "Fang, H.",
+    "Liu, J."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.24.26365856 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A study testing whether somatic copy-number variations (CNVs) in DNA from nipple discharge can detect breast cancer and inform prognosis, using a 20-feature CNV panel, clinical cohorts, and paired single-cell RNA sequencing.",
+    "plain": "Some women with nipple discharge need to know whether it signals breast cancer, and today that is hard to tell without an invasive procedure. The researchers looked at genetic changes in DNA collected from nipple fluid and found that a panel of 20 such changes detected cancer in their clinical cohorts more often than DNA from a blood sample did. They also linked these signals to individual cancer cells and to a score that was associated with better outcomes in two outside patient groups.",
+    "why": "A reliable, non-invasive way to assess nipple discharge could help triage patients who now need biopsy, and the idea of sampling tumor-near fluid instead of blood is a new angle. The text reports the results but does not describe the sample sizes, the cohort design, or how the panel performs outside the study, so the findings should be treated as preliminary until independent replication.",
+    "background": "- Liquid biopsy: testing body fluids (here nipple fluid, or blood plasma) for tumor DNA instead of taking tissue.\n- Copy-number variation (CNV): a change in how many copies of a stretch of DNA a cell carries; cancer cells often gain or lose copies.\n- Cell-free DNA: short DNA fragments floating in blood plasma, released partly by dying cells.\n- Sensitivity and specificity: the share of cancers correctly flagged, and the share of healthy cases correctly cleared.\n- AUC (area under the curve): a 0 to 1 score of how well a test separates cases from non-cases; 0.5 is no better than chance.\n- Single-cell RNA sequencing: measuring gene activity in individual cells to see what cell types are present.\n- Estrogen signaling: a hormone pathway that drives many breast cancers and is a common target of treatment.\n- Prognosis: the likely course or outcome of a disease.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Accurate, noninvasive diagnosis of malignant nipple discharge remains a longstanding clinical challenge. This study evaluated somatic copy-number variations (CNVs) in nipple discharge DNA (ndDNA) as high-fidelity diagnostic biomarkers and explored their cellular origins and shedding mechanisms. We derived a 20-feature CNV panel from large-scale genomic datasets and validated its diagnostic potential. Integrative single-cell analysis of 50 patients revealed that these features predominantly arose in ancestral states across molecular subtypes and exhibited functionally relevant co-occurrence patterns. In clinical cohorts, ndDNA-based detection achieved 74.4% sensitivity and 94.4% specificity (AUC = 0.863), significantly outperforming plasma cell-free DNA (AUC = 0.517; p < 0.0001). Paired single-cell RNA sequencing confirmed high concordance between ndDNA profiles and malignant epithelial cells. High-fidelity epithelial subclusters displayed active estrogen signaling and distinct immune interactions, and a derived Fidelity Score independently predicted favorable prognosis in two external survival cohorts. Our findings establish nipple discharge as a tumor-proximal liquid biopsy that preserves early tumor genomic signatures with minimal dilution, advancing noninvasive diagnostic and prognostic strategies.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.22.26368676",
+   "title": "Direct tumour-adipocyte contact / Stroma AReactive Invasion Front Areas (TAC/SARIFA) in advanced oropharyngeal cancer",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368676v1",
+   "authors": [
+    "Haas, S.",
+    "Maerkl, B.",
+    "Peiper, A.",
+    "Sauter, C.",
+    "Fiedler, L.",
+    "Ortmann, N.",
+    "Zenk, J.",
+    "Doescher, J."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.22.26368676 v1",
+   "primary_category": "oncology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A monocentric retrospective study of 78 advanced (pT3–pT4) oropharyngeal squamous cell carcinomas assessing whether tumour-adipocyte contact (TAC/SARIFA) on H&E slides relates to overall survival, recurrence-free survival, p16 status and nodal extranodal extension.",
+    "plain": "This paper looks at a feature seen under the microscope where cancer cells touch fat cells at the edge of a tumour, which the authors call TAC/SARIFA. The team reviewed 78 throat cancer cases from 2005 to 2023 and their lymph nodes, checking whether this feature was present and comparing it with how long patients survived and whether the cancer returned. They report that the feature was linked to shorter overall survival and to spread into lymph nodes with extranodal extension, while its link to recurrence was not statistically significant.",
+    "why": "If a simple stain-free look at routine tissue slides can flag higher-risk throat cancers, it could help pathologists sort patients by risk. The study is small, single-centre and retrospective, so the finding is best read as a possible prognostic marker that needs confirmation in larger, prospective cohorts.",
+    "background": "- Oropharyngeal cancer: cancer of the throat behind the mouth, often linked to HPV infection; p16 is a protein marker used as a proxy for HPV.\n- pT3/pT4: tumour stage categories, meaning a larger or more invasive primary tumour.\n- H&E staining: the standard pink-and-purple stain used to look at tissue slices under a microscope.\n- Invasion front: the leading edge where a tumour pushes into surrounding tissue.\n- SARIFA / TAC: a pattern where cancer cells directly contact fat cells at the invasion front, reported as a negative prognostic (poor-outcome) sign in other cancers.\n- Extranodal extension (ENE): cancer growing through the lymph node capsule into surrounding tissue.\n- Overall survival / recurrence-free survival: time until death from any cause, and time until the cancer returns, respectively.\n- Retrospective: analysis of past records rather than patients followed forward in a planned trial.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Introduction: Stroma areactive invasion front areas (SARIFA) are a histopathological phenomenon at the tumour invasion front characterised by direct tumour-adipocyte contact (TAC). It can be detected on histological Haematoxylin-Eosin (H&E) stained tumour slides. TAC/SARIFA has emerged as a strong negative prognostic factor in several tumour entities. In this monocentric retrospective study, we aim to elucidate the impact of TAC/SARIFA in oropharyngeal cancer. Materials and methods: 78 cases of pT3 to pT4 oropharyngeal squamous cell cancer from 2005 to 2023 and their corresponding lymph nodes were analysed for the occurrence of TAC/SARIFA. Besides, we compared overall survival rates, recurrence-free survival (RFS) and association with biological and pathological tumour characteristics. Results: In total, overall survival was significantly reduced in TAC/SARIFA-positive tumours (p=0.014). Moreover, TAC/SARIFA positive primary tumours are associated with TAC/SARIFA positive lymph nodes (p<0.001) and extranodal extension (ENE) (p=0.032). Finally, RFS in TAC/SARIFA-positive tumours was reduced, but not significantly (p=0.072). No significant difference was found between p16 positive and p16 negative tumours and prevalence of TAC/SARIFA. Conclusion: TAC/SARIFA is a possible prognostically relevant risk factor in oropharyngeal cancer. When detected in the primary tumour or lymph nodes, it is associated with reduced overall survival rates and tendency towards shorter RFS. TAC/SARIFA-positive lymph nodes almost always show ENE.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.24.26368523",
    "title": "The cellular neighbourhoods of adult gliomas and their clinical associations",
@@ -45,12 +112,12 @@
    "primary_category": "oncology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A single-cell spatial transcriptomic atlas of 275 adult glioma patients (2.6 million cells) reports recurrent cellular neighbourhoods across glioma types, with some neighbourhood abundances linked to survival in astrocytoma.",
-    "plain": "This study looks at the most common malignant brain tumours in adults, gliomas, and asks whether the different types of cells inside them are arranged in repeating local groups. The researchers mapped the position and activity of about 2.6 million cells from 275 patients, using a technique that measures which genes are switched on in each cell while keeping its location in the tissue. They found recurring cell \"neighbourhoods\" with particular immune and support-cell mixes, some shared across tumour types and some linked to clinical features.",
-    "why": "It suggests that the spatial layout of tumour cells, not only their molecular type, may carry information about prognosis, and the authors report that in astrocytoma neighbourhood abundance was associated with survival independently of WHO grade. Whether this could guide treatment or diagnosis is not shown in the text and would need further study.",
+    "ai": true,
     "background": "- Gliomas are tumours arising from glial cells, the support cells of the brain; glioblastoma is the most aggressive common type.\n- IDH mutations and 1p/19q codeletion are genetic markers used to classify these tumours.\n- WHO grade is a standard pathology scale of how aggressive a tumour looks under the microscope.\n- Single-cell spatial transcriptomics measures gene activity in individual cells while retaining their positions in a tissue slice.\n- A \"neighbourhood\" here means a recurring group of nearby cells with a characteristic mix of cell types.\n- AC-like (astrocyte-like) refers to a cell state resembling normal astrocytes, a type of glial cell.\n- H&E is the routine stain used to view tissue sections under a microscope.\n- Multiplexed protein imaging labels many proteins at once in the same tissue section.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A single-cell spatial transcriptomic atlas of 275 adult glioma patients (2.6 million cells) reports recurrent cellular neighbourhoods across glioma types, with some neighbourhood abundances linked to survival in astrocytoma.",
+    "plain": "This study looks at the most common malignant brain tumours in adults, gliomas, and asks whether the different types of cells inside them are arranged in repeating local groups. The researchers mapped the position and activity of about 2.6 million cells from 275 patients, using a technique that measures which genes are switched on in each cell while keeping its location in the tissue. They found recurring cell \"neighbourhoods\" with particular immune and support-cell mixes, some shared across tumour types and some linked to clinical features.",
+    "why": "It suggests that the spatial layout of tumour cells, not only their molecular type, may carry information about prognosis, and the authors report that in astrocytoma neighbourhood abundance was associated with survival independently of WHO grade. Whether this could guide treatment or diagnosis is not shown in the text and would need further study."
    },
    "abstract": "Glial tumours are the most common primary malignant brain tumours in adults and comprise molecularly and histologically distinct entities with diverse outcomes. Despite this diversity, they arise within a shared anatomical environment, suggesting that common organisational principles may shape tumour heterogeneity. However, how cellular states are organised across gliomas and whether this organisation relates to clinical outcomes remains unclear. To that end, we generated a single-cell resolution spatial transcriptomic atlas of 2.6 million cells from 275 patients spanning IDH-wildtype glioblastoma, IDH-mutant and chromosome 1p/19q codeleted oligodendroglioma, IDH-mutant astrocytoma and ependymoma. Across diagnoses, we show how heterogeneous tumour cell states are spatially organised into recurrent neighbourhoods with distinct immune and glial composition, which in turn assemble into a higher-order architecture. Among these cellular neighbourhoods, some, such as the astrocyte-like (AC-like), are conserved across entities, whereas others segregate by clinicopathological parameters. AI-powered histopathology further reveals selective association of neighbourhoods within histological clusters, providing a link between molecular spatial organisation to routine H&E morphology. In astrocytoma, neighbourhood abundance is associated with patient survival independently of WHO grade, with AC-like enrichment linked to favourable outcomes. Same-cell high-plex spatial transcriptomics and multiplexed protein imaging in an independent astrocytoma cohort validated these neighbourhoods and further confirmed enrichment of oligodendrocytes within the TBI neighbourhood. Collectively, our findings reveal that glial tumours are spatially encoded through recurrent multicellular neighbourhoods across different molecular entities, showing clinical relevance beyond conventional histology and providing a foundation for analogous investigation across cancer types.",
    "source": "medrxiv"
@@ -83,12 +150,12 @@
    "primary_category": "oncology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Regulatory network models built from multi-omic data of over 10,000 prostate cancer patients point to EP300/CBP as a target in androgen pathway modulator-resistant disease, supported by preclinical work with the inhibitor pocenbrodib and one clinical case.",
-    "plain": "Prostate cancer drugs that block male hormone signalling often stop working over time, and doctors need new targets for these resistant tumours. The authors used computer models of gene regulation, built from large sets of patient molecular data, to find a protein called EP300 (and its close relative CBP) linked to resistance. They then tested a new inhibitor of these proteins, pocenbrodib, in lab and animal studies, and report benefit in one patient.",
-    "why": "Resistance to hormone-blocking drugs is nearly universal in advanced prostate cancer, so a new candidate target is of interest. The evidence is limited: the human benefit rests on a single patient, so the finding is a lead for further testing rather than an established treatment.",
+    "ai": true,
     "background": "- Androgen pathway modulators (APMs): drugs that block male hormones such as testosterone from driving prostate cancer growth through the androgen receptor.\n- Therapy resistance: when tumours keep growing despite treatment.\n- Multi-omic data: measurements across several layers of biology (genes, proteins, and so on) from the same patients.\n- Regulatory network model: a computer map of which genes and proteins control others.\n- EP300 / CBP: related proteins that switch genes on by adding chemical tags (acetylation) to histones and other proteins.\n- Acetylomics: measuring these acetyl tags across the proteome.\n- Oxidative phosphorylation and fatty acid metabolism: cell processes that produce energy; the paper links the drug to suppressing them.\n- In vitro / in vivo: lab-dish and living-animal experiments; a single-patient clinical report is far weaker evidence than a trial.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Regulatory network models built from multi-omic data of over 10,000 prostate cancer patients point to EP300/CBP as a target in androgen pathway modulator-resistant disease, supported by preclinical work with the inhibitor pocenbrodib and one clinical case.",
+    "plain": "Prostate cancer drugs that block male hormone signalling often stop working over time, and doctors need new targets for these resistant tumours. The authors used computer models of gene regulation, built from large sets of patient molecular data, to find a protein called EP300 (and its close relative CBP) linked to resistance. They then tested a new inhibitor of these proteins, pocenbrodib, in lab and animal studies, and report benefit in one patient.",
+    "why": "Resistance to hormone-blocking drugs is nearly universal in advanced prostate cancer, so a new candidate target is of interest. The evidence is limited: the human benefit rests on a single patient, so the finding is a lead for further testing rather than an established treatment."
    },
    "abstract": "Androgen pathway modulators (APMs) have significantly improved outcomes for men with metastatic prostate cancer, but the evolution of therapy resistance is nearly universal, and there remains a major clinical need to identify actionable vulnerabilities for therapy-resistant disease. To address this need, we employed regulatory network models that leverage multi-omic data from over 10,000 prostate cancer patients with longitudinal clinical data. Analysis of the architecture of the network models identified EP300 as the top actionable target associated with androgen receptor-mediated therapy resistance. These observations were validated using a novel inhibitor of CBP/EP300, pocenbrodib, which showed preclinical activity in vitro and in vivo. Acetylomics analysis and functional studies pinpointed inhibition of oxidative phosphorylation and fatty acid metabolism as key mechanisms of action for pocenbrodib. Clinical benefit for this agent was demonstrated in a patient with metastatic APM-resistant prostate cancer (NCT04575766), highlighting CBP/EP300 as a key target for further translation.",
    "source": "medrxiv"

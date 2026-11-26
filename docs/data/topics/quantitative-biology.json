@@ -1,7 +1,76 @@
 {
  "slug": "quantitative-biology",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31322",
+   "title": "Ranking honeybee breeder colonies: a probabilistic method using vine copulas to consider multiple criteria",
+   "url": "https://arxiv.org/abs/2611.31322",
+   "authors": [
+    "Christophe Reype (AE)",
+    "Thomas Opitz (BioSP)",
+    "Eleanora Bassi (UNAAPI)",
+    "Benjamin B. Basso (AE",
+    "UMT PrADE)",
+    "Charl{\\`e}ne Dumas (ADAPI",
+    "UMT PrADE)",
+    "Massimiliano Gotti (UNAAPI)",
+    "Giovanni Guido (UNAAPI)",
+    "Guillaume Kairo (ADAPI",
+    "UMT PrADE)",
+    "Coline Kouchner (ADAPI",
+    "UMT PrADE)",
+    "Pascal Jourdan (ADAPI",
+    "UMT PrADE)",
+    "Pierre-Alban Mochet (ADAPI",
+    "UMT PrADE)",
+    "Michele Tagliabue (UNAAPI)",
+    "Fanny Mondet (AE",
+    "UMT PrADE)"
+   ],
+   "label": "arXiv:2611.31322v1",
+   "primary_category": "q-bio.PE",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A paper proposing a population-calibrated probabilistic score, built from a weighted Euclidean distance to an ideal colony and a vine-copula model of the joint distribution of four criteria, for ranking honeybee breeder colonies across eight apiaries.",
+    "plain": "Beekeepers who breed bees want to pick the best colonies using several traits at once, but a single combined number does not show how a colony compares with the other colonies available. This paper turns each colony's score into a probability: the chance that a colony drawn at random from the reference group does better. The authors tested this on 265 colonies from eight French and Italian apiaries over two seasons.",
+    "why": "It offers a way to say how unusual a colony's performance is relative to its own population, not just a raw rank, which may help breeding decisions. The text does not report any external validation or comparison to breeders' outcomes, so its practical value is still untested here.",
+    "background": "- Multi-criteria ranking: combining several traits (here four) into one ordering, usually via weights.\n- Euclidean distance to an ideal: how far a colony is from a hypothetical best-possible colony, measured in straight-line terms.\n- Copula: a mathematical tool that separates each trait's own distribution from how the traits move together; a vine copula builds this up from pairs of traits.\n- Rank transformation: replacing raw measurements with their rank within each apiary, so apiaries with different scales can be compared.\n- Probability score: here, the share of a reference population expected to outperform a candidate colony.\n- Bootstrap: resampling the data to estimate how stable results are.\n- Weak dependence: the traits in this dataset vary largely independently, so the copula model adds little beyond treating them separately.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Ranking honeybee colonies according to multiple performance criteria is central to selection in bee breeding, but deterministic scores provide limited information about how a selected colony compares with the population of available colonies. We propose a population-calibrated probabilistic score based on a weighted Euclidean distance to an ideal colony and an estimation of the joint distribution of the data. For a candidate colony, the probability-score is the probability that a colony drawn from a reference population outperforms the candidate. We estimate the dependence structure among criteria using a vine copula after apiary-specific rank transformations, allowing different marginal distributions while modelling a common dependence structure. Importantly, the joint distribution calibrates the distance into a probability but does not change the ordering induced by a fixed distance and weight vector. We apply the method to 265 observations from eight French and Italian apiaries during the 2024 and 2025 seasons. Dependence among the four criteria is weak in this dataset, and the vine-copula and independence probability-scores are therefore similar. A simulation study evaluates probability-score estimation under a range of dependence structures, while bootstrap and apiary-subset analyses quantify sensitivity to sampling and study composition. We additionally assess preference robustness by evaluating the proportion of admissible weight vectors for which a colony belongs to the top ranking. The framework provides an interpretable and reproducible population-relative score for multi-criteria colony selection.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31536",
+   "title": "Tempering and few-shot calibration of pathology foundation models improve digital biomarker reproducibility across slide scanners",
+   "url": "https://arxiv.org/abs/2611.31536",
+   "authors": [
+    "Frank T Wen",
+    "Kyler Rosen",
+    "Siddhi Ramesh",
+    "Michael Koo",
+    "Sara Kochanny",
+    "Sasha Jain-Liu",
+    "Emma Dyer",
+    "Alexander T Pearson",
+    "James M Dolezal"
+   ],
+   "label": "arXiv:2611.31536v1",
+   "primary_category": "q-bio.QM",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A fine-tuning method called \"tempering\" for pathology foundation models reduces how much their cancer biomarker predictions depend on which slide scanner produced the images, evaluated on HPV, MSI, prostate grading and breast phenotyping tasks.",
+    "plain": "Pathology AI models that read tissue slides for cancer clues can give different answers depending on which scanner digitized the slide, which hurts results across hospitals. The authors describe a way of fine-tuning these models, called tempering, that they report makes predictions more consistent across scanners. They say it does this using only public data and performs as well as or better than calibration done with data from the local site.",
+    "why": "Scanner-driven variation is a practical obstacle to using AI biomarkers in routine care across centers, so a method that improves cross-scanner consistency could matter if it holds up. The text reports specific percentage improvements, but it is an abstract-level summary, so the size and generality of the gains cannot be judged from it alone.",
+    "background": "- Pathology foundation model: a large AI model pretrained on many tissue images, then adapted to specific tasks.\n- Whole-slide scanner: the device that digitizes a glass tissue slide; different brands and settings leave subtle image \"signatures\".\n- Biomarker: a measurable clue (here, derived from slide images) used to predict a disease feature or treatment response.\n- HPV, MSI: human papillomavirus infection status in head-and-neck cancer; microsatellite instability, a DNA repair marker in colorectal cancer.\n- AUROC: a 0 to 1 score of how well a model separates two classes; higher is better, 0.5 is chance.\n- Confounding: when a non-target factor (here, scanner) is tied to the outcome in training data, so the model may learn the factor instead of the disease.\n- Post hoc calibration: adjusting a model after training using local data.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Pathology foundation models underpin a growing number of histology-based cancer biomarkers, but sensitivity to slide scanner-specific image signatures degrades cross-center reliability and reproducibility. We developed a foundation model fine-tuning method that improved consistency in head-and-neck cancer human papillomavirus (HPV) prediction, colorectal cancer microsatellite instability (MSI) identification, prostate cancer grading and breast cancer phenotyping. This tempering method decreased cross-scanner prediction differences by 67.5% for HPV (95% CI 59.0-73.9%), 69.3% for MSI (95% CI 51.9-76.5%) and 63.4%-81.2% for breast signatures. Cross-scanner prostate grade agreement rose from 42.5% to 92.7%. Under full scanner-HPV confounding during training, AUROC fell from 0.80 to 0.68 with original model features but only from 0.86 to 0.84 with tempering. Unlike post hoc feature calibration, tempering used only public data yet matched or exceeded on-site calibration. These findings support tempering to reduce scanner dependence of pathology foundation models.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31334",
    "title": "Turbulent Epidemics: Scale-dependent Fluctuations as a Probe of Population Heterogeneity",
@@ -16,12 +85,12 @@
    "primary_category": "q-bio.PE",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper adapts turbulence-style scale-dependent fluctuation analysis to disaggregated COVID-19 case data from Germany's 2020/21 winter wave and uses a new network simulator (Epimetheus) to test which heterogeneity mechanisms, such as clustering and variable susceptibility, could reproduce the observed patterns.",
-    "plain": "Infections rarely spread evenly: some people and groups pass on far more virus than others. This paper borrows a tool from fluid physics, which breaks turbulent motion into fluctuations at different sizes, and applies it to case data from Germany's COVID-19 winter wave of 2020/21. The authors then run computer simulations of an idealized structured population to see which combinations of clustering and variation in susceptibility can reproduce the observed patterns.",
-    "why": "The approach offers a way to use the spatial and group-level structure in case data to constrain models of heterogeneous spread, which matters for prediction and for judging the effects of interventions. The text reports only a qualitative comparison between simulation and data, so the conclusions, such as the estimated 0.2 to 0.35 population limit on the outbreak, are tentative and depend on the chosen model.",
+    "ai": true,
     "background": "- Heterogeneity in epidemics: individuals and groups differ in how many people they infect (for example, superspreading events).\n- Secondary attack rate: the fraction of close contacts of an infected person who become infected.\n- Overdispersion: a measure of how much more variable case counts are than a simple random model would predict.\n- Fluctuation spectrum: a breakdown of how much variation occurs at each size scale, borrowed from turbulence studies in fluid dynamics.\n- Network-based simulation: modeling a population as nodes (people or groups) connected by contacts, and simulating transmission across those links.\n- Self-limiting effects: mechanisms such as depletion of susceptible people that slow an outbreak without deliberate intervention.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper adapts turbulence-style scale-dependent fluctuation analysis to disaggregated COVID-19 case data from Germany's 2020/21 winter wave and uses a new network simulator (Epimetheus) to test which heterogeneity mechanisms, such as clustering and variable susceptibility, could reproduce the observed patterns.",
+    "plain": "Infections rarely spread evenly: some people and groups pass on far more virus than others. This paper borrows a tool from fluid physics, which breaks turbulent motion into fluctuations at different sizes, and applies it to case data from Germany's COVID-19 winter wave of 2020/21. The authors then run computer simulations of an idealized structured population to see which combinations of clustering and variation in susceptibility can reproduce the observed patterns.",
+    "why": "The approach offers a way to use the spatial and group-level structure in case data to constrain models of heterogeneous spread, which matters for prediction and for judging the effects of interventions. The text reports only a qualitative comparison between simulation and data, so the conclusions, such as the estimated 0.2 to 0.35 population limit on the outbreak, are tentative and depend on the chosen model."
    },
    "abstract": "Heterogeneous dynamics, including phenomena such as superspreading and clustering, is a hallmark of many infectious diseases. A key challenge lies in identifying observables that constrain heterogeneous dynamics. We here adapt the technique of turbulence decomposition from fluid dynamics to extract scale-dependent fluctuation spectra and correlation functions from disaggregated epidemiological data as a probe of population heterogeneity. To investigate possible explanations for the observed heterogeneities during the COVID-19 winter wave in Germany in 2020/21, we calculate synthetic observables using the new network-based simulation code \\textsc{Epimetheus} for an idealized structured population. The code can flexibly incorporate clustering, heterogeneous connectivity and susceptibility, superspreading as well as temporal modulations of transmission risk and factors like waning of immunity and vaccination. A qualitative comparison of simulated and observed fluctuation spectra and correlation functions as well as the secondary attack rate and the overdispersion indicates that both clustering and variations of susceptibility across population substructures of all scales are required to produce the observed dynamics. Combined with heterogeneous connectivity, it is likely that self-limiting effects would have limited the winter outbreak to $0.2\\texttt{-}0.35$ of the population without further behavioral changes after the autumn of 2020. A uniform population-wide reduction of transmission risk alone does not adequately explain the observed heterogeneities. Further analysis of the relative contributions and interplay of interventions and self-limiting effects on COVID-19 disease dynamics is required. We outline avenues towards a better integration of heterogeneity in models for predicting infectious disease dynamics and diagnosing effects of interventions.",
    "source": "arxiv"
@@ -38,12 +107,12 @@
    "primary_category": "q-bio.NC",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A review that organizes models of multisensory integration into normative (hypothesis-driven, statistically optimal) and neural network (circuit-emulating) classes, with accompanying equations and Python code.",
-    "plain": "This review looks at how brains combine signals from different senses, such as smell, sight and sound, into one picture. It sorts the many existing mathematical and computer models of this process into two groups: those that start from what the brain ideally should do, and those that try to mimic how real networks of neurons could do it. The authors also provide a step-by-step guide with simple equations and Python code, and compare what each approach explains.",
-    "why": "Combining senses is a common problem for animals and for artificial systems, so a clear comparison of the two modelling styles may help researchers in neuroscience and AI relate their work. The text does not show specific new results, so its value lies mainly in organizing and teaching existing ideas.",
+    "ai": true,
     "background": "- Multisensory integration: merging information from several senses about the same event.\n- Statistically optimal integration: weighting each cue by its reliability, so the combined estimate is as precise as possible.\n- Normative model: a model built from a hypothesis about what the brain should compute, rather than from its wiring.\n- Neural network model: a simulated set of connected units, loosely inspired by neurons, that learns or processes inputs; artificial networks can have billions of parameters.\n- Neuron response profile: how a cell's firing rate changes with the stimulus it receives.\n- Python code: a programming language; the review includes examples to run.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A review that organizes models of multisensory integration into normative (hypothesis-driven, statistically optimal) and neural network (circuit-emulating) classes, with accompanying equations and Python code.",
+    "plain": "This review looks at how brains combine signals from different senses, such as smell, sight and sound, into one picture. It sorts the many existing mathematical and computer models of this process into two groups: those that start from what the brain ideally should do, and those that try to mimic how real networks of neurons could do it. The authors also provide a step-by-step guide with simple equations and Python code, and compare what each approach explains.",
+    "why": "Combining senses is a common problem for animals and for artificial systems, so a clear comparison of the two modelling styles may help researchers in neuroscience and AI relate their work. The text does not show specific new results, so its value lies mainly in organizing and teaching existing ideas."
    },
    "abstract": "Animals continuously detect scents, sights and sounds, which their brains combine into diverse multisensory streams. Multisensory integration accelerates learning, increases reaction speeds and helps to resolve sensory ambiguities. In studying this process, the field has developed a continuum of models; from concise mathematical equations, with a handful of variables, to artificial neural networks, with billions of parameters. In this review, we divide this spectrum into two classes: normative models start from a hypothesis about how multisensory signals should be integrated, while neural network models aim to emulate how circuits could integrate them. Together, these models demonstrate that observers can integrate cues in a statistically optimal fashion, and help to explain experimental findings, including the diversity of multisensory neuron response profiles and network architectures. In this review, we provide a didactic overview of multisensory models, complete with accessible equations and Python code, and compare their assumptions and explanatory power. We detail what has been learned from these models. Finally, we discuss how the ideas and insights from classical theoretical models can be reconciled with those from artificial neural networks, and how this convergence should shape future research.",
    "source": "arxiv"

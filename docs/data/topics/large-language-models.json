@@ -1,7 +1,60 @@
 {
  "slug": "large-language-models",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32734",
+   "title": "ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios",
+   "url": "https://arxiv.org/abs/2611.32734",
+   "authors": [
+    "Yera Choi",
+    "Yeong Hwa Kim",
+    "Jaedeok Lee",
+    "Taekang Kim",
+    "Sangdoo Yun",
+    "Seong-Eun Moon"
+   ],
+   "label": "arXiv:2611.32734v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "ASCENT is a clinician-annotated benchmark and training set of 3,078 stepwise diagnostic problems derived from MedQA-USMLE, used to test and fine-tune LLMs on how they revise diagnostic impressions as clinical information accumulates.",
+    "plain": "Doctors rarely reach a diagnosis all at once; they form an early impression and revise it as test results and history come in. This paper builds a set of 3,078 medical exam-style cases broken into stepwise chunks (what was found, what the doctor thinks, and why) and uses it to check how well AI language models reason through that process. The authors report that models doing well on standard medical quiz questions still perform noticeably worse on the stepwise version, and that fine-tuning two Qwen2.5 models on the set improves scores.",
+    "why": "Standard medical question tests may overstate how well AI handles real, step-by-step clinical work, so a benchmark that tracks intermediate reasoning under incomplete information is a useful check before any clinical use. The text does not show any clinical deployment or validation beyond the exam-derived cases, so its relevance to real patient care is untested.",
+    "background": "- Large language model (LLM): an AI system trained on large amounts of text to generate and reason with language.\n- Benchmark: a standardized set of test problems used to compare systems.\n- MedQA-USMLE: a collection of medical licensing-exam style questions that the source cases come from.\n- Stepwise reasoning: working through a problem in stages, updating conclusions as new information arrives.\n- Fine-tuning: further training a pre-trained model on a smaller, specialized dataset.\n- F1 score: a accuracy measure balancing precision (how many named items were correct) and recall (how many correct items were found).\n- Chain-of-thought (CoT): a method where a model writes out intermediate reasoning steps before answering.\n- Counterfactual perturbation and rollout: tests that change earlier inputs or let a model's own earlier outputs feed into later steps, to see whether errors carry forward.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Large language models (LLMs) excel at medical question answering yet are rarely evaluated on the stepwise diagnostic reasoning that defines real clinical workflows, where impressions are revised as information accumulates. We build Annotated Stepwise Clinical rEasoning for NaturalisTic Diagnosis (ASCENT), a clinician-annotated benchmark and training resource of 3,078 stepwise problems derived from MedQA-USMLE that decomposes each vignette into EMR-aligned steps (Findings, Impression, supporting Rationale), enabling evaluation of intermediate reasoning under incomplete information. Experiments and training with ASCENT revealed insights into how current LLMs handle stepwise diagnostic reasoning. Even strong reasoning models that perform well on MedQA-USMLE leave substantial headroom on ASCENT, and general-purpose frontier models trail further, exposing a persistent gap between fully informed and stepwise diagnosis. Fine-tuning Qwen2.5-7B and 32B on ASCENT yields measurable F1 gains over both pre-trained and HuatuoGPT-o1 CoT-trained baselines, with gains driven primarily by precision. Complementary robustness analyses (counterfactual perturbation, format-vs-content control, judge agreement, and rollout) further show that ASCENT-fine-tuned models rely on the diagnostic content of prior impressions rather than imitating their output format, while error propagation under rollout remains a key challenge for clinical deployment.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32566",
+   "title": "Evaluating Latent Knowledge Stability in Multimodal Large Language Models",
+   "url": "https://arxiv.org/abs/2611.32566",
+   "authors": [
+    "Chuancheng Shi",
+    "Shangze Li",
+    "Wenhua Wu",
+    "Zifeng Cheng",
+    "Pengyang Shao",
+    "Fei Shen",
+    "Tat-Seng Chua"
+   ],
+   "label": "arXiv:2611.32566v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "This paper proposes margin- and support-based metrics (MRS and KSS) and a 19,452-item benchmark, MMStableBench, to test whether multimodal LLMs keep their latent knowledge stable when image viewpoint and question wording change.",
+    "plain": "AI models that handle both pictures and text can give a right answer to a question but still change their internal leaning when the photo angle or the wording shifts. The authors build new scores that look inside the model at how strongly it prefers its first answer and how its internal support for facts is spread out, rather than only checking whether the final answer is correct. They also release a benchmark of about 19,000 facts, each tested under several viewpoints, phrasings, and option orders, and report results on 15 models.",
+    "why": "Checking only whether an answer is correct can miss cases where a model is fragile underneath, which matters for trusting these systems. The paper also reports that a regularizer inspired by the margin score helps edited knowledge generalize better, though the text gives few details on how large or general that gain is.",
+    "background": "- Multimodal large language model (MLLM): an AI system that takes both images and text as input and produces text.\n- Latent knowledge: information stored inside the model's numerical parameters and internal states, not directly visible in its outputs.\n- Logit: the raw score a model assigns to each possible answer before it is converted to probabilities; a \"margin\" is the gap between the top answer's score and its rivals.\n- Gradient: a measure of how much a score changes when the model's internals change slightly; used here to describe how support is distributed.\n- Knowledge editing: deliberately changing a model's stored facts, then checking whether the change holds across related situations.\n- Benchmark: a standard test set used to compare models fairly.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Changes in image viewpoint and question formulation can alter latent knowledge representations in multimodal large language models (MLLMs). However, output correctness and overall representational drift provide limited insight into how these changes affect model decisions. We therefore evaluate latent knowledge stability across visual and linguistic elicitation conditions from two complementary perspectives: answer preference and internal support. Specifically, we devise the margin retention score (MRS), which measures the first-order projected degradation of the initial answer's logit margin over competing options across conditions and assesses how changes in latent knowledge representations affect this margin. We also present latent knowledge support-structure stability (KSS), which evaluates reference-correct items by comparing internal support profiles constructed using the margin gradient under the reference condition, which jointly reflects changes in how internal support is distributed and changes in total support magnitude. We further construct MMStableBench, comprising 19,452 knowledge items (facts), each probing the same latent knowledge across varied image viewpoints, semantically equivalent question formulations, and answer-option permutations. Experiments across 15 MLLMs show that MRS and KSS reveal latent knowledge instability not captured by accuracy, while an MRS-inspired regularizer further improves the generalization of edited latent knowledge.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32359",
    "title": "Implementation of Machine Translation for the Uzbek Language Based on Transformer Models",
@@ -14,12 +67,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper fine-tunes transformer models (T5 and mT5) on a roughly 3-million-pair Uzbek-English parallel corpus and evaluates translation quality with BLEU, claiming improvement over older methods.",
-    "plain": "This paper is about building an automatic translator between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned up sentence pairs in both languages, expanded the collection, and then adjusted two existing AI language models to do the translation. They report that the result beats older translation approaches, measured by a standard scoring method.",
-    "why": "Low-resource languages are often poorly served by translation tools, so work that makes them better supported matters for the people who speak them. The text gives only a general claim of improvement and does not show detailed results, so how large the gain is and how well it holds up cannot be judged from this summary alone.",
+    "ai": true,
     "background": "- Machine translation: software that converts text from one language to another automatically.\n- Transformer models: the neural network design behind most modern AI language tools; T5 and mT5 are published transformer models, with mT5 trained on many languages at once.\n- Fine-tuning: further training a pretrained model on a specific task or dataset to improve it there.\n- Parallel corpus: a collection of sentences paired with their translations in another language, used as training material.\n- Data augmentation: artificially expanding a dataset, for example by creating new variants of existing sentences.\n- BLEU score: a common automatic metric that compares machine translations to human reference translations; higher is better, but it is an imperfect proxy for quality.\n- Low-resource language: a language with little available digital text for training AI systems.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper fine-tunes transformer models (T5 and mT5) on a roughly 3-million-pair Uzbek-English parallel corpus and evaluates translation quality with BLEU, claiming improvement over older methods.",
+    "plain": "This paper is about building an automatic translator between Uzbek, a language with relatively little digital text, and English. The authors gathered and cleaned up sentence pairs in both languages, expanded the collection, and then adjusted two existing AI language models to do the translation. They report that the result beats older translation approaches, measured by a standard scoring method.",
+    "why": "Low-resource languages are often poorly served by translation tools, so work that makes them better supported matters for the people who speak them. The text gives only a general claim of improvement and does not show detailed results, so how large the gain is and how well it holds up cannot be judged from this summary alone."
    },
    "abstract": "This research focuses on building a machine translation system for the Uzbek language using transformer models such as T5 and mT5. Because of the limited data and the complexity of the Uzbek language, we collect, preprocess and augment data to create a strong Uzbek-English parallel corpus of about 3 million sentence pairs. The models are fine-tuned for optimal translation performance, and we use the BLEU score to evaluate the results. This study shows that our approach significantly improves upon older methods and helps promote the Uzbek language in the digital world.",
    "source": "arxiv"
@@ -41,12 +94,12 @@
    "primary_category": "cs.CL",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper tests whether training small Qwen3 language models with supervised fine-tuning and reinforcement learning on objective game outcomes from three multi-player social games improves their social play, with some held-out-game transfer.",
-    "plain": "Researchers want AI models that can communicate and cooperate socially, but grading that behavior usually needs expensive AI judges that can be gamed. They used multi-player social games, where the rules themselves decide who wins, as a training ground. Small Qwen3 models trained this way won far more often against a much larger Gemma-3-27B model, and the gains partly carried over to games they had not been trained on.",
-    "why": "The approach offers a way to train social skills without relying on judge models that can be fooled, which matters for building agents that work with people or other agents. Whether these gains reflect general social intelligence, rather than skill at these specific games, is not settled by the text, and the held-out gain is smaller (39% to 54%) than the in-game gain.",
+    "ai": true,
     "background": "- Large language model (LLM): a text-predicting AI system such as Qwen3 or Gemma-3.\n- Supervised fine-tuning (SFT): further training a model on example responses that show the desired behavior.\n- Reinforcement learning with verifiable rewards (RLVR): training where the model is rewarded by an objective, checkable result (here, the game's outcome) rather than a judge's opinion.\n- Reward hacking: when a model finds a way to score well on the reward signal without actually doing the intended task.\n- Win rate: the share of games won against an opponent; \"pp\" means percentage points.\n- Held-out games: games not used during training, used to test whether skills transfer.\n- Multi-player social games: games like hidden-role party games that require talking, coordinating and inferring others' hidden roles.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper tests whether training small Qwen3 language models with supervised fine-tuning and reinforcement learning on objective game outcomes from three multi-player social games improves their social play, with some held-out-game transfer.",
+    "plain": "Researchers want AI models that can communicate and cooperate socially, but grading that behavior usually needs expensive AI judges that can be gamed. They used multi-player social games, where the rules themselves decide who wins, as a training ground. Small Qwen3 models trained this way won far more often against a much larger Gemma-3-27B model, and the gains partly carried over to games they had not been trained on.",
+    "why": "The approach offers a way to train social skills without relying on judge models that can be fooled, which matters for building agents that work with people or other agents. Whether these gains reflect general social intelligence, rather than skill at these specific games, is not settled by the text, and the held-out gain is smaller (39% to 54%) than the in-game gain."
    },
    "abstract": "The training of socially intelligent language models often relies on large language model (LLM) judges, which are expensive, noisy, and vulnerable to reward hacking. Multi-player social games offer a natural alternative: they require open-ended communication to coordinate with teammates and infer hidden roles, while their rules provide an objective outcome which can serve as a verifiable reward for training. Using three social games, we explore how much social intelligence Qwen3 models can acquire through supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR). Results show that against a much stronger Gemma-3-27B model, SFT and RLVR raise the win rate of Qwen3-4B from 33% to 81% on the three trained games, and from 39% to 54% on three additional held-out games. In contrast, in-context strategies such as prompting improve the win rate of Qwen3-4B by only about 6 pp across the same games we train and evaluate on. Furthermore, we show that the gains from SFT and RLVR hold across the model sizes 1.7B, 4B, and 32B. Qualitative analyses of agent behavior show signs of stronger social intelligence; for example, trained agents tend to share information more openly, check each other's claims against public evidence, and coordinate their votes. More broadly, our results demonstrate that training LLMs on verifiable outcomes in social games can cultivate generalizable social behaviors, which offers a scalable path for building socially intelligent agents.",
    "source": "arxiv"

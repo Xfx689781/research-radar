@@ -1,7 +1,64 @@
 {
  "slug": "high-energy-astrophysics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31916",
+   "title": "Machine learning enables full Bayesian inference for spinning extreme-mass-ratio inspirals",
+   "url": "https://arxiv.org/abs/2611.31916",
+   "authors": [
+    "Bo Liang",
+    "Minghui Du",
+    "Zhenwei Lyu",
+    "Hanlin Song",
+    "Jiakai Zhang",
+    "Weichen Qin",
+    "Chia-Jui Chou",
+    "Yi Yang",
+    "Jingyi Yu",
+    "Ziren Luo",
+    "Mingming Sun",
+    "Peng Xu",
+    "Yue-Liang Wu"
+   ],
+   "label": "arXiv:2611.31916v1",
+   "primary_category": "gr-qc",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A machine-learning-assisted full Bayesian analysis of a spinning extreme-mass-ratio inspiral, inferring all 14 parameters from the complete prior for a simulated one-year LISA-Taiji observation using the augmented analytic kludge waveform model.",
+    "plain": "The paper looks at a small object, perhaps a stellar-mass black hole or neutron star, slowly spiralling into a massive black hole at the centre of a galaxy, and the ripples in space-time (gravitational waves) it gives off. The authors simulate one year of such signals as seen by future space detectors and use generative neural networks to narrow down the huge range of possible settings before computing the exact statistical answer. They report that, for a simulated case, the massive black hole's mass and spin, and the small object's mass, orbit and distance can all be pinned down with high precision.",
+    "why": "Precise measurements from these signals could test whether black holes behave as general relativity predicts and could help measure the expansion of the universe using gravitational-wave \"dark sirens\". The results rest on simulations and a simplified waveform model, so how well they hold for real observations is not yet shown by the text.",
+    "background": "- Gravitational waves: tiny distortions of space-time, here in the millihertz band targeted by space missions such as LISA and Taiji.\n- Extreme-mass-ratio inspiral (EMRI): a small compact object orbiting a massive black hole that is millions of times heavier.\n- Bayesian inference: a method that combines prior assumptions with data to give a probability distribution over unknown parameters (the posterior).\n- Parameter space: here 14 numbers describing the source, such as masses, spins, orbital shape, distance and sky position.\n- Analytic kludge: a fast approximate model for generating the waveform, used because exact calculations are too slow.\n- Dark siren: a gravitational-wave source whose distance is measured directly, usable for cosmology without a matching light signal.\n- Redshift: the stretching of signals by cosmic expansion; \"redshifted mass\" is the mass as inferred including this effect.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Extreme-mass-ratio inspirals (EMRIs), stellar-mass compact objects spiralling into massive black holes, promise to measure the masses and spins of the central black holes, reveal the strong-field environment around them and gauge cosmic distances via millihertz gravitational-wave observations. Yet most forecasts for the parameter inference of these systems assume known source parameters, and broad-prior analyses have addressed only simplified versions of the problem. The joint inversion of all 14 parameters of a spinning source from the complete prior has remained unsolved. Here we solve it for the augmented analytic kludge model: generative networks narrow the complete prior and reveal a ring of degenerate spin directions, and the exact detector likelihood determines the posterior. For a simulated one-year LISA-Taiji observation, within one ring sector we obtain, for the first time, a 14-parameter posterior of a spinning EMRI from the complete prior, the most precise yet obtained for such a source from broad priors. The redshifted mass and spin of the massive black hole are determined to two parts in $10^5$, the mass two orders of magnitude beyond any electromagnetic measurement. The compact object's redshifted mass is measured to one part in $10^4$, and its eccentric, retrograde orbit discriminates between capture channels. The 0.8% distance and sub-square-degree localization are sufficient for dark-siren cosmology. Year-long coherent analysis resolves the inspiral driven by radiation reaction itself.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32629",
+   "title": "Critical Eddington luminosity and photon cooling of compact spherical stars",
+   "url": "https://arxiv.org/abs/2611.32629",
+   "authors": [
+    "Tisha Desai",
+    "Ji\\v{r}\\'i Hor\\'ak",
+    "W{\\l}odek Klu\\'zniak",
+    "Sukalpa Kundu"
+   ],
+   "label": "arXiv:2611.32629v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Derives the critical Eddington luminosity for spherical stars whose surface lies inside the Schwarzschild photon sphere, showing that photons returning to the surface change the balance condition and allow non-uniform emission.",
+    "plain": "The paper asks how bright a very compact star can be before its own light pushes its outer layers away against gravity, a limit known as the Eddington luminosity. Such limits matter for understanding bursts of X-rays from neutron stars. The authors use standard ray-tracing formulas for light bending around a non-spinning massive object to work this out for stars so compact that light emitted from the surface can loop back onto it.",
+    "why": "The text claims that returning photons change the usual balance condition, and that a formula long used in X-ray burst studies misses photons emitted outside the escape cone for stars smaller than 3 gravitational radii. This matters for interpreting burst models and for hypothetical ultra-compact objects, but the text gives only the analytical framing and conclusions, so its wider impact is not established here.",
+    "background": "- Eddington luminosity: the brightness at which outward radiation pressure balances gravity on a surface.\n- Schwarzschild metric: the geometry of spacetime around a non-spinning, spherical mass in general relativity.\n- Photon sphere: the radius (3 times the gravitational radius, 3GM/c^2) at which light can orbit the mass on an unstable circular path.\n- Gravitational radius: GM/c^2, a length scale set by the object's mass.\n- Escape cone: the range of emission directions from a surface that let light reach a distant observer rather than falling back.\n- Ray tracing: following the paths of light rays through curved spacetime.\n- X-ray bursts: sudden flashes of X-rays from material burning on neutron star surfaces.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Context. Relativistic corrections to the luminosity have been used for neutron stars of radius greater than $3MG/c^2$ in studies of X-ray bursts. However, there is no fundamental limit that excludes the existence of more compact massive objects with a physical surface, fluid or solid. Aims. We aim to discuss critical \"Eddington\" luminosity for spherical stars that have a surface within the sphere of unstable circular photon orbits (photon sphere). Methods. We use standard analytical ray-tracing formulae in the Schwarzschild metric. Results. We find that for stars within the photon sphere, the Eddington condition for balance between radiative force and gravitational attraction is fundamentally altered by photons returning to the surface. The equilibrium is non-local and requires stationarity on timescales of photon fall-back. As a result, spontaneous symmetry breaking is possible, leading to non-uniformity of emission across the photospheric surface. Conclusions. For a fixed intrinsic luminosity, the photons returning to the surface decrease the cooling rate of stars inside their photon sphere. At the same time, the returning photons increase the value of the critical luminosity that would balance gravity. One and the same redshifted formula applies to the critical luminosity, as seen by a distant observer, for any radius of the star. In the X-ray burst literature, for stars with radius less than 3 gravitational radii a different formula has long been accepted that missed the essential physics of the photons emitted in directions outside the escape cone.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32671",
    "title": "Cosmic ray protons from 40 GeV to 10 EeV due to star formation?",
@@ -15,12 +72,12 @@
    "primary_category": "astro-ph.HE",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proposes that cosmic-ray protons from about 40 GeV to 10 EeV could be described as a sum of three components from three distinct populations of supernova remnants, tested under a supergalactic diffusion scenario (halo size 1-20 Mpc) and a cosmological scenario (source redshift up to 6).",
-    "plain": "Cosmic rays are very fast charged particles that arrive at Earth from space, and their energy spectrum (how many arrive at each energy) has a shape that still needs explaining. This paper asks whether the particles at energies from about 40 billion electron-volts up to 10 billion billion electron-volts could come from exploding stars, and it tests two broad pictures of where they travel from. The text reports that a sum of three contributions, one for each of three groups of exploding-star remnants, reasonably matches the observed spectrum.",
-    "why": "Knowing where the highest-energy cosmic rays come from is an open question in astrophysics, and linking them to star formation would connect them to the life cycle of galaxies. The text gives only the framing and a summary claim of a reasonable fit; I cannot judge from it how strong or unique that fit is, so its significance remains uncertain.",
+    "ai": true,
     "background": "- Cosmic rays: high-energy atomic nuclei (here protons) that travel through space and hit Earth's atmosphere.\n- Energy units: GeV is a billion electron-volts, EeV is a billion billion electron-volts.\n- Supernova remnant: the expanding debris and shock wave left after a massive star explodes; shocks can accelerate particles.\n- Hypernova: an especially energetic supernova, which the paper suggests can push particle energies to about 1 EeV.\n- Energy spectrum: the count of particles at each energy; its shape (breaks, slopes) is what models try to reproduce.\n- Diffusion in a magnetic field: particles wander randomly through magnetic structures before escaping; the paper's halo size H (1-20 Mpc) sets how far they wander.\n- Redshift: a measure of cosmic distance and age; z = 6 corresponds to sources existing very early in the universe.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes that cosmic-ray protons from about 40 GeV to 10 EeV could be described as a sum of three components from three distinct populations of supernova remnants, tested under a supergalactic diffusion scenario (halo size 1-20 Mpc) and a cosmological scenario (source redshift up to 6).",
+    "plain": "Cosmic rays are very fast charged particles that arrive at Earth from space, and their energy spectrum (how many arrive at each energy) has a shape that still needs explaining. This paper asks whether the particles at energies from about 40 billion electron-volts up to 10 billion billion electron-volts could come from exploding stars, and it tests two broad pictures of where they travel from. The text reports that a sum of three contributions, one for each of three groups of exploding-star remnants, reasonably matches the observed spectrum.",
+    "why": "Knowing where the highest-energy cosmic rays come from is an open question in astrophysics, and linking them to star formation would connect them to the life cycle of galaxies. The text gives only the framing and a summary claim of a reasonable fit; I cannot judge from it how strong or unique that fit is, so its significance remains uncertain."
    },
    "abstract": "The formation of massive stars eventually results in supernovae explosions. Typical supernova remnants (SNRs) accelerate cosmic ray (CR) protons up to $E_{max-p} \\sim 10$ TeV; the value of $E_{max-p}$ may reach $\\sim 1$ EeV for the case of the hypernovae and/or for a sub-relativistic velocity of the SNR's shock wave. We show that the observable CR proton spectrum in the energy range between 40 GeV and 10 EeV is reasonably well described with a sum of three components that correspond to three distinct SNR populations. We consider two basic scenarios of CR origin: I) the supergalactic scenario assuming diffusion of the protons inside a magnetic field structure with the characteristic radius $H = 1-20$ Mpc and II. the cosmological scenario with the maximum redshift of the sources $z_{max} = 6$.",
    "source": "arxiv"
@@ -37,12 +94,12 @@
    "primary_category": "astro-ph.HE",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Four axisymmetric general relativistic radiation magnetohydrodynamic simulations of super-Eddington accretion onto magnetized neutron stars (surface fields 3×10^10 to 1×10^11 G) measure accretion column width and estimated radiation shock height, and compare the resulting column radii with spectral fits from Be/X-ray binary outbursts using the bwcycl model.",
-    "plain": "A neutron star is a very dense, collapsed star, and when it pulls in gas faster than radiation pressure can comfortably balance, the gas lands on its magnetic poles in a narrow column that glows in X-rays. This paper uses computer simulations of that gas flow for four strengths of the star's magnetic field. It reports how wide the column is, how tall the braking region above the surface is, and how these compare with values inferred from X-ray observations of outbursts in Be/X-ray binaries.",
-    "why": "Understanding the shape of these columns matters for interpreting the X-ray light from bright outbursts, since the observed spectra are fit with models that assume a geometry. The paper finds that three of its four column radii fall in the upper part of the range the spectral fits suggest, which offers a rough cross-check between simulation and observation. The text does not show how strongly this agreement constrains the models, so it should be read as a consistency check rather than a settled answer.",
+    "ai": true,
     "background": "- Accretion: matter falling onto a compact object such as a neutron star, releasing energy as it falls.\n- Eddington limit: the rough brightness ceiling where outward radiation pressure balances gravity; \"super-Eddington\" means the inflow exceeds it.\n- Neutron star: an extremely dense stellar remnant with a very strong magnetic field that can channel infalling gas to its poles.\n- Accretion column: the narrow, funnel-shaped stream of gas hitting the magnetic pole.\n- Be/X-ray binary: a system pairing a rapidly spinning, gas-emitting Be star with a neutron star; outbursts occur when the neutron star pulls in extra gas.\n- General relativistic radiation magnetohydrodynamics (GRRMHD): simulations combining Einstein's gravity, magnetic fields, fluid flow and radiation transport.\n- Axisymmetric: simulated as symmetric around one axis, which simplifies the calculation.\n- Radiation shock: a boundary where fast infalling gas is abruptly slowed by radiation pressure.\n- Spectral modeling: fitting a model to the measured X-ray energy distribution to infer physical parameters.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Four axisymmetric general relativistic radiation magnetohydrodynamic simulations of super-Eddington accretion onto magnetized neutron stars (surface fields 3×10^10 to 1×10^11 G) measure accretion column width and estimated radiation shock height, and compare the resulting column radii with spectral fits from Be/X-ray binary outbursts using the bwcycl model.",
+    "plain": "A neutron star is a very dense, collapsed star, and when it pulls in gas faster than radiation pressure can comfortably balance, the gas lands on its magnetic poles in a narrow column that glows in X-rays. This paper uses computer simulations of that gas flow for four strengths of the star's magnetic field. It reports how wide the column is, how tall the braking region above the surface is, and how these compare with values inferred from X-ray observations of outbursts in Be/X-ray binaries.",
+    "why": "Understanding the shape of these columns matters for interpreting the X-ray light from bright outbursts, since the observed spectra are fit with models that assume a geometry. The paper finds that three of its four column radii fall in the upper part of the range the spectral fits suggest, which offers a rough cross-check between simulation and observation. The text does not show how strongly this agreement constrains the models, so it should be read as a consistency check rather than a settled answer."
    },
    "abstract": "The geometry and structure of neutron star accretion columns affect the X-ray emission in super-Eddington accreting systems. We perform four axisymmetric general relativistic radiation magnetohydrodynamic simulations of super-Eddington accretion onto magnetized neutron stars with the maximum surface magnetic fields ranging from $3\\times10^{10}$ to $1\\times10^{11}\\,\\mathrm{G}$. We measure the column width and estimate the characteristic radiation shock heights from the flow velocity and velocity gradient. Across the four models, the angular width decreases from approximately $0.14$ to $0.07\\,\\mathrm{rad}$, while the estimated shock height increases from $1.95$ to $3.89\\,\\mathrm{km}$. We then compare our solutions to the best-fit values derived from spectral modeling of super-Eddington Be/X-ray binary outbursts. We calculate area-equivalent column radii that vary between 5.2 and 3.2 km, three of which fall within the upper part of the range inferred from spectral results using the \\texttt{bwcycl} model.",
    "source": "arxiv"

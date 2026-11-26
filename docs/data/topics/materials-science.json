@@ -1,7 +1,58 @@
 {
  "slug": "materials-science",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2608.20902",
+   "title": "Systematic and accurate anharmonic formation free energies of metastable defects via a constrained Bayesian Adaptive Biasing Force framework",
+   "url": "https://arxiv.org/abs/2608.20902",
+   "authors": [
+    "Clovis Lapointe",
+    "Anruo Zhong",
+    "Manuel Ath\\`enes",
+    "Mihai-Cosmin Marinica"
+   ],
+   "label": "arXiv:2608.20902v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper extends a constrained Bayesian Adaptive Biasing Force method (BABFc) into a thermodynamic integration workflow that assigns anharmonic formation free energies to individual metastable defect basins in bcc alpha-iron, using an empirical potential and a data-driven force field.",
+    "plain": "Defects in metal crystals, such as a missing atom or an extra atom squeezed between others, can settle into several nearby arrangements that are almost equally stable. Working out how likely each arrangement is at a given temperature is hard, because atoms move in non-simple ways and the arrangements can switch into one another. The authors describe a method that needs only a starting arrangement and a way to confine the atoms, and they report running thousands of such calculations on hundreds of defect arrangements in iron across a range of temperatures.",
+    "why": "Reliable free energies for many competing defect states are needed to predict how defects behave at real operating temperatures, which matters for materials such as steels used in reactors. The text reports meV/atom-level statistical accuracy and a low failure rate, but it does not show how these estimates compare with experiments, so the practical impact is still to be judged.",
+    "background": "- Free energy: a thermodynamic quantity that combines energy and disorder; it determines which states are favoured at a given temperature.\n- Metastable defect: a local arrangement of atoms around a flaw in a crystal that is stable for a while but not the lowest-energy state.\n- Anharmonicity: atoms do not vibrate like simple springs at high temperature, so simple approximations fail.\n- Thermodynamic integration: a way of computing free energy differences by gradually switching a system from a known reference to the target.\n- Adaptive biasing force: a simulation technique that adds a gradually learned push to help the system explore barriers it would otherwise rarely cross.\n- Interstitial and vacancy: an extra atom squeezed between lattice sites, and a missing atom from a lattice site, respectively.\n- bcc alpha-Fe: body-centred cubic iron, the common low-temperature form of iron.\n- Empirical potential vs. data-driven force field: a hand-fitted mathematical model of atomic forces versus one trained on quantum-mechanical data.\n- meV/atom: a very small energy scale, a thousandth of an electron-volt per atom.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Computing the formation free energies of metastable defects at finite temperature remains challenging due to anharmonicity, the multiplicity of basins and the frequent occurrence of migration events. Using the previously introduced constrained Bayesian Adaptive Biasing Force method (BABFc), we establish a practical thermodynamic integration framework for computing restricted anharmonic formation free energies associated with individual metastable defect basins. We demonstrate that BABFc can be exploited as a robust, systematic and numerically efficient tool for addressing a long standing bottleneck in atomistic materials science: the finite temperature thermodynamic characterization of metastable defects in complex, highly anharmonic energy landscapes. The proposed workflow requires only a reference local minimum and a confinement strategy and does not rely on defect specific collective variables. It therefore provides a general route to assign well-defined free energies to individual metastable basins, even when these basins are separated by low barriers and embedded in a dense landscape of competing configurations. In this setting, BABFc enables stable, bias corrected free energy estimates with statistical accuracies at the meV/atom level and a very low failure rate, including for systems containing approximately one thousand atoms. We demonstrate this capability through thousands of independent free energy calculations covering hundreds of four-interstitial and four-vacancy configurations in bcc $\\alpha$-Fe over a broad temperature range, using both a traditional empirical potential and a data driven force field.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32103",
+   "title": "Emergent Electric-Field-Tunable $p$-Wave Magnetism in Twisted Bilayer NiPS$_3$",
+   "url": "https://arxiv.org/abs/2611.32103",
+   "authors": [
+    "Jiaran Su",
+    "Jin-Xin Hu",
+    "Qi Sun",
+    "Dante M. Kennes",
+    "Yuhao Fu",
+    "Lede Xian",
+    "Lijun Zhang"
+   ],
+   "label": "arXiv:2611.32103v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Theoretical and first-principles study showing that a perpendicular layer bias (electric field) can reorient and deform the odd-parity (p-wave) spin splitting in a 21-degree twisted NiPS3 bilayer, and can activate diagonal spin conductivities and a polarity-dependent tilt in the transverse spin-current response.",
+    "plain": "The paper looks at a thin two-layer stack of the magnetic material NiPS3, with one layer twisted 21 degrees relative to the other. In this structure, the electron spin pattern (how spin depends on direction of motion through the crystal) is fixed by symmetry to point along one crystal direction. The authors show, mostly through computer calculations, that applying an electric field across the layers can rotate and reshape this spin pattern and change how spin current flows.",
+    "why": "It proposes a way to electrically tune spin textures and spin-current direction without changing the local magnetic order, which could matter for spintronics. The text is purely theoretical and computational; its practical relevance depends on the coplanar magnetic state staying stable, which the authors themselves flag as a condition.",
+    "background": "- Spin: a quantum property of electrons that acts like a tiny magnet; spintronics uses it to carry information.\n- Spin texture: how electron spin orientation varies with direction of motion (momentum) in a crystal.\n- p-wave splitting: an odd-parity pattern where spin-split energy bands differ under inversion of momentum, in the way a p orbital changes sign.\n- Neel vector: the direction of the alternating magnetic moments in an antiferromagnet, which has no net magnetization.\n- Twisted bilayer: two atomic layers stacked with a rotational offset, which changes their combined symmetry.\n- Symmetry reduction: using crystal symmetries to limit which physical outcomes are allowed.\n- Wannier-based linear response: a computational method that models how a material's electrons respond to a small applied field, using localized orbital-like functions.\n- Layer bias: a voltage difference between the two layers, producing a perpendicular electric field.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A perpendicular electric field can reorient a momentum-space spin texture without changing the local magnetic configuration. In this Letter, we investigate this mechanism in a $21^\\circ$-twisted $\\mathrm{NiPS}_3$ bilayer with zigzag order and coplanar, nonparallel layer N\\'eel vectors. In the ideal nonrelativistic limit, an antiunitary in-plane half-translation enforces opposite-spin pairing at opposite momenta, while a layer-exchanging twofold operation pins the leading $p$-wave spin splitting to a crystallographic direction. A perpendicular layer bias lifts this orientational constraint while preserving the antiunitary symmetry, allowing a transverse component of the splitting vector. First-principles calculations show gate-dependent reorientation and deformation of spin-resolved isoenergy contours. Wannier-based linear-response calculations further reveal field-activated diagonal spin conductivities and a polarity-dependent tilt in the angular profile of the transverse spin-current response. The spin-texture axis, dispersion axes, and transport-response axis are distinct quantities governed by the same symmetry reduction. These results identify layer bias as a route to controlling odd-parity spin textures and spin-current anisotropy, provided that the coplanar magnetic state remains stable.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31748",
    "title": "Magic-layer scenario for predicting non-van der Waals two-dimensional materials: The case of double-layer honeycomb structures",
@@ -13,12 +64,12 @@
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Using first-principles calculations, the authors propose a \"magic-layer\" stability criterion, based on excess energies of thin films at different thicknesses, to predict which non-van der Waals compounds (III-V, II-VI, I-VII and Mn-based) can form stable double-layer honeycomb 2D structures.",
-    "plain": "Some flat, one-atom-or-few-atom-thick sheets can be peeled off a bulk crystal easily because their layers are held together weakly. Many other materials are not like this, and making their thin sheets is hard. This paper borrows an idea from cluster physics, where certain \"magic\" sizes are unusually stable, and checks which thicknesses of several compound crystals are energetically favoured.",
-    "why": "The text reports that the stability measure separates compounds that have been experimentally synthesized from those that have not, which suggests it could be a screening tool for finding new 2D materials. The text does not show how well this generalises beyond the studied families, so its predictive reach remains to be tested.",
+    "ai": true,
     "background": "- Van der Waals (vdW) bonding: weak attraction between layers, which lets sheets be peeled off (exfoliated), as with graphene.\n- Non-vdW 2D material: a sheet-like material whose layers are held by stronger chemical bonds, so it is hard to separate from its bulk crystal.\n- First-principles calculations: computer simulations of material energies starting from basic quantum mechanics, with no fitted experimental inputs.\n- Excess energy: how much higher in energy a thin film is than the bulk crystal; lower values indicate a more stable film.\n- Magic number: a size of a cluster that is unusually stable compared with neighbouring sizes.\n- Honeycomb structure: a hexagonal lattice pattern of atoms, like graphene's.\n- III-V, II-VI, I-VII: groups of compounds built from elements in those columns of the periodic table (e.g., GaAs, ZnS, NaCl-type salts).",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using first-principles calculations, the authors propose a \"magic-layer\" stability criterion, based on excess energies of thin films at different thicknesses, to predict which non-van der Waals compounds (III-V, II-VI, I-VII and Mn-based) can form stable double-layer honeycomb 2D structures.",
+    "plain": "Some flat, one-atom-or-few-atom-thick sheets can be peeled off a bulk crystal easily because their layers are held together weakly. Many other materials are not like this, and making their thin sheets is hard. This paper borrows an idea from cluster physics, where certain \"magic\" sizes are unusually stable, and checks which thicknesses of several compound crystals are energetically favoured.",
+    "why": "The text reports that the stability measure separates compounds that have been experimentally synthesized from those that have not, which suggests it could be a screening tool for finding new 2D materials. The text does not show how well this generalises beyond the studied families, so its predictive reach remains to be tested."
    },
    "abstract": "A magic number is a specific size of a van der Waals (vdW) cluster that shows pronounced stability compared to adjacent sizes, and therefore magic clusters are preferentially formed in experiments. We apply the ``magic-layer'' concept to identify non-vdW two-dimensional (2D) materials that are difficult to exfoliate from their parent 3D crystals. As a case, we study the stability of thin films in III-V, II-VI, I-VII, and Mn-based compounds using first-principles calculations. By calculating excess energies for various thicknesses, we find significant stabilization reflecting the formation of double-layer honeycomb structures at specific thicknesses. The stability measure based on the magic-layer concept can distinguish the experimentally synthesized systems from the experimentally unrealized systems, which serves as a key descriptor for predicting the realization of non-vdW 2D materials.",
    "source": "arxiv"
@@ -51,12 +102,12 @@
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper reports a two-step, solution-based route to ultrathin high-entropy transition metal dichalcogenides, using a mixed-metal layered hydroxide precursor that is then chalcogenized, with a representative (VCrFeCoNi)S2-x composition showing magnetism above room temperature.",
-    "plain": "Researchers want very thin, flat magnetic materials that keep working at ordinary room temperature, since such materials could support future electronics and data-storage technologies. This paper describes a way to make thin layered sheets that mix five or more different metals at the atomic level. The team first builds a mixed-metal layered hydroxide precursor by chemical precipitation in a sealed heated vessel, then converts it into a sulfur-based layered compound, and reports that one example stays magnetic above room temperature.",
-    "why": "Magnetic two-dimensional materials are a active research area for spintronics and low-power information technology, and a method that can tune their composition is potentially useful. The text does not show device performance or how widely the approach extends beyond the representative composition, so its practical impact remains to be tested.",
+    "ai": true,
     "background": "- Two-dimensional (2D) materials: crystals only a few atoms thick, arranged in sheets.\n- Transition metals: elements such as iron, cobalt, nickel, chromium and vanadium, whose electrons often give rise to magnetism.\n- Dichalcogenides: compounds of a metal with a chalcogen (sulfur, selenium or tellurium).\n- High-entropy materials: materials that mix five or more elements in roughly comparable amounts, often in one uniform structure.\n- Layered double hydroxides: layered mineral-like solids that can host mixed metal ions between their sheets; used here as a precursor.\n- Hydrothermal coprecipitation: making a solid by mixing dissolved salts in water in a heated, sealed container so the solid forms.\n- Chalcogenization: reacting a material with a chalcogen to convert it into the sulfide or similar compound.\n- Magnetism above room temperature: magnetic order that persists at roughly 20–25 °C, which matters for practical devices.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper reports a two-step, solution-based route to ultrathin high-entropy transition metal dichalcogenides, using a mixed-metal layered hydroxide precursor that is then chalcogenized, with a representative (VCrFeCoNi)S2-x composition showing magnetism above room temperature.",
+    "plain": "Researchers want very thin, flat magnetic materials that keep working at ordinary room temperature, since such materials could support future electronics and data-storage technologies. This paper describes a way to make thin layered sheets that mix five or more different metals at the atomic level. The team first builds a mixed-metal layered hydroxide precursor by chemical precipitation in a sealed heated vessel, then converts it into a sulfur-based layered compound, and reports that one example stays magnetic above room temperature.",
+    "why": "Magnetic two-dimensional materials are a active research area for spintronics and low-power information technology, and a method that can tune their composition is potentially useful. The text does not show device performance or how widely the approach extends beyond the representative composition, so its practical impact remains to be tested."
    },
    "abstract": "As silicon-based electronics approach their physical limits, low-dimensional magnetic materials have attracted increasing attention for next-generation electronic and information technologies. Realizing these opportunities requires two-dimensional (2D) materials with robust and tunable room-temperature magnetism. Here, we report a two-step synthesis strategy for fabricating 2D high-entropy transition metal dichalcogenides (HE-TMDs) incorporating magnetic elements beyond conventional groups 4-6. High-entropy layered double hydroxides (HE-LDHs) are first synthesized via hydrothermal coprecipitation, enabling atomic-level mixing of diverse transition metals across groups 4-12. Subsequent chalcogenization yields 2D HE-TMDs while preserving homogeneous elemental distribution. This approach circumvents the constraints of solid-state reaction, chemical vapor transport methods, enabling the synthesis of compositionally complex and structurally controlled 2D magnets. Representative (VCrFeCoNi)S2-x exhibits robust magnetism above room temperature, demonstrating the potential of this high-entropy design strategy for expanding the compositional and functional diversity of 2D magnetic materials.",
    "source": "arxiv"

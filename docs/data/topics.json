@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "language": "en",
  "fields": [
   "Mathematics",
@@ -880,7 +880,7 @@
     "econ.EM",
     "econ.GN"
    ],
-   "new_today": 2
+   "new_today": 0
   },
   {
    "slug": "economic-theory",
@@ -931,7 +931,7 @@
     "q-fin.GN",
     "q-fin.EC"
    ],
-   "new_today": 2
+   "new_today": 1
   },
   {
    "slug": "signal-processing",

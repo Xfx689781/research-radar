@@ -1,7 +1,65 @@
 {
  "slug": "chemistry",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32289",
+   "title": "Perturbation of CO A1{\\Pi} by a3{\\Pi} should have been undetectable: detection, mechanism, and surprises",
+   "url": "https://arxiv.org/abs/2611.32289",
+   "authors": [
+    "Stanis{\\l}aw Ryzner",
+    "Robert W. Field",
+    "Wim Ubachs",
+    "Alan N. Heays",
+    "Asen Pashov",
+    "Patryk Jasik",
+    "J\\'ozef E. Sienkiewicz",
+    "Nelson de Oliveira",
+    "Kin F. Lai",
+    "Marzena I. Malicka",
+    "Aleksandra Stasik",
+    "Wojciech Szajna",
+    "Izabela Piotrowska",
+    "Rafa{\\l} Hakalla"
+   ],
+   "label": "arXiv:2611.32289v1",
+   "primary_category": "physics.chem-ph",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Spectroscopic study of 13C18O showing that a forbidden-looking direct coupling between the a3Pi (v=13) and A1Pi (v=2) levels is actually observed, and that it proceeds indirectly via the e3Sigma- (v=4) state with quantum interference between its F1e and F3e components.",
+    "plain": "Molecules absorb and emit light only at specific energy levels, and sometimes two levels in different electronic states mix in a way that shifts their positions and changes how strongly they absorb light. For carbon monoxide, this mixing between two particular levels was expected to be too weak to notice, but the authors measured clear signs of it in one isotope of the molecule. They traced it to an indirect route through a third state and found that different pathways can interfere with each other.",
+    "why": "The result conflicts with the expectation that this direct coupling is essentially unobservable, so it refines how weak molecular couplings are understood and modelled. The text does not claim wider applications, so any link to other fields is uncertain.",
+    "background": "- Electronic states: different energy arrangements of a molecule's electrons; each has its own set of vibrational levels.\n- Vibrational level: a discrete energy level from the molecule's stretching motion.\n- Perturbation (level mixing): when two nearby energy levels couple, their positions shift and their light absorption can borrow strength from each other.\n- Vibrational overlap integral: a measure of how much two vibrational wavefunctions overlap; small overlap means weak coupling.\n- Isotopologue: the same molecule with different isotopes of its atoms (here 13C and 18O).\n- Spin-forbidden/triplet vs singlet states: a3Pi is a triplet and A1Pi a singlet, so direct transitions between them are normally restricted.\n- Quantum interference: when two indirect pathways add or cancel in amplitude, as in waves.\n- VUV and visible Fourier-transform spectroscopy: laboratory methods that measure absorption or emission across ultraviolet/vacuum-UV and visible light.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A direct perturbation between the $a^3\\Pi$ and $A^1\\Pi$ vibrational levels of two electronic states that belong to the same electronic configuration of the carbon monoxide molecule should be unobservably weak because the vibrational overlap integral $\\langle a^3\\Pi,v' \\mid A^1\\Pi,v'' \\rangle$ for their near-degenerate levels is extremely small. Yet level-shift and transition-intensity signatures of the $a^3\\Pi(v = 13) \\sim A^1\\Pi(v = 2)$ perturbation are unmistakably present in the $^{13}\\mathrm{C}^{18}\\mathrm{O}$ isotopologue. A detailed study of, among others, the $A^1\\Pi$ - $X^1\\Sigma^+(2, 0)$, $B^1\\Sigma^+$ - $A^1\\Pi(0, 2)$, and $C^1\\Sigma^+$ - $A^1\\Pi(0, 2)$ spectra, obtained by the VUV- and Vis-FT complementary techniques in the energy regions of the six crossing points ($e$- and $f$-symmetry, $|\\Omega| = 0, 1, 2$) between the $a^3\\Pi(v = 13)$ and $A^1\\Pi(v = 2)$ states, reveal that the perturbation pathways are indirect, primarily facilitated by the $e^3\\Sigma^-(v = 4)$ state, and that quantum mechanical interferences via its F1e and F3e components occur.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32739",
+   "title": "Neutron Spectroscopy Transformed: Deuterated ZIF-8 and Machine-Learned Potentials Catch Nitrogen Threading Its Gates",
+   "url": "https://arxiv.org/abs/2611.32739",
+   "authors": [
+    "Jeff Armstrong",
+    "Hamish Cavaye",
+    "Pankaj Sharma",
+    "Matthew E. Potter"
+   ],
+   "label": "arXiv:2611.32739v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Combining machine-learned interatomic potentials with deuterated linkers, the authors use inelastic neutron scattering on ZIF-8 during nitrogen dosing at 77 K to assign a new 270 cm^-1 band to end-on N2 molecules threading through the four-ring windows, with simulations of the threading free-energy trap.",
+    "plain": "This paper looks at how a porous crystal called ZIF-8 takes up nitrogen gas. The researchers used a neutron-based vibration measurement, made clearer by swapping hydrogen for its heavier isotope deuterium in the crystal's linkers, and compared it against fast computer simulations. They report a new vibration signal that appears as gas loads and grows over the dosing series, which they attribute to single nitrogen molecules passing through the small windows of the framework.",
+    "why": "The authors claim the signal's strength tracks how many molecules are threading through the windows during the slow process of gas uptake, which could give a direct, in-situ way to follow gas-framework mechanisms. The text presents this as a first vibrational signature of the threaded state, but the work is a single material and gas, so its wider reach is not established here.",
+    "background": "- Porous metal-organic frameworks (MOFs) such as ZIF-8 are crystals riddled with pores and windows that trap gas molecules.\n- Inelastic neutron scattering (INS) measures how atoms vibrate; it is especially sensitive to hydrogen, so deuterating (swapping H for D) reduces overlap between bands.\n- Density-functional theory (DFT) is a quantum-chemistry calculation that is accurate but slow; machine-learned interatomic potentials (MLIPs) are faster learned approximations of the same energies and forces.\n- Dosing at 77 K means gas is added in stages to a sample cooled to liquid-nitrogen temperature, and spectra are recorded at each stage.\n- Free-energy trap: a local energy minimum that a molecule can settle into, which affects how often it is found there.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We report a step change in what inelastic neutron scattering (INS) can reveal, by combining machine-learned interatomic potentials (MLIPs) with deliberate deuteration of the sample. INS's prowess in charting framework and guest motions within porous materials during in situ dosing has historically had one caveat: costly density-functional-theory calculations are a major bottleneck in the speed and depth of analysis. We show that rapid frontier MLIPs remove this bottleneck on both counts, keeping pace with the experiment while bringing a new level of insight. Deuterating the linkers of ZIF-8 pries apart bands that overlap in the hydrogenous framework, and we test four MLIPs against eight stages of nitrogen dosing at 77 K. On loading, a previously unobserved band appears at 270 cm^-1 and grows gradually through the dosing series. The simulations trace it to single N2 molecules threaded end-on through four-ring windows, each turning its ring of linkers and propping the window open, and unbiased dynamics catch molecules threading into the windows on their own, finding a free-energy trap that crowding stabilizes. This is the first vibrational signature of the threaded state and, crucially, its intensity directly counts the threading over the slow, macroscopic timescale of gas uptake, in situ. More broadly, the simulations explain how each framework band responds to its guests, establishing MLIP-assisted inelastic neutron scattering as a route to mechanism, not just assignment.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31432",
    "title": "Current-Dependent Meta-GGA and Local Hybrid Functionals for Relativistic NMR Shifts",
@@ -14,12 +72,12 @@
    "primary_category": "physics.chem-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper derives and implements a two-component relativistic version of the current-dependent kinetic-energy density for meta-GGA and local hybrid density functionals in NMR shielding and shift calculations, using a Kramers-restricted Kohn-Sham reference and SAP-X2C relativistic treatment.",
-    "plain": "Chemists use computer models to predict NMR spectra, the fingerprint signals that show how atoms sit in a molecule. For compounds with heavy atoms, relativistic effects matter, and the standard software support for the more accurate modern calculation methods is limited. This paper presents a way to include a more gauge-consistent form of one such method in relativistic NMR calculations.</plain>\n<parameter name=\"why\">Predicting NMR shifts for heavy-element compounds is useful for checking and interpreting experiments, so a more reliable calculation method could help. The text presents the formulation and its gauge invariance, but it does not report benchmark accuracy numbers in the excerpt, so its practical gain is not established here.</plain>\n<parameter name=\"background\">- NMR chemical shift: the frequency at which a nucleus resonates, sensitive to its local electronic environment.\n- Density functional theory (DFT): a computational method that gets molecular energies and properties from electron density instead of full wavefunctions.\n- Meta-GGA and local hybrid functionals: refined DFT approximations that use extra density information (such as kinetic-energy density) to improve accuracy.\n- Gauge invariance: results do not depend on the arbitrary choice of reference origin for the magnetic vector potential; this is needed for reliable magnetic properties.\n- Relativistic effects and spin-orbit coupling: important for heavy atoms; they make electron currents and spin mix, so the calculation must treat current densities in the ground state.\n- Two-component (X2C) theory: a simplified relativistic framework that approximates the full four-component Dirac treatment.\n- Kramers-restricted Kohn-Sham: a reference-state formalism for systems with time-reversal symmetry in relativistic calculations.",
-    "why": "",
+    "ai": true,
     "background": "",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper derives and implements a two-component relativistic version of the current-dependent kinetic-energy density for meta-GGA and local hybrid density functionals in NMR shielding and shift calculations, using a Kramers-restricted Kohn-Sham reference and SAP-X2C relativistic treatment.",
+    "plain": "Chemists use computer models to predict NMR spectra, the fingerprint signals that show how atoms sit in a molecule. For compounds with heavy atoms, relativistic effects matter, and the standard software support for the more accurate modern calculation methods is limited. This paper presents a way to include a more gauge-consistent form of one such method in relativistic NMR calculations.</plain>\n<parameter name=\"why\">Predicting NMR shifts for heavy-element compounds is useful for checking and interpreting experiments, so a more reliable calculation method could help. The text presents the formulation and its gauge invariance, but it does not report benchmark accuracy numbers in the excerpt, so its practical gain is not established here.</plain>\n<parameter name=\"background\">- NMR chemical shift: the frequency at which a nucleus resonates, sensitive to its local electronic environment.\n- Density functional theory (DFT): a computational method that gets molecular energies and properties from electron density instead of full wavefunctions.\n- Meta-GGA and local hybrid functionals: refined DFT approximations that use extra density information (such as kinetic-energy density) to improve accuracy.\n- Gauge invariance: results do not depend on the arbitrary choice of reference origin for the magnetic vector potential; this is needed for reliable magnetic properties.\n- Relativistic effects and spin-orbit coupling: important for heavy atoms; they make electron currents and spin mix, so the calculation must treat current densities in the ground state.\n- Two-component (X2C) theory: a simplified relativistic framework that approximates the full four-component Dirac treatment.\n- Kramers-restricted Kohn-Sham: a reference-state formalism for systems with time-reversal symmetry in relativistic calculations.",
+    "why": ""
    },
    "abstract": "NMR chemical shifts are key for the characterization of novel compounds. Especially for molecules with heavy elements, the experimental data is often corroborated with computational studies in density functional theory (DFT). However, modern meta-generalized gradient approximations (meta-GGAs) and local hybrid functionals are not widely supported in relativistic calculations with quantum chemistry program suites. So far, their current-dependent generalization in the spirit of Dobson, Becke, and Tao was not presented at all. This generalization ensures gauge invariance and does not introduce artifacts--unlike the more popular field-dependent generalization of the kinetic-energy density. In non-relativistic and scalar-relativistic calculations, the first was shown to be superior but the current density only arises due to the magnetic field perturbation. In contrast, spin--orbit coupling also induces current densities in the preceding ground-state calculation and the DFT framework needs to be generalized to a current density functional theory (CDFT) for consistency with the current-dependent response equations. Herein, we present the two-component relativistic generalization of the current-dependent kinetic-energy density of a Kramers-restricted Kohn--Sham reference for meta-GGAs and local hybrid functionals in NMR calculations. The extension is invariant under a position-dependent phase and a position-dependent spin rotation of the spinors, or a local U(1)$\\times$SU(2) transformation. Relativistic effects are considered with exact two-component theory using a superposition of atomic potentials to include the two-electron picture-change correction (SAP-X2C).",
    "source": "arxiv"
@@ -37,12 +95,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that spin-adapted DMRG matrix product states, indexed by unitary group approach steps, form an abelian-symmetric MPS that block-sparse protocols can load at a cost set by the spin-multiplet count, followed by a per-site Clebsch-Gordan rotation, and gives Toffoli and ancilla resource estimates for singlet ground states of iron-sulphur active space models.",
-    "plain": "Quantum computers could in principle estimate the energy of molecules that are hard to model on ordinary computers, but they first need a good starting state, and building that state is expensive. This paper proposes a way to prepare a starting state that respects the total spin of the molecule, which lets the circuit store fewer amplitudes. The authors estimate the cost of their circuits for model iron-sulphur clusters and report lower Toffoli-gate counts and fewer ancilla qubits than the comparison methods they name.",
-    "why": "Preparing the initial state is a major fault-tolerant cost for phase estimation on strongly correlated molecules, so cheaper preparation bears directly on whether such calculations become practical. The results are resource estimates from the paper's own circuit designs, not hardware demonstrations, so the size of the practical gain remains to be tested.",
+    "ai": true,
     "background": "- Quantum phase estimation: a quantum algorithm for finding the energy of a molecule, which needs a good approximate starting state.\n- Fault-tolerant cost: the count of expensive error-corrected operations (such as Toffoli gates) and the number of ancilla (helper) qubits a circuit needs.\n- Matrix product state (MPS): a chain-like way of compactly writing a quantum state of many particles, built with the density matrix renormalisation group (DMRG) method.\n- Spin and symmetry: a molecule's total spin is conserved, and exploiting that conservation reduces the number of amplitudes to store; \"block-sparse\" means storing only the nonzero blocks that respect a symmetry.\n- Unitary group approach: a standard way of labelling electron configurations and spin states in quantum chemistry.\n- Clebsch-Gordan coefficient: a number from angular momentum theory that tells how spin states combine.\n- Active space model: a reduced set of orbitals and electrons chosen to capture the strongly correlated part of a molecule.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that spin-adapted DMRG matrix product states, indexed by unitary group approach steps, form an abelian-symmetric MPS that block-sparse protocols can load at a cost set by the spin-multiplet count, followed by a per-site Clebsch-Gordan rotation, and gives Toffoli and ancilla resource estimates for singlet ground states of iron-sulphur active space models.",
+    "plain": "Quantum computers could in principle estimate the energy of molecules that are hard to model on ordinary computers, but they first need a good starting state, and building that state is expensive. This paper proposes a way to prepare a starting state that respects the total spin of the molecule, which lets the circuit store fewer amplitudes. The authors estimate the cost of their circuits for model iron-sulphur clusters and report lower Toffoli-gate counts and fewer ancilla qubits than the comparison methods they name.",
+    "why": "Preparing the initial state is a major fault-tolerant cost for phase estimation on strongly correlated molecules, so cheaper preparation bears directly on whether such calculations become practical. The results are resource estimates from the paper's own circuit designs, not hardware demonstrations, so the size of the practical gain remains to be tested."
    },
    "abstract": "Quantum phase estimation for strongly-correlated molecules requires an initial state of high overlap with the true ground state, and preparing one is a significant fault-tolerant cost. Matrix product states (MPS) produced by the density matrix renormalisation group (DMRG) are a leading choice, yet existing circuits treat their tensors as dense or do not use the full symmetries present in molecular electronic Hamiltonians. In quantum chemistry, DMRG also exploits total spin, a non-abelian symmetry, storing one amplitude per spin multiplet instead of one per state. We show that the reduced tensors of such a spin-adapted MPS, labelled by the steps of the unitary group approach, form an abelian-symmetric MPS, which existing block-sparse preparation protocols can load at a cost set by the multiplet count. One state-independent rotation per site, determined by a Clebsch-Gordan coefficient, then returns the state to the occupation basis. We provide resource estimates for our circuits on singlet ground states of active space models of iron-sulphur clusters, finding improvements in Toffoli count up to $135\\times$ compared to dense methods and $4.9\\times$ compared to block-sparse methods applied to the same states, with up to $3.7\\times$ fewer ancilla qubits required.",
    "source": "arxiv"

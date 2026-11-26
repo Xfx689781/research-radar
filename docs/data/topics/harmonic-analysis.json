@@ -1,7 +1,52 @@
 {
  "slug": "harmonic-analysis",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31825",
+   "title": "Weighted Inequalities for the Fractional Maximal Operator on Trees with Flow Measures",
+   "url": "https://arxiv.org/abs/2611.31825",
+   "authors": [
+    "Shengzhe Lu",
+    "Fayou Zhao"
+   ],
+   "label": "arXiv:2611.31825v1",
+   "primary_category": "math.CA",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper develops a Muckenhoupt-type weighted theory for the fractional maximal operator on infinite trees with flow measures, using admissible trapezoids in place of balls and a new class of fractional A(p,q)(μ) weights, with a weak-type endpoint result at p=1.",
+    "plain": "This paper studies a averaging tool, the fractional maximal operator, applied to data living on an infinite branching network (a tree). The usual weighted theory for this kind of averaging does not carry over directly, because these measures do not behave like ordinary space. The authors replace the usual balls with \"trapezoids\" and define a new family of weights that determine when the averaging operator stays bounded between two weighted spaces.",
+    "why": "The result gives a precise, checkable condition (membership in the new weight class) for when the operator is bounded, which is the kind of characterization that matters in harmonic analysis. Its connection to wider areas such as analysis on networks or graphs is plausible but not established in the text.",
+    "background": "- Maximal operator: a tool that replaces each value by the largest average over neighborhoods around it; the fractional version uses a power of the size to measure how much it smooths.\n- Tree: a graph with no loops, branching outward from a root, here infinite.\n- Flow measure: a way of assigning mass to the tree's vertices, here nondoubling (doubling the neighborhood size does not bound the mass by a fixed factor) and growing exponentially with distance.\n- Weight: a positive function that reweights the space; Muckenhoupt theory gives conditions on weights for boundedness of averaging operators.\n- Lebesgue spaces ℓ^p: sets of sequences whose p-th powers are summable, with p controlling how strictly size is measured.\n- Weak-type estimate: a bound on how often the operator output exceeds a level, used when the strong bound fails at an endpoint.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper develops a weighted theory for the fractional Hardy-Littlewood maximal operator $M_{\\mu,\\gamma}$, $0<\\gamma<1$, on infinite trees equipped with flow measures. Such measures are typically nondoubling and exhibit exponential volume growth, so the classical Muckenhoupt theory does not apply directly. By replacing Euclidean balls with admissible trapezoids, a class of fractional $A(p,q)(\\mu)$ weights is introduced, and a Muckenhoupt-type theorem is established: for $1\\le p<1/\\gamma$ and $1/p-1/q=\\gamma$, the operator $M_{\\mu,\\gamma}$ is bounded from $\\ell^p_\\mu(\\omega^p)$ to $\\ell^q_\\mu(\\omega^q)$ if and only if $\\omega\\in A(p,q)(\\mu)$. The endpoint case $p=1$ is characterized via a weak-type estimate.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33058",
+   "title": "An $A_1$ characterization of the boundedness of the maximal function on weighted variable Lebesgue spaces",
+   "url": "https://arxiv.org/abs/2611.33058",
+   "authors": [
+    "Francisco Gon\\c{c}alves",
+    "Tuomas Oikari",
+    "Troy Roberts"
+   ],
+   "label": "arXiv:2611.33058v1",
+   "primary_category": "math.CA",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper gives a necessary and sufficient characterization of when the Hardy-Littlewood maximal operator is bounded on weighted variable Lebesgue spaces, in terms of a variable Muckenhoupt-type condition plus an auxiliary integrable function h making two weighted expressions lie in A_1, and shows the strong Muckenhoupt condition is insufficient in the weighted setting.",
+    "plain": "The paper studies a standard averaging tool from analysis, the maximal function, which replaces a function by its largest local average. It asks when this tool stays well-behaved on function spaces where the integrability exponent can change from place to place and where a weight reweights the measure. The authors give an exact test for this, using an auxiliary integrable function h, and prove both directions of the test.",
+    "why": "The result gives a complete criterion where earlier conditions were only sufficient or were known to fail in the weighted case, and the authors say the characterization is new even without weights. The abstract does not say how far the method reaches beyond this setting, so its wider significance is unclear from the text alone.",
+    "background": "- Maximal function: the operator that takes the largest average of a function over balls containing a point.\n- Lebesgue space L^p: functions whose p-th power is integrable; variable exponent p(x) lets p change with position.\n- Weight w: a positive function that reweights the measure, changing which functions count as large.\n- Muckenhoupt A_p and A_1 conditions: integrability-type conditions on weights that characterize when averaging operators stay bounded; A_1 is the strictest, endpoint version.\n- Sparse domination: bounding an operator by a sum of simpler averages over a special family of cubes.\n- Rubio de Francia algorithm: a construction that produces auxiliary weights with good properties from a bounded operator.\n- Conjugate exponent p'(x): defined by 1/p(x) + 1/p'(x) = 1.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We characterize the boundedness of the Hardy-Littlewood maximal operator $M$ on weighted variable Lebesgue spaces for exponents satisfying $1<p_-\\le p_+<\\infty$. We show that $M$ is bounded on $L^{p(\\cdot)}_w$ if and only if the pair $(p(\\cdot),w)$ satisfies a variable Muckenhoupt condition and there exists $h\\in L^1$ such that $w^{-1}h^{1/p(\\cdot)}$ and $wh^{1/p'(\\cdot)}$ belong to $A_1$. This characterization is new even in the unweighted setting. To prove sufficiency, we use sparse domination together with a local modular averaging estimate whose error terms are summable over sparse families to $\\|h\\|_{L^1}$. Conversely, assuming $M$ is bounded, we construct $h$ using a simultaneous Rubio de Francia algorithm. To motivate this new characterization, we show that the strong Muckenhoupt condition, which characterizes the boundedness of $M$ in the unweighted case by a theorem of Diening, is not sufficient in the weighted setting. As applications, we give short proofs and extensions of known sufficient conditions.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31874",
    "title": "Normal and Unitary Operators on Smooth Banach Spaces via the Duality Mapping",
@@ -14,12 +59,12 @@
    "primary_category": "math.FA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper extends the notions of normal and unitary operators, and the spectral properties of normal operators, from Hilbert spaces to smooth Banach spaces by using the duality mapping.",
-    "plain": "Mathematicians have long studied a special class of operators (maps that transform vectors in a space) that behave nicely on Hilbert spaces, which are spaces where lengths and angles work as in ordinary geometry. This paper asks how much of that theory survives in a wider family of spaces called smooth Banach spaces, where a geometric tool called the duality mapping replaces the inner product. The text reports that the authors define normal and unitary operators in this setting, prove several characterisations of them, and find that many classical properties carry over.",
-    "why": "The work is a generalisation of a well-known part of functional analysis, so its value lies in showing which classical results depend on the inner product and which do not. The provided text does not say which specific applications, if any, it connects to, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- Operator: a rule that maps vectors in a space to vectors in the same or another space.\n- Hilbert space: a space with an inner product (a way of measuring angles and lengths), the setting of classical quantum-style operator theory.\n- Banach space: a complete space where lengths are measured by a norm but angles need not be defined.\n- Smooth Banach space: a Banach space in which the norm has no sharp corners, so each vector has a unique supporting direction.\n- Duality mapping: a rule that assigns to each vector a set of matching functionals (linear measuring tools) of the same size, replacing the inner product.\n- Normal and unitary operators: classes of operators that commute with their own adjoint and preserve length, respectively, in Hilbert spaces.\n- Spectrum: the set of scalars for which an operator minus that scalar fails to be invertible.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extends the notions of normal and unitary operators, and the spectral properties of normal operators, from Hilbert spaces to smooth Banach spaces by using the duality mapping.",
+    "plain": "Mathematicians have long studied a special class of operators (maps that transform vectors in a space) that behave nicely on Hilbert spaces, which are spaces where lengths and angles work as in ordinary geometry. This paper asks how much of that theory survives in a wider family of spaces called smooth Banach spaces, where a geometric tool called the duality mapping replaces the inner product. The text reports that the authors define normal and unitary operators in this setting, prove several characterisations of them, and find that many classical properties carry over.",
+    "why": "The work is a generalisation of a well-known part of functional analysis, so its value lies in showing which classical results depend on the inner product and which do not. The provided text does not say which specific applications, if any, it connects to, so the wider significance is uncertain."
    },
    "abstract": "This article extends the classical notions of normal and unitary operators from Hilbert spaces to smooth Banach spaces through the duality mapping. The class of normal operators introduced in this setting contains, as a special case, the self-adjoint operators on smooth Banach spaces defined via the duality mapping. We establish several characterisations of these operators and investigate their fundamental properties. In particular, we examine various spectral properties of normal operators on smooth Banach spaces. These results demonstrate that many fundamental aspects of the classical theory of normal and unitary operators on Hilbert spaces persist in the smooth Banach space setting.",
    "source": "arxiv"
@@ -37,12 +82,12 @@
    "primary_category": "math.FA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves heat and Poisson kernel estimates for the operator ||x||^{2-a} Δ_k in the (k,a)-generalized Laguerre setting (Dunkl Laplacian over a finite reflection group), and builds a Calderón–Zygmund singular integral theory on it, including a T1 characterization of L^2 boundedness.",
-    "plain": "This is a piece of pure mathematics about how heat and diffusion spread under a specific, somewhat unusual rule of motion, one that mixes ordinary spatial change with symmetries given by mirror-like reflections. The authors pin down the size and smoothness of the \"spreading\" kernel that describes this process. From those estimates they develop a general toolkit for a family of averaging operators on this setting and give a test for when such operators behave well on signals.",
-    "why": "The text presents this as a systematic extension of classical harmonic analysis tools (Calderón–Zygmund theory and the T1 theorem) to a new, symmetry-twisted setting. The text does not state specific applications, so its wider significance is uncertain from the abstract alone.",
+    "ai": true,
     "background": "- Heat kernel: the function describing how heat (or a quantity) spreads from a point over time.\n- Poisson kernel: a related smoothing function, here obtained by \"subordination\" (averaging heat-type behavior over time).\n- Dunkl Laplacian: a generalized second-derivative operator that incorporates reflection symmetries of a finite group.\n- Laguerre setting: a framework built around Laguerre-type operators, here with an extra power weight parameter a.\n- Calderón–Zygmund operators: singular integral operators whose kernels obey size and smoothness conditions, which yield L^p bounds from L^2 bounds.\n- L^p spaces, weak type (1,1), BMO (functions of bounded mean oscillation): standard measures of size and of boundedness.\n- T1 theorem: a criterion that reduces L^2 boundedness of an operator to checking its action on the constant function 1 (and its adjoint), plus a weak boundedness condition.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves heat and Poisson kernel estimates for the operator ||x||^{2-a} Δ_k in the (k,a)-generalized Laguerre setting (Dunkl Laplacian over a finite reflection group), and builds a Calderón–Zygmund singular integral theory on it, including a T1 characterization of L^2 boundedness.",
+    "plain": "This is a piece of pure mathematics about how heat and diffusion spread under a specific, somewhat unusual rule of motion, one that mixes ordinary spatial change with symmetries given by mirror-like reflections. The authors pin down the size and smoothness of the \"spreading\" kernel that describes this process. From those estimates they develop a general toolkit for a family of averaging operators on this setting and give a test for when such operators behave well on signals.",
+    "why": "The text presents this as a systematic extension of classical harmonic analysis tools (Calderón–Zygmund theory and the T1 theorem) to a new, symmetry-twisted setting. The text does not state specific applications, so its wider significance is uncertain from the abstract alone."
    },
    "abstract": "In this paper, we establish heat and Poisson kernel estimates for $\\mathfrak L=\\|x\\|^{2-a}\\Delta_k$ in the $(k,a)$-generalized Laguerre setting, where $\\Delta_k$ is the Dunkl Laplacian associated with a finite reflection group. The heat kernel is nonnegative, symmetric, and conservative, and satisfies a Gaussian bound in the orbit distance together with polynomial decay in the distance between the transformed coordinates. The Poisson kernel, obtained by subordination, satisfies corresponding size and time-derivative estimates, while $-t\\partial_t p_t$ has integral zero in each variable. Motivated by these estimates, we introduce a class of $(k,a)$-Calder\\'{o}n-Zygmund singular integral operators and show that $L^2_{k,a}$-boundedness implies $L^p_{k,a}$-boundedness for $1<p<\\infty$, together with weak type $(1,1)$ and $L^\\infty$-to-$\\BMO$ estimates. Finally, we establish a $T1$ theorem characterizing the $L^2$-boundedness of such operators by the conditions $T1\\in BMO$, $T^*1\\in BMO$, and the weak boundedness property.",
    "source": "arxiv"

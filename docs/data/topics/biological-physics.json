@@ -1,7 +1,56 @@
 {
  "slug": "biological-physics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32990",
+   "title": "Cell and nuclear shapes predict confined motility",
+   "url": "https://arxiv.org/abs/2611.32990",
+   "authors": [
+    "Malcolm Mehrabian-Terlexis",
+    "Jacqueline Janssen",
+    "Paul Sitoleux",
+    "Thierry Mora",
+    "Aleksandra M. Walczak",
+    "C\\'ecile Sykes"
+   ],
+   "label": "arXiv:2611.32990v1",
+   "primary_category": "q-bio.QM",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Using microfluidic confinement of MDA-MB-231 breast cancer cells, this paper trains machine-learning classifiers on 12 cell and nuclear contour features to predict whether a cell will squeeze through a constriction smaller than its nucleus, finding that cell area and circularity carry most of the predictive signal.",
+    "plain": "Cancer cells spreading through the body sometimes have to squeeze through gaps narrower than their own nucleus. This study put breast cancer cells into tiny chambers connected by narrow gaps and tracked whether each cell made it through. Averages of cell and nucleus shape did not separate cells that passed from those that did, but a machine-learning model using shape measurements from earlier moments could predict passing fairly well, with less round cells more likely to pass.",
+    "why": "Being able to tell from shape alone whether a cell can squeeze through tight spaces may help in understanding how cancer spreads, and the authors report that the model still worked for narrower gaps and stickier surfaces without retraining. The text does not show how well this carries over to real tissue or patients, so its wider relevance remains uncertain.",
+    "background": "- Metastasis: cancer spreading from its original site to other parts of the body.\n- Nucleus: the cell's compartment holding its DNA; it is often the stiffest and bulkiest part, so it is the main obstacle when a cell squeezes through a narrow gap.\n- Microfluidics: devices with channels and chambers only micrometres wide, used to control the environment cells experience.\n- Contour/morphology features: numerical descriptions of outline shape, such as area and circularity (how close the outline is to a perfect circle).\n- Classifier: a machine-learning model that sorts cases into categories, here \"transits\" versus \"does not transit.\"\n- Adhesion: how strongly cells stick to the surface they crawl on, which affects how easily they move.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Cancer metastasis relies on an enhanced property of cells to migrate efficiently even through constrictions smaller than their nucleus. Both cell and nuclear morphology may influence this process. How these morphologies relate to the likelihood that a cell will transit through a constriction remains unclear. Here we combine microfluidic experiments with machine learning to predict whether MDA-MB-231 breast cancer cells are able to transit through narrow constrictions. Cells migrate within vertically confined boxes, and may migrate into neighboring boxes by transiting through constrictions, requiring a deformation of the nucleus. Defining a set of 12 geometrical features derived from cell and nuclear contours, we find that their average values are not statistically indicative of whether or not a cell will transit. To overcome this limitation, we use trajectories to train classifiers and evaluate their ability to predict future transit events. We find that the cell area and cell circularity carry most of the predictive information and less circular cells are more likely to transit. Without retraining, the models also predict transit through narrower constrictions and in more adhesive substrates. Morphological features of cells about 30 minutes before a transit event proved most informative about future transit events occurring or not. Together, our results show that cell shape, readable from simple contour descriptors, contains a transferable but condition-dependent signature of imminent transit.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32737",
+   "title": "Impact of Taylor-Aris dispersion on chemical patterns in confined channel flows",
+   "url": "https://arxiv.org/abs/2611.32737",
+   "authors": [
+    "Yanis Baouche",
+    "Ramita Mondal",
+    "Christina Kurzthaler"
+   ],
+   "label": "arXiv:2611.32737v1",
+   "primary_category": "cond-mat.soft",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Using an invariant-manifold reduction for slender channels, the authors show that advection with Taylor-Aris dispersion in a confined flow can invert the classical Turing criterion for the Brusselator activator-inhibitor model, triggering or destroying chemical patterns, and confirm this with direct simulations.",
+    "plain": "This paper asks how a steady fluid flow through a narrow channel changes the chemical patterns that reaction-diffusion systems can form, such as stripes. The authors reduce the full two-dimensional problem to one dimension using a standard model system, the Brusselator, and account for how flow spreads chemicals along the channel. They report that flow can create patterns even when the chemicals alone would not form them, and can also erase patterns that already exist.",
+    "why": "Patterns of this kind are often proposed to underlie biological shapes, so showing that flow in confined channels can switch pattern formation on or off may matter for microfluidic and biological settings. The text is limited to the abstract, so the scope of the claims beyond the Brusselator model and these simulations is not clear from it.",
+    "background": "- Chemical patterns: spatial stripes or spots that arise when reacting chemicals diffuse at different rates (reaction-diffusion systems).\n- Turing criterion: the classical condition, based on unequal diffusion rates of the two chemicals, under which a uniform mixture becomes unstable and forms patterns.\n- Brusselator: a simple textbook model of two interacting chemicals, an activator and an inhibitor.\n- Advection: transport of chemicals by the moving fluid.\n- Taylor-Aris dispersion: the effective spreading of a solute in a flow that combines molecular diffusion with shear across a channel, giving a larger effective diffusivity along the flow.\n- Péclet number: the ratio of advection to diffusion; large values mean the flow dominates.\n- Slender channel: a channel much longer than it is wide, which allows the reduction to one dimension.\n- Invariant manifold: a reduced set of states the full system settles onto, allowing a simpler description.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Chemical patterns form through non-linear interactions between different species. We study how confined channel flows affect pattern formation using the Brusselator as a paradigmatic activator-inhibitor model. An invariant-manifold method for slender channels reduces the advection-diffusion-reaction equation to one spatial dimension, with species transported at the mean flow velocity and molecular diffusivities replaced by the classical Taylor-Aris dispersion coefficients. We obtain the phase diagram as a function of the P\\'eclet number (i.e., the relative strength of advection to diffusion), the channel slenderness, and the diffusivity ratio of the species. Our analytical results demonstrate that the classical Turing criterion can become inverted at large P\\'eclet numbers and, thus, channel flow can trigger pattern formation even when the molecular diffusivities violate the classical Turing condition, and conversely destroy pre-existing patterns. Both predictions are confirmed by direct numerical simulations, which show advected stripe patterns, whose wavelength can be predicted by our reduced theory, as well as oscillatory dynamics. These findings highlight that hydrodynamic flows can modify chemical mixing and thereby profoundly affect pattern formation in channel geometries.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32850",
    "title": "Geometry and topology of DNA defects",
@@ -15,12 +64,12 @@
    "primary_category": "cond-mat.soft",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper defines a geometric order parameter (a backbone-to-base polar vector plus a base-orientation quaternion) to classify DNA defects as flips, stacking defects, or composites, and examines their occurrence in real structures and in biased molecular dynamics simulations.",
-    "plain": "DNA is normally a tidy double helix, but its strands can be locally disturbed by damage, by proteins sitting on it, or by enzymes such as RNA polymerase. This paper gives a precise geometric way to describe these local disturbances and how they change over time. The authors combine this description with computer simulations and with analysis of experimentally determined DNA structures.",
-    "why": "A quantitative, shared description of defects could help connect the shape of DNA to its chemical function, and the authors suggest it could be extended to RNA and nucleosome arrays. The text does not show how far these applications would go, so their practical value remains to be tested.",
+    "ai": true,
     "background": "- DNA is a double helix of two strands; each strand has a sugar-phosphate backbone and attached bases (A, T, G, C).\n- Normally the bases stack neatly on top of each other and point in a consistent direction relative to the backbone.\n- A \"defect\" here means a local departure from that regular arrangement, such as a base flipping out or bases stacking imperfectly.\n- A \"polar vector\" is an arrow with a direction, here running from backbone to base; a \"quaternion\" is a compact mathematical way to encode 3D orientation.\n- Atomistic simulations model every atom and its motion; biased molecular dynamics pushes the system toward a chosen deformation to study it.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper defines a geometric order parameter (a backbone-to-base polar vector plus a base-orientation quaternion) to classify DNA defects as flips, stacking defects, or composites, and examines their occurrence in real structures and in biased molecular dynamics simulations.",
+    "plain": "DNA is normally a tidy double helix, but its strands can be locally disturbed by damage, by proteins sitting on it, or by enzymes such as RNA polymerase. This paper gives a precise geometric way to describe these local disturbances and how they change over time. The authors combine this description with computer simulations and with analysis of experimentally determined DNA structures.",
+    "why": "A quantitative, shared description of defects could help connect the shape of DNA to its chemical function, and the authors suggest it could be extended to RNA and nucleosome arrays. The text does not show how far these applications would go, so their practical value remains to be tested."
    },
    "abstract": "DNA defects arise frequently, either as a result of damage, protein binding or the action of molecular enzymes such as an RNA polymerase. Here we combine geometry, atomistic simulations and an analysis of real DNA structures to provide a quantitative characterisation of DNA defects and their dynamics. The composite order parameter describing defects geometrically is a backbone-to-base polar vector, together with a quaternion capturing 3D base orientation in a single strand. There are three types of defects: flips of the polar vector, stacking defects of bases, and composite defects encompassing both. All types of defects feature in realistic structures for DNA and have functional relevance. Additionally, biased molecular dynamics simulations of DNA with an imposed elastic deformation form flip or stacking defects whose abundance and dynamics strongly depend on sequence and type of deformation. Our results provide a link between geometry and biochemistry, and could also be applied, for instance, to identify defects in RNA molecules and nucleosome arrays.",
    "source": "arxiv"
@@ -40,12 +89,12 @@
    "primary_category": "cond-mat.stat-mech",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A short review that frames lattice random walks with a rotational (chiral) bias around a memory-carrying internal state, using the recently introduced chiral random walk as a template and linking persistent, chiral, run-and-tumble and cyclic walks, odd diffusion in environments, and spiral self-avoiding walks.",
-    "plain": "This review looks at random movement on a grid where the walker has a built-in tendency to turn one way, as with bacteria that swim in circles near surfaces or charged particles bent by a magnetic field. The authors argue that on a lattice this sideways bias only works if the walker remembers something about its recent direction, and they organise many scattered earlier models around that idea. The text describes the framework and where the memory shows up: in the walker, the surrounding environment, and the path traced out.",
-    "why": "Chiral random motion appears in biology, active matter and magnetic transport, and lattice models are simple enough to solve exactly, so a common framework could help researchers in several fields see related work. The text does not report new experimental results, and its practical reach beyond these communities is not stated.",
+    "ai": true,
     "background": "- A random walk is a path built from repeated random steps; diffusion is its large-scale spreading.\n- A lattice is a regular grid of points that a walker hops between.\n- Mean-squared displacement measures how far, on average, a walker has spread from its start.\n- Chirality means a systematic left or right rotational bias.\n- The diffusion tensor describes how spreading depends on direction; an antisymmetric part produces sideways (odd) transport that does not change the spreading distance.\n- Persistent walks keep their heading for a while; run-and-tumble motion alternates straight runs with random reorientations, as in E. coli.\n- Self-avoiding walks are paths that never revisit a site.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A short review that frames lattice random walks with a rotational (chiral) bias around a memory-carrying internal state, using the recently introduced chiral random walk as a template and linking persistent, chiral, run-and-tumble and cyclic walks, odd diffusion in environments, and spiral self-avoiding walks.",
+    "plain": "This review looks at random movement on a grid where the walker has a built-in tendency to turn one way, as with bacteria that swim in circles near surfaces or charged particles bent by a magnetic field. The authors argue that on a lattice this sideways bias only works if the walker remembers something about its recent direction, and they organise many scattered earlier models around that idea. The text describes the framework and where the memory shows up: in the walker, the surrounding environment, and the path traced out.",
+    "why": "Chiral random motion appears in biology, active matter and magnetic transport, and lattice models are simple enough to solve exactly, so a common framework could help researchers in several fields see related work. The text does not report new experimental results, and its practical reach beyond these communities is not stated."
    },
    "abstract": "Chirality, a systematic rotational bias, is ubiquitous in many random motion patterns, from bacteria cells, that swim in circles near surfaces and spinning colloids, to charged particles diffusing under the influence of magnetic fields. In two dimensions, chirality renders random transport \\textit{odd}: the diffusion tensor acquires an antisymmetric part that leaves the mean-squared displacement invariant but modifies fluxes and boundary currents. Lattice models for random motion are a natural setting to study chirality, since they are exactly solvable, connect directly to heterogeneous media, cellular automata, and programmable robots, and in discrete time admit fully chiral limits with a localised bulk and edge transport. Lattice walks with a rotational bias have been introduced in different communities several times since 1960, yet without a common language or conceptual connection between them. Here we review these models from the perspective that on the lattice, chirality requires memory. Taking the recently introduced chiral random walk model as a template, we describe the walker with an internal degree of freedom. With a chiral biased updating rule, the full diffusion tensor of this chiral walker turns odd. Within this picture, we can unite persistent and chiral walks, run-and-tumble motion, and cyclic random motions in one framework. We discuss how the memory is followed into the environment; in Lorentz lattice gases, kinetic and rotor walks, and random odd environments; and into the path; in spiral self-avoiding walks.",
    "source": "arxiv"

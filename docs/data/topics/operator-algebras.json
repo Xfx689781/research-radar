@@ -1,7 +1,50 @@
 {
  "slug": "operator-algebras",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32363",
+   "title": "Monadicity of noncommutative measurable spaces over $C^{\\ast}$-algebras",
+   "url": "https://arxiv.org/abs/2611.32363",
+   "authors": [
+    "Fosco Loregian",
+    "Antonio Lorenzin"
+   ],
+   "label": "arXiv:2611.32363v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper shows that sigma-C*-algebras (a proposed noncommutative version of measurable spaces) form a monadic category over C*-algebras, characterizes sigma-cpu maps via a comonad related to the Giry monad, and builds a tensor product and a CP-instrument correspondence in this setting.",
+    "plain": "The paper continues a line of work that tries to carry the ideas of probability and measurable spaces over to noncommutative algebras, the mathematical objects used to describe quantum systems. It sets up the structure of these \"sigma C*-algebras\" and their probabilistic maps in a way that category theorists can organize, and it defines a product for them. It also adapts a known notion of quantum measurement (CP-instruments) to this setting and links it to the probabilistic maps.",
+    "why": "The work tests how far the analogy between measurable spaces and noncommutative algebras can be pushed, using tools from category theory that are standard for classical probability. Its connection to quantum measurement and to the Giry monad (a classical tool for describing random maps) is the main reason it may interest people in quantum probability and categorical foundations; the text does not say how these results will be used beyond that.",
+    "background": "- C*-algebra: a collection of bounded operators closed under addition, multiplication and adjoint; a noncommutative generalization of continuous functions on a space.\n- Measurable space: a set with a sigma-algebra, the structure needed for probability.\n- sigma-homomorphism / sigma-additivity: structure-preserving maps and \"countable additivity\" conditions, which allow countably many operations.\n- Monad / comonad: a categorical pattern for packaging structure; a monad models things like random outcomes, and monadicity says a category is equivalent to algebras over a monad.\n- Giry monad: the classical monad on measurable spaces whose maps are probability measures.\n- Completely positive (CP) map: a linear map that preserves positivity even when extended to matrices; these describe quantum operations.\n- Locally presentable category: a category built from a small set of generators under colimits, a size-control notion from category theory.\n- Maximal tensor product: a standard way to combine two C*-algebras.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In a recent paper, Tobias Fritz and the second author identified $\\sigma C^*$-algebras as a tentative noncommutative analogue of measurable spaces. We advance this analogy by establishing monadicity of $\\sigma C^*$-algebras over $C^*$-algebras and proving several results of interest to both the category theory and operator algebra communities. In detail, we show that: - The associated probabilistic morphisms, $\\sigma$-cpu maps, admit a description via a comonad closely related to the Giry monad. Equivalently, $\\sigma$-cpu maps can be characterized by a universal property. - The category of $\\sigma C^*$-algebras and $\\sigma$-homomorphisms is locally $\\aleph_1$-presentable. - $\\sigma C^*$-algebras have a tensor product induced by the maximal tensor product of $C^*$-algebras and satisfying an analogous universal property. - The notion of CP-instruments, defined as $\\sigma$-additive assignments from a $\\sigma$-algebra to a space of completely positive maps, can be adapted to this setting by taking as target the set of $\\sigma$-normal completely positive maps between $\\sigma C^*$-algebras. This yields a bijective correspondence with $\\sigma$-cpu maps out of the tensor product of the previous item.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31425",
+   "title": "Disjointness, Orthogonality and Commutativity in $C^*$-Algebras",
+   "url": "https://arxiv.org/abs/2611.31425",
+   "authors": [
+    "Jani Jokela"
+   ],
+   "label": "arXiv:2611.31425v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper characterizes order-theoretic disjointness of self-adjoint elements in a C*-algebra via the vanishing of aAb and trivial intersection of the ideals they generate, describes disjoint complements through annihilator ideals, and gives commutativity criteria based on disjointness of orthogonal positive contractions and projections.",
+    "plain": "This paper studies a rule for when two mathematical objects, called elements, of a certain algebraic system (C*-algebras, which model quantum observables) are \"disjoint,\" meaning they do not overlap in an order sense. The authors show that this happens exactly when multiplying one element on both sides through the algebra always gives zero, and when the smallest two-sided pieces built from each element share only zero. They then use this to show that if every pair of such elements that multiply to zero is disjoint, the whole algebra must be commutative, meaning the order of multiplication never matters.",
+    "why": "Commutativity criteria of this kind tell us when a non-commutative system must reduce to a simpler one, which matters for the structure theory of operator algebras. The text does not indicate applications beyond this structural theory, so its wider significance is unclear from the given material.",
+    "background": "- C*-algebra: a collection of bounded operators (generalized matrices or functions) closed under addition, multiplication, scaling and a conjugate-transpose operation; it is the standard setting for quantum mechanics mathematics.\n- Self-adjoint element: an element equal to its own conjugate-transpose, analogous to a real number.\n- Positive contraction: a self-adjoint element whose \"spectrum\" lies in [0,1], roughly a generalized probability or dampening factor.\n- Commutative: the algebra where ab = ba always holds, like ordinary numbers.\n- Order-theoretic disjointness: two elements have no common lower bound beyond zero in the partial order of positive elements.\n- Ideal: a subset closed under addition and multiplication by any algebra element; the two-sided ideal generated by a is the smallest such set containing a.\n- Annihilator ideal: all elements that multiply a given element to zero.\n- Projection: a self-adjoint element equal to its own square; real rank zero is a topological condition on the algebra.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We characterize order-theoretic disjointness of two elements $a$ and $b$ in the self-adjoint part of a $C^*$-algebra $A$ via the condition $aAb = \\{0\\}$ and the trivial intersection of closed two-sided ideals generated by $a$ and $b$. As a consequence, we show that disjoint complements coincide with the self-adjoint parts of annihilator ideals. We also prove that $A$ is commutative whenever every pair of algebraically orthogonal positive contractions in $A$ is disjoint. Finally, we establish corresponding commutativity criteria involving projections for real rank zero $C^*$-algebras.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32953",
    "title": "The Universal Frame Characterization of C*-algebras",
@@ -14,12 +57,12 @@
    "primary_category": "math.OA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proves that a C*-algebra is exactly one of compact operators if and only if every Hilbert A-module admits a frame, settling a question of Amini, Asadi, Elliott and Khosravi (2017) that goes back to Frank and Larson (2002).",
-    "plain": "This paper is about a precise yes-or-no question in the mathematics of operators, which are rules that act on spaces of functions or vectors. The authors ask which algebras of such operators have a particular kind of \"frame,\" a way of spreading a space's contents out so every element can be rebuilt from its pieces. They show that this property holds exactly for the algebras made of compact operators, which answers a question posed in 2017.",
-    "why": "The result gives a clean characterization: one structural property of an algebra is equivalent to another, which closes an open question raised by earlier researchers. Its connections to wider areas are not described in the text, so any broader significance is unclear from this abstract alone.",
+    "ai": true,
     "background": "- C*-algebra: a collection of bounded linear operators on a Hilbert space that is closed under addition, multiplication, scalar multiples, and taking adjoints (a kind of conjugate transpose), with a norm compatible with these operations.\n- Compact operators: operators that behave like finite-dimensional matrices in the limit; they form a basic, well-understood special case of C*-algebras.\n- Hilbert module: a generalization of a Hilbert space in which the \"scalars\" are replaced by elements of a C*-algebra.\n- Frame: a spanning family of vectors that allows any element to be reconstructed from its inner products with the family, though the vectors need not be independent.\n- The question originates in work by Frank and Larson (2002) and was posed further by Amini, Asadi, Elliott and Khosravi (2017).",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that a C*-algebra is exactly one of compact operators if and only if every Hilbert A-module admits a frame, settling a question of Amini, Asadi, Elliott and Khosravi (2017) that goes back to Frank and Larson (2002).",
+    "plain": "This paper is about a precise yes-or-no question in the mathematics of operators, which are rules that act on spaces of functions or vectors. The authors ask which algebras of such operators have a particular kind of \"frame,\" a way of spreading a space's contents out so every element can be rebuilt from its pieces. They show that this property holds exactly for the algebras made of compact operators, which answers a question posed in 2017.",
+    "why": "The result gives a clean characterization: one structural property of an algebra is equivalent to another, which closes an open question raised by earlier researchers. Its connections to wider areas are not described in the text, so any broader significance is unclear from this abstract alone."
    },
    "abstract": "We prove that a C*-algebra A is a C*-algebra of compact operators if and only if every Hilbert A-module admits a frame. This answers affirmatively the question of Amini, Asadi, Elliott and Khosravi (2017), arising from the problem of Frank and Larson (2002)",
    "source": "arxiv"
@@ -38,12 +81,12 @@
    "primary_category": "math.OA",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that the first L²-Betti number of the free group factor L(F_n) (in the Connes–Shlyakhtenko sense) is infinite, using algebraic derivations built from assignments on the semicircular generators and a rank identity for Jacobians of polynomial relations.",
-    "plain": "This paper studies a measure of \"how much room\" a certain algebraic structure has, called the first L²-Betti number, for the von Neumann algebra built from a free group with a finite number of generators. The authors show this number is infinite. They do this by showing that values assigned to the basic generators can always be extended to a full algebraic derivation (a rule for how things change under products), and they also show that an outer derivation of this kind forces the number to be infinite in any II₁ factor with separable predual.",
-    "why": "Infinite L²-Betti number is a strong structural statement about these algebras, and the paper links derivations to a rank identity for Jacobians, which may connect operator algebra theory to tools from algebraic geometry. The text alone does not show how far the methods reach beyond free group factors, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- Von Neumann algebra: a self-adjoint algebra of bounded operators on Hilbert space, the non-commutative analogue of a space of measurable functions.\n- Free group factor L(F_n): the von Neumann algebra generated by the free group on n generators; a II₁ factor.\n- L²-Betti number (Connes–Shlyakhtenko): a dimension-like invariant measuring the size of the first L²-cohomology of a bimodule-valued derivation problem; infinite means maximally large in this sense.\n- Derivation: a linear map satisfying the Leibniz (product) rule; algebraic means defined by polynomial expressions rather than analytic limits; outer means not of the trivial inner form.\n- Semicircular elements: the non-commutative analogue of Gaussian random variables, the standard generators of free group factors.\n- Jacobian / rank identity: in this setting, the matrix of partial derivatives of polynomial relations and its rank, used to build derivations.\n- II₁ factor with separable predual: a type of infinite-dimensional operator algebra with a faithful trace and a countable dense subset of its predual.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that the first L²-Betti number of the free group factor L(F_n) (in the Connes–Shlyakhtenko sense) is infinite, using algebraic derivations built from assignments on the semicircular generators and a rank identity for Jacobians of polynomial relations.",
+    "plain": "This paper studies a measure of \"how much room\" a certain algebraic structure has, called the first L²-Betti number, for the von Neumann algebra built from a free group with a finite number of generators. The authors show this number is infinite. They do this by showing that values assigned to the basic generators can always be extended to a full algebraic derivation (a rule for how things change under products), and they also show that an outer derivation of this kind forces the number to be infinite in any II₁ factor with separable predual.",
+    "why": "Infinite L²-Betti number is a strong structural statement about these algebras, and the paper links derivations to a rank identity for Jacobians, which may connect operator algebra theory to tools from algebraic geometry. The text alone does not show how far the methods reach beyond free group factors, so the wider significance is uncertain."
    },
    "abstract": "Let \\(M\\) be the von Neumann algebra of a nonabelian free group of finite rank. We prove that its first \\(L^2\\)-Betti number in the sense of Connes and Shlyakhtenko is infinite. We show that every assignment of values in \\(\\Aff(M\\bar\\otimes M^{\\op})\\) to the standard semicircular generators extends to an algebraic derivation on all of \\(M\\). The extension follows from a rank identity for the Jacobians of finite systems of polynomial relations. We also prove that, for any \\(\\mathrm{II}_1\\) factor with separable predual, the existence of an outer derivation with these coefficients forces the first \\(L^2\\)-Betti number to be infinite.",
    "source": "arxiv"

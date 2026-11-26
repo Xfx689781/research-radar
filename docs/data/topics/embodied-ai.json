@@ -1,7 +1,57 @@
 {
  "slug": "embodied-ai",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32483",
+   "title": "CodeWAM: A Code World Action Model for End-to-End Autonomous Driving",
+   "url": "https://arxiv.org/abs/2611.32483",
+   "authors": [
+    "Zhisheng Chen",
+    "Jinpeng Wang",
+    "Beicheng Lou",
+    "Zhengwei Xie",
+    "Hao Wu",
+    "Rui Qian",
+    "Kun Wang",
+    "Vivian W. H. Wong"
+   ],
+   "label": "arXiv:2611.32483v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "CodeWAM is a driving world model that uses executable code to represent the ego vehicle's planned motion, paired with a learned visual model of the scene, and reports benchmark scores on NAVSIM v1, v2 and NAVHARD.",
+    "plain": "Self-driving planners need to guess what will happen if the car follows a candidate plan, both to the road around it and to the car itself. This paper proposes representing the car's own motion as small pieces of executable code, while a learned visual model handles the scene. The authors report that this combination scores well on several driving benchmarks and that it works with two other planners without extra training.",
+    "why": "Autonomous driving systems are judged on whether they can foresee outcomes of their own choices, so a more structured way to model the vehicle's motion may matter for planning. The text reports benchmark numbers and transfer results, but it does not show how the approach behaves on real roads, so its wider significance is uncertain.",
+    "background": "- World model: a learned system that predicts how an environment will change in response to an action.\n- Ego vehicle: the car being controlled by the planner.\n- Candidate plan: one possible future trajectory the planner is considering and scoring.\n- NAVSIM / NAVHARD / PDMS / EPDMS: offline driving benchmarks and scoring metrics that estimate how safe and progressive a planned driving trajectory is; higher is better.\n- Executable code as a representation: describing a process as a program that can be run to produce its outcome, instead of only as learned numbers.\n- Hydra-MDP and DrivoR: other driving planners; the paper tests its approach on them without retraining.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego vehicle's motion under a candidate plan. We propose CodeWAM, a driving world model that incorporates executable code as part of its world representation. Code represents ego dynamics by expressing how the vehicle state evolves under plan execution, while a learned visual model captures scene-dependent consequences. Executing the code produces a candidate-conditioned motion sequence, which is evaluated relative to the prior plan and recorded motion history. The resulting execution consequences and learned scene outcomes jointly represent the candidate's future, enabling the planner to assess both what a plan may lead to and how the vehicle transitions into that future. The selected plan becomes part of the next decision's execution context, linking successive choices within the model. CodeWAM achieves 93.6 PDMS on NAVSIM v1 navtest, 92.1 EPDMS on v2 navtest, and 50.6 EPDMS on NAVHARD. Further experiments demonstrate improved pairwise execution consistency and gains on Hydra-MDP and DrivoR without additional training, supporting executable code as a complementary representation for driving world models.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31715",
+   "title": "Sparks of Weight-Space Programming for Robot Foundation Models",
+   "url": "https://arxiv.org/abs/2611.31715",
+   "authors": [
+    "Kyle Coelho",
+    "Eugen Solowjow"
+   ],
+   "label": "arXiv:2611.31715v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper applies weight-space programming, where a language-model agent reads and edits a few parameters of a pre-trained vision-language-action robot policy (pi0.5), to fix recurring failure states in simulation without new data or training.",
+    "plain": "Robot AI models sometimes get stuck in the same recognizable situation again and again. This paper tries to fix those repeated failures by making a tiny, targeted change directly to the model's internal settings, rather than collecting new examples and retraining it. In simulation, editing about 0.0002% of the parameters improved success on these recurring failures, and the authors report that reversed or random edits did not give the same gains.",
+    "why": "If this kind of direct, minimal editing holds up beyond simulation, it could offer a cheaper way to patch specific robot behaviors after deployment. The text only reports simulation results on one model, so how well it transfers to real robots or other models is unclear from this description alone.",
+    "background": "- Robot foundation model (RFM): a large AI model pre-trained on many robot tasks that maps camera images and language instructions to motor actions.\n- Vision-language-action (VLA) policy: such a model, taking in what the robot sees and is told, and outputting movements.\n- Parameters / weights: the numerical settings inside a neural network that determine its behavior; 0.0002% means a very small fraction of them.\n- Activations: the intermediate signals inside the network when it processes an input.\n- Neurons that are \"near-silent\": units that rarely produce a strong signal, so reusing them is less likely to disturb normal behavior.\n- Fine-tuning: further training on a specific task, after the initial pre-training.\n- Ablation controls: \"reversed\" and \"random\" edits used as comparisons to check the gains are not accidental.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper demonstrates an approach for correcting failures of robot foundation models (RFMs) without additional data collection, demonstrations, or training. We apply weight-space programming (WSP), in which a language-model agent directly reads and writes a neural network's parameters, to a large, pre-trained vision-language-action policy. The idea is simple: many policy failures are not random but repeatedly land in the same recognizable stuck state, so if that state is visible in the model's internal activations, a small edit could trigger a corrective movement while leaving the rest of the model's parameters unchanged. A core design choice is where to write the edit: repurposing a few near-silent neurons in the action expert lets the edit switch on in situations associated with the failure and produce a corrective movement, such as lowering the gripper toward the target, that is specified directly rather than learned through training. Empirically, when applied to the pi0.5 policy in simulation, we find that edits to roughly 0.0002% of the parameters can improve success on recurring failures, including for a policy that was already fine-tuned on its task. Reversed and random edits indicate that the gains come from the intended behavior, and the approach works best when the failure situation is recognizable and a simple correction can address it.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33144",
    "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
@@ -32,12 +82,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "PyRUA-Dex uses coding agents to write programmatic robot policies for bimanual dexterous manipulation without human demonstrations, evaluated on Bench2Dex and DexJoCo benchmarks and on a real two-hand robot.",
-    "plain": "Teaching robot hands to do fine tasks usually needs many examples from humans, and those examples are hard to collect well. This paper has AI coding agents write the robot's control program instead: several agents try out skills in parallel, a summarizing agent keeps the successful ones as a reusable library and one program, and that program is then refined on randomized setups. The authors report strong scores in simulation and real-world demos on a robot with two 22-joint hands, including playing piano and writing calligraphy.",
-    "why": "It offers an alternative to collecting human demonstrations, which the authors say is the main bottleneck for dexterous robots. Whether this approach generalizes beyond the tasks shown is not established by the text, so its wider significance is still uncertain.",
+    "ai": true,
     "background": "- Dexterous manipulation: using multi-fingered robot hands for fine, precise object handling.\n- Bimanual: using two hands or arms together.\n- Degrees of freedom (DoF): independent joints or movement directions; 22-DoF hands are highly articulated.\n- Demonstrations and retargeting: learning from recorded human examples, including mapping human hand motion onto a robot hand.\n- Programmatic policy: a robot controller written as readable code rather than a neural network.\n- Coding agents: AI systems that write and run software to solve a task.\n- Simulation benchmarks: standardized virtual test suites (Bench2Dex, DexJoCo) used to compare methods; scores are as reported by the authors.\n- Domain randomization: varying object positions and conditions during training so the controller is robust.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PyRUA-Dex uses coding agents to write programmatic robot policies for bimanual dexterous manipulation without human demonstrations, evaluated on Bench2Dex and DexJoCo benchmarks and on a real two-hand robot.",
+    "plain": "Teaching robot hands to do fine tasks usually needs many examples from humans, and those examples are hard to collect well. This paper has AI coding agents write the robot's control program instead: several agents try out skills in parallel, a summarizing agent keeps the successful ones as a reusable library and one program, and that program is then refined on randomized setups. The authors report strong scores in simulation and real-world demos on a robot with two 22-joint hands, including playing piano and writing calligraphy.",
+    "why": "It offers an alternative to collecting human demonstrations, which the authors say is the main bottleneck for dexterous robots. Whether this approach generalizes beyond the tasks shown is not established by the text, so its wider significance is still uncertain."
    },
    "abstract": "Learning for dexterous manipulation is limited by the scarcity of high-quality demonstrations: retargeting from human video is imprecise, teleoperation gives no force feedback to the operator, and exoskeleton-based collection is hard to scale up. We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. The programmatic policy is developed in two stages: during exploration, multiple agents explore in parallel for task skills and ways to compose them, and a distilling agent condenses the successful attempts into a task library and one program. During refinement, this program is improved through randomized layouts for enhanced robustness and execution efficiency. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks. In real world experiments on a bimanual platform with two 22-DoF hands, PyRUA-Dex learns to play piano, write calligraphy, and other tasks efficiently: learning a new piece from sheet music takes as little as 30 minutes. These results suggest that PyRUA-Dex is an effective framework for developing dexterous manipulation policies with coding agents in the absence of high quality dexterous manipulation demonstrations.",
    "source": "arxiv"
@@ -59,12 +109,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Ego2Real transfers bimanual dexterous manipulation from egocentric human videos paired with tactile gloves to anthropomorphic robot hands, using tactile signals both to refine hand-object reconstructions and to define contact rewards for reinforcement learning.",
-    "plain": "Teaching robot hands to handle objects by watching people is cheaper than programming them by hand, but video alone misses how hard a person is pressing and where contact happens. This paper adds touch sensors worn as gloves on the demonstrator, and uses that touch data in two places: to correct the estimated hand poses from video, and to reward a robot's training when its contacts match the human's. The paper reports that adding touch data to both steps yields higher task success rates.",
-    "why": "Robots that learn from human demonstration need better data about physical contact, which is the hard part of dexterous work. The approach may matter for scaling robot skill learning, but the text gives no details on the size of the gains, the tasks, or how it compares with other methods, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Egocentric demonstration: video recorded from the person's own head or chest camera, showing their hands doing a task.\n- Bimanual dexterous manipulation: using two multi-fingered hands together to handle objects.\n- Tactile sensing: measuring touch and pressure, here through sensor gloves.\n- Hand-object reconstruction: estimating the 3D positions of a hand and an object from images.\n- Reinforcement learning: a robot learns by trial and error, guided by a reward signal.\n- Contact reward: a bonus given when the robot's fingertips touch an object as the human's did.\n- Anthropomorphic hand: a robot hand shaped roughly like a human hand, with a different body and motors than a person's.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Ego2Real transfers bimanual dexterous manipulation from egocentric human videos paired with tactile gloves to anthropomorphic robot hands, using tactile signals both to refine hand-object reconstructions and to define contact rewards for reinforcement learning.",
+    "plain": "Teaching robot hands to handle objects by watching people is cheaper than programming them by hand, but video alone misses how hard a person is pressing and where contact happens. This paper adds touch sensors worn as gloves on the demonstrator, and uses that touch data in two places: to correct the estimated hand poses from video, and to reward a robot's training when its contacts match the human's. The paper reports that adding touch data to both steps yields higher task success rates.",
+    "why": "Robots that learn from human demonstration need better data about physical contact, which is the hard part of dexterous work. The approach may matter for scaling robot skill learning, but the text gives no details on the size of the gains, the tasks, or how it compares with other methods, so its wider significance is uncertain."
    },
    "abstract": "Learning dexterous manipulation from egocentric human demonstrations offers a scalable path toward robot skill acquisition. Vision alone, however, provides limited information about physical contacts and the demonstrator's force intent, leading to ambiguities in interpreting hand-object interactions. Capturing human touch via tactile sensing is therefore crucial for reliable human-to-robot dexterous skill transfer. We present Ego2Real, a framework that leverages egocentric demonstrations and tactile gloves to transfer bimanual dexterous manipulation skills to robotic hands. Ego2Real incorporates tactile supervision at two complementary stages: (1) tactile-guided hand-object interaction reconstruction, which uses measured tactile signals to refine hand poses and contact geometry; and (2) contact-informed reinforcement learning, which translates human contact patterns into robotic contact rewards. By combining refined motion references with physical contact rewards during training, Ego2Real guides anthropomorphic robotic hands to emulate demonstrated contact behaviors while adapting to their own morphology and actuation. Experiments show that incorporating tactile supervision into both reconstruction and policy learning yields higher manipulation success rates, underscoring the importance of enriching egocentric demonstrations with tactile observations to improve their quality and transferability.",
    "source": "arxiv"

@@ -1,7 +1,52 @@
 {
  "slug": "statistical-physics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31584",
+   "title": "Absence of $\\sigma$-criticality in Short-Range Spin Glasses",
+   "url": "https://arxiv.org/abs/2611.31584",
+   "authors": [
+    "C. M. Newman",
+    "D. L. Stein"
+   ],
+   "label": "arXiv:2611.31584v1",
+   "primary_category": "cond-mat.dis-nn",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper rules out the second kind of sigma-criticality (a bond sitting on the critical-droplet boundaries of a positive density of other bonds) in the Edwards-Anderson Ising spin glass, completing the exclusion of sigma-criticality and proposing a rigorous necessary condition for ground-state pair multiplicity.",
+    "plain": "This paper studies a model of magnets with randomly mixed friendly and hostile connections between neighboring spins, and asks how stable its lowest-energy arrangements are when one connection is changed. The authors show that one specific way a single change could ripple through a large fraction of the system cannot happen in this model. That removes one route to the existence of several distinct lowest-energy arrangements, though it does not settle the question itself.",
+    "why": "Whether a spin glass has many distinct ground states is a central open question in the theory of disordered materials, and the paper narrows the set of mechanisms that could cause it. The text does not indicate links beyond statistical physics, so wider applications are unclear from this abstract alone.",
+    "background": "- Spin glass: a magnet-like lattice where each bond is randomly ferromagnetic (aligned) or antiferromagnetic (opposed), so no arrangement satisfies all bonds.\n- Ground state: a spin configuration of lowest total energy; several different ground states may exist.\n- Flexibility of a bond: how much a bond's energy cost changes when it is flipped, used to measure how stable a ground state is to small changes.\n- Droplet: a connected region of spins flipped relative to the ground state; a critical droplet is the one whose flip costs energy comparable to changing a single coupling.\n- Sigma-criticality: the property that changing one coupling can alter the flexibility of a positive fraction of couplings in an infinite system; the paper treats it as a sufficient condition for multiple ground state pairs.\n- Positive density: the fraction of bonds in an infinite lattice is bounded away from zero.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The stability of ground states in the Edwards-Anderson Ising spin glass in dimensions two and higher against perturbations of a single coupling can be quantified through the ``flexibility'' of that coupling in a particular ground state. The property of $\\sigma$-criticality is one in which varying a single coupling can alter the flexibilities of a (strictly) positive density of couplings in an infinite system, and its presence provides a sufficient condition for the presence of multiple ground state pairs. In a previous paper it was shown for the EA spin glass that $\\sigma$-criticality of the first kind, in which the critical droplet of a bond has a positive-density interface with the ground state, was ruled out in any dimension. The remaining possibility, called $\\sigma$-criticality of the second kind, is one in which a bond lies in the critical droplet boundaries of a positive density of other bonds. We show here that this kind of $\\sigma$-criticality is also absent, ruling out altogether the presence of $\\sigma$-criticality in the EA spin glass. While this doesn't resolve the question of multiplicity of ground state pairs, it removes a sufficient condition for its presence. We then propose a rigorous necessary condition for ground state pair multiplicity.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32301",
+   "title": "Dynamic scaling behaviors induced by periodic drivings at continuous Ising quantum transitions",
+   "url": "https://arxiv.org/abs/2611.32301",
+   "authors": [
+    "Andrea Pelissetto",
+    "Davide Rossini",
+    "Ettore Vicari"
+   ],
+   "label": "arXiv:2611.32301v1",
+   "primary_category": "cond-mat.stat-mech",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper develops a renormalization-group dynamic scaling theory for periodically driven quantum Ising chains and Kitaev wires near continuous zero-temperature phase transitions, distinguishing drivings that break versus preserve the Z2 symmetry, and checks it numerically with smooth and square-wave drives.",
+    "plain": "The paper studies what happens when a chain of tiny quantum magnets (or an equivalent wire of electrons) is repeatedly pushed back and forth by a periodic external field, right at the point where the material is on the edge between two kinds of order. The authors build a scaling theory that predicts how the system's response depends on the size of the push and how fast it oscillates, and they test it with computer simulations. The key finding, as described in the text, is that pushes that couple directly to the order parameter and pushes that keep the symmetry intact follow different power-law patterns.",
+    "why": "Understanding how systems at a phase transition respond to periodic driving matters for quantum simulation and for controlling quantum devices, and the framework is general enough to apply to other transitions. The text does not state specific applications, so the broader connections are an informed guess rather than a claim made by the authors.",
+    "background": "- Phase transition: a sudden change in a material's state, such as from magnetized to unmagnetized, as a control parameter crosses a threshold.\n- Zero-temperature quantum phase transition: the change is driven by quantum effects rather than heat, and occurs at absolute zero.\n- Quantum Ising chain: a row of simple quantum spins that either align together (ordered) or do not, a standard model for such transitions.\n- Z2 symmetry: a symmetry where flipping all spins leaves the system unchanged; the order parameter is the quantity that breaks it.\n- Renormalization group (RG): a method for seeing how a system's behavior looks at different length scales, used to find power-law (scaling) exponents.\n- Kitaev wire: a one-dimensional model of electrons in a superconductor that maps mathematically onto the Ising chain.\n- Periodic driving and square-wave drive: a repeating external push, either smooth (a single sinusoidal frequency) or abrupt (switching on and off).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the out-of-equilibrium scaling behaviors induced by periodic driving protocols in quantum many-body systems near continuous quantum phase transitions at zero temperature. We consider two paradigmatic one-dimensional systems: the quantum Ising chain subject to periodic longitudinal fields and the Kitaev fermionic wire with periodically driven chemical potentials, equivalent to a quantum Ising chain with a periodic transverse field. Within a renormalization-group (RG) framework, we develop a dynamic scaling theory for both finite-size systems and the thermodynamic limit, identifying scaling variables associated with the driving amplitude and period. We distinguish between protocols that break the global ${\\mathbb Z}_2$ symmetry by coupling to the order parameter and those that preserve it. These two classes of driving exhibit distinct scaling behaviors, with power-law exponents determined by the RG dimensions of the corresponding perturbations. We verify the proposed dynamic scaling theory through numerical simulations of both smooth single-frequency and discontinuous square-wave periodic drivings.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33150",
    "title": "Parametric neural-network wavefunctions across a bosonic phase transition",
@@ -15,12 +60,12 @@
    "primary_category": "cond-mat.quant-gas",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper introduces Boseformer, an attention-based neural-network ansatz that is trained over a Hamiltonian parameter to represent bosonic wavefunctions across a superfluid-to-crystal quantum phase transition in 2D bosons with 1/r^3 repulsion.",
-    "plain": "The paper looks at how a gas of particles that follow bosonic quantum rules behaves as it shifts between a flowing superfluid state and an ordered crystal state. The authors build a single neural network that describes the quantum wavefunction (the mathematical object encoding the system's state) for many strength settings of the interaction at once. Once trained, it can be used across the transition without retraining for each setting.",
-    "why": "Describing phase transitions in quantum matter is computationally hard, and a model that works across a range of parameters without retraining could reduce that cost. The text is a short abstract, so it does not show how accurate the results are or how the method compares with existing approaches, and its wider significance is not yet established.",
+    "ai": true,
     "background": "- Bosons: particles (such as some atoms) that can share the same quantum state, unlike electrons.\n- Wavefunction: the mathematical function that gives the full quantum description of a system.\n- Phase transition: an abrupt change in a material's state, such as melting or freezing, here between flowing (superfluid) and ordered (crystal) forms.\n- Hamiltonian parameter: a tunable setting in the system's energy rules, here the strength of interactions.\n- Variational Monte Carlo: a method that tunes an approximate wavefunction using random sampling to lower its energy.\n- Neural-network wavefunction: using a neural network as a flexible, trainable guess for the wavefunction.\n- Attention: a neural-network mechanism that lets each part of the input weigh other parts, widely used in modern AI models.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper introduces Boseformer, an attention-based neural-network ansatz that is trained over a Hamiltonian parameter to represent bosonic wavefunctions across a superfluid-to-crystal quantum phase transition in 2D bosons with 1/r^3 repulsion.",
+    "plain": "The paper looks at how a gas of particles that follow bosonic quantum rules behaves as it shifts between a flowing superfluid state and an ordered crystal state. The authors build a single neural network that describes the quantum wavefunction (the mathematical object encoding the system's state) for many strength settings of the interaction at once. Once trained, it can be used across the transition without retraining for each setting.",
+    "why": "Describing phase transitions in quantum matter is computationally hard, and a model that works across a range of parameters without retraining could reduce that cost. The text is a short abstract, so it does not show how accurate the results are or how the method compares with existing approaches, and its wider significance is not yet established."
    },
    "abstract": "We propose Boseformer, a universal attention-based neural-network architecture for representing the wavefunctions of particles with bosonic quantum statistics, including superfluid and crystal phases. The model is trained to generate the wavefunction as a function of a Hamiltonian parameter across the quantum phase transition between these phases. Once trained with variational Monte Carlo optimization, it can serve as a foundation model describing the phase transition without the need to retrain it for individual parameter values. We demonstrate our method on a system of two-dimensional bosons with $1/r^3$ repulsive interaction.",
    "source": "arxiv"
@@ -41,12 +86,12 @@
    "primary_category": "cond-mat.soft",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Experiments on self-propelled Janus colloid dimers, backed by simulations and coarse-grained hydrodynamic theory, show that flocks can phase-separate into elongated polar streams via an \"active nematic condensation\" mechanism in which denser regions gain stronger polar and nematic order that draws in more particle flux.",
-    "plain": "Researchers studied tiny self-propelled particles that move together as a group, called a flock. They found that the flock can split into dense, elongated streams that move along their long axis, instead of the sideways bands usually seen near the point where flocking begins. The text attributes this to a feedback loop: denser parts of the flock align more strongly, which pulls in even more particles.",
-    "why": "The paper proposes that flocking and clustering can work together rather than only compete, and that nematic order (alignment without a preferred direction, like rods lying side by side) can shape flocks, which the standard Toner-Tu flocking equations do not include. Its wider relevance to natural or engineered swarms is suggested by the authors as a generic mechanism, but the text itself does not test that beyond this system.",
+    "ai": true,
     "background": "- Active matter: systems whose units consume energy to move on their own, such as colloids, cells or animals.\n- Janus colloid dimers: pairs of micron-scale particles with two faces of different chemistry, which self-propel when driven (here, the experimental model).\n- Flocking: particles aligning their directions so the group moves coherently; the Toner-Tu equations are the standard continuum description.\n- Motility-induced phase separation: self-propelled particles bunch together into dense clusters even without attraction between them.\n- Polar vs. nematic order: polar order means all particles point the same way; nematic order means they share an axis but may point either way.\n- Coarse-graining: replacing individual particles with smooth density and orientation fields to derive a hydrodynamic theory.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Experiments on self-propelled Janus colloid dimers, backed by simulations and coarse-grained hydrodynamic theory, show that flocks can phase-separate into elongated polar streams via an \"active nematic condensation\" mechanism in which denser regions gain stronger polar and nematic order that draws in more particle flux.",
+    "plain": "Researchers studied tiny self-propelled particles that move together as a group, called a flock. They found that the flock can split into dense, elongated streams that move along their long axis, instead of the sideways bands usually seen near the point where flocking begins. The text attributes this to a feedback loop: denser parts of the flock align more strongly, which pulls in even more particles.",
+    "why": "The paper proposes that flocking and clustering can work together rather than only compete, and that nematic order (alignment without a preferred direction, like rods lying side by side) can shape flocks, which the standard Toner-Tu flocking equations do not include. Its wider relevance to natural or engineered swarms is suggested by the authors as a generic mechanism, but the text itself does not test that beyond this system."
    },
    "abstract": "Two of the most paradigmatic phenomena in active matter are flocking, where particles align to move collectively, and motility-induced phase separation, where self-propulsion causes particles to condense even without attractive interactions. Here, using experiments on self-propelled Janus colloid dimers, we show that flocks can phase separate to form polar streams. These structures are elongated dense clusters of particles that flock along the stream's long axis, in contrast to the well-known transverse bands that form close to the flocking transition. We use particle-based simulations and hydrodynamic theory obtained through coarse-graining to identify the underlying mechanism, which we call active nematic condensation: Denser regions of the flock develop stronger polar and hence nematic order, which leads to further particle fluxes into the dense region. These results reveal a generic mechanism whereby flocks can condense into streams. Our findings uncover that flocks can be shaped by nematic order, which is usually not accounted for in the standard Toner-Tu equations. More broadly, our work shows that collective motion and phase separation can not only coexist but also cooperate in active matter.",
    "source": "arxiv"

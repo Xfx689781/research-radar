@@ -1,7 +1,51 @@
 {
  "slug": "complex-analysis",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32080",
+   "title": "Chern classes of vanishing cycles for maps having no blowups",
+   "url": "https://arxiv.org/abs/2611.32080",
+   "authors": [
+    "Xia Liao"
+   ],
+   "label": "arXiv:2611.32080v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "For holomorphic maps between complex manifolds whose singular fibres have at most isolated complete intersection singularities (ICIS) and that have no blowups, the paper shows that the Riemann-Hurwitz defect in Chern classes is offset by the Chern class transformation of the Milnor number constructible function.",
+    "plain": "The paper studies how the shape of a space changes when a smooth family of spaces is squeezed into a singular one, looking at \"nearby\" and \"vanishing\" cycles, which are the pieces of topology that survive or disappear at the singular point. The authors work with maps that do not involve blowups (a procedure that replaces a point with a larger space). Their main claim is a formula relating a correction term from the map's branching to a topological count of how singular the points are.",
+    "why": "The text gives only the abstract, so its wider significance is unclear from it. It appears to be a technical contribution to a Chern-class version of the vanishing-cycle theory, which is of interest to specialists in singularity theory and algebraic topology.",
+    "background": "- Complex manifold: a space that locally looks like complex-number coordinates, a setting for complex analysis.\n- Holomorphic map: a smooth, complex-differentiable function between such spaces.\n- Chern classes: topological invariants that measure how a space's tangent structure twists; used to count and classify shapes.\n- Riemann-Hurwitz defect: a correction term that appears when a map branches, comparing the topology before and after the map.\n- Milnor number: a whole-number count of how complicated an isolated singularity is.\n- Constructible function: a function assigning integers to the pieces of a space, used to package local invariants globally.\n- Isolated complete intersection singularity (ICIS): a common, relatively tame type of singular point.\n- Blowup: a standard operation that resolves a singular point by replacing it with a larger space.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the nearby and vanishing cycles for maps with no blowups. For holomorphic maps between complex manifolds admitting at most ICIS, we show that the Riemann-Hurwitz defect in Chern classes is compensated for by the Chern class transformation of the Milnor number constructible function.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32404",
+   "title": "Noncommutative $\\mathcal{R}(p,q)-$deformed beta functions of first and second kind : beta gamma relations, shift identities and symmetrisation",
+   "url": "https://arxiv.org/abs/2611.32404",
+   "authors": [
+    "Kaw\\`eyim Lankpetre",
+    "Isiaka Aremua",
+    "Joseph D\\'esir\\'e Bukweli Kyemba"
+   ],
+   "label": "arXiv:2611.32404v1",
+   "primary_category": "math.QA",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper builds beta functions (and the associated deformed gamma functions) for the R(p,q)-deformed quantum algebras of Hounkonnou and Bukweli Kyemba, deriving their shift identities, symmetrisation, convexity properties, and deformed hypergeometric summations.",
+    "plain": "This paper extends two classical special functions, the beta and gamma functions, to a family of \"deformed\" number systems that come from quantum algebra. The authors define two versions of the beta function, derive their basic identities and asymptotic behaviour, and check the identities numerically to thirty digits. The text suggests that the deformed gamma function is logarithmically convex on the positive half line exactly when one deformation parameter is at least 1.",
+    "why": "It gives a tested set of identities for a family of deformed special functions, several named deformations being covered as special cases. The text does not say what applications these functions have, so any link to physics or other areas is unclear from this text alone.",
+    "background": "- Gamma function: a generalisation of the factorial to non-integer values.\n- Beta function: a integral-defined function built from two gamma values; here it has a \"first kind\" version on [0,1] and a \"second kind\" version on the half line.\n- q-deformation: replacing ordinary numbers and arithmetic with a parameter-dependent version that reduces to the ordinary case when the parameter is removed; common in quantum algebra.\n- Shift identity: a rule relating the function's value at x+1 to its value at x.\n- Logarithmic convexity: the logarithm of the function curves upward, a property used to characterise gamma-type functions (Bohr–Mollerup theorem).\n- Hypergeometric function: a standard series of special functions that includes many named functions as cases.\n- Numerical check to thirty digits: the identities were tested by computer to 30 decimal places.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop the theory of the beta functions attached to the $\\mathcal{R}(p,q)-$deformed quantum algebras of Hounkonnou and Bukweli Kyemba, for structure functions whose deformed numbers are generated by two deformation functions $\\phi_{1}>\\phi_{2}>0$. Working with the Jackson type series representation of the deformed integral, we define a first kind beta function on $[0,1]$ from the deformed power $(1\\ominus\\phi_{2}t)^{y-1}$, extended to complex exponents, and a second kind beta function on the half line from $(1\\oplus\\phi_{1}t)^{-x-y}$. The first kind function equals $\\phi_{1}^{(y-1)(2x+y-2)/2}\\Gamma_{\\mathcal{R}(p,q)}(x)\\Gamma_{\\mathcal{R}(p,q)}(y)/\\Gamma_{\\mathcal{R}(p,q)}(x+y)$ for all complex arguments with positive real parts; we derive its general shift identity, its exchange defect $\\phi_{1}^{(y-x)(x+y-1)/2}$, a commutative symmetrisation unique up to a constant, its asymptotics and a deformed Euler integral for a deformed Gauss hypergeometric function, which yields a deformed Gauss summation. The second kind function is evaluated through Ramanujan's ${}_{1}\\psi_{1}$ summation and involves a second deformed gamma function, differing from the first one by a one periodic theta quotient, so that its exchange defect persists in the one parameter case. We prove a Bohr Mollerup type characterisation and a multiplication formula for the deformed gamma function, show that it is logarithmically convex on the positive half line if and only if $\\phi_{1}\\geq1$, obtain the joint logarithmic convexity of normalised beta functions with a deformed Tur\\'an identity, and compute the moments of the associated deformed beta distributions. Gauge invariance covers the Jagannathan Srinivasa Rao, Chakrabarti Jagannathan, generalized $q-$Quesne and Hounkonnou Ngompe deformations, and every identity is confirmed numerically to thirty digits.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33131",
    "title": "H\\\"older continuity of Green functions for Markov sets",
@@ -14,12 +58,12 @@
    "primary_category": "math.CV",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "For a compact set K in C^N, the paper shows that the Green function (and so the Siciak extremal function) is Hölder continuous exactly when polynomial derivatives satisfy Markov's inequality on K, settling a long-open implication, with a Hölder exponent of 1/m in one variable from a Markov bound of degree m.",
-    "plain": "The paper studies a measure of how \"spread out\" a compact set of points is in the complex plane or higher-dimensional complex space, using a function built from polynomials that vanish on the set. It asks when this function varies smoothly in a controlled way (Hölder continuity, a precise limit on how steeply it can change). The authors show this smoothness is equivalent to a bound on how fast polynomial derivatives can grow, and they settle a long-standing open question in one direction.",
-    "why": "The result connects two areas, approximation theory and pluripotential theory, by linking a regularity property of an extremal function to a classical inequality about polynomials. Its value to wider work depends on the specialist applications, which the text does not discuss.",
+    "ai": true,
     "background": "- Compact set: a closed, bounded collection of points, such as a disk or a curve.\n- Polynomial and its derivative: a sum of powers of the variable and the rate at which it changes.\n- Markov's inequality: a bound saying a polynomial of degree n cannot have derivatives larger than about A·n^m times its maximum size on the set.\n- Green function / Siciak extremal function: a function, built from polynomials bounded on K, that measures how far a point is from K.\n- Hölder continuity: a smoothness condition with an exponent; larger exponent means smoother, exponent 1 is Lipschitz.\n- Several complex variables: working with several complex numbers at once; Hörmander's theorem concerns extending holomorphic functions from a point.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "For a compact set K in C^N, the paper shows that the Green function (and so the Siciak extremal function) is Hölder continuous exactly when polynomial derivatives satisfy Markov's inequality on K, settling a long-open implication, with a Hölder exponent of 1/m in one variable from a Markov bound of degree m.",
+    "plain": "The paper studies a measure of how \"spread out\" a compact set of points is in the complex plane or higher-dimensional complex space, using a function built from polynomials that vanish on the set. It asks when this function varies smoothly in a controlled way (Hölder continuity, a precise limit on how steeply it can change). The authors show this smoothness is equivalent to a bound on how fast polynomial derivatives can grow, and they settle a long-standing open question in one direction.",
+    "why": "The result connects two areas, approximation theory and pluripotential theory, by linking a regularity property of an extremal function to a classical inequality about polynomials. Its value to wider work depends on the specialist applications, which the text does not discuss."
    },
    "abstract": "Let $K$ be a nonempty compact subset of $\\mathbb C^N$. We prove that its Green function (and consequently, the Siciak extremal function) is H\\\"older continuous if and only if the first derivatives of polynomials satisfy Markov's inequality on $K$. The implication from Markov's inequality to H\\\"older continuity of the associated Green function settles a longstanding open problem at the intersection of approximation theory and pluripotential theory. A Markov bound $An^m$ in degree $n$ gives every H\\\"older exponent below $1/m$. In one complex variable it gives the exponent $1/m$ itself. The proof compares the extremal functions of two neighborhoods of $K$. For $N>1$ we use H\\\"ormander's theorem on holomorphic extension from a point. For $N=1$ the comparison follows from the maximum principle.",
    "source": "arxiv"
@@ -36,12 +80,12 @@
    "primary_category": "math.NT",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that the geometric mean value of Smale's mean values can be arbitrarily large for polynomials of each degree above 2, derives upper bounds for it under extra assumptions to support Smale's mean value conjecture on several polynomial subclasses, and links Smale's mean values to Fekete points.",
-    "plain": "The paper studies a quantity that measures how polynomials (formulas like x^3 - 2x + 1) behave near their roots, which is tied to a long-standing conjecture by mathematician Steve Smale. The authors show that one natural version of this quantity, the geometric mean value, can be made larger than any chosen number for polynomials of each degree above 2. That means this quantity alone cannot give the best possible bound on the smaller Smale mean values. They also prove bounds under extra conditions and relate the problem to Fekete points, special arrangements of points that are used in approximation theory.",
-    "why": "Smale's mean value conjecture is a well-known open question in complex analysis, so the paper's result that one tool cannot settle it is informative about which approaches are dead ends. The link to Fekete points suggests a new research direction, though the text does not show how far that connection will carry.",
+    "ai": true,
     "background": "- Polynomial: a sum of powers of a variable, such as x^3 - 2x + 1; its degree is the highest power.\n- Complex numbers and complex analysis: polynomials are studied with complex inputs, where roots and derivatives behave in structured ways.\n- Smale's mean value conjecture: a conjecture about how the derivative of a polynomial at a root relates to the polynomial's other roots, bounding the smallest such \"mean value\" by a constant.\n- Geometric mean value: a version of the mean built by multiplying terms and taking a root, as opposed to an ordinary average.\n- Fekete points: a set of points chosen to be as spread out as possible in a region, used in approximation and interpolation.\n- Upper bound: a number that a quantity is guaranteed not to exceed.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that the geometric mean value of Smale's mean values can be arbitrarily large for polynomials of each degree above 2, derives upper bounds for it under extra assumptions to support Smale's mean value conjecture on several polynomial subclasses, and links Smale's mean values to Fekete points.",
+    "plain": "The paper studies a quantity that measures how polynomials (formulas like x^3 - 2x + 1) behave near their roots, which is tied to a long-standing conjecture by mathematician Steve Smale. The authors show that one natural version of this quantity, the geometric mean value, can be made larger than any chosen number for polynomials of each degree above 2. That means this quantity alone cannot give the best possible bound on the smaller Smale mean values. They also prove bounds under extra conditions and relate the problem to Fekete points, special arrangements of points that are used in approximation theory.",
+    "why": "Smale's mean value conjecture is a well-known open question in complex analysis, so the paper's result that one tool cannot settle it is informative about which approaches are dead ends. The link to Fekete points suggests a new research direction, though the text does not show how far that connection will carry."
    },
    "abstract": "We prove that, for every integer $d>2$ and every $L>0$, there exists a polynomial of degree $d$ whose geometric mean value exceeds $L$. This result demonstrates that the geometric mean value alone is insufficient to establish the smallest upper bound for the minimum of Smale's mean values. Under certain additional assumptions, we derive upper bounds for the geometric mean value, thereby verifying Smale's mean value conjecture for several subclasses of polynomials. Furthermore, we connect Smale's mean values to Fekete points. Motivated by this connection, we formulate a new problem concerning Fekete points in the spirit of Smale's mean values.",
    "source": "arxiv"

@@ -1,7 +1,55 @@
 {
  "slug": "model-architectures",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32199",
+   "title": "Steerable by Design: Conditional Pretraining for Robust Control of Language Models",
+   "url": "https://arxiv.org/abs/2611.32199",
+   "authors": [
+    "Henry Castillo",
+    "Yanchen Liu",
+    "Claudio Mayrink Verdun",
+    "Dylan Hadfield-Menell"
+   ],
+   "label": "arXiv:2611.32199v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proposes a pretraining method and encoder-plus-cross-attention architecture (Mancelle-3B and a 400M controlled variant) that separates an instruction/control channel from the data token stream from the start of training, so the model learns to use that channel for steering.",
+    "plain": "Today's chatbot-style language models are trained mainly to predict the next word, and they are only taught to follow instructions or behave safely at the end, or by tweaks at use time. Because instructions and data arrive through the same input, the model can mistake text it is reading for commands, which enables jailbreaks. This paper builds a model where instructions go through a separate channel from the start of training, and reports that this model can be steered more strongly than comparable open models using prompts or activation tweaks, while staying fluent and holding up better against adversarial attempts to counter the steering.</plain>\n<parameter name=\"why\">If the separation holds up, it suggests that control and safety could be designed into a model's training rather than bolted on afterward, which matters for jailbreak resistance. The text is a preprint summary with no detailed numbers, so the size and generality of the claimed gains cannot be judged from it.",
+    "why": "",
+    "background": "- Language models are trained to predict the next token (a word or word-piece) in a sequence.\n- \"Prompt-based\" steering means giving instructions in the input text; \"activation-based\" steering means nudging the model's internal signals directly.\n- A jailbreak is an input crafted to get a model to ignore its safety rules.\n- An encoder turns text into internal numerical features; cross-attention lets one stream read from another without writing back into it.\n- Soft prompts are learned numerical inputs, not ordinary words, that can be used to push a model's behavior.\n- A \"controlled baseline\" is a comparison model built the same way except for the key change being tested.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Our goal is to build language models that are steerable by design. Today's language models are pretrained with next-token prediction, which relegates alignment and control to the final 1% of training tokens or inference-time interventions. These models repurpose a single input channel for both instructions and data, leading to common failure modes where the model mistakenly treats data as instructions such as intentional jailbreaks and unintentional in-context alignment drift. To correct this, we propose a pretraining method and architecture that separates the two from the very start, producing Mancelle-3B. An encoder processes high-level semantic features of upcoming text with cross-attention that prevents the token stream from writing back into this control channel. During pretraining, the model learns to rely on these features to predict the next token, turning the channel into an effective handle for steering the model. Mancelle-3B steers more strongly than prompt- and activation-based methods on comparable open models while maintaining fluency, and it withstands adversarial black-box and soft-prompt counter-steering that defeats those baselines. We reproduce this against a more controlled baseline with Mancelle-400M. Our results show that robust control can be built into language models if we do so early and intentionally.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32504",
+   "title": "InducedTFMs: A Family of Sub-Quadratic Tabular Foundation Models Using Induced Attention",
+   "url": "https://arxiv.org/abs/2611.32504",
+   "authors": [
+    "Salome Gobbi",
+    "Nicolas Atienza",
+    "Nicola Cancedda",
+    "Michael Arbel"
+   ],
+   "label": "arXiv:2611.32504v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "InducedTFM replaces both attention stages of a bidimensional tabular foundation model with Set Transformer induced attention, making cost linear in samples and features while keeping cell-level representations, and is benchmarked against TabICLv2 and a kernel linear-attention baseline.",
+    "plain": "Tabular foundation models are AI models that make predictions on a new spreadsheet-style table in one pass, without being retrained for that table. Their core computation gets much more expensive as tables grow, which limits training to small tables and forces large tables to be chunked or sampled. This paper describes a version whose cost grows linearly with the number of rows and columns, and reports that it matches a full-attention baseline's accuracy on the stated benchmarks.",
+    "why": "Making these models scale would let them be used on large real-world tables, where they are currently impractical, and the paper reports a 30x inference speed-up at 640K rows on narrow tables. The text also notes that row-compression methods remain preferable on wide tables, so the advantage is not universal.",
+    "background": "- Tabular data: rows are samples and columns are features, like a spreadsheet or database table.\n- In-context learning: the model learns from labeled examples given in its input at prediction time, with no weight updates.\n- Attention: a mechanism where each item in the input is compared with every other item; its cost grows with the square of the input size, which is the \"quadratic\" cost the paper targets.\n- Induced attention (Set Transformer): a trick that routes comparisons through a small set of learned summary points, so cost grows linearly instead.\n- Linear attention: a family of cheaper approximations; the paper's kernel-based baseline is one of these.\n- Row compression: summarizing each row into one vector, which is cheaper but discards per-cell detail.\n- Gradient-boosted trees: a standard, strong method for tabular prediction that the models are compared against.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Tabular foundation models (TFMs) have emerged as a serious competitor to gradient-boosted trees, predicting on a new table in a single forward pass by in-context learning. However, their attention is quadratic in the number of samples and features, which caps pretraining at small synthetic tables and forces inference on large ones to rely on chunking or subsampling. Row-compression models reduce the feature-wise cost, but only by discarding the cell-level representation, and remain quadratic in the number of samples. We introduce InducedTFM, which replaces both attention stages of a bidimensional TFM with the induced attention of the Set Transformer, preserving cell-level representations while making its cost linear in both samples and features. Under a training budget matched to a full-attention TabICLv2 reimplementation, InducedTFM matches its accuracy on TabArena and on a benchmark of larger datasets, and clearly outperforms a kernel linear-attention baseline of the same asymptotic cost. It overtakes TabICLv2 in inference time on narrow tables, reaching a 30x speed-up at 640K rows, although row compression remains preferable on wide tables.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32969",
    "title": "Eliciting the Recall Capacity of Linear Attention",
@@ -14,12 +62,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper studies why linear-attention language models recall information from context far worse than softmax attention, and shows that targeted training changes (in-context sentence repetition and context-sensitive loss reweighting) narrow that gap without changing the architecture.",
-    "plain": "Language models often need to look back at earlier text and pull out a specific detail, such as a name paired with a fact. Linear-attention models, which are cheaper to run than the standard kind, are noticeably worse at this. The paper tests this gap with synthetic tasks and natural text, and finds that the models can learn this skill when training is adjusted to reward it.",
-    "why": "Linear attention is an attempt to make language models cheaper on long inputs, so a recall deficit is a real cost of that efficiency. The result suggests the gap may be partly a training problem rather than a fixed limit of the design, though the text does not show how well this carries over to larger or different production models.",
+    "ai": true,
     "background": "- Attention: the mechanism in language models that lets each word look back at earlier words in the input.\n- Softmax attention: the standard form of attention, which is accurate at recall but its cost grows quickly with input length.\n- Linear attention: a cheaper approximation whose cost grows in a straight line with input length, but which keeps a fixed-size memory of past text.\n- Associative recall: a test where the model must output the value linked to a given key, such as a name and its number, seen earlier in the text.\n- State size: how much information the fixed memory can hold; the paper links it to how many items can be recalled.\n- Loss reweighting: changing how much each training prediction counts, so that recall-relevant predictions get more emphasis.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies why linear-attention language models recall information from context far worse than softmax attention, and shows that targeted training changes (in-context sentence repetition and context-sensitive loss reweighting) narrow that gap without changing the architecture.",
+    "plain": "Language models often need to look back at earlier text and pull out a specific detail, such as a name paired with a fact. Linear-attention models, which are cheaper to run than the standard kind, are noticeably worse at this. The paper tests this gap with synthetic tasks and natural text, and finds that the models can learn this skill when training is adjusted to reward it.",
+    "why": "Linear attention is an attempt to make language models cheaper on long inputs, so a recall deficit is a real cost of that efficiency. The result suggests the gap may be partly a training problem rather than a fixed limit of the design, though the text does not show how well this carries over to larger or different production models."
    },
    "abstract": "Linear attention models exhibit a disproportionate deficit relative to softmax attention in associative recall (AR) in language modeling. We investigate this gap through natural language evaluations, synthetic recall tasks, and targeted training interventions. Using a synthetic setting, we quantify the role of state-size in how many items can be recalled from memory and find a similar empirical scaling across the tested linear-attention architectures. Testing this relationship reveals that even a single layer at scale can learn to retrieve thousands of associations across long distances. Yet, standard language model training does not reliably teach a linear model to copy from context, whereas a comparable softmax model learns to do so. Considering this, we strengthen recall supervision during training through in-context sentence repetition and context-sensitive loss reweighting. Both methods improve recall-intensive benchmark performance and narrow the long-distance AR gap to the softmax baseline without changing the architecture, token budget, or number of optimization steps, at a slight cost to general language modeling. These targeted changes to training can thus elicit substantial but underutilized retrieval capacity in linear-attention models. These findings suggest that, although linear-attention architectures have substantial capacity for recall, their inductive biases and the demands of language model training make it difficult to develop this capability without dedicated incentives.",
    "source": "arxiv"
@@ -37,12 +85,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "PATH is a transformer-based neural network that predicts users' permission decisions for hierarchically organized authorization requests from personal AI agents, using hierarchy-aware attention masks, a parent-gated probability formulation, and hierarchy-level embeddings, with reported finite-sample risk bounds and zero hierarchy violations in experiments.",
-    "plain": "Personal AI assistants that act for you often ask for many permissions, and approving each one by hand is tedious while approving everything is risky. This paper proposes a model that learns from a user's past yes-or-no decisions to predict how they would answer new permission requests, so they only need to step in where it matters. The authors report that the model predicts well on simulated data, AI-generated profiles, and real user data, and that its predictions never break the parent-child structure of the permission categories.",
-    "why": "",
+    "ai": true,
     "background": "- Personal AI agent: software that performs multi-step tasks for a user, such as booking, messaging, or file access, and must ask permission for sensitive actions.\n- Authorization: a user's decision to allow or deny a given permission request.\n- Hierarchical requests: permissions organized in parent-child categories, where a child permission only makes sense if its parent is considered.\n- Transformer: a neural network architecture that uses attention to weigh relationships among items in a sequence; attention masks restrict which items can relate to each other.\n- Parent-gated probability: a prediction for a child category that is conditioned on its parent's prediction, so the two stay consistent.\n- Sparse observations: few recorded user decisions relative to the number of possible permissions.\n- Finite-sample risk bounds and convergence: theoretical guarantees on how prediction error shrinks with more data and whether the training procedure settles on a solution.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PATH is a transformer-based neural network that predicts users' permission decisions for hierarchically organized authorization requests from personal AI agents, using hierarchy-aware attention masks, a parent-gated probability formulation, and hierarchy-level embeddings, with reported finite-sample risk bounds and zero hierarchy violations in experiments.",
+    "plain": "Personal AI assistants that act for you often ask for many permissions, and approving each one by hand is tedious while approving everything is risky. This paper proposes a model that learns from a user's past yes-or-no decisions to predict how they would answer new permission requests, so they only need to step in where it matters. The authors report that the model predicts well on simulated data, AI-generated profiles, and real user data, and that its predictions never break the parent-child structure of the permission categories.",
+    "why": ""
    },
    "abstract": "Personal AI agents can carry out complex, multi-step tasks on users' behalf, but doing so often involves numerous permission requests. Manually reviewing each request is time-consuming, while indiscriminate approval poses privacy and security risks. Predicting users' authorization preferences offers a way to reduce this burden while preserving user control. However, authorization prediction is challenging because permission requests are often hierarchical and observed user decisions are sparse and potentially correlated. To address these challenges, We propose the Parent-gated Authorization Transformer for Hierarchies (PATH) to predict users' authorization preferences for personal AI agents. PATH is a novel neural network architecture that combines hierarchy-aware attention masks with a parent-gated probability formulation to ensure hierarchy-consistent predictions. Hierarchy-level embeddings further support learning from sparse observations and patterns shared within each authorization level. We establish finite-sample risk bounds and provide sufficient conditions for consistent authorization probability estimation and algorithmic convergence. Experiments on simulated data, AI-generated user profiles, and real user authorization data demonstrate strong predictive performance with zero hierarchy violations.",
    "source": "arxiv"

@@ -1,7 +1,55 @@
 {
  "slug": "ai4math",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.33064",
+   "title": "U-Statistics-Powered LLM Reasoning",
+   "url": "https://arxiv.org/abs/2611.33064",
+   "authors": [
+    "Shijin Gong",
+    "Kai Ye",
+    "Victor Chernozhukov",
+    "Xinyu Zhang",
+    "Chengchun Shi"
+   ],
+   "label": "arXiv:2611.33064v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper treats choosing the group size in GRPO-style reinforcement learning for language models as a variance-ratio estimation problem, and proposes a pessimistic ratio estimator that stays stable when the denominator is small.",
+    "plain": "Training large language models with reinforcement learning often samples a group of answers to each question and compares them, but the size of that group is usually picked by trial and error. This paper reframes the choice as a classical statistics question about estimating a ratio of two variances. It proposes a cautious (\"pessimistic\") way to estimate that ratio so the choice does not become unreliable, and reports that adapting the group size this way reduces error and improves training compared with fixed group sizes on the tested tasks.",
+    "why": "Group size is a hyperparameter that many GRPO-type methods set by hand, so a principled rule for it could matter for training efficiency. The text does not establish how broadly the gains hold beyond the reported tasks, so its wider significance is unclear.",
+    "background": "- GRPO (group relative policy optimization): a reinforcement learning method for language models that scores each sampled answer relative to the other answers sampled for the same prompt.\n- Group size: how many answers are sampled per prompt; it sets the trade-off between accuracy and cost.\n- Policy gradient: the estimated direction used to update a model's behaviour during reinforcement learning.\n- U-statistic: an average over all subsets of a fixed size from a sample, which is the structure the policy gradient takes here.\n- Variance ratio estimation: estimating how much noise one quantity has relative to another; unstable when the denominator is near zero.\n- Mean squared error: the average squared gap between an estimate and the true value, used to judge estimator quality.\n- Pessimistic estimator: one that deliberately shrinks toward safer choices when uncertainty is high.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Since its introduction by DeepSeek, group relative policy optimization (GRPO) has been widely adopted for training large reasoning models and agents, spurring a proliferation of its variants. Yet the group size, a crucial hyperparameter in these GRPO-type algorithms, remains largely chosen by trial and error. Exploiting the U-statistic structure of GRPO's policy gradient, we recast the selection of the group size as a classical statistical problem of variance ratio estimation. This problem is particularly challenging when the denominator of the ratio is small, rendering naive plug-in estimators unstable. To address this challenge, we propose a pessimistic ratio estimator that accounts for the denominator's estimation uncertainty. We characterise the statistical properties of this estimator across three sample-size regimes. Empirically, using %a jackknife-based pessimistic rule on synthetic tasks from Reasoning Gym and real-world benchmarks covering both mathematical reasoning and code generation, we show that our adaptive group size selection reduces the mean squared error of the resulting policy gradient and improves policy optimisation over fixed-group-size baselines, with modest additional computational cost.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31762",
+   "title": "Verified Proof Refactoring with Codex and Qwen",
+   "url": "https://arxiv.org/abs/2611.31762",
+   "authors": [
+    "Lazar Milikic",
+    "Gordan {\\DJ}uri\\'c",
+    "Viktor Kun\\v{c}ak"
+   ],
+   "label": "arXiv:2611.31762v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A locally run Qwen model driven by the Codex CLI searches for shorter, cheaper-to-check Lean 4 proofs, keeping only edits that Lean accepts across required versions, and reports a combined score of 82.18 on 60 Lean Refactor Arena problems.",
+    "plain": "This paper is about tidying up computer-checked mathematical proofs written in the Lean programming language, making them shorter and faster for the computer to verify without changing what they prove. An AI model proposes rewrites, and a supervising program keeps a rewrite only if it scores better and the proof still passes on every required version of Lean. The authors report that their system ranked first in the open-source language-model track of a competition called Lean Refactor Arena.",
+    "why": "Long, slow proofs are a practical cost for anyone maintaining large formal math libraries, so automated cleanup could help. The text reports only a competition result and small score changes (82.07 to 82.18), so its broader significance is unclear from this description alone.",
+    "background": "- Lean 4: a proof assistant, a programming language in which mathematical statements and their proofs are checked by the computer.\n- Refactoring: rewriting code to keep its behavior while making it cleaner or shorter.\n- Theorem statement: the claim being proved; the paper requires these to stay unchanged.\n- Lean versions: the proofs must still compile across several releases of the software.\n- Combined score: the competition's objective, which rewards shorter source and lower checking cost; higher is better.\n- Codex CLI: an open-source command-line tool that lets an AI model read files, search code, and run tests.\n- Qwen: an open-weight language model family, here run on the authors' own machine.\n- Verification gate: a candidate edit is accepted only if the proof checker confirms it.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We refactor existing Lean 4 proofs to reduce source length and checking cost while preserving theorem statements and compatibility across Lean versions. A locally served Qwen model uses the open-source Codex CLI to inspect source, retrieve declarations, and test proof replacements. The host keeps a replacement only if it improves the objective and Lean accepts it on every required version. A deterministic CPU pass then refines the verified proofs. On the 60 problems in Lean Refactor Arena, model search achieves a local mean combined score of 82.07, and cleanup raises it to 82.18. The final proofs pass all 127 required proof--version checks. Our system placed first in the open-source LLM track of Lean Refactor Arena at VeriCodeGen.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31571",
    "title": "Safe Autoformalization: Sufficiency and Necessity with Entailment Graphs",
@@ -14,12 +62,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proposes a graph-based method for autoformalization (turning natural-language statements into logic formulas) that uses LLM-generated candidate formulas, solver-checked entailment orderings, and LLM entailment oracles to certify one-sided logical adequacy, with soundness and completeness results and a Lean machine-checked proof.",
-    "plain": "The paper is about turning ordinary English statements, such as security requirements, into precise logical formulas that a computer can check. Language models produce such formulas, but with no guarantee they match what the statement means. The authors arrange candidate formulas in a graph ordered by how strong they are, and use checks to find formulas that safely bound the intended meaning from above and below.",
-    "why": "Formal checking is only as trustworthy as the translation it starts from, so a method that certifies when a translation is safe to rely on matters for AI-assisted verification. The text reports a small expert-adjudicated study on AWS security properties, where the graph method was safe in all 20 cases while two baselines were unsafe in 25% and 10%; the scale of that study is small, so the broader applicability is not established by the text.",
+    "ai": true,
     "background": "- Autoformalization: translating natural-language statements into formal logic.\n- Entailment: statement A entails B if whenever A holds, B must also hold.\n- Sufficient vs. necessary formula: a sufficient formula implies the intended meaning (safe to enforce); a necessary formula is implied by it (safe to rely on).\n- Entailment graph: nodes are candidate formulas, edges record logical strength; a solver (automated logic checker) decides the ordering.\n- Residual and co-residual: the two adjoint operations of an ordering, used here to define the local checks.\n- Sound vs. complete oracle: sound accepts only true entailments; complete accepts all true entailments.\n- Lean: a proof assistant used to machine-check the mathematical proofs.\n- AWS: Amazon Web Services; the security properties tested come from its setting.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes a graph-based method for autoformalization (turning natural-language statements into logic formulas) that uses LLM-generated candidate formulas, solver-checked entailment orderings, and LLM entailment oracles to certify one-sided logical adequacy, with soundness and completeness results and a Lean machine-checked proof.",
+    "plain": "The paper is about turning ordinary English statements, such as security requirements, into precise logical formulas that a computer can check. Language models produce such formulas, but with no guarantee they match what the statement means. The authors arrange candidate formulas in a graph ordered by how strong they are, and use checks to find formulas that safely bound the intended meaning from above and below.",
+    "why": "Formal checking is only as trustworthy as the translation it starts from, so a method that certifies when a translation is safe to rely on matters for AI-assisted verification. The text reports a small expert-adjudicated study on AWS security properties, where the graph method was safe in all 20 cases while two baselines were unsafe in 25% and 10%; the scale of that study is small, so the broader applicability is not established by the text."
    },
    "abstract": "Autoformalization translates a natural-language statement into a formula that captures its intent, which depends on the statement's context: the background that disambiguates it. LLMs make autoformalization practical, but their probabilistic output carries no formal guarantees. We propose techniques for safe autoformalization that certify one-sided logical adequacy: a formula sufficient for the intent is safe to enforce, and a formula necessary for it is safe to rely on. We use LLMs to generate candidate formulas and order them by logical strength in an Entailment Graph (EG), an ordering a solver decides. Each edge carries a residual and a co-residual, the two adjoints of the entailment order, all fixed by the candidate pool alone. In a context, two searches return the sufficient frontier, the weakest candidates that entail the statement, and the necessary frontier, the strongest candidates the statement entails; each step is one local check against an edge's residual or co-residual. The frontiers bracket the statement and yield the ambiguity residue, which holds exactly of the situations the candidates certify neither as satisfying nor as violating it; the statement is ambiguous precisely when the residue is satisfiable. For natural-language statements and contexts, an LLM entailment oracle decides the checks; it is sound if it accepts only checks that hold, and complete if it accepts every check that holds. We prove that a sound oracle makes the search safe regardless of pool quality, and that a complete one makes the frontiers tight. On security-critical AWS properties, EGs are safe in all 20 cases of an expert-adjudicated study, where majority vote over equivalence clusters and Universal Self-Consistency are unsafe in 25% and 10%. An ablation with the same oracle but no graph is unsafe in 25% and rejects every candidate in another 30%. We machine-checked our proofs in Lean.",
    "source": "arxiv"
@@ -35,12 +83,12 @@
    "primary_category": "cs.LO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper defines 19 measures of how different two formal proofs of the same theorem are, groups them into six families, and tests them on machine-checked proofs in a Curry-Howard kernel and in Lean 4/Mathlib.",
-    "plain": "As AI systems produce more mathematical proofs than people can read, the authors ask how to tell whether a proof is genuinely new or just a rewrite of an existing one. They define a set of ways to measure how far apart two proofs are, and test them on several computer-checked proofs that there are infinitely many primes. Their findings include that measures based on which earlier results a proof relies on tend to match intuition, while measures based on meaning can rank proofs in surprising ways.",
-    "why": "Checking whether AI-generated proofs are duplicates or truly new ideas is a practical problem as machine-generated mathematics grows, and the paper ties this to Hilbert's 24th problem on the theory of proofs. The text reports small test sets (5 proofs in one kernel, 3 theorems and 19 proofs in Lean), so the measures are better seen as a starting framework than as settled tools.",
+    "ai": true,
     "background": "- A proof is a step-by-step argument that a statement is true; in formal systems such as Lean, each step is checked by a computer.\n- Curry-Howard correspondence: a view in which proofs are treated as programs, which lets proof-checking systems be studied as type-theory kernels.\n- Lean 4 and Mathlib: a proof assistant and its large community library of formalised mathematics.\n- \"Proof irrelevance\": the idea that all proofs of the same statement count as equal in some logical systems.\n- Dissimilarity measure: a number saying how far apart two objects are; here, how different two proofs are, measured at several levels (text, structure, dependencies, meaning, information content).\n- The infinitude of primes: a classical result, proved by Euclid, with later proofs such as Goldbach's and Furstenberg's topological one.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper defines 19 measures of how different two formal proofs of the same theorem are, groups them into six families, and tests them on machine-checked proofs in a Curry-Howard kernel and in Lean 4/Mathlib.",
+    "plain": "As AI systems produce more mathematical proofs than people can read, the authors ask how to tell whether a proof is genuinely new or just a rewrite of an existing one. They define a set of ways to measure how far apart two proofs are, and test them on several computer-checked proofs that there are infinitely many primes. Their findings include that measures based on which earlier results a proof relies on tend to match intuition, while measures based on meaning can rank proofs in surprising ways.",
+    "why": "Checking whether AI-generated proofs are duplicates or truly new ideas is a practical problem as machine-generated mathematics grows, and the paper ties this to Hilbert's 24th problem on the theory of proofs. The text reports small test sets (5 proofs in one kernel, 3 theorems and 19 proofs in Lean), so the measures are better seen as a starting framework than as settled tools."
    },
    "abstract": "We now live in the age of machine-generated mathematics: AI systems produce research-level proofs faster than the human mathematical community can read them. Verification is only part of the challenge. We also need to know whether a \"new proof\" is indeed new, whether a thousand generated proofs contain one idea or many, and where each sits relative to human mathematics. All of these require measuring distances between proofs. Following Hilbert's 24th problem and the identity-of-proofs problem, we ask how far apart two proofs of one theorem are, and what shape the proof space they inhabit has. We define 19 dissimilarity measures in 6 families (syntactic, structural, dependency & resource, semantic, information-theoretic, higher-categorical) and 10 desirable properties, which we argue are the conditions for safely optimising a measure. In a Curry-Howard kernel, 5 machine-checked proofs that the primes are infinite show that raw syntax cannot tell a rewrite from a new argument, that dependency-based and structural measures reproduce the intuitive ordering (Euclid rewritten < Goldbach < Furstenberg), and that semantic measures invert it: Furstenberg's topological proof produces exactly Euclid's witness. A replication in Lean 4/Mathlib (3 theorems, 19 proofs, 18 measures) confirms that dependency-closure measures track intuition best, and shows that equality of normal forms never holds between differently written versions of the same argument, that proofs by citation look unlike the arguments they cite, and that proof irrelevance cannot distinguish any two proofs. We argue for reporting dissimilarity as a multi-level profile, extend the measures to proofs of different theorems, and discuss uses, from detecting duplicated AI proofs and orchestrating prover agents to interpreting AI proofs via their nearest human-understandable counterparts. Code, Lean sources and data are released.",
    "source": "arxiv"

@@ -1,7 +1,74 @@
 {
  "slug": "mental-health",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "medrxiv:10.64898/2026.11.22.26368713",
+   "title": "APOE ϵ4 Effects on Cognitive Decline and Progression to Dementia are Sequentially Mediated through Plasma P-tau217 and Hippocampal Atrophy in an Asian Cohort",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.22.26368713v1",
+   "authors": [
+    "Kan, C. N.",
+    "Chong, J. R.",
+    "Casado-Rodrigo, D.",
+    "Chai, Y. L.",
+    "Venketasubramanian, N.",
+    "Tan, B. Y.",
+    "Zhou, J. H.",
+    "Chen, C. L.-H.",
+    "Lai, M. K. P.",
+    "Tan, C. H."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.22.26368713 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "In a Singapore cohort of older Asian adults, APOE ε4 carriers showed higher plasma p-tau217 and hippocampal and entorhinal atrophy, and these markers partly mediated ε4-linked cognitive decline and dementia risk, with white matter hyperintensities not contributing.",
+    "plain": "The paper looks at why a common gene variant, APOE ε4, raises the risk of Alzheimer's disease and whether that effect runs through a chain of measurable changes in the body and brain. Researchers followed 659 older adults in Singapore for up to five years, measuring a blood marker of tau (a protein that builds up in Alzheimer's), brain scan volumes, and yearly memory and thinking tests. They found that carriers of the variant had higher blood tau, smaller memory-related brain regions, and faster cognitive decline, with these markers accounting for a modest share of the effect.",
+    "why": "It offers population-specific evidence from an Asian cohort, where the biological pathways of APOE ε4 have been less studied than in European-ancestry groups. The findings may help point to blood-based tau measures and hippocampal atrophy as markers to track, though the text does not show how well they would work for individual diagnosis or treatment decisions.",
+    "background": "- APOE ε4 is a gene variant (allele) known as the strongest common genetic risk factor for late-onset Alzheimer's disease.\n- Plasma p-tau217 is a phosphorylated form of the tau protein measured in a blood sample; elevated levels are linked to Alzheimer's pathology.\n- Tau and amyloid are proteins whose buildup in the brain is a hallmark of Alzheimer's disease.\n- The hippocampus is a brain region central to memory; atrophy means shrinkage, and entorhinal cortex thickness is also an early-affected area.\n- White matter hyperintensities are bright spots on brain MRI scans linked to small-vessel, cerebrovascular damage.\n- Serial mediation analysis tests whether an effect passes through one or more intermediate variables in sequence, and \"hazard ratio\" (HR) compares the rate of an event between groups over time.\n- The text reports mediated shares of roughly 9–14%, so most of the ε4 effect is not explained by these pathways in this analysis.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Background The APOE {epsilon}4 allele is a major genetic risk factor for Alzheimer's disease (AD) but underlying pathophysiological mechanisms may vary across populations. In Asian cohorts, the relative contributions of plasma phosphorylated tau (p-tau217), neurodegeneration, and cerebrovascular disease to {epsilon}4-associated cognitive decline remain unclear. Objective We investigated biomarker pathways linking APOE {epsilon}4 to cognitive trajectories and incident dementia. Methods APOE genotyping, plasma p-tau217 measurement, and neuroimaging were conducted at baseline in the Singapore Harmonization longitudinal cohort. Participants underwent annual comprehensive neuropsychological assessments for five years. We examined {epsilon}4 group differences in p-tau217, regional subcortical volumes, cortical thickness, and white matter hyperintensities (WMH). Serial mediation analyses examined mediating effects of plasma p-tau217 and neuroimaging markers on {epsilon}4 associations with cognitive decline and dementia risk. Results APOE {epsilon}4 was present in 29.4% of cohort (N=659; age=73.5{+/-}8.0 years; female=56.4%; Chinese ethnicity=83.6%). Carriers had higher p-tau217, reduced entorhinal thickness, and smaller hippocampus, amygdala, accumbens, and putamen volumes, but no WMH differences. Pathways from APOE {epsilon}4 through p-tau217 to hippocampal volume ({beta}=-0.009, 95% CI=-0.015, -0.004, 13.8%) and entorhinal thickness ({beta}=-0.008, 95% CI=-0.014, -0.004, 13%) significantly mediated steeper global and domain-specific cognitive decline. APOE {epsilon}4 was associated with increased dementia risk (HR=2.35, 95% CI=1.37-4.06), partially mediated by p-tau217 and hippocampal volume (9%). Direct {epsilon}4 effects were minimal and WMH did not influence these associations. Conclusions APOE {epsilon}4 contributes to cognitive decline and incident dementia through an AD-specific cascade captured by increased p-tau217 and hippocampal atrophy, providing population-specific insights into APOE {epsilon}4-related pathways in older Asian adults.",
+   "source": "medrxiv"
+  },
+  {
+   "uid": "medrxiv:10.64898/2026.11.24.26368659",
+   "title": "Parkinson's disease-associated LRRK2 armadillo domain variants enhance kinase pathway activity through a Rab-binding site-dependent mechanism",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.11.24.26368659v1",
+   "authors": [
+    "Rashidova, N.",
+    "Gomes, S.",
+    "Frances, R. E.",
+    "Scharff, R.",
+    "Matheson-Grant, T.",
+    "Lis, P.",
+    "Nirujogi, R. S.",
+    "Gonzalez, T.",
+    "Alessi, A.",
+    "Global Parkinson's Genetics Program (GP2),",
+    "Lange, L. M.",
+    "Zimprich, A.",
+    "Pfeffer, S.",
+    "Vela Desojo, L.",
+    "Hoenicka, J.",
+    "Sammler, E. M.",
+    "Alessi, D. R."
+   ],
+   "label": "medRxiv doi:10.64898/2026.11.24.26368659 v1",
+   "primary_category": "neurology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Cellular and primary blood-cell study showing that the ARM-domain Madrid haplotype variant L488P raises LRRK2 kinase pathway activity in a manner dependent on the ARM Rab-binding site 1, distinct from classical catalytic-core variants.",
+    "plain": "Mutations in the LRRK2 gene are a known genetic cause of Parkinson's disease, and most of the harmful ones sit in the protein's active core. This paper looks at a family with Parkinson's carrying two changes in a different region of the protein, the \"armadillo\" domain, and finds that one of them (L488P) makes the protein's signalling run about twice as strongly in lab cells and in blood cells from carriers. The effect depends on a specific docking site the protein uses to bind Rab proteins, which suggests a different route to overactivity than the usual one.",
+    "why": "It points to a second way that LRRK2 can be pushed into overdrive, which could matter for how carriers are classified and for drugs that target LRRK2 kinase activity. The text does not show whether this affects disease risk or treatment, and the family and sample sizes described are limited, so the clinical relevance remains uncertain.",
+    "background": "- LRRK2 is a large protein; its mutations are a common inherited cause of Parkinson's disease.\n- LRRK2 has a kinase function: it attaches phosphate groups (phosphorylation) to target proteins, here mainly Rab proteins, which act as cellular switches.\n- Most known harmful variants sit in the catalytic (ROC-COR and kinase) regions; this paper studies the separate armadillo (ARM) region, which helps the protein bind Rabs and move to membranes.\n- A \"haplotype\" is a group of gene variants inherited together; the Madrid haplotype carries two ARM changes.\n- Phosphorylation is measured here by mass spectrometry (PRM), a method that counts specific modified peptides.\n- Neutrophils and monocytes are white blood cells that can be sampled from people and used as accessible proxies.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Pathogenic variants that increase LRRK2 kinase activity are a common genetic cause of Parkinson's disease. Most pathogenic variants occur within the catalytic ROC-COR GTPase (e.g. R1441C) and kinase (e.g. G2019S) domains, where they activate LRRK2 through distinct mechanisms. The common kinase-domain variant directly enhances the intrinsic catalytic activity of LRRK2, whereas ROC-COR variants shift the equilibrium towards its active conformation. Whether variants in the N-terminal armadillo (ARM) domain, which contains Rab GTPase-binding sites involved in LRRK2 membrane recruitment, activate LRRK2 through a different mechanism remains unclear. Here, we characterise the LRRK2 Madrid haplotype, comprising two ARM variants (L119P/L488P) identified in a multigenerational family with PD. In cellular assays, L488P, but not L119P, increased LRRK2-mediated Rab10 phosphorylation approximately two-fold. Increased LRRK2 pathway activity was likewise observed in primary neutrophils and monocytes from variant carriers, including individuals with and without PD. Multiplexed parallel reaction monitoring (PRM) mass spectrometry in neutrophils further demonstrated coordinated increases in phosphorylation of six endogenous Rab substrates (Rab3, Rab8, Rab10, Rab12, Rab35 and Rab43), demonstrating concordant pathway activation in cellular models and primary human blood cells. Mechanistically, L488P lies adjacent to ARM Rab-binding site 1, and its activating effect was abolished by the site-1-disrupting L403E substitution, whereas activation by the ROC-domain variant R1441C was retained. We further investigated five rare ARM-domain variants identified through GP2 and independent genetic datasets, of which two, F470S and V483G, showed increased LRRK2 pathway activity in a site-1-dependent manner, while the remaining three showed no substantial activation. Together, these findings demonstrate that L488P-mediated pathway activation is recapitulated in human variant carriers and depends on an intact ARM Rab-binding site 1, identifying a mechanism of LRRK2 regulation distinct from that of classical catalytic-core variants.",
+   "source": "medrxiv"
+  },
   {
    "uid": "medrxiv:10.64898/2026.11.22.26368682",
    "title": "Plasma proteomic markers of cognitive and brain aging in a multi-ethnic cohort",
@@ -37,12 +104,12 @@
    "primary_category": "neurology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A plasma proteomics study measuring 220 blood proteins in 250 older adults of Chinese, South Asian, and non-Hispanic White background, with replication in 1,381 ADNI participants, linking protein levels to cognition, brain MRI markers, and cognitive decline.",
-    "plain": "Researchers measured about 220 proteins in blood samples from 250 older adults from three ethnic groups, and checked how those levels related to thinking skills and brain scans. Several proteins tied to brain disease, nerve connections, oxidative stress, and inflammation were linked to poorer cognition, and a tau-related protein was linked to a thinner area of the brain involved in memory. The main findings were then checked in a much larger US cohort of 1,381 people, where some of the same proteins were associated with cognitive decline and progression toward clinical disease.",
-    "why": "Blood tests that reflect brain aging could be easier and cheaper to use than brain scans or spinal fluid tests, and the study includes ethnic groups that are usually underrepresented in Alzheimer's research. Whether these proteins will prove useful as clinical markers is not established by this text; it reports associations, not diagnostic performance.",
+    "ai": true,
     "background": "- Plasma proteomics: measuring many proteins at once in a blood sample; \"ultrasensitive\" means very low concentrations can be detected.\n- Tau (pTau): a protein that forms tangles in Alzheimer's disease; phosphorylated forms are chemically modified versions used as disease markers.\n- Entorhinal cortex: a brain region near the hippocampus important for memory, often one of the first affected in Alzheimer's.\n- Cerebral small vessel disease: damage to the tiny blood vessels of the brain, often seen as white matter changes on MRI.\n- Cohort study: following a defined group of people over time; ADNI is a large US Alzheimer's research cohort.\n- Associations are correlational; they do not by themselves show that a protein causes brain changes.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A plasma proteomics study measuring 220 blood proteins in 250 older adults of Chinese, South Asian, and non-Hispanic White background, with replication in 1,381 ADNI participants, linking protein levels to cognition, brain MRI markers, and cognitive decline.",
+    "plain": "Researchers measured about 220 proteins in blood samples from 250 older adults from three ethnic groups, and checked how those levels related to thinking skills and brain scans. Several proteins tied to brain disease, nerve connections, oxidative stress, and inflammation were linked to poorer cognition, and a tau-related protein was linked to a thinner area of the brain involved in memory. The main findings were then checked in a much larger US cohort of 1,381 people, where some of the same proteins were associated with cognitive decline and progression toward clinical disease.",
+    "why": "Blood tests that reflect brain aging could be easier and cheaper to use than brain scans or spinal fluid tests, and the study includes ethnic groups that are usually underrepresented in Alzheimer's research. Whether these proteins will prove useful as clinical markers is not established by this text; it reports associations, not diagnostic performance."
    },
    "abstract": "Advances in ultrasensitive proteomics offer opportunities to characterize molecular pathways underlying brain aging. We measured 220 plasma proteins using NULISAseq Neuro220 in 250 Chinese, South Asian, and non-Hispanic White older adults (mean age=68.2 years, 70.4% female). Proteins implicated in neurodegenerative diseases (including brain-derived phosphorylated Tau, BDpTau), synaptic function, oxidative stress, and inflammation were associated with poorer cognition. Phosphorylated Tau205 was associated with reduced entorhinal thickness, whereas inflammatory proteins were associated with imaging markers of cerebral small vessel disease. Several findings were replicated in 1,381 participants in the Alzheimer's Disease Neuroimaging Initiative, including associations of BDpTau species, NPTX2, BACE1, TREM1, CCL17, PRDX6, and IGF1R with cognitive decline and clinical progression. Cardiometabolic risk factors were associated with widespread proteomic alterations, many of which were also linked to poorer brain health. These results identify promising molecular markers of brain aging and extend proteomic research to ethnically diverse populations historically underrepresented in Alzheimer's disease research.",
    "source": "medrxiv"
@@ -60,12 +127,12 @@
    "primary_category": "neurology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "In 73 ADNI participants with clinical AD or MCI, lower antemortem neuromelanin-MRI substantia nigra volume was associated with autopsy-confirmed Lewy body copathology and with greater nigral hypopigmentation at autopsy, though the study is single-cohort and modest in size.",
-    "plain": "Many people diagnosed with Alzheimer's disease also have Lewy body deposits, clumps of a protein called alpha-synuclein in the brain, and these are linked to earlier symptoms and faster memory and thinking decline. This study asked whether a special brain scan measuring the size of a midbrain region called the substantia nigra, taken while people were alive, could help flag those cases. Among 73 people whose brains were examined after death, those with Lewy body deposits tended to have a smaller nigral region on the scan and paler (less pigmented) tissue at autopsy.",
-    "why": "A scan-based marker that hints at hidden Lewy body pathology in Alzheimer's patients could help clinicians and researchers sort patients during life, which matters for prognosis and trial selection. The result is preliminary: it comes from one small cohort, the scans were taken years before autopsy, and the predictive value shown (area under the curve about 0.77) is moderate and was not tested in separate data.",
+    "ai": true,
     "background": "- Alzheimer's disease (AD): the most common cause of dementia, defined by amyloid and tau brain changes.\n- Mild cognitive impairment (MCI): noticeable memory or thinking problems that do not yet meet the full dementia threshold.\n- Lewy bodies: abnormal clumps of alpha-synuclein protein; they define Parkinson's disease and dementia with Lewy bodies, and often co-occur with AD.\n- Substantia nigra: a midbrain area that makes dopamine; its pigmented cells are lost in Parkinson's disease.\n- Neuromelanin-sensitive MRI: a scan that picks up the dark pigment in the substantia nigra, used as a proxy for its health.\n- Autopsy confirmation: the diagnosis of Lewy body pathology was made on tissue after death, which is the reference standard here.\n- ADNI: the Alzheimer's Disease Neuroimaging Initiative, a large shared research database.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "In 73 ADNI participants with clinical AD or MCI, lower antemortem neuromelanin-MRI substantia nigra volume was associated with autopsy-confirmed Lewy body copathology and with greater nigral hypopigmentation at autopsy, though the study is single-cohort and modest in size.",
+    "plain": "Many people diagnosed with Alzheimer's disease also have Lewy body deposits, clumps of a protein called alpha-synuclein in the brain, and these are linked to earlier symptoms and faster memory and thinking decline. This study asked whether a special brain scan measuring the size of a midbrain region called the substantia nigra, taken while people were alive, could help flag those cases. Among 73 people whose brains were examined after death, those with Lewy body deposits tended to have a smaller nigral region on the scan and paler (less pigmented) tissue at autopsy.",
+    "why": "A scan-based marker that hints at hidden Lewy body pathology in Alzheimer's patients could help clinicians and researchers sort patients during life, which matters for prognosis and trial selection. The result is preliminary: it comes from one small cohort, the scans were taken years before autopsy, and the predictive value shown (area under the curve about 0.77) is moderate and was not tested in separate data."
    },
    "abstract": "Background: Lewy body (LB) copathology in Alzheimer's disease (AD) is associated with earlier symptom onset and faster cognitive decline. Depigmentation of substantia nigra pars compacta (SNc) volume is seen in both Parkinson's disease and dementia with Lewy bodies. We examined whether lower antemortem SNc volume was associated with autopsy confirmed LB pathology in patients with AD or mild cognitive impairment (MCI). Methods: Seventy-three participants with a clinical diagnosis of AD or MCI, neuromelanin-sensitive MRI, and subsequent neuropathologic assessment from the Alzheimer's Disease Neuroimaging Initiative were studied. At autopsy, 33 participants had LB pathology (LB+) and 40 had no LB pathology (LB-). We compared SNc volume between groups using analysis of covariance adjusted for age and sex. Within the LB+ group, we assessed the association between SNc volume and nigral hypopigmentation using Spearman correlation. In a secondary analysis, we tested whether adding SNc volume to a logistic regression mode containing age, sex, and executive function improved model fit for autopsy-defined LB status. Results: LB+ participants had greater nigral hypopigmentation at autopsy and lower antemortem SNc volume than LB- participants. The adjusted mean difference in SNc volume (LB+ minus LB-) was -66 mm3 (95% confidence interval -115.9 to -16.2, P=0.010). Within the LB+ group, lower SNc volume was associated with greater hypopigmentation (Spearman rho;=-0.373, P=0.032). Among 71 participants with complete model data, adding SNc volume improved model fit (likelihood ratio=8.67, P=0.003). The combined model had an in sample area under the receiver operating characteristic curve of 0.770 (95% confidence interval: 0.661-0.879). Conclusion: The correspondence between lower antemortem SNc volume and greater hypopigmentation at autopsy supports the use of neuromelanin-sensitive MRI to characterize nigral involvement in AD or MCI with LB copathology. These findings are based on a single cohort, and the interval of several years between imaging and autopsy limits how closely the pigmentation ratings reflect nigral integrity at imaging.",
    "source": "medrxiv"

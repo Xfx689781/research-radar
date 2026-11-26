@@ -1,7 +1,51 @@
 {
  "slug": "combinatorics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32607",
+   "title": "Sparse Additive Spanners and the Cost Spectra of Group Actions",
+   "url": "https://arxiv.org/abs/2611.32607",
+   "authors": [
+    "Itai Benjamini"
+   ],
+   "label": "arXiv:2611.32607v1",
+   "primary_category": "math.GR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper studies invariant random spanning subgraphs of Cayley graphs, measuring how sparse an additive spanner can be by its expected vertex degree, and relates the achievable sparsity (\"cost spectra\" of group actions) to geometric invariants of the group.",
+    "plain": "The paper asks how few connections a network can keep if it must keep every point and let distances grow by at most a fixed constant amount. Using random, symmetry-respecting choices of which connections to keep, it shows that on a square grid the average number of connections per point can be pushed arbitrarily close to two, while a fully symmetric choice made from independent labels forces keeping every connection. The note then tests similar questions on other groups.",
+    "why": "It connects a concrete sparsification question about graphs to the symmetry of group actions, and the text suggests the minimum over actions recovers a geometric quantity. The text is a brief expository note, so the wider significance is not established here.",
+    "background": "- Cayley graph: a graph built from a group, where vertices are group elements and edges come from multiplying by generators.\n- Additive spanner: a subgraph that keeps all vertices and whose distances exceed the originals by at most a fixed constant.\n- Invariant random subgraph: a random choice of edges whose distribution is unchanged by the group's symmetries.\n- Expected degree: the average number of kept edges at a vertex; lower means sparser.\n- Hyperbolic group: a group whose Cayley graph is tree-like at large scales; nilpotent group: a group with a layered, commutator-based structure.\n- Cost spectrum: the set of achievable additive costs over choices of group action, as described in the text.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "How sparse can a Cayley graph become if we retain all its vertices and allow distances to increase by at most a fixed additive constant? We study invariant random spanning subgraphs, measuring sparsity by the expected degree at a vertex. On the square grid, a random translate of a sparse mesh brings the mean degree arbitrarily close to two. If the choice must be made equivariantly from independent vertex labels, every edge is forced. In this expository note we follow these two answers through other groups. Geometry alone forces a positive gap on each non-elementary hyperbolic Cayley graph, while on one four-regular nilpotent Cayley graph the choice of action realizes every additive cost in $[1,2]$. The minimum of the action spectrum recovers the geometric cost. Open problems are presented in the end.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32740",
+   "title": "Fluctuations in the k-cut numbers of random recursive trees",
+   "url": "https://arxiv.org/abs/2611.32740",
+   "authors": [
+    "Laura Eslava",
+    "Marco L. Ortiz",
+    "Minmin Wang"
+   ],
+   "label": "arXiv:2611.32740v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves a fluctuation (limit distribution) result for the number of k-cut steps needed to isolate the root of a random recursive tree as the tree grows, generalizing earlier results for the classical one-cut procedure.",
+    "plain": "This paper studies a random branching structure called a random recursive tree and a rule for \"cutting\" it apart. The question is how much the number of cuts needed to separate the root from the rest of the tree varies from one random tree to another as the tree gets very large. The authors identify the size of these fluctuations for a generalized version of the cutting rule, where k-cut steps replace the classical one-at-a-time cutting.",
+    "why": "Cutting random trees is a standard way to study how random structures behave in the limit, and the classical results it extends are known in this area. The text does not say more about applications, so the wider significance beyond this line of research is unclear from the summary alone.",
+    "background": "- A tree is a network of nodes with one root and branches, with no loops.\n- A random recursive tree is built by adding nodes one at a time, each attaching to a uniformly chosen earlier node.\n- \"Cutting\" a tree means removing edges or nodes according to a rule; the classical procedure removes one edge at a time.\n- The k-cut procedure (Cai et al., 2018) is a generalization in which the cutting rule is parameterized by k.\n- \"Fluctuations\" means how much a random quantity deviates from its typical value, usually described by a limiting probability distribution as size grows.\n- Prior work by Drmota et al. (2009) and Iksanov et al. (2007) covers the classical case, which this paper extends.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We consider the k-cut procedure introduced by Cai et al. [EJP, 2018] on random recursive trees. Our main result identifies the fluctuations in the number of cuts required to isolate the root as the tree size tends to infinity. This extends the results by Drmota et al. [RSA, 2009] and Iksanov et al. [ECP, 2007] for the classical cutting procedure.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32746",
    "title": "The majority game chromatic number for dense random graphs",
@@ -16,12 +60,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "For fixed edge probability 2/3 < p < 1, the majority game chromatic number of the Erdős–Rényi random graph G(n,p) equals 3 with high probability.",
-    "plain": "The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how many colours are needed. For random graphs that are fairly dense (each pair of vertices is joined with a fixed probability above two-thirds), the authors show that three colours are enough with high probability, meaning the chance of this failing goes to zero as the graph grows.",
-    "why": "It gives a sharp answer for a specific range of densities in a game-version of graph colouring, a classical topic. The text does not say how the result compares with other ranges of p or with related games, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Graph: vertices joined by edges; a proper colouring gives adjacent vertices different colours.\n- Chromatic number: the fewest colours needed for a proper colouring.\n- Erdős–Rényi random graph G(n,p): n vertices, each pair joined independently with probability p.\n- \"With high probability\": the probability of the stated outcome tends to 1 as n grows.\n- Game chromatic number: a variant where two players alternately colour vertices; the \"majority\" version has a specific set of rules not described in the given text.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "For fixed edge probability 2/3 < p < 1, the majority game chromatic number of the Erdős–Rényi random graph G(n,p) equals 3 with high probability.",
+    "plain": "The paper studies a two-player game on random networks: players take turns colouring the vertices of a graph so that no two neighbours share a colour, and the question is how many colours are needed. For random graphs that are fairly dense (each pair of vertices is joined with a fixed probability above two-thirds), the authors show that three colours are enough with high probability, meaning the chance of this failing goes to zero as the graph grows.",
+    "why": "It gives a sharp answer for a specific range of densities in a game-version of graph colouring, a classical topic. The text does not say how the result compares with other ranges of p or with related games, so its wider significance is uncertain."
    },
    "abstract": "We show that for every fixed $2/3<p<1$ the majority game chromatic number of the Erd\\H{o}s--R\\'enyi random graph $G_{n,p}$ is $3$ with high probability.",
    "source": "arxiv"
@@ -38,12 +82,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A short new proof that the 3-uniform off-diagonal Ramsey number r_3(K_4^-, K_n) is at least 2^{Ω(n log n)}, using a construction linked to a directed graph from Bradač's work on off-diagonal graph Ramsey numbers, with sharp bounds claimed for higher-uniformity extensions.",
-    "plain": "This paper is about a question in combinatorics: how large a set must be before any way of coloring its groups of items is forced to contain a particular pattern. The authors give a shorter proof of an earlier result by Fox and He about one such case, and the proof uses a construction tied to a directed graph studied by Bradač. They also say the same idea extends to several related problems with more items per group, which answers questions posed by Mubayi and Suk.",
-    "why": "The work simplifies an existing lower-bound argument and, according to the abstract, yields sharp bounds for several generalizations that other researchers had asked about. It is a specialist result, and the text does not say how broadly it will matter beyond this area of Ramsey theory.",
+    "ai": true,
     "background": "- Ramsey number: the smallest size of a structure guaranteed to contain a given pattern when its elements are colored or split in every possible way.\n- Graph vs. hypergraph: a graph links pairs of vertices; a 3-uniform hypergraph links triples of vertices.\n- K_4^- and K_n: K_n is a complete graph on n vertices (every pair linked); K_4^- is four vertices with five of the six links, a small pattern to look for.\n- Off-diagonal: the two patterns searched for are different, so the problem is asymmetric.\n- Lower bound 2^{Ω(n log n)}: a rough growth rate saying the number grows roughly exponentially in n log n; it shows how large the number must be at least.\n- Sharp bound: a bound that matches the known answer up to constant factors.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A short new proof that the 3-uniform off-diagonal Ramsey number r_3(K_4^-, K_n) is at least 2^{Ω(n log n)}, using a construction linked to a directed graph from Bradač's work on off-diagonal graph Ramsey numbers, with sharp bounds claimed for higher-uniformity extensions.",
+    "plain": "This paper is about a question in combinatorics: how large a set must be before any way of coloring its groups of items is forced to contain a particular pattern. The authors give a shorter proof of an earlier result by Fox and He about one such case, and the proof uses a construction tied to a directed graph studied by Bradač. They also say the same idea extends to several related problems with more items per group, which answers questions posed by Mubayi and Suk.",
+    "why": "The work simplifies an existing lower-bound argument and, according to the abstract, yields sharp bounds for several generalizations that other researchers had asked about. It is a specialist result, and the text does not say how broadly it will matter beyond this area of Ramsey theory."
    },
    "abstract": "We give a new short proof of a theorem of Fox and He that the $3$-uniform Ramsey number $r_3(K_4^-, K_n)$ is at least $2^{\\Omega(n \\log n)}$. The construction exploits a new connection with a directed graph recently introduced by Brada\\v{c} in his work on off-diagonal graph Ramsey numbers. Moreover, it generalizes naturally to give sharp bounds for several extensions of this problem in higher uniformity, answering questions raised by Mubayi and Suk.",
    "source": "arxiv"

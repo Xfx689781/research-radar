@@ -1,7 +1,53 @@
 {
  "slug": "human-computer-interaction",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31899",
+   "title": "Beyond Average Gains: Probing the Equity--Vulnerability Tension in Structured Visual AI for Learning",
+   "url": "https://arxiv.org/abs/2611.31899",
+   "authors": [
+    "Mingyuan Li",
+    "Duan Wang",
+    "Erick Purwanto",
+    "Yihong Wang"
+   ],
+   "label": "arXiv:2611.31899v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A randomized study of a structured visual AI tutor (VisualCodeChat) versus a standard text chatbot for learning graph algorithms, with 282 university students' questionnaires, finding higher average usability and effectiveness ratings for the visual tool but uneven experiences tied to prior chatbot use.",
+    "plain": "Researchers compared a learning tool that combines guided stages, chat explanations, and animated diagrams against a plain text chatbot, using a study of university students learning graph algorithms. Students rated the visual tool higher on usability and perceived effectiveness when averages were compared directly, but no differences appeared for efficiency, satisfaction, or mood after use. Within each tool, students with different prior chatbot experience gave noticeably different ratings, suggesting average scores hide uneven experiences.",
+    "why": "It challenges the habit of judging AI learning tools by average ratings alone, and it points to whether learners with different backgrounds and devices can actually get guidance, recover from problems, and show understanding on their own. The text does not report learning outcomes, so its link to actual learning gains is not established here.",
+    "background": "- Conversational AI: chatbots that answer questions in typed dialogue.\n- Randomized study: participants are randomly assigned to conditions, so groups differ mainly by the tool they used.\n- Graph algorithms: step-by-step methods for problems on networks of nodes and links, such as finding shortest paths; hard for beginners to track.\n- Usability and satisfaction ratings: questionnaire scores on how easy and pleasant a tool felt, not measures of what was learned.\n- Unadjusted vs. exploratory analyses: the headline comparison did not account for other factors, and the subgroup findings were exploratory, so they need confirmation.\n- Equity in this context: whether a tool works similarly for learners with different prior experience and devices.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Open-ended conversational AI requires learners to formulate questions, organize learning paths, and track changing problem states. Structured visual interfaces may ease these demands, but higher average ratings do not establish that support is experienced consistently across learner backgrounds and devices. We conducted a randomized study of graph-algorithm learning, comparing VisualCodeChat (VCC), which combines predefined learning stages, conversational explanations, and dynamic algorithm visualizations, with a standard text-based chatbot. We analyzed 282 post-task questionnaires from university students. In unadjusted comparisons, VCC received significantly higher usability and perceived effectiveness ratings. We detected no significant between-condition differences in efficiency, satisfaction, or post-use emotion. Exploratory within-condition analyses identified differences associated with prior chatbot experience: infrequent users reported lower adoption and learning-management ratings in the standard AI condition, while uncomfortable prior chatbot experiences were associated with lower interaction and layout ratings in the VCC condition. These findings suggest that improving the average interaction experience is only part of making AI-supported learning inclusive. Future evaluations should examine whether learners with different prior experiences can obtain guidance, recover from difficulties, and demonstrate understanding independently across devices.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32869",
+   "title": "AI, Bias, and Inclusion: A Two-Phase Mixed-Methods Study of Gender Bias, Awareness, and Trust in Artificial Intelligence",
+   "url": "https://arxiv.org/abs/2611.32869",
+   "authors": [
+    "MD Junayed Talukdar",
+    "Khosro Salmani"
+   ],
+   "label": "arXiv:2611.32869v1",
+   "primary_category": "cs.CY",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A two-phase mixed-methods study that combines a computational content analysis of 360 ChatGPT-generated occupational narratives across four countries with a student survey on bias awareness and trust in AI, framed through Equity, Diversity, and Inclusion (EDI) and AI ethics scholarship.",
+    "plain": "The paper looks at whether AI text generators tie certain jobs to one gender, and whether students notice this and how much they trust AI for important decisions. The researchers asked ChatGPT for occupational stories using gender-neutral prompts for four countries (Canada, Germany, India, and Bangladesh), then checked the stories for gender patterns. They also studied student perceptions to see how those views relate to fairness and inclusion ideas.",
+    "why": "Biased AI output can shape how people think about careers and who belongs in them, so it matters for hiring, education, and public trust. The text does not report the findings, so it is unclear what the study showed; its stated aim is to build an empirical base for future fairness-focused design frameworks.",
+    "background": "- Gender bias in AI: systems trained on existing text can reproduce stereotypes, such as linking nursing with women and engineering with men.\n- Computational content analysis: counting and categorizing words or themes in large amounts of text by software and rules, rather than reading each item by hand.\n- Mixed-methods design: combining numerical measurement with human-survey or interview data.\n- EDI (Equity, Diversity, and Inclusion): diversity means recognizing individual differences, equity means fair treatment and access, and inclusion means valuing everyone involved.\n- Sociotechnical: the idea that fairness depends on both the technology and the social settings it operates in, not only on code or data.\n- Gender-neutral prompt: a request worded without specifying a gender, so any gender pattern in the answer comes from the system.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Artificial Intelligence (AI) systems are widespread across fields such as healthcare, finance, employment, and criminal justice, with a substantial impact on the lives of individuals and society. However, it has been established that AI systems perpetuate existing social inequalities, particularly through biases that are not easily discernible. Such biases are embedded in the technical and social structures of artificial intelligence systems, making them difficult to detect. These biases challenge the concept of Equity, Diversity, and Inclusion (EDI), which recognizes diversity as the acknowledgment of individual differences, equity as fairness and equal access, and inclusion as the value placed on all participants. This study argues that fairness in artificial intelligence systems cannot be achieved by focusing solely on their technical aspects, necessitating a holistic approach. This study employs a two-phase mixed-methods design. Phase 1 applies computational content analysis to 360 occupational narratives generated by ChatGPT across four countries (Canada, Germany, India, and Bangladesh) using gender-neutral prompts to examine whether professions are predominantly associated with one gender and whether these patterns remain consistent across regions. Phase 2 examines the extent to which students recognize potential bias in AI, their trust in AI for consequential decision-making, and how these perceptions relate to themes in EDI and AI ethics scholarship. By combining output-level bias analysis with user perception data, this study identifies the empirical foundations necessary for future EDI-AI co-design frameworks, outlining the sociotechnical dimensions that such frameworks must address to be effective.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32768",
    "title": "Emerging International Best Practices for AI Model Specs",
@@ -27,12 +73,12 @@
    "primary_category": "cs.CY",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "This paper offers a five-part guide to writing \"model specs\" (public documents stating how frontier AI models should behave), covering benefits, a taxonomy, practical writing and implementation guidance, eight open problems, and recommendations for companies, governments and civil society.",
-    "plain": "AI companies are starting to publish documents that describe how their AI systems are meant to behave, and there has been little independent advice on how to write them. This paper tries to fill that gap by explaining why such documents help, sorting them into a rough classification, suggesting how to write and apply them, and listing unresolved questions. The text provided is a summary of the paper's structure; it does not show the specific content of the guidance or the taxonomy.",
-    "why": "As AI systems become more influential, publicly stated behaviour rules are becoming part of how these systems are developed and governed, so practical guidance on them may matter to developers, regulators and the public. The text does not show how widely the proposals have been adopted or tested, so their real impact is unclear.",
+    "ai": true,
     "background": "- A \"model spec\" is a written document from an AI developer describing the intended behaviour of its AI model, including what it should and should not do.\n- \"Frontier AI developers\" means the organisations building the most capable, cutting-edge AI models.\n- A \"taxonomy\" is a structured classification of types or categories, here of model specs.\n- \"Governance\" refers to the rules, oversight and institutions that guide how a technology is developed and used.\n- Model specs are a fairly new kind of document, so there is no settled standard for them yet.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "This paper offers a five-part guide to writing \"model specs\" (public documents stating how frontier AI models should behave), covering benefits, a taxonomy, practical writing and implementation guidance, eight open problems, and recommendations for companies, governments and civil society.",
+    "plain": "AI companies are starting to publish documents that describe how their AI systems are meant to behave, and there has been little independent advice on how to write them. This paper tries to fill that gap by explaining why such documents help, sorting them into a rough classification, suggesting how to write and apply them, and listing unresolved questions. The text provided is a summary of the paper's structure; it does not show the specific content of the guidance or the taxonomy.",
+    "why": "As AI systems become more influential, publicly stated behaviour rules are becoming part of how these systems are developed and governed, so practical guidance on them may matter to developers, regulators and the public. The text does not show how widely the proposals have been adopted or tested, so their real impact is unclear."
    },
    "abstract": "Frontier AI developers from around the world have begun to publish documents that describe how their AI models are intended to behave. Although these 'model specifications'-or 'model specs', for short-are increasingly important in AI development and governance, little independent guidance exists for writing them. This paper addresses this gap in five main sections. First, we outline the advantages of writing a model spec for AI developers and society at large. Second, we introduce a taxonomy for model specs that developers can take inspiration from. Third, we propose guidance for writing and implementing a spec in practice. Fourth, we note eight open problems related to writing model specs for safe and desirable behaviour. We conclude with recommendations for frontier AI companies, governments, and research and civil society organisations.",
    "source": "arxiv"
@@ -51,12 +97,12 @@
    "primary_category": "cs.HC",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "This position paper proposes \"Calm Agent,\" a design framework for AI agents running ongoing background tasks that organizes three on-demand interaction modes (Delegate, Adjust, Check) around a persistent task representation, and illustrates it with a desktop prototype called Orvlet.",
-    "plain": "The paper argues that AI helpers doing side tasks should be designed for people who only check in now and then, because their attention is elsewhere. The authors describe a way to structure this: users hand off a task, tune it, or glance at its status, with the task's state kept in one continuing record. They show the ideas through a desktop prototype, Orvlet, but the text does not report user testing or measured results.",
-    "why": "As AI agents start running tasks for long stretches in the background, how people keep track of and steer them without being pulled away from their main work is an open design question. The paper's framing may be relevant to interface design and attention research, though its evidence is a position and prototype description rather than a study.",
+    "ai": true,
     "background": "- AI agent: software that carries out multi-step tasks on a user's behalf with some autonomy.\n- Intermittent attention: a person who looks at a task only occasionally while doing other work.\n- Persistent task representation: a continuing internal record of what a task is, its status, and its settings, so users can pick it up again.\n- Generative interaction: interfaces an AI creates on the fly to fit an open-ended goal, versus fixed, pre-built controls.\n- Human-computer interaction (HCI): the field studying how people use and design computer systems.\n- Position paper: a text that argues for a viewpoint and proposes a framework, typically without a full empirical evaluation.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "This position paper proposes \"Calm Agent,\" a design framework for AI agents running ongoing background tasks that organizes three on-demand interaction modes (Delegate, Adjust, Check) around a persistent task representation, and illustrates it with a desktop prototype called Orvlet.",
+    "plain": "The paper argues that AI helpers doing side tasks should be designed for people who only check in now and then, because their attention is elsewhere. The authors describe a way to structure this: users hand off a task, tune it, or glance at its status, with the task's state kept in one continuing record. They show the ideas through a desktop prototype, Orvlet, but the text does not report user testing or measured results.",
+    "why": "As AI agents start running tasks for long stretches in the background, how people keep track of and steer them without being pulled away from their main work is an open design question. The paper's framing may be relevant to interface design and attention research, though its evidence is a position and prototype description rather than a study."
    },
    "abstract": "AI agents can carry out auxiliary tasks while users focus on other work. Yet users still need to understand task state, make changes, and respond when help is required. We argue that agents for ongoing auxiliary tasks should be designed around intermittent human attention: tasks should continue between interactions, and users should be able to return with little effort to understand and control them. We develop this position as Calm Agent. It connects three on-demand interaction modes: Delegate, Adjust, and Check, through a persistent task representation. Generative interaction provides controls and feedback suited to open-ended goals, while existing controls support routine actions. We illustrate these principles with Orvlet, a desktop prototype for background execution and compact task interfaces. We identify challenges in adapting interfaces while preserving continuity, coordinating attention across tasks, providing responsive interaction, and learning user habits over time. The aim is to support continuing task control while protecting attention for primary work.",
    "source": "arxiv"

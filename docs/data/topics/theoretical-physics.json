@@ -1,7 +1,51 @@
 {
  "slug": "theoretical-physics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32438",
+   "title": "Entanglement island and Page curve for one-sided rotating Kerr black holes",
+   "url": "https://arxiv.org/abs/2611.32438",
+   "authors": [
+    "Soumen Pari"
+   ],
+   "label": "arXiv:2611.32438v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Applies the entanglement island prescription to one-sided rotating Kerr black holes formed by gravitational collapse, using an effective two-dimensional near-horizon model of a scalar field, and examines the island boundary, Page time and scrambling time for non-extremal and extremal cases.",
+    "plain": "Black holes seem to slowly give off radiation that carries away information, which clashes with the idea that information cannot be destroyed. This paper studies spinning (Kerr) black holes formed by collapse and asks how their spin changes the calculation of the radiation's entropy, a measure of how much information it holds. The authors report that, for non-extremal black holes, an \"island\" region appears that stops the entropy from growing without limit, giving the expected rise-and-fall shape known as the Page curve.",
+    "why": "The information paradox is a central open question connecting gravity and quantum mechanics, so results on how realistic spinning black holes behave are of interest to researchers in that area. The text does not indicate how general or definitive these results are beyond this specific setup.",
+    "background": "- Hawking radiation: black holes slowly emit thermal radiation, and in principle this could erase information about what fell in.\n- Information paradox: if information is lost, this conflicts with quantum mechanics, which requires information to be preserved.\n- Page curve: the expected shape of radiation entropy over time, rising and then falling again if information is preserved.\n- Entanglement entropy: a measure of how strongly a region's quantum states are linked to the rest of the system.\n- Island prescription: a recent method in which some regions inside the black hole are counted as part of the radiation's description, lowering its entropy.\n- Kerr black hole: a rotating black hole; extremal means it is spinning at the maximum rate allowed.\n- Scrambling time: the time for information dropped into a black hole to become thoroughly mixed up.\n- Effective two-dimensional theory: a simplified model that keeps only the essential behaviour near the horizon, the boundary of the black hole.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the information paradox for one-sided asymptotically flat rotating Kerr black holes formed through gravitational collapse using the island prescription. Near the horizon, the dynamics of a scalar field can be described by an effective two-dimensional theory, which provides the framework for our analysis. We study how rotation affects the location of the island boundary $\\partial I$, the Page time, and the scrambling time, treating non-extremal and extremal Kerr black holes separately. For non-extremal black holes, the emergence of an island prevents the unbounded growth of Hawking radiation entropy at late times and restores the unitary Page curve. We further find that the island boundary depends on the location of the cutoff surface, in contrast to the behaviour found for eternal Kerr black holes. In the extremal case, the late-time entanglement entropy of Hawking radiation approaches the Bekenstein-Hawking entropy of the extremal black hole. Our results demonstrate the important role of black hole geometry in determining the behaviour of entanglement entropy and suggest that the island prescription provides a semiclassical resolution of the information paradox for one-sided rotating Kerr black holes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31459",
+   "title": "The Relaxation of Quantum Near-Extremal Black Holes. (I) Microcanonical States, Pruning of Quasinormal Modes, and the Aretakis Instability",
+   "url": "https://arxiv.org/abs/2611.31459",
+   "authors": [
+    "Roberto Emparan",
+    "Sameer Murthy",
+    "Stefano Trezzi"
+   ],
+   "label": "arXiv:2611.31459v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper resolves the puzzle of why near-extremal black holes ring down through an infinite tower of classical quasinormal modes, by showing that quantum fluctuations split each mode into a pair of poles and prune the tower to finitely many resonances, and it relates these effects to the Aretakis instability of extremal black holes.",
+    "plain": "The paper asks how a nearly extreme black hole, one that is almost as heavy as it can be while still holding together, settles back down after being disturbed. Classical theory predicts infinitely many decaying \"ringing\" patterns, some of which would decay faster than the black hole's energy above extremality allows. The authors argue that quantum fluctuations, which matter once that energy drops below a certain scale, remove most of these patterns, leaving only finitely many.",
+    "why": "It addresses a conceptual tension in black hole physics about how quantum effects change late-time behaviour that classical calculations predict. The link to the Aretakis instability (horizon derivatives growing without bound) suggests the classical divergence may be an artifact of taking limits in the wrong order, though the text alone does not show how far this extends beyond the model studied.",
+    "background": "- Black hole \"quasinormal modes\": characteristic damped vibrations a black hole emits when perturbed, like the fading ring of a struck bell.\n- Extremal vs. near-extremal black holes: the extremal limit is the heaviest charged or spinning black hole with the smallest possible horizon; \"near-extremal\" means slightly above that mass, with energy E above extremality.\n- Retarded Green's function: a standard mathematical tool giving how a probe field responds over time to a disturbance; its poles encode decay rates.\n- Conformal dimension Δ: a number labelling how a probe field scales; it sets the power-law decay rate.\n- Aretakis instability: in extremal black holes, derivatives of a field transverse to the horizon grow without limit.\n- Semiclassical vs. late-time limits: taking quantum corrections into account first versus waiting a long time first can give different answers, a familiar point in quantum mechanics.\n- Resonance: a quasi-stable state with a finite lifetime, the quantum analogue of a quasinormal mode.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The late-time relaxation of a near-extremal black hole is classically governed by an infinite tower of purely damped quasinormal modes. This poses a puzzle: the higher overtones decay at rates much larger than the energy $E$ of the black hole above extremality, so they would need black hole states below the extremal mass. We resolve it by including the quantum fluctuations that become large when $E$ falls below a scale $E_b$. We compute the retarded Green's function of a probe of conformal dimension $\\Delta$ in a black hole of fixed energy, and find that each classical mode splits into a pair of poles with real parts set by $E_b$. The perturbed black hole decays as an unstable quantum system, and a pair is a resonance, i.e., a quasinormal mode, only if its energy lies within the accessible black hole spectrum. This prunes the tower to finitely many modes, all damped faster than $\\Delta^2E_b$, and below $E=\\Delta^2E_b/2$ none is left. For generic $\\Delta$, the response of the black hole decays first as $t^{-2\\Delta}$ and finally as $t^{-3/2}$, with an exponential stage in between if $E\\gg\\Delta^2E_b$. The same quantum effects bear on the Aretakis instability of extremal black holes, in which transverse derivatives of a perturbation grow without bound on the horizon. Like the tower of modes, it originates in the scale invariance of the classical throat, which the quantum fluctuations break. The $t^{-2\\Delta}$ decay, which is the boundary counterpart of the Aretakis growth, ends by $t\\sim1/E_b$, when the throat ceases to be classical, and by then horizon derivatives have grown only to a finite value. Their unbounded growth is an artifact of taking the semiclassical limit before the late-time one, two limits that in quantum mechanics do not commute.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31379",
    "title": "Free hyperboloidal evolution in 3D: gauge waves and constraint-violating gravitational waves",
@@ -13,12 +57,12 @@
    "primary_category": "gr-qc",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "This paper extends hyperboloidal (conformally compactified) evolution with the BSSN/Z4 formulation of general relativity from spherical symmetry to full 3D, demonstrating free evolution of gauge waves and constraint-violating gravitational waves on Minkowski spacetime with signal extraction at future null infinity.",
-    "plain": "Scientists who simulate gravity on computers usually have to cut off their simulated universe at a finite distance, which can distort the gravitational waves they want to study. This paper describes a way to carry the simulation all the way out to \"future null infinity,\" the far-away boundary where outgoing waves can be read off cleanly, and it does so for full three-dimensional simulations. The authors test it on simple disturbances in empty flat space and report that the code runs reliably and the signals can be extracted at that far boundary.",
-    "why": "Clean access to waves at infinity matters for predicting the gravitational-wave signals that detectors such as LIGO and Virgo are meant to catch, so a working 3D tool is a useful building block. The text only covers tests in flat spacetime with simple perturbations, so it does not yet show how the method performs for realistic sources such as merging black holes.",
+    "ai": true,
     "background": "- General relativity describes gravity as the curvature of spacetime; numerical relativity solves its equations on computers.\n- Gravitational waves are ripples in spacetime produced by accelerating massive objects.\n- \"Minkowski spacetime\" is empty, flat spacetime, the simplest test background.\n- \"Future null infinity\" is the idealized far-away region where outgoing light and gravitational waves end up; hyperboloidal slices are time slices that reach it.\n- Conformal compactification maps infinite distance onto a finite boundary so the whole region can be simulated.\n- BSSN and Z4 are standard formulations of Einstein's equations used in simulations; \"free evolution\" means the constraint equations are not enforced exactly during the run, so small constraint violations can appear.\n- Gauge waves are coordinate-choice disturbances that do not carry physical energy.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper extends hyperboloidal (conformally compactified) evolution with the BSSN/Z4 formulation of general relativity from spherical symmetry to full 3D, demonstrating free evolution of gauge waves and constraint-violating gravitational waves on Minkowski spacetime with signal extraction at future null infinity.",
+    "plain": "Scientists who simulate gravity on computers usually have to cut off their simulated universe at a finite distance, which can distort the gravitational waves they want to study. This paper describes a way to carry the simulation all the way out to \"future null infinity,\" the far-away boundary where outgoing waves can be read off cleanly, and it does so for full three-dimensional simulations. The authors test it on simple disturbances in empty flat space and report that the code runs reliably and the signals can be extracted at that far boundary.",
+    "why": "Clean access to waves at infinity matters for predicting the gravitational-wave signals that detectors such as LIGO and Virgo are meant to catch, so a working 3D tool is a useful building block. The text only covers tests in flat spacetime with simple perturbations, so it does not yet show how the method performs for realistic sources such as merging black holes."
    },
    "abstract": "Hyperboloidal evolution allows to reach future null infinity within numerical relativity simulations. This work extends the conformal compactification approach with BSSN/Z4 from spherical symmetry to full 3D simulations. This is the first free numerical hyperboloidal evolution in 3D with a common formulation of general relativity. In this first step, gauge waves and constraint-violating gravitational waves perturbing Minkowski spacetime are evolved nonlinearly and show that the implementation is reliable and signals can be successfully extracted at future null infinity.",
    "source": "arxiv"
@@ -35,12 +79,12 @@
    "primary_category": "hep-th",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper extends a family of 6d BPS supergravity solutions (fundamental strings plus NS5-branes near the BTZ black hole threshold) to include gauge excitations of the fivebranes, and studies the energetics of D-string solitons relative to the deconfinement transition of little strings.",
-    "plain": "This paper is about a theoretical question in string theory: when does a tangle of strings turn into a black hole, and what happens at the tipping point between the two. The authors build more detailed model geometries that describe a set of strings and five-dimensional membranes (fivebranes) sitting very close to that tipping point. They then examine how much energy certain small objects called D-string solitons carry, and how that relates to the point where the little strings stop being confined.",
-    "why": "The black hole/string transition is a long-standing topic linking gravity and string theory, so the work matters to specialists studying that connection. The provided text only gives the aims and setup, not the specific results, so its broader significance is unclear from this summary alone.",
+    "ai": true,
     "background": "- BTZ black hole: a simple black hole solution in three-dimensional spacetime, used as a toy model in gravity research.\n- Supergravity solution: a classical geometry of gravity that solves the equations of a supersymmetric theory, often used to model string theory objects.\n- BPS state: a special, highly symmetric configuration whose energy is fixed by its charges, making it easier to analyse.\n- Fundamental string and NS5-brane: basic extended objects in string theory; branes are higher-dimensional generalisations of points or strings.\n- Little strings: non-gravitational strings that live on NS5-branes and behave as the basic non-abelian degrees of freedom in the relevant theory.\n- Deconfinement transition: a phase change, analogous to melting, in which the constituents of a bound state become free.\n- D-string soliton: a stable, particle-like lump of energy built from D-strings, a class of branes that carry charge for open strings.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extends a family of 6d BPS supergravity solutions (fundamental strings plus NS5-branes near the BTZ black hole threshold) to include gauge excitations of the fivebranes, and studies the energetics of D-string solitons relative to the deconfinement transition of little strings.",
+    "plain": "This paper is about a theoretical question in string theory: when does a tangle of strings turn into a black hole, and what happens at the tipping point between the two. The authors build more detailed model geometries that describe a set of strings and five-dimensional membranes (fivebranes) sitting very close to that tipping point. They then examine how much energy certain small objects called D-string solitons carry, and how that relates to the point where the little strings stop being confined.",
+    "why": "The black hole/string transition is a long-standing topic linking gravity and string theory, so the work matters to specialists studying that connection. The provided text only gives the aims and setup, not the specific results, so its broader significance is unclear from this summary alone."
    },
    "abstract": "Near to the onset of BTZ black hole formation in string theory is a large ensemble of 6d BPS supergravity solutions sourced by slightly separated fundamental strings and Neveu-Schwarz fivebranes. We extend the construction of these geometries to include gauge excitations of the fivebranes, and then study the energetics of D-string solitons in relation to the deconfinement transition of little strings, which are the natural non-abelian degrees of freedom that deconfine in the transition to the black hole phase.",
    "source": "arxiv"

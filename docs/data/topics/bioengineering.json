@@ -1,7 +1,65 @@
 {
  "slug": "bioengineering",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.22.768423",
+   "title": "Digital light processing of human-scale tissue-engineered heart valves",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.768423v1",
+   "authors": [
+    "Jafari, A.",
+    "Nemati, A.",
+    "Sarshoghi, A.",
+    "Rafatian, N.",
+    "Guenette, S.",
+    "Park, Y.",
+    "Karamzadeh, V.",
+    "Hedayatnia, A.",
+    "Leduc, C.",
+    "Liberman, M.",
+    "Bouhout, I.",
+    "Kadem, L.",
+    "Andelfinger, G.",
+    "Savoji, H."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.22.768423 v1",
+   "primary_category": "bioengineering",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A composite hydrogel ink (PEGDA, GelMA and methacrylated quince seed mucilage, called GPQuin) is used with digital light processing 3D printing to make human-scale, trileaflet tissue-engineered heart valve scaffolds, with initial cell, implantation and pulse-duplicator tests.",
+    "plain": "Replacement heart valves made from living or biological material could avoid some problems of current valves, such as immune reactions and calcium build-up. This study developed a new printable gel-like \"ink\" that can be shaped by a light-based 3D printer into a full-size three-leaflet heart valve scaffold. The printed valves opened and closed under simulated pulmonary (lung-side) blood flow, and the material supported human stem-cell-derived valve cells for two weeks.",
+    "why": "Making valves at full human size with separate, well-shaped leaflets is a practical hurdle for tissue-engineered valves, so a printable material that does this is relevant to that field. The text reports early-stage results only, and whether the approach leads to clinically usable valves is not shown here.",
+    "background": "- Heart valves control one-way blood flow; current replacements are mechanical or biological (from animal tissue) and each has drawbacks.\n- Tissue engineering builds replacement tissue by combining a scaffold (a supporting structure), cells and sometimes growth signals.\n- Hydrogels are water-rich, soft gel networks; PEGDA is a synthetic polymer, GelMA is a modified gelatin, and quince seed mucilage is a plant-derived gum; \"methacrylated\" means chemically modified so light can harden it.\n- Digital light processing (DLP) is a 3D printing method that hardens whole layers of liquid resin at once using projected light.\n- Micro-CT is an X-ray imaging method used here to measure how closely the printed shape matches the design (deviations of about +214 and -248 micrometers, i.e. fractions of a millimetre).\n- Subcutaneous implantation means placing the material under the skin of an animal to test tissue reaction; a pulse duplicator is a lab pump that mimics heartbeat flow.\n- Induced pluripotent stem cells are adult cells reprogrammed to an early state, then guided to become other cell types.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Tissue engineered heart valves (TEHVs) could overcome the complications of current heart valve replacement, such as immunologic events, degenerative fibrocalcific changes, and patient-prosthesis mismatch. Digital light processing (DLP) 3D printing enables creation of complex geometries; however, suitable (bio)inks remain limited. Here, a composite ink comprising poly(ethylene glycol) diacrylate (PEGDA), gelatin methacryloyl (GelMA), and methacrylated quince seed mucilage (QSGM), termed GPQuin, was developed for DLP printing of human-scale TEHVs. GPQuin enabled fabrication of a trileaflet TEHV with separated leaflets and anatomically inspired sinuses. Micro-computed tomography revealed mean positive and negative surface deviations of +214 and -248 micrometers, respectively. The printed hydrogels exhibited a tensile modulus of 117.2 +/- 15.5 kPa, an ultimate tensile strength of 113.2 +/- 17.4 kPa, and an elongation at break of 75.3 +/- 2.3%. Human induced pluripotent stem cell-derived valve cells attached to the hydrogel surfaces and remained predominantly viable over 14 days. After 12 weeks of subcutaneous implantation, the constructs showed a time-dependent inflammatory response. In a pulse duplicator under pulmonary loading, printed valves exhibited good cyclic leaflet opening and closing. Together, these findings establish GPQuin as a printable platform for human-scale valve scaffolds and support further investigation in heart valve tissue engineering.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.766607",
+   "title": "BMP-2 Release from Biomaterial Carriers: Reporting Heterogeneity and the Limits of Cross-Study Prediction",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766607v1",
+   "authors": [
+    "Zhou, W.",
+    "Zhou, L.",
+    "Hou, W.",
+    "Yang, Y. P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.766607 v1",
+   "primary_category": "bioengineering",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A preliminary meta-analysis of 79 published BMP-2 release experiments from 21 studies, testing whether carrier family alone can predict release across studies with machine learning, and finding that gains largely vanish under publication-grouped validation.",
+    "plain": "Bone-growth proteins (BMP-2) are often loaded onto carrier materials that release them slowly, and researchers publish how much drug leaves the carrier over time. This paper gathered 79 such release experiments from 21 papers, using an AI assistant plus human checking, and asked whether the published numbers can be used to predict release. Only about half of the experiments reported BMP-2 alone as a percentage of the loaded dose, and simple predictions based on carrier type helped on new random splits but not reliably when whole publications were held out.",
+    "why": "It shows that published drug-release data are hard to reuse for prediction because of inconsistent reporting, and that apparent accuracy can come from similarity within a single study. This matters for anyone hoping to build predictive models for biomaterial drug delivery, though the dataset is small and the authors describe it as preliminary.",
+    "background": "- BMP-2: a protein that signals bone to form; used clinically at high doses, so controlled release from carriers is of interest.\n- Carrier / biomaterial: a scaffold or coating (e.g., polymer, collagen, mineral-based) that holds the protein and releases it over time.\n- Release profile: the curve of how much of the loaded protein has left the carrier at each time point.\n- Log10 units: errors are measured on a logarithmic scale, so a difference of 0.4 means roughly a 2.5-fold difference in the quantity.\n- Mean absolute error (MAE): the average size of prediction mistakes; lower is better.\n- Machine learning baseline: a simple reference model (here, the global median) that more complex models are compared against.\n- Random hold-out vs. publication-grouped cross-validation: the first mixes experiments from all studies when testing; the second tests on entire studies not seen in training, which is a stricter test of generalization.\n- Interpolation vs. generalization: predicting within familiar conditions versus predicting for new studies or materials.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Published release profiles offer a potential basis for predicting bone morphogenetic protein-2 (BMP-2) delivery from biomaterial carriers, but heterogeneous reporting and study-specific effects complicate their reuse in machine learning (ML) models. As a preliminary exploration, we compiled 79 release experiments and 487 time points from 21 publications with a workflow that combined a large language model assistant and human verification, and we examined data comparability and cross-study prediction with ML models. Only 38 experiments (48%) reported BMP-2 alone as a percentage of the loaded dose. Within individual studies, binding components and coating layers were associated with slower release, consistent with established carrier mechanisms. Using carrier family as the sole predictor, a family-median model and gradient-boosted decision trees achieved lower mean absolute errors than a global-median baseline under random hold-out validation (0.42 and 0.44 versus 0.52 log10 units). Publication-grouped cross-validation did not establish a corresponding improvement (0.57 and 0.48 versus 0.50). Only 10 of the 28 modeling experiments belonged to carrier families represented in the training data under this scheme, and carrier family was strongly associated with publication. These findings highlight the need to distinguish within-study interpolation from cross-study generalization. Broader coverage of each carrier family, quantitative formulation and assay descriptors, and accessible numerical source data are needed to support predictive modeling of BMP-2 release.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768121",
    "title": "Extracellular matrix-enriched human induced chondrocyte organoids as living building blocks for scalable cartilage tissue engineering",
@@ -20,12 +78,12 @@
    "primary_category": "bioengineering",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Human induced chondrocytes (hiCHOs), matured in spinner flasks and then reaggregated with a tissue-derived matrix supplement, self-assemble into matrix-rich cartilage organoids that can fuse into larger constructs.",
-    "plain": "Cartilage damage in joints often leads to painful arthritis, and current repair methods need many of a patient's own cells and scale poorly. This paper describes growing cartilage-like clusters, called organoids, from stem-cell-derived cartilage cells in a spinning culture flask, with a natural matrix supplement added to help them form. The authors report that one million cells gave over 27,000 organoids in two weeks, and that these organoids could join together into larger pieces of cartilage.",
-    "why": "The main claim is about scalability: making many cartilage building blocks from an off-the-shelf cell source could matter for future joint repair. The text does not show clinical testing, so its relevance to patients is still a possibility to be tested rather than a demonstrated result.",
+    "ai": true,
     "background": "- Articular cartilage: the smooth tissue covering joint ends; it heals poorly, and damage can progress to osteoarthritis.\n- Tissue engineering: growing tissue in the lab to repair or replace damaged body parts.\n- Induced pluripotent or progenitor cells: adult cells reprogrammed into a stem-like state, then guided to become a target cell type (here, chondrocytes, the cartilage-making cells).\n- Organoid: a small 3D cell cluster that self-organizes and mimics aspects of a tissue.\n- Spinner flask: a stirred culture vessel that keeps cells suspended and moving, allowing larger batches.\n- Extracellular matrix: the protein-and-sugar scaffolding cells secrete; here, a tissue-derived supplement is added to support it.\n- Autologous: taken from the patient themselves; off-the-shelf means a ready-made, donor-independent supply.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Human induced chondrocytes (hiCHOs), matured in spinner flasks and then reaggregated with a tissue-derived matrix supplement, self-assemble into matrix-rich cartilage organoids that can fuse into larger constructs.",
+    "plain": "Cartilage damage in joints often leads to painful arthritis, and current repair methods need many of a patient's own cells and scale poorly. This paper describes growing cartilage-like clusters, called organoids, from stem-cell-derived cartilage cells in a spinning culture flask, with a natural matrix supplement added to help them form. The authors report that one million cells gave over 27,000 organoids in two weeks, and that these organoids could join together into larger pieces of cartilage.",
+    "why": "The main claim is about scalability: making many cartilage building blocks from an off-the-shelf cell source could matter for future joint repair. The text does not show clinical testing, so its relevance to patients is still a possibility to be tested rather than a demonstrated result."
    },
    "abstract": "Articular cartilage defects are common and often develop into painful and debilitating osteoarthritis due to the low innate healing capacity of cartilage. However, current regenerative treatments are limited as they depend on large autologous cell numbers and poor scalability. Here, a novel approach for rapid and plentiful cartilage organoid production is introduced for modular and scalable cartilage tissue engineering, by combining an off-the-shelf cell source with a natural matrix supplement in spinner flask cultures. First, human induced chondroprogenitor cell (hiCPC) colonies are matured towards human induced chondrocytes (hiCHO) aggregates in spinner flasks. Although maturation is achieved, resulting hiCHO aggregates show some phenotypic heterogeneity between clones. Nevertheless, subsequent dissociation and culture with a tissue-derived matrix supplement results in rapid and homogeneous organoid self-assembly, generating large numbers of hiCHO-derived cartilage organoids. This matrix-supplemented culture generates consistent pericellular and extracellular matrix-rich organoids without detected off-target cells, limiting the need of labor-intensive selections steps and enhancing scalability. Impressively, 1 million hiCHOs produce over 27,000 organoids within two weeks, with an approximately 30-fold increase in cell number. Finally, hiCHO-derived organoids fuse together to assemble large cartilage constructs, demonstrating their potential as scalable, off-the-shelf building blocks and addressing an unmet need in regenerative cartilage tissue engineering.",
    "source": "biorxiv"
@@ -46,12 +104,12 @@
    "primary_category": "bioengineering",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Electrospun polyurethane fiber patches containing reduced graphene oxide, surface-coated with a nitrogen-rich plasma polymer, are characterized for structure, strength, conductivity, and cytotoxicity toward primary cardiac fibroblasts as a candidate cardiac tissue engineering scaffold.",
-    "plain": "Heart disease is a leading cause of death, and heart transplants are limited by few donors and lifelong immune-suppressing drugs. This paper describes a thin, flexible mesh-like patch meant to support heart tissue and conduct electrical signals, made from a plastic-like polymer mixed with a conductive carbon material. The authors report physical, electrical, and mechanical measurements and show the patch was not toxic to heart fibroblast cells in lab tests.",
-    "why": "Cardiac patches that are both strong and electrically conductive could matter for repairing damaged heart muscle, which must contract in coordinated electrical waves. The text reports only material characterization and a single cytotoxicity assay, so it does not show whether the patch helps heart tissue repair or works in living animals.",
+    "ai": true,
     "background": "- Cardiac patch: a sheet placed on damaged heart tissue to provide support and help regrowth.\n- Electrospinning: a method that uses an electric field to draw polymer solutions into very fine fibers, forming a mesh.\n- Polyurethane (PU): a flexible, durable plastic often used in medical devices.\n- Graphene oxide and reduced graphene oxide (rGO): sheets of carbon atoms; the reduced form conducts electricity better.\n- Low-pressure plasma polymerization: treating a surface with ionized gas to deposit a thin coating; here nitrogen-rich, meant to help cells stick.\n- Cytotoxicity assay: a lab test checking whether a material harms cells.\n- Primary cardiac fibroblasts: connective-tissue cells taken directly from heart tissue.\n- X-ray photoelectron spectroscopy and tensile testing: surface chemistry analysis and stretch-to-break strength testing.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "Electrospun polyurethane fiber patches containing reduced graphene oxide, surface-coated with a nitrogen-rich plasma polymer, are characterized for structure, strength, conductivity, and cytotoxicity toward primary cardiac fibroblasts as a candidate cardiac tissue engineering scaffold.",
+    "plain": "Heart disease is a leading cause of death, and heart transplants are limited by few donors and lifelong immune-suppressing drugs. This paper describes a thin, flexible mesh-like patch meant to support heart tissue and conduct electrical signals, made from a plastic-like polymer mixed with a conductive carbon material. The authors report physical, electrical, and mechanical measurements and show the patch was not toxic to heart fibroblast cells in lab tests.",
+    "why": "Cardiac patches that are both strong and electrically conductive could matter for repairing damaged heart muscle, which must contract in coordinated electrical waves. The text reports only material characterization and a single cytotoxicity assay, so it does not show whether the patch helps heart tissue repair or works in living animals."
    },
    "abstract": "Cardiovascular diseases remain the leading cause of mortality worldwide. Traditional treatments, including heart transplantation, are limited by the scarcity of donor organs and the need for lifelong immunosuppression, highlighting the urgent need for alternative therapies. Cardiac patches represent a promising approach to restoring heart function by providing structural support and promoting cardiac tissue regeneration. Here, we developed biocompatible and conductive electrospun cardiac patches, aiming to mimic the structural, mechanical, and electrical properties of the native myocardium. polyurethane (PU) was selected as the base material due to its favorable mechanical properties and biocompatibility. Reduced graphene oxide (rGO) was incorporated into the electrospun PU fibers to enhance electrical conductivity, and a low-pressure plasma-polymerized nitrogen-rich (LPPE:N) coating was applied to improve cell adhesion. The fabricated patches were characterized through various techniques, including scanning electron microscopy, X-ray photoelectron spectroscopy, tensile testing, and conductivity measurements. Also, in vitro cytotoxicity assay using primary cardiac fibroblasts confirmed the biocompatibility of the patches. These physicochemical, electromechanical, and biological characterizations suggest that the rGO/LPPE:N-functionalized PU patches demonstrate promising potential for cardiac tissue engineering applications.",
    "source": "biorxiv"

@@ -1,7 +1,53 @@
 {
  "slug": "genetics-genomics",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.23.768687",
+   "title": "Sequence-to-function embeddings across individuals capture rare and common variant heritability",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768687v1",
+   "authors": [
+    "Billeci, F.",
+    "Anglada-Girotto, M.",
+    "Gusev, A.",
+    "Frazer, J.",
+    "Dias, M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.23.768687 v1",
+   "primary_category": "genetics",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper introduces EMBHER, a variance-component framework that estimates how much gene-expression heritability is captured by the intermediate embeddings of a sequence-to-function model (Borzoi), including for rare variants.",
+    "plain": "Scientists train large AI models to predict how DNA sequence controls gene activity, and these models build internal numerical summaries along the way. This paper asks whether those internal summaries also reflect differences between people, meaning how much of the variation in gene activity across individuals they can account for. The authors built a method, EMBHER, to measure this and applied it to the Borzoi model using whole-blood data.",
+    "why": "It offers a way to connect genome-wide AI predictors with population genetics, which may help explain inherited differences in gene expression, especially rare variants that are hard to study one at a time. The text presents this as a first step rather than a finished tool, and its wider impact remains to be tested.",
+    "background": "- Gene expression: how strongly a gene is turned on or off, which can differ between people.\n- Heritability: the share of variation in a trait across individuals that is explained by genetic differences.\n- Variance-component model: a statistical method that splits trait variation into parts due to different sources, such as genotypes.\n- Sequence-to-function model: a deep neural network that takes raw DNA sequence and predicts molecular readouts such as gene activity.\n- Embedding: an intermediate set of numbers inside a neural network that summarizes the input in a learned form.\n- Rare variant: a genetic change carried by very few people, so its effect is hard to estimate alone.\n- Whole-blood expression: gene activity measured in blood samples from individuals.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Statistical genetics learns how DNA shapes gene expression from variation across individuals, whereas sequence-to-function models learn from variation along the genome. Because sequence-to-function models map sequence to molecular readouts through deep architectures, their intermediate representations could offer function-informed descriptions of genetic variation. Whether these representations capture differences between individuals, however, is unknown. Here we introduce Embedding-based Heritability (EMBHER), a variance-component framework that estimates the expression heritability captured by these representations. Applied to Borzoi, embeddings recover much of the whole-blood heritability explained by genotypes and far exceed the model's final predictions. Deeper layers increasingly prioritize functional, evolutionarily constrained sequence while encoding less ancestry information than genotypes. Embeddings also explain more rare-variant heritability than genotypes, consistent with sharing information across variants too rare to estimate individually. EMBHER integrates sequence-to-function models with statistical genetics, a first step towards population-to-function models.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.19.767897",
+   "title": "The 'near T2T' Canton-S assembly is inconsistent with other Canton-S genomes",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767897v1",
+   "authors": [
+    "Emerson, J. J."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.19.767897 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A commentary arguing that a recently published \"near T2T\" genome assembly of the fruit fly strain Canton-S differs from three other independently sequenced Canton-S assemblies by an amount comparable to differences between distinct strains, raising doubts about its genetic identity.",
+    "plain": "Canton-S is a classic laboratory fruit fly strain that many researchers use as a standard reference. A recent team published a very high-quality, nearly complete genome sequence for it, and this short note argues that the new sequence does not match other independently produced Canton-S genomes. The author suggests that the difference is about as large as the differences seen between separate fly strains, so the community should be cautious before adopting it.",
+    "why": "Reference genomes for widely used lab strains shape many experiments, so if a new reference reflects a different genetic background, studies built on it could be misread. The text does not show how the mismatch arises (for example, whether it reflects real genetic differences, sample handling, or assembly errors), so that remains open.",
+    "background": "- Drosophila melanogaster (fruit fly) is a standard model organism in genetics.\n- A \"strain\" is a line of flies kept in the lab for generations; different labs' versions of the same named strain can drift genetically.\n- A genome \"assembly\" is a computer reconstruction of an organism's DNA from many short sequence reads.\n- \"T2T\" (telomere-to-telomere) means an assembly covering whole chromosomes end to end with no gaps; \"near T2T\" means almost complete.\n- Comparing independent assemblies of the same strain is a way to check whether a new sequence is genetically consistent with others.\n- This is a single short critique; the original paper's response is not in the text provided.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Canton-S is among the most widely used Drosophila melanogaster strains, underlying substantial community infrastructure, including serving as a wild-type strain for: genetics studies; studying phenotypes, especially in behavioral studies; and complex trait mapping studies among many others. The recent 'near T2T' assembly of Canton-S (LIU et al.) is presented as delivering modern sequencing and assembly quality to the Drosophila community via this important strain. I find that this assembly is inconsistent with three other independently sequenced Canton-S genome assemblies on a magnitude comparable to differences between distinct strains, raising concerns about its genetic identity that the community should consider when choosing whether to adopt it as a resource.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768666",
    "title": "Functional interrogation of osteoarthritis-associated regulatory variants and effector genes.",
@@ -27,12 +73,12 @@
    "primary_category": "genomics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Functional genomics in primary human chondrocytes (MPRA, CRISPR activation/interference, chromatin and conformation data) that links osteoarthritis GWAS loci to regulatory variants and target genes, centred on rs1895062 and PAPPA at 9q33.",
-    "plain": "Genetic studies have linked hundreds of spots in the human genome to osteoarthritis, a common joint disease, but in most cases it is unclear which DNA letter matters or which gene it affects. The authors tested candidate regions in cartilage cells grown in the lab, using methods that measure how strongly each DNA version switches genes on and off. They report that one variant, rs1895062, appears to raise activity of a nearby gene called PAPPA, with the risk version showing higher activity.",
-    "why": "It moves beyond association by combining several lines of evidence to suggest a likely causal variant and gene for one osteoarthritis risk locus, which could help prioritise follow-up work. The text does not show whether PAPPA is a viable drug target or how it affects joint health in people, so those links remain open.",
+    "ai": true,
     "background": "- GWAS (genome-wide association study): scans of many people's genomes to find DNA regions statistically linked to a disease; such regions rarely point to the exact causal change.\n- Regulatory variant: a DNA change that alters how much a gene is switched on, rather than changing the protein itself.\n- Chondrocyte: the cell type that makes and maintains cartilage.\n- MPRA (massively parallel reporter assay): a test that puts many DNA sequences into cells at once to measure which ones drive gene activity.\n- CRISPR activation/interference: tools that turn a target gene's regulatory region up or down, to see the effect on gene expression.\n- Chromatin accessibility, H3K27ac and chromatin conformation: markers of open, active DNA regions and of physical loops that bring distant DNA into contact with gene promoters.\n- PAPPA: a protease involved in growth-factor signalling and extracellular matrix remodelling.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Functional genomics in primary human chondrocytes (MPRA, CRISPR activation/interference, chromatin and conformation data) that links osteoarthritis GWAS loci to regulatory variants and target genes, centred on rs1895062 and PAPPA at 9q33.",
+    "plain": "Genetic studies have linked hundreds of spots in the human genome to osteoarthritis, a common joint disease, but in most cases it is unclear which DNA letter matters or which gene it affects. The authors tested candidate regions in cartilage cells grown in the lab, using methods that measure how strongly each DNA version switches genes on and off. They report that one variant, rs1895062, appears to raise activity of a nearby gene called PAPPA, with the risk version showing higher activity.",
+    "why": "It moves beyond association by combining several lines of evidence to suggest a likely causal variant and gene for one osteoarthritis risk locus, which could help prioritise follow-up work. The text does not show whether PAPPA is a viable drug target or how it affects joint health in people, so those links remain open."
    },
    "abstract": "Background: Genome-wide association studies (GWAS) have identified hundreds of loci associated with osteoarthritis (OA); however, the regulatory variants and effector genes underlying most associations remain unresolved. Results: We used complementary functional genomic approaches in chondrocytes to resolve prioritized OA risk loci. Massively parallel reporter assays (MPRAs) in primary human chondrocytes identified allele-specific regulatory activity at variants across multiple loci, two of which were independently validated using low-throughput reporter assays. In parallel, integration of OA GWAS signals with chromatin accessibility, H3K27ac CUT&Tag, and chromatin conformation data prioritised candidate regulatory elements for CRISPR based perturbation. CRISPR activation and interference supported functional regulatory relationships between OA risk regions and Pappalysin 1 (PAPPA) and Sprouty RTK signaling antagonist 4 (SPRY4) as target genes. At the 9q33 locus, multiple independent lines of evidence converged on rs1895062, which resides in an accessible region that loops to the PAPPA promoter. The OA risk G allele at rs1895062 results in higher regulatory activity by MPRA and low throughput reporter assay. Activation of this region by CRISPR increases PAPPA gene expression and induces widespread transcriptional changes involving extracellular matrix remodelling and other OA-relevant pathways. Conclusion: Integrating genetic association, genomic and epigenomic data, and functional perturbation in disease-relevant cells can resolve the regulatory mechanisms underlying OA risk loci. Using this multi-faceted approach, we provide convergent functional evidence for rs1895062 as a likely causal variant that controls PAPPA gene expression and OA risk.",
    "source": "biorxiv"
@@ -54,12 +100,12 @@
    "primary_category": "genetics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A simulation study proposing an isoeliteness score (an effect-size-weighted Hamming distance over QTL markers) between founder lines, and an isoeliteness-guided genomic selection (isoGS) method, to manage the diversity-versus-eliteness trade-off in admixed crop germplasm.",
-    "plain": "Public crop breeding programs swap seed lines with one another to add genetic variety, but mixing lines can break up gene combinations that already make a crop good. This paper uses computer simulations of a self-pollinating annual crop to test when such mixing hurts the gains that genomic selection (choosing plants by their DNA markers) can deliver. The authors score how genetically different founder lines are in the traits that matter most, and find that less compatible pairs gain less early on; a modified selection method, isoGS, recovers some of that loss.",
-    "why": "Breeders must balance adding new genetic diversity against keeping the traits that make elite varieties valuable, and this work offers a way to measure and manage that trade-off trait by trait. Because the results come only from simulations, how far they carry over to real breeding programs is not established by this text.",
+    "ai": true,
     "background": "- Crop breeding: developing new plant varieties by crossing and selecting lines with desired traits.\n- Elite germplasm: the best-performing breeding lines and seeds already in use.\n- Genomic selection (GS): predicting a plant's value from its DNA markers so that breeders can pick plants without growing every one to maturity.\n- Genetic gain: the improvement in a trait over successive breeding cycles.\n- QTL (quantitative trait loci): stretches of DNA linked to a trait that is controlled by many genes.\n- Epistasis and haplotypes: genes interacting with one another, and blocks of DNA inherited together; breaking up favorable combinations can reduce performance.\n- Transgressive segregation: offspring that show traits more extreme than either parent, which can be useful or undesirable.\n- Hamming distance: a count of positions where two DNA sequences differ, here weighted by how strongly each position affects the trait.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A simulation study proposing an isoeliteness score (an effect-size-weighted Hamming distance over QTL markers) between founder lines, and an isoeliteness-guided genomic selection (isoGS) method, to manage the diversity-versus-eliteness trade-off in admixed crop germplasm.",
+    "plain": "Public crop breeding programs swap seed lines with one another to add genetic variety, but mixing lines can break up gene combinations that already make a crop good. This paper uses computer simulations of a self-pollinating annual crop to test when such mixing hurts the gains that genomic selection (choosing plants by their DNA markers) can deliver. The authors score how genetically different founder lines are in the traits that matter most, and find that less compatible pairs gain less early on; a modified selection method, isoGS, recovers some of that loss.",
+    "why": "Breeders must balance adding new genetic diversity against keeping the traits that make elite varieties valuable, and this work offers a way to measure and manage that trade-off trait by trait. Because the results come only from simulations, how far they carry over to real breeding programs is not established by this text."
    },
    "abstract": "Global networks of public crop breeding programs exchange germplasm to share traits and increase diversity for genetic gain. There is a fundamental dilemma in crop breeding between the need to expand the genetic variation in elite gene pools while avoiding disruptions to essential traits required for eliteness. One particular challenge in admixed germplasm is the release of undesired transgressive segregation due to the disruption of favorable epistatic haplotypes of essential traits, which may stymie deployment of genomic selection (GS) In this study, we used breeding simulations to model recurrent population improvement for an annual crop species that can be selfed and crossed to examine the effectiveness of GS in admixed germplasm. We quantified the genetic heterogeneity between founder lines with an isoeliteness score, an effect size-weighted Hamming distance using quantitative trait loci markers. Populations with low founder isoeliteness (i.e. low genetic compatibility) had lower genetic gain with GS in early cycles than those with high founder isoeliteness (63% and 27% lower after 2 and 4 cycles). To mitigate this, we developed an isoeliteness-guided GS (isoGS) method to recover favorable epistatic haplotypes in a segregating population, which enabled 31% and 15% more genetic gain after 4 and 20 cycles. Our results suggest that founder isoeliteness scores and isoGS are valuable tools for overcoming the diversity vs. eliteness dilemma by managing the introduction of genetic diversity in a trait-specific manner.",
    "source": "biorxiv"

@@ -1,7 +1,63 @@
 {
  "slug": "security-cryptography",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31993",
+   "title": "Not Just Any Example: Security Requirements and Fix Patterns for Guiding LLM Vulnerability Repair",
+   "url": "https://arxiv.org/abs/2611.31993",
+   "authors": [
+    "Zichen Liu",
+    "Liangyi Huang",
+    "Stanley Nguyen",
+    "Kha Tu Nguyen",
+    "Xinda Wang",
+    "Xusheng Xiao"
+   ],
+   "label": "arXiv:2611.31993v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "An empirical study clusters 3,816 open-source security patches into fix patterns tied to 12 security-requirement impact classes, then uses those patterns to select examples that improve LLM-based vulnerability repair.",
+    "plain": "Software bugs that open security holes often take a long time to fix, and AI models can now write patches for them, but a patch that makes the program run is not guaranteed to actually close the security gap. This paper studies thousands of real security fixes to find repair strategies that recur across different vulnerabilities. It then shows that giving an AI model well-chosen example fixes, instead of random ones, helps it produce patches that do better on the test.",
+    "why": "Connecting the kind of security rule a flaw breaks to the fixes that usually repair it is a practical way to guide AI patch tools beyond fixed templates. The reported gain is measured on the paper's own tasks and four models, so its reach to other software or real deployments is not shown in the text.",
+    "background": "- A \"vulnerability\" is a flaw in software that an attacker could exploit.\n- A \"security patch\" is a code change that fixes such a flaw.\n- A \"fix pattern\" is a recurring type of code edit, such as adding a check before a risky operation, possibly across several places in the code.\n- Large language models (LLMs) are AI systems that generate text and code; \"zero-shot\" means asking without any worked examples, and \"few-shot\" examples are sample fixes included in the prompt.\n- \"pass@3\" means the share of tasks where at least one of three attempts produces a correct patch.\n- Clustering means grouping similar items together automatically.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Software vulnerabilities leave systems open to attack, and their remediation is often delayed. Large language models (LLMs) have advanced automated patch generation, yet passing functionality tests does not ensure that a patch enforces the security requirement the vulnerability violated. Existing vulnerability repair techniques rely on curated patterns or templates with limited coverage, leaving unclear which repair strategies carry over across vulnerabilities and how they can steer LLMs. We present a large-scale empirical study that relates recurring fix patterns to the security impacts of vulnerabilities and examines how this knowledge can guide LLM-based repair. Building on a manual study of security patches, we cluster 3,816 security patches from 348 open-source repositories and analyze the edits and their context to derive concrete fix patterns, ranging from local safeguards to coordinated changes across multiple locations. We define 12 security impact classes by the security requirements that vulnerabilities violate and map them to repair categories and fix patterns, revealing characteristic repairs, alternative strategies within a class, and patterns shared across classes. We then use these patterns and impact-pattern associations to select repair examples for four LLMs on repair tasks of varying complexity. Guided example selection raises the four-model mean pass@3 from 37.9% under zero-shot prompting to up to 49.2%, whereas randomly selected examples reach only 36.9%. Our findings connect vulnerability characterization with patch generation and support organizing repair knowledge around security requirements.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32389",
+   "title": "AgentBank: Banking on Blockchain Agentic Payments",
+   "url": "https://arxiv.org/abs/2611.32389",
+   "authors": [
+    "Yuexin Xiang",
+    "Martin Pere\\v{s}\\'ini",
+    "Yuchen Lei",
+    "Yuquan Li",
+    "Yuanzhe Zhang",
+    "Andreas Deppeler",
+    "Tsz Hon Yuen",
+    "Shiping Chen",
+    "Qin Wang",
+    "Burkhard Stiller"
+   ],
+   "label": "arXiv:2611.32389v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "AgentBank proposes a smart-contract banking layer where AI agents spend against owner-issued mandates and on-chain limits, with internal payments settled as balance updates over pooled, partly yield-bearing backing funds, and reports experiments on idle liquidity, gas costs, reserve policy under market stress, and bank-run risk.",
+    "plain": "AI programs are starting to pay each other for data and computing power, but each one usually sits on its own crypto wallet, where money sits unused and must be moved for every purchase. This paper proposes a shared \"bank\" built from smart contracts (self-running programs on a blockchain) so agents spend against account balances under limits set by their owners. The authors report that this cuts idle money by 52-77% compared with separate wallets and lowers transaction costs for batched internal payments, and they also look at how reserves should be held and what happens if many depositors try to withdraw at once.",
+    "why": "As AI agents begin making real payments, how their money is held and limited is an open design question with security and financial consequences. The text does not establish how these results would hold on live systems, and the reported figures come from the paper's own experiments.",
+    "background": "- Blockchain and smart contracts: programs that run on a public ledger and hold and move digital money without a central operator.\n- Crypto wallet: an account controlled by a private key; whoever holds the key can spend the funds.\n- Idle liquidity: money that is available but not being used, sitting in accounts.\n- Agentic payments: AI software making purchases on its own, using protocols such as x402 and AP2 named in the text.\n- Mandate and spending limit: an owner's pre-approved rules on what an agent may spend.\n- Reserves and yield-bearing strategies: part of the funds is kept liquid for withdrawals, while the rest is lent or invested in DeFi (decentralized finance) to earn returns.\n- Bank run: a rush of withdrawals that can drain a bank's liquid funds, here examined as a risk for automated systems.\n- Gas cost: the fee paid to process a transaction on a blockchain.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "AI agents increasingly pay for data and computation through protocols such as x402 and AP2, but individually funded wallets idle and require asset transfers for every payment. We present AgentBank, a smart-contract banking layer that lets agents spend bank liabilities under owner-issued mandates and on-chain spending limits. Internal payments update account balances without transferring assets, while pooled backing funds are allocated between reserves and yield-bearing strategies. We bound losses from compromised agent keys and analyze how correlated demand affects reserve requirements. Experiments show that AgentBank reduces idle liquidity by 52-77% relative to per-agent wallets and lowers gas costs for batched internal payments. Using historical DeFi liquidity data, we evaluate how reserve policies balance treasury returns against payment availability during market stress. We further examine the risks of automated bank runs and evaluate mechanisms to mitigate them.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.31331",
    "title": "Trustworthy Edge AI: Security, Privacy, and Resilience for Distributed Intelligence",
@@ -14,12 +70,12 @@
    "primary_category": "cs.CR",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A book chapter surveying security, privacy, and resilience mechanisms for Edge AI systems, with a call for cross-layer design, drawing on case studies from smart cities, autonomous vehicles, healthcare, and industrial IoT.",
-    "plain": "This is an overview chapter about keeping AI running on local devices (such as sensors, cars, and hospital equipment) rather than in distant data centers. It explains the ways such systems can be attacked or fail, and reviews protective methods like trusted hardware, checking device identity, and training AI on shared data without pooling the raw data in one place. The text is a survey and argument rather than a report of new experimental results.",
-    "why": "Edge AI is spreading into cities, vehicles, and healthcare, so how these systems protect data and keep working under attack matters to many fields. The text itself gives no measured findings, so it is best read as a guide to open questions and trade-offs rather than evidence for any specific method.",
+    "ai": true,
     "background": "- Edge AI: running AI models on or near the device that collects the data, instead of only in the cloud.\n- Attack surface: the number of points where an attacker could get in; more varied devices means more of these points.\n- Zero-trust: a model where no device or connection is trusted by default and each must be verified.\n- Attestation: a device proving to others that its software is genuine and unaltered.\n- Federated learning: several devices improve a shared model by sending back model updates instead of their raw data.\n- Differential privacy: adding controlled noise so that results reveal little about any single person's data.\n- Adversarial robustness: how well a model resists inputs deliberately crafted to fool it.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A book chapter surveying security, privacy, and resilience mechanisms for Edge AI systems, with a call for cross-layer design, drawing on case studies from smart cities, autonomous vehicles, healthcare, and industrial IoT.",
+    "plain": "This is an overview chapter about keeping AI running on local devices (such as sensors, cars, and hospital equipment) rather than in distant data centers. It explains the ways such systems can be attacked or fail, and reviews protective methods like trusted hardware, checking device identity, and training AI on shared data without pooling the raw data in one place. The text is a survey and argument rather than a report of new experimental results.",
+    "why": "Edge AI is spreading into cities, vehicles, and healthcare, so how these systems protect data and keep working under attack matters to many fields. The text itself gives no measured findings, so it is best read as a guide to open questions and trade-offs rather than evidence for any specific method."
    },
    "abstract": "This chapter examines the principles and emerging research directions for building secure, privacy-preserving, and resilient Edge Artificial Intelligence (Edge AI) systems. As intelligence shifts from centralized clouds to distributed edge environments, challenges arise in ensuring data integrity, privacy, and reliable operation under adversarial and uncertain conditions. The chapter analyzes Edge AI architectures, emphasizing the expanded attack surface due to heterogeneous devices, resource constraints, and dynamic networks. It reviews core security mechanisms, including hardware-rooted trust, zero-trust models, secure communication, and attestation. Privacy-preserving approaches, such as federated learning, secure aggregation, and differential privacy, enable collaborative intelligence without centralized data sharing. Resilience strategies, including fault tolerance, adversarial robustness, and adaptive orchestration, are also explored. Case studies from smart cities, autonomous vehicles, healthcare, and industrial IoT illustrate practical trade-offs. The chapter advocates a holistic, cross-layer design integrating security, privacy, and resilience for trustworthy edge intelligence.",
    "source": "arxiv"
@@ -35,12 +91,12 @@
    "primary_category": "eess.SY",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper shows that PJM-style masking of power-plant offer curves in anonymized electricity market data can be undone by matching against public plant data, and proposes a differentially private monthly aggregate release with stated accuracy trade-offs.",
-    "plain": "Electricity markets publish how much each power plant is willing to sell at each price, so analysts can study prices and spot possible manipulation. Some grid operators hide plant names with codes, assuming this keeps the offers private. Using Texas (ERCOT) data where the names are public as a test, the authors found that public fuel and emissions records could still match many coded units back to their plants.",
-    "why": "It matters for how grid regulators and market monitors decide what data to publish and how much privacy they can actually promise. The paper also offers a noisy aggregate release that keeps the main market measures usable, though its results come from one market and its own simulations, and the claim that PJM's feed would fail the same way is an expectation rather than a tested result.",
+    "ai": true,
     "background": "- Offer curve: a plant's stated willingness to sell power at each price level, by hour.\n- Merit order: ranking plants from cheapest to most expensive offer to build the market supply curve.\n- Clearing price: the price where supply meets demand in the market.\n- Masking/anonymization: replacing names with codes; the paper tests whether this hides identity.\n- Re-identification: linking anonymous records back to real plants using other public data.\n- Differential privacy: a guarantee that the published output barely changes whether any one unit's data is included; adds calibrated random noise. Zero-concentrated differential privacy (zCDP) is one formal way to measure this, and epsilon (ε) sets the strength (smaller is stronger).\n- Fuel group: a category such as gas, coal, wind or hydro.\n- Combined-cycle: a type of gas plant.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that PJM-style masking of power-plant offer curves in anonymized electricity market data can be undone by matching against public plant data, and proposes a differentially private monthly aggregate release with stated accuracy trade-offs.",
+    "plain": "Electricity markets publish how much each power plant is willing to sell at each price, so analysts can study prices and spot possible manipulation. Some grid operators hide plant names with codes, assuming this keeps the offers private. Using Texas (ERCOT) data where the names are public as a test, the authors found that public fuel and emissions records could still match many coded units back to their plants.",
+    "why": "It matters for how grid regulators and market monitors decide what data to publish and how much privacy they can actually promise. The paper also offers a noisy aggregate release that keeps the main market measures usable, though its results come from one market and its own simulations, and the claim that PJM's feed would fail the same way is an expectation rather than a tested result."
    },
    "abstract": "ERCOT publishes every generator's hourly offer curve 60 days after the operating day. Market monitors, researchers and traders use these records to study the merit order and check for withholding. PJM publishes the same kind of data with unit names replaced by codes, on the view that masking keeps offers confidential. We test that view on ERCOT data from 2024 to 2026, where names are public and so provide ground truth, by masking the records under PJM's published rules. Public EIA and EPA data match 25% of the masked units we can score (32% of their capacity) to their plant, and 45% fall within the top five guesses. PJM's feed carries the same fields, so we expect masking to fail there too. Publishing exact fuel-group totals instead does not help. An attacker who knows the other units in a group recovers one unit's high-price offers exactly, and an outsider who knows only the target's outage dates reaches a correlation of 0.77, most of it from a few renewable and hydro units that offer at very high prices (0.32 over fossil units). We propose a differentially private release: monthly totals by fuel group and price bin, with Gaussian noise calibrated under zero-concentrated differential privacy so that each unit's whole year of offers is protected. It publishes an unbiased noisy layer and derives a monotone supply curve and shares from it at no extra privacy cost. At $\\varepsilon=10$ per unit-year the market supply curve stays within 11% of the truth, the implied clearing price within \\$3.0/MWh, and the attacker's correlation falls to 0.23. Whether an analysis still works depends on one ratio, how much the true quantity varies month to month against the noise, which predicts the accuracy of totals to within 0.05. The clearing price, supply slope and combined-cycle capacity remain usable, but no monthly release, private or exact, can answer questions about single hours or single units.",
    "source": "arxiv"

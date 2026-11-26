@@ -1,7 +1,60 @@
 {
  "slug": "plant-biology",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.22.768468",
+   "title": "Functional divergence of D-, A-, and B-type cyclins in the moss Physcomitrium patens",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.768468v1",
+   "authors": [
+    "Gan, Y.",
+    "Ruan, J.",
+    "Li, M.",
+    "Li, C.",
+    "Yi, P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.22.768468 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A study of how D-, A-, and B-type cyclins (cell-cycle regulators) and their CDK partners differ in function and binding in the moss Physcomitrium patens, using expression tracking, overexpression, knockouts, and yeast two-hybrid binding assays.",
+    "plain": "Cells divide by following a timed sequence of control proteins, and in plants these control proteins have multiplied over evolution. This paper asks what the three main groups of these proteins (called cyclins) each do in a simple land plant, the moss Physcomitrium patens. The authors tracked when each type is made or destroyed during the cell cycle, then made some over-produced or removed to see what changed.",
+    "why": "The work suggests the three cyclin groups have partly overlapping and partly separate jobs, and that the moss's more complex leafy structures (gametophores) are especially sensitive to problems with mitotic cyclins. It may help explain how cell-division control supports development in non-vascular plants, though the text alone does not show how far these findings extend to other plants.",
+    "background": "- Cell cycle: the ordered series of stages a cell goes through to copy and divide its contents (G1, S for DNA copying, G2, and M for mitosis, the division itself).\n- Cyclins: proteins whose levels rise and fall through the cycle; they partner with cyclin-dependent kinases (CDKs), enzymes that switch cell-cycle steps on.\n- D-, A-, and B-type cyclins: the three main cyclin classes studied here; D-type is linked to entering the cycle, A-type to DNA copying and the step before division, and B-type to mitosis.\n- Physcomitrium patens: a small moss widely used as a model for studying plant development; it has a simple body plan compared with flowering plants.\n- Gametophore: the leafy, upright reproductive-stage structure of the moss.\n- Overexpression and loss-of-function: making a gene product in excess, or removing it, to see what breaks.\n- Yeast two-hybrid assay: a lab test in yeast that checks whether two proteins physically bind each other.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Cyclins and cyclin-dependent kinases (CDKs) are central cell-cycle regulators that have undergone diversification in land plants; however, the functional implications of this divergence remain incompletely understood, particularly in non-vascular lineages. Here, we systematically dissected the roles of the three principal cyclin classes--D, A, and B--in the model moss Physcomitrium patens. We show that CYCD2 exhibits constitutive expression throughout the cell cycle, CYCA2 is degraded during mitosis and transcriptionally activated post-mitotically, whereas CYCB1 is M-phase-specific and rapidly depleted at anaphase. Overexpression and loss-of-function analyses revealed functional divergence among these classes: cyclin D primarily governs cell cycle entry and vegetative growth; cyclin B regulates mitotic progression with its overexpression causing division failure and arresting gametophore development; cyclin A regulates S-to-G2/M transition and exhibits overlapping functions with both D- and B-type cyclins, contributing to vegetative growth, mitotic fidelity, and gametophore development. Yeast two-hybrid assays showed that CYCB2 associates broadly with both CDKAs and CDKBs, CYCA2 preferentially interacts with CDKAs, and CYCD1 binds CDKAs along with a subset of CDKBs. Collectively, our results reveal both overlapping and class-specific contributions of D-, A-, and B-type cyclins to cell-cycle progression and development in P. patens, and suggest that complex tissues (gametophores) are particularly vulnerable to mitotic cyclin dysfunction. These findings provide a foundation for understanding how cyclin diversification underpins developmental plasticity across different contexts in non-vascular land plants.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.769068",
+   "title": "Mechanical Induced Stress Enhances Arabidopsis Susceptibility to Fusarium oxysporum in a Jasmonic Acid-Dependent Manner",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769068v1",
+   "authors": [
+    "Brenya, E.",
+    "Pervin, M.",
+    "Biswas, A.",
+    "Paudel, L.",
+    "Chen, Z.-H.",
+    "Tissue, D. T.",
+    "Johnson, S. N.",
+    "Cazzonelli, C. I."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.769068 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Prolonged mechanical stress (repeated touching) in Arabidopsis increased susceptibility to the hemibiotrophic fungus Fusarium oxysporum f. sp. conglutinans via hyper-induced jasmonic acid signalling, with the jar1-11 biosynthesis mutant showing greater resistance.",
+    "plain": "Plants that are repeatedly touched or brushed, which is known to toughen them against some germs, turned out to be more vulnerable to a fungus that attacks through a different route. The researchers compared touched and untouched Arabidopsis (a small model plant) infected with this fungus, and found that the touched plants had higher levels of a stress hormone called jasmonic acid and its defence genes, which the fungus appears to exploit. A mutant unable to make enough of this hormone resisted the infection better.</plain>\n<parameter name=\"why\">It suggests a possible trade-off: touch-based treatments aimed at boosting immunity or changing plant shape could leave crops more open to some pathogens. The text is a single abstract, so the size of the effect and the wider applicability to crops are not shown here.</why>\n<parameter name=\"background\">- Arabidopsis thaliana: a small flowering weed widely used as a lab model plant.\n- Mechanical-induced stress (MIS): repeated touching or bending that changes how a plant grows and defends itself.\n- Jasmonic acid (JA): a plant hormone that switches on defence genes, especially against chewing insects and necrotrophic pathogens (which kill tissue).\n- Hemibiotrophic pathogen: a microbe that first lives quietly in living tissue, then kills it later; Fusarium oxysporum is one example.\n- jar1-11: a mutant plant line with a faulty step in making the active form of jasmonic acid.\n- Marker genes such as PDF1.2, VSP1 and LOX1 are used as readouts of JA defence activity.</plain>\n<parameter name=\"difficulty\">intermediate",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "Prolonged mechanical-induced stress (MIS) primes juvenile Arabidopsis plants for enhanced resistance against necrotrophic pathogens through the activation of jasmonate-mediated defense pathways. We hypothesised that MIS would weaken defense against hemibiotrophic pathogens that exploit jasmonate pathways to promote infection. We show that touch-acclimated wild-type plants were more susceptible to Fusarium oxysporum f. sp. conglutinans (Foc) infection than un-touched control plants. Jasmonic acid (JA) levels as well as JA defense-related gene expression were hyper-induced for up to 5 days post-inoculation in the MIS plants. In contrast, the MIS- and control- JA biosynthesis-deficient mutant jasmonate resistance 1 (jar1-11) was more resistant to Foc infection compared to the WT. The jar1-11 mutant showed significant attenuation in the induction of JA defense-responsive gene expression. In the absence of Foc infection, a single event of MIS similarly induced JA biosynthesis and stress-associated marker genes, but not JA signalling genes, in naive and touch-acclimated plant tissues. Touch-acclimated plants had higher basal levels of JA and JA defense-related genes expression, including PDF1.2, VSP1, and LOX1. Our findings highlight that prolonged MIS of Arabidopsis cross-primes JA-dependent susceptibility to a hemibiotrophic pathogen that can hijack the JA pathway to promote infection, revealing a potential trade-off when utilising MIS to promote immunity against necrotrophic pathogens or alter morphological traits for agronomical gains.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.22.768253",
    "title": "Restoring beneficial ancestral genomic sites enhances broad disease resistance in rice",
@@ -36,12 +89,12 @@
    "primary_category": "plant biology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proposes \"Beneficial Ancestral Genomic Sites,\" restoring ancestral acidic residues at phosphorylatable sites in plant proteins, and reports that doing so in the rice NADPH oxidases OsRbohB and OsRbohI raised broad-spectrum disease resistance, with field tests of growth-defense tradeoff models.",
-    "plain": "Crop breeders usually work only with the genetic variation already present in farmed plants and their wild relatives. This paper proposes going back further in evolutionary history: restoring an older, ancestral version of specific chemical sites in plant proteins. The authors tested this in rice by changing two immune-related enzymes so they resemble their ancestral form, and report that this raised resistance to several diseases.",
-    "why": "",
+    "ai": true,
     "background": "- Proteins are chains of amino acids; some amino acids can have a phosphate group attached (phosphorylation), which can switch a protein's activity on or off.\n- Acidic residues carry a negative charge and can sometimes mimic a phosphate group at these sites.\n- NADPH oxidases (Rboh enzymes) produce reactive oxygen molecules that plants use as part of their immune response.\n- Growth-defense tradeoff: resources spent on defense can reduce growth or yield, and the paper tests competing models of this tradeoff in the field.\n- Ancestral sequence reconstruction: inferring what a gene looked like in ancient ancestors, which is the source of the \"ancestral\" sites here.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes \"Beneficial Ancestral Genomic Sites,\" restoring ancestral acidic residues at phosphorylatable sites in plant proteins, and reports that doing so in the rice NADPH oxidases OsRbohB and OsRbohI raised broad-spectrum disease resistance, with field tests of growth-defense tradeoff models.",
+    "plain": "Crop breeders usually work only with the genetic variation already present in farmed plants and their wild relatives. This paper proposes going back further in evolutionary history: restoring an older, ancestral version of specific chemical sites in plant proteins. The authors tested this in rice by changing two immune-related enzymes so they resemble their ancestral form, and report that this raised resistance to several diseases.",
+    "why": ""
    },
    "abstract": "Crop improvement has long been constrained to genetic variations within cultivated germplasms and their wild relatives, which capture only a small fraction of historical protein diversity accumulated over evolutionary processes. Here, we propose the Beneficial Ancestral Genomic Sites concept, hypothesizing that restoring conserved ancestral acidic residues at phosphorylatable sites in plant proteins could substantially improve plant performance. We experimentally validate this concept with key immune-associated NADPH oxidases OsRbohB and OsRbohI to elevate broad-spectrum disease resistance in rice. Field-level testing of two competing models for growth-defense tradeoffs in plants strongly supports mitigating tradeoffs in modern agricultural settings. Our work unlocks a hidden, untapped reservoir of elite molecular variations inaccessible from conventional breeding resources, establishing a potentially transformative strategy for next-generation crop improvement under modern agriculture contexts.",
    "source": "biorxiv"
@@ -60,12 +113,12 @@
    "primary_category": "plant biology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper presents GnotoBag, a bag-based, peat-substrate gnotobiotic (germ-controlled) growth system that extends a prior platform to allow longer, sterile-condition cultivation of Arabidopsis and larger crops such as rice and tomato.",
-    "plain": "Scientists who study how microbes living around plant roots affect plant growth need plants that can be grown without unwanted microbes for long periods. This paper describes a modified growing setup, made from bags filled with peat, that improves airflow and adds a built-in way to supply water and nutrients. The authors report that it keeps small model plants growing through flowering and gives bigger plants like rice and tomato room to grow for at least four weeks.",
-    "why": "Controlled, microbe-free growth makes it easier to tell which effects come from specific microbes rather than from background noise, which matters for future work on crop productivity. The text does not report any measured benefit to crop yield, so the link to agriculture is a stated goal rather than a shown result.",
+    "ai": true,
     "background": "- Gnotobiotic means growing organisms in a setting where the microbial community is fully known, usually by starting from sterile conditions and adding back chosen microbes.\n- Axenic means free of all other organisms; keeping it that way is hard over weeks or months.\n- The plant microbiome is the community of bacteria, fungi and other microbes living on and inside plants, especially in the roots.\n- Arabidopsis thaliana is a small flowering plant widely used as a laboratory model.\n- The previous platform had a 6.5-week workflow; GnotoBag aims to go beyond that.\n- Peat is an organic growing medium; the \"headspace\" is the air space above the growing material.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper presents GnotoBag, a bag-based, peat-substrate gnotobiotic (germ-controlled) growth system that extends a prior platform to allow longer, sterile-condition cultivation of Arabidopsis and larger crops such as rice and tomato.",
+    "plain": "Scientists who study how microbes living around plant roots affect plant growth need plants that can be grown without unwanted microbes for long periods. This paper describes a modified growing setup, made from bags filled with peat, that improves airflow and adds a built-in way to supply water and nutrients. The authors report that it keeps small model plants growing through flowering and gives bigger plants like rice and tomato room to grow for at least four weeks.",
+    "why": "Controlled, microbe-free growth makes it easier to tell which effects come from specific microbes rather than from background noise, which matters for future work on crop productivity. The text does not report any measured benefit to crop yield, so the link to agriculture is a stated goal rather than a shown result."
    },
    "abstract": "Plants and their microbial communities form a symbiotic system, where microbial communities play a key role in plant growth, development and stress resilience. However, the molecular mechanisms underlying plant-microbiota interactions remain poorly understood. A practical challenge is maintaining axenic conditions during prolonged plant growth while providing adequate space, ventilation, water, and nutrients. To advance research on plant-microbiome interactions, we developed the \"GnotoBag\" system, a bag-based extension of a previously established peat-based gnotobiotic plant growth platform. Key improvements of this GnotoBag system include enhanced ventilation and an integrated nutrient and water delivery system that sustains plant growth. These modifications support prolonged cultivation beyond the previously described 6.5-week workflow, enabling studies of microbiome effects on Arabidopsis thaliana growth and development under controlled microbial conditions, including the transition from vegetative to reproductive growth. Additionally, the expanded headspace of the GnotoBag provides sufficient space for cultivating larger plants, including rice and tomato, for at least four weeks. The increased headspace and the ability to add nutrients and water support research on larger crop plants, laying a foundation for future studies of microbiome functions in agricultural production.",
    "source": "biorxiv"

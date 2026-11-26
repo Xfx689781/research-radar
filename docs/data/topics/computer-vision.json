@@ -1,7 +1,56 @@
 {
  "slug": "computer-vision",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.31589",
+   "title": "Spec$^2$R: Recovering Emergent Properties in Supervised Vision Transformers",
+   "url": "https://arxiv.org/abs/2611.31589",
+   "authors": [
+    "Adam Wr\\'obel",
+    "Jacek Tabor",
+    "Bartosz Zieli\\'nski",
+    "Marcin Przewi\\k{e}\\'zlikowski"
+   ],
+   "label": "arXiv:2611.31589v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Spec$^2$R is a lightweight spectral regularization method that fine-tunes the MLP layers of pretrained supervised Vision Transformers to recover self-supervised-like object-aligned patch representations and attention maps, while improving adversarial robustness.",
+    "plain": "Image-recognition models called Vision Transformers come in two training styles. Models trained with labeled examples tend to produce internal features that do not line up well with the objects in a picture, while models trained without labels often do. This paper finds that the feed-forward layers in the labeled-trained models add rapid, jittery variation to the image-patch features, which scrambles their spatial layout. The authors then propose a small fine-tuning step that smooths this variation, and they report that it restores object-aligned features and attention while keeping classification accuracy roughly competitive.",
+    "why": "It offers a concrete explanation for why supervised and self-supervised vision models differ internally, and a cheap way to adjust an existing model rather than retraining it. The text does not report how broadly the approach generalizes beyond the models studied, so its wider significance is uncertain.",
+    "background": "- Vision Transformer (ViT): a neural network that splits an image into patches and processes them with attention, a mechanism that lets each patch weigh information from others.\n- Supervised vs. self-supervised training: supervised models learn from human-provided labels; self-supervised models learn from the data's own structure without labels.\n- Patch representation: the numerical description the model builds for each image patch.\n- Attention map: a visualization of which image regions the model focuses on.\n- MLP (multilayer perceptron) layer: the feed-forward block inside each transformer layer that transforms each patch's features separately.\n- Spectral analysis: studying a signal by breaking it into frequency components, where high frequency means rapid, fine-scale variation.\n- Regularization: a constraint added during training to keep a model from drifting in unwanted ways.\n- Adversarial robustness: how well a model resists inputs deliberately altered to fool it.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Vision Transformers (ViTs) have achieved strong performance across computer vision tasks, but the quality of their learned representations differs drastically depending on the training paradigm. While self-supervised ViTs often demonstrate emergent properties, such as object-aligned patch representations and attention maps, supervised ViTs typically lack these properties, even when trained with strong data augmentations. Understanding the origin of this difference is important for explaining and controlling the object-level structure. To investigate it, we perform a spectral analysis of supervised and self-supervised models, and identify a key distinction: MLP layers in supervised ViTs introduce high-frequency variations into patch representations, disrupting their spatial organization. Motivated by this finding, we propose Spec$^2$R, a lightweight spectral regularization method that fine-tunes the MLP layers of pretrained supervised ViTs. Spec$^2$R recovers object-aligned patch representations and attention maps, while improving adversarial robustness and preserving competitive classification accuracy.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.31392",
+   "title": "Look Where Camouflage Breaks: Concealment-Guided Observation for Camouflaged Object Detection",
+   "url": "https://arxiv.org/abs/2611.31392",
+   "authors": [
+    "Dingming Zhang",
+    "Fengyang Xiao",
+    "Jingjia Feng",
+    "Chunming He",
+    "Sina Farsiu"
+   ],
+   "label": "arXiv:2611.31392v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "CamoBreak is an active camouflaged object detection framework that uses a multi-scale \"Concealment Spectrum\" to decide which crops to re-examine and where to write local corrections into the prediction and feature memory, with experiments reported across encoder families and related segmentation tasks.",
+    "plain": "The paper looks at how to find objects that are hidden by blending into their background, such as an animal in foliage. Instead of examining an image once, the method measures how well each region matches its surroundings at different zoom levels, then chooses which zoomed-in crops to look at again and decides whether another look is worth it. The authors report consistent improvements across several model types and related segmentation tasks.",
+    "why": "Camouflaged object detection is hard because the target is designed to look like its background, so a method that decides where and when to take another look may be useful for vision systems that work under visual ambiguity. The text reports gains but gives no specific numbers in the excerpt, so the size of the benefit is not yet clear to me.",
+    "background": "- Camouflaged object detection: finding and outlining objects whose colors and textures closely match their surroundings.\n- Segmentation: labeling every pixel as object or background, producing an outline mask.\n- Encoder: the neural network component that turns an image into internal features; \"encoder families\" means several such architectures were tested.\n- Multi-scale analysis: comparing a region at different zoom levels, since an object can be hidden at one scale and visible at another.\n- Active observation: the system chooses which part of the image to look at next, rather than processing it in one pass.\n- Feature memory: stored internal representations that carry information from one observation step to the next.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A camouflaged object can blend into its surroundings at one scale and become distinguishable at another. Yet a region's apparent ambiguity gives limited guidance on which observation would resolve it. The challenge is to connect the form and scale of concealment to the evidence that a new view can reveal. We introduce CamoBreak, an active framework for camouflaged object detection guided by a Concealment Spectrum. From the image and current predictions, the spectrum measures regional resemblance and boundary ambiguity across comparison scales, distinguishing persistent concealment from separation emerging at finer or broader scales. These measurements guide crop selection from the already-captured image and recognition against global foreground and background references. An object-conditioned spatial preference then selects where local evidence should update the prediction and feature memory, retaining target corrections while suppressing background distractions. Accepted corrections reshape the next measurement, while predicted segmentation benefit determines whether to observe again. Experiments across encoder families and related segmentation tasks show consistent improvements. Targeted analyses support improved small-target recovery, multiple-object coverage, and selective evidence integration. Code will be released.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32369",
    "title": "Visual-State Graph Memory for Streaming Video Understanding",
@@ -16,12 +65,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Proposes Visual-State Graph (VSG), a training-free memory for streaming video that stores objects, their relations, and an event log as a persistent, dynamically updated scene graph, and retrieves from it alongside recent frames under a fixed input budget.",
-    "plain": "Video models often need to answer questions about something that happened earlier in a long live video, but the important moment may have scrolled out of their short window of recent frames. This paper proposes a memory that keeps a running summary of the scene instead of every frame: each object gets one lasting entry with a dated history of how it changed, plus a log of events. When a question arrives, the system pulls out the relevant objects and events together with the latest frames.",
-    "why": "Streaming video applications such as monitoring or assistive devices need to recall the past without storing unlimited footage, so a compact memory of scene state is a practical design question. The text reports that, across four benchmarks and seven open-source vision-language models (7B to 32B parameters), VSG improved reasoning about the past under matched input budgets while keeping real-time operation; the size and consistency of these gains beyond the abstract are not described here.",
+    "ai": true,
     "background": "- Vision-language model (VLM): an AI system that answers questions about images or video given as input.\n- Streaming video: video that arrives continuously, so the model sees it frame by frame and cannot look ahead.\n- Scene graph: a structured description of a scene as nodes (objects) connected by edges (relations such as \"holding\" or \"next to\").\n- Training-free: the method is added on top of existing models without retraining them.\n- Input budget: a fixed limit on how much information (e.g., number of frames or tokens) the model can take in at once.\n- Retrieval: selecting only the stored items relevant to the current question.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "Proposes Visual-State Graph (VSG), a training-free memory for streaming video that stores objects, their relations, and an event log as a persistent, dynamically updated scene graph, and retrieves from it alongside recent frames under a fixed input budget.",
+    "plain": "Video models often need to answer questions about something that happened earlier in a long live video, but the important moment may have scrolled out of their short window of recent frames. This paper proposes a memory that keeps a running summary of the scene instead of every frame: each object gets one lasting entry with a dated history of how it changed, plus a log of events. When a question arrives, the system pulls out the relevant objects and events together with the latest frames.",
+    "why": "Streaming video applications such as monitoring or assistive devices need to recall the past without storing unlimited footage, so a compact memory of scene state is a practical design question. The text reports that, across four benchmarks and seven open-source vision-language models (7B to 32B parameters), VSG improved reasoning about the past under matched input budgets while keeping real-time operation; the size and consistency of these gains beyond the abstract are not described here."
    },
    "abstract": "In streaming video understanding, the evidence needed to answer a question may have already left the recent-frame window. Keeping all frames does not scale with video length, while dropping older frames limits the model's ability to reason about the past. We propose Visual-State Graph (VSG), a training-free memory that stores the state of a stream rather than the raw sequence of frames. VSG represents the stream as a graph of objects and their relations, together with a log of events; similar to a dynamically evolving scene graph. An object observed repeatedly is represented by one persistent node, with a timestamped history of how its state changes. To determine whether a newly mentioned object already exists in the graph, we compare the relations it takes part in with those of stored objects. We build this memory as the video arrives, before the questions are known. When a question arrives, we retrieve relevant objects and events alongside recent frames under a fixed input budget. Our evaluation spans four streaming-video benchmarks and seven open-source vision-language models ranging from 7B to 32B parameters. Under matched input budgets, VSG improves reasoning about the past while preserving real-time understanding.",
    "source": "arxiv"
@@ -39,12 +88,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "DOPER is an RGB-only framework that shares one visual backbone across detection, segmentation, and keypoint prediction to estimate 6D object poses via Perspective-n-Point, trained from synthetic data and adapted to real images with partial supervision and multi-view geometric constraints.",
-    "plain": "This paper is about working out where a known object is and how it is turned in 3D, using only ordinary color camera images. The method first learns from computer-generated images, then adapts to real photos, and it locates points on the object to compute its position and orientation. The authors report state-of-the-art detection scores on four benchmark datasets and real-time speed (about 35 times per second per object).",
-    "why": "Estimating object pose from a plain camera matters for robotics and spacecraft or warehouse tasks where depth sensors are not available. The text claims state-of-the-art detection accuracy and real-time speed, but the summary alone does not show how these compare to other methods in detail.",
+    "ai": true,
     "background": "- Pose estimation: finding an object's 3D position and rotation (6D pose) relative to the camera.\n- Keypoints and heatmaps: a few marked points on the object, and a map of how likely each point is to be at each pixel.\n- Perspective-n-Point (PnP): a standard calculation that turns matched 2D image points and known 3D model points into a pose.\n- Synthetic training: learning from computer-rendered images rather than real photos, then adapting to real ones.\n- CAD model: a digital 3D design of the object.\n- Multi-view and calibration: using several cameras whose positions are precisely known.\n- Average precision (AP): a standard score for how well detections match the true objects.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "DOPER is an RGB-only framework that shares one visual backbone across detection, segmentation, and keypoint prediction to estimate 6D object poses via Perspective-n-Point, trained from synthetic data and adapted to real images with partial supervision and multi-view geometric constraints.",
+    "plain": "This paper is about working out where a known object is and how it is turned in 3D, using only ordinary color camera images. The method first learns from computer-generated images, then adapts to real photos, and it locates points on the object to compute its position and orientation. The authors report state-of-the-art detection scores on four benchmark datasets and real-time speed (about 35 times per second per object).",
+    "why": "Estimating object pose from a plain camera matters for robotics and spacecraft or warehouse tasks where depth sensors are not available. The text claims state-of-the-art detection accuracy and real-time speed, but the summary alone does not show how these compare to other methods in detail."
    },
    "abstract": "We present DOPER, an RGB pose estimation framework that shares a visual backbone across object detection, segmentation, and keypoint prediction to recover the 6D pose of known objects through Perspective-n-Point. Starting from synthetic training, DOPER adapts to real observations using partial supervision while retaining synthetic keypoint labels. Calibrated multi-view observations provide geometric constraints for keypoint supervision. During inference, optional heatmap refinement fits a rigid pose directly to the predicted keypoint distributions, resolving ambiguous correspondences without depth input or a learned pose refiner. Starting from underspecified CAD models, DOPER progressively refines the object representation and pose estimator. Results on SPEED+ and SHIRT further demonstrate effective adaptation to illumination changes and accurate temporal pose estimation. Across the evaluated single-view and multi-view configurations, DOPER achieves state-of-the-art detection AP results on HANDAL, HOPEv2, HOT3D, and T-LESS while using only RGB and running in real time (35 Hz per object model on one GB300). These results demonstrate the effectiveness of jointly learning detection and pose keypoints, with real observations and geometric constraints.",
    "source": "arxiv"

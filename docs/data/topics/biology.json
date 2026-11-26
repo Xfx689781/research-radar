@@ -1,7 +1,54 @@
 {
  "slug": "biology",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768148",
+   "title": "NanoHIV-DR: a Nextflow workflow for consensus and read level HIV-1 drug resistance profiling from Oxford Nanopore sequencing",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768148v1",
+   "authors": [
+    "Lule, D.",
+    "Ssemwanga, D.",
+    "Kaleebu, P.",
+    "Tully, D. C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768148 v1",
+   "primary_category": "bioinformatics",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "NanoHIV-DR is a Nextflow workflow that takes raw Oxford Nanopore HIV-1 sequencing data through basecalling, demultiplexing, host-read removal, filtering, alignment and consensus building, then reports drug-resistance mutations using both consensus-level (Sierra) and read-level analysis.",
+    "plain": "HIV treatment can stop working when the virus picks up mutations that resist drugs, so clinics sometimes sequence the virus to check for them. This paper describes a software pipeline that turns the raw output of a portable DNA-reading device (Oxford Nanopore) into a readable report of resistance mutations, with less manual work. The text describes the workflow and its two analysis approaches, but does not report accuracy tests or results.",
+    "why": "Making resistance testing easier to run with portable sequencers could matter for HIV care in settings with limited lab expertise, and the ability to detect minority variants below the consensus level is a stated feature. The abstract does not show validation data, so how well it performs in practice is unclear from this text alone.",
+    "background": "- HIV-1 drug resistance: viral mutations that reduce how well antiretroviral drugs work.\n- Genotyping: reading the virus's genetic sequence to find known resistance mutations.\n- Oxford Nanopore sequencing: a method that reads DNA or RNA as it passes through pores, producing long reads, and is portable.\n- Basecalling: converting the raw electrical signal from the device into written sequence letters.\n- Demultiplexing: sorting mixed samples back into their individual sources using barcodes.\n- Consensus sequence: a single \"average\" sequence built from many reads of the same virus.\n- Read-level analysis: examining individual sequence reads, which can reveal minority variants hidden in a consensus.\n- Nextflow: a workflow tool that chains software steps together in a reproducible way.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Oxford Nanopore sequencing offers a rapid and portable approach for HIV-1 drug resistance (HIVDR) genotyping, but analysis of the resulting long-read data requires multiple bioinformatics steps and currently available nanopore workflows are limited. We developed NanoHIV-DR, a Nextflow-based workflow that streamlines the analysis of Oxford Nanopore sequencing data and generation of HIVDR reports. NanoHIV-DR processes raw POD5 files through basecalling, demultiplexing, host-read removal, quality filtering, read alignment and consensus generation, before identifying resistance-associated mutations and interpreting predicted drug susceptibility. The workflow provides two complementary approaches to HIVDR analysis: consensus-based resistance interpretation using Sierra and read-level detection of resistance-associated variants, enabling mutations below the consensus level to be identified and quantified. Outputs are integrated with clinical metadata to generate human-readable HIVDR reports. NanoHIV-DR provides a reproducible and accessible workflow for Nanopore-based HIVDR analysis with reduced bioinformatics expertise and manual processing for translating long-read sequencing data into interpretable resistance profiles.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.769041",
+   "title": "Structural deformations of lipid bilayers around membrane proteins inform oligomerization type",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769041v1",
+   "authors": [
+    "Diaz Vazquez, G.",
+    "Condon, S. G. F.",
+    "Robertson, J. L."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.769041 v1",
+   "primary_category": "biophysics",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Coarse-grained molecular dynamics simulations of monomeric and oligomeric forms of ten membrane channels and transporters in POPC bilayers compare membrane thickness, deformation energy, and lipid packing to test whether membrane defects signal oligomerization type.",
+    "plain": "Proteins that sit in a cell membrane bend and thin the fatty layer around them, and that disturbance can help pull identical proteins together into groups. This computer study simulated ten channel and transporter proteins, alone and as groups, in a simple model membrane to measure how far and how strongly they disturb it. The authors report that all of them disturb the membrane up to about 3 nm away, and that proteins which always assemble the same way show larger disturbances at their contact surfaces, which fall when they join.",
+    "why": "It offers a physical, membrane-based explanation for why some proteins form fixed complexes while others change their arrangement between related species, which may matter for understanding protein assembly. The text does not show how well these simulated trends hold in real cells or with other membrane compositions, so its broader significance is uncertain.",
+    "background": "- Cell membranes are double layers (\"bilayers\") of fat-like lipid molecules; POPC is a common lipid used in model membranes.\n- Membrane proteins are embedded in this layer and can distort its thickness and shape around them.\n- Coarse-grained molecular dynamics is a simulation method that groups atoms into larger beads to model how molecules move over time.\n- Oligomers are complexes of several copies of the same protein; \"obligatory\" or \"structurally monomorphic\" complexes always assemble the same way.\n- Deformation energy and lipid packing parameters are measures of how much the membrane is strained and how its lipids are arranged.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A functional definition of a membrane protein's structure is the three-dimensional arrangement of the polypeptide and the structure of the membrane around it. Biological membranes are composed of self-assembled lipid bilayers, with membrane proteins acting as inclusions that perturb this phase. These inclusions induce long-range changes in membrane structure and create an intrinsic, lipid-mediated driving force for membrane protein association. The question is how much different membrane protein folds shape their surrounding membrane to tune the affinity and specificity of this driving force. To investigate this, we conducted a computational study to evaluate whether different membrane protein oligomers exhibit characteristic membrane defects that indicate specificity in complexation. We performed coarse-grained molecular dynamics simulations of monomeric and oligomeric states of ten different channels and transporters in POPC bilayers and evaluated changes in membrane thickness, deformation energy, and lipid packing parameters. We found that all the proteins affect their surrounding membrane up to 3 nm from the protein surface. However, we observed larger defects at oligomeric interfaces for obligatory or structurally monomorphic complexes, suggesting that their oligomerization is partly driven by burial of membrane defects. In contrast, oligomers that adopt different quaternary structures across homologs show weaker perturbations at known binding interfaces, and larger perturbations at lipid-facing surfaces. Nevertheless, all systems show fewer membrane defects upon oligomerization, suggesting an underlying lipid-mediated driving force that each protein fold modulates to tune affinity via membrane-mediated oligomerization.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768656",
    "title": "Tuning evolutionary information in MSAs shapes protein generation and folding",
@@ -14,12 +61,12 @@
    "primary_category": "bioinformatics",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper tests whether changing which homologous sequences are included in a protein multiple sequence alignment (MSA), and thereby its per-site information content, steers generative protein design and structure prediction outcomes.",
-    "plain": "Researchers who use computer models to design or predict protein shapes feed them a collection of related protein sequences from many species. This study asks whether deliberately choosing which sequences go into that collection, rather than treating the collection as fixed, changes what the models generate and how confidently they predict structures. The authors report that the coherence of the chosen sequences tracked both structure-prediction confidence and how novel the generated sequences were, with the strongest effects near a particular information level.",
-    "why": "It suggests that the input alignment, often treated as a fixed preprocessing step, is a lever that can change model behaviour, which matters for anyone relying on these tools for design. The text does not show how broadly the effects generalise beyond the 45-protein cohort and the benchmark named, so the scale of the practical impact is unclear.",
+    "ai": true,
     "background": "- Multiple sequence alignment (MSA): a table lining up many related protein sequences so that matching positions sit in the same column.\n- Homologues: sequences related by shared evolutionary ancestry.\n- Information content (bits per site): a measure of how strongly a column is conserved; low values mean the position varies a lot across sequences.\n- Structure prediction confidence: the model's own score of how sure it is about a predicted 3D shape.\n- Generative protein models: systems that propose new amino acid sequences; \"decoder uncertainty\" refers to how unsure the generator is when choosing residues.\n- Matched-depth control: a comparison set with the same number of sequences but chosen at random, to separate the effect of selection from the effect of size.\n- The text is an abstract-level summary; methods and effect sizes are not given, so the findings should be read as preliminary.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper tests whether changing which homologous sequences are included in a protein multiple sequence alignment (MSA), and thereby its per-site information content, steers generative protein design and structure prediction outcomes.",
+    "plain": "Researchers who use computer models to design or predict protein shapes feed them a collection of related protein sequences from many species. This study asks whether deliberately choosing which sequences go into that collection, rather than treating the collection as fixed, changes what the models generate and how confidently they predict structures. The authors report that the coherence of the chosen sequences tracked both structure-prediction confidence and how novel the generated sequences were, with the strongest effects near a particular information level.",
+    "why": "It suggests that the input alignment, often treated as a fixed preprocessing step, is a lever that can change model behaviour, which matters for anyone relying on these tools for design. The text does not show how broadly the effects generalise beyond the 45-protein cohort and the benchmark named, so the scale of the practical impact is unclear."
    },
    "abstract": "Protein multiple sequence alignments are widely regarded as fixed artifacts of homologue retrieval. An alignment's row composition shapes the evolutionary context that is supplied to a protein model. In this study, we tested whether tuning row composition would steer protein generation and structure prediction outcomes. We tuned lower-tail alignment information by controlling row selection within a reference protein-projected coordinate frame. We paired each information-targeted alignment with a matched-depth random-row control alignment. Across a cohort of 45 diverse proteins, row coherence among the retained homologues is predictive of structural confidence readouts and generated sequence novelty. The strongest row-coherence states occur near an empirical lower-tail information reference point of 1 bit/site. Below this reference point, generated de novo sequences demonstrate more eager exploration, higher decoder uncertainty, and reduced structural confidence at mutated positions. Across an independent structure-prediction benchmark, controlling the fraction of low-information positions demonstrated that intermediate fractions of low-information positions were associated with improved structure prediction within a confidence-gated subset. These findings evince that evolutionary information in protein alignments can be tuned to shape protein generation and structure prediction results.",
    "source": "biorxiv"
@@ -45,12 +92,12 @@
    "primary_category": "systems biology",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "Transcriptomic survey of mouse terminal ileum across germ-free, defined 12-strain microbiota (MM12), and specific-pathogen-free conditions, examining how microbiome complexity shapes co-expression networks linked to the ileum-liver axis.",
-    "plain": "This paper asks how much the community of microbes living in the gut changes the genes that are switched on in the lower small intestine (the terminal ileum) of mice, and whether that reaches the liver. The researchers compared mice with no microbes (germ-free), mice with a simple set of 12 known bacterial strains, and mice with a normal, diverse microbiome, with 15 animals in each group. The text provided ends at the study design, so the actual findings are not described here.",
-    "why": "Gut microbes are known to influence the immune system, bile acid handling and liver function, so tracing how their complexity tunes gene activity in the gut could help explain gut-liver links. The available text does not report results, so its significance beyond the stated aim cannot yet be judged.",
+    "ai": true,
     "background": "- Microbiome: the community of bacteria and other microbes living in the gut.\n- Germ-free mouse: raised with no microbes at all, used as a baseline.\n- Oligo-Mouse-Microbiota-12 (MM12): a defined, simplified community of 12 bacterial strains.\n- Specific pathogen free (SPF): mice with a normal, diverse microbiome but free of known pathogens.\n- Terminal ileum: the last section of the small intestine, where nutrients and bile acids are absorbed.\n- Transcriptome: the full set of gene activity readings in a tissue sample.\n- Co-expression network: a map of genes whose activity rises and falls together, suggesting shared regulation.\n- Gut-liver axis: the two-way communication between the intestine and the liver, partly via bile acids and immune cells.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Transcriptomic survey of mouse terminal ileum across germ-free, defined 12-strain microbiota (MM12), and specific-pathogen-free conditions, examining how microbiome complexity shapes co-expression networks linked to the ileum-liver axis.",
+    "plain": "This paper asks how much the community of microbes living in the gut changes the genes that are switched on in the lower small intestine (the terminal ileum) of mice, and whether that reaches the liver. The researchers compared mice with no microbes (germ-free), mice with a simple set of 12 known bacterial strains, and mice with a normal, diverse microbiome, with 15 animals in each group. The text provided ends at the study design, so the actual findings are not described here.",
+    "why": "Gut microbes are known to influence the immune system, bile acid handling and liver function, so tracing how their complexity tunes gene activity in the gut could help explain gut-liver links. The available text does not report results, so its significance beyond the stated aim cannot yet be judged."
    },
    "abstract": "The microbiome plays an increasingly recognised role in development, metabolism and immunity across all segments of the small and large intestine, as well as more distant organs such as the liver. In the terminal ileum - a key site of nutrient absorption - the presence of microbes dictates the development of secondary lymphoid structures (Peyers patches), mediates bile acid metabolism, and impacts absorption. In part, coordinated regulatory networks in the gut impact liver function and immunity through gut-liver connectivity and the movement of immune cells and bioactive small molecules that includes bile acids and other bacterial metabolites. We aimed to examine the extent of microbiome involvement in ileal transcription, where subtle changes in co-expression networks can be tuned by microbiome diversity, composition and function. We surveyed ileal transcriptomes across mouse models which vary in microbiome complexity ranging from germ-free (GF, n = 15), the Oligo-Mouse-Microbiota-12 (MM12, n = 15), and specific pathogen free (SPF, n = 15).",
    "source": "biorxiv"

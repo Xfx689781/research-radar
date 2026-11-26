@@ -1,7 +1,56 @@
 {
  "slug": "reinforcement-learning",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32645",
+   "title": "TeamFlowRL: Online Policy Optimization of Decentralized Flow Policies for Multi-Agent Coordination",
+   "url": "https://arxiv.org/abs/2611.32645",
+   "authors": [
+    "Guowei Zou",
+    "Beiwen Zhang",
+    "Haitao Wang",
+    "Hong Hong",
+    "Zhiquan Chen",
+    "Hejun Wu"
+   ],
+   "label": "arXiv:2611.32645v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "TeamFlowRL pretrains decentralized multi-agent flow policies offline and fine-tunes them online by optimizing over full denoising trajectories with a shared team advantage and per-agent clipped ratios.",
+    "plain": "The paper looks at teaching several cooperating agents, such as robot arms working together, to act well as a team. They start from behavior learned offline from fixed recordings, then keep improving it through live trial and error. The authors report that their method improved every starting point they tested, and did better than a standard Gaussian-policy approach on bimanual (two-armed) tasks under added exploration noise.",
+    "why": "Flow-based generative policies can capture rich, varied behavior, but they are hard to fine-tune with reinforcement learning because their action probabilities are hard to compute. This work offers one way around that for multi-agent teams, which may matter for robotics and other settings where several agents must coordinate.",
+    "background": "- Reinforcement learning: learning by trial and error, guided by a reward signal.\n- Multi-agent coordination: several agents must act together toward a shared goal.\n- Offline vs. online learning: offline uses a fixed dataset; online learns from new interaction with the environment.\n- Flow / diffusion policies: generative models that turn random noise into actions through a series of denoising steps.\n- Policy ratio and clipping: a standard way to limit how much a policy changes in one update, to keep training stable.\n- Advantage: how much better an action turned out than expected, here shared across the team.\n- Bimanual tasks: tasks requiring two robotic arms or hands.\n- The summary relies only on the abstract; reported gains are the authors' own results and were not checked.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Complex cooperative tasks require coordinated multi-agent behavior. Offline generative policies learn expressive cooperative behaviors from trajectories but remain limited by fixed datasets. Online reinforcement learning can improve them through environment interaction. However, fine-tuning flow policies is difficult because action likelihoods are hard to compute. We propose TeamFlowRL, a two-stage framework that pretrains multi-agent flow policies offline and fine-tunes them online. We formulate team policy optimization over the complete denoising trajectories of decentralized flow policies, avoiding intractable action likelihoods. The resulting objective weights each agent's trajectory ratio with a shared team advantage and clips each ratio separately, aligning local policy updates with the common team return. Across 51 paired configurations in seven simulation groups, TeamFlowRL improves every offline initialization, with a 47.3% average gain in normalized score. It also achieves 33.1% higher average success under exploration noise than Gaussian-policy fine-tuning across 6 bimanual tasks.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32687",
+   "title": "Are We Rewarding the Wrong Module? Module-Specific Policy Optimization for Multimodal Reinforcement Learning",
+   "url": "https://arxiv.org/abs/2611.32687",
+   "authors": [
+    "HuiSeong Cho",
+    "Jun Yeong Park",
+    "Yu Rang Park"
+   ],
+   "label": "arXiv:2611.32687v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "MSPO proposes splitting the reinforcement-learning reward for multimodal LLMs so the vision encoder is trained on a perception-specific signal (from auxiliary visual checklist questions and a confidence-weighted reward) while the projector and language model keep standard outcome-based GRPO updates.",
+    "plain": "Many AI systems that read images and solve problems learn from a single \"right or wrong\" score on the final answer. That score gets applied to every part of the system, including the part that looks at the picture, even when the model saw the image correctly but reasoned wrongly, or the reverse. This paper proposes giving the image-viewing part its own training signal, based on answers to small questions about what is visible in the image, and reports that the approach scores higher on average than prior tuned models on seven math and general reasoning tests at two model sizes.",
+    "why": "It targets a concrete weakness in how multimodal models are trained: credit for an answer is spread across modules that may not share the blame. The text reports average gains over existing RL-tuned models at 3B and 7B scales, but it gives no detail on how large those gains are, so its practical value remains to be checked.",
+    "background": "- Multimodal large language model (MLLM): an AI model that takes both images and text and produces text.\n- Modules: the vision encoder turns the image into numbers, a projector maps them into the language model's space, and the LLM does the reasoning.\n- Reinforcement learning (RL): training by rewarding good outputs and penalizing bad ones.\n- RLVR: RL where rewards come from automatically checkable answers, such as a correct math result.\n- GRPO (Group Relative Policy Optimization): an RL method that scores each sampled answer relative to the other answers to the same question.\n- Advantage: how much better or worse an action turned out than expected; it sets the size and direction of a training update.\n- Credit assignment: deciding which part of a system deserves credit or blame for an outcome.\n- Beta distribution: a probability distribution over values between 0 and 1, used here to express uncertainty about how accurate perception is.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Reinforcement learning with verifiable rewards (RLVR) based on Group Relative Policy Optimization (GRPO) has been widely adopted to enhance the multimodal reasoning of multimodal large language models (MLLMs). However, existing methods share a common limitation of Module-Level Credit Entanglement, in which the vision encoder, projector, and LLM modules are jointly optimized using the same advantage signals even when perceptual correctness and final-answer correctness differ. To address this limitation, we propose Module-Specific Policy Optimization (MSPO), a framework that separates perceptual and outcome-based learning signals across model modules. Specifically, MSPO uses responses to perception checklists comprising auxiliary questions about visual information to derive an advantage for training the vision encoder. From these responses, MSPO computes the Confidence-aware Perception Reward (CaPR), using a perception sign obtained by thresholding checklist accuracy to determine reward direction and posterior confidence from a Beta distribution over latent perception accuracy to scale reward magnitude. We then derive the vision advantage through group-relative normalization of CaPR and scale it using main-task success rates. This advantage guides updates to the vision encoder, while the projector and LLM retain outcome-based GRPO updates. Extensive experiments on seven mathematical and general reasoning benchmarks demonstrate that MSPO outperforms existing RL-tuned models on average at both the 3B and 7B scales.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.32013",
    "title": "To Critic Or Not To Critic",
@@ -17,12 +66,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "An empirical study of when a learned critic (PPO) beats critic-free group-based advantage estimation (GRPO) in RL, framed as a bias-variance tradeoff in gradient direction across batch sizes, horizons, and domains including LLM tasks.",
-    "plain": "Training AI systems with trial-and-error rewards often uses one of two methods: one trains a helper \"critic\" that estimates how good each step is, and the other skips the helper and compares a group of attempts instead. This paper asks when the helper is worth its cost. Across more than 1,200 training runs, the authors find that the helper-based method tends to win when batches of training data are small, while the simpler group method catches up as batches grow, and needs bigger batches on longer, harder tasks.",
-    "why": "Many recent language-model training results compare these two methods without a clear rule for which to use, so a set of conditions for the choice is useful to practitioners. The text reports the trends but does not show how far they generalize beyond the tasks tested.",
+    "ai": true,
     "background": "- Reinforcement learning (RL): training by rewards from trial and error.\n- Policy gradient: the direction in which to nudge a model so it earns more reward.\n- Critic / value function: a learned estimate of expected future reward, used to judge actions.\n- Advantage: how much better an action was than expected.\n- Bias vs. variance: a noisy estimate (high variance) versus one that is systematically off (bias). Critics reduce noise but can introduce bias when they are wrong.\n- Bootstrapping: updating estimates using other estimates, which can propagate errors.\n- Batch size: how many examples are used per update; larger batches give less noisy gradients.\n- PPO and GRPO: two popular RL algorithms; GRPO scores each attempt relative to its group, with no critic.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "An empirical study of when a learned critic (PPO) beats critic-free group-based advantage estimation (GRPO) in RL, framed as a bias-variance tradeoff in gradient direction across batch sizes, horizons, and domains including LLM tasks.",
+    "plain": "Training AI systems with trial-and-error rewards often uses one of two methods: one trains a helper \"critic\" that estimates how good each step is, and the other skips the helper and compares a group of attempts instead. This paper asks when the helper is worth its cost. Across more than 1,200 training runs, the authors find that the helper-based method tends to win when batches of training data are small, while the simpler group method catches up as batches grow, and needs bigger batches on longer, harder tasks.",
+    "why": "Many recent language-model training results compare these two methods without a clear rule for which to use, so a set of conditions for the choice is useful to practitioners. The text reports the trends but does not show how far they generalize beyond the tasks tested."
    },
    "abstract": "As large language models tackle longer and more complex tasks, understanding when a critic improves the efficiency of reinforcement learning (RL) becomes increasingly important. Proximal Policy Optimization (PPO) trains a critic to reduce variance and provide fine-grained credit assignment, while Group Relative Policy Optimization (GRPO) drops the critic and avoids the bias of bootstrapping from the critic's value estimates. Although recent critic-based methods have reported strong performance relative to GRPO, it remains unclear when each approach is preferable. We argue that there is no universal answer; instead, the choice depends on several interacting factors, including batch size, critic reliance, and task complexity. We study the bias-variance tradeoff in terms of gradient direction, measuring how closely each method's gradient estimates align with the true policy gradient as batch size grows. Under a shared actor objective, we compare GRPO with PPO in control tasks, short-horizon math, and long-horizon terminal agents. Across more than 1,200 training runs, including 96 with LLMs, we find that PPO generally leads at small batch sizes, while GRPO often overtakes heavily bootstrapped PPO and reaches parity with lightly bootstrapped PPO at larger batches. At longer horizons and in more complex domains, GRPO needs larger batches to catch up to PPO's performance. Accounting for training compute, critics pay off at small budgets, but their returns diminish at larger budgets.",
    "source": "arxiv"
@@ -41,12 +90,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper proposes RLVB, a reinforcement learning reward that uses the simulator's exact posterior over the answer to teach vision-language agents when to stop gathering evidence and commit, and introduces the Pro Worlds visual-puzzle benchmark.",
-    "plain": "AI agents solving multi-step tasks often give an answer too early, before they have seen enough evidence. The authors train agents with a reward that checks, during training only, whether the evidence so far already settles the answer, and rewards the agent for exploring when it does not and for answering when it does. They report gains over the base model on nine test settings, with some of the tests using tasks not seen in training.",
-    "why": "Premature guessing is a practical failure for agents that work through long tasks, and the paper's point that a final-answer-only reward cannot teach timing is a clear, testable claim. The approach's reliance on a simulator that can compute the exact answer probability during training limits where it applies, so its wider relevance is uncertain.",
+    "ai": true,
     "background": "- Reinforcement learning: training by rewarding actions that lead to good outcomes.\n- Reward signal: the score the agent gets; an end-of-episode reward only scores the final answer.\n- Posterior: the probability distribution over possible answers given the evidence seen so far.\n- Vision-language model: an AI model that takes both images and text as input.\n- GRPO and PPO: two common reinforcement learning training algorithms; the paper compares against them.\n- Process reward from an LLM judge: a score on intermediate steps given by another language model.\n- GPU-hours: a measure of computing cost.\n- Laziness here means committing to an answer before the evidence supports it.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes RLVB, a reinforcement learning reward that uses the simulator's exact posterior over the answer to teach vision-language agents when to stop gathering evidence and commit, and introduces the Pro Worlds visual-puzzle benchmark.",
+    "plain": "AI agents solving multi-step tasks often give an answer too early, before they have seen enough evidence. The authors train agents with a reward that checks, during training only, whether the evidence so far already settles the answer, and rewards the agent for exploring when it does not and for answering when it does. They report gains over the base model on nine test settings, with some of the tests using tasks not seen in training.",
+    "why": "Premature guessing is a practical failure for agents that work through long tasks, and the paper's point that a final-answer-only reward cannot teach timing is a clear, testable claim. The approach's reliance on a simulator that can compute the exact answer probability during training limits where it applies, so its wider relevance is uncertain."
    },
    "abstract": "AI agents working on long tasks often commit to an answer before they have enough evidence, a behavior called laziness. In our evaluations, they frequently commit even while their stated belief still names several possible answers. An outcome reward at the end of the episode scores only the final answer, so it cannot teach the agent when to commit, because a lucky guess receives the same reward as an answer backed by evidence. During training, however, the simulator can compute the exact posterior over the answer at every step and tell whether the evidence is already enough. We propose Reinforcement Learning with Verifiable Beliefs (RLVB), which rewards the agent for taking further steps while this posterior still allows several answers and for committing once the evidence is sufficient. The reward needs no judge, critic or reward model, and it never reads the belief line the agent writes before each action. We also introduce Pro Worlds, a benchmark of visual puzzles where the agent views a large world through a small window. We evaluate three vision-language models on three benchmarks, two of which are never seen in training. RLVB improves the base model in all nine settings, by 17.1% on average. Under the outcome reward, GRPO and PPO fall below the base model on average. RLVB also outperforms PPO with a process reward from an LLM judge by 9.3% on average while using 1.6 times fewer GPU-hours. The trained agent answers with sufficient evidence in 51%, 12% and 74% of the episodes on the three benchmarks, against 8%, 0.4% and 36% for the base model. Its accuracy gain therefore comes from answering more often at high levels of evidence. The belief line shows how the agent reaches this evidence: it acts on its own belief. It commits at only 0.1 to 2.2% of the turns at which the evidence is insufficient and its line still names several answers, against 3 to 68% for the base model.",
    "source": "arxiv"

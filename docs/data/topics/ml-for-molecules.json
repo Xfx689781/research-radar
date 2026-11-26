@@ -1,7 +1,55 @@
 {
  "slug": "ml-for-molecules",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "papers": [
+  {
+   "uid": "arxiv:2611.32851",
+   "title": "Path-probability gradients for optimizing force fields against dynamical observables",
+   "url": "https://arxiv.org/abs/2611.32851",
+   "authors": [
+    "Zhongyao Wang",
+    "Lun Song",
+    "Yakun Zeng",
+    "Xingao Gong",
+    "Rui Shi",
+    "Mao Su"
+   ],
+   "label": "arXiv:2611.32851v1",
+   "primary_category": "physics.chem-ph",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "PathGrad computes gradients of Langevin path probabilities rather than of chaotic trajectories, enabling stable optimization of machine-learning force fields against dynamical experimental observables such as diffusion coefficients, validated on molten copper and water.",
+    "plain": "Simulations of how atoms move are used to predict things like how fast a liquid's molecules spread out. Tuning the rules that govern those atomic forces so the simulated motion matches lab measurements is hard, because tiny changes in a chaotic simulation can make the calculated adjustments unstable. This paper proposes a way around that by working with the probability of the whole motion path, and reports that it works for molten copper and liquid water.",
+    "why": "Fitting simulation models directly to experiments could make them more accurate than the quantum calculations they are built from, which matters for chemistry and materials design. The text reports that tuning water to match diffusion and structure also improved untargeted properties and a more accurate reference energy check, but its broader generality is claimed rather than shown in this excerpt.",
+    "background": "- Force field: a set of rules giving the forces between atoms, used to run molecular dynamics simulations.\n- Machine-learning force field: such rules learned from quantum-chemistry calculations, so they inherit that method's errors.\n- Molecular dynamics: step-by-step simulation of how atoms move under those forces.\n- Langevin dynamics: a standard simulation scheme in which random thermal kicks and friction are added to the motion.\n- Path probability: how likely a given sequence of atomic motions is under those random kicks.\n- Gradient: the direction and size of change in a model's settings that improves its match to data; unstable gradients make tuning unreliable.\n- Dynamical observables: measured quantities that depend on motion over time, such as diffusion coefficient and viscosity.\n- Radial distribution function: a measure of how atoms are spaced around one another.\n- Activation energy: how strongly a rate changes with temperature.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Machine learning force fields inherit the errors of the electronic-structure methods used to generate their training data, and refining them against experimental measurements provides a direct route beyond this limit. However, such refinement remains difficult for dynamical observables because differentiating chaotic molecular trajectories yields unstable gradients. Here, we introduce PathGrad, which differentiates Langevin path probabilities instead of the trajectories themselves. The resulting gradient estimator is accumulated on the fly from thermal noise and force derivatives, and its variance remains stable as the trajectory length increases. We validated the gradient estimator against finite-difference calculations and used it to fine-tune molten-copper and water potentials against experimental diffusion coefficients together with structural constraints. For water, jointly optimizing diffusion and the oxygen-oxygen radial distribution function also improves the predictions of shear viscosity and rotational relaxation, neither of which is included in the optimization objective. Alignment at a single temperature also improves the apparent activation energies of multiple dynamical observables, bringing their temperature dependences closer to experiments. Moreover, the optimized potential exhibits smaller force errors relative to an independent, higher-level quantum-chemical reference, indicating that alignment with experiments improves the fidelity of the potential energy surface beyond the fitted targets. PathGrad thus establishes a general framework for incorporating experimental observables directly into force field optimizations.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.32659",
+   "title": "Comparative Molecular Dynamics Study of Initial Oxide Film Growth on Al, Mg, and Ti Using a Universal Neural Network Potential",
+   "url": "https://arxiv.org/abs/2611.32659",
+   "authors": [
+    "Yoyo Hinuma",
+    "Taisuke Hasegawa"
+   ],
+   "label": "arXiv:2611.32659v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "Molecular dynamics simulations with a universal neural network potential, supplying O2 gas, compare early oxide film growth on Al, Mg, and Ti and test the film thickness against Cabrera-Mott theory.",
+    "plain": "Metals like aluminum and titanium naturally develop a thin protective oxide skin when exposed to air, and this skin largely determines how they resist corrosion. The authors used a computer simulation of individual atoms, driven by a machine-learned model of interatomic forces, to watch such films form on aluminum, magnesium, and titanium. They report that aluminum and titanium grew films 1 to 2 nanometers thick within a few picoseconds of simulated time, and that the film thickness grew with the logarithm of time, as an older physical theory predicts.",
+    "why": "Being able to watch oxide films form atom by atom offers a route to understanding corrosion and passivation of light structural metals, which matter for lightweight engineering. The text reports one simulation setup and does not show how well these results match experiments, so its relevance to real-world corrosion is not established from this summary alone.",
+    "background": "- Molecular dynamics (MD): computer simulation that moves atoms over time according to the forces between them.\n- Neural network potential (NNP): a machine-learned stand-in for the quantum-mechanical forces between atoms, much cheaper to compute.\n- Universal NNP: a single model trained to handle many elements, not just one.\n- Passive oxide film: a thin, stable oxide layer that slows further corrosion of the metal underneath.\n- Cabrera-Mott theory: a classic model predicting that oxide growth slows roughly logarithmically with time as the film thickens and electric fields across it change.\n- Coordination number: how many neighboring atoms surround a given atom in a material; here about 4.4 to 5.2 for the metals' oxides.\n- Picosecond: one trillionth of a second; simulations cover very short real times.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Spontaneous formation of an oxide film, which may be passive, is found in many metals such as Al and Ti. We report direct computational observation of oxide film formation on the three major light structural metals, Al, Mg, and Ti, with molecular dynamics (MD) using a universal neural network potential (NNP). O2 molecules were supplied during MD simulations to replenish O consumed by the metal. Al and Ti formed a 1-2 nm thick film within a few ps of the simulation with O2 gas pressure of 102-103 atm. The film thicknesses of all metal oxides continued to increase proportionally to the logarithm of simulation time, consistent with Cabrera-Mott theory. Al and Ti oxides grow at the surface, while Mg oxide grows into the Mg metal. Al, Mg, and Ti are approximately 4.4, 4.3, and 5.2-fold coordinated, respectively, in the oxide.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33104",
    "title": "Evolutionary constraints on protein fold diversity",
@@ -14,12 +62,12 @@
    "primary_category": "q-bio.BM",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "A review-style abstract arguing that natural proteins use only a small fraction of the folds that their secondary-structure arrangements could in principle form, and asking whether biophysics or evolutionary history sets that limit.",
-    "plain": "Proteins are chains that fold into 3D shapes, and in principle many more shapes are possible than nature actually uses. This short piece asks whether that gap comes from physical limits on what can fold or from the accidents of evolutionary history. The text says recent structure-prediction tools, protein comparison methods, and cryo-electron microscopy have helped map this space, and that natural proteins occupy only a small fraction of it.",
-    "why": "Knowing which shapes are reachable matters for designing new proteins and enzymes, and it bears on how evolution explores possibilities. The text is only an abstract, so it does not show the specific evidence or how strongly the constraints are established; the full paper would be needed to judge that.",
+    "ai": true,
     "background": "- Proteins are chains of amino acids that fold into 3D shapes; the shape largely determines function.\n- Secondary structures are local building blocks such as alpha helices and beta strands; their arrangement defines a fold's topology.\n- A \"fold\" is a broad category of 3D architecture shared by proteins with a similar overall layout.\n- Structure prediction and cryo-electron microscopy (a method that images molecules frozen in thin ice) let researchers see many more protein shapes than before.\n- The open question is whether physics or evolutionary contingency (the role of chance and history) limits which folds exist.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A review-style abstract arguing that natural proteins use only a small fraction of the folds that their secondary-structure arrangements could in principle form, and asking whether biophysics or evolutionary history sets that limit.",
+    "plain": "Proteins are chains that fold into 3D shapes, and in principle many more shapes are possible than nature actually uses. This short piece asks whether that gap comes from physical limits on what can fold or from the accidents of evolutionary history. The text says recent structure-prediction tools, protein comparison methods, and cryo-electron microscopy have helped map this space, and that natural proteins occupy only a small fraction of it.",
+    "why": "Knowing which shapes are reachable matters for designing new proteins and enzymes, and it bears on how evolution explores possibilities. The text is only an abstract, so it does not show the specific evidence or how strongly the constraints are established; the full paper would be needed to judge that."
    },
    "abstract": "Arrangements of secondary structures in proteins yield a wide variety of possible topologies, yet the protein folds observed in nature are limited in their diversity. Is the number of protein folds limited by biophysical constraints or by evolutionary contingency? In recent years, the development of new methods for protein structure prediction and comparison, molecular design, and the rapid progress of cryo-electron microscopy revealed new insights into the protein fold space. Here, we present recent findings demonstrating that natural proteins adopt only a small fraction of all possible folds and discuss how evolutionary processes limit the diversity of evolving protein folds.",
    "source": "arxiv"
@@ -37,12 +85,12 @@
    "primary_category": "physics.chem-ph",
    "date": "2026-11-25",
    "summary": {
-    "one_liner": "The paper presents OMNI-P3x, a universal machine-learned interatomic potential trained on ground- and singlet excited-state geometries of neutral and charged organic molecules, and applies it to screen flavylium and xanthene dye libraries for photochemical properties.",
-    "plain": "Designing light-responsive molecules, such as dyes that glow at particular colours, usually requires slow quantum calculations for every candidate, which makes testing huge lists of molecules impractical. The authors built a trained computer model that stands in for those calculations: it estimates molecular shapes and how strongly a molecule absorbs light without running new quantum calculations for each one. They used it to screen about 234,000 flavylium derivatives and, after fine-tuning, about 163,000 xanthene-based dyes, which they report as identifying new candidates for red, near-infrared and short-wavelength infrared emission.",
-    "why": "Faster screening could narrow down which molecules are worth synthesising and testing for applications such as imaging or light-harvesting materials. The text claims accuracy \"approaching\" TD-DFT (a standard but costly quantum method), but the abstract alone does not give the size of that error, so the practical reliability should be checked in the full paper.",
+    "ai": true,
     "background": "- Photochemistry: how molecules change when they absorb light and enter an excited electronic state.\n- Ground vs. excited state: the molecule's resting arrangement versus its arrangement after light absorption.\n- Quantum-mechanical (QM) calculations: accurate but computationally expensive simulations of electrons and atoms.\n- TD-DFT: time-dependent density functional theory, a widely used, moderately expensive method for excited states; here it serves as the accuracy benchmark.\n- Machine-learned interatomic potential (MLIP): a neural network trained on quantum results that predicts atomic forces and energies far faster.\n- Fine-tuning: adjusting a pretrained model on a narrower dataset to improve performance on a specific class of molecules.\n- Flavylium and xanthene dyes: families of coloured organic molecules used as dyes and fluorescent markers.\n- Near-infrared / short-wavelength infrared: light wavelengths just beyond visible red, useful for imaging through tissue.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper presents OMNI-P3x, a universal machine-learned interatomic potential trained on ground- and singlet excited-state geometries of neutral and charged organic molecules, and applies it to screen flavylium and xanthene dye libraries for photochemical properties.",
+    "plain": "Designing light-responsive molecules, such as dyes that glow at particular colours, usually requires slow quantum calculations for every candidate, which makes testing huge lists of molecules impractical. The authors built a trained computer model that stands in for those calculations: it estimates molecular shapes and how strongly a molecule absorbs light without running new quantum calculations for each one. They used it to screen about 234,000 flavylium derivatives and, after fine-tuning, about 163,000 xanthene-based dyes, which they report as identifying new candidates for red, near-infrared and short-wavelength infrared emission.",
+    "why": "Faster screening could narrow down which molecules are worth synthesising and testing for applications such as imaging or light-harvesting materials. The text claims accuracy \"approaching\" TD-DFT (a standard but costly quantum method), but the abstract alone does not give the size of that error, so the practical reliability should be checked in the full paper."
    },
    "abstract": "Computational photochemistry supports the design and understanding of new materials. However, the high cost of excited-state quantum-mechanical (QM) calculations makes screening large molecular libraries prohibitively expensive. To address this limitation, we introduce OMNI-P3x, a universal machine-learned interatomic potential (MLIP) for singlet ground- and excited-state simulations of neutral and charged organic molecules. Trained on both ground- and excited-state conformations, it performs complete computational photochemistry workflows with accuracy approaching TD-DFT. We demonstrate its practical applicability by screening a combinatorial library of 234,375 flavylium derivatives, where the pretrained model performs ground-state geometry optimization and predicts absorption properties without additional QM calculations. Following fine-tuning, we further screen 162,960 xanthene-based dyes, identifying new candidates for red, near-infrared and short-wavelength infrared emission. Furthermore, state-dependent neural charges, learned without reference atomic charges, provide an interpretable picture of intramolecular charge redistribution upon excitation.",
    "source": "arxiv"
