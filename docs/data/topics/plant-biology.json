@@ -3,6 +3,36 @@
  "updated": "2026-11-26",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.24.768924",
+   "title": "Augmenting chlorophyll fluorescence-based analysis of plant photosynthesis with genetically encoded biosensors",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768924v1",
+   "authors": [
+    "Cislaghi, A. P.",
+    "Barreto, P.",
+    "Niemeier, J.-O.",
+    "Hoang, M.",
+    "Brünje, A.",
+    "Busch, K.",
+    "Buchert, F.",
+    "Hippler, M.",
+    "Holzwarth, A. R.",
+    "Schwarzländer, M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.768924 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper combines genetically encoded fluorescent biosensors for stromal pH, stromal MgATP2-, and cytosolic pH and NADH/NAD+ with time- and wavelength-resolved chlorophyll fluorescence (ChloroSpec L1) in attached Arabidopsis leaves to link photosynthetic light reactions with subcellular metabolism.",
+    "plain": "Plants turn light into chemical energy in their leaves, and the chloroplast's internal chemistry and the cell's metabolism are closely tied to that process. This paper describes a way to watch both at once in living, attached leaves: glowing sensor proteins inside cells report on chemistry, while a light-based instrument measures how the leaf's photosynthetic machinery responds. The authors report that the chloroplast interior became more alkaline in light and returned when light was removed, and that under fluctuating light the chloroplast pH and cytosolic NAD redox state were linked to changes in photosystem II efficiency and non-photochemical quenching.",
+    "why": "Photosynthesis responds to changing light in ways that are hard to observe inside living tissue, so a method that reads cell chemistry alongside leaf-level fluorescence could help explain how plants regulate themselves in variable conditions. The text describes this as a platform rather than a finished explanation, so its broader significance for crop or plant science is not established here.",
+    "background": "- Photosynthesis has \"light reactions\" that capture light energy in membranes of chloroplasts (the organelles in plant cells) and make energy carriers such as ATP.\n- Chlorophyll fluorescence: chlorophyll re-emits a small amount of absorbed light; its changes reveal how efficiently photosystem II uses light and how much energy is dissipated as heat (non-photochemical quenching).\n- Stroma: the fluid inside chloroplasts where many metabolic reactions happen; its pH and ATP levels change with light.\n- Genetically encoded biosensors: fluorescent proteins engineered to change brightness when a specific molecule or pH changes, introduced into the plant's own genome.\n- NADH/NAD+ is a redox pair (electron carriers) that reflects the cell's energy and metabolic state.\n- Wavelength-resolved measurement means analyzing the colour/spectrum of emitted light, not just its intensity.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The status of the light reactions of photosynthesis is tightly linked to subcellular physiology and metabolism. Yet, monitoring how both these levels are coordinated in living plants has remained challenging to explore. Here, we combine genetically encoded biosensors with time- and wavelength-resolved chlorophyll fluorescence spectroscopy (ChloroSpec L1) in attached Arabidopsis thaliana leaves. Stromal pHluorin2 reported a reversible, light-dependent alkalinization in a single mesophyll layer of leaf discs imaged by confocal microscopy and over the illuminated area of attached leaves recorded by ChloroSpec, where a distinct overshoot appeared at all irradiances. Measurement of the light-response dynamics of stromal MgATP2-, cytosolic pH, and cytosolic NADH/NAD+ illustrates the flexibility of the approach to different biosensors and subcellular localizations. Under prolonged fluctuating light, simultaneous recordings linked progressive stromal alkalinization and slow cytosolic NAD redox integration to wavelength-dependent shifts in photosystem II efficiency and non-photochemical quenching. By coupling programmable illumination with multiplexed metabolic and spectroscopic readouts in planta, this platform bridges cellular bioenergetics and leaf physiology to dissect photosynthetic regulation under dynamic environments.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.22.768468",
    "title": "Functional divergence of D-, A-, and B-type cyclins in the moss Physcomitrium patens",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.768468v1",
@@ -17,42 +47,14 @@
    "primary_category": "plant biology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A study of how D-, A-, and B-type cyclins (cell-cycle regulators) and their CDK partners differ in function and binding in the moss Physcomitrium patens, using expression tracking, overexpression, knockouts, and yeast two-hybrid binding assays.",
-    "plain": "Cells divide by following a timed sequence of control proteins, and in plants these control proteins have multiplied over evolution. This paper asks what the three main groups of these proteins (called cyclins) each do in a simple land plant, the moss Physcomitrium patens. The authors tracked when each type is made or destroyed during the cell cycle, then made some over-produced or removed to see what changed.",
-    "why": "The work suggests the three cyclin groups have partly overlapping and partly separate jobs, and that the moss's more complex leafy structures (gametophores) are especially sensitive to problems with mitotic cyclins. It may help explain how cell-division control supports development in non-vascular plants, though the text alone does not show how far these findings extend to other plants.",
-    "background": "- Cell cycle: the ordered series of stages a cell goes through to copy and divide its contents (G1, S for DNA copying, G2, and M for mitosis, the division itself).\n- Cyclins: proteins whose levels rise and fall through the cycle; they partner with cyclin-dependent kinases (CDKs), enzymes that switch cell-cycle steps on.\n- D-, A-, and B-type cyclins: the three main cyclin classes studied here; D-type is linked to entering the cycle, A-type to DNA copying and the step before division, and B-type to mitosis.\n- Physcomitrium patens: a small moss widely used as a model for studying plant development; it has a simple body plan compared with flowering plants.\n- Gametophore: the leafy, upright reproductive-stage structure of the moss.\n- Overexpression and loss-of-function: making a gene product in excess, or removing it, to see what breaks.\n- Yeast two-hybrid assay: a lab test in yeast that checks whether two proteins physically bind each other.",
+    "one_liner": "A study of how D-, A- and B-type cyclins (cell-cycle regulators) and their CDK partners differ in function and binding in the moss Physcomitrium patens, using expression tracking, overexpression, loss-of-function mutants and yeast two-hybrid binding assays.",
+    "plain": "Cells divide in a timed sequence, and proteins called cyclins help set the timing by partnering with enzymes called CDKs. This paper looks at three families of cyclins in a small moss, asking what each one does and which partners it binds. The authors report that the families overlap in some roles but each also has its own job, such as D-type cyclins mainly starting cell division and B-type cyclins mainly controlling the mitosis step.",
+    "why": "Plants have expanded their cell-cycle gene families over evolution, and this work tests what that expansion means in a non-vascular land plant, which helps show how division control was organized early in plant evolution. The text also reports that overexpressing the B-type cyclin stopped gametophore (leafy moss shoot) development, suggesting complex tissues are especially sensitive to errors in mitotic control; the broader significance for other plants is not established by this text alone.",
+    "background": "- Cell cycle: the ordered steps a cell goes through to copy its contents and divide (G1, S phase for DNA copying, G2, and M phase for mitosis).\n- Cyclins: proteins whose levels rise and fall through the cycle; they partner with cyclin-dependent kinases (CDKs), enzymes that switch cell-cycle steps on.\n- Cyclin classes: D-type acts early (entry and growth), A-type acts across S to G2/M, B-type acts mainly in mitosis.\n- Physcomitrium patens: a moss used as a lab model; its life stage called the gametophore is the leafy shoot.\n- Overexpression and knockout: boosting or removing a gene to see what changes.\n- Yeast two-hybrid: a lab test in yeast that checks whether two proteins physically bind.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Cyclins and cyclin-dependent kinases (CDKs) are central cell-cycle regulators that have undergone diversification in land plants; however, the functional implications of this divergence remain incompletely understood, particularly in non-vascular lineages. Here, we systematically dissected the roles of the three principal cyclin classes--D, A, and B--in the model moss Physcomitrium patens. We show that CYCD2 exhibits constitutive expression throughout the cell cycle, CYCA2 is degraded during mitosis and transcriptionally activated post-mitotically, whereas CYCB1 is M-phase-specific and rapidly depleted at anaphase. Overexpression and loss-of-function analyses revealed functional divergence among these classes: cyclin D primarily governs cell cycle entry and vegetative growth; cyclin B regulates mitotic progression with its overexpression causing division failure and arresting gametophore development; cyclin A regulates S-to-G2/M transition and exhibits overlapping functions with both D- and B-type cyclins, contributing to vegetative growth, mitotic fidelity, and gametophore development. Yeast two-hybrid assays showed that CYCB2 associates broadly with both CDKAs and CDKBs, CYCA2 preferentially interacts with CDKAs, and CYCD1 binds CDKAs along with a subset of CDKBs. Collectively, our results reveal both overlapping and class-specific contributions of D-, A-, and B-type cyclins to cell-cycle progression and development in P. patens, and suggest that complex tissues (gametophores) are particularly vulnerable to mitotic cyclin dysfunction. These findings provide a foundation for understanding how cyclin diversification underpins developmental plasticity across different contexts in non-vascular land plants.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.24.769068",
-   "title": "Mechanical Induced Stress Enhances Arabidopsis Susceptibility to Fusarium oxysporum in a Jasmonic Acid-Dependent Manner",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769068v1",
-   "authors": [
-    "Brenya, E.",
-    "Pervin, M.",
-    "Biswas, A.",
-    "Paudel, L.",
-    "Chen, Z.-H.",
-    "Tissue, D. T.",
-    "Johnson, S. N.",
-    "Cazzonelli, C. I."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.24.769068 v1",
-   "primary_category": "plant biology",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "Prolonged mechanical stress (repeated touching) in Arabidopsis increased susceptibility to the hemibiotrophic fungus Fusarium oxysporum f. sp. conglutinans via hyper-induced jasmonic acid signalling, with the jar1-11 biosynthesis mutant showing greater resistance.",
-    "plain": "Plants that are repeatedly touched or brushed, which is known to toughen them against some germs, turned out to be more vulnerable to a fungus that attacks through a different route. The researchers compared touched and untouched Arabidopsis (a small model plant) infected with this fungus, and found that the touched plants had higher levels of a stress hormone called jasmonic acid and its defence genes, which the fungus appears to exploit. A mutant unable to make enough of this hormone resisted the infection better.</plain>\n<parameter name=\"why\">It suggests a possible trade-off: touch-based treatments aimed at boosting immunity or changing plant shape could leave crops more open to some pathogens. The text is a single abstract, so the size of the effect and the wider applicability to crops are not shown here.</why>\n<parameter name=\"background\">- Arabidopsis thaliana: a small flowering weed widely used as a lab model plant.\n- Mechanical-induced stress (MIS): repeated touching or bending that changes how a plant grows and defends itself.\n- Jasmonic acid (JA): a plant hormone that switches on defence genes, especially against chewing insects and necrotrophic pathogens (which kill tissue).\n- Hemibiotrophic pathogen: a microbe that first lives quietly in living tissue, then kills it later; Fusarium oxysporum is one example.\n- jar1-11: a mutant plant line with a faulty step in making the active form of jasmonic acid.\n- Marker genes such as PDF1.2, VSP1 and LOX1 are used as readouts of JA defence activity.</plain>\n<parameter name=\"difficulty\">intermediate",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": true
-   },
-   "abstract": "Prolonged mechanical-induced stress (MIS) primes juvenile Arabidopsis plants for enhanced resistance against necrotrophic pathogens through the activation of jasmonate-mediated defense pathways. We hypothesised that MIS would weaken defense against hemibiotrophic pathogens that exploit jasmonate pathways to promote infection. We show that touch-acclimated wild-type plants were more susceptible to Fusarium oxysporum f. sp. conglutinans (Foc) infection than un-touched control plants. Jasmonic acid (JA) levels as well as JA defense-related gene expression were hyper-induced for up to 5 days post-inoculation in the MIS plants. In contrast, the MIS- and control- JA biosynthesis-deficient mutant jasmonate resistance 1 (jar1-11) was more resistant to Foc infection compared to the WT. The jar1-11 mutant showed significant attenuation in the induction of JA defense-responsive gene expression. In the absence of Foc infection, a single event of MIS similarly induced JA biosynthesis and stress-associated marker genes, but not JA signalling genes, in naive and touch-acclimated plant tissues. Touch-acclimated plants had higher basal levels of JA and JA defense-related genes expression, including PDF1.2, VSP1, and LOX1. Our findings highlight that prolonged MIS of Arabidopsis cross-primes JA-dependent susceptibility to a hemibiotrophic pathogen that can hijack the JA pathway to promote infection, revealing a potential trade-off when utilising MIS to promote immunity against necrotrophic pathogens or alter morphological traits for agronomical gains.",
    "source": "biorxiv"
   },
   {

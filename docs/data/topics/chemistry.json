@@ -3,61 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32289",
-   "title": "Perturbation of CO A1{\\Pi} by a3{\\Pi} should have been undetectable: detection, mechanism, and surprises",
-   "url": "https://arxiv.org/abs/2611.32289",
+   "uid": "arxiv:2611.33377",
+   "title": "Dressed Time-Dependent Density Functional Theory: Opening and Closing a Pandora's box",
+   "url": "https://arxiv.org/abs/2611.33377",
    "authors": [
-    "Stanis{\\l}aw Ryzner",
-    "Robert W. Field",
-    "Wim Ubachs",
-    "Alan N. Heays",
-    "Asen Pashov",
-    "Patryk Jasik",
-    "J\\'ozef E. Sienkiewicz",
-    "Nelson de Oliveira",
-    "Kin F. Lai",
-    "Marzena I. Malicka",
-    "Aleksandra Stasik",
-    "Wojciech Szajna",
-    "Izabela Piotrowska",
-    "Rafa{\\l} Hakalla"
+    "Jack T. Taylor",
+    "Neepa T. Maitra"
    ],
-   "label": "arXiv:2611.32289v1",
+   "label": "arXiv:2611.33377v1",
    "primary_category": "physics.chem-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Spectroscopic study of 13C18O showing that a forbidden-looking direct coupling between the a3Pi (v=13) and A1Pi (v=2) levels is actually observed, and that it proceeds indirectly via the e3Sigma- (v=4) state with quantum interference between its F1e and F3e components.",
-    "plain": "Molecules absorb and emit light only at specific energy levels, and sometimes two levels in different electronic states mix in a way that shifts their positions and changes how strongly they absorb light. For carbon monoxide, this mixing between two particular levels was expected to be too weak to notice, but the authors measured clear signs of it in one isotope of the molecule. They traced it to an indirect route through a third state and found that different pathways can interfere with each other.",
-    "why": "The result conflicts with the expectation that this direct coupling is essentially unobservable, so it refines how weak molecular couplings are understood and modelled. The text does not claim wider applications, so any link to other fields is uncertain.",
-    "background": "- Electronic states: different energy arrangements of a molecule's electrons; each has its own set of vibrational levels.\n- Vibrational level: a discrete energy level from the molecule's stretching motion.\n- Perturbation (level mixing): when two nearby energy levels couple, their positions shift and their light absorption can borrow strength from each other.\n- Vibrational overlap integral: a measure of how much two vibrational wavefunctions overlap; small overlap means weak coupling.\n- Isotopologue: the same molecule with different isotopes of its atoms (here 13C and 18O).\n- Spin-forbidden/triplet vs singlet states: a3Pi is a triplet and A1Pi a singlet, so direct transitions between them are normally restricted.\n- Quantum interference: when two indirect pathways add or cancel in amplitude, as in waves.\n- VUV and visible Fourier-transform spectroscopy: laboratory methods that measure absorption or emission across ultraviolet/vacuum-UV and visible light.",
+    "one_liner": "This paper benchmarks and refines dressed time-dependent density functional theory (DTDDFT), a correction to adiabatic TDDFT for excitations with double-excitation character, addressing a protocol for when to apply it, how to build its matrix, an \"undownfolding\" reformulation, and a proposed dynamical-correlation fix.",
+    "plain": "Standard computer methods for predicting how molecules absorb light struggle with certain excited states, where two electrons move together rather than one. This paper looks at a correction called DTDDFT that helps with these cases and asks practical questions about using it: when it is needed, which orbitals to include, and how to handle numerical ambiguities. The authors test it on a set of small organic molecules and compare it against more expensive reference methods.",
+    "why": "Predicting light absorption accurately matters for designing dyes, photochemistry and materials, and this work shows where a cheap correction helps and where it needs care. The text reports benchmark comparisons on specific molecules but does not establish how broadly the approach will generalise.",
+    "background": "- Time-dependent density functional theory (TDDFT): a widely used, relatively cheap way to compute molecular excited states and light absorption.\n- Excitation: lifting an electron to a higher energy orbital; a \"double excitation\" moves two electrons at once, which standard TDDFT handles poorly.\n- Oscillator strength: a measure of how strongly a transition absorbs light.\n- Kohn-Sham states: the single-electron orbitals used within density functional theory.\n- Tamm-Dancoff approximation: a simplification that drops some coupling terms to make calculations more stable.\n- Wavefunction methods: more accurate but costlier quantum chemistry methods used here as reference.\n- Triplet instability: a numerical failure producing unphysical imaginary excitation energies.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "A direct perturbation between the $a^3\\Pi$ and $A^1\\Pi$ vibrational levels of two electronic states that belong to the same electronic configuration of the carbon monoxide molecule should be unobservably weak because the vibrational overlap integral $\\langle a^3\\Pi,v' \\mid A^1\\Pi,v'' \\rangle$ for their near-degenerate levels is extremely small. Yet level-shift and transition-intensity signatures of the $a^3\\Pi(v = 13) \\sim A^1\\Pi(v = 2)$ perturbation are unmistakably present in the $^{13}\\mathrm{C}^{18}\\mathrm{O}$ isotopologue. A detailed study of, among others, the $A^1\\Pi$ - $X^1\\Sigma^+(2, 0)$, $B^1\\Sigma^+$ - $A^1\\Pi(0, 2)$, and $C^1\\Sigma^+$ - $A^1\\Pi(0, 2)$ spectra, obtained by the VUV- and Vis-FT complementary techniques in the energy regions of the six crossing points ($e$- and $f$-symmetry, $|\\Omega| = 0, 1, 2$) between the $a^3\\Pi(v = 13)$ and $A^1\\Pi(v = 2)$ states, reveal that the perturbation pathways are indirect, primarily facilitated by the $e^3\\Sigma^-(v = 4)$ state, and that quantum mechanical interferences via its F1e and F3e components occur.",
+   "abstract": "Dressed time-dependent density functional theory (DTDDFT) has been shown to overcome the inability of adiabatic TDDFT to describe excitation energies and oscillator strengths of double-excitation character, however, it is far from being a black-box method. Here, we outline and address several operational issues while benchmarking the approach on a range of molecules. We define a protocol to determine whether an excitation from adiabatic TDDFT needs a double-excitation correction, without requiring a priori knowledge of the state, and which Kohn-Sham states to build the frequency-dependent DTDDFT matrix from. We present an 'undownfolding' that replaces this frequency-dependent matrix by a linear frequency-independent one in a larger space, eliminating ambiguities in the iterative procedure required to diagonalize the former. We compare the performance of DTDDFT for both excitation energies and oscillator strengths, as measured by an approximate metric for their single-excitation character, for different choices of the underlying adiabatic density functional approximation, with and without employing the Tamm-Dancoff approximation, for molecular excitations predicted by wavefunction methods to have either partial or genuine double-excitation character. We propose a correction to DTDDFT to account for missing dynamical correlation that is removed in the truncation procedure inherent in the method, and discuss the possibility of unphysical imaginary frequencies reminiscent of the 'triplet instability' that may arise. We provide benchmark data for butadiene, hexatriene, octatetraene, cyclopentadiene, acrolein, naphthalene, ethylene, borole, and cyclopentadienone. In some cases, DTDDFT predicts frequencies with about as much accuracy as the same underlying adiabatic TDDFT predicts for the constituent and near-lying single excitations.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32739",
-   "title": "Neutron Spectroscopy Transformed: Deuterated ZIF-8 and Machine-Learned Potentials Catch Nitrogen Threading Its Gates",
-   "url": "https://arxiv.org/abs/2611.32739",
+   "uid": "arxiv:2611.34732",
+   "title": "A general-purpose electron density model for molecular chemistry",
+   "url": "https://arxiv.org/abs/2611.34732",
    "authors": [
-    "Jeff Armstrong",
-    "Hamish Cavaye",
-    "Pankaj Sharma",
-    "Matthew E. Potter"
+    "Paolo Pegolo",
+    "Joseph W. Abbott",
+    "Michele Ceriotti"
    ],
-   "label": "arXiv:2611.32739v1",
-   "primary_category": "cond-mat.mtrl-sci",
+   "label": "arXiv:2611.34732v1",
+   "primary_category": "physics.chem-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Combining machine-learned interatomic potentials with deuterated linkers, the authors use inelastic neutron scattering on ZIF-8 during nitrogen dosing at 77 K to assign a new 270 cm^-1 band to end-on N2 molecules threading through the four-ring windows, with simulations of the threading free-energy trap.",
-    "plain": "This paper looks at how a porous crystal called ZIF-8 takes up nitrogen gas. The researchers used a neutron-based vibration measurement, made clearer by swapping hydrogen for its heavier isotope deuterium in the crystal's linkers, and compared it against fast computer simulations. They report a new vibration signal that appears as gas loads and grows over the dosing series, which they attribute to single nitrogen molecules passing through the small windows of the framework.",
-    "why": "The authors claim the signal's strength tracks how many molecules are threading through the windows during the slow process of gas uptake, which could give a direct, in-situ way to follow gas-framework mechanisms. The text presents this as a first vibrational signature of the threaded state, but the work is a single material and gas, so its wider reach is not established here.",
-    "background": "- Porous metal-organic frameworks (MOFs) such as ZIF-8 are crystals riddled with pores and windows that trap gas molecules.\n- Inelastic neutron scattering (INS) measures how atoms vibrate; it is especially sensitive to hydrogen, so deuterating (swapping H for D) reduces overlap between bands.\n- Density-functional theory (DFT) is a quantum-chemistry calculation that is accurate but slow; machine-learned interatomic potentials (MLIPs) are faster learned approximations of the same energies and forces.\n- Dosing at 77 K means gas is added in stages to a sample cooled to liquid-nitrogen temperature, and spectra are recorded at each stage.\n- Free-energy trap: a local energy minimum that a molecule can settle into, which affects how often it is found there.",
+    "one_liner": "A machine-learning model (PET-rho-OMol25), trained on four million molecular structures, predicts the ground-state electron density and spin polarization of molecules, approximating density-functional theory accuracy for a range of chemical diagnostics.",
+    "plain": "This paper describes a computer model that estimates how electrons are spread out around molecules, which is the information chemists use to judge how molecules will react. The authors trained it on about four million molecular structures in different charge and spin states. According to the text, it can process whole proteins in a few seconds on one graphics card, and its least reliable answers are flagged by a built-in uncertainty estimate.",
+    "why": "Electron density is usually obtained from slow quantum calculations, so a fast, transferable estimate could make reactivity analyses practical for much larger molecules such as proteins. The text claims accuracy close to density-functional theory for most properties, but the reach of that claim beyond the reported tests is not something the summary can confirm.",
+    "background": "- Electron density: a map of where electrons are likely to be around a molecule; it determines much of its chemistry.\n- Density-functional theory (DFT): a standard quantum-mechanical calculation method, widely used but computationally costly.\n- Machine-learning potential: a model trained on existing calculations to predict results much faster than running the calculation directly.\n- Spin density: how unpaired electrons are distributed, relevant to redox reactions (electron transfer) and magnetism.\n- Diagnostics mentioned: vibrational Stark shifts (how bond vibrations respond to an electric field), halogen sigma-holes (positive patches on halogen atoms that guide bonding), hydrogen-bond basicity, and core-level shifts (energy changes of inner electrons, measurable by X-ray spectroscopy).\n- OMol25: the large molecular dataset the model was trained on.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We report a step change in what inelastic neutron scattering (INS) can reveal, by combining machine-learned interatomic potentials (MLIPs) with deliberate deuteration of the sample. INS's prowess in charting framework and guest motions within porous materials during in situ dosing has historically had one caveat: costly density-functional-theory calculations are a major bottleneck in the speed and depth of analysis. We show that rapid frontier MLIPs remove this bottleneck on both counts, keeping pace with the experiment while bringing a new level of insight. Deuterating the linkers of ZIF-8 pries apart bands that overlap in the hydrogenous framework, and we test four MLIPs against eight stages of nitrogen dosing at 77 K. On loading, a previously unobserved band appears at 270 cm^-1 and grows gradually through the dosing series. The simulations trace it to single N2 molecules threaded end-on through four-ring windows, each turning its ring of linkers and propping the window open, and unbiased dynamics catch molecules threading into the windows on their own, finding a free-energy trap that crowding stabilizes. This is the first vibrational signature of the threaded state and, crucially, its intensity directly counts the threading over the slow, macroscopic timescale of gas uptake, in situ. More broadly, the simulations explain how each framework band responds to its guests, establishing MLIP-assisted inelastic neutron scattering as a route to mechanism, not just assignment.",
+   "abstract": "Universal machine-learning potentials predict molecular structure and stability at the accuracy of quantum mechanics, for a fraction of the cost. Properties derived instead from knowledge of the electronic structure give profound insights into chemical reactivity, but are not accessible with the same ease or transferability. We train PET-rho-OMol25, a model of the ground-state electron density and spin polarization of molecular systems on four million OMol25 structures in multiple charge and spin states. The model makes predictions for entire proteins in a few seconds on a single GPU, and enables estimation of important diagnostics of molecular structure and reactivity, such as vibrational Stark measurements, halogen $\\sigma$-holes, hydrogen-bond basicities and core-level shifts, as well as spin density for redox chemistry and magnetism. PET-rho-OMol25 has an accuracy close to density-functional theory, with its least reliable predictions flagged by its built-in uncertainty estimator, for most properties and classes of compounds. It can be used as a drop-in replacement for electronic-structure calculations of the density, making insightful analyses available for larger and more complex structures.",
    "source": "arxiv"
   },
   {

@@ -3,51 +3,54 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31640",
-   "title": "Reward Basis Decomposition for Interpreting Preference Heterogeneity",
-   "url": "https://arxiv.org/abs/2611.31640",
+   "uid": "arxiv:2611.34930",
+   "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+   "url": "https://arxiv.org/abs/2611.34930",
    "authors": [
-    "Mohamed I. Eldagla",
-    "Ifesi Onubogu",
-    "Prerana Rane",
-    "Harsh Sharma",
-    "Rachel Freedman"
+    "Paul Vilars",
+    "Vincent Quoc-Huy Trinh",
+    "Maria Vakalopoulou",
+    "Dimitris Samaras",
+    "Stergios Christodoulidis",
+    "Mahdi S. Hosseini"
    ],
-   "label": "arXiv:2611.31640v1",
+   "label": "arXiv:2611.34930v1",
    "primary_category": "cs.LG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Reward Basis Decomposition splits per-user reward-model weights into a shared population direction and per-user directions, then analyzes each with concept alignment and sparse autoencoders, validated on a synthetic control and applied to PRISM and Community Alignment.",
-    "plain": "Reward models are the scoring systems that tell an AI which answers people prefer, and they can encode whose values count and how much. This paper proposes a way to split those scores into a part that everyone shares and a part that differs from person to person. The authors first check that the method can find planted individual differences in synthetic data, then run it on two real datasets of multiple human preferences.",
-    "why": "Knowing which preferences are shared and which are individual matters for aligning AI to diverse users. The reported finding is negative: on these two real datasets, the per-user parts added no reliable predictive benefit beyond one shared direction, so the work is best read as a careful null result under its specific setup rather than evidence about human values in general.",
-    "background": "- Reward model: a learned scoring function that ranks AI outputs according to human preference data.\n- Preference heterogeneity: the fact that different people prefer different things.\n- Embedding space: the numerical coordinates a model uses to represent text; a \"direction\" is a line through this space.\n- Concept alignment: checking whether a direction matches human-understandable concepts.\n- Sparse autoencoder: a tool that breaks a model's internal representation into a small set of more interpretable features.\n- Synthetic control: test data with known, planted answers used to check that a method works.",
+    "one_liner": "BioScore is a label-free benchmark that scores how well pathology image encoders capture 52 marker-gene-defined cell identities, using sparse-autoencoder feature groups matched against spatial transcriptomics of the same tissue.",
+    "plain": "Pathology AI models read tissue slide images, but they are usually judged only by how well they do on tasks like classification, which says little about what biology they have learned. This paper proposes a test that checks whether each model's internal features line up with specific cell types, using gene-activity maps from the same tissue as a reference. The authors scored 8 pathology models and 3 general natural-image models, and found that all the pathology models scored higher.",
+    "why": "It offers a way to look inside pathology models at the biology they represent, rather than only their task scores, which may help researchers compare and understand them. The text does not show how well these scores predict real-world clinical usefulness, so that link remains open.",
+    "background": "- Pathology foundation models: large AI models trained on many tissue images, then reused for many tasks.\n- Image encoder: the part of a model that turns an image patch into a list of numbers (an embedding).\n- Sparse autoencoder: a method that re-expresses those numbers as a small set of mostly-off features, which can be easier to interpret.\n- Spatial transcriptomics: a technique that measures which genes are active at each location in a tissue section.\n- Marker genes: genes whose activity is characteristic of a particular cell type.\n- Linear probe: a simple supervised classifier trained on frozen model features; BioScore is compared against this kind of benchmark.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Canonical reward models specify the optimization target for AI policies, so understanding the values they encode is important for ensuring AI alignment. Existing interpretability techniques interpret reward models with a single reward head, which cannot distinguish between the values that a population shares and those that vary among individuals. We introduce Reward Basis Decomposition (RBD), which splits per-user weights into a population term and a per-user term. This yields a shared population direction and individual user directions that are analyzed separately via concept alignment and sparse autoencoder decomposition. We verify that RBD can recover artificially planted per-user directions on a synthetic control, then apply it to two real-world multi-preference datasets, PRISM and Community Alignment. In both, we find no individual-user structure, suggesting that a single direction in the reward embedding space accounts for most preferences. We verify that RBD can recover artificially planted per-user directions on a synthetic control, then apply it to two real-world multi-preference datasets, PRISM and Community Alignment. In both, we find no reliable predictive benefit from the fitted per-user terms beyond the shared population direction under our setup. Code and the synthetic dataset are available at https://github.com/RachelFreedman/RBD.",
+   "abstract": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that quantifies how well an image encoder captures cell identities, with spatial transcriptomics of the same tissue as the reference. A sparse autoencoder splits the encoder's patch embeddings into sparse features, which we cluster into a fixed number of groups. BioScore then measures, for each of 52 cell identities defined by marker genes, how specifically one group follows the identity's expression over the tissue. Because the autoencoder training is fully unsupervised, a match shows that the model represents the cell identity from the image alone. We score 8 pathology foundation models and 3 natural-image models. Every pathology model scores above every natural-image model (0.299--0.371 \\vs 0.214--0.232), and paired tests separate three tiers among the pathology models. Unlike a supervised probe, BioScore needs no labels, builds its reference from the data and scores even from few sections, yet it ranks the encoders as a probe does. Its per-identity breakdown indicates which cell identities each encoder captures or misses.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31795",
-   "title": "Constructive Causal Abstraction and a Case Study in Mechanistic Interpretability",
-   "url": "https://arxiv.org/abs/2611.31795",
+   "uid": "arxiv:2611.33966",
+   "title": "PatternMiner: Automated Mathematical Discovery Through LLM-Guided Training and Interpretation of Small Models",
+   "url": "https://arxiv.org/abs/2611.33966",
    "authors": [
-    "Yuchen Zhu",
-    "Sergio Hernan Garrido Mejia",
-    "Dominik Janzing"
+    "Michael Ruofan Zeng",
+    "Junaid Hasan",
+    "Xuanyu Yang",
+    "Emily Xia Meng",
+    "Henry Kvinge"
    ],
-   "label": "arXiv:2611.31795v1",
+   "label": "arXiv:2611.33966v1",
    "primary_category": "cs.AI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes Constructive Causal Abstraction (CCA), which builds a high-level causal model that is consistent with a low-level model by adding a complementary variable that captures state lost when macro interventions are ill-defined, and applies it to auditing versus editing neural networks.",
-    "plain": "Researchers who want to explain how a complicated system works often describe it with a simpler high-level model and check that the two models agree. The authors point out that the usual simple \"high-level action\" often means different things at the detailed level, so the check fails before it starts. They fix this by adding one extra variable that keeps track of the detail being dropped, and they give linear-case conditions and a nonlinear construction method for doing this.",
-    "why": "It offers a more principled way to make simplified explanations of AI models match what the models actually do, and it is applied to a gender-bias case study on the Bias-in-Bios dataset. The text does not establish how widely the approach will generalize beyond the examples it reports, so its broader significance is still open.",
-    "background": "- Causal model: a description of how variables influence one another, where you can \"intervene\" by forcing a variable to a value.\n- Abstraction: a simpler high-level model that should behave like a detailed low-level model under matching interventions.\n- Intervention: deliberately setting a variable (for example, switching off a part of a network) and observing the effect.\n- Mechanistic interpretability: reverse-engineering which internal parts of a neural network perform which computations.\n- Subspace editing vs. auditing: changing a model's internal directions to alter behavior versus inspecting them to detect problems such as bias.\n- Interpretability illusion: a situation where a direction that looks like it carries a signal is not the one the model actually uses to produce its output.\n- ODE (ordinary differential equation): an equation describing how a quantity changes over time, used here in the nonlinear construction.",
+    "one_liner": "PatternMiner is an LLM-agent system that generates mathematical datasets, trains small models, interprets them to propose conjectures, and searches for counterexamples, applied to five positivity problems in algebraic combinatorics.",
+    "plain": "This paper describes a computer system that tries to discover new mathematical facts. A language-model agent builds datasets of mathematical objects, trains small machine-learning models on them, and then inspects those models to suggest possible rules. The system also hunts for counterexamples with mathematical software, and it reports that it proved several new theorems in one area of combinatorics.",
+    "why": "It combines two approaches to AI-assisted mathematics, one based on text reasoning by large language models and one based on interpretable models over concrete data, which the text says each lacks alone. Its value rests on the new theorems it reports, and the text does not say how significant those results are to the field.",
+    "background": "- Positivity problems: questions about whether certain numbers or polynomial coefficients are always nonnegative, a common theme in algebraic combinatorics.\n- Schubert calculus and Kazhdan–Lusztig theory: areas of algebra and combinatorics where such positivity questions arise.\n- Conjecture: a statement believed to be true but not yet proven.\n- Counterexample: a specific case that shows a conjecture is false.\n- Interpretability: techniques for explaining what a trained machine-learning model has learned.\n- Large language model (LLM) agent: an AI system that writes text and can call external tools such as mathematical software.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Existing frameworks in causal abstraction first propose a high-level causal model, and then verify whether its interventional effects agree with those of a given micro-level model - the two models are declared causally consistent when the discrepancy is zero. However, proposing a consistent macro causal model is difficult, because macro causal relations are almost never well-defined, since distinct micro-level interventions associated with the same apparent macro intervention can produce different effects. Our central insight is that causally consistent macro-level models can be obtained constructively: ill-defined macro interventions can be interpreted as missing variables on the macro level, and can be accounted for by introducing a complementary variable q that retains omitted causally relevant state. In the linear case, q has a unique form and we provide sufficient conditions for valid implementations to exist; in the nonlinear case, we provide an ODE-based algorithm for constructing implementations. We call this framework Constructive Causal Abstraction (CCA), and use CCA to formulate the difference between machine-learning model auditing and editing. With the Bias-in-Bios biographies dataset, we demonstrate that CCA allows practitioners to articulate assumptions when detecting the model's gender bias. Finally, CCA resolves a well-known paradox known as \"interpretability illusion\" which points to a mismatch between the subspace for editing and the one where the model implements a signal-to-output pathway.",
+   "abstract": "There are several approaches to AI-driven mathematical discovery. One of these involves the use of large language models (LLMs) to resolve well-specified conjectures via text-based reasoning, while another uses narrow models and interpretability for more open-ended, human-in-the-loop exploration using object-based mathematical data. The latter is limited in its ability to move beyond simple empirical pattern detection while the former is not well-designed for direct, open-ended exploration of large mathematical datasets. In this paper we introduce PatternMiner, a system that combines these two paradigms. In PatternMiner, an LLM agent generates mathematical datasets based on an initial broad question, trains narrow machine learning models on them, uses interpretability techniques to extract patterns from these trained models, and uses these patterns to formulate conjectures. Once an initial conjecture has been formulated, PatternMiner instructs the agent to search for counterexamples using calls to mathematical software. If a set of counterexamples can be found, these are used as feedback for conjecture refinement or another round of training and interpretability. The conjecture progressively evolves through this iterative sequence with the agent allowed to try to prove it at any point. We describe the results of applying PatternMiner to five well-known positivity problems in algebraic combinatorics. PatternMiner proves several new theorems related to Schubert positivity and projection, a character-row evaluation formula, a restricted version of the Kazhdan--Lusztig combinatorial invariance conjecture, and Schur positivity for a family of immanant coefficients. We end by analyzing the most common routes to conjecture generation that are used by PatternMiner in our case studies as well as documenting the most common failure modes.",
    "source": "arxiv"
   },
   {

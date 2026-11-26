@@ -3,60 +3,53 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31916",
-   "title": "Machine learning enables full Bayesian inference for spinning extreme-mass-ratio inspirals",
-   "url": "https://arxiv.org/abs/2611.31916",
+   "uid": "arxiv:2611.33906",
+   "title": "Fast radio bursts track cosmic star formation history with time delay: the effect of burst fluence",
+   "url": "https://arxiv.org/abs/2611.33906",
    "authors": [
-    "Bo Liang",
-    "Minghui Du",
-    "Zhenwei Lyu",
-    "Hanlin Song",
-    "Jiakai Zhang",
-    "Weichen Qin",
-    "Chia-Jui Chou",
-    "Yi Yang",
-    "Jingyi Yu",
-    "Ziren Luo",
-    "Mingming Sun",
-    "Peng Xu",
-    "Yue-Liang Wu"
+    "X. D. Jia",
+    "D. H. Zhai",
+    "J. P. Hu",
+    "S. X. Yi",
+    "F. Y. Wang"
    ],
-   "label": "arXiv:2611.31916v1",
-   "primary_category": "gr-qc",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "A machine-learning-assisted full Bayesian analysis of a spinning extreme-mass-ratio inspiral, inferring all 14 parameters from the complete prior for a simulated one-year LISA-Taiji observation using the augmented analytic kludge waveform model.",
-    "plain": "The paper looks at a small object, perhaps a stellar-mass black hole or neutron star, slowly spiralling into a massive black hole at the centre of a galaxy, and the ripples in space-time (gravitational waves) it gives off. The authors simulate one year of such signals as seen by future space detectors and use generative neural networks to narrow down the huge range of possible settings before computing the exact statistical answer. They report that, for a simulated case, the massive black hole's mass and spin, and the small object's mass, orbit and distance can all be pinned down with high precision.",
-    "why": "Precise measurements from these signals could test whether black holes behave as general relativity predicts and could help measure the expansion of the universe using gravitational-wave \"dark sirens\". The results rest on simulations and a simplified waveform model, so how well they hold for real observations is not yet shown by the text.",
-    "background": "- Gravitational waves: tiny distortions of space-time, here in the millihertz band targeted by space missions such as LISA and Taiji.\n- Extreme-mass-ratio inspiral (EMRI): a small compact object orbiting a massive black hole that is millions of times heavier.\n- Bayesian inference: a method that combines prior assumptions with data to give a probability distribution over unknown parameters (the posterior).\n- Parameter space: here 14 numbers describing the source, such as masses, spins, orbital shape, distance and sky position.\n- Analytic kludge: a fast approximate model for generating the waveform, used because exact calculations are too slow.\n- Dark siren: a gravitational-wave source whose distance is measured directly, usable for cosmology without a matching light signal.\n- Redshift: the stretching of signals by cosmic expansion; \"redshifted mass\" is the mass as inferred including this effect.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Extreme-mass-ratio inspirals (EMRIs), stellar-mass compact objects spiralling into massive black holes, promise to measure the masses and spins of the central black holes, reveal the strong-field environment around them and gauge cosmic distances via millihertz gravitational-wave observations. Yet most forecasts for the parameter inference of these systems assume known source parameters, and broad-prior analyses have addressed only simplified versions of the problem. The joint inversion of all 14 parameters of a spinning source from the complete prior has remained unsolved. Here we solve it for the augmented analytic kludge model: generative networks narrow the complete prior and reveal a ring of degenerate spin directions, and the exact detector likelihood determines the posterior. For a simulated one-year LISA-Taiji observation, within one ring sector we obtain, for the first time, a 14-parameter posterior of a spinning EMRI from the complete prior, the most precise yet obtained for such a source from broad priors. The redshifted mass and spin of the massive black hole are determined to two parts in $10^5$, the mass two orders of magnitude beyond any electromagnetic measurement. The compact object's redshifted mass is measured to one part in $10^4$, and its eccentric, retrograde orbit discriminates between capture channels. The 0.8% distance and sub-square-degree localization are sufficient for dark-siren cosmology. Year-long coherent analysis resolves the inspiral driven by radiation reaction itself.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32629",
-   "title": "Critical Eddington luminosity and photon cooling of compact spherical stars",
-   "url": "https://arxiv.org/abs/2611.32629",
-   "authors": [
-    "Tisha Desai",
-    "Ji\\v{r}\\'i Hor\\'ak",
-    "W{\\l}odek Klu\\'zniak",
-    "Sukalpa Kundu"
-   ],
-   "label": "arXiv:2611.32629v1",
+   "label": "arXiv:2611.33906v1",
    "primary_category": "astro-ph.HE",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Derives the critical Eddington luminosity for spherical stars whose surface lies inside the Schwarzschild photon sphere, showing that photons returning to the surface change the balance condition and allow non-uniform emission.",
-    "plain": "The paper asks how bright a very compact star can be before its own light pushes its outer layers away against gravity, a limit known as the Eddington luminosity. Such limits matter for understanding bursts of X-rays from neutron stars. The authors use standard ray-tracing formulas for light bending around a non-spinning massive object to work this out for stars so compact that light emitted from the surface can loop back onto it.",
-    "why": "The text claims that returning photons change the usual balance condition, and that a formula long used in X-ray burst studies misses photons emitted outside the escape cone for stars smaller than 3 gravitational radii. This matters for interpreting burst models and for hypothetical ultra-compact objects, but the text gives only the analytical framing and conclusions, so its wider impact is not established here.",
-    "background": "- Eddington luminosity: the brightness at which outward radiation pressure balances gravity on a surface.\n- Schwarzschild metric: the geometry of spacetime around a non-spinning, spherical mass in general relativity.\n- Photon sphere: the radius (3 times the gravitational radius, 3GM/c^2) at which light can orbit the mass on an unstable circular path.\n- Gravitational radius: GM/c^2, a length scale set by the object's mass.\n- Escape cone: the range of emission directions from a surface that let light reach a distant observer rather than falling back.\n- Ray tracing: following the paths of light rays through curved spacetime.\n- X-ray bursts: sudden flashes of X-rays from material burning on neutron star surfaces.",
+    "one_liner": "Forward-modeling of CHIME/FRB non-repeating bursts finds that, once fluence (burst energy as seen at Earth) is included alongside dispersion measure, the FRB rate tracks cosmic star formation with little delay, whereas a DM-only analysis implies a 3–4 Gyr delay, which the authors attribute to biases in mapping fluence to signal-to-noise.",
+    "plain": "Fast radio bursts are very brief, very bright flashes of radio waves from distant galaxies, and nobody yet knows what produces them. This paper asks how often they occur at different distances into the past, which hints at whether their sources are young stars or old stars. The authors fit a model to the catalogued bursts from the CHIME telescope and report that the answer depends on whether the burst brightness (fluence) is included in the analysis.</plain>\n<parameter name=\"why>Whether FRB sources are young or old objects is a basic open question about their origin, and the two earlier studies the paper mentions disagree. The paper suggests that a measurement choice, not just the data, can change the conclusion, which matters for anyone using FRB rates to test progenitor models. The text does not establish which progenitor model is correct.</plain>\n<parameter name=\"background\">- Fast radio bursts (FRBs): millisecond radio flashes from outside our galaxy; their sources are unidentified.\n- Redshift: a measure of how far away (and how far back in time) an object is.\n- Star formation rate (SFR): how quickly new stars form across the universe at each epoch; it peaks several billion years ago.\n- Time delay: the lag between when stars form and when a source population forms or explodes. Young progenitors follow star formation closely; old progenitors lag behind it by billions of years.\n- Dispersion measure (DM): how much a radio signal is smeared out by electrons along its path; used as a proxy for distance.\n- Fluence: the total energy received per unit area from a burst; a brightness-related quantity that affects whether a burst is detected.\n- Forward modeling: proposing a model of the source population, simulating how it would appear through the telescope's selection effects, and comparing with observations.\n- CHIME/FRB: the Canadian Hydrogen Intensity Mapping Experiment's FRB detector and its published burst catalogs.</background>\n<parameter name=\"difficulty\">research-level",
+    "why": "",
+    "background": "",
+    "difficulty": "",
+    "ai": true
+   },
+   "abstract": "Fast radio bursts (FRBs) are luminous millisecond-duration radio transients of extragalactic origin, yet their progenitor systems remain unidentified. The redshift evolution of the FRB event rate provides a powerful, model-independent discriminant between young progenitors and old progenitors, but recent studies have reached conflicting conclusions. In this work, we perform a forward-modeling analysis of the apparent non-repeating FRB sample from the CHIME/FRB catalogs to constrain the intrinsic FRB population. We find that the FRB rate follows the star formation rate (SFR) with little time delay when both dispersion measure (DM) and fluence are considered. In contrast, when only DM is taken into account, a significant time delay ($3 \\sim 4$ Gyr) exists between the FRB rate and the SFR. The main reason for this discrepancy is that systematic biases exist in the mapping process from burst fluence to signal-to-noise ratio. These results support that at least a fraction of FRBs arise from a progenitor population whose event rate is delayed relative to star formation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33488",
+   "title": "Quantum Noise-Limited Terahertz Interferometry for Distinguishing Ultra-Compact Supermassive Galactic Objects",
+   "url": "https://arxiv.org/abs/2611.33488",
+   "authors": [
+    "Vishwas Patel",
+    "Pankaj S. Joshi",
+    "Swalih A. Valiyakath",
+    "Munn V. Shukla",
+    "Mehul R. Pandya"
+   ],
+   "label": "arXiv:2611.33488v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A theoretical study proposing that terahertz-band space interferometry, operating near the quantum noise limit, could distinguish the lensed central images of a Schwarzschild black hole from those of a JMN-1 naked singularity around Sgr A* and M87*.",
+    "plain": "The Event Horizon Telescope has imaged the glowing gas around the centers of galaxies M87 and our Milky Way (Sgr A*). This paper asks whether a black hole and a hypothetical object without an event horizon, a \"naked singularity,\" could be told apart by the way their light is combined across telescope spacings. The authors report that, for a simple model of gas falling in thinly and evenly, the two cases become separable on certain baseline ranges at noise levels they estimate are about 28 times below the EHT's 2017 statistical uncertainty.",
+    "why": "Whether the centers of galaxies contain event horizons bears on the cosmic censorship conjecture, a central open question in black hole physics. The text gives only a theoretical forecast for a future space interferometer, so it is a proposal to test rather than a demonstration.",
+    "background": "- Event Horizon Telescope (EHT): a global network of radio dishes that produced the first images of black hole shadows, M87* in 2019 and Sgr A* in 2022.\n- Event horizon: the boundary around a black hole beyond which light cannot escape.\n- Naked singularity: a hypothetical compact object with a singularity but no horizon hiding it; the cosmic censorship conjecture says such objects should not form in nature.\n- JMN-1: a specific family of spacetime models describing a naked singularity, used here as the alternative to Schwarzschild black holes.\n- Gravitational lensing: bending of light by strong gravity, which shapes the central image.\n- Interferometry and baselines: combining signals from telescopes separated by a distance (baseline); longer baselines probe finer detail. Measured in gigawavelengths (G-lambda), a unit of baseline relative to observing wavelength.\n- Visibility: the complex Fourier-domain measurement interferometers record, from which images are reconstructed.\n- Optically thin accretion: gas that is diffuse enough that light passes through it rather than being absorbed.\n- Quantum-limited detection: the lowest noise that the laws of quantum mechanics allow for a detector.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Context. Relativistic corrections to the luminosity have been used for neutron stars of radius greater than $3MG/c^2$ in studies of X-ray bursts. However, there is no fundamental limit that excludes the existence of more compact massive objects with a physical surface, fluid or solid. Aims. We aim to discuss critical \"Eddington\" luminosity for spherical stars that have a surface within the sphere of unstable circular photon orbits (photon sphere). Methods. We use standard analytical ray-tracing formulae in the Schwarzschild metric. Results. We find that for stars within the photon sphere, the Eddington condition for balance between radiative force and gravitational attraction is fundamentally altered by photons returning to the surface. The equilibrium is non-local and requires stationarity on timescales of photon fall-back. As a result, spontaneous symmetry breaking is possible, leading to non-uniformity of emission across the photospheric surface. Conclusions. For a fixed intrinsic luminosity, the photons returning to the surface decrease the cooling rate of stars inside their photon sphere. At the same time, the returning photons increase the value of the critical luminosity that would balance gravity. One and the same redshifted formula applies to the critical luminosity, as seen by a distant observer, for any radius of the star. In the X-ray burst literature, for stars with radius less than 3 gravitational radii a different formula has long been accepted that missed the essential physics of the photons emitted in directions outside the escape cone.",
+   "abstract": "The images of the galactic centers, M87$^*$ and Sgr~A$^*$, obtained by the Event Horizon Telescope (EHT) provide hitherto unknown revelations on these supermassive objects. The key issue here is the presence or otherwise of an event horizon at these ultra-compact entities. We show here that distinguishing the central images generated by gravitational lensing of a Schwarzschild black hole and a Joshi--Malafarina--Narayan (JMN-1) central naked singularity provides important insights into the nature of these supermassive objects and would help test the cosmic censorship conjecture, central to black hole physics. For optically thin spherical accretion onto Sgr~A$^*$, their interferometric visibilities become separable, independently of the emission model, on three baseline ranges within 1.4--6.2 G$\\lambda$ at errors of $\\simeq36\\,\\mu$Jy, and at $L_\\star=2.64\\,$G$\\lambda$ at $\\simeq71\\,\\mu$Jy. This is about 28 times below the 2017 Event Horizon Telescope statistical uncertainty. We suggest that the widest detection window demands minutes-long coherent integrations, favoring a near-quantum-limited space interferometer.",
    "source": "arxiv"
   },
   {

@@ -3,47 +3,49 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.33073",
-   "title": "Properties of the Sawin--Wood Model for Unramified Galois Groups of Global Fields",
-   "url": "https://arxiv.org/abs/2611.33073",
+   "uid": "arxiv:2611.34409",
+   "title": "Galois scalar extension of simple Lie algebras",
+   "url": "https://arxiv.org/abs/2611.34409",
    "authors": [
-    "Mark Shusterman",
-    "Gonen Zimmerman"
+    "Alfonso Di Bartolo",
+    "Francesco Paolo Di Fatta",
+    "Gianmarco La Rosa"
    ],
-   "label": "arXiv:2611.33073v1",
-   "primary_category": "math.NT",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper proves finite generation, finite presentation, tail estimates for generator rank, and some homological vanishing for random unramified Galois groups of global fields under the Sawin–Wood measure, in the pro-|Γ|' Γ-category.",
-    "plain": "This paper studies a random mathematical object: a group that models the symmetries of the largest possible unramified extensions of a number field, with the randomness governed by a specific probability measure (the Sawin–Wood model). The authors show that, with probability one, this random group can be described by a finite list of building blocks and a finite list of rules linking them. They also give a precise estimate for how unlikely it is to need many building blocks.",
-    "why": "Predicting how often certain Galois groups occur is a central question in arithmetic, and random-group models give testable predictions about it. The result is a technical refinement of an existing model rather than a claimed breakthrough, and the text does not say how it bears on specific open problems.",
-    "background": "- Global field: a number field (finite extension of the rationals) or a function field over a finite field.\n- Unramified Galois group: the symmetry group of the maximal extension of a field that is unramified (has no branching) at every prime, with a chosen finite group Γ acting.\n- Conjugacy class: a set of group elements that are equivalent under relabelling inside the group.\n- Finite generation and finite presentation: the group can be built from finitely many elements, subject to finitely many relations.\n- Generator rank: the minimum number of elements needed to generate the group.\n- Abelianization: the largest commutative quotient of a group; \"finite\" means it has finitely many elements.\n- Homology H_2: a measure of hidden relations in a group; vanishing means none of that kind.\n- Almost surely: holds with probability 1 under the model's measure.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We prove almost-sure finite generation and finite presentation in the pro-$|\\Gamma|'$ $\\Gamma$-category for the Sawin--Wood measure $\\nu_{\\Gamma,n,U}$, where $\\Gamma$ is a non-trivial finite group, $n$ is coprime to $|\\Gamma|$, and $U$ is a nonempty multiset of conjugacy classes of $\\Gamma$. The $\\Gamma$-generator rank of the random group $X$ has the sharp tail $\\mathbf{P}(d_\\Gamma(X) \\geq r) = Ce^{-\\kappa r^2-\\zeta r}(1+O(e^{-\\varepsilon r}))$, where $C>0$, $\\kappa>0$, and $\\zeta\\in\\mathbb{R}$ are explicit constants depending on $n$, $\\Gamma$ and $U$, and $\\varepsilon>0$. Almost surely, $X$ admits a presentation with the minimum number of $\\Gamma$-generators, using at most $|U|$ more defining $\\Gamma$-relations than generators. We also prove that every open subgroup of $X$ has finite abelianization almost surely under the assumption that for every complex representation of $\\Gamma$ there is an element in $U$ that fixes a nonzero vector. Finally, we prove that $H_2(X,\\widehat{\\mathbb{Z}})=0$ almost surely when $n=1$, $\\Gamma$ is cyclic, and $U$ contains only the conjugacy class of a generator of $\\Gamma$ (with multiplicity one).",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32272",
-   "title": "Commutator syzygies and pure resolutions over central polynomial rings with division-ring coefficients",
-   "url": "https://arxiv.org/abs/2611.32272",
-   "authors": [
-    "Hoang Anh Tu",
-    "Huynh Viet Khanh"
-   ],
-   "label": "arXiv:2611.32272v1",
+   "label": "arXiv:2611.34409v1",
    "primary_category": "math.RA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "For the noncommutative polynomial ring D[x,y,z] over a division ring D, with central indeterminates, the paper computes the syzygies and minimal free resolution of the quotient by two elements x^p+az^p and y^q+bz^q, and compares the resulting Betti tables with those over commutative polynomial rings.",
-    "plain": "This paper studies polynomials whose coefficients come from a non-commutative number-like system (a division ring, where multiplication need not be commutative), and asks what relations hold among a pair of such polynomials. It works out a complete \"map\" of those relations, called a free resolution, for a specific family of pairs. The main finding, as stated in the text, is that the answer differs from the familiar commutative case: when the coefficients fail to commute, the quotient has a longer resolution and tables of counts that do not occur over ordinary polynomial rings.",
-    "why": "The text reports that these resolution tables cannot occur over ordinary polynomial rings over fields, and that for noncommutative coefficients the set of achievable tables in three variables is strictly larger. This bears on how far classical results about syzygies and Betti numbers extend to noncommutative settings; the text does not say more about wider applications.",
-    "background": "- Polynomial ring: polynomials in variables x, y, z with coefficients in a base ring.\n- Division ring: a number-like system where every nonzero element has an inverse, but multiplication may not commute (ab may differ from ba).\n- Central indeterminates: variables that commute with every coefficient.\n- Syzygy: a relation among generators of an ideal or module; the syzygy module collects all such relations.\n- Free resolution: a step-by-step chain of free modules that encodes the syzygies; its length is the projective dimension.\n- Betti numbers: counts of generators at each stage of the resolution; a Betti table lists them by degree.\n- Pure resolution: a resolution where each stage is generated in a single degree.\n- Finite length: the quotient is finite-dimensional over the base field in a suitable sense.\n- Rational cone / semigroup: geometric and combinatorial sets of possible Betti tables.",
+    "one_liner": "The paper studies how simple finite-dimensional Lie algebras behave under scalar extension by a finite Galois field extension, giving a splitting criterion for the extended algebra, a simplicity result for prime-order cyclic extensions, and the invariance of the dimension of the centroid, with an application to finite fields.",
+    "plain": "The paper looks at a family of algebraic structures called simple Lie algebras and asks what happens when you enlarge the number system they are built over, using a Galois extension (a standard way of adding new numbers such as square roots while keeping a symmetry structure). The authors show that under a stated condition the enlarged structure splits into several identical copies of a simpler object, and that in certain prime-order cases with no such copy it stays simple. They also show that a certain invariant, the dimension of the centroid, does not change under these extensions, and use this to work out the centroids over finite fields.",
+    "why": "The results give a general way to carry classification and structure results from one ground field to another, which is a recurring theme in algebra. The text itself does not discuss applications beyond the centroid computation over finite fields, so the wider reach is uncertain.",
+    "background": "- Lie algebra: a vector space with a bracket operation satisfying certain rules, used to describe symmetries (e.g., of continuous transformations).\n- Simple Lie algebra: one with no nontrivial proper ideals (no smaller sub-structures closed under the bracket that could be split off).\n- Field: a number-like system where addition, subtraction, multiplication and division work (e.g., rationals, real numbers, finite fields with a prime number of elements).\n- Field extension: a larger field containing the original, e.g., adding a square root of 2 to the rationals; Galois means it has a rich symmetry group.\n- Scalar extension (tensoring with a field): building a new algebra over the bigger field from an algebra over the smaller one.\n- Centroid: the set of linear maps that commute with the bracket up to scalar multiplication; its dimension is an invariant.\n- Direct sum: placing several copies of an object side by side with no interaction.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $D$ be a division ring and let $A=D[x,y,z]$ with central indeterminates. For positive integers $p,q$ and $a,b\\in D$, put $f=x^p+az^p$ and $g=y^q+bz^q$. We compute their left syzygy module and the minimal graded free resolution of $A/(Af+Ag)$. This quotient has projective dimension two if $ab=ba$ and three otherwise. In the latter case, it has finite length and total Betti numbers $(1,2,2,1)$, with a pure resolution of type $(0,d,3d,4d)$ when $p=q=d$. These tables do not occur over polynomial rings over fields. If $D$ is finite-dimensional over its center $K$, the Betti tables of modules of finite length over $K[x_1,\\dots,x_n]$ and left modules of finite length over $D[x_1,\\dots,x_n]$ generate the same rational cone for every $n\\ge1$. In three variables, the semigroup over $K$ is properly contained in that over $D$ when $D$ is noncommutative.",
+   "abstract": "We investigate the behaviour of simple finite-dimensional Lie algebras under finite Galois field extensions. Given a simple Lie algebra $L$ over a field $\\mathbb{F}$ and a finite Galois extension $\\mathbb{K}/\\mathbb{F}$ of degree $n = [\\mathbb{K}:\\mathbb{F}]$, we prove that if $L$ is isomorphic to a $\\mathbb{K}$-Lie algebra $S$ viewed as an $\\mathbb{F}$-algebra, then the scalar extension $L \\otimes_{\\mathbb{F}} \\mathbb{K}$ is isomorphic to the direct sum of $n$ copies of $S$. Furthermore, for cyclic extensions of order a prime number, we show that if no such $\\mathbb{K}$-Lie algebra $S$ exists, the extended algebra $L \\otimes_{\\mathbb{F}} \\mathbb{K}$ remains simple. This framework provides a general mechanism to transfer structural and classification results across different ground fields. In addition, we examine the centroids of simple Lie algebras, proving that the dimension of the space of centroids is invariant under finite field extensions. As an application, we explicitly determine the structure of the spaces of centroids for simple Lie algebras over finite fields.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34205",
+   "title": "Normal abelian subgroups of order 5^6 in finite 5-groups",
+   "url": "https://arxiv.org/abs/2611.34205",
+   "authors": [
+    "L\\\"u Gong",
+    "Jiaye Chen",
+    "Baojun Li"
+   ],
+   "label": "arXiv:2611.34205v1",
+   "primary_category": "math.GR",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves that every finite 5-group containing an abelian subgroup of order 5^6 also has a normal abelian subgroup of that order (elementary abelian when the given one is), settling the last open case n=6 of Kourovka Notebook Problem 21.51 for p=5.",
+    "plain": "The paper studies finite groups built from symmetry-like operations where every element has a power-of-five size. It asks whether a certain kind of \"flat, evenly-behaved\" sub-collection of a given size that exists inside such a group must also exist in a stable, well-positioned form. The author settles the last open case of this question for sub-collections of size 5 to the sixth power, using a minimal counterexample argument.",
+    "why": "It closes a listed open problem from a well-known problem collection, and together with earlier results it fixes exactly which sizes the statement holds for. The text does not indicate wider applications beyond group theory.",
+    "background": "- Group: a set of symmetries (or abstract elements) with a rule for combining them.\n- Finite 5-group: a group whose size is a power of 5.\n- Abelian subgroup: a sub-collection in which elements commute, so the order of combining them does not matter.\n- Normal subgroup: a sub-collection that stays unchanged under conjugation (re-labelling by other group elements).\n- Elementary abelian: abelian and every non-identity element has order 5.\n- Order 5^6: the sub-collection has 5^6 = 15625 elements.\n- Kourovka Notebook: a public list of open problems in group theory.\n- Commutator pairing, isotropic subgroup, plane cubic over GF(5): tools from linear and algebraic structure over the field with five elements; the text uses them only in outline.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A finite 5-group containing an abelian subgroup of order 5^6 has a normal abelian subgroup of that order. If the given subgroup is elementary abelian, the normal subgroup can be chosen elementary abelian. This resolves n=6, the last open case of both parts of Problem~21.51 of the Kourovka Notebook for p=5. Together with earlier results, it follows that 1\\le n\\le 6 is the exact range in which each assertion holds for every finite 5-group at subgroup order 5^n. In a minimal counterexample, five conjugate abelian subgroups generate a group of class at most three. In class two we construct invariant isotropic subgroups for the commutator pairing. In class three the Jacobi identity produces a nonzero plane cubic over the field of five elements. The five conjugate subgroups give five distinct singular points spanning the plane, which forces the cubic to vanish.",
    "source": "arxiv"
   },
   {

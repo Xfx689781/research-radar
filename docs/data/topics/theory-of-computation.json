@@ -3,47 +3,51 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32524",
-   "title": "A Tight Superlinear Lower Bound on the Sketching Dimension of Weighted Spectral Sparsification",
-   "url": "https://arxiv.org/abs/2611.32524",
+   "uid": "arxiv:2611.33738",
+   "title": "Toggle Tree: A New Data Structure for Efficient Parallel Graph Processing",
+   "url": "https://arxiv.org/abs/2611.33738",
    "authors": [
-    "Yanyu Chen",
-    "Yu Chen",
-    "Mingji Yang"
+    "Xinjian Jiang",
+    "Youzhe Liu",
+    "Yan Gu",
+    "Yihan Sun"
    ],
-   "label": "arXiv:2611.32524v1",
+   "label": "arXiv:2611.33738v1",
    "primary_category": "cs.DS",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves that any linear sketch giving a (1±O(1))-spectral sparsifier of weighted n-vertex graphs needs dimension Ω(n^{6/5}), matching the known Õ(n^{6/5}) upper bound up to polylog factors and removing the earlier restriction to incidence sketches.",
-    "plain": "The paper studies how much compressed information is needed to summarize a network (a graph of nodes and weighted links) so that its overall connection structure can still be approximated. The authors show that for weighted graphs, any such compressed summary of a certain kind must be at least roughly n^{6/5} numbers in size, where n is the number of nodes. This matches an existing upper bound up to small logarithmic factors.",
-    "why": "The result closes a gap left by earlier work, which had only proven a weaker lower bound for a restricted class of sketches. It also sharpens a contrast: the same setting admits near-linear compression for cut sparsification, so the difference between cut and spectral approximation is now shown to be sharp. The text does not say what wider applications this may have.",
-    "background": "- Graph: nodes joined by weighted edges.\n- Sparsifier: a smaller weighted graph that approximates the original; a cut sparsifier preserves the total weight across every split of nodes, while a spectral sparsifier preserves a stronger set of quadratic measurements tied to the graph's Laplacian matrix.\n- Linear sketch: a compressed summary computed by taking fixed linear combinations (measurements) of the graph's edge weights; its dimension is the number of measurements.\n- Lower bound vs. upper bound: a lower bound shows no method can do better; an upper bound is a construction that achieves a given size.\n- Leverage score: a measure of how much a single column of a matrix contributes that cannot be replaced by the others.\n- Big-O/Omega/polylog notation: n^{6/5} describes growth in n; polylog factors are powers of log n that are ignored.",
+    "one_liner": "The paper introduces the Toggle Tree, a parallel data structure built on hierarchical bit vectors that represents vertex frontiers for graph algorithms and exposes IndexSet and IndexMap interfaces, and reports faster implementations of five graph problems than GBBS and PASGAL.",
+    "plain": "Many computer programs that explore networks, such as road maps or social graphs, keep track of a changing \"to-do list\" of nodes to visit next. This paper proposes a new way to store that list so that many processor cores can update and scan it at the same time. The authors use it to build five standard network algorithms and report that these versions run substantially faster than existing published versions on large real-world graphs.",
+    "why": "Speeding up core routines like breadth-first search and shortest paths on very large graphs matters for any field that analyzes big networks. The text claims both theoretical guarantees and practical speedups, but the abstract alone does not show the size of the gains or the conditions under which they hold, so those details need checking in the full paper.",
+    "background": "- A graph is a set of nodes (vertices) joined by links (edges), such as a network of web pages or roads.\n- A \"frontier\" is the set of nodes currently being processed in a search step, like the current ring of a ripple spreading outward.\n- Sparse frontiers store a list of active nodes; dense frontiers store a yes/no mark for every node. The paper tries to combine the strengths of both.\n- A bit vector is a compact row of 0/1 flags; hierarchical means these flags are organized in layers, so large empty regions can be skipped quickly.\n- Parallel processing means splitting work across many processor cores at once.\n- Baselines named: GBBS and PASGAL are existing graph-processing frameworks/systems used for comparison.\n- Algorithms named: breadth-first search, k-core decomposition, graph coloring, Bellman-Ford shortest paths, and weighted BFS.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We show that any linear sketch that computes a $\\bigl(1 \\pm O(1)\\bigr)$-spectral sparsifier of $n$-vertex weighted graphs with polynomially bounded weights must have dimension $\\Omega\\bigl(n^{6/5}\\bigr)$. Previously, Chen, Khanna, and Li (FOCS 2022) gave a sketching dimension upper bound of $\\widetilde{O}\\bigl(n^{6/5}\\bigr)$ and a lower bound of $\\Omega\\bigl(n^{21/20 - o(1)}\\bigr)$ for incidence sketches, in which each measurement examines edges incident on a single vertex. Our lower bound removes this restriction and matches the upper bound up to polylogarithmic factors. Together with their $\\widetilde{O}(n)$ upper bound for weighted cut sparsification, our result also gives a sharp separation between cut and spectral sparsification. In our hard distributions, we randomly permute vertices into blocks on a cycle and construct a complete graph whose edge weights decrease with cyclic block distance. We reduce the problem to showing that the sketch column of an edge between opposite blocks has a small leverage score relative to other columns scaled by the edge weights. For incidence sketches, we obtain this bound from a routing decomposition on the block cycle that uses few columns between distant blocks. We then add a separate clique to reduce arbitrary sketches to incidence sketches with expected dimension linear in the original dimension.",
+   "abstract": "We present the Toggle Tree, a parallel data structure for frontier-based graph algorithms. A Toggle Tree is used to represent a subset of vertices using hierarchical bit vectors, enabling efficient parallel updates, traversal, and set-wise reductions without global packing. It provides an IndexSet interface that unifies a wide range of parallel graph algorithms under a common abstraction of frontiers and active sets, and an IndexMap interface that also incorporates priority-queue semantics. Specifically, the Toggle Tree aims to combine the advantages of traditional sparse and dense frontier representations, offering both provable theoretical guarantees and high efficiency in practice. Using Toggle Trees, we implement five fundamental graph algorithms, including breadth-first search (BFS), k-core, degree-based graph coloring, single-source shortest paths using Bellman-Ford, and weighted-BFS (wBFS). Across a diverse set of large real-world graphs and the five graph problems, our implementations outperform state-of-the-art baselines, including GBBS and PASGAL, achieving substantial speedups. Our code is publicly available.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32048",
-   "title": "Minimizing Total Busy Time with Bounded Parallelism: A $3/2$-Approximation for Parallelism Two and a Forest Characterization for General Parallelism",
-   "url": "https://arxiv.org/abs/2611.32048",
+   "uid": "arxiv:2611.34897",
+   "title": "Computing Normal-Form Correlated Equilibria in Extensive-Form Games is in PPAD",
+   "url": "https://arxiv.org/abs/2611.34897",
    "authors": [
-    "Chi-Yeh Chen"
+    "Vincent Cheval",
+    "Florian Horn",
+    "Soumyajit Paul",
+    "Mahsa Shirmohammadi"
    ],
-   "label": "arXiv:2611.32048v1",
-   "primary_category": "cs.DS",
+   "label": "arXiv:2611.34897v1",
+   "primary_category": "cs.GT",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives a combinatorial 3/2-approximation for minimum total busy time with parallelism g=2 (improving the previous ratio of 2), extends it to temporal bin packing with large items, and characterizes optimal schedules for general g via maximum-weight \"g-caterpillar forests.\"",
-    "plain": "The problem asks how to assign jobs, each occupying a fixed time window, to machines that can run at most g jobs at once, so that the total time the machines are switched on is as small as possible. The authors give a method that, when g=2, is guaranteed to come within a factor of 1.5 of the best possible schedule, where the best previously known guarantee for general instances was 2. For general g they show that optimal schedules have a precise structure that yields an exact integer program and a polynomial-size relaxation for each fixed g.",
-    "why": "Scheduling with bounded parallelism is an NP-hard problem, so guaranteed approximation ratios are the main way to get provably good schedules, and this paper tightens the ratio for g=2 from 2 to 3/2. The random-instance experiments (average ratio about 1.07 to 1.075 against optimal or tight lower bounds) are reported in the text, but their broader significance for practical scheduling is not established here.",
-    "background": "- Approximation algorithm: a polynomial-time method guaranteed to produce a solution within a known factor of the optimum.\n- NP-hard: a class of problems believed not to admit fast exact algorithms in general.\n- Busy time: total time machines are running at least one job; jobs sharing a machine save time.\n- Parallelism g: maximum number of jobs a machine can run simultaneously.\n- Linear relaxation / integrality gap: replacing whole-number choices with fractional ones to get a lower bound, and the worst-case ratio between that bound and the true optimum.\n- Local-ratio technique: an analysis method that reduces weights step by step to bound solution quality.\n- Temporal bin packing: packing items with time intervals into bins of fixed capacity, a close relative of the scheduling problem.",
+    "one_liner": "The paper shows that finding a normal-form correlated equilibrium in succinct extensive-form games with perfect recall lies in PPAD for any number of players, and that computing one with support size quadratic in the game size is PPAD-hard even for two players.",
+    "plain": "The paper asks how hard it is to compute a \"correlated equilibrium\" in games where players make decisions over several turns, a setting where a shared random signal can coordinate their choices. The authors place this computational task in PPAD, a complexity class that captures problems whose solutions are guaranteed to exist but are believed to be hard to find. They also show a matching hardness result, but only for solutions with a restricted number of possible signal outcomes.",
+    "why": "The authors describe this problem as a major open question in algorithmic game theory, so placing it in PPAD is a step toward understanding its difficulty. The text does not discuss applications beyond game theory, so its wider relevance is unclear from this text alone.",
+    "background": "- Game theory: a model of strategic interaction among players, each choosing actions to maximize their own payoff.\n- Extensive-form game: a game played over a tree of sequential decisions; perfect recall means players remember their own past choices.\n- Correlated equilibrium: a stable outcome where a trusted shared random signal recommends actions to players, and no player gains by deviating from the recommendation.\n- Normal-form correlated equilibrium: a version of correlated equilibrium defined over the full strategy space of the game, which can be exponentially large.\n- Support size: the number of distinct signal outcomes used in the equilibrium; a smaller support is a simpler solution.\n- PPAD: a complexity class for search problems where a solution always exists by a parity or fixed-point argument, but efficient algorithms are not known; hardness here suggests no efficient algorithm is likely.\n- Succinct game: a game whose description is compact relative to its full size.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study the minimum total busy time problem: jobs with fixed processing intervals must be assigned to identical machines, each of which can process at most g jobs at a time, so that the total time during which the machines are busy is minimized. The problem is NP-hard already for g=2, and, to the best of our knowledge, no approximation ratio below 2 was known for general instances with g=2, where the ratio 2 is attained by giving every job its own machine. We present a combinatorial 3/2-approximation algorithm for g=2. The algorithm applies the two-phase local-ratio technique to the known pair formulation of the problem, processing the overlapping job pairs in order of the right ends of their overlaps. The cost of its schedule is at most $L-\\lambda/2$, where L is the total processing time and $\\lambda$ is the optimal value of the linear relaxation of the pair formulation; hence the integrality gaps of this relaxation and of the configuration LP are at most 3/2. The result extends to temporal bin packing with items larger than one third of the bin capacity. For general g, we show that optimal schedules correspond exactly to maximum-weight forests of a special kind, which we call g-caterpillar forests; this yields an exact integer program and a linear relaxation of polynomial size for every fixed g. We also observe that securing a (1-1/g) fraction of the optimal savings suffices for a (2-1/g)-approximation. On random instances with g=2, evaluated with exact optima or tight lower bounds obtained from the pair formulation, the average ratio of the algorithm to the optimum is at most 1.075 for 100 jobs and at most 1.070 for 200 jobs.",
+   "abstract": "We study the computational complexity of finding any normal-form correlated equilibria (NFCE for short) in the succinct games of extensive-form with perfect recall, which is considered as a major open problem in algorithmic game theory. Our main results place this problem in PPAD for an arbitrary numbers of players. Our second result establishes PPAD-hardness of computing such an NFCE with support size of at most quadratic in the size of the game, even for two-player games. The posed restriction on the support size in PPAD-hardness construction is motivated by our PPAD algorithm, which constructs an NFCE with support size quadratic in the size of the input extensive-form game.",
    "source": "arxiv"
   },
   {

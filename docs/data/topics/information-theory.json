@@ -3,47 +3,49 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.33129",
-   "title": "A Koashi--Imoto Criterion for Holevo-Rate Visible Compression",
-   "url": "https://arxiv.org/abs/2611.33129",
+   "uid": "arxiv:2611.34468",
+   "title": "Exponential Analysis for Trace-Distance Errors in Quantum Information Theory",
+   "url": "https://arxiv.org/abs/2611.34468",
    "authors": [
-    "Anthony M. Polloreno"
+    "Hao-Chung Cheng",
+    "Li Gao",
+    "Shi-Bing Li",
+    "Hongsen Qiu"
    ],
-   "label": "arXiv:2611.33129v1",
+   "label": "arXiv:2611.34468v1",
    "primary_category": "quant-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives a Koashi–Imoto-type characterization of when the Holevo rate is achievable for visible quantum source compression with shared classical randomness and no shared entanglement, and shows a converse for mixed quantum parts using Fawzi–Renner recovery and a decoupling bound for blind compression.",
-    "plain": "The paper studies how many quantum bits per symbol are needed to compress a source whose encoder can see the classical labels attached to each quantum signal, a setting where the best possible rate is known as the Holevo rate. It finds an exact condition for when that rate can be reached: roughly, every signal must be pure (not mixed) on the quantum part of each sector it occupies. For qubits this means the signals are either all pure or commute pairwise, and when some occupied part is mixed, codes with small error cannot reach the Holevo rate.",
-    "why": "It sharpens the known achievable-rate picture for quantum source coding by giving a precise structural test rather than only an asymptotic bound. The text does not say what practical or other-field applications it may have, so any wider connection is uncertain.",
-    "background": "- Quantum source: a stream of quantum states (qubits) emitted with classical labels; the encoder may see the labels.\n- Compression rate: the number of quantum bits needed per symbol, as the message length grows.\n- Holevo information: the standard limit on the classical information carried by an ensemble of quantum states.\n- Shared classical randomness vs. entanglement: resources the sender and receiver may share; here only randomness is allowed.\n- Koashi–Imoto decomposition: a way to split a set of quantum states into classical and quantum parts that carry the information.\n- Pure vs. mixed state: a pure state is a definite quantum state; a mixed state is a statistical blend of such states.\n- Fawzi–Renner recovery and decoupling bounds: standard tools from quantum information used to prove converses (limits that no code can beat).\n- Visible vs. blind compression: whether the encoder knows the labels or not.",
+    "one_liner": "The paper determines exact exponential rates (reliability functions and strong converse exponents, in the i.i.d. setting) at which trace-distance errors vanish or blow up for classical-quantum soft covering, privacy amplification, convex splitting, and Haar-random decoupling, with formulas in terms of sandwiched and Petz Rényi information.",
+    "plain": "This paper is about how fast the error shrinks when quantum information is scrambled, shared, or hidden. The errors are measured with \"trace distance,\" a standard way of asking how easily two quantum states can be told apart. The authors work out the exact exponential rates at which these errors fall (and, in the other regime, rise) for several standard quantum protocols when many copies are used.",
+    "why": "Exact error exponents tell engineers and theorists precisely how many resources a protocol needs for a given reliability, which matters for secure communication and quantum data processing. The text does not say how these results will be used in practice, so their wider impact is unclear from this summary alone.",
+    "background": "- Quantum states: descriptions of quantum systems, often mixed, written as density matrices.\n- Trace distance: a measure of how distinguishable two quantum states are, between 0 and 1.\n- Reliability function: the exponent describing how quickly the error probability falls as the block length grows.\n- Strong converse exponent: the exponent describing how quickly success vanishes when the transmission rate is pushed past the limit.\n- Soft covering and convex splitting: protocols that make a random set of states look like a target state.\n- Privacy amplification: shrinking a partly secret key so an eavesdropper who has quantum side information learns almost nothing.\n- Decoupling: randomising a system so that it becomes uncorrelated with a part of itself or with a reference.\n- Sandwiched and Petz Rényi information: families of entropy-like quantities that generalise Shannon information to quantum states.\n- Quantum hypothesis testing: deciding which of two quantum states a system is in, the tool linking these errors to the exponents.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "For a finite memoryless quantum source whose encoder knows the sequence of classical labels, we determine when the Holevo rate is achievable with shared classical randomness and no shared entanglement. In the maximal Koashi--Imoto decomposition of the signal ensemble, this occurs exactly when each signal is pure on the quantum part of every sector it occupies. For qubits, this means that the signals are all pure or commute pairwise. If any occupied quantum part is mixed, every code with sufficiently small mean local error has rate bounded away from the Holevo information, uniformly in blocklength. To prove the converse, we apply Fawzi--Renner recovery to a hypothetical sequence of visible codes approaching the Holevo rate at vanishing local error, then invoke a decoupling bound of Baghali Khanian and Winter for blind compression.",
+   "abstract": "We study the trace-distance error in classical-quantum soft covering, privacy amplification against quantum side information, convex splitting, and decoupling by a Haar-random unitary followed by partial trace. In the independent and identically distributed setting, we determine exact reliability functions and strong converse exponents for soft covering with independent codewords, uniform convex splitting, and Haar partial-trace decoupling. For privacy amplification, we determine the exact reliability function for independent random binning and the exact strong converse exponent for every two-universal hash ensemble. The reliability and strong converse formulas involve sandwiched and Petz-R\\'enyi information, respectively. The proofs connect trace-distance errors to quantum hypothesis testing, using Rosenthal inequalities for sums of random matrices in the reliability analysis and conditional second-moment bounds for the strong converses.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32126",
-   "title": "Validity and maximum violation of the entanglement-assisted quantum Singleton bound for linear stabilizer codes",
-   "url": "https://arxiv.org/abs/2611.32126",
+   "uid": "arxiv:2611.33318",
+   "title": "What Must LLM Agents Communicate? From Information Loss to Communication Failures",
+   "url": "https://arxiv.org/abs/2611.33318",
    "authors": [
-    "Jae-Hyun Baek",
-    "Byung-Sun Won",
-    "Jon-Lark Kim"
+    "Yi-Yun Chu",
+    "Xiaobin Shen"
    ],
-   "label": "arXiv:2611.32126v1",
-   "primary_category": "quant-ph",
+   "label": "arXiv:2611.33318v1",
+   "primary_category": "cs.MA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "For linear entanglement-assisted quantum stabilizer codes, the paper determines when the Brun–Devetak–Hsieh entanglement-assisted quantum Singleton bound holds, and bounds by how much it can be violated, in terms of how many qudits plus the receiver's entangled halves recover the logical qudits.",
-    "plain": "Quantum error-correcting codes protect fragile quantum information from noise, and some versions borrow pairs of entangled particles shared in advance to help. A standard rule of thumb says how many such pairs are needed; this paper works out exactly when that rule is guaranteed to hold for a broad class of these codes, and by how much it can fail when it does not. The answer depends on a single count: how many particles, together with the receiver's halves of the shared pairs, are needed to recover the protected information.",
-    "why": "A clear characterization of when a standard capacity-type bound holds, and how far it can be beaten, sharpens how we understand the cost of entanglement-assisted protection. The connections to classical maximum distance separable codes and to polynomial evaluation codes are concrete, though the broader practical impact is not stated in the text.",
-    "background": "- Quantum error correction: encoding quantum information into many physical particles so that noise can be detected and undone.\n- Entanglement-assisted codes: codes that use entangled pairs shared between sender and receiver in advance; the bound counts how many such pairs are consumed.\n- Qudits: quantum units of information with more than two levels (qubits are the two-level case).\n- Stabilizer codes: a standard, linear-algebra-based family of quantum codes.\n- Singleton bound: a classical-style limit relating code length, number of protected symbols and minimum distance; the quantum version here is the bound being tested.\n- Maximum distance separable (MDS) codes: classical codes that meet the Singleton limit exactly; the MDS conjecture concerns how long they can be over a finite field.\n- Lean: a proof assistant used to machine-check the mathematical proofs.",
+    "one_liner": "A framework drawing on information theory and communication complexity that asks what messages LLM agents must exchange so a team can make accurate joint predictions when evidence is spread across them, tested with controlled experiments and message-level analysis.",
+    "plain": "Several AI agents may each hold a piece of the evidence needed for a decision, and together they may have enough to decide well, yet still fail to do so. The paper asks what those agents must tell each other, and when talking back and forth actually helps. The authors compare theoretical limits on how much information gets lost with the results of controlled experiments.",
+    "why": "Multi-agent LLM systems are increasingly used for joint reasoning, so knowing whether failures come from fundamental limits or from poor communication habits matters for designing them. The link to communication complexity and information loss gives the work a principled footing, though the text alone does not show how broadly the findings generalize beyond the authors' experiments.",
+    "background": "- Multi-agent LLM system: several language-model instances that each see part of a problem and exchange messages.\n- Information theory: the mathematical study of how much information can be stored, sent, and lost.\n- Communication complexity: a field asking how many bits two or more parties must exchange to compute a joint answer.\n- Sufficiency: whether a message keeps all the information needed for the final decision.\n- Information loss: information discarded when an agent compresses its evidence into a summary, such as a probability report.\n- Query-first interaction: an agent first states what it needs to know, so others send only relevant evidence.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Entanglement-assisted quantum codes protect quantum information with entangled pairs shared in advance, and the entanglement-assisted quantum Singleton bound of Brun, Devetak and Hsieh is the standard estimate of how many pairs they consume. Codes that violate it at large distance are known. For linear entanglement-assisted stabilizer codes, which include all qubit stabilizer codes of this kind, we determine when the bound holds and how far it can fail. The answer depends on how many qudits, together with the receiver's halves of the pairs, recover the logical qudits. If this number is less than twice the number of logical qudits, the bound holds, also for degenerate codes. If it is exactly twice that, the bound overstates the number of pairs by at most the length of the longest classical maximum distance separable (MDS) code of that dimension, minus the dimension. Codes carrying values and derivatives of polynomials on the projective line attain this maximum whenever the field size is at least that dimension and the MDS conjecture is known for it, which includes every prime and, by a recently announced result, every even field size. If the number is more than twice the number of logical qudits, the violation is bounded in terms of the lengths of classical codes of a given Singleton defect, and the bound is attained for one logical qudit. Apart from cited MDS lengths, the proofs are formalized in the Lean proof assistant.",
+   "abstract": "When evidence is distributed across LLM agents, a team may collectively possess all the information needed for a decision yet fail to use it effectively. What must agents communicate for accurate joint predictions, and when does interaction help? We study three requirements for effective communication: sufficiency of the information conveyed, selection of relevant evidence, and utilization of received information. Drawing on information theory and communication complexity, we develop a framework that combines theoretical benchmarks with controlled experiments and message-level analyses. We find that local probability reports can discard essential information, with theoretical information loss closely matching observed performance penalties. Query-first interaction improves predictions when relevant evidence depends on a private query, but compact one-shot representations can eliminate this advantage. Even when sufficient information is communicated, agents may fail to select or use it correctly. Together, these findings distinguish fundamental communication limits from failures in how LLM agents communicate and use information.",
    "source": "arxiv"
   },
   {

@@ -3,48 +3,51 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32747",
-   "title": "Convex computation of cost bounds for data-driven nonlinear optimal control",
-   "url": "https://arxiv.org/abs/2611.32747",
+   "uid": "arxiv:2611.33923",
+   "title": "Wasserstein-Fisher-Rao Reconstruction of Discrete space Population Dynamics",
+   "url": "https://arxiv.org/abs/2611.33923",
    "authors": [
-    "Oumayma Khattabi",
-    "Matteo Tacchi-Benard",
-    "Sorin Olaru"
+    "Junda Ying",
+    "Xinyu Wang",
+    "Peijie Zhou",
+    "Lei Zhang"
    ],
-   "label": "arXiv:2611.32747v1",
+   "label": "arXiv:2611.33923v1",
    "primary_category": "math.OC",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives a convex (semidefinite-programming) relaxation for computing a lower bound on the best achievable cost of a data-driven optimal control problem for input-affine polynomial systems whose input matrix is unknown and state-dependent.",
-    "plain": "The paper studies how to steer a system, such as a machine or vehicle, to do its job at lowest cost when the exact model of how controls affect it is partly unknown. The authors use recorded data and a Lipschitz assumption (a limit on how fast the unknown part can change) to build a set of possible models, then solve the best-case version of the problem. This yields a lower bound on the cost any feedback control policy could reach.",
-    "why": "Knowing a guaranteed lower bound on achievable cost is useful for judging how good a controller is, even when the model is uncertain. The text does not show how the method performs beyond one numerical comparison with benchmark methods, so its practical impact is not established here.",
-    "background": "- Optimal control: choosing inputs over time to minimise a cost.\n- Hamilton-Jacobi-Bellman (HJB) equation: a partial differential equation whose solution gives the optimal cost.\n- Input-affine system: the control enters the dynamics in a simple linear way, multiplied by a state-dependent matrix.\n- Lipschitz continuity: the unknown part of the dynamics cannot change arbitrarily fast.\n- Moment-SoS hierarchy: a sequence of convex semidefinite programs that approximates polynomial optimization problems from below.\n- Semidefinite program (SDP): a convex optimization problem solvable numerically.\n- Lower bound: a value guaranteed to be no greater than the true optimum.",
+    "one_liner": "The paper extends the dynamic Wasserstein-Fisher-Rao (unbalanced optimal transport) problem to discrete state spaces, derives a closed-form solution, and proposes an unbalanced discrete flow matching method as a numerical approximation for large or more general cases.",
+    "plain": "The paper studies how a population of cells changes over time when we only see snapshots of it at a few moments. Cells are grouped into coarse cell types, and the authors build a mathematical method that estimates a smooth, continuous-time path between those snapshots, allowing cells to be created or lost along the way. The authors report a closed-form solution for their framework, a numerical shortcut for very large problems, and tests on simulated and real biological data.",
+    "why": "Reconstructing how cell populations evolve from sparse measurements is a practical problem in developmental and disease biology, where cells cannot be tracked individually. The text does not say how the method compares with existing tools, so its practical advantage is not established here.",
+    "background": "- Optimal transport: a way of finding the cheapest way to move one distribution of mass into another; \"unbalanced\" means mass can also appear or disappear.\n- Wasserstein-Fisher-Rao: a specific unbalanced transport distance combining moving mass and growing or shrinking it.\n- Discrete state space: the system is described by a finite set of categories (here, coarse cell types) rather than continuous positions.\n- Flow matching: a machine-learning technique that learns a continuous-time path transforming one distribution into another; the discrete version works on categories.\n- Markovian: the future depends only on the present state, not on the full history.\n- Snapshot data: measurements taken at several time points without following the same individual cells over time.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The paper addresses the optimal control problem of an input-affine polynomial system with an unknown (state-dependent) input matrix affecting the control effectiveness. Under assumptions on the existence of a data set and the Lipschitz continuity of the unknown part {of the dynamics}, an uncertainty set is constructed and used to adapt the Hamilton-Jacobi-Bellman equation towards a data-driven formulation. We solve it for the best-case scenario, thus giving a lower bound on the best cost achievable by means of a feedback control policy. After relaxing it into a moment-SoS hierarchy of semidefinite programs, a control law is extracted from the primal on moments and compared with other benchmark methods in a numerical application.",
+   "abstract": "Reconstructing the continuous time dynamics of cell state evolution from sparse snapshot observations can be formulated as an unbalanced optimal transport problem. To study such dynamics at a coarse grained cell type level, unbalanced optimal transport must be extended to discrete state spaces. Inspired by discrete flow matching, we extended the dynamic Wasserstein-Fisher-Rao (WFR) problem to discrete spaces, and derived a closed form for its solution. For particularly large state spaces or more general models, we proposed an unbalanced discrete flow matching as a numerical approximation method, which provides a Markovian reconstruction of the optimal WFR flow. Our discrete WFR framework also stays stable across different coarse grain resolution. Finally, numerical experiments demonstrated the effectiveness of the proposed approach, and applications to real biological data supported the plausibility of the reconstructed dynamics.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31926",
-   "title": "Linear-Quadratic Graphon Mean-Field Games in Hilbert Spaces and Applications",
-   "url": "https://arxiv.org/abs/2611.31926",
+   "uid": "arxiv:2611.33802",
+   "title": "BGPNP: A Non-Euclidean Gradient Projection Newton Pursuit Method for Sparsity-Constrained Optimization",
+   "url": "https://arxiv.org/abs/2611.33802",
    "authors": [
-    "Zhen Wu",
-    "De-xuan Xu"
+    "Jiawei Chen",
+    "Huilin Han",
+    "Yibing Lv",
+    "Jen-Chih Yao"
    ],
-   "label": "arXiv:2611.31926v1",
+   "label": "arXiv:2611.33802v1",
    "primary_category": "math.OC",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper studies linear-quadratic graphon mean-field games with infinite-dimensional stochastic evolution dynamics in Hilbert spaces, reducing the limit game to an operator-valued Riccati equation and a GMFG system, and deriving approximate (epsilon-)Nash equilibria for the N-agent game.",
-    "plain": "The paper looks at how a very large number of interacting decision-makers, spread over a network, each steer their own evolving system while trying to minimise a personal cost. The agents' states live in an infinite-dimensional space, so their behaviour is described by evolving random equations rather than a fixed list of numbers. The authors show how to find a limiting \"typical agent\" model and use it to build strategies that come close to a stable equilibrium for the full group, and they apply the results to an optimal investment problem with delay in a competitive setting.",
-    "why": "Mean-field and graphon game models are a common tool for large-population decision problems in economics, engineering and networks, and extending them to infinite-dimensional dynamics (such as delay or PDE-type systems) broadens where they can be used. The text does not show how widely this extension will be adopted, and the stated contribution is mainly theoretical.",
-    "background": "- Mean-field games: models where each agent reacts to the average behaviour of a large population, rather than to every other agent individually.\n- Graphon: a limiting description of a very large network, where agents are placed on a continuous interval and connection strengths are given by a function.\n- Linear-quadratic control: a standard setting where dynamics are linear and costs are quadratic, which allows explicit solutions.\n- Hilbert space: an infinite-dimensional generalisation of ordinary Euclidean space, used to model systems whose states are functions.\n- Stochastic evolution equation: a differential equation with random noise, evolving in an infinite-dimensional space.\n- Riccati equation: a matrix (here operator-valued) equation whose solution gives the optimal feedback gain in linear-quadratic control.\n- Nash equilibrium: a set of strategies where no agent can gain by changing only its own strategy; an epsilon-Nash equilibrium holds approximately, up to a small tolerance.",
+    "one_liner": "A non-Euclidean (Bregman-distance-based) gradient projection plus Newton pursuit method, called BGPNP, for minimizing an objective subject to a cap on the number of nonzero variables, with convergence results and compressed sensing experiments.",
+    "plain": "This paper studies a way to solve optimization problems where only a small number of variables are allowed to be nonzero, such as finding a sparse signal that fits measurements. The authors propose a two-stage iterative method: a gradient-based step that keeps the iterates within the sparsity limit, followed by a faster Newton-style step once the set of active variables has settled. They report that the method provably decreases the objective, converges, and does so at a fast local rate, and that it performs competitively on compressed sensing tests.",
+    "why": "Sparse optimization underlies many signal-recovery and data-compression tasks, so faster or more reliable solvers have practical value. The paper's main claimed contribution is convergence guarantees that avoid some restrictive conditions used in earlier work, though the text alone does not show how broadly these conditions are relaxed or how the method compares beyond the compressed sensing tests mentioned.",
+    "background": "- Sparsity constraint: a rule that only a fixed small number of variables may be nonzero.\n- Gradient method: iteratively moving downhill along the slope of the objective function.\n- Projection: adjusting a point so it satisfies a constraint, here by keeping only the largest entries.\n- Bregman distance: a generalized measure of distance between points that can replace the usual Euclidean (straight-line) distance, useful when geometry is not standard.\n- Newton step: a update using curvature information that converges quickly near a solution.\n- Convergence rates: \"linear\" and \"quadratic\" describe how fast the error shrinks per iteration; quadratic is much faster.\n- Compressed sensing: recovering a sparse signal from fewer measurements than usual.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "This paper investigates a class of linear-quadratic graphon mean-field games (LQ-GMFGs) in Hilbert spaces, where heterogeneous agents are distributed over large networks. A distinguishing feature of our model, compared with the model of well-studied finite dimensional LQ-GMFGs, is that the dynamics of agents are governed by infinite dimensional stochastic evolution equations (SEEs) involving an unbounded operator. The diffusion coefficients are allowed to depend on the state, the control, and the weighted state-average. In addition, the parameters in cost functionals could be indefinite. As the number of agents, $N$, tends to infinity, following the Nash certainty equivalence methodology, the solvability of the limit GMFG is reduced to that of an operator-valued Riccati equation and a GMFG equation system. The existence of a strongly regular solution to the former is characterized by an equivalent, easily verifiable condition, and the sufficient conditions are established for the solvability of the latter by applying the spectral decomposition method. Therefore a Nash equilibrium for the limit game is obtained. Under some adequate convergence assumptions, a set of decentralized strategies for the $N$-agent game is designed based on the Nash equilibrium of the limit GMFG, and the obtained strategy profile is shown to constitute an $\\epsilon$-Nash equilibrium. Finally, the theoretical results are applied to an optimal investment problem with delay in a competitive environment.",
+   "abstract": "A non-Euclidean gradient projection Newton pursuit method is proposed for solving sparsity constrained optimization problem via the Bregman distance. The method is also denoted as BGPNP. The method firstly constructs a gradient projection step based on the Bregman distance to ensure that the iterates satisfy the sparsity constraint. Then, when the support set becomes stable or the gradient norm is sufficiently small, a Newton pursuit step is introduced to improve local convergence efficiency. The BGPNP is proved to possess a sufficient descent property and the non-increasing monotonicity of the objective function values. The full convergence and linear convergence rate of the BGPNP are established under appropriate conditions, which do not involve the symmetry coefficient of Bregman distance and the $\\theta$-uniform condition. Moreover, the locally quadratical convergence rate of the BGPNP is also obtained. This method provides an effective algorithmic framework for sparse optimization in non-Euclidean setting. Numerical experiments on sparsity-constrained compressed sensing problems validate the competitive performance of BGPNP compared with existing leading solvers.",
    "source": "arxiv"
   },
   {

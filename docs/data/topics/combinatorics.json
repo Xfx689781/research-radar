@@ -3,47 +3,50 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32607",
-   "title": "Sparse Additive Spanners and the Cost Spectra of Group Actions",
-   "url": "https://arxiv.org/abs/2611.32607",
+   "uid": "arxiv:2611.33423",
+   "title": "From random intersection to spatial graphs: a unified asymptotic framework",
+   "url": "https://arxiv.org/abs/2611.33423",
    "authors": [
-    "Itai Benjamini"
+    "Alessandra Bianchi",
+    "Alberto De Nicol\\`o",
+    "Riccardo Michielan"
    ],
-   "label": "arXiv:2611.32607v1",
-   "primary_category": "math.GR",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper studies invariant random spanning subgraphs of Cayley graphs, measuring how sparse an additive spanner can be by its expected vertex degree, and relates the achievable sparsity (\"cost spectra\" of group actions) to geometric invariants of the group.",
-    "plain": "The paper asks how few connections a network can keep if it must keep every point and let distances grow by at most a fixed constant amount. Using random, symmetry-respecting choices of which connections to keep, it shows that on a square grid the average number of connections per point can be pushed arbitrarily close to two, while a fully symmetric choice made from independent labels forces keeping every connection. The note then tests similar questions on other groups.",
-    "why": "It connects a concrete sparsification question about graphs to the symmetry of group actions, and the text suggests the minimum over actions recovers a geometric quantity. The text is a brief expository note, so the wider significance is not established here.",
-    "background": "- Cayley graph: a graph built from a group, where vertices are group elements and edges come from multiplying by generators.\n- Additive spanner: a subgraph that keeps all vertices and whose distances exceed the originals by at most a fixed constant.\n- Invariant random subgraph: a random choice of edges whose distribution is unchanged by the group's symmetries.\n- Expected degree: the average number of kept edges at a vertex; lower means sparser.\n- Hyperbolic group: a group whose Cayley graph is tree-like at large scales; nilpotent group: a group with a layered, commutator-based structure.\n- Cost spectrum: the set of achievable additive costs over choices of group action, as described in the text.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "How sparse can a Cayley graph become if we retain all its vertices and allow distances to increase by at most a fixed additive constant? We study invariant random spanning subgraphs, measuring sparsity by the expected degree at a vertex. On the square grid, a random translate of a sparse mesh brings the mean degree arbitrarily close to two. If the choice must be made equivariantly from independent vertex labels, every edge is forced. In this expository note we follow these two answers through other groups. Geometry alone forces a positive gap on each non-elementary hyperbolic Cayley graph, while on one four-regular nilpotent Cayley graph the choice of action realizes every additive cost in $[1,2]$. The minimum of the action spectrum recovers the geometric cost. Open problems are presented in the end.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32740",
-   "title": "Fluctuations in the k-cut numbers of random recursive trees",
-   "url": "https://arxiv.org/abs/2611.32740",
-   "authors": [
-    "Laura Eslava",
-    "Marco L. Ortiz",
-    "Minmin Wang"
-   ],
-   "label": "arXiv:2611.32740v1",
+   "label": "arXiv:2611.33423v1",
    "primary_category": "math.PR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves a fluctuation (limit distribution) result for the number of k-cut steps needed to isolate the root of a random recursive tree as the tree grows, generalizing earlier results for the classical one-cut procedure.",
-    "plain": "This paper studies a random branching structure called a random recursive tree and a rule for \"cutting\" it apart. The question is how much the number of cuts needed to separate the root from the rest of the tree varies from one random tree to another as the tree gets very large. The authors identify the size of these fluctuations for a generalized version of the cutting rule, where k-cut steps replace the classical one-at-a-time cutting.",
-    "why": "Cutting random trees is a standard way to study how random structures behave in the limit, and the classical results it extends are known in this area. The text does not say more about applications, so the wider significance beyond this line of research is unclear from the summary alone.",
-    "background": "- A tree is a network of nodes with one root and branches, with no loops.\n- A random recursive tree is built by adding nodes one at a time, each attaching to a uniformly chosen earlier node.\n- \"Cutting\" a tree means removing edges or nodes according to a rule; the classical procedure removes one edge at a time.\n- The k-cut procedure (Cai et al., 2018) is a generalization in which the cutting rule is parameterized by k.\n- \"Fluctuations\" means how much a random quantity deviates from its typical value, usually described by a limiting probability distribution as size grows.\n- Prior work by Drmota et al. (2009) and Iksanov et al. (2007) covers the classical case, which this paper extends.",
+    "one_liner": "The paper studies geometric random intersection graphs, where spatially placed vertices connect when they share a located group, deriving exact subgraph probabilities, clustering formulas, and convergence to several standard random graph models.",
+    "plain": "This paper looks at networks built from points scattered in space, where two points are linked if they both belong to a shared group placed nearby. The authors work out exact formulas for how often small patterns of links appear and how clustered the network is, which is the tendency of friends-of-friends to also be connected. They also show that under certain settings the network approaches well-known simpler random network models, while noting that its clustering may not settle to the same value as the simpler model.",
+    "why": "Clustering is a central feature of real social and spatial networks, and this work clarifies how two common mechanisms for creating it, shared groups and spatial closeness, relate to each other. The text does not indicate specific applications, so the practical reach beyond probability theory is unclear from the abstract alone.",
+    "background": "- Random graph: a network generated by a random rule, studied through averages as it grows large.\n- Random intersection graph: vertices are linked when they share a group they have each joined.\n- Spatial random graph: vertices are points in space, linked more often when they are close.\n- Clustering: how often two neighbours of a node are also neighbours of each other (triangles).\n- Poisson process: a standard random scattering of points with a given density.\n- Convergence / limit: showing that a model's statistics approach those of a simpler model as a parameter changes.\n- Erdős–Rényi graph: the simplest random network, where every pair is linked independently with equal chance.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We consider the k-cut procedure introduced by Cai et al. [EJP, 2018] on random recursive trees. Our main result identifies the fluctuations in the number of cuts required to isolate the root as the tree size tends to infinity. This extends the results by Drmota et al. [RSA, 2009] and Iksanov et al. [ECP, 2007] for the classical cutting procedure.",
+   "abstract": "Random intersection graphs and spatial random graphs provide different mechanisms for generating edges and clustering. We investigate their interplay through geometric random intersection graphs, where vertices are adjacent whenever they share a spatially located group. First, a Poisson decomposition by attachment sets yields exact subgraph probabilities and laws of large numbers for connected subgraph densities. It distinguishes triangles supported by a common group from those requiring three distinct groups. Second, explicit representations of global and average local clustering reveal their different dependence on model parameters and the role of shared groups in edge correlations. Finally, by varying the strength and spatial range of group memberships, we establish convergence to random connection, random geometric, random intersection, Erd\\H{o}s--R\\'enyi, and complete graphs. We characterize the corresponding clustering limits and show that clustering need not converge to that of the limiting graph, highlighting the distinction between spatially local convergence and global graph statistics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33427",
+   "title": "Graceful Colorings for Random Graphs",
+   "url": "https://arxiv.org/abs/2611.33427",
+   "authors": [
+    "Sean English",
+    "Edward Janosko",
+    "Erik Slivken",
+    "Sid Touzeau"
+   ],
+   "label": "arXiv:2611.33427v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "This paper determines, up to the order of magnitude, the graceful coloring number of Erdős–Rényi random graphs across three density regimes, using Salem–Spenser sets, forbidden submatchings, and the chromatic number of the graph's square.",
+    "plain": "The paper studies how many colors are needed to label the points of a randomly generated network so that two rules hold: neighboring points get different colors, and every link gets a distinct \"color\" given by the difference between its endpoints' labels. It looks at random networks of three kinds, depending on how many links they have. For each kind it gives an estimate of the number of labels needed.",
+    "why": "The results give concrete growth rates for a combinatorial quantity on random graphs, which is a standard test case in the field. The text does not say how the results bear on applications beyond this area, so any wider significance is unclear from the text alone.",
+    "background": "- Graph: a set of vertices (points) joined by edges (links).\n- Random graph G(n,p): n vertices, each pair joined independently with probability p.\n- Proper vertex coloring: adjacent vertices get different colors.\n- Proper edge coloring: edges sharing an endpoint get different colors.\n- Graceful coloring: vertex colors from 1..k such that edge labels |c(u)−c(v)| are all distinct at each vertex.\n- Diameter: the longest shortest path between any two vertices; diameter 2 means every pair is within two steps.\n- Salem–Spenser sets: sets of integers with no nontrivial three-term relations of a certain type, used here as a tool.\n- Asymptotic notation: n^{1+o(1)} means up to factors that are subpolynomial in n; Θ means growth of the same order up to constant factors.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Given a vertex coloring $c:V(G)\\to [k]$, the graceful induced edge labeling is the induced edge coloring $c'(uv):=|c(u)-c(v)|$. A vertex coloring $c$ is a \\textbf{graceful coloring} if $c$ is a proper vertex coloring and $c'$ is a proper edge coloring. The graceful coloring number $\\chi_g(G)$ is the least $k$ such that there exists a graceful coloring $c:V(G)\\to [k]$. We study the graceful coloring number for the Erd\\H{o}s-Renyi random graph, $G_{n,p}$. In the diameter $2$ regime, we find the $\\chi_g(G_{n,p})=n^{1+o(1)}$ using a connection between graceful colorings and Salem-Spenser sets. In the regime where $G_{n,p}$ is connected, but not diameter 2, we find that $\\chi_g(G_{n,p})=\\Theta\\left(\\frac{n^2p^2}{\\log np}\\right)$, using the forbidden submatching method and a connection between graceful coloring and the chromatic number of the square of $G_{n,p}$. Finally, in the regime where $G_{n,p}$ has constant average degree, we find that $\\chi_g(G_{n,p})=\\Delta(G_{n,p})+1$, by exploring the cycle structure of $G_{n,p}$.",
    "source": "arxiv"
   },
   {

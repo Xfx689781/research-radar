@@ -3,52 +3,53 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31589",
-   "title": "Spec$^2$R: Recovering Emergent Properties in Supervised Vision Transformers",
-   "url": "https://arxiv.org/abs/2611.31589",
+   "uid": "arxiv:2611.34025",
+   "title": "Incorporating the Knowledge Distillation to Improve the EfficientNet Transfer Learning Capability",
+   "url": "https://arxiv.org/abs/2611.34025",
    "authors": [
-    "Adam Wr\\'obel",
-    "Jacek Tabor",
-    "Bartosz Zieli\\'nski",
-    "Marcin Przewi\\k{e}\\'zlikowski"
+    "Tjeng Wawan Cenggoro"
    ],
-   "label": "arXiv:2611.31589v1",
+   "label": "arXiv:2611.34025v1",
    "primary_category": "cs.CV",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Spec$^2$R is a lightweight spectral regularization method that fine-tunes the MLP layers of pretrained supervised Vision Transformers to recover self-supervised-like object-aligned patch representations and attention maps, while improving adversarial robustness.",
-    "plain": "Image-recognition models called Vision Transformers come in two training styles. Models trained with labeled examples tend to produce internal features that do not line up well with the objects in a picture, while models trained without labels often do. This paper finds that the feed-forward layers in the labeled-trained models add rapid, jittery variation to the image-patch features, which scrambles their spatial layout. The authors then propose a small fine-tuning step that smooths this variation, and they report that it restores object-aligned features and attention while keeping classification accuracy roughly competitive.",
-    "why": "It offers a concrete explanation for why supervised and self-supervised vision models differ internally, and a cheap way to adjust an existing model rather than retraining it. The text does not report how broadly the approach generalizes beyond the models studied, so its wider significance is uncertain.",
-    "background": "- Vision Transformer (ViT): a neural network that splits an image into patches and processes them with attention, a mechanism that lets each patch weigh information from others.\n- Supervised vs. self-supervised training: supervised models learn from human-provided labels; self-supervised models learn from the data's own structure without labels.\n- Patch representation: the numerical description the model builds for each image patch.\n- Attention map: a visualization of which image regions the model focuses on.\n- MLP (multilayer perceptron) layer: the feed-forward block inside each transformer layer that transforms each patch's features separately.\n- Spectral analysis: studying a signal by breaking it into frequency components, where high frequency means rapid, fine-scale variation.\n- Regularization: a constraint added during training to keep a model from drifting in unwanted ways.\n- Adversarial robustness: how well a model resists inputs deliberately altered to fool it.",
-    "difficulty": "research-level",
+    "one_liner": "The paper proposes using knowledge distillation to pass knowledge from larger EfficientNet models into smaller EfficientNet models as a transfer learning method for computer vision.",
+    "plain": "Image-recognition AI models are often pretrained on a large image collection and then reused for new tasks, a practice called transfer learning. This paper asks whether the smaller models in the EfficientNet family can be improved by learning from the larger models, which they were originally grown from. The authors report that this approach improved each EfficientNet size they tested, and that several smaller models beat a larger model trained the standard way.",
+    "why": "It offers a practical way to get better results from smaller, cheaper vision models without changing their size, which may matter for devices with limited computing power. The text is a short abstract, so it does not show how large or consistent the gains were, or how the method compares with other transfer approaches.",
+    "background": "- Transfer learning: reusing a model trained on a large dataset (such as ImageNet) as the starting point for a new task.\n- EfficientNet: a family of image-recognition networks of increasing size, where larger members were built by scaling up a smaller baseline.\n- Knowledge distillation: training a smaller \"student\" model to imitate the outputs of a larger \"teacher\" model.\n- ImageNet: a large benchmark dataset of labeled photographs used to compare vision models.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Vision Transformers (ViTs) have achieved strong performance across computer vision tasks, but the quality of their learned representations differs drastically depending on the training paradigm. While self-supervised ViTs often demonstrate emergent properties, such as object-aligned patch representations and attention maps, supervised ViTs typically lack these properties, even when trained with strong data augmentations. Understanding the origin of this difference is important for explaining and controlling the object-level structure. To investigate it, we perform a spectral analysis of supervised and self-supervised models, and identify a key distinction: MLP layers in supervised ViTs introduce high-frequency variations into patch representations, disrupting their spatial organization. Motivated by this finding, we propose Spec$^2$R, a lightweight spectral regularization method that fine-tunes the MLP layers of pretrained supervised ViTs. Spec$^2$R recovers object-aligned patch representations and attention maps, while improving adversarial robustness and preserving competitive classification accuracy.",
+   "abstract": "Due to the Deep Learning requirement for a large training dataset, Transfer Learning has become a central method in the field of Computer Vision, which heavily used Deep Learning. Since the adoption of transfer learning in the field, the performance of the models in computer vision is significantly upgraded. The common transfer learning practice in computer vision research is to use state-of-the-art architectures in the ImageNet dataset as the backbone network. The best performing architecture in ImageNet is currently held by EfficientNet, which is a set of architectures that were progressively grown from a baseline architecture. By observing the EfficientNet development approach, it is natural to hypothesize that the smaller EfficientNet architecture is capable to contain the knowledge of the larger architecture. This hypothesis comes from the fact that the larger EfficientNet architecture was grown from the smaller architecture. Therefore, in this study, we experimented if it is beneficial to transfer the knowledge from the larger architecture to the smaller architecture of the EfficientNet. To achieve this goal, we proposed a transfer learning method that uses Knowledge Distillation as the knowledge transfer mechanism from the larger to smaller architecture. We found that the proposed method is able to upgrade the performance of each of the EfficientNet architecture. Several smaller architectures are even able to outperform the larger architecture that was trained using the standard transfer learning method.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31392",
-   "title": "Look Where Camouflage Breaks: Concealment-Guided Observation for Camouflaged Object Detection",
-   "url": "https://arxiv.org/abs/2611.31392",
+   "uid": "arxiv:2611.33940",
+   "title": "TAT-Det: A Dataset for Testicular Appendage Torsion Detection and Segmentation in Ultrasound Images",
+   "url": "https://arxiv.org/abs/2611.33940",
    "authors": [
-    "Dingming Zhang",
-    "Fengyang Xiao",
-    "Jingjia Feng",
-    "Chunming He",
-    "Sina Farsiu"
+    "Ying Jiang",
+    "Juntao Jiang",
+    "Linxuan Fan",
+    "Lingling Li",
+    "Yaqi Wang",
+    "Xiuzhen Yang",
+    "Yong Liu",
+    "Jiangning Zhang",
+    "Jingjing Ye"
    ],
-   "label": "arXiv:2611.31392v1",
+   "label": "arXiv:2611.33940v1",
    "primary_category": "cs.CV",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "CamoBreak is an active camouflaged object detection framework that uses a multi-scale \"Concealment Spectrum\" to decide which crops to re-examine and where to write local corrections into the prediction and feature memory, with experiments reported across encoder families and related segmentation tasks.",
-    "plain": "The paper looks at how to find objects that are hidden by blending into their background, such as an animal in foliage. Instead of examining an image once, the method measures how well each region matches its surroundings at different zoom levels, then chooses which zoomed-in crops to look at again and decides whether another look is worth it. The authors report consistent improvements across several model types and related segmentation tasks.",
-    "why": "Camouflaged object detection is hard because the target is designed to look like its background, so a method that decides where and when to take another look may be useful for vision systems that work under visual ambiguity. The text reports gains but gives no specific numbers in the excerpt, so the size of the benefit is not yet clear to me.",
-    "background": "- Camouflaged object detection: finding and outlining objects whose colors and textures closely match their surroundings.\n- Segmentation: labeling every pixel as object or background, producing an outline mask.\n- Encoder: the neural network component that turns an image into internal features; \"encoder families\" means several such architectures were tested.\n- Multi-scale analysis: comparing a region at different zoom levels, since an object can be hidden at one scale and visible at another.\n- Active observation: the system chooses which part of the image to look at next, rather than processing it in one pass.\n- Feature memory: stored internal representations that carry information from one observation step to the next.",
-    "difficulty": "research-level",
+    "one_liner": "TAT-Det is a publicly described ultrasound dataset of 2,600 expert-annotated images from 1,203 children, with bounding boxes and pixel masks for testicular appendage torsion, plus baseline detection and segmentation benchmarks.",
+    "plain": "This paper is about a painful condition in young boys called testicular appendage torsion, a small twisted tissue structure in the scrotum that is a common cause of sudden scrotal pain before puberty. The authors built a labeled set of 2,600 ultrasound images from 1,203 patients at a children's hospital in China, with outlines drawn by trained specialists. They then tested several existing AI models on the images, reporting that YOLO11m performed best at finding the lesion and RWKV-UNet performed best at outlining it.",
+    "why": "Pediatric scrotal emergencies are hard to diagnose from symptoms alone, and there were few public datasets for this problem, so a shared labeled resource could let other groups build and compare automated tools. The text does not report how these models would perform in clinical use, so its practical value remains to be tested.",
+    "background": "- Testicular appendage torsion (TAT): twisting of a tiny appendage attached to the testicle; the leading cause of sudden scrotal pain in prepubertal boys.\n- Ultrasound: sound-wave imaging used to look inside the body without radiation.\n- Dataset annotation: human experts marking the region of interest in each image so software can learn from it.\n- Bounding box vs. segmentation mask: a rectangle around a lesion (detection) versus a pixel-by-pixel outline of it (segmentation).\n- Baseline benchmark: a first set of reference scores that later methods can be compared against.\n- YOLO11m and RWKV-UNet: names of existing deep learning model architectures used for detection and segmentation respectively.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "A camouflaged object can blend into its surroundings at one scale and become distinguishable at another. Yet a region's apparent ambiguity gives limited guidance on which observation would resolve it. The challenge is to connect the form and scale of concealment to the evidence that a new view can reveal. We introduce CamoBreak, an active framework for camouflaged object detection guided by a Concealment Spectrum. From the image and current predictions, the spectrum measures regional resemblance and boundary ambiguity across comparison scales, distinguishing persistent concealment from separation emerging at finer or broader scales. These measurements guide crop selection from the already-captured image and recognition against global foreground and background references. An object-conditioned spatial preference then selects where local evidence should update the prediction and feature memory, retaining target corrections while suppressing background distractions. Accepted corrections reshape the next measurement, while predicted segmentation benefit determines whether to observe again. Experiments across encoder families and related segmentation tasks show consistent improvements. Targeted analyses support improved small-target recovery, multiple-object coverage, and selective evidence integration. Code will be released.",
+   "abstract": "Background: Testicular appendage torsion (TAT) is the leading cause of acute scrotal pain in prepubertal children. Yet, its diagnosis remains challenging due to nonspecific clinical manifestations and the absence of standardized datasets for pediatric acute scrotal emergencies. Results: We present TAT-Det, an expert-annotated ultrasound dataset specifically designed for TAT. TAT-Det comprises 2,600 ultrasound images from 1,203 patients collected at the Children's Hospital, Zhejiang University School of Medicine. Each TAT-positive image is accompanied by lesion-level bounding boxes for detection and pixel-level segmentation masks for fine-grained delineation. Annotations were produced through a multi-stage workflow involving independent annotation by board-certified pediatric sonographers, consensus review, and refinement. Baseline benchmarks for object detection and semantic segmentation using representative deep learning models are further provided, with YOLO11m achieving the best detection performance and RWKV-UNet the best segmentation performance. Conclusions: TAT-Det addresses the lack of publicly available resources for pediatric emergency ultrasound and establishes a foundation for developing and evaluating artificial intelligence methods for automated TAT analysis.",
    "source": "arxiv"
   },
   {

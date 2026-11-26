@@ -3,6 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
+   "uid": "arxiv:2611.34722",
+   "title": "How Large are Monetary Policy Effects? dentifying the Shocks in a VAR also Identifies the Constants",
+   "url": "https://arxiv.org/abs/2611.34722",
+   "authors": [
+    "Andrew Mountford"
+   ],
+   "label": "arXiv:2611.34722v1",
+   "primary_category": "econ.GN",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "In a structural VAR, restrictions used to identify the fundamental shocks also pin down the structural constant terms, and the paper shows that placing Bayesian priors on those constants, applied to Baumeister and Hamilton's (2018) monetary policy model, can yield a more intuitive policy rule and a larger estimated role for monetary policy.",
+    "plain": "Economists often study how central bank interest-rate decisions affect the economy by fitting statistical models to data such as inflation, output and interest rates. This paper points out that the same assumptions used to separate out the underlying shocks in these models also determine how the models' baseline (constant) terms relate to the observed data, and that these baseline terms are usually ignored. The authors add prior beliefs about them to the estimation and, using an existing monetary policy study as the example, report that this gives a more intuitive policy rule and a bigger estimated role for monetary policy.",
+    "why": "The question of how large monetary policy effects really are matters for policy debates, and the paper suggests that a modelling choice that is often overlooked can change the answer. The text is a short abstract, so the size of the change and how general the result is cannot be judged from it alone.",
+    "background": "- Structural VAR (vector autoregression): a statistical model that describes several time series, such as inflation and interest rates, as depending on their own past values and on hidden \"shocks\" that represent unexpected events.\n- Identification: the extra assumptions needed to turn the statistical fit into a causal story about which shock is which, for example a monetary policy shock.\n- Contemporaneous effects matrix: a table describing how variables affect each other within the same period.\n- Constant terms: the baseline level each variable takes when all shocks are zero; in the structural model these are distinct from the constants in the reduced-form (purely statistical) version.\n- Bayesian estimation: a method that combines prior beliefs about parameters with the data.\n- Monetary policy rule: a formula describing how a central bank sets interest rates in response to economic conditions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Restrictions on the contemporaneous effects matrix used to identify fundamental shocks in a structural VAR, also determine the mapping from the structural constant terms to the reduced form constant terms. In some models one will have priors about these structural constant terms and these should therefore be included in a Bayesian estimation procedure. We illustrate the potential significance of this using the analysis of monetary policy by Baumeister and Hamilton (2018) as a motivating example. We show that imposing priors over the structural constant terms can lead to a more intuitive estimated monetary policy rule and a much larger estimated role for monetary policy in describing the evolution of the data. The analysis also allows for a clear visual presentation of the structural model, highlighting its multiple contending elements. For example the observed inflation series is estimated to be the result of positive demand and commodity price effects offset by negative monetary policy and risk spread effects.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33187",
+   "title": "Orthogonal inference for machine learning forecasts",
+   "url": "https://arxiv.org/abs/2611.33187",
+   "authors": [
+    "Alberto Quaini"
+   ],
+   "label": "arXiv:2611.33187v1",
+   "primary_category": "econ.EM",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper builds feasible, locally robust (orthogonal) score-based inference for comparing the population evaluation risks of machine learning forecasts trained under mismatched objectives, with Gaussian limits and long-run covariance estimation under beta-mixing and overlapping training windows.",
+    "plain": "When two forecasting models are compared, the model fitting itself can make one look better than it truly is, even when the comparison uses held-out data. This paper proposes a corrected way to test whether one machine learning forecast really beats another, by adjusting the scores so that small errors from fitting the models matter much less. The authors report that in simulations using lasso and neural-network forecasts, this correction greatly reduces the rate of false \"winner\" findings, which a simple bootstrap of the uncorrected scores does not achieve.",
+    "why": "Forecast comparisons guide investment and policy, so spurious evidence of superiority has real costs. The approach connects econometric inference with locally robust (orthogonal) estimation from semiparametric statistics; the text supports the simulation claim but the scope of its practical impact beyond the examples given is not established.",
+    "background": "- Forecast evaluation: comparing models by their average loss on data not used to train them.\n- Overfitting and estimation error: a model trained on the same data it is judged on, or retrained over time, can have noise that flatters it.\n- Orthogonal (locally robust) scores: a way of adjusting a statistic so that small changes in the fitted nuisance parts (here, the trained model) have no first-order effect.\n- Mixing and time dependence: beta-mixing means observations far apart in time are nearly independent, which is needed for valid inference on time series.\n- Long-run variance: the variance of an average over dependent data, which must account for correlation across time.\n- Size distortion: when a test rejects a true null hypothesis more often than its nominal rate.\n- Lasso and neural probability forecasts: examples of a sparse linear model and a neural network that predicts probabilities.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Forecast comparisons inform investment and other economic decisions, but machine learning forecasts can be trained under objectives that differ from the relevant losses. Estimation error can then create spurious evidence of predictive superiority, even with out-of-sample evaluation. We establish feasible inference for differences in population evaluation risks in this setting. Building on locally robust estimation, we construct scores that preserve the risk target and remove first-order estimation sensitivity. Under geometric beta-mixing, moment conditions and simultaneous learning bounds, we establish Gaussian limits and consistent long-run covariance estimation for overlapping chronological training windows, allowing refitting at every evaluation date. Uniform extensions provide confidence coverage over classes of data-generating processes; Wald inference requires nondegenerate corrected-score covariance. For sparse linear forecasts and neural probability forecasts, we give explicit corrections and simultaneous learning bounds. Simulations with lasso and neural forecasts show substantial reductions in size distortion that bootstrapping uncorrected scores does not reproduce.",
+   "source": "arxiv"
+  },
+  {
    "uid": "arxiv:2611.31613",
    "title": "Training decision models for simulating human respondents",
    "url": "https://arxiv.org/abs/2611.31613",

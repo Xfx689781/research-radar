@@ -3,56 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32734",
-   "title": "ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios",
-   "url": "https://arxiv.org/abs/2611.32734",
+   "uid": "arxiv:2611.33195",
+   "title": "Verified experience improves materials prediction with large language models",
+   "url": "https://arxiv.org/abs/2611.33195",
    "authors": [
-    "Yera Choi",
-    "Yeong Hwa Kim",
-    "Jaedeok Lee",
-    "Taekang Kim",
-    "Sangdoo Yun",
-    "Seong-Eun Moon"
+    "Yiming Zhang",
+    "Koji Tsuda"
    ],
-   "label": "arXiv:2611.32734v1",
+   "label": "arXiv:2611.33195v1",
    "primary_category": "cs.CL",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "ASCENT is a clinician-annotated benchmark and training set of 3,078 stepwise diagnostic problems derived from MedQA-USMLE, used to test and fine-tune LLMs on how they revise diagnostic impressions as clinical information accumulates.",
-    "plain": "Doctors rarely reach a diagnosis all at once; they form an early impression and revise it as test results and history come in. This paper builds a set of 3,078 medical exam-style cases broken into stepwise chunks (what was found, what the doctor thinks, and why) and uses it to check how well AI language models reason through that process. The authors report that models doing well on standard medical quiz questions still perform noticeably worse on the stepwise version, and that fine-tuning two Qwen2.5 models on the set improves scores.",
-    "why": "Standard medical question tests may overstate how well AI handles real, step-by-step clinical work, so a benchmark that tracks intermediate reasoning under incomplete information is a useful check before any clinical use. The text does not show any clinical deployment or validation beyond the exam-derived cases, so its relevance to real patient care is untested.",
-    "background": "- Large language model (LLM): an AI system trained on large amounts of text to generate and reason with language.\n- Benchmark: a standardized set of test problems used to compare systems.\n- MedQA-USMLE: a collection of medical licensing-exam style questions that the source cases come from.\n- Stepwise reasoning: working through a problem in stages, updating conclusions as new information arrives.\n- Fine-tuning: further training a pre-trained model on a smaller, specialized dataset.\n- F1 score: a accuracy measure balancing precision (how many named items were correct) and recall (how many correct items were found).\n- Chain-of-thought (CoT): a method where a model writes out intermediate reasoning steps before answering.\n- Counterfactual perturbation and rollout: tests that change earlier inputs or let a model's own earlier outputs feed into later steps, to see whether errors carry forward.",
+    "one_liner": "The paper introduces MatMemBench, a sequential 22-task materials benchmark that reveals outcomes after each prediction, and MatRecall, a memory framework that lets large language models store verified predictions and recall them without retraining.",
+    "plain": "Scientists often predict material properties, check the answer in the lab or with calculations, and then use that result to make the next guess. This paper asks whether a language-model predictor can do the same: it saves each checked prediction, along with the supporting evidence, the true outcome and the error, and draws on those saved records for later questions. The authors report that this memory approach improved results substantially compared with a version that has no memory, and in some cases beat specialized models.",
+    "why": "It targets a gap between standard benchmarks, which score each question in isolation, and real discovery work, where each outcome should inform the next step. Whether this kind of memory-based learning holds up beyond the authors' own benchmark is not something the text establishes.",
+    "background": "- Large language models (LLMs): AI systems trained on text that can also be prompted to make predictions.\n- Specialized models: machine-learning models built for one narrow task, usually fixed after training.\n- Retrieval-augmented generation: a method where the model looks up stored documents before answering.\n- Benchmark: a standard test set used to compare methods.\n- Online adaptation: improving as new results arrive, rather than only during initial training.\n- Materials discovery: searching for new materials with useful properties, using experiments and computer simulations.\n- Median improvement: the typical gain across tasks, here reported as 62% over a memory-free model.",
     "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Large language models (LLMs) excel at medical question answering yet are rarely evaluated on the stepwise diagnostic reasoning that defines real clinical workflows, where impressions are revised as information accumulates. We build Annotated Stepwise Clinical rEasoning for NaturalisTic Diagnosis (ASCENT), a clinician-annotated benchmark and training resource of 3,078 stepwise problems derived from MedQA-USMLE that decomposes each vignette into EMR-aligned steps (Findings, Impression, supporting Rationale), enabling evaluation of intermediate reasoning under incomplete information. Experiments and training with ASCENT revealed insights into how current LLMs handle stepwise diagnostic reasoning. Even strong reasoning models that perform well on MedQA-USMLE leave substantial headroom on ASCENT, and general-purpose frontier models trail further, exposing a persistent gap between fully informed and stepwise diagnosis. Fine-tuning Qwen2.5-7B and 32B on ASCENT yields measurable F1 gains over both pre-trained and HuatuoGPT-o1 CoT-trained baselines, with gains driven primarily by precision. Complementary robustness analyses (counterfactual perturbation, format-vs-content control, judge agreement, and rollout) further show that ASCENT-fine-tuned models rely on the diagnostic content of prior impressions rather than imitating their output format, while error propagation under rollout remains a key challenge for clinical deployment.",
+   "abstract": "Materials discovery is an iterative loop: experiments and calculations verify predictions, and each outcome can inform the next. Yet most predictors are specialized single-task models fixed after training. Large language models have recently emerged as predictors across heterogeneous tasks but generally underperform specialized models, and retrieval-augmented variants discard their own outcomes. Benchmarks also score queries in isolation, leaving improvement from outcomes untested. Here we construct MatMemBench, a sequential benchmark of 22 materials tasks that reveals outcomes only after prediction and tests online adaptation, memory retention and cross-task transfer. We present MatRecall, a framework that lets large language models store verified predictions, with evidence, outcome and error, as episodes and recall them without retraining. MatRecall improved median performance by 62% over a memory-free model, exceeded specialized models on 11 tasks, remained useful after feedback stopped and transferred between related tasks. Verified experience could become a reusable resource for self-improving discovery loops.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32566",
-   "title": "Evaluating Latent Knowledge Stability in Multimodal Large Language Models",
-   "url": "https://arxiv.org/abs/2611.32566",
+   "uid": "arxiv:2611.33197",
+   "title": "Extraneous Cognitive Load in Large Language Models",
+   "url": "https://arxiv.org/abs/2611.33197",
    "authors": [
-    "Chuancheng Shi",
-    "Shangze Li",
-    "Wenhua Wu",
-    "Zifeng Cheng",
-    "Pengyang Shao",
-    "Fei Shen",
-    "Tat-Seng Chua"
+    "Arushi Gupta",
+    "Sheng Liu",
+    "James Zou"
    ],
-   "label": "arXiv:2611.32566v1",
+   "label": "arXiv:2611.33197v1",
    "primary_category": "cs.CL",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper proposes margin- and support-based metrics (MRS and KSS) and a 19,452-item benchmark, MMStableBench, to test whether multimodal LLMs keep their latent knowledge stable when image viewpoint and question wording change.",
-    "plain": "AI models that handle both pictures and text can give a right answer to a question but still change their internal leaning when the photo angle or the wording shifts. The authors build new scores that look inside the model at how strongly it prefers its first answer and how its internal support for facts is spread out, rather than only checking whether the final answer is correct. They also release a benchmark of about 19,000 facts, each tested under several viewpoints, phrasings, and option orders, and report results on 15 models.",
-    "why": "Checking only whether an answer is correct can miss cases where a model is fragile underneath, which matters for trusting these systems. The paper also reports that a regularizer inspired by the margin score helps edited knowledge generalize better, though the text gives few details on how large or general that gain is.",
-    "background": "- Multimodal large language model (MLLM): an AI system that takes both images and text as input and produces text.\n- Latent knowledge: information stored inside the model's numerical parameters and internal states, not directly visible in its outputs.\n- Logit: the raw score a model assigns to each possible answer before it is converted to probabilities; a \"margin\" is the gap between the top answer's score and its rivals.\n- Gradient: a measure of how much a score changes when the model's internals change slightly; used here to describe how support is distributed.\n- Knowledge editing: deliberately changing a model's stored facts, then checking whether the change holds across related situations.\n- Benchmark: a standard test set used to compare models fairly.",
+    "one_liner": "The paper introduces CogLoadBench, a controlled benchmark varying five cognitive-load-inspired presentation factors across three reasoning task families, and proposes an activation-based Extraneous Load Score plus an inference-time representation shift to reduce load effects on LLMs.",
+    "plain": "Psychologists have found that how a problem is laid out, not just how hard it is, changes how well people solve it. This paper asks whether large language models behave similarly: the authors build a test set that changes only the presentation of tasks, then measure how much that hurts model accuracy. They also propose a score, computed from the model's internal activity, that estimates how much unnecessary load a prompt puts on the model.",
+    "why": "The work tries to separate presentation effects from task difficulty, which is a gap in how LLM performance is usually evaluated. If the score and the representation shift hold up, they could offer a way to diagnose and reduce presentation-driven errors without rewriting prompts, though the text alone does not show how broadly this transfers.",
+    "background": "- Cognitive Load Theory: from educational psychology, it splits mental effort into intrinsic load (the task's inherent difficulty) and extraneous load (effort caused by how information is presented).\n- Prompt: the text input given to a language model.\n- Activations: the internal numerical values a neural network computes while processing input.\n- Benchmark: a standardized test set used to compare models.\n- Inference time: when a trained model is being used, as opposed to when it is being trained.\n- Representation steering: nudging a model's internal values in a chosen direction without changing the prompt.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Changes in image viewpoint and question formulation can alter latent knowledge representations in multimodal large language models (MLLMs). However, output correctness and overall representational drift provide limited insight into how these changes affect model decisions. We therefore evaluate latent knowledge stability across visual and linguistic elicitation conditions from two complementary perspectives: answer preference and internal support. Specifically, we devise the margin retention score (MRS), which measures the first-order projected degradation of the initial answer's logit margin over competing options across conditions and assesses how changes in latent knowledge representations affect this margin. We also present latent knowledge support-structure stability (KSS), which evaluates reference-correct items by comparing internal support profiles constructed using the margin gradient under the reference condition, which jointly reflects changes in how internal support is distributed and changes in total support magnitude. We further construct MMStableBench, comprising 19,452 knowledge items (facts), each probing the same latent knowledge across varied image viewpoints, semantically equivalent question formulations, and answer-option permutations. Experiments across 15 MLLMs show that MRS and KSS reveal latent knowledge instability not captured by accuracy, while an MRS-inspired regularizer further improves the generalization of edited latent knowledge.",
+   "abstract": "Cognitive Load Theory (CLT) shows that human problem-solving is affected by both intrinsic load, arising from task difficulty, and extraneous load, arising from how task information is presented. Large language models (LLMs) show analogous effects: presentation alone can affect model performance, but these effects have not yet been systematically isolated from task difficulty. To address this gap, we introduce CogLoadBench, a controlled benchmark that varies five CLT-inspired presentation factors across three reasoning task families. Across models, we find that higher extraneous load conditions often reduce accuracy by either adding competition or complicating the reasoning path. To support diagnosis and mitigation of load-related effects, we propose the Extraneous Load Score (ELS), a prompt-time metric computed from activations that estimates a model's extraneous load, and show that it generalizes across reasoning task types and load levels. We further show that shifting model representations toward lower-load directions at inference time can improve average model performance without changing prompt content.",
    "source": "arxiv"
   },
   {

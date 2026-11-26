@@ -3,46 +3,46 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32575",
-   "title": "Convolution Algebras of Generalized Preprojective Algebras and Kac-Moody Positive Parts",
-   "url": "https://arxiv.org/abs/2611.32575",
+   "uid": "arxiv:2611.34187",
+   "title": "Tensor ideals of oligomorphic permutation categories",
+   "url": "https://arxiv.org/abs/2611.34187",
    "authors": [
-    "Fengjun Shi"
+    "Inna Entova-Aizenbud",
+    "Thorsten Heidersdorf"
    ],
-   "label": "arXiv:2611.32575v1",
+   "label": "arXiv:2611.34187v1",
    "primary_category": "math.RT",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper realizes the enveloping algebras of positive parts of symmetrizable Kac-Moody Lie algebras as convolution algebras of constructible functions on module varieties of Geiss-Leclerc-Schröer generalized preprojective algebras, characterizes the pairs (C,D) admitting such a realization, and generalizes Lusztig's preprojective construction.",
-    "plain": "This is a pure-mathematics paper about building well-known algebraic structures (the \"positive halves\" of a family of symmetric infinite-dimensional symmetry algebras called Kac-Moody Lie algebras) out of geometry: counting or summing functions over spaces of representations of a certain kind of algebra. The authors show this construction works exactly for a specified class of input data, and they say it extends an earlier construction due to Lusztig. The abstract does not give details of the proofs.",
-    "why": "It links three areas, Lie algebras, quiver-style representation theory and geometry of module varieties, and gives a characterization of when the link holds. The text does not say what applications it may have beyond this area, so its wider importance is unclear from the abstract alone.",
-    "background": "- Lie algebra: a symmetry structure described by bracket operations; Kac-Moody Lie algebras are infinite-dimensional, generalizing the finite simple ones.\n- Positive part: the half of the algebra built from \"raising\" generators, a standard piece of the structure.\n- Enveloping algebra: a ring built from a Lie algebra that keeps its multiplication rules.\n- Preprojective algebra: an algebra attached to a directed graph (quiver) that encodes its representations.\n- Generalized preprojective algebra (Geiss-Leclerc-Schröer): a version using a pair of matrices (C,D) instead of a graph alone.\n- Module variety: a geometric space whose points are representations of an algebra of a fixed size.\n- Constructible function: a function that is piecewise simple on geometric pieces; convolution is a product on such functions.\n- Lusztig's construction: the earlier classical case, using the ordinary preprojective algebra.",
+    "one_liner": "The paper classifies tensor ideals in oligomorphic permutation categories Perm(G,μ) by an equivalence relation on transitive smooth G-sets, giving a bijection with downward-closed subsets of the resulting poset, and computes that poset in many cases.",
+    "plain": "This paper is about a family of mathematical structures built from groups that act on sets in a very \"tame\" way, with the aim of listing all the ways one can consistently discard objects from them. The authors sort the relevant sets into classes under a suitable notion of equivalence, and show that the ways of discarding objects (the tensor ideals) correspond exactly to the downward-closed collections of those classes. They then work out this correspondence explicitly for many specific groups, including symmetric groups, wreath products and classical matrix groups over finite fields.",
+    "why": "The text gives a complete classification in a stated class of categories, which is a clean structural result rather than a claim of wide impact. Its connection to other areas (such as tensor triangular geometry or the study of infinite-symmetry categories) is suggested by the setting but is not spelled out in the text, so the wider significance is uncertain.",
+    "background": "- Category: a collection of objects and structure-preserving maps between them.\n- Tensor product: a way of combining two objects, as in the tensor product of vector spaces.\n- Tensor ideal: a subcollection of objects closed under taking summands and tensoring with anything, a kind of \"absorbing\" subset.\n- Thick tensor ideal: a tensor ideal that is also closed under taking direct summands and certain \"two-out-of-three\" exact sequences.\n- Group action on a set: a group permuting the elements of a set; \"transitive\" means any element can be moved to any other.\n- Oligomorphic group: an infinite group with only finitely many orbits on each finite power of its underlying set; the infinite symmetric group is the standard example.\n- Poset: a partially ordered set; downward-closed means if an element is included, everything below it is too.\n- Characteristic: a number describing arithmetic in a field; characteristic 0 (like rationals) versus positive characteristic (like finite fields) behave differently.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We realize the enveloping algebras of positive parts of symmetrizable Kac-Moody Lie algebras as convolution algebras of constructible functions on module varieties of Geiss-Leclerc-Schr\\\"oer generalized preprojective algebras $\\Pi(C,D)$. We characterize all pairs $(C,D)$ for which such a realization exists. These realizations generalize Lusztig's classical preprojective construction. The construction uses a folding embedding and torus actions on flag varieties.",
+   "abstract": "We classify tensor ideals for oligomorphic permutation categories $Perm(G,\\mu)$. To this end we define an equivalence relation on the class of transitive smooth $G$-sets. We show that there is a bijection between the tensor ideals of $Perm(G,\\mu)$ and the downward-closed subsets of the poset of equivalence classes. As a corollary we obtain that there is a bijection between tensor ideals and thick tensor ideals. We determine the poset in many cases (mostly in characteristic $0$): the infinite symmetric group, wreath products, products of oligomorphic groups, equivariantizations, finite groups in positive characteristic and the classical groups $GL, O, Sp, U$ over a finite field.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31602",
-   "title": "Tensor powers of the Steinberg character of $GL_n(\\mathbb{F}_q)$, zonotopal algebras, and quiver varieties",
-   "url": "https://arxiv.org/abs/2611.31602",
+   "uid": "arxiv:2611.34497",
+   "title": "The inductive Galois-McKay conjecture for groups of Lie type C",
+   "url": "https://arxiv.org/abs/2611.34497",
    "authors": [
-    "Emmanuel Letellier",
-    "Fernando Rodriguez Villegas"
+    "Lucas Ruhstorfer"
    ],
-   "label": "arXiv:2611.31602v1",
+   "label": "arXiv:2611.34497v1",
    "primary_category": "math.RT",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper studies tensor powers of the Steinberg character of GL_n(F_q), realizes their multiplicities via cohomology of star-shaped quiver varieties, shows that this cohomology is generated by tautological classes and isomorphic to a central zonotopal algebra, and derives a combinatorial multiplicity formula previously conjectured for m=2.",
-    "plain": "This work is about a way of multiplying symmetry \"fingerprints\" of matrix groups over finite fields. The authors take the m-fold tensor product of one special fingerprint (the Steinberg character of the group GL_n over a finite field with q elements) and count how often each basic building block appears in it. They do this by linking the question to the shape of certain geometric spaces called quiver varieties, and they obtain a counting formula for these multiplicities.",
-    "why": "The paper gives an explicit combinatorial formula for multiplicities, which the text says was previously only conjectured for m=2 by the second author. Its link between representation theory, geometry of quiver varieties and zonotopal algebras is the main point of interest; the text does not say more about wider applications.",
-    "background": "- Characters: functions that encode the symmetry of a group's action; tensor products combine them, and multiplicities count how often a building block occurs.\n- GL_n(F_q): invertible n-by-n matrices over a finite field with q elements.\n- Steinberg character: a particular special character of this group.\n- Unipotent characters: the basic building blocks of the group's representations that the multiplicities refer to.\n- Quiver varieties: geometric spaces built from arrows-and-vertices diagrams; their cohomology (a kind of algebraic invariant describing their shape) is used here.\n- Tautological classes: natural algebraic classes on these spaces; \"generated by\" means every element is built from them.\n- Zonotopal algebras: algebras associated with zonotopes (multi-dimensional shapes built from line segments), used here as a combinatorial model.",
+    "one_liner": "The paper proves the inductive Galois-McKay conjecture for symplectic groups, determining the character fields of irreducible characters of their extensions by field automorphisms, using Brauer trees and generalized Gelfand-Graev characters.",
+    "plain": "This paper is about a central question in the study of symmetry in algebra: how the structure of a group of symmetries relates to the structure of its smaller \"local\" pieces. The authors focus on one large family of such groups, the symplectic groups, and prove that a predicted matching between these two sides holds for them. A key step is working out which number fields are needed to describe the basic symmetry \"measurements\" (characters) of the extended groups.",
+    "why": "The Galois-McKay conjecture links the representation theory of a finite group to that of its local subgroups, and proving the inductive version for a whole infinite family of groups is a concrete step toward that conjecture. The text does not say what wider applications it may have, so its significance beyond this area is unclear from the text alone.",
+    "background": "- Finite groups: sets of symmetries closed under combining them, such as rotations or permutations.\n- Representation theory: describing a group by how it acts as matrices; \"characters\" are compact numerical fingerprints of these actions.\n- Symplectic groups: a classical family of matrix groups of Lie type C, preserving a certain skew-symmetric form.\n- Field automorphisms: relabelings of the number systems the matrix entries live in, which can extend a group.\n- Character fields: the smallest number system needed to write down a group's character values.\n- Brauer trees and generalized Gelfand-Graev characters: specialized tools for organizing and constructing characters in these groups.\n- The Galois-McKay conjecture: a long-standing prediction relating a group's characters to those of its local subgroups, with the \"inductive\" version being a stronger, recursively checkable form.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this paper we study the $m$-th tensor power ${\\rm St}^{\\otimes m}$ of the Steinberg character of $GL_n(q)$. To do that we use the connection between tensor products of unipotent characters and the cohomology of certain quiver varieties for star-shaped quivers \\cite{L2}\\cite{LRV}. We prove that the cohomology ring of the quiver variety associated to ${\\rm St}^{\\otimes m}$ is generated by its tautological classes. We use this to prove that this cohomology ring is isomorphic to a central zonotopal algebra. We then deduce a combinatorial formula for the multiplicities of unipotent characters in ${\\rm St}^{\\otimes m}$. This formula has been conjectured by the second author when $m=2$.",
+   "abstract": "We prove the inductive Galois-McKay conjecture for the symplectic groups. A key result is the determination of the character fields of the irreducible characters of the extensions of the symplectic group by field automorphisms. Two main ingredients for this are the theory of Brauer trees and the generalized Gelfand-Graev characters.",
    "source": "arxiv"
   },
   {

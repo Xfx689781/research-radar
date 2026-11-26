@@ -3,46 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32363",
-   "title": "Monadicity of noncommutative measurable spaces over $C^{\\ast}$-algebras",
-   "url": "https://arxiv.org/abs/2611.32363",
+   "uid": "arxiv:2611.33960",
+   "title": "On Shepp's property in free probability",
+   "url": "https://arxiv.org/abs/2611.33960",
    "authors": [
-    "Fosco Loregian",
-    "Antonio Lorenzin"
+    "Wiktor Ejsmont",
+    "Takahiro Hasebe",
+    "Patrycja H\\k{e}\\'cka-J\\k{e}draszczyk"
    ],
-   "label": "arXiv:2611.32363v1",
+   "label": "arXiv:2611.33960v1",
    "primary_category": "math.OA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper shows that sigma-C*-algebras (a proposed noncommutative version of measurable spaces) form a monadic category over C*-algebras, characterizes sigma-cpu maps via a comonad related to the Giry monad, and builds a tensor product and a CP-instrument correspondence in this setting.",
-    "plain": "The paper continues a line of work that tries to carry the ideas of probability and measurable spaces over to noncommutative algebras, the mathematical objects used to describe quantum systems. It sets up the structure of these \"sigma C*-algebras\" and their probabilistic maps in a way that category theorists can organize, and it defines a product for them. It also adapts a known notion of quantum measurement (CP-instruments) to this setting and links it to the probabilistic maps.",
-    "why": "The work tests how far the analogy between measurable spaces and noncommutative algebras can be pushed, using tools from category theory that are standard for classical probability. Its connection to quantum measurement and to the Giry monad (a classical tool for describing random maps) is the main reason it may interest people in quantum probability and categorical foundations; the text does not say how these results will be used beyond that.",
-    "background": "- C*-algebra: a collection of bounded operators closed under addition, multiplication and adjoint; a noncommutative generalization of continuous functions on a space.\n- Measurable space: a set with a sigma-algebra, the structure needed for probability.\n- sigma-homomorphism / sigma-additivity: structure-preserving maps and \"countable additivity\" conditions, which allow countably many operations.\n- Monad / comonad: a categorical pattern for packaging structure; a monad models things like random outcomes, and monadicity says a category is equivalent to algebras over a monad.\n- Giry monad: the classical monad on measurable spaces whose maps are probability measures.\n- Completely positive (CP) map: a linear map that preserves positivity even when extended to matrices; these describe quantum operations.\n- Locally presentable category: a category built from a small set of generators under colimits, a size-control notion from category theory.\n- Maximal tensor product: a standard way to combine two C*-algebras.",
+    "one_liner": "The paper proves a free-probability analogue of Shepp's theorem for freely independent standard semicircular elements, showing that a family of self-normalized squared quadratic forms is free with standard Marchenko-Pastur laws, and adds free analogues of Lukacs-type independence results.",
+    "plain": "This is a pure mathematics paper about \"free probability,\" a version of probability theory for noncommuting random quantities such as large random matrices. It asks whether a classical fact about independent random variables, Shepp's theorem, still holds when the variables are \"free\" in this noncommutative sense. The authors show that it does, using the three Pauli matrices as coefficients, and they also prove some related results of the Lukacs type.",
+    "why": "The text places the work as a translation of a classical independence result into the noncommutative setting, which is the kind of bridge that matters for operator algebras and random matrix theory. The abstract does not say what applications, if any, follow, so its wider significance beyond this translation is uncertain.",
+    "background": "- Shepp's theorem: a classical result about when certain squared quadratic forms in independent Gaussian variables are independent; the paper's starting point.\n- Free independence: Voiculescu's noncommutative analogue of independence, used for operators rather than ordinary random variables.\n- Semicircular element: the free analogue of a Gaussian (normal) random variable.\n- Marchenko-Pastur distribution: a limiting distribution of eigenvalues of random sample covariance matrices, here the target law for each self-normalized squared form.\n- Quadratic form: an expression like x^T A x built from a vector and a matrix; Pauli matrices are specific 2x2 complex matrices from quantum physics.\n- Lukacs-type results: characterizations of distributions via independence of certain combinations of variables.\n- Corner algebra / free projection: a compressed piece of an operator algebra cut out by a projection.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In a recent paper, Tobias Fritz and the second author identified $\\sigma C^*$-algebras as a tentative noncommutative analogue of measurable spaces. We advance this analogy by establishing monadicity of $\\sigma C^*$-algebras over $C^*$-algebras and proving several results of interest to both the category theory and operator algebra communities. In detail, we show that: - The associated probabilistic morphisms, $\\sigma$-cpu maps, admit a description via a comonad closely related to the Giry monad. Equivalently, $\\sigma$-cpu maps can be characterized by a universal property. - The category of $\\sigma C^*$-algebras and $\\sigma$-homomorphisms is locally $\\aleph_1$-presentable. - $\\sigma C^*$-algebras have a tensor product induced by the maximal tensor product of $C^*$-algebras and satisfying an analogous universal property. - The notion of CP-instruments, defined as $\\sigma$-additive assignments from a $\\sigma$-algebra to a space of completely positive maps, can be adapted to this setting by taking as target the set of $\\sigma$-normal completely positive maps between $\\sigma C^*$-algebras. This yields a bijective correspondence with $\\sigma$-cpu maps out of the tensor product of the previous item.",
+   "abstract": "We establish a free analogue of Shepp's theorem for freely independent standard semicircular elements. We show more generally that a family of self-normalized squared quadratic forms is free, and each has a standard Marchenko-Pastur distribution. The free analogue of Shepp's theorem follows by taking the coefficients of quadratic forms to be the three Pauli matrices. We also prove some new free analogues of Lukacs-type independence results. The key part of the proof is a construction of an equivalent and simpler operator model on a corner algebra compressed by a free projection.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31425",
-   "title": "Disjointness, Orthogonality and Commutativity in $C^*$-Algebras",
-   "url": "https://arxiv.org/abs/2611.31425",
+   "uid": "arxiv:2611.34793",
+   "title": "The type I conjecture for locally compact groups acting on trees",
+   "url": "https://arxiv.org/abs/2611.34793",
    "authors": [
-    "Jani Jokela"
+    "Cyril Houdayer",
+    "Basile Morando"
    ],
-   "label": "arXiv:2611.31425v1",
-   "primary_category": "math.OA",
+   "label": "arXiv:2611.34793v1",
+   "primary_category": "math.GR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper characterizes order-theoretic disjointness of self-adjoint elements in a C*-algebra via the vanishing of aAb and trivial intersection of the ideals they generate, describes disjoint complements through annihilator ideals, and gives commutativity criteria based on disjointness of orthogonal positive contractions and projections.",
-    "plain": "This paper studies a rule for when two mathematical objects, called elements, of a certain algebraic system (C*-algebras, which model quantum observables) are \"disjoint,\" meaning they do not overlap in an order sense. The authors show that this happens exactly when multiplying one element on both sides through the algebra always gives zero, and when the smallest two-sided pieces built from each element share only zero. They then use this to show that if every pair of such elements that multiply to zero is disjoint, the whole algebra must be commutative, meaning the order of multiplication never matters.",
-    "why": "Commutativity criteria of this kind tell us when a non-commutative system must reduce to a simpler one, which matters for the structure theory of operator algebras. The text does not indicate applications beyond this structural theory, so its wider significance is unclear from the given material.",
-    "background": "- C*-algebra: a collection of bounded operators (generalized matrices or functions) closed under addition, multiplication, scaling and a conjugate-transpose operation; it is the standard setting for quantum mechanics mathematics.\n- Self-adjoint element: an element equal to its own conjugate-transpose, analogous to a real number.\n- Positive contraction: a self-adjoint element whose \"spectrum\" lies in [0,1], roughly a generalized probability or dampening factor.\n- Commutative: the algebra where ab = ba always holds, like ordinary numbers.\n- Order-theoretic disjointness: two elements have no common lower bound beyond zero in the partial order of positive elements.\n- Ideal: a subset closed under addition and multiplication by any algebra element; the two-sided ideal generated by a is the smallest such set containing a.\n- Annihilator ideal: all elements that multiply a given element to zero.\n- Projection: a self-adjoint element equal to its own square; real rank zero is a topological condition on the algebra.",
+    "one_liner": "The paper proves that closed groups acting minimally and two-transitively on the boundary of a locally finite tree are uniformly admissible (hence type I), settling Nebbia's conjecture, and uses an operator-algebra result on amenable amalgamated free products of atomic von Neumann algebras with integer traces.",
+    "plain": "The paper studies symmetry groups of tree-like networks, the kind of branching structure where every node has finitely many neighbours and there is no loop. It shows that, under a natural condition on how the group acts on the \"edges at infinity\" of the tree (two-transitivity), the group behaves in a very regular way that mathematicians call type I. The main tool is a result about certain algebras of operators, which are the mathematical objects used to describe these symmetries.",
+    "why": "The text says this settles a conjecture of Nebbia in a strong form, and that together with earlier work by Caprace, Kalantar and Monod it gives a complete if-and-only-if characterisation for nonamenable groups acting minimally on such trees. The text does not say what wider applications it has, so any connection beyond this area is unclear from the text alone.",
+    "background": "- Locally finite tree: a connected graph with no cycles where each vertex has finitely many neighbours; its boundary is the set of its \"ends\" (infinite paths going out to infinity).\n- Group acting on a tree: a group of symmetries (automorphisms) of the tree; \"minimal\" means no proper invariant subtree; \"two-transitive\" on the boundary means any two pairs of distinct boundary points can be mapped to each other.\n- Amenable group: roughly, a group with a kind of averaging/invariant-mean property; nonamenable groups are the \"large\" opposite case.\n- Type I: a regularity property of a group's representations (linked to its unitary representation theory); this is the main property studied.\n- Von Neumann algebra: an algebra of bounded operators on a Hilbert space, used as the operator-algebra framework; \"atomic\" means it is generated by minimal projections in a discrete way; \"trace\" is a generalised notion of summing diagonal values.\n- Amalgamated free product: a way of gluing two algebras along a common subalgebra, analogous to gluing groups along a common subgroup.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We characterize order-theoretic disjointness of two elements $a$ and $b$ in the self-adjoint part of a $C^*$-algebra $A$ via the condition $aAb = \\{0\\}$ and the trivial intersection of closed two-sided ideals generated by $a$ and $b$. As a consequence, we show that disjoint complements coincide with the self-adjoint parts of annihilator ideals. We also prove that $A$ is commutative whenever every pair of algebraically orthogonal positive contractions in $A$ is disjoint. Finally, we establish corresponding commutativity criteria involving projections for real rank zero $C^*$-algebras.",
+   "abstract": "We prove that a closed group of automorphisms acting minimally on a locally finite tree and two-transitively on its boundary is uniformly admissible, hence of type I. This solves Nebbia's conjecture in a strong form. Together with the work of Caprace, Kalantar and Monod, this shows that for every closed nonamenable subgroup $G$ of $\\mathrm{Aut}(T)$ acting minimally on a locally finite tree $T$, $G$ is of type I if and only if the action on $\\partial T$ is two-transitive. The key ingredient is the following operator algebraic result: if the projections of two atomic von Neumann algebras $A_1, A_2$ have integer traces, then every amenable amalgamated free product $A_1 \\ast_B A_2$ with $B$ atomic is of type I.",
    "source": "arxiv"
   },
   {

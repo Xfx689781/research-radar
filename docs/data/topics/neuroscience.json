@@ -3,57 +3,52 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.24.769047",
-   "title": "Human iPSC-derived Olfactory Sensory Organoids model olfactory function and drug response",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769047v1",
+   "uid": "biorxiv:10.64898/2026.11.23.768703",
+   "title": "Representational geometry shapes noise-driven working memory errors",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768703v1",
    "authors": [
-    "Singh, V.",
-    "Pantula, A.",
-    "Joshi, K.",
-    "Sadul, O.",
-    "Lagadapati, N.",
-    "Srikumar, A. K.",
-    "Li, N.",
-    "Zhu, X.",
-    "Mahairaki, V.",
-    "Kathuria, A."
+    "Alleman, M.",
+    "Panichello, M. F.",
+    "Buschman, T. J.",
+    "Johnston, W. J."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.24.769047 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.23.768703 v1",
    "primary_category": "neuroscience",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Human iPSC-derived olfactory sensory organoids are shown to develop olfactory-like neurons and glia, network electrical activity, and distinct functional responses to three glioma-relevant kinase inhibitors (Dasatinib, Trametinib, Selumetinib).",
-    "plain": "Some drugs for brain diseases may be given through the nose, which could bypass the barrier that normally keeps many drugs out of the brain. But little is known about how those drugs affect the tissue inside the nose. The researchers grew small three-dimensional clusters of human cells from stem cells that resemble developing smell tissue, then tested how they respond to electrical activity and three cancer-related drugs.",
-    "why": "A lab model of human nasal smell tissue could offer a way to screen how intranasally delivered treatments might affect the nose before they reach patients. The text reports the model's features and drug responses, but it does not show how well these responses predict effects in people, so its usefulness for that purpose remains to be tested.",
-    "background": "- Organoid: a small, lab-grown 3D cell cluster that imitates some features of a real organ.\n- Induced pluripotent stem cells (iPSCs): adult cells reprogrammed to an early, flexible state, which can then be coaxed into other cell types.\n- Olfactory sensory neurons: nerve cells in the nose that detect smells and send signals to the brain.\n- Intranasal drug delivery: giving medicine through the nose, a possible route to the brain that avoids the blood-brain barrier.\n- Single-nuclei RNA sequencing: a method that reads which genes are active in individual cells, used to identify cell types.\n- Kinase inhibitors: drugs that block enzymes (kinases) involved in cell growth signalling; here they are relevant to glioma, a brain tumour.\n- Network bursting: coordinated bursts of electrical firing across many cells, measured as a sign of functional connectivity.",
+    "one_liner": "Electrophysiological recordings from monkey neocortex during a color working memory task suggest that \"guess\" responses arise from noise in the delay-period neural population code, with the shape of that population's color representation predicting each animal's error pattern.",
+    "plain": "When people try to remember colors or other items for a few seconds, they sometimes give an answer that looks random, as if they guessed. This study recorded brain activity from many sites across the monkey outer brain during a color memory task to ask where those guesses come from. The authors report that signs of guessing appear during the memory delay itself, and that the way the brain's activity is arranged for color matches the pattern of each animal's mistakes.",
+    "why": "It offers a neural explanation for a long-studied behavioral pattern, suggesting that random-looking errors in memory may reflect noise in how populations of neurons represent information. The text does not establish how far this generalizes beyond the two monkeys studied, so its wider relevance remains open.",
+    "background": "- Working memory: the brief ability to hold information in mind after it is no longer visible, here for a short delay.\n- \"Guess\" response: a recall answer that is unrelated to the item shown, which the authors treat as a sign of memory failure rather than a deliberate guess.\n- Electrophysiological recording: measuring electrical activity of neurons with electrodes; here, from many sites across the neocortex (the wrinkled outer layer of the brain).\n- Neural population geometry: the way the joint activity of many neurons is arranged in a high-dimensional space, so that similar stimuli map to nearby patterns.\n- Encoding precision: how finely the brain represents a stimulus; lower precision means more noisy, less accurate memories.\n- Noise: random variability in neural activity that can blur or distort the stored information.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Intranasal drug delivery is being explored as an alternative approach to overcome the blood-brain barrier in the treatment of central nervous system diseases. However, little is known about how therapeutics administered through this route affect human olfactory tissue. Here, we develop human induced pluripotent stem cell-derived olfactory sensory organoids that reproduce key cellular and functional features of the developing olfactory system. Over three months of differentiation, the organoids acquire diverse neuronal and glial-associated populations, including cells expressing markers of olfactory sensory neurons and interneurons. Single-nuclei RNA sequencing shows changes in cellular composition and lineage-associated transcriptional programs during maturation, while comparison with a human fetal nasal atlas identifies shared neural populations and developmental signatures. Alongside these molecular changes, the organoids develop spontaneous electrical activity and coordinated network bursting. Exposure to the glioma-relevant kinase inhibitors Dasatinib, Trametinib, and Selumetinib produces distinct changes in neuronal network activity, demonstrating the ability of the model to capture compound-associated functional responses. Together, these findings establish a human Olfactory Sensory Organoid system for investigating olfactory development and evaluating how therapeutics may affect olfactory neural tissue during intranasal drug administration.",
+   "abstract": "Humans and other animals have strictly limited working memory capacity. When asked to recall one or more presented items after a delay period, subjects will occasionally recall an apparently random item: a \"guess'' response. Where do these guesses come from? Using electrophysiological recordings from across monkey neocortex during the performance of a color working memory task, we show that the neural correlates of guess responses emerge during the memory delay -- and that variable encoding precision makes guesses more likely, especially in one of our two animals. If guess responses emerge due to noise, we hypothesize that the detailed neural population geometry for color should shape the distribution of behavioral responses. We confirm this hypothesis by showing that the representational geometry specific to each animal is consistent with their idiosyncratic patterns of errors. Despite the often assumed robustness of neural population representations, noise appears to be a key bottleneck on the reliability of working memory.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.24.768980",
-   "title": "Brain pericyte lineages converge on a shared molecular profile",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768980v1",
+   "uid": "biorxiv:10.64898/2026.11.25.769094",
+   "title": "Auditory cortical population codes for pitch are cue dependent",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769094v1",
    "authors": [
-    "Durkan, A. F.",
-    "Levey, J.",
-    "Shankar, M.",
-    "O'Brown, N. M."
+    "Tarka, V. M.",
+    "Gaucher, Q.",
+    "King, A. J.",
+    "Willmore, B. D.",
+    "Walker, K. M. M."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.24.768980 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.25.769094 v1",
    "primary_category": "neuroscience",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Zebrafish lineage-tracing shows that brain pericytes from neural crest and mesoderm origins occupy distinct regions early on, yet converge on a largely shared gene-expression profile in adults, with only 30 differentially expressed genes between lineages.",
-    "plain": "Pericytes are cells that wrap around the brain's small blood vessels and help regulate them. This study asks whether cells that come from two different embryonic sources end up as different types of cells in the brain. Using genetically labeled zebrafish, the researchers tracked where each group sits from larval to adult stages and compared their gene activity in adult fish.",
-    "why": "It tests a basic question about whether developmental origin shapes the identity of brain support cells, which matters for understanding vessel biology and brain disease. The text does not show whether the regional differences or the few distinct genes have functional consequences, so the broader significance is not established here.",
-    "background": "- Pericytes: cells that wrap around small blood vessels (capillaries) and help control blood flow and the blood-brain barrier.\n- Embryonic lineages: groups of cells traced back to the early tissue they came from; here, neural crest (a migratory embryonic tissue) and mesoderm (a tissue that forms muscle, blood, and connective tissue).\n- Lineage tracing: genetically labeling cells at an early stage so their descendants can be followed later.\n- Zebrafish: a small fish widely used in research because its embryos are transparent and easy to image.\n- Bulk RNA sequencing: measuring the average gene activity of a sorted population of cells, which reveals which genes are switched on.\n- FACS: a method that sorts cells by fluorescent labels; in situ hybridization: a method that shows where specific RNA is present within tissue.",
-    "difficulty": "intermediate",
+    "one_liner": "Using a linear decoder on 1085 ferret primary auditory cortex neurons, the authors show that population codes for fundamental frequency (F0) generalise across sounds only when those sounds share the same type of pitch cue (spectral or temporal), and that F0 information is distributed across the population.",
+    "plain": "The paper asks whether the brain's sound-processing area represents musical pitch the same way regardless of how that pitch is signalled in the sound. Researchers recorded from about 1,000 neurons in ferrets while playing 10 kinds of sound, then trained a simple decoder to read the pitch from the firing patterns. The pitch was read reliably within any one sound type, but transferred well only between sounds that carried pitch in the same way, and poorly between complex sounds and pure tones.",
+    "why": "It bears on how the brain achieves perceptual invariance, recognising the same melody across instruments, which is a basic question in hearing science. The text reports that pitch information is spread widely over the population while only about 20 neurons are enough to decode it, but it does not spell out what this means for hearing itself, so its wider implications are uncertain.",
+    "background": "- Pitch: the perceived highness or lowness of a sound, tied to its fundamental frequency (F0), the rate of its repeating waveform.\n- Spectral cues: pitch inferred from the spacing of harmonic frequency components in a sound.\n- Temporal cues: pitch inferred from how the waveform repeats over time.\n- Primary auditory cortex: the first region of the brain's cortex to process sound.\n- Population code: information carried by the joint activity of many neurons rather than by one neuron.\n- Linear decoder: a simple statistical model that maps neural firing patterns to a predicted value, used to test what information is present.\n- Generalisation: whether a decoder trained on one set of conditions still works on different ones.\n- Onset/offset responses: neural activity at the start and end of a sound.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Brain pericytes arise from two embryonic lineages, neural crest and mesoderm, but it is unknown whether these origins produce molecularly distinct pericyte populations. Using zebrafish lineage-tracing transgenics, we mapped neural crest- and mesoderm-derived pericytes across the brain from larval to adult stages. Neural crest-derived pericytes occupied the forebrain and mesoderm-derived pericytes occupied the midbrain and hindbrain at early stages. A population of neural crest-derived pericytes then appeared in the dorsal midbrain by 10 days post-fertilization and persisted into adulthood. A small population of mesoderm-derived pericytes also appeared in the ventral forebrain of juvenile and adult fish. Bulk RNA sequencing of FACS-isolated adult pericytes showed that the two lineages share expression of canonical pericyte genes, with only 30 genes differentially expressed. Fluorescent in situ hybridization validated one neural crest-enriched gene, plpp3, and several mesoderm-enriched genes, including loxl2b. Together, these data suggest that despite distinct embryonic origins and regional bias, brain pericyte lineages converge on a largely shared molecular profile.",
+   "abstract": "Pitch provides a powerful example of perceptual invariance, enabling us to recognize the same melody across different instruments. The fundamental frequency (F0) at which a pitch is heard can be derived from either the harmonic spacing of frequency components (spectral cues), the waveform periodicity (temporal cues), or both. It is unclear whether population codes for F0 in auditory cortex are invariant across these acoustic cue classes. We addressed this question by training a linear decoder to predict F0 from the spiking responses of 1085 neurons in ferret primary auditory cortex to 10 sound types varying in their spectral and temporal composition. F0 could be decoded accurately when trained and tested on any individual sound type. However, decoding performance generalised well across sounds only if they contained the same class of pitch cue, and poorly between complex sounds and pure tones. Onset and offset responses carried different information about the F0 of complex sounds. Finally, approximately 20 neurons were sufficient to decode F0, but F0 information was widely distributed across the neural population. These findings show that F0 is represented in primary auditory cortex in cue-dependent, temporally multiplexed subspaces, with sparse pitch representations embedded in a distributed, robust population code.",
    "source": "biorxiv"
   },
   {

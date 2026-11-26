@@ -3,49 +3,52 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32458",
-   "title": "VividAudio: Multi-Event Reference-Conditioned Video-to-Audio Generation",
-   "url": "https://arxiv.org/abs/2611.32458",
+   "uid": "arxiv:2611.34626",
+   "title": "Investigation of generalization to unseen audio generation models in audio--text semantic-alignment score prediction",
+   "url": "https://arxiv.org/abs/2611.34626",
    "authors": [
-    "You Li",
-    "Dewei Zhou",
-    "Fan Ma",
-    "Dongliang He",
-    "Yi Yang"
+    "Yuki Okamoto",
+    "Noriyuki Tonami",
+    "Takao Kawamura",
+    "Keisuke Imoto",
+    "Ryotaro Nagase",
+    "Riki Takizawa",
+    "Minoru Kishi",
+    "Shinnosuke Takamichi"
    ],
-   "label": "arXiv:2611.32458v1",
+   "label": "arXiv:2611.34626v1",
    "primary_category": "cs.SD",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Proposes Mr-V2A, a video-to-audio task where each sound event in a video is conditioned on its own audio reference and time span, with a data-pair construction method (IntraEvtVar), a composite reference design (TACO-Ref) with local and global pathways, and a router (TRR) to limit cross-event acoustic leakage.",
-    "plain": "Video-to-audio systems generate sound effects for a silent video. This paper asks whether a user can instead say which sound should appear for each event in the video, by supplying an example sound and a time window for each one. The authors report a training-data trick, a way of combining the example sounds over time, and a routing step meant to stop the sounds from bleeding into each other, and say it gives better control than existing methods on two benchmarks while keeping sound quality competitive.",
-    "why": "Giving users control over the specific sound of each event in a video could matter for film sound design and Foley work, where creators currently edit sounds by hand. The text does not show how large or practical the gain is, and it is an arXiv-style method paper rather than a product release.",
-    "background": "- Video-to-audio (V2A): generating a soundtrack or sound effects from video frames.\n- Foley: sound effects added to film or video to match on-screen actions.\n- Reference-conditioned generation: steering output with an example audio clip rather than only a text prompt.\n- Time-aligned reference: example sounds placed on a timeline matching when each event occurs.\n- Q-Former: a small module that compresses a stream of features into a fixed set of summary tokens.\n- Attention and routing: mechanisms that decide which parts of the input influence which parts of the output.\n- Acoustic leakage: one event's sound characteristics wrongly appearing in another event's sound.\n- Benchmarks used: VGGSound-Ref and VividBench, as named in the text.",
-    "difficulty": "research-level",
+    "one_liner": "This paper studies whether learned models that score how well generated audio matches its text prompt still work on audio from text-to-audio generators they were not trained on, and tests a gradient reversal layer (GRL) adversarial training method to reduce generator-specific bias.",
+    "plain": "Text-to-audio systems create sound from a written description, such as \"a dog barking in the rain.\" This paper asks whether the automatic judges that rate how well a sound matches its description still work when the sound comes from a generator they never saw during training. The authors found that such judges get worse on audio from unseen generators, and that a training trick helps in some cases but only partly removes the generator-specific clues.",
+    "why": "Automatic scoring is often used to compare and improve text-to-audio systems, so a judge that only works on known generators could mislead researchers about newer models. The work is relevant to anyone building fair evaluation tools for generative audio, though the text does not show how broadly the findings hold beyond the settings tested.",
+    "background": "- Text-to-audio (TTA) generation: AI models that produce sound from a text description.\n- Semantic alignment: how well the content of a sound matches what the text says.\n- Alignment-score prediction: a trained model that outputs a number rating this match, standing in for human judgment.\n- Generalization: whether a model keeps working on data unlike its training data, here audio from new generators.\n- Pretrained audio encoder: a model already trained to turn audio into numerical features, which the scoring model builds on.\n- Adversarial training with a gradient reversal layer: a method that trains a model to make its internal features useless for identifying which generator made the audio.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Existing video-to-audio (V2A) methods have achieved promising results in synthesizing high-quality audios. However, as V2A advances toward more flexible user-directed creation, existing methods remain notably limited in controlling the distinct acoustic identities of multiple events within a video. We therefore formulate multi-event reference-conditioned V2A (Mr-V2A), where each event is assigned a specific audio reference and target time span. Mr-V2A presents three key challenges. First, event-level reference-target training pairs are scarce. We introduce Intra-Video Event Variation (IntraEvtVar), which constructs non-oracle pairs through four variation modes of events mined within each video. Second, we organize the references into a Time-Aligned COmposite Reference (TACO-Ref) and inject it through local and global pathways: the local pathway retains time-resolved event cues, while an Audio Q-Former provides a clip-level acoustic-context condition. Third, jointly conditioning on multiple references can cause acoustic-attribute leakage across events. Localized reference attention and the TACO-Ref Router (TRR) explicitly constrain event-to-reference correspondence to reduce such interference. Experiments on VGGSound-Ref and VividBench demonstrate stronger reference controllability than existing V2A and exemplar-based methods while maintaining competitive Foley generation quality.",
+   "abstract": "Text-to-audio generation (TTA) requires reliable evaluation of semantic alignment between generated audio and input text. Existing learning-based alignment-score prediction models have been evaluated only on audio generated by models included in the training data, leaving their generalization to unseen generation models unexplored. In this paper, we investigate the generalization of audio--text semantic-alignment score prediction models to unseen TTA models and introduce adversarial training using a generation-model classifier with a gradient reversal layer (GRL). Experimental results show that pretrained audio encoders capture generation-model-specific characteristics and that alignment-score prediction performance degrades on audio generated by unseen TTA models. Applying the GRL improves prediction performance in some settings, although its effectiveness in suppressing generation-model-specific information is limited.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32286",
-   "title": "Reproducing the Speech Labels of Qwen3-Omni's Talker: Mimi in bf16, and a Last-Frame Pitfall",
-   "url": "https://arxiv.org/abs/2611.32286",
+   "uid": "arxiv:2611.34241",
+   "title": "TigerTTS: Draft-Guided Multi-Frame Parallel Speech-Token Language Model for Fast and Robust Text-to-Speech",
+   "url": "https://arxiv.org/abs/2611.34241",
    "authors": [
-    "Yuxuan Chen"
+    "Dewei Kong"
    ],
-   "label": "arXiv:2611.32286v1",
+   "label": "arXiv:2611.34241v1",
    "primary_category": "cs.SD",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper identifies the unreleased audio encoder behind Qwen3-Omni's speech-output labels as kyutai's Mimi codec (bf16 weights, moshi package), and reports a last-frame encoding mismatch in transformers' MimiModel that causes noise bursts after fine-tuning unless inputs are padded to a multiple of 1920 samples.",
-    "plain": "Qwen3-Omni is a speech-producing AI model, but the tool that turned its training audio into the compact codes it learns from was never published, so people cannot easily train new voices in the same format. The authors work backwards from the released model's behavior and conclude the missing tool is very likely kyutai's Mimi audio codec, and they find that a common open-source version of Mimi handles the final fraction of a recording differently, which makes fine-tuned speech end in a noise burst.",
-    "why": "It matters for anyone who wants to fine-tune open speech-generation models, since matching the label encoder is a precondition for that work. The padding issue may also affect other systems built on Mimi, though the text reports this only for the CSM-1B model and the authors release a checker and toolkit for others to verify.",
-    "background": "- Audio codec: a tool that compresses sound into a short sequence of discrete codes and back again.\n- Codebooks: lookup tables of codes; a 16-codebook setup uses 16 codes per time step, here at 12.5 time steps per second.\n- Talker: the part of Qwen3-Omni that generates the speech codes.\n- Teacher-forced likelihood: scoring how probable the model finds a given label sequence when it is fed the correct previous steps.\n- bf16: a reduced-precision number format used to store model weights.\n- LoRA fine-tuning: a cheap way of adapting a large model by training small add-on weights.\n- Nats: a unit of information, used here to score how surprising data is to a model.\n- Calibration: checking that a test reliably distinguishes cases it should distinguish.",
+    "one_liner": "TigerTTS is a text-to-speech system that uses a small non-autoregressive model to draft speech tokens for a whole utterance, then refines them with a compact autoregressive language model that predicts several frames in parallel, with reported gains in speed and in word-level accuracy.",
+    "plain": "This paper describes a system that turns written text into spoken audio. The main problems it targets are speech that is slow to generate, and speech that skips or repeats words. The authors first sketch a rough version of the whole sentence in one pass, then fill in the detail step by step, and they report that this makes generation much faster while keeping errors low.",
+    "why": "Faster, more reliable speech generation matters for voice assistants and live applications where delay is noticeable. The reported results are the authors' own benchmark comparisons on specific datasets (SEED and LibriSpeech), so independent replication would be needed before relying on the figures.",
+    "background": "- Text-to-speech (TTS): software that converts text into spoken audio.\n- Speech tokens: short numeric codes that represent slices of audio, which a language model can predict like words.\n- Autoregressive model: generates one piece at a time, each depending on the previous ones; accurate but slow for long outputs.\n- Non-autoregressive model: produces all pieces at once; faster but usually less precise.\n- Real-time factor (RTF): time taken to generate audio divided by the audio's length; lower is faster, so 0.05 means about 20 times faster than real time.\n- Word error rate (WER) and character error rate (CER): share of words or characters a speech recognizer gets wrong on the synthesized audio; lower is better.\n- Latency to first packet: delay before the first chunk of audio can be played.\n- KV-cache, CUDA Graphs, and weight absorption: engineering techniques for reducing memory use and speeding up GPU inference.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Qwen3-Omni speaks through a Talker predicting 16 codebooks of a 12.5 Hz audio codec, but the encoder that made its training labels was not released, so new voices cannot be trained on matching labels. We identify this encoder from the released model's behavior. White-box regression shows that the codebook embeddings of the Talker, its multi-token predictor and the Code2Wav decoder match the first 16 codebooks of kyutai's Mimi layer by layer. A decoder-based test looks convincing but fails calibration: decoders trained on known labels cannot tell them apart. Teacher-forced Talker likelihoods, calibrated with 13 code language models trained on known labels, do tell implementations apart: the Talker prefers labels from kyutai's moshi package with bf16 weights over every other variant we tried. Loudness normalization and band-limiting of 20% or more of the data are ruled out. Separately, transformers' MimiModel encodes the last frame differently from kyutai's encoder unless the input length is a multiple of 1920 samples. After LoRA fine-tuning on its labels, 44--55% of generated sentences end in a noise burst, and the same frame costs the Mimi-based CSM-1B 119 nats; padding the input removes both. We release the encoding recipe, a label checker and a Talker fine-tuning toolkit.",
+   "abstract": "Autoregressive speech-token language models enable high-quality TTS but suffer from latency growth with sequence length, word omission or repetition without explicit alignment, and fidelity limits from discrete codebooks. We present TigerTTS, a production-grade LLM TTS system built around a lightweight non-autoregressive NAR model. With explicit alignment, the NAR model drafts tokens for the entire utterance, which are refined frame-by-frame by a compact autoregressive LLM. The draft is aligned frame-for-frame with LLM targets and injected at the input, ensuring training-inference consistency. Leveraging its accuracy, the LLM predicts 12 tokens per step across 3 frames and 4 groups, while a conditional-total-correlation bound keeps parallel prediction nearly lossless. We use a codebook-free FSQ tokenizer with four parallel groups and about 1800 bps to avoid codebook collapse. The backbone keeps positional information only in input embeddings, enabling exact MLA weight absorption and a four-fold KV-cache reduction. Decoding uses CUDA Graphs with a graph-safe multinomial sampler. A Fast mode further reduces first-packet latency: the NAR generator acts as a prefix synthesizer with RTF 0.03, producing the first 500 ms before LLM decoding. With CUDA-Graph decoding, TigerTTS reaches RTF 0.05, about 20x real-time, on one GPU. Despite using a 0.15B backbone, it outperforms standard PyTorch inference of VoxCPM2 2B by 5x and CosyVoice 2 by 16x. TigerTTS achieves the lowest CER and WER on SEED, 1.09 and 1.67, and strong WER, NMOS, and speaker similarity on LibriSpeech test-clean, 2.22, 4.36, and 0.820. Fast-mode guided semantic tokens provide a well-aligned content prior, reducing dropped words, loops, and runaway generation without sacrificing speed.",
    "source": "arxiv"
   },
   {

@@ -3,52 +3,46 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32990",
-   "title": "Cell and nuclear shapes predict confined motility",
-   "url": "https://arxiv.org/abs/2611.32990",
+   "uid": "arxiv:2611.34610",
+   "title": "Stochastic Failure Dynamics in a Model Peptidoglycan Mesh under Hydrolysis and Mechanical Loading",
+   "url": "https://arxiv.org/abs/2611.34610",
    "authors": [
-    "Malcolm Mehrabian-Terlexis",
-    "Jacqueline Janssen",
-    "Paul Sitoleux",
-    "Thierry Mora",
-    "Aleksandra M. Walczak",
-    "C\\'ecile Sykes"
+    "Issan Patri",
+    "Garima Rani"
    ],
-   "label": "arXiv:2611.32990v1",
-   "primary_category": "q-bio.QM",
+   "label": "arXiv:2611.34610v1",
+   "primary_category": "physics.bio-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Using microfluidic confinement of MDA-MB-231 breast cancer cells, this paper trains machine-learning classifiers on 12 cell and nuclear contour features to predict whether a cell will squeeze through a constriction smaller than its nucleus, finding that cell area and circularity carry most of the predictive signal.",
-    "plain": "Cancer cells spreading through the body sometimes have to squeeze through gaps narrower than their own nucleus. This study put breast cancer cells into tiny chambers connected by narrow gaps and tracked whether each cell made it through. Averages of cell and nucleus shape did not separate cells that passed from those that did, but a machine-learning model using shape measurements from earlier moments could predict passing fairly well, with less round cells more likely to pass.",
-    "why": "Being able to tell from shape alone whether a cell can squeeze through tight spaces may help in understanding how cancer spreads, and the authors report that the model still worked for narrower gaps and stickier surfaces without retraining. The text does not show how well this carries over to real tissue or patients, so its wider relevance remains uncertain.",
-    "background": "- Metastasis: cancer spreading from its original site to other parts of the body.\n- Nucleus: the cell's compartment holding its DNA; it is often the stiffest and bulkiest part, so it is the main obstacle when a cell squeezes through a narrow gap.\n- Microfluidics: devices with channels and chambers only micrometres wide, used to control the environment cells experience.\n- Contour/morphology features: numerical descriptions of outline shape, such as area and circularity (how close the outline is to a perfect circle).\n- Classifier: a machine-learning model that sorts cases into categories, here \"transits\" versus \"does not transit.\"\n- Adhesion: how strongly cells stick to the surface they crawl on, which affects how easily they move.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Cancer metastasis relies on an enhanced property of cells to migrate efficiently even through constrictions smaller than their nucleus. Both cell and nuclear morphology may influence this process. How these morphologies relate to the likelihood that a cell will transit through a constriction remains unclear. Here we combine microfluidic experiments with machine learning to predict whether MDA-MB-231 breast cancer cells are able to transit through narrow constrictions. Cells migrate within vertically confined boxes, and may migrate into neighboring boxes by transiting through constrictions, requiring a deformation of the nucleus. Defining a set of 12 geometrical features derived from cell and nuclear contours, we find that their average values are not statistically indicative of whether or not a cell will transit. To overcome this limitation, we use trajectories to train classifiers and evaluate their ability to predict future transit events. We find that the cell area and cell circularity carry most of the predictive information and less circular cells are more likely to transit. Without retraining, the models also predict transit through narrower constrictions and in more adhesive substrates. Morphological features of cells about 30 minutes before a transit event proved most informative about future transit events occurring or not. Together, our results show that cell shape, readable from simple contour descriptors, contains a transferable but condition-dependent signature of imminent transit.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32737",
-   "title": "Impact of Taylor-Aris dispersion on chemical patterns in confined channel flows",
-   "url": "https://arxiv.org/abs/2611.32737",
-   "authors": [
-    "Yanis Baouche",
-    "Ramita Mondal",
-    "Christina Kurzthaler"
-   ],
-   "label": "arXiv:2611.32737v1",
-   "primary_category": "cond-mat.soft",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "Using an invariant-manifold reduction for slender channels, the authors show that advection with Taylor-Aris dispersion in a confined flow can invert the classical Turing criterion for the Brusselator activator-inhibitor model, triggering or destroying chemical patterns, and confirm this with direct simulations.",
-    "plain": "This paper asks how a steady fluid flow through a narrow channel changes the chemical patterns that reaction-diffusion systems can form, such as stripes. The authors reduce the full two-dimensional problem to one dimension using a standard model system, the Brusselator, and account for how flow spreads chemicals along the channel. They report that flow can create patterns even when the chemicals alone would not form them, and can also erase patterns that already exist.",
-    "why": "Patterns of this kind are often proposed to underlie biological shapes, so showing that flow in confined channels can switch pattern formation on or off may matter for microfluidic and biological settings. The text is limited to the abstract, so the scope of the claims beyond the Brusselator model and these simulations is not clear from it.",
-    "background": "- Chemical patterns: spatial stripes or spots that arise when reacting chemicals diffuse at different rates (reaction-diffusion systems).\n- Turing criterion: the classical condition, based on unequal diffusion rates of the two chemicals, under which a uniform mixture becomes unstable and forms patterns.\n- Brusselator: a simple textbook model of two interacting chemicals, an activator and an inhibitor.\n- Advection: transport of chemicals by the moving fluid.\n- Taylor-Aris dispersion: the effective spreading of a solute in a flow that combines molecular diffusion with shear across a channel, giving a larger effective diffusivity along the flow.\n- Péclet number: the ratio of advection to diffusion; large values mean the flow dominates.\n- Slender channel: a channel much longer than it is wide, which allows the reduction to one dimension.\n- Invariant manifold: a reduced set of states the full system settles onto, allowing a simpler description.",
+    "one_liner": "A minimal stochastic-mechanical model, analysed with extreme value theory and simulations, of how a Gram-negative peptidoglycan cell wall fails over time when hydrolases keep cutting bonds, growth is blocked, and mechanical load may be applied.",
+    "plain": "Bacteria are protected by a mesh-like wall made of cross-linked sugar-and-peptide chains. This paper asks how that wall eventually breaks down if growth is stopped, for example by an antibacterial agent, while enzymes keep snipping its bonds. The authors use a simplified random model, with mathematical limit laws and computer simulations, to describe when and where the wall gives way.",
+    "why": "The text reports that failure time grows only logarithmically with the number of bonds, so extra cross-linking gives diminishing returns, and that collapse stays localized even when overall cross-linking is high. These are model results, not experimental findings, so their relevance to real bacteria is untested from this text alone; they may be of interest to people studying antibiotic action or bacterial cell-wall mechanics.",
+    "background": "- Peptidoglycan (PG): a mesh of sugar chains linked by short peptides that forms the bacterial cell wall.\n- Cross-links: bonds that tie the mesh together; more cross-links mean a stronger wall.\n- Hydrolases: enzymes that break (cut) bonds in the wall.\n- Gram-negative: a bacterial group with a thin wall and an outer membrane.\n- Extreme value theory: statistics of the largest or smallest values, here the weakest point giving way first.\n- Gumbel and Weibull laws: standard probability distributions for minimum or weakest-link failure times.\n- Stochastic simulation: computer runs with random events to mimic chance-driven behaviour.\n- Logarithmic growth: the quantity rises very slowly, roughly in proportion to the log of the input.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Chemical patterns form through non-linear interactions between different species. We study how confined channel flows affect pattern formation using the Brusselator as a paradigmatic activator-inhibitor model. An invariant-manifold method for slender channels reduces the advection-diffusion-reaction equation to one spatial dimension, with species transported at the mean flow velocity and molecular diffusivities replaced by the classical Taylor-Aris dispersion coefficients. We obtain the phase diagram as a function of the P\\'eclet number (i.e., the relative strength of advection to diffusion), the channel slenderness, and the diffusivity ratio of the species. Our analytical results demonstrate that the classical Turing criterion can become inverted at large P\\'eclet numbers and, thus, channel flow can trigger pattern formation even when the molecular diffusivities violate the classical Turing condition, and conversely destroy pre-existing patterns. Both predictions are confirmed by direct numerical simulations, which show advected stripe patterns, whose wavelength can be predicted by our reduced theory, as well as oscillatory dynamics. These findings highlight that hydrodynamic flows can modify chemical mixing and thereby profoundly affect pattern formation in channel geometries.",
+   "abstract": "We develop a minimal stochastic-mechanical model for failure dynamics of the Gram-negative peptidoglycan (PG) cell wall under blocked growth and continued hydrolysis. The cell wall is modelled as a collection of load-bearing cross-sections, with random number of cross-links in each such cross-section, around a fixed degree of cross-linking. To understand failure dynamics of the cell wall under antibacterial agents which prevent insertion of fresh PG material, peptide bonds are progressively excised by hydrolases, while insertion/formation of new bonds is blocked. We compare and contrast rupture dynamics in no-load and load-activated regimes, using extreme value theory and stochastic simulations, deriving limiting laws for system failure in both the long-cell and large crosslinking limits. For a cross-section with many bonds, the mean failure time grows only log- arithmically with bond number, giving diminishing returns from additional cross-linking. In the no-load case, the centered failure time converges to a Gumbel law, though crucially, load changes the centered distribution and accelerates the final stages of collapse. In long cells, failure follows a weakest-link Weibull-type scaling controlled by the least cross-linked regions, with mechanical load reducing the failure-time scale without changing the weakest-link exponent. The fraction of bonds removed before failure tends to zero, showing that collapse can remain highly localized even while the global cross-linking degree stays high. Slowing down growth and other cellular functions is a typical antibiotic escape mechanism for bacteria and in this context, we show that, hydrolase down-regulation uniformly rescales the failure-time distribution and delays collapse, but does not remove the load-induced preference for rupture in weakened regions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34305",
+   "title": "Quantum chaotic signature in non-empirical ensemble of DNA base pairs",
+   "url": "https://arxiv.org/abs/2611.34305",
+   "authors": [
+    "Mehdi Ameri"
+   ],
+   "label": "arXiv:2611.34305v1",
+   "primary_category": "q-bio.BM",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper tests whether the orbital energy levels of isolated guanine-cytosine and adenine-thymine Watson-Crick base pairs, computed with density functional theory, follow random-matrix level statistics, and finds they most closely match the semi-Poisson distribution.",
+    "plain": "Researchers looked at the energy levels of single DNA base pairs (the GC and AT pairs that hold the two strands of DNA together), calculated with a standard computer quantum-chemistry method. They asked whether the spacing pattern of these levels looks like the patterns seen in chaotic quantum systems or in simple, unrelated levels. The energy spacings fit best a middle-ground pattern called semi-Poisson, lying between fully ordered and fully chaotic behavior.",
+    "why": "It applies random-matrix statistics, a tool from nuclear and quantum chaos, to a small biological molecule, which is an unusual pairing. The authors suggest possible links to charge transfer in biology, but the text does not show such a link, so that connection remains speculative.",
+    "background": "- Watson-Crick base pairs: the GC and AT pairings that form the rungs of the DNA double helix.\n- Density functional theory (DFT): a common computer method for estimating the electron energy levels of molecules.\n- Kohn-Sham orbital energies: the single-electron energy levels that DFT produces, used here as the data.\n- Random-matrix theory: a statistical framework describing energy-level spacings in complex quantum systems. Poisson spacings mean unrelated levels; GOE (Gaussian Orthogonal Ensemble) spacings mean chaotic systems with level repulsion; semi-Poisson is an intermediate pattern.\n- Level repulsion: nearby energy levels tend to avoid each other in chaotic systems.\n- Adjacent-gap ratio, number variance, and spectral compressibility: statistical measures used to compare level patterns with each model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The statistical study of many-body chaotic quantum systems would indicate important phenomena such as short-range level repulsion and long-range spectral rigidity. We investigate such behavior in an ensemble of gas-phase guanine-cytosine (GC) and adenine-thymine (AT) Watson-Crick (WC) base pairs by calculating their Kohn-Sham molecular orbital energy levels via ab initio density functional theory (DFT). We track the probability distribution, adjacent-gap ratios (AGR), number variance, and spectral compressibility of the unfolded level spacings to see whether their statistics follow the statistics of the eigenvalues of random matrices. After comparing the results to Poisson, semi-Poisson (SP), and Gaussian Orthogonal Ensemble (GOE) statistics, it becomes evident that the statistics of orbital energy levels agree closely with the semi-Poisson distribution, pointing to an intermediate regime between integrability and chaos, characterized by level repulsion and strong long-range correlations. Potential biophysical implications for charge transfer and related biological processes are also discussed.",
    "source": "arxiv"
   },
   {

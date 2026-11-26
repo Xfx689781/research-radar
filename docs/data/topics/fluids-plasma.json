@@ -3,50 +3,51 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32287",
-   "title": "Plasma Heating by Magnetic Reconnection and Alfven Waves in Collisionless Shocks",
-   "url": "https://arxiv.org/abs/2611.32287",
+   "uid": "arxiv:2611.33412",
+   "title": "Point vortex dynamics influenced by the surface motion",
+   "url": "https://arxiv.org/abs/2611.33412",
    "authors": [
-    "Masahiro Hoshino",
-    "Shuichi Matsukiyo",
-    "Takanobu Amano"
+    "Delia Ionescu-Kruse",
+    "Rossen I. Ivanov",
+    "Michail D. Todorov"
    ],
-   "label": "arXiv:2611.32287v1",
-   "primary_category": "astro-ph.HE",
+   "label": "arXiv:2611.33412v1",
+   "primary_category": "nlin.PS",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Using particle-in-cell simulations, this paper examines how large-amplitude Alfvén waves from shock-reflected ions drive both ordinary wave-particle heating and reconnection-driven preferential ion heating in current sheets behind high-Mach-number collisionless shocks.",
-    "plain": "In space and astrophysical shock waves, the ions and electrons often end up at different temperatures, and it is not fully understood how the energy gets split between them. This study looks at strong waves, called Alfvén waves, that are launched when some ions bounce back from the shock front. The authors report that ions tend to be heated where the magnetic field forms X-shaped patterns downstream, which they link to magnetic reconnection and annihilation in thin current sheets.",
-    "why": "Splitting energy between ions and electrons in shocks affects how particles are accelerated and how much heat the plasma holds, which matters for shocks in space, supernova remnants, and similar settings. The text presents a correlation from simulations and suggests a role for reconnection; it does not establish how large that role is.",
-    "background": "- Collisionless shock: a shock wave in a plasma (ionized gas) where particles interact through electromagnetic fields rather than collisions.\n- Temperature in a plasma: the average random motion of its ions or electrons; ion and electron temperatures can differ.\n- Alfvén wave: a low-frequency wave that travels along magnetic field lines, like a vibration on a stretched string made of magnetic field.\n- Magnetic reconnection: a process where magnetic field lines break and reconnect, releasing stored energy into particles, often in thin current sheets.\n- Mach number: the ratio of the shock's speed to the local wave speed; high Mach number means a very strong shock.\n- Particle-in-cell (PIC) simulation: a computer method that tracks many individual charged particles together with their electromagnetic fields.",
+    "one_liner": "A mathematical study of a coupled system in which a free fluid surface (with long, small-amplitude waves in the Boussinesq regime) interacts with a point vortex inside the fluid, showing that surface solitary waves survive the interaction and that the vortex motion can be reduced to decoupled ODEs.",
+    "plain": "This paper looks at what happens when a swirling point of fluid rotation sits beneath a water surface that carries waves. The authors model the surface and the vortex together, using equations that apply to long, gentle waves. They report that solitary waves (single rolling humps that travel without spreading) keep their shape for a wide range of vortex strengths, and that a simpler version of the model can describe the vortex's motion on its own.",
+    "why": "It gives a mathematically tractable picture of how a surface wave and an underlying vortex affect each other, which may matter for understanding nearshore flows or wave-vortex interactions. The text does not say how far these results carry over to real water, so the practical reach is uncertain.",
+    "background": "- Free surface: the upper boundary of a fluid, such as the top of a pond or sea.\n- Point vortex: an idealized, infinitely small whirlpool-like swirl of fluid, treated as a single point.\n- Solitary wave (soliton): a single wave hump that keeps its shape and speed as it travels.\n- Boussinesq regime: an approximation for long, shallow, low-amplitude waves, where simpler equations replace the full fluid equations.\n- Ordinary differential equations (ODEs): equations describing how a few quantities change over time, here used for the vortex's position.\n- Vortex strength: a number measuring how strongly the fluid circulates around the vortex.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In collisionless shock waves, the ion and electron temperatures generally differ, and the mechanisms governing their energy partitioning remain one of the central unresolved problems in shock physics. Although energy can be exchanged through various plasma waves generated upstream and downstream of the shock, large-amplitude Alfven waves excited by ions reflected at the shock front play a particularly important role in high-Mach-number shocks. In this study, we focus on these large-amplitude Alfven waves and examine not only plasma heating through conventional wave-particle interactions but also preferential ion heating driven by magnetic reconnection within current sheets formed by trains of such waves. Using particle-in-cell (PIC) simulations, we find a correlation between ion heating and X-type magnetic field structures in the downstream region, and we suggest that magnetic reconnection and magnetic annihilation within these current sheets influence the energy partitioning between ions and electrons.",
+   "abstract": "We study a coupled system of differential equations, which models the dynamics of fluid with a free surface and a point vortex in the body of the fluid. For long surface waves of small amplitude, the effects of the interaction between the waves and the point vortex are modeled within the framework of the Boussinesq regime. It turns out that the solitary waves on the surface are not destroyed by the interaction with the vortex, and, as a matter of fact, the solitary waves remain practically unaffected for a significant range of the vortex strength. As a result, a further simplification of the model is proposed, where the vortex motion under solitons propagating on the surface is determined from a system of decoupled ordinary differential equations.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31603",
-   "title": "Exact force-free three-dimensional toroidal equilibria and the sawtooth q(0) problem",
-   "url": "https://arxiv.org/abs/2611.31603",
+   "uid": "arxiv:2611.34717",
+   "title": "A 2D fluid model in BOUT++/Hermes-3 for simulating detached divertor plasmas in tokamaks",
+   "url": "https://arxiv.org/abs/2611.34717",
    "authors": [
-    "W. Sengupta",
-    "A. Bhattacharjee",
-    "T. J. Klotz",
-    "A. O. Brown"
+    "Malamas Tsagkaridis",
+    "Ben Dudson",
+    "Mike Kryjak",
+    "Nami Li",
+    "Xueqiao Xu"
    ],
-   "label": "arXiv:2611.31603v1",
+   "label": "arXiv:2611.34717v1",
    "primary_category": "physics.plasm-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper constructs exact closed-form force-free (curl B = lambda B) toroidal magnetic equilibria with nested flux surfaces and no continuous symmetry, shows they are Taylor minimum-energy states within a bounded radius, and applies them to the tokamak sawtooth q(0) problem.",
-    "plain": "The paper concerns the magnetic fields that confine hot plasma in donut-shaped fusion devices called tokamaks, and a long-standing puzzle about the \"sawtooth\" instability that periodically disrupts the core. The authors write down exact mathematical solutions for magnetic fields that wrap around a closed loop in nested layers, without needing any rotational or other continuous symmetry. They report that some of these fixed-boundary states have the central safety factor q(0) below 1 while the wall value is above 1, reaching 0.84 at tight aspect ratio and about 0.94 at conventional aspect ratio, without an island or current sheet.",
-    "why": "The work offers explicit counterexamples to Grad's conjecture in its pressureless form, which bears on how plasma relaxes to equilibrium. It may bear on the sawtooth problem, where the central safety factor dipping below one is usually tied to instability, but the text does not establish whether these states can actually be reached dynamically or how they match the surrounding plasma, and the authors say those questions remain open.",
-    "background": "- Magnetic field lines and flux surfaces: nested surfaces like layers of an onion, each enclosing the magnetic axis.\n- Force-free field: a magnetic field where the current runs parallel to the field (curl B = lambda B), so magnetic forces balance without pressure.\n- Taylor state: a relaxed magnetic configuration reached by minimizing magnetic energy while conserving toroidal flux and magnetic helicity.\n- Rotational transform and safety factor q: how many times a field line winds poloidally per toroidal turn; q = 1 is a key stability threshold.\n- Sawtooth oscillation: a periodic crash of the tokamak core temperature linked to q on axis dropping below 1.\n- Grad's conjecture: a claim that toroidal plasma equilibria with nested surfaces and no symmetry do not exist without pressure.\n- Aspect ratio: ratio of the torus's major radius to its minor radius; \"tight\" means a thin donut.",
+    "one_liner": "A two-dimensional fluid model in BOUT++/Hermes-3 is used to simulate detached divertor plasmas in a DIII-D tokamak discharge, with an improved PETSc SNES steady-state solver and comparison of sparse preconditioners (STRUMPACK ILU preferred, about 5x faster than HYPRE-based setups in the cases studied).",
+    "plain": "Fusion reactors need a way to keep the exhaust plasma from damaging the metal surfaces that absorb it, and one strategy is \"detachment,\" where the hot plasma is cooled near those surfaces before it arrives. This paper describes a computer model of that cooling process for a real experiment at the DIII-D fusion device, and it also reports how to make the model's calculations run faster. The authors adjust the model to match measured upstream conditions, add nitrogen gas to cool the plasma, and track where energy and particles are gained and lost. They also show that, as the plasma density at the edge is raised, the temperature at the target drops and the measured ion current eventually levels off, as expected for detachment.",
+    "why": "Reliable simulations of detachment matter for designing future high-power tokamaks, where controlling heat loads on divertor surfaces is a central engineering problem. The solver speedup is a practical result for anyone running these large simulations, though the text reports it only for the cases considered, so its general reach is not yet shown.",
+    "background": "- Tokamak: a doughnut-shaped magnetic device that confines hot plasma for fusion research.\n- Divertor: the region at the bottom of the tokamak where exhaust plasma hits target plates.\n- Detachment: a state where the plasma is cooled and pulled away from the target plates, lowering heat loads.\n- Fluid model: treats plasma as a continuous fluid with density, temperature and velocity, rather than tracking individual particles.\n- Fixed-fraction impurity radiation: a simplified way of modeling cooling by adding a set share of an impurity gas (here nitrogen) that radiates energy.\n- Steady-state solver and preconditioner: numerical methods that find an unchanging solution of large equation systems faster; the preconditioner helps the linear algebra converge.\n- Separatrix density: the plasma density at the boundary between confined and exhaust plasma, used as an input control.\n- Ion saturation current: a measured electrical current at the target that indicates how much plasma arrives there.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We construct exact, closed-form solutions of curl of B=lambda B with nested toroidal flux surfaces around a closed magnetic axis, finite rotational transform and, in general, no continuous Euclidean symmetry. They are counterexamples to Grad's conjecture in its pressureless form. Inside a regular flux surface that fits in a ball of radius r_b with |lambda| r_b<4.49, each is the unique minimum of magnetic energy at fixed toroidal flux and helicity, so each is a Taylor state. The rotational transform is a ratio of one-dimensional integrals. Our primary application is the sawtooth q(0) problem in tokamaks. In one configuration, q crosses unity on a smooth torus of closed field lines, with no island and no current sheet. Across the family, minimum-energy fixed-boundary states with q(0)<1<q_wall exist; in our scans q(0) reaches 0.84 at tight aspect ratio and about 0.94 at conventional aspect ratio. At comparable helicity-to-flux ratio, configurations with different boundary shapes have either sign of the magnetic shear. These fixed-boundary equilibria are candidates for relaxed cores, which need not be axisymmetric. Their dynamical accessibility and their matching to the surrounding plasma remain open.",
+   "abstract": "Detached divertor operation is essential for controlling target heat fluxes in future high-power tokamaks. We present a two-dimensional fluid model implemented in BOUT++/Hermes-3 for simulating detached divertor plasmas with plasma-neutral interactions and fixed-fraction impurity radiation. We report improvements to the PETSc SNES-based steady-state solver used for two-dimensional axisymmetric transport simulations with fluid neutrals and assess the performance of several sparse-solver preconditioning strategies. For the cases considered here, STRUMPACK used as an ILU preconditioner with low-rank compression provides the most favorable performance, reducing the linear-to-nonlinear iteration ratio and achieving approximately a fivefold speedup relative to \\HYPRE{}-based configurations. The optimized solver is then applied to DIII-D shot $\\#174287$ at 4000~ms to characterize detached divertor conditions. Cross-field transport coefficients are adjusted to reproduce upstream experimental profiles, and detachment is modeled using nitrogen fixed-fraction radiation. Steady-state particle and energy balances are evaluated by decomposing the density and pressure equations into their transport and source terms. In the outer divertor, electron energy losses are dominated by ionization and impurity radiation, while ion energy losses occur mainly through collisional transfer to electrons. An upstream separatrix density scan shows decreasing target electron temperature and a rollover of the integrated target ion saturation current at higher $n_{e,\\mathrm{sep}}$ consistent with expected detachment trends. These developments establish a foundation for future multispecies simulations. Hermes-3 is publicly available on GitHub under the GPL-3 open-source license.",
    "source": "arxiv"
   },
   {

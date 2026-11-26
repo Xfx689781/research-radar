@@ -3,55 +3,55 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32314",
-   "title": "Operationalizing Quantum Machine Learning for IoT Network Intrusion Detection",
-   "url": "https://arxiv.org/abs/2611.32314",
+   "uid": "arxiv:2611.34630",
+   "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+   "url": "https://arxiv.org/abs/2611.34630",
    "authors": [
-    "Domenico Ciuonzo",
-    "Idio Guarino",
-    "Alfredo Nascita",
-    "Antonio Pescap\\`e",
-    "Vincenzo Spadari"
+    "Yifan Wang",
+    "Zetao Guo",
+    "You Xiao",
+    "Wendi Sun",
+    "Song Chen"
    ],
-   "label": "arXiv:2611.32314v1",
-   "primary_category": "cs.NI",
+   "label": "arXiv:2611.34630v1",
+   "primary_category": "cs.AR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper evaluates a hybrid quantum-classical network intrusion detection system for IoT traffic against a classical deep learning baseline across data scarcity, cross-domain transfer, temporal constraints, noisy quantum backends, and calibration.",
-    "plain": "Internet-of-Things devices such as sensors and smart gadgets are increasingly targeted by cyberattacks, so networks need tools that spot malicious traffic. This paper tests whether a quantum-assisted machine learning approach is practical for that job, using three recent IoT security datasets. It compares the quantum approach with a standard deep learning method on accuracy and several operational factors.",
-    "why": "It offers a measured, side-by-side look at whether quantum machine learning is ready for a real security task, and the reported result is mixed rather than a claim of superiority. It may matter for anyone deciding where near-term quantum hardware could help, though the text alone does not show how far these results extend beyond the tested setups.",
-    "background": "- Network intrusion detection system (NIDS): software that flags suspicious or malicious network traffic.\n- IoT (Internet of Things): networked everyday devices with limited computing power and varied traffic.\n- Deep learning (DL): a common machine learning method that learns patterns from large amounts of data; used here as the classical baseline.\n- Quantum machine learning (QML): machine learning that uses quantum circuits for part of the computation; current quantum hardware is noisy and small.\n- Hybrid quantum-classical: a system where a quantum circuit and ordinary computer code work together.\n- Data scarcity, domain shift, calibration: respectively, having little training data, testing on data from a different setting, and whether predicted confidence matches how often predictions are actually right.\n- Binary vs. multiclass: detecting attack vs. normal traffic only, versus identifying which type of attack.",
+    "one_liner": "ISTS is a hardware-software co-designed accelerator that reuses partial sums across bit-slice vectors clustered near shared representative patterns (Steiner points) to speed up quantized LLM matrix multiplications.",
+    "plain": "Running large language models requires huge numbers of multiplications, and chips are often limited by time and memory for these operations. This paper proposes a chip design that breaks the numbers being multiplied into their individual bits and notices that many of the bit patterns are very similar to a few common ones. By reusing the results already computed for those common patterns, the chip does less work. The authors report average speedups of 1.27x to 3.09x over five existing accelerator designs in their evaluations.",
+    "why": "Faster and cheaper matrix multiplication matters for deploying LLMs on limited hardware, so the approach is worth watching. The reported gains come from the authors' own comparisons, and the text does not show how the design performs beyond those benchmarks or in real deployments.",
+    "background": "- Large language models (LLMs): AI systems whose core workload is huge grids of multiplications (general matrix multiplication, GEMM).\n- Quantization: storing numbers with fewer bits to save memory and computation.\n- Bit slices: splitting a number into its separate binary digits, grouped by position, so each group can be processed on its own.\n- Hamming distance: the count of bit positions where two patterns differ; \"a few bit flips away\" means two patterns differ in only a few places.\n- Partial sums: intermediate totals accumulated during a multiplication; reusing them avoids recomputing.\n- Steiner point: here, a representative pattern that nearby patterns are derived from with a few additions or subtractions.\n- Accelerator: specialized hardware built to run one type of computation faster than a general processor.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The rapid growth of the Internet of Things (IoT) has increased networked systems' exposure to cyber threats, making Network Intrusion Detection Systems (NIDSs) essential for securing heterogeneous environments. While Deep Learning (DL) has shown strong performance in traffic analysis, Quantum Machine Learning (QML) has recently gained attention as an alternative approach to learn complex traffic patterns. We assess QML's practical applicability to intrusion detection in heterogeneous IoT scenarios. We present a hybrid quantum-classical NIDS and evaluate it on three recent IoT security datasets, under operationally relevant conditions. Beyond detection accuracy, we compare QML with a classical DL baseline across five operational perspectives: (i) performance under data scarcity, (ii) transferability through cross-domain evaluation, (iii) resilience to temporal constraints, (iv) robustness to quantum non-idealities across multiple noisy backends, and (v) prediction trustworthiness through calibration analysis. Experiments on binary and multiclass misuse detection show that DL generally outperforms QML under ideal and noisy conditions. However, QML remains competitive in data-scarcity and domain-shift scenarios and can outperform the DL baseline under temporal constraints.",
+   "abstract": "Large language models (LLMs) have become foundational to modern artificial intelligence. Driven by scaling laws, their rapid growth poses increasing computational and memory challenges for deployment. To accelerate the general matrix multiplication (GEMM) operations that dominate LLM computation, bit-slice architectures decompose quantized operands along the bit dimension, exposing slice-level sparsity and redundancy. However, existing bit-slice designs primarily exploit sparsity in high-order slices, while dense low-order slices still offer substantial untapped reuse opportunities. We observe that bit-slice vectors (BSVs) are highly clustered in Hamming space, with many BSVs lying only a few bit flips away from a small set of representative patterns. Based on this observation, we propose ISTS, an algorithm-hardware co-designed accelerator that leverages representative BSV patterns as shared Steiner points to reuse partial sums across slices, substantially reducing computation. Specifically, the partial sum of each target BSV can be reconstructed from that of its assigned Steiner point using only a few additions or subtractions. On the algorithmic side, we propose Steiner Absorption Table Construction (SATC), which selects a compact set of Steiner points to absorb BSVs with only a few bidirectional bit flips, while FlipPrune selectively prunes flips to further expand the reusable BSV population. On the hardware side, we design a lightweight accelerator that supports Steiner reuse for static linear layer weights and runtime-generated attention K/V tensors. Comprehensive evaluations show that ISTS achieves average speedups of $3.09\\times$, $2.41\\times$, $2.18\\times$, $1.27\\times$, and $1.41\\times$ over the state-of-the-art accelerators ANT, BBS, LUT Tensor Core, Transitive Array, and MCBP-BRCR, respectively.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31671",
-   "title": "AeroPoint: Agentic AI for Intent-Driven Point Cloud Inspection in UAV-Edge Systems",
-   "url": "https://arxiv.org/abs/2611.31671",
+   "uid": "arxiv:2611.34329",
+   "title": "Relieving Hotspot Congestion in Large-Scale Low Earth Orbit Satellite Networks via Distributed Dual-Timescale Traffic Splitting",
+   "url": "https://arxiv.org/abs/2611.34329",
    "authors": [
-    "Reza Farahani",
-    "Zoha Azimi",
-    "Naser Hossein Motlagh",
-    "Christian Timmerer",
-    "Arda Goknil",
-    "Sagar Sen",
-    "Schahram Dustdar"
+    "Shuyang Li",
+    "Guanchen Wu",
+    "Qiang Wu",
+    "Ran Wang",
+    "Jie Hao",
+    "Chao Ren",
+    "Hongke Zhang"
    ],
-   "label": "arXiv:2611.31671v1",
-   "primary_category": "cs.DC",
+   "label": "arXiv:2611.34329v1",
+   "primary_category": "cs.NI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "AeroPoint is an edge-computing system in which an LLM-based planner at a ground server turns natural-language inspection questions into structured requests, and a drone-side pipeline builds a knowledge graph from LiDAR point clouds and returns only the matching evidence, evaluated on power-line inspection scenes.",
-    "plain": "Drones that scan power lines with laser sensors produce huge 3D point clouds that are hard to process on board and slow to send over radio. This paper proposes AeroPoint, where an operator asks a question in plain language, a language model at a ground station works out what to look for, and the drone sends back only the small set of relevant facts rather than the whole scan. The authors report that the payload drops from about 3700 KB for full point clouds to 3.1 KB for retrieval responses, in a prototype tested on 150 scenes.",
-    "why": "It addresses a real bottleneck in drone inspection: bandwidth and onboard compute limits when sensors produce very dense data. The approach may be relevant to edge AI and infrastructure monitoring more broadly, though the evidence is a single prototype case study, and the retrieval results use ground-truth labels rather than labels produced by the drone's own perception, so real-world performance is uncertain.</why>\n<parameter name=\"background\">- UAV: unmanned aerial vehicle (drone).\n- LiDAR: laser scanning that measures 3D positions, producing a point cloud (a large set of 3D dots).\n- Edge computing: processing data near the sensor (here, on the drone and a ground server) rather than in a distant cloud.\n- Knowledge graph: a network of labeled objects and relationships (e.g., \"wire is attached to tower\").\n- LLM (large language model): an AI system that interprets and generates text; here used to plan which graph queries to run.\n- Retrieval completeness: how fully the returned evidence covers what the question needed.\n- Jetson Nano: a small, low-power embedded computer board used to measure onboard processing cost.",
-    "background": "",
-    "difficulty": "intermediate",
+    "one_liner": "BRACE is a two-timescale distributed traffic-splitting scheme for LEO satellite networks that combines slowly computed destination-aware splits (keeping every admissible port non-zero) with fast, constant-time per-hop reweighting based on instantaneous local queues, evaluated in 144-satellite flow-level simulations.",
+    "plain": "Low Earth orbit satellite networks carry internet traffic between satellites, and some links become overloaded when too much traffic is routed through the same spot. This paper proposes a method that decides how each satellite spreads its traffic across its possible outgoing links, updating the big plan slowly and the quick adjustments rapidly based on how full each local queue is. In simulations of a 144-satellite network, the authors report it lost fewer packets than a tuned congestion-aware heuristic under the same hotspot conditions.",
+    "why": "Congestion at satellite links directly affects broadband access from space, which is part of the non-terrestrial networking role envisioned for 6G. The idea of keeping a small share of traffic on every usable route while adjusting quickly to queues may be relevant to other distributed routing problems, though the text does not establish wider applicability.",
+    "background": "- LEO satellites orbit roughly a few hundred to a couple thousand km up, and they connect to each other via inter-satellite links, forming a moving mesh network.\n- Traffic splitting means sending a flow's packets across several outgoing links in chosen proportions, rather than one fixed path.\n- A queue is the waiting line of packets at a link; queue length signals congestion.\n- Packet drop rate is the fraction of packets discarded when queues overflow; it is a common measure of congestion harm.\n- Two timescales: a slow layer updates the split plan periodically (cheap for onboard computers), while a fast layer makes quick local tweaks using current queue sizes.\n- Flow-level simulation models traffic as whole flows rather than individual packets, which is faster but simplifies real behavior.\n- The results are simulation-only and the text gives no details on the reward function or baselines beyond their names.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Unmanned Aerial Vehicle (UAV)-based Light Detection and Ranging (LiDAR) inspection generates dense point clouds that strain onboard computing and wireless bandwidth. Intent-based inspection allows operators to request objects, attributes, and spatial relationships through natural language. Answering these requests requires trans- lating intent into spatial queries and retrieving relevant evidence under UAV processing and communication constraints. This article presents AeroPoint, an agentic AI system combining onboard point cloud processing and knowledge graph construction with Large Language Model (LLM)-based retrieval planning at a ground edge server. The LLM translates inspection questions into structured requests, which the UAV executes to return selected graph evidence for answer generation. We evaluate the prototype in a power line inspection case study using 150 TS40K UAV LiDAR scenes and profile processing costs on NVIDIA Jetson Nano hardware. Retrieval experiments use graphs constructed from dataset-provided ground-truth semantic labels. Experimental results show that transmitted payload decreases from 3700 KB for complete point clouds to 3.1 KB for retrieval responses, while evaluated LLM routers achieve the highest graph retrieval completeness for relational queries.",
+   "abstract": "Sixth-generation mobile systems envision ubiquitous connectivity through non-terrestrial networks, in which low Earth orbit (LEO) satellite networks play a key role by extending broadband access beyond terrestrial infrastructure. Traffic hotspots in LEO satellite networks congest inter-satellite links, and short flows leave end-to-end congestion control little time to react. In distributed traffic splitting, recomputing splits at every queue change increases onboard computation, whereas periodic splits miss such changes and withhold zero-weight ports from faster queue-based reweighting. We formulate the distributed slow-layer traffic-splitting problem, whose objective combines throughput, queueing delay, traffic loss, and short-flow completion time, and propose Balanced Routing with Admissible Ports and Congestion Control at Two Timescales (BRACE). Its slow layer assigns destination-aware splits with a positive weight on every admissible port, and its fast layer reweights them in constant time per hop using instantaneous local queues. In 144-satellite flow-level simulations, BRACE achieves the highest reward among the tested distributed methods in all seven hotspot conditions and 28-45% lower drop rates than the lowest-loss baseline, a tuned congestion-aware heuristic, in the three highest-load conditions. Without retuning, its drop rates are 26-76% lower than that baseline's at calibrated loads in constellations of up to 1584 satellites.",
    "source": "arxiv"
   },
   {

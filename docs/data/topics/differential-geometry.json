@@ -3,48 +3,50 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31936",
-   "title": "A Spectral Zoo of Genus-Zero Free Boundary Minimal Surfaces with Many Boundary Components",
-   "url": "https://arxiv.org/abs/2611.31936",
+   "uid": "arxiv:2611.33476",
+   "title": "Nonlocal approximation of stable minimal surfaces with prescribed number of connected components",
+   "url": "https://arxiv.org/abs/2611.33476",
    "authors": [
-    "Haoyu Chen",
-    "Braxton Osting"
+    "Lorenzo De Gaspari",
+    "Serena Dipierro",
+    "Ovidiu Savin",
+    "Enrico Valdinoci"
    ],
-   "label": "arXiv:2611.31936v1",
-   "primary_category": "math.SP",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "A numerical and asymptotic study of critical points of the length-normalized first Steklov eigenvalue on genus-zero surfaces with many boundary components, linking them to free boundary minimal surfaces and free curve limits.",
-    "plain": "The paper looks at special curved surfaces that sit inside a ball and meet its edge at right angles, and at the \"best\" versions of them measured by a number tied to how a drum vibrates at its lowest mode. The authors computed 268 such surfaces numerically, with up to 2252 boundary holes, and checked their symmetries and stability. They also describe how families of these surfaces appear to approach simpler limit shapes made of flat disks and catenoid-like tubes, and give an estimate of the limiting value for large numbers of holes.",
-    "why": "It gives a large, numerically certified catalogue of candidate extremal surfaces and connects them to explicit limit shapes, which may help map out the landscape of free boundary minimal surfaces. How far the numerical picture holds in general is not settled by the text: the large-b asymptotic is described as a formal evaluation, and the families are said to \"appear\" to converge.",
-    "background": "- Minimal surface: a surface with zero mean curvature, locally shaped like a soap film.\n- Free boundary minimal surface: a minimal surface inside a ball whose edge lies on the sphere and meets it at right angles.\n- Steklov eigenvalue: a vibration-type number attached to a surface's boundary, measuring how a harmonic function's energy leaks out through the edge; the first one is the lowest nontrivial such value.\n- Length normalization: rescaling by the boundary length so the number does not depend on the size of the surface.\n- Critical point: a shape where small changes do not change the value to first order; the Morse index counts the directions in which it can be decreased.\n- Uniformization: mapping a surface conformally onto a standard shape, here a sphere with round caps removed.\n- Catenoid: the tube-like minimal surface formed by a soap film between two rings.\n- Logarithmic energy: a standard quantity from potential theory measuring how points repel each other through a logarithm of distance.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study critical points of the length-normalized first Steklov eigenvalue $\\bar\\sigma_1$ on genus-zero surfaces with $b$ boundary components. By a theorem of Fraser and Schoen, their first eigenfunctions give free boundary minimal surfaces in the unit ball. After uniformization, the domain is the round sphere minus $b$ round caps, with a weight on the boundary circles. A layer potential formulation gives the eigenvalues, their derivatives and a certificate for each critical point, and an exact multipole system for the caps. We compute a spectral zoo of 268 numerically certified critical points with up to $b=2252$ boundary components, including the $27$ embedded examples listed by Schulz. With their symmetry groups and Morse indices, the critical points satisfy a signed count for $3\\le b\\le10$. Most belong to families built from rings of boundary components. As the rings fill in, these appear to converge to the free curve minimal surfaces of Karpukhin and Noutchegueme, unions of flat disks and catenoidal annuli that meet along circles on the sphere. We construct these limits, among them the critical drum and the cake stand, a flat disk with a catenoidal horn. The families approach their limits like $j^{-1}$ for rings of $j$ caps, and the equatorial family approaches $4\\pi$ with deficit $4\\pi b^{-1}e^{-b}$. For large $b$, the leading terms of the multipole system reduce to the logarithmic energy of the cap centers and a formal evaluation gives $\\bar\\sigma_1^\\star(b)=8\\pi-16\\pi\\,b^{-1}\\log b+O(b^{-1})$.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.31447",
-   "title": "Sub-Riemannian Distances on Lie Groups: Tangent Asymptotics and Hermitian Matrix Formulas",
-   "url": "https://arxiv.org/abs/2611.31447",
-   "authors": [
-    "Wolfram Bauer",
-    "Zhicheng Han",
-    "Zhipeng Yang"
-   ],
-   "label": "arXiv:2611.31447v1",
+   "label": "arXiv:2611.33476v1",
    "primary_category": "math.DG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives small-scale asymptotics of Carnot–Carathéodory (sub-Riemannian) distance on two-step Lie groups, comparing it to the nilpotent tangent group, with precise error orders and a Hermitian-matrix formula for block subgroups of SU(N).",
-    "plain": "The paper studies shortest paths in a curved space where only certain directions of motion are allowed, such as steering a vehicle that can only move forward and turn. It asks how the length of these shortest routes behaves when the points are very close to the starting point. The authors show that, for small distances, the squared distance matches a simpler model space up to a known error, and they give explicit formulas for a special family of groups.",
-    "why": "Sub-Riemannian distances appear in control theory, robotics and the geometry of quantum systems, so precise small-scale approximations can be useful there. The text does not say how the results will be applied elsewhere, so any wider connection is uncertain.",
-    "background": "- Lie group: a smooth space with a compatible group multiplication, such as rotations of a body.\n- Sub-Riemannian (Carnot–Carathéodory) distance: shortest path length when only some directions of motion are permitted.\n- Two-step: the allowed directions generate the full space after one level of brackets (commutators).\n- Nilpotent tangent group: a simpler model group that approximates the space near a point.\n- Asymptotic expansion: writing a quantity as a main term plus an error term that shrinks at a stated rate as the scale r goes to 0.\n- Cut point and abnormal endpoint: places where shortest paths stop being unique or fail to follow the usual rules.\n- Hermitian matrix and trace norm: square complex matrices equal to their conjugate transpose, and a standard size measure for them.\n- Trigonometric polynomial: a finite sum of sine and cosine terms, here describing a minimizing closed loop.",
+    "one_liner": "The paper shows that strictly stable classical minimal hypersurfaces in a Euclidean ball can be approximated, for the fractional parameter s close to 1, by stable s-minimal surfaces in a smaller ball, and uses this to build stable nonlocal minimal surfaces with many connected components.",
+    "plain": "The paper studies soap-film-like surfaces that minimize area, in two versions: ordinary ones and \"nonlocal\" ones whose cost depends on long-range interactions, controlled by a parameter s. It shows that, when s is close to 1, a stable nonlocal version can be found that closely follows a given ordinary stable surface inside a smaller region. As a consequence, the authors can build such nonlocal surfaces with many separate pieces, as long as the number of pieces stays below a bound that grows as s approaches 1.",
+    "why": "It connects the classical theory of minimal surfaces with the newer nonlocal theory, showing that the two can be linked quantitatively. The text describes the bound on the number of components as optimal at least in dimensions 2 and 3, though it does not spell out why beyond that claim.",
+    "background": "- Minimal surface: a surface that locally has the least area for its boundary, like a soap film; \"stable\" means it stays minimal under small perturbations.\n- Mean curvature: a local measure of how a surface bends on average; a minimal surface has zero mean curvature.\n- Nonlocal perimeter/mean curvature: a version of area whose cost counts interactions between distant points, weighted by a parameter s in (0,1); as s tends to 1 it approaches the ordinary notion.\n- Foliation: a family of nested or parallel surfaces filling a region, used here as barriers (comparison surfaces).\n- Connected components: separate pieces of a surface.\n- Euclidean ball: a solid round region in ordinary space.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Let $d_{\\mathrm{SR}}$ be the Carnot--Carath\\'{e}odory distance associated with a two-step Lie pair and let $d_0$ be the distance on its nilpotent tangent group. For compact Lie pairs we prove, locally uniformly in $(X,Z)$, \\[ d_{\\mathrm{SR}}\\!\\left(e,\\exp(rX+r^2Z)\\right)^2 =r^2d_0(e,(X,Z))^2+O(r^3). \\] For symmetric pairs, the remainder improves to $O(r^4)$. This order is sharp in general, and the estimate remains uniform at cut points, abnormal endpoints, and points where the tangent endpoint map changes rank. If the tangent minimizer is unique, the endpoint differential is onto, and the constrained Hessian is coercive, we determine the coefficient of $r^4$ with remainder $O(r^6)$. For block subgroups of $\\mathrm{SU}(N)$, we express the vertical squared distance on the tangent group as the attained minimum of a finite-dimensional functional on Hermitian matrices subject to linear constraints on their partial traces. Every minimizer gives a minimizing loop represented by a trigonometric polynomial. For one $m$-dimensional block and $q$ scalar blocks, the coefficient has weights $\\lceil j/q\\rceil$ and reduces to a trace norm formula when $q\\ge\\lfloor m/2\\rfloor$.",
+   "abstract": "We show that every strictly stable classical minimal hypersurface in a Euclidean ball can be approximated, for $s$ sufficiently close to $1$, by a stable $s$-minimal surface in a smaller ball. We also give an explicit lower bound on the size of the interval of admissible values of $s$. As a consequence, we construct stable nonlocal minimal surfaces with an arbitrarily large number $k$ of connected components in a bounded region, under the quantitative condition $k \\leq \\frac{C}{\\sqrt{1-s}}$, attaining an optimal result (at least in dimensions $2$ and $3$). As part of the proof of our main result, we obtain an auxiliary result of independent interest, providing quantitative estimates for foliations of constant mean curvature embedded hypersurfaces near a stable minimal surface. The resulting foliation supplies nonlocal barriers thanks to known results of uniform convergence of the nonlocal mean curvature to the classical one when $s \\to 1$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33604",
+   "title": "Equivariant cohomology of stacky Lie group actions",
+   "url": "https://arxiv.org/abs/2611.33604",
+   "authors": [
+    "Daniel L\\'opez Garcia",
+    "Cristian Ortiz",
+    "Roberto Villaflor"
+   ],
+   "label": "arXiv:2611.33604v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper defines equivariant cohomology for Lie groupoids and differentiable stacks acted on by Lie 2-groups, proves Morita invariance and a simplicial Cartan model, and applies this to toric symplectic stacks.",
+    "plain": "Mathematicians often study symmetric spaces by tracking how a group of symmetries acts on them. This paper extends that toolkit to \"stacks,\" which are generalized spaces that carry extra structure (such as orbifold-like singularities), and to the higher symmetry groups that act on them. The authors build an invariant of these symmetric objects, check that it does not depend on how the object is presented, and use it to compute an example.",
+    "why": "The work gives a well-defined way to measure symmetry-related topological information for stacks, which are increasingly used in geometry and mathematical physics. The text does not say how far the results reach beyond the toric symplectic examples it mentions, so the wider significance is uncertain.",
+    "background": "- Lie group: a continuous group of symmetries, such as rotations.\n- Group action: a way a group moves the points of a space.\n- Cohomology: an algebraic invariant that counts topological features (holes, loops) of a space.\n- Equivariant cohomology: a version of cohomology that also takes a group's symmetry into account.\n- Lie groupoid: a presentation of a space, possibly with singularities, by a collection of points and arrows between them.\n- Stack / differentiable stack: a generalized space, often presented by a groupoid; two presentations can describe the same stack (Morita equivalence).\n- Lie 2-group: a higher-dimensional analogue of a Lie group, with symmetries between symmetries.\n- Symplectic manifold: a space with a geometric structure from classical mechanics; toric means it has a large symmetry torus acting on it.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this work we introduce equivariant cohomology for Lie groupoids and differentiable stacks. For Lie groupoids equipped with a strict action of a Lie 2-group, we define the corresponding equivariant cohomology via the Borel model and establish its Morita invariance. We also construct a simplicial Cartan model and prove that, under standard compactness assumptions, it recovers the equivariant cohomology defined via the Borel model. In the framework of stacky Lie group actions, we show that if a connected and \\'etale stacky Lie group acts on a differentiable stack admitting an equivariant atlas, then the stacky action admits a strict presentation by a Lie 2-group action. Furthermore, we prove that different choices of equivariant atlases yield equivariantly Morita equivalent presenting actions, giving rise to a well-defined notion of equivariant cohomology for differentiable stacks. As an application, we compute the equivariant cohomology of toric symplectic stacks.",
    "source": "arxiv"
   },
   {

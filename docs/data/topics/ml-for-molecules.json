@@ -3,51 +3,55 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32851",
-   "title": "Path-probability gradients for optimizing force fields against dynamical observables",
-   "url": "https://arxiv.org/abs/2611.32851",
+   "uid": "arxiv:2611.33408",
+   "title": "Computing hydration free energies and crystalline solubility of drug-like molecules with MACE",
+   "url": "https://arxiv.org/abs/2611.33408",
    "authors": [
-    "Zhongyao Wang",
-    "Lun Song",
-    "Yakun Zeng",
-    "Xingao Gong",
-    "Rui Shi",
-    "Mao Su"
+    "J. Harry Moore",
+    "Paul Mortenson",
+    "Davide Branduardi",
+    "Pavel Buslaev",
+    "Javier Antor\\'an",
+    "Laurence Midgley",
+    "Nicholas J. Browning",
+    "G\\'abor Cs\\'anyi"
    ],
-   "label": "arXiv:2611.32851v1",
+   "label": "arXiv:2611.33408v1",
    "primary_category": "physics.chem-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "PathGrad computes gradients of Langevin path probabilities rather than of chaotic trajectories, enabling stable optimization of machine-learning force fields against dynamical experimental observables such as diffusion coefficients, validated on molten copper and water.",
-    "plain": "Simulations of how atoms move are used to predict things like how fast a liquid's molecules spread out. Tuning the rules that govern those atomic forces so the simulated motion matches lab measurements is hard, because tiny changes in a chaotic simulation can make the calculated adjustments unstable. This paper proposes a way around that by working with the probability of the whole motion path, and reports that it works for molten copper and liquid water.",
-    "why": "Fitting simulation models directly to experiments could make them more accurate than the quantum calculations they are built from, which matters for chemistry and materials design. The text reports that tuning water to match diffusion and structure also improved untargeted properties and a more accurate reference energy check, but its broader generality is claimed rather than shown in this excerpt.",
-    "background": "- Force field: a set of rules giving the forces between atoms, used to run molecular dynamics simulations.\n- Machine-learning force field: such rules learned from quantum-chemistry calculations, so they inherit that method's errors.\n- Molecular dynamics: step-by-step simulation of how atoms move under those forces.\n- Langevin dynamics: a standard simulation scheme in which random thermal kicks and friction are added to the motion.\n- Path probability: how likely a given sequence of atomic motions is under those random kicks.\n- Gradient: the direction and size of change in a model's settings that improves its match to data; unstable gradients make tuning unreliable.\n- Dynamical observables: measured quantities that depend on motion over time, such as diffusion coefficient and viscosity.\n- Radial distribution function: a measure of how atoms are spaced around one another.\n- Activation energy: how strongly a rate changes with temperature.",
+    "one_liner": "A workflow built on MACE machine-learning interatomic potentials (including a new λ-MACE variant) computes hydration and sublimation free energies to predict crystalline solubility of neutral drug-like molecules, reaching experimental accuracy for the hydration leg but a combined error of 1.53 log units.",
+    "plain": "Drug makers need to know how well a candidate molecule dissolves in water, because that affects how much of a pill the body absorbs. This paper tries to calculate that solubility from physics rather than from models trained on past measurements. The authors report that their method predicts how readily molecules dissolve in water (hydration) very accurately on 70 test compounds, but when the crystal-related step is added, the final solubility prediction is still about 1.5 log units off, which is well short of experimental accuracy.",
+    "why": "Solubility is a costly bottleneck in drug discovery, and physics-based predictions could generalise better than data-driven ones outside their training data. The paper is candid that the remaining gap lies in the crystal (solid-state) thermodynamics, so it is best read as a useful benchmark and a map of what still needs improving rather than a finished tool.",
+    "background": "- Solubility: how much of a substance dissolves in a solvent; reported here as log units, where one unit is a tenfold difference.\n- Free energy: a thermodynamic quantity that determines whether a process happens spontaneously; hydration free energy is the energy change when a molecule moves from gas into water.\n- Sublimation free energy: the energy change when a solid turns directly into gas; used here to link the solid crystal to the dissolved state.\n- Free energy perturbation: a simulation method that computes free energy differences by gradually transforming one molecule into another.\n- Interatomic potential: a machine-learned function that estimates the forces between atoms, replacing slower quantum calculations or hand-built force fields.\n- DFT (density functional theory): a standard quantum-mechanical calculation method used as the reference for accuracy.\n- Chemical accuracy: roughly 1 kcal/mol error in energy, the benchmark the authors say is needed for each leg.\n- FreeSolv: a public database of experimentally measured hydration free energies.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Machine learning force fields inherit the errors of the electronic-structure methods used to generate their training data, and refining them against experimental measurements provides a direct route beyond this limit. However, such refinement remains difficult for dynamical observables because differentiating chaotic molecular trajectories yields unstable gradients. Here, we introduce PathGrad, which differentiates Langevin path probabilities instead of the trajectories themselves. The resulting gradient estimator is accumulated on the fly from thermal noise and force derivatives, and its variance remains stable as the trajectory length increases. We validated the gradient estimator against finite-difference calculations and used it to fine-tune molten-copper and water potentials against experimental diffusion coefficients together with structural constraints. For water, jointly optimizing diffusion and the oxygen-oxygen radial distribution function also improves the predictions of shear viscosity and rotational relaxation, neither of which is included in the optimization objective. Alignment at a single temperature also improves the apparent activation energies of multiple dynamical observables, bringing their temperature dependences closer to experiments. Moreover, the optimized potential exhibits smaller force errors relative to an independent, higher-level quantum-chemical reference, indicating that alignment with experiments improves the fidelity of the potential energy surface beyond the fitted targets. PathGrad thus establishes a general framework for incorporating experimental observables directly into force field optimizations.",
+   "abstract": "Accurate prediction of thermodynamic solubility is critical in drug discovery, where it influences oral bioavailability and drives decisions in formulation chemistry. First-principles calculations of intrinsic solubility offer the potential to achieve superior generalization to existing direct, data-driven predictors, which often suffer significant performance degradation outside of their training distribution. Whilst free energy perturbation calculations provide a rigorous framework to estimate these quantities, their accuracy is typically limited by the quality of the empirical force field used. In this work, we present a computational workflow driven by the MACE family of machine learning interatomic potentials to compute the solubility of neutral drug-like molecules. We introduce $\\lambda$-MACE, a potential optimised for condensed-phase free energy calculations, which enables hydration free energy calculations at experimental accuracy on an evaluation set of 70 compounds from the FreeSolv database selected for their relevance to medicinal chemistry. We further combine these hydration free energy calculations with sublimation free energy calculations to predict crystalline solubility given a known experimental crystal structure, on an additional set of 10 compounds. We achieve state-of-the-art performance for each leg of the calculation, with experimental accuracy for the hydration leg, and accuracy competitive with industry-standard DFT for the sublimation leg. However, the overall errors after combining both legs lead to accuracy of 1.53 log units. This is significantly above the experimental accuracy (0.17-0.6 log units). Closing this gap will require substantially tighter accuracy in each leg, on the order of half of chemical accuracy (0.5 kcal/mol), with crystalline thermodynamics the hardest remaining challenge.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32659",
-   "title": "Comparative Molecular Dynamics Study of Initial Oxide Film Growth on Al, Mg, and Ti Using a Universal Neural Network Potential",
-   "url": "https://arxiv.org/abs/2611.32659",
+   "uid": "arxiv:2611.34334",
+   "title": "PineIR: 3D molecular structures from an infrared spectrum alone",
+   "url": "https://arxiv.org/abs/2611.34334",
    "authors": [
-    "Yoyo Hinuma",
-    "Taisuke Hasegawa"
+    "Giulio Benedini",
+    "Pierre-Paul De Breuck",
+    "Miguel A. L. Marques",
+    "Silvana Botti"
    ],
-   "label": "arXiv:2611.32659v1",
-   "primary_category": "cond-mat.mtrl-sci",
+   "label": "arXiv:2611.34334v1",
+   "primary_category": "physics.chem-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Molecular dynamics simulations with a universal neural network potential, supplying O2 gas, compare early oxide film growth on Al, Mg, and Ti and test the film thickness against Cabrera-Mott theory.",
-    "plain": "Metals like aluminum and titanium naturally develop a thin protective oxide skin when exposed to air, and this skin largely determines how they resist corrosion. The authors used a computer simulation of individual atoms, driven by a machine-learned model of interatomic forces, to watch such films form on aluminum, magnesium, and titanium. They report that aluminum and titanium grew films 1 to 2 nanometers thick within a few picoseconds of simulated time, and that the film thickness grew with the logarithm of time, as an older physical theory predicts.",
-    "why": "Being able to watch oxide films form atom by atom offers a route to understanding corrosion and passivation of light structural metals, which matter for lightweight engineering. The text reports one simulation setup and does not show how well these results match experiments, so its relevance to real-world corrosion is not established from this summary alone.",
-    "background": "- Molecular dynamics (MD): computer simulation that moves atoms over time according to the forces between them.\n- Neural network potential (NNP): a machine-learned stand-in for the quantum-mechanical forces between atoms, much cheaper to compute.\n- Universal NNP: a single model trained to handle many elements, not just one.\n- Passive oxide film: a thin, stable oxide layer that slows further corrosion of the metal underneath.\n- Cabrera-Mott theory: a classic model predicting that oxide growth slows roughly logarithmically with time as the film thickens and electric fields across it change.\n- Coordination number: how many neighboring atoms surround a given atom in a material; here about 4.4 to 5.2 for the metals' oxides.\n- Picosecond: one trillionth of a second; simulations cover very short real times.",
+    "one_liner": "PineIR is a generative model that builds 3D molecular structures atom by atom from an infrared spectrum alone, subtracting each atom's predicted spectral contribution as it goes, and is trained on machine-learned-potential IR spectra of millions of molecules.",
+    "plain": "Chemists often use an infrared (IR) spectrum, a fingerprint made by how a molecule absorbs light, to spot which chemical groups are present, but not to work out the full 3D shape of the molecule. This paper presents a computer model that tries to rebuild the 3D structure from the IR spectrum alone, without the extra measurements that earlier models needed. On computed spectra of molecules the model had not seen, the best of fifty candidate structures had the correct connectivity (which atoms are joined to which) in 43% of cases.",
+    "why": "Getting a full structure from one cheap, fast measurement would be useful for identifying unknown compounds, if it holds up on real measured spectra. The text only reports results on computed spectra, so how well it works on laboratory data is not shown here.",
+    "background": "- Infrared (IR) spectrum: a plot of which frequencies of light a molecule absorbs; it reflects its bonds and groups.\n- Connectivity: which atoms are bonded to which, the skeleton of a molecule, separate from its 3D arrangement.\n- Conformer: a different 3D shape the same molecule can take by rotating around its bonds.\n- Diastereomer: a stereoisomer (same bonds, different 3D arrangement at some centers) that is not a mirror image.\n- Generative model: a machine-learning model that produces new structures step by step, here one atom at a time.\n- Machine-learned interatomic potential: a fast learned approximation of the forces between atoms, used here to compute spectra cheaply instead of with full quantum calculations.\n- B3LYP: a widely used quantum-chemistry method (hybrid density functional) for computing molecular properties; the model was later fine-tuned on spectra computed at this level.\n- Held-out molecules: molecules kept out of training and used only for testing.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Spontaneous formation of an oxide film, which may be passive, is found in many metals such as Al and Ti. We report direct computational observation of oxide film formation on the three major light structural metals, Al, Mg, and Ti, with molecular dynamics (MD) using a universal neural network potential (NNP). O2 molecules were supplied during MD simulations to replenish O consumed by the metal. Al and Ti formed a 1-2 nm thick film within a few ps of the simulation with O2 gas pressure of 102-103 atm. The film thicknesses of all metal oxides continued to increase proportionally to the logarithm of simulation time, consistent with Cabrera-Mott theory. Al and Ti oxides grow at the surface, while Mg oxide grows into the Mg metal. Al, Mg, and Ti are approximately 4.4, 4.3, and 5.2-fold coordinated, respectively, in the oxide.",
+   "abstract": "Computing the infrared (IR) spectrum of a molecule from its structure is routine. The inverse problem is not. In practice, IR spectra are used to identify the functional groups present in a molecule, while the determination of its complete structure requires additional measurements. Machine-learning models that return 3D structures from IR spectra exist, but all of them need extra input, such as Raman, ultraviolet or nuclear magnetic resonance spectra, the molecular formula, or the number of atoms. In this work we present PineIR, a generative model that returns 3D molecular structures from the IR spectrum alone. PineIR builds the molecule atom by atom, and each atom is associated with its contribution to the IR spectrum. This contribution is subtracted from the input spectrum before the next atom is generated. To train it, we computed with a machine-learned interatomic potential the IR spectra of 4.6 million structures of 3.1 million molecules, including conformer ensembles. On computed spectra of held-out molecules, the best-ranked of fifty candidates has the correct connectivity in 43% of the cases, and the generated geometries reproduce the conformer and the diastereomer that produced the input spectrum. After fine-tuning on 161k spectra calculated with the hybrid functional B3LYP, the model can also be applied to spectra at this level of theory.",
    "source": "arxiv"
   },
   {

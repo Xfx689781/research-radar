@@ -3,51 +3,56 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.33064",
-   "title": "U-Statistics-Powered LLM Reasoning",
-   "url": "https://arxiv.org/abs/2611.33064",
+   "uid": "arxiv:2611.33165",
+   "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+   "url": "https://arxiv.org/abs/2611.33165",
    "authors": [
-    "Shijin Gong",
-    "Kai Ye",
-    "Victor Chernozhukov",
-    "Xinyu Zhang",
-    "Chengchun Shi"
+    "Charles Arnal",
+    "Ahmad Rammal",
+    "Niket Patel",
+    "Fabian Gloeckle",
+    "Bartosz Piotrowski",
+    "Amaury Hayat",
+    "Julia Kempe",
+    "R\\'emi Munos",
+    "Vivien Cabannes"
    ],
-   "label": "arXiv:2611.33064v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper treats choosing the group size in GRPO-style reinforcement learning for language models as a variance-ratio estimation problem, and proposes a pessimistic ratio estimator that stays stable when the denominator is small.",
-    "plain": "Training large language models with reinforcement learning often samples a group of answers to each question and compares them, but the size of that group is usually picked by trial and error. This paper reframes the choice as a classical statistics question about estimating a ratio of two variances. It proposes a cautious (\"pessimistic\") way to estimate that ratio so the choice does not become unreliable, and reports that adapting the group size this way reduces error and improves training compared with fixed group sizes on the tested tasks.",
-    "why": "Group size is a hyperparameter that many GRPO-type methods set by hand, so a principled rule for it could matter for training efficiency. The text does not establish how broadly the gains hold beyond the reported tasks, so its wider significance is unclear.",
-    "background": "- GRPO (group relative policy optimization): a reinforcement learning method for language models that scores each sampled answer relative to the other answers sampled for the same prompt.\n- Group size: how many answers are sampled per prompt; it sets the trade-off between accuracy and cost.\n- Policy gradient: the estimated direction used to update a model's behaviour during reinforcement learning.\n- U-statistic: an average over all subsets of a fixed size from a sample, which is the structure the policy gradient takes here.\n- Variance ratio estimation: estimating how much noise one quantity has relative to another; unstable when the denominator is near zero.\n- Mean squared error: the average squared gap between an estimate and the true value, used to judge estimator quality.\n- Pessimistic estimator: one that deliberately shrinks toward safer choices when uncertainty is high.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Since its introduction by DeepSeek, group relative policy optimization (GRPO) has been widely adopted for training large reasoning models and agents, spurring a proliferation of its variants. Yet the group size, a crucial hyperparameter in these GRPO-type algorithms, remains largely chosen by trial and error. Exploiting the U-statistic structure of GRPO's policy gradient, we recast the selection of the group size as a classical statistical problem of variance ratio estimation. This problem is particularly challenging when the denominator of the ratio is small, rendering naive plug-in estimators unstable. To address this challenge, we propose a pessimistic ratio estimator that accounts for the denominator's estimation uncertainty. We characterise the statistical properties of this estimator across three sample-size regimes. Empirically, using %a jackknife-based pessimistic rule on synthetic tasks from Reasoning Gym and real-world benchmarks covering both mathematical reasoning and code generation, we show that our adaptive group size selection reduces the mean squared error of the resulting policy gradient and improves policy optimisation over fixed-group-size baselines, with modest additional computational cost.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.31762",
-   "title": "Verified Proof Refactoring with Codex and Qwen",
-   "url": "https://arxiv.org/abs/2611.31762",
-   "authors": [
-    "Lazar Milikic",
-    "Gordan {\\DJ}uri\\'c",
-    "Viktor Kun\\v{c}ak"
-   ],
-   "label": "arXiv:2611.31762v1",
+   "label": "arXiv:2611.33165v1",
    "primary_category": "cs.AI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A locally run Qwen model driven by the Codex CLI searches for shorter, cheaper-to-check Lean 4 proofs, keeping only edits that Lean accepts across required versions, and reports a combined score of 82.18 on 60 Lean Refactor Arena problems.",
-    "plain": "This paper is about tidying up computer-checked mathematical proofs written in the Lean programming language, making them shorter and faster for the computer to verify without changing what they prove. An AI model proposes rewrites, and a supervising program keeps a rewrite only if it scores better and the proof still passes on every required version of Lean. The authors report that their system ranked first in the open-source language-model track of a competition called Lean Refactor Arena.",
-    "why": "Long, slow proofs are a practical cost for anyone maintaining large formal math libraries, so automated cleanup could help. The text reports only a competition result and small score changes (82.07 to 82.18), so its broader significance is unclear from this description alone.",
-    "background": "- Lean 4: a proof assistant, a programming language in which mathematical statements and their proofs are checked by the computer.\n- Refactoring: rewriting code to keep its behavior while making it cleaner or shorter.\n- Theorem statement: the claim being proved; the paper requires these to stay unchanged.\n- Lean versions: the proofs must still compile across several releases of the software.\n- Combined score: the competition's objective, which rewards shorter source and lower checking cost; higher is better.\n- Codex CLI: an open-source command-line tool that lets an AI model read files, search code, and run tests.\n- Qwen: an open-weight language model family, here run on the authors' own machine.\n- Verification gate: a candidate edit is accepted only if the proof checker confirms it.",
+    "one_liner": "AutoformBench is a 341-task benchmark for Lean 4 formalization of advanced mathematics, where agents must build missing definitions and lemmas, not just prove isolated theorems, and the paper reports that frontier models share a common difficulty frontier tied to constructing that infrastructure.",
+    "plain": "Computer proof assistants check mathematics line by line, but writing a result in such a system takes more than proving the final claim: you also need the definitions and helper facts that connect it to the existing library. This paper introduces a test set of 341 such tasks drawn from 24 advanced math sources, where AI agents get the informal proof and must write the Lean version, including the supporting pieces. The authors report that frontier models tend to struggle with the same problems, and that success depends more on building that missing scaffolding than on the field of mathematics.",
+    "why": "Most earlier evaluations gave AI a single theorem in a setting where much of the needed theory already existed, so they may overstate how much real formalization work AI can do. The benchmark targets the harder, more realistic part of the job, which matters for anyone hoping AI can help formalize research mathematics. The text does not report detailed scores, so the size of the gap between models is not something this summary can establish.",
+    "background": "- Lean 4: a programming language and proof assistant in which mathematical statements and proofs are checked by computer.\n- Mathlib: Lean's large community library of already-formalized mathematics.\n- Formalization: translating an informal mathematical argument into code the proof checker accepts.\n- Definitions and lemmas: the supporting concepts and intermediate facts a proof relies on; here they must be built by the AI.\n- Benchmark: a fixed set of tasks used to compare systems on equal terms.\n- Agent: an AI system that works through multi-step actions, such as writing and testing code, rather than producing one answer.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We refactor existing Lean 4 proofs to reduce source length and checking cost while preserving theorem statements and compatibility across Lean versions. A locally served Qwen model uses the open-source Codex CLI to inspect source, retrieve declarations, and test proof replacements. The host keeps a replacement only if it improves the objective and Lean accepts it on every required version. A deterministic CPU pass then refines the verified proofs. On the 60 problems in Lean Refactor Arena, model search achieves a local mean combined score of 82.07, and cleanup raises it to 82.18. The final proofs pass all 127 required proof--version checks. Our system placed first in the open-source LLM track of Lean Refactor Arena at VeriCodeGen.",
+   "abstract": "AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources. Lean-experienced mathematicians formalized and audited each target statement, leaving the corresponding Lean proof to the evaluated agent. Each problem is embedded in a broader mathematical development: agents receive the informal proof but must translate it into Lean while constructing the missing definitions, intermediate lemmas, and supporting infrastructure. We compare the performance of frontier models on these problems. We find a largely shared difficulty frontier: success depends less on mathematical domain than on models' ability to construct missing formal infrastructure. Data and code at https://github.com/facebookresearch/autoformbench",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33676",
+   "title": "Interactive Proofs as a Unified Framework for Evaluating and Leveraging Verifiable Proof Generation by LLM Agents",
+   "url": "https://arxiv.org/abs/2611.33676",
+   "authors": [
+    "Yankai Shu",
+    "Xingyu Zhao",
+    "Chuan Mao",
+    "Congchi Yin"
+   ],
+   "label": "arXiv:2611.33676v1",
+   "primary_category": "cs.AI",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proposes Merlin-Bench, a benchmark that casts LLM agents as provers in an interactive proof protocol with a formal verifier, testing 100 cases across 15 problem families on 10 frontier LLMs and several agent harnesses.",
+    "plain": "Math and software-checking AI systems are often asked for an answer, but a useful answer also needs evidence that others can check. This paper builds a test in which an AI must back up its claimed answer by exchanging messages with an automatic checker, following a set rule for how the exchange works. Across 100 test cases, the authors report that getting current AI models to produce checkable evidence this way is still a substantial challenge.",
+    "why": "Checkable evidence matters if AI is to be trusted with proofs or program verification, because a correct-looking answer alone can't be verified. The work's connection to interactive proof systems from complexity theory is a framing choice; the text does not show how far the benchmark will generalize beyond its 100 cases.",
+    "background": "- Interactive proof system: a protocol where a \"prover\" convinces a \"verifier\" through back-and-forth exchanges, drawn from computational complexity theory.\n- Formal verifier: an automatic program that mechanically checks whether a proof is valid, independent of human judgment.\n- LLM agent harness: the surrounding software that lets a language model call tools, run code, and iterate on its work.\n- Theorem proving: using computers to establish mathematical statements with rigorous, checkable proofs.\n- Benchmark: a standard set of test tasks used to compare systems.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Recent advances in LLM-assisted theorem proving and program verification have attracted widespread attention. Beyond determining whether a proposition is true, LLM agents must produce evidence that can be independently checked by humans or formal verification tools. To evaluate the underlying, protocol-agnostic ability of LLM agents to construct verifiable proofs-rather than their proficiency with any particular proof language or verification tool, we introduce Merlin-Bench. Drawing on interactive proof systems from computational complexity theory, we cast an LLM agent as the prover: under a designated protocol, the agent interacts with a formal verifier to substantiate its claimed answer to a problem instance. We develop an automated framework for constructing test cases and use it to create 100 cases across 15 problem families, each formulated within this prover-verifier framework. Experiments with 10 frontier LLMs across multiple agent harnesses show that reliably producing verifiable proofs in accordance with specified protocols remains a substantial challenge. Our case studies further provide actionable insights into improving agents' ability to generate verifier-accepted proofs: tool use is essential for completing practical proof tasks; different forms of guidance, ranging from engineering instructions to problem-specific knowledge, substantially affect success rates on interactive-proof tasks; and proof-solving experience distilled from abstract tasks can transfer to concrete, real-world verification tasks.",
    "source": "arxiv"
   },
   {

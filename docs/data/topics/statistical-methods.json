@@ -3,49 +3,50 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31619",
-   "title": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
-   "url": "https://arxiv.org/abs/2611.31619",
+   "uid": "arxiv:2611.34057",
+   "title": "Design-based causal inference for ROC curves",
+   "url": "https://arxiv.org/abs/2611.34057",
    "authors": [
-    "Arya Sikder",
-    "Sriram Pillutla"
+    "Bufan Li",
+    "Haoyang Yu"
    ],
-   "label": "arXiv:2611.31619v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper defines a \"resolution\" for forecasting leaderboards, the smallest score gap a board's datasets can reliably detect, and introduces Vernier to compute it, along with tie and ranking-stability checks, for zero-shot time-series foundation models.",
-    "plain": "Companies now build general-purpose forecasting models and judge them on public leaderboards that score each model on held-out datasets. This paper asks how small a score difference those leaderboards can actually tell apart, and offers a tool that works this out from the files each board already publishes. By its account, most of the boards it examines cannot separate their top entries, their rankings can flip when unrelated submissions are added, and the amount of history given to models is often not recorded.",
-    "why": "Leaderboards are the main evidence for claims that one forecasting model beats another, so knowing what a board can and cannot distinguish affects how much those claims should be trusted. The paper's reported figures come from its own analysis of several named boards; the text does not show how widely its findings would hold beyond them.",
-    "background": "- Foundation model: a large model pretrained once on broad data, then used on new tasks without further training (zero-shot).\n- Time-series forecasting: predicting future values of a sequence, such as demand, energy use or weather.\n- Leaderboard: a public ranking of models by their score on shared test datasets.\n- Resolution (as used here): the smallest difference in score that a board's datasets can reliably distinguish from noise.\n- Rank reversal: when adding or rerunning other entries changes the order of two models.\n- Context length: how much past history a model is given before it forecasts.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much history a model receives. On 70 configurations, shortening it raised the error of three of four open models, two of them by 15%. We release Vernier, which runs this report with one command on any leaderboard that publishes per-dataset scores: https://github.com/therealram18/vernier",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.31624",
-   "title": "Probabilistic index models for hierarchical survival outcomes",
-   "url": "https://arxiv.org/abs/2611.31624",
-   "authors": [
-    "Xi Fang",
-    "Zhiqiang Cao",
-    "Lu Mao",
-    "Fan Li"
-   ],
-   "label": "arXiv:2611.31624v1",
+   "label": "arXiv:2611.34057v1",
    "primary_category": "stat.ME",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper extends probabilistic index models to prioritized composite survival outcomes (such as death and first hospitalization) under censoring, proposing three weighted estimating equations that differ in how they use partially observed comparisons, with asymptotic theory and sandwich variance estimators.",
-    "plain": "In clinical trials, patients can have a ranked set of outcomes, such as death counting for more than a nonfatal hospital stay, and these are compared between treatment groups. Some follow-up times are cut short (censored), so for some pairs of patients the ranking cannot be settled yet. The authors propose three statistical methods for estimating treatment effects that use this partial information differently, and they report that the one that also uses lower-priority events when higher-priority outcomes are still uncertain gave the smallest variance in their simulations.",
-    "why": "Trials often need to combine death and nonfatal events into one fair comparison, and censoring is common, so better use of partial data can matter for precision. The text reports simulation gains and one real-trial illustration (HF-ACTION), but the real-data analysis found intervals that included zero for all three methods, so it does not show a clinical effect.",
-    "background": "- Probabilistic index model: a regression that estimates the chance that a patient from one group does better than a patient from another, given covariates.\n- Prioritized composite outcome: several event types ranked by importance (e.g., death first, then hospitalization).\n- Censoring: follow-up ends before an event is seen, so the exact outcome is unknown.\n- Estimating equations: a method for estimating parameters by setting weighted sums of residual-type functions to zero.\n- Consistency and asymptotic normality: estimates converge to the true value and have an approximately bell-shaped distribution in large samples.\n- Sandwich estimator: a robust way to estimate uncertainty (standard errors) that accounts for the model's structure.\n- Nuisance model: an auxiliary model (e.g., for censoring or event timing) needed to build the weights but not the target itself.\n- Restriction time: a fixed time horizon up to which outcomes are compared.",
+    "one_liner": "A design-based framework for estimating the ROC curve, which compares treated and control outcome distributions in randomized experiments, with rank-based estimation, covariate adjustment, simultaneous confidence bands, and extreme-tail inference.",
+    "plain": "This paper is about comparing how a treatment changes the whole spread of outcomes, not just the average. Instead of asking only whether the treated group does better on average, it asks, for each cutoff level in the control group, what share of treated people score above that cutoff. The authors build an estimator from pooled ranks of the outcomes, prove it behaves well for large samples, and show how to attach confidence intervals to it.",
+    "why": "Many experiments care about who gains, not only the average gain, and this gives a way to study that without assuming a specific model of the outcomes. The text also reports that covariate adjustment can reduce variance and that the methods are tested on a large online learning experiment, though the text gives no further detail on how much improvement that yields.",
+    "background": "- Randomized experiment: people are randomly assigned to treatment or control, so the groups are comparable on average.\n- Potential outcomes: each person has an outcome under treatment and one under control; only one is observed.\n- Design-based inference: uncertainty comes from the random assignment itself, not from assuming a statistical model for outcomes.\n- ROC curve: originally from diagnostic testing, it plots the true-positive rate against the false-positive rate; here it is used to compare two outcome distributions.\n- Quantile: the value below which a given share of a group falls (e.g., the 90th percentile is the score exceeded by 10% of the group).\n- Covariate adjustment: using pre-treatment background variables to sharpen estimates.\n- Confidence band: a range around a whole curve, not just a single point, that is expected to contain the true curve with a stated probability.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In clinical trials, prioritized composite outcomes allow treatment comparisons to reflect the clinical importance of fatal and nonfatal events. Probabilistic index models relate these comparisons to covariates, but censoring can leave a comparison unresolved. We develop three weighted estimating equations at a prespecified restriction time, with logit, probit, and identity links. Complete history weighting requires both restricted histories to be observed. Resolved comparison weighting also retains comparisons determined before both histories are complete. Conditional tie weighting further uses an observed lower-priority event when higher-priority ties remain uncertain, weighting its regression residual by their conditional probability under a joint model of observed event histories. The construction accommodates a fixed number of nonfatal components and parametric or semiparametric joint models. Under their respective nuisance-model assumptions, the three equations target the same full data regression parameter. We establish consistency and asymptotic normality and derive sandwich estimators accounting for overlapping pairs and nuisance estimation. Across 27 simulation configurations, conditional tie weighting had smaller empirical variance than the other two methods, with reductions ranging from 5.1 to 59.0 percent relative to resolved comparison weighting. An HF-ACTION analysis of death and first hospitalization illustrates the additional observed information used by conditional tie weighting. Conditional tie weighting yielded smaller estimated variances, and the treatment effect intervals from all three methods included zero.",
+   "abstract": "In randomized experiments, causal inference traditionally focuses on the average treatment effect, yet comparing the treatment and control potential outcome distributions is often of interest. Under complete randomization, we adopt a design-based framework without imposing an outcome model to study the receiver operating characteristic (ROC) curve, which measures the proportion of treated outcomes exceeding each upper quantile of the control distribution. We propose an estimator that depends only on pooled outcome ranks, establish its asymptotic normality, and construct conservative variance estimators and confidence intervals. We also develop covariate adjustment directly for the ROC estimator, preserving the target estimand while achieving an asymptotic variance no larger than that of the unadjusted estimator. We further construct simultaneous confidence bands over an interior range of quantile levels and extend pointwise inference to the extreme upper tail of the control distribution, with both extensions accommodating covariate adjustment. Simulation studies and an application to a large-scale online learning experiment illustrate the proposed methods.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34378",
+   "title": "BADGERS: Bayesian Adaptive Graph-Guided Errors-in-Variables Regression Solution for Structured High-Dimensional Data",
+   "url": "https://arxiv.org/abs/2611.34378",
+   "authors": [
+    "Zeyu Hu",
+    "Kewen Qu",
+    "Qi Long",
+    "Jun Yan",
+    "Wenrui Li"
+   ],
+   "label": "arXiv:2611.34378v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "BADGERS is a Bayesian regression framework that handles measurement error in replicated high-dimensional covariates (such as gene expression) while using a biological graph to guide variable selection and model the dependence among covariates.",
+    "plain": "Many gene studies measure the same quantity several times because each measurement is noisy, and standard analysis tools usually ignore that noise. This paper proposes a statistical method, BADGERS, that estimates the underlying \"true\" values from the repeated readings, uses a known biological network of related genes to help decide which genes matter, and tests the approach on simulated data and on gene expression datasets for Alzheimer's disease and multiple myeloma. The summary text reports advantages over existing methods in simulations and real-data analyses, but it does not give the specific numbers.",
+    "why": "Ignoring measurement error can bias which variables appear important, and omics studies often have this problem, so a method that accounts for it while using biological network information may be useful. Its practical value depends on details (such as computational cost and performance across settings) that the summary does not report.",
+    "background": "- High-dimensional data: many more measured variables (e.g., thousands of genes) than samples.\n- Errors-in-variables: when predictors are measured with noise, naive regression gives biased results.\n- Latent variables: unobserved \"true\" values inferred from noisy measurements.\n- Bayesian methods: combine prior beliefs with data to get a distribution over possible answers; Markov chain Monte Carlo (MCMC) is a sampling method used to compute these.\n- Graphical lasso: a technique that estimates how variables are linked, encouraging sparse (few-connection) networks.\n- Shrinkage priors: settings that pull weak effects toward zero to select variables.\n- Omics: large-scale biological measurement fields such as genomics and transcriptomics.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Knowledge-guided learning methods that incorporate biological graph information into the analysis of structured high-dimensional data, such as genomic data, can improve variable selection and prediction accuracy while yielding more interpretable results. However, these methods typically assume that covariates are measured without error. This assumption is often violated in omics studies involving replicated measurements. To address this gap, we develop the Bayesian Adaptive Graph-guided Errors-in-variables Regression Solution (BADGERS), a Bayesian framework that jointly accounts for covariate measurement error and incorporates graph information while accommodating varying numbers of replicates across covariates. BADGERS treats the true covariates as latent variables and integrates three key components: a Gaussian errors-in-variables model using replicated measurements to inform the latent true covariates, a Bayesian adaptive graphical lasso with a graph-informed prior to model their dependence structure, and a regression model with an adaptive structured shrinkage prior to leverage graph information and facilitate variable selection. We develop an efficient Markov chain Monte Carlo algorithm for posterior sampling. We demonstrate the advantages of BADGERS over existing methods through simulation studies and analyses of gene expression datasets for Alzheimer's disease and multiple myeloma.",
    "source": "arxiv"
   },
   {

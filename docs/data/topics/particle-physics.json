@@ -3,55 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32925",
-   "title": "Multi-Component Axion Dark Matter Revisited and the Role of Ultralight ALPs",
-   "url": "https://arxiv.org/abs/2611.32925",
+   "uid": "arxiv:2611.34808",
+   "title": "Probing Ultralight Dark Matter at the Electroweak Scale",
+   "url": "https://arxiv.org/abs/2611.34808",
    "authors": [
-    "Hai-Jun Li"
+    "Martin Bauer",
+    "Sreemanti Chakraborti"
    ],
-   "label": "arXiv:2611.32925v1",
+   "label": "arXiv:2611.34808v1",
    "primary_category": "hep-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper revisits multi-component axion dark matter, using a stochastic (randomized) mixing mechanism to relax the uniform hierarchy of axion decay constants and examining how this affects the QCD axion and ultralight axion-like particles (ALPs) in a two- and multi-component setting.",
-    "plain": "The paper asks whether dark matter, the invisible material making up most of the mass of galaxies, could be made of several kinds of very light particles called axions instead of one. It starts from a known \"maximal mixing\" picture and generalizes it with a randomized mixing rule. The authors report that either the standard QCD axion or a lighter cousin, the ALP, can end up supplying most of the dark matter depending on the parameters.",
-    "why": "If dark matter is a mix of axion-like particles, that would change where experiments should look for it, and the paper points to specific ultralight candidates that upcoming searches could test. The text presents these as model-based predictions. Whether they hold up depends on experiments that are not described here.",
-    "background": "- Dark matter: unseen matter whose gravity shapes galaxies; its particle identity is unknown.\n- Axion: a hypothetical very light particle proposed to solve a puzzle in the strong nuclear force (the strong CP problem); the QCD axion is the version tied to that puzzle.\n- ALP (axion-like particle): a similar light particle not tied to that puzzle, with a free mass and coupling.\n- Decay constant: a parameter setting the energy scale at which an axion's properties appear; larger values mean weaker couplings.\n- Mixing: several axion fields can combine, sharing a dark matter abundance among them.\n- Cold dark matter: dark matter moving slowly compared with light, which is what galaxy formation requires.",
+    "one_liner": "The paper estimates how well current and future collider measurements of Z and Higgs boson widths, and CP-odd observables such as tau dipole moments in Z decays, could detect oscillating signals from ultralight dark matter at the electroweak scale.",
+    "plain": "The paper asks whether particle colliders could spot a very light, invisible form of dark matter that makes certain properties of particles wobble over time. The authors look at how precisely the widths of the Z and Higgs bosons, and certain lopsided decay effects in Z particles decaying to tau pairs, can be measured. They report that the tau-based measurements could be more sensitive than atomic clocks or tests of the equivalence principle, which are the usual ways of searching for this kind of dark matter.",
+    "why": "If dark matter is an ultralight field, it could leave time-varying traces in particle physics measurements, so a new search channel would be useful. The text only supports a claim of better sensitivity than atomic clocks and equivalence tests under the paper's assumptions; it does not say whether any signal has been seen.",
+    "background": "- Dark matter: unseen matter that holds galaxies together; its nature is unknown.\n- Ultralight dark matter: a hypothesized field with an extremely small particle mass, behaving like a wave that oscillates over time.\n- Misalignment mechanism: a way such a field could have been produced in the early universe with the right overall density, leaving it oscillating now.\n- Electroweak scale: the energy range (around the mass of the W, Z and Higgs bosons) where the weak force and the Higgs field operate.\n- Z and Higgs bosons: heavy, short-lived particles; their \"width\" describes how quickly they decay and how spread out their measured mass is.\n- CP-odd observables: measurements sensitive to asymmetry between matter and antimatter behavior, such as electric or magnetic dipole moments.\n- Dipole moment: a measure of how a particle's charge or magnetism is lopsided along an axis.\n- Atomic clocks and equivalence principle tests: precision experiments that currently constrain such fields.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "In this work, we revisit the multi-component axion dark matter (DM) scenario and explore the role of ultralight axion-like particles (ALPs). After briefly reviewing maximal axion mixing, we incorporate a stochastic axion mixing mechanism that generalizes it by relaxing the requirement of a uniform hierarchy among the axion decay constants. We find that, depending on the parameters, either the QCD axion or an ALP can dominate the DM abundance after mixing; once axion mass contributions are included, the heaviest ALPs tend to prevail. In a two-component framework, stochastic mixing significantly enlarges the allowed parameter space for the QCD axion decay constant, enabling the QCD axion to constitute the entirety of cold DM. The corresponding ALP mass range remains largely unconstrained by current experiments and is within reach of future searches. In the multi-component case, a larger ALP population leads to the emergence of more ultralight ALPs with large decay constants. These ultralight ALPs represent compelling targets for upcoming axion searches.",
+   "abstract": "Ultralight dark matter provides an explanation for astrophysical evidence for dark matter at all scales. This non-thermal dark matter requires a misalignment mechanism to reproduce the observed matter energy density of the Universe and therefore induce oscillating, time-dependent signals. We determine the sensitivity of current and future collider measurements of the width of the Z and Higgs bosons, and show that CP odd observables such as dipole moments in $Z\\to \\tau^+\\tau^-$ decays provide a better sensitivity to ultralight dark matter than atomic clocks or equivalence principle tests.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31810",
-   "title": "Intrinsic Soft Function in the Continuum and Physical Mass Limit from Lattice QCD",
-   "url": "https://arxiv.org/abs/2611.31810",
+   "uid": "arxiv:2611.34464",
+   "title": "Ultralight Dark Matter Spectrum with Gravitational Focusing and Doppler Motion",
+   "url": "https://arxiv.org/abs/2611.34464",
    "authors": [
-    "Zhi-Chao Gong",
-    "Min-Huan Chu",
-    "Jun Hua",
-    "Xiangdong Ji",
-    "Andreas Sch\\\"afer",
-    "Jin-Xin Tan",
-    "Han-Zhang Wang",
-    "Wei Wang",
-    "Jian-Hui Zhang",
-    "Mu-Hua Zhang",
-    "Qi-An Zhang"
+    "Shao-Feng Ge",
+    "Yong Tang",
+    "Yue-Hui Yao"
    ],
-   "label": "arXiv:2611.31810v1",
-   "primary_category": "hep-lat",
+   "label": "arXiv:2611.34464v1",
+   "primary_category": "hep-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A lattice QCD calculation extracts the nonperturbative intrinsic soft function of TMD factorization at the physical pion mass, in the continuum and infinite-momentum limits, using large-momentum effective theory and axial-vector interpolators.",
-    "plain": "This paper is about a hard-to-compute piece of how the internal momentum of quarks inside protons and pions is described. The authors used supercomputer simulations of quarks on a discrete grid (lattice QCD) to estimate this piece directly from the underlying theory. They report results using pions at their real physical mass, across six simulation setups with four grid spacings, reaching separations of about 1.1 femtometers.",
-    "why": "Precision studies of how quark momentum is distributed in hadrons depend on this input, so a determination that controls the continuum, physical-mass and infinite-momentum limits together is useful for that field. The text reports that the results agree with perturbative predictions at short distances and give an approximately exponential decay with an effective scale of about 0.7 GeV, but it does not spell out the wider implications beyond being a benchmark.",
-    "background": "- QCD: the theory of quarks and gluons that binds protons and pions.\n- Lattice QCD: computing QCD numerically on a discrete four-dimensional grid of space and time.\n- TMD (transverse-momentum-dependent) factorization: a framework that splits high-energy scattering into separate pieces, one of which is the soft function.\n- Soft function: a quantity describing soft (low-momentum) gluon effects; its nonperturbative part cannot be computed with standard perturbation theory.\n- Large-momentum effective theory: a method for getting quantities at infinite momentum from simulations at finite momentum.\n- Physical pion mass limit: simulations run with the pion's real mass, rather than heavier, easier-to-simulate pions.\n- Transverse distance b⊥: the separation perpendicular to the motion of the particle; 1 fm is 10^-15 m.\n- Effective scale Λ: a fitted parameter setting how fast the quantity falls off with distance; it is not a fundamental constant.",
+    "one_liner": "This paper studies how the Sun's gravitational focusing and the Earth-based detector's Doppler motion reshape the expected energy spectrum of ultralight dark matter signals, and how ignoring these effects can bias inferred dark matter parameters.",
+    "plain": "Some proposed dark matter particles are extremely light and could be detected as faint, repeating signals in sensitive instruments. This paper asks how two local effects change the shape of the expected signal: the Sun's gravity pulling dark matter toward it, and the motion of the detector as the Earth moves. The authors estimate the signal strength analytically and run Bayesian statistical tests on simulated data to show that these effects matter for parameter estimates.",
+    "why": "If these local effects are left out of the signal models, a detection could lead to wrong estimates of the dark matter's properties, so the modeling matters for interpreting any future signal. The text does not say whether any experiment has observed such a signal, so the practical payoff depends on future detections.",
+    "background": "- Dark matter: invisible matter that makes up most of the mass of galaxies; its particle nature is unknown.\n- Ultralight dark matter: hypothetical particles far lighter than an electron, behaving more like waves than particles.\n- Signal spectrum: how the strength of a detected signal varies with energy or frequency.\n- Phase-space distribution: a description of how dark matter particles are spread across positions and velocities.\n- Gravitational focusing: the Sun's gravity bends the paths of passing dark matter, concentrating it in some directions.\n- Doppler effect: the shift in observed frequency caused by a source or detector moving relative to the signal.\n- Bayesian analysis: a statistical method that updates estimates of unknown parameters using data and prior assumptions.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The intrinsic soft function is a universal nonperturbative ingredient of transverse-momentum-dependent (TMD) factorization. Despite substantial progress in lattice QCD studies, a determination with simultaneous control of the continuum, physical-pion-mass, and infinite-momentum limits has remained unavailable. In this work we present the first lattice determination incorporating all these limits within large-momentum effective theory, extracting the intrinsic soft function from a light-meson form factor and quasi-TMD wave functions. A key advance is the use of power-counting-guided axial-vector interpolators, which substantially improve the signal and enable a direct calculation at the physical pion mass. Combined with results from six ensembles spanning four lattice spacings, this improvement allows a precise determination extending to $b_\\perp\\simeq1.1~\\mathrm{fm}$, while remaining consistent with perturbative predictions at short distances. The resulting transverse-distance dependence exhibits an approximately exponential decay, with the decay rate being characterized by an effective scale $\\Lambda\\simeq0.7~\\mathrm{GeV}$ at $\\mu=2~\\mathrm{GeV}$, providing a quantitative benchmark for nonperturbative Wilson-line dynamics and essential input for precision TMD studies.",
+   "abstract": "Ultralight dark matter can produce signals in experiments through its couplings with the Standard Model particles. The resulting signal spectrum is determined by the phase-space distribution of dark matter, which encodes information about its production mechanism and the history of the local universe. However, the local environmental effects can modify the observed spectrum and should be included in signal modeling to avoid biased parameter estimates. In this work, we investigate how the gravitational focusing by Sun and the Doppler effect due to the detector's motion modify the signal spectrum and affect inferring the underlying dark matter parameters. We analytically estimate the signal significance and perform Bayesian analysis on simulated data to demonstrate their impact.",
    "source": "arxiv"
   },
   {

@@ -3,48 +3,46 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.33025",
-   "title": "Bloch Discriminants of Discrete Periodic Operators",
-   "url": "https://arxiv.org/abs/2611.33025",
+   "uid": "arxiv:2611.33771",
+   "title": "Semiorthogonal decompositions of limit categories for symmetric stacks",
+   "url": "https://arxiv.org/abs/2611.33771",
    "authors": [
-    "Margaret H. Regan",
-    "Frank Sottile",
-    "Simon Telen"
+    "Yukinobu Toda"
    ],
-   "label": "arXiv:2611.33025v1",
+   "label": "arXiv:2611.33771v1",
    "primary_category": "math.AG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper adapts computational algebraic geometry to study how critical points of Bloch varieties, which link the spectrum of an operator on a Z^2-periodic graph to its group action, change qualitatively with parameters, for three example graphs.",
-    "plain": "The paper studies a mathematical object that describes the allowed energy levels of a wave-like process on a repeating network of points and connections, such as a crystal-like lattice. The authors ask at which parameter values the shape of this object changes in a qualitative way, and they answer this for three specific two-directional periodic graphs using computer-algebra methods. The set of such turning-point parameter values is called the Bloch discriminant.",
-    "why": "The critical points of these objects correspond to edges of the spectrum, so knowing when their behavior shifts bears on how spectra of periodic structures change. The authors also note that the critical points are real-algebraic under a non-standard real structure, which they present as a first step toward computational tools for such varieties; the text does not say more about wider applications.",
-    "background": "- Operator on a graph: a rule for passing values between connected points of a network; its spectrum is the set of energies or values it can take.\n- Periodic graph: a network that repeats in a regular pattern, here indexed by two integer directions (Z^2).\n- Bloch variety: a geometric object (a set of solutions to polynomial equations) that records how spectrum depends on the repeat (group) action.\n- Critical point: a point where the geometry is not smooth or where the local shape changes; these mark edges of the spectrum.\n- Algebraic geometry: the study of shapes defined by polynomial equations.\n- Real structure: a rule that selects which points of a complex-number setting count as \"real\"; the standard one is ordinary real numbers, the paper uses a non-standard one.\n- Discriminant: the set of parameter values where the qualitative type of a solution set changes.",
+    "one_liner": "The paper extends limit categories, previously defined for derived stacks with self-dual cotangent complexes, to a broader class called symmetric stacks, and establishes compact generation, semiorthogonal decompositions, functoriality, and a Künneth formula for them.",
+    "plain": "This paper is about a technical construction in algebraic geometry: a way of attaching a category (a structured collection of objects and maps between them) to a geometric space of solutions to a moduli problem. The authors broaden an earlier version of this construction to a wider class of spaces, which they call symmetric stacks. They then prove several general structural properties of these categories, and a companion paper uses them to state a conjecture.",
+    "why": "The motivation given is to support Dolbeault geometric Langlands-type correspondences for a wider range of moduli stacks, which is a long-running program linking geometry and representation theory. The text does not show any concrete new consequence beyond the structural results listed, so the wider impact is best treated as a possibility rather than an established outcome.",
+    "background": "- Moduli stack: a geometric object that parametrizes families of mathematical objects (such as vector bundles or sheaves) together with their symmetries.\n- Derived stack: a refinement of a moduli stack that keeps track of extra homological information, used to handle spaces that are not smooth.\n- Cotangent complex: a homological object encoding the infinitesimal shape of a space; \"self-dual\" means it matches its own dual, a symmetry the paper generalizes.\n- Category (in this sense): a collection of objects with maps between them, here built as a limit over a family of such categories.\n- Semiorthogonal decomposition: a way of splitting a category into simpler pieces that interact in a controlled order.\n- Langlands program: a web of conjectures connecting number theory, geometry and representation theory; the Dolbeault version concerns Higgs bundles and sheaves on curves or surfaces.\n- Künneth formula: a rule relating the invariants of a product of spaces to those of the factors.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The Bloch variety of an operator on a periodic graph encodes the relation between its spectrum and the group action on the graph, with critical points corresponding to edges of the spectrum. We adapt methods from computational algebraic geometry to describe how the qualitative behavior of critical points of Bloch varieties depends upon parameters for three Z^2-periodic graphs. The set of parameters where the qualitative behavior changes is the Bloch discriminant. As the critical points are real-algebraic with respect to a non-standard real structure on the complex torus, this is also a first step towards developing computational tools for varieties with a non-standard real structure.",
+   "abstract": "In our earlier work with Tudor Padurariu, we introduced the notion of limit categories for derived stacks with self-dual cotangent complexes and used them to formulate the Dolbeault geometric Langlands conjecture. In this paper, we generalize the notion of limit categories to a broader class of derived stacks, which we call symmetric stacks. One of the motivations for this generalization is to formulate Dolbeault geometric Langlands-type correspondences for a broader class of moduli stacks. We establish several fundamental properties of limit categories for symmetric stacks, including compact generation, the existence of semiorthogonal decompositions, functoriality, and a Kunneth formula. In a companion paper, we apply the results of this paper to formulate a Dolbeault geometric Langlands-type conjecture for moduli stacks of sheaves on smooth surfaces with nef anticanonical divisors.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31552",
-   "title": "On the unirationality of anticanonical weighted complete intersection surfaces: the infinite families",
-   "url": "https://arxiv.org/abs/2611.31552",
+   "uid": "arxiv:2611.33491",
+   "title": "Primitive Collections for Klyachko Varieties",
+   "url": "https://arxiv.org/abs/2611.33491",
    "authors": [
-    "Giulia Gugiatti",
-    "Alex Massarenti"
+    "Nicole Lemire",
+    "Jason Palombaro"
    ],
-   "label": "arXiv:2611.31552v1",
+   "label": "arXiv:2611.33491v1",
    "primary_category": "math.AG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper shows that anticanonical weighted complete intersection surfaces in the four infinite families are unirational over their field of definition, and that over a Hilbertian field a Hilbert subset of these surfaces is nonrational.",
-    "plain": "The paper studies a classification of certain curved geometric surfaces, defined by polynomial equations with weighted variables, that come from a specific \"anticanonical\" setup. The known list splits into finitely many special cases and four infinite families, and this work deals with the infinite families. The authors show that surfaces in these families can be described by rational parametrization over their base field, and that, over a suitable kind of field, most members of these families are not rational.",
-    "why": "Rationality questions ask whether a geometric object can be parametrized by rational functions, which is a basic way of telling how simple it is. The result settles this for the infinite families in the text, and it is a specialist contribution that the text does not place in any wider application.",
-    "background": "- Algebraic surface: the solution set of polynomial equations in three variables, viewed over a field such as the rationals or complex numbers.\n- Weighted complete intersection: a surface cut out by several polynomial equations where variables carry positive integer weights, which act like a generalised projective space.\n- Anticanonical: refers to a canonical class of divisors on the surface (the anticanonical class), a standard invariant used to sort surfaces by how curved or constrained they are.\n- Rational surface: one birational to the projective plane, i.e. parametrizable by rational functions of two variables.\n- Unirational: a weaker notion; the surface is covered by a rational parametrization that may be many-to-one, rather than one-to-one.\n- Field of definition and Hilbertian field: the number field or other base field of the coefficients, and a class of fields where Hilbert's irreducibility theorem holds, so that \"most\" specializations behave generically.\n- Hilbert subset: a set of parameter values large enough in the sense of Hilbert's irreducibility theorem.",
+    "one_liner": "The paper determines the maximal cones, primitive collections, cohomology ring, and orbit-stability properties of the fan for Klyachko toric Gorenstein Fano varieties X_{mn} when n is congruent to 1 modulo m.",
+    "plain": "This paper studies a family of geometric shapes built from pieces of a higher-dimensional grid, called Klyachko varieties. The authors focus on the cases where one parameter is one more than a multiple of the other, and they describe the basic building blocks (maximal cones and primitive collections) that define these shapes. They also describe the algebraic bookkeeping (cohomology ring) attached to them and some results about how symmetric groups act on these blocks.",
+    "why": "Klyachko varieties link toric geometry to representation theory, algebraic groups and graph theory, and the generalized del Pezzo special case already supports results on derived categories. The text does not claim wider consequences, so the value here is mainly as a structural description of a known family.",
+    "background": "- Toric variety: a geometric object built from a collection of cones (a \"fan\") in space, so that combinatorics of the fan controls the geometry.\n- Fano variety: a space whose anticanonical bundle is positive, loosely a \"positively curved\" shape; Gorenstein is a mild regularity condition.\n- Maximal cone and primitive collection: the basic combinatorial pieces of a fan that determine its structure.\n- Cohomology ring: an algebraic invariant recording how the space's pieces intersect.\n- Symmetric group action: permutations of coordinates (S_m × S_n) acting on the variety.\n- Rationality and stable rationality: whether the space can be parametrized by rational functions, in a weak or strong sense.\n- Generalized del Pezzo variety: a centrally symmetric member of this family, X_{2,2k+1}.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Anticanonical weighted complete intersection surfaces fall into finitely many sporadic families and four infinite families. We prove that the anticanonical surfaces lying in the infinite families are unirational over their field of definition. Over a Hilbertian field, we further prove that a Hilbert subset of members consists of nonrational surfaces.",
+   "abstract": "Klyachko introduced a family of $S_m\\times S_n$-invariant toric Gorenstein Fano varieties, $X_{mn}$, with connections to representation theory, algebraic groups, and graph theory. He focused on the case in which $m$ and $n$ are coprime, for which $X_{mn}$ are smooth, and hence Fano. Klyachko and Voskresenskii later proved that all forms of $X_{mn}$ are stably rational when $m, n$ are coprime, and that all forms of $X_{mn}$ are rational when $n$ is congruent to 1 modulo $m$. In the same paper, they classified centrally symmetric toric Fano varieties as products of projective lines and generalized del Pezzo varieties, $X_{2,2k+1}$. For this reason, the special case of generalized del Pezzo varieties are frequently studied. For example, Ballard, Duncan, and McFadden proved that the bounded derived category of generalized del Pezzo varieties has a full exceptional collection of line bundles. An understanding of the maximal cones and primitive collections of the fan associated to $X_{2,2k+1}$ is crucial in their construction. In this paper, we focus on the Klyachko varieties $X_{mn}$ in the case in which $n$ is congruent to 1 modulo $m$. We determine a description of the maximal cones and primitive collections for the associated fan. We also determine a description of their cohomology ring and some stability results on the $S_m\\times S_n$-orbits of maximal cones and primitive collections for $X_{mn}$.",
    "source": "arxiv"
   },
   {

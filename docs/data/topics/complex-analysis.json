@@ -3,47 +3,46 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32080",
-   "title": "Chern classes of vanishing cycles for maps having no blowups",
-   "url": "https://arxiv.org/abs/2611.32080",
+   "uid": "arxiv:2611.33697",
+   "title": "Singularities in global pluripotential theory",
+   "url": "https://arxiv.org/abs/2611.33697",
    "authors": [
-    "Xia Liao"
+    "Mingchen Xia"
    ],
-   "label": "arXiv:2611.32080v1",
-   "primary_category": "math.AG",
+   "label": "arXiv:2611.33697v1",
+   "primary_category": "math.CV",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "For holomorphic maps between complex manifolds whose singular fibres have at most isolated complete intersection singularities (ICIS) and that have no blowups, the paper shows that the Riemann-Hurwitz defect in Chern classes is offset by the Chern class transformation of the Milnor number constructible function.",
-    "plain": "The paper studies how the shape of a space changes when a smooth family of spaces is squeezed into a singular one, looking at \"nearby\" and \"vanishing\" cycles, which are the pieces of topology that survive or disappear at the singular point. The authors work with maps that do not involve blowups (a procedure that replaces a point with a larger space). Their main claim is a formula relating a correction term from the map's branching to a topological count of how singular the points are.",
-    "why": "The text gives only the abstract, so its wider significance is unclear from it. It appears to be a technical contribution to a Chern-class version of the vanishing-cycle theory, which is of interest to specialists in singularity theory and algebraic topology.",
-    "background": "- Complex manifold: a space that locally looks like complex-number coordinates, a setting for complex analysis.\n- Holomorphic map: a smooth, complex-differentiable function between such spaces.\n- Chern classes: topological invariants that measure how a space's tangent structure twists; used to count and classify shapes.\n- Riemann-Hurwitz defect: a correction term that appears when a map branches, comparing the topology before and after the map.\n- Milnor number: a whole-number count of how complicated an isolated singularity is.\n- Constructible function: a function assigning integers to the pieces of a space, used to package local invariants globally.\n- Isolated complete intersection singularity (ICIS): a common, relatively tame type of singular point.\n- Blowup: a standard operation that resolves a singular point by replacing it with a larger space.",
+    "one_liner": "A book-length treatment of plurisubharmonic singularities on compact Kähler manifolds, linking them to non-Archimedean and toric pluripotential theory.",
+    "plain": "This is a book, expanded from lecture notes, about a branch of advanced geometry that studies functions on complex spaces which are \"bent\" in controlled ways, especially where they blow up or become singular. The author builds up the theory systematically and connects it to two related settings: one that uses a different notion of distance (non-Archimedean) and one built on shapes called toric varieties. The text summary does not list specific new results.",
+    "why": "Pluripotential theory is a central tool for studying the geometry of complex spaces, and bringing together its singular side with non-Archimedean and toric versions may be useful for specialists. The summary is too brief to say which results are new, so its exact importance is unclear from this text alone.",
+    "background": "- Complex manifolds: smooth spaces locally described by complex numbers.\n- Kähler manifolds: complex manifolds with a compatible geometric structure, common in algebraic geometry.\n- Plurisubharmonic functions: a class of functions that behave like \"convex\" functions in several complex directions.\n- Singularities: points where such a function or space fails to be smooth.\n- Non-Archimedean geometry: a version of analysis using a distance in which the triangle inequality is strengthened.\n- Toric varieties: spaces built from combinatorial data about polytopes.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study the nearby and vanishing cycles for maps with no blowups. For holomorphic maps between complex manifolds admitting at most ICIS, we show that the Riemann-Hurwitz defect in Chern classes is compensated for by the Chern class transformation of the Milnor number constructible function.",
+   "abstract": "This book is an expanded version of the author's lecture notes at the Institute for Advanced Study in Mathematics (IASM) at Zhejiang University. We systematically develop the theory of plurisubharmonic singularities on compact K\\\"ahler manifolds and relate it to the non-Archimedean pluripotential theory and toric pluripotential theory.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32404",
-   "title": "Noncommutative $\\mathcal{R}(p,q)-$deformed beta functions of first and second kind : beta gamma relations, shift identities and symmetrisation",
-   "url": "https://arxiv.org/abs/2611.32404",
+   "uid": "arxiv:2611.34661",
+   "title": "Cyclic polynomials in mixed-weighted Dirichlet-type spaces",
+   "url": "https://arxiv.org/abs/2611.34661",
    "authors": [
-    "Kaw\\`eyim Lankpetre",
-    "Isiaka Aremua",
-    "Joseph D\\'esir\\'e Bukweli Kyemba"
+    "Rajkamal Nailwal",
+    "Aljaz Zalar"
    ],
-   "label": "arXiv:2611.32404v1",
-   "primary_category": "math.QA",
+   "label": "arXiv:2611.34661v1",
+   "primary_category": "math.FA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper builds beta functions (and the associated deformed gamma functions) for the R(p,q)-deformed quantum algebras of Hounkonnou and Bukweli Kyemba, deriving their shift identities, symmetrisation, convexity properties, and deformed hypergeometric summations.",
-    "plain": "This paper extends two classical special functions, the beta and gamma functions, to a family of \"deformed\" number systems that come from quantum algebra. The authors define two versions of the beta function, derive their basic identities and asymptotic behaviour, and check the identities numerically to thirty digits. The text suggests that the deformed gamma function is logarithmically convex on the positive half line exactly when one deformation parameter is at least 1.",
-    "why": "It gives a tested set of identities for a family of deformed special functions, several named deformations being covered as special cases. The text does not say what applications these functions have, so any link to physics or other areas is unclear from this text alone.",
-    "background": "- Gamma function: a generalisation of the factorial to non-integer values.\n- Beta function: a integral-defined function built from two gamma values; here it has a \"first kind\" version on [0,1] and a \"second kind\" version on the half line.\n- q-deformation: replacing ordinary numbers and arithmetic with a parameter-dependent version that reduces to the ordinary case when the parameter is removed; common in quantum algebra.\n- Shift identity: a rule relating the function's value at x+1 to its value at x.\n- Logarithmic convexity: the logarithm of the function curves upward, a property used to characterise gamma-type functions (Bohr–Mollerup theorem).\n- Hypergeometric function: a standard series of special functions that includes many named functions as cases.\n- Numerical check to thirty digits: the identities were tested by computer to 30 decimal places.",
+    "one_liner": "The paper gives a complete characterization of which polynomials are cyclic in mixed-weighted Dirichlet-type spaces of functions on the bidisk, in terms of their zero sets and the three weight parameters.",
+    "plain": "The paper studies a family of function spaces made of functions of two complex variables, where each coefficient of the function is weighted by a size-dependent factor controlled by three real parameters. A function is \"cyclic\" if, by multiplying it by polynomials and taking limits, one can approximate the constant function 1 inside the space. The authors determine exactly which polynomials have this property, using only where they vanish and the values of the three parameters.",
+    "why": "Cyclicity is a basic structural question for these spaces, since it describes which functions generate the whole space under multiplication. The result extends earlier characterizations for anisotropic and total-degree versions of the same spaces on the bidisk, so it is a systematic completion of that line of work rather than a new direction; its wider significance beyond this specialist area is unclear from the text alone.",
+    "background": "- Unit bidisk: the set of pairs of complex numbers (z1, z2) with each having absolute value less than 1.\n- Holomorphic function: a complex-differentiable function of complex variables, here written as a power series in z1 and z2.\n- Dirichlet-type space: a space of functions whose norm combines the size of the function with the size of its derivatives, here via weighted sums of squared coefficients.\n- Mixed weights: the three exponents alpha1, alpha2, alpha3 control how strongly the coefficient indices m, n and m+n are weighted.\n- Cyclic function: a function f such that the closure of all polynomial multiples of f contains the constant 1; informally, f \"generates\" the whole space.\n- Zero set: the set of points where a polynomial equals zero.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We develop the theory of the beta functions attached to the $\\mathcal{R}(p,q)-$deformed quantum algebras of Hounkonnou and Bukweli Kyemba, for structure functions whose deformed numbers are generated by two deformation functions $\\phi_{1}>\\phi_{2}>0$. Working with the Jackson type series representation of the deformed integral, we define a first kind beta function on $[0,1]$ from the deformed power $(1\\ominus\\phi_{2}t)^{y-1}$, extended to complex exponents, and a second kind beta function on the half line from $(1\\oplus\\phi_{1}t)^{-x-y}$. The first kind function equals $\\phi_{1}^{(y-1)(2x+y-2)/2}\\Gamma_{\\mathcal{R}(p,q)}(x)\\Gamma_{\\mathcal{R}(p,q)}(y)/\\Gamma_{\\mathcal{R}(p,q)}(x+y)$ for all complex arguments with positive real parts; we derive its general shift identity, its exchange defect $\\phi_{1}^{(y-x)(x+y-1)/2}$, a commutative symmetrisation unique up to a constant, its asymptotics and a deformed Euler integral for a deformed Gauss hypergeometric function, which yields a deformed Gauss summation. The second kind function is evaluated through Ramanujan's ${}_{1}\\psi_{1}$ summation and involves a second deformed gamma function, differing from the first one by a one periodic theta quotient, so that its exchange defect persists in the one parameter case. We prove a Bohr Mollerup type characterisation and a multiplication formula for the deformed gamma function, show that it is logarithmically convex on the positive half line if and only if $\\phi_{1}\\geq1$, obtain the joint logarithmic convexity of normalised beta functions with a deformed Tur\\'an identity, and compute the moments of the associated deformed beta distributions. Gauge invariance covers the Jagannathan Srinivasa Rao, Chakrabarti Jagannathan, generalized $q-$Quesne and Hounkonnou Ngompe deformations, and every identity is confirmed numerically to thirty digits.",
+   "abstract": "For $\\boldsymbol{\\alpha}=(\\alpha_1,\\alpha_2,\\alpha_3)\\in\\mathbb R^3$, we investigate cyclic polynomials in the mixed-weighted Dirichlet-type space $\\mathscr{D}_{\\boldsymbol{\\alpha}}$ of holomorphic functions $f(z_1,z_2)=\\sum_{m,n\\geq0}a_{m,n}z_1^mz_2^n$ on the unit bidisk satisfying $$ \\sum_{m,n\\geq0}|a_{m,n}|^2 (m+1)^{\\alpha_1}(n+1)^{\\alpha_2} (m+n+1)^{\\alpha_3}<\\infty. $$ We give a complete characterization of cyclic polynomials in terms of their zero sets and the parameters $\\alpha_1,\\alpha_2,\\alpha_3$. Our results extend previously known characterizations for anisotropic and total-degree Dirichlet-type spaces on the unit bidisk.",
    "source": "arxiv"
   },
   {

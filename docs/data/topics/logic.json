@@ -3,45 +3,46 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31342",
-   "title": "Idempotent generically stable measures in NSOP$_1$ groups",
-   "url": "https://arxiv.org/abs/2611.31342",
+   "uid": "arxiv:2611.34109",
+   "title": "A family of forcings with hyperfinite equivalence of generics",
+   "url": "https://arxiv.org/abs/2611.34109",
    "authors": [
-    "Daniel Max Hoffmann"
+    "Ben De Bondt"
    ],
-   "label": "arXiv:2611.31342v1",
+   "label": "arXiv:2611.34109v1",
    "primary_category": "math.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves the Idempotent Measure Conjecture for type-definable groups in NSOP$_1$ theories, showing that global idempotent generically stable (frequency interpretation) measures are unique left- and right-invariant measures concentrating on the type-definable stabilizer.",
-    "plain": "This is a result in model theory, the branch of logic that studies which structures and definable sets behave well. The authors consider groups defined by logical formulas in a class of theories called NSOP$_1$ and show that a certain kind of \"averaging\" measure on such a group is essentially unique, and that its support has a simple algebraic structure. The argument also relies on an announced theorem by Ben Yaacov, Chernikov and Ramsey, whose proof is given in an appendix, to extend the conclusion to all such groups.</plain>\n<parameter name=\"why\">It settles a conjecture about how measures on definable groups behave in a broad class of theories, which bears on the structure theory of groups in model theory. Its wider connections are not spelled out in the text, so I cannot say more with confidence.",
-    "why": "",
-    "background": "- Group: a set with an associative operation, identity and inverses; here the group is defined by logical formulas.\n- Type-definable: described by a (possibly infinite) collection of logical conditions.\n- Stabilizer: the subgroup of elements that preserve a given type under the group action.\n- Measure (probability measure): an assignment of \"sizes\" or weights to definable sets, here used to average over the group.\n- Left/right-invariant: unchanged when the group acts on the left or right.\n- Idempotent: a measure that is equal to its own convolution (self-combination).\n- NSOP$_1$: a dividing-independence property from stability-theory classification, a broad class of theories generalizing stable ones.\n- Randomization: a construction that turns a theory into one about random variables/measures; the text cites a theorem that it preserves NSOP$_1$.\n- Minimal left ideal and left-simple semigroup: standard algebraic notions from semigroup theory.",
+    "one_liner": "The paper identifies a class of set-theoretic forcing notions, including several classical ones, and shows that for each forcing in that class the equivalence-of-generics relation of Smythe is a hyperfinite countable Borel equivalence relation (CBER).",
+    "plain": "This is about the logical foundations of mathematics, specifically a technique called forcing, which builds new mathematical universes by adding \"generic\" objects that dodge all prescribed obstacles. The authors look at when two such generic objects count as equivalent, and they group many well-known constructions into one class. For every construction in that class, they show the equivalence is \"hyperfinite,\" meaning it can be approximated by a sequence of finite pieces.",
+    "why": "The work places a family of classical constructions under a single structural description, which may help compare them. Its connection to descriptive set theory (the study of how definable sets of reals can be classified) is the reason it matters to specialists; the text does not say what further applications it has, so the wider significance is uncertain.",
+    "background": "- Forcing: a method from set theory for extending a model of mathematics by adding a \"generic\" object that meets every dense condition.\n- Generic object: an object that avoids all exceptional sets that could be specified in advance in the model.\n- Equivalence of generics: a relation saying when two generics yield the same information or are interchangeable, as defined by Smythe (the text gives no further detail).\n- Borel equivalence relation: a way of sorting points of a Polish space into classes where the sorting rule is simple enough to be \"Borel\" (definable from open sets by countable operations).\n- Countable Borel equivalence relation (CBER): a Borel equivalence relation whose classes are countable.\n- Hyperfinite: a CBER that is an increasing union of finite-class equivalence relations; intuitively, it is as tame as countable classification gets.\n- Background in set theory and descriptive set theory at graduate level is needed.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We prove the Idempotent Measure Conjecture for type-definable groups in theories whose Keisler randomization is NSOP$_1$. More precisely, every global idempotent frequency interpretation measure on such a group is the unique left-invariant and the unique right-invariant measure concentrating on its type-definable stabilizer. In particular, its support is a left-simple convolution semigroup and has a unique minimal left ideal. The announced theorem of Ben Yaacov, Chernikov and Ramsey that randomization preserves NSOP$_1$ (proof in the appendix) yields the corresponding conclusion for all type-definable groups in NSOP$_1$ theories.",
+   "abstract": "We identify a class of forcings that includes several classical forcings and prove that for all forcings $\\mathbb{P}$ in this class the associated equivalence of generics relation $\\equiv^{\\mathbb{P}}_M$, as defined by Smythe, is a hyperfinite CBER.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31591",
-   "title": "Provability of Consistency: A New Foundational Landscape",
-   "url": "https://arxiv.org/abs/2611.31591",
+   "uid": "arxiv:2611.33530",
+   "title": "Stability in abstract classes via set theoretic techniques",
+   "url": "https://arxiv.org/abs/2611.33530",
    "authors": [
-    "Sergei Artemov"
+    "Jeremy Beard",
+    "Marcos Mazari-Armida"
    ],
-   "label": "arXiv:2611.31591v1",
+   "label": "arXiv:2611.33530v1",
    "primary_category": "math.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A survey-style paper arguing that Hilbertian consistency of Peano Arithmetic, unlike the standard Gödelian consistency formula, can be proved inside PA itself, and claiming this refutes the Unprovability of Consistency Thesis.",
-    "plain": "The paper concerns a long-standing belief in logic: that a formal arithmetic system cannot prove, within itself, that it is free of contradictions. The authors claim that the usual formula for \"consistency\" used in Gödel's argument differs from the older, Hilbert-style notion, and that a proof of the older notion can be carried out inside the system. The text as given states this claim and summarizes its consequences but does not show the detailed proof.",
-    "why": "If correct, the claim would challenge a widely held result in the foundations of mathematics and bear on old philosophical arguments (such as the Lucas-Penrose argument about minds and machines) and on the design of self-checking theorem provers. The text alone does not let me judge whether the proof holds, and the claim is contested in its framing, so it should be read with that caution.",
-    "background": "- Peano Arithmetic (PA): a standard formal system for the natural numbers and their basic arithmetic.\n- Consistency: a theory is consistent if it never proves both a statement and its negation.\n- Gödel's second incompleteness theorem: a consistent system of this strength cannot prove its own consistency formula, which is the basis of the \"unprovability\" thesis.\n- Hilbert's consistency program: the early 20th-century aim to prove mathematics consistent using only safe, finitary methods.\n- Gödelian vs. Hilbertian consistency: two different formal statements that both get called \"consistency\"; the paper's central claim is that they are not equivalent.\n- Lucas-Penrose argument: a philosophical argument that human minds surpass any formal machine because machines cannot verify their own consistency.",
+    "one_liner": "The paper shows that abstract elementary classes with an independence relation satisfying a mild local character condition are stable, and applies this to classes of modules closed under pure submodules.",
+    "plain": "This is a paper in mathematical logic about \"abstract classes,\" which are collections of mathematical structures with a notion of substructure, such as classes of modules (algebraic objects like vector spaces, generalized). The authors prove that such classes behave in a tame, orderly way (\"stable\") whenever a certain notion of independence has a mild local property. They reach this using tools from model theory and set theory.",
+    "why": "The result says that a broad family of structures is orderly under a fairly weak assumption, which matters for classifying what such theories can look like. The text does not say how far beyond the module examples the result reaches, so its wider impact is unclear from this summary alone.",
+    "background": "- Abstract classes: collections of structures with a chosen notion of embedding, generalizing first-order model theory.\n- Independence relation: an abstract analogue of \"independence\" from linear algebra or probability, saying when two parts of a structure are unrelated given a base.\n- Local character: a condition that every element depends only on a small piece of the structure.\n- Stability (in a cardinal λ): a measure of tameness; roughly, the number of distinct ways to describe objects of size λ is controlled, rather than exploding.\n- Modules and pure submodules: modules are generalized vector spaces over a ring R; a pure submodule is one that respects linear equations with parameters in it.\n- Cardinal arithmetic: the condition λ^(card(R)+ℵ₀) = λ is a size-related assumption about infinite cardinal numbers.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "This paper surveys recent developments on the provability of consistency. For nearly a century, the Unprovability of Consistency Thesis (UCT) has held that sufficiently rich systems, such as Peano Arithmetic (PA), cannot formalize a proof of their own consistency. Recent studies show that the standard G\\\"odelian consistency formula, Con_PA, on which the UCT argument rests, represents a non-equivalent redefinition of the original Hilbertian notion of consistency. We construct a rigorous mathematical proof of the Hilbertian consistency of PA that is formalizable within PA itself, thereby refuting UCT. While G\\\"odelian consistency formulas remain indispensable for comparing the relative strengths of theories, Hilbertian consistency enables internal self-verification. Beyond vindicating Hilbert's consistency program, these findings dismantle the Lucas-Penrose argument and remove perceived logical barriers to self-verifying Automated Theorem Proving and Artificial Intelligence.",
+   "abstract": "We prove that all abstract classes equipped with an independence relation satisfying a mild local character condition are stable. We obtain the result by using methods from model theory and set theory. We have several applications in the context of abstract classes of modules. In particular, we prove that if $K$ is a class of $R$-modules closed under isomorphisms and pure submodules and $\\lambda^{\\operatorname{card}(R) + \\aleph_0} = \\lambda$, then $K$ equipped with pure embeddings is stable in $\\lambda$.",
    "source": "arxiv"
   },
   {

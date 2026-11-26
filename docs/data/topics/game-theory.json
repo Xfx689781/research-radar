@@ -3,50 +3,53 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.33081",
-   "title": "Breaking the Square-Root Barrier for Linear Swap Regret in Polyhedral Games",
-   "url": "https://arxiv.org/abs/2611.33081",
+   "uid": "arxiv:2611.33193",
+   "title": "Formalization, Transparency, and Collusion in Open-Source Game Theory",
+   "url": "https://arxiv.org/abs/2611.33193",
    "authors": [
-    "Vasilis Pollatos",
-    "Alberto Marchesi"
+    "Colomban Duclaux",
+    "Riccardo Formenti",
+    "Pepijn Cobben",
+    "Terry Jingchen Zhang",
+    "Bernhard Sch\\\"olkopf",
+    "Zhijing Jin"
    ],
-   "label": "arXiv:2611.33081v1",
+   "label": "arXiv:2611.33193v1",
    "primary_category": "cs.GT",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives deterministic uncoupled learning dynamics with improved linear swap regret bounds in polyhedral games (T^{1/3} on compact polytopes given by linear inequalities) and an O(n^2 M^4 log T) bound for linear deviations in extensive-form games, linking these deviations to untimed communication with a mediator.",
-    "plain": "The paper studies how players who repeatedly play a game against each other can learn to avoid regret, meaning they cannot gain by systematically remapping their past choices with a simple rule. It considers a broad family of such remappings (all linear or affine ones over each player's set of allowed strategies) and shows that, in certain settings, the regret can grow more slowly than the usual square-root-of-time rate. For sequential games played as trees, it reports a bound that grows only logarithmically with the number of rounds.",
-    "why": "The result matters for the theory of equilibrium learning because it pushes past the standard square-root rate for this class of deviations and ties the deviation class to a concrete communication model (untimed communication with a mediator). Its significance depends on the technical proof, which the text only outlines, so the broader impact is uncertain.",
-    "background": "- Regret: how much better a player could have done in hindsight with a fixed alternative; low regret means play is hard to exploit.\n- Swap regret: regret measured against rules that remap each action to another action; linear and trigger deviations are richer or specific families of such rules.\n- Self-play: all players run learning algorithms against each other.\n- Polytope: a shape with flat faces defined by linear inequalities, used here as each player's strategy set.\n- Extensive-form game: a game played over a branching tree of decisions and information.\n- Square-root barrier: the standard T^{1/2} regret rate, where T is the number of rounds.\n- Mediator / untimed communication: a trusted third party that suggests moves; the paper ties the deviation class to players who can query it in a restricted way.\n- Log-barrier and Gordon fixed point: specialized optimization and fixed-point tools used in the proof; the text gives no detail.",
+    "one_liner": "Formal foundations for open-source game theory (programs that read each other's source code and act on what they can prove about it), including a resolution of an open question about DupocBot and CupodBot via a transposition argument, a Lean 4 mechanization, and an extension to partial transparency tested in Prisoner's Dilemma experiments.",
+    "plain": "The paper looks at what happens when AI programs can see some or all of each other's inner workings, and whether that visibility makes them more likely to secretly cooperate in a harmful way (collusion). The authors build a precise mathematical framework for this setting, check the core proofs with a computer proof assistant, and then study a version where each program sees only part of its opponent's code. In their Prisoner's Dilemma experiments, more visibility led to more cooperation, both in the stable outcomes and in the outcomes selected by the learning dynamics they used.",
+    "why": "The text suggests that limiting how much AI agents can learn about one another could be a lever for alignment protocols, which is a practical concern for oversight of multi-agent systems. How far the Prisoner's Dilemma result carries over to real AI systems is not established by the text, so it should be treated as a model-based finding.",
+    "background": "- Prisoner's Dilemma: a standard game where two players each choose to cooperate or defect; mutual cooperation is good for both but tempting to exploit, and here it stands in for collusion.\n- Open-source game theory: a setting where each player is a program that can read its opponent's code and try to prove facts about how it will behave.\n- Proof system: a fixed set of rules for what counts as a valid proof, here with limits on computation (\"resource-bounded\").\n- Replicator dynamics: a model of how strategies spread over time in a population, based on how well they do.\n- Lean 4: a programming language and proof assistant used to check mathematical proofs by computer.\n- Transposition argument: a proof technique that reuses an argument by swapping the roles of the players or programs.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study linear swap regret in self-play against all affine self-maps of each player's strategy polytope. Efficient adversarial bounds for this class scale as $\\sqrt{T}$. On compact polytopes given by linear inequalities, our deterministic uncoupled dynamics achieve $\\widetilde{\\mathcal{O}}(\\mathrm{poly}(D)T^{1/3})$ cumulative regret, where $D$ is the binary length of the game description. The bound is independent of the number of vertices. In perfect-recall $n$-player extensive-form games with at most $M$ terminal sequences per player, we obtain $\\mathcal{O}(n^2M^4\\log T)$ regret against all linear deviations, extending the logarithmic trigger-regret bound of Anagnostides, Farina, and Sandholm [AFS23]. This class can strictly contain the trigger deviations [FP23] and consists exactly of the deviations implementable by untimed communication (UTC), in which a player interleaves moves with mediator queries along a separate feasible path [ZFS24]. The proof combines optimistic log-barrier learning on a compact matrix lift with stability of the Gordon fixed point, using treeplex geometry in extensive form.",
+   "abstract": "Cooperation among AI agents will undermine alignment protocols when it takes the form of collusion. Under these protocols, agents often have some information about one another, and how much they have may determine whether they collude. Open-source game theory studies the extreme case, in which each program reads its opponent's source code and acts based on what it can prove about it. We develop formal foundations for this theory: we specify a concrete proof system, resolve an open problem concerning DupocBot and CupodBot through a transposition argument, and mechanize the framework in Lean 4; to our knowledge, this is the first mechanization of resource-bounded open-source game theory. We then extend the framework to the more realistic setting of partial transparency, where each program receives only partial information about its opponent. In Prisoner's Dilemma experiments, where mutual cooperation models collusion, greater transparency increases both the cooperation sustainable in equilibrium and the cooperation selected by replicator dynamics. This suggests that controlling how much agents can know about one another matters for alignment protocols.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31866",
-   "title": "The Oracle Is Not Enough: Secure Settlement for Prediction Markets",
-   "url": "https://arxiv.org/abs/2611.31866",
+   "uid": "arxiv:2611.33627",
+   "title": "Welfare-Enhancing Mechanism Design for Agent Ecosystems",
+   "url": "https://arxiv.org/abs/2611.33627",
    "authors": [
-    "Jiayu Liu",
-    "Sen Yang",
-    "Xueyuan Zhao",
-    "Kartik Nayak",
-    "Fan Zhang"
+    "Zitian Guo",
+    "Chen Xu",
+    "Beibei Li",
+    "Chenyan Xiong"
    ],
-   "label": "arXiv:2611.31866v1",
-   "primary_category": "cs.CR",
+   "label": "arXiv:2611.33627v1",
+   "primary_category": "cs.MA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes a layered, stake-backed settlement protocol for heterogeneous prediction markets, proves manipulation is unprofitable for each settled market, and evaluates it on historical Polymarket and UMA data.",
-    "plain": "Prediction markets let people bet on real-world outcomes, and the market must then decide which outcome won so that money can be paid out. This paper asks how to make that decision correctly and at scale, when each market needs different evidence and interpretation and a wrong call can make cheating profitable. The authors combine paid crowdsourcing, voting backed by staked funds, and selective review after settlement, and report that 99% of admitted markets could be settled with modest participation rewards even when verifying them is expensive.",
-    "why": "Settlement is the step where money changes hands, so an error or a manipulable process directly affects users' funds, and the paper gives a formal argument plus an empirical test on real market data. The text does not show how the approach performs outside the Polymarket and UMA data it studies, so its wider applicability is unclear.",
-    "background": "- Prediction market: a market where people trade contracts that pay out depending on whether an event happens; prices are read as forecasts.\n- Settlement: the step that decides the winning outcome and releases the collateral (the money staked).\n- Oracle: an external source or service that reports real-world facts to a blockchain-based system.\n- Crowdsourcing with incentives: paying many participants to report or vote, with rewards for honest answers.\n- Stake-backed voting: voters put up their own funds, which can be lost if they vote dishonestly.\n- Manipulation is unprofitable: a game-theory claim that cheating costs more than it gains.\n- Self-enforcing participation: the rewards are set so that participants have reason to take part and report honestly without outside enforcement.\n- Liveness: the system keeps producing settlements rather than stalling.",
+    "one_liner": "The paper models competition among content agents that optimize their submitted profiles to win selection by a user agent in an agentic web, builds a simulation benchmark (WildRegistry) from real search requests, and proposes DEC, a platform-side credit mechanism that reallocates later opportunities based on recorded delivery outcomes.",
+    "plain": "As AI assistants start choosing which websites or content providers to consult on a user's behalf, those providers have an incentive to polish the descriptions they submit to get picked. The paper simulates this repeated competition and finds that it tends to settle into a state where the selections get worse for users. The authors propose a platform rule that uses records of what was actually delivered to shift later chances toward providers that deliver, and report that this improves the outcome in their simulations.",
+    "why": "It addresses a question likely to matter as AI agent marketplaces grow: how platforms should design rules so that competition for visibility does not degrade what users receive. The text does not show how the approach performs outside the authors' simulation, so its practical reach is uncertain.",
+    "background": "- Agentic Web: a setting where AI agents, rather than people, search and call services for users.\n- Generative Engine Optimization (GEO): techniques for rewriting content so AI search systems cite it more often.\n- Dynamic game under private monitoring: a repeated strategic interaction where players cannot fully see each other's actions or outcomes.\n- Equilibrium: a stable state where no player gains by changing strategy alone; here a \"harmful\" one is named as an approximate rewriting equilibrium.\n- Mechanism design: designing the rules of a system so that self-interested participants produce a desired outcome.\n- Welfare Gain: the paper's summary score of improvement in overall outcome; the text gives +2.01 points without defining the scale.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Prediction markets are becoming an important mechanism for aggregating information and forecasting uncertain real-world events. As they grow in scale and value, reliable settlement becomes critical because settlement determines the winning outcome and allocation of market collateral. Yet many heterogeneous markets require market-specific evidence and interpretation, and incorrect settlement can create direct financial incentives for manipulation. In this paper, we ask how to settle heterogeneous markets correctly and efficiently at scale. We first compare existing settlement designs in their support for heterogeneous markets, reliance on direct operator intervention, and resistance to manipulation, motivating a layered architecture that combines incentivized crowdsourcing with stake-backed voting and selective post-settlement review. Building on this architecture, we develop a stake-backed settlement protocol that provides economic security and settlement liveness under market-specific verification costs. Specifically, we prove that manipulation is unprofitable for every settled market and give two constructions that support sufficient self-enforcing participation with controlled reward expenditure. Using historical Polymarket and UMA data, we evaluate the protocol under real-world conditions. We find that 99% of admitted markets can be settled with modest participation rewards even under high verification costs.",
+   "abstract": "The emerging Agentic Web forms a multi-agent ecosystem: a decentralized service market where the user agent selects which content agents to query from their submitted profiles, before seeing any documents. Profiles therefore become a new target of optimization. Existing Generative Engine Optimization studies how a single supplier rewrites documents the engine can already retrieve, to improve their citation. In the Agentic Web, multiple content agents optimize profiles to compete for limited opportunities to deliver documents. To study this repeated interaction, we build WildRegistry, a simulation framework and benchmark based on a real agentic-search request stream, and model it as a dynamic game under private monitoring. Long-horizon experiments show that this competition lowers website-selection quality and settles at a harmful stable point, which our empirical criterion identifies as an approximate rewriting equilibrium. We therefore design a welfare-enhancing mechanism, DEC (Delivery-Evidence Credit), a platform-side policy that uses recorded delivery outcomes to reallocate later opportunities and reduce information asymmetry. DEC improves this endpoint, raising website-selection quality while preserving most of providers' exposure gains, for a Welfare Gain of +2.01 points and a healthier long-horizon outcome. More broadly, our findings highlight the importance of mechanism design in agent ecosystems: turning recorded delivery outcomes into evidence that endogenously shapes later user-agent selection and content-agent adaptation can steer long-horizon adaptation toward delivered capabilities.",
    "source": "arxiv"
   },
   {

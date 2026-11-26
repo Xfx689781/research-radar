@@ -3,25 +3,55 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31860",
-   "title": "The Effect of Remote Working on Regional Waste: Evidence from South Korea",
-   "url": "https://arxiv.org/abs/2611.31860",
+   "uid": "arxiv:2611.34171",
+   "title": "Rank-size analysis of optimal portfolio weights with a reverse-engineering application",
+   "url": "https://arxiv.org/abs/2611.34171",
    "authors": [
-    "Hyoungchul Kim",
-    "Hee-Seung Yang"
+    "Roy Cerqueti",
+    "Francesco Cesarone",
+    "Alessio Di Paolo",
+    "Valerio Ficcadenti"
    ],
-   "label": "arXiv:2611.31860v1",
-   "primary_category": "econ.GN",
+   "label": "arXiv:2611.34171v1",
+   "primary_category": "q-fin.PM",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Uses the COVID-19 pandemic as a natural experiment to estimate how regional work-from-home eligibility in South Korea changed household waste by material type, finding little change in total waste but shifts toward more plastic and textile waste and less food waste.",
-    "plain": "The paper asks whether working from home changes how much and what kind of trash households produce. It uses the COVID-19 pandemic as a natural experiment, comparing South Korean regions where more jobs could be done remotely with regions where fewer could. Overall household waste barely changed, but the mix shifted: more plastic and textile waste and less food waste in the high-eligibility regions.",
-    "why": "Remote work is now common, and its side effects on resource use and waste are not well measured, so this is a useful piece of evidence on a less-studied effect. The text does not explain the mechanisms in detail, so the link to consumption habits and daily routines is a plausible interpretation the authors suggest rather than something shown here.",
-    "background": "- Work-from-home (WFH) eligibility: the share of jobs in a region that could realistically be done remotely.\n- Natural experiment: a real-world event, here the pandemic, that changed conditions in a way that resembles a controlled trial, letting researchers compare outcomes.\n- Regional waste data: household waste measured by area and by material type (plastic, textile, food, and others).\n- Causal comparison: the study compares high- and low-eligibility regions over time to estimate the effect of remote work, rather than just showing correlation.\n- Only the abstract-level summary is provided; the methods, sample size, and effect sizes are not in the text.",
+    "one_liner": "The paper fits seven rank-size functional forms to sorted optimal portfolio weights from four allocation models (GMV, minimum-CVaR, Risk Parity, Most Diversified Portfolio) on major equity indices, ranks the fits with goodness-of-fit measures plus a relaxed second-order stochastic dominance criterion, and uses the fitted parameters in a Random Forest to infer which model generated a given set of weights.",
+    "plain": "Investment funds split their money across many assets, and the resulting list of percentages has a shape. This paper studies that shape by sorting the weights from largest to smallest and checking which simple mathematical curve describes them best. It then asks whether those curve parameters reveal which allocation rule produced the portfolio.",
+    "why": "The text suggests a compact way to summarise how a portfolio is spread out, which may help compare strategies or spot which rule a manager used. The text does not report how useful this is in practice, so its wider value is unclear.",
+    "background": "- Portfolio weights: the fraction of total money placed in each asset.\n- Rank-size analysis: sorting values from largest to smallest and fitting a curve to the pattern, a technique also used for city sizes and word frequencies.\n- Global minimum-variance, minimum-CVaR, risk parity, most diversified portfolio: four rules for choosing weights to control risk in different ways.\n- Stochastic dominance: a way of ranking distributions; the paper uses a softened version that allows small violations.\n- Random Forest: a machine-learning classifier built from many decision trees.\n- Blocked cross-validation: a testing method that keeps overlapping time windows together so the model is not tested on data it has effectively seen.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "This paper investigates the shape of optimal portfolio weights using rank-size analysis. We consider four portfolio selection models: Global Minimum-Variance (GMV), minimum-CVaR, Risk Parity (RP), and the Most Diversified Portfolio (MDP). For each model, we fit seven rank-size specifications to the sorted portfolio weights generated over rolling windows. To compare the fitted specifications, we combine standard goodness-of-fit measures with Cumulative Second-order $\\varepsilon$-Stochastic Dominance, an $\\varepsilon$-parameterized generalization of Second-order Stochastic Dominance that quantifies the extent to which the exact dominance conditions are satisfied or violated. Empirically applied to major equity indices, this approach provides a systematic criterion for identifying the optimal functional form across diverse market compositions. Furthermore, we address the inverse problem of identifying the generating model from the observed weight structure. We use the calibrated rank-size parameters as inputs to a Random Forest classifier, evaluated by a blocked cross-validation that accounts for the overlap between estimation windows. The parameters separate minimum-risk from risk-diversification strategies and identify the RP and MDP portfolios, whereas the GMV and minimum-CVaR portfolios are difficult to distinguish. These results indicate that rank-size parameters provide a compact and informative description of portfolio allocation geometries.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33584",
+   "title": "How LLM Agents Reshape Financial Knowledge Graphs: A Survey",
+   "url": "https://arxiv.org/abs/2611.33584",
+   "authors": [
+    "Yunbai Zhang",
+    "Heze Ma",
+    "Nan Jiang",
+    "Wenxuan Liu",
+    "Ze Chen",
+    "Yunyi Gao",
+    "Winnie Gao",
+    "Han-Tai Shiao"
+   ],
+   "label": "arXiv:2611.33584v1",
+   "primary_category": "q-fin.GN",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A survey that organizes how LLM agents build, maintain, verify, and query financial knowledge graphs across seven themes, and lists three open questions about evidence sufficiency, downstream updates, and reuse.",
+    "plain": "Financial firms often store facts about companies, people, and deals as a linked web of information called a knowledge graph. This paper reviews studies where AI \"agents,\" which can decide what to search for next and what to double-check, are used to build and keep that web up to date. The authors report that these studies show agents can find evidence a first search missed and can revise records when new information appears. They also say three questions are still open.",
+    "why": "Financial decisions such as risk checks and investment research depend on linked, current data, so how well agents manage that data matters for practice. The text is a survey and does not report new experimental results, so its claims rest on the studies it reviews, and it does not measure how well these systems work in real firms.",
+    "background": "- Knowledge graph: a database of entities (companies, people, transactions) connected by labeled relationships.\n- Large language model (LLM): an AI system trained on text that can read documents and extract facts from them.\n- LLM agent: an LLM that runs in a loop, choosing actions such as searching, checking, or editing records based on what it has found so far.\n- Entity matching / reconciliation: deciding whether two records refer to the same real-world thing.\n- Temporal evolution: how facts change over time, so older records may need correction.\n- Survey: a review of existing studies; it summarizes rather than tests a new method.",
     "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Remote working, or work-from-home (WFH), has become common around the world. However, its broader effects on social welfare, including waste generation, remain understudied. This study examines the impact of remote work on regional waste production in South Korea, using the COVID-19 pandemic as a natural experiment. Overall household waste changed little, but regions with greater WFH eligibility saw increases in plastic and textile waste and a decrease in food waste. These findings suggest that remote work may change consumption patterns and daily routines. Understanding these effects can help inform sustainable work practices and waste management as remote work becomes more widespread.",
+   "abstract": "Financial knowledge graphs (KGs) link information across sources to support risk assessment, investment research, asset recommendations, and forecasting. Large language models (LLMs) help build these graphs by extracting relationships from text and matching entities across records. Yet a workflow may still prescribe which sources to consult and which checks to run. If the chosen sources lack relevant evidence, even accurate extraction can leave a financial question unanswered. LLM agents can adapt the workflow as evidence emerges. They use the graph and earlier findings to decide where to look next, which claims to verify, and whether to update a record for later use. This is the first survey devoted to how LLM agents reshape the construction, maintenance, and use of financial KGs. Our taxonomy covers Knowledge Graph Construction, Temporal Evolution, Verification, Reconciliation, and Admission, Adaptive Acquisition, and Knowledge Graph Usage. We examine how studies evaluate graph quality, agents' use of evidence, financial task outcomes, and reliability over time. These evaluations show that agents can recover evidence missed in an initial search and revise records as new information arrives. Three questions remain unresolved. How can an agent tell whether it has enough evidence for a financial decision? After a record is corrected, how can the agent identify which earlier conclusions need to change? Which relationships and rules can it reuse in a new graph or domain?",
    "source": "arxiv"
   },
   {

@@ -3,47 +3,46 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32784",
-   "title": "Convergence of Implicit Particle Methods for Wasserstein Gradient Flows",
-   "url": "https://arxiv.org/abs/2611.32784",
+   "uid": "arxiv:2611.34456",
+   "title": "Existence of odd-frequency free boundary points in the Signorini problem",
+   "url": "https://arxiv.org/abs/2611.34456",
    "authors": [
-    "Yunhong Deng",
-    "Wilfrid Gangbo",
-    "Li Wang"
+    "Xavier Fern\\'andez-Real"
    ],
-   "label": "arXiv:2611.32784v1",
-   "primary_category": "math.NA",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper proves that implicit JKO time-stepping schemes for Wasserstein gradient flows with nonlinear internal energies converge to the continuum solution when the evolving measure is approximated by N particles (and, for the blob method, when the regularization parameter also vanishes under N ε_N^d → ∞), using Γ-convergence and compactness.",
-    "plain": "This paper studies a way of simulating how a cloud of material spreads out over time, using a large number of particles to stand in for a smooth density. The authors show that, as the number of particles grows, the particle-based computation settles toward the true continuous answer. The hard part is estimating the internal energy, which depends on the density in a nonlinear way and cannot be computed directly from scattered particle positions, so they try three ways of reconstructing the density from the particles.",
-    "why": "Gradient flows in Wasserstein distance model many diffusion-like processes, so a rigorous link between particle simulations and the continuous equation gives the numerical methods a firmer footing. The text presents this as complementing classical dynamical mean-field theory; how far it reaches beyond the stated settings is not something the text details.",
-    "background": "- Probability measure: a way of describing where a population or mass sits; a density is a smooth special case.\n- Wasserstein distance: a way to measure how far apart two distributions are by the cost of moving mass between them.\n- Gradient flow: a continuous evolution that steadily decreases an energy, here in the Wasserstein geometry.\n- JKO scheme: a time-discretization where each step minimizes energy plus a transport-distance penalty.\n- Particle approximation: replacing a continuous distribution with N point masses.\n- Internal energy: a functional (for example, entropy-like) of the density that drives diffusion.\n- Γ-convergence: a notion of convergence for minimization problems that guarantees minimizers converge to minimizers of the limit.\n- Blob method: smoothing particles with a kernel of width ε to reconstruct a density.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "In this paper, we establish the convergence of implicit particle methods for Wasserstein gradient flows as the number of particles tends to infinity, with the time step held fixed. The schemes combine the Jordan--Kinderlehrer--Otto (JKO) variational time discretization with particle approximations of the evolving probability measure. The main challenge lies in approximating the internal energy, which depends nonlinearly on the probability density and cannot, in general, be evaluated directly on empirical measures. We consider three approaches: a one-dimensional density reconstruction based on the spacings between ordered particles; a blob method using kernel-based density reconstruction; and a transport-map formulation in which the density is recovered from the pushforward relation through the change-of-variables formula. The latter two approaches apply in arbitrary spatial dimensions without requiring the spatial domain to be compact. For the blob method, we also establish simultaneous convergence as the particle number tends to infinity and the regularization parameter vanishes, under the scaling $N\\varepsilon_N^d\\to\\infty$. Our analysis combines $\\Gamma$-convergence and compactness arguments to establish convergence of the discrete variational problems and their minimizers. These results complement classical dynamical mean-field theory by providing a variational particle-to-continuum limit for implicit JKO schemes involving nonlinear internal energies.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32870",
-   "title": "Finite-time blowup in the inviscid GOY and Sabra models",
-   "url": "https://arxiv.org/abs/2611.32870",
-   "authors": [
-    "Taehun Kim"
-   ],
-   "label": "arXiv:2611.32870v1",
+   "label": "arXiv:2611.34456v1",
    "primary_category": "math.AP",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper constructs finite-time blowup of vorticity amplitudes in the inviscid GOY and Sabra shell models, stable under small perturbations, using a travelling wave of renormalized equations, a modulation argument, and computer-assisted interval arithmetic.",
-    "plain": "The paper studies simplified mathematical models of fluid turbulence, where a quantity that measures spinning motion (vorticity) could in principle grow without bound in a finite time. The authors build initial conditions for which the vorticity amplitudes become infinitely large at a set time, growing at a self-similar rate, and show this behaviour survives small changes to the starting state. Parts of the argument are checked by computer using rigorous interval arithmetic.",
-    "why": "Whether ideal (inviscid) fluid flow can develop singularities in finite time is a central open question in fluid mathematics, so results on simplified shell models are a test bed for ideas that might later apply to the full equations. The text does not claim any direct consequence for the Navier-Stokes or Euler equations, and the connection is uncertain.",
-    "background": "- Shell models: simplified turbulence models that keep only a sequence of energy levels (\"shells\") with couplings between neighbouring shells, instead of full 3D fluid flow.\n- Inviscid: no viscosity (no friction-like internal damping).\n- Vorticity: a measure of local spinning in a fluid.\n- Blowup: a solution whose size becomes unbounded in finite time.\n- Self-similar rate (T-t)^{-1}: the growth speed is set by the time remaining until the blowup time T, with the same shape at each scale.\n- Travelling wave: a solution that keeps its shape while moving at constant speed in a suitable rescaled frame.\n- Modulation argument: correcting for known symmetries (time shifts, phase shifts) at each step so the remaining error shrinks.\n- Computer-assisted proof: rigorous numerical verification using interval arithmetic, which tracks guaranteed error bounds.",
+    "one_liner": "The paper constructs a solution to the Signorini (obstacle-type) problem with a free boundary point of frequency 3, settling the open question of whether odd-frequency free boundary points exist.",
+    "plain": "The paper studies a mathematical model where a surface is pressed against an obstacle, and the boundary between contact and non-contact regions can have a complicated shape. Researchers had classified the possible boundary points by a number called \"frequency,\" and one class (odd frequencies at full-density points) had never been shown to actually occur. The authors build an explicit solution that has a boundary point of frequency 3, showing that this class is not empty.",
+    "why": "Settling whether a predicted type of singular point exists completes a known classification and tests how far existing structure theory reaches. The text does not indicate applications beyond this theoretical question, so its wider significance is uncertain.",
+    "background": "- Signorini problem: a boundary-value problem where a function must stay above an obstacle, and is either touching it or free, with a free boundary separating the two.\n- Free boundary: the interface between the contact set and the non-contact set.\n- Frequency: a number measuring how the solution grows or behaves near a boundary point; it is a scaling-type index, and only certain values are possible.\n- Density: a measure of how much of a small ball around a point is occupied by the contact or non-contact set; zero density and full density are the two extreme cases referred to.\n- Half-integer, even, and odd frequencies: the three classes of free boundary points the classification allows; the paper concerns the odd class.\n- Regularity: how smooth the free boundary is; known results cover structure of each class.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "For the inviscid GOY and Sabra shell models with zero boundary conditions at the lowest shells, we construct strong solutions with finitely supported initial data whose vorticity amplitudes blow up in the supremum norm in finite time, at the self-similar rate $(T-t)^{-1}$. The blowup is stable under small perturbations of the initial data in the same norm, including complex-valued ones. Guided by the work of Mailybaev, we use a travelling wave of the renormalized equations to obtain blowup in the original variables. We construct such a wave for the equations extended to all integer shells, decaying in both directions. We then show that the dynamics near this wave contract once the directions generated by time-translation and phase symmetries are removed by adjusting the symmetry parameters at each step (a modulation argument). This yields blowup solutions on the positive shells satisfying the original boundary conditions. Computer-assisted interval arithmetic is used to establish the existence of the travelling wave and the contraction estimate needed for the modulation argument.",
+   "abstract": "Up to a lower-dimensional set, the free boundary of the Signorini problem consists of points with frequency that is half-integer, even (at zero density points), or odd (at full density points). Surprisingly, despite extensive work on the structure and regularity of each of these sets, the existence of odd-frequency free boundary points has remained open. In this paper, we construct a solution with a free boundary point of frequency 3.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33800",
+   "title": "Critical exponent for Nakao's problem in three space dimensions",
+   "url": "https://arxiv.org/abs/2611.33800",
+   "authors": [
+    "Vladimir Georgiev",
+    "Kosuke Kita"
+   ],
+   "label": "arXiv:2611.33800v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper finds the sharp exponent condition in three space dimensions separating global existence of small-data solutions from finite-time blow-up for a damped wave equation coupled to a wave equation (Nakao's problem), using weighted pointwise estimates and test-function arguments.",
+    "plain": "The paper studies a pair of coupled equations that describe how waves and damped (smeared-out, friction-like) motion can feed into each other in three-dimensional space. It asks for which strengths of the nonlinear coupling a small starting disturbance keeps evolving smoothly forever, and for which strengths even tiny starting disturbances can blow up in finite time. The authors identify the exact boundary between these two behaviours.",
+    "why": "Knowing exactly where the line falls between \"stays bounded\" and \"blows up\" is the kind of sharp answer that mathematicians look for in nonlinear wave models. The text does not say how it connects to applications beyond this class of equations, so any wider relevance is unclear from the text alone.",
+    "background": "- A \"wave equation\" describes vibrations and signals that travel at a finite speed, like sound or light fronts.\n- A \"damped\" wave equation includes friction, so its behaviour at late times looks more like diffusion or heat spreading.\n- \"Semilinear\" means the nonlinear term is a power of the unknown function, and the exponents of these powers decide the outcome.\n- \"Global existence\" means a solution exists for all time; \"finite-time blow-up\" means it becomes infinitely large in a finite time.\n- \"Critical exponent\" is the threshold value of such a power that separates the two behaviours.\n- \"Pointwise estimates\" are bounds on the solution at each individual point, with weights that track how it spreads in space.\n- \"Test functions\" are auxiliary smooth functions used to derive integral inequalities that a blowing-up solution cannot satisfy.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study a system consisting of a semilinear damped wave equation coupled to a semilinear wave equation in three space dimensions. We determine the sharp condition on the exponents of nonlinear terms that separates global existence for sufficiently small initial data from finite-time blow-up even for arbitrarily small data satisfying suitable positivity assumptions. To prove global existence, we combine a weighted pointwise estimate for the damped wave equation, which we established in earlier work, with a new one for the wave equation. The new pointwise estimate for the wave equation uses a combination of a parabolic weight and a light-cone weight. For the proof of blow-up, pointwise lower bounds are compared with integral upper bounds obtained by test functions. In the main estimates, explicit physical-space representations reveal how forcing near the wave cone influences the damped component on parabolic spatial scales and, in turn, the wave component inside the cone.",
    "source": "arxiv"
   },
   {

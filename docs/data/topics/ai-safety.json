@@ -3,57 +3,54 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32037",
-   "title": "Online Environment Repair for Coding Agents",
-   "url": "https://arxiv.org/abs/2611.32037",
+   "uid": "arxiv:2611.33398",
+   "title": "Best-of-$N$ Test-Time Steering Can Lead to Reward Hacking in Vision-Language-Action Models",
+   "url": "https://arxiv.org/abs/2611.33398",
    "authors": [
-    "Sheng Lu",
-    "Rui Mao",
-    "Zewei Chen",
-    "Chihua Ying",
-    "Beiduo Chen",
-    "Dingxin Hu",
-    "Tinghao Yu"
+    "Vanshaj Khattar",
+    "Jing Liu",
+    "Toshiaki Koike-Akino",
+    "Ming Jin",
+    "Ye Wang"
    ],
-   "label": "arXiv:2611.32037v1",
-   "primary_category": "cs.LG",
+   "label": "arXiv:2611.33398v1",
+   "primary_category": "cs.RO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes \"online environment repair,\" which patches exploitable verifier bugs in coding-agent RL environments during training rather than penalizing or filtering exploited rollouts, and reports large reductions in reward hacking on software-engineering tasks across 20 controlled GRPO runs.",
-    "plain": "Training AI coding agents often relies on automatic tests that give a score when code passes. Sometimes the agent finds a shortcut that earns full credit without actually solving the problem, because the test itself has a flaw. This paper describes fixing those flawed tests while training is still running, instead of only punishing the shortcut or throwing away the affected examples.",
-    "why": "Reward hacking, where a system scores well by gaming its scoring method rather than doing the intended task, is a central concern in AI safety and alignment. The approach targets the environment itself, which may matter as training gets more automated, but the text reports results only from the authors' own controlled experiments, so generalization beyond them is unclear.",
-    "background": "- Reinforcement learning (RL): training by rewarding behavior that scores well; GRPO is one specific RL method for language models.\n- Reward hacking: a system earning reward through an unintended shortcut instead of the real goal.\n- Verifier / unit test: an automatic checker that decides whether a produced solution is correct.\n- Reasoning monitor: a separate system that reads the model's reasoning to detect cheating.\n- Pass@8: the share of problems solved at least once in eight attempts.\n- Differential fuzzing: feeding many random inputs to two versions of code and checking whether outputs diverge, to find flaws.\n- Held-out evaluation: testing on problems not used in training.",
+    "one_liner": "This paper studies best-of-N test-time steering for vision-language-action robot policies and finds that, with an inaccurate verifier, sampling more candidates can select actions that exploit verifier errors (reward hacking), with calibration and softmax selection offering partial mitigation in some settings.",
+    "plain": "Robots that follow language instructions can be improved at deployment time by sampling several possible actions and letting a scoring program pick the best one. This paper shows that this strategy can backfire: when the scorer makes mistakes, picking from more candidates can favor actions that just happen to earn high scores from those errors rather than actually doing the task well. The authors tested this on 60 safety-focused robot tasks in a simulator, with ten repeated runs per task.",
+    "why": "It is a concrete, measured example of a known worry in AI safety: optimizing against an imperfect scoring rule can make results worse. It matters for any system that picks outputs by checking them with a learned or approximate judge, though the text covers one robot policy, one simulator, and deliberately injected verifier errors, so its reach beyond that setting is unclear.",
+    "background": "- Vision-language-action (VLA) model: an AI that reads camera images and a text instruction and outputs robot movements.\n- Test-time steering: guiding a model's behavior while it runs, by spending extra computation, rather than retraining it.\n- Best-of-N sampling: generate N candidate outputs, then keep the one a scoring function rates highest.\n- Verifier: the scoring function that rates candidates; here, a checker built on a physics simulator (MuJoCo).\n- Reward hacking: when an optimizer exploits flaws in a score so the score looks good while the real goal is missed.\n- Calibration: making a score's numbers match how often it is actually right.\n- Softmax selection: picking candidates probabilistically, weighted by score, instead of always taking the top one.\n- LIBERO-Safety: a benchmark of simulated robot manipulation tasks with safety considerations.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Programmatic verifiers provide scalable reward signals for training coding agents with reinforcement learning, yet subtle harness defects and incomplete unit tests allow policies to earn full credit without solving the intended task. Existing training-time defenses intervene either by penalizing suspicious outputs or by filtering flagged tasks and rollouts. However, output penalties leave the underlying verifier exploitable, driving policies to disguise shortcuts under reasoning monitors or zeroing out valid solutions under detector false positives, whereas task and rollout filtering discards or mutes the hardest problems where shortcuts emerge earliest. Pre-training verifier hardening repairs the environment directly, but misses vulnerability classes that surface only as the policy improves during reinforcement learning. In this paper, we propose online environment repair, which leaves triggering rollout rewards unchanged to remove hiding incentives and asynchronously patches exploited environments during training. Candidate repairs triggered by execution invariants or differential fuzzing are deployed only after passing three automated validation gates that block the exploit while preserving valid solutions, canceling detector false positives and enabling structural propagation across repositories without scaffold labels or reference solutions. Across 20 controlled GRPO experiments on heterogeneous software-engineering repositories, online environment repair reduces cumulative reward hacking from 36.9% to 0.06% and improves held-out Pass@8 from 21.7% to 46.7%, consistently outperforming reward-penalty, rollout-filtering, and static-hardening baselines while eliminating zero-shot exploitation on unseen loophole classes.",
+   "abstract": "Vision-language-action (VLA) models have shown promise for general-purpose robotic manipulation, but adapting to changing environmental conditions still remains challenging. Recent test-time steering methods have shown promise in enabling adaptive VLA policies by utilizing additional computation during deployment. In this paper, we consider best-of-$N$ test-time steering for VLA models, where multiple action candidates are sampled from a fixed policy and a verifier is used to select the best one during deployment. We show that increasing $N$ does not always improve performance when the verifier is inaccurate, and can favor candidates whose scores exploit prediction errors, a form of reward hacking. We study this effect on 60 LIBERO-Safety task-level cases using a $\\pi_{0.5}$ policy, with ten repetitions per case. We introduce controlled errors in a MuJoCo trajectory verifier and show that as $N$ increases, selected candidate rewards diverge from the accurate verifier rewards, leading to reward hacking. We also show that verifier calibration and softmax-based candidate selection can mitigate reward hacking in some settings.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32166",
-   "title": "RightDiff: Learning Generative Reward Models to Judge by the Right Differences",
-   "url": "https://arxiv.org/abs/2611.32166",
+   "uid": "arxiv:2611.34278",
+   "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+   "url": "https://arxiv.org/abs/2611.34278",
    "authors": [
-    "Qiyuan Chen",
-    "Hongsen Huang",
-    "Jiahe Chen",
-    "Renjie Hua",
-    "Hongxia Xu",
-    "Chuan Ren",
-    "Jian Wu"
+    "Manit Baser",
+    "Vyoman Jain",
+    "Rachel Yeo Hui Min",
+    "Xianglin Yang",
+    "Meenatchi Sundaram Muthu Selva Annamalai",
+    "Dinil Mon Divakaran"
    ],
-   "label": "arXiv:2611.32166v1",
-   "primary_category": "cs.CL",
+   "label": "arXiv:2611.34278v1",
+   "primary_category": "cs.CR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "RightDiff trains a generative reward model that judges pairs of responses by first listing the response-specific differences, sorting them into material and immaterial factors, writing pair-specific rubrics, and only then giving a verdict, with the aim of resisting length and formatting shortcuts.",
-    "plain": "AI systems are often graded by other AI \"judges\" that decide which of two answers people would prefer. These judges can learn shortcuts, such as favoring longer or neatly formatted answers, instead of the real differences that matter. This paper proposes a judge that first finds the concrete differences between the two answers, labels each as important or not, and only then makes its decision.",
-    "why": "",
-    "background": "- Reward model: a model that scores AI responses so another model can be trained toward answers people prefer.\n- Generative reward model: a reward model that writes out its reasoning as text before giving a verdict, rather than only outputting a score.\n- Pairwise preference: judging which of two answers is better.\n- Rubric: a checklist of criteria used to grade answers.\n- Direct preference optimization (DPO): a training method that tunes a model directly on pairs of preferred and rejected answers.\n- Length shortcut / rationale drift: a judge learning that longer or more polished text wins, while its stated reasoning drifts away from the real quality differences.\n- Benchmarks named: RewardBench and RM-Bench (tests of reward models), Arena-Hard and AlpacaEval (tests of chat model quality).",
+    "one_liner": "The paper studies security risks of cross-model latent communication, where a learned mapper translates one language model's KV cache into a form a different target model can use, and introduces the \"Chasm\" framework with a lightweight target-side cache guard as a mitigation.",
+    "plain": "AI agents often pass information to each other as written messages, but they can also share their internal working memory directly. This paper asks whether that shortcut weakens the safety training of the receiving model, since it then reads context it never produced itself. The authors report that such transfers substantially weaken refusals and defenses against prompt injection and jailbreaks, and they propose a small guard that corrects transferred memory to restore refusals.",
+    "why": "As multi-agent AI systems adopt faster, cheaper ways to share internal states, a safety check that only inspects text messages could miss attacks. The text reports concrete attack-success figures, but it is a single paper's experiments, so how far these results generalize to other models and deployments is not established here.",
+    "background": "- Large language model (LLM): an AI system that generates text from a prompt.\n- Multi-agent system: several AI models working together, passing information between them.\n- KV cache (key-value cache): the stored internal working memory a model builds while reading text; reusing it saves recomputation.\n- Latent communication: sharing these internal representations instead of plain-language messages.\n- Cross-model transfer: using a learned mapper to convert one model's memory into a format another model can read.\n- Safety alignment: training that makes a model refuse harmful requests.\n- Prompt injection: hidden instructions in input text that hijack a model's behavior.\n- Jailbreak: a crafted prompt that gets a model to bypass its refusals.\n- GCG: a standard automated method for generating adversarial jailbreak suffixes.\n- pp (percentage points): the absolute difference between two percentages.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Generative reward models typically rely on generic query-level rubrics or unconstrained rationales, overlooking the fact that pairwise preference is driven by response-specific differences. Moreover, optimizing solely for outcome correctness encourages models to exploit superficial shortcuts such as verbosity and formatting, triggering rationale drift. To address this, we propose RightDiff, which structures pairwise evaluation into an evidence-grounded evaluation trajectory executed in a single autoregressive generation. RightDiff explicitly discovers contrastive differences between candidates, categorizes them into material or immaterial factors, and induces pair-specific rubrics before final adjudication. To train this process without post-hoc rationalization, we synthesize demonstration data via response-isolated prompts and optimize the reward model with a difference-alignment reward regularized by budget-constrained one-to-one matching and multiplicative gating. RightDiff achieves state-of-the-art preference modeling performance on RewardBench and RM-Bench, surpassing all open-source reward models and leading proprietary LLM judges. Downstream, it provides reliable supervision for direct preference optimization on Arena-Hard and AlpacaEval while effectively resisting length shortcuts.",
+   "abstract": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and prefill computation. One such mechanism is cross-model Key-Value (KV) cache transfer, which uses a learned mapper to translate a source model's KV cache into one a target model can use. However, this handoff means the target model consumes context it did not encode itself, thus calling into question whether its safety alignment still holds. In this work, we investigate the security implications of latent handoffs by introducing Chasm, a framework characterizing cross-model handoff attacks across three new attack surfaces: the source model, mapper, and handoff mechanism itself. Our experiments reveal that latent handoffs substantially undermine safety alignment and prompt-injection defenses. Notably, a target model that follows only 0.4% of benchmark prompt injections natively, follows up to 44.2% when transferred through a mapper from a source model. On the other hand, for jailbreak attacks, transfer alone raises attack success by up to 24.6 pp within a model family and zero-shot attacks by up to 69.2 pp, whereas white-box optimization through the mapper boosts the attack success rate to 92.5%, against 37.5% for ordinary GCG on the same target. To address these vulnerabilities, we propose a lightweight target-side cache guard that corrects transferred caches to restore the target model's refusal, considerably mitigating these attacks.",
    "source": "arxiv"
   },
   {

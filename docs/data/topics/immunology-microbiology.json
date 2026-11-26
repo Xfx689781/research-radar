@@ -3,6 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.26.769370",
+   "title": "A tricomponent mRNA pertussis vaccine elicits superior protective immunity over licensed acellular pertussis vaccine against emerging antibiotic-resistant variants",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.26.769370v1",
+   "authors": [
+    "Zhang, W.",
+    "Che, J.",
+    "Wang, G.",
+    "Wang, J.",
+    "Qin, S.",
+    "Dai, H.",
+    "Ma, J.",
+    "Meng, J.",
+    "Shao, X.",
+    "Guo, K.",
+    "Di, Z.",
+    "An, Q.",
+    "Xiao, P.",
+    "Zhuang, S.",
+    "Gao, X.",
+    "Yang, Y.",
+    "Ma, X.",
+    "Yuan, L.",
+    "Zhang, M.",
+    "Wang, L.",
+    "Shao, Z.",
+    "Lin, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.26.769370 v1",
+   "primary_category": "microbiology",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "A preclinical study in mice reporting that a three-antigen, lipid-nanoparticle-delivered mRNA pertussis vaccine (mPervax) produced stronger Th1 T-cell, Tfh and antibody responses than the licensed acellular vaccine Boostrix and protected against the reference strain and PRN- or FHA-deficient clinical isolates.",
+    "plain": "Whooping cough (pertussis) has been coming back in many countries, partly because the current acellular vaccine may not give long-lasting, strong protection and bacteria are changing. In this study, researchers built an experimental mRNA vaccine that carries instructions for three pertussis proteins, packaged in fat-bubble particles like those used in some COVID-19 vaccines. In mice, it triggered stronger immune responses than the licensed Boostrix vaccine and protected better against bacterial challenge, including against bacterial strains that lack some of the targeted proteins.",
+    "why": "Pertussis resurgence is a real public health concern, and the paper suggests that mRNA could be a route to better vaccines that still work when bacteria lose a vaccine target. Because the evidence comes from mice and a single comparison with one licensed vaccine, it is an early signal rather than proof that the vaccine would work better in people.",
+    "background": "- Pertussis (whooping cough) is a highly contagious respiratory infection caused by the bacterium Bordetella pertussis.\n- Acellular pertussis vaccines (aPV) use purified bacterial proteins rather than whole killed bacteria; Boostrix is a licensed combined tetanus-diphtheria-pertussis vaccine used as the comparator.\n- mRNA vaccines deliver a genetic message that cells use to make a target protein, which the immune system then learns to recognise; lipid nanoparticles (LNPs) are the fatty carriers that protect the mRNA.\n- The three antigens here are inactivated pertussis toxin subunit 1 (PTS1), truncated filamentous hemagglutinin (FHA) and pertactin (PRN).\n- Th1 and Tfh cells are types of helper T cells that support strong antibody and cell-mediated responses; Th1 is linked to protection against intracellular or respiratory bacteria.\n- Maternal antibody protection means antibodies passed from mother to offspring; \"challenge\" means exposing animals to live bacteria to test protection.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Pertussis remains a major global health burden and has been resurging rapidly over the past decade. The causes of pertussis re-emergence are multifactorial, including vaccine-induced pathogen evolution, antimicrobial resistance, and crucially suboptimal protective immunity elicited by the widely used acellular pertussis vaccine (aPV). In this study, we developed a tricomponent mRNA pertussis vaccine formulated with lipid nanoparticle (LNP), designated mPervax, which encodes inactive pertussis toxin subunit 1 (PTS1), truncated filamentous hemagglutinin (FHA) and pertactin (PRN). Compared to a commercialized Tetanus-diptheria-pertussis vaccine Boostrix, mPervax induced stronger and broader innate immune activation, superior antigen-specific Th1-type CD4+ T and Tfh cell responses, and robust B. pertussis-specific antibody responses with remarkably increased magnitude and functionality. In addition, mPervax conferred an efficient maternal antibody-mediated protection in offspring mice and reshaped the immune profile established by primary Boostrix immunization towards a Th1-phenotype when used as a heterologous booster. Furthermore, upon bacterial challenge, mPervax outperformed Boostrix not only against the WHO reference strain 18323, but strikingly provided effective protection against emerging antibiotic-resistant clinical isolates that are deficient in PRN and/or FHA. Collectively, these data demonstrate that the mRNA pertussis vaccine is superior to Boostrix in multiple contexts, and therefore holds promise for next-generation pertussis vaccine development.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.23.768741",
    "title": "Testing the impact of gut microbiome rewilding on the health of captive bumble bees",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768741v1",
@@ -16,38 +58,13 @@
    "date": "2026-11-26",
    "summary": {
     "one_liner": "Experimental test of whether inoculating captive Bombus impatiens colonies with wild-derived environmental gut bacteria (\"microbiome rewilding\") improves survival, reproduction, nutrition, or resistance to an opportunistic pathogen, finding no benefit from the environmental bacteria tested.",
-    "plain": "Bumble bees raised in captivity lose much of the variety of bacteria found in their guts in the wild. This study tried adding back five wild-collected bacterial species to lab colonies to see whether that restores health. Adding them did not change survival, egg-laying, or fat and sugar stores, and one bacterium, Arsenophonus, did not protect against a pathogen, while gut material from captive bees did.",
-    "why": "Captive breeding is common for pollinators and other animals used in farming, conservation and research, so a way to restore lost gut microbes could matter for their health. The result that adding wild bacteria did not help suggests that rewilding is not a simple fix, and that which microbes are added may matter more than diversity alone; the text does not establish how general this is beyond this bee species.",
-    "background": "- Animal \"microbiome\": the community of bacteria living in the gut, which can affect digestion, nutrition, and disease resistance.\n- Captivity tends to reduce microbial diversity, and \"rewilding\" means deliberately restoring microbes found in wild animals.\n- Bumble bees (Bombus) are wild pollinators important for crops and ecosystems; colonies are often kept in labs or raised commercially.\n- Core bacteria are the host-specific microbes that captive bees keep; environmental bacteria are those picked up from the outside world.\n- Arsenophonus is a bacterial genus that colonized captive bees at the highest rate among the tested environmental bacteria.\n- An opportunistic pathogen is a microbe that causes disease mainly when the host's defenses are weak.\n- Glycogen and lipids are stored energy reserves measured as indicators of nutritional health.",
+    "plain": "Bumble bees raised in captivity lose much of the variety of microbes they would normally carry from the wild. This study tried adding five wild-collected bacterial species back into captive bee colonies to see whether that restores health. Adding them did not change survival, egg-laying, or energy stores, and one of them, Arsenophonus, did not protect bees from a harmful bacterium, while gut material from captive bees did.",
+    "why": "Captive rearing is common for crops, conservation, and research, so a simple way to restore lost microbes would be useful. The result shows that putting wild microbes back does not automatically help, which suggests that which microbes are restored matters. The text does not establish how these findings would transfer to other species.",
+    "background": "- The gut microbiome is the community of microbes living in an animal's digestive tract.\n- Captivity tends to reduce microbial diversity, which may affect nutrition, disease resistance, and reproduction.\n- \"Rewilding\" means deliberately restoring microbes found in wild animals.\n- Bumble bees (Bombus) are important wild and crop pollinators, and colonies are often reared in captivity.\n- \"Core\" bacteria are host-specialized microbes that persist in captive bees; environmental bacteria are those picked up from the outside world.\n- Opportunistic pathogens cause disease mainly when the host's defenses are weak or the microbial balance is disrupted.\n- Glycogen and lipids are stored energy reserves in the body.",
     "difficulty": "intermediate",
     "ai": true
    },
    "abstract": "Animals and plants are often raised in captivity for food, companionship, conservation, or research purposes, a practice which typically reduces the diversity of their microbiomes. This loss of microbial diversity may in turn compromise host nutrition, pathogen resistance, and reproduction. Microbiome \"rewilding\"--restoring microbes present in the wild, but lost in captivity--has been proposed as a way to ameliorate these effects. However, it has only been tested in a handful of taxa. We evaluated the efficacy of microbiome rewilding in bumble bees (Bombus), a group of ecologically and agriculturally important pollinators. In captivity, bumble bees retain host-specialized \"core\" gut bacteria, but lack the diverse environmental bacteria commonly present in the gut of wild bees. We inoculated captive B. impatiens colonies with five species of environmental bacteria isolated from wild B. impatiens. Rewilding did not affect bee survival, reproduction, or nutrition (glycogen or lipid levels). We conducted a second experiment with Arsenophonus, the environmental bacterium exhibiting the highest colonization rate in captive bees, to test its role in resistance against an opportunistic bacterial pathogen. While inoculation with gut material from captive bees (which is dominated by core bacteria) completely protected hosts from pathogen infection, Arsenophonus inoculation had no effect. These findings demonstrate that microbiome rewilding is not always effective for sustaining the health of captive hosts.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.21.768310",
-   "title": "Oral microbiome and DNA virome profiling in pigs reveals age-associated dynamics and extracellular recovery of Streptococcus suis-associated phage lineages",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.21.768310v1",
-   "authors": [
-    "Osei, E. K.",
-    "Ornelas, M. A. S.",
-    "Garcia Manzanilla, E.",
-    "Mahony, J.",
-    "Kenny, J. G."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.21.768310 v1",
-   "primary_category": "microbiology",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "Shotgun metagenomic profiling of oral fluids from pigs on 15 Irish farms, with paired bulk and virus-like-particle enrichment, mapping age-linked succession of oral bacteria and DNA viruses and identifying 26 candidate phages predicted to infect Streptococcus suis.",
-    "plain": "Researchers looked at the microbes and viruses living in the mouths of pigs as they grow older, using samples from 15 commercial farms in Ireland. They found that both the bacterial and viral communities change in a fairly predictable order as pigs age, and that most of the viruses they detected could not be matched to a known group. They also identified 26 viruses that are predicted to attack Streptococcus suis, a pig pathogen, which the authors describe as the first catalogue of such phages from pig oral environments.",
-    "why": "Pig herd health depends partly on what microbes are carried and passed between animals, and bacteriophages (viruses that infect bacteria) are being studied as possible tools for targeting disease-causing bacteria. The work is a descriptive survey, so it suggests possible routes to phage discovery and microbiome-based interventions but does not itself show that any of these phages would work as treatments.",
-    "background": "- Microbiome: the community of bacteria and other microbes living in a body or environment.\n- Virome: the community of viruses in a sample; here DNA viruses only.\n- Shotgun metagenomics: sequencing all the DNA in a sample at once and matching it to reference databases.\n- Virus-like particles (VLP) enrichment: a lab step that concentrates virus particles so they can be studied separately from bacteria.\n- vOTU (viral operational taxonomic unit): a cluster of similar viral sequences treated as one viral \"species\" for counting.\n- Bacteriophage (phage): a virus that infects bacteria; phages are studied as possible alternatives to antibiotics.\n- Streptococcus suis: a bacterium that causes disease in pigs and can occasionally infect people.\n- Weaning: the point when piglets move off mother's milk to solid feed, a major dietary change.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The pig oral cavity is a critical interface for microbial transmission and herd health monitoring, yet its microbiome and virome remains poorly characterised. We performed shotgun metagenomic sequencing of oral fluids from pigs across 15 commercial farms in Ireland, using paired bulk and virus-like particles (VLP) enrichment to capture comprehensive microbial and DNA virome diversity. Microbial communities shifted progressively with age, with early post-weaning animals enriched in environmental genera such as Pseudomonas and Staphylococcus and later stages dominated by lactic acid bacteria and anaerobes. Only 20.6% of vOTUs could be assigned to a known genus, with the most abundant being Astrithrvirus, which increased with age. Both microbiome and DNA virome exhibited predictable, coordinated age-associated succession with strong cross-domain coupling supported by virus-host networks. Functional profiling of the microbiome revealed that predicted carbohydrate substrates tracked the dietary transitions, while accessory viral functions partitioned by lifestyle and host. The early post-weaning stage was characterised by high abundance of viral integration and excision functions, as well as elevated resistome diversity that was almost exclusively of prokaryotic origin rather than viral. Importantly, 26 of the 25,223 vOTUs identified were predicted to target Streptococcus suis, providing the first metagenomic catalogue of such phages from pig oral environments. These findings expand our understanding of oral microbiome-virome dynamics and establish a framework for integrated microbiome and viromics approaches that could enable therapeutic phage discovery and inform microbiome-targeted interventions in pig production systems.",
    "source": "biorxiv"
   },
   {

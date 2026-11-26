@@ -3,51 +3,50 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.22.767446",
-   "title": "Species turnover dominates plant trait variation along continental climate gradients",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.767446v1",
+   "uid": "biorxiv:10.64898/2026.11.23.767764",
+   "title": "Resonance-organized phase-locking, extinction and phase-dependent rescue in periodically forced populations with delayed Allee effects",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.767764v1",
    "authors": [
-    "Britton, T. G.",
-    "Towers, I.",
-    "Falster, D. S.",
-    "Wiliams, L. J.",
-    "Gallagher, R. V.",
-    "Wright, I. J."
+    "Sun, J.",
+    "Guichard, F.",
+    "Humphries, A. R."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.22.767446 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.23.767764 v1",
    "primary_category": "ecology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Partitioning plant trait variation along Australian precipitation and temperature gradients (seven traits, 1867 taxa) into among-species turnover versus within-species adjustment, finding turnover dominant and within-species adjustment stronger in non-woody taxa.",
-    "plain": "Plants growing in wetter or hotter places often differ in traits such as leaf size, wood density and seed mass. This study asks how much of that difference comes from different species replacing one another across climates, and how much comes from individual species changing their traits to suit local conditions. Using data on seven traits and 1867 plant types from across mainland Australia, the authors found that swapping species was the main driver, especially for wood density and seed mass.",
-    "why": "Knowing whether plant communities change mainly by species replacement or by individual plants adapting in place affects how well we can forecast vegetation and ecosystem function under climate change. The text does not show how these findings compare with other regions or models, so their wider reach is not established here.",
-    "background": "- Plant functional traits: measurable features such as leaf traits, wood density and seed mass that relate to how a plant grows and survives.\n- Climate gradients: steady changes in rainfall or temperature across a landscape.\n- Species turnover: the replacement of one species by another with different trait values as conditions change.\n- Within-species adjustment (trait plasticity or local adaptation): the same species changing its traits across environments.\n- Woody vs non-woody taxa: trees and shrubs versus herbs and grasses, which differ in stem structure.\n- Variance partitioning: a statistical way of splitting total variation into separate sources.",
+    "one_liner": "A numerical study of a periodically forced Hutchinson-type population model with delayed density regulation and a strong Allee effect, mapping how forcing frequency and amplitude, resonance, Hopf-driven oscillations, and phase-dependent rescue shape extinction risk.",
+    "plain": "This paper asks when a population that is hit by repeating environmental swings (such as seasonal changes) is most likely to die out. The authors ran computer simulations of a population model in which individuals struggle when numbers are too low (a strong Allee effect) and growth responds to past conditions with a time lag. They report that extinction is most sensitive when the environmental rhythm matches the population's own natural oscillation, and that some populations recover only when the timing of their dip relative to the environmental cycle is favorable.",
+    "why": "Extinction risk under changing environments is a central question in conservation, and the paper argues that severity, abundance, or regularity alone cannot predict it. The findings are from a single theoretical model, so their relevance to real species is not established by the text and would need field data to test.",
+    "background": "- Hutchinson-type model: a population growth equation with a time delay, so today's growth depends on numbers in the past.\n- Allee effect: a population that falls too small declines further because mates or cooperation become scarce; a strong Allee effect has a threshold below which extinction follows.\n- Periodic forcing: an outside influence that repeats on a fixed cycle, such as seasons.\n- Resonance: when the forcing frequency matches a system's natural frequency, responses can be amplified.\n- Arnold tongues: regions in parameter space where the population's oscillation locks onto the forcing frequency.\n- Bifurcation: a qualitative change in behavior as a parameter varies; Hopf bifurcations create oscillations, saddle-node bifurcations create or destroy periodic orbits.\n- Lyapunov exponent: a measure of whether nearby trajectories diverge (chaotic) or converge (regular).",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Variation in plant functional traits along climate gradients chiefly arises from two processes: turnover of species with different trait values, and trait adjustment within species across environments. Yet, the relative contributions of these processes remain poorly quantified, limiting our ability to predict how traits, species distributions and, in turn, ecosystem properties will respond to climate change. Across seven functional traits and 1867 plant taxa from continental Australia, we provide a unified assessment of among- versus within-species contributions across multiple dimensions of plant function. Species turnover emerged as the dominant process driving trait variation along both precipitation and temperature gradients. Nevertheless, the contribution of within-species adjustment to climate differed substantially among traits and was generally greater in non-woody than woody taxa, these patterns being most clearly expressed along precipitation gradients. Our findings imply that plant traits will track changing climatic conditions primarily through species replacement, particularly for traits such as wood density and seed mass. Species may also respond in situ through adjustments in leaf physiology and morphology and, in woody taxa, through shifts in relative allocation between leaves and stem tissues. This knowledge has potential to improve predictions of the structure and function of future plant communities.",
+   "abstract": "Population persistence under environmental fluctuations depends not only on the magnitude of external disturbances but also on their interaction with endogenous population dynamics. However, how environmental resonance interacts with delayed density dependence and Allee effects to determine extinction risk remains poorly understood. Here, we investigate a periodically forced Hutchinson-type population model incorporating delayed density regulation and a strong Allee effect. Through numerical simulations, Lyapunov exponent analysis, and bifurcation continuation, we characterize the organization of population dynamics and extinction across environmental forcing frequencies and amplitudes. We find that extinction vulnerability is strongly organized by resonance between endogenous population oscillations and environmental forcing, with the lowest forcing amplitudes required for extinction occurring near the principal 1:1 resonance. The parameter space exhibits a hierarchy of frequency-locking regions consistent with Arnold tongues, including structures bounded by saddle-node bifurcations of periodic orbits. We further demonstrate that the carrying-capacity-to-Allee-threshold ratio governs the emergence of intrinsic oscillations through a Hopf bifurcation, fundamentally reorganizing the population's response to environmental forcing. Counterintuitively, lowering the Allee threshold can increase extinction vulnerability by strengthening destabilizing delayed feedback. Finally, we identify a history-dependent rescue mechanism through which populations can recover after temporarily crossing below the nominal Allee threshold. Successful recovery events exhibit systematic phase dependence relative to environmental forcing. Together, these findings demonstrate that extinction risk cannot be inferred from environmental severity, population abundance, or dynamical regularity alone. Instead, persistence emerges from the interaction between environmental timescales, endogenous oscillations, and history-dependent opportunities for recovery.",
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.23.768693",
-   "title": "pyMultiVideo: Open-source, Python-based, software for acquiring, synchronising, and compressing video from multiple cameras",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768693v1",
+   "uid": "biorxiv:10.64898/2026.11.23.768685",
+   "title": "Explaining an early ground-nesting bee emergence with climate and occurrence data: Temperature, not precipitation, advances onset",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768685v1",
    "authors": [
-    "Aziz, A.",
-    "Akam, T."
+    "Thrift, C. N.",
+    "Ostwald, M. M.",
+    "Schlauch Saiyawong, J.",
+    "Seltmann, K. C."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.23.768693 v1",
-   "primary_category": "animal behavior and cognition",
+   "label": "bioRxiv doi:10.64898/2026.11.23.768685 v1",
+   "primary_category": "ecology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper presents pyMultiVideo, an open-source Python application with a GUI for acquiring, synchronising, and GPU-compressing video from multiple cameras, with a camera-API layer separated from the interface code, validated at high frame rates on modest hardware.",
-    "plain": "Scientists who study animal behaviour or moving machines often film with several cameras at once, and keeping those recordings in step and saving them efficiently is harder than it sounds. This paper describes a free, open-source program called pyMultiVideo that handles this job, including recording and compressing video on the fly. The authors report test recordings from multi-camera setups at high frame rates with no dropped frames on ordinary computer hardware.",
-    "why": "Reliable, low-cost recording tools can make field and lab video studies easier to reproduce and share, which matters for behavioural and movement research. The text is a software description with validation tests, so its wider impact on research practice is not something it claims to show.",
-    "background": "- Frame rate: how many images per second a camera records; higher rates capture faster movement.\n- Dropped frames: images lost during recording, which can corrupt timing data.\n- Synchronisation: making sure several cameras (or cameras and other instruments) record the same moment.\n- GPIO pins: simple electrical input/output connections on a computer or device used to send or log timing signals.\n- GPU compression: using the graphics chip to shrink video files while they are being recorded, to save disk space.\n- Camera API: the software interface a program uses to control a specific camera model; separating it from the GUI makes it easier to add new camera types.\n- Open-source Python: free software written in a widely used programming language, which others can inspect and modify.",
-    "difficulty": "introductory",
+    "one_liner": "A study of an unusually early spring emergence of the ground-nesting bee Melissodes tepidus timberlakei, using five years of nest monitoring at one site and 119 years of regional occurrence records, linking emergence timing to temperature and precipitation in the western United States.",
+    "plain": "Researchers noticed a type of ground-nesting bee coming out of its nests unusually early in spring 2026. They combined five years of nest observations from one site with more than a century of museum-style records of where this bee was found across the western United States. They report that warmer temperatures went with earlier emergence, while rainfall did not appear to.",
+    "why": "Bee emergence timing matters because it has to line up with when flowers bloom for pollination to work, and climate change could pull these schedules apart. The text supports a modest claim about temperature and emergence, and suggests monitoring ground nests as a useful tool; how far the findings generalize beyond this bee and these sites is not shown in the summary.",
+    "background": "- Phenology: the timing of recurring seasonal events, such as when insects emerge or plants flower.\n- Ground-nesting bees: bees that dig nests in soil, so their emergence can be watched by monitoring nest sites.\n- Melissodes tepidus timberlakei: a long-horned bee species (a type of solitary bee) found in the western United States.\n- Occurrence records: historical collection and sighting records that show where and when a species was found.\n- Temperature versus precipitation: the study compares how warmth and rainfall each relate to emergence timing.\n- Correlation: the study shows an association between climate and emergence, not proof that temperature directly causes it.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "Video acquisition plays a critical role in many scientific experiments, enabling the quantification of human or animal behaviour, and movement of physical systems. Scientific applications place exacting demands on video acquisition, often requiring multiple cameras, high frame rates, synchronisation between cameras or with other hardware, control of camera parameters, and efficient data storage with comprehensive metadata. Here we present pyMultiVideo, an open-source Python application for scientific video acquisition. Features of the software include a graphical user interface (GUI) for efficiently configuring and running multi-camera experiments, online video compression using the computer's GPU, and synchronisation through recording GPIO pins states or external frame triggering. The code-base is simple and modular, with a separation of camera API from GUI code to facilitate adding support for additional camera systems. We outline the design and functionality of the software and present validation experiments demonstrating simultaneous recording and compression from multi-camera setups, at high frame rates without dropped frames on modest computer hardware.",
+   "abstract": "Understanding the drivers of bee phenology is important for predicting how climate change may alter the temporal overlap between bee activity and plant flowering, with consequences for pollination. We documented unusually early emergence of Melissodes tepidus timberlakei Cockerell, 1926 at a perennial nesting site in spring 2026 and examined the relationship between emergence and climatic conditions with (1) five years of nesting observations at a single site, and (2) 119 years of M. tepidus occurrence records from across the western United States. We found that warming temperatures were associated with earlier emergence, whereas precipitation was not, and we emphasize the utility of monitoring ground nests to understand emergence drivers in bees during ongoing climate change.",
    "source": "biorxiv"
   },
   {

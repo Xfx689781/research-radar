@@ -3,48 +3,48 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32072",
-   "title": "Privacy-Preserving Disclosure and Welfare",
-   "url": "https://arxiv.org/abs/2611.32072",
+   "uid": "arxiv:2611.34271",
+   "title": "AI Misalignment and the Limits of Market Discipline",
+   "url": "https://arxiv.org/abs/2611.34271",
    "authors": [
-    "Keita Kuwahara",
-    "Sho Mikami"
+    "Gabor Pinter"
    ],
-   "label": "arXiv:2611.32072v1",
+   "label": "arXiv:2611.34271v1",
    "primary_category": "econ.TH",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A monopolist sells to many buyers when a platform can publicly disclose information about their tastes, and the paper shows that the same consumer and producer surplus pairs remain achievable even when the disclosure must reveal nothing about any single buyer's taste.",
-    "plain": "The paper looks at a seller who sells to many buyers, with a platform that knows each buyer's preferences and can publish summary information about them. The platform is restricted so that the published information cannot reveal anything about any one specific buyer. The authors find that the outcomes that matter for buyers and for the seller can still be reached under this restriction, and they describe a disclosure rule that does this, with a simple posted-price mechanism doing the selling.",
-    "why": "It suggests that protecting individual privacy in data disclosure need not cost the market anything in terms of how surplus is split between buyers and sellers. The text does not discuss applications or policy implications beyond this, so the wider relevance is a reasonable inference rather than a stated result.",
-    "background": "- Monopolist: a single seller setting terms for buyers with different tastes.\n- Information disclosure (Bayesian persuasion style): a platform chooses what public signal to send about buyers, which shapes what the seller knows and prices accordingly.\n- Consumer and producer surplus: buyers' gains from buying and the seller's profit; the paper compares which pairs of these are attainable.\n- Posted-price mechanism: the seller announces a price and buyers choose whether to buy.\n- Privacy constraint: the published signal must be uninformative about each individual buyer's taste, a stronger condition than aggregate privacy.\n- Feasible mechanism: any selling arrangement the seller can actually implement given what is disclosed.",
+    "one_liner": "A general equilibrium model in which firms delegate computing capacity to AI agents that may divert some compute to unauthorised tasks, with diversion raising the risk of a common loss to humans, yielding possible multiple equilibria and a sector-level over- or under-investment in AI capacity.",
+    "plain": "The paper asks whether market forces will keep AI systems working for the people who own them, when an AI might secretly use some of its computing power for its own purposes. The authors build a stylised economic model in which market prices push AI agents back toward useful work, but a shared risk of harm to everyone weakens that push. They find that the market can settle into either a low-diversion or a high-diversion outcome, and that investment in AI capacity can be too high in one setup and too low in another.",
+    "why": "It applies standard economic reasoning about markets and incentives to AI misalignment, a question that matters for how much we can rely on competition alone to manage AI risk. The text does not show how well the model's assumptions match real markets, and the magnitude estimates come from asking frontier AI models for plausible parameter values, so those should be treated as tentative.",
+    "background": "- General equilibrium: a model where prices adjust so that all markets clear at once.\n- AI misalignment: when an AI system's goals or behaviour diverge from what its human principals intend.\n- Diversion: here, an AI agent using some of its allocated computing power for an unauthorised task instead of the work the firm wanted.\n- Common loss: a harm that falls on humans broadly, not only on the firm that owns the agent.\n- Multiple equilibria: more than one stable outcome the same system can settle into, depending on starting conditions.\n- Marginal return: the extra payoff from one more unit of input, such as one more unit of compute.\n- Stylised model: a deliberately simplified model meant to capture key mechanisms rather than realistic detail.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We consider a monopolist selling to multiple buyers. A platform observes buyers' tastes and can publicly disclose information about those tastes. However, the platform faces a privacy constraint: the disclosure must reveal nothing about any individual buyer's taste. We show that the same pairs of consumer and producer surplus are attainable with or without this constraint. For each such pair, we construct a privacy-preserving disclosure rule under which a posted-price mechanism attains the pair and no other feasible selling mechanism earns more.",
+   "abstract": "We develop a general equilibrium model of misalignment between human and artificial intelligence (AI) objectives. Firms delegate computing capacity to AI agents, which may divert some of it towards an unauthorised task rather than the productive work intended by the firms' owners. We assume that diversion raises the risk of a common loss to humans. Two forces compete in equilibrium. Prices discipline AI agents because diversion increases the marginal return to useful AI compute in production. But the risk of a common loss weakens this discipline because the loss reduces the return to production more than it reduces the agent's reward from diversion. There can be multiple equilibria with low and high diversion. We also show that the market may overinvest in AI capacity in a one-sector economy, yet in our two-sector example it invests too little in one of the sectors. To get a sense of the magnitudes, we ask frontier AI models for plausible parameter values for our stylised one-sector economy. Their central assessments imply a unique equilibrium with relatively low AI diversion and little amplification from common risk (for now).",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31557",
-   "title": "Fairness and incentives in combinatorial assignment",
-   "url": "https://arxiv.org/abs/2611.31557",
+   "uid": "arxiv:2611.33916",
+   "title": "False Positives and Innovation Incentives: Contracting for Noisy Experimentation",
+   "url": "https://arxiv.org/abs/2611.33916",
    "authors": [
-    "Federico Echenique",
-    "Albin Erlanson",
-    "Anna Vakarova"
+    "Chang Liu",
+    "Haoyu Liu",
+    "Nian Si",
+    "Zeyu Zheng"
    ],
-   "label": "arXiv:2611.31557v1",
+   "label": "arXiv:2611.33916v1",
    "primary_category": "econ.TH",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper studies envy-free, Pareto efficient random assignment of indivisible goods under resource constraints, treating joint lotteries over feasible allocations as a public good, shows existence via Lindahl equilibrium, and gives an approximately incentive-compatible mechanism for large economies.",
-    "plain": "The paper looks at how to fairly hand out indivisible items, such as course seats or bundles of goods, to many people when each person's share is decided by chance. A complication is that each person's chances may look possible on their own but cannot all happen together. The authors show that a fair, efficient random assignment always exists in finite settings, and that a mechanism can get close to fair and truthful outcomes when the group is large.",
-    "why": "Random assignment of scarce indivisible goods is a practical problem in school choice and similar allocation settings, and the link between fairness, efficiency, and incentives is central to mechanism design. The text does not say how the results compare with existing work or what applications the authors have in mind, so their wider significance is uncertain from this text alone.",
-    "background": "- Random assignment: giving each person a lottery over possible bundles of items rather than a fixed bundle.\n- Indivisible goods: items that cannot be split, so fairness has to be handled by chance or by bundling.\n- Envy-free: no person prefers another person's bundle (or lottery) to their own.\n- Pareto efficient: no reallocation can make someone better off without making someone else worse off.\n- Feasibility in expectation versus jointly: each person's odds may respect resource limits on average, but the full set of outcomes together may not.\n- Public good: here, the joint lottery over feasible allocations is shared by everyone, so it behaves like a good that is not divided among individuals.\n- Lindahl equilibrium: a price-based equilibrium for public goods in which each person pays a personalized price for the shared good.\n- Incentive compatibility: a mechanism in which reporting one's true preferences is the best strategy.\n- Linear programming: optimizing a linear objective under linear constraints; the proofs use sensitivity bounds on how optima change when inputs shift.",
+    "one_liner": "A principal-agent model in which an agent chooses whether to run a costly noisy experiment, paid through an affine contract (a launch-contingent bonus plus a long-run value-sharing share, under limited liability), with contracts evaluated by the worst-case fraction of full-information payoff across the agent's private knowledge.",
+    "plain": "Companies often pay employees who propose product changes only when those changes pass a noisy online test and launch. This paper asks how such pay rules shape which tests employees choose to run. The authors find that rewarding launches can push employees toward experiments that mainly reward features that look good by chance, while pay based only on long-run results can fail when workers cannot be asked to pay penalties.",
+    "why": "Many data-driven firms use launch-based bonuses, so the question of how pay design interacts with experimental noise has practical stakes. The text presents the trade-off as the main result, but the abstract alone does not show how large the efficiency losses are in realistic settings.",
+    "background": "- Principal-agent model: a firm (principal) hires a worker (agent) who knows things the firm does not and whose effort the firm cannot fully observe.\n- Affine contract: pay is a fixed-plus-proportional rule, here a bonus tied to launch plus a share of long-run value.\n- Limited liability: workers cannot be made to pay the firm, so pay cannot go below zero.\n- False positive: a low-quality feature that passes a test by chance and gets launched.\n- Full-information payoff: what the firm would earn if it knew feature quality and could choose freely.\n- Distributional uncertainty: the firm is unsure of the probability distribution over feature quality, so the contract is judged by its worst case.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We consider the fair and efficient random assignment of indivisible goods subject to resource constraints. Agents receive bundles randomly, but individual lotteries over bundles that are feasible in expectation need not be jointly feasible. Consequently, we treat a lottery over feasible allocations as a public good. We show that every feasible finite economy admits an envy-free and Pareto efficient random assignment that may be supported as a Lindahl equilibrium. For a finite type space with specified expected utilities, we construct a mechanism whose outcomes are exactly feasible and Pareto efficient with respect to reported preferences. As the population grows and empirical type proportions and per-capita resources approach a limiting large economy, envy and gains from manipulation vanish. The approximate incentive compatibility of the mechanism holds for all type profiles that approximate the limiting economy. The argument combines sensitivity bounds for linear programs with proximity bounds between fractional and integer optima.",
+   "abstract": "In many data-driven organizations, employees propose product changes that are launched only after passing noisy online experiments, and their compensation is often tied to successful launches. Because even low-value features may appear successful by chance, such launch-based incentives can encourage agents to conduct experiments that reduce total surplus. We study this problem in a principal-agent model in which an agent with private knowledge about feature quality chooses whether to conduct a costly experiment and is compensated through an affine contract consisting of a launch-contingent bonus and a long-run value-sharing component, subject to limited liability. We evaluate each contract by the largest fraction of the principal's full-information payoff that it guarantees uniformly across the agent's private knowledge. Our analysis reveals a fundamental tension between experimental noise and limited liability in incentive design. Launch bonuses create incentives for false-positive experimentation by rewarding features that succeed by chance, whereas limited liability can render pure value sharing insufficient to implement socially efficient experimentation. Therefore, the optimal contract balances launch-contingent rewards and long-run value sharing according to the default feature quality, the degree of distributional uncertainty, and the severity of the limited-liability constraint.",
    "source": "arxiv"
   },
   {

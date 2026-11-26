@@ -3,47 +3,49 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32434",
-   "title": "Computing expectations associated with McKean--Vlasov stochastic differential equations via probability-flow ordinary differential equations",
-   "url": "https://arxiv.org/abs/2611.32434",
+   "uid": "arxiv:2611.34304",
+   "title": "Converse comparison of $g$-expectations and uniqueness of generators of BSDEs: a novel approach and some sharp results",
+   "url": "https://arxiv.org/abs/2611.34304",
    "authors": [
-    "Mathias Horres",
-    "Shyam Mohan Subbiah Pillai",
-    "Ra\\'ul Tempone"
+    "Xuejun Shi",
+    "Shengjun Fan",
+    "Long Jiang"
    ],
-   "label": "arXiv:2611.32434v1",
-   "primary_category": "math.NA",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper proposes a deterministic mean-field ODE, with score function estimated via coupled ODE particles and randomized quasi-Monte Carlo and Runge–Kutta integration, to compute expectations for McKean–Vlasov SDEs at lower cost than standard Euler–Maruyama particle Monte Carlo.",
-    "plain": "The paper looks at how to estimate averages over systems of many interacting random particles, where each particle's motion depends on the overall crowd's distribution. Standard simulation of these systems is expensive when high accuracy is needed. The authors replace the random motion with a deterministic flow that has the same population statistics, and they report a theoretical cost bound that improves on the standard approach.",
-    "why": "Mean-field models of interacting agents appear in physics, finance, and engineering, so cheaper accurate estimates could matter there. The text gives only a complexity result under stated assumptions on weak-error and variance convergence, so its practical gains would depend on those assumptions holding.",
-    "background": "- Stochastic differential equation (SDE): an equation for how a quantity evolves with both steady drift and random noise.\n- McKean–Vlasov SDE: an SDE whose drift or noise depends on the law (distribution) of its own solution, modeling many interacting particles in the limit.\n- Monte Carlo estimation: approximating an average by averaging many random simulations; error shrinks slowly with more samples.\n- Computational complexity O(TOL^-p): cost needed to reach error tolerance TOL grows like TOL to the power -p; smaller p is cheaper.\n- Fokker–Planck and Liouville equations: equations describing how a probability distribution evolves over time.\n- Probability-flow ODE: a deterministic ODE whose trajectories have the same marginal distributions as a random process.\n- Score function: the gradient of the log of a probability density, used here to drive the deterministic flow.\n- Quasi-Monte Carlo and Runge–Kutta methods: more accurate sampling and time-stepping schemes than plain random sampling and simple stepping.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "This work considers the numerical approximation of expectations of functionals of $d$-dimensional McKean--Vlasov stochastic differential equations (MV-SDEs) with random initial conditions. Standard numerical schemes employ a stochastic interacting particle system of $P$ coupled $d$-dimensional SDEs, whose empirical measure converges to the MV-SDE law. However, naive Euler--Maruyama Monte Carlo (MC) estimators based on particle systems achieve a computational complexity of $\\mathcal{O}\\left( \\text{TOL}^{-4} \\right)$ to satisfy a prescribed error tolerance TOL. To reduce this complexity, this work reformulates the associated nonlinear Fokker--Planck equation as a Liouville equation describing the evolution of the law of a deterministic mean-field ordinary differential equation (ODE) with random initial conditions, sharing the same marginal distributions as the original MV-SDE. The resulting mean-field ODE eliminates the need to approximate It\\^{o} integrals and permits the use of higher-order integration schemes in time and stochastic space. However, simulating trajectories requires the score function of the MV-SDE's marginal law, which is approximated using a statistical estimator based on a system of $P$ coupled $d$-dimensional ODEs. The proposed estimator combines randomized quasi-MC in the stochastic variables and Runge--Kutta integrators in time, with efficient score estimation. Under assumptions on weak-error and variance convergence, the resulting estimator achieves a computational complexity of $\\mathcal{O}\\left(\\text{TOL}^{-\\left(\\max\\{\\beta/\\alpha,2\\} + 1/\\gamma \\right)}\\right)$, where $\\alpha$ and $\\beta$ denote, respectively, the weak-error and variance convergence rates with respect to $P$, and $\\gamma$ is the order of the time-integration scheme.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32764",
-   "title": "Large deviation principle of error of Euler--Maruyama method for stochastic differential equations",
-   "url": "https://arxiv.org/abs/2611.32764",
-   "authors": [
-    "Diancong Jin"
-   ],
-   "label": "arXiv:2611.32764v1",
+   "label": "arXiv:2611.34304v1",
    "primary_category": "math.PR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves a large deviation principle, at speed equal to the number of steps, for the terminal-time error of the Euler–Maruyama scheme applied to a one-dimensional SDE with C_b^3 coefficients and uniform ellipticity, with the rate function built from an empirical enhanced control of the small and large Brownian increments.",
-    "plain": "This paper studies how likely it is that a computer approximation of a randomly moving system ends up far from the true answer. The method approximates a continuous random process by taking n small random steps, and the authors show that the probability of a large final error falls off exponentially fast as n grows. They identify the rate of that decay, which depends on how single unusually large random kicks and many small kicks accumulate.",
-    "why": "Large deviation results quantify rare failures of numerical simulations, which matters for reliability when a method is run many times. The text does not say what applications the authors have in mind, so the broader significance beyond this technical setting is unclear from the abstract alone.",
-    "background": "- Stochastic differential equation (SDE): an equation describing a system driven by random noise, such as a jittering price or particle.\n- Euler–Maruyama method: the simplest way to simulate an SDE on a computer, by taking small steps and adding a random increment at each step.\n- Brownian increment: the random kick of a Brownian motion (random walk in continuous time) over one step.\n- Large deviation principle (LDP): a statement that the probability of an unusual event decays exponentially, with a rate function saying how fast.\n- Speed n: the exponential decay rate scales with the number of steps n.\n- Rate function: a function that gives the exponential cost of each possible outcome; here it vanishes only at zero error.\n- Uniformly elliptic diffusion coefficient: the noise strength is bounded away from zero and infinity.\n- Contraction principle: a way to transfer an LDP from one quantity to another via a continuous map.",
+    "one_liner": "The paper studies inverse problems for backward stochastic differential equations (BSDEs), proving via a forward-SDE representation of generators that an ordering between two g-expectations forces pointwise comparability of their generators under only the standard Lipschitz assumption, which also yields a general uniqueness theorem for BSDE generators.",
+    "plain": "The paper asks a reverse question about a mathematical tool called a backward stochastic differential equation, which is used to price risk and model decisions under uncertainty. Given only the final outcomes, can you recover the rule that produced them? The authors show that if one such outcome is always ordered above another, the underlying rules must also be ordered at every point, and they do this without the extra simplifying assumptions earlier work needed.",
+    "why": "The result claims to fully settle the converse comparison problem for g-expectations in the standard Lipschitz setting, and to give a general uniqueness statement for BSDE generators. Its significance rests on the proofs in the full paper, which the summary does not show; its links to applications in finance or control are not described in the text.",
+    "background": "- Stochastic differential equation (SDE): an equation describing a quantity that evolves randomly over time, like a noisy price path.\n- Backward SDE (BSDE): an equation run backward from a known terminal value, whose solution includes a random process and a \"generator\" that sets how the value changes over time.\n- Generator: the rule inside a BSDE that determines how the solution drifts; it is the object the paper tries to recover.\n- g-expectation: a nonlinear way of averaging a future payoff, defined as the initial value of a BSDE with generator g.\n- Comparison theorem: a result saying that if terminal outcomes are ordered, the initial values are ordered too; the converse asks whether the reverse holds.\n- Lipschitz condition: a mild smoothness requirement that the rule changes at a bounded rate.\n- Uniqueness of generators: the claim that the initial values determine the generator.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We study large deviations for the error of the Euler--Maruyama method applied to a one-dimensional stochastic differential equation with $C_b^3$ coefficients and a uniformly elliptic diffusion coefficient. We prove that the error at the terminal time, without rescaling, satisfies a large deviation principle (LDP) at speed $n$, where $n$ is the number of steps, with a good rate function that vanishes only at the origin. In particular, the probability that the error exceeds a fixed level decays exponentially in $n$. Two effects determine the rate function. A single Brownian increment of fixed nonzero size has finite cost at speed $n$, and the cumulative effect of smaller Brownian increments depends on the states at which their squares accumulate. To capture both effects, we introduce, for a cutoff $\\varepsilon\\in(0,1]$, an empirical enhanced control that records the state-dependent quadratic variation of the small increments together with the time, state and size of each increment exceeding $\\varepsilon$. We prove an LDP for the empirical enhanced control for every fixed $\\varepsilon$, and deduce the LDP for the error by the contraction principle and an exponentially good approximation as $\\varepsilon\\to0$.",
+   "abstract": "This paper investigates inverse problems for backward stochastic differential equations (BSDEs), with a particular focus on the converse comparison theorem and the uniqueness of generators solely through the initial values of the corresponding solutions. To this end, we develop a forward-SDE representation approach that combines a contradiction argument with a representation of generators in terms of solutions to associated forward stochastic differential equations (SDEs). As one of the main consequences, we prove that an ordering between two $g$-expectations necessarily implies the pointwise comparability of their generators, without requiring any additional structural assumptions beyond the standard Lipschitz condition. This removes the continuity, $y$-independence, and deterministic assumptions required in previous works, thereby yielding a complete solution to the converse comparison problem for $g$-expectations under the standard Lipschitz framework and, at the same time, establishing a general uniqueness theorem for generators of BSDEs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33540",
+   "title": "Graphon hitting times: connectivity and minimum degree",
+   "url": "https://arxiv.org/abs/2611.33540",
+   "authors": [
+    "Constanza Gacit\\'ua Fuentes",
+    "Marcos Kiwi",
+    "Mat\\'ias Pavez-Sign\\'e"
+   ],
+   "label": "arXiv:2611.33540v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper proves that, for graphon-based inhomogeneous random graphs under a connectivity and low-degree-tail condition, the connectivity and minimum-degree-one hitting times coincide whp, and gives criteria for when this transition is sharp, using Laplace transforms and vague convergence of rescaled degree measures.",
+    "plain": "Imagine building a random network one link at a time until every node is connected to the rest. A classic fact for the simplest random networks is that this moment arrives exactly when the last lonely, unlinked node gets its first link. This paper proves a version of that fact for a much broader family of random networks, where different nodes have different chances of linking, described by a \"graphon.\"",
+    "why": "It extends a well-known random-graph result to inhomogeneous networks, with conditions stated in terms of the graphon's degree distribution. The text also revisits minimum-degree results of Hladký and Viswanathan with simpler proofs, so it may matter to people studying random network models more generally.",
+    "background": "- Random graph: a network whose edges are chosen at random; here edges are added one by one in random order.\n- Hitting time: the first moment a property (here, connectivity or having no isolated vertex) holds.\n- Graphon: a limiting description of a large random network in which each pair of node \"types\" has a link probability.\n- Degree: the number of links at a node; the degree distribution describes how degrees are spread across nodes.\n- Asymptotically almost surely (a.a.s.): with probability tending to 1 as the network grows.\n- Laplace transform and vague convergence: standard analytic tools for handling distributions of small values; no need to master them to grasp the main message.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A classical result in random graphs states that the Erd\\H{o}s--R\\'enyi random graph process becomes connected at exactly the moment its last isolated vertex disappears. The main goal of this paper is to establish a graphon analogue of this result. Let $G(n,W)$ be the inhomogeneous random graph sampled from a graphon $W$, and reveal its edges one by one in a uniformly random order. We prove that if $W$ is connected and the lower tail of its degree distribution satisfies $g_W(t)/t\\to 0$ as $t\\to 0$, which is needed for the connectivity of $G(n,W)$, then the connectivity and minimum-degree-one hitting times coincide asymptotically almost surely. We also determine when this hitting time occurs at scale $\\Theta(n\\log n)$, as in the binomial random graph model. Moreover, we give a simple analytic criterion for the transition to be localized in a $(1+o(1))$-multiplicative window, and construct graphons with minimum degrees arbitrarily close to zero whose transition is nevertheless sharp. Our approach uses Laplace transforms and vague convergence of rescaled graphon degree measures to provide a unified framework for analyzing low-degree vertices and connectivity transitions. Along the way, we revisit the minimum degree of~$G(n,W)$, giving simplified proofs of results of Hladk\\'y and Viswanathan~\\cite{HV} and establishing the limiting distribution of $\\delta(G(n,W))$ under a second-order decorrelation condition.",
    "source": "arxiv"
   },
   {

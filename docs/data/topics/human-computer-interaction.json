@@ -3,49 +3,59 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31899",
-   "title": "Beyond Average Gains: Probing the Equity--Vulnerability Tension in Structured Visual AI for Learning",
-   "url": "https://arxiv.org/abs/2611.31899",
+   "uid": "arxiv:2611.34945",
+   "title": "MidasTUI: Instant Tangible User Interfaces for Wearable Displays using Everyday Objects",
+   "url": "https://arxiv.org/abs/2611.34945",
    "authors": [
-    "Mingyuan Li",
-    "Duan Wang",
-    "Erick Purwanto",
-    "Yihong Wang"
+    "Wen Ying",
+    "Xuweiyi Chen",
+    "Zezhou Cheng",
+    "Seongkook Heo"
    ],
-   "label": "arXiv:2611.31899v1",
+   "label": "arXiv:2611.34945v1",
    "primary_category": "cs.HC",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A randomized study of a structured visual AI tutor (VisualCodeChat) versus a standard text chatbot for learning graph algorithms, with 282 university students' questionnaires, finding higher average usability and effectiveness ratings for the visual tool but uneven experiences tied to prior chatbot use.",
-    "plain": "Researchers compared a learning tool that combines guided stages, chat explanations, and animated diagrams against a plain text chatbot, using a study of university students learning graph algorithms. Students rated the visual tool higher on usability and perceived effectiveness when averages were compared directly, but no differences appeared for efficiency, satisfaction, or mood after use. Within each tool, students with different prior chatbot experience gave noticeably different ratings, suggesting average scores hide uneven experiences.",
-    "why": "It challenges the habit of judging AI learning tools by average ratings alone, and it points to whether learners with different backgrounds and devices can actually get guidance, recover from problems, and show understanding on their own. The text does not report learning outcomes, so its link to actual learning gains is not established here.",
-    "background": "- Conversational AI: chatbots that answer questions in typed dialogue.\n- Randomized study: participants are randomly assigned to conditions, so groups differ mainly by the tool they used.\n- Graph algorithms: step-by-step methods for problems on networks of nodes and links, such as finding shortest paths; hard for beginners to track.\n- Usability and satisfaction ratings: questionnaire scores on how easy and pleasant a tool felt, not measures of what was learned.\n- Unadjusted vs. exploratory analyses: the headline comparison did not account for other factors, and the subgroup findings were exploratory, so they need confirmation.\n- Equity in this context: whether a tool works similarly for learners with different prior experience and devices.",
-    "difficulty": "intermediate",
+    "one_liner": "MidasTUI turns ordinary objects into temporary input devices for wearable displays by using the headset camera and a Transformer-based temporal classifier to detect hand-object motion, infer the intended input type (slider, mouse, keypad), and map it to an app function.",
+    "plain": "Wearable displays such as smart glasses can show a full workspace, but controlling them usually means waving your hands in the air, which is tiring and gives no physical feedback, or carrying a separate controller. This paper proposes using everyday objects instead: for example, sliding an earbud case across a table can act as a mouse. The system watches the user's hand through the display's camera, works out what kind of control the motion is meant to be, and links it to an action on screen.",
+    "why": "The work addresses a practical usability problem for head-worn displays, and it reports a comparative user study claiming lower physical burden and better perceived usability than mid-air gestures. The text gives no detailed numbers, so the strength of these claims can't be judged from this summary alone; it may matter for how future wearable interfaces handle input.</why>\n<parameter name=\"background\">- Tangible user interface: a control built from physical objects a person can touch, rather than purely on-screen or in-air controls.\n- Wearable display: a head-worn screen (such as smart glasses) that overlays digital content on the real world.\n- Mid-air gestures: hand movements made without touching anything, which can cause arm fatigue and offer no tactile feedback.\n- Temporal classifier: a machine-learning model that labels sequences of sensor data over time; a Transformer is a common neural-network architecture for this.\n- Cross-object and cross-user generalization: whether the system still works on objects and people it was not trained on.</background>\n<parameter name=\"difficulty\">intermediate",
+    "background": "",
+    "difficulty": "",
     "ai": true
    },
-   "abstract": "Open-ended conversational AI requires learners to formulate questions, organize learning paths, and track changing problem states. Structured visual interfaces may ease these demands, but higher average ratings do not establish that support is experienced consistently across learner backgrounds and devices. We conducted a randomized study of graph-algorithm learning, comparing VisualCodeChat (VCC), which combines predefined learning stages, conversational explanations, and dynamic algorithm visualizations, with a standard text-based chatbot. We analyzed 282 post-task questionnaires from university students. In unadjusted comparisons, VCC received significantly higher usability and perceived effectiveness ratings. We detected no significant between-condition differences in efficiency, satisfaction, or post-use emotion. Exploratory within-condition analyses identified differences associated with prior chatbot experience: infrequent users reported lower adoption and learning-management ratings in the standard AI condition, while uncomfortable prior chatbot experiences were associated with lower interaction and layout ratings in the VCC condition. These findings suggest that improving the average interaction experience is only part of making AI-supported learning inclusive. Future evaluations should examine whether learners with different prior experiences can obtain guidance, recover from difficulties, and demonstrate understanding independently across devices.",
+   "abstract": "While wearable displays can bring digital workspaces anywhere, interaction remains limited by mid-air gestures that lack tactile feedback and induce fatigue, or controllers that are cumbersome to carry. We present MidasTUI, a system that instantly transforms arbitrary everyday objects into opportunistic tangible user interfaces through brief interaction demonstrations. For example, a user can slide an earbud case across a table as a mouse, enabling opportunistic interaction without carrying a dedicated input device. MidasTUI detects when a user is holding and moving an object using the wearable display camera and a Transformer-based temporal classifier. It then infers the intended input modality (e.g., slider, mouse, keypad) from hand movement and maps the tracked hand-object interaction to an application function. Our evaluations demonstrate reliable cross-object and cross-user generalization. A comparative user study further shows that grounding interaction in everyday objects reduces physical burden and improves perceived usability and control relative to mid-air interaction.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32869",
-   "title": "AI, Bias, and Inclusion: A Two-Phase Mixed-Methods Study of Gender Bias, Awareness, and Trust in Artificial Intelligence",
-   "url": "https://arxiv.org/abs/2611.32869",
+   "uid": "arxiv:2611.34383",
+   "title": "Towards Democratized Academic LLM Hosting: Practical insights from needs, implementations, and governance across Dutch institutions",
+   "url": "https://arxiv.org/abs/2611.34383",
    "authors": [
-    "MD Junayed Talukdar",
-    "Khosro Salmani"
+    "Azza Ahmed",
+    "Sreeparna Deb",
+    "Taylor Stone",
+    "Sven Warris",
+    "Aaron Ding",
+    "Joost Bengsch",
+    "Margriet Cox",
+    "Julio Alexandrino de Oliveira Filho",
+    "Alexandre Strube",
+    "Avishek Anand",
+    "Thomas Abeel",
+    "the Towards Democratized Academic LLM Hosting Workshop Consortium"
    ],
-   "label": "arXiv:2611.32869v1",
+   "label": "arXiv:2611.34383v1",
    "primary_category": "cs.CY",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A two-phase mixed-methods study that combines a computational content analysis of 360 ChatGPT-generated occupational narratives across four countries with a student survey on bias awareness and trust in AI, framed through Equity, Diversity, and Inclusion (EDI) and AI ethics scholarship.",
-    "plain": "The paper looks at whether AI text generators tie certain jobs to one gender, and whether students notice this and how much they trust AI for important decisions. The researchers asked ChatGPT for occupational stories using gender-neutral prompts for four countries (Canada, Germany, India, and Bangladesh), then checked the stories for gender patterns. They also studied student perceptions to see how those views relate to fairness and inclusion ideas.",
-    "why": "Biased AI output can shape how people think about careers and who belongs in them, so it matters for hiring, education, and public trust. The text does not report the findings, so it is unclear what the study showed; its stated aim is to build an empirical base for future fairness-focused design frameworks.",
-    "background": "- Gender bias in AI: systems trained on existing text can reproduce stereotypes, such as linking nursing with women and engineering with men.\n- Computational content analysis: counting and categorizing words or themes in large amounts of text by software and rules, rather than reading each item by hand.\n- Mixed-methods design: combining numerical measurement with human-survey or interview data.\n- EDI (Equity, Diversity, and Inclusion): diversity means recognizing individual differences, equity means fair treatment and access, and inclusion means valuing everyone involved.\n- Sociotechnical: the idea that fairness depends on both the technology and the social settings it operates in, not only on code or data.\n- Gender-neutral prompt: a request worded without specifying a gender, so any gender pattern in the answer comes from the system.",
-    "difficulty": "intermediate",
+    "one_liner": "A workshop-based synthesis of needs, implementation practices, and governance challenges for institutionally hosted large language model (LLM) services across Dutch academic institutions.",
+    "plain": "Universities increasingly want to run their own AI chatbot-style tools instead of relying only on outside commercial services. This paper reports on a workshop with people from university IT, research support, education, and policy, and summarizes the practices, tensions, and open questions they raised. The text itself is a high-level overview; it does not report measured results.",
+    "why": "Decisions about where and how universities host AI tools touch on cost, energy use, data control, and fairness of access, so practical accounts of these choices are useful to people running or funding such services. The text is a short abstract-level description, so it is hard to judge how deep the findings go; it may be most relevant to research-infrastructure and digital-policy readers.",
+    "background": "- LLM (large language model): the kind of AI behind chatbots and text-generating tools.\n- Hosting: running the software on one's own servers or a managed environment, rather than only using a company's website or API.\n- Institutionally governed: the university sets the rules on access, data, and responsible use.\n- Democratized access: making such tools available broadly across an institution, not just to well-funded groups.\n- Socio-technical: involving both technology and the people, rules, and organizations around it.\n- Energy and utilization: how much electricity the hardware uses and how much of its capacity is actually used.\n- Dutch academia: the universities and research institutes in the Netherlands.",
+    "difficulty": "introductory",
     "ai": true
    },
-   "abstract": "Artificial Intelligence (AI) systems are widespread across fields such as healthcare, finance, employment, and criminal justice, with a substantial impact on the lives of individuals and society. However, it has been established that AI systems perpetuate existing social inequalities, particularly through biases that are not easily discernible. Such biases are embedded in the technical and social structures of artificial intelligence systems, making them difficult to detect. These biases challenge the concept of Equity, Diversity, and Inclusion (EDI), which recognizes diversity as the acknowledgment of individual differences, equity as fairness and equal access, and inclusion as the value placed on all participants. This study argues that fairness in artificial intelligence systems cannot be achieved by focusing solely on their technical aspects, necessitating a holistic approach. This study employs a two-phase mixed-methods design. Phase 1 applies computational content analysis to 360 occupational narratives generated by ChatGPT across four countries (Canada, Germany, India, and Bangladesh) using gender-neutral prompts to examine whether professions are predominantly associated with one gender and whether these patterns remain consistent across regions. Phase 2 examines the extent to which students recognize potential bias in AI, their trust in AI for consequential decision-making, and how these perceptions relate to themes in EDI and AI ethics scholarship. By combining output-level bias analysis with user perception data, this study identifies the empirical foundations necessary for future EDI-AI co-design frameworks, outlining the sociotechnical dimensions that such frameworks must address to be effective.",
+   "abstract": "Academic LLM hosting is emerging as an operational infrastructure domain with recurring socio-technical patterns, tensions, and governance requirements across institutions. Based on a workshop with academic infrastructure, research-support, education, and policy-adjacent stakeholders, this paper synthesizes current practices and open questions around institutionally governed LLM services for Dutch academia. It highlights challenges around deployment models, energy and utilization, governance, tooling, commercial integration, and research and education use cases, and identifies emerging directions for service pathways, coordination, and responsible operation.",
    "source": "arxiv"
   },
   {

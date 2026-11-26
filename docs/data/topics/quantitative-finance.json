@@ -3,48 +3,51 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31626",
-   "title": "A Kernel Framework for Linear Operator Equations",
-   "url": "https://arxiv.org/abs/2611.31626",
+   "uid": "arxiv:2611.34567",
+   "title": "Large deviations for integrated exponentials of Gaussian Volterra processes - application to variance options",
+   "url": "https://arxiv.org/abs/2611.34567",
    "authors": [
-    "Damir Filipovic",
-    "Valentin Tissot-Daguette"
+    "Antoine Jacquier",
+    "Mugad Oumgari",
+    "Dan Pirjol",
+    "Lingjiong Zhu"
    ],
-   "label": "arXiv:2611.31626v1",
-   "primary_category": "math.NA",
+   "label": "arXiv:2611.34567v1",
+   "primary_category": "math.PR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper embeds linear operator equations (differential, boundary, and integral) into a reproducing kernel Hilbert space, solves them by regularized least squares at collocation points, and uses a Nyström subsampling of operator-induced representers to cut cost for large collocation sets.",
-    "plain": "The paper addresses equations that describe how quantities change over time or space, especially when they include \"nonlocal\" terms that depend on values across a whole range, or constraints that vary across the domain. The authors place these equations inside a mathematical space of smooth functions (a kernel Hilbert space), solve them by fitting at a finite set of sample points, and reduce computation by using a subset of those points. They test the method on ordinary, partial, and partial integro-differential equations, including option pricing examples with several assets and with sudden price jumps.",
-    "why": "The approach offers one unified recipe for several kinds of equations that usually need separate numerical schemes, and it reports that sensitivities such as financial Greeks come from direct differentiation of the solution. The text does not give comparisons against standard pricing methods, so its practical advantage is not established from this description alone.",
-    "background": "- Linear operator equation: an equation of the form L u = f, where L is a linear rule (for example, a derivative or an integral) applied to an unknown function u.\n- Reproducing kernel Hilbert space (RKHS): a space of smooth functions defined by a kernel function, in which evaluating a function at a point is a well-behaved operation.\n- Riesz representer: the function in that space that stands in for a linear operation, so applying the operation equals taking an inner product.\n- Collocation points: sample locations where the equation is enforced.\n- Regularized least squares: finding the best fit while penalizing overly complicated solutions.\n- Nyström approximation: approximating a large matrix or problem using a smaller, randomly or deliberately chosen subset of points.\n- Option pricing and Greeks: Greeks are sensitivities of an option's price to inputs such as the underlying price or volatility.\n- Partial integro-differential equation: an equation mixing partial derivatives with integrals, used to model jumps in asset prices.",
+    "one_liner": "The paper proves small-time large deviation principles, a central limit theorem and moderate deviations for the normalised time integral of the exponential of a Gaussian Volterra process, and applies these to short-maturity asymptotics and implied volatility expansions for variance options in rough volatility models.",
+    "plain": "The paper studies how a randomly fluctuating volatility (how jumpy or unstable an asset's price swings are) behaves over very short time spans, and how that affects the prices of options whose payoff depends on realised variance. The authors prove mathematical results about how unlikely extreme averages of this fluctuating quantity are, and how it behaves in typical cases. They then use these results to derive approximate formulas for option prices and implied volatilities at short maturities, and check the formulas numerically.",
+    "why": "Rough volatility models are a active area in mathematical finance because they fit observed option prices well, and short-maturity behaviour is a key test of them. The text does not say how the results compare with existing models or practice beyond the numerical checks it mentions, so the wider significance is unclear from the abstract alone.",
+    "background": "- Volatility: a measure of how much an asset's price moves; in these models it is itself random.\n- Gaussian process: a random quantity evolving over time whose values follow a bell-curve (normal) distribution.\n- Volterra process: a Gaussian process whose value depends on its whole past through a weighted memory; \"rough\" models use memory that makes volatility very irregular.\n- Large deviations: the study of how quickly the probability of rare, extreme outcomes shrinks.\n- Central limit theorem: the result that averages of many random pieces look roughly bell-shaped.\n- Variance option: a derivative paying based on realised variance rather than on the asset price itself.\n- Implied volatility: the volatility value that, plugged into a standard pricing formula, reproduces an observed option price.\n- Short-maturity asymptotics: approximations for option prices as the time to expiry goes to zero.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Solving linear operator equations with nonlocal terms or heterogeneous constraints often requires specific numerical schemes. We develop a unified approach based on embedding such equations into a reproducing kernel Hilbert space (RKHS). Differential, boundary, and integral operators are represented by their Riesz representers in the RKHS. The equations are solved in the regularized least-squares sense at finitely many collocation points. The solution is a finite linear combination of operator-induced representers and is obtained from a single linear system. Its sensitivities, such as financial Greeks, follow by direct differentiation. To reduce the computational cost for large collocation sets, we introduce a Nystr\\\"om approximation based on subsampling the operator-induced representers. It yields the best approximation of this solution within the reduced trial space, in a regularized empirical norm. Numerical examples cover ordinary, partial, and partial integro-differential equations, including multi-asset and jump-diffusion option pricing.",
+   "abstract": "We prove small-time large deviations for the normalised time integral of the exponential of a Gaussian Volterra process, and complement it with a central limit theorem and moderate deviations. As an application, we obtain short-maturity asymptotics for out-of-the-money and at-the-money variance options in rough volatility models, as well as implied volatility expansions which we validate numerically.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32488",
-   "title": "Dynamic stochastic multi-attribute group decision-making based on fractional-order stochastic dominance criteria",
-   "url": "https://arxiv.org/abs/2611.32488",
+   "uid": "arxiv:2611.34192",
+   "title": "Time-consistency of cash-subadditive risk measures: The infimal cocycle property",
+   "url": "https://arxiv.org/abs/2611.34192",
    "authors": [
-    "Shuqin Wang",
-    "Wei Zou",
-    "Jiehua Xie"
+    "Matteo Ferrari",
+    "Roger J. A. Laeven",
+    "Emanuela Rosazza Gianin",
+    "Marco Zullino"
    ],
-   "label": "arXiv:2611.32488v1",
-   "primary_category": "q-fin.RM",
+   "label": "arXiv:2611.34192v1",
+   "primary_category": "q-fin.MF",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes a dynamic group decision-making model for stochastic multi-attribute problems that uses fractional-order stochastic dominance criteria and a new priority degree, allowing attributes and alternatives to change across decision periods.",
-    "plain": "The paper addresses how a group of decision-makers can rank options when outcomes are uncertain and the situation changes over time. It replaces the usual whole-number comparison rule for uncertain outcomes with a finer-grained, fractional-order version. The authors report that this captures preference relations more precisely and that the method can handle options and criteria being added or removed between periods, supported by numerical examples and comparisons.",
-    "why": "Ranking uncertain options is used in finance, engineering and policy, so a more flexible comparison rule could matter there. The text does not say how widely the method would be adopted, and its claims of greater accuracy rest on the authors' own examples and comparisons.",
-    "background": "- Multi-attribute decision making: choosing among alternatives judged on several criteria (attributes).\n- Stochastic dominance: a rule for saying one uncertain outcome is preferred to another, based on comparing their probability distributions, without fixing exact utility numbers.\n- Integer-order vs fractional-order: the standard rules use whole-number orders (first, second, ...) of comparison; the fractional version lies between them, giving a finer scale.\n- Utility function: a formula describing how much a decision-maker values an outcome; concave means diminishing returns to gains.\n- Priority degree: a score for how strongly one alternative is preferred to another.\n- Dynamic decision process: decisions made over several time periods where the set of options or criteria can change.",
+    "one_liner": "The paper characterizes time-consistency of convex, cash-subadditive dynamic risk measures via their minimal penalty, and introduces an infimal cocycle property shown to be equivalent to time-consistency on L^infinity (under continuity from below) and on L^p for p<infinity (without continuity assumptions).",
+    "plain": "The paper studies how to measure the risk of a financial position over time so that the measurements made today and later stay consistent with each other. The authors show that this consistency can be checked using a \"minimal penalty\" term, which is the cost of the risk measure under its dual description. They define a condition, the infimal cocycle property, which says the penalty is the smallest value over all ways of splitting the discounting across an intermediate date, and they show this condition is equivalent to time-consistency.",
+    "why": "Time-consistency is a basic requirement for dynamic risk measures used in finance and insurance, so a precise test for it is useful for the theory. The text also links the result to backward stochastic differential equations and to dynamic programming in stochastic control, which may make it relevant to those areas; the wider practical reach is not stated in the text.",
+    "background": "- Risk measure: a rule that assigns a number (a required capital buffer, say) to an uncertain future payoff.\n- Dynamic risk measure: a risk measure re-computed at several dates, using information available at each date.\n- Time-consistency: if one position is judged riskier than another at a later date, it should be judged riskier today too, so the sequence of assessments does not contradict itself.\n- Cash-subadditivity: adding a sure cash amount reduces risk by at most that amount, a weaker form of the usual \"cash-invariance\" property.\n- Penalty: the dual cost term in the representation of a convex risk measure; the minimal penalty is the smallest such cost.\n- Cocycle property: a multiplicative consistency condition on penalties across two periods; the paper's infimal version takes the smallest value over all admissible splits.\n- Conditional sub-probability density: a non-negative weight, given the information at a date, that is at most one in total, used as the dual variable.\n- L^infinity and L^p spaces: sets of bounded and p-integrable random variables, the settings in which the results hold.\n- BSDE (backward stochastic differential equation) and dynamic programming: tools that link such risk measures to optimal control problems.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The stochastic dominance criterion has been widely employed in stochastic multi-attribute decision making as a robust tool for quantitatively comparing decision-makers' preferences over alternatives. Existing research predominantly relies on integer-order stochastic dominance criteria within static modeling frameworks. However, the integer-order scale is often too coarse, and real-world decision-making typically occurs in dynamic environments, for which static methods are inadequate. To address these limitations, this paper proposes a novel dynamic stochastic multi-attribute group decision making model based on fractional-order stochastic dominance criteria. In this model, we introduce the priority degree under fractional-order stochastic dominance, which not only encompasses the priority degree under integer-order stochastic dominance, but also is applicable to decision-makers whose utility functions are not concave everywhere. Consequently, the proposed model captures the dominance relations between alternatives with greater accuracy and flexibility. Moreover, the model allows for the addition or removal of attributes and alternatives across decision periods, thereby exhibiting the applicability to any dynamic decision process. Numerical examples and comparative analyses show the effectiveness and robustness of the proposed approach, highlighting its broader applicability compared with conventional methods. This study enriches the theoretical foundation of dynamic stochastic multi-attribute group decision making and contributes to improving the reliability and precision of decision outcomes.",
+   "abstract": "We characterize the time-consistency of convex, cash-subadditive dynamic risk measures in terms of their minimal penalty. The dual variables are conditional sub-probability densities, which factorize across an intermediate date in many ways, according to how the discount is allocated to the two periods. We introduce an infimal cocycle property, in which the penalty is the infimum over all such factorizations, and show that it is equivalent to time-consistency, with the infimum attained. This holds on $L^\\infty$ under continuity from below, and on $L^p$, $p<\\infty$, without continuity assumptions. In the cash-additive case it reduces to the classical cocycle property. For risk measures induced by BSDEs, it represents the dynamic programming principle of a stochastic control problem whose value is the penalty.",
    "source": "arxiv"
   },
   {

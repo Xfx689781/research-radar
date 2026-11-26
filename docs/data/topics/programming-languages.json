@@ -3,48 +3,47 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32374",
-   "title": "Validating Multi-Model AI-Generated Acceptance Criteria in Requirements Engineering",
-   "url": "https://arxiv.org/abs/2611.32374",
+   "uid": "arxiv:2611.34210",
+   "title": "Direct cognition problem: a semantic skeleton of mathematics and its growth",
+   "url": "https://arxiv.org/abs/2611.34210",
    "authors": [
-    "Mateen Ahmed Abbasi",
-    "Petri Ihantola",
-    "Tommi Mikkonen",
-    "Niko M\\\"akitalo"
+    "Vasilii A. Gromov",
+    "Nikolai N. Evdokimov"
    ],
-   "label": "arXiv:2611.32374v1",
-   "primary_category": "cs.SE",
+   "label": "arXiv:2611.34210v1",
+   "primary_category": "cs.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A prototype workflow that uses retrieval-augmented generation and several LLMs to draft acceptance criteria from user stories, with a logged, human-finalized review step, framed as an operationalized validation process rather than an accuracy improvement.",
-    "plain": "Software teams often write short user stories describing what a feature should do, and the tests or \"acceptance criteria\" that say when it is done. This paper describes a tool where several AI language models draft those criteria, a reviewer compares and edits the suggestions, and every step is recorded. The authors built a working prototype; the text does not report any measured results on how accurate the outputs were.",
-    "why": "AI-written requirements can carry errors forward into design, coding and testing, so checking them matters. The paper's contribution is a way to make human review explicit and auditable, which may matter to teams adopting AI tools, though the text offers no evidence yet of how well it works in practice.",
-    "background": "- User story: a short statement of a feature from an end user's view, such as \"as a customer, I want to reset my password.\"\n- Acceptance criteria: the conditions a feature must meet to be considered complete.\n- Large language model (LLM): an AI system that generates text from patterns learned in training data; it can produce plausible but wrong content (\"hallucination\").\n- Retrieval-augmented generation (RAG): the model is given relevant documents retrieved from a collection before it writes, to ground its output.\n- Human-in-the-loop: a workflow where a person reviews and approves AI output before it is used.\n- Traceability: being able to link each requirement back to its source and later artifacts.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Large language models (LLMs) are increasingly used in software engineering to generate artifacts such as requirements, user stories, acceptance criteria, documentation, and code. Their use in requirements engineering raises important questions about correctness, traceability, and hallucination, especially because flawed specifications can affect later design, implementation, and verification activities. While much recent work on AI-assisted software engineering has focused on code generation and code-level validation, the validation of AI-generated specifications has received less attention. This paper addresses this gap by presenting a validation-oriented approach for AI-generated acceptance criteria. The approach combines retrieval-augmented generation (RAG), multi-model generation, and an explicitly structured human-in-the-loop workflow. We describe a working prototype that allows users to prepare or enter user stories, generate acceptance criteria using several LLMs, optionally augment generation with retrieved requirements-related examples, compare outputs side by side, inspect retrieved context, and select, edit, or regenerate candidate criteria before explicitly submitting a reviewer-finalized version. The system also records model outputs, user interventions, retrieval settings, and final criteria as part of a logged decision process. Rather than claiming that generation accuracy is already improved, the contribution of this work is to operationalize validation as an explicit, inspectable, and accountable process for AI-generated requirements artifacts.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.31858",
-   "title": "Functional Programming with Hypergraph Transformation",
-   "url": "https://arxiv.org/abs/2611.31858",
-   "authors": [
-    "Jin Sano"
-   ],
-   "label": "arXiv:2611.31858v1",
-   "primary_category": "cs.PL",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "A dissertation presenting λ_GT, a call-by-value functional language built on port-hypergraph transformation (via HyperLMNtal), with a core type system, a linear-implication extension for incomplete graphs, and Isabelle/HOL mechanisation of the meta-theory.",
-    "plain": "Programs often store data as trees, but some data is better described as a network where items connect to several others at once. This dissertation proposes a functional programming language, λ_GT, that lets programmers rewrite such networks by pattern matching while using types to state rules the network must always obey. The author builds an interpreter, proves the type system sound, and checks the core definitions with a computer proof assistant.",
-    "why": "Combining the clean reasoning of functional languages with graph-shaped data could help tools that must keep complex structures valid during manipulation. The text does not show practical adoption or performance results, so its wider impact is uncertain.",
-    "background": "- Functional programming: computing by applying and combining functions, without mutable state.\n- Pattern matching: selecting a program branch by the shape of a value.\n- Graph / hypergraph: nodes joined by links, where a link (hyperedge) can join more than two nodes.\n- Graph transformation: rewriting a graph by replacing matched parts according to rules.\n- Type system: static rules that classify values and rule out errors before running; soundness means well-typed programs do not go wrong.\n- Call-by-value: arguments are evaluated before a function is applied.\n- Linear types: types where a resource is used exactly once, here used to describe partly built graphs.\n- Isabelle/HOL: a proof assistant used to check mathematical proofs by machine.",
+    "one_liner": "The paper builds a finite set of reusable intermediate lemmas (\"anchors\") from the three axioms of classical propositional logic, grown without a fixed target theorem, and reports that these anchors shorten proofs of previously unseen structures in two external corpora.",
+    "plain": "The authors start from three basic rules of logic and let a program grow a small library of useful intermediate results, chosen by how often they get reused across many proofs. They then test whether this library makes new proofs shorter, and report that it does on two sets of held-out proofs. The text gives only a summary, so the details of the method and how the proof counts were measured are not visible here.",
+    "why": "It is a concrete, measured attempt to find shared structure underlying many proofs, which bears on how proof assistants and automated theorem provers could reuse lemmas. The reported gains are modest in some cases and rest on a post hoc test, so the claim should be read cautiously; the wider significance is unclear from this text alone.",
+    "background": "- Propositional logic: statements built from \"and\", \"or\", \"not\", \"if-then\", with no quantifiers.\n- Axioms: starting rules assumed true; every proof is built from them.\n- Proof structure / combinator: a proof written as a tree of simple steps, here in a typed combinator style.\n- Lemma: a helper result proved once and reused in later proofs.\n- Anchor: a lemma the paper selects as a reusable building block.\n- Post hoc test: an analysis done after seeing the results, so it is weaker evidence than a pre-planned test.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Complex data structures are difficult to manipulate declaratively while preserving their shape invariants. Functional languages offer pattern matching and strong static guarantees, but their type systems primarily describe tree-shaped data. Graph transformation languages support richer structures, yet their state-oriented models do not integrate naturally with value- and function-based programming. This dissertation introduces $\\lambda_{GT}$, a functional language that integrates port-hypergraph transformation. It represents complex data as port hypergraphs, manipulates them by pattern matching, and uses types to specify global shape invariants. We formalise HyperLMNtal as a term-based graph transformation formalism, then define the syntax and call-by-value semantics of untyped $\\lambda_{GT}$ and implement a prototype interpreter. We develop a core type system for $\\lambda_{GT}$, prove its soundness, and relate it to graph-grammar-based typing. We extend the system with linear implication types to describe incomplete graphs arising during pattern matching. The extended system is sound with dynamic pattern-matching checks and is conservative over complete graph types. We also identify a statically safe fragment in which these checks can be eliminated. Finally, we mechanise the definitions and meta-theory in Isabelle/HOL.",
+   "abstract": "We construct a finite semantic skeleton from three axioms of classical propositional logic without specifying a target theorem. During growth, the constructor records which proofs share an intermediate lemma. When choosing the final anchors, it also counts inferences that use a premise the lemma can supply by substitution. The primary skeleton contains ten anchors whose certificates expand to the axioms through 27 shared inference steps. It shortens all 30 previously unseen proof structures in an external catalogue of typed combinators, saving 90 of 412 steps. One anchor recurs in all five runs of the constructor. In a post hoc test, this anchor alone shortens 26 of the 30 proofs. It also shortens 331 of 475 previously unseen proofs of familiar theorems in a second corpus.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34714",
+   "title": "Higher-Order Generation of First-Order Theories",
+   "url": "https://arxiv.org/abs/2611.34714",
+   "authors": [
+    "Ziyue Jin",
+    "Umang Mathur"
+   ],
+   "label": "arXiv:2611.34714v1",
+   "primary_category": "cs.LO",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper introduces a logic whose formulas finitely describe possibly infinite first-order theories generated by higher-order recursion schemes, and studies their expressiveness, model checking, and satisfiability under conjunctive and disjunctive interpretations.",
+    "plain": "The paper is about a way to describe very large, even infinite, collections of logical statements using a short, structured recipe. The recipe is a small grammar that can build statements in layers, where the building blocks can themselves be operations. The authors work out how much these descriptions can express, how hard it is to check whether a structure satisfies them, and when it is possible to tell whether such a collection can be satisfied at all.",
+    "why": "The paper gives exact complexity results: over finite ordered structures, disjunctive theories at each scheme order match a level of the exponential-time hierarchy, and one fragment's satisfiability becomes undecidable already at order one. It extends earlier work on regular first-order theories (Mathur et al., POPL 2025), so it is mainly of interest to researchers in logic and verification; its wider relevance is not addressed in the text.",
+    "background": "- First-order logic: statements using \"for all\", \"there exists\", and relations between objects.\n- Theory: a set of such statements; a model is a structure that makes them all true.\n- Satisfiability: whether some model exists; decidable means a program can always answer yes or no.\n- Model checking: testing whether a given structure satisfies a given theory.\n- Higher-order recursion scheme: a finite grammar that generates trees, where rules can take other rules as inputs.\n- Complexity classes: polynomial time (0-EXPTIME) and the exponential-time hierarchy (k-EXPTIME), which bound how long the best algorithms need as problems grow.\n- Conjunctive vs. disjunctive reading: a model must satisfy all generated sentences vs. at least one.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce a logic whose formulae are finite descriptions of possibly infinite first-order theories. A theory is a set of first-order sentences, generated in our setting by a higher-order recursion scheme. Such a scheme is a finite grammar whose parameters may denote trees or operations on trees. We consider two interpretations: a model must satisfy every generated sentence under the conjunctive interpretation, and at least one under the disjunctive interpretation. For schemes of order $k=0$, these theories coincide with the regular first-order theories of Mathur et al. (POPL 2025). We generalize this representation by allowing higher-order schemes, while retaining first-order quantification in every generated sentence. We study the expressive power, model checking, and satisfiability of this logic. Over finite ordered structures, we show that disjunctive theories of existential sentences generated at order at most $k$ capture $k$-EXPTIME, for every $k\\geq0$. Allowing unrestricted first-order sentences captures $(k+1)$-EXPTIME at the same scheme order, where $0$-EXPTIME denotes polynomial time. We also give model-checking algorithms in the corresponding time classes for each fixed signature, variable-name set, and order bound. For satisfiability under either interpretation, we extend several decidability results for regular theories to every order. However, we show that conjunctive satisfiability of quantifier-free theories, decidable at order zero, becomes undecidable already at order one. Finally, we recover decidable conjunctive satisfiability at every order by separating higher-order generation of Boolean structure from independent regular generation of ground atoms. Together, these results show how higher-order generation of first-order syntax captures the exponential-time hierarchy while retaining decidable satisfiability in restricted fragments.",
    "source": "arxiv"
   },
   {

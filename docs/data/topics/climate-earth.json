@@ -3,49 +3,49 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32589",
-   "title": "A consistent generalised kinetic equation for damped ocean waves",
-   "url": "https://arxiv.org/abs/2611.32589",
+   "uid": "arxiv:2611.33383",
+   "title": "Basin-Scale Nonlinear Dynamics of Thermohaline Ocean Circulation. Part I: Theory",
+   "url": "https://arxiv.org/abs/2611.33383",
    "authors": [
-    "Rhys Ransome",
-    "Alberto Alberello",
-    "Davide Proment",
-    "Raphael Stuhlmeier"
+    "Conner W. Lester",
+    "Dylan E. McNamara",
+    "Till J. W. Wagner"
    ],
-   "label": "arXiv:2611.32589v1",
-   "primary_category": "physics.flu-dyn",
+   "label": "arXiv:2611.33383v1",
+   "primary_category": "physics.geo-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper derives a generalised kinetic (energy-balance) equation for weakly nonlinear ocean waves that couples wave damping with nonlinear energy exchange between frequencies, instead of treating them as independent additive terms as current spectral wave models do.",
-    "plain": "Forecast models of ocean waves track how wave energy is spread across frequencies, and they usually add the effect of damping (energy loss) on top of the effect of waves exchanging energy with each other, as if the two did not interact. This paper starts from the basic equations of weakly nonlinear waves and derives a version in which the two effects are linked. The authors report that total energy loss changes little, but the way energy is distributed across wave frequencies differs noticeably, especially when damping is weak or depends on frequency.",
-    "why": "Ocean wave models are used in operational forecasts and in climate models, so how they handle energy loss matters for their outputs. The text suggests the new formulation is more numerically stable and could be a basis for future operational modelling, though this is a claim the authors make and has not been tested in operational settings in the text provided. The authors also link the frequency-dependent damping to interactions with sea ice (the cryosphere), which is a growing concern.",
-    "background": "- Spectral wave model: a model that describes the sea state by how wave energy is distributed across frequencies (and directions), and evolves that distribution over time.\n- Weakly nonlinear waves: waves whose interactions are small enough to treat as a perturbation of simple waves, but which still exchange energy between frequencies.\n- Kinetic equation: an energy-balance equation for the spectrum, describing how energy changes through forcing, nonlinear transfer and dissipation.\n- Damping: loss of wave energy, for example through friction, breaking, or interaction with sea ice.\n- Additive damping: the common modelling choice of simply adding a damping term to the energy balance, independent of the nonlinear transfer.\n- Memory effect: the present damping depends on the past state of the waves, not only on the instantaneous state.\n- Cryosphere: the frozen parts of the Earth system, such as sea ice.",
+    "one_liner": "A tracer-conservation framework that expresses thermohaline (density-driven) ocean circulation bifurcations as a balance between surface fluxes and basin-scale advective and dissipative transport, tested in a three-dimensional ocean-basin model, with Part II reserved for tipping-point forecasting closures.",
+    "plain": "The paper looks at the large-scale ocean circulation that moves heat and salt around the planet, which may have more than one stable state and can flip abruptly between them. The authors describe the circulation as a balance between what enters the ocean at its surface and how that heat and salt are carried or spread out by the flow. In a three-dimensional model of an ocean basin, they find that salt carried by the flow itself mainly controls when the circulation collapses, while simple spreading mixing mainly controls when it recovers.",
+    "why": "Abrupt shifts in ocean overturning are a major concern in climate science, so a framework that explains them through transport processes, rather than overturning strength alone, may help interpret models of the same behavior. The text links this to classic simple \"box models,\" but how far the framework applies beyond the single model studied is not shown in this excerpt.",
+    "background": "- Thermohaline circulation: ocean flow driven by differences in temperature (thermo) and salinity (haline) that change water density.\n- Multiple equilibria: the same forcing can support more than one stable circulation state, so the system can get stuck or jump.\n- Bifurcation/tipping point: a threshold beyond which a state changes abruptly.\n- Box model: a very simplified model that treats ocean regions as a few well-mixed boxes; used to build intuition.\n- Tracer: a substance (here heat or salt) tracked as it is carried and mixed; conservation means its total change equals inputs minus outflows.\n- Advection vs. dissipation: transport by bulk flow versus spreading by mixing and diffusion.\n- Part I/II: this is the theory half; the forecasting method is in the companion paper.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Contemporary spectral wave models, including those used in operational wave forecasts and in coupled earth system models, assume damping and non-linear wave energy exchange to be independent. Here, we critically examine this assumption. Starting from the equations of weakly non-linear waves, we rigorously derive a governing equation that consistently couples damping and non-linear interactions. This consistent generalised kinetic equation does not lead to an appreciable change in total wave--energy dissipation, but compared to the standard additive damping approach there is a noticeable difference in the distribution of energy among the wave frequencies. This effect is particularly important for weak damping, and is a consequence of a memory effect retained in model. Even stronger differences are observed when damping is allowed to depend on wave frequency, as is characteristic of many wave processes of growing interest such as the interaction with other components of the earth system, e.g. the cryosphere. Compared to the purely additive formulation, our new damped generalised kinetic equation has improved numerical stability characteristics. The formulation presented therefore provides a possible basis for future operational wave modelling. While our results are for ocean waves, the derived generalised kinetic equation can be applied to other weakly nonlinear dispersive systems where external damping (or forcing) applies.",
+   "abstract": "Earth's thermohaline ocean circulation may support multiple equilibria and abrupt transitions. Similar bifurcation structures for different ocean models suggest common underlying dynamics across the model hierarchy. Here we propose a unifying framework from tracer conservation, in which surface fluxes are balanced by dissipative and advective tracer transport. We express this flux balance through a large-scale tracer gradient and a transport efficiency that measures how strongly circulation displaces the tracer field from its no-flow \"conductive\" state. The flux balance quantifies the transport contributions that sustain each circulation state and give rise to abrupt transitions. In a three-dimensional ocean-basin model, we find nonlinear salinity advection dominates the collapse threshold and linear dissipation dominates the recovery threshold. Temperature has additional dissipation from surface restoring, making thermal fluxes more dissipation-dominated than salinity fluxes. The tracer contrasts and boundary layers that a given circulation generates produce distinct transport regimes, approximately quadratic in circulation strength for weak flow and linear for strong flow. With a simple circulation closure, the flux balance reduces to longstanding box-model bifurcation results for the weak and strong flow regimes. Thus, by expressing thermohaline bifurcations through basin-scale transport, this framework connects box-model insight to the continuous equations. Furthermore, as this framework exposes the transport processes that balance a changing forcing, it provides constraints on a thermohaline ocean state and its trend toward tipping that overturning strength alone does not. In Part II, we develop flux-balance closures to forecast such tipping points.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32703",
-   "title": "Effect of humidity and phase transition on turbulent diffusion of droplets and water vapour in atmospheric turbulent flows",
-   "url": "https://arxiv.org/abs/2611.32703",
+   "uid": "arxiv:2611.34718",
+   "title": "ENSO-linked redistribution of post-monsoon tropical cyclone energy between the Arabian Sea and the Bay of Bengal: 1982--2025",
+   "url": "https://arxiv.org/abs/2611.34718",
    "authors": [
-    "I. Rogachevskii",
-    "N. Kleeorin"
+    "Prashant Saini",
+    "Rishikesh Yadav",
+    "Sarita Azad"
    ],
-   "label": "arXiv:2611.32703v1",
-   "primary_category": "physics.flu-dyn",
+   "label": "arXiv:2611.34718v1",
+   "primary_category": "stat.AP",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A theoretical study of how humidity and condensation/evaporation phase changes alter turbulent diffusion of droplets and water vapour in atmospheric flows, expressed via a turbulent Damköhler number and mutual diffusion coefficients.",
-    "plain": "This paper looks at how tiny water droplets and water vapour spread out through turbulent air, such as in clouds, when the water can turn between vapour and liquid. The authors build theoretical relationships for how fast each one mixes and how they affect each other's mixing. They report that the spreading of droplets and vapour slows as the turbulence-to-phase-change time ratio gr",
-    "why": "",
-    "background": "",
-    "difficulty": "",
+    "one_liner": "A joint statistical analysis of 416 North Indian Ocean cyclones (1982–2025) finds that El Niño/La Niña redistributes post-monsoon cyclone energy between the Arabian Sea and Bay of Bengal rather than changing the basin total, with the relationship shifting over time and needing about three decades of data to detect certain trends.",
+    "plain": "The paper asks whether the El Niño climate pattern in the Pacific changes how strong tropical storms are in the North Indian Ocean, and where. Using best-track storm records and atmospheric reanalysis data from 1982 to 2025, the authors report that in October to December, El Niño shifts storm energy toward the Arabian Sea and away from the Bay of Bengal, while the combined total stays roughly unchanged. The effect appears to work through changes in wind shear and spin in the lower atmosphere, not through how often storms form.",
+    "why": "Storm energy in the two sub-basins affects coastal risk in India, Pakistan, Oman, and Bangladesh, so a redistribution rather than a simple increase or decrease matters for planning. The text reports that the relationship changed between 1982–2003 and 2004–2025, which suggests that short records may give misleading conclusions; the link to future climate change is not addressed in the text.",
+    "background": "- ENSO (El Niño–Southern Oscillation): a recurring warming and cooling of the central Pacific that shifts weather worldwide; the Niño-3.4 index measures it.\n- Tropical cyclone energy (ACE): a measure combining storm strength and duration over its lifetime.\n- Arabian Sea (AS) and Bay of Bengal (BoB): the two sub-basins of the North Indian Ocean where cyclones form.\n- Post-monsoon season: October–December, the main cyclone season for these basins.\n- Vertical wind shear (VWS): change in wind speed or direction with height; high shear tends to weaken storms.\n- Low-level vorticity: the spin of air near the surface, which helps storms organize.\n- IBTrACS, IMD, JTWC, ERA5, ERSSTv5: storm-track databases and climate datasets used for the analysis.\n- Stationarity: whether a relationship stays the same over time.\n- IOD (Indian Ocean Dipole): a separate east–west temperature pattern in the Indian Ocean that can overlap with ENSO.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "We investigate the effect of humidity on turbulent diffusion of droplets and water vapour in atmospheric turbulent flows taking into account the effect of phase transitions on turbulent transport. We find that the coefficients of turbulent diffusion of droplets and water vapour decrease with increase the turbulent Damk\\\"{o}hler number (the ratio of turbulent time in the integral scale and phase transition time for condensation of water vapour), while the coefficients of the mutual turbulent diffusion that describe the turbulent cross effects increase with this parameter. For large turbulent Damk\\\"{o}hler number, the coefficient of turbulent diffusion of droplets is strongly depleted when the evaporation of droplets is much faster than the condensation of water vapour. The obtained theoretical relationships are potentially useful in modelling applications in the atmospheric turbulence.",
+   "abstract": "Tropical cyclones in the North Indian Ocean (NIO) form in two sub-basins, the Arabian Sea (AS) and the Bay of Bengal (BoB), which are usually studied separately, with their relationship to the El Ni\\~no-Southern Oscillation (ENSO) treated as stationary. We develop a joint inter-basin statistical framework and apply it to 416 disturbances from quality-controlled IBTrACS best tracks for 1982--2025, with harmonised IMD and JTWC intensities, ERA5 and ERSSTv5. The framework tests whether ENSO changes the basin total or redistributes energy between the sub-basins, separates its effect on formation from that on intensification, attributes each sub-basin's response to environmental terms along individual tracks, and tests stationarity and the record length needed to detect trends. In October-December, ENSO redistributes rather than changes the total: for a one-standard-deviation increase in Ni\\~no-3.4 (about 1 $^\\circ$C), accumulated cyclone energy (ACE) is multiplied by 1.89 in the AS and by 0.63 in the BoB, while the NIO total shows no detectable change (factor 0.99 [0.74, 1.32]). ENSO acts on intensification, with no detectable effect on formation: the odds that a cyclonic storm becomes very severe rise about fourfold in the AS and halve in the BoB, through lower vertical wind shear (VWS) over the AS and weaker low-level vorticity over the BoB. The relationship has changed: El Ni\\~no lowered total NIO energy in 1982--2003, but in 2004-2025 AS gains balanced BoB losses (change p = 0.016). Very severe storms and rapid intensification increased in the AS only, and no 15-year window detects this increase, so about three decades of data are needed. The post-monsoon IOD signal can hardly be separated from ENSO, and August Ni\\~no-3.4 gives modest skill for the AS-BoB partition but none for the basin total.",
    "source": "arxiv"
   },
   {

@@ -3,54 +3,58 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2608.20902",
-   "title": "Systematic and accurate anharmonic formation free energies of metastable defects via a constrained Bayesian Adaptive Biasing Force framework",
-   "url": "https://arxiv.org/abs/2608.20902",
+   "uid": "arxiv:2611.33544",
+   "title": "Machine-Learning Spin-Fermion Models for Strongly Disordered Magnets: Sb-Doped MnTe",
+   "url": "https://arxiv.org/abs/2611.33544",
    "authors": [
-    "Clovis Lapointe",
-    "Anruo Zhong",
-    "Manuel Ath\\`enes",
-    "Mihai-Cosmin Marinica"
+    "Do Hoon Kiem",
+    "Parul R. Raghuvanshi",
+    "David S. Parker",
+    "Lucas Lindsay",
+    "Valentino R. Cooper",
+    "Tom Berlijn"
    ],
-   "label": "arXiv:2608.20902v1",
+   "label": "arXiv:2611.33544v1",
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper extends a constrained Bayesian Adaptive Biasing Force method (BABFc) into a thermodynamic integration workflow that assigns anharmonic formation free energies to individual metastable defect basins in bcc alpha-iron, using an empirical potential and a data-driven force field.",
-    "plain": "Defects in metal crystals, such as a missing atom or an extra atom squeezed between others, can settle into several nearby arrangements that are almost equally stable. Working out how likely each arrangement is at a given temperature is hard, because atoms move in non-simple ways and the arrangements can switch into one another. The authors describe a method that needs only a starting arrangement and a way to confine the atoms, and they report running thousands of such calculations on hundreds of defect arrangements in iron across a range of temperatures.",
-    "why": "Reliable free energies for many competing defect states are needed to predict how defects behave at real operating temperatures, which matters for materials such as steels used in reactors. The text reports meV/atom-level statistical accuracy and a low failure rate, but it does not show how these estimates compare with experiments, so the practical impact is still to be judged.",
-    "background": "- Free energy: a thermodynamic quantity that combines energy and disorder; it determines which states are favoured at a given temperature.\n- Metastable defect: a local arrangement of atoms around a flaw in a crystal that is stable for a while but not the lowest-energy state.\n- Anharmonicity: atoms do not vibrate like simple springs at high temperature, so simple approximations fail.\n- Thermodynamic integration: a way of computing free energy differences by gradually switching a system from a known reference to the target.\n- Adaptive biasing force: a simulation technique that adds a gradually learned push to help the system explore barriers it would otherwise rarely cross.\n- Interstitial and vacancy: an extra atom squeezed between lattice sites, and a missing atom from a lattice site, respectively.\n- bcc alpha-Fe: body-centred cubic iron, the common low-temperature form of iron.\n- Empirical potential vs. data-driven force field: a hand-fitted mathematical model of atomic forces versus one trained on quantum-mechanical data.\n- meV/atom: a very small energy scale, a thousandth of an electron-volt per atom.",
+    "one_liner": "A machine-learning method that compresses first-principles calculations into disordered spin-fermion models, applied to altermagnetism in Sb-doped MnTe.",
+    "plain": "Some magnetic materials could be useful for future electronics that use electron spin, but most of them are electrical insulators. Adding impurities can make them conduct electricity, yet the impurities also scramble the atomic and magnetic arrangement, which is hard to simulate accurately. This paper trains a machine-learning model on detailed quantum calculations so that it can reproduce those results and then predict magnetic interactions in very large, randomly disordered samples.",
+    "why": "The authors report that, using this approach on antimony-doped manganese telluride, altermagnetism (a magnetic order with spin-split electronic bands) appears to persist up to about 25% antimony, and that disorder-induced broadening affects how selective the spin behavior is. The text is a short abstract, so the details of the method's accuracy and the strength of these claims cannot be checked here; the approach may be relevant to modeling other disordered magnets, but that is a judgment beyond the text.",
+    "background": "- Spintronics: electronics that use the spin (an intrinsic magnetic property) of electrons as well as their charge.\n- Altermagnets: a recently recognized class of magnets whose opposite-spin sublattices are not related by simple translation, producing spin-split electronic bands even with no net magnetization.\n- Doping: deliberately adding small amounts of another element to change a material's properties, here making an insulator conductive.\n- First-principles calculations: simulations built directly from quantum mechanics with no fitted empirical parameters, but computationally expensive for large systems.\n- Spin-fermion model: a simplified model coupling localized magnetic moments to mobile electrons; exchange couplings describe how neighboring spins interact.\n- Renormalization: systematically simplifying a detailed model into a coarser one that keeps the essential physics.\n- Supercell: a large simulation box repeating the crystal structure, used here to represent random disorder.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Computing the formation free energies of metastable defects at finite temperature remains challenging due to anharmonicity, the multiplicity of basins and the frequent occurrence of migration events. Using the previously introduced constrained Bayesian Adaptive Biasing Force method (BABFc), we establish a practical thermodynamic integration framework for computing restricted anharmonic formation free energies associated with individual metastable defect basins. We demonstrate that BABFc can be exploited as a robust, systematic and numerically efficient tool for addressing a long standing bottleneck in atomistic materials science: the finite temperature thermodynamic characterization of metastable defects in complex, highly anharmonic energy landscapes. The proposed workflow requires only a reference local minimum and a confinement strategy and does not rely on defect specific collective variables. It therefore provides a general route to assign well-defined free energies to individual metastable basins, even when these basins are separated by low barriers and embedded in a dense landscape of competing configurations. In this setting, BABFc enables stable, bias corrected free energy estimates with statistical accuracies at the meV/atom level and a very low failure rate, including for systems containing approximately one thousand atoms. We demonstrate this capability through thousands of independent free energy calculations covering hundreds of four-interstitial and four-vacancy configurations in bcc $\\alpha$-Fe over a broad temperature range, using both a traditional empirical potential and a data driven force field.",
+   "abstract": "Metallic altermagnets are promising for spintronics, but most altermagnets are insulating. Doping can induce metallicity, but introduces chemical and magnetic disorder that is challenging to model from first principles. Here, we introduce a machine-learning approach that renormalizes first-principles calculations onto disordered spin-fermion models. The learned models accurately reproduce first-principles magnetic and electronic properties and enable predictions of millions of inequivalent long-range exchange couplings in large disordered supercells. Applied to Sb-doped MnTe, the approach shows that altermagnetism persists up to about 25\\% Sb, and reveals disorder broadening as a new factor controlling spin selectivity. More broadly, our work opens a route to combining renormalization with machine-learned Hamiltonians for strongly disordered materials.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.32103",
-   "title": "Emergent Electric-Field-Tunable $p$-Wave Magnetism in Twisted Bilayer NiPS$_3$",
-   "url": "https://arxiv.org/abs/2611.32103",
+   "uid": "arxiv:2611.34507",
+   "title": "AFM metrology for 3D high aspect ratio semiconductor structures",
+   "url": "https://arxiv.org/abs/2611.34507",
    "authors": [
-    "Jiaran Su",
-    "Jin-Xin Hu",
-    "Qi Sun",
-    "Dante M. Kennes",
-    "Yuhao Fu",
-    "Lede Xian",
-    "Lijun Zhang"
+    "Hokyun Chin",
+    "Shihwei Yu",
+    "Lucas Rencker",
+    "Omid Tajalizadehkhoob",
+    "Khalid El Maghawry Elsayed",
+    "Po-Cheng Wu",
+    "Duygu Akbulut",
+    "Niranjan Saikumar",
+    "Hamed Sadeghian"
    ],
-   "label": "arXiv:2611.32103v1",
+   "label": "arXiv:2611.34507v1",
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Theoretical and first-principles study showing that a perpendicular layer bias (electric field) can reorient and deform the odd-parity (p-wave) spin splitting in a 21-degree twisted NiPS3 bilayer, and can activate diagonal spin conductivities and a polarity-dependent tilt in the transverse spin-current response.",
-    "plain": "The paper looks at a thin two-layer stack of the magnetic material NiPS3, with one layer twisted 21 degrees relative to the other. In this structure, the electron spin pattern (how spin depends on direction of motion through the crystal) is fixed by symmetry to point along one crystal direction. The authors show, mostly through computer calculations, that applying an electric field across the layers can rotate and reshape this spin pattern and change how spin current flows.",
-    "why": "It proposes a way to electrically tune spin textures and spin-current direction without changing the local magnetic order, which could matter for spintronics. The text is purely theoretical and computational; its practical relevance depends on the coplanar magnetic state staying stable, which the authors themselves flag as a condition.",
-    "background": "- Spin: a quantum property of electrons that acts like a tiny magnet; spintronics uses it to carry information.\n- Spin texture: how electron spin orientation varies with direction of motion (momentum) in a crystal.\n- p-wave splitting: an odd-parity pattern where spin-split energy bands differ under inversion of momentum, in the way a p orbital changes sign.\n- Neel vector: the direction of the alternating magnetic moments in an antiferromagnet, which has no net magnetization.\n- Twisted bilayer: two atomic layers stacked with a rotational offset, which changes their combined symmetry.\n- Symmetry reduction: using crystal symmetries to limit which physical outcomes are allowed.\n- Wannier-based linear response: a computational method that models how a material's electrons respond to a small applied field, using localized orbital-like functions.\n- Layer bias: a voltage difference between the two layers, producing a perpendicular electric field.",
+    "one_liner": "The paper shows atomic force microscopy (AFM) can resolve individual line-and-space profiles in high aspect ratio gate-all-around nanosheet transistor structures, both in the nanosheet region and the isolation region between sheets, and reports a statistical evaluation of their critical dimensions.",
+    "plain": "Modern computer chips are built from tiny three-dimensional transistors, and their features must be measured very precisely to keep manufacturing under control. This paper describes using a probe-based microscope (AFM), which feels the surface with a fine tip, to take clear measurements of very tall, narrow structures inside these transistors. The authors then ran a statistical analysis of the sizes they measured.",
+    "why": "Chip makers need to check feature sizes as transistors get denser and more three-dimensional, so a measurement method that is both fast and reliable matters for production control. The text does not report how the AFM results compare with other measurement techniques, so its wider value is not established here.",
+    "background": "- Transistor: a tiny electronic switch; the basic building block of chips.\n- Gate-all-around FET (GAAFET): a transistor design where the control gate wraps fully around thin channel layers.\n- Nanosheet (NS): a very thin, flat sheet of silicon-based channel material stacked inside such a transistor.\n- Aspect ratio: height divided by width of a feature; high aspect ratio means tall and narrow.\n- Atomic force microscopy (AFM): an instrument that scans a surface with a sharp tip to map its shape at near-atomic scale.\n- Critical dimension (CD): a key width or spacing that determines whether a chip works as designed.\n- Lines and spaces: a repeating pattern of raised lines separated by gaps, used to test measurement quality.\n- Metrology: the science of making precise measurements in manufacturing.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "A perpendicular electric field can reorient a momentum-space spin texture without changing the local magnetic configuration. In this Letter, we investigate this mechanism in a $21^\\circ$-twisted $\\mathrm{NiPS}_3$ bilayer with zigzag order and coplanar, nonparallel layer N\\'eel vectors. In the ideal nonrelativistic limit, an antiunitary in-plane half-translation enforces opposite-spin pairing at opposite momenta, while a layer-exchanging twofold operation pins the leading $p$-wave spin splitting to a crystallographic direction. A perpendicular layer bias lifts this orientational constraint while preserving the antiunitary symmetry, allowing a transverse component of the splitting vector. First-principles calculations show gate-dependent reorientation and deformation of spin-resolved isoenergy contours. Wannier-based linear-response calculations further reveal field-activated diagonal spin conductivities and a polarity-dependent tilt in the angular profile of the transverse spin-current response. The spin-texture axis, dispersion axes, and transport-response axis are distinct quantities governed by the same symmetry reduction. These results identify layer bias as a route to controlling odd-parity spin textures and spin-current anisotropy, provided that the coplanar magnetic state remains stable.",
+   "abstract": "Transistors have long been the foundation of the semiconductor industry, with continuous architectural innovations enabling the scaling of integrated circuits while maintaining high performance. Advancements in deposition and lithographic techniques have further expanded design possibilities, while increasing structural complexity demands stricter process control. Atomic force microscopy (AFM) offers a rapid and reliable metrology solution, providing high-resolution measurements and robust statistical analysis of critical parameters. In this work, we present clearly resolved individual profiles of lines and spaces in high aspect ratio (HAR) gate all around FET (GAAFET)-type structures on both the nanosheet (NS) region and in the isolation region between the nanosheets and we present a comprehensive statistical evaluation of their critical dimensions.",
    "source": "arxiv"
   },
   {

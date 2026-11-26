@@ -3,45 +3,47 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.31244",
-   "title": "On the invertibility of saddle-point matrices: exact algebraic conditions and applications to constrained dynamics",
-   "url": "https://arxiv.org/abs/2611.31244",
+   "uid": "arxiv:2611.34165",
+   "title": "Entropic continuity of Lyapunov exponents in arbitrary dimension",
+   "url": "https://arxiv.org/abs/2611.34165",
    "authors": [
-    "Federico Talamucci"
+    "David Burguet",
+    "Gang Liao",
+    "Yao Tong"
    ],
-   "label": "arXiv:2611.31244v1",
-   "primary_category": "physics.class-ph",
-   "date": "2026-11-26",
-   "summary": {
-    "one_liner": "The paper gives necessary and sufficient algebraic conditions (constraint independence plus a kernel intersection condition) for invertibility of the saddle-point matrix in D'Alembert–Lagrange constrained dynamics, avoiding generalized inverses and positive-definiteness assumptions on the mass matrix.",
-    "plain": "When a mechanical system is forced to obey constraints (such as a bead on a wire or a linked robot arm), its motion is found by solving a larger coupled system of equations. This paper asks exactly when that system can be solved uniquely. The author states that the answer is two algebraic conditions: the constraints must be independent of one another, and no allowed motion may produce inertial forces that are fully cancelled by the constraint forces.",
-    "why": "The text argues that common textbook assumptions, such as a mass matrix that is positive definite, are stronger than needed and that the method can handle massless parts and indefinite inertia without special workarounds. Its relevance to practical simulation software is plausible but not demonstrated in the text, which gives no numerical tests.",
-    "background": "- Constrained dynamics: motion of a mechanical system subject to restrictions such as fixed lengths or contact.\n- D'Alembert–Lagrange principle: a way of writing equations of motion where constraint forces do no work along allowed motions.\n- Saddle-point matrix: a block matrix that couples the system's inertia (mass) with the constraint equations; it must be invertible for the motion to be uniquely determined.\n- Mass matrix: the matrix describing how the system resists acceleration; positive definiteness means it is strictly \"well-behaved\" in every direction.\n- Generalized inverse: a substitute for the matrix inverse used when a matrix is singular; the paper aims to avoid it.\n- Kernel (null space): the set of vectors a matrix maps to zero.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The solvability of constrained dynamical systems governed by D'Alembert--Lagrange mechanics relies directly on the invertibility of the coefficient matrix describing the underlying saddle-point structure, which couples system inertia with kinematic constraints. Standard formulations often rely on overly restrictive sufficient assumptions, such as global positive definiteness or semi-definiteness of the mass matrix, frequently combined with generalized inverses to handle singular mass distributions. In this work, we establish the purely necessary and sufficient algebraic conditions for matrix invertibility: the kinematic independence of the constraints and a kernel intersection condition between the allowed directions of motion and the induced inertial forces. We provide a physical interpretation of this requirement, demonstrating that it eliminates non-zero admissible motions whose generated inertial forces are entirely absorbed by constraint reactions. Furthermore, by completely avoiding generalized inverses, this formulation offers a unified and coordinate-free framework capable of handling massless components and indefinite inertia structures within a computationally robust setting.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.32079",
-   "title": "Dissipative Geometric Flows and Certified Phase-Volume Contraction",
-   "url": "https://arxiv.org/abs/2611.32079",
-   "authors": [
-    "Igor Furtat"
-   ],
-   "label": "arXiv:2611.32079v1",
+   "label": "arXiv:2611.34165v1",
    "primary_category": "math.DS",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper certifies uniform phase-volume contraction for prescribed dynamical systems using a regularized Sobolev gradient flow, with finite-time certification, a Hölder-based stopping criterion, and new divergence-penalized Liouville, Yamabe and Ricci-type evolutions.",
-    "plain": "The paper studies whether a dynamical system's volume in its state space can be guaranteed to shrink at a steady exponential rate. The authors give a search procedure that finds a positive density certifying such a rate, and it stops in finite time once the certificate is good enough. They also analyze several related geometric evolution equations and show some cases where smooth convergence fails.",
-    "why": "Volume contraction is a classical way to reason about long-run behavior of systems such as flows and attractors, so a computable certificate for it is of interest to people studying stability. The text does not indicate applications beyond dynamical systems, and its broader connections are not spelled out, so I am not sure how far the results reach outside this setting.",
-    "background": "- Phase volume: the measure of a region of all possible states of a system, and how it changes as the system evolves.\n- Contraction rate and invariant measure: a bound on how fast volume can shrink, tied to the system's divergence (its local rate of expansion or compression).\n- Sobolev norm and gradient flow: a way of measuring the size of a smooth function and of steadily adjusting a function to reduce a cost, like rolling downhill.\n- Regularization: adding a small extra penalty to make a problem well-behaved; here it is made to vanish in the limit.\n- Hölder estimate: an inequality that converts a control on an averaged quantity into a control on its pointwise values.\n- Conformal factor and DeTurck gauge: terms from geometric flows (Yamabe and Ricci flows) that rescale a metric or fix a coordinate choice.",
+    "one_liner": "The paper proves entropic continuity of the sum of positive Lyapunov exponents for C^∞ diffeomorphisms in arbitrary dimension under an entropy gap condition, extending Buzzi, Crovisier and Sarig's result, and shows the condition is sharp.",
+    "plain": "This paper studies how the chaos of a system that evolves by repeated rule-based motion (a smooth map of a space onto itself, such as a stirred fluid or a planetary-style orbit model) changes when the rule is slightly altered. It shows that, under a stated condition on the system's entropy (a measure of how much complexity or unpredictability it has), a key chaos measure called the sum of positive Lyapunov exponents varies continuously. The authors also give examples showing the condition cannot simply be dropped.",
+    "why": "Continuity of these chaos measures under small changes matters for knowing whether a model's predicted behaviour is robust to small errors in its description. The text links the work to the Newhouse phenomenon and to standard maps, but the abstract does not show how far these applications go.",
+    "background": "- Diffeomorphism: a smooth, invertible map of a space to itself, viewed as one step of a discrete-time evolution.\n- Lyapunov exponents: rates at which nearby trajectories separate exponentially; positive ones signal chaos.\n- Topological and measure-theoretic entropy: measures of how complex or unpredictable a system's orbits are, counted in total or under a particular statistical measure.\n- Continuity (in this setting): small changes to the map cause only small changes to the quantity.\n- Ergodic measure of maximal entropy: a statistical description of the system's typical long-run behaviour that carries the largest possible entropy.\n- Upper semicontinuity: a one-sided form of continuity where the quantity can jump up only in the limit, never suddenly down.\n- Newhouse phenomenon: the appearance of infinitely many stable structures near a system with a tangency, a known source of complex behaviour.\n- Standard map: a simple model from physics of area-preserving motion, often used to study chaos.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "This paper develops an approach to uniform phase-volume contraction for prescribed dynamical systems. The main result is that every positive rate strictly below the invariant-measure bound can be certified in finite search time by a regularized Sobolev gradient flow. The resulting positive density ensures exponential contraction of the weighted phase volume with unit prefactor. For each fixed regularization parameter, the flow converges exponentially to a unique minimizer. As the regularization vanishes, these minimizers converge to the feasible potential of minimum Sobolev norm for a fixed feasibility margin. The certification procedure rests on a Holder estimate that converts a bound on the integral penalty into a pointwise bound on the weighted divergence over the entire invariant domain. This estimate yields a stopping criterion for the search. Finite termination is also established in growing finite-dimensional trial spaces for a staged scheme with exact gradient evaluations and controlled positive quadrature. The scheme requires neither a supplied feasibility margin nor a bound on the norm of a feasible potential. A disk example shows that the invariant-measure bound can be approached by smooth certificates even when no C^1 certificate attains it. Analytical properties of novel local D-Liouville, D-Yamabe, and D-Ricci evolutions driven by divergence penalties are established. For the unnormalized D-Yamabe flow, a scaling obstruction to exponential stability of stationary conformal factors is established. For the D-Ricci flow, the transformation law for the prescribed vector field under DeTurck pullback is derived. This law specifies how the vector field must transform when the gauge term is removed. Examples on the torus and sphere identify obstructions to smooth convergence of the geometric evolutions.",
+   "abstract": "We prove that the sum of the positive Lyapunov exponents is entropically continuous for every $C^\\infty$ diffeomorphism, provided the entropy exceeds its second-largest exterior growth rate. We also establish stable strong positive recurrence and show that the topological entropy is continuous, and the number of ergodic measures of maximal entropy is upper semicontinuous. This extends the result of Buzzi, Crovisier, and Sarig to arbitrary dimensions. We give examples in both the measure-theoretic and topological senses, showing that this entropy gap condition is sharp. We also present applications related to the Newhouse phenomenon and standard maps.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34103",
+   "title": "From Limit Theorems to Mixing Limit Theorems",
+   "url": "https://arxiv.org/abs/2611.34103",
+   "authors": [
+    "Jianshu Jiang"
+   ],
+   "label": "arXiv:2611.34103v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-26",
+   "summary": {
+    "one_liner": "The paper gives an alternative proof, under weaker assumptions, of an Arana-Herrera–Forni result that turns ordinary limit theorems for cocycles over dynamical systems into mixing limit theorems, following Gouëzel's approach.",
+    "plain": "The paper is about a general technique in the study of chaotic, evolving systems: taking a known \"limit theorem\" (a statement about how averages or fluctuations behave over long times) and upgrading it into a stronger \"mixing\" version that also holds jointly with the system's own dynamics. The authors re-prove an existing result of Arana-Herrera and Forni with fewer assumptions, using an approach inspired by Gouëzel's earlier work.",
+    "why": "The text is short, so its scope is hard to judge beyond the abstract. Its value is mainly methodological: it shows the same upgrading result holds under weaker conditions, which may make the tool applicable to more systems.",
+    "background": "- Dynamical system: a rule that moves points forward in time, such as a map or flow.\n- Cocycle: a quantity attached to each step of the dynamics (for example, a running total or a matrix product) that accumulates along orbits.\n- Limit theorem: a statement describing the long-run behaviour of such accumulated quantities, such as a central limit theorem for fluctuations.\n- Mixing: the property that the system forgets its initial state, so distant-in-time events become roughly independent.\n- Mixing limit theorem: a limit theorem that holds in this \"forgetful\" sense, jointly with the dynamics.\n- Background papers: prior work by Gouëzel and by Arana-Herrera and Forni, which the text does not describe.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Following the work of Gou\\\"ezel, we give an alternative proof, under weaker assumptions, of a result of Arana-Herrera and Forni, which provides a general method for upgrading limit theorems for cocycles over dynamical systems to mixing limit theorems.",
    "source": "arxiv"
   },
   {

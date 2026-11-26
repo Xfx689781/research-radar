@@ -3,53 +3,50 @@
  "updated": "2026-11-26",
  "papers": [
   {
-   "uid": "arxiv:2611.32483",
-   "title": "CodeWAM: A Code World Action Model for End-to-End Autonomous Driving",
-   "url": "https://arxiv.org/abs/2611.32483",
+   "uid": "arxiv:2611.34403",
+   "title": "Recoverability policy editing for closed-loop safety in autonomous driving",
+   "url": "https://arxiv.org/abs/2611.34403",
    "authors": [
-    "Zhisheng Chen",
-    "Jinpeng Wang",
-    "Beicheng Lou",
-    "Zhengwei Xie",
-    "Hao Wu",
-    "Rui Qian",
-    "Kun Wang",
-    "Vivian W. H. Wong"
+    "Yang Guan",
+    "Shengbo Eben Li"
    ],
-   "label": "arXiv:2611.32483v1",
+   "label": "arXiv:2611.34403v1",
    "primary_category": "cs.RO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "CodeWAM is a driving world model that uses executable code to represent the ego vehicle's planned motion, paired with a learned visual model of the scene, and reports benchmark scores on NAVSIM v1, v2 and NAVHARD.",
-    "plain": "Self-driving planners need to guess what will happen if the car follows a candidate plan, both to the road around it and to the car itself. This paper proposes representing the car's own motion as small pieces of executable code, while a learned visual model handles the scene. The authors report that this combination scores well on several driving benchmarks and that it works with two other planners without extra training.",
-    "why": "Autonomous driving systems are judged on whether they can foresee outcomes of their own choices, so a more structured way to model the vehicle's motion may matter for planning. The text reports benchmark numbers and transfer results, but it does not show how the approach behaves on real roads, so its wider significance is uncertain.",
-    "background": "- World model: a learned system that predicts how an environment will change in response to an action.\n- Ego vehicle: the car being controlled by the planner.\n- Candidate plan: one possible future trajectory the planner is considering and scoring.\n- NAVSIM / NAVHARD / PDMS / EPDMS: offline driving benchmarks and scoring metrics that estimate how safe and progressive a planned driving trajectory is; higher is better.\n- Executable code as a representation: describing a process as a program that can be run to produce its outcome, instead of only as learned numbers.\n- Hydra-MDP and DrivoR: other driving planners; the paper tests its approach on them without retraining.",
+    "one_liner": "A state-level policy editing method that, for recoverable states where a neural driving policy would eventually lead to a collision, overrides the policy's actions to steer the vehicle back into a safe set, aiming for closed-loop collision avoidance while keeping the original policy elsewhere.",
+    "plain": "Self-driving systems built on neural networks usually come with no formal promise that they will stay safe over time. This paper looks at situations where a car is heading toward trouble but could still get back to safe driving if it reacts in time. The authors' method identifies those situations and corrects the car's actions only there, then hands control back to the original driving model once it has recovered. In simulated urban driving on the nuPlan benchmark, the authors report a 48% drop in safety incidents compared with the original policy, with its driving performance largely kept.",
+    "why": "Neural driving models are hard to certify, so a way to add a safety layer that leaves most of the model's behaviour untouched could matter for deployment. The reported result is from simulation only, and the text does not say how the method performs on real vehicles or in situations outside the tested scenarios.",
+    "background": "- Closed-loop: the car's actions affect what it sees next, so errors can compound over time, unlike a single prediction.\n- Policy: the rule or neural network that maps what the car senses to what it does (steer, brake, accelerate).\n- Feasible set: the set of situations from which the policy can still avoid collisions; the paper's notion of recoverability is about returning to it in finite time.\n- Recoverable disturbance: a shock or error that the car can correct from, as opposed to one that already makes collision unavoidable.\n- nuPlan: a public benchmark of urban driving scenarios used for testing planning algorithms in simulation.\n- Safety incident: an event such as a collision counted during simulated runs.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego vehicle's motion under a candidate plan. We propose CodeWAM, a driving world model that incorporates executable code as part of its world representation. Code represents ego dynamics by expressing how the vehicle state evolves under plan execution, while a learned visual model captures scene-dependent consequences. Executing the code produces a candidate-conditioned motion sequence, which is evaluated relative to the prior plan and recorded motion history. The resulting execution consequences and learned scene outcomes jointly represent the candidate's future, enabling the planner to assess both what a plan may lead to and how the vehicle transitions into that future. The selected plan becomes part of the next decision's execution context, linking successive choices within the model. CodeWAM achieves 93.6 PDMS on NAVSIM v1 navtest, 92.1 EPDMS on v2 navtest, and 50.6 EPDMS on NAVHARD. Further experiments demonstrate improved pairwise execution consistency and gains on Hydra-MDP and DrivoR without additional training, supporting executable code as a complementary representation for driving world models.",
+   "abstract": "Autonomous driving powered by neural network models lacks safety guarantees. We propose a state-level policy editing technique that guarantees closed-loop safety under recoverable disturbances while reusing the model's existing driving capabilities. Closed-loop safety means that the vehicle remains free of collisions at all future times. We introduce the concept of policy recoverability to characterize whether a vehicle can safely return to the original policy's feasible set in finite time. Our method identifies states that are unsafe in the long term under the original policy but recoverable, and selectively edits policy outputs within this region. The vehicle corrects its actions upon entering this region and resumes the original policy upon recovery. Closed-loop simulations on nuPlan urban driving scenarios show a 48% reduction in safety incidents under the original policy while largely preserving its driving performance.",
    "source": "arxiv"
   },
   {
-   "uid": "arxiv:2611.31715",
-   "title": "Sparks of Weight-Space Programming for Robot Foundation Models",
-   "url": "https://arxiv.org/abs/2611.31715",
+   "uid": "arxiv:2611.34130",
+   "title": "WorldPhy: Benchmarking Fine-Grained Physical Plausibility of World Models in Robotics",
+   "url": "https://arxiv.org/abs/2611.34130",
    "authors": [
-    "Kyle Coelho",
-    "Eugen Solowjow"
+    "Ziyuan Chu",
+    "Mingzhi Zheng",
+    "Kaiyue Zhang",
+    "Jinan Zhang",
+    "Linchao Zhu"
    ],
-   "label": "arXiv:2611.31715v1",
+   "label": "arXiv:2611.34130v1",
    "primary_category": "cs.RO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper applies weight-space programming, where a language-model agent reads and edits a few parameters of a pre-trained vision-language-action robot policy (pi0.5), to fix recurring failure states in simulation without new data or training.",
-    "plain": "Robot AI models sometimes get stuck in the same recognizable situation again and again. This paper tries to fix those repeated failures by making a tiny, targeted change directly to the model's internal settings, rather than collecting new examples and retraining it. In simulation, editing about 0.0002% of the parameters improved success on these recurring failures, and the authors report that reversed or random edits did not give the same gains.",
-    "why": "If this kind of direct, minimal editing holds up beyond simulation, it could offer a cheaper way to patch specific robot behaviors after deployment. The text only reports simulation results on one model, so how well it transfers to real robots or other models is unclear from this description alone.",
-    "background": "- Robot foundation model (RFM): a large AI model pre-trained on many robot tasks that maps camera images and language instructions to motor actions.\n- Vision-language-action (VLA) policy: such a model, taking in what the robot sees and is told, and outputting movements.\n- Parameters / weights: the numerical settings inside a neural network that determine its behavior; 0.0002% means a very small fraction of them.\n- Activations: the intermediate signals inside the network when it processes an input.\n- Neurons that are \"near-silent\": units that rarely produce a strong signal, so reusing them is less likely to disturb normal behavior.\n- Fine-tuning: further training on a specific task, after the initial pre-training.\n- Ablation controls: \"reversed\" and \"random\" edits used as comparisons to check the gains are not accidental.",
-    "difficulty": "research-level",
+    "one_liner": "WorldPhy is a benchmark of 300 robotics scenarios, plus a learned reward model (WorldPhyReward) trained on over 12K human annotations, for scoring how physically plausible videos generated by 13 world models are across six fine-grained physical dimensions and instruction following.",
+    "plain": "World models are AI systems that predict or generate future video of a scene, and robots can use them to practice or plan actions. This paper introduces WorldPhy, a test set of 300 robot tasks, each starting from a single image and an instruction, along with a scoring model trained on human judgments. The authors report that the scoring model agrees better with human raters than general vision-language models and existing reward models do, and that 13 current world models often fail to keep motion and object interactions physically realistic across different robot scenes.",
+    "why": "Robots that rely on generated video need that video to obey physics such as contact, motion and object behaviour, so a finer-grained way to check this is useful for judging and improving these models. The text does not show how the benchmark affects real robot performance, so its practical impact remains to be tested.",
+    "background": "- World model: an AI model that generates or predicts future video frames given a starting image and an action or instruction.\n- Benchmark: a standard set of test tasks used to compare systems fairly.\n- Reward model: a learned scorer that rates outputs, here trained to mimic human ratings.\n- Vision-language model (VLM): an AI model that takes images and text and produces text answers.\n- Physical plausibility: whether motion and contacts in a video look consistent with real-world physics.\n- Human annotation: people labelling or rating examples, used here as ground truth for training and checking the scorer.",
+    "difficulty": "intermediate",
     "ai": true
    },
-   "abstract": "This paper demonstrates an approach for correcting failures of robot foundation models (RFMs) without additional data collection, demonstrations, or training. We apply weight-space programming (WSP), in which a language-model agent directly reads and writes a neural network's parameters, to a large, pre-trained vision-language-action policy. The idea is simple: many policy failures are not random but repeatedly land in the same recognizable stuck state, so if that state is visible in the model's internal activations, a small edit could trigger a corrective movement while leaving the rest of the model's parameters unchanged. A core design choice is where to write the edit: repurposing a few near-silent neurons in the action expert lets the edit switch on in situations associated with the failure and produce a corrective movement, such as lowering the gripper toward the target, that is specified directly rather than learned through training. Empirically, when applied to the pi0.5 policy in simulation, we find that edits to roughly 0.0002% of the parameters can improve success on recurring failures, including for a policy that was already fine-tuned on its task. Reversed and random edits indicate that the gains come from the intended behavior, and the approach works best when the failure situation is recognizable and a simple correction can address it.",
+   "abstract": "World models are increasingly used in robotics to improve the performance of embodied models. Compared with general-purpose video generation, robotics places more stringent requirements on world models. Generated videos must satisfy fine-grained physical constraints on robot motion and object interactions. However, existing world model benchmarks can overlook robotics specific physical details and struggle to assess them accurately. To address this problem, we introduce WorldPhy, a world model benchmark for accurate, fine-grained evaluation of physical plausibility in robotics. Our benchmark contains 300 tasks, each consisting of an initial-frame image and a task instruction, covering diverse robotics scenes, task categories, viewpoints, and robot configurations. We further collect over 12K high-quality human annotations, and use them to train WorldPhyReward to accurately provide scores and reasons across six fine-grained physical dimensions and an instruction-following dimension. Comparisons with general VLMs and existing reward models show that WorldPhyReward better aligns with human ratings. We system- atically evaluate 13 frontier open and closed-source world models. The results reveal that current world models struggle to consistently maintain fine-grained physical plausibility across different robotics scenarios. Our code is available at https://github.com/chuziyuan139/ WorldPhy.",
    "source": "arxiv"
   },
   {
