@@ -3,6 +3,31 @@
  "updated": "2026-11-27",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.25.769289",
+   "title": "Structure-guided discovery of zinc enzymes and prediction of acetophenone reduction activity",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769289v1",
+   "authors": [
+    "Xu, Q.",
+    "Zhou, Y.",
+    "Han, Y.",
+    "Liu, Z.",
+    "Lu, D."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769289 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper uses structure-guided mining of Zn-His protein structures and AlphaFold predictions, experimental assays of 25 candidates, and small-sample machine learning to find and predict zinc enzymes that reduce acetophenone with phenylsilane.",
+    "plain": "Researchers wanted to find natural proteins that can carry out a chemical reaction they do not normally perform, using a zinc atom as the active metal center. They searched a large protein structure database for zinc-binding sites, grouped 2,660 candidate sequences into 200 structural clusters, and tested 25 samples on a model reaction that turns acetophenone into a reduced alcohol. Eight samples passed a 10% yield threshold, and a machine-learning model trained on a more diverse set of examples recalled active samples better on the test data.",
+    "why": "It offers a way to pick candidate enzyme scaffolds from structural data rather than testing them blindly, which may help in designing enzymes for new reactions. The text reports only one model reaction and a small set of assays, so how far the approach generalises is not shown here.",
+    "background": "- Enzymes are proteins that speed up chemical reactions; a metal atom at the active site can do the chemistry.\n- Artificial metalloenzymes are proteins with a metal added or placed in them to catalyse reactions they do not normally do.\n- Zn-His motif: a zinc atom held in place by histidine amino acids.\n- Protein Data Bank (PDB): a public archive of experimentally determined protein structures. AlphaFold: an AI tool that predicts protein structures from sequence.\n- Asymmetric reduction: adding hydrogen to a molecule so that one of two mirror-image forms is favoured.\n- Phenylsilane: the hydrogen source used in the reaction. Apparent yield: the amount of product observed relative to the maximum possible.\n- Small-sample machine learning: training models on limited data; feature ablation means removing feature groups to see which ones matter.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Advances in artificial metalloenzyme design have expanded the range of reactions accessible to enzymes, yet the diversity of available scaffolds remains limited. Experimental activity data for individual non-native reactions are scarce, making it difficult to establish how the environment around a metal center shapes catalysis across scaffolds. Using phenylsilane-driven asymmetric reduction of acetophenone as a model reaction, we developed a workflow that combines structure-guided mining, experimental activity assays, and small-sample machine learning. We used the Zn-His coordination motif to mine experimental Protein Data Bank structures and AlphaFold predictions and grouped 2,660 candidate sequences into 200 structural clusters. Of 25 samples assayed, eight met the 10% apparent-yield threshold, including the positive enzymatic control. To evaluate small-sample learning, we assembled literature-derived training sets that differed in scaffold diversity. Training on the larger, more diverse dataset substantially improved recall on the experimental test set. Feature ablation identified contributions from pocket and tunnel geometry, hydrophobicity and solvent exposure, and local packing and metal coordination. These results provide a basis for discovering natural enzyme scaffolds with non-native activities from structural data.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.24.768724",
    "title": "Identification of Functional NOD2-Specific Aptamers Using APT-SNAP Microarrays to Screen Zebrafish Nod-like Receptors",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768724v1",
@@ -21,36 +46,14 @@
    "primary_category": "biochemistry",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "The paper reports DNA aptamers, selected with the high-density APT-SNAP microarray platform, that bind zebrafish NOD2 and related NOD-like receptors, and validates the lead NOD2 binders with ELASA, pull-down, biolayer interferometry and fluorescence microscopy.",
-    "plain": "Researchers wanted reliable tools to detect certain immune sensor proteins in zebrafish, a model animal often used to study immunity, but commercial antibodies for these proteins did not work well. They used a screening method that tests huge numbers of short DNA sequences against proteins to find ones that stick tightly to the target. Several DNA binders were found, and the best ones for a protein called NOD2 were tested with several lab methods and shown to bind it specifically.",
-    "why": "Good detection reagents are a bottleneck for studying immune sensors, and the authors argue the same approach could be used for other hard-to-detect proteins that lack good antibodies. The text reports lab-level validation only; its broader usefulness for other targets is a claim the authors make and has not been shown here.",
-    "background": "- NOD-like receptors (NLRs) are proteins inside cells that sense signs of pathogens or tissue damage and trigger immune responses; their dysregulation is linked to inflammatory disease and cancer.\n- Antibodies are protein-based tools that stick to a target protein and are used to detect it; they are often unreliable or unavailable for less-studied species like zebrafish.\n- Aptamers are short single-stranded DNA or RNA sequences that fold into shapes that bind specific targets, acting as chemical alternatives to antibodies.\n- A microarray is a surface carrying many different sequences at once, allowing thousands of binding tests in parallel.\n- Validation methods named: ELASA (enzyme-linked assay using aptamers, like an ELISA), pull-down (fishing the target out of a mixture), biolayer interferometry (measuring binding strength in real time), and fluorescence microscopy (imaging glowing labels in cells).",
-    "difficulty": "research-level",
+    "one_liner": "The paper reports DNA aptamers, identified with the APT-SNAP high-density microarray, that bind zebrafish NOD2 and other zebrafish NOD-like receptors, and validates the lead NOD2 binders with ELASA, pull-down, biolayer interferometry and fluorescence microscopy.",
+    "plain": "Researchers wanted reliable tools to detect a family of immune sensor proteins in zebrafish, a small fish widely used in immunology, because commercial antibodies for these proteins were not working well. They used a method that screens large arrays of short DNA strands to find ones that stick to these proteins, and selected candidates that bind a protein called NOD2. Several tests indicated that the lead DNA binders grab zebrafish NOD2 tightly and specifically.",
+    "why": "Good detection reagents are a bottleneck for studying immune signaling, which is linked to inflammatory diseases and cancers, and the authors suggest the same approach could help with other hard-to-target proteins. The text does not show any disease or clinical application, so the broader value remains a proposal rather than a demonstrated result.",
+    "background": "- NOD-like receptors (NLRs) are proteins inside cells that sense signs of microbes or tissue damage and trigger immune responses.\n- Antibodies are proteins that bind specific targets and are used as detection tools in labs; many do not work well for some proteins.\n- Aptamers are short single-stranded DNA or RNA sequences that fold into shapes that bind a target, serving as an antibody-like alternative.\n- A microarray is a glass or chip surface carrying thousands of different spots, here used to test many aptamers at once.\n- Zebrafish are a common model organism for studying the immune system.\n- Biolayer interferometry (BLI) measures how strongly and how fast a molecule binds a target; pull-downs use a bait to fish out binding partners; ELASA is an enzyme-linked assay similar to ELISA but with aptamers.\n- Affinity means how tightly a binder holds its target.",
+    "difficulty": "intermediate",
     "ai": true
    },
    "abstract": "NOD-like receptors (NLRs) are intracellular immune sensors that monitor for pathogen- and damage-associated molecular patterns (PAMPs, DAMPs) and initiate innate immune signaling pathways upon detection. Dysregulation of NLR signaling contributes to numerous inflammatory diseases and cancers, yet mechanistic studies of NLR proteins are limited by the availability of reliable detection reagents, particularly in emerging model organisms such as zebrafish (Danio rerio). Although zebrafish provide a powerful system for studying innate immunity, few validated antibodies exist for zebrafish NLR proteins. Here, we describe the development of aptamer-based detection reagents targeting zebrafish NLRs using the APT-SNAP platform, a high-density aptamer microarray technology that enables rapid identification of protein-binding nucleic acid ligands. Using this approach, we identified multiple DNA aptamers that bind zebrafish NLR proteins and selected candidates targeting NOD2 for further characterization. Orthogonal validation assays, which include enzyme-linked apta-sorbent assays (ELASAs), pull-downs, biolayer interferometry (BLI), and fluorescence microscopy, confirmed that the lead aptamers bind zebrafish NOD2 with high affinity and specificity, and function effectively in biochemical and cellular assays. These results demonstrate that APT-SNAP generated validated, native-state affinity reagents for a zebrafish immune protein where commercial antibodies failed, providing new molecular tools for investigating NLR biology in zebrafish. More broadly, this strategy establishes a generalizable approach for generating affinity reagents against challenging protein targets that lack reliable antibodies.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.27.769052",
-   "title": "RNA structure probing with 4-base-recognizing RNA cutters",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.27.769052v1",
-   "authors": [
-    "Takahashi, M.",
-    "Nashimoto, M."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.27.769052 v1",
-   "primary_category": "biochemistry",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "In vitro tests of human tRNase ZL guided by 13 \"hook-type\" sgRNAs against nine 32-nt RNA targets, mapping which 3- or 4-base recognition sequences work and whether the enzyme cuts only loosely folded RNA regions.",
-    "plain": "Cells fold their RNA molecules into complex shapes, and knowing which parts are tightly folded and which are open helps explain how RNA works. This paper tests a molecular scissors approach: a human enzyme (tRNase ZL) is steered by a short guide RNA to cut RNA at a chosen short sequence. The authors report, in test tubes only, which guide designs cut well and that cutting happened only in open or loosely folded regions.",
-    "why": "If the approach works inside cells, it could give a way to probe the shapes of cellular mRNA and non-coding RNA, which may matter for understanding gene regulation and for precision medicine. The text itself is a feasibility study in vitro, and it says the cellular use is a future goal, so its practical value remains unproven.",
-    "background": "- RNA is a single-stranded molecule that folds into 3D shapes; those shapes affect its function.\n- mRNA carries genetic instructions; non-coding RNAs regulate genes without being translated into protein.\n- \"Structure probing\" means using a chemical or enzyme to see which RNA regions are open or folded.\n- tRNase ZL is a human enzyme that cuts RNA; a guide RNA (sgRNA) can direct where it cuts.\n- \"Hook-type\" sgRNA is a guide design from the authors' earlier work; the text does not describe its details.\n- A \"4-base recognition sequence\" means the guide pairs with four RNA bases to mark the cut site.\n- Nucleotides (nt) are the letters of RNA; G and C are two of the four bases.\n- Hairpin: a stem-loop shape formed when a stretch of RNA folds back on itself.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "To elucidate dynamic higher-order structures of RNA in human cells would be important not only to deeply understand the physiological functions of mRNA and non-coding RNA but also to establish precision medicine. tRNase ZL together with hook-type sgRNA works as a 4-base-recognizing RNA cutter. We thought that RNA structure probing using the RNA cutters with hook-type sgRNAs of various 4-base recognition sequences would provide valuable information on the higher-order structures of cellular RNA. In this study, we investigated the feasibility of this method in vitro. We examined nine 32-nt RNA targets of various degrees of folding for cleavability by human tRNase ZL guided by each of thirteen hook-type sgRNAs. The assays were carried out under four different conditions: at 37 or 50{degrees}C with MgCl2 or spermidine. From these assays, we identified four main findings: At least two consecutive G or C nt in the target RNA recognition sequence are needed for hook-type sgRNA to work as a guide for tRNase ZL. A longer target RNA recognition sequence of hook-type sgRNA provides better guiding ability, and the hook-type sgRNA that can form with target RNA a hairpin structure without bulged nucleotides shows a better guiding ability. tRNase ZL with hook-type sgRNA, which was designed to work as a 4-base-recognizing RNA cutter, can also work efficiently as a 3-base-recognizing RNA cutter in some cases. Cleavage of target RNA by tRNase ZL guided by hook-type sgRNA occurs only in unstructured or loosely-folded target RNA, suggesting that sgRNA-guided tRNase ZL can discriminate less folded regions from tightly folded ones in long cellular mRNA or non-coding RNA. Structure probing of cellular RNA by introducing into the cells the hook-type sgRNA designed based on the findings of this study would provide valuable information on the higher-order structures of the cellular RNA.",
    "source": "biorxiv"
   },
   {

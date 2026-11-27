@@ -3,6 +3,35 @@
  "updated": "2026-11-27",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.25.769136",
+   "title": "The thylakoid K+ exchange antiporter KEA3 affects NPQ dynamics and growth in the green algae Chlamydomonas reinhardtii",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769136v1",
+   "authors": [
+    "Andree, I.",
+    "Wunder, T.",
+    "Käbe, S.",
+    "Atlantas, B.",
+    "Eirich, J.",
+    "Kunz, H.-H.",
+    "Finkemeier, I.",
+    "Buchert, F.",
+    "Armbruster, U."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769136 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "In the green alga Chlamydomonas reinhardtii, the thylakoid K+/H+ antiporter CrKEA3 is shown to help relax energy-dependent quenching (qE) in both light-to-dark transitions and in darkness, and its loss slows growth and raises low-CO2-induced protein levels.",
+    "plain": "Plants and algae capture sunlight for photosynthesis but must safely get rid of excess light energy, which they do by dissipating it as heat. This paper looks at a protein called KEA3, which helps switch off this heat-release protective system when light drops. The authors knocked out KEA3 in a single-celled green alga and found that the mutants kept the protective response switched on more strongly, grew more slowly at higher light, and showed signs that they were short of carbon dioxide.",
+    "why": "The text suggests KEA3 does more in algae than previously described for land plants, touching on how cells balance light and carbon dioxide. Its relevance to crop productivity is not addressed in the text, so any link to farming should be treated as speculative.",
+    "background": "- Photosynthesis: using light to fix CO2 into sugar, which needs a steady CO2 supply.\n- Nonphotochemical quenching (NPQ): a protective process that releases surplus light energy as heat so it does not damage the photosynthetic machinery.\n- qE (energy-dependent quenching): the fastest NPQ component, switched on when the thylakoid interior (lumen) becomes acidic.\n- Thylakoid: membrane inside chloroplasts where light reactions happen.\n- KEA3 antiporter: a membrane protein that exchanges potassium ions for protons, helping control acidity inside the thylakoid.\n- Low-CO2-induced (LCI) proteins: proteins a cell makes more of when carbon dioxide is scarce, used here as a marker of CO2 deficit.\n- Chlamydomonas reinhardtii: a standard single-celled green alga used as a lab model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The highly variable environmental conditions that photosynthetic organism experience in nature require rapid and long-term acclimatory responses. Light and CO2 availability are tightly linked within the cell. When light intensity rises, CO2 fixation accelerates, causing intracellular CO2 to become limiting for photosynthesis. Nonphotochemical quenching (NPQ) mechanisms prevent over excitation of the photosynthetic electron transport chain and consequent damage by reactive oxygen species. Energy dependent quenching (qE) is the fastest NPQ component and responds to thylakoid lumen acidification, a consequence of photosynthesis limiting CO2 concentrations. In vascular plants, the thylakoid K/H antiporter KEA3 is required for qE downregulation after a high to low light transition, transiently enhancing photosynthetic quantum yield. Here, we demonstrate that the same holds for the unicellular green alga Chlamydomonas reinhardtii (Cr). Unlike vascular plants, CrKEA3 also contributes to qE relaxation in the dark and influences growth. The crkea3 mutants from higher light intensities, showed increased qE compared to the wild type (WT) background and grew more slowly. The growth reduction was accompanied by increased accumulation of low-CO2-induced (LCI) proteins, suggesting that crkea3 mutants experience a relative CO2 deficit. Our data suggest that KEA3 activity modulates multiple regulatory layers of photosynthesis in unicellular green algae, extending beyond the functions previously described for vascular plants.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.24.768977",
    "title": "Whole-genome resequencing and indoor phenotyping resolve the genetic architecture of drought stress response in tepary bean",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768977v1",
@@ -21,43 +50,14 @@
    "primary_category": "plant biology",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "Whole-genome resequencing of 363 tepary bean accessions, paired with indoor drought phenotyping of 282 of them, maps genetic loci associated with growth, water use and photosynthesis under drought and well-watered conditions.",
-    "plain": "Tepary bean is a legume that grows in dry climates, but scientists know little about the genes behind its drought tolerance. The team sequenced the genomes of 363 wild, weedy, cultivated and bred versions of the plant, then grew 282 of them for two weeks under well-watered or very dry soil and measured growth, water loss and photosynthesis. They then linked the genetic differences to these measurements to find the regions of the genome involved.",
-    "why": "The study separates the genetic basis of growth under drought from growth under normal watering, and reports that the strongest drought-linked region lies in a stretch of DNA affected by domestication. This could help breeders select for drought-tolerant beans, though the text does not test any breeding outcome, and several candidate genes are only tentatively linked.",
-    "background": "- Tepary bean (Phaseolus acutifolius) is a drought-adapted relative of the common bean.\n- Whole-genome resequencing: reading the DNA of many individuals and comparing them to a reference genome to find single-nucleotide polymorphisms (SNPs), single-letter differences in DNA.\n- Association mapping: testing which DNA variants occur more often in plants showing a given trait, to locate genes that influence that trait.\n- Locus: a specific position or region on a chromosome. Haplotype: a group of nearby DNA variants inherited together.\n- Evapotranspiration: water lost from soil and leaves together. Photosynthesis: the plant's conversion of light into chemical energy.\n- Domestication: the process by which humans selected wild plants for farming, which can change their genes.\n- Rank-normalized: values converted to ranks so that statistical methods can be applied fairly.\n- Candidate gene: a gene near a locus that might plausibly explain the trait, based on its known function.",
+    "one_liner": "Whole-genome resequencing of 363 tepary bean accessions, combined with indoor drought and well-watered phenotyping of 282 of them, maps genetic loci for growth, water use and photosynthesis under drought versus control conditions.",
+    "plain": "Tepary bean is a legume that grows in dry climates, but scientists have not understood well which genes make it drought-tolerant. The team sequenced the genomes of 363 wild, weedy, cultivated and breeding lines and grew 282 of them for 14 days at either well-watered or very dry soil, measuring growth, water loss and photosynthesis. They then linked differences in the genetic code to differences in these traits.",
+    "why": "Crop breeders looking for drought resilience need to know which genetic regions control it, and this study points to specific regions and some candidate genes. The text reports that growth under drought and under well-watered conditions rests on separate genetic bases, and that the largest drought-linked locus lies in regions affected by domestication. Whether the candidate genes actually cause the effects is not shown here and would need follow-up experiments.",
+    "background": "- Tepary bean (Phaseolus acutifolius) is a legume adapted to arid regions, related to common bean.\n- Resequencing: reading the genome of many individuals to find small DNA differences (SNPs, single-nucleotide polymorphisms).\n- Association mapping: testing which DNA differences statistically go with differences in a trait, to locate genomic regions (loci) that influence it.\n- Domestication: the process by which wild plants were selected over time for farming traits; cultivated and wild groups differ genetically.\n- Evapotranspiration: water lost from soil and leaves together; photosynthesis: the plant's process of making sugar from light.\n- Water-holding capacity: the share of water soil can hold; 10% represents drought, 60% well-watered in this study.\n- Rank-normalized: a statistical adjustment that makes measurements comparable across traits.\n- Candidate genes: genes located in a mapped region that might plausibly explain the trait, pending testing.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Tepary bean (Phaseolus acutifolius A. Gray) is an arid-adapted legume, whose drought resilience is widely reported but poorly resolved genetically. Here we resequenced 363 wild, weedy, cultivated and breeding accessions and recovered 6.9 million single-nucleotide polymorphisms (SNPs). We phenotyped 282 of the accessions for growth, evapotranspiration and photosynthesis over 14 days at 60% or 10% soil water-holding capacity. Cultivated and breeding lines grew roughly twice as fast as wild accessions, and the proportional reduction in growth under drought did not differ between these germplasm classes. Evapotranspiration separated the classes under full irrigation, but converged under drought, making it the most plastic trait we measured. Canopy density predicted how much water a plant used, but not how well it tolerated losing it. Association mapping across 104 rank-normalized measurements yielded 113 significant SNPs at 46 positions, which resolved to three drought and six control loci. Three drought loci corresponded to 98 of the 113 SNPs, with the largest one localized on chromosome 8. This locus separates wild from cultivated accessions, and resolves to no gene. Three of the eight remaining loci carry candidates whose interval, expression under drought and published mechanism agree: a cytokinin oxidase, a CIPK1-clade kinase and the antenna subunit LHCB5. The most structure-independent locus localizes to 26 kb but implicates genes with no published role in water relations. Growth under drought and control conditions therefore rest on separate genetic bases, and the variation with the largest effect under deficit lies in haplotypes affected by domestication.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.25.769266",
-   "title": "An RHD6-directed gene network sustains root hair growth under combined low phosphate and salt stress in Arabidopsis",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769266v1",
-   "authors": [
-    "Ibeas, M. A.",
-    "Perez, J.",
-    "Padilla, G.",
-    "Tapia-Reyes, P.",
-    "Garcia, F.",
-    "Salinas-Grenet, H.",
-    "Acha, R.",
-    "Meneses, C.",
-    "Estevez, J. M."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.25.769266 v1",
-   "primary_category": "plant biology",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "In Arabidopsis, induction of the transcription factor RHD6 kept root hairs growing under combined low phosphate and salt stress, and RNA sequencing plus promoter and co-expression analyses defined a candidate RHD6 target network in which HEC3 was identified as a modulator of the root hair response to combined stress.",
-    "plain": "Plants often face low phosphate in the soil and salty conditions at the same time, and it is unclear how their roots handle both. The researchers screened 18 gene regulators that are active in root hairs, the tiny hair-like outgrowths that absorb nutrients, and found that switching on one of them, RHD6, kept root hairs growing under both stresses when normal plants' hairs were stunted. Measuring gene activity under these conditions gave a list of genes that RHD6 likely controls.",
-    "why": "The work offers a resource of candidate genes for root responses to two common soil stresses, and it points to HEC3 as a possible regulator of that response. The text does not show whether these findings would carry over to crops, so the practical relevance is unclear.",
-    "background": "- Root hairs: thin extensions of root cells that take up water and nutrients such as phosphate.\n- Inorganic phosphate: a mineral form of phosphorus that plants need; low levels limit growth.\n- Salt stress: high sodium in soil that disrupts water uptake and growth.\n- Transcription factor: a protein that switches sets of genes on or off.\n- RHD6 and HEC genes: regulators involved in root hair development.\n- TRANSPLANTA lines and beta-estradiol induction: a lab method for turning a gene on at will using a chemical signal.\n- RNA sequencing: measures which genes are active and how strongly.\n- T-DNA insertion mutants: plants with a disrupted gene, used to test what that gene does.\n- Arabidopsis thaliana: a small flowering weed widely used as a model plant.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Phosphate deficiency and salinity can coincide, but how roots integrate the two stresses is poorly understood. Root hairs (RHs) elongate under low inorganic phosphate and are inhibited by salt. Screening {beta}-estradiol-inducible TRANSPLANTA lines for 18 RH-expressed transcription factors (TFs) in Arabidopsis (Arabidopsis thaliana), we found that induction of ROOT HAIR DEFECTIVE 6 (RHD6) maintained RH growth under combined low phosphate (5 {micro}M) and salt (100 mM NaCl), which inhibited wild-type RH growth. RNA sequencing of RHD6-induced roots under dual stress identified 1,811 differentially expressed genes. Up-regulated genes were enriched for RH differentiation, tip growth and cell wall organization; down-regulated genes were enriched for phenylpropanoid and suberin metabolism, hydrogen peroxide catabolism, photosynthesis and responses to wounding and jasmonic acid. Promoter motif scanning combined with ensemble co-expression analysis defined a core network of 396 candidate direct RHD6 targets, including 31 TFs. The TFs with the largest expression changes were HEC3, HEC1 and EIL4. In T-DNA insertion mutants, dual stress did not shorten hec3 RHs; eil4 and hec1 had shorter RHs on the control medium but no significant change in relative inhibition. These data provide a resource of RHD6-dependent genes and identify HEC3 as a modulator of the RH response to combined stress.",
    "source": "biorxiv"
   },
   {

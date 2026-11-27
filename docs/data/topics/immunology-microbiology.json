@@ -21,10 +21,10 @@
    "primary_category": "microbiology",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A longitudinal study of 101 pregnant women (280 vaginal microbiome samples) that links periconceptional food-frequency diet and supplement intake to vaginal bacterial composition across pregnancy trimesters.",
-    "plain": "Researchers asked whether what women eat and take as supplements around the time of conception is linked to the bacteria living in the vagina during pregnancy. They followed 101 women across pregnancy, collecting vaginal samples and diet questionnaires. Overall diet scores showed little link, but certain nutrients were associated with specific bacteria, in different directions depending on the trimester.",
-    "why": "Vaginal bacteria have been repeatedly tied to adverse pregnancy outcomes, so finding that modifiable nutrients track with them is of interest for reproductive health. The text only reports associations, however, so it does not show that any nutrient changes the microbiome, and the authors frame the micronutrient results as suggestive.",
-    "background": "- The vaginal microbiome is the community of microbes living in the vagina; a mix dominated by Lactobacillus species is generally considered healthy, while shifts toward other bacteria (dysbiosis) are linked to pregnancy complications.\n- Lactobacillus crispatus and Lactobacillus iners are two Lactobacillus species that behave differently.\n- Periconceptional period: the window around conception.\n- Food frequency questionnaire: a survey asking how often foods are eaten, used to estimate diet.\n- Dietary index: a single score summarizing overall diet quality.\n- Recommended daily allowance (RDA): the amount of a nutrient considered sufficient for most healthy people.\n- Association studies show correlation, not cause.",
+    "one_liner": "A longitudinal cohort study (280 vaginal samples from 101 pregnant women) that links periconceptional diet and supplement use to vaginal microbiome composition across pregnancy trimesters, reporting stage-specific associations with Lactobacillus species and with dysbiosis-linked taxa such as Sneathia and Megasphaera.",
+    "plain": "Researchers asked whether what women eat and supplement around the time of conception is linked to the community of bacteria living in the vagina during pregnancy. They tracked 101 women over several samples each and compared those samples with food questionnaires. They found that overall diet scores were not strongly tied to the bacteria, but some individual nutrients and supplements were linked to shifts in bacterial groups, especially in the third trimester.",
+    "why": "Vaginal bacterial imbalance has been linked to adverse pregnancy outcomes, so knowing whether diet or supplements shift that balance could inform future nutrition strategies. The text reports associations only, not cause and effect, and it does not show that any supplement changes pregnancy outcomes.",
+    "background": "- The vaginal microbiome is the mix of microbes living in the vagina; a mix dominated by Lactobacillus species is generally considered healthier, while other bacteria can signal \"dysbiosis\" (imbalance).\n- Periconceptional period: the window around conception and early pregnancy.\n- Food frequency questionnaire: a survey asking how often people eat particular foods, used to estimate nutrient intake.\n- Recommended daily allowance (RDA): the amount of a nutrient considered sufficient for most healthy people.\n- Associations found in observational data do not establish that a nutrient causes a change in the microbiome.",
     "difficulty": "intermediate",
     "ai": true
    },
@@ -32,27 +32,34 @@
    "source": "biorxiv"
   },
   {
-   "uid": "biorxiv:10.64898/2026.11.23.768523",
-   "title": "Salmonella MgtC promotes polymyxin B resistance and systemic infection by activating LpxO-mediated lipid A hydroxylation",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768523v1",
+   "uid": "biorxiv:10.64898/2026.11.26.769503",
+   "title": "A modular intranasal Nm-nOMV RBD concatemer vaccine induces broad betacoronavirus-neutralizing antibodies",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.26.769503v1",
    "authors": [
-    "Choi, N.",
-    "Baek, S.",
-    "Choi, E.",
-    "Lee, E.-J."
+    "Harichandran, K.",
+    "van den Braak, W. J. P.",
+    "Hulswit, R. J. G.",
+    "van der Lee, J.",
+    "Krug, N.",
+    "Retscglag, F.",
+    "Oosterhoff, D.",
+    "Drosten, C.",
+    "Mueller, M. A.",
+    "Bosch, B.-J.",
+    "Kruiswijk, C. P."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.23.768523 v1",
-   "primary_category": "microbiology",
+   "label": "bioRxiv doi:10.64898/2026.11.26.769503 v1",
+   "primary_category": "immunology",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "Salmonella's virulence protein MgtC binds the lipid A hydroxylase LpxO and boosts its activity, and a Leu287Ala substitution in LpxO weakens this binding, reducing polymyxin B and serum resistance and virulence in mice.",
-    "plain": "Salmonella bacteria survive inside the body partly by changing the outer coating of their cell wall so that immune defense peptides cannot easily damage them. This paper looks at a bacterial protein, MgtC, that helps this process by interacting with an enzyme, LpxO, which adds a hydroxyl group to the fatty tail of that coating. The authors found that MgtC binds LpxO and increases how much the coating is modified, and that changing one amino acid in LpxO weakens this link and makes the bacteria less resistant and less virulent in mice.",
-    "why": "It shows that a pathogen can regulate an enzyme's activity directly, not only by switching its gene on or off, which may matter for understanding how bacteria resist host defenses. The text does not address whether this could lead to treatments, so any clinical relevance remains speculative.",
-    "background": "- Lipopolysaccharide (LPS) is a sugar-and-fat molecule forming the outer layer of many Gram-negative bacteria; its fatty anchor is called lipid A.\n- Lipid A modifying enzymes change this anchor's chemistry, which can help bacteria resist cationic antimicrobial peptides, which are positively charged immune defense molecules.\n- Polymyxin B is an antibiotic peptide used as a lab stand-in for these host defense peptides; serum resistance tests whether bacteria survive human blood components.\n- MgtC is a virulence factor needed for Salmonella to survive inside host cells.\n- Bacterial two-hybrid screening is a lab method that detects which proteins physically interact.\n- Most prior work on these enzymes focused on gene transcription; this paper addresses control at the level of enzyme activity.\n- Hydroxylation means adding an -OH group to a molecule.",
+    "one_liner": "A mouse study testing intranasal vaccine candidates that pair a meningococcal outer-membrane-vesicle delivery platform with multivalent receptor-binding-domain (RBD) concatemers from sarbecovirus, merbecovirus and embecovirus spike proteins, reporting mucosal IgA, systemic IgG and neutralization of several betacoronaviruses.",
+    "plain": "Betacoronaviruses are a family that includes SARS-CoV-2 and other viruses that can jump from animals to people. This paper describes a nose-spray vaccine design that uses tiny bubbles of membrane from a bacterium (Neisseria meningitidis) to carry pieces of several coronavirus spike proteins. In mice, the approach produced antibodies in the nose and blood that neutralized the homologous virus and some related viruses, including bat-associated ones.",
+    "why": "A vaccine that works on the nose lining could aim to block infection and spread at the point of entry, not just protect the lungs, and a design that covers several virus groups may help against future spillovers. The text reports only mouse data and does not show protection against infection, so its relevance to people is still unknown.",
+    "background": "- Betacoronaviruses: one genus of coronaviruses, including SARS-CoV, MERS-CoV and SARS-CoV-2, some of which spread from animals to humans.\n- Spike protein: the surface protein coronaviruses use to enter cells; its receptor-binding domain (RBD) is the part that latches onto a host cell.\n- Concatemer: several copies or pieces of a protein joined into one chain, here to display multiple RBDs together.\n- Outer membrane vesicles (OMVs): small spheres of bacterial membrane that can act as a natural immune stimulant and carrier.\n- Mucosal IgA vs systemic IgG: IgA is the antibody type found on nose and airway surfaces; IgG is the main antibody type in the blood.\n- Neutralizing antibodies: antibodies that block a virus from infecting cells.\n- Preclinical: tested in animals, not yet in people. The delivery platform was reported safe in a first-in-human Phase 1 trial, but that trial is not the subject of this paper.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The intracellular pathogen Salmonella Typhimurium modifies the lipid A moiety of lipopolysaccharide through various lipid A-modifying enzymes, thereby acquiring resistance to host cationic antimicrobial peptides during infection. While regulation of these enzymes at the transcription level has been extensively studied, however, regulation at the activity level remains poorly understood. Here, we show that the Salmonella virulence factor MgtC interacts with LpxO, an enzyme that hydroxylates the 3'-myristoyl chain of hexa-acylated lipid A, identified through bacterial two-hybrid screening for potential MgtC interaction partners. MgtC binding to LpxO promotes lipid A hydroxylation in a concentration-dependent manner, and the Leu287 residue in the C-terminal helix of LpxO is required for this interaction. Substitution of Leu287 with Ala reduces MgtC binding without affecting intrinsic hydroxylase activity, consequently impairing MgtC-enhanced lipid A hydroxylation. This substitution decreases resistance to both the antimicrobial peptide polymyxin B and human serum, and attenuates virulence in a mouse infection model. These findings suggest that Salmonella exploits MgtC to promote LpxO hydroxylation activity, thereby enhancing survival inside the host.",
+   "abstract": "Betacoronaviruses pose a major threat to human and animal health due to their propensity to cause spillover infections. Broadly protective vaccines that induce mucosal immunity may strengthen pandemic preparedness by limiting infection and onward transmission. Here we have developed intranasal betacoronavirus vaccine candidates combining AdJane Biosciences' Neisseria meningitidis native outer membrane vesicle (Nm-nOMV) platform, a self-adjuvating mucosal delivery platform recently shown to be safe and well tolerated in a first-in-human Phase 1 trial, with multivalent coronavirus spike immunogens. We evaluated betacoronaviruses full Spike proteins, chimeric full Spike proteins, and Receptor Binding Domain (RBD) concatemers representing sarbecoviruses, merbecoviruses, and embecoviruses. Antigenic profiling identified immunogens retaining activity against human convalescent sera and characterized monoclonal antibodies. In mice, intranasal immunization with Nm-nOMVs combined with RBD concatemers induced mucosal IgA responses, systemic IgG and broad neutralization of homologous and heterologous human and bat related betacoronaviruses. Together, findings from the study identify multivalent RBD concatemers co-administered with the Nm-nOMV platform as a promising, modular antigen design for the development of broadly protective mucosal vaccines against emerging betacoronaviruses.",
    "source": "biorxiv"
   },
   {

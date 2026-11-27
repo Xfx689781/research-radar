@@ -7,10 +7,9 @@ New papers posted from about 2026-11-26 to 2026-11-27 (UTC).
 
 ## Highlights
 
-- **[Learning Protein Structure Representations through Joint-Embedding Prediction](https://www.biorxiv.org/content/10.64898/2026.11.25.769343v1)** (Computational and systems biology): Proteins are chains of amino acids that fold into 3D shapes, and computer models often learn these shapes by trying to rebuild exact coordinates. This paper asks whether a different training goal, predicting hidden parts of a protein's representation from the visible parts, can capture biologically useful information. The authors report that their frozen representations did better than a strong baseline on remote-homology detection (finding evolutionarily related proteins with little sequence similarity) and stayed competitive on function and flexibility tasks, and that a separate decoder could rebuild backbones from them with a mean C RMSD of 1.61 Å on 309 held-out chains.</plain>
-<parameter name="why">It challenges the assumption that better coordinate reconstruction means better representations for biological prediction, and it shows one approach that tries to do both. The generation result is exploratory: 62 of 384 unconditionally generated backbones (16.15%) met a designability criterion, which is a modest starting point rather than a established capability.
-- **[Sex differences and multiregional variation in placental gene expression in late-onset gestational hypertension](https://www.biorxiv.org/content/10.64898/2026.11.25.769234v1)** (Cell and molecular biology): Some high blood pressure problems in pregnancy start late, after 34 weeks, and are more common than the early form that has received most research. This study looked at which genes are active in the placenta, the organ linking mother and baby, in ten late-onset hypertensive pregnancies and ten normal ones. Patterns differed depending on whether the baby was genetically female or male, and activity also varied from place to place within the same placenta.
-- **[Genomic conformation reflects epigenetic programming rather than gene expression](https://www.biorxiv.org/content/10.64898/2026.11.26.769172v1)** (Genetics and genomics): Cells pack their long DNA into folded loops and neighbourhoods, and this study asks whether that folding drives gene activity or follows from it. Using the Dlk1-Dio3 region, a stretch of DNA where a gene's expression depends on which parent it came from, the authors mapped how the DNA folds in fetal brain and then used genetic edits to test what depends on what. They found the folding can be changed while the chemical marks and gene activity stay the same.
+- **[Reconstructing regulatory histories of cell fate decisions from single-cell lineage and multi-omics](https://www.biorxiv.org/content/10.64898/2026.11.26.769378v1)** (Computational and systems biology): Cells in an embryo or a healing organ take on different identities, but we usually only see snapshots of their final or current gene activity, not the earlier steps that led there. This paper presents a computational method, RegArch, that combines gene activity measurements, chromatin (DNA packaging) data, and family trees of cells to infer the gene control networks that likely operated in both final cells and their ancestors. The authors report that the method recovers ancestral networks in simulations and gives useful patterns in worm and zebrafish data.
+- **[Learning Protein Structure Representations through Joint-Embedding Prediction](https://www.biorxiv.org/content/10.64898/2026.11.25.769343v1)** (Computational and systems biology): Proteins are chains of amino acids that fold into 3D shapes, and computer models need a compact numerical summary of that shape to make predictions. This paper trains such a model by hiding parts of a protein's backbone and having it predict the hidden parts' summaries, rather than asking it to redraw exact coordinates. The authors report that these summaries do well on several biology prediction tasks, especially detecting remote evolutionary relatives, and can still be decoded back into backbone shapes with about 1.61 Å error on 309 test chains.
+- **[Sex differences and multiregional variation in placental gene expression in late-onset gestational hypertension](https://www.biorxiv.org/content/10.64898/2026.11.25.769234v1)** (Cell and molecular biology): Late-onset high blood pressure in pregnancy, diagnosed after 34 weeks, is common and can affect both mother and baby, but it has been studied less than early-onset forms. The researchers compared gene activity in placentas from full-term pregnancies with and without this condition, separating pregnancies by whether the baby was female or male. They also sampled each placenta in four spots to see how gene activity varied across the organ.
 
 ## Probability
 
@@ -93,16 +92,15 @@ Nothing notable this time.
 ### [Clay helps sales teams win with Codex and ChatGPT](https://openai.com/business/customer-stories/clay-plugins-openai)
 ** · `openai.com` · OpenAI News · relevance 0.07
 
-- **In one sentence**: A short announcement describing Clay's ChatGPT and Codex integrations for sales teams, which the text says use GPT-6 models for reasoning over deal research and go-to-market data.
-- **In plain words**: The article covers a software company, Clay, that has connected its sales tool to AI products from OpenAI, ChatGPT and Codex. The aim described is to help sales staff research potential deals and turn raw customer data into plans for reaching the market. According to the text, the AI reasoning behind this is handled by GPT-6 models.
-- **Why it matters**: It is a small example of AI tools being built into everyday business software, which is a growing trend. The text gives no details on results, adoption, or how well it works, so its wider importance is unclear.
-- **Background needed**: - Clay: a company whose product helps sales teams gather and organize data about companies and prospects.
-- ChatGPT: a conversational AI chat product from OpenAI.
-- Codex: an OpenAI AI tool aimed at writing and working with computer code.
-- Integration: a link that lets one piece of software use another's features.
-- Go-to-market (GTM): the plan a business uses to reach and sell to customers.
-- GPT-6: named in the text as the model doing the reasoning; the text gives no further detail on it.
-- The text is a very brief promotional-style item with no figures, testimonials, or technical details. · level: introductory
+- **In one sentence**: A short announcement describing how sales-tech company Clay uses ChatGPT and Codex integrations, with GPT-6 models handling reasoning, to help users research deals and build go-to-market plans.
+- **In plain words**: Clay is a tool that helps businesses find and organize information about potential customers. This short item says its users can now use ChatGPT and Codex, OpenAI's tools, to look into sales deals and turn raw data into plans for reaching the market. The text says the reasoning work is done by GPT-6 models.
+- **Why it matters**: It is a small example of AI models being built into everyday business software, which is a trend worth watching. The text gives no results, user numbers or outcomes, so its real impact is unclear.
+- **Background needed**: - Clay: a company whose software gathers and organizes data on sales prospects.
+- ChatGPT: OpenAI's chat-based AI assistant.
+- Codex: an OpenAI tool that generates and works with computer code.
+- GPT-6: named in the text as the model doing the reasoning; the text gives no further details about it.
+- Go-to-market plan: a business strategy for how a product reaches customers and sells.
+- Integration: connecting one software product to another so they work together. · level: introductory
 
 <details><summary>Original abstract</summary>
 
@@ -113,15 +111,14 @@ ChatGPT and Codex integrations help Clay’s users research deals and turn data 
 ### [The questions Jensen Huang and Nvidia will still have to answer about Megaspeed](https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/)
 *Tim Fernholz* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.05
 
-- **In one sentence**: A news piece raising open questions about what Nvidia knew regarding the destination of its chips sold to Megaspeed, and whether a personal relationship between Jensen Huang and a Megaspeed executive should have cast doubt on Megaspeed's assurances.
-- **In plain words**: The article is about an investigation into where advanced AI computer chips made by Nvidia ended up after being linked to a company called Megaspeed. The central question is whether Nvidia knew, or had reason to suspect, where those chips went. The text also raises whether a personal relationship between Nvidia's chief executive, Jensen Huang, and a Megaspeed manager should have made Nvidia doubt what Megaspeed told it.
-- **Why it matters**: Chip export rules and who controls high-end AI hardware are matters of public and government concern, so questions about what a supplier knew about end use can matter for regulation and accountability. The text is short and does not give findings, so it is unclear how the investigation will turn out.
-- **Background needed**: - Nvidia makes the specialized chips used to train and run modern AI systems.
-- Governments, including the US, restrict some sales of these chips to certain countries or companies, so a chip's final destination matters.
+- **In one sentence**: A news piece raising open questions about what Nvidia knew regarding where its chips ended up after sales to Megaspeed, and whether a personal relationship between Jensen Huang and a Megaspeed executive gave Nvidia reason to doubt that company's assurances.
+- **In plain words**: The article is about an investigation into whether the chipmaker Nvidia knew where its advanced AI chips were ultimately sent after being sold to a company called Megaspeed. It also asks whether a personal relationship between Nvidia's CEO, Jensen Huang, and a Megaspeed executive should have made Nvidia doubt what Megaspeed told it. The text is a short summary of the questions, not a full account of findings.
+- **Why it matters**: Chip sales are closely watched because export rules limit where advanced chips can go, so questions about a buyer's real destination matter for regulators and the industry. The excerpt does not show any conclusion, so it is unclear how the investigation will turn out.
+- **Background needed**: - Nvidia makes the graphics processors (GPUs) that are the main hardware for training and running AI systems.
+- Governments, including the US, restrict exports of advanced chips to certain countries and require sellers to know who the end buyer is.
 - Megaspeed is the company named in the article; the text does not describe its business in detail.
-- Companies that sell into restricted markets often rely on written assurances from buyers about where goods will go.
-- Jensen Huang is Nvidia's chief executive. The text reports a personal affair with a Megaspeed executive as a factor investigators are weighing.
-- The article poses questions rather than reporting conclusions; the excerpt provided is only one paragraph. · level: introductory
+- Jensen Huang is Nvidia's chief executive.
+- The article relies on questions and reporting; the excerpt contains no confirmed findings, and the affair is mentioned only as a possible factor. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -132,14 +129,14 @@ The central question for investigators is what Nvidia knew about where those chi
 ### [Jensen Huang still thinks a succession plan creates unnecessary hierarchy](https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/)
 *Kirsten Korosec* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.05
 
-- **In one sentence**: A short news piece reporting that Nvidia CEO Jensen Huang still opposes naming a formal succession plan, framed against the company's recent period of operating without its founder.
-- **In plain words**: The article is about Jensen Huang, the leader of the chipmaker Nvidia, and his view that a plan for who would take over the top job would add unnecessary layers of rank inside the company. It opens by noting that the company recently spent about two weeks finding out how it operates without its founder. The text provided is only a one-sentence teaser, so it does not explain what that absence was or give more of Huang's reasoning.
-- **Why it matters**: Leadership continuity matters for a company that is among the most valuable and influential in AI chip supply, so how its top executive thinks about succession may interest investors and industry watchers. The excerpt is too thin to say more about the stakes or what, if anything, follows from it.
-- **Background needed**: - Nvidia makes graphics processors (GPUs), which are widely used to train and run AI models.
-- Jensen Huang co-founded Nvidia and has been its chief executive for decades.
-- A "succession plan" is an arrangement for who would replace a leader and when.
-- The "founder" in the headline refers to Huang himself; the text implies he was briefly absent, but gives no details.
-- The excerpt is a single teaser sentence, so the full article's facts are not available here. · level: introductory
+- **In one sentence**: A news piece reports that Nvidia CEO Jensen Huang still opposes a formal succession plan, framing it as creating unnecessary hierarchy, at a time when the company is described as having spent two weeks without its founder.
+- **In plain words**: The article is about Jensen Huang, the leader of the chip company Nvidia, and his view that planning for who would take over his role creates unneeded layers of management. The text is a single short teaser line, so it gives no detail on what happened during the "two weeks without its founder" or what the plan would look like. Nothing beyond that framing is stated.
+- **Why it matters**: Leadership succession at a company that is a major supplier of AI chips may matter to investors and the industry, but the text is too thin to say why this particular stance matters or what it connects to. The reader should treat the article as a preview and check the full story for the facts.
+- **Background needed**: - Nvidia makes the graphics processors widely used to train and run AI systems.
+- Jensen Huang is Nvidia's co-founder and chief executive.
+- A succession plan is a company's arrangement for who would replace a top leader if they left or became unavailable.
+- The phrase "two weeks without its founder" suggests a period when Huang was absent, but the teaser does not explain why.
+- The article is only a short teaser; the full text is needed for context. · level: introductory
 
 <details><summary>Original abstract</summary>
 
@@ -150,14 +147,14 @@ It's a remarkable stance for a company that spent the last two weeks finding out
 ### [Anthropic shares fall below IPO price, a worrying sign for AI startups](https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/)
 *Marina Temkin* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.04
 
-- **In one sentence**: A news piece reporting that shares of Anthropic, an AI company, have dropped below their initial public offering (IPO) price, and suggesting this could pressure valuations across AI startups.
-- **In plain words**: The article reports that the stock of Anthropic, an AI company, has fallen below the price it was first sold at when it became publicly traded. The text is very short and gives no figures, timeline, or details about why the shares fell. It says the slump could make investors value other AI startups lower.
-- **Why it matters**: Share prices of a prominent AI company can influence how investors judge other AI startups, so the story may matter for the wider funding climate. The text is too thin to show how large or lasting the effect will be.
-- **Background needed**: - IPO (initial public offering): the first time a private company sells shares to the public on a stock exchange.
-- IPO price: the price at which those first shares were sold; trading below it means the stock is worth less than its launch price.
-- Valuation: the total value investors place on a company, usually based on its share price.
-- AI startup: a young company building AI products, often funded by private investors before going public.
-- The article gives no details on Anthropic's financials, the size of the drop, or the reasons behind it. · level: introductory
+- **In one sentence**: A news piece reporting that shares of Anthropic, an AI company, have dropped below their initial public offering (IPO) price, and suggesting this could pressure valuations of other AI startups.
+- **In plain words**: The article says that the stock of Anthropic, an artificial intelligence company, has fallen below the price it was first sold at when it began trading publicly. The text is very short, so it gives no details on how far the shares fell, when, or why. Its main point is that this slump may make investors value other AI startups less.
+- **Why it matters**: Share prices of large AI companies are often used as a signal for how investors feel about the whole sector, so a drop after a public listing may matter to startups seeking funding. The text is too thin to say how large or lasting this effect will be.
+- **Background needed**: - IPO (initial public offering): the first time a private company sells shares to the public on a stock market.
+- Share price vs. IPO price: the IPO price is the level at which shares were first sold; trading below it means early buyers are currently at a loss.
+- Valuation: the total value investors place on a company, often estimated from its share price.
+- AI startup: a young company building artificial intelligence products, often funded by private investors before any public listing.
+- The article is a brief news item with no figures, quotes, or sources, so treat its claims as reported, not verified. · level: introductory
 
 <details><summary>Original abstract</summary>
 
@@ -168,14 +165,15 @@ Anthropic’s post-IPO slump could put pressure on AI startup valuations.
 ### [In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy](https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/)
 *Lucas Ropek* · `techcrunch.com` · AI News & Artificial Intelligence | TechCrunch · relevance 0.04
 
-- **In one sentence**: Nvidia CEO Jensen Huang, speaking at a company all-hands meeting, reportedly thanked the White House, apologized to staff, and said he is in therapy, according to a short news item whose text is limited to a few sentences.
-- **In plain words**: Jensen Huang, who founded the chip company Nvidia, spoke to his employees at an internal company-wide meeting on a Tuesday. According to this short article, he apologized to staff, said he was grateful for a second chance to lead the company, and mentioned that he is in therapy. The article gives no details about what the apology was for or what the White House thanks related to.
-- **Why it matters**: Nvidia makes the graphics chips widely used to train and run AI systems, so comments from its leader can matter to the wider tech industry. The text is too thin to say what prompted the apology or the White House thanks, so its wider significance is unclear.
-- **Background needed**: - Nvidia is a major maker of chips used for AI computing.
-- Jensen Huang is its founder and chief executive.
-- An "all-hands meeting" is a company-wide gathering where leaders address all employees.
-- The phrase "second chance to lead" suggests Huang had faced some kind of setback in his leadership, but the article does not explain it.
-- The article does not describe the White House connection, so readers should check fuller reporting for context. · level: introductory
+- **In one sentence**: Nvidia founder Jensen Huang, at an all-hands staff meeting, reportedly apologized to employees, thanked the White House, and said he is in therapy, while describing gratitude for a second chance to lead the company.
+- **In plain words**: The chief executive of Nvidia, the chip maker that makes much of the hardware used to build AI, spoke to all of his staff at a company-wide meeting on Tuesday. According to this short article, he said sorry to the team, thanked the U.S. government, and mentioned that he is in therapy. The text does not say what the apology or the "second chance" was about.
+- **Why it matters**: Nvidia is a central company in the AI industry, so comments from its leader can matter to investors, customers, and staff. The article is very brief, though, and gives no detail on the cause of the apology or on the White House connection, so its wider significance is unclear from this text alone.
+- **Background needed**: - Nvidia designs graphics processors (GPUs), which are widely used to train and run AI systems.
+- Jensen Huang is Nvidia's co-founder and chief executive.
+- An "all-hands meeting" is a company-wide gathering where leadership addresses all employees.
+- "Second chance to lead" suggests he had faced some kind of setback or pressure about his leadership, but the article does not explain it.
+- The White House reference is unexplained in the text; it could relate to government policy on chips, but the article does not say.
+- The text is only a short news summary, so key context is missing. · level: introductory
 
 <details><summary>Original abstract</summary>
 
@@ -321,17 +319,39 @@ Nothing notable this time.
 
 ## Biochemistry
 
+### [Structure-guided discovery of zinc enzymes and prediction of acetophenone reduction activity](https://www.biorxiv.org/content/10.64898/2026.11.25.769289v1)
+*Xu, Q.; Zhou, Y.; Han, Y. et al.* · `biochemistry` · bioRxiv doi:10.64898/2026.11.25.769289 v1 · relevance 0.07
+
+- **In one sentence**: The paper uses structure-guided mining of Zn-His protein structures and AlphaFold predictions, experimental assays of 25 candidates, and small-sample machine learning to find and predict zinc enzymes that reduce acetophenone with phenylsilane.
+- **In plain words**: Researchers wanted to find natural proteins that can carry out a chemical reaction they do not normally perform, using a zinc atom as the active metal center. They searched a large protein structure database for zinc-binding sites, grouped 2,660 candidate sequences into 200 structural clusters, and tested 25 samples on a model reaction that turns acetophenone into a reduced alcohol. Eight samples passed a 10% yield threshold, and a machine-learning model trained on a more diverse set of examples recalled active samples better on the test data.
+- **Why it matters**: It offers a way to pick candidate enzyme scaffolds from structural data rather than testing them blindly, which may help in designing enzymes for new reactions. The text reports only one model reaction and a small set of assays, so how far the approach generalises is not shown here.
+- **Background needed**: - Enzymes are proteins that speed up chemical reactions; a metal atom at the active site can do the chemistry.
+- Artificial metalloenzymes are proteins with a metal added or placed in them to catalyse reactions they do not normally do.
+- Zn-His motif: a zinc atom held in place by histidine amino acids.
+- Protein Data Bank (PDB): a public archive of experimentally determined protein structures. AlphaFold: an AI tool that predicts protein structures from sequence.
+- Asymmetric reduction: adding hydrogen to a molecule so that one of two mirror-image forms is favoured.
+- Phenylsilane: the hydrogen source used in the reaction. Apparent yield: the amount of product observed relative to the maximum possible.
+- Small-sample machine learning: training models on limited data; feature ablation means removing feature groups to see which ones matter. · level: research-level
+
+<details><summary>Original abstract</summary>
+
+Advances in artificial metalloenzyme design have expanded the range of reactions accessible to enzymes, yet the diversity of available scaffolds remains limited. Experimental activity data for individual non-native reactions are scarce, making it difficult to establish how the environment around a metal center shapes catalysis across scaffolds. Using phenylsilane-driven asymmetric reduction of acetophenone as a model reaction, we developed a workflow that combines structure-guided mining, experimental activity assays, and small-sample machine learning. We used the Zn-His coordination motif to mine experimental Protein Data Bank structures and AlphaFold predictions and grouped 2,660 candidate sequences into 200 structural clusters. Of 25 samples assayed, eight met the 10% apparent-yield threshold, including the positive enzymatic control. To evaluate small-sample learning, we assembled literature-derived training sets that differed in scaffold diversity. Training on the larger, more diverse dataset substantially improved recall on the experimental test set. Feature ablation identified contributions from pocket and tunnel geometry, hydrophobicity and solvent exposure, and local packing and metal coordination. These results provide a basis for discovering natural enzyme scaffolds with non-native activities from structural data.
+
+</details>
+
 ### [Identification of Functional NOD2-Specific Aptamers Using APT-SNAP Microarrays to Screen Zebrafish Nod-like Receptors](https://www.biorxiv.org/content/10.64898/2026.11.24.768724v1)
 *Messa, P. E.; Pearson, K. S.; Conti, B. J. et al.* · `biochemistry` · bioRxiv doi:10.64898/2026.11.24.768724 v1 · relevance 0.06
 
-- **In one sentence**: The paper reports DNA aptamers, selected with the high-density APT-SNAP microarray platform, that bind zebrafish NOD2 and related NOD-like receptors, and validates the lead NOD2 binders with ELASA, pull-down, biolayer interferometry and fluorescence microscopy.
-- **In plain words**: Researchers wanted reliable tools to detect certain immune sensor proteins in zebrafish, a model animal often used to study immunity, but commercial antibodies for these proteins did not work well. They used a screening method that tests huge numbers of short DNA sequences against proteins to find ones that stick tightly to the target. Several DNA binders were found, and the best ones for a protein called NOD2 were tested with several lab methods and shown to bind it specifically.
-- **Why it matters**: Good detection reagents are a bottleneck for studying immune sensors, and the authors argue the same approach could be used for other hard-to-detect proteins that lack good antibodies. The text reports lab-level validation only; its broader usefulness for other targets is a claim the authors make and has not been shown here.
-- **Background needed**: - NOD-like receptors (NLRs) are proteins inside cells that sense signs of pathogens or tissue damage and trigger immune responses; their dysregulation is linked to inflammatory disease and cancer.
-- Antibodies are protein-based tools that stick to a target protein and are used to detect it; they are often unreliable or unavailable for less-studied species like zebrafish.
-- Aptamers are short single-stranded DNA or RNA sequences that fold into shapes that bind specific targets, acting as chemical alternatives to antibodies.
-- A microarray is a surface carrying many different sequences at once, allowing thousands of binding tests in parallel.
-- Validation methods named: ELASA (enzyme-linked assay using aptamers, like an ELISA), pull-down (fishing the target out of a mixture), biolayer interferometry (measuring binding strength in real time), and fluorescence microscopy (imaging glowing labels in cells). · level: research-level
+- **In one sentence**: The paper reports DNA aptamers, identified with the APT-SNAP high-density microarray, that bind zebrafish NOD2 and other zebrafish NOD-like receptors, and validates the lead NOD2 binders with ELASA, pull-down, biolayer interferometry and fluorescence microscopy.
+- **In plain words**: Researchers wanted reliable tools to detect a family of immune sensor proteins in zebrafish, a small fish widely used in immunology, because commercial antibodies for these proteins were not working well. They used a method that screens large arrays of short DNA strands to find ones that stick to these proteins, and selected candidates that bind a protein called NOD2. Several tests indicated that the lead DNA binders grab zebrafish NOD2 tightly and specifically.
+- **Why it matters**: Good detection reagents are a bottleneck for studying immune signaling, which is linked to inflammatory diseases and cancers, and the authors suggest the same approach could help with other hard-to-target proteins. The text does not show any disease or clinical application, so the broader value remains a proposal rather than a demonstrated result.
+- **Background needed**: - NOD-like receptors (NLRs) are proteins inside cells that sense signs of microbes or tissue damage and trigger immune responses.
+- Antibodies are proteins that bind specific targets and are used as detection tools in labs; many do not work well for some proteins.
+- Aptamers are short single-stranded DNA or RNA sequences that fold into shapes that bind a target, serving as an antibody-like alternative.
+- A microarray is a glass or chip surface carrying thousands of different spots, here used to test many aptamers at once.
+- Zebrafish are a common model organism for studying the immune system.
+- Biolayer interferometry (BLI) measures how strongly and how fast a molecule binds a target; pull-downs use a bait to fish out binding partners; ELASA is an enzyme-linked assay similar to ELISA but with aptamers.
+- Affinity means how tightly a binder holds its target. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -339,48 +359,65 @@ NOD-like receptors (NLRs) are intracellular immune sensors that monitor for path
 
 </details>
 
-### [RNA structure probing with 4-base-recognizing RNA cutters](https://www.biorxiv.org/content/10.64898/2026.11.27.769052v1)
-*Takahashi, M.; Nashimoto, M.* · `biochemistry` · bioRxiv doi:10.64898/2026.11.27.769052 v1 · relevance 0.05
+## Pharmacology and drug discovery
 
-- **In one sentence**: In vitro tests of human tRNase ZL guided by 13 "hook-type" sgRNAs against nine 32-nt RNA targets, mapping which 3- or 4-base recognition sequences work and whether the enzyme cuts only loosely folded RNA regions.
-- **In plain words**: Cells fold their RNA molecules into complex shapes, and knowing which parts are tightly folded and which are open helps explain how RNA works. This paper tests a molecular scissors approach: a human enzyme (tRNase ZL) is steered by a short guide RNA to cut RNA at a chosen short sequence. The authors report, in test tubes only, which guide designs cut well and that cutting happened only in open or loosely folded regions.
-- **Why it matters**: If the approach works inside cells, it could give a way to probe the shapes of cellular mRNA and non-coding RNA, which may matter for understanding gene regulation and for precision medicine. The text itself is a feasibility study in vitro, and it says the cellular use is a future goal, so its practical value remains unproven.
-- **Background needed**: - RNA is a single-stranded molecule that folds into 3D shapes; those shapes affect its function.
-- mRNA carries genetic instructions; non-coding RNAs regulate genes without being translated into protein.
-- "Structure probing" means using a chemical or enzyme to see which RNA regions are open or folded.
-- tRNase ZL is a human enzyme that cuts RNA; a guide RNA (sgRNA) can direct where it cuts.
-- "Hook-type" sgRNA is a guide design from the authors' earlier work; the text does not describe its details.
-- A "4-base recognition sequence" means the guide pairs with four RNA bases to mark the cut site.
-- Nucleotides (nt) are the letters of RNA; G and C are two of the four bases.
-- Hairpin: a stem-loop shape formed when a stretch of RNA folds back on itself. · level: research-level
+### [The Impact of Highly Effective Modulator Therapies on the ABCG5 ABCG8 Sterol Transporter and Hepatobiliary Function](https://www.biorxiv.org/content/10.64898/2026.11.26.769199v1)
+*Campbell, M. G.; Chauhan, I.; Poole, B. et al.* · `pharmacology and toxicology` · bioRxiv doi:10.64898/2026.11.26.769199 v1 · relevance 0.09
+
+- **In one sentence**: In cultured human hepatocytes and in mice, highly effective CF modulator drugs (HEMT) altered ABCG5/ABCG8 sterol transporter abundance, localization and maturation, with reduced biliary lipid secretion and signs of liver fat and collagen changes in the mice.
+- **In plain words**: Sitosterolemia is a rare inherited condition in which plant-derived fats (sterols) build up in the blood because two liver and gut transporter proteins, ABCG5 and ABCG8, do not work properly. Cystic fibrosis drugs called HEMT, which also act on some related transporter proteins, were tested on these transporters in liver cells grown in the lab and in mice. The drugs changed how much of the transporters was present and where they sat in cells, but did not fix the faulty forms caused by sitosterolemia mutations.
+- **Why it matters**: The paper suggests that cystic fibrosis drugs may have unintended effects on liver transporters and bile flow, which could help explain liver problems seen in some CF patients (CF with hepatobiliary involvement). The text does not establish how these mouse findings translate to patients, so the clinical link remains a hypothesis.
+- **Background needed**: - ABC transporters: membrane proteins that move molecules across cell membranes, using energy from ATP.
+- ABCG5 and ABCG8: two "half" transporters that must pair up to function; together they push cholesterol and plant sterols out of cells into bile and the gut.
+- Sitosterolemia: a recessive genetic disorder where mutations in ABCG5 or ABCG8 cause plant sterols to accumulate.
+- CFTR: the transporter defective in cystic fibrosis; HEMT are drug combinations that correct or boost faulty CFTR.
+- Protein maturation: proteins are processed and folded in the cell before they reach their correct location; faulty maturation often traps them in the cell.
+- Hepatocytes: the main liver cells; bile is the liver fluid that carries cholesterol and other lipids to the gut.
+- In vitro vs. in vivo: "in vitro" means in lab dishes; "in vivo" means in living animals. · level: research-level
 
 <details><summary>Original abstract</summary>
 
-To elucidate dynamic higher-order structures of RNA in human cells would be important not only to deeply understand the physiological functions of mRNA and non-coding RNA but also to establish precision medicine. tRNase ZL together with hook-type sgRNA works as a 4-base-recognizing RNA cutter. We thought that RNA structure probing using the RNA cutters with hook-type sgRNAs of various 4-base recognition sequences would provide valuable information on the higher-order structures of cellular RNA. In this study, we investigated the feasibility of this method in vitro. We examined nine 32-nt RNA targets of various degrees of folding for cleavability by human tRNase ZL guided by each of thirteen hook-type sgRNAs. The assays were carried out under four different conditions: at 37 or 50{degrees}C with MgCl2 or spermidine. From these assays, we identified four main findings: At least two consecutive G or C nt in the target RNA recognition sequence are needed for hook-type sgRNA to work as a guide for tRNase ZL. A longer target RNA recognition sequence of hook-type sgRNA provides better guiding ability, and the hook-type sgRNA that can form with target RNA a hairpin structure without bulged nucleotides shows a better guiding ability. tRNase ZL with hook-type sgRNA, which was designed to work as a 4-base-recognizing RNA cutter, can also work efficiently as a 3-base-recognizing RNA cutter in some cases. Cleavage of target RNA by tRNase ZL guided by hook-type sgRNA occurs only in unstructured or loosely-folded target RNA, suggesting that sgRNA-guided tRNase ZL can discriminate less folded regions from tightly folded ones in long cellular mRNA or non-coding RNA. Structure probing of cellular RNA by introducing into the cells the hook-type sgRNA designed based on the findings of this study would provide valuable information on the higher-order structures of the cellular RNA.
+Sitosterolemia (STSL) is a monogenic, recessive disorder characterized by the accumulation of xenosterols in plasma and tissues. STSL is caused by mutations in either ABCG5 or ABCG8, genes that encode ABC half-transporters that form an obligate heterodimer (G5G8) that opposes sterol absorption and promotes biliary cholesterol secretion in the small intestine and liver, respectively. Like STSL, Cystic Fibrosis (CF) is caused by mutations in an ABC transporter, the CF transmembrane conductance regulator (CFTR, ABCC7). Highly Effective Modulator Therapies (HEMT) are small molecule drugs used in combination to treat CF. HEMT modulate additional ABC transporters, suggesting they may interact with G5G8 to alter wild-type or mutant protein function. We established human hepatocyte cell lines expressing ABCG5 and ABCG8 and tested the effect of HEMT independently and in combination on G5G8 protein abundance, localization, and maturation. HEMT increase G5G8 abundance, induce the appearance of a high-molecular weight form of ABCG5, and redistribute ABCG8 intracellularly in cultured hepatocytes. However, HEMT failed to rescue maturation of STSL-causing mutants of either ABCG5 or ABCG8 in vitro. Finally, we examined the effect of HEMT on G5G8 and biliary cholesterol secretion in mice. In contrast to cultured hepatocytes, HEMT reduced Abcg5 and Abcg8 protein and biliary lipid secretion. HEMT treatment also promoted hepatic triglyceride accumulation and the expression of collagens, suggesting that HEMT may contribute to CF with Hepatobiliary Involvement (CFHBI) in patients.
 
 </details>
 
-## Pharmacology and drug discovery
-
-Nothing notable this time.
-
 ## Computational and systems biology
+
+### [Reconstructing regulatory histories of cell fate decisions from single-cell lineage and multi-omics](https://www.biorxiv.org/content/10.64898/2026.11.26.769378v1)
+*Yu, X.; Wang, Z.; Zhang, Z. et al.* · `bioinformatics` · bioRxiv doi:10.64898/2026.11.26.769378 v1 · relevance 0.15
+
+- **In one sentence**: RegArch is a probabilistic framework that combines transcriptomic, chromatin-derived, and time-scaled lineage data to reconstruct terminal and unobserved ancestral gene regulatory networks during cell fate decisions, validated in simulations and in C. elegans and zebrafish heart datasets.
+- **In plain words**: Cells in an embryo or a healing organ take on different identities, but we usually only see snapshots of their final or current gene activity, not the earlier steps that led there. This paper presents a computational method, RegArch, that combines gene activity measurements, chromatin (DNA packaging) data, and family trees of cells to infer the gene control networks that likely operated in both final cells and their ancestors. The authors report that the method recovers ancestral networks in simulations and gives useful patterns in worm and zebrafish data.
+- **Why it matters**: Being able to infer how regulatory programs were set up along a cell's ancestry could help explain where cell types diversify, and the paper frames its output as hypotheses to test. The text does not show how well the predictions hold up experimentally, so the practical value remains to be judged by follow-up work.
+- **Background needed**: - Gene regulatory network (GRN): a map of which regulator genes switch other genes on or off.
+- Transcriptomic profile: a measurement of which genes are active in cells, typically from RNA sequencing.
+- Chromatin data: information about how accessible DNA is, indicating where regulators may bind.
+- Single-cell lineage: a record of which cells descended from which, often reconstructed from cell division history.
+- Progenitor/ancestral cell: an earlier cell that gives rise to several later cell types.
+- Model organisms: C. elegans (a small worm with a fully mapped cell lineage) and zebrafish (used to study heart repair after injury).
+- Simulation: testing a method on artificial data where the true answer is known. · level: research-level
+
+<details><summary>Original abstract</summary>
+
+Understanding how distinct cell identities emerge from common progenitors requires access to regulatory histories that molecular snapshots cannot directly reveal. We introduce RegArch, a probabilistic framework integrating transcriptomic profiles, chromatin-derived evidence, and time-scaled cell lineages to reconstruct terminal and unobserved ancestral gene regulatory networks (GRNs). These lineage-resolved networks enable characterization of regulatory reorganization, prioritization of differentiation-associated and branch-biased regulators, and identification of constitutive, lineage-associated, and state-restricted modules. Simulations demonstrate ancestral network recovery and improved terminal GRN inference. In Caenorhabditis elegans, inferred ancestral GRNs combined with measured regulator expression generated target-expression signatures preferentially matching their corresponding progenitor profiles. EMS lineage analyses identified a shared regulatory module and branch-enriched modules with distinct ancestral representation. In zebrafish hearts sampled after injury, developmental ancestry informed endocardial- and epicardial-associated candidate regulator prioritization. RegArch thus generates testable hypotheses about the regulatory origins of cellular diversity.
+
+</details>
 
 ### [Learning Protein Structure Representations through Joint-Embedding Prediction](https://www.biorxiv.org/content/10.64898/2026.11.25.769343v1)
 *Hwang, U.; Shin, Y.; Song, J. et al.* · `bioinformatics` · bioRxiv doi:10.64898/2026.11.25.769343 v1 · relevance 0.14
 
-- **In one sentence**: PS-JEPA is a self-supervised model that learns protein backbone structure representations by predicting masked residue embeddings from visible context, without a coordinate-reconstruction objective, and reports competitive results on StructTokenBench and backbone reconstruction from frozen features.
-- **In plain words**: Proteins are chains of amino acids that fold into 3D shapes, and computer models often learn these shapes by trying to rebuild exact coordinates. This paper asks whether a different training goal, predicting hidden parts of a protein's representation from the visible parts, can capture biologically useful information. The authors report that their frozen representations did better than a strong baseline on remote-homology detection (finding evolutionarily related proteins with little sequence similarity) and stayed competitive on function and flexibility tasks, and that a separate decoder could rebuild backbones from them with a mean C RMSD of 1.61 Å on 309 held-out chains.</plain>
-<parameter name="why">It challenges the assumption that better coordinate reconstruction means better representations for biological prediction, and it shows one approach that tries to do both. The generation result is exploratory: 62 of 384 unconditionally generated backbones (16.15%) met a designability criterion, which is a modest starting point rather than a established capability.
+- **In one sentence**: PS-JEPA is a self-supervised model that learns protein backbone-structure representations by predicting masked residue embeddings from visible context, without a coordinate-reconstruction objective, and is evaluated on StructTokenBench and backbone reconstruction.
+- **In plain words**: Proteins are chains of amino acids that fold into 3D shapes, and computer models need a compact numerical summary of that shape to make predictions. This paper trains such a model by hiding parts of a protein's backbone and having it predict the hidden parts' summaries, rather than asking it to redraw exact coordinates. The authors report that these summaries do well on several biology prediction tasks, especially detecting remote evolutionary relatives, and can still be decoded back into backbone shapes with about 1.61 Å error on 309 test chains.
+- **Why it matters**: It tests whether learning to predict abstract representations, rather than exact coordinates, can keep both useful biological information and recoverable geometry. The text reports a generation experiment only as exploratory, so its wider significance is uncertain and would need independent replication.
 - **Background needed**: - Protein backbone: the main chain of atoms that defines a protein's 3D shape.
-- Representation (embedding): a list of numbers a model learns to summarize a protein.
 - Self-supervised learning: training on unlabeled data by hiding part of the input and predicting it.
-- Joint-embedding prediction (JEPA): predicting the representation of hidden parts rather than their raw values.
-- Frozen representations: learned features used as-is, without further tuning, for downstream tasks.
-- Remote homology: detecting proteins related by ancestry despite low sequence similarity; scored with macro F1.
-- RMSD (in Å): root-mean-square deviation between predicted and true atom positions; lower is better.
-- Designability: whether a generated backbone is judged foldable and self-consistent by a computational check.
-- Mamba: a sequence-modeling architecture; bidirectional means it reads context in both directions. · level: research-level
+- Joint-embedding prediction (JEPA): predicting the representation of a hidden part, not its raw values.
+- Frozen representations: a pretrained model's outputs are used as-is, without further training, for downstream tasks.
+- Remote homology: detecting proteins that share ancestry and fold but have diverged in sequence; scored here by macro F1 (a balanced accuracy-style score, higher is better).
+- RMSD (in Å): root-mean-square deviation between two structures; lower means closer match.
+- Designability: a computational check of whether a generated backbone is likely to be foldable into a real protein.
+- Mamba: a sequence-modeling architecture; bidirectional means it reads context in both directions.
+- GearNet-Edge: an existing graph-based protein structure model used here as the baseline. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -388,42 +425,22 @@ Motivation: Protein structure representations are often learned by reconstructin
 
 </details>
 
-### [A spatiotemporal perturbational atlas of the post-pneumonectomy lung](https://www.biorxiv.org/content/10.64898/2026.11.25.768918v1)
-*Obata, T.; Aracena, D. P.; Tomas Gracia, M. et al.* · `systems biology` · bioRxiv doi:10.64898/2026.11.25.768918 v1 · relevance 0.08
-
-- **In one sentence**: A time-resolved spatial atlas of lung regeneration in rats after removal of one lung, combining single-cell RNA sequencing, Xenium spatial transcriptomics, and NICHES-based spatial connectomics across Days 3, 7, and 14.
-- **In plain words**: When one lung is surgically removed, the remaining lung tissue reorganizes itself. The authors studied this in rats, tracking which cells sit where and how they signal to each other at several days after surgery. They report three different tissue layouts at successive time points, including a short-lived community at Day 7 that shows signs of scarring-like signaling.
-- **Why it matters**: Mapping where cells are and how they talk during tissue repair, over time, is a newer approach than looking at cell types alone. The authors present their spatial connectivity method as a general framework, which may apply to other tissues, but the text does not show that yet.
-- **Background needed**: - Pneumonectomy: surgical removal of one whole lung; the remaining lung is known to grow new alveoli (the tiny air sacs where gas exchange happens) in some mammals.
-- Single-cell RNA sequencing: measures which genes are active in each cell, used here to identify cell types.
-- Spatial transcriptomics (10x Xenium): measures gene activity in intact tissue slices, so each cell's location is kept.
-- NICHES: a computational method that estimates which cells are signaling to which neighboring cells, based on gene expression.
-- Mesothelium: the thin protective lining over the lung surface.
-- Mechanotransduction: how cells sense and respond to physical forces such as stretch.
-- Fibrosis-mimetic signaling: gene signals resembling those seen in scarring, described here as similar in pattern rather than confirmed scarring.
-- Perturbational atlas: a map of tissue states after a deliberate disturbance, sampled over time. · level: research-level
-
-<details><summary>Original abstract</summary>
-
-Perturbational spatial atlases have begun to map regenerative dynamics in a variety of tissues, yet lung remodeling has not been characterized at comparable spatial and temporal resolution. Post-pneumonectomy lung regeneration (PPLR) provides a tractable mammalian model for tissue regeneration that can be studied in situ. Here, we present a spatiotemporal perturbational atlas of PPLR in Rattus norvegicus, combining single-cell RNA sequencing (scRNAseq), high-resolution spatial transcriptomics (10x Genomics Xenium), and NICHES-based spatial tissue connectomics. We observe three distinct tissue architectures at successive timepoints after pneumonectomy, each characterized by coordinated shifts in local cellular composition and intercellular signaling. At Day 3 (D3), a line of interstitial macrophages colocalizes directly beneath an intact mesothelium among active mechanotransductive and inflammatory signaling. We also observe the unexpected appearance of a transitional remodeling cellular community at D7 which appears largely absent at later timepoints, marked by fibrosis- mimetic signaling. At D14, an alveologenic architecture at distal lung tissue displays a connectivity signature consistent with active de novo growth, distinct from baseline homeostasis. Our findings establish a spatiotemporal map of multicellular architecture during regenerative lung remodeling and introduce a generalizable framework for spatial connectomic analysis to be used in perturbational tissue systems biology.
-
-</details>
-
 ## Neuroscience
 
 ### [Conditional feature importance with error control for machine-learning-based biomarker discovery in Alzheimer's disease](https://www.biorxiv.org/content/10.64898/2026.11.26.769462v1)
-*Paillard, J.; Silvestri, E.; Bryois, J. et al.* · `neuroscience` · bioRxiv doi:10.64898/2026.11.26.769462 v1 · relevance 0.09
+*Paillard, J.; Silvestri, E.; Bryois, J. et al.* · `neuroscience` · bioRxiv doi:10.64898/2026.11.26.769462 v1 · relevance 0.10
 
-- **In one sentence**: The paper proposes Conditional Feature Importance (CFI), a statistically grounded way to measure each biomarker's unique predictive contribution, with false-discovery control, and applies it to protein and imaging data for Alzheimer's diagnosis, onset, and progression across three cohorts.
-- **In plain words**: Researchers wanted to know which measurements in blood, spinal fluid, genes, and brain scans really carry unique information about Alzheimer's disease, rather than just repeating what other measurements already show. They developed a method called Conditional Feature Importance that works with any machine-learning model and tries to control false discoveries. Applied to data from about 48,000 people in three large studies, it reported that age and a nerve-damage marker (neurofilament light chain) mattered for all three outcomes, and that some markers added unique information only in specific cases.
-- **Why it matters**: Many biomarker studies struggle because measurements are highly correlated, so it is hard to tell which one adds something new. A method that separates unique from redundant signals, with error control, could make machine-learning results easier to interpret. The text does not show how well the findings hold up outside these cohorts, so the specific biological claims should be treated as preliminary.
-- **Background needed**: - Alzheimer's disease: a progressive brain disease; biomarkers are measurable signs (in blood, spinal fluid, genes, or scans) linked to it.
+- **In one sentence**: The paper proposes Conditional Feature Importance (CFI), a statistical framework that measures the unique contribution of individual or grouped variables in any machine learning model while controlling false discoveries, and applies it to protein and imaging biomarkers of Alzheimer's disease across three cohorts.
+- **In plain words**: Researchers wanted to find which measurements in blood, spinal fluid, genes and brain scans really help predict Alzheimer's disease, rather than just repeating information already captured by other measurements. They developed a method, Conditional Feature Importance, that asks how much each marker adds once the other markers are already known, and applied it to data from about 48,000 people in three large studies. The text reports that some markers, such as age and neurofilament light chain, mattered across diagnosis, onset and progression, while others, such as plasma total tau in diagnosis and CSF p-tau181 in progression, added unique information for specific outcomes.
+- **Why it matters**: Many Alzheimer's biomarkers are correlated, so it is hard to tell which ones carry distinct information, and this work offers a statistical way to separate them with error control. Its value for clinical biomarker discovery depends on whether the findings hold in other data, which the summary alone cannot establish.
+- **Background needed**: - Alzheimer's disease: a progressive brain disorder causing memory loss and thinking decline.
+- Biomarker: a measurable substance or feature (in blood, spinal fluid, genes or scans) that signals disease or its course.
 - Machine learning model: a computer program that learns patterns from data to make predictions.
-- Feature importance: a score for how much a model relies on a given variable.
-- Conditional (unique) contribution: how much a variable adds after accounting for the other variables, so overlapping measurements are not double-counted.
-- False discovery control: statistical safeguards that limit the number of findings that are due to chance.
-- Cohorts named: ADNI, BioFINDER, and UK Biobank are large research datasets of participants.
-- Abbreviations: APOE ε4 is a common genetic risk variant; NfL is neurofilament light, a marker of nerve injury; p-tau181 and tau are proteins linked to the disease; Aβ42 and Aβ40 are amyloid-beta protein fragments. · level: research-level
+- Feature importance: a score for how much a variable contributes to a model's predictions.
+- Conditional (unique) contribution: how much a marker helps after accounting for other markers, which matters when measurements are correlated.
+- False discovery control: statistical safeguards that limit how often chance findings are reported as real.
+- Key markers: amyloid beta and p-tau (amyloid and tau proteins), neurofilament light chain (a marker of nerve damage), APOE ε4 (a common genetic risk variant), neurogranin and alpha-synuclein (synapse and neuron-related proteins).
+- Cohorts named: ADNI, BioFINDER and UK Biobank, large research datasets. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -431,23 +448,21 @@ Alzheimer's disease (AD) is characterized by complex biology captured by proteom
 
 </details>
 
-### [Human iPSC-derived Olfactory Sensory Organoids model olfactory function and drug response](https://www.biorxiv.org/content/10.64898/2026.11.24.769047v1)
-*Singh, V.; Pantula, A.; Joshi, K. et al.* · `neuroscience` · bioRxiv doi:10.64898/2026.11.24.769047 v1 · relevance 0.07
+### [Network size regulates the balance between reuse and reconstruction of neural dynamics during reversal learning](https://www.biorxiv.org/content/10.64898/2026.11.26.769384v1)
+*Nakamura, M.; Kurikawa, T.* · `neuroscience` · bioRxiv doi:10.64898/2026.11.26.769384 v1 · relevance 0.10
 
-- **In one sentence**: Human iPSC-derived olfactory sensory organoids, grown for three months, show olfactory-like neuron and glial populations, developmental transcriptional changes compared with a fetal nasal atlas, spontaneous network bursting, and distinct activity responses to three glioma-relevant kinase inhibitors.
-- **In plain words**: Researchers grew small three-dimensional clusters of tissue from human stem cells that resemble the developing smell system in the nose. They tracked how the cells mature over three months, found that the clusters develop electrical firing and synchronized bursts of activity, and showed that three cancer-related drugs change that activity in different ways. The aim is a lab model for studying smell development and for checking how drugs given through the nose might affect nerve tissue there.
-- **Why it matters**: Intranasal delivery is being explored as a way to get drugs past the blood-brain barrier, but little is known about how those drugs affect human olfactory tissue. A human model that can be tested with drugs could help screen for such effects before people are exposed, though the text does not show how well it predicts effects in real patients.
-- **Background needed**: - Induced pluripotent stem cells (iPSCs): adult cells reprogrammed to an embryonic-like state, which can then be coaxed into other cell types.
-- Organoid: a small, lab-grown 3D tissue culture that mimics some features of a real organ.
-- Olfactory sensory neurons: nerve cells in the nose that detect smells and send signals to the brain.
-- Single-nuclei RNA sequencing: a method that reads which genes are active in each cell nucleus, used to identify cell types.
-- Electrical network bursting: synchronized bursts of firing across many cells, a sign of functional connectivity.
-- Kinase inhibitors: drugs that block enzymes (kinases) involved in cell growth signaling; Dasatinib, Trametinib and Selumetinib are examples used in glioma (brain tumor) research.
-- Blood-brain barrier: a protective layer that limits which substances pass from blood into the brain. · level: research-level
+- **In one sentence**: Recurrent neural network simulations on a reversal learning task show that larger networks more consistently reuse their prereversal population dynamics, while smaller networks vary more in how much they reorganize them, with reorganization linked to larger prereversal recurrent weights.
+- **In plain words**: The study asks what happens inside a learning system when the rules change and the old associations must be reversed. Using computer models of small and large artificial neural networks trained on such a reversal task, the authors found that networks reached the same performance but differed in whether they kept their earlier internal activity patterns or substantially rebuilt them. Larger networks tended to keep and adjust the old patterns in a more consistent way.
+- **Why it matters**: It links system size to the style of flexible adaptation, not just to how fast learning happens, which may matter for thinking about brain size and cognitive flexibility. The text is limited to simulations of artificial networks, so any connection to real brains is a hypothesis the abstract does not test.
+- **Background needed**: - Reversal learning: after learning that one response is rewarded, the rule is switched and the learner must now respond the opposite way.
+- Recurrent neural network: an artificial network whose units feed back into each other, so it can hold and change activity over time.
+- Population dynamics: the joint pattern of activity across many units, often described as a trajectory through a high-dimensional space.
+- Recurrent weights: the strengths of connections between units inside the network.
+- Reuse vs. reconstruction: whether the network keeps its old activity trajectories after the reversal or substantially reorganizes them. · level: research-level
 
 <details><summary>Original abstract</summary>
 
-Intranasal drug delivery is being explored as an alternative approach to overcome the blood-brain barrier in the treatment of central nervous system diseases. However, little is known about how therapeutics administered through this route affect human olfactory tissue. Here, we develop human induced pluripotent stem cell-derived olfactory sensory organoids that reproduce key cellular and functional features of the developing olfactory system. Over three months of differentiation, the organoids acquire diverse neuronal and glial-associated populations, including cells expressing markers of olfactory sensory neurons and interneurons. Single-nuclei RNA sequencing shows changes in cellular composition and lineage-associated transcriptional programs during maturation, while comparison with a human fetal nasal atlas identifies shared neural populations and developmental signatures. Alongside these molecular changes, the organoids develop spontaneous electrical activity and coordinated network bursting. Exposure to the glioma-relevant kinase inhibitors Dasatinib, Trametinib, and Selumetinib produces distinct changes in neuronal network activity, demonstrating the ability of the model to capture compound-associated functional responses. Together, these findings establish a human Olfactory Sensory Organoid system for investigating olfactory development and evaluating how therapeutics may affect olfactory neural tissue during intranasal drug administration.
+Neural system size is a fundamental quantitative property that may influence cognitive function. While larger neural systems have been associated with enhanced cognitive performance, how system size contributes to cognitive flexibility remains poorly understood. In particular, it is unclear whether size influences not only how efficiently a system learns but also how previously established neural dynamics are reorganized when learned associations must change. We addressed this question using recurrent neural networks trained on a reversal learning task. Despite reaching the same performance criterion, networks differed strikingly in how their internal dynamics changed across reversal. Some networks largely preserved prereversal population trajectories, thereby reusing previously established dynamics, whereas others substantially reorganized them, effectively reconstructing their dynamical structure. This continuum of adaptation strategies was particularly broad in small networks. Importantly, the extent of reorganization was related to network properties established before reversal: networks with larger prereversal recurrent weights tended to exhibit stronger reconstruction. We then examined whether the balance between reuse and reconstruction depended systematically on network size. As network size increased, changes in internal dynamics became progressively smaller and less variable, indicating increasing convergence toward the reuse strategy. Larger networks also learned both the initial and reversed mappings more rapidly and consistently. Thus, network size shapes not only learning efficiency but also the strategy by which previously learned population dynamics are modified during flexible adaptation, shifting the balance from diverse reuse reconstruction strategies in small networks toward consistent reuse in larger networks.
 
 </details>
 
@@ -456,15 +471,16 @@ Intranasal drug delivery is being explored as an alternative approach to overcom
 ### [Genomic conformation reflects epigenetic programming rather than gene expression](https://www.biorxiv.org/content/10.64898/2026.11.26.769172v1)
 *Edwards, C. A.; Dearden, F. L.; Weinberg-Shukron, A. et al.* · `genomics` · bioRxiv doi:10.64898/2026.11.26.769172 v1 · relevance 0.15
 
-- **In one sentence**: In the imprinted Dlk1-Dio3 region, parent-of-origin-specific 3D chromatin folding in fetal brain depends on the germline-derived imprinting control region and CTCF binding at a secondary element, and this folding can be disrupted without changing imprinting, transcription, or epigenetic state.
-- **In plain words**: Cells pack their long DNA into folded loops and neighbourhoods, and this study asks whether that folding drives gene activity or follows from it. Using the Dlk1-Dio3 region, a stretch of DNA where a gene's expression depends on which parent it came from, the authors mapped how the DNA folds in fetal brain and then used genetic edits to test what depends on what. They found the folding can be changed while the chemical marks and gene activity stay the same.
-- **Why it matters**: It suggests that 3D genome shape and gene activity can be controlled separately, which challenges a simple view that folding causes expression. The text does not say how far this holds outside this one region or this developmental stage, so its wider significance is uncertain.
-- **Background needed**: - Genomic imprinting: some genes are expressed only from the copy inherited from one parent, set by chemical tags (epigenetic marks) laid down in the germline.
-- Imprinting control region: a DNA element that carries these parent-specific marks and coordinates nearby genes.
-- Chromatin conformation: how DNA folds in three dimensions inside the nucleus, often mapped with chromosome-contact methods.
-- Topological domains: regions of DNA that fold together as units.
-- CTCF: a protein that binds DNA and helps anchor loops in the folded structure.
-- Transcription: the copying of a gene into RNA, the first step toward making a protein. · level: research-level
+- **In one sentence**: In the imprinted Dlk1-Dio3 region of mouse genome, parent-of-origin-specific 3D chromatin folding in fetal brain depends on the germline-derived imprinting control region, and can be disrupted at a secondary CTCF site without changing imprinting, transcription, or epigenetic marks, suggesting conformation and transcription can be decoupled.
+- **In plain words**: The DNA inside each cell is folded into loops and neighbourhoods, and this folding is thought to influence which genes are switched on. This study looked at one well-studied region of the genome where genes are expressed from only one parent's copy, and asked which comes first: the folding, the chemical tags on the DNA, or gene activity. The authors found that the folding in fetal brain follows the parental copy and depends on a control element set up in the egg or sperm, and that removing one binding site could change the folding while leaving gene activity and tags unchanged.
+- **Why it matters**: It challenges the common assumption that 3D genome structure directly drives gene activity, showing in this context the two can be separated. The text does not show how broadly this applies beyond this one region and tissue, so its wider significance is uncertain.
+- **Background needed**: - Genomic imprinting: some genes are active only from the copy inherited from one parent, controlled by chemical tags (epigenetic marks) on DNA.
+- Chromatin conformation: how DNA folds in three dimensions inside the nucleus, bringing distant regions together.
+- Topological domains: self-contained neighbourhoods of folded DNA.
+- CTCF: a protein that binds specific DNA sites and helps anchor loops in the folded structure.
+- Imprinting control region: a DNA element whose tags are set in the germline (egg or sperm) and guide imprinting afterwards.
+- Transcription: the copying of a gene into RNA, the first step in gene activity.
+- Genetic approach: the authors altered DNA in mice to test which features depend on which. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -472,23 +488,23 @@ Genome function is regulated temporally and tissue-specifically through coordina
 
 </details>
 
-### [AHCY inhibition reshapes DNA methylation and transcriptional regulation in colorectal cancer cells](https://www.biorxiv.org/content/10.64898/2026.11.26.769437v1)
-*Tikkakoski, I.; Karttunen, K.; Patel, D. et al.* · `genomics` · bioRxiv doi:10.64898/2026.11.26.769437 v1 · relevance 0.07
+### [Epstein-Barr Virus Load in Lymphoblastoid Cell Lines and Its Association with Schizophrenia](https://www.biorxiv.org/content/10.64898/2026.11.24.768881v1)
+*Yin, D.; Zhang, H.; Sanders, A. R. et al.* · `genomics` · bioRxiv doi:10.64898/2026.11.24.768881 v1 · relevance 0.12
 
-- **In one sentence**: Pharmacological inhibition of AHCY in GP5d colorectal cancer cells raised SAH, caused genome-wide DNA hypomethylation with some localized hypermethylation, slowed proliferation, and linked promoter hypomethylation to upregulation of cell cycle genes such as CDKN1A.
-- **In plain words**: Cells rely on a chain of chemical reactions that moves small chemical "methyl" tags around, and these tags help switch genes on or off. This study blocked one enzyme in that chain, AHCY, in a colon cancer cell line and measured the cells' chemistry, their DNA tagging across the genome, and which genes were active. The cells lost tags across much of their DNA, grew more slowly, and a cell cycle brake gene, CDKN1A, was strongly turned up.
-- **Why it matters**: It suggests a possible link between cell metabolism, DNA methylation and the control of cancer cell growth, which may matter for thinking about metabolic drugs aimed at cancer. The text is a single cell-line study, so it does not show whether the same effects occur in tumours or patients.
-- **Background needed**: - DNA methylation: adding a small chemical tag to DNA, usually reducing how active a nearby gene is; hypomethylation means losing tags, hypermethylation means gaining them.
-- Methionine cycle: a metabolic pathway that supplies methyl groups for tagging DNA and other molecules.
-- S-adenosylhomocysteine (SAH): a by-product of methyl transfers that, when it builds up, blocks the enzymes that add tags.
-- AHCY: the enzyme that breaks down SAH; blocking it causes SAH to accumulate.
-- Promoter vs gene body: the promoter is the switch region just before a gene; the gene body is the coding stretch itself.
-- CDKN1A: a protein that slows cell division, acting as a brake on the cell cycle.
-- Nanopore sequencing: a DNA-reading method that can detect methyl tags directly from the DNA molecule. · level: research-level
+- **In one sentence**: A case-control and polygenic-score analysis of Epstein-Barr virus (EBV) viral load in lymphoblastoid cell lines from the MGS schizophrenia cohort, with a GWAS of 2,000 participants, found no significant link to schizophrenia or bipolar polygenic risk.
+- **In plain words**: Researchers asked whether people with schizophrenia carry more Epstein-Barr virus inside lab-grown immune cell lines made from their blood cells. They also checked whether genetic risk scores for schizophrenia or bipolar disorder, or variants across the genome, track with how much virus is present. No statistically significant link turned up, though one gene region showed a weak hint that needs follow-up.
+- **Why it matters**: Epstein-Barr virus has been tied to autoimmune, neurological and other conditions, so asking whether a person's genetics make them more susceptible to it is a reasonable question. The study is a null result with only one suggestive signal, so it mainly narrows the question rather than settling it. The text does not show how the lab cell-line model relates to the virus in the body.
+- **Background needed**: - Epstein-Barr virus (EBV): a common herpes-family virus that infects most adults and stays in the body for life.
+- Lymphoblastoid cell lines (LCLs): immune cells from a person's blood that are infected with EBV in a dish so they keep growing indefinitely; used as a lab model.
+- Viral load here means the amount of viral DNA measured in these cells.
+- Polygenic risk score: a single number summing the effects of many common genetic variants, used to estimate inherited risk for a trait.
+- Linear regression with covariates: a statistical method that tests an association while adjusting for age, sex and genetic ancestry.
+- GWAS (genome-wide association study): scans the genome for variants linked to a trait; the usual bar for significance is P < 5 x 10^-8.
+- Schizophrenia (SCZ) and bipolar disorder (BIP): severe psychiatric conditions with substantial inherited components. · level: research-level
 
 <details><summary>Original abstract</summary>
 
-DNA methylation is an important epigenetic mechanism regulating gene expression, and its maintenance depends on cellular methyl group metabolism. Adenosylhomocysteinase (AHCY) is a key enzyme in the methionine cycle that hydrolyzes S-adenosylhomocysteine (SAH), thereby preventing its accumulation and inhibition of methyltransferase activity. Although AHCY has been implicated in cancer cell proliferation and transcriptional regulation, the effects of its inhibition on genome-wide DNA methylation and their relationship to gene expression remain poorly understood in colorectal cancer (CRC). Here, we investigated the consequences of pharmacological AHCY inhibition in GP5d colorectal cancer cells by integrating metabolomic profiling, nanopore sequencing-based DNA methylation analysis and RNA sequencing. AHCY inhibition resulted in SAH accumulation, widespread DNA hypomethylation and reduced cell proliferation, accompanied by changes in purine metabolism and gene expression. Despite the overall loss of DNA methylation, localized hypermethylation was also observed, particularly at CpG-rich regulatory regions. Transcriptomic analysis revealed changes in proliferation-associated and cell cycle checkpoint pathways, including strong upregulation of the cell cycle regulator CDKN1A. Importantly, promoter hypomethylation was significantly enriched among upregulated genes, including genes involved in cell cycle regulation, whereas gene body hypomethylation showed no comparable association with differential gene expression. Together, these findings demonstrate that AHCY inhibition induces extensive metabolic, epigenetic and transcriptional changes in CRC cells and suggest that promoter hypomethylation may contribute to the transcriptional responses associated with reduced cell proliferation.
+Background: Blood Epstein-Barr virus (EBV) DNAs are reported to have genetic determinants and correlate with prevalence of autoimmune, neurological, respiratory and cardiovascular condition. However, whether a patient is more susceptible to EBV virus infection is unknown. Lymphoblastoid cell lines (LCLs) are often immortalized by infecting individuals' peripheral lymphocytes by EBV in a dish, providing an ex vivo model to address this question. Here, we examined associations of EBV viral load in LCLs with schizophrenia (SCZ) diagnosis, SCZ and bipolar (BIP) polygenic risk scores, and host genetic variation. Methods: EBV viral load in LCLs from the Molecular Genetics of Schizophrenia (MGS) study was examined using univariable and multivariable linear regression. Separate multivariable models evaluated SCZ diagnosis, bipolar disorder polygenic score (BIP-PGS), and SCZ polygenic score (SCZ-PGS), adjusting for age, sex, and the first five genetic ancestry principal components. An exploratory analysis examined age at schizophrenia onset. A genome-wide association study (GWAS) was conducted in 2,000 participants using the same covariates. Results: SCZ diagnosis was not significantly associated with EBV viral load after covariate adjustment (Beta=-0.004, SE = 0.025, P = 0.868). Neither BIP-PGS (Beta=-0.009, SE = 0.013, P = 0.469) nor SCZ-PGS (Beta=-0.002, SE = 0.013, P = 0.897) was significantly associated with viral load. Univariable analyses also identified no significant association with age at SCZ onset. For GWAS of EBV loads in LCL, no variant reached genome-wide significance (P < 5 x 10e-8). The strongest association was observed at rs7188098 in the GP2 gene on chromosome 16 (P = 3.7 x 10e-7). Conclusions: These analyses did not identify statistically significant associations of LCL EBV viral load with SCZ diagnosis or the psychiatric polygenic scores examined. The GWAS identified suggestive signals of association with EBV load, which require further investigation in larger sample sizes.
 
 </details>
 
@@ -497,17 +513,18 @@ DNA methylation is an important epigenetic mechanism regulating gene expression,
 ### [Sex differences and multiregional variation in placental gene expression in late-onset gestational hypertension](https://www.biorxiv.org/content/10.64898/2026.11.25.769234v1)
 *Plaisier, S. B.; Smith, M. D.; Abdulahad, A. et al.* · `developmental biology` · bioRxiv doi:10.64898/2026.11.25.769234 v1 · relevance 0.15
 
-- **In one sentence**: Placental gene expression was compared between late-onset gestational hypertensive and normotensive pregnancies, stratified by fetal sex and sampled at four locations across the placental disc, with overlap checked against two earlier preeclampsia datasets.
-- **In plain words**: Some high blood pressure problems in pregnancy start late, after 34 weeks, and are more common than the early form that has received most research. This study looked at which genes are active in the placenta, the organ linking mother and baby, in ten late-onset hypertensive pregnancies and ten normal ones. Patterns differed depending on whether the baby was genetically female or male, and activity also varied from place to place within the same placenta.
-- **Why it matters**: Most placenta research on high blood pressure in pregnancy has focused on early-onset disease, so this work looks at a more common form that is still poorly understood. The finding that effects differ by fetal sex, and that the placenta is not uniform, may matter for how future studies sample tissue and interpret results. The text does not show whether these patterns lead to better diagnosis or treatment, and the small sample size (ten per group) means the findings would need confirmation in larger studies.
-- **Background needed**: - Gestational hypertension: high blood pressure first diagnosed after 20 weeks of pregnancy.
-- Preeclampsia: a form of this condition that also involves other signs of organ stress; early-onset is before 34 weeks, late-onset is after.
-- Placenta: the temporary organ that exchanges oxygen, nutrients and waste between mother and fetus.
-- Gene expression: how actively a gene is switched on to make its product, often measured from tissue samples.
-- Karyotype (46,XX or 46,XY): the chromosome makeup that defines genetic sex in the fetus.
+- **In one sentence**: Transcriptomic comparison of placentas from ten late-onset gestational hypertension and ten normotensive full-term pregnancies, stratified by fetal sex and sampled at four locations per placenta, identifying sex-dependent differential expression and intraplacental variation.
+- **In plain words**: Late-onset high blood pressure in pregnancy, diagnosed after 34 weeks, is common and can affect both mother and baby, but it has been studied less than early-onset forms. The researchers compared gene activity in placentas from full-term pregnancies with and without this condition, separating pregnancies by whether the baby was female or male. They also sampled each placenta in four spots to see how gene activity varied across the organ.
+- **Why it matters**: The text reports that the placental gene differences linked to this condition differed between female and male fetuses, which may matter for how the condition is understood or studied. The study is small (ten pregnancies per group), so the findings are best treated as hypothesis-generating until larger studies confirm them.
+- **Background needed**: - Placenta: the temporary organ linking mother and fetus, which supplies nutrients and oxygen.
+- Gestational hypertension: high maternal blood pressure first diagnosed after 20 weeks of pregnancy; "late-onset" here means after 34 weeks.
+- Preeclampsia: a more serious hypertensive pregnancy disorder that often includes signs of organ involvement; the "mild" late-onset form is discussed here.
+- Gene expression: how actively a gene is switched on to make its products; measured here to compare placentas.
+- Differential expression: a gene being more or less active in one group than another.
 - Intraplacental variation: differences in gene activity between different spots on the same placenta.
-- Enrichment analysis: a way of checking whether a list of changed genes shares a common biological function more often than chance.
-- Ribosomal genes, immune and inflammatory genes: genes involved in protein production and the body's defence and inflammation responses. · level: research-level
+- Karyotype 46,XX / 46,XY: standard chromosome patterns corresponding to female and male sex chromosomes.
+- Enrichment analysis: a statistical check of whether a set of genes shares a common biological function more than chance would predict.
+- Biomarkers LEP and FLT1: genes previously reported as markers of preeclampsia. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -515,23 +532,24 @@ Placental dysfunction has been associated with hypertensive disorders of pregnan
 
 </details>
 
-### [Functional Right Ventricular and Atrial Cardiomyocytes Generated from Human Pluripotent Stem Cell-derived Second Heart Field Progenitors](https://www.biorxiv.org/content/10.64898/2026.11.25.769301v1)
-*Zhang, J.; Kim, G. C.; Leonov, V. et al.* · `developmental biology` · bioRxiv doi:10.64898/2026.11.25.769301 v1 · relevance 0.10
+### [A Tunable Centromere-inheritance Switch Links DNA Replication to Germline Regeneration and Reproductive Aging](https://www.biorxiv.org/content/10.64898/2026.11.25.769226v1)
+*Ranjan, R.; Huang, H.-Y.; Perumattam, M. et al.* · `developmental biology` · bioRxiv doi:10.64898/2026.11.25.769226 v1 · relevance 0.11
 
-- **In one sentence**: Differentiation of human pluripotent stem cells into second heart field progenitors, yielding right ventricular and atrial cardiomyocytes characterized by single-cell transcriptomics and electrophysiology against left ventricular controls.
-- **In plain words**: Stem cells that can become almost any cell type can be guided in a dish to form heart muscle cells. The heart has several chambers, and the muscle cells from each differ, but methods to make the right-side and upper-chamber types reliably have been lacking. This study coaxed human stem cells into an early heart-forming precursor state and then into right ventricular, atrial, and left ventricular muscle cells, and compared their gene activity and electrical behavior.
-- **Why it matters**: Chamber-specific heart cells could make disease models and drug tests more realistic, since drugs act differently on different chambers. The text reports that the cells resemble human fetal heart tissue and respond differently to drugs, but it does not show clinical use, so the practical value is still to be tested.
-- **Background needed**: - Pluripotent stem cells (hPSCs): cells that can be grown into many cell types in the lab.
-- Heart chambers: the heart has ventricles (pumping chambers) and atria (receiving chambers), and each side and chamber has its own muscle cell type.
-- Second heart field (SHF) and first heart field (FHF): two groups of embryonic precursor cells that build different parts of the heart; the study uses SHF precursors for right ventricle and atrium and FHF-derived cells for left ventricle.
-- Single-cell RNA sequencing (scRNA-seq): a method that measures which genes each individual cell is switching on, used here to identify cell types.
-- Action potential: the brief electrical signal that makes heart muscle contract; its shape (for example, the early "phase 1" dip) differs by chamber.
-- Maturity: how closely lab-grown cells resemble adult or fetal cells in gene activity and function.
-- Trabecular vs. compact myocardium: the spongy inner layer versus the dense outer wall of the ventricle, marked by NPPA and HEY2 respectively. · level: research-level
+- **In one sentence**: In Drosophila male germline stem cells, the centromere-marking protein CID (CENP-A) and its partner CENP-C are inherited asymmetrically onto sister centromeres during DNA replication, a bias that CAL1 and lagging-strand Primase 1 can shift to tune dedifferentiation, regeneration and fertility.
+- **In plain words**: Chromosomes are pulled apart at their centromere, a region whose identity is set by protein markers rather than by a fixed DNA sequence, so those markers must be copied correctly each time DNA is duplicated. This paper studies fruit fly sperm-producing stem cells and finds that the old centromere marker is passed on unevenly between the two new copies in stem cells, and that this unevenness can be adjusted by changing a DNA replication component. The authors link this tuning to how well male flies recover from damage and keep fertility as they age.
+- **Why it matters**: It connects the basic mechanics of how chromosome identity is copied during DNA replication to stem cell behavior, regeneration and fertility, which is a new angle on those questions. The text does not establish whether the same asymmetry matters in mammals or humans, so the wider relevance is untested here.
+- **Background needed**: - Centromere: the part of a chromosome that holds it to the spindle during cell division.
+- CENP-A (CID in flies): a special histone-like protein that marks where centromeres sit; it is epigenetic, meaning it is inherited without a change in the DNA letters.
+- Kinetochore and CENP-C: the protein structure built on the centromere that grips spindle fibres; CENP-C is an inner component.
+- CAL1: a chaperone protein that delivers CENP-A to centromeres during S phase (the DNA-copying stage).
+- Sister chromatids and leading/lagging strands: the two copies of a chromosome made during replication; one DNA strand is copied continuously and the other in pieces, so the two sides are made differently.
+- Primase: an enzyme that starts the short RNA primers used to build the lagging strand.
+- Germline stem cell and dedifferentiation: stem cells that make sperm, and the process in which progenitor cells revert to a stem-cell state.
+- Gamma-irradiation: radiation used here as a damage test to probe regeneration. · level: research-level
 
 <details><summary>Original abstract</summary>
 
-Second heart field (SHF) progenitors give rise to distinct populations of cardiomyocytes (CMs) in developing heart including right ventricular (rv) and atrial (a) CMs, but robust methods to generate these CM types from human pluripotent stem cells (hPSCs) are lacking. Here we differentiated hPSCs to SHF progenitors, rvCMs and aCMs identified by scRNA-seq transcriptome analysis in comparison to FHF-derived left ventricular (lv) CMs. The hPSC-CM single cell transcriptomes overlapped human fetal heart transcriptomes supporting the chamber-specific identity. The rvCMs strongly express the trabecular myocardium marker, NPPA, in contrast to the lvCMs which express HEY2, a compact myocardium marker. Functional studies demonstrated subtly different cardiac action potentials with a more prominent phase 1 repolarization in rvCMs and chamber-specific pharmacological responses. The gene expression pattern and functional properties suggest greater maturity of rvCMs relative to lvCMs. Overall, this study enables scalable access to chamber-specific hPSC-CMs for disease modeling and potential therapeutic applications.
+Centromeres direct chromosome segregation and are defined not by DNA sequence but by CENP-A-containing chromatin, raising the question of how centromeric identity is faithfully transmitted through DNA replication, and whether this process influences stem cell behavior. In the Drosophila male germline, germline stem cells (GSCs) assemble asymmetric sister centromeres linked to non-random sister-chromatid segregation, but how this asymmetry is established and whether it contributes to germline function remain unclear. Using high-resolution microscopy on cell-type and stage-specific chromatin fibers, we show that pre-existing CENP-A (CID in flies) is recycled asymmetrically onto newly replicated sister centromeres in early germ cells including GSCs, while differentiating progenitors redistribute CID nearly symmetrically. Inner kinetochore component CENP-C shows a similar pattern, with both proteins enriched on the lagging strand. The CID chaperone CAL1 associates with centromeres during S phase and is required for this asymmetric incorporation of both CID and CENP-C and for normal germline function; compromising CAL1 leads to either early-germline tumors or germ cell loss. Intriguingly, reducing lagging-strand Primase 1, a component of the DNA polymerase (Pol) complex, is sufficient to induce sister centromere asymmetry in differentiating progenitors, promoting a stem cell-like centromere state, proper centrosome orientation, and niche-directed microtubule behavior during dedifferentiation of progenitors. Combining modest CID overexpression with Primase 1 reduction further enhances dedifferentiation and redifferentiation, significantly improving male fertility during aging and regeneration following {gamma}-irradiation. Together, these findings identify that replication-coupled, strand-biased centromere inheritance can be tuned to regulate cellular plasticity, linking DNA replication to regenerative capacity and reproductive fitness.
 
 </details>
 
@@ -540,16 +558,14 @@ Second heart field (SHF) progenitors give rise to distinct populations of cardio
 ### [Maternal periconceptional nutrition is associated with the vaginal microbiome along pregnancy](https://www.biorxiv.org/content/10.64898/2026.11.25.769327v1)
 *Liu, J.; Batuure, A.; Urban, J. et al.* · `microbiology` · bioRxiv doi:10.64898/2026.11.25.769327 v1 · relevance 0.12
 
-- **In one sentence**: A longitudinal study of 101 pregnant women (280 vaginal microbiome samples) that links periconceptional food-frequency diet and supplement intake to vaginal bacterial composition across pregnancy trimesters.
-- **In plain words**: Researchers asked whether what women eat and take as supplements around the time of conception is linked to the bacteria living in the vagina during pregnancy. They followed 101 women across pregnancy, collecting vaginal samples and diet questionnaires. Overall diet scores showed little link, but certain nutrients were associated with specific bacteria, in different directions depending on the trimester.
-- **Why it matters**: Vaginal bacteria have been repeatedly tied to adverse pregnancy outcomes, so finding that modifiable nutrients track with them is of interest for reproductive health. The text only reports associations, however, so it does not show that any nutrient changes the microbiome, and the authors frame the micronutrient results as suggestive.
-- **Background needed**: - The vaginal microbiome is the community of microbes living in the vagina; a mix dominated by Lactobacillus species is generally considered healthy, while shifts toward other bacteria (dysbiosis) are linked to pregnancy complications.
-- Lactobacillus crispatus and Lactobacillus iners are two Lactobacillus species that behave differently.
-- Periconceptional period: the window around conception.
-- Food frequency questionnaire: a survey asking how often foods are eaten, used to estimate diet.
-- Dietary index: a single score summarizing overall diet quality.
+- **In one sentence**: A longitudinal cohort study (280 vaginal samples from 101 pregnant women) that links periconceptional diet and supplement use to vaginal microbiome composition across pregnancy trimesters, reporting stage-specific associations with Lactobacillus species and with dysbiosis-linked taxa such as Sneathia and Megasphaera.
+- **In plain words**: Researchers asked whether what women eat and supplement around the time of conception is linked to the community of bacteria living in the vagina during pregnancy. They tracked 101 women over several samples each and compared those samples with food questionnaires. They found that overall diet scores were not strongly tied to the bacteria, but some individual nutrients and supplements were linked to shifts in bacterial groups, especially in the third trimester.
+- **Why it matters**: Vaginal bacterial imbalance has been linked to adverse pregnancy outcomes, so knowing whether diet or supplements shift that balance could inform future nutrition strategies. The text reports associations only, not cause and effect, and it does not show that any supplement changes pregnancy outcomes.
+- **Background needed**: - The vaginal microbiome is the mix of microbes living in the vagina; a mix dominated by Lactobacillus species is generally considered healthier, while other bacteria can signal "dysbiosis" (imbalance).
+- Periconceptional period: the window around conception and early pregnancy.
+- Food frequency questionnaire: a survey asking how often people eat particular foods, used to estimate nutrient intake.
 - Recommended daily allowance (RDA): the amount of a nutrient considered sufficient for most healthy people.
-- Association studies show correlation, not cause. · level: intermediate
+- Associations found in observational data do not establish that a nutrient causes a change in the microbiome. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -557,62 +573,42 @@ The human vaginal microbiome has been repeatedly associated with adverse pregnan
 
 </details>
 
-### [Salmonella MgtC promotes polymyxin B resistance and systemic infection by activating LpxO-mediated lipid A hydroxylation](https://www.biorxiv.org/content/10.64898/2026.11.23.768523v1)
-*Choi, N.; Baek, S.; Choi, E. et al.* · `microbiology` · bioRxiv doi:10.64898/2026.11.23.768523 v1 · relevance 0.10
+### [A modular intranasal Nm-nOMV RBD concatemer vaccine induces broad betacoronavirus-neutralizing antibodies](https://www.biorxiv.org/content/10.64898/2026.11.26.769503v1)
+*Harichandran, K.; van den Braak, W. J. P.; Hulswit, R. J. G. et al.* · `immunology` · bioRxiv doi:10.64898/2026.11.26.769503 v1 · relevance 0.11
 
-- **In one sentence**: Salmonella's virulence protein MgtC binds the lipid A hydroxylase LpxO and boosts its activity, and a Leu287Ala substitution in LpxO weakens this binding, reducing polymyxin B and serum resistance and virulence in mice.
-- **In plain words**: Salmonella bacteria survive inside the body partly by changing the outer coating of their cell wall so that immune defense peptides cannot easily damage them. This paper looks at a bacterial protein, MgtC, that helps this process by interacting with an enzyme, LpxO, which adds a hydroxyl group to the fatty tail of that coating. The authors found that MgtC binds LpxO and increases how much the coating is modified, and that changing one amino acid in LpxO weakens this link and makes the bacteria less resistant and less virulent in mice.
-- **Why it matters**: It shows that a pathogen can regulate an enzyme's activity directly, not only by switching its gene on or off, which may matter for understanding how bacteria resist host defenses. The text does not address whether this could lead to treatments, so any clinical relevance remains speculative.
-- **Background needed**: - Lipopolysaccharide (LPS) is a sugar-and-fat molecule forming the outer layer of many Gram-negative bacteria; its fatty anchor is called lipid A.
-- Lipid A modifying enzymes change this anchor's chemistry, which can help bacteria resist cationic antimicrobial peptides, which are positively charged immune defense molecules.
-- Polymyxin B is an antibiotic peptide used as a lab stand-in for these host defense peptides; serum resistance tests whether bacteria survive human blood components.
-- MgtC is a virulence factor needed for Salmonella to survive inside host cells.
-- Bacterial two-hybrid screening is a lab method that detects which proteins physically interact.
-- Most prior work on these enzymes focused on gene transcription; this paper addresses control at the level of enzyme activity.
-- Hydroxylation means adding an -OH group to a molecule. · level: research-level
+- **In one sentence**: A mouse study testing intranasal vaccine candidates that pair a meningococcal outer-membrane-vesicle delivery platform with multivalent receptor-binding-domain (RBD) concatemers from sarbecovirus, merbecovirus and embecovirus spike proteins, reporting mucosal IgA, systemic IgG and neutralization of several betacoronaviruses.
+- **In plain words**: Betacoronaviruses are a family that includes SARS-CoV-2 and other viruses that can jump from animals to people. This paper describes a nose-spray vaccine design that uses tiny bubbles of membrane from a bacterium (Neisseria meningitidis) to carry pieces of several coronavirus spike proteins. In mice, the approach produced antibodies in the nose and blood that neutralized the homologous virus and some related viruses, including bat-associated ones.
+- **Why it matters**: A vaccine that works on the nose lining could aim to block infection and spread at the point of entry, not just protect the lungs, and a design that covers several virus groups may help against future spillovers. The text reports only mouse data and does not show protection against infection, so its relevance to people is still unknown.
+- **Background needed**: - Betacoronaviruses: one genus of coronaviruses, including SARS-CoV, MERS-CoV and SARS-CoV-2, some of which spread from animals to humans.
+- Spike protein: the surface protein coronaviruses use to enter cells; its receptor-binding domain (RBD) is the part that latches onto a host cell.
+- Concatemer: several copies or pieces of a protein joined into one chain, here to display multiple RBDs together.
+- Outer membrane vesicles (OMVs): small spheres of bacterial membrane that can act as a natural immune stimulant and carrier.
+- Mucosal IgA vs systemic IgG: IgA is the antibody type found on nose and airway surfaces; IgG is the main antibody type in the blood.
+- Neutralizing antibodies: antibodies that block a virus from infecting cells.
+- Preclinical: tested in animals, not yet in people. The delivery platform was reported safe in a first-in-human Phase 1 trial, but that trial is not the subject of this paper. · level: research-level
 
 <details><summary>Original abstract</summary>
 
-The intracellular pathogen Salmonella Typhimurium modifies the lipid A moiety of lipopolysaccharide through various lipid A-modifying enzymes, thereby acquiring resistance to host cationic antimicrobial peptides during infection. While regulation of these enzymes at the transcription level has been extensively studied, however, regulation at the activity level remains poorly understood. Here, we show that the Salmonella virulence factor MgtC interacts with LpxO, an enzyme that hydroxylates the 3'-myristoyl chain of hexa-acylated lipid A, identified through bacterial two-hybrid screening for potential MgtC interaction partners. MgtC binding to LpxO promotes lipid A hydroxylation in a concentration-dependent manner, and the Leu287 residue in the C-terminal helix of LpxO is required for this interaction. Substitution of Leu287 with Ala reduces MgtC binding without affecting intrinsic hydroxylase activity, consequently impairing MgtC-enhanced lipid A hydroxylation. This substitution decreases resistance to both the antimicrobial peptide polymyxin B and human serum, and attenuates virulence in a mouse infection model. These findings suggest that Salmonella exploits MgtC to promote LpxO hydroxylation activity, thereby enhancing survival inside the host.
+Betacoronaviruses pose a major threat to human and animal health due to their propensity to cause spillover infections. Broadly protective vaccines that induce mucosal immunity may strengthen pandemic preparedness by limiting infection and onward transmission. Here we have developed intranasal betacoronavirus vaccine candidates combining AdJane Biosciences' Neisseria meningitidis native outer membrane vesicle (Nm-nOMV) platform, a self-adjuvating mucosal delivery platform recently shown to be safe and well tolerated in a first-in-human Phase 1 trial, with multivalent coronavirus spike immunogens. We evaluated betacoronaviruses full Spike proteins, chimeric full Spike proteins, and Receptor Binding Domain (RBD) concatemers representing sarbecoviruses, merbecoviruses, and embecoviruses. Antigenic profiling identified immunogens retaining activity against human convalescent sera and characterized monoclonal antibodies. In mice, intranasal immunization with Nm-nOMVs combined with RBD concatemers induced mucosal IgA responses, systemic IgG and broad neutralization of homologous and heterologous human and bat related betacoronaviruses. Together, findings from the study identify multivalent RBD concatemers co-administered with the Nm-nOMV platform as a promising, modular antigen design for the development of broadly protective mucosal vaccines against emerging betacoronaviruses.
 
 </details>
 
 ## Cancer biology
 
-### [CSF Boundary Disruption and Tumor-Dependent Patterns of Medulloblastoma Metastasis](https://www.biorxiv.org/content/10.64898/2026.11.23.768674v1)
-*Ryan, l. N.; Jimenez Garcia, L.; Gross, A. C. et al.* · `cancer biology` · bioRxiv doi:10.64898/2026.11.23.768674 v1 · relevance 0.07
-
-- **In one sentence**: In mouse xenograft models of medulloblastoma, the paper links disruption of cerebrospinal fluid-facing tissue boundaries and primary tumor growth architecture to dissemination, and shows that tumor models implanted at the same site still produce different metastatic patterns.
-- **In plain words**: Medulloblastoma is a childhood brain tumor, and the main cause of death is its spread through the fluid that bathes the brain and spinal cord. This study grew human tumors in mice, changing where each tumor sat in the cerebellum relative to the fluid-facing surfaces, and then tracked how the cancer spread through the brain and spine. The authors found that the way a tumor grew at its edge, especially tumors that broke into surrounding tissue, mattered more for spread than the tumor's size or location.
-- **Why it matters**: Spread through the fluid around the brain is the main cause of death in this cancer, so understanding which factors drive it could guide future work on prevention. The work is preclinical, using mice and a few cell models, so its relevance to patients is not yet established.
-- **Background needed**: - Medulloblastoma: the most common malignant brain tumor in children, arising in the cerebellum (the back part of the brain that coordinates movement).
-- Leptomeningeal metastasis: cancer spreading across the thin membranes covering the brain and spinal cord, through the cerebrospinal fluid (CSF) that cushions them.
-- Orthotopic xenograft: a human tumor grown in mice at the same anatomical site it would occupy in the body.
-- Bioluminescence imaging: tracking tumor growth over time by detecting light produced by engineered cancer cells.
-- Metastatic topology: the pattern of where cancer spreads and how it is arranged across brain and spinal compartments.
-- Growth architecture: the shape and edge behavior of a tumor, such as whether it stays well-bounded or invades surrounding tissue. · level: research-level
-
-<details><summary>Original abstract</summary>
-
-Background: Leptomeningeal metastasis is the major cause of mortality in medulloblastoma, yet the mechanisms that facilitate dissemination are poorly resolved. Here, we leveraged preclinical models to define metastatic topology, the anatomical distribution and organization of disseminated disease across craniospinal compartments and ask how topology is influenced by cerebrospinal fluid (CSF) access, primary tumor anatomy, and tumor biology. Methods: Orthotopic D425 xenograft models were used to manipulate primary tumor geometry, defined by anatomical position of primary tumors within the cerebellum relative to CSF facing boundaries. Longitudinal bioluminescence, survival, primary growth architecture at the tumor host interface, CSF boundary breach, and craniospinal metastatic distribution were quantified. Additional medulloblastoma models MED411, MED2112, and CHLA-01-MED were implanted at a common midline cerebellar location to assess tumor-intrinsic contributions to metastatic topology. Results: While primary tumor geometry altered disease progression and survival, it did not significantly alter metastasis distribution. Strikingly, growth architecture and primary tumor burden correlated with dissemination. Despite their large size, circumscribed tumors frequently remained localized, whereas smaller, disruptive primary growth architecture was strongly associated with boundary breach, intracranial, and spinal dissemination. Conversely, when anatomical origin was held constant, distinct medulloblastoma models generated significantly different metastatic topologies. Conclusions: Disruption of CSF-facing anatomical boundaries is associated with distant dissemination, whereas the distribution of established metastatic disease differs substantially among medulloblastoma models despite standardized implantation conditions. These findings distinguish anatomical factors associated with dissemination from tumor-dependent patterns of metastatic colonization and establish an experimental framework for investigating the mechanisms underlying metastatic topology.
-
-</details>
-
 ### [Single-agent PD-L1 blockade and tumour volume in orthotopic GL261 glioma, with an exploratory lipid analysis of the treated tumours](https://www.biorxiv.org/content/10.64898/2026.11.22.768425v1)
 *Carretero-Navarro, P.; Lopez-Larrubia, P.; Pacheco-Torres, J.* · `cancer biology` · bioRxiv doi:10.64898/2026.11.22.768425 v1 · relevance 0.07
 
-- **In one sentence**: In mice with orthotopic GL261 gliomas, single-agent anti-PD-L1 reduced MRI-measured tumour volume at day 14 in both an IDH1-wild-type and an IDH1-mutant line, with exploratory diffusion-imaging and ex vivo lipid mass-spectrometry readouts.
-- **In plain words**: Glioblastoma is a aggressive brain cancer, and drugs that release the immune system's brakes (checkpoint blockers) have so far not improved outcomes in patients. This study tested an antibody that blocks the PD-L1 brake in mice with a brain tumour of a common lab type, and measured tumour size repeatedly with MRI scans rather than only tracking survival. Treated tumours were smaller than control tumours in both of the two tumour lines tested.
-- **Why it matters**: Reporting tumour volume with a confidence interval, rather than only survival, gives a more direct measure of drug effect in this model. The imaging and lipid changes are exploratory and hint at how the tumour tissue changed, but the text does not establish what they mean for patients.
+- **In one sentence**: In mice with orthotopic GL261 gliomas, single-agent anti-PD-L1 reduced MRI-measured tumour volume in both an IDH1-wild-type and an IDH1-mutant line, with exploratory diffusion-imaging and ex vivo lipid mass-spectrometry readouts.
+- **In plain words**: Glioblastoma is an aggressive brain cancer, and drugs that release the immune system's brake (checkpoint blockers) have so far not improved outcomes in patients. This study tested an antibody against PD-L1, a checkpoint protein, alone in mice with brain tumours, and tracked tumour size over time with MRI scans. Treated mice had tumours about a third (IDH1-wild-type line) to two-fifths (IDH1-mutant line) the size of untreated controls at day 14.
+- **Why it matters**: The paper reports tumour volume with confidence intervals rather than only survival, which is a more direct measure of effect in this mouse model. It is a mouse study with modest group sizes and some secondary analyses labelled exploratory, so it does not show the treatment would work in patients; its main value is in suggesting which measurements and tumour types merit further testing.
 - **Background needed**: - Glioblastoma (GBM): the most common and most aggressive primary brain cancer in adults.
 - GL261: a mouse glioma cell line grown in the brain of immunocompetent mice, so the immune system is intact.
 - Orthotopic: implanted in the organ where the tumour naturally arises (here, the brain).
-- Immune checkpoint blockade: antibodies that stop tumour-related "off switches" such as PD-L1, letting immune cells attack cancer.
-- IDH1 mutation: a genetic change common in some gliomas; the study compared an IDH1-wild-type and an IDH1-mutant line.
-- MRI tumour volume and diffusion imaging: measuring tumour size over time and water movement in tissue (apparent diffusion coefficient, fractional anisotropy).
-- Linear mixed model: a statistical method for repeated measurements on the same animals over time.
-- Mass spectrometry imaging: maps the distribution of molecules such as lipids across a tissue slice.
-- Sphingomyelin and phosphatidylcholine: fat-like lipids that are components of cell membranes. · level: research-level
+- Immune checkpoint blockade: antibodies that block signals such as PD-L1 that tumours use to suppress immune attack.
+- IDH1 mutation: a genetic change in some gliomas linked to a better prognosis; the study compares wild-type and mutant versions of the model.
+- MRI volume and diffusion imaging: MRI measures tumour size; diffusion metrics (apparent diffusion coefficient, fractional anisotropy) reflect how water moves through tissue and tumour structure.
+- Mass spectrometry imaging: maps the distribution of molecules such as lipids across a tissue section.
+- Confidence interval and linear mixed model: a range of plausible values for the effect and a statistical model that handles repeated measurements in the same animals. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -620,39 +616,40 @@ Immune checkpoint blockade has not yet changed outcomes in glioblastoma (GBM), a
 
 </details>
 
-## Ecology and evolution
+### [CSF Boundary Disruption and Tumor-Dependent Patterns of Medulloblastoma Metastasis](https://www.biorxiv.org/content/10.64898/2026.11.23.768674v1)
+*Ryan, l. N.; Jimenez Garcia, L.; Gross, A. C. et al.* · `cancer biology` · bioRxiv doi:10.64898/2026.11.23.768674 v1 · relevance 0.07
 
-### [Biodiversity turnover in coastal marine eukaryotic plankton revealed by a 20-year metabarcoding time series](https://www.biorxiv.org/content/10.64898/2026.11.25.768829v1)
-*Warwick-Dugdale, J.; Ostle, C.; Bird, K. et al.* · `ecology` · bioRxiv doi:10.64898/2026.11.25.768829 v1 · relevance 0.10
-
-- **In one sentence**: A 20-year (2001-2023) high-frequency 18S rRNA (V9) metabarcoding time series from a Western English Channel coastal observatory shows recurrent seasonal plankton cycles plus a transient 2008-2011 community shift linked to negative North Atlantic Oscillation phases.
-- **In plain words**: Scientists tracked tiny sea-dwelling organisms (plankton) off the south coast of England for more than twenty years by reading their genetic traces in water samples. They found the community follows yearly seasonal patterns, but between about 2008 and 2011 it temporarily shifted toward smaller organisms and lower diversity, before largely returning to its earlier state.
-- **Why it matters**: Decade-long records of marine plankton are rare, and this one suggests that large-scale climate patterns can reorganise coastal ecosystems in ways that seasonal monitoring alone would miss. The text reports the shift but does not establish its mechanism, so the link to climate forcing should be read as an association the authors propose.
-- **Background needed**: - Plankton: free-floating microscopic organisms in water, including algae (diatoms), animal-like drifters (copepods), and single-celled eukaryotes.
-- Metabarcoding: identifying species by sequencing a short standard stretch of DNA (here 18S rRNA gene, region V9) from a water sample, rather than by microscope.
-- Picoeukaryotes: very small single-celled eukaryotes; heterotrophic stramenopiles: non-photosynthetic single-celled organisms in that group.
-- Biodiversity turnover: change in which species are present and how abundant they are over time.
-- North Atlantic Oscillation (NAO): a recurring pattern of air-pressure differences across the North Atlantic that shifts winds, storms and temperatures across the region; "negative phase" refers to one direction of this swing.
-- Stratification: layering of warmer, lighter water over colder water, which affects nutrient mixing. · level: research-level
+- **In one sentence**: In mouse xenograft models of medulloblastoma, the paper links disruption of cerebrospinal fluid (CSF)-facing tumor boundaries and primary growth architecture to spinal and intracranial spread, while showing that tumor biology alone shapes where metastases settle.
+- **In plain words**: Medulloblastoma is a childhood brain tumor that often spreads through the fluid surrounding the brain and spinal cord, and that spread is the main cause of death. The researchers implanted human tumor lines into mice at different positions in the cerebellum and tracked how the disease grew, spread, and where it settled. They found that how a tumor grew into its surroundings mattered more for spread than its position or size alone, and that different tumor types settled in different places even when implanted in the same spot.
+- **Why it matters**: Spread through the cerebrospinal fluid is the leading cause of death in this cancer, so understanding which factors drive it is useful. The study offers a framework for separating anatomical causes of spread from tumor-specific patterns, though its findings come from mouse models and would need testing in patients.
+- **Background needed**: - Medulloblastoma: the most common malignant brain tumor in children, arising in the cerebellum (the lower back part of the brain that coordinates movement).
+- Leptomeningeal metastasis: cancer spreading into the thin membranes covering the brain and spinal cord, where cerebrospinal fluid (CSF) flows.
+- CSF: clear fluid that cushions the brain and spinal cord and circulates through spaces around them.
+- Xenograft: human tumor cells grown in a mouse, used to model human disease.
+- Orthotopic: implanted in the organ where the tumor naturally arises, here the cerebellum.
+- Bioluminescence imaging: tracking tumor growth by light emitted from cells engineered to glow.
+- Metastatic topology: the pattern of where and how spread disease is distributed across the brain and spine. · level: research-level
 
 <details><summary>Original abstract</summary>
 
-Long-term observations are essential to resolve how ecosystems respond to environmental variability, yet decadal-scale molecular time series of marine plankton communities remain rare. Here, we analysed a >20-year (2001-2023) high-frequency 18S rRNA gene (V9) metabarcoding time series of eukaryotic plankton from a coastal observatory in the Western English Channel. Community composition exhibited recurrent seasonal cycles driven primarily by seawater temperature and water column stratification. Superimposed on this seasonal baseline, we identified a pronounced but transient community shift between 2008 and 2011, characterised by reduced diversity, and distinct community structuring, indicating plankton ecosystem-wide biodiversity turnover. This period reflected marked community reorganisation, with potential declines in larger plankton taxa (including copepods and diatoms) and concurrent increases in picoeukaryotes and heterotrophic stramenopiles, consistent with a shift toward smaller-sized, microbial communities. While temperature explained much of the seasonal-scale variation, it did not account for the proposed biodiversity turnover. Instead, the shift was associated with negative phases of the North Atlantic Oscillation, implicating basin-scale climate forcing. Following 2011, communities returned to a state resembling earlier years, indicating a reversible, rather than persistent, change. These findings demonstrate that coastal plankton communities can undergo rapid, climate-driven but reversible biodiversity turnover that is not captured by seasonal dynamics alone and highlight the power of long-term metabarcoding time series to detect transient and recoverable ecologically significant community reorganisation.
+Background: Leptomeningeal metastasis is the major cause of mortality in medulloblastoma, yet the mechanisms that facilitate dissemination are poorly resolved. Here, we leveraged preclinical models to define metastatic topology, the anatomical distribution and organization of disseminated disease across craniospinal compartments and ask how topology is influenced by cerebrospinal fluid (CSF) access, primary tumor anatomy, and tumor biology. Methods: Orthotopic D425 xenograft models were used to manipulate primary tumor geometry, defined by anatomical position of primary tumors within the cerebellum relative to CSF facing boundaries. Longitudinal bioluminescence, survival, primary growth architecture at the tumor host interface, CSF boundary breach, and craniospinal metastatic distribution were quantified. Additional medulloblastoma models MED411, MED2112, and CHLA-01-MED were implanted at a common midline cerebellar location to assess tumor-intrinsic contributions to metastatic topology. Results: While primary tumor geometry altered disease progression and survival, it did not significantly alter metastasis distribution. Strikingly, growth architecture and primary tumor burden correlated with dissemination. Despite their large size, circumscribed tumors frequently remained localized, whereas smaller, disruptive primary growth architecture was strongly associated with boundary breach, intracranial, and spinal dissemination. Conversely, when anatomical origin was held constant, distinct medulloblastoma models generated significantly different metastatic topologies. Conclusions: Disruption of CSF-facing anatomical boundaries is associated with distant dissemination, whereas the distribution of established metastatic disease differs substantially among medulloblastoma models despite standardized implantation conditions. These findings distinguish anatomical factors associated with dissemination from tumor-dependent patterns of metastatic colonization and establish an experimental framework for investigating the mechanisms underlying metastatic topology.
 
 </details>
+
+## Ecology and evolution
 
 ### [Sodium-enriched nectar increases seed set in low diversity prairies](https://www.biorxiv.org/content/10.64898/2026.11.25.769002v1)
 *Darst, A. L.; Lamm, M. E.; Haddad, N. M.* · `ecology` · bioRxiv doi:10.64898/2026.11.25.769002 v1 · relevance 0.10
 
-- **In one sentence**: A field experiment testing whether sodium-enriched nectar raises seed set in black-eyed Susan (Rudbeckia hirta) planted in low- versus high-diversity prairie plots, with germination and a supplementary floral-visitation study.
-- **In plain words**: Flowers make nectar, a sugary liquid that feeds pollinating insects, and it can also contain small amounts of minerals such as sodium, which plants themselves barely need but many pollinators do. The authors grew black-eyed Susan plants in soil with added sodium or ordinary soil, then placed paired plants in prairie plots seeded with either many or few plant species. They found that the sodium-fed plants had sodium-rich nectar and set more seeds, but only in the low-diversity prairies.
-- **Why it matters**: It suggests that a mineral in nectar can affect plant reproduction, and that the effect depends on the surrounding plant community, which matters for how pollination is studied and for managing restored prairies. The text does not show how broadly this holds beyond this one species and these plots.
-- **Background needed**: - Nectar: sugary fluid flowers offer pollinators; it can also carry trace minerals.
-- Sodium: plants need very little, but many animals, including bees and butterflies, seek it out.
-- Seed set: the share of flowers that produce seeds, a common measure of plant reproductive success.
-- Germination rate: the share of seeds that sprout, used here to check seed quality.
-- Context dependency: an effect that changes depending on surrounding conditions, here the diversity of the plant community.
-- Prairie diversity: low-diversity plots had fewer seeded plant species than high-diversity plots. · level: intermediate
+- **In one sentence**: A field experiment testing whether sodium-enriched nectar in black-eyed Susan (Rudbeckia hirta) raises seed set, and whether that effect depends on how diverse the surrounding prairie plant community is.
+- **In plain words**: Flowers make nectar to feed visiting insects, and that nectar can carry trace minerals such as sodium, which plants themselves need very little of but many pollinators seek out. The researchers grew black-eyed Susan plants in soil with added sodium or ordinary soil, then placed paired plants in prairie plots seeded with either many or few plant species. They found that sodium-boosted plants produced more seeds in the low-diversity prairies but not in the high-diversity ones, while seed germination was unaffected.
+- **Why it matters**: It suggests that a small mineral in nectar may matter for plant reproduction, and that its benefit can depend on the surrounding plant community. This points to context dependence in plant-pollinator relationships, though the text alone does not show how broadly the result would hold across other species or sites.
+- **Background needed**: - Nectar is a sugary liquid flowers produce to reward pollinators such as bees and butterflies.
+- Micronutrients are minerals needed in tiny amounts; sodium is scarce in many plants but important to some animals.
+- Seed set is the proportion of flower ovules that develop into seeds, a common measure of plant reproductive success.
+- Germination rate is the share of seeds that sprout, used here to check seed quality.
+- Context dependency means an interaction's outcome changes with surrounding conditions, here the diversity of the plant community.
+- The sodium-visitation link was explored only in a supplementary experiment, so the main evidence is seed set. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -660,48 +657,67 @@ Plant-pollinator interactions depend on floral traits and background plant commu
 
 </details>
 
+### [Biodiversity turnover in coastal marine eukaryotic plankton revealed by a 20-year metabarcoding time series](https://www.biorxiv.org/content/10.64898/2026.11.25.768829v1)
+*Warwick-Dugdale, J.; Ostle, C.; Bird, K. et al.* · `ecology` · bioRxiv doi:10.64898/2026.11.25.768829 v1 · relevance 0.10
+
+- **In one sentence**: A 20-year (2001–2023) high-frequency 18S rRNA (V9) metabarcoding time series from a Western English Channel coastal observatory shows recurrent seasonal plankton cycles, plus a transient 2008–2011 shift toward smaller, microbial-dominated communities linked to negative North Atlantic Oscillation phases.
+- **In plain words**: This study looks at tiny floating organisms in coastal seawater off southwest England, sampled over more than two decades. The authors found the usual yearly ups and downs, plus a clear shift between 2008 and 2011 when the community had fewer kinds of organisms and more very small ones. Afterwards the community went back to looking like it did before.
+- **Why it matters**: Decades of data on the base of the marine food web are rare, so this record helps show how ecosystems respond to climate swings and recover from them. The link to the North Atlantic Oscillation, a large-scale pattern of atmospheric pressure, suggests the shift came from basin-scale climate rather than local causes, though the text gives only an association, not proof of cause.
+- **Background needed**: - Plankton: free-floating organisms in water, from microscopic algae to small animals; they form the base of marine food webs.
+- Eukaryotes: organisms whose cells have a nucleus, including algae, protists and small animals.
+- Metabarcoding: identifying species by sequencing a standard short stretch of DNA (here the 18S rRNA gene, region V9) from a water sample, rather than by microscope.
+- Picoeukaryotes: very small eukaryotic cells, roughly a few micrometres or less across.
+- Heterotrophic stramenopiles: a large group of protists that feed on other organisms or organic matter rather than making their own food by photosynthesis.
+- Stratification: layering of warm, light water over cold, dense water, which limits mixing.
+- North Atlantic Oscillation (NAO): a recurring pattern of pressure differences between Iceland and the Azores that shapes winds and weather across the North Atlantic.
+- Biodiversity turnover: change in which species are present and how common they are over time. · level: intermediate
+
+<details><summary>Original abstract</summary>
+
+Long-term observations are essential to resolve how ecosystems respond to environmental variability, yet decadal-scale molecular time series of marine plankton communities remain rare. Here, we analysed a >20-year (2001-2023) high-frequency 18S rRNA gene (V9) metabarcoding time series of eukaryotic plankton from a coastal observatory in the Western English Channel. Community composition exhibited recurrent seasonal cycles driven primarily by seawater temperature and water column stratification. Superimposed on this seasonal baseline, we identified a pronounced but transient community shift between 2008 and 2011, characterised by reduced diversity, and distinct community structuring, indicating plankton ecosystem-wide biodiversity turnover. This period reflected marked community reorganisation, with potential declines in larger plankton taxa (including copepods and diatoms) and concurrent increases in picoeukaryotes and heterotrophic stramenopiles, consistent with a shift toward smaller-sized, microbial communities. While temperature explained much of the seasonal-scale variation, it did not account for the proposed biodiversity turnover. Instead, the shift was associated with negative phases of the North Atlantic Oscillation, implicating basin-scale climate forcing. Following 2011, communities returned to a state resembling earlier years, indicating a reversible, rather than persistent, change. These findings demonstrate that coastal plankton communities can undergo rapid, climate-driven but reversible biodiversity turnover that is not captured by seasonal dynamics alone and highlight the power of long-term metabarcoding time series to detect transient and recoverable ecologically significant community reorganisation.
+
+</details>
+
 ## Plant biology
+
+### [The thylakoid K+ exchange antiporter KEA3 affects NPQ dynamics and growth in the green algae Chlamydomonas reinhardtii](https://www.biorxiv.org/content/10.64898/2026.11.25.769136v1)
+*Andree, I.; Wunder, T.; Käbe, S. et al.* · `plant biology` · bioRxiv doi:10.64898/2026.11.25.769136 v1 · relevance 0.07
+
+- **In one sentence**: In the green alga Chlamydomonas reinhardtii, the thylakoid K+/H+ antiporter CrKEA3 is shown to help relax energy-dependent quenching (qE) in both light-to-dark transitions and in darkness, and its loss slows growth and raises low-CO2-induced protein levels.
+- **In plain words**: Plants and algae capture sunlight for photosynthesis but must safely get rid of excess light energy, which they do by dissipating it as heat. This paper looks at a protein called KEA3, which helps switch off this heat-release protective system when light drops. The authors knocked out KEA3 in a single-celled green alga and found that the mutants kept the protective response switched on more strongly, grew more slowly at higher light, and showed signs that they were short of carbon dioxide.
+- **Why it matters**: The text suggests KEA3 does more in algae than previously described for land plants, touching on how cells balance light and carbon dioxide. Its relevance to crop productivity is not addressed in the text, so any link to farming should be treated as speculative.
+- **Background needed**: - Photosynthesis: using light to fix CO2 into sugar, which needs a steady CO2 supply.
+- Nonphotochemical quenching (NPQ): a protective process that releases surplus light energy as heat so it does not damage the photosynthetic machinery.
+- qE (energy-dependent quenching): the fastest NPQ component, switched on when the thylakoid interior (lumen) becomes acidic.
+- Thylakoid: membrane inside chloroplasts where light reactions happen.
+- KEA3 antiporter: a membrane protein that exchanges potassium ions for protons, helping control acidity inside the thylakoid.
+- Low-CO2-induced (LCI) proteins: proteins a cell makes more of when carbon dioxide is scarce, used here as a marker of CO2 deficit.
+- Chlamydomonas reinhardtii: a standard single-celled green alga used as a lab model. · level: research-level
+
+<details><summary>Original abstract</summary>
+
+The highly variable environmental conditions that photosynthetic organism experience in nature require rapid and long-term acclimatory responses. Light and CO2 availability are tightly linked within the cell. When light intensity rises, CO2 fixation accelerates, causing intracellular CO2 to become limiting for photosynthesis. Nonphotochemical quenching (NPQ) mechanisms prevent over excitation of the photosynthetic electron transport chain and consequent damage by reactive oxygen species. Energy dependent quenching (qE) is the fastest NPQ component and responds to thylakoid lumen acidification, a consequence of photosynthesis limiting CO2 concentrations. In vascular plants, the thylakoid K/H antiporter KEA3 is required for qE downregulation after a high to low light transition, transiently enhancing photosynthetic quantum yield. Here, we demonstrate that the same holds for the unicellular green alga Chlamydomonas reinhardtii (Cr). Unlike vascular plants, CrKEA3 also contributes to qE relaxation in the dark and influences growth. The crkea3 mutants from higher light intensities, showed increased qE compared to the wild type (WT) background and grew more slowly. The growth reduction was accompanied by increased accumulation of low-CO2-induced (LCI) proteins, suggesting that crkea3 mutants experience a relative CO2 deficit. Our data suggest that KEA3 activity modulates multiple regulatory layers of photosynthesis in unicellular green algae, extending beyond the functions previously described for vascular plants.
+
+</details>
 
 ### [Whole-genome resequencing and indoor phenotyping resolve the genetic architecture of drought stress response in tepary bean](https://www.biorxiv.org/content/10.64898/2026.11.24.768977v1)
 *Srinivasan, A.; Yu, L.; Nichols, R. et al.* · `plant biology` · bioRxiv doi:10.64898/2026.11.24.768977 v1 · relevance 0.06
 
-- **In one sentence**: Whole-genome resequencing of 363 tepary bean accessions, paired with indoor drought phenotyping of 282 of them, maps genetic loci associated with growth, water use and photosynthesis under drought and well-watered conditions.
-- **In plain words**: Tepary bean is a legume that grows in dry climates, but scientists know little about the genes behind its drought tolerance. The team sequenced the genomes of 363 wild, weedy, cultivated and bred versions of the plant, then grew 282 of them for two weeks under well-watered or very dry soil and measured growth, water loss and photosynthesis. They then linked the genetic differences to these measurements to find the regions of the genome involved.
-- **Why it matters**: The study separates the genetic basis of growth under drought from growth under normal watering, and reports that the strongest drought-linked region lies in a stretch of DNA affected by domestication. This could help breeders select for drought-tolerant beans, though the text does not test any breeding outcome, and several candidate genes are only tentatively linked.
-- **Background needed**: - Tepary bean (Phaseolus acutifolius) is a drought-adapted relative of the common bean.
-- Whole-genome resequencing: reading the DNA of many individuals and comparing them to a reference genome to find single-nucleotide polymorphisms (SNPs), single-letter differences in DNA.
-- Association mapping: testing which DNA variants occur more often in plants showing a given trait, to locate genes that influence that trait.
-- Locus: a specific position or region on a chromosome. Haplotype: a group of nearby DNA variants inherited together.
-- Evapotranspiration: water lost from soil and leaves together. Photosynthesis: the plant's conversion of light into chemical energy.
-- Domestication: the process by which humans selected wild plants for farming, which can change their genes.
-- Rank-normalized: values converted to ranks so that statistical methods can be applied fairly.
-- Candidate gene: a gene near a locus that might plausibly explain the trait, based on its known function. · level: research-level
+- **In one sentence**: Whole-genome resequencing of 363 tepary bean accessions, combined with indoor drought and well-watered phenotyping of 282 of them, maps genetic loci for growth, water use and photosynthesis under drought versus control conditions.
+- **In plain words**: Tepary bean is a legume that grows in dry climates, but scientists have not understood well which genes make it drought-tolerant. The team sequenced the genomes of 363 wild, weedy, cultivated and breeding lines and grew 282 of them for 14 days at either well-watered or very dry soil, measuring growth, water loss and photosynthesis. They then linked differences in the genetic code to differences in these traits.
+- **Why it matters**: Crop breeders looking for drought resilience need to know which genetic regions control it, and this study points to specific regions and some candidate genes. The text reports that growth under drought and under well-watered conditions rests on separate genetic bases, and that the largest drought-linked locus lies in regions affected by domestication. Whether the candidate genes actually cause the effects is not shown here and would need follow-up experiments.
+- **Background needed**: - Tepary bean (Phaseolus acutifolius) is a legume adapted to arid regions, related to common bean.
+- Resequencing: reading the genome of many individuals to find small DNA differences (SNPs, single-nucleotide polymorphisms).
+- Association mapping: testing which DNA differences statistically go with differences in a trait, to locate genomic regions (loci) that influence it.
+- Domestication: the process by which wild plants were selected over time for farming traits; cultivated and wild groups differ genetically.
+- Evapotranspiration: water lost from soil and leaves together; photosynthesis: the plant's process of making sugar from light.
+- Water-holding capacity: the share of water soil can hold; 10% represents drought, 60% well-watered in this study.
+- Rank-normalized: a statistical adjustment that makes measurements comparable across traits.
+- Candidate genes: genes located in a mapped region that might plausibly explain the trait, pending testing. · level: research-level
 
 <details><summary>Original abstract</summary>
 
 Tepary bean (Phaseolus acutifolius A. Gray) is an arid-adapted legume, whose drought resilience is widely reported but poorly resolved genetically. Here we resequenced 363 wild, weedy, cultivated and breeding accessions and recovered 6.9 million single-nucleotide polymorphisms (SNPs). We phenotyped 282 of the accessions for growth, evapotranspiration and photosynthesis over 14 days at 60% or 10% soil water-holding capacity. Cultivated and breeding lines grew roughly twice as fast as wild accessions, and the proportional reduction in growth under drought did not differ between these germplasm classes. Evapotranspiration separated the classes under full irrigation, but converged under drought, making it the most plastic trait we measured. Canopy density predicted how much water a plant used, but not how well it tolerated losing it. Association mapping across 104 rank-normalized measurements yielded 113 significant SNPs at 46 positions, which resolved to three drought and six control loci. Three drought loci corresponded to 98 of the 113 SNPs, with the largest one localized on chromosome 8. This locus separates wild from cultivated accessions, and resolves to no gene. Three of the eight remaining loci carry candidates whose interval, expression under drought and published mechanism agree: a cytokinin oxidase, a CIPK1-clade kinase and the antenna subunit LHCB5. The most structure-independent locus localizes to 26 kb but implicates genes with no published role in water relations. Growth under drought and control conditions therefore rest on separate genetic bases, and the variation with the largest effect under deficit lies in haplotypes affected by domestication.
-
-</details>
-
-### [An RHD6-directed gene network sustains root hair growth under combined low phosphate and salt stress in Arabidopsis](https://www.biorxiv.org/content/10.64898/2026.11.25.769266v1)
-*Ibeas, M. A.; Perez, J.; Padilla, G. et al.* · `plant biology` · bioRxiv doi:10.64898/2026.11.25.769266 v1 · relevance 0.06
-
-- **In one sentence**: In Arabidopsis, induction of the transcription factor RHD6 kept root hairs growing under combined low phosphate and salt stress, and RNA sequencing plus promoter and co-expression analyses defined a candidate RHD6 target network in which HEC3 was identified as a modulator of the root hair response to combined stress.
-- **In plain words**: Plants often face low phosphate in the soil and salty conditions at the same time, and it is unclear how their roots handle both. The researchers screened 18 gene regulators that are active in root hairs, the tiny hair-like outgrowths that absorb nutrients, and found that switching on one of them, RHD6, kept root hairs growing under both stresses when normal plants' hairs were stunted. Measuring gene activity under these conditions gave a list of genes that RHD6 likely controls.
-- **Why it matters**: The work offers a resource of candidate genes for root responses to two common soil stresses, and it points to HEC3 as a possible regulator of that response. The text does not show whether these findings would carry over to crops, so the practical relevance is unclear.
-- **Background needed**: - Root hairs: thin extensions of root cells that take up water and nutrients such as phosphate.
-- Inorganic phosphate: a mineral form of phosphorus that plants need; low levels limit growth.
-- Salt stress: high sodium in soil that disrupts water uptake and growth.
-- Transcription factor: a protein that switches sets of genes on or off.
-- RHD6 and HEC genes: regulators involved in root hair development.
-- TRANSPLANTA lines and beta-estradiol induction: a lab method for turning a gene on at will using a chemical signal.
-- RNA sequencing: measures which genes are active and how strongly.
-- T-DNA insertion mutants: plants with a disrupted gene, used to test what that gene does.
-- Arabidopsis thaliana: a small flowering weed widely used as a model plant. · level: research-level
-
-<details><summary>Original abstract</summary>
-
-Phosphate deficiency and salinity can coincide, but how roots integrate the two stresses is poorly understood. Root hairs (RHs) elongate under low inorganic phosphate and are inhibited by salt. Screening {beta}-estradiol-inducible TRANSPLANTA lines for 18 RH-expressed transcription factors (TFs) in Arabidopsis (Arabidopsis thaliana), we found that induction of ROOT HAIR DEFECTIVE 6 (RHD6) maintained RH growth under combined low phosphate (5 {micro}M) and salt (100 mM NaCl), which inhibited wild-type RH growth. RNA sequencing of RHD6-induced roots under dual stress identified 1,811 differentially expressed genes. Up-regulated genes were enriched for RH differentiation, tip growth and cell wall organization; down-regulated genes were enriched for phenylpropanoid and suberin metabolism, hydrogen peroxide catabolism, photosynthesis and responses to wounding and jasmonic acid. Promoter motif scanning combined with ensemble co-expression analysis defined a core network of 396 candidate direct RHD6 targets, including 31 TFs. The TFs with the largest expression changes were HEC3, HEC1 and EIL4. In T-DNA insertion mutants, dual stress did not shorten hec3 RHs; eil4 and hec1 had shorter RHs on the control medium but no significant change in relative inhibition. These data provide a resource of RHD6-dependent genes and identify HEC3 as a modulator of the RH response to combined stress.
 
 </details>
 
@@ -710,17 +726,17 @@ Phosphate deficiency and salinity can coincide, but how roots integrate the two 
 ### [Digital light processing of human-scale tissue-engineered heart valves](https://www.biorxiv.org/content/10.64898/2026.11.22.768423v1)
 *Jafari, A.; Nemati, A.; Sarshoghi, A. et al.* · `bioengineering` · bioRxiv doi:10.64898/2026.11.22.768423 v1 · relevance 0.08
 
-- **In one sentence**: A composite hydrogel ink (PEGDA, GelMA and methacrylated quince seed mucilage, called GPQuin) is used with digital light processing 3D printing to make human-scale trileaflet tissue-engineered heart valve scaffolds, which are tested for shape accuracy, mechanics, cell viability, implant response and pulsatile leaflet motion.
-- **In plain words**: Replacement heart valves made from living or biologically compatible material could avoid some problems of current artificial and donor valves. This paper reports a new printable "ink" that lets a light-based 3D printer build a valve about the size of a human one, with three flaps and pocket-like sinuses. The printed valves matched the intended shape reasonably well, held together under stretching, let human stem-cell-derived valve cells survive for two weeks, and opened and closed under a pump test that mimics low-pressure flow.</plain>
-<parameter name="why">It addresses a real bottleneck: the printable materials available for complex, full-size valve scaffolds have been limited. The work is at an early stage, though. The text reports only in-vitro tests, one 12-week implant study showing an inflammatory response, and a pulse-duplicator test under pulmonary (low-pressure) loading, so it is not yet evidence that such valves would work in patients.</plain>
-<parameter name="background">- Heart valves control one-way blood flow; current replacements (mechanical or tissue-based) have drawbacks such as immune reactions, calcification and mismatch with patient size.
-- Tissue engineering builds replacement tissue on a scaffold that cells can grow on and that later is replaced by the body's own tissue.
-- 3D printing with digital light processing (DLP) hardens a liquid resin layer by layer using projected light.
-- Hydrogels are water-rich, soft gel-like materials; the ink here combines synthetic PEG with natural gelatin and plant-derived mucilage.
-- Induced pluripotent stem cells are adult cells reprogrammed to an embryonic-like state, and can be guided to become other cell types such as valve cells.
-- Micro-CT is an X-ray scanning method used to measure how closely a printed object matches its design.
-- A pulse duplicator is a pump rig that mimics heartbeat pressure and flow to test valve function.</plain>
-<parameter name="difficulty">research-level
+- **In one sentence**: A composite bioink (PEGDA, GelMA and methacrylated quince seed mucilage, called GPQuin) is used with digital light processing to print a human-scale trileaflet tissue-engineered heart valve, with initial mechanical, cell-viability, implantation and pulse-duplicator tests.
+- **In plain words**: Replacement heart valves made from living or biological material could avoid some problems of current implants, but they are hard to manufacture at full human size. This paper describes a new printable gel mixture that lets a light-based 3D printer build a valve about the size of a human one, with three separate flaps and sinus-shaped pockets. The printed valves were checked for shape accuracy, stretchiness, cell compatibility, response to 12 weeks under the skin in an animal model, and opening and closing in a test pump.
+- **Why it matters**: Printing full-size, complex valve shapes is a real bottleneck in heart valve tissue engineering, so a printable ink that handles this geometry is relevant to that field. The text reports only early-stage measurements, and it does not show that the valves would work in a patient, so its clinical significance remains uncertain.
+- **Background needed**: - Heart valves control one-way blood flow; current replacements are mechanical or biological (tissue-based) and have known drawbacks such as immune reactions, calcification, and mismatch with patient size.
+- Tissue engineering builds replacement tissue from scaffolds (structures that support cells) combined with cells.
+- Hydrogels are water-swollen soft gels; the ink here is a mix of synthetic PEG-based and natural polymers (gelatin and a plant mucilage from quince seeds).
+- Methacrylation adds light-reactive groups so the material hardens when exposed to light.
+- Digital light processing (DLP) is a 3D printing method that cures a whole layer of liquid resin at once using projected light.
+- Micro-CT is an X-ray scanning method used here to compare printed shape against the design (deviations are in micrometers, thousandths of a millimeter).
+- Induced pluripotent stem cells are adult cells reprogrammed into an embryonic-like state, which can then be turned into other cell types.
+- A pulse duplicator is a pump rig that simulates heartbeat flow to test valve function. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -731,15 +747,15 @@ Tissue engineered heart valves (TEHVs) could overcome the complications of curre
 ### [BMP-2 Release from Biomaterial Carriers: Reporting Heterogeneity and the Limits of Cross-Study Prediction](https://www.biorxiv.org/content/10.64898/2026.11.13.766607v1)
 *Zhou, W.; Zhou, L.; Hou, W. et al.* · `bioengineering` · bioRxiv doi:10.64898/2026.11.13.766607 v1 · relevance 0.08
 
-- **In one sentence**: A preliminary meta-analysis of 79 published BMP-2 release experiments from 21 papers, testing whether carrier type alone can predict release with machine learning and finding that gains largely vanish when models are tested on studies they were not trained on.
-- **In plain words**: Bone-growth proteins (BMP-2) are often loaded onto carrier materials that release them slowly into the body. The authors gathered release data from 21 published papers, using an AI assistant plus human checking, to see whether published results could be reused to predict how a new carrier will release the protein. They found that many papers report data in inconsistent ways, and that simple predictions beat a baseline only when the test data come from the same studies used for training.
-- **Why it matters**: Predicting how fast a drug or growth factor leaves a carrier could help design implants for bone repair with less trial and error. The paper is useful mainly as a caution: it shows that published data are hard to combine and that apparent predictive gains may reflect study-specific effects rather than general rules.
-- **Background needed**: - BMP-2 is a protein that signals bone to form; it is used clinically in bone repair and is often delivered from a carrier material.
-- A "release profile" is how the amount of protein leaving the carrier changes over time.
-- Machine learning (ML) models learn patterns from data to make predictions; "gradient-boosted decision trees" are a common type of such model.
-- Random hold-out validation tests a model on randomly chosen data points, which can include data from the same paper it learned from. Publication-grouped cross-validation holds out whole papers, a stricter test of generalization to new studies.
-- Mean absolute error in log10 units measures average prediction error on a logarithmic scale; lower is better.
-- The paper is a small exploratory study, not a definitive result. · level: research-level
+- **In one sentence**: A preliminary study compiles 79 published BMP-2 release experiments from 21 papers and tests whether carrier-family labels let machine-learning models predict release across different studies, finding that gains largely disappear under publication-grouped validation.
+- **In plain words**: The paper asks whether past published measurements of how a bone-growth protein (BMP-2) leaks out of implant materials can be reused to predict future release. The authors pulled 79 experiments from 21 papers, using an AI assistant plus human checking, and found that only 48% reported BMP-2 alone as a percentage of the loaded dose, so the data are hard to compare. Simple models did better than a basic baseline when test data came from the same studies, but not when whole studies were held out.
+- **Why it matters**: Predicting drug or growth-factor release from carriers could help design bone-repair devices with less trial and error, but this work suggests that published data, as currently reported, may not support predictions for new studies. It is a useful caution about reporting standards in biomaterials research, though the text describes itself as preliminary.
+- **Background needed**: - BMP-2 is a protein that signals bone to form; it is used clinically in bone-repair procedures and is often delivered from a carrier material.
+- "Release profile" means how the amount of protein leaking from a carrier changes over time.
+- "Loaded dose" is the total amount of protein put into the carrier at the start.
+- Machine learning models learn patterns from data to predict new outcomes; "mean absolute error" measures average prediction error, here in log10 units.
+- Random hold-out validation tests on data points mixed from the same studies; publication-grouped cross-validation holds out whole papers, a stricter test of generalization to new studies.
+- "Carrier family" is a category of material (such as a class of coating or scaffold) used to group carriers. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -756,16 +772,16 @@ Nothing notable this time.
 ### [Proteogenomic analysis provides insights into the effect of physical activity on cancers](https://www.medrxiv.org/content/10.64898/2026.11.25.26368973v1)
 *Song, A.; Chatterjee, C.; Moore, S. C. et al.* · `epidemiology` · medRxiv doi:10.64898/2026.11.25.26368973 v1 · relevance 0.05
 
-- **In one sentence**: A two-stage proteome-wide Mendelian randomization study that uses genetic variants to test whether physical activity changes circulating proteins and whether those proteins in turn influence risk of several site-specific cancers.
-- **In plain words**: This paper asks how being physically active might lower the risk of certain cancers by changing proteins in the blood. The researchers used large public genetic datasets as a kind of natural experiment, checking whether genes linked to activity levels also track with blood protein levels and then with cancer risk. They report 687 links between activity measures and proteins, and 213 of the 503 proteins involved also showed effects on at least one cancer.
-- **Why it matters**: It offers a candidate list of blood proteins that could sit between exercise and cancer, which may help guide later lab and clinical work. The text is a summary only, so the links are statistical associations from genetic data and do not by themselves show that these proteins cause the effects or that they are useful as treatment targets.
-- **Background needed**: - Mendelian randomization: a method that uses genetic variants, which are assigned at birth and not changed by lifestyle, as stand-ins to test whether a factor likely causes an outcome.
-- GWAS summary statistics: published results from genome-wide studies that show which genetic variants go with a trait, used here without access to individual-level data.
-- Proteome: the full set of proteins in the body; here, 2,940 proteins measured in blood plasma.
-- Physical activity measures: self-reported and accelerometer-based (wearable motion sensor) measures of activity, including sedentary time and light activity.
-- FDR (false discovery rate): a correction for the many statistical tests run at once; FDR<0.05 is a common threshold.
-- Two-stage design: Stage 1 links activity to proteins; Stage 2 links proteins to cancer.
-- Example from the text: MSMB and TNF proteins were linked to prostate cancer risk. · level: research-level
+- **In one sentence**: A two-stage proteome-wide Mendelian randomization study tests whether genetically predicted physical activity changes plasma protein levels and whether those proteins in turn affect risk of several site-specific cancers.
+- **In plain words**: Past studies have linked more physical activity with lower rates of several cancers, but the biological route by which this happens is poorly understood. This paper uses genetic data from large population studies as a kind of natural experiment to look for blood proteins that sit between activity and cancer. The authors report many activity-protein links and a smaller set of proteins that also show effects on cancer risk.
+- **Why it matters**: Identifying specific blood proteins that might carry the protective effect of exercise could point to targets for later study. The text is a summary only, so the strength of the causal claims and the validity of the cancer links cannot be judged from it; the prostate cancer example is presented as illustrative.
+- **Background needed**: - Mendelian randomization: uses genetic variants as stand-ins to test whether a factor causes an outcome, reducing confounding from lifestyle and other influences.
+- GWAS summary statistics: published results from genome-wide association studies, which show how common genetic variants relate to a trait, used here without access to individual-level data.
+- Proteome-wide: testing many blood proteins (here 2,940) one by one.
+- Plasma proteins: proteins circulating in blood, measured as biomarkers of tissue activity.
+- FDR (false discovery rate): a correction for the many simultaneous tests, with FDR<0.05 used as the significance threshold.
+- Accelerometer-based measures: wearable motion sensors, compared with self-reported activity.
+- Two-stage design: Stage 1 links activity to proteins; Stage 2 links proteins to cancer. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -776,16 +792,16 @@ Background. Increased physical activity (PA) has been associated with decreased 
 ### [Prenatal exposure to semi-volatile organic compounds and early childhood sleep duration](https://www.medrxiv.org/content/10.64898/2026.11.25.26368881v1)
 *Binczewski, N. R.; Hurst, J. H.; Lunsford-Avery, J. R. et al.* · `epidemiology` · medRxiv doi:10.64898/2026.11.25.26368881 v1 · relevance 0.04
 
-- **In one sentence**: In a North Carolina pregnancy cohort of 147 children aged 2–24 months, prenatal exposure to semi-volatile organic compounds measured via maternal silicone wristbands was associated with shorter parent-reported sleep in 2-month-olds but largely not at older ages.
-- **In plain words**: This study asks whether chemicals that pregnant women are exposed to from everyday products, such as plastics additives, flame retardants and some fuel byproducts, are linked to how long their babies sleep. The researchers had mothers wear silicone wristbands that absorb these chemicals over several days in each trimester, then compared the chemical levels with sleep reported by parents. Among 2-month-olds, higher exposure to several of these chemical groups was linked to shorter sleep over day, night and the full 24 hours, but the links were mostly absent in older children.
-- **Why it matters**: Sleep is important for early brain and body development, and the environmental causes of poor infant sleep are not well understood. The findings suggest prenatal chemical exposure could be one such factor, though the study is observational and based on parent reports, so it shows association rather than cause.
-- **Background needed**: - Semi-volatile organic compounds (SVOCs): chemicals found in plastics, personal care products, pesticides and flame retardants that move between air, dust and skin.
-- Phthalates, polycyclic aromatic hydrocarbons (PAHs) and organophosphate esters: the chemical groups that were linked to shorter sleep in the text.
-- Silicone wristbands: passive samplers worn on the wrist that collect chemicals from the surrounding air, serving as a proxy for personal exposure.
-- Prospective pregnancy cohort: a group of pregnant people followed over time, with measurements taken during pregnancy and after birth.
-- Mixture analysis: a method that looks at the combined effect of many chemicals together rather than one at a time.
-- Multiplicative change: a ratio where 1 means no change and values below 1 mean shorter expected sleep; for example, 0.77 for nighttime sleep from benzyl butyl phthalate.
-- Parent-reported sleep: sleep duration estimated by caregivers rather than measured directly, which can be less precise. · level: intermediate
+- **In one sentence**: In a North Carolina pregnancy cohort of 147 children aged 2–24 months, prenatal wristband measures of semi-volatile organic compounds were associated with shorter parent-reported sleep among 2-month-olds but largely not at older ages.
+- **In plain words**: This study asks whether chemicals that pregnant women are exposed to from everyday products, such as plastics, flame retardants and fuels, affect how long babies sleep. Mothers wore silicone wristbands that soak up airborne chemicals during each trimester, and parents later reported their children's sleep. Among 2-month-old babies, higher prenatal levels of several of these chemical groups were linked to less sleep over day, night and total 24 hours, while the links were mostly absent in older infants.</plain>
+<parameter name="why">Sleep is central to early brain and body development, and chemical exposures before birth are a modifiable concern, so a link like this is worth tracking. The text reports associations only and relies on parent-reported sleep, so it does not show that the chemicals cause the sleep changes; the authors themselves call for studies of broader sleep health.
+- **Background needed**: - Semi-volatile organic compounds (SVOCs): chemicals that slowly leave plastics, coatings, pesticides and fuels and float in indoor air and dust.
+- Groups named: polycyclic aromatic hydrocarbons (from combustion such as smoke), phthalates (plasticizers), and organophosphate esters (flame retardants and plasticizers).
+- Silicone wristbands worn for several days act as passive air samplers that collect these chemicals.
+- Prospective pregnancy cohort: families followed from pregnancy onward, with exposure measured before birth.
+- Generalized linear mixed-effects models: statistical models that account for repeated measures within families and for adjustment variables such as child age and race.
+- Multiplicative change: a ratio; 0.77 means expected sleep is about 23% lower per the exposure measured, with a 95% confidence interval of 0.61 to 0.95 (a range of plausible values).
+- Mixture analysis: looks at several chemicals together rather than one at a time. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -798,15 +814,16 @@ Background: Adequate sleep duration is critical for early childhood development;
 ### [Evolutionary and transmission dynamics of vaccine-derived poliovirus serotype 2 (cVDPV2) outbreaks in the Horn of Africa region](https://www.medrxiv.org/content/10.64898/2026.11.25.26368672v1)
 *Owuor, D. C.; Cheruiyot, C. K.; Onyango, M. et al.* · `infectious diseases` · medRxiv doi:10.64898/2026.11.25.26368672 v1 · relevance 0.10
 
-- **In one sentence**: Phylogeographic analysis of 234 VP1 sequences from circulating vaccine-derived poliovirus type 2 (cVDPV2) in three WHO African Region and one Eastern Mediterranean countries (2017–2025) suggests the SOM-BAN-1 lineage originated in Somalia and spread regionally through multiple introductions.
-- **In plain words**: Polio is being driven in parts of East Africa by a form of the weakened vaccine virus that has mutated and regained the ability to spread in under-vaccinated communities. This paper uses the genetic sequences of virus samples from patients and sewage-type environmental samples to trace where the outbreak strains came from and how they moved between countries in the Horn of Africa. The authors report that Somalia appears to be the likely origin and main source of the lineage, with several separate chains of spread within the country and into neighbouring countries.
-- **Why it matters**: Tracing how outbreak viruses move helps public health teams see where responses fell short, and the authors argue that regularly updated sequence analysis could guide faster outbreak responses and better vaccination campaigns. The text does not report measured effects of any such response, so its practical impact is a proposal rather than a demonstrated result.
-- **Background needed**: - Poliovirus has three serotypes (1, 2, 3); wild type 2 and 3 are declared eradicated, and wild type 1 still circulates in a few countries.
-- Oral polio vaccine contains weakened live virus; in under-immunised populations it can mutate and circulate, causing vaccine-derived poliovirus (cVDPV).
-- VP1 is the outer capsid gene commonly sequenced to track poliovirus lineages.
-- SOM-BAN-1 is a named genetic lineage of cVDPV2 in this region.
-- Phylogeography combines genetic family trees with geographic locations to infer where and how a virus spread.
-- Surveillance includes clinical samples (from paralysis cases) and environmental samples (such as wastewater). · level: research-level
+- **In one sentence**: A phylogeographic analysis of 234 full-length VP1 sequences from clinical and environmental surveillance in three WHO AFRO countries and one EMRO country (2017–2025) traces the origins and spread of SOM-BAN-1 lineage circulating vaccine-derived poliovirus type 2 (cVDPV2) in the Horn of Africa, pointing to Somalia as the likely origin.
+- **In plain words**: Vaccine-derived polio is a form of polio that has mutated from the weakened oral vaccine strain and begun spreading in communities with low immunity. This paper looks at a version of it, type 2, circulating in the Horn of Africa, and uses the genetic sequences of viruses collected from patients and sewage-type environmental samples to reconstruct where the outbreaks came from and how they moved between countries. The authors report that the virus appears to have originated in Somalia and then seeded outbreaks in neighbouring countries, with multiple separate transmission chains.
+- **Why it matters**: Understanding how an outbreak moves between countries can show where response and vaccination efforts fell short, and the authors suggest regular sequence updates could help guide timelier responses. The text describes the findings as supporting evidence rather than definitive proof, and the link to real-world response decisions is the authors' suggestion, not something tested here.
+- **Background needed**: - Polio: a viral disease that can cause paralysis; eradication relies on vaccination.
+- Serotypes: poliovirus comes in three types (1, 2, 3); type 2 wild virus has already been eradicated.
+- cVDPV2: circulating vaccine-derived poliovirus type 2, which arises when the weakened oral vaccine virus mutates and spreads in under-immunised populations.
+- VP1 gene: a part of the virus genome commonly sequenced to track its lineage.
+- Phylogeographic analysis: a method that combines genetic family trees with geographic locations to infer where a virus came from and how it travelled.
+- SOM-BAN-1: a named lineage of the virus within the broader type 2 family tree.
+- WHO AFRO / EMRO / EURO: World Health Organization regional offices (Africa, Eastern Mediterranean, Europe). · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -817,21 +834,20 @@ The poliovirus eradication campaign by the Global Polio Eradication Initiative (
 ### [Safety and microbiological activity of a combined phage cocktail in persons with cystic fibrosis colonized with Achromobacter: Study protocol for a phase 1, investigator-initiated, randomized clinical trial.](https://www.medrxiv.org/content/10.64898/2026.11.22.26368705v1)
 *Massey, J.; Hughes Kramer, K.; Snook Barrett, S. et al.* · `infectious diseases` · medRxiv doi:10.64898/2026.11.22.26368705 v1 · relevance 0.05
 
-- **In one sentence**: A study protocol for a small phase 1 open-label randomized trial testing the safety and early biological effects of a four-phage cocktail (AchromoPhage) against Achromobacter lung infections in adults with cystic fibrosis, given intravenously, by inhalation, or both.
-- **In plain words**: This is a plan for a small safety trial of viruses that infect bacteria, called phages, used as a treatment for a hard-to-kill lung germ in people with cystic fibrosis. Twelve adults would be assigned to one of three ways of receiving three weekly doses, and the researchers would track side effects, lung function, quality of life, how long the phages persist in blood and airways, and whether the body makes antibodies against them. The text describes the design only; no results are reported.
-- **Why it matters**: Achromobacter infections are difficult to treat, and phage therapy has so far been studied mostly through individual case reports, so a controlled trial of its safety and behavior in the body would add evidence. Whether the approach helps patients cannot be judged from this protocol, which is a plan rather than a finding.
-- **Background needed**: - Cystic fibrosis (CF) is an inherited disease that causes thick mucus in the lungs, making them prone to long-term bacterial infection.
-- Achromobacter is a group of Gram-negative bacteria (a bacterial type with a double membrane) that often resist many antibiotics.
-- Bacteriophages ("phages") are viruses that infect and kill specific bacteria; "obligately lytic" means they only reproduce by destroying their host cell.
-- A phase 1 trial mainly tests safety and dosing, not whether the treatment works.
+- **In one sentence**: A study protocol for a small phase 1 open-label randomized trial testing the safety, tolerability, and early biological effects of a four-phage cocktail (AchromoPhage), given intravenously, by inhalation, or both, in 12 adults with cystic fibrosis and Achromobacter lung infection.
+- **In plain words**: This is a plan for a small safety trial of viruses that kill bacteria, called phages, used against a hard-to-treat lung bacterium in people with cystic fibrosis. Twelve adults will be randomly assigned to receive three weekly doses by vein, by breathing them in, or both, and researchers will track side effects, lung function, quality of life, how the phages move through the body, and whether the immune system produces antibodies against them. The text is a protocol, so it reports no results yet.
+- **Why it matters**: Phage therapy is an understudied option for resistant bacteria, and the authors note that clinical trials in cystic fibrosis have not yet examined Achromobacter. A well-run safety and pharmacology study of this kind is a necessary early step before any judgment about whether phages help patients, though this protocol alone cannot show that.
+- **Background needed**: - Cystic fibrosis is an inherited condition that causes thick mucus and chronic lung infections.
+- Achromobacter is a group of Gram-negative bacteria (a bacterial category with a protective outer membrane) that often resists many antibiotics.
+- Bacteriophages (phages) are viruses that infect and kill specific bacteria; "obligately lytic" means they always kill the cell rather than living quietly inside it.
+- A phase 1 trial is an early-stage study focused mainly on safety and how a treatment behaves in the body, not on whether it works.
 - Pharmacokinetics means how a drug is absorbed, spread, and cleared from the body.
-- FEV1 is a standard lung-function measure taken by breathing into a spirometer.
-- A neutralizing antibody response means the immune system produces proteins that block the virus.
-- The trial is small (12 participants) and open-label, so everyone knows which treatment they receive. · level: intermediate
+- FEV1 is a standard breathing test measuring how much air a person can forcefully exhale in one second.
+- The primary safety endpoint is serious (Grade 4 or higher) treatment-related adverse events; the study is registered as NCT0727590. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
-BackgroundAchromobacter are a genus of difficult-to-treat, frequently multi-drug-resistant Gram-negative bacteria that can cause severe infections in people with cystic fibrosis (pwCF). Bacteriophages are an understudied yet promising therapy for these and other antibiotic-resistant bacteria. However, data are largely limited to case reports or series, and clinical trials among pwCF to date have not evaluated Achromobacter. MethodsThis is an investigator-initiated, open-label, randomized phase 1 pilot trial to evaluate the safety, tolerability, and biological effects of AchromoPhage, a cocktail of four genetically distinct, obligately lytic Achromobacter-targeting phages (phiACH01, phiACH04, phiACH06, phiACH07) with broad activity against Achromobacter species, in 12 adult participants with CF and pulmonary Achromobacter infection. Twelve participants will be randomized into three groups to receive a total of three, increasing, weekly doses of the AchromoPhage cocktail via one of three routes: 1) intravenous, 2) via inhalation, or 3) or intravenously and inhaled. Participation in the trial will span approximately 7 weeks, which will consist of outpatient phage dose administrations, safety and symptom monitoring, and longitudinal collection of biospecimens for protocol-specified and exploratory analyses through Day 42. The primary safety endpoint is the occurrence of treatment-related Grade 4 or greater adverse events. Secondary endpoints include longitudinal changes in FEV1 by spirometry, longitudinal changes in health-related quality of life, pharmacokinetics of each of the four phages in blood and the respiratory tract, and emergence of a phage neutralizing antibody response in serum. DiscussionWhile existing case anecdotes and observational studies suggest that phages are safe and may have a role in treating human infections, there is a paucity of clinical trials studying the adverse effect profile and basic pharmacological parameters of phages. This trial will study the safety and explore the pharmacokinetic and other properties of a four-phage cocktail in patients with CF and chronic Achromobacter lung infection. Trial registrationClinicalTrials.gov NCT0727590. Registered on 12/10/2025 Structured summary O_TBL View this table: org.highwire.dtl.DTLVardef@2c915forg.highwire.dtl.DTLVardef@1fbfa37org.highwire.dtl.DTLVardef@1e852b9org.highwire.dtl.DTLVardef@18ef2b6org.highwire.dtl.DTLVardef@1e0b7a2_HPS_FORMAT_FIGEXP M_TBL C_TBL Protocol versionAchromoPhage Protocol August 26, 2026. Version 2.0
+BackgroundAchromobacter are a genus of difficult-to-treat, frequently multi-drug-resistant Gram-negative bacteria that can cause severe infections in people with cystic fibrosis (pwCF). Bacteriophages are an understudied yet promising therapy for these and other antibiotic-resistant bacteria. However, data are largely limited to case reports or series, and clinical trials among pwCF to date have not evaluated Achromobacter. MethodsThis is an investigator-initiated, open-label, randomized phase 1 pilot trial to evaluate the safety, tolerability, and biological effects of AchromoPhage, a cocktail of four genetically distinct, obligately lytic Achromobacter-targeting phages (phiACH01, phiACH04, phiACH06, phiACH07) with broad activity against Achromobacter species, in 12 adult participants with CF and pulmonary Achromobacter infection. Twelve participants will be randomized into three groups to receive a total of three, increasing, weekly doses of the AchromoPhage cocktail via one of three routes: 1) intravenous, 2) via inhalation, or 3) or intravenously and inhaled. Participation in the trial will span approximately 7 weeks, which will consist of outpatient phage dose administrations, safety and symptom monitoring, and longitudinal collection of biospecimens for protocol-specified and exploratory analyses through Day 42. The primary safety endpoint is the occurrence of treatment-related Grade 4 or greater adverse events. Secondary endpoints include longitudinal changes in FEV1 by spirometry, longitudinal changes in health-related quality of life, pharmacokinetics of each of the four phages in blood and the respiratory tract, and emergence of a phage neutralizing antibody response in serum. DiscussionWhile existing case anecdotes and observational studies suggest that phages are safe and may have a role in treating human infections, there is a paucity of clinical trials studying the adverse effect profile and basic pharmacological parameters of phages. This trial will study the safety and explore the pharmacokinetic and other properties of a four-phage cocktail in patients with CF and chronic Achromobacter lung infection. Trial registrationClinicalTrials.gov NCT0727590. Registered on 12/10/2025 Structured summary O_TBL View this table: org.highwire.dtl.DTLVardef@11c2137org.highwire.dtl.DTLVardef@1c8a9a0org.highwire.dtl.DTLVardef@f888eaorg.highwire.dtl.DTLVardef@e4e327org.highwire.dtl.DTLVardef@fd2549_HPS_FORMAT_FIGEXP M_TBL C_TBL Protocol versionAchromoPhage Protocol August 26, 2026. Version 2.0
 
 </details>
 
@@ -840,16 +856,17 @@ BackgroundAchromobacter are a genus of difficult-to-treat, frequently multi-drug
 ### [Potential public health and economic impact of influenza and COVID-19 multicomponent vaccination (mRNA-1083) for adults aged 65 years and older in France](https://www.medrxiv.org/content/10.64898/2026.11.25.26368982v1)
 *Mehta, D.; Biron, L.; Carette, J. et al.* · `health economics` · medRxiv doi:10.64898/2026.11.25.26368982 v1 · relevance 0.13
 
-- **In one sentence**: A static decision-tree health economic model for France estimates the public health and cost impact of Moderna's combined influenza/COVID-19 mRNA vaccine (mRNA-1083) versus separate high-dose flu and BNT162b2 COVID-19 shots in adults aged 65 and older.
-- **In plain words**: Flu and COVID-19 both still cause many illnesses and hospital stays in older adults. This study modelled what would happen in France if a single combined injection replaced the separate flu and COVID-19 shots, looking at an average post-pandemic season. The authors report estimated savings in cases, hospitalisations, healthcare costs and staff time, but these are model projections, not measured results.
-- **Why it matters**: It bears on whether combining respiratory vaccines in one shot could make vaccination easier and cover more people, which matters for public health planning. The text is a modelling study with assumptions the summary does not detail, so the size of the estimates should be treated as uncertain.
-- **Background needed**: - Seasonal influenza and COVID-19 are respiratory viruses that cause more severe disease in older adults.
-- A "static decision-tree model" is a simplified calculation that follows possible outcomes step by step for a fixed population; it is not a full simulation of epidemics over time.
-- High-dose inactivated influenza vaccine (HD-IIV) is a higher-strength flu shot used for older people.
-- BNT162b2 is an existing mRNA COVID-19 vaccine; mRNA-1083 is a combined product built on the same mRNA platform.
-- "Egg-adaptation" refers to flu viruses changing when grown in eggs for vaccine production, which can make the vaccine a less close match to circulating strains.
-- "Antigenic drift" is gradual change in flu virus surface proteins over time, which can make the chosen vaccine strain mismatch the season's virus.
-- "Vaccine coverage rate" is the share of the target group who get vaccinated. · level: research-level
+- **In one sentence**: A static decision-tree economic model estimates the public health and cost impact in France of a combined influenza/COVID-19 mRNA vaccine (mRNA-1083) versus separate high-dose flu and BNT162b2 COVID-19 vaccines in adults aged 65 and older, across five value dimensions.
+- **In plain words**: Flu and COVID-19 both still cause a lot of illness and hospital visits in older adults, and they are usually given as separate shots. This paper is a computer-based estimate of what would happen in France if one combined shot, mRNA-1083, replaced the two separate vaccines for people aged 65 and over. The authors model one typical flu season after the pandemic and add up the expected cases, hospital stays, costs and staff time saved.
+- **Why it matters**: It is a modelled estimate, not a trial, so the figures depend on the model's assumptions about protection, uptake and strain matching. It is relevant to how countries plan seasonal respiratory vaccination and whether a single injection could raise uptake among older adults.
+- **Background needed**: - Influenza (flu) and SARS-CoV-2 (the COVID-19 virus) are seasonal respiratory infections that are most dangerous for older adults.
+- A decision-tree model is a flowchart-style calculation that follows people through possible outcomes (infection, clinic visit, hospital stay) and attaches probabilities and costs to each branch.
+- "Static" means the model does not simulate how the epidemic changes over time.
+- High-dose inactivated influenza vaccine (HD-IIV) and BNT162b2 are existing comparator vaccines.
+- Vaccine coverage rate (VCR) is the share of the target group that gets vaccinated.
+- Antigenic drift is gradual change in flu virus surface proteins, which can make the chosen vaccine strain a poor match; egg-adaptation is a change that can occur when flu vaccine viruses are grown in eggs.
+- The mRNA platform is the technology behind the vaccine; the text says it allows later strain selection, which may improve matching.
+- The headline figures (for example 25,830 cases prevented and EUR69.4 million saved) are model estimates for an average season, and the text does not give their uncertainty ranges in the summary provided. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -860,16 +877,16 @@ Seasonal influenza and SARS-CoV-2 continue to cause substantial disease burden, 
 ### [Monitoring SNAP and Food Insecurity After the One Big Beautiful Bill Act: Early Evidence from a National Longitudinal Cohort](https://www.medrxiv.org/content/10.64898/2026.11.19.26368514v1)
 *Robertson, M.; Sanborn, J.; Penrose, K. et al.* · `health policy` · medRxiv doi:10.64898/2026.11.19.26368514 v1 · relevance 0.07
 
-- **In one sentence**: A longitudinal cohort study of 844 low-income U.S. adults tracks SNAP receipt and food insecurity from August 2025 to March 2026, comparing states that did and did not yet enforce the expanded OBBBA work requirement.
-- **In plain words**: In July 2025, a new U.S. federal law (the One Big Beautiful Bill Act) made it harder to qualify for SNAP, the federal food-assistance program, and added work requirements. The authors followed the same 844 lower-income adults over several months and found that the share receiving SNAP dropped slightly, while the share reporting they couldn't reliably afford enough food rose.
-- **Why it matters**: It is an early look at how a major change to the largest federal food program may be affecting people in real time, at a moment when the government had stopped tracking food insecurity. Because it is a single early study with a relatively small sample, its findings should be treated as preliminary and it does not by itself show what caused the changes.
-- **Background needed**: - SNAP: the U.S. Supplemental Nutrition Assistance Program, which helps low-income households buy food.
-- Work requirements: rules that tie continued benefits to working or related activity; they can cause people to lose coverage through paperwork or eligibility checks.
-- One Big Beautiful Bill Act (OBBBA): a July 2025 federal law that restricted SNAP eligibility and expanded work requirements.
-- Federal poverty guideline: the government's income threshold for poverty; this study uses 200% of it as its low-income cutoff.
-- Food insecurity: a household-level measure of limited or uncertain access to enough food, here assessed by a screening questionnaire.
-- Longitudinal cohort: the same group of people is followed over time, allowing change within individuals to be observed.
-- Difference-in-timing comparison: comparing states that started enforcing the rule with states that had not yet started. · level: intermediate
+- **In one sentence**: A longitudinal study of 844 low-income U.S. adults tracks SNAP receipt and food insecurity from August 2025 to March 2026, comparing states that did and did not yet enforce the expanded OBBBA work requirement.
+- **In plain words**: In July 2025 the U.S. passed a law (the One Big Beautiful Bill Act) that made it harder to qualify for SNAP, the federal food assistance program, and added work rules. The authors followed the same group of 844 lower-income adults over several months to see whether fewer people got food aid and whether hunger worries changed. They found SNAP use dipped slightly, food insecurity (not having enough food or money for it) rose, and people who left SNAP were about as food insecure as those who stayed.
+- **Why it matters**: It offers early, individual-level evidence on what happens to people when food aid is cut back, at a time when the government has also reduced its own tracking of food insecurity. Because the study is early and small in scope, its findings should be read as preliminary, and the text does not show how well they generalize to the whole country.
+- **Background needed**: - SNAP (Supplemental Nutrition Assistance Program): the main U.S. federal food aid program, often called food stamps.
+- Work requirement: a condition that adults receive benefits only if they meet work or training hours; the paper concerns an expanded version.
+- OBBBA: the One Big Beautiful Bill Act, a July 2025 U.S. federal law that restricted SNAP eligibility.
+- Federal poverty guideline: the government's income threshold for poverty; the study focuses on households under 200% of it.
+- Food insecurity: a screening-based measure of uncertain or insufficient access to food due to money or resources.
+- Longitudinal cohort: the same group of people surveyed repeatedly over time, which lets researchers see changes within individuals.
+- Recertification: the periodic process of re-proving eligibility to keep benefits. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -882,16 +899,17 @@ The One Big Beautiful Bill Act (OBBBA), signed in July 2025, restricted eligibil
 ### [An updated open-source, large dataset of T1-weighted stroke brain MRIs and lesion segmentation masks](https://www.medrxiv.org/content/10.64898/2026.11.25.26369004v1)
 *Chakraborty, S.; Khan, M. H.; de la Rosa, E. et al.* · `neurology` · medRxiv doi:10.64898/2026.11.25.26369004 v1 · relevance 0.13
 
-- **In one sentence**: ATLAS v3.0 releases an expanded open dataset (N=1815) of T1-weighted stroke brain MRIs with manually drawn lesion masks, split into a public training set (n=1453) and a hidden set (n=362) for testing generalizability.
-- **In plain words**: Doctors and researchers often need to outline exactly where a stroke damaged the brain on an MRI scan, and doing this by hand is slow and can vary between people. This paper announces an updated free collection of brain scans from stroke patients, each with the damaged area carefully traced by hand, so that computer programs can learn to do this outlining automatically. The collection is about 43% larger than the previous version.
-- **Why it matters**: Automatic stroke-lesion tools are not yet accurate or reliable enough to replace hand tracing, and better tools need more and more varied data to learn from. The hidden test subset is meant to check whether tools work on new patients, not just the ones they were trained on, which matters for rehabilitation research that relies on these measurements.
-- **Background needed**: - MRI (magnetic resonance imaging): a scanner that builds detailed pictures of soft tissue such as the brain.
-- T1-weighted: one imaging setting that highlights brain anatomy and is commonly used for structural images.
-- Stroke lesion: an area of brain tissue damaged when blood flow is blocked or a vessel bursts.
-- Lesion segmentation mask: a map that marks, pixel by pixel, which parts of a scan are damaged tissue.
-- Manual vs. automated segmentation: manual means a person traces the lesion; automated means a computer program does it.
-- Generalizability: how well a method works on data it was not built or trained on.
-- Open-source dataset: data freely available for anyone to download and reuse. · level: intermediate
+- **In one sentence**: ATLAS v3.0 is an expanded open dataset of 1,815 T1-weighted stroke brain MRIs with manually drawn lesion masks, split into 1,453 publicly released training scans and 362 held-out scans reserved for testing generalizability.
+- **In plain words**: Doctors and researchers often need to outline exactly where a stroke damaged the brain on an MRI scan. Drawing these outlines by hand is slow and can vary from person to person, so computer programs are being built to do it automatically. This paper describes an updated free public collection of brain scans from stroke patients, with expert hand-drawn outlines, meant to give those programs more examples to learn from.
+- **Why it matters**: Automated stroke lesion tools are not yet accurate or reliable enough to replace manual work, and the authors argue that more diverse training data is a key need as models grow more complex. The text does not report any new algorithm results, so its value rests on the dataset itself being larger and openly available.
+- **Background needed**: - MRI (magnetic resonance imaging): a scan that produces detailed pictures of soft tissue such as the brain.
+- T1-weighted: one standard MRI contrast setting that shows brain anatomy clearly.
+- Lesion: a region of damaged tissue; here, the area injured by stroke.
+- Segmentation mask: a digital outline or map marking which pixels belong to the lesion.
+- Manual annotation: experts drawing these outlines by hand; treated as the reference standard but subjective and labor-intensive.
+- Generalizability: how well a program works on new scans from different patients or sites, not just the ones it was trained on.
+- Hidden test set: scans kept back from public release so that results on them can be checked fairly.
+- Predecessor: ATLAS v2.1, an earlier release with 1,271 scans. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -902,17 +920,17 @@ Precise delineation of stroke lesions on MRI scans provides essential quantitati
 ### [Effects of age and lesion characteristics on chronic outcomes after childhood stroke: a large-scale study of 469 childhood stroke survivors](https://www.medrxiv.org/content/10.64898/2026.11.25.26368974v1)
 *Griffis, J. C.; Bruss, J.; Mhanna, A. et al.* · `neurology` · medRxiv doi:10.64898/2026.11.25.26368974 v1 · relevance 0.13
 
-- **In one sentence**: A large cohort study (n=469, SCOUTS) using ordinal regression and voxel-based lesion-symptom mapping finds that age at childhood stroke and lesion size/location relate to chronic sensorimotor, language, and cognitive/behavioral outcomes, with age moderating the effect of left-hemisphere lesions on expressive language.
-- **In plain words**: Children who have a stroke can be left with lasting problems with movement, speech, language, thinking, or behaviour. This study followed 469 child stroke survivors, at least six months after their stroke, to see how their age at the time of stroke and the size and location of brain damage related to those problems. Younger age was linked to worse outcomes when considered alone, but in models that accounted for other factors, the link held only for language.
-- **Why it matters**: Stroke in childhood is rare but can affect development for life, and the results of earlier studies on whether younger or older age is better have been inconsistent. The finding that older age can worsen the effect of large left-hemisphere damage on expressive language, and that the left side's vulnerability may grow as language becomes more left-lateralized, is a hypothesis about brain development that the authors suggest, not one the text establishes as settled.
-- **Background needed**: - Stroke: a loss of blood supply to part of the brain, which damages the tissue there.
-- Lesion: a region of damaged brain tissue; lesion volume is its size.
-- Laterality: which hemisphere (left or right) is affected; language is usually left-dominant in most people.
-- Chronic outcome: a problem still present at least 6 months after the event.
-- Ordinal logistic regression: a statistical model for outcomes that come in ordered levels (e.g., none, mild, severe).
-- Voxel-based lesion-symptom mapping: a method that compares brain scans voxel by voxel (3D pixels) to find regions where damage goes with a given deficit.
-- Moderation: when the effect of one factor depends on the level of another factor.
-- Neuroplasticity: the brain's ability to reorganise, which is thought to be greater in younger children. · level: research-level
+- **In one sentence**: A large cohort study (n=469, SCOUTS) examining how age at childhood stroke onset and lesion size, laterality and location relate to chronic sensorimotor, language and cognitive/behavioral outcomes, using ordinal regression and voxel-based lesion-symptom mapping.
+- **In plain words**: Children who have a stroke can be left with lasting problems with movement, speech, understanding language, or thinking and behavior. This study followed 469 child stroke survivors to see how their age at the time of stroke and the size and location of the brain damage related to these problems months or years later. The team found that younger age alone looked linked to worse outcomes, but this mostly disappeared after accounting for other factors, except for language; larger damage was linked to worse outcomes, and the location of damage was mapped for each type of problem.
+- **Why it matters**: Clinicians and families often ask whether a child's age at stroke predicts recovery, and the existing evidence has been mixed. The large sample and the mapping of specific brain regions to specific problems may help guide prognosis and future rehabilitation research, though the text does not show direct clinical use.
+- **Background needed**: - Stroke: a loss of blood supply to part of the brain, causing damage to brain tissue.
+- Childhood stroke: stroke occurring in infancy through adolescence; it is rarer than adult stroke and its effects depend on the developing brain.
+- Chronic outcome: a problem still present at least six months after the stroke.
+- Lesion: an area of damaged brain tissue; lesion volume is its size, and laterality refers to which hemisphere (left or right) is affected.
+- Sensorimotor: relating to movement and sensation of the body.
+- Ordinal logistic regression: a statistical model for outcomes graded on an ordered scale (for example, none, mild, moderate, severe).
+- Voxel-based lesion-symptom mapping: a method that compares brain-damage locations across people to find which regions are linked to a given deficit.
+- Lateralization: the tendency for a brain function to be concentrated in one hemisphere; the paper suggests language becomes more left-lateralized with development. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -925,19 +943,19 @@ The effects of stroke on the developing brain are thought to depend on age at st
 ### [Unmet Needs in NSCLC Care: Insights from Temporal Routes to Treatment](https://www.medrxiv.org/content/10.64898/2026.11.24.26368897v1)
 *Abbas, M.; Bitton, N.; Sharma, R. et al.* · `oncology` · medRxiv doi:10.64898/2026.11.24.26368897 v1 · relevance 0.06
 
-- **In one sentence**: A retrospective cohort of 3,541 NSCLC patients from one health system was clustered by the sequence and timing of pre-treatment events (imaging, primary care and specialist visits, ED visits, diagnosis, treatment) into four care pathways, each with distinct early-detection and survival profiles.
-- **In plain words**: This study looks at the path patients took from first medical contact to treatment for non-small cell lung cancer, the most common type of lung cancer. The researchers grouped about 3,500 patients from one health system by the order and timing of their medical visits and scans, and found four typical routes. The routes differed in how often cancer was caught early and how often patients ended up in the emergency department first.
-- **Why it matters**: Lung cancer is a leading cause of cancer death, and catching it earlier generally improves outcomes, so the gaps the authors describe (low screening uptake, weak primary care involvement, emergency-room-first presentations) point to where interventions might help. The text reports these as associations within one health system; it does not test any intervention, so the suggested benefit remains a hypothesis.
-- **Background needed**: - NSCLC: non-small cell lung cancer, the most common lung cancer type.
-- LDCT: low-dose CT scan, a screening scan for people at high risk of lung cancer.
-- PCP: primary care provider, a patient's family or general doctor.
-- Emergency Department (ED) presentation: arriving at emergency care, often a sign that symptoms were not caught earlier.
-- Early-stage diagnosis: cancer found before it has spread, when treatment is more often successful.
-- Charlson index: a score for how many other serious illnesses a patient has; higher means more comorbidity.
-- Retrospective cohort: looking back at existing patient records rather than enrolling people prospectively.
-- K-means clustering: a statistical method that sorts patients into groups with similar patterns; the Gap Statistic helps choose how many groups.
-- 1-gram / 2-gram: ways of encoding sequences by single events or pairs of consecutive events.
-- 5-year survival: the share of patients alive five years after diagnosis. · level: research-level
+- **In one sentence**: A retrospective cohort of 3,541 NSCLC patients treated in one health system (2012–2022) used sequence clustering of pre-treatment clinical events to identify four distinct routes to diagnosis and treatment, highlighting gaps in screening, primary care, and emergency-based presentation.
+- **In plain words**: This study looks at the order and timing of medical steps people took before starting lung cancer treatment, such as scans, visits to family doctors and lung specialists, and emergency room trips. The researchers grouped patients by these patterns and found four common routes. The routes differed in how often cancer was caught early and how well patients did, which points to where care may be falling short.
+- **Why it matters**: Finding out when and where patients first enter the system can show why cancers are caught late, which matters because lung cancer is a leading cause of cancer deaths. The text reports associations within one health system, so it does not show that the suggested interventions would work; that would need testing.
+- **Background needed**: - NSCLC (non-small cell lung cancer): the most common type of lung cancer.
+- LDCT (low-dose CT): a low-radiation scan used to screen high-risk people for lung cancer before symptoms appear.
+- Early-stage diagnosis: cancer found before it has spread, usually when treatment works best.
+- PCP (primary care provider): a patient's regular family or general doctor.
+- ED (emergency department): hospital emergency room.
+- Charlson index: a score for how many other serious health conditions a patient has; higher means more comorbidity.
+- K-means clustering: a statistical method that sorts records into groups with similar patterns.
+- Gap Statistic: a standard check used to choose how many groups the data should be split into.
+- n-gram encoding: turning a sequence of events into short overlapping chunks (single steps or pairs of steps) so patterns can be compared.
+- Retrospective cohort: a study that looks back at existing medical records for a defined group of patients. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -948,19 +966,18 @@ Background: Lung cancer remains the leading cause of cancer-related deaths world
 ### [Concurrent chemoradiotherapy combined with immunotherapy in locally advanced cervical cancer: an evaluation of efficacy](https://www.medrxiv.org/content/10.64898/2026.11.25.26368911v1)
 *Xue, Y.; Hao, Y.; Shi, C. et al.* · `oncology` · medRxiv doi:10.64898/2026.11.25.26368911 v1 · relevance 0.06
 
-- **In one sentence**: A single-center retrospective cohort of 126 locally advanced cervical cancer patients compares chemoradiotherapy with or without sintilimab, and examines post-treatment CD8+ T-cell proportion and CA125 as possible markers of benefit.
-- **In plain words**: This study looks at whether adding an immune-boosting drug, sintilimab, to standard radiation-plus-chemotherapy helps women with advanced cervical cancer that has spread locally. The authors compared 60 patients who received the added drug with 66 who did not, using past records from one hospital. They found more tumor shrinkage and longer progression-free and overall survival with the combination, and that a blood measure of immune cells (CD8+ T cells) after treatment may help show who benefits most.
-- **Why it matters**: Cervical cancer treatment is an active area, and the question of which patients gain from immunotherapy matters for choosing treatment. Because the study is retrospective and from one center, with non-randomized groups, its findings are hypothesis-generating and should be confirmed in controlled trials before changing practice.
-- **Background needed**: - Locally advanced cervical cancer: tumor that has grown beyond the cervix into nearby tissue or lymph nodes but has not spread widely; staged by FIGO 2018 criteria.
-- Concurrent chemoradiotherapy (CCRT): radiation and chemotherapy given together; the standard of care here.
-- Sintilimab: an immune checkpoint inhibitor antibody that releases the immune system's brake on tumor-attacking cells.
-- CD8+ T cells: immune cells that can directly kill cancer cells; measured here as a share of blood immune cells.
-- CA125: a blood protein often raised in ovarian and cervical cancers, used as a rough marker of tumor burden.
-- RECIST 1.1: standard imaging-based rules for judging whether tumors shrink or grow.
-- Objective response rate (ORR): share of patients whose tumors shrink by a defined amount.
-- Progression-free survival (PFS) and overall survival (OS): time until the disease worsens, and time until death, respectively.
-- Hazard ratio (HR): a comparison of event rates over time; HR below 1 suggests a lower risk of the event in that group.
-- Retrospective cohort: patients are identified from past records rather than randomly assigned in advance. · level: intermediate
+- **In one sentence**: A single-center retrospective cohort of 126 locally advanced cervical cancer patients comparing concurrent chemoradiotherapy with or without sintilimab, examining response, PFS/OS, and whether post-treatment CD8+ T-cell proportion or CA125 identifies who benefits.
+- **In plain words**: This study looks at whether adding an immunotherapy drug, sintilimab, to the usual combined radiation and chemotherapy helps women with advanced cervical cancer that has spread locally. The researchers compared 60 patients who received the add-on with 66 who received standard treatment alone, all treated at one hospital. They reported better tumor shrinkage and longer progression-free and overall survival with the add-on, and suggested that a blood measure of immune cells may help identify who benefits most.</plain>
+<parameter name="why">It adds to the evidence on combining immune checkpoint drugs with chemoradiotherapy for cervical cancer, and it raises the question of whether a simple blood test could guide treatment choice. Because the study is retrospective, from one center, and uses post-treatment markers, the findings are hypothesis-generating and would need confirmation in larger prospective trials.</plain>
+<parameter name="background">- Cervical cancer: a cancer of the cervix; "locally advanced" means it has grown beyond the cervix into nearby tissue but not distant organs (FIGO stage IB3–IVA).
+- Concurrent chemoradiotherapy (CCRT): radiation and chemotherapy given at the same time.
+- Sintilimab: an immune checkpoint inhibitor, a drug that releases the immune system's brake so it can attack cancer cells.
+- CD8+ T cells: immune cells that can kill cancer cells; measured here as a share of white blood cells in the blood.
+- CA125: a protein in the blood often raised when tumors are large; used here as a marker of tumor burden.
+- RECIST 1.1: a standard set of rules for measuring whether tumors shrink on scans.
+- Progression-free survival (PFS) and overall survival (OS): time until cancer worsens, and time until death, respectively. Hazard ratio (HR) below 1 suggests lower risk in the group.
+- Retrospective cohort: patients' past records are analyzed rather than assigning treatments randomly, so differences may reflect factors other than the drug.</background>
+<parameter name="difficulty">research-level
 
 <details><summary>Original abstract</summary>
 
@@ -973,17 +990,16 @@ Objective: This study examined whether adding sintilimab to standard treatment i
 ### [DiabetIA: A Longitudinal Electronic Health Record Dataset for Diabetes Research from Mexico](https://www.medrxiv.org/content/10.64898/2026.11.24.26368871v1)
 *Lopez Pineda, A.; Tripp, J.; Santana-Quinteros, D. et al.* · `health informatics` · medRxiv doi:10.64898/2026.11.24.26368871 v1 · relevance 0.21
 
-- **In one sentence**: DiabetIA is a publicly downloadable longitudinal primary-care EHR dataset from six IMSS family medicine units in Michoacán, Mexico (2005–2020), built with two-year observation windows and next-year type 2 diabetes labels as prediction targets.
-- **In plain words**: Doctors' clinic records from a Mexican public social security system were cleaned and organized into a dataset that tracks about 136,000 adults over many years. Each record window holds diagnoses, body measurements, blood tests and prescriptions, and marks whether type 2 diabetes appeared the following year. The authors report checks on how complete, plausible and consistent the data are, and how well it matches a state health survey.
-- **Why it matters**: Long-term primary-care records from low- and middle-income countries, especially in Latin America, are rarely shared with researchers, so this release could let others study diabetes progression in an underrepresented population. The text does not show how the data perform in real prediction models, so its practical value is still to be tested.
-- **Background needed**: - EHR (electronic health record): digital medical charts kept by clinics and hospitals.
-- Longitudinal: data followed over time for the same people, not a single snapshot.
-- Type 2 diabetes: a long-term condition where the body does not use insulin well, leading to high blood sugar.
-- ICD-10: the international coding system for diagnoses.
-- Anthropometry and vital signs: body measurements (such as weight, height) and routine readings (such as blood pressure).
-- Two-year window: a fixed span of past records used to predict what happens in the next year.
-- Technical validation: checks of data quality, such as missing values, implausible entries and agreement with an independent survey.
-- IMSS: Mexico's Social Security Institute, which provides public healthcare to many workers. · level: intermediate
+- **In one sentence**: DiabetIA is a publicly downloadable longitudinal primary-care EHR dataset from six IMSS family medicine units in Michoacán, Mexico (2005–2020), with two-year patient windows and next-year type 2 diabetes as the prediction target, plus a technical validation against a state health survey.
+- **In plain words**: Doctors' electronic patient records from a Mexican public social security system were organized into a dataset that researchers can use to study how chronic illnesses like diabetes develop over time. It covers about 136,000 adults followed for up to 15 years, with more than 3.2 million visits. The authors also checked the data's completeness, plausibility, consistency and how well it matches a state health survey.
+- **Why it matters**: Long-term primary-care records from low- and middle-income countries, especially in Latin America, are rarely shared, so a free dataset could let researchers build and test diabetes prediction and disease-trajectory models for a population that is often underrepresented. The text does not report any model results or clinical outcomes, so its practical impact remains to be seen.
+- **Background needed**: - Electronic health record (EHR): a patient's medical chart stored digitally by clinics.
+- Longitudinal data: repeated measurements of the same people over many years, rather than a single snapshot.
+- Primary care: routine first-contact care from family doctors.
+- Type 2 diabetes: a long-term condition where the body does not regulate blood sugar well; often linked with obesity and hypertension (high blood pressure).
+- ICD-10: the standard international coding system for diagnoses.
+- Two-year window: a slice of a patient's history used to predict whether they will be diagnosed with diabetes in the following year.
+- IMSS: Mexico's Institute of Social Security, a large public health insurer. · level: intermediate
 
 <details><summary>Original abstract</summary>
 
@@ -994,18 +1010,20 @@ Longitudinal electronic health records (EHRs) from primary care are scarce in lo
 ### [How many large language models does title-abstract screening need? Theory, two replications and an evaluation at real prevalence](https://www.medrxiv.org/content/10.64898/2026.11.25.26369001v1)
 *Quinelen, E.; Neumann, I.; Contreras, M.* · `health informatics` · medRxiv doi:10.64898/2026.11.25.26369001 v1 · relevance 0.11
 
-- **In one sentence**: A beta-binomial analysis of correlated votes from eleven LLMs screening titles and abstracts for systematic reviews, estimating that about two or three well-chosen models may suffice, tested on derivation reviews, two replications and a two-voter pipeline at real prevalence.
-- **In plain words**: Systematic reviews require researchers to read thousands of article titles and abstracts to find the few relevant studies, and teams are starting to ask several AI language models to do this sorting. This paper asks how many such models are really needed, given that the models tend to make the same mistakes. The authors found that errors were strongly correlated, so eight models behaved roughly like 1.6 independent ones, and that two or three models captured most of the possible benefit in their tests.
-- **Why it matters**: Screening is a costly step in evidence reviews, so the choice of how many AI voters to use affects both missed studies and workload. The authors' caveat that the answer needs further study, and their advice to compare any ensemble with its best single model, keeps the claim measured; it is not a settled rule.
-- **Background needed**: - Title-and-abstract screening: the first filter in a systematic review, where reviewers decide which records might be relevant enough to read in full.
-- Large language model (LLM): an AI system trained on large amounts of text that can be prompted to classify documents.
-- Ensemble: several models voting together on the same decision.
-- Correlated errors: when models make the same mistakes, so adding more of them adds less new information than the headcount suggests.
-- Beta-binomial model: a statistical model for counts of votes where the chance of error varies between cases.
-- Sensitivity: the share of truly relevant records the screen correctly flags.
-- Prevalence: the proportion of records that are actually relevant; real reviews have very few.
-- Bootstrap: resampling data repeatedly to estimate how stable a result is.
-- Derivation vs replication: the first set of data used to build the findings versus separate later datasets used to test predictions made beforehand. · level: research-level
+- **In one sentence**: A beta-binomial analysis of correlated votes from eleven LLMs on SYNERGY and Cochrane title-abstract screening sets, estimating that about two or three well-chosen models may suffice for an ensemble, with replication tests and a two-voter pipeline evaluated at real prevalence.
+- **In plain words**: Systematic reviews require researchers to read thousands of titles and abstracts to find the few studies that are relevant. This paper asks how many AI language models should vote together to do this screening safely, and finds that because the models tend to make the same mistakes, a small group (about two or three well-chosen models) may be enough, though the authors say this needs more study. Their pipeline sent about 12% of records to human reading while catching most relevant studies in the test sets.
+- **Why it matters**: Screening is a large time cost in evidence synthesis, so how many AI models are needed (and at what cost) matters for practical workflows. The main claim rests on a modelling assumption about correlated errors and on a limited set of reviews, so it should be read as a suggestion to test further rather than a settled rule.
+- **Background needed**: - Systematic review: a structured literature review that screens many records by title and abstract to find relevant studies.
+- Large language model (LLM): an AI system that can read and classify text; here, used as a voter that says include or exclude.
+- Ensemble: a group of models whose votes are combined into one decision.
+- Sensitivity: the share of truly relevant studies that are caught.
+- Correlated errors: when models tend to be wrong on the same records, so adding more of them adds less new information.
+- Intraclass correlation: a 0 to 1 measure of how much errors agree; higher means more shared mistakes.
+- Beta-binomial model: a statistical model for counts of votes that vary between cases.
+- Bootstrap: resampling the data many times to estimate how stable a result is.
+- Net benefit: gain in correct decisions balanced against the human reading time and machine cost.
+- Prevalence: the share of records that are truly relevant; real reviews have very few.
+- Derivation vs replication: the first dataset used to build the rule, and later independent datasets used to test it. · level: research-level
 
 <details><summary>Original abstract</summary>
 
@@ -1103,17 +1121,17 @@ Nothing notable this time.
 | Materials science | 0 | 0 | 0 |
 | Soft matter and polymers | 0 | 0 | 0 |
 | AI for chemistry and materials | 0 | 0 | 0 |
-| Biochemistry | 33 | 26 | 2 |
-| Pharmacology and drug discovery | 11 | 8 | 0 |
-| Computational and systems biology | 161 | 155 | 2 |
-| Neuroscience | 152 | 145 | 2 |
-| Genetics and genomics | 60 | 54 | 2 |
-| Cell and molecular biology | 87 | 81 | 2 |
-| Immunology and microbiology | 99 | 91 | 2 |
-| Cancer biology | 41 | 36 | 2 |
-| Ecology and evolution | 85 | 78 | 2 |
-| Plant biology | 34 | 27 | 2 |
-| Bioengineering and synthetic biology | 41 | 34 | 2 |
+| Biochemistry | 37 | 30 | 2 |
+| Pharmacology and drug discovery | 14 | 11 | 1 |
+| Computational and systems biology | 200 | 194 | 2 |
+| Neuroscience | 174 | 167 | 2 |
+| Genetics and genomics | 65 | 59 | 2 |
+| Cell and molecular biology | 94 | 88 | 2 |
+| Immunology and microbiology | 107 | 99 | 2 |
+| Cancer biology | 44 | 39 | 2 |
+| Ecology and evolution | 90 | 83 | 2 |
+| Plant biology | 36 | 29 | 2 |
+| Bioengineering and synthetic biology | 45 | 38 | 2 |
 | Mathematical biology (arXiv) | 0 | 0 | 0 |
 | Epidemiology | 27 | 22 | 2 |
 | Infectious diseases | 10 | 5 | 2 |

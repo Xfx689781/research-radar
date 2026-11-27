@@ -3,6 +3,38 @@
  "updated": "2026-11-27",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.26.769199",
+   "title": "The Impact of Highly Effective Modulator Therapies on the ABCG5 ABCG8 Sterol Transporter and Hepatobiliary Function",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.26.769199v1",
+   "authors": [
+    "Campbell, M. G.",
+    "Chauhan, I.",
+    "Poole, B.",
+    "Hutchison, R.",
+    "Noffsinger, V.",
+    "Morgan, R. A.",
+    "Nguyen, N. H.",
+    "Brodsky, J. L.",
+    "Anspach, G.",
+    "Park, S.",
+    "Helsley, R. N.",
+    "Graf, G. A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.26.769199 v1",
+   "primary_category": "pharmacology and toxicology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "In cultured human hepatocytes and in mice, highly effective CF modulator drugs (HEMT) altered ABCG5/ABCG8 sterol transporter abundance, localization and maturation, with reduced biliary lipid secretion and signs of liver fat and collagen changes in the mice.",
+    "plain": "Sitosterolemia is a rare inherited condition in which plant-derived fats (sterols) build up in the blood because two liver and gut transporter proteins, ABCG5 and ABCG8, do not work properly. Cystic fibrosis drugs called HEMT, which also act on some related transporter proteins, were tested on these transporters in liver cells grown in the lab and in mice. The drugs changed how much of the transporters was present and where they sat in cells, but did not fix the faulty forms caused by sitosterolemia mutations.",
+    "why": "The paper suggests that cystic fibrosis drugs may have unintended effects on liver transporters and bile flow, which could help explain liver problems seen in some CF patients (CF with hepatobiliary involvement). The text does not establish how these mouse findings translate to patients, so the clinical link remains a hypothesis.",
+    "background": "- ABC transporters: membrane proteins that move molecules across cell membranes, using energy from ATP.\n- ABCG5 and ABCG8: two \"half\" transporters that must pair up to function; together they push cholesterol and plant sterols out of cells into bile and the gut.\n- Sitosterolemia: a recessive genetic disorder where mutations in ABCG5 or ABCG8 cause plant sterols to accumulate.\n- CFTR: the transporter defective in cystic fibrosis; HEMT are drug combinations that correct or boost faulty CFTR.\n- Protein maturation: proteins are processed and folded in the cell before they reach their correct location; faulty maturation often traps them in the cell.\n- Hepatocytes: the main liver cells; bile is the liver fluid that carries cholesterol and other lipids to the gut.\n- In vitro vs. in vivo: \"in vitro\" means in lab dishes; \"in vivo\" means in living animals.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Sitosterolemia (STSL) is a monogenic, recessive disorder characterized by the accumulation of xenosterols in plasma and tissues. STSL is caused by mutations in either ABCG5 or ABCG8, genes that encode ABC half-transporters that form an obligate heterodimer (G5G8) that opposes sterol absorption and promotes biliary cholesterol secretion in the small intestine and liver, respectively. Like STSL, Cystic Fibrosis (CF) is caused by mutations in an ABC transporter, the CF transmembrane conductance regulator (CFTR, ABCC7). Highly Effective Modulator Therapies (HEMT) are small molecule drugs used in combination to treat CF. HEMT modulate additional ABC transporters, suggesting they may interact with G5G8 to alter wild-type or mutant protein function. We established human hepatocyte cell lines expressing ABCG5 and ABCG8 and tested the effect of HEMT independently and in combination on G5G8 protein abundance, localization, and maturation. HEMT increase G5G8 abundance, induce the appearance of a high-molecular weight form of ABCG5, and redistribute ABCG8 intracellularly in cultured hepatocytes. However, HEMT failed to rescue maturation of STSL-causing mutants of either ABCG5 or ABCG8 in vitro. Finally, we examined the effect of HEMT on G5G8 and biliary cholesterol secretion in mice. In contrast to cultured hepatocytes, HEMT reduced Abcg5 and Abcg8 protein and biliary lipid secretion. HEMT treatment also promoted hepatic triglyceride accumulation and the expression of collagens, suggesting that HEMT may contribute to CF with Hepatobiliary Involvement (CFHBI) in patients.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.16.765078",
    "title": "Ruthenium Coordination Architecture Redirects Imiquimod Antiviral Activity",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.16.765078v1",
