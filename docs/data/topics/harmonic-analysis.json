@@ -1,7 +1,52 @@
 {
  "slug": "harmonic-analysis",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33260",
+   "title": "Separable models of an NIP Banach space theory",
+   "url": "https://arxiv.org/abs/2611.33260",
+   "authors": [
+    "Karim Khanaki",
+    "Pedro Poitevin"
+   ],
+   "label": "arXiv:2611.33260v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper shows that a specific renormed Hilbert-type Banach space has an NIP (no independence property) unstable theory in the pure Banach language, recovers its index order from the norm, and classifies its separable models up to surjective linear isometry by an order type and a Hilbert dimension.",
+    "plain": "The paper studies a particular infinite-dimensional normed space and the logical rules that describe what is true in it. It shows that these rules are \"tame\" in a technical sense (NIP), and that the space's structure reveals an underlying ordering of its indices. Using that ordering, the author sorts the countably generated versions of the space into a continuum of classes, each labelled by an ordering type and a dimension.",
+    "why": "It gives a concrete example where model-theoretic tameness and classification results are carried over to Banach spaces, a setting where such tools are less developed. The text does not say how far the methods extend beyond this example, so broader connections are uncertain.",
+    "background": "- Banach space: a complete normed vector space, the infinite-dimensional analogue of a space with a length measure.\n- Renorming: giving the same space a different but equivalent norm (way of measuring length).\n- Ell-2 space (ℓ₂): infinite sequences whose squared entries sum to a finite number, with the usual Hilbert norm.\n- Model theory: the study of which statements hold in a structure and how structures are classified by their logical properties.\n- Pure Banach language: the logical vocabulary using only the norm and linear operations, with no extra predicates.\n- NIP (no independence property): a tameness condition from model theory limiting how complicated definable relations can get.\n- Unstable theory: a theory that is not stable, meaning it has enough complexity to define an order.\n- Elementary embedding: a map between structures that preserves all first-order statements.\n- Surjective linear isometry: a bijective linear map that preserves norms, i.e. an exact structural match of the spaces.\n- Uniform metric: a way of measuring distance between functions that compares their worst-case gap.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $Y$ be the renorming of $\\ell_2(\\mathbb N)\\oplus_2\\ell_2(\\mathbb N)$ with norm $(h^2+q^2)^{1/2}$, where $h$ is the Hilbert norm and $q(u,v)=\\sup_{i<j}|u_i+v_j|$. We prove that the unstable theory $\\operatorname{Th}(Y)$ is NIP in the pure Banach language. We recover the index order from the Banach norm and classify the continuum many separable models up to surjective linear isometry. The invariants are the order type of a countable model of $\\operatorname{Th}(\\mathbb N,<)$ and the dimension of a separable Hilbert summand. Every such pair occurs. We describe all elementary embeddings between these models. The bounded norm types over a separable model are separable in the uniform metric exactly when its index order contains no copy of $(\\mathbb Q,<)$.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34559",
+   "title": "Pietsch's favourite problem on singular traces",
+   "url": "https://arxiv.org/abs/2611.34559",
+   "authors": [
+    "Gustavo Ara\\'ujo",
+    "Daniel Pellegrino",
+    "Joedson Santos"
+   ],
+   "label": "arXiv:2611.34559v1",
+   "primary_category": "math.FA",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper answers Pietsch's Problem 16 affirmatively by constructing a nonzero bounded singular spectral trace on the weak Weyl ideal over the class of all Banach spaces.",
+    "plain": "The paper concerns a list of open questions about \"traces,\" which are ways of assigning a single number to certain linear operators (maps between infinite-dimensional spaces) in a consistent way. In 2023 the mathematician A. Pietsch posed twenty-seven such questions, and this paper settles the one he considered his favourite. The authors show that a particular kind of nonzero trace exists on a specific family of operators, the weak Weyl ideal.",
+    "why": "The abstract is short and does not say what the result is used for, so its wider importance is unclear from the text alone. It is a positive existence result answering a question posed by a leading specialist, which is why it is of interest to people working on operator ideals and traces.",
+    "background": "- Operators: linear maps between infinite-dimensional spaces, generalising matrices.\n- Banach spaces: complete normed vector spaces, the standard setting for infinite-dimensional analysis.\n- Operator ideals: families of operators closed under certain algebraic operations, studied as a unit.\n- Traces: functionals on an operator ideal that behave like the matrix trace (for example, additive and compatible with composition).\n- Singular traces: traces that vanish on finite-rank operators, which is what makes them nontrivial in infinite dimensions.\n- Weak Weyl ideal: a specific operator ideal defined through Weyl (approximation-number) type quantities; the text gives no further detail.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In 2023, A. Pietsch formulated twenty-seven open problems concerning traces on operator ideals. We give an affirmative answer to Problem 16, which Pietsch singled out as his personal favourite, by constructing a nonzero bounded singular spectral trace on the weak Weyl ideal over the class of all Banach spaces.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33556",
    "title": "The Kalton--Peck space disproves Rubio de Francia's conjecture",
@@ -14,12 +59,12 @@
    "primary_category": "math.FA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper shows that the complex Kalton–Peck space Z_2 is never of the form [X,H]_θ (complex interpolation between a UMD space X and a Hilbert space H), which disproves Rubio de Francia's conjecture on intermediate UMD spaces.",
-    "plain": "This is about a question in functional analysis: whether a certain well-known infinite-dimensional space can be built by \"blending\" a nice space with a Hilbert space. The authors prove it cannot be built that way for any choice of the nice space and blending setting, which answers a conjecture from the 1980s in the negative. The argument combines several technical estimates and a convexity and separation argument from standard analysis.",
-    "why": "It settles a named conjecture in the negative, so it matters for anyone tracking which spaces can arise as interpolation scales. The text does not say how far the result reaches beyond this specific conjecture, so broader implications are uncertain.",
+    "ai": true,
     "background": "- Banach space: a complete normed vector space, the usual setting for infinite-dimensional analysis.\n- UMD space: a Banach space where a certain family of singular-integral-type operators stays bounded; it is a standard \"well-behaved\" class.\n- Hilbert space: a space with an inner product, like ordinary Euclidean geometry extended to infinite dimensions.\n- Complex interpolation [X,H]_θ: a way of producing an intermediate space between two spaces, indexed by a parameter θ between 0 and 1.\n- Kalton–Peck space Z_2: a classical example of a space built from a twisted construction, known to be UMD.\n- Rubio de Francia's conjecture: the proposal that intermediate spaces between UMD spaces are always UMD-like in a specific sense; this paper says the conjecture fails.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that the complex Kalton–Peck space Z_2 is never of the form [X,H]_θ (complex interpolation between a UMD space X and a Hilbert space H), which disproves Rubio de Francia's conjecture on intermediate UMD spaces.",
+    "plain": "This is about a question in functional analysis: whether a certain well-known infinite-dimensional space can be built by \"blending\" a nice space with a Hilbert space. The authors prove it cannot be built that way for any choice of the nice space and blending setting, which answers a conjecture from the 1980s in the negative. The argument combines several technical estimates and a convexity and separation argument from standard analysis.",
+    "why": "It settles a named conjecture in the negative, so it matters for anyone tracking which spaces can arise as interpolation scales. The text does not say how far the result reaches beyond this specific conjecture, so broader implications are uncertain."
    },
    "abstract": "We prove that the classical complex Kalton--Peck space $Z_2$ is not isomorphic to $[X,H]_\\theta$ for any UMD Banach space $X$, Hilbert space $H$, and $0<\\theta<1$. Since $Z_2$ is UMD, this disproves Rubio de Francia's conjecture on intermediate UMD spaces. The proof combines the logarithmic block identity, a shift-commutator estimate on the interpolation strip, a unified obstruction in terms of reciprocal Hilbert norms, and Hahn--Banach with elementary convexity. It allows arbitrary compatible placements. We also realize $Z_2$ as a quotient of a closed subspace of an intermediate UMD space for every fixed interpolation parameter less than one.",
    "source": "arxiv"
@@ -37,12 +82,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper studies weak monotonicity of heat kernel and ball-averaged functionals on weighted graphs, proving weak Bakry-Émery estimates under sub-Gaussian heat kernel bounds and deriving Gagliardo-Nirenberg, Sobolev, Nash and isoperimetric inequalities on strongly recurrent graphs and their products.",
-    "plain": "This paper is about how heat spreads over networks: nodes connected by weighted links, where a \"heat\" quantity diffuses from node to node over time. The authors show that under certain tail-type bounds on how fast heat spreads, a weakened form of a smoothness-and-monotonicity property holds, with explicit exponents for graphs that are \"strongly recurrent\" (random walks on them return to their starting region reliably). They then use this to derive a family of standard inequalities that relate size, smoothness and volume on such networks.",
-    "why": "Inequalities of the Sobolev and Nash type are basic tools for judging how fast diffusions and random walks behave, so results that hold on graphs and on products of graphs may be useful to researchers in analysis and probability. The text does not indicate applications beyond this theory, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- A weighted graph: points (vertices) joined by links (edges) that carry numerical weights, like a network of roads with distances.\n- Heat kernel: a function describing how a unit of heat or probability starting at one point spreads to other points over time; equivalently, the transition law of a random walk.\n- Sub-Gaussian heat kernel estimate: a bound saying the spreading probability has tails no heavier than a Gaussian (bell curve) decay, with distance measured in a suitable way.\n- Semigroup and Bakry-Émery estimates: a standard way of expressing how smoothing by diffusion controls the size of gradients (rates of change) of functions.\n- Recurrence: a random walk is recurrent if it returns to its start infinitely often; \"strongly recurrent\" is a stronger version of this.\n- Sobolev, Nash, Gagliardo-Nirenberg and isoperimetric inequalities: standard relations between a function's size, its rate of change, and the volume of sets, used to quantify how a space or network behaves.\n- Hölder exponent: a number measuring a degree of smoothness.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies weak monotonicity of heat kernel and ball-averaged functionals on weighted graphs, proving weak Bakry-Émery estimates under sub-Gaussian heat kernel bounds and deriving Gagliardo-Nirenberg, Sobolev, Nash and isoperimetric inequalities on strongly recurrent graphs and their products.",
+    "plain": "This paper is about how heat spreads over networks: nodes connected by weighted links, where a \"heat\" quantity diffuses from node to node over time. The authors show that under certain tail-type bounds on how fast heat spreads, a weakened form of a smoothness-and-monotonicity property holds, with explicit exponents for graphs that are \"strongly recurrent\" (random walks on them return to their starting region reliably). They then use this to derive a family of standard inequalities that relate size, smoothness and volume on such networks.",
+    "why": "Inequalities of the Sobolev and Nash type are basic tools for judging how fast diffusions and random walks behave, so results that hold on graphs and on products of graphs may be useful to researchers in analysis and probability. The text does not indicate applications beyond this theory, so the wider significance is uncertain."
    },
    "abstract": "We study weak monotonicity of heat kernel and ball averaged functionals on weighted graphs, and the associated critical exponents. Under sub-Gaussian heat kernel estimates, weak Bakry-\\'Emery estimates for the semigroup are proved, with explicit values of the H\\\"older regularity exponent in the strongly recurrent case. Applications of the theory include Gagliardo-Nirenberg, Sobolev, Nash and isoperimetric inequalities on strongly recurrent graphs and their products.",
    "source": "arxiv"

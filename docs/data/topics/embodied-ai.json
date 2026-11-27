@@ -1,7 +1,58 @@
 {
  "slug": "embodied-ai",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34884",
+   "title": "FineDex: Bridging Fine-Grained Human-Object Interaction Generation to Dexterous Humanoid Manipulation",
+   "url": "https://arxiv.org/abs/2611.34884",
+   "authors": [
+    "Yujia Zeng",
+    "Yuxin Chen",
+    "Yuzhen Song",
+    "Runhan Huang",
+    "Chensheng Peng",
+    "Yiyang Shao",
+    "Koushil Sreenath",
+    "Masayoshi Tomizuka",
+    "Yilun Du"
+   ],
+   "label": "arXiv:2611.34884v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "FineDex is a framework that generates coordinated human body, hand, and object motion from fine-grained finger-level instructions, then uses those generated interactions as priors for a physics-based agent that learns feasible grasping and manipulation strategies, with real-robot deployment on a dexterous humanoid.",
+    "plain": "Robots with multi-fingered hands are often used like simple grippers, and digital models of people grabbing things rarely let you say which finger does what. This paper proposes FineDex, which lets a user specify things like which hand to use, which fingers to use, and where they touch an object with a hinge or moving part. The generated motions are then used as a starting guide for a simulated robot that practices until it finds contact strategies that work physically.",
+    "why": "Finger-level control is a known gap between human-like manipulation and what robots do today, so controllable finger-level generation could matter for robot learning and animation. The text reports state-of-the-art generation quality and a real-robot deployment, but the summary gives no detailed numbers, so the size of the gains is not something I can judge from this text alone.",
+    "background": "- Human-object interaction (HOI) generation: producing realistic motion of a body and hands handling an object.\n- Dexterous manipulation: using a multi-fingered robot hand, not a simple two-jaw gripper.\n- Articulated objects: things with moving parts joined together, such as drawers, lids, or scissors.\n- Physics-based digital twin: a simulated copy of the robot and its environment that obeys physical laws, used for trial-and-error practice.\n- Priors: reference motions that guide a learning system so it does not have to search from scratch.\n- Test-time adaptation: adjusting to a new object or instruction at use time, without retraining the model for each case.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Dexterity is, at its core, finger-level control, yet existing dexterous manipulation and human-object interaction (HOI) generation methods rarely let one specify how an interaction is performed: five-fingered hands are often reduced to grippers, or finger usage is copied from individual human demonstrations. We present FineDex, a framework that makes finger-level intent both expressible and executable. FineDex learns coordinated human body, hand, and object motions that follow fine-grained instructions on hand selection, individual fingers, and contacts with articulated objects. To bridge generation and execution, FineDex leverages generated interactions as actionable priors for an agent that discovers physically feasible contact strategies through practice in a physics-based digital twin. By adapting at test time without per-instance retraining, FineDex generalizes across fine-grained instructions and object configurations. Experiments demonstrate state-of-the-art HOI generation quality and fine-grained controllability, substantial improvements in dexterous manipulation success, and successful deployment on a real dexterous humanoid robot.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33911",
+   "title": "CoTAMP: Cooperative Task and Motion Planning for Quadruped Robots with Large Language Models",
+   "url": "https://arxiv.org/abs/2611.33911",
+   "authors": [
+    "Woojin Kim",
+    "Jemin Hwangbo"
+   ],
+   "label": "arXiv:2611.33911v1",
+   "primary_category": "cs.RO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "CoTAMP is an LLM-plus-code framework that plans cooperative multi-quadruped tasks by inventing motions on the fly, generating keyframe-based references, and refining them with trajectory optimization for dynamic feasibility.",
+    "plain": "This paper looks at how groups of four-legged robots can work together to get through places one robot cannot cross alone, such as a ledge one robot can only climb by standing on its partner, or a gap that must be bridged with boxes. The authors use large language models to plan the steps and the body poses, and ordinary code to check each plan and send errors back for correction. On three simulated courses with two robot models, all 30 trials produced kinematically valid motion references that converged during the final physics refinement.",
+    "why": "Most earlier planners could only choose from a fixed list of pre-defined skills or handle one robot at a time, so this work targets a more open-ended kind of cooperation. Its reported gains over baselines in success rate, dynamic feasibility, and planning time and cost are of interest to people building legged robot teams, though the text reports only simulation results.",
+    "background": "- Task and motion planning (TAMP): deciding both the high-level sequence of actions and the physical movements needed to carry them out.\n- Quadruped robot: a four-legged walking robot; RAIBO2 is the specific model used here.\n- Keyframe: a snapshot pose at a key moment; the system fills in smooth motion between keyframes.\n- Kinematic synthesis: computing joint positions that achieve the poses, ignoring forces.\n- Dynamic feasibility: whether the motion obeys physics (balance, torque, contact forces).\n- Trajectory optimization: adjusting a planned motion mathematically so it can actually be executed.\n- Large language model (LLM): a text-based AI model used here to propose plans, paired with code that verifies them.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Some environments cannot be traversed by a single quadruped robot, for example a ledge that one robot can climb only from its partner's back or a gap that must be bridged with boxes. Solving them requires cooperative task and motion planning (TAMP). Previous works are limited to the motions of a single robot or only select actions from a predefined set of skills. We propose a framework with two parts: task planning that invents motions not defined in advance, and motion generation that realizes the invented motions. Both parts consist of large language model (LLM)-based modules and code-based modules. Task planning divides the trajectory of the whole task into steps and fixes the robot poses at the step boundaries. Motion generation produces keyframes that describe the motion of each step and turns them into a continuous trajectory through kinematic synthesis. The code-based modules check every plan and motion and return failures to the LLM-based modules for correction. The whole trajectory is then refined by trajectory optimization to satisfy the dynamics. On three simulated courses with two RAIBO2 robot models, our framework produced kinematically valid references in all 30 trials, all of which converged in trajectory optimization. Compared with several baselines, our framework showed advantages in success rate, dynamic feasibility, execution time, and generation time and cost. Project page: https://woojin8098.github.io/CoTAMP/",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34403",
    "title": "Recoverability policy editing for closed-loop safety in autonomous driving",
@@ -14,12 +65,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A state-level policy editing method that, for recoverable states where a neural driving policy would eventually lead to a collision, overrides the policy's actions to steer the vehicle back into a safe set, aiming for closed-loop collision avoidance while keeping the original policy elsewhere.",
-    "plain": "Self-driving systems built on neural networks usually come with no formal promise that they will stay safe over time. This paper looks at situations where a car is heading toward trouble but could still get back to safe driving if it reacts in time. The authors' method identifies those situations and corrects the car's actions only there, then hands control back to the original driving model once it has recovered. In simulated urban driving on the nuPlan benchmark, the authors report a 48% drop in safety incidents compared with the original policy, with its driving performance largely kept.",
-    "why": "Neural driving models are hard to certify, so a way to add a safety layer that leaves most of the model's behaviour untouched could matter for deployment. The reported result is from simulation only, and the text does not say how the method performs on real vehicles or in situations outside the tested scenarios.",
+    "ai": true,
     "background": "- Closed-loop: the car's actions affect what it sees next, so errors can compound over time, unlike a single prediction.\n- Policy: the rule or neural network that maps what the car senses to what it does (steer, brake, accelerate).\n- Feasible set: the set of situations from which the policy can still avoid collisions; the paper's notion of recoverability is about returning to it in finite time.\n- Recoverable disturbance: a shock or error that the car can correct from, as opposed to one that already makes collision unavoidable.\n- nuPlan: a public benchmark of urban driving scenarios used for testing planning algorithms in simulation.\n- Safety incident: an event such as a collision counted during simulated runs.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A state-level policy editing method that, for recoverable states where a neural driving policy would eventually lead to a collision, overrides the policy's actions to steer the vehicle back into a safe set, aiming for closed-loop collision avoidance while keeping the original policy elsewhere.",
+    "plain": "Self-driving systems built on neural networks usually come with no formal promise that they will stay safe over time. This paper looks at situations where a car is heading toward trouble but could still get back to safe driving if it reacts in time. The authors' method identifies those situations and corrects the car's actions only there, then hands control back to the original driving model once it has recovered. In simulated urban driving on the nuPlan benchmark, the authors report a 48% drop in safety incidents compared with the original policy, with its driving performance largely kept.",
+    "why": "Neural driving models are hard to certify, so a way to add a safety layer that leaves most of the model's behaviour untouched could matter for deployment. The reported result is from simulation only, and the text does not say how the method performs on real vehicles or in situations outside the tested scenarios."
    },
    "abstract": "Autonomous driving powered by neural network models lacks safety guarantees. We propose a state-level policy editing technique that guarantees closed-loop safety under recoverable disturbances while reusing the model's existing driving capabilities. Closed-loop safety means that the vehicle remains free of collisions at all future times. We introduce the concept of policy recoverability to characterize whether a vehicle can safely return to the original policy's feasible set in finite time. Our method identifies states that are unsafe in the long term under the original policy but recoverable, and selectively edits policy outputs within this region. The vehicle corrects its actions upon entering this region and resumes the original policy upon recovery. Closed-loop simulations on nuPlan urban driving scenarios show a 48% reduction in safety incidents under the original policy while largely preserving its driving performance.",
    "source": "arxiv"
@@ -39,12 +90,12 @@
    "primary_category": "cs.RO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "WorldPhy is a benchmark of 300 robotics scenarios, plus a learned reward model (WorldPhyReward) trained on over 12K human annotations, for scoring how physically plausible videos generated by 13 world models are across six fine-grained physical dimensions and instruction following.",
-    "plain": "World models are AI systems that predict or generate future video of a scene, and robots can use them to practice or plan actions. This paper introduces WorldPhy, a test set of 300 robot tasks, each starting from a single image and an instruction, along with a scoring model trained on human judgments. The authors report that the scoring model agrees better with human raters than general vision-language models and existing reward models do, and that 13 current world models often fail to keep motion and object interactions physically realistic across different robot scenes.",
-    "why": "Robots that rely on generated video need that video to obey physics such as contact, motion and object behaviour, so a finer-grained way to check this is useful for judging and improving these models. The text does not show how the benchmark affects real robot performance, so its practical impact remains to be tested.",
+    "ai": true,
     "background": "- World model: an AI model that generates or predicts future video frames given a starting image and an action or instruction.\n- Benchmark: a standard set of test tasks used to compare systems fairly.\n- Reward model: a learned scorer that rates outputs, here trained to mimic human ratings.\n- Vision-language model (VLM): an AI model that takes images and text and produces text answers.\n- Physical plausibility: whether motion and contacts in a video look consistent with real-world physics.\n- Human annotation: people labelling or rating examples, used here as ground truth for training and checking the scorer.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "WorldPhy is a benchmark of 300 robotics scenarios, plus a learned reward model (WorldPhyReward) trained on over 12K human annotations, for scoring how physically plausible videos generated by 13 world models are across six fine-grained physical dimensions and instruction following.",
+    "plain": "World models are AI systems that predict or generate future video of a scene, and robots can use them to practice or plan actions. This paper introduces WorldPhy, a test set of 300 robot tasks, each starting from a single image and an instruction, along with a scoring model trained on human judgments. The authors report that the scoring model agrees better with human raters than general vision-language models and existing reward models do, and that 13 current world models often fail to keep motion and object interactions physically realistic across different robot scenes.",
+    "why": "Robots that rely on generated video need that video to obey physics such as contact, motion and object behaviour, so a finer-grained way to check this is useful for judging and improving these models. The text does not show how the benchmark affects real robot performance, so its practical impact remains to be tested."
    },
    "abstract": "World models are increasingly used in robotics to improve the performance of embodied models. Compared with general-purpose video generation, robotics places more stringent requirements on world models. Generated videos must satisfy fine-grained physical constraints on robot motion and object interactions. However, existing world model benchmarks can overlook robotics specific physical details and struggle to assess them accurately. To address this problem, we introduce WorldPhy, a world model benchmark for accurate, fine-grained evaluation of physical plausibility in robotics. Our benchmark contains 300 tasks, each consisting of an initial-frame image and a task instruction, covering diverse robotics scenes, task categories, viewpoints, and robot configurations. We further collect over 12K high-quality human annotations, and use them to train WorldPhyReward to accurately provide scores and reasons across six fine-grained physical dimensions and an instruction-following dimension. Comparisons with general VLMs and existing reward models show that WorldPhyReward better aligns with human ratings. We system- atically evaluate 13 frontier open and closed-source world models. The results reveal that current world models struggle to consistently maintain fine-grained physical plausibility across different robotics scenarios. Our code is available at https://github.com/chuziyuan139/ WorldPhy.",
    "source": "arxiv"

@@ -1,7 +1,50 @@
 {
  "slug": "logic",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33345",
+   "title": "A Sequent Calculus for the Quantified Reflection Calculus $\\mathrm{QRC}_1$: Cut-Elimination, Interpolation, and NP-Completeness",
+   "url": "https://arxiv.org/abs/2611.33345",
+   "authors": [
+    "Mitar Nedeljkovi\\'c"
+   ],
+   "label": "arXiv:2611.33345v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper gives the first Gentzen-style sequent calculus for the first-order modal logic QRC_1, proves cut-admissibility, interpolation, and finite model property results, and claims NP-completeness of its decision problem over fixed signatures.",
+    "plain": "This paper is about a formal logic, a precise system of rules for what counts as a valid argument about provability (what a mathematical theory can prove about itself). The authors build a new proof system of the standard \"sequent calculus\" type for an existing logic called QRC_1, which extends provability reasoning to quantifiers such as \"for all\" and \"there exists.\" Using this system, they establish several structural properties and state that deciding whether a formula is valid for this logic is in the NP class of problems.",
+    "why": "The work matters to specialists in proof theory and modal logic because it gives a clean proof system for a logic that is claimed to avoid a known completeness barrier for quantified provability logics. Its link to the arithmetic of Peano and Heyting Arithmetic makes it relevant to the foundations of mathematics, though the broader significance depends on the details of the proofs, which the brief does not show.",
+    "background": "- Modal logic: logics with operators like \"it is provable that,\" studied with possible-worlds (Kripke) semantics.\n- Provability logic: modal logic whose operator is read as \"provable in a formal theory,\" linked to Peano and Heyting Arithmetic.\n- Quantifiers: \"for all\" and \"there exists,\" which make the logic first-order rather than purely propositional.\n- Sequent calculus (Gentzen style): a proof system that builds proofs from sequents (premises ⊢ conclusions) using inference rules.\n- Cut-elimination: showing that a detour rule (\"cut\") can always be removed from proofs, which gives strong control over proof structure.\n- Craig interpolation: if an implication holds, there is a shared-vocabulary intermediate statement that links its two sides.\n- NP-complete: a class of decision problems where yes-answers can be checked quickly, and which are believed but not proven to be hard to solve quickly.\n- Finite model property: if a formula is valid, it holds in some finite model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We introduce $\\mathrm{G3QRC}_1$, the first Gentzen-style sequent calculus for Borges and Joosten's Quantified Reflection Calculus ($\\mathrm{QRC}_1$). As a strictly positive, first-order modal logic, $\\mathrm{QRC}_1$ crucially escapes Vardanyan's $\\Pi^0_2$-completeness theorem for quantified provability logic, while remaining arithmetically complete with respect to Peano and Heyting Arithmetic. The central innovation of $\\mathrm{G3QRC}_1$ is a pair of context-erasing modal rules that simultaneously account for the monotonicity and transitivity axioms by deliberately discarding parametric context across modal boundaries. This structural bottleneck allows for a clean proof of cut-admissibility via a standard lexicographic induction, circumventing the complex loop-checking typically required for provability logics. Cut admissibility yields an instantiated subformula property and supports a direct canonical proof of the finite model property. We streamline the adequate Kripke semantics by interpreting constants globally. We also establish a split-context Craig interpolation theorem and a contextual form of left uniform interpolation, uniformly eliminating private predicate symbols, constants, and free parameters. Finally, by leveraging the rigid structural constraints of the context-erasing rules and the absence of left-branching connectives, we prove that, over the standard fixed countable signatures specified in the paper, the decision problem for $\\mathrm{QRC}_1$ is $\\mathbf{NP}$-complete, situating this quantified modal logic in a comparatively low nondeterministic complexity class.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34850",
+   "title": "Well-foundedness of the strict Lipschitz order on countably complete filters",
+   "url": "https://arxiv.org/abs/2611.34850",
+   "authors": [
+    "Gabriel Fernandes",
+    "Matheus Duzi"
+   ],
+   "label": "arXiv:2611.34850v1",
+   "primary_category": "math.LO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "In ZF+DC, the strict Lipschitz order on proper countably complete filters on a fixed ordinal is shown well-founded, and ultrafilters on the same ordinal are shown to be equal when mutually nonexpansively reducible, answering both parts of Question 9.2.11 in The Ultrapower Axiom.",
+    "plain": "This paper is about a way of comparing \"large-set systems\" (filters) built on the ordinal numbers, which are the counting levels of infinity used in set theory. The author shows that under the standard background axioms (ZF plus dependent choice), this comparison cannot go on forever in a descending chain, and that two such systems which can each be reduced to the other are the same. These are answers to two specific open questions posed in a published book on set theory.",
+    "why": "The text settles two questions from The Ultrapower Axiom, a book proposing a principle about ultrapowers (a standard tool for building models of set theory). It is a targeted result for specialists; the text does not say more about its wider impact.",
+    "background": "- Ordinals: the well-ordered counting levels of infinity, starting 0, 1, 2, ... and continuing past all ordinary counting.\n- Filters and ultrafilters: families of \"large\" subsets of a set; an ultrafilter decides for every subset whether it is large.\n- Countably complete: closed under intersecting countably many large sets.\n- Well-founded order: one with no infinite descending chain.\n- ZF and DC: the standard axioms of set theory (Zermelo-Fraenkel) plus dependent choice, a weak form of the axiom of choice.\n- Lipschitz/nonexpansive reducibility: a way of saying one filter can be mapped into another in a controlled, distance-preserving-type fashion.\n- Transfinite recursion: defining objects by recursion along ordinals.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In $\\mathsf{ZF}+\\mathsf{DC}$, the strict Lipschitz order on proper countably complete filters on any fixed ordinal is well-founded. The proof uses transfinite recursion and closure under countable intersections to derive a contradiction from a descending chain. Restricting each filter to the least ordinal it contains yields a set-like well-founded order that compares filters on different ordinals. In $\\mathsf{ZF}$, two ultrafilters on the same ordinal are equal if each is nonexpansively reducible to the other. These results answer both parts of Question 9.2.11 in The Ultrapower Axiom.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34109",
    "title": "A family of forcings with hyperfinite equivalence of generics",
@@ -13,12 +56,12 @@
    "primary_category": "math.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper identifies a class of set-theoretic forcing notions, including several classical ones, and shows that for each forcing in that class the equivalence-of-generics relation of Smythe is a hyperfinite countable Borel equivalence relation (CBER).",
-    "plain": "This is about the logical foundations of mathematics, specifically a technique called forcing, which builds new mathematical universes by adding \"generic\" objects that dodge all prescribed obstacles. The authors look at when two such generic objects count as equivalent, and they group many well-known constructions into one class. For every construction in that class, they show the equivalence is \"hyperfinite,\" meaning it can be approximated by a sequence of finite pieces.",
-    "why": "The work places a family of classical constructions under a single structural description, which may help compare them. Its connection to descriptive set theory (the study of how definable sets of reals can be classified) is the reason it matters to specialists; the text does not say what further applications it has, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- Forcing: a method from set theory for extending a model of mathematics by adding a \"generic\" object that meets every dense condition.\n- Generic object: an object that avoids all exceptional sets that could be specified in advance in the model.\n- Equivalence of generics: a relation saying when two generics yield the same information or are interchangeable, as defined by Smythe (the text gives no further detail).\n- Borel equivalence relation: a way of sorting points of a Polish space into classes where the sorting rule is simple enough to be \"Borel\" (definable from open sets by countable operations).\n- Countable Borel equivalence relation (CBER): a Borel equivalence relation whose classes are countable.\n- Hyperfinite: a CBER that is an increasing union of finite-class equivalence relations; intuitively, it is as tame as countable classification gets.\n- Background in set theory and descriptive set theory at graduate level is needed.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper identifies a class of set-theoretic forcing notions, including several classical ones, and shows that for each forcing in that class the equivalence-of-generics relation of Smythe is a hyperfinite countable Borel equivalence relation (CBER).",
+    "plain": "This is about the logical foundations of mathematics, specifically a technique called forcing, which builds new mathematical universes by adding \"generic\" objects that dodge all prescribed obstacles. The authors look at when two such generic objects count as equivalent, and they group many well-known constructions into one class. For every construction in that class, they show the equivalence is \"hyperfinite,\" meaning it can be approximated by a sequence of finite pieces.",
+    "why": "The work places a family of classical constructions under a single structural description, which may help compare them. Its connection to descriptive set theory (the study of how definable sets of reals can be classified) is the reason it matters to specialists; the text does not say what further applications it has, so the wider significance is uncertain."
    },
    "abstract": "We identify a class of forcings that includes several classical forcings and prove that for all forcings $\\mathbb{P}$ in this class the associated equivalence of generics relation $\\equiv^{\\mathbb{P}}_M$, as defined by Smythe, is a hyperfinite CBER.",
    "source": "arxiv"
@@ -35,12 +78,12 @@
    "primary_category": "math.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper shows that abstract elementary classes with an independence relation satisfying a mild local character condition are stable, and applies this to classes of modules closed under pure submodules.",
-    "plain": "This is a paper in mathematical logic about \"abstract classes,\" which are collections of mathematical structures with a notion of substructure, such as classes of modules (algebraic objects like vector spaces, generalized). The authors prove that such classes behave in a tame, orderly way (\"stable\") whenever a certain notion of independence has a mild local property. They reach this using tools from model theory and set theory.",
-    "why": "The result says that a broad family of structures is orderly under a fairly weak assumption, which matters for classifying what such theories can look like. The text does not say how far beyond the module examples the result reaches, so its wider impact is unclear from this summary alone.",
+    "ai": true,
     "background": "- Abstract classes: collections of structures with a chosen notion of embedding, generalizing first-order model theory.\n- Independence relation: an abstract analogue of \"independence\" from linear algebra or probability, saying when two parts of a structure are unrelated given a base.\n- Local character: a condition that every element depends only on a small piece of the structure.\n- Stability (in a cardinal λ): a measure of tameness; roughly, the number of distinct ways to describe objects of size λ is controlled, rather than exploding.\n- Modules and pure submodules: modules are generalized vector spaces over a ring R; a pure submodule is one that respects linear equations with parameters in it.\n- Cardinal arithmetic: the condition λ^(card(R)+ℵ₀) = λ is a size-related assumption about infinite cardinal numbers.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that abstract elementary classes with an independence relation satisfying a mild local character condition are stable, and applies this to classes of modules closed under pure submodules.",
+    "plain": "This is a paper in mathematical logic about \"abstract classes,\" which are collections of mathematical structures with a notion of substructure, such as classes of modules (algebraic objects like vector spaces, generalized). The authors prove that such classes behave in a tame, orderly way (\"stable\") whenever a certain notion of independence has a mild local property. They reach this using tools from model theory and set theory.",
+    "why": "The result says that a broad family of structures is orderly under a fairly weak assumption, which matters for classifying what such theories can look like. The text does not say how far beyond the module examples the result reaches, so its wider impact is unclear from this summary alone."
    },
    "abstract": "We prove that all abstract classes equipped with an independence relation satisfying a mild local character condition are stable. We obtain the result by using methods from model theory and set theory. We have several applications in the context of abstract classes of modules. In particular, we prove that if $K$ is a class of $R$-modules closed under isomorphisms and pure submodules and $\\lambda^{\\operatorname{card}(R) + \\aleph_0} = \\lambda$, then $K$ equipped with pure embeddings is stable in $\\lambda$.",
    "source": "arxiv"

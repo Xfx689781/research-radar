@@ -1,7 +1,63 @@
 {
  "slug": "stars-sun",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34450",
+   "title": "Investigating the Neupert Effect with HEL1OS/Aditya-L1",
+   "url": "https://arxiv.org/abs/2611.34450",
+   "authors": [
+    "Srikar Paavan Tadepalli",
+    "Abhishekh Kumar Srivastava",
+    "K. Sankarasubramanian",
+    "Manju Sudhakar",
+    "Anand Jain",
+    "Brajpal Singh",
+    "Reenu Palawat",
+    "Ravishankar B. T.",
+    "Anuj Nandi"
+   ],
+   "label": "arXiv:2611.34450v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Using HEL1OS hard X-ray spectrograms from Aditya-L1 for 312 solar flares (Nov 2023–May 2026), the authors test the Neupert effect, reporting a median soft–hard X-ray correlation of 0.984 and an empirical forward model that reconstructs the thermal lightcurve from resolved non-thermal energy-release episodes, including quasi-periodic pulsing flares.",
+    "plain": "This paper looks at solar flares, sudden bursts of energy on the Sun. It uses data from an Indian solar satellite's hard X-ray instrument to compare the high-energy X-ray bursts with the slower heating of the hot gas around them. The authors report a very strong match between the two across 312 flares and build a simple model that rebuilds the slower heating curve from the bursts.",
+    "why": "The Neupert effect is a long-standing empirical rule about how flares heat plasma, so a large sample testing it with one broadband instrument may help connect flare energy release to the heating that follows. The text does not show how far the empirical model generalises beyond this dataset, so its wider physical meaning is uncertain.",
+    "background": "- Solar flares: sudden explosive releases of magnetic energy on the Sun, producing X-rays.\n- Hard X-rays (high-energy) come mainly from fast, non-thermal electrons hitting the solar atmosphere; soft X-rays come from hot thermal plasma.\n- Neupert effect: an observed pattern where the soft X-ray signal roughly tracks the time-integral of the hard X-ray signal.\n- Quasi-periodic pulsations (QPPs): repeated brightness oscillations within a flare with a rough but not exact period.\n- Aditya-L1: India's solar observatory satellite; HEL1OS is its hard X-ray spectrometer.\n- Correlation coefficient: 1 means perfect linear tracking, 0 means no relation.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We investigate the Neupert effect in solar flares using broadband hard X-ray observations from the HEL1OS instrument onboard Aditya-L1. By separating thermal and non-thermal components from HEL1OS spectrograms, we analyse a sample of 312 flares observed between November 2023 and May 2026. We find that the soft X-ray flux is strongly correlated with the time-integrated hard X-ray emission, with a median correlation coefficient of 0.984, indicating that Neupert-like behaviour is nearly ubiquitous in flares with detectable non-thermal emission. Extending beyond statistical correlation, we develop an empirical forward model in which the thermal lightcurve is reconstructed from the non-thermal emission by resolving the hard X-ray lightcurve into individual energy-release episodes and convolving their fitted profiles with finite thermal-response functions. This approach successfully reproduces the observed thermal evolution, including flares that exhibit quasi-periodic pulsations (QPPs). Our results demonstrate that the broadband HEL1OS observations sample both thermal-dominated and non-thermal-dominated flare emission within a single instrument, providing an observation-driven link between the temporal structure of non-thermal HXR emission and the thermal X-ray response. This provides a different framework for interpreting flare energetics and temporal evolution using broadband hard X-ray measurements.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33301",
+   "title": "Evidence for an Evolving Surface on the Partly Burnt Runaway Stellar Remnant GD 492",
+   "url": "https://arxiv.org/abs/2611.33301",
+   "authors": [
+    "Reuben Dsouza",
+    "J. J. Hermes",
+    "Boris T. G\\\"ansicke",
+    "Ken J. Shen",
+    "Ciarra Coston",
+    "Roberto Raddi",
+    "Mark Hollands"
+   ],
+   "label": "arXiv:2611.33301v1",
+   "primary_category": "astro-ph.SR",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Analysis of 12 TESS sectors of photometry shows that the 8.9-hour brightness modulation of the partly burnt hypervelocity runaway remnant GD 492 changes in period and shape on timescales of one to two months, which the authors attribute qualitatively to evolving surface spots.",
+    "plain": "GD 492 is a dense leftover star that was flung away at very high speed, and it may be the survivor of an exploding star. Earlier work reported that its brightness rises and falls about every 8.9 hours. Using more than four years of satellite brightness measurements, the authors find that this cycle drifts over time, and that a simple two-spot model with shifting surface features can roughly reproduce the changing patterns.",
+    "why": "If the brightness changes come from surface features, they could help constrain the star's outer convective layers and how to interpret its unusual chemical composition. The text does not establish how strongly this bears on the wider picture, and the spot geometry is not uniquely determined.",
+    "background": "- A white dwarf is the dense, Earth-sized core left after a star like the Sun runs out of fuel; GD 492 is a partly burnt remnant, meaning its outer layers show signs of nuclear processing.\n- A \"hypervelocity runaway\" is a star moving fast enough to escape its home galaxy, usually after a binary companion is destroyed or a stellar explosion.\n- A thermonuclear supernova is a stellar explosion driven by runaway nuclear fusion.\n- TESS is a NASA satellite that measures star brightness over time (photometry); a \"sector\" is roughly a 27-day observing window.\n- A photometric modulation is a regular brightness variation, here interpreted as a rotating star with uneven surface markings, similar to starspots on the Sun.\n- Differential rotation means different latitudes spin at different rates; the paper suggests this may contribute to the changes.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "GD 492 (LP 40-365) is a partly burnt, hypervelocity runaway stellar remnant thought to have survived a thermonuclear supernova. We analyze 12 sectors of TESS photometry spanning more than four years to investigate the previously reported 8.9-hr photometric modulation of the star. We find that the modulation changes with time, with individual-sector fits yielding apparent periods ranging from 8.8606 to 8.9048 hr (0.5% changes), more than 25 times the formal measurement uncertainties. Both the period and shape of the modulation evolve on a timescales of approximately one to two months. We show qualitatively that a two-spot model with evolving surface structure can reproduce several of the observed light-curve morphologies, although the geometry of the spots is not uniquely constrained. These observations suggest that changing surface inhomogeneities are a plausible origin of the photometric variability. Differential rotation and magnetic activity may contribute to this evolution, potentially providing new constraints on the outer convective structure of GD 492 and on the interpretation of its atmospheric abundances.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33598",
    "title": "Transport of High Energy Protons from CME-Shock to the Sun and its Connection to Extended Gamma-rays Observed by FERMI",
@@ -14,12 +70,12 @@
    "primary_category": "astro-ph.SR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper tests whether long-duration gamma rays from the 2014 September 1 solar flare, seen by Fermi-LAT, could come from CME-shock-accelerated protons that escape back toward the Sun, by modeling proton transport with AWSoM MHD results and an analytic time-scale relation.",
-    "plain": "Some solar eruptions give off gamma rays for hours, even when the eruption happens behind the Sun's edge as seen from Earth. This paper asks whether those gamma rays come from high-energy protons that were accelerated by a shock wave pushed out by a coronal mass ejection (a huge bubble of solar material) and then travelled back down toward the Sun. The authors use a computer model of the solar wind to estimate the conditions the protons pass through, and they outline how the proton spectrum would change on the way down to the surface.",
-    "why": "Understanding where the particles behind these long gamma-ray signals come from bears on how the Sun accelerates particles that can reach Earth as solar energetic particles, a hazard for spacecraft and astronauts. The text only describes a planned comparison with in situ particle measurements, so it is not yet shown whether the scenario holds.",
+    "ai": true,
     "background": "- Coronal mass ejection (CME): a large expulsion of magnetized plasma from the Sun, often driving a shock wave ahead of it.\n- Gamma rays: the highest-energy form of light; here they are produced when fast protons collide with material at the Sun.\n- Fermi LAT: a space telescope that detects gamma rays.\n- Behind the limb (BTL): on the far side of the Sun as seen from Earth, so the flare is hidden from direct view.\n- Alfvén wave / AWSoM: a model of the solar corona in which magnetic waves (Alfvén waves) heat and drive the solar wind.\n- Mean free path: the average distance a particle travels before its direction is scattered by magnetic turbulence.\n- Residence time / escape time: how long a particle stays at a given height before leaving.\n- Proton spectrum: how many protons there are at each energy.\n- Solar energetic particles (SEPs): protons and other particles accelerated by the Sun that reach Earth.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper tests whether long-duration gamma rays from the 2014 September 1 solar flare, seen by Fermi-LAT, could come from CME-shock-accelerated protons that escape back toward the Sun, by modeling proton transport with AWSoM MHD results and an analytic time-scale relation.",
+    "plain": "Some solar eruptions give off gamma rays for hours, even when the eruption happens behind the Sun's edge as seen from Earth. This paper asks whether those gamma rays come from high-energy protons that were accelerated by a shock wave pushed out by a coronal mass ejection (a huge bubble of solar material) and then travelled back down toward the Sun. The authors use a computer model of the solar wind to estimate the conditions the protons pass through, and they outline how the proton spectrum would change on the way down to the surface.",
+    "why": "Understanding where the particles behind these long gamma-ray signals come from bears on how the Sun accelerates particles that can reach Earth as solar energetic particles, a hazard for spacecraft and astronauts. The text only describes a planned comparison with in situ particle measurements, so it is not yet shown whether the scenario holds."
    },
    "abstract": "This work is motivated by the Large Area Telescope (LAT) observations of long-duration gamma rays from flares associated often with fast Coronal Mass Ejections (CMEs), several of which originate behind the limb (BTL) of the Sun. Our aim is to test the feasibility of the scenario whereby the gamma-rays are produced by CME-shock accelerated particles escaping from downstream to the Sun by investigating the transport of protons in this process for the flare of 2014 September 1. We use results from the global MHD modeling by the Alfv\\'{e}n Wave Solar Model (AWSoM) to obtain the characteristics of downstream plasma, such as magnetic field geometry, Alfv\\'en speed, and energy density of turbulence. This allows us to evaluate the variations of the proton scattering mean free path with energy and distance from the CME-shock. Using an approximate analytic relation between the relevant time scales of the transport, we determine the energy dependence of the residence time at (or escape time from) different distances above the photosphere, and determine the evolution of the proton spectrum from the acceleration site to the photosphere. These results can be used to obtain the spectrum of the observed gamma-rays. Inversely, because of insignificant energy loss or gain during transport, this is a reversible process and the spectrum of protons at the photosphere, obtained from the observed gamma-rays, can be ``de-evolved\" back to the CME using the same algorithm. Comparison of these spectra with the in situ observations of Solar Energetic Particles (SEPs) could then shed light on their transport from the CME to the Earth.",
    "source": "arxiv"
@@ -63,12 +119,12 @@
    "primary_category": "astro-ph.IM",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A mission concept for MoonRISE, a nine-dipole, fiber-tethered low-frequency (0.1-30 MHz) radio interferometer on the lunar farside, with science goals on solar wind scattering, the lunar ionosphere, and Uranian radio emission.",
-    "plain": "The paper proposes a lunar mission that would listen to radio waves below 30 MHz, a range that is blocked from Earth's surface by the ionosphere and by human radio noise. The Moon's far side is shielded from Earth's radio chatter, so the team argues it is the quietest place nearby to make these measurements. The text describes the science goals, a proposed landing site, an operating plan, and the instrument design, but it does not report new measured results.",
-    "why": "Radio frequencies below 20 MHz have been hard to observe from anywhere, so a working instrument there could test how solar wind affects space weather and reveal Uranus's radio emissions, which have not been observed since Voyager 2 in 1986. Whether the mission is ever funded and built is outside what this paper shows.",
+    "ai": true,
     "background": "- Interferometer: several separated antennas whose signals are combined to act like one larger telescope with finer detail.\n- Ionosphere: a charged layer of the upper atmosphere that reflects or distorts radio waves below about 20 MHz, which is why these frequencies are hard to observe from Earth.\n- Radio frequency interference (RFI): human-made radio signals that swamp faint natural signals.\n- Type III solar radio bursts: fast radio emissions from the Sun caused by electron beams moving through the solar wind.\n- Solar radius: the Sun's radius as a unit of distance; 2-20 solar radii covers the region from near the Sun's surface out into the inner solar system.\n- Dipole: a simple rod-shaped antenna.\n- Regolith: the loose dust and rock layer covering the Moon's surface.\n- Ground penetrating radar: a radar that images underground layers.\n- Heritage: earlier missions or instruments whose designs this concept reuses (SunRISE and OVRO-LWA are named).",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A mission concept for MoonRISE, a nine-dipole, fiber-tethered low-frequency (0.1-30 MHz) radio interferometer on the lunar farside, with science goals on solar wind scattering, the lunar ionosphere, and Uranian radio emission.",
+    "plain": "The paper proposes a lunar mission that would listen to radio waves below 30 MHz, a range that is blocked from Earth's surface by the ionosphere and by human radio noise. The Moon's far side is shielded from Earth's radio chatter, so the team argues it is the quietest place nearby to make these measurements. The text describes the science goals, a proposed landing site, an operating plan, and the instrument design, but it does not report new measured results.",
+    "why": "Radio frequencies below 20 MHz have been hard to observe from anywhere, so a working instrument there could test how solar wind affects space weather and reveal Uranus's radio emissions, which have not been observed since Voyager 2 in 1986. Whether the mission is ever funded and built is outside what this paper shows."
    },
    "abstract": "The universe below 20 MHz remains one of space science's last unexplored frontiers, inaccessible from Earth due to its ionosphere and terrestrial radio frequency interference (RFI). We present the mission concept for the Moon Radio Interferometer for Science and Exploration (MoonRISE), an all-sky imaging, low-frequency radio telescope operating from 100 kHz-30 MHz from the lunar farside, the quietest radio environment in the inner Solar System. If realized, MoonRISE would be the first radio interferometer on the Moon and the first connected-element radio interferometer in space. Its science objectives are to (1) determine how solar wind turbulence drives plasma heating, acceleration, and space weather evolution in the inner heliosphere, by measuring the scattering of type III solar radio bursts between 2-20 solar radii; (2) constrain the density, structure, and variability of the lunar ionosphere and its effects on surface communication; and (3) resolve the plasma sources and magnetospheric dynamics that power Uranian Kilometric Radiation, observable for the first time since Voyager 2 in 1986. The same observations would yield all-sky maps of the low-frequency sky, subsurface structure at the landing site, and a characterization of the farside RF environment. The Radio Interferometer concept consists of nine 3.5 m dipoles embedded in a 1.5 km optical-fiber tether deployed by a rover, with power- and RF-over-fiber enabling RFI-free mapping. A rover-mounted Ground Penetrating Radar (300-2000 MHz) would measure regolith dielectric properties and bedrock depth to characterize the dipoles' RF performance. We describe the science objectives, a reference landing site in Lacus Luxuriae, a notional concept of operations, and the payload design and technology maturity. The concept builds on SunRISE and OVRO-LWA heritage and could serve as a basis for a future selected mission.",
    "source": "arxiv"

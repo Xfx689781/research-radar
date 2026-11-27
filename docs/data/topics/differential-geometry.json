@@ -1,7 +1,51 @@
 {
  "slug": "differential-geometry",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34037",
+   "title": "Three-dimensional harmonic critical metrics for the Einstein-Hilbert functional and self-similar Ricci flows",
+   "url": "https://arxiv.org/abs/2611.34037",
+   "authors": [
+    "Sergey E. Stepanov",
+    "Irina I. Tsyganok"
+   ],
+   "label": "arXiv:2611.34037v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "In three dimensions, the paper shows that closed harmonic critical metrics for the Einstein-Hilbert functional under Chen-Nagano variations are exactly the constant-sectional-curvature (space-form) metrics, linking this rigidity to self-similar Ricci flows and the smooth Poincaré theorem.",
+    "plain": "The paper studies a question about which shapes of curved three-dimensional space are \"balanced\" under a specific kind of smooth deformation that keeps volume fixed. The authors show that, for closed three-dimensional spaces, the only such balanced shapes are the ones where curvature is the same in every direction (space forms). They also describe some related mathematical structure, such as extra freedoms that do not change the geometry, and give explicit examples of self-similar flows.",
+    "why": "It is a rigidity result: a broad variational condition forces a very special geometry in dimension three, which ties together calculus of variations, Ricci flow, and the topology of 3-manifolds. Its exact reach beyond the stated setting is not clear from the abstract alone, so the significance should be judged after reading the full proofs.",
+    "background": "- A metric is a rule for measuring distances on a curved space; \"curvature\" describes how that space bends.\n- The Einstein-Hilbert functional is a number computed from a metric, and \"critical\" metrics are where it stops changing under small deformations, like a flat spot on a landscape.\n- Volume-preserving deformations keep the total size of the space fixed while changing its shape.\n- Ricci flow is a process that evolves a metric over time to smooth out curvature; self-similar flows change only by scaling and reshaping in a fixed pattern.\n- A closed manifold is a compact space with no boundary; a space form is one with the same curvature in every direction.\n- The Poincaré theorem (in its smooth version) concerns when a 3-dimensional space with trivial topology must be a sphere.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We address the three-dimensional harmonic analogue of Hilbert's variational problem: does criticality of the Einstein-Hilbert functional under volume-preserving Chen-Nagano variations force constant sectional curvature, and how is this rigidity related to Ricci flow and topology? Starting from the known characterization of compact harmonic critical metrics as gradient Ricci solitons, we use Ivey's classification to show that such metrics on closed three manifolds are precisely the space-form metrics, equivalently the stationary metrics of the volume-normalized Ricci flow. We also describe residual gauge one-forms, establish transversality of the Chen-Nagano gauge to infinitesimal diffeomorphism directions, and give explicit self-similar flows. The normalized Ricci-flow velocity is an admissible Chen-Nagano variation for n > = 3, and the smooth Poincar'e theorem admits an equivalent formulation in terms of the existence of harmonic critical metrics",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34738",
+   "title": "Left-Invariant Kundt Structures on Almost Abelian Lie Groups",
+   "url": "https://arxiv.org/abs/2611.34738",
+   "authors": [
+    "S. El Bourkadi",
+    "M. W. Mansouri"
+   ],
+   "label": "arXiv:2611.34738v1",
+   "primary_category": "math.DG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper classifies left-invariant Kundt structures on almost abelian Lie groups, giving algebraic existence criteria, admissible real Jordan forms by signature of the abelian ideal, and characterizations of Kundt pairs defining pp-waves and plane waves in arbitrary dimension.",
+    "plain": "The paper studies a special family of symmetric geometric spaces, described by smooth shapes with a consistent way of moving from point to point, and asks which of these spaces admit a particular kind of light-like direction structure. The authors give algebraic tests for when such structures exist and sort the possible forms by a sign pattern. They also identify which cases correspond to pp-waves and plane waves, with examples in four dimensions.",
+    "why": "Pp-waves and plane waves are standard exact solutions in general relativity, so a classification of their homogeneous versions in arbitrary dimension is of interest to geometers and mathematical physicists. The text does not indicate applications beyond this classification, so the wider significance is uncertain.",
+    "background": "- Lie group: a smooth space that is also a group, with symmetries that act the same way at every point (left-invariant means invariant under translation by the group).\n- Almost abelian Lie group: a group with a codimension-one abelian ideal, so it is nearly commutative.\n- Kundt structure: a geometry with a null (light-like) direction whose flow has special properties, central to Lorentzian geometry.\n- pp-wave and plane wave: exact spacetime solutions of Einstein's equations that model gravitational waves, with null directions that are parallel or recurrent.\n- Real Jordan form and signature: standard linear-algebra normal forms of a matrix and the count of positive versus negative eigen-directions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study left-invariant Kundt structures on almost abelian Lie groups. We establish algebraic existence criteria and characterize the admissible real Jordan forms according to the signature of the Abelian ideal. We then characterize the Kundt pairs defining pp-waves and plane waves in arbitrary dimension, with particular attention to recurrent and parallel null directions. Examples in dimension four illustrate both plane and non-plane pp-wave geometries.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33476",
    "title": "Nonlocal approximation of stable minimal surfaces with prescribed number of connected components",
@@ -16,12 +60,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper shows that strictly stable classical minimal hypersurfaces in a Euclidean ball can be approximated, for the fractional parameter s close to 1, by stable s-minimal surfaces in a smaller ball, and uses this to build stable nonlocal minimal surfaces with many connected components.",
-    "plain": "The paper studies soap-film-like surfaces that minimize area, in two versions: ordinary ones and \"nonlocal\" ones whose cost depends on long-range interactions, controlled by a parameter s. It shows that, when s is close to 1, a stable nonlocal version can be found that closely follows a given ordinary stable surface inside a smaller region. As a consequence, the authors can build such nonlocal surfaces with many separate pieces, as long as the number of pieces stays below a bound that grows as s approaches 1.",
-    "why": "It connects the classical theory of minimal surfaces with the newer nonlocal theory, showing that the two can be linked quantitatively. The text describes the bound on the number of components as optimal at least in dimensions 2 and 3, though it does not spell out why beyond that claim.",
+    "ai": true,
     "background": "- Minimal surface: a surface that locally has the least area for its boundary, like a soap film; \"stable\" means it stays minimal under small perturbations.\n- Mean curvature: a local measure of how a surface bends on average; a minimal surface has zero mean curvature.\n- Nonlocal perimeter/mean curvature: a version of area whose cost counts interactions between distant points, weighted by a parameter s in (0,1); as s tends to 1 it approaches the ordinary notion.\n- Foliation: a family of nested or parallel surfaces filling a region, used here as barriers (comparison surfaces).\n- Connected components: separate pieces of a surface.\n- Euclidean ball: a solid round region in ordinary space.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows that strictly stable classical minimal hypersurfaces in a Euclidean ball can be approximated, for the fractional parameter s close to 1, by stable s-minimal surfaces in a smaller ball, and uses this to build stable nonlocal minimal surfaces with many connected components.",
+    "plain": "The paper studies soap-film-like surfaces that minimize area, in two versions: ordinary ones and \"nonlocal\" ones whose cost depends on long-range interactions, controlled by a parameter s. It shows that, when s is close to 1, a stable nonlocal version can be found that closely follows a given ordinary stable surface inside a smaller region. As a consequence, the authors can build such nonlocal surfaces with many separate pieces, as long as the number of pieces stays below a bound that grows as s approaches 1.",
+    "why": "It connects the classical theory of minimal surfaces with the newer nonlocal theory, showing that the two can be linked quantitatively. The text describes the bound on the number of components as optimal at least in dimensions 2 and 3, though it does not spell out why beyond that claim."
    },
    "abstract": "We show that every strictly stable classical minimal hypersurface in a Euclidean ball can be approximated, for $s$ sufficiently close to $1$, by a stable $s$-minimal surface in a smaller ball. We also give an explicit lower bound on the size of the interval of admissible values of $s$. As a consequence, we construct stable nonlocal minimal surfaces with an arbitrarily large number $k$ of connected components in a bounded region, under the quantitative condition $k \\leq \\frac{C}{\\sqrt{1-s}}$, attaining an optimal result (at least in dimensions $2$ and $3$). As part of the proof of our main result, we obtain an auxiliary result of independent interest, providing quantitative estimates for foliations of constant mean curvature embedded hypersurfaces near a stable minimal surface. The resulting foliation supplies nonlocal barriers thanks to known results of uniform convergence of the nonlocal mean curvature to the classical one when $s \\to 1$.",
    "source": "arxiv"
@@ -39,12 +83,12 @@
    "primary_category": "math.DG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper defines equivariant cohomology for Lie groupoids and differentiable stacks acted on by Lie 2-groups, proves Morita invariance and a simplicial Cartan model, and applies this to toric symplectic stacks.",
-    "plain": "Mathematicians often study symmetric spaces by tracking how a group of symmetries acts on them. This paper extends that toolkit to \"stacks,\" which are generalized spaces that carry extra structure (such as orbifold-like singularities), and to the higher symmetry groups that act on them. The authors build an invariant of these symmetric objects, check that it does not depend on how the object is presented, and use it to compute an example.",
-    "why": "The work gives a well-defined way to measure symmetry-related topological information for stacks, which are increasingly used in geometry and mathematical physics. The text does not say how far the results reach beyond the toric symplectic examples it mentions, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- Lie group: a continuous group of symmetries, such as rotations.\n- Group action: a way a group moves the points of a space.\n- Cohomology: an algebraic invariant that counts topological features (holes, loops) of a space.\n- Equivariant cohomology: a version of cohomology that also takes a group's symmetry into account.\n- Lie groupoid: a presentation of a space, possibly with singularities, by a collection of points and arrows between them.\n- Stack / differentiable stack: a generalized space, often presented by a groupoid; two presentations can describe the same stack (Morita equivalence).\n- Lie 2-group: a higher-dimensional analogue of a Lie group, with symmetries between symmetries.\n- Symplectic manifold: a space with a geometric structure from classical mechanics; toric means it has a large symmetry torus acting on it.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper defines equivariant cohomology for Lie groupoids and differentiable stacks acted on by Lie 2-groups, proves Morita invariance and a simplicial Cartan model, and applies this to toric symplectic stacks.",
+    "plain": "Mathematicians often study symmetric spaces by tracking how a group of symmetries acts on them. This paper extends that toolkit to \"stacks,\" which are generalized spaces that carry extra structure (such as orbifold-like singularities), and to the higher symmetry groups that act on them. The authors build an invariant of these symmetric objects, check that it does not depend on how the object is presented, and use it to compute an example.",
+    "why": "The work gives a well-defined way to measure symmetry-related topological information for stacks, which are increasingly used in geometry and mathematical physics. The text does not say how far the results reach beyond the toric symplectic examples it mentions, so the wider significance is uncertain."
    },
    "abstract": "In this work we introduce equivariant cohomology for Lie groupoids and differentiable stacks. For Lie groupoids equipped with a strict action of a Lie 2-group, we define the corresponding equivariant cohomology via the Borel model and establish its Morita invariance. We also construct a simplicial Cartan model and prove that, under standard compactness assumptions, it recovers the equivariant cohomology defined via the Borel model. In the framework of stacky Lie group actions, we show that if a connected and \\'etale stacky Lie group acts on a differentiable stack admitting an equivariant atlas, then the stacky action admits a strict presentation by a Lie 2-group action. Furthermore, we prove that different choices of equivariant atlases yield equivariantly Morita equivalent presenting actions, giving rise to a well-defined notion of equivariant cohomology for differentiable stacks. As an application, we compute the equivariant cohomology of toric symplectic stacks.",
    "source": "arxiv"

@@ -1,7 +1,110 @@
 {
  "slug": "ai-news",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "news:99b93f3e10984935",
+   "title": "Clay helps sales teams win with Codex and ChatGPT",
+   "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+   "authors": [],
+   "label": "OpenAI News",
+   "primary_category": "openai.com",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A short announcement describing how Clay, a sales-data platform, has integrated ChatGPT and Codex so its users can research deals and build go-to-market plans, with GPT-6 models handling the reasoning.",
+    "plain": "Sales teams often spend hours gathering information about potential customers and deciding how to approach them. This item says that Clay, a company whose software collects and organizes business data, now connects with OpenAI's ChatGPT and Codex tools so users can research deals and turn that data into sales plans. The text says GPT-6 models do the reasoning, but it gives no details on how well this works.",
+    "why": "It is a small example of AI assistants being built into everyday business software, which is a trend many companies are pursuing. The text is too brief to show whether the integration performs better than existing methods, so its wider significance is unclear.",
+    "background": "- Clay: a software platform that gathers and organizes data about companies and contacts for sales and marketing teams.\n- Go-to-market (GTM): the plan a company uses to reach customers and sell a product, including who to target and how.\n- ChatGPT and Codex: OpenAI's AI tools; ChatGPT answers questions in conversation, while Codex is oriented toward writing and working with code.\n- GPT-6: named in the text as the model doing the reasoning; the text gives no further information about it.\n- Integration: a connection that lets one software product use another's tools inside its own interface.\n- The article is a brief promotional-style announcement and includes no data, results, or independent evaluation.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:958b4d502f59f32f",
+   "title": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
+   "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
+   "authors": [
+    "Tim Fernholz"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A news piece raising open questions about what Nvidia knew regarding the destination of its chips sold through Megaspeed, and whether Jensen Huang's personal relationship with a Megaspeed executive should have made Nvidia doubt that company's assurances.",
+    "plain": "The article is about an investigation into whether the chip maker Nvidia knew where its advanced processors ended up after they were sold to a company called Megaspeed. It also asks whether a personal relationship between Nvidia's chief executive, Jensen Huang, and a Megaspeed executive gave Nvidia reason to distrust what Megaspeed said about where the chips went. The text is short and only poses these questions, so it does not report any findings.",
+    "why": "Chip sales are closely watched because export rules limit where advanced AI chips can be shipped, so whether a seller knew its buyer was passing chips on could matter for compliance. The text does not give details of the investigation or any outcome, so its wider significance is unclear.",
+    "background": "- Nvidia makes graphics processors (GPUs) that are the main hardware for training and running AI models.\n- Governments, including the US, restrict exports of advanced chips to certain countries and require sellers to know where chips go (\"know your customer\" checks).\n- Megaspeed is the company named in the article; the text does not explain its business beyond this.\n- Jensen Huang is Nvidia's chief executive.\n- The article's central claim is an open question about knowledge and motive, not an established fact.\n- The text is brief and gives no details of the investigation, sources, or responses from the companies.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The central question for investigators is what Nvidia knew about where those chips ended up and whether Huang's affair with a Megaspeed executive gave the company reason to doubt Megaspeed's assurances.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:7a5947019eec714b",
+   "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
+   "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
+   "authors": [
+    "Kirsten Korosec"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A short news piece reporting that Nvidia CEO Jensen Huang has said he still sees a formal succession plan as creating unnecessary hierarchy, framed against the company's recent period without its founder.",
+    "plain": "This is a brief news item about Jensen Huang, the head of the chip maker Nvidia, and his view that a formal plan for who would take over his job is not needed because it would add unnecessary layers of rank. The article's opening line says the company recently spent two weeks finding out what it is like to operate without its founder. The text provided is only one sentence, so it does not explain what that absence was or give details of the plan itself.",
+    "why": "Leadership and succession questions at a company as large as Nvidia can matter to investors, customers and the wider AI chip market. The text is too thin to say more about the stakes or what the absence involved, so its wider significance is unclear.",
+    "background": "- Nvidia is a major maker of graphics and AI computing chips.\n- Jensen Huang co-founded Nvidia and has been its chief executive.\n- A succession plan is a formal arrangement for who would replace a leader and when.\n- The article's claim that the company was without its founder for two weeks is given only in the opening line; the text provided does not explain the cause.\n- The source text is a single sentence, so the full article should be read for context.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:02839082ff9ffa67",
+   "title": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+   "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+   "authors": [
+    "James O'Donnell"
+   ],
+   "label": "Artificial intelligence – MIT Technology Review",
+   "primary_category": "technologyreview.com",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A news piece reporting that a prominent philosopher disputes the reasoning Anthropic gave for treating AI consciousness or sentience as a possible investment risk, though the provided text is cut off before the argument is laid out.",
+    "plain": "This article covers a disagreement over whether AI systems might be conscious. The AI company Anthropic reportedly flagged the possibility that AI could have feelings or awareness as a risk for investors, and a well-known philosopher is said to reject the company's reasoning. The excerpt we have stops before it explains the philosopher's objections or the company's full argument.",
+    "why": "Companies deciding how to talk about AI minds affects investors, policy and public expectations about machine moral status. Because the excerpt is short, it is unclear how strong the philosopher's objection is, so treat the piece as a starting point rather than a settled assessment.",
+    "background": "- Consciousness and sentience: whether a system has subjective experience, such as feeling pain or having an inner point of view. This is hard to test, even in humans and animals.\n- Moral status: whether an entity deserves ethical consideration because of what it may experience.\n- Anthropic: an AI company that builds large language models such as Claude.\n- Investment risk: a company's disclosure of possible problems that could affect its business or reputation, often listed in documents for investors.\n- The Algorithm: the weekly AI newsletter from MIT Technology Review, where this piece first appeared.\n- The excerpt is incomplete; the philosopher's name and specific arguments are not given in the text provided.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing. Given “the way we approach model sentience and moral…",
+   "source": "rss"
+  },
+  {
+   "uid": "news:5f077d12f5abe5fa",
+   "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+   "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+   "authors": [
+    "Lucas Ropek"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Nvidia CEO Jensen Huang, speaking at an all-hands staff meeting, reportedly thanked the White House, said he is in therapy, and apologized to employees while expressing gratitude for a \"second chance\" to lead the company.",
+    "plain": "Jensen Huang, the founder and leader of the chip company Nvidia, held a meeting with all of his staff on a Tuesday. In it he said sorry to employees, thanked the White House, and mentioned that he is going to therapy. He also said he was grateful to be given a second chance to run the company.",
+    "why": "The article is short and gives few details, so the reasons for the apology, the White House thanks, or the \"second chance\" are not explained in the text. Nvidia is a major maker of the chips used for AI, so leadership changes or public statements from its head can matter to the industry, but the text alone does not show what is behind these remarks.",
+    "background": "- Nvidia is a company that designs computer chips, especially the graphics processors widely used to train and run AI systems.\n- Jensen Huang co-founded Nvidia and has been its chief executive (CEO), the top leader.\n- An \"all-hands\" meeting is a company-wide gathering where leadership addresses all employees at once.\n- The White House is the office of the U.S. President; companies often deal with it on trade, export rules, and government policy.\n- The text does not say what the \"second chance\" refers to, so the context is missing.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
+   "source": "rss"
+  },
   {
    "uid": "news:94305b427e5aac0a",
    "title": "Nvidia hits pause on chip shipments to Southeast Asia",
@@ -13,12 +116,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Nvidia has reportedly told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as U.S. efforts to keep advanced AI chips out of China tighten.",
-    "plain": "The chipmaker Nvidia has asked the companies that build its servers to stop sending them to four Southeast Asian countries: Malaysia, Singapore, Thailand and Indonesia. The reason given is that the United States is pushing harder to stop advanced AI chips from reaching China. The article is short and does not say how long the pause will last.",
-    "why": "Nvidia's chips are central to AI development, and shipping routes through neighboring countries are one way such chips could reach restricted buyers. The text does not give details on how the pause works or what it will affect, so its wider impact is unclear.",
+    "ai": true,
     "background": "- Nvidia designs AI processors (GPUs) and sells them mostly inside complete servers, which are built by partner manufacturers.\n- U.S. export controls limit the sale and transfer of advanced AI chips to China, for security and competition reasons.\n- Southeast Asian countries such as Malaysia, Singapore, Thailand and Indonesia have become transit and assembly hubs for electronics, which is why rules affecting them matter.\n- \"Pause shipments\" here means an order to hold deliveries; the article does not say whether it is permanent or tied to a specific rule.\n- The text is a brief news item with no official statement quoted, so details should be checked against further reporting.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "Nvidia has reportedly told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as U.S. efforts to keep advanced AI chips out of China tighten.",
+    "plain": "The chipmaker Nvidia has asked the companies that build its servers to stop sending them to four Southeast Asian countries: Malaysia, Singapore, Thailand and Indonesia. The reason given is that the United States is pushing harder to stop advanced AI chips from reaching China. The article is short and does not say how long the pause will last.",
+    "why": "Nvidia's chips are central to AI development, and shipping routes through neighboring countries are one way such chips could reach restricted buyers. The text does not give details on how the pause works or what it will affect, so its wider impact is unclear."
    },
    "abstract": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
    "source": "rss"
@@ -34,12 +137,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Meta has added its Muse AI assistant directly into Instagram direct messages, so users no longer need to switch to the separate Muse app to use it.",
-    "plain": "Meta, the company that owns Instagram, is letting people use its Muse AI assistant inside Instagram's private messaging feature. Before this change, a user who wanted the assistant had to leave Instagram and open a different app. The article is short and reports the change itself, not how well the assistant performs.",
-    "why": "It shows a common industry direction: AI helpers being placed inside apps people already use daily rather than in separate tools. The text does not say how many people use it or what effect it will have, so its wider importance is unclear.",
+    "ai": true,
     "background": "- Meta owns Instagram and Facebook.\n- Muse is the name of Meta's AI assistant, as the article describes it; the article does not explain its abilities.\n- \"DMs\" means direct messages, the private chat feature in Instagram.\n- An \"AI agent\" is a program that can carry out tasks or answer questions for a user; the article uses this term without detail.\n- Integration here means building one product into another so they work together.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "Meta has added its Muse AI assistant directly into Instagram direct messages, so users no longer need to switch to the separate Muse app to use it.",
+    "plain": "Meta, the company that owns Instagram, is letting people use its Muse AI assistant inside Instagram's private messaging feature. Before this change, a user who wanted the assistant had to leave Instagram and open a different app. The article is short and reports the change itself, not how well the assistant performs.",
+    "why": "It shows a common industry direction: AI helpers being placed inside apps people already use daily rather than in separate tools. The text does not say how many people use it or what effect it will have, so its wider importance is unclear."
    },
    "abstract": "The new integration gets rid of the need for users to toggle between Instagram and the Muse app when they want to interact with the AI agent.",
    "source": "rss"
@@ -55,12 +158,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "An opinion-style piece argues that the launch of Grand Theft Auto VI, a handcrafted video game, shows that human-made work can succeed commercially even in a period focused on efficiency, and it contrasts this with Anthropic's entry into public markets the same day.",
-    "plain": "This short article is about a major video game, Grand Theft Auto VI, which launched on the same day that the AI company Anthropic began trading on the public stock market. The text says the game was built by hand, with a lot of human care, and that it became one of the most successful entertainment launches ever. The author uses this to argue that being efficient is not always the same as being valuable.",
-    "why": "It offers a cultural counterpoint to the AI industry's focus on automation and speed, and it touches on how markets value human craft. The text is brief and gives no sales figures or detailed evidence, so its claims should be read as the author's opinion rather than established fact.",
+    "ai": true,
     "background": "- Grand Theft Auto VI: a large, long-awaited video game from Rockstar Games, the studio behind earlier titles in the series.\n- Anthropic: an AI company that develops the Claude family of AI models; the article says it entered the public market that day.\n- \"Going public\": selling shares of a company to ordinary investors on a stock exchange.\n- \"Efficiency\" here means producing the most output for the least effort or cost, often a goal of automation.\n- The article is an opinion-style commentary with no detailed data, so the claims about success are not independently verified in the text.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "An opinion-style piece argues that the launch of Grand Theft Auto VI, a handcrafted video game, shows that human-made work can succeed commercially even in a period focused on efficiency, and it contrasts this with Anthropic's entry into public markets the same day.",
+    "plain": "This short article is about a major video game, Grand Theft Auto VI, which launched on the same day that the AI company Anthropic began trading on the public stock market. The text says the game was built by hand, with a lot of human care, and that it became one of the most successful entertainment launches ever. The author uses this to argue that being efficient is not always the same as being valuable.",
+    "why": "It offers a cultural counterpoint to the AI industry's focus on automation and speed, and it touches on how markets value human craft. The text is brief and gives no sales figures or detailed evidence, so its claims should be read as the author's opinion rather than established fact."
    },
    "abstract": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time.",
    "source": "rss"
@@ -76,12 +179,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Reports say Amazon and Meta are discussing a possible deal that would end a two-month blockade of the AI agent Muse.",
-    "plain": "Two large tech companies, Amazon and Meta, are reportedly negotiating a deal that would lift a block that has been in place on an AI program called Muse for about two months. The article is very short and does not say who imposed the block, why, or what terms are being discussed.",
-    "why": "Disputes over access to AI tools can affect how widely such tools are used and who controls them. The text is too thin to say more, and it is unclear whether a deal has been reached.",
+    "ai": true,
     "background": "- An \"AI agent\" is a software program that can carry out tasks on its own, such as acting on a user's behalf.\n- A \"blockade\" here likely means access to Muse has been restricted, but the article does not explain the mechanism.\n- Amazon and Meta are both large technology companies with major AI businesses.\n- The article reports talks only; no agreement is confirmed in the text.\n- The source of the report and the reasons for the blockade are not given.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "Reports say Amazon and Meta are discussing a possible deal that would end a two-month blockade of the AI agent Muse.",
+    "plain": "Two large tech companies, Amazon and Meta, are reportedly negotiating a deal that would lift a block that has been in place on an AI program called Muse for about two months. The article is very short and does not say who imposed the block, why, or what terms are being discussed.",
+    "why": "Disputes over access to AI tools can affect how widely such tools are used and who controls them. The text is too thin to say more, and it is unclear whether a deal has been reached."
    },
    "abstract": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
    "source": "rss"
@@ -95,12 +198,12 @@
    "primary_category": "openai.com",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A short company feature describing how Intentful, a firm, uses an AI assistant called \"dot\" (named Aria in one case, used by Marina Petrova) to research websites, draft proposals, flag messages, and resolve issues.",
-    "plain": "This short article describes how a company called Intentful uses an AI assistant named \"dot\" to take on routine office work. According to the text, the assistant, which goes by Aria for one employee, helps look up information on websites, prepare proposal documents, point out important messages, and sort out problems. The text does not report any measured results.",
-    "why": "It is a customer-style example of AI tools being used to free staff for other work, which is a common theme in workplace AI adoption. The text gives no figures or independent evidence, so it shows one company's described use rather than proof of benefit.",
+    "ai": true,
     "background": "- \"dot\" appears to be the name of an AI assistant product; the article does not explain how it works.\n- Intentful is the company featured; Marina Petrova is the named user.\n- \"Proactively flagging\" means the assistant surfaces messages or issues without being asked.\n- Proposals here are business documents, such as bids or project plans.\n- The title's claim of \"more time for growth\" is the company's framing, not a measured outcome in the text.\n- The source is thin: only one short paragraph, with no details on costs, accuracy, or how the tool was built.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A short company feature describing how Intentful, a firm, uses an AI assistant called \"dot\" (named Aria in one case, used by Marina Petrova) to research websites, draft proposals, flag messages, and resolve issues.",
+    "plain": "This short article describes how a company called Intentful uses an AI assistant named \"dot\" to take on routine office work. According to the text, the assistant, which goes by Aria for one employee, helps look up information on websites, prepare proposal documents, point out important messages, and sort out problems. The text does not report any measured results.",
+    "why": "It is a customer-style example of AI tools being used to free staff for other work, which is a common theme in workplace AI adoption. The text gives no figures or independent evidence, so it shows one company's described use rather than proof of benefit."
    },
    "abstract": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
    "source": "rss"

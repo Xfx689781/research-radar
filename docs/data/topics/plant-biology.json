@@ -1,7 +1,65 @@
 {
  "slug": "plant-biology",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.768977",
+   "title": "Whole-genome resequencing and indoor phenotyping resolve the genetic architecture of drought stress response in tepary bean",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768977v1",
+   "authors": [
+    "Srinivasan, A.",
+    "Yu, L.",
+    "Nichols, R.",
+    "Miller, E.",
+    "Voss, A.",
+    "Nelson, A. D. L.",
+    "Pauli, D.",
+    "Porch, T.",
+    "Julkowska, M. M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.768977 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Whole-genome resequencing of 363 tepary bean accessions combined with indoor drought and control phenotyping of 282 of them maps 113 significant SNPs to three drought loci and six control loci, with the largest drought locus on chromosome 8 separating wild from cultivated lines.",
+    "plain": "Tepary bean is a legume that grows in dry places, and scientists want to know which genes let it cope with drought. The team sequenced the DNA of 363 bean lines, grew 282 of them for two weeks at either well-watered or very dry soil, and measured growth, water use and photosynthesis. They then linked differences in the DNA to differences in those measurements.",
+    "why": "Drought tolerance is a central problem for crop breeding, and this study separates the genetic basis of growth under drought from growth under normal conditions. The finding that the strongest drought-linked region is tied to domestication suggests that breeding history shaped drought response, though the text does not show how this translates to field performance.",
+    "background": "- Tepary bean (Phaseolus acutifolius) is a legume from arid regions, related to common bean.\n- Accessions are samples of a crop or wild plant kept in a collection; wild, weedy, cultivated and breeding lines are different groups.\n- Whole-genome resequencing reads the full DNA of many individuals to find single-nucleotide polymorphisms (SNPs), single-letter variations in the genetic code.\n- Association mapping checks which DNA variants occur more often in plants showing a given trait, to locate genes behind it.\n- Evapotranspiration is the total water lost from soil and leaves; canopy density is how much leaf cover the plant has.\n- Locus means a specific position on a chromosome; haplotype means a group of nearby variants inherited together.\n- Domestication is the process by which wild plants were selected and bred for human use.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Tepary bean (Phaseolus acutifolius A. Gray) is an arid-adapted legume, whose drought resilience is widely reported but poorly resolved genetically. Here we resequenced 363 wild, weedy, cultivated and breeding accessions and recovered 6.9 million single-nucleotide polymorphisms (SNPs). We phenotyped 282 of the accessions for growth, evapotranspiration and photosynthesis over 14 days at 60% or 10% soil water-holding capacity. Cultivated and breeding lines grew roughly twice as fast as wild accessions, and the proportional reduction in growth under drought did not differ between these germplasm classes. Evapotranspiration separated the classes under full irrigation, but converged under drought, making it the most plastic trait we measured. Canopy density predicted how much water a plant used, but not how well it tolerated losing it. Association mapping across 104 rank-normalized measurements yielded 113 significant SNPs at 46 positions, which resolved to three drought and six control loci. Three drought loci corresponded to 98 of the 113 SNPs, with the largest one localized on chromosome 8. This locus separates wild from cultivated accessions, and resolves to no gene. Three of the eight remaining loci carry candidates whose interval, expression under drought and published mechanism agree: a cytokinin oxidase, a CIPK1-clade kinase and the antenna subunit LHCB5. The most structure-independent locus localizes to 26 kb but implicates genes with no published role in water relations. Growth under drought and control conditions therefore rest on separate genetic bases, and the variation with the largest effect under deficit lies in haplotypes affected by domestication.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.25.769266",
+   "title": "An RHD6-directed gene network sustains root hair growth under combined low phosphate and salt stress in Arabidopsis",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769266v1",
+   "authors": [
+    "Ibeas, M. A.",
+    "Perez, J.",
+    "Padilla, G.",
+    "Tapia-Reyes, P.",
+    "Garcia, F.",
+    "Salinas-Grenet, H.",
+    "Acha, R.",
+    "Meneses, C.",
+    "Estevez, J. M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769266 v1",
+   "primary_category": "plant biology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "In Arabidopsis, induction of the transcription factor RHD6 keeps root hairs growing under combined low phosphate and salt stress, and RNA sequencing plus promoter and co-expression analysis yields a candidate network of 396 direct RHD6 targets, with HEC3 singled out as a modulator of the root hair response.",
+    "plain": "Plants often face low phosphate in the soil and salty conditions at the same time, and salt tends to stop the tiny hair-like outgrowths on roots from growing. The authors switched on single plant regulatory genes one at a time and found that turning on RHD6 kept root hairs growing under both stresses together, which normal plants could not do. Sequencing the genes that changed in those roots gave a list of candidate genes that RHD6 may directly control, and mutant plants lacking HEC3 did not show the usual shortening of root hairs under the combined stress.",
+    "why": "Root hairs are the main route by which plants take up phosphate and water, so understanding how they keep growing under combined stress could matter for crop performance on salty, nutrient-poor soils. The text does not show any direct crop or field application, and the HEC3 finding rests on a limited set of mutant tests in a model plant.",
+    "background": "- Root hairs: thin tubular extensions of root cells that absorb water and nutrients such as phosphate.\n- Phosphate (inorganic phosphate): an essential nutrient that is often scarce in soil.\n- Salt stress: high sodium levels that slow plant growth and water uptake.\n- Transcription factor: a protein that switches sets of genes on or off; RHD6 is one that helps drive root hair growth.\n- Inducible system (beta-estradiol-inducible TRANSPLANTA lines): a lab method that turns a gene on by adding a chemical, so its effects can be compared.\n- RNA sequencing: measuring which genes are more or less active, here comparing RHD6-induced and control roots under dual stress.\n- Promoter motif scanning and co-expression analysis: computer methods that predict which genes a transcription factor is likely to control directly.\n- T-DNA insertion mutants: plants with a disrupted gene, used to test what that gene does.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Phosphate deficiency and salinity can coincide, but how roots integrate the two stresses is poorly understood. Root hairs (RHs) elongate under low inorganic phosphate and are inhibited by salt. Screening {beta}-estradiol-inducible TRANSPLANTA lines for 18 RH-expressed transcription factors (TFs) in Arabidopsis (Arabidopsis thaliana), we found that induction of ROOT HAIR DEFECTIVE 6 (RHD6) maintained RH growth under combined low phosphate (5 {micro}M) and salt (100 mM NaCl), which inhibited wild-type RH growth. RNA sequencing of RHD6-induced roots under dual stress identified 1,811 differentially expressed genes. Up-regulated genes were enriched for RH differentiation, tip growth and cell wall organization; down-regulated genes were enriched for phenylpropanoid and suberin metabolism, hydrogen peroxide catabolism, photosynthesis and responses to wounding and jasmonic acid. Promoter motif scanning combined with ensemble co-expression analysis defined a core network of 396 candidate direct RHD6 targets, including 31 TFs. The TFs with the largest expression changes were HEC3, HEC1 and EIL4. In T-DNA insertion mutants, dual stress did not shorten hec3 RHs; eil4 and hec1 had shorter RHs on the control medium but no significant change in relative inhibition. These data provide a resource of RHD6-dependent genes and identify HEC3 as a modulator of the RH response to combined stress.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.24.768924",
    "title": "Augmenting chlorophyll fluorescence-based analysis of plant photosynthesis with genetically encoded biosensors",
@@ -22,12 +80,12 @@
    "primary_category": "plant biology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper combines genetically encoded fluorescent biosensors for stromal pH, stromal MgATP2-, and cytosolic pH and NADH/NAD+ with time- and wavelength-resolved chlorophyll fluorescence (ChloroSpec L1) in attached Arabidopsis leaves to link photosynthetic light reactions with subcellular metabolism.",
-    "plain": "Plants turn light into chemical energy in their leaves, and the chloroplast's internal chemistry and the cell's metabolism are closely tied to that process. This paper describes a way to watch both at once in living, attached leaves: glowing sensor proteins inside cells report on chemistry, while a light-based instrument measures how the leaf's photosynthetic machinery responds. The authors report that the chloroplast interior became more alkaline in light and returned when light was removed, and that under fluctuating light the chloroplast pH and cytosolic NAD redox state were linked to changes in photosystem II efficiency and non-photochemical quenching.",
-    "why": "Photosynthesis responds to changing light in ways that are hard to observe inside living tissue, so a method that reads cell chemistry alongside leaf-level fluorescence could help explain how plants regulate themselves in variable conditions. The text describes this as a platform rather than a finished explanation, so its broader significance for crop or plant science is not established here.",
+    "ai": true,
     "background": "- Photosynthesis has \"light reactions\" that capture light energy in membranes of chloroplasts (the organelles in plant cells) and make energy carriers such as ATP.\n- Chlorophyll fluorescence: chlorophyll re-emits a small amount of absorbed light; its changes reveal how efficiently photosystem II uses light and how much energy is dissipated as heat (non-photochemical quenching).\n- Stroma: the fluid inside chloroplasts where many metabolic reactions happen; its pH and ATP levels change with light.\n- Genetically encoded biosensors: fluorescent proteins engineered to change brightness when a specific molecule or pH changes, introduced into the plant's own genome.\n- NADH/NAD+ is a redox pair (electron carriers) that reflects the cell's energy and metabolic state.\n- Wavelength-resolved measurement means analyzing the colour/spectrum of emitted light, not just its intensity.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper combines genetically encoded fluorescent biosensors for stromal pH, stromal MgATP2-, and cytosolic pH and NADH/NAD+ with time- and wavelength-resolved chlorophyll fluorescence (ChloroSpec L1) in attached Arabidopsis leaves to link photosynthetic light reactions with subcellular metabolism.",
+    "plain": "Plants turn light into chemical energy in their leaves, and the chloroplast's internal chemistry and the cell's metabolism are closely tied to that process. This paper describes a way to watch both at once in living, attached leaves: glowing sensor proteins inside cells report on chemistry, while a light-based instrument measures how the leaf's photosynthetic machinery responds. The authors report that the chloroplast interior became more alkaline in light and returned when light was removed, and that under fluctuating light the chloroplast pH and cytosolic NAD redox state were linked to changes in photosystem II efficiency and non-photochemical quenching.",
+    "why": "Photosynthesis responds to changing light in ways that are hard to observe inside living tissue, so a method that reads cell chemistry alongside leaf-level fluorescence could help explain how plants regulate themselves in variable conditions. The text describes this as a platform rather than a finished explanation, so its broader significance for crop or plant science is not established here."
    },
    "abstract": "The status of the light reactions of photosynthesis is tightly linked to subcellular physiology and metabolism. Yet, monitoring how both these levels are coordinated in living plants has remained challenging to explore. Here, we combine genetically encoded biosensors with time- and wavelength-resolved chlorophyll fluorescence spectroscopy (ChloroSpec L1) in attached Arabidopsis thaliana leaves. Stromal pHluorin2 reported a reversible, light-dependent alkalinization in a single mesophyll layer of leaf discs imaged by confocal microscopy and over the illuminated area of attached leaves recorded by ChloroSpec, where a distinct overshoot appeared at all irradiances. Measurement of the light-response dynamics of stromal MgATP2-, cytosolic pH, and cytosolic NADH/NAD+ illustrates the flexibility of the approach to different biosensors and subcellular localizations. Under prolonged fluctuating light, simultaneous recordings linked progressive stromal alkalinization and slow cytosolic NAD redox integration to wavelength-dependent shifts in photosystem II efficiency and non-photochemical quenching. By coupling programmable illumination with multiplexed metabolic and spectroscopic readouts in planta, this platform bridges cellular bioenergetics and leaf physiology to dissect photosynthetic regulation under dynamic environments.",
    "source": "biorxiv"
@@ -47,12 +105,12 @@
    "primary_category": "plant biology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A study of how D-, A- and B-type cyclins (cell-cycle regulators) and their CDK partners differ in function and binding in the moss Physcomitrium patens, using expression tracking, overexpression, loss-of-function mutants and yeast two-hybrid binding assays.",
-    "plain": "Cells divide in a timed sequence, and proteins called cyclins help set the timing by partnering with enzymes called CDKs. This paper looks at three families of cyclins in a small moss, asking what each one does and which partners it binds. The authors report that the families overlap in some roles but each also has its own job, such as D-type cyclins mainly starting cell division and B-type cyclins mainly controlling the mitosis step.",
-    "why": "Plants have expanded their cell-cycle gene families over evolution, and this work tests what that expansion means in a non-vascular land plant, which helps show how division control was organized early in plant evolution. The text also reports that overexpressing the B-type cyclin stopped gametophore (leafy moss shoot) development, suggesting complex tissues are especially sensitive to errors in mitotic control; the broader significance for other plants is not established by this text alone.",
+    "ai": true,
     "background": "- Cell cycle: the ordered steps a cell goes through to copy its contents and divide (G1, S phase for DNA copying, G2, and M phase for mitosis).\n- Cyclins: proteins whose levels rise and fall through the cycle; they partner with cyclin-dependent kinases (CDKs), enzymes that switch cell-cycle steps on.\n- Cyclin classes: D-type acts early (entry and growth), A-type acts across S to G2/M, B-type acts mainly in mitosis.\n- Physcomitrium patens: a moss used as a lab model; its life stage called the gametophore is the leafy shoot.\n- Overexpression and knockout: boosting or removing a gene to see what changes.\n- Yeast two-hybrid: a lab test in yeast that checks whether two proteins physically bind.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A study of how D-, A- and B-type cyclins (cell-cycle regulators) and their CDK partners differ in function and binding in the moss Physcomitrium patens, using expression tracking, overexpression, loss-of-function mutants and yeast two-hybrid binding assays.",
+    "plain": "Cells divide in a timed sequence, and proteins called cyclins help set the timing by partnering with enzymes called CDKs. This paper looks at three families of cyclins in a small moss, asking what each one does and which partners it binds. The authors report that the families overlap in some roles but each also has its own job, such as D-type cyclins mainly starting cell division and B-type cyclins mainly controlling the mitosis step.",
+    "why": "Plants have expanded their cell-cycle gene families over evolution, and this work tests what that expansion means in a non-vascular land plant, which helps show how division control was organized early in plant evolution. The text also reports that overexpressing the B-type cyclin stopped gametophore (leafy moss shoot) development, suggesting complex tissues are especially sensitive to errors in mitotic control; the broader significance for other plants is not established by this text alone."
    },
    "abstract": "Cyclins and cyclin-dependent kinases (CDKs) are central cell-cycle regulators that have undergone diversification in land plants; however, the functional implications of this divergence remain incompletely understood, particularly in non-vascular lineages. Here, we systematically dissected the roles of the three principal cyclin classes--D, A, and B--in the model moss Physcomitrium patens. We show that CYCD2 exhibits constitutive expression throughout the cell cycle, CYCA2 is degraded during mitosis and transcriptionally activated post-mitotically, whereas CYCB1 is M-phase-specific and rapidly depleted at anaphase. Overexpression and loss-of-function analyses revealed functional divergence among these classes: cyclin D primarily governs cell cycle entry and vegetative growth; cyclin B regulates mitotic progression with its overexpression causing division failure and arresting gametophore development; cyclin A regulates S-to-G2/M transition and exhibits overlapping functions with both D- and B-type cyclins, contributing to vegetative growth, mitotic fidelity, and gametophore development. Yeast two-hybrid assays showed that CYCB2 associates broadly with both CDKAs and CDKBs, CYCA2 preferentially interacts with CDKAs, and CYCD1 binds CDKAs along with a subset of CDKBs. Collectively, our results reveal both overlapping and class-specific contributions of D-, A-, and B-type cyclins to cell-cycle progression and development in P. patens, and suggest that complex tissues (gametophores) are particularly vulnerable to mitotic cyclin dysfunction. These findings provide a foundation for understanding how cyclin diversification underpins developmental plasticity across different contexts in non-vascular land plants.",
    "source": "biorxiv"

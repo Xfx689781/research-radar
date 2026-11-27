@@ -1,7 +1,57 @@
 {
  "slug": "ecology-evolution",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.768994",
+   "title": "Trade-off between resource excretion and reliance maintains biodiversity of a cross-feeding mutualism",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768994v1",
+   "authors": [
+    "Yu, Y.",
+    "Bisesi, A. T.",
+    "Mandyam Dhati, A.",
+    "Kambouridis, I.",
+    "Parikh, H.",
+    "Goyal, A.",
+    "Abreu, C. I."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.768994 v1",
+   "primary_category": "ecology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A mathematical model of a bacteria–yeast cross-feeding mutualism shows that increased dependence on exchanged resources, not only reduced sharing of resources (\"cheating\"), can drive community collapse, and that a trade-off between excretion and reliance can allow several bacterial auxotrophs to coexist.",
+    "plain": "Many microbes trade food with each other: one species gives away a nutrient and another gives back a different one. This paper uses a computer model of a bacteria-yeast pair, where bacteria break down lactose and share galactose with yeast in return for amino acids, to ask what makes such partnerships break down. The model suggests that a partner that leans too heavily on the exchange can cause collapse, just as a partner that stops sharing can, and that trade-offs between sharing and depending on exchange can let several bacterial species live together.",
+    "why": "The usual worry about unstable partnerships focuses on cheaters who stop contributing; this work argues that dependence on the partner matters too, which could change how stability of mutual relationships is studied. The text reports only model results, so how well these predictions hold for real microbial communities is not shown here.",
+    "background": "- Mutualism: a relationship where both partners benefit from each other.\n- Cross-feeding: one organism releases (excretes) a nutrient that another organism uses.\n- Auxotroph: an organism that cannot make a certain nutrient itself and must obtain it from others (here, amino acids).\n- Cheater: a partner that takes benefits while giving little or nothing back.\n- Phase diagram: a map showing which parameter combinations lead to stable coexistence versus collapse.\n- Coexistence and biodiversity: several species persisting together in one community.\n- The model is theoretical; it is a two-species system (bacteria and yeast) expanded to several bacterial species.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Microbial mutualisms, in which species exchange resources through cross-feeding, are common in nature. Yet the stability of mutualistic interactions is debated, and cross-feeding communities are vulnerable to cheaters that benefit from the excretions of others but reduce or cease their own excretion of resources, which can lead to community collapse. Here, we demonstrate with a mathematical model that in addition to decreased excretion, increased reliance on cross-fed resources can also lead to community collapse. In a two-species model of bacteria that metabolizes lactose and provides yeast with galactose, in exchange for amino acids from yeast, we show that the set of excretion and reliance parameters that maximizes biomass is adjacent to a region of community collapse in the phase diagram. By expanding the model to include multiple bacterial auxotrophs competing for lactose and either separate or overlapping amino acids, we also demonstrate that a trade-off between reliance and excretion can enable coexistence within the bacterial mutualist guild. Finally, we show that intraguild coexistence of bacteria favors yeast, increasing biodiversity but decreasing total community biomass. Our results argue that the question of cheaters should be paired with analysis of reliance on mutualistic exchange, and that both of these parameters modulate biodiversity and the stability of mutualisms to collapse.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.25.769002",
+   "title": "Sodium-enriched nectar increases seed set in low diversity prairies",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769002v1",
+   "authors": [
+    "Darst, A. L.",
+    "Lamm, M. E.",
+    "Haddad, N. M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769002 v1",
+   "primary_category": "ecology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A field experiment testing whether sodium-enriched nectar raises seed set in black-eyed Susan (Rudbeckia hirta) planted in prairies of high versus low plant diversity, with a supplementary look at floral visitation.",
+    "plain": "Flowers make nectar, a sugary liquid that feeds pollinators such as bees and butterflies, and some pollinators also need trace minerals like sodium that plants themselves hardly use. This study grew black-eyed Susan plants in sodium-enriched or ordinary soil, placed them in prairie plots seeded with either many or few plant species, and counted the seeds they produced. The authors report that sodium-treated plants made more seeds in the low-diversity prairies but not in the high-diversity ones.",
+    "why": "It suggests that a trace nutrient in nectar can affect plant reproduction, and that the effect depends on the surrounding plant community, which matters for how pollination works in restored or changing habitats. The text reports only one plant species and one season-level comparison, so how far it generalizes is unclear.",
+    "background": "- Nectar: the sugary liquid flowers offer pollinators; it can also contain small amounts of minerals.\n- Micronutrient: a substance needed in very small amounts; here, sodium, which plants need little of but many pollinators require.\n- Seed set: the proportion of flower ovules that develop into seeds, a common measure of plant reproductive success.\n- Germination rate: the share of seeds that sprout, used to check whether seed quality changed.\n- Context dependency: the idea that the same interaction can produce different results depending on surrounding conditions, such as neighboring plant diversity.\n- Prairie plots seeded with high or low diversity: experimental grasslands planted with many versus few plant species.\n- Supplementary experiment: a smaller side study; here it looked at which flower visitors came to the plants.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Plant-pollinator interactions depend on floral traits and background plant community properties, yet the role of nectar micronutrients in these interactions is poorly understood. Sodium is a micronutrient of particular interest because although plants need little to no sodium, animal pollinators require it. It is unknown whether sodium-enriched nectar increases plant fitness in animal-pollinated plants and how this may be affected by the broader plant community. To test this, we grew black-eyed Susan (Rudbeckia hirta) plants in sodium-enriched or control soil. We placed pairs of sodium-addition and control plants in prairies seeded with high or low diversity and measured seed set and germination rate. In a supplementary experiment, we explored differences in floral visitation. We found that black-eyed Susan plants grown in sodium-enriched soil had sodium-enriched nectar. Seed set increased in sodium-addition plants in prairies seeded with low diversity but not in prairies seeded with high diversity. Germination rate was not affected by sodium addition. Altogether, our study highlights the importance of considering both micronutrients and context dependency in understanding plant reproduction and complex species interactions.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.767764",
    "title": "Resonance-organized phase-locking, extinction and phase-dependent rescue in periodically forced populations with delayed Allee effects",
@@ -15,12 +65,12 @@
    "primary_category": "ecology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A numerical study of a periodically forced Hutchinson-type population model with delayed density regulation and a strong Allee effect, mapping how forcing frequency and amplitude, resonance, Hopf-driven oscillations, and phase-dependent rescue shape extinction risk.",
-    "plain": "This paper asks when a population that is hit by repeating environmental swings (such as seasonal changes) is most likely to die out. The authors ran computer simulations of a population model in which individuals struggle when numbers are too low (a strong Allee effect) and growth responds to past conditions with a time lag. They report that extinction is most sensitive when the environmental rhythm matches the population's own natural oscillation, and that some populations recover only when the timing of their dip relative to the environmental cycle is favorable.",
-    "why": "Extinction risk under changing environments is a central question in conservation, and the paper argues that severity, abundance, or regularity alone cannot predict it. The findings are from a single theoretical model, so their relevance to real species is not established by the text and would need field data to test.",
+    "ai": true,
     "background": "- Hutchinson-type model: a population growth equation with a time delay, so today's growth depends on numbers in the past.\n- Allee effect: a population that falls too small declines further because mates or cooperation become scarce; a strong Allee effect has a threshold below which extinction follows.\n- Periodic forcing: an outside influence that repeats on a fixed cycle, such as seasons.\n- Resonance: when the forcing frequency matches a system's natural frequency, responses can be amplified.\n- Arnold tongues: regions in parameter space where the population's oscillation locks onto the forcing frequency.\n- Bifurcation: a qualitative change in behavior as a parameter varies; Hopf bifurcations create oscillations, saddle-node bifurcations create or destroy periodic orbits.\n- Lyapunov exponent: a measure of whether nearby trajectories diverge (chaotic) or converge (regular).",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A numerical study of a periodically forced Hutchinson-type population model with delayed density regulation and a strong Allee effect, mapping how forcing frequency and amplitude, resonance, Hopf-driven oscillations, and phase-dependent rescue shape extinction risk.",
+    "plain": "This paper asks when a population that is hit by repeating environmental swings (such as seasonal changes) is most likely to die out. The authors ran computer simulations of a population model in which individuals struggle when numbers are too low (a strong Allee effect) and growth responds to past conditions with a time lag. They report that extinction is most sensitive when the environmental rhythm matches the population's own natural oscillation, and that some populations recover only when the timing of their dip relative to the environmental cycle is favorable.",
+    "why": "Extinction risk under changing environments is a central question in conservation, and the paper argues that severity, abundance, or regularity alone cannot predict it. The findings are from a single theoretical model, so their relevance to real species is not established by the text and would need field data to test."
    },
    "abstract": "Population persistence under environmental fluctuations depends not only on the magnitude of external disturbances but also on their interaction with endogenous population dynamics. However, how environmental resonance interacts with delayed density dependence and Allee effects to determine extinction risk remains poorly understood. Here, we investigate a periodically forced Hutchinson-type population model incorporating delayed density regulation and a strong Allee effect. Through numerical simulations, Lyapunov exponent analysis, and bifurcation continuation, we characterize the organization of population dynamics and extinction across environmental forcing frequencies and amplitudes. We find that extinction vulnerability is strongly organized by resonance between endogenous population oscillations and environmental forcing, with the lowest forcing amplitudes required for extinction occurring near the principal 1:1 resonance. The parameter space exhibits a hierarchy of frequency-locking regions consistent with Arnold tongues, including structures bounded by saddle-node bifurcations of periodic orbits. We further demonstrate that the carrying-capacity-to-Allee-threshold ratio governs the emergence of intrinsic oscillations through a Hopf bifurcation, fundamentally reorganizing the population's response to environmental forcing. Counterintuitively, lowering the Allee threshold can increase extinction vulnerability by strengthening destabilizing delayed feedback. Finally, we identify a history-dependent rescue mechanism through which populations can recover after temporarily crossing below the nominal Allee threshold. Successful recovery events exhibit systematic phase dependence relative to environmental forcing. Together, these findings demonstrate that extinction risk cannot be inferred from environmental severity, population abundance, or dynamical regularity alone. Instead, persistence emerges from the interaction between environmental timescales, endogenous oscillations, and history-dependent opportunities for recovery.",
    "source": "biorxiv"
@@ -39,12 +89,12 @@
    "primary_category": "ecology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A study of an unusually early spring emergence of the ground-nesting bee Melissodes tepidus timberlakei, using five years of nest monitoring at one site and 119 years of regional occurrence records, linking emergence timing to temperature and precipitation in the western United States.",
-    "plain": "Researchers noticed a type of ground-nesting bee coming out of its nests unusually early in spring 2026. They combined five years of nest observations from one site with more than a century of museum-style records of where this bee was found across the western United States. They report that warmer temperatures went with earlier emergence, while rainfall did not appear to.",
-    "why": "Bee emergence timing matters because it has to line up with when flowers bloom for pollination to work, and climate change could pull these schedules apart. The text supports a modest claim about temperature and emergence, and suggests monitoring ground nests as a useful tool; how far the findings generalize beyond this bee and these sites is not shown in the summary.",
+    "ai": true,
     "background": "- Phenology: the timing of recurring seasonal events, such as when insects emerge or plants flower.\n- Ground-nesting bees: bees that dig nests in soil, so their emergence can be watched by monitoring nest sites.\n- Melissodes tepidus timberlakei: a long-horned bee species (a type of solitary bee) found in the western United States.\n- Occurrence records: historical collection and sighting records that show where and when a species was found.\n- Temperature versus precipitation: the study compares how warmth and rainfall each relate to emergence timing.\n- Correlation: the study shows an association between climate and emergence, not proof that temperature directly causes it.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A study of an unusually early spring emergence of the ground-nesting bee Melissodes tepidus timberlakei, using five years of nest monitoring at one site and 119 years of regional occurrence records, linking emergence timing to temperature and precipitation in the western United States.",
+    "plain": "Researchers noticed a type of ground-nesting bee coming out of its nests unusually early in spring 2026. They combined five years of nest observations from one site with more than a century of museum-style records of where this bee was found across the western United States. They report that warmer temperatures went with earlier emergence, while rainfall did not appear to.",
+    "why": "Bee emergence timing matters because it has to line up with when flowers bloom for pollination to work, and climate change could pull these schedules apart. The text supports a modest claim about temperature and emergence, and suggests monitoring ground nests as a useful tool; how far the findings generalize beyond this bee and these sites is not shown in the summary."
    },
    "abstract": "Understanding the drivers of bee phenology is important for predicting how climate change may alter the temporal overlap between bee activity and plant flowering, with consequences for pollination. We documented unusually early emergence of Melissodes tepidus timberlakei Cockerell, 1926 at a perennial nesting site in spring 2026 and examined the relationship between emergence and climatic conditions with (1) five years of nesting observations at a single site, and (2) 119 years of M. tepidus occurrence records from across the western United States. We found that warming temperatures were associated with earlier emergence, whereas precipitation was not, and we emphasize the utility of monitoring ground nests to understand emergence drivers in bees during ongoing climate change.",
    "source": "biorxiv"

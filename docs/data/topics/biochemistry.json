@@ -1,7 +1,62 @@
 {
  "slug": "biochemistry",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.768724",
+   "title": "Identification of Functional NOD2-Specific Aptamers Using APT-SNAP Microarrays to Screen Zebrafish Nod-like Receptors",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768724v1",
+   "authors": [
+    "Messa, P. E.",
+    "Pearson, K. S.",
+    "Conti, B. J.",
+    "Vogt, D. T.",
+    "Nicol, N. R.",
+    "Kumar, V.",
+    "Ozers, E. S.",
+    "Warren, C. L.",
+    "Ozers, M. S."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.768724 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper reports DNA aptamers, selected with the high-density APT-SNAP microarray platform, that bind zebrafish NOD2 and several other zebrafish NOD-like receptors, and validates the lead NOD2 binders with ELASA, pull-down, biolayer interferometry and fluorescence microscopy.",
+    "plain": "Scientists studying the immune system need reliable tools that grab onto specific proteins so they can be seen and measured. For zebrafish, a common research animal, good antibodies for a family of immune sensors called NOD-like receptors are scarce. The authors used a microarray screen to find short DNA sequences (aptamers) that stick to these zebrafish proteins, then tested the best candidates for NOD2 in several lab assays.",
+    "why": "Reliable detection reagents are a practical bottleneck for studying immune sensors that are linked to inflammatory disease and cancer, so a validated set of NOD2 binders could make zebrafish work easier. The text describes the approach as generalizable to other hard-to-target proteins, but it does not test that claim beyond this one family, so its broader reach remains untested here.",
+    "background": "- NOD-like receptors (NLRs): proteins inside cells that detect signs of microbial invasion or tissue damage and switch on immune responses.\n- Zebrafish (Danio rerio): a small freshwater fish widely used in biology because it is transparent and easy to study genetically.\n- Antibodies: protein tools that bind a target molecule; used for detection but can fail for some targets.\n- Aptamers: short single-stranded DNA or RNA molecules that fold into shapes that bind a target, acting as synthetic alternatives to antibodies.\n- Microarray: a glass or chip surface carrying many different molecules at once, allowing thousands of binding tests in parallel.\n- Affinity and specificity: how tightly a reagent binds its target and how little it binds other things.\n- Biolayer interferometry (BLI): a light-based method for measuring how strongly two molecules bind in real time.\n- Pull-down: a method that uses a bait molecule to fish its partners out of a mixture for detection.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "NOD-like receptors (NLRs) are intracellular immune sensors that monitor for pathogen- and damage-associated molecular patterns (PAMPs, DAMPs) and initiate innate immune signaling pathways upon detection. Dysregulation of NLR signaling contributes to numerous inflammatory diseases and cancers, yet mechanistic studies of NLR proteins are limited by the availability of reliable detection reagents, particularly in emerging model organisms such as zebrafish (Danio rerio). Although zebrafish provide a powerful system for studying innate immunity, few validated antibodies exist for zebrafish NLR proteins. Here, we describe the development of aptamer-based detection reagents targeting zebrafish NLRs using the APT-SNAP platform, a high-density aptamer microarray technology that enables rapid identification of protein-binding nucleic acid ligands. Using this approach, we identified multiple DNA aptamers that bind zebrafish NLR proteins and selected candidates targeting NOD2 for further characterization. Orthogonal validation assays, which include enzyme-linked apta-sorbent assays (ELASAs), pull-downs, biolayer interferometry (BLI), and fluorescence microscopy, confirmed that the lead aptamers bind zebrafish NOD2 with high affinity and specificity, and function effectively in biochemical and cellular assays. These results demonstrate that APT-SNAP generated validated, native-state affinity reagents for a zebrafish immune protein where commercial antibodies failed, providing new molecular tools for investigating NLR biology in zebrafish. More broadly, this strategy establishes a generalizable approach for generating affinity reagents against challenging protein targets that lack reliable antibodies.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.768040",
+   "title": "Antifungal and Antibiofilm Activity of a Thermostable Lipid Transfer Protein-Enriched Fraction from Capsicum annuum L. Seeds against Candidozyma auris",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768040v1",
+   "authors": [
+    "Vera Gonzalez, S. M.",
+    "Larrondo, C.",
+    "Claver, S.",
+    "Moreno-Romero, J.",
+    "Garcia-Pardo, J.",
+    "Obregon, W. D."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.768040 v1",
+   "primary_category": "biochemistry",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A heat-stable, lipid-transfer-protein-enriched fraction from Capsicum annuum (pepper) seeds shows antifungal and antibiofilm activity against multidrug-resistant Candidozyma auris and other Candida species in laboratory tests.",
+    "plain": "Candidozyma auris is a yeast that can cause serious hospital infections and often resists common antifungal drugs. The researchers took a water extract of pepper seeds, heated it to keep only the heat-tolerant parts, and found that the leftover fraction was rich in two small plant proteins, Ca-nsLTP1 and Ca-nsLTP2. In lab dishes, this fraction slowed or killed several Candida and C. auris strains, including some that did not respond to fluconazole, and it also reduced yeast films (biofilms) on surfaces.",
+    "why": "Drug-resistant fungal infections are hard to treat, so new molecules with different mechanisms are of interest. The text is limited to lab results with a fraction rather than purified proteins, and it does not show whether this works in people or animals, so its practical value is still unknown.",
+    "background": "- Candidozyma auris (formerly Candida auris): a drug-resistant yeast that causes hospital outbreaks.\n- Antifungal: a substance that kills or stops fungi.\n- MIC (minimum inhibitory concentration): the lowest amount that stops growth; MFC: the lowest amount that kills the fungus.\n- Biofilm: a sticky, layered community of cells attached to a surface, which is harder to kill than single cells.\n- Lipid transfer proteins (nsLTPs): small plant proteins that bind fatty molecules; some plant nsLTPs have antimicrobial effects.\n- Heat-treated fraction: a portion of an extract that survives heating, here used to concentrate the small proteins.\n- Trypsin inhibition: the fraction also blocks an enzyme, trypsin, in a lab assay.\n- Fluconazole: a common antifungal drug to which some C. auris strains are resistant.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "The emergence of multidrug-resistant Candidozyma auris (C. auris) has intensified the search for antifungal molecules with alternative structures and mechanisms of action. Here, we investigated Capsicum annuum L. seeds as a source of thermostable antifungal peptides. Thermal fractionation of a crude aqueous seed extract (RBPCE) yielded a heat-treated fraction (RBPHT) enriched in low-molecular-weight proteins. LC-MS/MS identified the type I and type II non-specific lipid-transfer proteins Ca-nsLTP1 and Ca-nsLTP2 as its predominant constituents. Compared with RBPCE, RBPHT displayed increased trypsin-inhibitory potency. RBPHT inhibited C. albicans, C. krusei, and C. auris isolates from clades I, III, and IV, including isolates showing no detectable response to fluconazole under the conditions tested. Against a representative South American clade IV isolate, the nsLTP-enriched fraction exhibited minimum inhibitory and fungicidal concentrations of 180 and 360 g/mL, respectively. RBPHT also suppressed early biofilm establishment by C. albicans and C. auris and markedly reduced viable biofilm-associated populations when applied after initial cell adhesion. These findings provide the first evidence of antifungal and antibiofilm activity by a Capsicum seed-derived nsLTP-enriched fraction against C. auris and position Ca-nsLTP1 and Ca-nsLTP2 as promising plant-derived candidates for further antifungal development.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768175",
    "title": "Domain Architecture Analysis Guides the Discovery of Unusual Glycyl Radical Enzyme Fusion Proteins",
@@ -16,12 +71,12 @@
    "primary_category": "biochemistry",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Using sequence similarity networks and domain architecture analysis, the authors identify glycyl radical enzymes in photosynthetic eukaryotes (diatoms and related microalgae) that are fused to their own radical-activating enzyme, and show one such fusion protein works as an active pyruvate formate-lyase.",
-    "plain": "Enzymes that work without oxygen, called glycyl radical enzymes, are known mostly from bacteria and other microbes. This paper looks for new members of this family using computer maps of protein sequence similarity, and finds an unexpected group in algae that feed on light, where each enzyme is physically joined to the helper protein that switches it on.",
-    "why": "It suggests that oxygen-free metabolism may play a role in ecologically important algae such as diatoms, which the text describes as a previously unappreciated role. It also shows that looking at how protein domains are arranged can reveal new enzymes in large families; the broader significance beyond these findings is not established in the text.",
+    "ai": true,
     "background": "- Enzymes are protein catalysts; this group uses a glycyl radical, a carbon-centered reactive species on a glycine residue, to drive hard chemical reactions.\n- The radical is installed by a separate \"activating enzyme\" (GRE-AE), which here is physically fused to the catalytic subunit.\n- Anaerobic metabolism means energy production in the absence of oxygen.\n- Sequence similarity network (SSN): a map that groups proteins by how similar their amino acid sequences are.\n- Domain architecture: the arrangement of structural building blocks within a protein.\n- Pyruvate formate-lyase: a known glycyl radical enzyme that splits pyruvate into acetyl-CoA and formate.\n- Cryogenic electron microscopy (cryo-EM): imaging of frozen molecules to reveal their 3D shape; here at low resolution.\n- Diatoms: single-celled photosynthetic algae.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using sequence similarity networks and domain architecture analysis, the authors identify glycyl radical enzymes in photosynthetic eukaryotes (diatoms and related microalgae) that are fused to their own radical-activating enzyme, and show one such fusion protein works as an active pyruvate formate-lyase.",
+    "plain": "Enzymes that work without oxygen, called glycyl radical enzymes, are known mostly from bacteria and other microbes. This paper looks for new members of this family using computer maps of protein sequence similarity, and finds an unexpected group in algae that feed on light, where each enzyme is physically joined to the helper protein that switches it on.",
+    "why": "It suggests that oxygen-free metabolism may play a role in ecologically important algae such as diatoms, which the text describes as a previously unappreciated role. It also shows that looking at how protein domains are arranged can reveal new enzymes in large families; the broader significance beyond these findings is not established in the text."
    },
    "abstract": "Glycyl radical enzymes (GREs) use a post-translationally installed glycyl radical cofactor to catalyze chemically challenging reactions that are critical for anaerobic metabolism in microorganisms. Despite its importance, the GRE superfamily remains undercharacterized in part due to the vastness of its sequence space. Herein, we use sequence similarity network (SSN) analysis to survey the sequence diversity of the GRE superfamily and identify previously uncharacterized subfamilies. By analyzing the conserved domain architecture of each uncharacterized cluster, we find an unexpected cluster of GRE sequences from diverse photosynthetic eukaryotes. Bioinformatic, biochemical, and structural studies together demonstrate that these GREs have their catalytic subunits fused with a GRE-activating enzyme (GRE-AE). We characterize a highly expressed member of this subfamily as a functional pyruvate formate-lyase that is activated by its fused AE. Low resolution cryogenic electron microscopy confirms that this protein is a naturally occurring fusion, with a central dimeric GRE domain and one GRE-AE domain on each side. We further find that the GRE/GRE-AE fusion proteins are transcriptionally active in a wide range of diatoms and related microalgae. Overall, these findings uncover a previously unappreciated role for GRE-mediated anaerobic metabolism in ecologically important phototrophs, reveal that an attached AE can install a glycyl radical species on its cognate GRE, and show that domain architecture analysis is a powerful strategy to find novel enzymes among large enzyme superfamilies.",
    "source": "biorxiv"
@@ -41,12 +96,12 @@
    "primary_category": "biochemistry",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Bioinformatic and structural comparison of the bacterial protein-translocation motor SecA with nucleic acid helicases identifies \"pseudo-helicase\" motifs, and site-directed mutants show these motifs help couple ATP use to polypeptide transport through SecYEG.",
-    "plain": "Cells must push newly made proteins across membranes, and in bacteria a motor protein called SecA does this by using energy from ATP, the cell's fuel molecule. This paper looks at SecA's resemblance to helicases, enzymes that unwind DNA and RNA, and asks how the motor uses fuel and changes shape as it moves a protein chain through a channel. The authors identified several regions in SecA that match those helicase motifs and changed specific amino acids in them, then tested the altered proteins in a reconstituted system.",
-    "why": "The text reports that these motifs matter for regulating ATP-coupled transport and let the motor sense the protein being moved, which helps explain how chemical energy becomes mechanical movement in this machine. The text does not establish how far these findings apply beyond bacteria or to other motors, so that connection is uncertain.",
+    "ai": true,
     "background": "- Protein translocation: moving unfolded protein chains across a membrane, here through the SecYEG channel.\n- SecA: a motor protein that uses ATP (cellular fuel) and pushes the protein through in steps, described as a Brownian ratchet (random thermal motion rectified by binding and release).\n- Helicases: enzymes that use ATP to separate DNA or RNA strands; they share structural motifs (conserved short sequence patterns) with SecA.\n- Pseudo-helicase motif: a region resembling a helicase motif that may no longer do the original job.\n- Site-directed mutagenesis: changing single amino acids to test what each one contributes.\n- Reconstituted system: purified parts recombined in a test tube to measure activity without the whole cell.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Bioinformatic and structural comparison of the bacterial protein-translocation motor SecA with nucleic acid helicases identifies \"pseudo-helicase\" motifs, and site-directed mutants show these motifs help couple ATP use to polypeptide transport through SecYEG.",
+    "plain": "Cells must push newly made proteins across membranes, and in bacteria a motor protein called SecA does this by using energy from ATP, the cell's fuel molecule. This paper looks at SecA's resemblance to helicases, enzymes that unwind DNA and RNA, and asks how the motor uses fuel and changes shape as it moves a protein chain through a channel. The authors identified several regions in SecA that match those helicase motifs and changed specific amino acids in them, then tested the altered proteins in a reconstituted system.",
+    "why": "The text reports that these motifs matter for regulating ATP-coupled transport and let the motor sense the protein being moved, which helps explain how chemical energy becomes mechanical movement in this machine. The text does not establish how far these findings apply beyond bacteria or to other motors, so that connection is uncertain."
    },
    "abstract": "The ubiquitous Sec translocon is a highly conserved machine specialised for polypeptide translocation through lipid bilayers. In the bacterial system, the cytoplasmic motor ATPase SecA associates with the core channel complex SecYEG, through which unfolded polypeptides are driven across the membrane by a Brownian ratchet mechanism. How the energy released during the ATP-hydrolytic cycle is transduced to the conformational changes required for preprotein secretion is not well understood. Here, we re-explore the known homology between SecA and the nucleic acid helicases to better understand the fundamentals of dynamic energy coupling during biopolymer transport: how ATP-turnover is regulated by the engaged polypeptide, and how the ensuing conformational changes bring about transport. Using bioinformatics and comparative structural analysis we identify several motifs within SecA equivalent to those required for helicase activity. We then probe their involvement in protein translocation experimentally by site specific amino acid substitution and the analysis of reconstituted variant activity. The results show that the pseudo-helicase translocation motifs are important for regulating ATP-coupled protein transport, enabling the motor to sense and respond to the translocating polypeptide.",
    "source": "biorxiv"

@@ -1,7 +1,51 @@
 {
  "slug": "theoretical-physics",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33287",
+   "title": "Chaotic singularities inside vacuum black holes",
+   "url": "https://arxiv.org/abs/2611.33287",
+   "authors": [
+    "Robie A. Hennigar",
+    "Ayan K. Patra"
+   ],
+   "label": "arXiv:2611.33287v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper constructs stationary, asymptotically locally AdS5 black holes with regular, triaxially squashed horizons whose homogeneous interiors realize the cosmological billiard of generic five-dimensional vacuum gravity, giving an algebraic criterion for interior chaos and showing that regular-horizon solutions locally access an open set of billiard trajectories.",
+    "plain": "Near a spacelike singularity (the 'end of time' inside a black hole), Belinski, Khalatnikov and Lifshitz conjectured that gravity behaves chaotically, but no vacuum black hole had been shown to do this. This paper builds five-dimensional black holes whose insides follow a known chaotic 'billiard' model of gravity, and it identifies a simple algebraic test on the horizon data that is needed for that chaos to occur.",
+    "why": "It offers the first explicit vacuum black hole examples where the BKL chaotic-singularity picture is realised, which bears on how singularities inside black holes behave. The text does not establish wider implications, so the connections beyond this setting are uncertain.",
+    "background": "- Black hole interior: the region inside the horizon, where the future is a spacelike singularity.\n- Vacuum general relativity: Einstein's gravity with no matter, only spacetime geometry.\n- BKL conjecture: near generic singularities, space evolves chaotically, with changes that look like bouncing between walls.\n- Cosmological billiard: a simplified model in which the evolution is a ball bouncing in a region bounded by walls; chaos corresponds to certain bounce patterns.\n- AdS (anti-de Sitter) space: a curved spacetime with negative curvature, used here as the asymptotic background; 'locally' refers to the local geometry being AdS.\n- Horizon: the boundary of the black hole's region of no escape; 'regular' means it has no singularity there and 'triaxially squashed' means it is deformed unequally along three directions.\n- Causal exterior: the outside region has no causal pathologies.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "According to the conjecture of Belinski, Khalatnikov and Lifshitz, general relativity gives rise to chaotic dynamics in the vicinity of generic spacelike singularities. However, no vacuum black hole has been shown to exhibit this behaviour. Here we construct stationary, asymptotically locally AdS$_5$ black holes with regular, triaxially squashed horizons and causal exteriors, whose homogeneous interiors realize the cosmological billiard of generic five-dimensional vacuum gravity. We identify a simple algebraic condition on the horizon data that is necessary for the interior billiard to be chaotic, and show that solutions with regular horizons locally access an open set of billiard trajectories.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33744",
+   "title": "Late-time OTOCs in Toda conformal field theory",
+   "url": "https://arxiv.org/abs/2611.33744",
+   "authors": [
+    "Giwan Kim",
+    "Masahito Yamazaki"
+   ],
+   "label": "arXiv:2611.33744v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Late-time out-of-time-order correlators of semi-degenerate primary fields in A_{N-1} Toda conformal field theory are analyzed for N=2 (Liouville), N=3, and N>=4, using a spectral reduction and crossing-symmetry constraints.",
+    "plain": "This paper studies a scrambling-type measure, an out-of-time-order correlator, in a family of two-dimensional quantum field theories called Toda theories. The authors look at how this measure behaves at very late times and find that in the simplest case (Liouville theory) it decays like t to the power of minus 3/2, which they say corrects an earlier claim of a constant limit. For the rank-3 case they report that the late-time value approaches a pure phase, and they find that this does not extend to higher rank under their assumptions.",
+    "why": "It gives a concrete, checkable example of how late-time chaos-type diagnostics behave in an exactly solvable conformal field theory, and it corrects a prior result for Liouville theory. The rank-4 and higher conclusion depends on assumptions the text states explicitly (completeness of the reduced expansion), so its scope should be read with that caveat.</why>\n<parameter name=\"background\">- Out-of-time-order correlator (OTOC): a quantity that measures how quickly information spreads and gets scrambled in a quantum system; its late-time behavior is used as a probe of chaos.\n- Conformal field theory (CFT): a quantum field theory in two dimensions with enough symmetry to be solved exactly, often used as a toy model of gravity and holography.\n- Liouville and Toda theories: families of CFTs labeled by a rank N; Liouville is the N=2 case.\n- Primary fields and semi-degenerate fields: special operators whose behavior fixes the correlator; their \"weights\" label how they transform.\n- Spectral integral and continuum edge: the late-time behavior is governed by a sum over intermediate states, split into discrete states and a continuum; the edge of the continuum sets the slowest decay.\n- Crossing symmetry: a consistency requirement relating different ways of grouping the same correlator.\n- Braiding phase: a phase factor acquired when operators are exchanged around each other.",
+    "background": "",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study late-time out-of-time-order correlators (OTOCs) of semi-degenerate primary fields in two-dimensional $A_{N-1}$ Toda conformal field theory. In Liouville theory ($N=2$), we find that the OTOC decays as $t^{-3/2}$ when the continuum edge dominates, correcting a previously reported constant limit. For $N=3$, a transverse contour pinch reduces the spectral integral to one dimension. Assuming that the reduced expansion is complete, in the continuous phase the regulated edge behaves as a discrete state, and the OTOC approaches a pure braiding phase. As we check numerically, the edge block is a free-field correlator in a charge-neutral Weyl frame; this explains the pure phase and is consistent with crossing symmetry. For both $N=2$ and $N=3$, a dominant discrete residue gives a constant late-time limit. For $N\\geq4$, the same one-dimensional reduction violates a crossing bound on the lowest intermediate weight of a positive diagonal expansion. Hence the $N=2,3$ phase diagram does not extend to higher rank without additional contributions below the reduced continuum edge or outside a positive diagonal expansion.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34026",
    "title": "Kiselev black hole from semiclassical gravity with conformal anomaly",
@@ -14,12 +58,12 @@
    "primary_category": "gr-qc",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Solves the semiclassical Einstein equations with both type-A and type-B conformal anomaly contributions for a special relation between central charges and the cosmological constant, obtaining an exact Kiselev-type black hole metric.",
-    "plain": "This paper studies how quantum effects of matter fields near a black hole can change the black hole's shape in spacetime. The authors include the \"type-B\" part of a quantum effect called the conformal anomaly, not just the \"type-A\" part that earlier work used. For one specific relation between the theory's central charges and the cosmological constant, they find the equations can be solved exactly, giving a black hole of the known Kiselev form.",
-    "why": "Quantum corrections from the conformal anomaly are a candidate way to modify black hole geometry near where classical gravity breaks down, so a closed-form solution is a useful reference point. The text presents this mainly as a stepping stone toward studying black holes under the full anomaly; its broader physical significance is not established in the text.",
+    "ai": true,
     "background": "- Black hole: a region of spacetime whose gravity is so strong that nothing escapes; described by a metric (a formula for distances and times).\n- Semiclassical gravity: Einstein's gravity with the average quantum stress-energy of matter fields added as a source.\n- Conformal anomaly: a quantum effect where the trace of the stress-energy tensor does not vanish, even for massless fields, under rescaling of distances. It is split into type-A and type-B parts, with coefficients called central charges.\n- Cosmological constant: a term in Einstein's equations describing a background energy that affects large-scale spacetime curvature.\n- Kiselev black hole: a known family of black hole solutions surrounded by an energy-density field with a specific equation of state.\n- Exact solution: a closed-form answer to the equations, as opposed to a numerical or approximate one.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Solves the semiclassical Einstein equations with both type-A and type-B conformal anomaly contributions for a special relation between central charges and the cosmological constant, obtaining an exact Kiselev-type black hole metric.",
+    "plain": "This paper studies how quantum effects of matter fields near a black hole can change the black hole's shape in spacetime. The authors include the \"type-B\" part of a quantum effect called the conformal anomaly, not just the \"type-A\" part that earlier work used. For one specific relation between the theory's central charges and the cosmological constant, they find the equations can be solved exactly, giving a black hole of the known Kiselev form.",
+    "why": "Quantum corrections from the conformal anomaly are a candidate way to modify black hole geometry near where classical gravity breaks down, so a closed-form solution is a useful reference point. The text presents this mainly as a stepping stone toward studying black holes under the full anomaly; its broader physical significance is not established in the text."
    },
    "abstract": "Investigating black hole physics in semi-classical gravitational theory is an interesting and important direction. When the backreaction of the conformal anomaly-induced effective stress-energy tensor is taken into account, the black hole spacetime can be largely altered which changes many properties of the black hole. In this work, rather than restricting our attention to the type-A anomaly, we incorporate the type-B anomaly and investigate how it modifies the spacetime structure obtained when only the type-A anomaly is considered. We find that for a specific relation between the central charges and the cosmological constant, the semiclassical Einstein equations can be solved analytically, yielding a metric that takes the exact form of the Kiselev black hole. After deriving the solution, we further discuss the properties of this new black hole solutions. Our work serves as an essential stepping stone for studying black hole geometries under the full conformal anomaly.",
    "source": "arxiv"
@@ -38,12 +82,12 @@
    "primary_category": "hep-th",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Studies the non-perturbative spectrum of GGK theory (the non-relativistic limit of string theory on AdS5×S5), showing in light-cone and static gauges that the bosonic spectrum on several vacua matches free massive and massless scalars in AdS2 at all loops, and that the quantum correction to the classical energy vanishes under regularised Hurwitz series summation.",
-    "plain": "This paper looks at a simplified, non-relativistic version of string theory, a framework that describes tiny vibrating strings moving in a curved space. The authors work out the full set of possible energy levels for these strings, including quantum effects at every order of approximation. They find that, for the cases they study, the energies come from free particles in a lower-dimensional curved space, and that the quantum corrections cancel out, leaving only the classical energy.",
-    "why": "It tests a conjecture by de Leeuw, Fontanella and Nieto-García (arXiv:2403.09563) about this limit, and it bears on the broader question of how exactly solvable the spectrum of strings in AdS/CFT is. The reliance on regularised Hurwitz series for the vanishing correction is a technical choice whose broader physical meaning is not explained in the text, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- String theory: models in which particles are tiny one-dimensional strings whose vibrations give the particle spectrum.\n- AdS5×S5: a specific curved background (five-dimensional anti-de Sitter space times a five-sphere) central to the AdS/CFT correspondence.\n- Non-relativistic limit: a simplified regime where the speed of light is effectively taken to be large, so the theory becomes easier to solve.\n- GGK string: a string solution in this non-relativistic limit, studied here.\n- Light-cone and static gauge: choices of coordinates that remove redundant freedom in describing the string.\n- Vacuum and classical energy: a stable lowest-energy configuration of the string and its energy before quantum effects.\n- All-loop / quantum correction: effects from quantum fluctuations summed over all orders of approximation.\n- AdS2 scalar fields: particles of spin zero living in a two-dimensional anti-de Sitter space.\n- Hurwitz series regularisation: a mathematical technique for assigning finite values to divergent sums.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Studies the non-perturbative spectrum of GGK theory (the non-relativistic limit of string theory on AdS5×S5), showing in light-cone and static gauges that the bosonic spectrum on several vacua matches free massive and massless scalars in AdS2 at all loops, and that the quantum correction to the classical energy vanishes under regularised Hurwitz series summation.",
+    "plain": "This paper looks at a simplified, non-relativistic version of string theory, a framework that describes tiny vibrating strings moving in a curved space. The authors work out the full set of possible energy levels for these strings, including quantum effects at every order of approximation. They find that, for the cases they study, the energies come from free particles in a lower-dimensional curved space, and that the quantum corrections cancel out, leaving only the classical energy.",
+    "why": "It tests a conjecture by de Leeuw, Fontanella and Nieto-García (arXiv:2403.09563) about this limit, and it bears on the broader question of how exactly solvable the spectrum of strings in AdS/CFT is. The reliance on regularised Hurwitz series for the vanishing correction is a technical choice whose broader physical meaning is not explained in the text, so its wider significance is uncertain."
    },
    "abstract": "We study the non-perturbative spectrum of the non-relativistic limit of string theory in AdS$_5\\times$S$^5$, also known as GGK theory. In light-cone gauge, we show that the bosonic spectrum on a number of vacua is described at all-loops by free massive and massless scalar fields in AdS$_2$, confirming a conjecture by de Leeuw, Fontanella and Nieto-Garc\\'ia, arXiv:2403.09563. In static gauge, we obtain the same result for any classical string vacuum, and including fermions. We compute the quantum correction to the classical energy, and show that it vanishes once we adopt the regularised Hurwitz series. We conclude that the quantum energy spectrum built upon any GGK string consists solely of its classical vacuum energy.",
    "source": "arxiv"

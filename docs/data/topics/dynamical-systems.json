@@ -1,7 +1,53 @@
 {
  "slug": "dynamical-systems",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34251",
+   "title": "Integrable nearest neighbor interaction Hamiltonians and the rigidity of the Toda Lattice",
+   "url": "https://arxiv.org/abs/2611.34251",
+   "authors": [
+    "Vadim Kaloshin",
+    "Illya Koval",
+    "Daniel Tsodikovich"
+   ],
+   "label": "arXiv:2611.34251v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper shows that certain analytic deformations of the three-particle nearest-neighbour Toda lattice potential destroy integrability, without assuming anything about the form of the integrals, using a high-energy link between Toda orbits and billiard orbits in polytopes.",
+    "plain": "The paper studies a simple model of particles in a line, where each particle only pushes on its immediate neighbours, and a specific famous version of this model called the Toda lattice, which can be solved exactly. The authors change the force law slightly and ask whether the model can still be solved exactly. They find that some kinds of smooth changes break this exact solvability, and they prove this without having to guess what the hidden conserved quantities would look like.",
+    "why": "It addresses when a special, exactly solvable physical system is rigid, meaning small changes to it lose the special structure. The authors link this to the rigidity of ellipses in billiards, a known result in a different area, and the link runs through high-energy motion in the Toda lattice resembling billiard motion in polytopes. The text does not say how far the method extends beyond three particles.",
+    "background": "- Hamiltonian system: a mechanical model whose motion is determined by energy (a potential) and momentum.\n- Integrable system: one with enough conserved quantities to determine its motion exactly; these are rare and special.\n- Nearest-neighbour interaction: each particle interacts only with the adjacent ones in a chain.\n- Toda lattice: a classical, known integrable chain of particles with exponential-type neighbour forces.\n- Analytic deformation: a smooth change of the force law given by a convergent power series.\n- Billiards and polytopes: a ball bouncing inside a region with flat sides (a polytope); its motion is a classic test case in dynamics.\n- Local rigidity: a special property that survives only for a narrow class of nearby systems.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We consider mechanical Hamiltonian systems, where the potentials describe a nearest-neighbor interaction law. In this setting, a non trivial example of an integrable system is the celebrated Toda lattice. We study deformations of this potential (for three particles), and show that some classes of analytic deformations of the potential break its integrability, without assuming anything about the form of the integrals. This result is reminiscent of local rigidity of ellipses in billiards. The proof relies on the fact that high energy orbits for the Toda lattice approximate billiard orbits in some polytopes.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34514",
+   "title": "Limit laws for Siegel theta sums",
+   "url": "https://arxiv.org/abs/2611.34514",
+   "authors": [
+    "Jory Griffin",
+    "Jens Marklof",
+    "Tariq Osman"
+   ],
+   "label": "arXiv:2611.34514v1",
+   "primary_category": "math.NT",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proves limit laws and precise heavy-tail asymptotics for the modulus of normalised Siegel theta sums when the quadratic form is chosen at random from the full space of quadratic forms or from the space of diagonal forms, extending work of Jurkat–Van Horne and Götze–Gordin.",
+    "plain": "The paper studies a type of sum over whole-number lattice points where each term is a rotating phase set by a quadratic form (a rule built from squares and products of variables). Choosing that rule at random and letting the range of summation grow, the authors show the size of the normalised sum follows a limiting pattern. That pattern depends on which family the rule is drawn from, and they give detailed descriptions of its long tail for two such families.",
+    "why": "The result sharpens classic limit theorems for one-variable theta sums and extends them to several variables and Siegel half-spaces, which is a useful step in the probabilistic theory of such sums. The text does not claim wider consequences, and any further connections would need checking against the full paper.",
+    "background": "- Lattice sum: adding terms indexed by integer points (whole-number coordinates) in a growing region.\n- Exponential sum: a sum of terms of the form e^(2πi·x), i.e. unit-length rotating phases, so terms can cancel.\n- Quadratic form: a polynomial in several variables where every term has degree two (e.g. x² + 3xy).\n- Limit law: a theorem saying a normalised random quantity converges to a fixed probability distribution.\n- Heavy-tail asymptotics: precise description of how often very large values occur, governed by a tail that decays slowly.\n- Metaplectic group and Shale–Weil representation: an algebraic symmetry group and a way of representing it on functions, used as the main tool.\n- Unipotent flows in ergodic theory: a family of measure-preserving motions on a symmetric space whose long-run behaviour is studied.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Siegel theta sums are exponential sums over the integer lattice whose phases are determined by a quadratic form. For a random choice of quadratic form, we prove a limit law for the modulus of the normalised sum as the summation range tends to infinity. The limiting distribution depends on the space from which the quadratic form is sampled. We prove precise heavy-tail asymptotics for random sampling from (a) the full space of quadratic forms and (b) the space of diagonal forms. This study extends classic results by Jurkat and Van Horne for one-variable theta sums and by G\\\"otze and Gordin for theta series on Siegel half-spaces. Our approach uses the Shale--Weil representation of the metaplectic group and the ergodic theory of unipotent flows.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34165",
    "title": "Entropic continuity of Lyapunov exponents in arbitrary dimension",
@@ -15,12 +61,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves entropic continuity of the sum of positive Lyapunov exponents for C^∞ diffeomorphisms in arbitrary dimension under an entropy gap condition, extending Buzzi, Crovisier and Sarig's result, and shows the condition is sharp.",
-    "plain": "This paper studies how the chaos of a system that evolves by repeated rule-based motion (a smooth map of a space onto itself, such as a stirred fluid or a planetary-style orbit model) changes when the rule is slightly altered. It shows that, under a stated condition on the system's entropy (a measure of how much complexity or unpredictability it has), a key chaos measure called the sum of positive Lyapunov exponents varies continuously. The authors also give examples showing the condition cannot simply be dropped.",
-    "why": "Continuity of these chaos measures under small changes matters for knowing whether a model's predicted behaviour is robust to small errors in its description. The text links the work to the Newhouse phenomenon and to standard maps, but the abstract does not show how far these applications go.",
+    "ai": true,
     "background": "- Diffeomorphism: a smooth, invertible map of a space to itself, viewed as one step of a discrete-time evolution.\n- Lyapunov exponents: rates at which nearby trajectories separate exponentially; positive ones signal chaos.\n- Topological and measure-theoretic entropy: measures of how complex or unpredictable a system's orbits are, counted in total or under a particular statistical measure.\n- Continuity (in this setting): small changes to the map cause only small changes to the quantity.\n- Ergodic measure of maximal entropy: a statistical description of the system's typical long-run behaviour that carries the largest possible entropy.\n- Upper semicontinuity: a one-sided form of continuity where the quantity can jump up only in the limit, never suddenly down.\n- Newhouse phenomenon: the appearance of infinitely many stable structures near a system with a tangency, a known source of complex behaviour.\n- Standard map: a simple model from physics of area-preserving motion, often used to study chaos.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves entropic continuity of the sum of positive Lyapunov exponents for C^∞ diffeomorphisms in arbitrary dimension under an entropy gap condition, extending Buzzi, Crovisier and Sarig's result, and shows the condition is sharp.",
+    "plain": "This paper studies how the chaos of a system that evolves by repeated rule-based motion (a smooth map of a space onto itself, such as a stirred fluid or a planetary-style orbit model) changes when the rule is slightly altered. It shows that, under a stated condition on the system's entropy (a measure of how much complexity or unpredictability it has), a key chaos measure called the sum of positive Lyapunov exponents varies continuously. The authors also give examples showing the condition cannot simply be dropped.",
+    "why": "Continuity of these chaos measures under small changes matters for knowing whether a model's predicted behaviour is robust to small errors in its description. The text links the work to the Newhouse phenomenon and to standard maps, but the abstract does not show how far these applications go."
    },
    "abstract": "We prove that the sum of the positive Lyapunov exponents is entropically continuous for every $C^\\infty$ diffeomorphism, provided the entropy exceeds its second-largest exterior growth rate. We also establish stable strong positive recurrence and show that the topological entropy is continuous, and the number of ergodic measures of maximal entropy is upper semicontinuous. This extends the result of Buzzi, Crovisier, and Sarig to arbitrary dimensions. We give examples in both the measure-theoretic and topological senses, showing that this entropy gap condition is sharp. We also present applications related to the Newhouse phenomenon and standard maps.",
    "source": "arxiv"
@@ -36,12 +82,12 @@
    "primary_category": "math.DS",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives an alternative proof, under weaker assumptions, of an Arana-Herrera–Forni result that turns ordinary limit theorems for cocycles over dynamical systems into mixing limit theorems, following Gouëzel's approach.",
-    "plain": "The paper is about a general technique in the study of chaotic, evolving systems: taking a known \"limit theorem\" (a statement about how averages or fluctuations behave over long times) and upgrading it into a stronger \"mixing\" version that also holds jointly with the system's own dynamics. The authors re-prove an existing result of Arana-Herrera and Forni with fewer assumptions, using an approach inspired by Gouëzel's earlier work.",
-    "why": "The text is short, so its scope is hard to judge beyond the abstract. Its value is mainly methodological: it shows the same upgrading result holds under weaker conditions, which may make the tool applicable to more systems.",
+    "ai": true,
     "background": "- Dynamical system: a rule that moves points forward in time, such as a map or flow.\n- Cocycle: a quantity attached to each step of the dynamics (for example, a running total or a matrix product) that accumulates along orbits.\n- Limit theorem: a statement describing the long-run behaviour of such accumulated quantities, such as a central limit theorem for fluctuations.\n- Mixing: the property that the system forgets its initial state, so distant-in-time events become roughly independent.\n- Mixing limit theorem: a limit theorem that holds in this \"forgetful\" sense, jointly with the dynamics.\n- Background papers: prior work by Gouëzel and by Arana-Herrera and Forni, which the text does not describe.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives an alternative proof, under weaker assumptions, of an Arana-Herrera–Forni result that turns ordinary limit theorems for cocycles over dynamical systems into mixing limit theorems, following Gouëzel's approach.",
+    "plain": "The paper is about a general technique in the study of chaotic, evolving systems: taking a known \"limit theorem\" (a statement about how averages or fluctuations behave over long times) and upgrading it into a stronger \"mixing\" version that also holds jointly with the system's own dynamics. The authors re-prove an existing result of Arana-Herrera and Forni with fewer assumptions, using an approach inspired by Gouëzel's earlier work.",
+    "why": "The text is short, so its scope is hard to judge beyond the abstract. Its value is mainly methodological: it shows the same upgrading result holds under weaker conditions, which may make the tool applicable to more systems."
    },
    "abstract": "Following the work of Gou\\\"ezel, we give an alternative proof, under weaker assumptions, of a result of Arana-Herrera and Forni, which provides a general method for upgrading limit theorems for cocycles over dynamical systems to mixing limit theorems.",
    "source": "arxiv"

@@ -1,7 +1,59 @@
 {
  "slug": "ai4math",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34928",
+   "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+   "url": "https://arxiv.org/abs/2611.34928",
+   "authors": [
+    "Lukas Aichberger",
+    "Adam Golinski",
+    "Arno Blaas",
+    "Arwen Bradley",
+    "Jacob Springer",
+    "Mehrdad Farajtabar",
+    "Michael Kirchhof",
+    "Sinead Williamson"
+   ],
+   "label": "arXiv:2611.34928v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "DART mines rejected reasoning traces on hard math problems by ranking uncertain steps, generating deliberately distinct alternatives with reference-answer guidance, and completing them, to expand problem coverage and post-training data relative to plain Monte Carlo sampling.",
+    "plain": "Teaching AI models to solve math often relies on worked solutions that reach a checkably correct answer. On very hard problems, the model rarely produces such solutions by simply sampling many attempts. This paper proposes DART, a method that takes a wrong attempt, finds the steps where the model was least sure, and writes alternative versions of those steps to try to reach a correct answer.",
+    "why": "The reported results are that DART solved 37% more problems than plain repeated sampling with the same number of generated attempts, and that training an 8B-parameter model on its outputs gave the highest point estimate in five of six benchmark evaluations. These are the paper's own measurements, and the gains are not broken down further in the text, so they should be read as promising rather than settled; the work may matter for how training data for reasoning models is gathered.",
+    "background": "- Large language models (LLMs): AI systems trained on text that can be further trained (\"post-training\") on examples of good behavior.\n- Reasoning trace: the step-by-step written work a model produces before its final answer.\n- Verifier: a checker that marks whether a final answer is correct.\n- Monte Carlo (MC) sampling: generating many independent attempts at random and keeping the ones that work.\n- Greedy-unsolved: problems the model fails when it answers with its single most likely output.\n- Benchmarks: MATH-500 and AIME are standard sets of competition-style math problems.\n- Llama-3.1-8B-Instruct: a publicly available model with 8 billion parameters, used as the test model.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning Traces (DART), a trace-mining method that starts from a rejected trace, decomposes it into reasoning steps, and ranks them by position-weighted uncertainty. It then generates deliberately distinct alternative candidates for highly ranked steps using reference-answer guidance and a meta-thought before completing the resulting traces. On greedy-unsolved DeepMath-103K problems, DART recovers 37% more problems than MC sampling at a matched number of generated traces. Its estimated generation cost per recovered problem is nearly identical, while its cost per accepted trace is 30% lower. Post-training Llama-3.1-8B-Instruct on traces mined by DART achieves the highest point estimate in five of six evaluations across MATH-500 and AIME benchmarks. These results demonstrate that revisiting rejected traces with DART can expand problem coverage and provide effective post-training data.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33962",
+   "title": "DLaR: Dynamic Stochasticity Control for Latent Reasoning in Large Language Models",
+   "url": "https://arxiv.org/abs/2611.33962",
+   "authors": [
+    "Xiaocheng Luo",
+    "Peng Xu",
+    "Zaifu Zhan",
+    "Xiangyu Duan"
+   ],
+   "label": "arXiv:2611.33962v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "DLaR adds input-dependent and training-stage-dependent noise to latent (continuous-embedding) reasoning in LLMs trained with GRPO, reporting gains on math benchmarks over uniform-noise baselines.",
+    "plain": "Large language models often solve problems by writing out their reasoning as words. Some newer methods let the model reason in a hidden, continuous space instead, but these tend to be repetitive because they follow one fixed path. This paper proposes DLaR, which adds controlled randomness to that hidden reasoning, varying how much at each step and lowering it over training, so the model explores alternative solutions without losing coherence.",
+    "why": "Getting a model to explore varied reasoning paths while staying on track is a central practical question for AI systems that solve math problems. The paper reports results on seven math benchmarks, but the text alone does not show how large the gains are relative to other methods or how robust they are, so it is best treated as a promising, not settled, result.",
+    "background": "- Large language models (LLMs) generate text one token at a time; \"tokens\" are word-sized pieces.\n- Latent reasoning: the model passes internal vectors (continuous embeddings) between steps instead of writing words, so it does not need to be spelled out.\n- Stochasticity: deliberate randomness injected into a model's computation so that repeated runs can take different paths.\n- Reinforcement learning with GRPO: a training method where the model is rewarded for correct answers, comparing groups of its own sampled attempts.\n- Pass@1 / Pass@8: the share of problems solved on the first try, and the share solved by at least one of eight attempts.\n- Entropy and confidence: measures of how spread out versus peaked the model's next-step predictions are; high uncertainty signals more exploration here.\n- In-distribution vs. out-of-distribution: test problems similar to training data versus different ones.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Latent reasoning enables LLMs to operate in continuous embedding space, yet existing methods suffer from deterministic inference that precludes exploration of diverse reasoning paths. While recent approaches inject stochasticity to restore exploration, we identify two fundamental limitations: \\textit{uniform stochasticity} across all steps is suboptimal, and unconstrained perturbations disrupt reasoning coherence. We propose Dynamic Stochasticity Control for Latent Reasoning (DLaR), a framework with two complementary mechanisms that operate at different temporal granularities within the GRPO reinforcement learning framework. At the token level, Adaptive Stochasticity Modulation (ASM) dynamically adjusts perturbation intensity at each latent step based on a confidence-entropy fusion signal, increasing exploration when the model is uncertain and preserving stability when confident. At the training level, Training-Aware Stochasticity Tuning (TAST) progressively decays the base stochasticity level following a curriculum schedule. Through this dual-level design, DLaR establishes a hierarchical exploration-exploitation strategy that operates at both token and training levels. Extensive experiments on four in-distribution and three out-of-distribution mathematical reasoning benchmarks demonstrate that DLaR achieves the highest average performance across model scales, reaching 27.9%/50.6% Pass@1/Pass@8 on Llama-3.2-1B and 46.8%/68.2% on Qwen2.5-1.5B. Code: \\href{https://github.com/xiaocen-luo/DLaR}{https://github.com/xiaocen-luo/DLaR}.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33165",
    "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
@@ -21,12 +73,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "AutoformBench is a 341-task benchmark for Lean 4 formalization of advanced mathematics, where agents must build missing definitions and lemmas, not just prove isolated theorems, and the paper reports that frontier models share a common difficulty frontier tied to constructing that infrastructure.",
-    "plain": "Computer proof assistants check mathematics line by line, but writing a result in such a system takes more than proving the final claim: you also need the definitions and helper facts that connect it to the existing library. This paper introduces a test set of 341 such tasks drawn from 24 advanced math sources, where AI agents get the informal proof and must write the Lean version, including the supporting pieces. The authors report that frontier models tend to struggle with the same problems, and that success depends more on building that missing scaffolding than on the field of mathematics.",
-    "why": "Most earlier evaluations gave AI a single theorem in a setting where much of the needed theory already existed, so they may overstate how much real formalization work AI can do. The benchmark targets the harder, more realistic part of the job, which matters for anyone hoping AI can help formalize research mathematics. The text does not report detailed scores, so the size of the gap between models is not something this summary can establish.",
+    "ai": true,
     "background": "- Lean 4: a programming language and proof assistant in which mathematical statements and proofs are checked by computer.\n- Mathlib: Lean's large community library of already-formalized mathematics.\n- Formalization: translating an informal mathematical argument into code the proof checker accepts.\n- Definitions and lemmas: the supporting concepts and intermediate facts a proof relies on; here they must be built by the AI.\n- Benchmark: a fixed set of tasks used to compare systems on equal terms.\n- Agent: an AI system that works through multi-step actions, such as writing and testing code, rather than producing one answer.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "AutoformBench is a 341-task benchmark for Lean 4 formalization of advanced mathematics, where agents must build missing definitions and lemmas, not just prove isolated theorems, and the paper reports that frontier models share a common difficulty frontier tied to constructing that infrastructure.",
+    "plain": "Computer proof assistants check mathematics line by line, but writing a result in such a system takes more than proving the final claim: you also need the definitions and helper facts that connect it to the existing library. This paper introduces a test set of 341 such tasks drawn from 24 advanced math sources, where AI agents get the informal proof and must write the Lean version, including the supporting pieces. The authors report that frontier models tend to struggle with the same problems, and that success depends more on building that missing scaffolding than on the field of mathematics.",
+    "why": "Most earlier evaluations gave AI a single theorem in a setting where much of the needed theory already existed, so they may overstate how much real formalization work AI can do. The benchmark targets the harder, more realistic part of the job, which matters for anyone hoping AI can help formalize research mathematics. The text does not report detailed scores, so the size of the gap between models is not something this summary can establish."
    },
    "abstract": "AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources. Lean-experienced mathematicians formalized and audited each target statement, leaving the corresponding Lean proof to the evaluated agent. Each problem is embedded in a broader mathematical development: agents receive the informal proof but must translate it into Lean while constructing the missing definitions, intermediate lemmas, and supporting infrastructure. We compare the performance of frontier models on these problems. We find a largely shared difficulty frontier: success depends less on mathematical domain than on models' ability to construct missing formal infrastructure. Data and code at https://github.com/facebookresearch/autoformbench",
    "source": "arxiv"
@@ -45,12 +97,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes Merlin-Bench, a benchmark that casts LLM agents as provers in an interactive proof protocol with a formal verifier, testing 100 cases across 15 problem families on 10 frontier LLMs and several agent harnesses.",
-    "plain": "Math and software-checking AI systems are often asked for an answer, but a useful answer also needs evidence that others can check. This paper builds a test in which an AI must back up its claimed answer by exchanging messages with an automatic checker, following a set rule for how the exchange works. Across 100 test cases, the authors report that getting current AI models to produce checkable evidence this way is still a substantial challenge.",
-    "why": "Checkable evidence matters if AI is to be trusted with proofs or program verification, because a correct-looking answer alone can't be verified. The work's connection to interactive proof systems from complexity theory is a framing choice; the text does not show how far the benchmark will generalize beyond its 100 cases.",
+    "ai": true,
     "background": "- Interactive proof system: a protocol where a \"prover\" convinces a \"verifier\" through back-and-forth exchanges, drawn from computational complexity theory.\n- Formal verifier: an automatic program that mechanically checks whether a proof is valid, independent of human judgment.\n- LLM agent harness: the surrounding software that lets a language model call tools, run code, and iterate on its work.\n- Theorem proving: using computers to establish mathematical statements with rigorous, checkable proofs.\n- Benchmark: a standard set of test tasks used to compare systems.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes Merlin-Bench, a benchmark that casts LLM agents as provers in an interactive proof protocol with a formal verifier, testing 100 cases across 15 problem families on 10 frontier LLMs and several agent harnesses.",
+    "plain": "Math and software-checking AI systems are often asked for an answer, but a useful answer also needs evidence that others can check. This paper builds a test in which an AI must back up its claimed answer by exchanging messages with an automatic checker, following a set rule for how the exchange works. Across 100 test cases, the authors report that getting current AI models to produce checkable evidence this way is still a substantial challenge.",
+    "why": "Checkable evidence matters if AI is to be trusted with proofs or program verification, because a correct-looking answer alone can't be verified. The work's connection to interactive proof systems from complexity theory is a framing choice; the text does not show how far the benchmark will generalize beyond its 100 cases."
    },
    "abstract": "Recent advances in LLM-assisted theorem proving and program verification have attracted widespread attention. Beyond determining whether a proposition is true, LLM agents must produce evidence that can be independently checked by humans or formal verification tools. To evaluate the underlying, protocol-agnostic ability of LLM agents to construct verifiable proofs-rather than their proficiency with any particular proof language or verification tool, we introduce Merlin-Bench. Drawing on interactive proof systems from computational complexity theory, we cast an LLM agent as the prover: under a designated protocol, the agent interacts with a formal verifier to substantiate its claimed answer to a problem instance. We develop an automated framework for constructing test cases and use it to create 100 cases across 15 problem families, each formulated within this prover-verifier framework. Experiments with 10 frontier LLMs across multiple agent harnesses show that reliably producing verifiable proofs in accordance with specified protocols remains a substantial challenge. Our case studies further provide actionable insights into improving agents' ability to generate verifier-accepted proofs: tool use is essential for completing practical proof tasks; different forms of guidance, ranging from engineering instructions to problem-specific knowledge, substantially affect success rates on interactive-proof tasks; and proof-solving experience distilled from abstract tasks can transfer to concrete, real-world verification tasks.",
    "source": "arxiv"

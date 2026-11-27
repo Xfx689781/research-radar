@@ -1,7 +1,64 @@
 {
  "slug": "computer-vision",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34680",
+   "title": "Neural Rendering Compiler: Generative Video Models as Programmable Renderers",
+   "url": "https://arxiv.org/abs/2611.34680",
+   "authors": [
+    "Yuxia Zhu",
+    "Xinglong Xu",
+    "Hao Liang",
+    "Linzhuang Sun",
+    "Caijun Jia",
+    "Qifeng Cai",
+    "Jincen Luo",
+    "Lei Li",
+    "Alden Cai",
+    "Asher Qin",
+    "Wentao Zhang",
+    "Cheng Tan"
+   ],
+   "label": "arXiv:2611.34680v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "NeurCo probes frozen generative video models to build per-model capability manuals, then compiles a model-agnostic description of user intent into execution strategies that each model can reliably follow, evaluated on a 380-task compositional benchmark (VComBench).",
+    "plain": "Video-generating AI models can produce impressive clips, but it is hard to know in advance which instructions they will actually follow, such as a specific object, a camera move, or a sequence of events. This paper proposes a \"compiler\" that first tests a given model to learn what it reliably handles, then rewrites or reroutes the parts of a request it tends to miss. On a set of 380 multi-part video tasks, the authors report that requirement satisfaction rose from 46.8% to 52.3% for the Wan model and from 66.5% to 69.3% for Minimax H3.",
+    "why": "As video models get used as a kind of rendering engine, a predictable way to control them could matter for filmmaking, design and simulation tools. The gains reported are modest, and the text does not show how well the approach transfers beyond the models and benchmark tested.",
+    "background": "- Generative video model: an AI system that creates video clips from text, a still image, or reference footage.\n- \"Frozen\" model: the model's internal weights are not retrained; the method only changes the inputs and prompts it receives.\n- Rendering: turning a description of a scene into a finished image or video, as tools like Blender do.\n- Intermediate representation: a structured, neutral format (here, objects, constraints, events and cameras) that sits between user intent and model-specific instructions.\n- Requirement satisfaction: the share of individual requested features (e.g., \"a red car turns left\") that appear correctly in the output.\n- Prompt enhancer: a tool that rewrites or expands a text prompt before it is sent to a generator.\n- Controllability vs. photorealism: the trade-off where forcing a model to follow instructions can reduce how realistic its output looks.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Generative video models are becoming powerful renderers, yet lack the predictable control interfaces of conventional systems such as HTML/CSS engines or Blender. Their capabilities emerge implicitly from training, making it difficult to determine what they can reliably execute. We present Neural Rendering Compiler (NeurCo), which automatically probes frozen video models to construct model-specific capability manuals describing which semantic requirements they can reliably satisfy. NeurCo represents user intent in a model-agnostic intermediate representation of objects, constraints, events, and cameras, then compiles it into model-specific execution strategies. Reliable requirements remain unchanged, while unreliable ones are selectively rewritten or compiled into alternative execution strategies. We introduce VComBench, a benchmark of 380 compositional, multi-requirement tasks spanning text-to-video, image-to-video, and reference-to-video generation. NeurCo improves requirement satisfaction from 46.8% to 52.3% on Wan and from 66.5% to 69.3% on Minimax H3, and achieves further gains when combined with prompt enhancers, including on Seedance 2.5. Our analysis reveals model-specific differences in control capabilities and trade-offs between controllability and photorealism, highlighting capability-guided compilation as a promising approach to programmable generative video rendering.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34220",
+   "title": "Variation-aware Temporal Correspondence for Self-Supervised Video Representation Learning",
+   "url": "https://arxiv.org/abs/2611.34220",
+   "authors": [
+    "Yang Liu",
+    "Qianqian Xu",
+    "Peisong Wen",
+    "Siran Dai",
+    "Qingming Huang"
+   ],
+   "label": "arXiv:2611.34220v1",
+   "primary_category": "cs.CV",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "VT-CoRe is a self-supervised video representation learning framework that uses sandwich-sampled temporal references, a Patch Registration Module for patch-level correspondence, and self-distillation with temporal variation modeling on masked video modeling.",
+    "plain": "This paper is about teaching computers to understand videos without human labels, by hiding parts of video frames and having the model fill them in using nearby frames. The authors argue that objects change position and appearance over time, so the model needs to match the same spots across frames and track how they change. They report that their method, VT-CoRe, was tested on 8 kinds of downstream tasks across 16 benchmarks, including robot-learning settings, and that it learns a more structured internal representation.",
+    "why": "Learning useful video features without labels is a practical need, since labeled video is expensive to produce. The paper's main idea, explicitly modeling how matched image regions change over time, may be relevant to video understanding and robotics, though the summary does not give the size of any gains against prior methods.",
+    "background": "- Self-supervised learning: training on unlabeled data by creating a learning task from the data itself.\n- Masked modeling: hiding parts of an input (here, video patches) and asking the model to reconstruct or predict them, similar to fill-in-the-blank.\n- Temporal correspondence: working out which region in one frame corresponds to which region in another frame.\n- Self-distillation: a teacher and student version of the same network, where the student matches the teacher's internal features.\n- Downstream tasks and benchmarks: standard test problems used to measure how good learned features are.\n- Latent space: the internal numerical representation a model builds for its inputs.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Self-supervised video representation learning has achieved remarkable progress by leveraging large-scale unlabeled video data. Recent methods commonly extend Masked Image Modeling (MIM) to Masked Video Modeling (MVM), where video representations are learned by capturing semantic information from temporal contexts during masked content recovery. Unlike static images, videos exhibit inherent temporal variation, as visual objects continuously change their positions, appearances, and motion states across frames. Therefore, MVM needs to preserve semantic consistency while capturing temporal changes of corresponding regions, which raises two central challenges: 1) how to establish reliable temporal correspondence across frames, and 2) how to formulate an appropriate representation learning objective for modeling both semantic consistency and temporal variation. To address these challenges, we propose Variation-aware Temporal Correspondence for video Representation learning (VT-CoRe) framework. For challenge 1), VT-CoRe introduces a sandwich sampling strategy to construct two-sided temporal references and a Patch Registration Module (PRM) to establish reliable patch-level correspondence. For challenge 2), VT-CoRe imposes latent-space semantic alignment on registered representations through a self-distillation architecture and further proposes temporal variation modeling to constrain representation trajectories over time. Experiments on 8 downstream tasks across 16 benchmarks demonstrate the effectiveness and applicability of VT-CoRe across pixel-level, frame-level, video-level, and vision-based robotic learning scenarios. Complementary representation analysis shows that VT-CoRe learns a more structured latent space for variation-aware temporal correspondence learning.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34025",
    "title": "Incorporating the Knowledge Distillation to Improve the EfficientNet Transfer Learning Capability",
@@ -13,12 +70,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes using knowledge distillation to pass knowledge from larger EfficientNet models into smaller EfficientNet models as a transfer learning method for computer vision.",
-    "plain": "Image-recognition AI models are often pretrained on a large image collection and then reused for new tasks, a practice called transfer learning. This paper asks whether the smaller models in the EfficientNet family can be improved by learning from the larger models, which they were originally grown from. The authors report that this approach improved each EfficientNet size they tested, and that several smaller models beat a larger model trained the standard way.",
-    "why": "It offers a practical way to get better results from smaller, cheaper vision models without changing their size, which may matter for devices with limited computing power. The text is a short abstract, so it does not show how large or consistent the gains were, or how the method compares with other transfer approaches.",
+    "ai": true,
     "background": "- Transfer learning: reusing a model trained on a large dataset (such as ImageNet) as the starting point for a new task.\n- EfficientNet: a family of image-recognition networks of increasing size, where larger members were built by scaling up a smaller baseline.\n- Knowledge distillation: training a smaller \"student\" model to imitate the outputs of a larger \"teacher\" model.\n- ImageNet: a large benchmark dataset of labeled photographs used to compare vision models.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper proposes using knowledge distillation to pass knowledge from larger EfficientNet models into smaller EfficientNet models as a transfer learning method for computer vision.",
+    "plain": "Image-recognition AI models are often pretrained on a large image collection and then reused for new tasks, a practice called transfer learning. This paper asks whether the smaller models in the EfficientNet family can be improved by learning from the larger models, which they were originally grown from. The authors report that this approach improved each EfficientNet size they tested, and that several smaller models beat a larger model trained the standard way.",
+    "why": "It offers a practical way to get better results from smaller, cheaper vision models without changing their size, which may matter for devices with limited computing power. The text is a short abstract, so it does not show how large or consistent the gains were, or how the method compares with other transfer approaches."
    },
    "abstract": "Due to the Deep Learning requirement for a large training dataset, Transfer Learning has become a central method in the field of Computer Vision, which heavily used Deep Learning. Since the adoption of transfer learning in the field, the performance of the models in computer vision is significantly upgraded. The common transfer learning practice in computer vision research is to use state-of-the-art architectures in the ImageNet dataset as the backbone network. The best performing architecture in ImageNet is currently held by EfficientNet, which is a set of architectures that were progressively grown from a baseline architecture. By observing the EfficientNet development approach, it is natural to hypothesize that the smaller EfficientNet architecture is capable to contain the knowledge of the larger architecture. This hypothesis comes from the fact that the larger EfficientNet architecture was grown from the smaller architecture. Therefore, in this study, we experimented if it is beneficial to transfer the knowledge from the larger architecture to the smaller architecture of the EfficientNet. To achieve this goal, we proposed a transfer learning method that uses Knowledge Distillation as the knowledge transfer mechanism from the larger to smaller architecture. We found that the proposed method is able to upgrade the performance of each of the EfficientNet architecture. Several smaller architectures are even able to outperform the larger architecture that was trained using the standard transfer learning method.",
    "source": "arxiv"
@@ -42,12 +99,12 @@
    "primary_category": "cs.CV",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "TAT-Det is a publicly described ultrasound dataset of 2,600 expert-annotated images from 1,203 children, with bounding boxes and pixel masks for testicular appendage torsion, plus baseline detection and segmentation benchmarks.",
-    "plain": "This paper is about a painful condition in young boys called testicular appendage torsion, a small twisted tissue structure in the scrotum that is a common cause of sudden scrotal pain before puberty. The authors built a labeled set of 2,600 ultrasound images from 1,203 patients at a children's hospital in China, with outlines drawn by trained specialists. They then tested several existing AI models on the images, reporting that YOLO11m performed best at finding the lesion and RWKV-UNet performed best at outlining it.",
-    "why": "Pediatric scrotal emergencies are hard to diagnose from symptoms alone, and there were few public datasets for this problem, so a shared labeled resource could let other groups build and compare automated tools. The text does not report how these models would perform in clinical use, so its practical value remains to be tested.",
+    "ai": true,
     "background": "- Testicular appendage torsion (TAT): twisting of a tiny appendage attached to the testicle; the leading cause of sudden scrotal pain in prepubertal boys.\n- Ultrasound: sound-wave imaging used to look inside the body without radiation.\n- Dataset annotation: human experts marking the region of interest in each image so software can learn from it.\n- Bounding box vs. segmentation mask: a rectangle around a lesion (detection) versus a pixel-by-pixel outline of it (segmentation).\n- Baseline benchmark: a first set of reference scores that later methods can be compared against.\n- YOLO11m and RWKV-UNet: names of existing deep learning model architectures used for detection and segmentation respectively.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "TAT-Det is a publicly described ultrasound dataset of 2,600 expert-annotated images from 1,203 children, with bounding boxes and pixel masks for testicular appendage torsion, plus baseline detection and segmentation benchmarks.",
+    "plain": "This paper is about a painful condition in young boys called testicular appendage torsion, a small twisted tissue structure in the scrotum that is a common cause of sudden scrotal pain before puberty. The authors built a labeled set of 2,600 ultrasound images from 1,203 patients at a children's hospital in China, with outlines drawn by trained specialists. They then tested several existing AI models on the images, reporting that YOLO11m performed best at finding the lesion and RWKV-UNet performed best at outlining it.",
+    "why": "Pediatric scrotal emergencies are hard to diagnose from symptoms alone, and there were few public datasets for this problem, so a shared labeled resource could let other groups build and compare automated tools. The text does not report how these models would perform in clinical use, so its practical value remains to be tested."
    },
    "abstract": "Background: Testicular appendage torsion (TAT) is the leading cause of acute scrotal pain in prepubertal children. Yet, its diagnosis remains challenging due to nonspecific clinical manifestations and the absence of standardized datasets for pediatric acute scrotal emergencies. Results: We present TAT-Det, an expert-annotated ultrasound dataset specifically designed for TAT. TAT-Det comprises 2,600 ultrasound images from 1,203 patients collected at the Children's Hospital, Zhejiang University School of Medicine. Each TAT-positive image is accompanied by lesion-level bounding boxes for detection and pixel-level segmentation masks for fine-grained delineation. Annotations were produced through a multi-stage workflow involving independent annotation by board-certified pediatric sonographers, consensus review, and refinement. Baseline benchmarks for object detection and semantic segmentation using representative deep learning models are further provided, with YOLO11m achieving the best detection performance and RWKV-UNet the best segmentation performance. Conclusions: TAT-Det addresses the lack of publicly available resources for pediatric emergency ultrasound and establishes a foundation for developing and evaluating artificial intelligence methods for automated TAT analysis.",
    "source": "arxiv"

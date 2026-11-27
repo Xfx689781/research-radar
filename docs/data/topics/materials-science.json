@@ -1,7 +1,68 @@
 {
  "slug": "materials-science",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34900",
+   "title": "Brightening spin- and parity-forbidden interlayer excitons through rhombohedral stacking",
+   "url": "https://arxiv.org/abs/2611.34900",
+   "authors": [
+    "Haodong Hu",
+    "Chih-En Hsu",
+    "Kenji Watanabe",
+    "Takashi Taniguchi",
+    "Hung-Chung Hsueh",
+    "Zhenglu Li",
+    "Ziliang Ye"
+   ],
+   "label": "arXiv:2611.34900v1",
+   "primary_category": "cond-mat.mes-hall",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Rhombohedral (3R) stacking of a MoS2 bilayer is reported to brighten two normally optically forbidden interlayer excitons, a spin-unlike 1s state and a parity-odd 2p state, and to reveal a gauge-invariant phase contrast in the hybridized 2p exciton via quantum interference.",
+    "plain": "Excitons are bound pairs of an electron and a \"hole\" (a missing electron) that carry light in semiconductors. In this paper, the authors stack two layers of molybdenum disulfide, a very thin material, in a specific rhombohedral arrangement, which makes two kinds of excitons that normally cannot absorb or emit light become visible optically. They identify these excitons using their magnetic response (g-factors) and by tuning them into resonance with ordinary excitons, where they mix.",
+    "why": "The work suggests that the way atomically thin layers are stacked can be used as a control knob for the quantum states of excitons, which may matter for future optical or quantum devices. The text does not show direct device applications, so the practical reach is not established here.",
+    "background": "- Excitons: electron-hole pairs bound together, acting like light-matter particles in semiconductors.\n- Symmetry-forbidden: transitions that selection rules block, so they normally do not absorb or emit light.\n- Interlayer exciton: the electron and hole sit in different atomic layers.\n- Stacking (3R/rhombohedral): the way successive atomic layers are shifted relative to each other; it changes the material's electronic behavior.\n- g-factor: a measure of how an energy level shifts in a magnetic field, used here as a fingerprint of the exciton's spin character.\n- Hybridization and quantum interference: when two states mix, their contributions can add or cancel, similar to overlapping waves.\n- 1s and 2p: labels for exciton energy levels, analogous to atomic orbitals; \"parity-odd\" means the wavefunction changes sign under spatial inversion.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Brightened symmetry-forbidden excitons can provide critical information about the electronic structure and many-body interactions in semiconductors. Recently, interlayer atomic registry has emerged as a new way to control atomically thin layered materials in both ground and excited states. Here we show that the rhombohedral stacking in a 3R-MoS_2 homobilayer can brighten two symmetry-forbidden interlayer excitons: one is a spin-unlike 1s exciton and the other is a parity-odd 2p exciton. The nature of these interlayer excitons is revealed by their gfactors as well as the hybridization patterns observed when they are tuned to resonate with intralayer excitons. Surprisingly, the hybridized 2p exciton exhibits a constructive quantum interference between the acquired transition dipoles, revealing a hidden gauge-invariant phase contrast between the constituent electronic states. Our results establish stacking control as a powerful approach for modulating quantum phases of excitons in 2D semiconductors.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33405",
+   "title": "Unveiling ferroelectricity in wafer-scale beta-phase In$_2$Se$_3$",
+   "url": "https://arxiv.org/abs/2611.33405",
+   "authors": [
+    "Kyungmin Yang",
+    "Hyunmin Cho",
+    "Jihwan Jeon",
+    "Tae Hyeon Park",
+    "Seojeong Ro",
+    "Hye Jung Kim",
+    "Jung-Hoon Lee",
+    "Jaewon Wang",
+    "Hyeon Suk Shin",
+    "Young-Min Kim",
+    "Chang Woo Myung",
+    "Roy H. Olsson III",
+    "Seunguk Song",
+    "Deep Jariwala"
+   ],
+   "label": "arXiv:2611.33405v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper reports bistable out-of-plane and in-plane polar order in van der Waals beta-phase In2Se3, arising from a picometre-scale distortion within each quintuple layer, persisting down to a ~1.9 nm bilayer, and demonstrated in wafer-scale MOCVD films with capacitor and transistor devices.",
+    "plain": "Ferroelectric materials can hold an electric polarization that flips when a voltage is applied, which could store bits in memory chips. Usually these materials stop working when made very thin. This paper argues that a layered semiconductor, beta-indium selenide, which was thought to lack this property, has a tiny built-in shift in its atomic layers that can be flipped, and that it still works at about two nanometres thick.",
+    "why": "The text reports that switching remains possible at the bilayer limit and that 2-inch wafer films gave capacitor arrays with under 5% switching-voltage spread across 100 devices, which bears on whether ultrathin memory could be manufactured at scale. The text does not show how these results compare with existing memory technologies, and the reported polarization is described only as \"apparent,\" so its significance is still to be judged.",
+    "background": "- Ferroelectric: a material whose internal electric polarization can be reversed by an applied electric field, and which keeps its state without power.\n- Remanent polarization and coercive field: the leftover polarization after the field is removed, and the field strength needed to flip it.\n- Centrosymmetric: a crystal whose structure looks the same after inversion through a central point, which normally rules out such polarization.\n- van der Waals semiconductor: a layered material whose sheets are held together by weak forces, making very thin single or few-layer films possible.\n- Quintuple layer: a five-atom-thick sheet unit that forms the building block of this layered crystal.\n- Picometre: one trillionth of a metre; the distortion described is extremely small.\n- MOCVD (metal-organic chemical vapor deposition): a standard industrial method for growing thin films on wafers.\n- Endurance and retention: how many switching cycles a device survives and how long stored states last.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Pushing ferroelectricity to the ultimate thickness limit is a central challenge for memory hardware, because conventional three-dimensional ferroelectrics degrade through depolarization and interfacial effects when thinned. Here we identify $\\beta$-In$_2$Se$_3$, a van der Waals semiconductor regarded as centrosymmetric, as a host of bistable polar order arising from a picometre-scale distortion within each quintuple layer. The polar state has out-of-plane and in-plane components, is switched by a vertical electric field, and persists to the bilayer limit (~1.9 nm) with an estimated coercive field of 0.9 MV/cm and an apparent remanent polarization of 11.0 $\\mu$C/cm$^2$. Films grown by metal-organic chemical vapor deposition on 2-inch wafers yield capacitor arrays with a switching-voltage spread below 5% across 100 devices, an endurance of $10^7$ cycles and a projected ten-year retention. Because the polar state coexists with a semiconducting gap, one film serves as both the switching layer of a capacitor and the channel of a ferroelectric semiconductor transistor.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33544",
    "title": "Machine-Learning Spin-Fermion Models for Strongly Disordered Magnets: Sb-Doped MnTe",
@@ -18,12 +79,12 @@
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A machine-learning method that compresses first-principles calculations into disordered spin-fermion models, applied to altermagnetism in Sb-doped MnTe.",
-    "plain": "Some magnetic materials could be useful for future electronics that use electron spin, but most of them are electrical insulators. Adding impurities can make them conduct electricity, yet the impurities also scramble the atomic and magnetic arrangement, which is hard to simulate accurately. This paper trains a machine-learning model on detailed quantum calculations so that it can reproduce those results and then predict magnetic interactions in very large, randomly disordered samples.",
-    "why": "The authors report that, using this approach on antimony-doped manganese telluride, altermagnetism (a magnetic order with spin-split electronic bands) appears to persist up to about 25% antimony, and that disorder-induced broadening affects how selective the spin behavior is. The text is a short abstract, so the details of the method's accuracy and the strength of these claims cannot be checked here; the approach may be relevant to modeling other disordered magnets, but that is a judgment beyond the text.",
+    "ai": true,
     "background": "- Spintronics: electronics that use the spin (an intrinsic magnetic property) of electrons as well as their charge.\n- Altermagnets: a recently recognized class of magnets whose opposite-spin sublattices are not related by simple translation, producing spin-split electronic bands even with no net magnetization.\n- Doping: deliberately adding small amounts of another element to change a material's properties, here making an insulator conductive.\n- First-principles calculations: simulations built directly from quantum mechanics with no fitted empirical parameters, but computationally expensive for large systems.\n- Spin-fermion model: a simplified model coupling localized magnetic moments to mobile electrons; exchange couplings describe how neighboring spins interact.\n- Renormalization: systematically simplifying a detailed model into a coarser one that keeps the essential physics.\n- Supercell: a large simulation box repeating the crystal structure, used here to represent random disorder.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A machine-learning method that compresses first-principles calculations into disordered spin-fermion models, applied to altermagnetism in Sb-doped MnTe.",
+    "plain": "Some magnetic materials could be useful for future electronics that use electron spin, but most of them are electrical insulators. Adding impurities can make them conduct electricity, yet the impurities also scramble the atomic and magnetic arrangement, which is hard to simulate accurately. This paper trains a machine-learning model on detailed quantum calculations so that it can reproduce those results and then predict magnetic interactions in very large, randomly disordered samples.",
+    "why": "The authors report that, using this approach on antimony-doped manganese telluride, altermagnetism (a magnetic order with spin-split electronic bands) appears to persist up to about 25% antimony, and that disorder-induced broadening affects how selective the spin behavior is. The text is a short abstract, so the details of the method's accuracy and the strength of these claims cannot be checked here; the approach may be relevant to modeling other disordered magnets, but that is a judgment beyond the text."
    },
    "abstract": "Metallic altermagnets are promising for spintronics, but most altermagnets are insulating. Doping can induce metallicity, but introduces chemical and magnetic disorder that is challenging to model from first principles. Here, we introduce a machine-learning approach that renormalizes first-principles calculations onto disordered spin-fermion models. The learned models accurately reproduce first-principles magnetic and electronic properties and enable predictions of millions of inequivalent long-range exchange couplings in large disordered supercells. Applied to Sb-doped MnTe, the approach shows that altermagnetism persists up to about 25\\% Sb, and reveals disorder broadening as a new factor controlling spin selectivity. More broadly, our work opens a route to combining renormalization with machine-learned Hamiltonians for strongly disordered materials.",
    "source": "arxiv"
@@ -47,12 +108,12 @@
    "primary_category": "cond-mat.mtrl-sci",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper shows atomic force microscopy (AFM) can resolve individual line-and-space profiles in high aspect ratio gate-all-around nanosheet transistor structures, both in the nanosheet region and the isolation region between sheets, and reports a statistical evaluation of their critical dimensions.",
-    "plain": "Modern computer chips are built from tiny three-dimensional transistors, and their features must be measured very precisely to keep manufacturing under control. This paper describes using a probe-based microscope (AFM), which feels the surface with a fine tip, to take clear measurements of very tall, narrow structures inside these transistors. The authors then ran a statistical analysis of the sizes they measured.",
-    "why": "Chip makers need to check feature sizes as transistors get denser and more three-dimensional, so a measurement method that is both fast and reliable matters for production control. The text does not report how the AFM results compare with other measurement techniques, so its wider value is not established here.",
+    "ai": true,
     "background": "- Transistor: a tiny electronic switch; the basic building block of chips.\n- Gate-all-around FET (GAAFET): a transistor design where the control gate wraps fully around thin channel layers.\n- Nanosheet (NS): a very thin, flat sheet of silicon-based channel material stacked inside such a transistor.\n- Aspect ratio: height divided by width of a feature; high aspect ratio means tall and narrow.\n- Atomic force microscopy (AFM): an instrument that scans a surface with a sharp tip to map its shape at near-atomic scale.\n- Critical dimension (CD): a key width or spacing that determines whether a chip works as designed.\n- Lines and spaces: a repeating pattern of raised lines separated by gaps, used to test measurement quality.\n- Metrology: the science of making precise measurements in manufacturing.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper shows atomic force microscopy (AFM) can resolve individual line-and-space profiles in high aspect ratio gate-all-around nanosheet transistor structures, both in the nanosheet region and the isolation region between sheets, and reports a statistical evaluation of their critical dimensions.",
+    "plain": "Modern computer chips are built from tiny three-dimensional transistors, and their features must be measured very precisely to keep manufacturing under control. This paper describes using a probe-based microscope (AFM), which feels the surface with a fine tip, to take clear measurements of very tall, narrow structures inside these transistors. The authors then ran a statistical analysis of the sizes they measured.",
+    "why": "Chip makers need to check feature sizes as transistors get denser and more three-dimensional, so a measurement method that is both fast and reliable matters for production control. The text does not report how the AFM results compare with other measurement techniques, so its wider value is not established here."
    },
    "abstract": "Transistors have long been the foundation of the semiconductor industry, with continuous architectural innovations enabling the scaling of integrated circuits while maintaining high performance. Advancements in deposition and lithographic techniques have further expanded design possibilities, while increasing structural complexity demands stricter process control. Atomic force microscopy (AFM) offers a rapid and reliable metrology solution, providing high-resolution measurements and robust statistical analysis of critical parameters. In this work, we present clearly resolved individual profiles of lines and spaces in high aspect ratio (HAR) gate all around FET (GAAFET)-type structures on both the nanosheet (NS) region and in the isolation region between the nanosheets and we present a comprehensive statistical evaluation of their critical dimensions.",
    "source": "arxiv"

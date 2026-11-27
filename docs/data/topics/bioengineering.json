@@ -1,7 +1,65 @@
 {
  "slug": "bioengineering",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.22.768423",
+   "title": "Digital light processing of human-scale tissue-engineered heart valves",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.768423v1",
+   "authors": [
+    "Jafari, A.",
+    "Nemati, A.",
+    "Sarshoghi, A.",
+    "Rafatian, N.",
+    "Guenette, S.",
+    "Park, Y.",
+    "Karamzadeh, V.",
+    "Hedayatnia, A.",
+    "Leduc, C.",
+    "Liberman, M.",
+    "Bouhout, I.",
+    "Kadem, L.",
+    "Andelfinger, G.",
+    "Savoji, H."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.22.768423 v1",
+   "primary_category": "bioengineering",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A composite light-curable bioink (PEGDA, GelMA, and methacrylated quince seed mucilage, called GPQuin) is used with digital light processing 3D printing to make a human-scale, trileaflet tissue-engineered heart valve scaffold, with mechanical, surface-accuracy, cell, implantation, and pulse-duplicator data reported.",
+    "plain": "Heart valves can fail, and replacements made from donor tissue or artificial materials have drawbacks. This paper describes a new printable gel-like material that can be shaped by shining light on it, and uses it to print a full-size three-leaflet heart valve scaffold. The authors report that the printed valve kept its shape reasonably well, its leaflets opened and closed under simulated pulmonary pressure, and human valve cells survived on it for two weeks.",
+    "why": "Printing a whole-size valve with separate, anatomically shaped leaflets is a hard engineering step, so the work is relevant to the goal of lab-grown replacement valves. The text reports only early results (one printed design, 12-week implantation with an inflammatory response, and a single pulse-duplicator test), so its clinical value is still uncertain.",
+    "background": "- Heart valves control one-way blood flow; replacements can be animal tissue, mechanical, or synthetic, each with known problems.\n- Tissue-engineered valves aim to grow living tissue on a scaffold that the body can remodel.\n- 3D printing builds objects layer by layer; digital light processing (DLP) cures a liquid resin with projected light, layer by layer.\n- Hydrogels are water-swollen gel networks; PEGDA is a synthetic polymer, gelatin methacryloyl (GelMA) is a modified gelatin, and quince seed mucilage is a plant-derived gum; \"methacrylated\" means chemically modified so it can be cured by light.\n- Tensile modulus measures stiffness; ultimate tensile strength is the stress at which a material breaks; elongation at break is how far it stretches before breaking.\n- Micro-CT is an X-ray scanning method used to compare the printed shape with the design.\n- Induced pluripotent stem cells are adult cells reprogrammed to an embryonic-like state, which can then be turned into other cell types.\n- A pulse duplicator is a lab pump rig that mimics heartbeat pressure and flow to test valves.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Tissue engineered heart valves (TEHVs) could overcome the complications of current heart valve replacement, such as immunologic events, degenerative fibrocalcific changes, and patient-prosthesis mismatch. Digital light processing (DLP) 3D printing enables creation of complex geometries; however, suitable (bio)inks remain limited. Here, a composite ink comprising poly(ethylene glycol) diacrylate (PEGDA), gelatin methacryloyl (GelMA), and methacrylated quince seed mucilage (QSGM), termed GPQuin, was developed for DLP printing of human-scale TEHVs. GPQuin enabled fabrication of a trileaflet TEHV with separated leaflets and anatomically inspired sinuses. Micro-computed tomography revealed mean positive and negative surface deviations of +214 and -248 micrometers, respectively. The printed hydrogels exhibited a tensile modulus of 117.2 +/- 15.5 kPa, an ultimate tensile strength of 113.2 +/- 17.4 kPa, and an elongation at break of 75.3 +/- 2.3%. Human induced pluripotent stem cell-derived valve cells attached to the hydrogel surfaces and remained predominantly viable over 14 days. After 12 weeks of subcutaneous implantation, the constructs showed a time-dependent inflammatory response. In a pulse duplicator under pulmonary loading, printed valves exhibited good cyclic leaflet opening and closing. Together, these findings establish GPQuin as a printable platform for human-scale valve scaffolds and support further investigation in heart valve tissue engineering.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.13.766607",
+   "title": "BMP-2 Release from Biomaterial Carriers: Reporting Heterogeneity and the Limits of Cross-Study Prediction",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766607v1",
+   "authors": [
+    "Zhou, W.",
+    "Zhou, L.",
+    "Hou, W.",
+    "Yang, Y. P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.13.766607 v1",
+   "primary_category": "bioengineering",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A preliminary study compiles 79 published BMP-2 release experiments from 21 papers and tests whether carrier-family labels can predict release across studies, finding that gains mostly hold within studies and not across publications.",
+    "plain": "Bone-growth proteins (BMP-2) are often loaded onto carrier materials that release them slowly over time. Researchers have published many release curves, but they are reported in inconsistent ways, so this paper gathered them, using an AI assistant checked by humans, to see whether a machine learning model could predict release from published data. Simple models beat a basic baseline when test data came from the same pool of studies, but not when whole publications were held out.",
+    "why": "Predicting how a growth factor leaves its carrier matters for designing bone-repair implants, and the paper is a useful caution about how far published data can be reused. It is a small, exploratory dataset, so its conclusions are tentative and mainly about data quality and study design.",
+    "background": "- BMP-2 is a protein that signals bone to grow; it is used in bone-repair treatments.\n- A \"carrier\" is a material (such as a coating or scaffold) that holds the protein and releases it gradually.\n- \"Release profile\" means how the amount released changes over time.\n- Machine learning (ML) models learn patterns from data to make predictions; gradient-boosted decision trees are a common method.\n- Mean absolute error measures average prediction error; log10 units are a logarithmic scale.\n- Random hold-out tests split data at random, while publication-grouped cross-validation holds out entire papers, which is a stricter test of generalization to new studies.\n- Interpolation means predicting within the range of known conditions; generalization means predicting for new studies or conditions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Published release profiles offer a potential basis for predicting bone morphogenetic protein-2 (BMP-2) delivery from biomaterial carriers, but heterogeneous reporting and study-specific effects complicate their reuse in machine learning (ML) models. As a preliminary exploration, we compiled 79 release experiments and 487 time points from 21 publications with a workflow that combined a large language model assistant and human verification, and we examined data comparability and cross-study prediction with ML models. Only 38 experiments (48%) reported BMP-2 alone as a percentage of the loaded dose. Within individual studies, binding components and coating layers were associated with slower release, consistent with established carrier mechanisms. Using carrier family as the sole predictor, a family-median model and gradient-boosted decision trees achieved lower mean absolute errors than a global-median baseline under random hold-out validation (0.42 and 0.44 versus 0.52 log10 units). Publication-grouped cross-validation did not establish a corresponding improvement (0.57 and 0.48 versus 0.50). Only 10 of the 28 modeling experiments belonged to carrier families represented in the training data under this scheme, and carrier family was strongly associated with publication. These findings highlight the need to distinguish within-study interpolation from cross-study generalization. Broader coverage of each carrier family, quantitative formulation and assay descriptors, and accessible numerical source data are needed to support predictive modeling of BMP-2 release.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.24.768839",
    "title": "Uncovering mechanisms of cell-free protein synthesis using tailored coarse-grained models",
@@ -15,12 +73,12 @@
    "primary_category": "synthetic biology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A coarse-grained ODE model, tested against batch E. coli extract experiments, is used to compare competing hypotheses about gene-length-dependent transcription limits, energy depletion as the cause of reaction termination, and batch-to-batch variability in translation in cell-free protein synthesis.",
-    "plain": "Cell-free protein synthesis makes proteins outside living cells, using a broth made from cell extracts, and it is widely used in labs. This paper builds a simplified computer model of the process and checks its predictions against real batch experiments. The authors report that longer genes appear to limit how fast transcription runs, that running out of chemical energy (not the gene or protein steps themselves) is the main reason reactions stop, and that translation varies most between batches of extract.",
-    "why": "Cell-free systems are a common tool in synthetic biology, and the paper suggests model-guided ways to raise yield and make results more reproducible. The text does not show how far these findings generalise beyond the authors' E. coli batch experiments, so their practical impact is still to be tested.",
+    "ai": true,
     "background": "- Cell-free protein synthesis: making proteins in a test tube using the molecular machinery extracted from cells, instead of growing living cells.\n- Transcription: copying a gene's DNA into messenger RNA. Translation: reading that RNA to build a protein.\n- Coarse-grained model: a simplified model that groups many molecular details into fewer variables.\n- Ordinary differential equations (ODEs): equations describing how quantities such as concentrations change over time.\n- Batch reaction: a single closed run where ingredients are mixed once and the reaction proceeds until it stops.\n- Design-build-test-learn cycle: an iterative loop of designing, making, measuring and refining a model or system.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A coarse-grained ODE model, tested against batch E. coli extract experiments, is used to compare competing hypotheses about gene-length-dependent transcription limits, energy depletion as the cause of reaction termination, and batch-to-batch variability in translation in cell-free protein synthesis.",
+    "plain": "Cell-free protein synthesis makes proteins outside living cells, using a broth made from cell extracts, and it is widely used in labs. This paper builds a simplified computer model of the process and checks its predictions against real batch experiments. The authors report that longer genes appear to limit how fast transcription runs, that running out of chemical energy (not the gene or protein steps themselves) is the main reason reactions stop, and that translation varies most between batches of extract.",
+    "why": "Cell-free systems are a common tool in synthetic biology, and the paper suggests model-guided ways to raise yield and make results more reproducible. The text does not show how far these findings generalise beyond the authors' E. coli batch experiments, so their practical impact is still to be tested."
    },
    "abstract": "Cell-free protein synthesis has revolutionised molecular biology research, and it continues to be a fundamental methodology in synthetic biology today. Yet, many of its mechanistic principles remain poorly understood, limiting our ability to predict reaction behaviour. In this work, we introduce a pipeline for uncovering these principles that combines computational models with experimental validation in a design-build-test-learn cycle. First, we develop a coarse-grained ordinary differential equation model describing key processes in the reaction. Next, we adapt the model to predict system behaviour under competing mechanistic hypotheses and compare model predictions to our experimental data from batch reactions using Escherichia coli extract. Our data and analysis indicate that gene length determines the rate-limiting step in transcription; it identifies transcription/translation-independent depletion of chemical energy as the primary cause for reaction termination; and finally it highlights translation as the most variable process between batches of cellular extract. Together, these results point to strategies for improving the yield and reproducibility of cell-free protein synthesis, and provide a framework for rational, model-guided design of cell-free systems.",
    "source": "biorxiv"
@@ -40,12 +98,12 @@
    "primary_category": "synthetic biology",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper introduces the Internet of Genetic Things (IoGT), a framework in which internet-linked sensor nodes read colour-based reporter signals from engineered E. coli and trigger blue-light optogenetic control of gene expression in a remote bacterial population, demonstrated as BUFFER, OR, AND and NOT logic gates across sites up to 555 m underground.",
-    "plain": "Engineers have long wanted living cells in different places to coordinate, much as internet-connected devices do, but cells normally communicate only over very short distances. This paper describes a setup where bacteria at one site are monitored by optical sensors and a small computer, and when their signals reach set levels, a message is sent over the internet to switch on light that controls a second bacterial population elsewhere. The authors report that this worked as simple logic gates between sites 100 m apart and between a surface lab and a deep-underground lab.",
-    "why": "It shows a way to link living cells across distance using ordinary internet infrastructure, which could matter for distributed biosensing or biological control in remote or hard-to-reach settings. The text does not show how robust or scalable the approach is beyond these demonstrations, so its broader usefulness remains to be tested.",
+    "ai": true,
     "background": "- Genetic circuit: engineered DNA that makes cells switch genes on or off in a logic-like way.\n- Reporter gene: a gene whose output, such as a colour, shows that another gene is active.\n- Optogenetics: controlling cell genes with light, here blue light.\n- Boolean logic gates: simple yes/no rules (BUFFER copies an input, NOT inverts it, AND needs all inputs, OR needs any input).\n- Escherichia coli (E. coli): a common lab bacterium used as a host for engineered circuits.\n- Raspberry Pi: a small, cheap single-board computer used here to read the optical sensors and relay data.\n- Internet of Things (IoT): networks of internet-connected sensing and control devices.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper introduces the Internet of Genetic Things (IoGT), a framework in which internet-linked sensor nodes read colour-based reporter signals from engineered E. coli and trigger blue-light optogenetic control of gene expression in a remote bacterial population, demonstrated as BUFFER, OR, AND and NOT logic gates across sites up to 555 m underground.",
+    "plain": "Engineers have long wanted living cells in different places to coordinate, much as internet-connected devices do, but cells normally communicate only over very short distances. This paper describes a setup where bacteria at one site are monitored by optical sensors and a small computer, and when their signals reach set levels, a message is sent over the internet to switch on light that controls a second bacterial population elsewhere. The authors report that this worked as simple logic gates between sites 100 m apart and between a surface lab and a deep-underground lab.",
+    "why": "It shows a way to link living cells across distance using ordinary internet infrastructure, which could matter for distributed biosensing or biological control in remote or hard-to-reach settings. The text does not show how robust or scalable the approach is beyond these demonstrations, so its broader usefulness remains to be tested."
    },
    "abstract": "The Internet of Things (IoT) exchanges information and coordinates functions among geographically separated electronic devices. However, establishing analogous long-distance networks between genetically engineered living systems remains a challenge because synthetic genetic intercellular communication largely relies on local molecular signal transport. Here, we introduced a cybergenetic framework named the Internet of Genetic Things (IoGT) that autonomously regulated long-distance gene expression between geographically separated bacterial populations by integrating IoT, bacterial gene expression, and optogenetics. We engineered interconnected IoT nodes containing genetically engineered Escherichia coli, in which colour signals arising from reporter gene expression were detected using optical sensors interfaced with a Raspberry Pi. When gene expressions reached predefined thresholds and patterns, data were transmitted over the internet to a remote node, triggering blue light illumination to induce target gene expression in an optogenetically engineered E. coli population. Using this genetic, electronic, genetic communication architecture, we demonstrated cybergenetic BUFFER and OR gates between bacterial populations distributed across nodes separated by 100 m, as well as a cybergenetic AND gate coordinated among three locations. To demonstrate geographically extended operation, we constructed a cybergenetic NOT gate connecting a surface laboratory with a deep-subsurface laboratory located 555 m underground and more than 200 km away. To our knowledge, this was Indias first deep-subsurface biology experiment. IoGT was programmable. It reconfigured the same engineered bacterial populations into diverse Boolean logic gates BUFFER, OR, AND, and NOT gates. These results established IoGT as a programmable cybergenetic architecture capable of remote, multi-node intercellular gene expression control, having significant promise for distributed synthetic biology systems operating across remote or extreme environments.",
    "source": "biorxiv"

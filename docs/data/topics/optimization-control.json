@@ -1,7 +1,54 @@
 {
  "slug": "optimization-control",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34002",
+   "title": "Policy and Value Iteration for Entropy-Regularized Stochastic Control",
+   "url": "https://arxiv.org/abs/2611.34002",
+   "authors": [
+    "Yuling Jiao",
+    "Peiying Wu",
+    "Jerry Zhijian Yang",
+    "Ruizhe Zhang",
+    "Tao Zhou"
+   ],
+   "label": "arXiv:2611.34002v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper analyzes a policy-and-value iteration scheme for finite-horizon entropy-regularized stochastic control with action-independent diffusion, giving a uniform error bound and convergence conditions tied to the Hamilton-Jacobi-Bellman equation.",
+    "plain": "The paper studies how to steer a system that is buffeted by random noise over a fixed time window, while also rewarding the controller for keeping its choices spread out rather than fixed. The authors alternate two steps: they approximately evaluate the cost of the current strategy, then reset the strategy to a probability-weighted form derived from that cost. They show that if the errors in both steps shrink to zero, the resulting strategy's cost approaches the best achievable value.",
+    "why": "The text gives a provable error bound and tests on two finite-horizon problems plus a discounted routing problem with twelve modes and an unregularized benchmark up to 10,000 dimensions. Its relevance beyond control theory is not stated in the text, so broader applications are unclear.",
+    "background": "- Stochastic control: choosing actions over time when outcomes contain random noise.\n- Hamilton-Jacobi-Bellman (HJB) equation: a partial differential equation whose solution gives the best achievable cost from each state and time.\n- Entropy regularization: adding a penalty for committing too firmly to one action, which makes the best strategy a spread-out probability distribution.\n- Gibbs distribution: a probability distribution that favors low-cost choices, weighted exponentially by cost.\n- Kullback-Leibler (KL) divergence: a measure of how far one probability distribution is from another.\n- Policy iteration vs. value iteration: alternating between evaluating a strategy's cost and improving the strategy.\n- Uniform convergence: error shrinking everywhere in the state space, not just at some points.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study finite-horizon entropy-regularized stochastic control with action-independent diffusion. To solve the associated Hamilton-Jacobi-Bellman (HJB) equation, we alternate between value and policy updates. Each iteration approximately solves a linear backward equation for the current policy, then approximates the Gibbs distribution defined by the resulting value gradient. We prove a uniform bound on the final policy's excess regularized cost. The bound assigns explicit, summable weights to the evaluation residuals and the Kullback-Leibler divergences from the updated policies to their Gibbs targets. Under the stated assumptions and with exact terminal data, vanishing errors in both steps imply uniform convergence to the optimal value. Two finite-horizon execution problems test value accuracy against a known solution and closed-loop performance when no exact solution is available. We also evaluate the iteration on a discounted infinite-horizon routing problem with twelve modes and an unregularized HJB benchmark in up to 10,000 dimensions.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34494",
+   "title": "The Monge Optimal Transport Barycenter Problem with Adaptive Features",
+   "url": "https://arxiv.org/abs/2611.34494",
+   "authors": [
+    "Yige Zhou",
+    "Esteban G. Tabak"
+   ],
+   "label": "arXiv:2611.34494v1",
+   "primary_category": "math.OC",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper extends data-driven Monge optimal transport barycenters, which map an outcome to a version statistically independent of covariates, by making the test-function features themselves adaptive (Gaussian RBFs with learned centers and bandwidths) and extending the method to multidimensional covariates.",
+    "plain": "The paper studies how to adjust a measurement so that it no longer depends on other variables, such as age or weather, while changing it as little as possible. The authors let the building blocks used to detect that dependence (bump-shaped functions) move and change width during the fit, rather than keeping them fixed. In synthetic tests, this adaptive version removed more of the dependence than fixed bumps with the same limited number of functions, and came close to what a larger fixed set achieved.",
+    "why": "Choosing the right features is a practical bottleneck when removing dependence numerically, so an automatic way to pick them could make such methods less dependent on expert guesswork. The text reports synthetic results and applications to age-related biomedical data and bike-sharing demand, but it does not give enough detail to judge how broadly the gains would hold.",
+    "background": "- Optimal transport: a way of finding the cheapest map that moves one distribution of values into another; a Monge map is a single deterministic rule for doing so.\n- Barycenter (here): a transformed version of an outcome that keeps it as close as possible to the original while removing its link to covariates.\n- Statistical independence: two variables carry no information about each other; dependence removal aims for this.\n- Test functions / features: chosen functions whose averages are used to check whether dependence is still present; finite sets of them make the independence condition approximate.\n- Radial basis functions (RBFs): smooth bump-shaped functions centered at a point with a set width; here both centers and widths are optimized.\n- Covariates: the other observed variables (e.g., age, temperature, humidity) that the outcome should be made independent of.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The data-driven Monge optimal transport barycenter problem seeks a map $y=T(x,z)$ that minimally perturbs an outcome $x$ while removing its statistical dependence on covariates $z$. Numerical implementations approximate the independence constraint through finite-dimensional test-function spaces, making the effectiveness of dependence removal sensitive to the choice of features. This article develops a procedure whereby the features themselves are optimized throughout the procedure. In particular, we adopt a feature space for $f$ consisting of Gaussian radial basis functions (RBFs) with adaptive individual centers and bandwidths. Synthetic experiments show that while fixed nonlinear RBF features can capture dependence structures that are poorly represented by linear features, adapting the RBF centers and bandwidths can further improve dependence removal within a limited feature space and achieve residual dependence comparable to that obtained with a larger fixed basis. We further extend the formulation to multidimensional covariates and evaluate its applicability to real-world problems, including removing age-related dependence in biomedical measurements and dependence on temperature and humidity in bike-sharing demand.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33923",
    "title": "Wasserstein-Fisher-Rao Reconstruction of Discrete space Population Dynamics",
@@ -16,12 +63,12 @@
    "primary_category": "math.OC",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper extends the dynamic Wasserstein-Fisher-Rao (unbalanced optimal transport) problem to discrete state spaces, derives a closed-form solution, and proposes an unbalanced discrete flow matching method as a numerical approximation for large or more general cases.",
-    "plain": "The paper studies how a population of cells changes over time when we only see snapshots of it at a few moments. Cells are grouped into coarse cell types, and the authors build a mathematical method that estimates a smooth, continuous-time path between those snapshots, allowing cells to be created or lost along the way. The authors report a closed-form solution for their framework, a numerical shortcut for very large problems, and tests on simulated and real biological data.",
-    "why": "Reconstructing how cell populations evolve from sparse measurements is a practical problem in developmental and disease biology, where cells cannot be tracked individually. The text does not say how the method compares with existing tools, so its practical advantage is not established here.",
+    "ai": true,
     "background": "- Optimal transport: a way of finding the cheapest way to move one distribution of mass into another; \"unbalanced\" means mass can also appear or disappear.\n- Wasserstein-Fisher-Rao: a specific unbalanced transport distance combining moving mass and growing or shrinking it.\n- Discrete state space: the system is described by a finite set of categories (here, coarse cell types) rather than continuous positions.\n- Flow matching: a machine-learning technique that learns a continuous-time path transforming one distribution into another; the discrete version works on categories.\n- Markovian: the future depends only on the present state, not on the full history.\n- Snapshot data: measurements taken at several time points without following the same individual cells over time.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extends the dynamic Wasserstein-Fisher-Rao (unbalanced optimal transport) problem to discrete state spaces, derives a closed-form solution, and proposes an unbalanced discrete flow matching method as a numerical approximation for large or more general cases.",
+    "plain": "The paper studies how a population of cells changes over time when we only see snapshots of it at a few moments. Cells are grouped into coarse cell types, and the authors build a mathematical method that estimates a smooth, continuous-time path between those snapshots, allowing cells to be created or lost along the way. The authors report a closed-form solution for their framework, a numerical shortcut for very large problems, and tests on simulated and real biological data.",
+    "why": "Reconstructing how cell populations evolve from sparse measurements is a practical problem in developmental and disease biology, where cells cannot be tracked individually. The text does not say how the method compares with existing tools, so its practical advantage is not established here."
    },
    "abstract": "Reconstructing the continuous time dynamics of cell state evolution from sparse snapshot observations can be formulated as an unbalanced optimal transport problem. To study such dynamics at a coarse grained cell type level, unbalanced optimal transport must be extended to discrete state spaces. Inspired by discrete flow matching, we extended the dynamic Wasserstein-Fisher-Rao (WFR) problem to discrete spaces, and derived a closed form for its solution. For particularly large state spaces or more general models, we proposed an unbalanced discrete flow matching as a numerical approximation method, which provides a Markovian reconstruction of the optimal WFR flow. Our discrete WFR framework also stays stable across different coarse grain resolution. Finally, numerical experiments demonstrated the effectiveness of the proposed approach, and applications to real biological data supported the plausibility of the reconstructed dynamics.",
    "source": "arxiv"
@@ -40,12 +87,12 @@
    "primary_category": "math.OC",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A non-Euclidean (Bregman-distance-based) gradient projection plus Newton pursuit method, called BGPNP, for minimizing an objective subject to a cap on the number of nonzero variables, with convergence results and compressed sensing experiments.",
-    "plain": "This paper studies a way to solve optimization problems where only a small number of variables are allowed to be nonzero, such as finding a sparse signal that fits measurements. The authors propose a two-stage iterative method: a gradient-based step that keeps the iterates within the sparsity limit, followed by a faster Newton-style step once the set of active variables has settled. They report that the method provably decreases the objective, converges, and does so at a fast local rate, and that it performs competitively on compressed sensing tests.",
-    "why": "Sparse optimization underlies many signal-recovery and data-compression tasks, so faster or more reliable solvers have practical value. The paper's main claimed contribution is convergence guarantees that avoid some restrictive conditions used in earlier work, though the text alone does not show how broadly these conditions are relaxed or how the method compares beyond the compressed sensing tests mentioned.",
+    "ai": true,
     "background": "- Sparsity constraint: a rule that only a fixed small number of variables may be nonzero.\n- Gradient method: iteratively moving downhill along the slope of the objective function.\n- Projection: adjusting a point so it satisfies a constraint, here by keeping only the largest entries.\n- Bregman distance: a generalized measure of distance between points that can replace the usual Euclidean (straight-line) distance, useful when geometry is not standard.\n- Newton step: a update using curvature information that converges quickly near a solution.\n- Convergence rates: \"linear\" and \"quadratic\" describe how fast the error shrinks per iteration; quadratic is much faster.\n- Compressed sensing: recovering a sparse signal from fewer measurements than usual.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A non-Euclidean (Bregman-distance-based) gradient projection plus Newton pursuit method, called BGPNP, for minimizing an objective subject to a cap on the number of nonzero variables, with convergence results and compressed sensing experiments.",
+    "plain": "This paper studies a way to solve optimization problems where only a small number of variables are allowed to be nonzero, such as finding a sparse signal that fits measurements. The authors propose a two-stage iterative method: a gradient-based step that keeps the iterates within the sparsity limit, followed by a faster Newton-style step once the set of active variables has settled. They report that the method provably decreases the objective, converges, and does so at a fast local rate, and that it performs competitively on compressed sensing tests.",
+    "why": "Sparse optimization underlies many signal-recovery and data-compression tasks, so faster or more reliable solvers have practical value. The paper's main claimed contribution is convergence guarantees that avoid some restrictive conditions used in earlier work, though the text alone does not show how broadly these conditions are relaxed or how the method compares beyond the compressed sensing tests mentioned."
    },
    "abstract": "A non-Euclidean gradient projection Newton pursuit method is proposed for solving sparsity constrained optimization problem via the Bregman distance. The method is also denoted as BGPNP. The method firstly constructs a gradient projection step based on the Bregman distance to ensure that the iterates satisfy the sparsity constraint. Then, when the support set becomes stable or the gradient norm is sufficiently small, a Newton pursuit step is introduced to improve local convergence efficiency. The BGPNP is proved to possess a sufficient descent property and the non-increasing monotonicity of the objective function values. The full convergence and linear convergence rate of the BGPNP are established under appropriate conditions, which do not involve the symmetry coefficient of Bregman distance and the $\\theta$-uniform condition. Moreover, the locally quadratical convergence rate of the BGPNP is also obtained. This method provides an effective algorithmic framework for sparse optimization in non-Euclidean setting. Numerical experiments on sparsity-constrained compressed sensing problems validate the competitive performance of BGPNP compared with existing leading solvers.",
    "source": "arxiv"

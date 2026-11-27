@@ -1,7 +1,51 @@
 {
  "slug": "operator-algebras",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33578",
+   "title": "Co-amenability and local reflexivity of $C^*$-algebras",
+   "url": "https://arxiv.org/abs/2611.33578",
+   "authors": [
+    "Yafei Zhao",
+    "Zhe Dong"
+   ],
+   "label": "arXiv:2611.33578v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper shows that local reflexivity of C*-algebras passes from a unital subalgebra A to a larger algebra B when the bidual inclusion A** ⊂ B** is co-amenable, and derives several permanence results that answer five questions from Kirchberg's 2011 list.",
+    "plain": "This paper is about a structural property of \"operator algebras,\" which are collections of mathematical operations on spaces, studied as a branch of abstract analysis. The authors ask when a bigger algebra inherits a \"local reflexivity\" property from a smaller algebra sitting inside it. They prove sufficient conditions for this inheritance and apply them to standard constructions such as tensor products, limits, crossed products, and free products.",
+    "why": "The text states that the results answer five specific open questions (b, c, d, f, h) posed by Kirchberg in 2011, so it resolves a named set of problems in the field. The text does not discuss wider applications beyond this area.",
+    "background": "- C*-algebra: a algebra of bounded operators on a Hilbert space, closed under adjoints and norm limits.\n- Unital inclusion: a smaller algebra A sitting inside a larger one B, sharing the identity element.\n- Bidual (A**): a much larger \"double dual\" algebra built from A, used to study A's structure.\n- Local reflexivity: a property that lets finite-dimensional pieces of the bidual be approximated by the algebra itself.\n- Co-amenability: a condition on how the inclusion of biduals behaves, related to averaging or approximation.\n- Exactness, amenable groups, reduced crossed products and free products: standard constructions and classes of groups/algebras used to build new C*-algebras.\n- Kirchberg's 2011 list: a published list of open problems about these properties.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Let $A\\subset B$ be a unital inclusion of $C^*$-algebras. We prove that local reflexivity passes from $A$ to $B$ if the inclusion $A^{**}\\subset B^{**}$ is co-amenable. It follows that local reflexivity is preserved by minimal tensor products with exact $C^*$-algebras, by inductive limits over directed sets, and by reduced crossed products by discrete amenable groups. We also prove that reduced free products with respect to states with faithful GNS representations preserve local reflexivity and that every locally reflexive $C^*$-algebra embeds into a simple locally reflexive $C^*$-algebra. These results answer Questions~(b), (c), (d), (f) and~(h) in Kirchberg's 2011 list.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33996",
+   "title": "Duality of finite-dimensional Hopf $\\mathrm{C}^*$-algebra actions via inclusions",
+   "url": "https://arxiv.org/abs/2611.33996",
+   "authors": [
+    "Anshu",
+    "Hyun Ho Lee"
+   ],
+   "label": "arXiv:2611.33996v1",
+   "primary_category": "math.OA",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper studies actions of finite-dimensional Hopf C*-algebras on unital C*-algebras, defining Rokhlin property and approximate representability directly for the action and relating them to the canonical conditional expectation, with a duality between an action and its dual action on the crossed product.",
+    "plain": "This paper is about symmetry in a very abstract setting: operator algebras are collections of \"operators\" (generalized measurements or matrices) and a finite-dimensional Hopf algebra is a finite set of symmetry-like rules that can act on them. The authors give direct definitions of two regularity conditions, the Rokhlin property and approximate representability, for such symmetry actions. They then show that, for a simple algebra with a simple crossed product under suitable hypotheses, these two conditions swap roles when one passes from the action to its dual action.",
+    "why": "The result gives a precise duality between an action and its dual, which extends known symmetry-duality results for group actions to the more general Hopf setting. The text also says these notions are matched with the spatial formulations of Barlak, Szabó and Voigt for separable algebras, and includes examples with and without the Rokhlin property; the broader significance beyond this specialist framework is not stated in the text.",
+    "background": "- C*-algebra: a algebra of bounded operators closed under adjoints and norm limits, a standard setting for quantum-style observables.\n- Unital and simple: contains an identity element, and has no nontrivial closed two-sided ideals.\n- Hopf algebra: an algebraic structure generalizing group symmetries, with multiplication and comultiplication; finite-dimensional here.\n- Action: a way a symmetry structure acts on an algebra by automorphisms.\n- Fixed-point algebra and conditional expectation: the subalgebra left unchanged by the action, and the averaging map onto it.\n- Crossed product: a larger algebra built from the action, encoding both the algebra and the symmetry.\n- Dual action: the induced symmetry action on the crossed product.\n- Rokhlin property: a regularity condition, analogous to a \"uniform spread\" of the symmetry, from classification theory for group actions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study actions of finite-dimensional Hopf $\\mathrm{C}^*$-algebras on a unital $\\mathrm{C}^*$-algebra $A$. We first define the Rokhlin property and approximate representability directly for an action $H\\curvearrowright A$ and characterize these properties, under appropriate hypotheses, in terms of the corresponding properties of the canonical conditional expectation $E\\colon A\\to A^H$. Based on this characterization, we establish the following duality for a saturated action on a simple unital $\\mathrm{C}^*$-algebra $A$ such that $A\\rtimes H$ is simple: 1. $H\\curvearrowright A$ has the Rokhlin property if and only if the dual action $H^{\\circ}\\curvearrowright A\\rtimes H$ is approximately representable. 2. $H\\curvearrowright A$ is approximately representable if and only if the dual action $H^{\\circ}\\curvearrowright A\\rtimes H$ has the Rokhlin property. For separable $A$, we also identify these properties with the corresponding spatial formulations introduced by Barlak--Szab{\\'o}--Voigt, assuming saturation in the Rokhlin comparison. We present examples of Hopf $\\mathrm{C}^*$-algebra actions both with and without the Rokhlin property.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33960",
    "title": "On Shepp's property in free probability",
@@ -15,12 +59,12 @@
    "primary_category": "math.OA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves a free-probability analogue of Shepp's theorem for freely independent standard semicircular elements, showing that a family of self-normalized squared quadratic forms is free with standard Marchenko-Pastur laws, and adds free analogues of Lukacs-type independence results.",
-    "plain": "This is a pure mathematics paper about \"free probability,\" a version of probability theory for noncommuting random quantities such as large random matrices. It asks whether a classical fact about independent random variables, Shepp's theorem, still holds when the variables are \"free\" in this noncommutative sense. The authors show that it does, using the three Pauli matrices as coefficients, and they also prove some related results of the Lukacs type.",
-    "why": "The text places the work as a translation of a classical independence result into the noncommutative setting, which is the kind of bridge that matters for operator algebras and random matrix theory. The abstract does not say what applications, if any, follow, so its wider significance beyond this translation is uncertain.",
+    "ai": true,
     "background": "- Shepp's theorem: a classical result about when certain squared quadratic forms in independent Gaussian variables are independent; the paper's starting point.\n- Free independence: Voiculescu's noncommutative analogue of independence, used for operators rather than ordinary random variables.\n- Semicircular element: the free analogue of a Gaussian (normal) random variable.\n- Marchenko-Pastur distribution: a limiting distribution of eigenvalues of random sample covariance matrices, here the target law for each self-normalized squared form.\n- Quadratic form: an expression like x^T A x built from a vector and a matrix; Pauli matrices are specific 2x2 complex matrices from quantum physics.\n- Lukacs-type results: characterizations of distributions via independence of certain combinations of variables.\n- Corner algebra / free projection: a compressed piece of an operator algebra cut out by a projection.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves a free-probability analogue of Shepp's theorem for freely independent standard semicircular elements, showing that a family of self-normalized squared quadratic forms is free with standard Marchenko-Pastur laws, and adds free analogues of Lukacs-type independence results.",
+    "plain": "This is a pure mathematics paper about \"free probability,\" a version of probability theory for noncommuting random quantities such as large random matrices. It asks whether a classical fact about independent random variables, Shepp's theorem, still holds when the variables are \"free\" in this noncommutative sense. The authors show that it does, using the three Pauli matrices as coefficients, and they also prove some related results of the Lukacs type.",
+    "why": "The text places the work as a translation of a classical independence result into the noncommutative setting, which is the kind of bridge that matters for operator algebras and random matrix theory. The abstract does not say what applications, if any, follow, so its wider significance beyond this translation is uncertain."
    },
    "abstract": "We establish a free analogue of Shepp's theorem for freely independent standard semicircular elements. We show more generally that a family of self-normalized squared quadratic forms is free, and each has a standard Marchenko-Pastur distribution. The free analogue of Shepp's theorem follows by taking the coefficients of quadratic forms to be the three Pauli matrices. We also prove some new free analogues of Lukacs-type independence results. The key part of the proof is a construction of an equivalent and simpler operator model on a corner algebra compressed by a free projection.",
    "source": "arxiv"
@@ -37,12 +81,12 @@
    "primary_category": "math.GR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves that closed groups acting minimally and two-transitively on the boundary of a locally finite tree are uniformly admissible (hence type I), settling Nebbia's conjecture, and uses an operator-algebra result on amenable amalgamated free products of atomic von Neumann algebras with integer traces.",
-    "plain": "The paper studies symmetry groups of tree-like networks, the kind of branching structure where every node has finitely many neighbours and there is no loop. It shows that, under a natural condition on how the group acts on the \"edges at infinity\" of the tree (two-transitivity), the group behaves in a very regular way that mathematicians call type I. The main tool is a result about certain algebras of operators, which are the mathematical objects used to describe these symmetries.",
-    "why": "The text says this settles a conjecture of Nebbia in a strong form, and that together with earlier work by Caprace, Kalantar and Monod it gives a complete if-and-only-if characterisation for nonamenable groups acting minimally on such trees. The text does not say what wider applications it has, so any connection beyond this area is unclear from the text alone.",
+    "ai": true,
     "background": "- Locally finite tree: a connected graph with no cycles where each vertex has finitely many neighbours; its boundary is the set of its \"ends\" (infinite paths going out to infinity).\n- Group acting on a tree: a group of symmetries (automorphisms) of the tree; \"minimal\" means no proper invariant subtree; \"two-transitive\" on the boundary means any two pairs of distinct boundary points can be mapped to each other.\n- Amenable group: roughly, a group with a kind of averaging/invariant-mean property; nonamenable groups are the \"large\" opposite case.\n- Type I: a regularity property of a group's representations (linked to its unitary representation theory); this is the main property studied.\n- Von Neumann algebra: an algebra of bounded operators on a Hilbert space, used as the operator-algebra framework; \"atomic\" means it is generated by minimal projections in a discrete way; \"trace\" is a generalised notion of summing diagonal values.\n- Amalgamated free product: a way of gluing two algebras along a common subalgebra, analogous to gluing groups along a common subgroup.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that closed groups acting minimally and two-transitively on the boundary of a locally finite tree are uniformly admissible (hence type I), settling Nebbia's conjecture, and uses an operator-algebra result on amenable amalgamated free products of atomic von Neumann algebras with integer traces.",
+    "plain": "The paper studies symmetry groups of tree-like networks, the kind of branching structure where every node has finitely many neighbours and there is no loop. It shows that, under a natural condition on how the group acts on the \"edges at infinity\" of the tree (two-transitivity), the group behaves in a very regular way that mathematicians call type I. The main tool is a result about certain algebras of operators, which are the mathematical objects used to describe these symmetries.",
+    "why": "The text says this settles a conjecture of Nebbia in a strong form, and that together with earlier work by Caprace, Kalantar and Monod it gives a complete if-and-only-if characterisation for nonamenable groups acting minimally on such trees. The text does not say what wider applications it has, so any connection beyond this area is unclear from the text alone."
    },
    "abstract": "We prove that a closed group of automorphisms acting minimally on a locally finite tree and two-transitively on its boundary is uniformly admissible, hence of type I. This solves Nebbia's conjecture in a strong form. Together with the work of Caprace, Kalantar and Monod, this shows that for every closed nonamenable subgroup $G$ of $\\mathrm{Aut}(T)$ acting minimally on a locally finite tree $T$, $G$ is of type I if and only if the action on $\\partial T$ is two-transitive. The key ingredient is the following operator algebraic result: if the projections of two atomic von Neumann algebras $A_1, A_2$ have integer traces, then every amenable amalgamated free product $A_1 \\ast_B A_2$ with $B$ atomic is of type I.",
    "source": "arxiv"

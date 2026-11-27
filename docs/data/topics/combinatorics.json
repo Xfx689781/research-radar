@@ -1,7 +1,62 @@
 {
  "slug": "combinatorics",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34348",
+   "title": "List coloring degenerate graphs with requests",
+   "url": "https://arxiv.org/abs/2611.34348",
+   "authors": [
+    "Rajat Adak",
+    "L. Sunil Chandran",
+    "Shiwali Gupta",
+    "Tom\\'a\\v{s} Kaiser",
+    "Subrahmanyam Kalyanasundaram",
+    "Rogers Mathew",
+    "Saraswati Girish Nanoti",
+    "Suraj Kumar Sahoo",
+    "Umesh Shankar",
+    "Joel M. Thomas"
+   ],
+   "label": "arXiv:2611.34348v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper improves bounds on (k,ε)-flexibility for d-degenerate graphs at the extreme list sizes k = d+2 and k = 2d, and at satisfaction ratio 1/(d+1).",
+    "plain": "The paper studies a graph-colouring puzzle: each node has a short list of allowed colours, and some nodes come with a requested colour. The question is how many requests can be honoured at once while still giving every node a colour from its list. The authors prove three results that push the trade-off between list size and the fraction of requests that can be met to its limits.",
+    "why": "The text shows the limiting example (the complete graph on d+1 vertices) that fixes the extreme values, and the results sharpen bounds near those extremes. Its wider relevance beyond this graph-theory setting is not discussed in the text, so I cannot say more.",
+    "background": "- Graph: a set of vertices joined by edges; a colouring gives each vertex a colour so that adjacent vertices differ.\n- d-degenerate graph: one whose vertices can be removed one at a time, each having at most d neighbours among those remaining.\n- List colouring: each vertex has its own allowed list of k colours rather than a common palette.\n- Requests: some vertices ask for a particular colour from their list; a colouring 'satisfies' a request if it gives that colour.\n- (k,ε)-flexible: for any lists of size k and any set of requests, at least an ε fraction of the requests can be satisfied.\n- Complete graph on d+1 vertices: every pair is adjacent, which forces the list size to be at least d+1 and the satisfiable fraction to be at most 1/(d+1).\n- Big-O style bounds: 'inverse exponential' vs 'inverse polynomial' describe how fast the guaranteed fraction shrinks as d grows.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove three results on the flexible list coloring of $d$-degenerate graphs. Following Dvo\\v{r}\\'{a}k, Norin and Postle [J. Graph Theory 2019], a graph $G$ is $(k,\\epsilon)$-flexible if for any assignment $L$ of lists of size $k$ to its vertices and any choice of requested colors by a set $\\widehat V$ of the vertices from their respective lists, there is an $L$-coloring satisfying at least $\\epsilon|\\widehat V|$ of the requests. The complete graph on $d+1$ vertices shows that if all $d$-degenerate graphs are $(k,\\epsilon)$-flexible for some list size $k$ and satisfaction ratio $\\epsilon$, then $k \\geq d+1$ and $\\epsilon\\leq\\tfrac1{d+1}$. Our results concern values at or near these extremes. For list size $d+2$, we improve the satisfaction ratio from an inverse exponential to an inverse polynomial function of $d$. For satisfaction ratio $\\tfrac1{d+1}$, we prove that it is achievable for list size $2d$ as well as $\\left\\lfloor(d+2)\\left(2-\\tfrac1e\\right)\\right\\rfloor$ (which is less than $2d$ for $d\\geq 9$).",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34794",
+   "title": "Monoid Representation of the Determinants of the Adjacency Matrices of 1-joined Path Graphs",
+   "url": "https://arxiv.org/abs/2611.34794",
+   "authors": [
+    "Daniel Pinzon",
+    "Daniel Pragel",
+    "Joshua Roberts",
+    "Zack Marshall",
+    "Olivia Strain"
+   ],
+   "label": "arXiv:2611.34794v1",
+   "primary_category": "math.CO",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper studies determinants of adjacency matrices of labeled path graphs joined by a single edge, shows these determinants form a finite monoid under matrix multiplication, and characterizes that monoid via a representation theory from Khovanov et al. (2024).",
+    "plain": "The paper looks at simple networks made of paths of dots joined together by one connecting line, where each piece carries a label that says how it is joined. For each such network it computes a single number, the determinant of its adjacency matrix (a grid recording which dots are linked). The authors report that these numbers combine under a rule that behaves like multiplication of matrices, and they describe that structure completely.",
+    "why": "The work gives a finite algebraic structure that is fully described, and the authors say it yields general formulas for chains of joined labeled paths. Its wider significance is unclear from the text alone; it builds on earlier work by the same authors and on a 2024 representation-theory framework.",
+    "background": "- Graph: dots (vertices) joined by lines (edges); a path graph is a simple chain of dots.\n- Adjacency matrix: a square grid of 0s and 1s recording which dots are directly linked.\n- Determinant: a single number computed from a square grid that summarizes some of its properties.\n- Monoid: a set with an associative combining rule and an identity element, like multiplication of numbers but not necessarily with inverses.\n- Finite monoid of matrices: a finite collection of matrices closed under matrix multiplication.\n- Representation theory: a way of studying abstract algebraic structures by mapping them to concrete matrices or linear transformations.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Following previous work by these authors, this paper explores all labeled path graphs joined by 1 edge where the labeling contains the information on how to join that graph. The algebraic structure that this operation has on the determinant of the adjacency matrix of the graph gives a finite monoid of matrices under matrix multiplication. We completely characterize the monoid using the representation theory discussed in Khovanov et al(2024). Finally, we demonstrate how these results can be used to find general formulas for the determinants of chains of 1-joined labeled paths.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33423",
    "title": "From random intersection to spatial graphs: a unified asymptotic framework",
@@ -15,12 +70,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper studies geometric random intersection graphs, where spatially placed vertices connect when they share a located group, deriving exact subgraph probabilities, clustering formulas, and convergence to several standard random graph models.",
-    "plain": "This paper looks at networks built from points scattered in space, where two points are linked if they both belong to a shared group placed nearby. The authors work out exact formulas for how often small patterns of links appear and how clustered the network is, which is the tendency of friends-of-friends to also be connected. They also show that under certain settings the network approaches well-known simpler random network models, while noting that its clustering may not settle to the same value as the simpler model.",
-    "why": "Clustering is a central feature of real social and spatial networks, and this work clarifies how two common mechanisms for creating it, shared groups and spatial closeness, relate to each other. The text does not indicate specific applications, so the practical reach beyond probability theory is unclear from the abstract alone.",
+    "ai": true,
     "background": "- Random graph: a network generated by a random rule, studied through averages as it grows large.\n- Random intersection graph: vertices are linked when they share a group they have each joined.\n- Spatial random graph: vertices are points in space, linked more often when they are close.\n- Clustering: how often two neighbours of a node are also neighbours of each other (triangles).\n- Poisson process: a standard random scattering of points with a given density.\n- Convergence / limit: showing that a model's statistics approach those of a simpler model as a parameter changes.\n- Erdős–Rényi graph: the simplest random network, where every pair is linked independently with equal chance.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies geometric random intersection graphs, where spatially placed vertices connect when they share a located group, deriving exact subgraph probabilities, clustering formulas, and convergence to several standard random graph models.",
+    "plain": "This paper looks at networks built from points scattered in space, where two points are linked if they both belong to a shared group placed nearby. The authors work out exact formulas for how often small patterns of links appear and how clustered the network is, which is the tendency of friends-of-friends to also be connected. They also show that under certain settings the network approaches well-known simpler random network models, while noting that its clustering may not settle to the same value as the simpler model.",
+    "why": "Clustering is a central feature of real social and spatial networks, and this work clarifies how two common mechanisms for creating it, shared groups and spatial closeness, relate to each other. The text does not indicate specific applications, so the practical reach beyond probability theory is unclear from the abstract alone."
    },
    "abstract": "Random intersection graphs and spatial random graphs provide different mechanisms for generating edges and clustering. We investigate their interplay through geometric random intersection graphs, where vertices are adjacent whenever they share a spatially located group. First, a Poisson decomposition by attachment sets yields exact subgraph probabilities and laws of large numbers for connected subgraph densities. It distinguishes triangles supported by a common group from those requiring three distinct groups. Second, explicit representations of global and average local clustering reveal their different dependence on model parameters and the role of shared groups in edge correlations. Finally, by varying the strength and spatial range of group memberships, we establish convergence to random connection, random geometric, random intersection, Erd\\H{o}s--R\\'enyi, and complete graphs. We characterize the corresponding clustering limits and show that clustering need not converge to that of the limiting graph, highlighting the distinction between spatially local convergence and global graph statistics.",
    "source": "arxiv"
@@ -39,12 +94,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper determines, up to the order of magnitude, the graceful coloring number of Erdős–Rényi random graphs across three density regimes, using Salem–Spenser sets, forbidden submatchings, and the chromatic number of the graph's square.",
-    "plain": "The paper studies how many colors are needed to label the points of a randomly generated network so that two rules hold: neighboring points get different colors, and every link gets a distinct \"color\" given by the difference between its endpoints' labels. It looks at random networks of three kinds, depending on how many links they have. For each kind it gives an estimate of the number of labels needed.",
-    "why": "The results give concrete growth rates for a combinatorial quantity on random graphs, which is a standard test case in the field. The text does not say how the results bear on applications beyond this area, so any wider significance is unclear from the text alone.",
+    "ai": true,
     "background": "- Graph: a set of vertices (points) joined by edges (links).\n- Random graph G(n,p): n vertices, each pair joined independently with probability p.\n- Proper vertex coloring: adjacent vertices get different colors.\n- Proper edge coloring: edges sharing an endpoint get different colors.\n- Graceful coloring: vertex colors from 1..k such that edge labels |c(u)−c(v)| are all distinct at each vertex.\n- Diameter: the longest shortest path between any two vertices; diameter 2 means every pair is within two steps.\n- Salem–Spenser sets: sets of integers with no nontrivial three-term relations of a certain type, used here as a tool.\n- Asymptotic notation: n^{1+o(1)} means up to factors that are subpolynomial in n; Θ means growth of the same order up to constant factors.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper determines, up to the order of magnitude, the graceful coloring number of Erdős–Rényi random graphs across three density regimes, using Salem–Spenser sets, forbidden submatchings, and the chromatic number of the graph's square.",
+    "plain": "The paper studies how many colors are needed to label the points of a randomly generated network so that two rules hold: neighboring points get different colors, and every link gets a distinct \"color\" given by the difference between its endpoints' labels. It looks at random networks of three kinds, depending on how many links they have. For each kind it gives an estimate of the number of labels needed.",
+    "why": "The results give concrete growth rates for a combinatorial quantity on random graphs, which is a standard test case in the field. The text does not say how the results bear on applications beyond this area, so any wider significance is unclear from the text alone."
    },
    "abstract": "Given a vertex coloring $c:V(G)\\to [k]$, the graceful induced edge labeling is the induced edge coloring $c'(uv):=|c(u)-c(v)|$. A vertex coloring $c$ is a \\textbf{graceful coloring} if $c$ is a proper vertex coloring and $c'$ is a proper edge coloring. The graceful coloring number $\\chi_g(G)$ is the least $k$ such that there exists a graceful coloring $c:V(G)\\to [k]$. We study the graceful coloring number for the Erd\\H{o}s-Renyi random graph, $G_{n,p}$. In the diameter $2$ regime, we find the $\\chi_g(G_{n,p})=n^{1+o(1)}$ using a connection between graceful colorings and Salem-Spenser sets. In the regime where $G_{n,p}$ is connected, but not diameter 2, we find that $\\chi_g(G_{n,p})=\\Theta\\left(\\frac{n^2p^2}{\\log np}\\right)$, using the forbidden submatching method and a connection between graceful coloring and the chromatic number of the square of $G_{n,p}$. Finally, in the regime where $G_{n,p}$ has constant average degree, we find that $\\chi_g(G_{n,p})=\\Delta(G_{n,p})+1$, by exploring the cycle structure of $G_{n,p}$.",
    "source": "arxiv"

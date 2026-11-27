@@ -1,7 +1,56 @@
 {
  "slug": "systems",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33406",
+   "title": "WADJET: Whole-Job Authorization and Dispatch for Job Execution Trust on FPGA System-on-Chip Accelerators",
+   "url": "https://arxiv.org/abs/2611.33406",
+   "authors": [
+    "Mohamed El-Hadedy"
+   ],
+   "label": "arXiv:2611.33406v1",
+   "primary_category": "cs.AR",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "WADJET is a hardware gate in FPGA logic that verifies, encrypts and sequence-checks each whole job before writing an unmodified accelerator's registers, so only approved, fresh jobs run on a Zynq-7020 SoC.",
+    "plain": "On a chip that pairs a processor with a programmable accelerator, the software that sends work can also tell the accelerator exactly what to do, so a bug or an attacker could alter or replay a job. WADJET adds a hardware gate that checks each complete job was approved and is new before any part of it reaches the accelerator. In the paper's tests, it released all 21,000 approved jobs and blocked all 14,700 altered or repeated ones.",
+    "why": "It addresses a gap the text describes: existing protections control who can reach an accelerator or protect its data, but not whether a specific job was approved and is unused. The reported cost is about a third of the lookup tables of ShEF's register protection and roughly ten microseconds added per job start, and the text states it assumes trusted key, reset, and configuration control. Its relevance beyond this platform is not established by the text.",
+    "background": "- FPGA: a reconfigurable chip whose logic circuits can be defined after manufacture.\n- System-on-chip (SoC): one chip combining a processor and hardware accelerators.\n- Accelerator registers: memory-mapped settings that tell hardware what to compute.\n- Authenticated encryption (Ascon-AEAD128): a scheme that both hides a message and detects any tampering.\n- Sequence number: a counter that lets the gate reject old or repeated jobs.\n- Lookup tables (LUTs): the basic logic units of an FPGA, used as a rough measure of hardware size.\n- Trusted computing base: the parts that must be assumed correct for the security claim to hold.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "On an FPGA system-on-chip, the software that submits work to an accelerator also decides what the accelerator does. It writes the registers one by one, and the hardware runs whatever it finds, so faulty or compromised software can change one address or resend a job. Existing protections decide who may reach an accelerator or keep its data safe. Deciding whether one job was approved and is still unused takes three things in one place: the only way to the accelerator, the whole job held back until checked, and a record of used approvals. WADJET puts the three in one gate in FPGA logic. A separate authority encrypts and authenticates each approved job, with a sequence number, using Ascon-AEAD128. The gate verifies the whole job before releasing any part, accepts only a newer sequence number, uses it up, and writes the registers of an unmodified accelerator itself. The gate replaces only the processor's direct line to the registers and works beside the existing protections. In a software model, a check on each write ran jobs mixed from two approved ones; the whole-job rule released none. Its release path is proven on the Verilog for all inputs. On a Zynq-7020 running a language model, it released all 21,000 approved jobs and none of 14,700 altered or repeated ones. It needs a third of the lookup tables of ShEF's register protection, which protects more, and adds about ten microseconds to starting a job. It assumes trusted control of its key, reset, and configuration.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34262",
+   "title": "From Telemetry to Intelligence: A Data-Centric Survey of O-RAN",
+   "url": "https://arxiv.org/abs/2611.34262",
+   "authors": [
+    "Samara Mayhoub",
+    "Zhengjia Xu",
+    "Tareq M. Shami",
+    "Mohammad Asif Habibi",
+    "Hamed Alimohammadi",
+    "Ayhan Akbas",
+    "Chuan Heng Foh",
+    "Jose Maria Alcaraz Calero"
+   ],
+   "label": "arXiv:2611.34262v1",
+   "primary_category": "cs.NI",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A survey that reviews O-RAN (open, software-programmable radio access network) through the lens of the data it produces and consumes, classifying that data by source, accessibility, abstraction level, and application across control loops, and listing key data challenges.",
+    "plain": "Mobile phone networks are increasingly being built from open, software-controlled parts, and they are meant to run themselves using machine learning and newer \"agentic\" AI systems. This paper looks at how well those systems can work, given the data the network produces, which is often incomplete, inconsistent, or hard to access. It sorts that data by where it comes from, who can reach it, how processed it is, and what it is used for, and it discusses the resulting problems for automatic network control.",
+    "why": "Automated control of mobile networks depends on whether the data feeding AI tools is usable, so a data-focused map of the field may help researchers and operators see gaps. The text describes this as the first comprehensive review of this data-centric angle, but the abstract alone does not show how thorough that claim is.",
+    "background": "- O-RAN: an open design for the radio part of cellular networks, with standard interfaces so equipment from different vendors can work together.\n- RAN: the radio access network, the towers and base stations that connect phones to the core network.\n- Control loops: automated feedback cycles that adjust the network at different speeds, from milliseconds to minutes or longer.\n- Telemetry: measurements and logs streamed from network equipment.\n- AI/ML: machine learning methods that learn patterns from data.\n- Agentic AI: software systems that plan and take multi-step actions with some autonomy.\n- Rule-based control: fixed if-then policies written by engineers.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "The Open Radio Access Network (O-RAN) has emerged as a new architecture for enabling programmability, intelligence, automation, and multi-vendor interoperability in the wireless domain of public telecommunications networks. Artificial Intelligence/Machine Learning (AI/ML), and more recently Agentic AI, are considered key enablers of automation and intelligentization in O-RAN. However, the effectiveness of such systems is constrained by the availability, quality, and structure of O-RAN data. In this survey, we present a data-centric perspective of O-RAN, focusing on how data support rule-based, AI/ML-driven, and emerging Agentic AI applications across various timescale control loops. We analyze O-RAN data along multiple dimensions, including source, accessibility, abstraction level, and application. We further identify key data challenges, and discuss their implications for intelligent control. The overarching objective of this work is to present the first comprehensive review of the data-centric perspective on intelligent applications in O-RAN. To this end, it introduces a unified framework for understanding the role of O-RAN data in enabling network intelligence and automation.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34630",
    "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
@@ -17,12 +66,12 @@
    "primary_category": "cs.AR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "ISTS is a hardware-software co-designed accelerator that reuses partial sums across bit-slice vectors clustered near shared representative patterns (Steiner points) to speed up quantized LLM matrix multiplications.",
-    "plain": "Running large language models requires huge numbers of multiplications, and chips are often limited by time and memory for these operations. This paper proposes a chip design that breaks the numbers being multiplied into their individual bits and notices that many of the bit patterns are very similar to a few common ones. By reusing the results already computed for those common patterns, the chip does less work. The authors report average speedups of 1.27x to 3.09x over five existing accelerator designs in their evaluations.",
-    "why": "Faster and cheaper matrix multiplication matters for deploying LLMs on limited hardware, so the approach is worth watching. The reported gains come from the authors' own comparisons, and the text does not show how the design performs beyond those benchmarks or in real deployments.",
+    "ai": true,
     "background": "- Large language models (LLMs): AI systems whose core workload is huge grids of multiplications (general matrix multiplication, GEMM).\n- Quantization: storing numbers with fewer bits to save memory and computation.\n- Bit slices: splitting a number into its separate binary digits, grouped by position, so each group can be processed on its own.\n- Hamming distance: the count of bit positions where two patterns differ; \"a few bit flips away\" means two patterns differ in only a few places.\n- Partial sums: intermediate totals accumulated during a multiplication; reusing them avoids recomputing.\n- Steiner point: here, a representative pattern that nearby patterns are derived from with a few additions or subtractions.\n- Accelerator: specialized hardware built to run one type of computation faster than a general processor.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "ISTS is a hardware-software co-designed accelerator that reuses partial sums across bit-slice vectors clustered near shared representative patterns (Steiner points) to speed up quantized LLM matrix multiplications.",
+    "plain": "Running large language models requires huge numbers of multiplications, and chips are often limited by time and memory for these operations. This paper proposes a chip design that breaks the numbers being multiplied into their individual bits and notices that many of the bit patterns are very similar to a few common ones. By reusing the results already computed for those common patterns, the chip does less work. The authors report average speedups of 1.27x to 3.09x over five existing accelerator designs in their evaluations.",
+    "why": "Faster and cheaper matrix multiplication matters for deploying LLMs on limited hardware, so the approach is worth watching. The reported gains come from the authors' own comparisons, and the text does not show how the design performs beyond those benchmarks or in real deployments."
    },
    "abstract": "Large language models (LLMs) have become foundational to modern artificial intelligence. Driven by scaling laws, their rapid growth poses increasing computational and memory challenges for deployment. To accelerate the general matrix multiplication (GEMM) operations that dominate LLM computation, bit-slice architectures decompose quantized operands along the bit dimension, exposing slice-level sparsity and redundancy. However, existing bit-slice designs primarily exploit sparsity in high-order slices, while dense low-order slices still offer substantial untapped reuse opportunities. We observe that bit-slice vectors (BSVs) are highly clustered in Hamming space, with many BSVs lying only a few bit flips away from a small set of representative patterns. Based on this observation, we propose ISTS, an algorithm-hardware co-designed accelerator that leverages representative BSV patterns as shared Steiner points to reuse partial sums across slices, substantially reducing computation. Specifically, the partial sum of each target BSV can be reconstructed from that of its assigned Steiner point using only a few additions or subtractions. On the algorithmic side, we propose Steiner Absorption Table Construction (SATC), which selects a compact set of Steiner points to absorb BSVs with only a few bidirectional bit flips, while FlipPrune selectively prunes flips to further expand the reusable BSV population. On the hardware side, we design a lightweight accelerator that supports Steiner reuse for static linear layer weights and runtime-generated attention K/V tensors. Comprehensive evaluations show that ISTS achieves average speedups of $3.09\\times$, $2.41\\times$, $2.18\\times$, $1.27\\times$, and $1.41\\times$ over the state-of-the-art accelerators ANT, BBS, LUT Tensor Core, Transitive Array, and MCBP-BRCR, respectively.",
    "source": "arxiv"
@@ -44,12 +93,12 @@
    "primary_category": "cs.NI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "BRACE is a two-timescale distributed traffic-splitting scheme for LEO satellite networks that combines slowly computed destination-aware splits (keeping every admissible port non-zero) with fast, constant-time per-hop reweighting based on instantaneous local queues, evaluated in 144-satellite flow-level simulations.",
-    "plain": "Low Earth orbit satellite networks carry internet traffic between satellites, and some links become overloaded when too much traffic is routed through the same spot. This paper proposes a method that decides how each satellite spreads its traffic across its possible outgoing links, updating the big plan slowly and the quick adjustments rapidly based on how full each local queue is. In simulations of a 144-satellite network, the authors report it lost fewer packets than a tuned congestion-aware heuristic under the same hotspot conditions.",
-    "why": "Congestion at satellite links directly affects broadband access from space, which is part of the non-terrestrial networking role envisioned for 6G. The idea of keeping a small share of traffic on every usable route while adjusting quickly to queues may be relevant to other distributed routing problems, though the text does not establish wider applicability.",
+    "ai": true,
     "background": "- LEO satellites orbit roughly a few hundred to a couple thousand km up, and they connect to each other via inter-satellite links, forming a moving mesh network.\n- Traffic splitting means sending a flow's packets across several outgoing links in chosen proportions, rather than one fixed path.\n- A queue is the waiting line of packets at a link; queue length signals congestion.\n- Packet drop rate is the fraction of packets discarded when queues overflow; it is a common measure of congestion harm.\n- Two timescales: a slow layer updates the split plan periodically (cheap for onboard computers), while a fast layer makes quick local tweaks using current queue sizes.\n- Flow-level simulation models traffic as whole flows rather than individual packets, which is faster but simplifies real behavior.\n- The results are simulation-only and the text gives no details on the reward function or baselines beyond their names.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "BRACE is a two-timescale distributed traffic-splitting scheme for LEO satellite networks that combines slowly computed destination-aware splits (keeping every admissible port non-zero) with fast, constant-time per-hop reweighting based on instantaneous local queues, evaluated in 144-satellite flow-level simulations.",
+    "plain": "Low Earth orbit satellite networks carry internet traffic between satellites, and some links become overloaded when too much traffic is routed through the same spot. This paper proposes a method that decides how each satellite spreads its traffic across its possible outgoing links, updating the big plan slowly and the quick adjustments rapidly based on how full each local queue is. In simulations of a 144-satellite network, the authors report it lost fewer packets than a tuned congestion-aware heuristic under the same hotspot conditions.",
+    "why": "Congestion at satellite links directly affects broadband access from space, which is part of the non-terrestrial networking role envisioned for 6G. The idea of keeping a small share of traffic on every usable route while adjusting quickly to queues may be relevant to other distributed routing problems, though the text does not establish wider applicability."
    },
    "abstract": "Sixth-generation mobile systems envision ubiquitous connectivity through non-terrestrial networks, in which low Earth orbit (LEO) satellite networks play a key role by extending broadband access beyond terrestrial infrastructure. Traffic hotspots in LEO satellite networks congest inter-satellite links, and short flows leave end-to-end congestion control little time to react. In distributed traffic splitting, recomputing splits at every queue change increases onboard computation, whereas periodic splits miss such changes and withhold zero-weight ports from faster queue-based reweighting. We formulate the distributed slow-layer traffic-splitting problem, whose objective combines throughput, queueing delay, traffic loss, and short-flow completion time, and propose Balanced Routing with Admissible Ports and Congestion Control at Two Timescales (BRACE). Its slow layer assigns destination-aware splits with a positive weight on every admissible port, and its fast layer reweights them in constant time per hop using instantaneous local queues. In 144-satellite flow-level simulations, BRACE achieves the highest reward among the tested distributed methods in all seven hotspot conditions and 28-45% lower drop rates than the lowest-loss baseline, a tuned congestion-aware heuristic, in the three highest-load conditions. Without retuning, its drop rates are 26-76% lower than that baseline's at calibrated loads in constellations of up to 1584 satellites.",
    "source": "arxiv"

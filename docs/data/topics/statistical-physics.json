@@ -1,7 +1,53 @@
 {
  "slug": "statistical-physics",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33306",
+   "title": "Bosonic Magic Resources at Quantum Criticality",
+   "url": "https://arxiv.org/abs/2611.33306",
+   "authors": [
+    "Paolo Stornati",
+    "Piotr Sierant",
+    "Emanuele Tirrito"
+   ],
+   "label": "arXiv:2611.33306v1",
+   "primary_category": "cond-mat.quant-gas",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper uses quantum relative entropy, a one-body-correlation-based measure of non-Gaussianity, to track quantum phase transitions in the ground state of the 1D extended Bose-Hubbard model, including hidden string order and Ising-type criticality.",
+    "plain": "The paper studies a chain of interacting bosonic particles, such as ultracold atoms in a lattice, at the points where its ground state changes its character. The authors measure how far the state is from a simple \"Gaussian\" reference state, using a quantity called quantum relative entropy, and check how that measure scales with system size. They report that the scaling reveals transitions between phases, with one transition showing a clear peak in a subleading term and another showing scaling consistent with Ising criticality.",
+    "why": "It proposes a way to detect many-body criticality, including hidden order, from a quantity that depends only on one-body correlations, which could be easier to access than full many-body measurements. The text does not show how this compares with existing probes or whether it can be measured experimentally, so its broader significance is uncertain.",
+    "background": "- Ground state: the lowest-energy quantum state of a system, which determines its equilibrium properties.\n- Bosons: particles that can pile into the same quantum state, such as ultracold atoms or photons.\n- Bose-Hubbard model: a lattice model of bosons hopping between sites and interacting, used to study superfluids and Mott insulators.\n- Non-Gaussianity: a measure of how far a quantum state is from a Gaussian state, which is easy to simulate; it is a resource for universal quantum computing with continuous variables.\n- Quantum relative entropy: a distance-like measure between quantum states, here used to quantify non-Gaussianity.\n- Quantum phase transition: a change in the ground state's character driven by parameters, not temperature.\n- Luttinger liquid: a gapless one-dimensional quantum fluid with power-law correlations.\n- Hidden (string) order: order not visible in simple local correlations, detected via nonlocal string operators.\n- Ising criticality: the universal behavior of the 2D Ising model at its critical point, used as a reference class of transitions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Non-Gaussianity is a resource for bosonic quantum information processing, providing a necessary ingredient for universal quantum computation in continuous-variable systems. Here we quantify non-Gaussianity in the ground state of the one-dimensional extended Bose-Hubbard model using quantum relative entropy (QRE), a measure determined solely by one-body correlations. The scaling of the QRE with system size reveals quantum phase transitions involving hidden and conventional order. We connect QRE scaling in the weakly interacting superfluid phase to Luttinger-liquid correlations and identify distinct critical signatures in its extensive and subleading contributions. At the Mott-Haldane transition, subtracting the extensive background reveals a pronounced peak in the subleading contribution, providing a clear signature of the onset of hidden string order. At the Haldane-density-wave transition, the extensive contribution to the QRE instead exhibits scaling consistent with Ising criticality. These results establish non-Gaussianity as a probe of many-body criticality, linking bosonic quantum resources to strongly correlated matter.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33281",
+   "title": "Neural Network Field Theory and the AdS/CFT Correspondence",
+   "url": "https://arxiv.org/abs/2611.33281",
+   "authors": [
+    "Dmitry S. Ageev",
+    "Yulia A. Ageeva",
+    "Anna S. Bernakevich"
+   ],
+   "label": "arXiv:2611.33281v1",
+   "primary_category": "hep-th",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper builds a neural-network realization of a massive scalar field on Euclidean anti-de Sitter space, adds quartic interactions via two routes, and recovers the bulk-to-boundary propagator, boundary two-point function, and leading connected four-point contact Witten diagram within the NN-FT framework.",
+    "plain": "The paper asks whether a neural network can act as a model of a physical field living in a curved, hyperbolic space, and whether the correlations measured at that space's edge match known results from holography. The authors design special neurons whose statistics reproduce a known field propagator exactly at finite width, and they add a quartic (four-particle) interaction in two different ways. They report recovering the standard boundary correlators and the leading four-point contact term, and they note that different architectures can give the same boundary correlators while describing different bulk theories.",
+    "why": "It offers a concrete, checkable link between neural network ensembles and interacting field theory with holographic duality, which may help clarify how architecture choices encode bulk dynamics. The text does not indicate applications beyond this theoretical framework, so the broader significance is uncertain.",
+    "background": "- Neural network field theory (NN-FT): treating a randomly initialized neural network as a distribution over functions, whose statistics can match a quantum or statistical field theory.\n- Gaussian field theory: a free field whose correlations are fully described by a two-point function (propagator); the infinite-width limit of a network gives this.\n- Anti-de Sitter (AdS) space: a curved space with negative curvature, used as the bulk side of holography.\n- Holography (AdS/CFT): a correspondence between a theory in a bulk space and a conformal field theory on its boundary.\n- Propagator and two-point function: the correlation between field values at two points.\n- Quartic interaction: a four-field term in the action, producing connected four-point correlations.\n- Witten diagram: a Feynman-style diagram for computing holographic correlators; the contact diagram is the simplest four-point term.\n- BDHM prescription: a standard recipe (Banks-Douglas-Horowitz-Martinec) for extracting boundary correlators from the bulk field.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We develop a neural realization of massive scalar field theory on Euclidean anti--de Sitter space and its holographic boundary observables within neural network field theory (NN--FT). We construct Fourier--Bessel cosine neurons whose covariance reproduces the regulated massive AdS propagator exactly at finite network width, with the Gaussian field theory recovered in the infinite-width limit. We introduce quartic interactions through two complementary approaches. The first implements a prescribed interaction by deforming the neural parameter measure, while the second generates a local quartic interaction from the statistics of auxiliary binary neurons. Applying the BDHM prescription directly to the neural ensemble, we recover the scalar bulk-to-boundary propagator, the conformal boundary two-point function, and the leading connected four-point contact Witten diagram. We further show that distinct neural architectures can reproduce the same leading boundary correlators while defining inequivalent bulk theories. These results establish a framework for studying interacting scalar holography within NN--FT and clarify the role of neural architecture in encoding bulk dynamics and boundary observables.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34004",
    "title": "Discrete truncated Wigner approximation of the quantum phase transition in the transverse-field Ising model",
@@ -14,12 +60,12 @@
    "primary_category": "quant-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper tests whether the discrete truncated Wigner approximation (DTWA), a semiclassical method for spin dynamics, captures the Kibble-Zurek scaling of the transverse-field Ising model's quantum phase transition in one to three dimensions and for all-to-all coupling.",
-    "plain": "The study looks at a magnet made of tiny quantum spins that is slowly or quickly tuned through a point where it switches from disordered to ordered. The authors test a cheaper approximate simulation method (DTWA) against more exact quantum Monte Carlo results. They report that the method fails on a one-dimensional chain, locates the onset of order reasonably well in square and cubic lattices, but does not reproduce the universal scaling of the transition there; for all-to-all coupling it tracks the exact order growth.",
-    "why": "Large quantum systems are hard to simulate exactly, so knowing where a cheap approximation can be trusted matters for researchers using it. The text suggests the method's reliability grows with the number of neighbours each spin interacts with, but this is a finding about one model and one method, not a general verdict.",
+    "ai": true,
     "background": "- Spin: a tiny quantum magnet, which can point up or down.\n- Transverse-field Ising model: a standard model of spins on a lattice that compete to align, with a field that flips them sideways; it has a quantum phase transition between disordered and ordered states.\n- Quantum phase transition: a change in a system's collective state driven by quantum effects at zero temperature, rather than by heat.\n- Ramp: slowly or quickly changing the control parameter (the field) through the transition.\n- Kibble-Zurek mechanism: a theory predicting how many defects or how much disorder remains after a transition, depending on ramp speed, following universal power laws (the \"exponents\").\n- Discrete truncated Wigner approximation (DTWA): a semiclassical method that treats quantum spins as classical ones with random initial states to approximate dynamics cheaply.\n- Quantum Monte Carlo (QMC): a numerical method using random sampling to simulate quantum systems accurately, used here as the reference.\n- Effective temperature: a classical thermal temperature that a relaxing simulation settles into, used to explain DTWA's failure in 1D.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper tests whether the discrete truncated Wigner approximation (DTWA), a semiclassical method for spin dynamics, captures the Kibble-Zurek scaling of the transverse-field Ising model's quantum phase transition in one to three dimensions and for all-to-all coupling.",
+    "plain": "The study looks at a magnet made of tiny quantum spins that is slowly or quickly tuned through a point where it switches from disordered to ordered. The authors test a cheaper approximate simulation method (DTWA) against more exact quantum Monte Carlo results. They report that the method fails on a one-dimensional chain, locates the onset of order reasonably well in square and cubic lattices, but does not reproduce the universal scaling of the transition there; for all-to-all coupling it tracks the exact order growth.",
+    "why": "Large quantum systems are hard to simulate exactly, so knowing where a cheap approximation can be trusted matters for researchers using it. The text suggests the method's reliability grows with the number of neighbours each spin interacts with, but this is a finding about one model and one method, not a general verdict."
    },
    "abstract": "The discrete truncated Wigner approximation (DTWA) has been a workhorse for large-scale spin dynamics, but whether it captures dynamics across a quantum phase transition has not been tested systematically. In this work, we use the transverse-field Ising model (TFIM) to study the quantum phase transition with DTWA from one to three dimensions and with all-to-all connectivity, using slow linear ramps and fast ramps. We find that DTWA cannot capture the dynamics on the one-dimensional chain, and that its behavior is consistent with classical thermalization, in which its classical spins relax toward a thermal state at a finite effective temperature that does not vanish for slow ramps, while a one-dimensional chain cannot order at any finite temperature. For square and cubic lattices, in contrast to the chain, DTWA builds order, and the order sets in close to the quantum critical point found by quantum Monte Carlo (QMC). However, its correlations do not grow with the Kibble-Zurek exponents, so DTWA captures the onset of order but not the universal dynamics of the transition. For all-to-all coupling, DTWA follows the exact growth of the order parameter along the entire ramp. Our results suggest that DTWA becomes more reliable as each spin interacts with more partners, and that beyond one dimension it can indicate where a quantum phase transition lies but cannot capture its critical scaling.",
    "source": "arxiv"
@@ -36,12 +82,12 @@
    "primary_category": "cond-mat.dis-nn",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A tribute chapter reviewing how replica symmetry breaking and cavity methods from spin-glass theory have been applied to combinatorial optimization, random satisfiability, survey propagation, and the geometry of solution spaces in neural networks.",
-    "plain": "This is a review chapter honoring physicist Giorgio Parisi, looking at how ideas he helped develop for disordered magnets (spin glasses) have spread into computer science problems and modern neural networks. It walks through classic puzzles such as matching and the traveling salesman problem, then discusses how the shape of the set of good solutions relates to how hard a problem is to solve and how a network learns. The text is a survey of established ideas and examples rather than a report of one new result.",
-    "why": "The chapter links a body of physics theory to practical questions about why some optimization and learning problems are hard and others are easy to solve. Its link to neural network training is of current interest, though the provided text only outlines these connections and does not give specific quantitative findings.",
+    "ai": true,
     "background": "- Spin glass: a magnet with randomly mixed friendly and hostile interactions, so it cannot settle into one simple arrangement.\n- Replica method: a mathematical trick from physics for averaging over many random systems at once.\n- Replica symmetry breaking (RSB): Parisi's refinement, where the set of low-energy states splits into many separated clusters.\n- Cavity method: an approximation technique for estimating how a large random system behaves when one piece is removed.\n- Combinatorial optimization: finding the best option among a huge number of discrete choices, e.g. shortest route for a traveling salesman.\n- Survey propagation: a message-passing algorithm for hard satisfiability problems, derived from the cavity approach.\n- Overparameterized model: a neural network with more adjustable weights than training examples.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A tribute chapter reviewing how replica symmetry breaking and cavity methods from spin-glass theory have been applied to combinatorial optimization, random satisfiability, survey propagation, and the geometry of solution spaces in neural networks.",
+    "plain": "This is a review chapter honoring physicist Giorgio Parisi, looking at how ideas he helped develop for disordered magnets (spin glasses) have spread into computer science problems and modern neural networks. It walks through classic puzzles such as matching and the traveling salesman problem, then discusses how the shape of the set of good solutions relates to how hard a problem is to solve and how a network learns. The text is a survey of established ideas and examples rather than a report of one new result.",
+    "why": "The chapter links a body of physics theory to practical questions about why some optimization and learning problems are hard and others are easy to solve. Its link to neural network training is of current interest, though the provided text only outlines these connections and does not give specific quantitative findings."
    },
    "abstract": "This chapter pays tribute to Giorgio Parisi by reviewing the influence of his work on spin glasses and replica symmetry breaking (RSB) on combinatorial optimization and artificial neural networks. We first introduce replica and cavity methods through the matching and traveling salesman problems, before discussing random satisfiability and the development of survey propagation. We then examine applications to neural networks, emphasizing the connections between the geometry of solution spaces, computational hardness, and learning. Particular attention is given to rare regions of high local entropy and their role in algorithmic accessibility. Examples involving overparameterized models and asymmetric recurrent networks illustrate how these ideas connect constrained optimization and inference with concepts developed in spin-glass theory.",
    "source": "arxiv"

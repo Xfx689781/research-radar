@@ -1,7 +1,53 @@
 {
  "slug": "probability",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33433",
+   "title": "Differentiability of the shape function in the planar corner growth model",
+   "url": "https://arxiv.org/abs/2611.33433",
+   "authors": [
+    "Christopher Janjigian",
+    "Firas Rassoul-Agha",
+    "Timo Sepp\\\"al\\\"ainen"
+   ],
+   "label": "arXiv:2611.33433v1",
+   "primary_category": "math.PR",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proves that the time-constant (shape) function of planar directed last-passage percolation with general i.i.d. real weights is differentiable on the open first quadrant, under moment conditions, using a multiscale path-counting argument with a Lean-formalized proof.",
+    "plain": "The paper studies a random growth model on a grid, where each site gets a random weight and we look for the most valuable path from one corner to a far-away point. The question is how the typical maximal value grows in each direction, and whether that growth rate changes smoothly with direction. The authors show it does change smoothly (is differentiable) in all directions of the open first quadrant, provided the weights have enough finite moments, and they check the argument in the Lean proof assistant.",
+    "why": "Differentiability of the shape function is a long-standing question in first- and last-passage percolation, and the text notes that the proof is an AI-assisted adaptation of an earlier OpenAI proof for the first-passage case. The moment conditions are described as nearly optimal, but the text does not say how this result compares beyond that, so its wider significance is unclear from the abstract alone.",
+    "background": "- Last-passage percolation: on a lattice, each site has a random weight; a directed path collects weights, and the last-passage time is the maximum total over paths from the origin to a far point.\n- Shape function: the limiting growth rate of that maximum in each direction, after scaling; it describes the average large-scale behaviour.\n- Differentiability: the shape function has a well-defined slope at each direction, meaning it varies smoothly rather than with corners.\n- Open first quadrant: directions where both coordinates are positive, excluding the boundary axes.\n- Percolation cone: a set of directions where known results already handle the behaviour, so only the other directions need proof.\n- Moment assumption: a condition that the weights have finite higher moments (averages of powers), controlling how extreme the weights can be.\n- Oriented percolation and van den Berg–Kesten inequality: standard probabilistic tools for counting disjoint paths and bounding probabilities of events.\n- Lean: a computer proof assistant used to check the proof formally.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We prove that the shape function of planar directed last-passage percolation with general i.i.d.\\ real-valued weights is differentiable on the open first quadrant, under a moment assumption of order $p''>4$ on the positive part of the weight and a nearly optimal order $p'>1$ on the negative part. Due to known results, only directions outside a percolation cone need be considered. The proof is a multiscale path-counting argument that uses the shape theorem, oriented percolation on a coarse-grained lattice, a simple change of measure in a finite region, and the van den Berg--Kesten inequality. Our Lean-formalized proof is an AI-assisted adaptation and improvement of the OpenAI proof of differentiability in planar first-passage percolation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33209",
+   "title": "Besicovitch Pseudo Almost Periodic Stochastic Processes and Their Applications to Delayed Stochastic Neural Networks",
+   "url": "https://arxiv.org/abs/2611.33209",
+   "authors": [
+    "Yongkun Li",
+    "Yuwei Cao",
+    "Bing Li"
+   ],
+   "label": "arXiv:2611.33209v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper introduces the concept of Besicovitch pseudo almost periodic stochastic processes and applies it to show existence and p-th mean stability of such solutions in distribution for delayed stochastic neural networks whose parameters other than the delays are pseudo almost periodic.",
+    "plain": "The paper is about random systems that move in patterns which repeat roughly but not exactly, such as a signal that wobbles with a rhythm that is nearly periodic. The authors define a new, formal way to describe such random patterns, in a sense that covers a broader class of behaviours than earlier definitions. They use this to study a model of neural networks with time delays and random noise, and report criteria under which a repeating-type solution exists and is stable.",
+    "why": "Models of neural networks and other noisy dynamical systems often have rhythms that are not strictly periodic, so a precise mathematical vocabulary for them is useful. The text presents this as a new conceptual tool, but its practical reach beyond the specific neural network model is not shown in the text.",
+    "background": "- Periodic function: repeats exactly at a fixed interval. Almost periodic: repeats approximately, with near-returns to earlier patterns.\n- Pseudo almost periodic: almost periodic plus a small part that decays or is averaged out over time.\n- Besicovitch sense: a way of measuring closeness of functions by averaging their differences over long stretches, which is looser than pointwise closeness.\n- Stochastic process: a quantity evolving randomly over time.\n- Solution in distribution: the statistical description (probability law) of the solution repeats, not the exact random path.\n- Time delay: the system's current change depends on its state some time in the past.\n- p-th mean stability: solutions stay close, measured by the average of the p-th power of their distance, as time goes on.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The Besicovitch almost periodic concept is a generalization of the Bohr, Stepanov, and Weyl almost periodic concepts and, in a certain sense, has broader coverage and weaker conditions. However, the concept of pseudo almost periodic stochastic processes in the Besicovitch sense has not yet been systematically proposed, which limits the characterization of the complex oscillatory behavior of a broader class of stochastic non-autonomous systems. This paper proposes the concept of Besicovitch pseudo almost periodic stochastic processes. As an application of this concept, we study the existence of Besicovitch pseudo almost periodic solutions in distribution for a class of stochastic delayed neural networks in which all parameters except the time delays are pseudo almost periodic and establish stability criteria for such solutions in the $p$-th mean sense. The work of this paper fills the gap caused by the lack of the concept of Besicovitch pseudo almost periodic stochastic processes and provides a new conceptual tool and analytical approach for characterizing the complex oscillatory behavior of stochastic differential equations and stochastic neural network systems.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34304",
    "title": "Converse comparison of $g$-expectations and uniqueness of generators of BSDEs: a novel approach and some sharp results",
@@ -15,12 +61,12 @@
    "primary_category": "math.PR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper studies inverse problems for backward stochastic differential equations (BSDEs), proving via a forward-SDE representation of generators that an ordering between two g-expectations forces pointwise comparability of their generators under only the standard Lipschitz assumption, which also yields a general uniqueness theorem for BSDE generators.",
-    "plain": "The paper asks a reverse question about a mathematical tool called a backward stochastic differential equation, which is used to price risk and model decisions under uncertainty. Given only the final outcomes, can you recover the rule that produced them? The authors show that if one such outcome is always ordered above another, the underlying rules must also be ordered at every point, and they do this without the extra simplifying assumptions earlier work needed.",
-    "why": "The result claims to fully settle the converse comparison problem for g-expectations in the standard Lipschitz setting, and to give a general uniqueness statement for BSDE generators. Its significance rests on the proofs in the full paper, which the summary does not show; its links to applications in finance or control are not described in the text.",
+    "ai": true,
     "background": "- Stochastic differential equation (SDE): an equation describing a quantity that evolves randomly over time, like a noisy price path.\n- Backward SDE (BSDE): an equation run backward from a known terminal value, whose solution includes a random process and a \"generator\" that sets how the value changes over time.\n- Generator: the rule inside a BSDE that determines how the solution drifts; it is the object the paper tries to recover.\n- g-expectation: a nonlinear way of averaging a future payoff, defined as the initial value of a BSDE with generator g.\n- Comparison theorem: a result saying that if terminal outcomes are ordered, the initial values are ordered too; the converse asks whether the reverse holds.\n- Lipschitz condition: a mild smoothness requirement that the rule changes at a bounded rate.\n- Uniqueness of generators: the claim that the initial values determine the generator.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper studies inverse problems for backward stochastic differential equations (BSDEs), proving via a forward-SDE representation of generators that an ordering between two g-expectations forces pointwise comparability of their generators under only the standard Lipschitz assumption, which also yields a general uniqueness theorem for BSDE generators.",
+    "plain": "The paper asks a reverse question about a mathematical tool called a backward stochastic differential equation, which is used to price risk and model decisions under uncertainty. Given only the final outcomes, can you recover the rule that produced them? The authors show that if one such outcome is always ordered above another, the underlying rules must also be ordered at every point, and they do this without the extra simplifying assumptions earlier work needed.",
+    "why": "The result claims to fully settle the converse comparison problem for g-expectations in the standard Lipschitz setting, and to give a general uniqueness statement for BSDE generators. Its significance rests on the proofs in the full paper, which the summary does not show; its links to applications in finance or control are not described in the text."
    },
    "abstract": "This paper investigates inverse problems for backward stochastic differential equations (BSDEs), with a particular focus on the converse comparison theorem and the uniqueness of generators solely through the initial values of the corresponding solutions. To this end, we develop a forward-SDE representation approach that combines a contradiction argument with a representation of generators in terms of solutions to associated forward stochastic differential equations (SDEs). As one of the main consequences, we prove that an ordering between two $g$-expectations necessarily implies the pointwise comparability of their generators, without requiring any additional structural assumptions beyond the standard Lipschitz condition. This removes the continuity, $y$-independence, and deterministic assumptions required in previous works, thereby yielding a complete solution to the converse comparison problem for $g$-expectations under the standard Lipschitz framework and, at the same time, establishing a general uniqueness theorem for generators of BSDEs.",
    "source": "arxiv"
@@ -38,12 +84,12 @@
    "primary_category": "math.CO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proves that, for graphon-based inhomogeneous random graphs under a connectivity and low-degree-tail condition, the connectivity and minimum-degree-one hitting times coincide whp, and gives criteria for when this transition is sharp, using Laplace transforms and vague convergence of rescaled degree measures.",
-    "plain": "Imagine building a random network one link at a time until every node is connected to the rest. A classic fact for the simplest random networks is that this moment arrives exactly when the last lonely, unlinked node gets its first link. This paper proves a version of that fact for a much broader family of random networks, where different nodes have different chances of linking, described by a \"graphon.\"",
-    "why": "It extends a well-known random-graph result to inhomogeneous networks, with conditions stated in terms of the graphon's degree distribution. The text also revisits minimum-degree results of Hladký and Viswanathan with simpler proofs, so it may matter to people studying random network models more generally.",
+    "ai": true,
     "background": "- Random graph: a network whose edges are chosen at random; here edges are added one by one in random order.\n- Hitting time: the first moment a property (here, connectivity or having no isolated vertex) holds.\n- Graphon: a limiting description of a large random network in which each pair of node \"types\" has a link probability.\n- Degree: the number of links at a node; the degree distribution describes how degrees are spread across nodes.\n- Asymptotically almost surely (a.a.s.): with probability tending to 1 as the network grows.\n- Laplace transform and vague convergence: standard analytic tools for handling distributions of small values; no need to master them to grasp the main message.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proves that, for graphon-based inhomogeneous random graphs under a connectivity and low-degree-tail condition, the connectivity and minimum-degree-one hitting times coincide whp, and gives criteria for when this transition is sharp, using Laplace transforms and vague convergence of rescaled degree measures.",
+    "plain": "Imagine building a random network one link at a time until every node is connected to the rest. A classic fact for the simplest random networks is that this moment arrives exactly when the last lonely, unlinked node gets its first link. This paper proves a version of that fact for a much broader family of random networks, where different nodes have different chances of linking, described by a \"graphon.\"",
+    "why": "It extends a well-known random-graph result to inhomogeneous networks, with conditions stated in terms of the graphon's degree distribution. The text also revisits minimum-degree results of Hladký and Viswanathan with simpler proofs, so it may matter to people studying random network models more generally."
    },
    "abstract": "A classical result in random graphs states that the Erd\\H{o}s--R\\'enyi random graph process becomes connected at exactly the moment its last isolated vertex disappears. The main goal of this paper is to establish a graphon analogue of this result. Let $G(n,W)$ be the inhomogeneous random graph sampled from a graphon $W$, and reveal its edges one by one in a uniformly random order. We prove that if $W$ is connected and the lower tail of its degree distribution satisfies $g_W(t)/t\\to 0$ as $t\\to 0$, which is needed for the connectivity of $G(n,W)$, then the connectivity and minimum-degree-one hitting times coincide asymptotically almost surely. We also determine when this hitting time occurs at scale $\\Theta(n\\log n)$, as in the binomial random graph model. Moreover, we give a simple analytic criterion for the transition to be localized in a $(1+o(1))$-multiplicative window, and construct graphons with minimum degrees arbitrarily close to zero whose transition is nevertheless sharp. Our approach uses Laplace transforms and vague convergence of rescaled graphon degree measures to provide a unified framework for analyzing low-degree vertices and connectivity transitions. Along the way, we revisit the minimum degree of~$G(n,W)$, giving simplified proofs of results of Hladk\\'y and Viswanathan~\\cite{HV} and establishing the limiting distribution of $\\delta(G(n,W))$ under a second-order decorrelation condition.",
    "source": "arxiv"

@@ -1,7 +1,67 @@
 {
  "slug": "neuroscience",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.769047",
+   "title": "Human iPSC-derived Olfactory Sensory Organoids model olfactory function and drug response",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769047v1",
+   "authors": [
+    "Singh, V.",
+    "Pantula, A.",
+    "Joshi, K.",
+    "Sadul, O.",
+    "Lagadapati, N.",
+    "Srikumar, A. K.",
+    "Li, N.",
+    "Zhu, X.",
+    "Mahairaki, V.",
+    "Kathuria, A."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.769047 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Human iPSC-derived olfactory sensory organoids are shown to develop olfactory-like neuronal and glial cell types, spontaneous network bursting, and distinct activity responses to three glioma-relevant kinase inhibitors (Dasatinib, Trametinib, Selumetinib).",
+    "plain": "Drugs given through the nose may reach the brain more directly, but it is not well known how they affect the nasal tissue they pass through. This paper describes lab-grown three-dimensional clumps of human cells, made from reprogrammed stem cells, that resemble developing smell tissue. The authors report that these clumps contain several cell types, show electrical bursts of activity, and respond differently to three cancer-related drugs.",
+    "why": "Intranasal delivery is an active approach for treating brain diseases, so a human model of the nasal smell tissue could help check drug side effects before people are exposed. The text does not report clinical testing, and the model's fidelity to real adult olfactory tissue is only compared against a developmental fetal atlas, so its wider usefulness remains to be seen.",
+    "background": "- Organoid: a small, three-dimensional tissue grown in a dish from stem cells.\n- iPSC (induced pluripotent stem cell): an adult cell reprogrammed to an early, flexible state, which can then be guided to become other cell types.\n- Olfactory sensory neurons: nerve cells in the nose that detect smells and send signals to the brain.\n- Single-nuclei RNA sequencing: a method that reads which genes are active in each cell nucleus, used to identify cell types.\n- Kinase inhibitors: drugs that block enzymes (kinases) that drive cell growth; these three are studied in glioma, a brain tumour.\n- Network bursting: synchronized bursts of electrical firing across a group of cells, measured as a sign of functional connectivity.\n- Intranasal delivery: giving medicine through the nasal passage, a possible route to the brain that bypasses the blood-brain barrier.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Intranasal drug delivery is being explored as an alternative approach to overcome the blood-brain barrier in the treatment of central nervous system diseases. However, little is known about how therapeutics administered through this route affect human olfactory tissue. Here, we develop human induced pluripotent stem cell-derived olfactory sensory organoids that reproduce key cellular and functional features of the developing olfactory system. Over three months of differentiation, the organoids acquire diverse neuronal and glial-associated populations, including cells expressing markers of olfactory sensory neurons and interneurons. Single-nuclei RNA sequencing shows changes in cellular composition and lineage-associated transcriptional programs during maturation, while comparison with a human fetal nasal atlas identifies shared neural populations and developmental signatures. Alongside these molecular changes, the organoids develop spontaneous electrical activity and coordinated network bursting. Exposure to the glioma-relevant kinase inhibitors Dasatinib, Trametinib, and Selumetinib produces distinct changes in neuronal network activity, demonstrating the ability of the model to capture compound-associated functional responses. Together, these findings establish a human Olfactory Sensory Organoid system for investigating olfactory development and evaluating how therapeutics may affect olfactory neural tissue during intranasal drug administration.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.20.768070",
+   "title": "Investigating Motor Skill Acquisition in Mice and Humans: Towards A Cross-Species Paradigm",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768070v1",
+   "authors": [
+    "Hille, M.",
+    "Justus, L. C.",
+    "Zocher, S.",
+    "Stark, T.",
+    "Bonhoeffer, M.",
+    "Lerch, J. P.",
+    "Czisch, M.",
+    "Kühn, S.",
+    "Lindenberger, U.",
+    "Bonhoeffer, T."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.20.768070 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A cross-species study that uses a matched chopstick-grasping task in mice and humans, with structural and quantitative MRI before, during and after training, to compare early brain changes linked to motor skill learning.",
+    "plain": "Researchers wanted a way to connect brain scans in people with what is known about brain cells from animal studies. They built a chopstick-grasping task for humans that mirrors a reaching task used in mice, then trained some mice and some men and compared them with untrained controls using MRI scans. Early in training, both species showed changes in the motor area of the brain on the side opposite the trained hand, but the authors say it is unclear whether these changes share the same biological cause.",
+    "why": "Brain scans in humans cannot directly show cell-level processes, so a task that works in both mice and people could help link scan findings to what happens in animal studies. The authors frame the work as a starting point rather than a finished answer, and they note that linking scan changes to cells will require future microscopic imaging in the same animals.",
+    "background": "- Motor skill learning: getting better at a movement, such as grasping, through practice.\n- MRI (magnetic resonance imaging): a scanner that images the brain's structure without surgery.\n- Gray matter volume: the amount of brain tissue in a region, measured from scans.\n- Quantitative MRI measures (MTsat, R1): scan-based values that are sensitive to tissue makeup; the authors suggest that increases in these may reflect more myelin, the fatty insulation around nerve fibers in the cortex.\n- Cortex: the outer layer of the brain; the primary motor cortex controls movement, and the contralateral side means the hemisphere opposite the trained limb.\n- Cross-species paradigm: the same experimental design applied to different animals, here mice and humans.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Relating non-invasive observations of human brain plasticity to cellular processes identified in animal models remains a major challenge in neuroscience. We address this challenge by introducing a paradigm for studying motor skill acquisition across species. We designed a human chopstick grasping task modeled after the rodent single-pellet reaching task, resulting in a comparable sequence of reach-to-grasp movements across species. We studied 48 young adult male C57BL/6N mice and 71 young men, comparing trained groups with untrained controls. In both mice and humans, structural magnetic resonance imaging (MRI) was performed before, during, and after motor training. The functional form of behavioral performance gains on the trained task was highly similar across species. In trained compared to control mice, analysis of the early learning interval revealed decreases in regional volume in contralateral primary motor and forelimb somatosensory cortices, with greater volume reductions in primary motor cortex associated with better reaching performance. In humans, performance gains transferred to other chopstick tasks but not to general dexterity, and no reliable changes in gray matter volume were observed. Quantitative MRI, however, revealed early training-related changes in tissue-sensitive measures, including increases in magnetization transfer saturation (MTsat) and longitudinal relaxation rate (R1) in contralateral motor and frontal regions, potentially reflecting an increase in intracortical myelin. Thus, early structural changes in the contralateral motor cortex were detected in both species, but the degree to which these changes reflect a common biological mechanism is unclear. We conclude that the present cross-species paradigm provides a viable starting point for studying brain plasticity across species. Future work needs to relate macroscopic structural changes more directly to cellular processes by applying longitudinal microscopic imaging and MRI in the same animals.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.23.768703",
    "title": "Representational geometry shapes noise-driven working memory errors",
@@ -16,12 +76,12 @@
    "primary_category": "neuroscience",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Electrophysiological recordings from monkey neocortex during a color working memory task suggest that \"guess\" responses arise from noise in the delay-period neural population code, with the shape of that population's color representation predicting each animal's error pattern.",
-    "plain": "When people try to remember colors or other items for a few seconds, they sometimes give an answer that looks random, as if they guessed. This study recorded brain activity from many sites across the monkey outer brain during a color memory task to ask where those guesses come from. The authors report that signs of guessing appear during the memory delay itself, and that the way the brain's activity is arranged for color matches the pattern of each animal's mistakes.",
-    "why": "It offers a neural explanation for a long-studied behavioral pattern, suggesting that random-looking errors in memory may reflect noise in how populations of neurons represent information. The text does not establish how far this generalizes beyond the two monkeys studied, so its wider relevance remains open.",
+    "ai": true,
     "background": "- Working memory: the brief ability to hold information in mind after it is no longer visible, here for a short delay.\n- \"Guess\" response: a recall answer that is unrelated to the item shown, which the authors treat as a sign of memory failure rather than a deliberate guess.\n- Electrophysiological recording: measuring electrical activity of neurons with electrodes; here, from many sites across the neocortex (the wrinkled outer layer of the brain).\n- Neural population geometry: the way the joint activity of many neurons is arranged in a high-dimensional space, so that similar stimuli map to nearby patterns.\n- Encoding precision: how finely the brain represents a stimulus; lower precision means more noisy, less accurate memories.\n- Noise: random variability in neural activity that can blur or distort the stored information.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Electrophysiological recordings from monkey neocortex during a color working memory task suggest that \"guess\" responses arise from noise in the delay-period neural population code, with the shape of that population's color representation predicting each animal's error pattern.",
+    "plain": "When people try to remember colors or other items for a few seconds, they sometimes give an answer that looks random, as if they guessed. This study recorded brain activity from many sites across the monkey outer brain during a color memory task to ask where those guesses come from. The authors report that signs of guessing appear during the memory delay itself, and that the way the brain's activity is arranged for color matches the pattern of each animal's mistakes.",
+    "why": "It offers a neural explanation for a long-studied behavioral pattern, suggesting that random-looking errors in memory may reflect noise in how populations of neurons represent information. The text does not establish how far this generalizes beyond the two monkeys studied, so its wider relevance remains open."
    },
    "abstract": "Humans and other animals have strictly limited working memory capacity. When asked to recall one or more presented items after a delay period, subjects will occasionally recall an apparently random item: a \"guess'' response. Where do these guesses come from? Using electrophysiological recordings from across monkey neocortex during the performance of a color working memory task, we show that the neural correlates of guess responses emerge during the memory delay -- and that variable encoding precision makes guesses more likely, especially in one of our two animals. If guess responses emerge due to noise, we hypothesize that the detailed neural population geometry for color should shape the distribution of behavioral responses. We confirm this hypothesis by showing that the representational geometry specific to each animal is consistent with their idiosyncratic patterns of errors. Despite the often assumed robustness of neural population representations, noise appears to be a key bottleneck on the reliability of working memory.",
    "source": "biorxiv"
@@ -41,12 +101,12 @@
    "primary_category": "neuroscience",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Using a linear decoder on 1085 ferret primary auditory cortex neurons, the authors show that population codes for fundamental frequency (F0) generalise across sounds only when those sounds share the same type of pitch cue (spectral or temporal), and that F0 information is distributed across the population.",
-    "plain": "The paper asks whether the brain's sound-processing area represents musical pitch the same way regardless of how that pitch is signalled in the sound. Researchers recorded from about 1,000 neurons in ferrets while playing 10 kinds of sound, then trained a simple decoder to read the pitch from the firing patterns. The pitch was read reliably within any one sound type, but transferred well only between sounds that carried pitch in the same way, and poorly between complex sounds and pure tones.",
-    "why": "It bears on how the brain achieves perceptual invariance, recognising the same melody across instruments, which is a basic question in hearing science. The text reports that pitch information is spread widely over the population while only about 20 neurons are enough to decode it, but it does not spell out what this means for hearing itself, so its wider implications are uncertain.",
+    "ai": true,
     "background": "- Pitch: the perceived highness or lowness of a sound, tied to its fundamental frequency (F0), the rate of its repeating waveform.\n- Spectral cues: pitch inferred from the spacing of harmonic frequency components in a sound.\n- Temporal cues: pitch inferred from how the waveform repeats over time.\n- Primary auditory cortex: the first region of the brain's cortex to process sound.\n- Population code: information carried by the joint activity of many neurons rather than by one neuron.\n- Linear decoder: a simple statistical model that maps neural firing patterns to a predicted value, used to test what information is present.\n- Generalisation: whether a decoder trained on one set of conditions still works on different ones.\n- Onset/offset responses: neural activity at the start and end of a sound.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Using a linear decoder on 1085 ferret primary auditory cortex neurons, the authors show that population codes for fundamental frequency (F0) generalise across sounds only when those sounds share the same type of pitch cue (spectral or temporal), and that F0 information is distributed across the population.",
+    "plain": "The paper asks whether the brain's sound-processing area represents musical pitch the same way regardless of how that pitch is signalled in the sound. Researchers recorded from about 1,000 neurons in ferrets while playing 10 kinds of sound, then trained a simple decoder to read the pitch from the firing patterns. The pitch was read reliably within any one sound type, but transferred well only between sounds that carried pitch in the same way, and poorly between complex sounds and pure tones.",
+    "why": "It bears on how the brain achieves perceptual invariance, recognising the same melody across instruments, which is a basic question in hearing science. The text reports that pitch information is spread widely over the population while only about 20 neurons are enough to decode it, but it does not spell out what this means for hearing itself, so its wider implications are uncertain."
    },
    "abstract": "Pitch provides a powerful example of perceptual invariance, enabling us to recognize the same melody across different instruments. The fundamental frequency (F0) at which a pitch is heard can be derived from either the harmonic spacing of frequency components (spectral cues), the waveform periodicity (temporal cues), or both. It is unclear whether population codes for F0 in auditory cortex are invariant across these acoustic cue classes. We addressed this question by training a linear decoder to predict F0 from the spiking responses of 1085 neurons in ferret primary auditory cortex to 10 sound types varying in their spectral and temporal composition. F0 could be decoded accurately when trained and tested on any individual sound type. However, decoding performance generalised well across sounds only if they contained the same class of pitch cue, and poorly between complex sounds and pure tones. Onset and offset responses carried different information about the F0 of complex sounds. Finally, approximately 20 neurons were sufficient to decode F0, but F0 information was widely distributed across the neural population. These findings show that F0 is represented in primary auditory cortex in cue-dependent, temporally multiplexed subspaces, with sparse pitch representations embedded in a distributed, robust population code.",
    "source": "biorxiv"

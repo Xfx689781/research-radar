@@ -1,7 +1,53 @@
 {
  "slug": "optics-atomic",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33954",
+   "title": "Ferroionic CuCrP2S6 Integrated Silicon Photonics for Neuromorphic Computing",
+   "url": "https://arxiv.org/abs/2611.33954",
+   "authors": [
+    "Ghada Dushaq",
+    "Srinivasa R. Tamalampudi",
+    "Mahmoud Rasras"
+   ],
+   "label": "arXiv:2611.33954v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper integrates the layered ferroionic material CuCrP2S6 onto silicon microring resonators and shows that electrical pulses shift the optical resonance via field-driven movement of Cu ions, giving volatile and nonvolatile optical memory that can mimic a leaky integrate-and-fire neuron.",
+    "plain": "Researchers built a tiny light-based switch on a silicon chip using a special layered crystal whose copper ions drift when a voltage is applied. Sending electrical pulses slowly changes the color (wavelength) at which the chip's light resonates, and the chip remembers this history. Some of the change fades within about a minute, while a larger part stays for at least a day, so the device can add up pulses and also forget them over time.",
+    "why": "Neuromorphic computing aims to build hardware that handles information the way brains do, with memory and gradual forgetting built in. Optical devices of this kind could in principle be fast and low in power, but the text reports only one device and a short set of measurements, so its practical scale and performance remain untested here.",
+    "background": "- Photonics: using light instead of electrons to carry and process signals.\n- Silicon microring resonator: a tiny circular waveguide on a chip that traps light at specific wavelengths; a shift in its resonance wavelength changes how much light passes through.\n- van der Waals material: a crystal made of thin layers held together weakly, so it can be placed on other chips.\n- Ferroionic: a material where mobile ions (charged atoms) move under an electric field and can lock into a state.\n- Volatile vs. nonvolatile memory: volatile states fade without power; nonvolatile states persist.\n- Leaky integrate-and-fire neuron: a standard simplified model of a neuron that sums inputs, slowly leaks charge, and fires when a threshold is crossed.\n- Time constant: the time for a fading quantity to drop to about 37% of its starting value.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Neuromorphic photonic computing calls for optical states that combine stimulus accumulation, spontaneous relaxation, and nonvolatile state retention without continuous power dissipation. Here, we demonstrate a ferroionic photonic platform by integrating layered van der Waals CuCrP2S6 onto silicon microring resonators using a back-end integration process. Electrical pulsing produces unidirectional blue shifts in the optical resonance, consistent with field-driven redistribution of mobile Cu ions and giving rise to a history-dependent optical response. The resulting optical state is strongly pulse dependent, exhibiting both volatile and nonvolatile components. A short 20-pulse excitation produces an initial 70 pm resonance shift that relaxes toward baseline within approximately 60 s, with a volatile relaxation time constant of 27-29 s. In contrast, after 1000 pulses, an initial 0.27 nm resonance shift relaxes to a persistent 0.13 nm nonvolatile state that is retained for at least 24 h. Repeated 6 V electrical pulses produce a progressive resonance shift over 1000 cycles, demonstrating cumulative optical integration. A fixed-wavelength readout converts the accumulated resonance shift into a thresholded optical response, with the normalized transmission remaining above the selected threshold through 600 pulses and falling below it at the 800-pulse state. These dynamics realize the basis for a leaky integrate-and-fire photonic neuron, where the pulse-dependent ionic response provides integration, spontaneous relaxation supplies a passive leak, persistent states provide nonvolatile memory, and fixed-wavelength readout provides an optical threshold response.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33483",
+   "title": "Statistical analysis of crossing beam speckle fields",
+   "url": "https://arxiv.org/abs/2611.33483",
+   "authors": [
+    "Ian D. Min-Roberts",
+    "Wojciech Rozmus",
+    "Pierre A. Michel"
+   ],
+   "label": "arXiv:2611.33483v1",
+   "primary_category": "physics.optics",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A statistical model of speckle patterns formed by two or more crossing laser beams, defining effective speckle size and abundance via a Kac-Rice asymptotic count, checked by Monte Carlo simulation, and applied to quad-beam smoothing and stimulated Brillouin scattering.",
+    "plain": "Laser beams that cross each other produce a grainy pattern of bright and dark spots, called speckle. This paper builds a statistical description of that pattern: it defines what counts as one speckle, estimates how big and how many speckles there are, and checks the estimate with computer simulations. It then uses the model to look at a four-beam setup meant to smooth the laser light, and reports that spreading the beams further apart reduces the expected amount of one unwanted light-scattering effect from the brightest spots.",
+    "why": "Controlling the uniformity of laser light matters for laser-driven fusion experiments, where uneven intensity can drive instabilities in the plasma. The text does not discuss fusion directly, so that link is an inference from the stated motivation (polarization smoothing and plasma density fluctuations) rather than something the paper spells out.",
+    "background": "- Speckle: the random grainy interference pattern produced when coherent laser light scatters or overlaps.\n- Intensity field: how bright the light is at each point in space.\n- Speckle abundance: how many separate bright spots of a given kind occur per unit area.\n- Kac-Rice formula: a standard probability tool for counting how often a random smooth function crosses a level, here used to count speckles.\n- Monte Carlo simulation: running many random trials on a computer to check a theoretical prediction.\n- Stimulated Brillouin scattering (SBS): a process in which laser light scatters off sound-like waves in plasma, losing energy; it is a concern in laser fusion.\n- Polarization smoothing: mixing beams of different polarization to make the overall light more uniform.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Building on the statistical analysis of single beam speckles, this paper develops a statistical description of speckle fields formed by crossing laser beams. A formal definition of individual speckles and their domains allows us to quantify the effective size and abundance of speckles. For two crossing beams, the effective speckle size is derived from the local curvature of the intensity field, and the expected speckle abundance is found asymptotically with the Kac-Rice formula. Monte Carlo simulations of speckle abundance show excellent agreement with the theoretical abundance formula. The two beam speckle analysis is then applied to a symmetric quad beam configuration motivated by polarization smoothing and demonstrates that increasing the separation between beams reduces expected stimulated Brillouin scattering reflectivity from saturated speckles. The statistical model is then extended to an arbitrary number of beams using a coordinate free formulation to obtain the spectral density of laser driven electron density fluctuations.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34518",
    "title": "Site-Resolved Optical Spectroscopy of Thulium in Solid Argon",
@@ -15,12 +61,12 @@
    "primary_category": "physics.atom-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Excitation-emission spectroscopy of thulium atoms frozen in solid argon resolves six trapping-site profiles, shows matrix-induced shifts for s→p but not f→d transitions, and identifies a three-photon pathway for a strong 560 nm emission from one site.",
-    "plain": "Researchers placed single thulium atoms inside a block of solid argon, which holds them in fixed positions, and shone light on them while measuring what they gave back. The light patterns split into six groups, which the authors link to different spots where an atom can sit in the argon. They also report that one spot gives off strong green-yellow light at 560 nm, and that this light may come from an atom absorbing three photons in sequence.",
-    "why": "The text shows that the surrounding solid can shift some atomic energy levels a lot while leaving others nearly unchanged, which matters for anyone trying to use atoms embedded in solids as sensors or quantum devices. The link to such applications is not addressed in the text, so the wider significance is uncertain.",
+    "ai": true,
     "background": "- Atoms have discrete energy levels; light is absorbed or emitted when an atom jumps between them.\n- Thulium is a rare-earth element; its outer electron configuration determines which jumps are possible.\n- Matrix-isolated atoms are atoms trapped in a solid inert gas (here argon) at very low temperature, so they do not react with neighbours.\n- Trapping sites are the different positions or local arrangements an atom can occupy in the solid; each shifts its energy levels slightly.\n- Excitation-emission spectroscopy shines light at one wavelength and records the light re-emitted at others, mapping how the atom absorbs and releases energy.\n- Multiphoton excitation means an atom absorbs several low-energy photons in sequence to reach a higher level.\n- Crystal-field splitting is the separation of energy levels caused by the electric fields of neighbouring atoms in a solid.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "Excitation-emission spectroscopy of thulium atoms frozen in solid argon resolves six trapping-site profiles, shows matrix-induced shifts for s→p but not f→d transitions, and identifies a three-photon pathway for a strong 560 nm emission from one site.",
+    "plain": "Researchers placed single thulium atoms inside a block of solid argon, which holds them in fixed positions, and shone light on them while measuring what they gave back. The light patterns split into six groups, which the authors link to different spots where an atom can sit in the argon. They also report that one spot gives off strong green-yellow light at 560 nm, and that this light may come from an atom absorbing three photons in sequence.",
+    "why": "The text shows that the surrounding solid can shift some atomic energy levels a lot while leaving others nearly unchanged, which matters for anyone trying to use atoms embedded in solids as sensors or quantum devices. The link to such applications is not addressed in the text, so the wider significance is uncertain."
    },
    "abstract": "We utilize the high resolution of the ground state transition ${}^2\\mathrm{F}_{7/2} \\leftrightarrow {}^2\\mathrm{F}_{5/2}$ in thulium atoms isolated in solid argon to perform excitation-emission spectroscopy. Decomposition of the excitation-emission spectrum reveals 6 absorption-emission profiles, which are attributed to multiple trapping sites in the host matrix. Comparison with vacuum transition energies shows large matrix-induced shifts for $\\mathrm{s}\\rightarrow\\mathrm{p}$ transitions, whereas $\\mathrm{f} \\rightarrow \\mathrm{d}$ transitions remain close to their free-atom energies. A single site exhibiting strong emission at 560nm is investigated and a three-photon excitation pathway is determined as a possible origin of the high energy 560nm light. Additionally, for long-lived levels belonging to the $\\mathrm{f}^{12}\\mathrm{d}$ configuration, narrow, crystal-field split absorption lines are identified. Matrix effects are important for establishing the mechanism behind the observed spectra and long $\\mathrm{f}^{12}\\mathrm{d}$ lifetimes.",
    "source": "arxiv"
@@ -40,12 +86,12 @@
    "primary_category": "physics.optics",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper demonstrates Fourier-transform photothermal spectroscopy, using a phase-stable broadband supercontinuum pump pulse pair and an off-resonant 800 nm thermal-lens probe, to reconstruct the linear absorption spectrum of phloxine B and compares it with a conventional frequency-domain absorption measurement.",
-    "plain": "Researchers want to know how strongly a material absorbs light at each color. Normally they measure how much light gets through the sample. Here, a short burst of broadband light is sent into a sample as two pulses with a controlled time gap; the light heats the sample slightly, creating a temporary lens, and a separate laser beam reads out that lens. Mathematically transforming the readout over the time gaps recovers the absorption spectrum, which the authors check against a standard measurement on the dye phloxine B.",
-    "why": "The text presents this as a proof-of-concept that absorption spectra can be inferred from refractive-index changes caused by heating rather than from transmitted light intensity, which may matter for samples where transmitted light is hard to measure accurately. The text does not establish how broadly the method would apply or how it compares in sensitivity or speed with existing techniques, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Absorption spectrum: how much light a sample absorbs at each wavelength (color).\n- Supercontinuum: very broadband light, produced here by sending ultrashort laser pulses through a special optical fiber.\n- Phase-stable pulse pair: two light pulses whose timing and wave alignment are controlled, so their interference is reproducible.\n- Fourier transform: a mathematical step that converts a signal recorded over time into its frequency content, here turning the time-delay signal into a spectrum.\n- Photothermal effect: light absorbed by a sample turns into heat, which changes the local refractive index (how light bends).\n- Thermal lens: a temporary lens-like effect created by this heating, read out by a probe laser beam.\n- Phloxine B: a fluorescent dye used here as a test sample.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper demonstrates Fourier-transform photothermal spectroscopy, using a phase-stable broadband supercontinuum pump pulse pair and an off-resonant 800 nm thermal-lens probe, to reconstruct the linear absorption spectrum of phloxine B and compares it with a conventional frequency-domain absorption measurement.",
+    "plain": "Researchers want to know how strongly a material absorbs light at each color. Normally they measure how much light gets through the sample. Here, a short burst of broadband light is sent into a sample as two pulses with a controlled time gap; the light heats the sample slightly, creating a temporary lens, and a separate laser beam reads out that lens. Mathematically transforming the readout over the time gaps recovers the absorption spectrum, which the authors check against a standard measurement on the dye phloxine B.",
+    "why": "The text presents this as a proof-of-concept that absorption spectra can be inferred from refractive-index changes caused by heating rather than from transmitted light intensity, which may matter for samples where transmitted light is hard to measure accurately. The text does not establish how broadly the method would apply or how it compares in sensitivity or speed with existing techniques, so its wider significance is uncertain."
    },
    "abstract": "We demonstrate Fourier-transform photothermal spectroscopy using broadband supercontinuum excitation and transient-lens detection. The output of a Ti:sapphire oscillator is broadened in a photonic crystal fiber to generate the supercontinuum pump, which is converted into a phase-stable pulse pair with a controllable femtosecond delay using a birefringent interferometer. The absorption-induced heating from the pump generates a transient thermal lens in the sample, which is detected as a function of delay by an off-resonant 800 nm photothermal probe beam. Fourier transform of the interferometric photothermal response yields a frequency-domain signal corresponding to the sample absorptance spectrum weighted by the pump spectrum. After division by the measured pump spectrum, the reconstructed photothermal spectrum is compared with a direct frequency-domain linear absorption measurement to evaluate the accuracy of the reconstruction. This method combines Fourier-transform broadband excitation with thermal-lens readout, allowing broadband linear absorption spectra to be obtained from pump-induced refractive-index changes rather than from transmitted excitation intensity. We demonstrate the method on phloxine B.",
    "source": "arxiv"

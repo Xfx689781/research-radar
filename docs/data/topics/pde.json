@@ -1,7 +1,52 @@
 {
  "slug": "pde",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34533",
+   "title": "Viscosity solutions for integro-differential equations with gradient and source terms",
+   "url": "https://arxiv.org/abs/2611.34533",
+   "authors": [
+    "Russell Schwab",
+    "Son N. T. Tu",
+    "Olga Turanova"
+   ],
+   "label": "arXiv:2611.34533v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proves comparison and existence (via Perron's method) of viscosity solutions for integro-differential equations with gradient and source terms, using a \"global comparison property\" together with a local Lipschitz assumption on the defining operator.",
+    "plain": "The paper studies a family of equations that mix a function's rate of change, its slope, and a non-local averaging effect, the kind that arise when a process depends on values far away as well as nearby. It shows that, under its assumptions, these equations have a well-defined solution that is unique and depends stably on the setup. The authors present a single framework that combines two existing styles of argument, one based on min-max structure and one from free boundary problems.",
+    "why": "The work aims to unify and extend several earlier results on this class of equations, which is useful for researchers who rely on these tools. The text does not indicate specific applications, so its wider reach beyond the mathematical community is unclear from the excerpt alone.",
+    "background": "- Partial differential equation (PDE): an equation relating a function to its rates of change in space.\n- Integro-differential equation: a PDE that also contains an integral, so the value at a point depends on values elsewhere.\n- Viscosity solution: a weak notion of solution that lets equations without smooth solutions still be treated rigorously.\n- Comparison principle: if one function is a sub-solution and another a super-solution, the first stays below the second; this gives uniqueness.\n- Perron's method: a way to construct a solution as the supremum of sub-solutions.\n- Gradient and source terms: a slope-dependent term and a term that adds forcing independent of the derivatives.\n- Min-max structure and free boundary problems: two techniques for analysing such equations, mentioned as the sources being combined.\n- Well-posedness: existence, uniqueness, and stability of solutions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We address global well-posedness for integro-differential equations with gradient and source terms. This naturally results from establishing the comparison principle for viscosity solutions and existence via Perron's method. There are many earlier results for similar equations, and our work attempts to give a unified approach and improve upon some recent examples. There is a natural juxtaposition of earlier results in the usual framework of viscosity solutions which rely on a min-max structure, with some more recent implementations coming from the free boundary literature in which a min-max is not apparent initially, but does appear a posteriori due to certain rigid structural constraints. Here we give a presentation that combines ideas from both situations. The most important feature of the operators in our equations is what we call the global comparison property. This is combined with a natural local Lipschitz assumption on the operator defining the equation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34197",
+   "title": "The confined discrete DLSS equation: gradient flow structure and long-time asymptotics",
+   "url": "https://arxiv.org/abs/2611.34197",
+   "authors": [
+    "Daniel Matthes",
+    "Andr\\'e Schlichting"
+   ],
+   "label": "arXiv:2611.34197v1",
+   "primary_category": "math.AP",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A structure-preserving numerical scheme for the fourth-order DLSS equation with linear confinement on the real line, shown to be a discrete gradient flow of relative entropy with exponential decay to a discrete Gaussian equilibrium via a discrete modified logarithmic Sobolev inequality.",
+    "plain": "This paper studies a discretized version of a fourth-order partial differential equation, the DLSS equation, which describes how a spread-out quantity evolves over time, here confined by a linear restoring force on a line. The authors build a computational scheme that keeps the equation's underlying mathematical structure intact, and show that the scheme's solutions stay positive and settle toward a Gaussian (bell-shaped) equilibrium at an exponential rate. Numerical experiments are reported to support these results.",
+    "why": "Preserving an equation's structure in a numerical scheme helps ensure that computed solutions behave like the true ones over long times, which matters for simulations. The paper's decay rate is stated to match the continuum rate as the grid is refined, but the text does not say how it is used beyond this setting.",
+    "background": "- Partial differential equation: an equation relating a function to its rates of change in space and time.\n- Fourth-order: involves up to fourth derivatives, making it harder to analyse than standard diffusion equations.\n- Gradient flow: evolution that always moves downhill in a chosen \"energy\" with respect to a chosen notion of distance.\n- Relative entropy: a measure of how far a distribution is from an equilibrium state.\n- Gaussian equilibrium: the bell-curve shape the solution converges to over time.\n- Logarithmic Sobolev inequality: an inequality bounding how fast a quantity can decay in terms of its dissipation; used to prove exponential rates.\n- Mesh size: the spacing of grid points in a numerical method; the limit of small mesh size recovers the continuous equation.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We propose and analyse a structure-preserving discretization of the fourth-order DLSS equation in dynamically rescaled variables leading to a linear confinement on the one-dimensional real line. The scheme is obtained as a discrete analogue of the Carrillo--Toscani splitting. It allows for a new interpretation of the DLSS equation as gradient flow of the relative entropy with respect to a combined diffusive and transport metric, extending the structure of the discretization introduced in our earlier work with Giuseppe Savar\\'{e} for the unconfined equation. We prove global existence of positive solutions and, as the main analytical result, exponential decay of the relative entropy towards the discrete Gaussian equilibrium. The decay rate is obtained via a discrete modified logarithmic Sobolev inequality. The resulting rate is consistent with the continuum rate and converges to it from below in the vanishing mesh-size limit. Numerical results illustrate and confirm our findings.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34456",
    "title": "Existence of odd-frequency free boundary points in the Signorini problem",
@@ -13,12 +58,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper constructs a solution to the Signorini (obstacle-type) problem with a free boundary point of frequency 3, settling the open question of whether odd-frequency free boundary points exist.",
-    "plain": "The paper studies a mathematical model where a surface is pressed against an obstacle, and the boundary between contact and non-contact regions can have a complicated shape. Researchers had classified the possible boundary points by a number called \"frequency,\" and one class (odd frequencies at full-density points) had never been shown to actually occur. The authors build an explicit solution that has a boundary point of frequency 3, showing that this class is not empty.",
-    "why": "Settling whether a predicted type of singular point exists completes a known classification and tests how far existing structure theory reaches. The text does not indicate applications beyond this theoretical question, so its wider significance is uncertain.",
+    "ai": true,
     "background": "- Signorini problem: a boundary-value problem where a function must stay above an obstacle, and is either touching it or free, with a free boundary separating the two.\n- Free boundary: the interface between the contact set and the non-contact set.\n- Frequency: a number measuring how the solution grows or behaves near a boundary point; it is a scaling-type index, and only certain values are possible.\n- Density: a measure of how much of a small ball around a point is occupied by the contact or non-contact set; zero density and full density are the two extreme cases referred to.\n- Half-integer, even, and odd frequencies: the three classes of free boundary points the classification allows; the paper concerns the odd class.\n- Regularity: how smooth the free boundary is; known results cover structure of each class.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper constructs a solution to the Signorini (obstacle-type) problem with a free boundary point of frequency 3, settling the open question of whether odd-frequency free boundary points exist.",
+    "plain": "The paper studies a mathematical model where a surface is pressed against an obstacle, and the boundary between contact and non-contact regions can have a complicated shape. Researchers had classified the possible boundary points by a number called \"frequency,\" and one class (odd frequencies at full-density points) had never been shown to actually occur. The authors build an explicit solution that has a boundary point of frequency 3, showing that this class is not empty.",
+    "why": "Settling whether a predicted type of singular point exists completes a known classification and tests how far existing structure theory reaches. The text does not indicate applications beyond this theoretical question, so its wider significance is uncertain."
    },
    "abstract": "Up to a lower-dimensional set, the free boundary of the Signorini problem consists of points with frequency that is half-integer, even (at zero density points), or odd (at full density points). Surprisingly, despite extensive work on the structure and regularity of each of these sets, the existence of odd-frequency free boundary points has remained open. In this paper, we construct a solution with a free boundary point of frequency 3.",
    "source": "arxiv"
@@ -35,12 +80,12 @@
    "primary_category": "math.AP",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper finds the sharp exponent condition in three space dimensions separating global existence of small-data solutions from finite-time blow-up for a damped wave equation coupled to a wave equation (Nakao's problem), using weighted pointwise estimates and test-function arguments.",
-    "plain": "The paper studies a pair of coupled equations that describe how waves and damped (smeared-out, friction-like) motion can feed into each other in three-dimensional space. It asks for which strengths of the nonlinear coupling a small starting disturbance keeps evolving smoothly forever, and for which strengths even tiny starting disturbances can blow up in finite time. The authors identify the exact boundary between these two behaviours.",
-    "why": "Knowing exactly where the line falls between \"stays bounded\" and \"blows up\" is the kind of sharp answer that mathematicians look for in nonlinear wave models. The text does not say how it connects to applications beyond this class of equations, so any wider relevance is unclear from the text alone.",
+    "ai": true,
     "background": "- A \"wave equation\" describes vibrations and signals that travel at a finite speed, like sound or light fronts.\n- A \"damped\" wave equation includes friction, so its behaviour at late times looks more like diffusion or heat spreading.\n- \"Semilinear\" means the nonlinear term is a power of the unknown function, and the exponents of these powers decide the outcome.\n- \"Global existence\" means a solution exists for all time; \"finite-time blow-up\" means it becomes infinitely large in a finite time.\n- \"Critical exponent\" is the threshold value of such a power that separates the two behaviours.\n- \"Pointwise estimates\" are bounds on the solution at each individual point, with weights that track how it spreads in space.\n- \"Test functions\" are auxiliary smooth functions used to derive integral inequalities that a blowing-up solution cannot satisfy.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper finds the sharp exponent condition in three space dimensions separating global existence of small-data solutions from finite-time blow-up for a damped wave equation coupled to a wave equation (Nakao's problem), using weighted pointwise estimates and test-function arguments.",
+    "plain": "The paper studies a pair of coupled equations that describe how waves and damped (smeared-out, friction-like) motion can feed into each other in three-dimensional space. It asks for which strengths of the nonlinear coupling a small starting disturbance keeps evolving smoothly forever, and for which strengths even tiny starting disturbances can blow up in finite time. The authors identify the exact boundary between these two behaviours.",
+    "why": "Knowing exactly where the line falls between \"stays bounded\" and \"blows up\" is the kind of sharp answer that mathematicians look for in nonlinear wave models. The text does not say how it connects to applications beyond this class of equations, so any wider relevance is unclear from the text alone."
    },
    "abstract": "We study a system consisting of a semilinear damped wave equation coupled to a semilinear wave equation in three space dimensions. We determine the sharp condition on the exponents of nonlinear terms that separates global existence for sufficiently small initial data from finite-time blow-up even for arbitrarily small data satisfying suitable positivity assumptions. To prove global existence, we combine a weighted pointwise estimate for the damped wave equation, which we established in earlier work, with a new one for the wave equation. The new pointwise estimate for the wave equation uses a combination of a parabolic weight and a light-cone weight. For the proof of blow-up, pointwise lower bounds are compared with integral upper bounds obtained by test functions. In the main estimates, explicit physical-space representations reveal how forcing near the wave cone influences the damped component on parabolic spatial scales and, in turn, the wave component inside the cone.",
    "source": "arxiv"

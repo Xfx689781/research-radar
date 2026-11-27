@@ -1,7 +1,49 @@
 {
  "slug": "algebraic-geometry",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33778",
+   "title": "The Dolbeault geometric Langlands-type conjecture for smooth surfaces",
+   "url": "https://arxiv.org/abs/2611.33778",
+   "authors": [
+    "Yukinobu Toda"
+   ],
+   "label": "arXiv:2611.33778v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper builds semiorthogonal decompositions for moduli stacks of one-dimensional sheaves on smooth surfaces with nef anti-canonical divisor, identifies their pieces as quasi-BPS categories of local Calabi-Yau threefolds, and proposes a Dolbeault geometric Langlands-type conjecture for surfaces with Hecke actions.</one_liner>\n<parameter name=\"plain\">This paper is about a precise mathematical framework that sorts the collection of certain geometric objects (sheaves on curves sitting inside a surface) into simpler, well-behaved building blocks. The authors compare these building blocks with categories of semistable sheaves and use that comparison to propose a conjecture generalizing the Dolbeault geometric Langlands conjecture, which relates Higgs bundles to a dual picture. The text indicates the construction is general but gives only a sketch of the examples and of the Hecke actions.",
+    "plain": "",
+    "why": "It connects algebraic geometry, representation theory and the geometric Langlands program, and for symplectic surfaces it is expected to lift known Hecke operators on BPS cohomology to a categorical level. Whether the conjecture holds is not established in the text, so its significance rests on future verification.",
+    "background": "- Coherent sheaves: algebraic objects generalizing vector bundles, used to describe geometric families.\n- Moduli stack: a space parametrizing such objects, including their automorphisms.\n- Semiorthogonal decomposition: a way of splitting a category into pieces that interact in a controlled order, analogous to a basis.\n- BPS cohomology / quasi-BPS categories: invariants from string theory counting \"protected\" states, here attached to Calabi-Yau threefolds.\n- Calabi-Yau threefold and nef anti-canonical divisor: special geometric shapes and a positivity condition on a curve class.\n- Higgs bundles and (Dolbeault) geometric Langlands: moduli of bundles with an extra field, and a conjectural duality between categories attached to them.\n- Hecke operators: symmetries that move between related moduli spaces.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Using a general theory of limit categories for symmetric stacks, we construct their semiorthogonal decompositions for moduli stacks of pure one-dimensional coherent sheaves on smooth surfaces with nef anti-canonical divisors. The components of these semiorthogonal decompositions are quasi-BPS categories associated with the corresponding local Calabi--Yau threefolds. By comparing these semiorthogonal decompositions with those of dg-categories of coherent sheaves on moduli stacks of semistable sheaves, we propose a Dolbeault geometric Langlands-type conjecture for surfaces, generalizing the Dolbeault geometric Langlands conjecture for $\\GL_r$-Higgs bundles. Our conjecture includes a correspondence for Higgs bundles twisted by sufficiently ample line bundles on curves. We discuss examples and construct Hecke actions on limit categories and, under certain conditions, on quasi-BPS categories. For symplectic surfaces, these actions are expected to provide a categorical lift of the corresponding Hecke operators on BPS cohomology constructed by Davison--Hennecart--Kinjo--Schiffmann--Vasserot.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34570",
+   "title": "Cohomology of pseudo-reductive groups over local function fields",
+   "url": "https://arxiv.org/abs/2611.34570",
+   "authors": [
+    "Zev Rosengarten"
+   ],
+   "label": "arXiv:2611.34570v1",
+   "primary_category": "math.NT",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper gives a duality pairing identifying the first Galois cohomology of a pseudo-reductive group over a local function field with the Pontryagin dual of the group of translation-invariant line bundles on that group, and equips Picard groups of schemes over Hausdorff topological fields with a topology having good properties.",
+    "plain": "The paper studies a certain kind of symmetry group (a \"pseudo-reductive group\") defined over a local function field, which is a number-like system built from polynomials over a finite field. It shows that a standard algebraic invariant of this group can be read off as the dual of another natural object, the group of \"translation-invariant line bundles\" on it. To do this, the authors put a topology on the Picard group, the group that classifies line bundles, and show this topology behaves well under mild conditions.",
+    "why": "This is a precise structural result in arithmetic algebraic geometry, relevant to duality theorems for algebraic groups over local fields. The abstract does not say what applications it has, so its wider significance beyond this area is unclear from the text alone.",
+    "background": "- Algebraic group: a geometric object that is both an algebraic variety and a group, such as matrices with determinant one.\n- Pseudo-reductive group: a well-behaved class of algebraic groups, generalizing reductive groups such as those of matrix groups, used in arithmetic settings.\n- Local function field: the field of Laurent series over a finite field, a \"local\" completion of the rational functions in one variable.\n- Galois cohomology: an invariant measuring obstructions to solving equations over a field, using the symmetries (Galois group) of the field's extensions.\n- Line bundle and Picard group: a way of attaching a one-dimensional vector space to each point of a space; the Picard group collects these up to equivalence.\n- Pontryagin dual: for a topological abelian group, the group of continuous homomorphisms into the circle (or unit complex numbers); a standard duality.\n- Topological field: a field with a topology compatible with its arithmetic operations; Hausdorff means distinct points can be separated.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We give a pairing which describes the first Galois cohomology of a pseudo-reductive group $G$ over a local function field $K$ as the Pontryagin dual of the group $\\Ext^1(G, \\Gm)$ of translation-invariant line bundles on $G$. In order to accomplish this, we endow the Picard group of a scheme $X$ over a (Hausdorff) topological field with a topology, and prove that this topology enjoys favorable properties under certain mild conditions on $X$ and on the field.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33771",
    "title": "Semiorthogonal decompositions of limit categories for symmetric stacks",
@@ -13,12 +55,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper extends limit categories, previously defined for derived stacks with self-dual cotangent complexes, to a broader class called symmetric stacks, and establishes compact generation, semiorthogonal decompositions, functoriality, and a Künneth formula for them.",
-    "plain": "This paper is about a technical construction in algebraic geometry: a way of attaching a category (a structured collection of objects and maps between them) to a geometric space of solutions to a moduli problem. The authors broaden an earlier version of this construction to a wider class of spaces, which they call symmetric stacks. They then prove several general structural properties of these categories, and a companion paper uses them to state a conjecture.",
-    "why": "The motivation given is to support Dolbeault geometric Langlands-type correspondences for a wider range of moduli stacks, which is a long-running program linking geometry and representation theory. The text does not show any concrete new consequence beyond the structural results listed, so the wider impact is best treated as a possibility rather than an established outcome.",
+    "ai": true,
     "background": "- Moduli stack: a geometric object that parametrizes families of mathematical objects (such as vector bundles or sheaves) together with their symmetries.\n- Derived stack: a refinement of a moduli stack that keeps track of extra homological information, used to handle spaces that are not smooth.\n- Cotangent complex: a homological object encoding the infinitesimal shape of a space; \"self-dual\" means it matches its own dual, a symmetry the paper generalizes.\n- Category (in this sense): a collection of objects with maps between them, here built as a limit over a family of such categories.\n- Semiorthogonal decomposition: a way of splitting a category into simpler pieces that interact in a controlled order.\n- Langlands program: a web of conjectures connecting number theory, geometry and representation theory; the Dolbeault version concerns Higgs bundles and sheaves on curves or surfaces.\n- Künneth formula: a rule relating the invariants of a product of spaces to those of the factors.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper extends limit categories, previously defined for derived stacks with self-dual cotangent complexes, to a broader class called symmetric stacks, and establishes compact generation, semiorthogonal decompositions, functoriality, and a Künneth formula for them.",
+    "plain": "This paper is about a technical construction in algebraic geometry: a way of attaching a category (a structured collection of objects and maps between them) to a geometric space of solutions to a moduli problem. The authors broaden an earlier version of this construction to a wider class of spaces, which they call symmetric stacks. They then prove several general structural properties of these categories, and a companion paper uses them to state a conjecture.",
+    "why": "The motivation given is to support Dolbeault geometric Langlands-type correspondences for a wider range of moduli stacks, which is a long-running program linking geometry and representation theory. The text does not show any concrete new consequence beyond the structural results listed, so the wider impact is best treated as a possibility rather than an established outcome."
    },
    "abstract": "In our earlier work with Tudor Padurariu, we introduced the notion of limit categories for derived stacks with self-dual cotangent complexes and used them to formulate the Dolbeault geometric Langlands conjecture. In this paper, we generalize the notion of limit categories to a broader class of derived stacks, which we call symmetric stacks. One of the motivations for this generalization is to formulate Dolbeault geometric Langlands-type correspondences for a broader class of moduli stacks. We establish several fundamental properties of limit categories for symmetric stacks, including compact generation, the existence of semiorthogonal decompositions, functoriality, and a Kunneth formula. In a companion paper, we apply the results of this paper to formulate a Dolbeault geometric Langlands-type conjecture for moduli stacks of sheaves on smooth surfaces with nef anticanonical divisors.",
    "source": "arxiv"
@@ -35,12 +77,12 @@
    "primary_category": "math.AG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper determines the maximal cones, primitive collections, cohomology ring, and orbit-stability properties of the fan for Klyachko toric Gorenstein Fano varieties X_{mn} when n is congruent to 1 modulo m.",
-    "plain": "This paper studies a family of geometric shapes built from pieces of a higher-dimensional grid, called Klyachko varieties. The authors focus on the cases where one parameter is one more than a multiple of the other, and they describe the basic building blocks (maximal cones and primitive collections) that define these shapes. They also describe the algebraic bookkeeping (cohomology ring) attached to them and some results about how symmetric groups act on these blocks.",
-    "why": "Klyachko varieties link toric geometry to representation theory, algebraic groups and graph theory, and the generalized del Pezzo special case already supports results on derived categories. The text does not claim wider consequences, so the value here is mainly as a structural description of a known family.",
+    "ai": true,
     "background": "- Toric variety: a geometric object built from a collection of cones (a \"fan\") in space, so that combinatorics of the fan controls the geometry.\n- Fano variety: a space whose anticanonical bundle is positive, loosely a \"positively curved\" shape; Gorenstein is a mild regularity condition.\n- Maximal cone and primitive collection: the basic combinatorial pieces of a fan that determine its structure.\n- Cohomology ring: an algebraic invariant recording how the space's pieces intersect.\n- Symmetric group action: permutations of coordinates (S_m × S_n) acting on the variety.\n- Rationality and stable rationality: whether the space can be parametrized by rational functions, in a weak or strong sense.\n- Generalized del Pezzo variety: a centrally symmetric member of this family, X_{2,2k+1}.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper determines the maximal cones, primitive collections, cohomology ring, and orbit-stability properties of the fan for Klyachko toric Gorenstein Fano varieties X_{mn} when n is congruent to 1 modulo m.",
+    "plain": "This paper studies a family of geometric shapes built from pieces of a higher-dimensional grid, called Klyachko varieties. The authors focus on the cases where one parameter is one more than a multiple of the other, and they describe the basic building blocks (maximal cones and primitive collections) that define these shapes. They also describe the algebraic bookkeeping (cohomology ring) attached to them and some results about how symmetric groups act on these blocks.",
+    "why": "Klyachko varieties link toric geometry to representation theory, algebraic groups and graph theory, and the generalized del Pezzo special case already supports results on derived categories. The text does not claim wider consequences, so the value here is mainly as a structural description of a known family."
    },
    "abstract": "Klyachko introduced a family of $S_m\\times S_n$-invariant toric Gorenstein Fano varieties, $X_{mn}$, with connections to representation theory, algebraic groups, and graph theory. He focused on the case in which $m$ and $n$ are coprime, for which $X_{mn}$ are smooth, and hence Fano. Klyachko and Voskresenskii later proved that all forms of $X_{mn}$ are stably rational when $m, n$ are coprime, and that all forms of $X_{mn}$ are rational when $n$ is congruent to 1 modulo $m$. In the same paper, they classified centrally symmetric toric Fano varieties as products of projective lines and generalized del Pezzo varieties, $X_{2,2k+1}$. For this reason, the special case of generalized del Pezzo varieties are frequently studied. For example, Ballard, Duncan, and McFadden proved that the bounded derived category of generalized del Pezzo varieties has a full exceptional collection of line bundles. An understanding of the maximal cones and primitive collections of the fan associated to $X_{2,2k+1}$ is crucial in their construction. In this paper, we focus on the Klyachko varieties $X_{mn}$ in the case in which $n$ is congruent to 1 modulo $m$. We determine a description of the maximal cones and primitive collections for the associated fan. We also determine a description of their cohomology ring and some stability results on the $S_m\\times S_n$-orbits of maximal cones and primitive collections for $X_{mn}$.",
    "source": "arxiv"

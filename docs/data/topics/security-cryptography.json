@@ -1,7 +1,58 @@
 {
  "slug": "security-cryptography",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33672",
+   "title": "Node Differential Privacy via Node-Stable Graph Projections",
+   "url": "https://arxiv.org/abs/2611.33672",
+   "authors": [
+    "Ishaq Aden-Ali",
+    "Adam Sealfon",
+    "Adam Smith",
+    "Thomas Steinke",
+    "Jonathan Ullman"
+   ],
+   "label": "arXiv:2611.33672v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper gives a nearly linear-time randomized graph projection that clips high-degree nodes in a node-stable way, plus a deterministic Lipschitz extension for total edge weight, and applies both to node-private vector summation and gradient descent on graph-structured data.",
+    "plain": "The paper studies how to learn from network data, such as who emailed whom, without revealing any one person's full set of connections. Its main tool is a way to trim a graph so that no person has too many links, while changing one person in the data barely changes the trimmed result. The authors also describe a related method for summing edge weights and use both tools for private summing and gradient descent.",
+    "why": "Protecting whole individuals in network data is harder than protecting single records, and the paper aims to keep accuracy high on realistic graphs where most people have few connections. The text does not report experimental results or comparisons in numbers, so its practical impact is unclear from this excerpt alone.",
+    "background": "- Differential privacy: a guarantee that an algorithm's output looks nearly the same whether or not any one individual's data is included.\n- Node privacy vs. edge privacy: node privacy protects everything tied to one person (all their connections), which is a stronger requirement than protecting a single link.\n- Graph degree: the number of connections a node has. Bounding the maximum degree limits how much one person can influence the data.\n- Graph projection: a transformation that maps a graph to a nearby graph satisfying a degree bound.\n- Lipschitz extension: a way to extend a function from restricted inputs to all inputs so that it changes by at most a bounded amount when one part of the input changes.\n- Gradient descent: an iterative optimization method used to train models by repeatedly stepping toward lower error.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Node-differentially private algorithms enable learning on network-structured datasets in which records reflect interactions among individuals. They protect the privacy of each individual's information, including all their associated records. A key challenge in the design of such algorithms is to exploit the structure of realistic graphs---where most nodes have low degree---to achieve high accuracy, without compromising on the worst-case privacy guarantee. In this work we give two new tools for designing accurate, computationally efficient node-differentially private algorithms. First, we give a nearly linear time, randomized, node-stable graph projection: the projection leaves graphs of maximum degree $D$ unchanged, maps arbitrary graphs to subgraphs of maximum degree $\\hat D \\approx D$, and ensures that changing one node of the input graph has only a small effect on the distribution of the edges selected among the remaining vertices. Unlike prior approaches, which abstain when the input violates the degree bound, our projection acts as degree clipping: even when $D$ is set well below the true maximum degree (trading truncation bias at high-degree outliers for lower privacy noise), it retains at least as many edges as a maximal $D$-bounded subgraph. Second, for graphs with bounded edge weights, we give a deterministic nearly linear time Lipschitz extension for the total edge weight that agrees with the original sum on graphs of maximum degree $D$ yet is $D$-Lipschitz on all graphs. Finally, we show how to apply these methods to design node-private algorithms for high-dimensional vector summation and gradient descent on datasets where records are associated with graph edges, such as email threads.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34859",
+   "title": "Model Weights, Airlocks and Sandboxes: A Call for Technical Validation of Re-identification Tests under the EDPB Anonymisation Guidelines",
+   "url": "https://arxiv.org/abs/2611.34859",
+   "authors": [
+    "Rickard Br\\\"annvall",
+    "Henrik Forsgren",
+    "Erik Ylip\\\"a\\\"a",
+    "Aslak Felin",
+    "Michael Popoff",
+    "Susanne Stenberg"
+   ],
+   "label": "arXiv:2611.34859v1",
+   "primary_category": "cs.CR",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A position paper arguing that re-identification tests used to judge whether data or AI models count as anonymous under the EDPB's draft anonymisation guidelines should be validated as measurement methods, with stated detection limits, bias and uncertainty, and sketches a secure-environment (airlock) framework with seven open questions.",
+    "plain": "The paper looks at how EU privacy regulators expect organisations to show that data, including the trained parameters of an AI model, is anonymous enough not to point back to people. The European Data Protection Board's draft guidance asks for such testing but does not say how a test should be designed or how much weight a result deserves. The authors propose checking out-of-the-box tests the way lab instruments are checked, and they work through three settings: releasing model weights, reviewing outputs before they leave a secure room (an \"airlock\"), and regulator-supervised sandboxes.",
+    "why": "Whether an AI model can be shared without counting as personal data is a live legal question in Europe, and the paper's point that a failed attack may just mean a weak test is a useful caution for anyone relying on such tests. The text does not show how these ideas have been adopted or tested in practice, so their real impact is unclear.",
+    "background": "- Anonymisation: making data so that people in it can no longer reasonably be identified; regulators judge this relative to who might access the data.\n- Re-identification test: an attempt, often simulated, to link anonymised records or model outputs back to real individuals.\n- Model weights: the numerical settings a trained machine learning model stores; they can sometimes leak information about training data.\n- Airlock / secure processing environment: a locked-down computing setting where outputs are checked before anything is released.\n- Regulatory sandbox: a supervised trial space where a regulator watches a company develop and test a product.\n- Measurement validation: the practice, common in labs and medicine, of showing a test's detection limit, bias and uncertainty before trusting its results.\n- EDPB: the European Data Protection Board, which issues guidance on the GDPR.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The Guidelines 02/2026 on anonymisation of the European Data Protection Board (EDPB), published for consultation in July 2026, assess anonymity relative to the entities that may access data. They bring AI models into scope and call for testing, but do not say how a re-identification test should be designed or validated, or how far its result counts as evidence. Building on our reply to the consultation, we describe a framework based on a secure processing environment whose outputs are reviewed before release (an airlock), and distinguish forms of release and three types of evidence: formal, empirical and indirect. We raise seven open questions, each with a scenario, and examine their technical side in three settings: the release of model weights (the trained parameters of a machine learning model), review at an airlock, and regulatory sandboxes, in which an authority supervises development and testing. In each setting the assessment depends on how far a test result can be relied on, since a failed re-identification attempt may mean only that the test was too weak. Drawing on measurement practice in other regulated fields, we call for re-identification tests to be validated as measurement methods, with stated detection limit, bias and uncertainty.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34229",
    "title": "Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth",
@@ -14,12 +65,12 @@
    "primary_category": "cs.CR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "An empirical benchmark of 13 classical, post-quantum and hybrid digital signature configurations, measuring signing and verification cost, throughput, and key/signature sizes, with projected ledger growth for five public blockchains.",
-    "plain": "Blockchains use digital signatures, which are the locks that prove a transaction came from its owner, and those locks are based on math that a future quantum computer could break. This paper tests a range of replacement locks that are designed to resist quantum computers, plus mixed versions that use both the old and new schemes, in a simulated blockchain. It then estimates what would happen to the size of the recorded history of five major chains if they had used these replacements.",
-    "why": "Migrating blockchains to quantum-resistant signatures is a live question for the systems that hold large amounts of value, so the measured trade-offs matter for planning. The paper's main point is that storage growth, not checking speed, may be the harder problem; the storage figures rest on the authors' stated modelling assumptions, so they are estimates rather than measurements of real networks.",
+    "ai": true,
     "background": "- Digital signature: a cryptographic proof that a message was authorised by the holder of a secret key; blockchains use them to approve transactions.\n- ECDSA: the classical signature scheme used by Bitcoin and Ethereum, vulnerable to a sufficiently large quantum computer.\n- Post-quantum cryptography: schemes designed to resist attacks from quantum computers. The paper tests ML-DSA, Falcon and SLH-DSA.\n- Hybrid signature: a combination that requires both a classical and a post-quantum signature to be valid, as a hedge.\n- Signature and key size: larger values mean bigger transactions and more data stored on the ledger.\n- Verification vs. signing: checking a signature is what every node does repeatedly; signing is done by the user.\n- Ledger growth: the total size of the stored transaction history that every full node must keep.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "An empirical benchmark of 13 classical, post-quantum and hybrid digital signature configurations, measuring signing and verification cost, throughput, and key/signature sizes, with projected ledger growth for five public blockchains.",
+    "plain": "Blockchains use digital signatures, which are the locks that prove a transaction came from its owner, and those locks are based on math that a future quantum computer could break. This paper tests a range of replacement locks that are designed to resist quantum computers, plus mixed versions that use both the old and new schemes, in a simulated blockchain. It then estimates what would happen to the size of the recorded history of five major chains if they had used these replacements.",
+    "why": "Migrating blockchains to quantum-resistant signatures is a live question for the systems that hold large amounts of value, so the measured trade-offs matter for planning. The paper's main point is that storage growth, not checking speed, may be the harder problem; the storage figures rest on the authors' stated modelling assumptions, so they are estimates rather than measurements of real networks."
    },
    "abstract": "Advances in quantum computing pose a long-term threat to blockchain systems that rely on classical digital signature schemes such as ECDSA. Migrating these systems to post-quantum cryptography introduces practical costs beyond cryptographic security, including larger transactions, higher computational costs and faster ledger growth. We present an empirical evaluation of 13 signature configurations in a common simulated blockchain framework: ECDSA, ML-DSA-44/65/87, Falcon-512/1024, SLH-DSA-SHA2-128s, and six hybrids combining ECDSA with each post-quantum scheme. We measure signing and verification costs, transaction-processing throughput, and signature and public-key sizes, and project the measured overheads onto five public blockchains: Bitcoin, Ethereum, Solana, BNB Smart Chain and TRON. Verification remains inexpensive for the evaluated lattice-based schemes, with Falcon-512 achieving a verification time comparable to ECDSA (30.1 versus 32.8 $\\mu$s). Storage overheads, however, are substantial. Under our modelling assumptions, had the recorded transaction histories used Falcon-512, the most compact post-quantum scheme evaluated, ledger sizes would have been 79--229% larger, depending on the blockchain. Hybrid configurations introduce relatively modest additional storage overhead compared with their standalone post-quantum counterparts, while ECDSA+Falcon-512 approximately doubles the verification cost of standalone Falcon-512. Existing transaction- and script-size limits also present obstacles to straightforward migration in Bitcoin and Solana. Overall, our findings suggest that storage overhead may pose a greater challenge than signature verification costs when migrating blockchain systems to post-quantum cryptography.",
    "source": "arxiv"
@@ -40,12 +91,12 @@
    "primary_category": "cs.CR",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper studies data poisoning attacks, where malicious users inject fake nodes and edges, against local differential privacy protocols that estimate statistics of dynamic graphs, and proposes a temporal attack strategy (TEA) with an absolute gain metric.",
-    "plain": "Some systems collect information about who connects to whom in a network while keeping each person's data private by adding noise on their own device. This paper shows that such systems can be manipulated: an attacker who injects fake users and fake connections can distort the statistics estimated for chosen target users. The authors design an attack that decides how many fake users to add at each point in time, and report that it significantly reduces the accuracy of the estimates.",
-    "why": "Privacy-preserving data collection is increasingly used, and this work points out that its privacy guarantees do not protect the accuracy of results against malicious participants. The text does not say how these attacks would perform against deployed systems or what defenses exist, so its practical reach is uncertain.",
+    "ai": true,
     "background": "- Dynamic graph: a network whose nodes and edges (connections) change over time, such as a social network.\n- Local differential privacy (LDP): each user adds random noise to their own data before sending it, so the collector never sees raw data, at some cost in accuracy.\n- Data poisoning attack: deliberately feeding false data into a system so that its outputs are wrong.\n- Fake nodes and edges: attacker-created accounts and connections submitted as if they were real users.\n- Graph statistics: summary measures of a network, such as degree (how many connections a node has), estimated for a target node.\n- Absolute gain metric: the paper's measure of total deviation of estimates from their pre-attack values, summed across time.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper studies data poisoning attacks, where malicious users inject fake nodes and edges, against local differential privacy protocols that estimate statistics of dynamic graphs, and proposes a temporal attack strategy (TEA) with an absolute gain metric.",
+    "plain": "Some systems collect information about who connects to whom in a network while keeping each person's data private by adding noise on their own device. This paper shows that such systems can be manipulated: an attacker who injects fake users and fake connections can distort the statistics estimated for chosen target users. The authors design an attack that decides how many fake users to add at each point in time, and report that it significantly reduces the accuracy of the estimates.",
+    "why": "Privacy-preserving data collection is increasingly used, and this work points out that its privacy guarantees do not protect the accuracy of results against malicious participants. The text does not say how these attacks would perform against deployed systems or what defenses exist, so its practical reach is uncertain."
    },
    "abstract": "With the increasing adoption of privacy-preserving techniques in dynamic graph analysis, local differential privacy (LDP) has become a fundamental paradigm for protecting user data in decentralized environments. However, despite its strong privacy guarantees, LDP-based dynamic graph protocols remain vulnerable to data poisoning attacks through malicious data injection. In this paper, we present the first systematic study of data poisoning attacks against privacy-preserving dynamic graphs under the LDP framework. Considering the temporal evolution of dynamic graphs, we identify key challenges in attack design and evaluation, including how to schedule attack resources across time and how to measure cumulative attack impact. To address these challenges, we introduce an absolute gain metric to quantify the overall deviation of graph statistical metrics before and after attacks across time. Based on this metric, we further propose a unified poisoning attack framework for dynamic graphs, which consists of target node selection, dynamic fake node scale scheduling, and fake edge injection. Within this framework, we design a temporal enhanced attack (TEA) strategy that dynamically schedules attack resources to maximize attack effectiveness, along with two baseline strategies, equal-scale attack (ESA) and random-scale attack (RSA), for comparison. Extensive experiments on real-world and synthetic datasets demonstrate that the proposed attacks can significantly degrade the accuracy of graph metric estimation for target nodes.",
    "source": "arxiv"

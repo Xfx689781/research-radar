@@ -1,7 +1,63 @@
 {
  "slug": "signal-processing",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34754",
+   "title": "AutoRSP: An AI Agent for Radar Sensing Pipeline Design",
+   "url": "https://arxiv.org/abs/2611.34754",
+   "authors": [
+    "Zhi Zheng",
+    "Xincheng Xie",
+    "Avery Gump",
+    "Sacha Jungerman",
+    "Hongyang Li",
+    "Yin Li",
+    "Mohit Gupta",
+    "Akarsh Prabhakara"
+   ],
+   "label": "arXiv:2611.34754v1",
+   "primary_category": "cs.NI",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "AutoRSP is an AI agent that designs end-to-end radar sensing pipelines across five stack layers, using RF simulation, on-sensor emulation and real edge-device runs as feedback instead of an LLM judge, with efficiency methods for the slower feedback loop.",
+    "plain": "Radar systems need a chain of work that spans the physical hardware and the software that processes its signals, and building that chain usually takes expert time and money. This paper asks whether an AI agent can design such a chain automatically. The authors report that their agent, AutoRSP, produced runnable pipelines for robotic imaging, car perception, and vital-sign sensing, with performance described as comparable to or better than human-expert pipelines and some closed-source AI agents.",
+    "why": "Automating radar pipeline design could lower the cost and expertise needed to build sensors for robots, cars and health monitoring. The text does not give detailed comparison numbers, so the strength of the performance claims cannot be judged from this summary alone; the authors also say they will release their tools and benchmarks.",
+    "background": "- Radar: sensing by sending radio waves and reading their echoes; RF means radio-frequency.\n- Sensing pipeline: a sequence of stages from hardware settings to signal processing to final output.\n- AI agent: a language model that plans and runs a series of tool calls, here searching over pipeline designs.\n- LLM judge: a language model used to score candidate designs; AutoRSP instead uses physical simulation and real hardware tests.\n- On-sensor emulation and edge devices: testing on a model of the sensor and on small local computing hardware.\n- Agentic loop: the repeated cycle of propose, test, and refine that the agent performs.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Radar sensing demands a pipeline that is well-thought-out across hardware and software. We ask whether an AI agent can automatically design radar sensing pipelines at a fraction of the time, cost, and expertise that current practice needs. We present AutoRSP, an agent that embeds radar-system-level structure through sub-agents mapped to five stack layers, a code-based representation of every layer with explicitly modeled cross-layer dependencies. Feedback for the agentic search process comes from a pipeline of realistic RF simulation, on-sensor emulation, and execution on real edge devices, rather than from an LLM judge. Because such feedback can be slower than an LLM call, we present methods to efficiently optimize agentic loops. We evaluate AutoRSP on robotic imaging, automotive perception, and vital sign sensing. It produces executable pipelines with performance comparable to or better than human-expert pipelines and closed-source agents. AutoRSP's harness, tools, and benchmarks will be released to bridge the rising gap in agentic research abilities outside of frontier labs.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34639",
+   "title": "Doppler RaDAR Single-Frame Anomaly Detection and Consistency Assessment by Velocity-Conditioned Gaussian Spectral Modeling",
+   "url": "https://arxiv.org/abs/2611.34639",
+   "authors": [
+    "Malte Stelzer",
+    "Timo Bartels",
+    "Dinu Mihailescu-Stoica",
+    "Niko Harnge",
+    "S\\\"oren Kohnert",
+    "Florian Poprawa",
+    "Marc Zeller",
+    "Tim Fingscheidt"
+   ],
+   "label": "arXiv:2611.34639v1",
+   "primary_category": "eess.SP",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A velocity-conditioned Gaussian spectral model, with a neural encoder and decoder, scores single frames of railway radar Doppler spectra for anomalies and checks whether the estimated speed is consistent with the measured spectrum, without needing ground-truth velocity at inference.",
+    "plain": "Trains in railway vehicles need to know how fast they are moving, and they often estimate this with radar. This paper asks a different question: is the radar signal itself believable, not just the speed number it produces. The authors built a system that predicts speed from a radar frequency pattern, then checks that pattern against what a healthy measurement should look like at that speed.",
+    "why": "Speed estimates can look plausible even when the underlying radar data are corrupted, so a measure of measurement plausibility could help flag unreliable readings in safety-relevant automation. The text reports that the disagreement score tracks real speed errors closely for the anomaly types tested, but the study is limited to controlled, investigated anomalies, so its use on real railway conditions is not yet shown.",
+    "background": "- Doppler radar: measures speed by how a reflected signal's frequency shifts when the target moves; the Doppler spectrum shows the strength of each frequency.\n- Speed over ground: the vehicle's actual speed relative to the track, a key input for railway control.\n- Neural encoder/decoder: a neural encoder turns the spectrum into a speed estimate; a decoder reconstructs the expected spectrum given a speed.\n- Gaussian distribution: a bell-shaped model of expected values; a measurement far from the expected bell curve gets a high anomaly score.\n- Anomaly score: a number indicating how unusual a measurement is compared with normal data.\n- Pearson correlation (r): a measure from -1 to 1 of how closely two quantities move together; r above 0.99 indicates a very tight linear relationship.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Reliable speed-over-ground estimation is essential for automated railway vehicles. However, the accuracy of a velocity estimate alone does not indicate whether the underlying RaDAR measurement is physically plausible. This paper introduces a velocity-conditioned Gaussian spectral modeling framework for anomaly detection and velocity consistency assessment. A neural encoder estimates the vehicle velocity from complex Doppler spectra, while a Gaussian decoder models the expected spectral distribution conditioned on a velocity estimate. Three complementary inference-time online indicators are derived: the spectral anomaly score (SAS), conditional anomaly score (CAS), and absolute velocity disagreement (AVD). Experiments demonstrate the sensitivity of the scores to velocity deviations. Under controlled spectral anomalies, SAS and CAS outperform conventional spectral indicators in most conditions. Furthermore, AVD exhibits strong correlations with actual velocity estimation errors (Pearson $r>0.99$) for the investigated extra-peak and local anomalies. These results demonstrate the potential of online conditional spectral modeling to assess measurement plausibility and velocity estimation reliability without requiring ground-truth velocities during inference.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34677",
    "title": "First Order Real Resonant Digital Filters and A Novel Orthogonal State Generator",
@@ -13,12 +69,12 @@
    "primary_category": "eess.SP",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper presents FOREST, a first-order digital resonant filter with real coefficients that also acts as an orthogonal state generator, implemented on a DSP platform and modelled with a discrete state-space model.",
-    "plain": "Engineers often need a circuit or computer routine that responds strongly to one specific frequency, such as the 50 or 60 Hz hum of mains electricity. This paper describes a simple digital filter of that kind, called FOREST, that gets its job done with only one stage of calculation. The authors say that, although the underlying mathematics of a resonator involves imaginary numbers, it can be read in a way that uses only ordinary real-number settings, and they tested it on a signal-processing board.",
-    "why": "A resonant filter that is both first order and uses real coefficients could be cheaper and simpler to run in real-time systems such as motor control or phase-locked loops. The text does not report how it compares with existing resonator designs, so its practical advantage is not established here.",
+    "ai": true,
     "background": "- A digital filter processes a stream of sampled numbers to pass or suppress certain frequencies.\n- A resonator amplifies signals near one frequency, like a tuning fork or a swing pushed at its natural rhythm.\n- The \"order\" of a filter is roughly how many past values it must remember; first order is the simplest case.\n- Transfer function and roots: a mathematical description of the filter whose key points are complex (imaginary-containing) numbers.\n- Real coefficients: the filter's settings are ordinary numbers, which are easier to implement in hardware.\n- State-space model: a way of describing a system by its internal memory values over time.\n- Orthogonal state generator: produces two signals that are 90 degrees out of phase, useful for tracking phase.\n- Phase-locked loop: a feedback circuit that locks onto the phase of an incoming signal.\n- Quality factor (high Q): a measure of how sharp and narrow a resonance is.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "The paper presents FOREST, a first-order digital resonant filter with real coefficients that also acts as an orthogonal state generator, implemented on a DSP platform and modelled with a discrete state-space model.",
+    "plain": "Engineers often need a circuit or computer routine that responds strongly to one specific frequency, such as the 50 or 60 Hz hum of mains electricity. This paper describes a simple digital filter of that kind, called FOREST, that gets its job done with only one stage of calculation. The authors say that, although the underlying mathematics of a resonator involves imaginary numbers, it can be read in a way that uses only ordinary real-number settings, and they tested it on a signal-processing board.",
+    "why": "A resonant filter that is both first order and uses real coefficients could be cheaper and simpler to run in real-time systems such as motor control or phase-locked loops. The text does not report how it compares with existing resonator designs, so its practical advantage is not established here."
    },
    "abstract": "We describe FOREST, a real, first order digital resonant filter and orthogonal state generator. We show that in spite of the imaginary nature of the roots of the transfer function of a resonator, appropriate interpretation of this transfer function nonetheless leads to a practical first order filter with real coefficients. We use a discrete state space model of FOREST to predict the resonator properties, and implement the filter in digital signal processing slices on a digital signal processing platform. Applications are in real time digital signal processing, engineering fields such as mains electricity monitoring and motor control, any application requiring a phase locked loop, and physics applications utilising high-quality-factor resonators.",
    "source": "arxiv"
@@ -37,12 +93,12 @@
    "primary_category": "eess.SP",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A semantic communication framework that pairs a transmitter-side domain-generalization module with a receiver-side pilot-based channel characterization module to keep task accuracy up when both input data and wireless channel conditions shift from training.",
-    "plain": "Semantic communication sends only the parts of a message that matter for a task, rather than every bit. This paper addresses the problem that such systems often perform poorly when the incoming data or the radio channel differs from what they were trained on. The authors split the fix into two parts: the sender learns features that ignore source-specific details, and the receiver uses known pilot signals to estimate current channel conditions and guide decoding.",
-    "why": "Wireless systems in next-generation networks will face varied data and conditions, so robustness to unseen scenarios matters for practical deployment. The text reports that classification accuracy improves by more than 18% over a conventional baseline in unseen scenarios, but the summary gives no further detail on the test setup, so the size of this gain should be read with caution.",
+    "ai": true,
     "background": "- Semantic communication: transmitting the meaning or task-relevant content of data instead of exact bits.\n- Encoder-decoder: a sender-side model that compresses data into a signal and a receiver-side model that reconstructs the task output.\n- Domain shift / domain generalization: when test data differs in distribution from training data, and methods that make models work across such differences.\n- Channel state: the current condition of the wireless link (noise, fading, distortion).\n- Pilot signals: known reference signals sent over a channel so the receiver can estimate its condition.\n- Classification accuracy: the share of inputs assigned the correct label, used here as the task measure.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A semantic communication framework that pairs a transmitter-side domain-generalization module with a receiver-side pilot-based channel characterization module to keep task accuracy up when both input data and wireless channel conditions shift from training.",
+    "plain": "Semantic communication sends only the parts of a message that matter for a task, rather than every bit. This paper addresses the problem that such systems often perform poorly when the incoming data or the radio channel differs from what they were trained on. The authors split the fix into two parts: the sender learns features that ignore source-specific details, and the receiver uses known pilot signals to estimate current channel conditions and guide decoding.",
+    "why": "Wireless systems in next-generation networks will face varied data and conditions, so robustness to unseen scenarios matters for practical deployment. The text reports that classification accuracy improves by more than 18% over a conventional baseline in unseen scenarios, but the summary gives no further detail on the test setup, so the size of this gain should be read with caution."
    },
    "abstract": "Semantic communication offers a promising approach to support intelligent services in next-generation wireless networks by efficiently transmitting task-relevant information. However, its performance can degrade significantly when input data and wireless channel conditions differ from those encountered during training. In this paper, we propose a robust semantic communication framework that addresses these distributional mismatches through two independent but complementary modules. At the transmitter, a domain-generalization module extracts task-relevant features while suppressing domain-specific information. At the receiver, a pilot-assisted channel characterization module extracts channel context from received pilot signals to guide semantic recovery under varying wireless conditions. Through the end-to-end training of semantic encoder-decoder pair with domain alignment and channel adaptation models, the proposed framework improves task performance under simultaneous input and channel distribution shifts with limited transmitter-receiver coordination during deployment. Simulation results show that the proposed framework improves classification accuracy by more than $18\\%$ over a conventional semantic communication baseline in the unseen scenarios.",
    "source": "arxiv"

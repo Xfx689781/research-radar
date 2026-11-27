@@ -1,7 +1,62 @@
 {
  "slug": "ml-for-molecules",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33417",
+   "title": "Temporal Selective Exploration for Reinforcement Learning-Guided Continuous-Discrete Flow Matching in 3D Molecular Design",
+   "url": "https://arxiv.org/abs/2611.33417",
+   "authors": [
+    "Lianghong Chen",
+    "Yan Yi Li",
+    "Gen Zhou",
+    "Yuxi Long",
+    "Ganlin Feng",
+    "Mike Domaratzki",
+    "Pingzhao Hu"
+   ],
+   "label": "arXiv:2611.33417v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A reinforcement-learning method that fine-tunes a continuous-discrete flow-matching generative model for 3D de novo molecular design, restricting exploration to influential timesteps and calibrating rewards across multiple objectives, applied to EGFR and Pin1 inhibitor design.",
+    "plain": "This paper is about using AI to design new 3D molecules that could block specific proteins linked to disease, here EGFR and Pin1. The authors train a generative model that places atoms in space and chooses which atoms they are, and they use reinforcement learning, a trial-and-reward training approach, to steer it toward molecules with desired properties. They report identifying some novel candidate inhibitors, supported only by computer-based (in silico) checks.",
+    "why": "Designing drug candidates with generative AI is an active area, and the paper tackles two practical training problems: wasted random exploration at unimportant steps and one objective overpowering the others. Whether the candidates are actually useful is unknown from this text, since the validation is computational only and no experimental results are described.",
+    "background": "- Generative model: software that learns to produce new examples, here molecules, from patterns in data.\n- Flow matching: a method that learns a smooth path turning random noise into a valid output over a series of steps.\n- Continuous vs. discrete: atom positions are continuous numbers; atom types (e.g., carbon, nitrogen) are discrete choices.\n- Reinforcement learning (RL): training by trying outputs and adjusting toward higher scores from a reward function.\n- ODE vs. SDE: a deterministic versus a randomized step-by-step process; randomness is needed so RL can explore.\n- Multi-objective optimization: balancing several goals at once, such as binding strength and drug-likeness.\n- EGFR and Pin1: protein targets associated with disease; inhibitors are molecules that block them.\n- In silico: performed by computer simulation rather than in a lab.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Flow matching has shown strong potential in generative tasks, while its optimization via Reinforcement Learning (RL) remains underexplored, especially in continuous-discrete mixed settings. Moreover, flow matching is formulated as an Ordinary Differential Equation (ODE), whose deterministic trajectories do not naturally support RL optimization. Introducing stochasticity by converting the entire trajectory into a Stochastic Differential Equation (SDE) is a common practice. Nevertheless, not all timesteps contribute to the final outcomes, and redundant exploration introduces additional noise. Furthermore, in multi-objective settings, some objectives may dominate the optimization while others receive insufficient updates. In this study, we propose an RL-guided continuous-discrete flow matching framework with temporal selective exploration for 3D de novo molecular design. Specifically, our method jointly optimizes continuous and discrete flow matching for atomic coordinates and molecular identities, respectively, while restricting exploration to timesteps that primarily contribute to target properties, reducing ineffective exploration. We also introduce a reward-based advantage calibration mechanism to mitigate objective dominance in multi-objective optimization. The framework is applied to design inhibitors for both the well-studied target protein EGFR and the challenging Pin1 protein. We identify some novel candidate inhibitors, supported by in silico validation.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33913",
+   "title": "PerovAgent: Autonomous Ligand Design for Halide Perovskite Nanocrystals",
+   "url": "https://arxiv.org/abs/2611.33913",
+   "authors": [
+    "Seungjun Cha",
+    "Yoo Jae Jeong",
+    "Amanda Conde Del Moral",
+    "Juan-Pablo Correa-Baena",
+    "Seth R. Marder",
+    "David S. Ginger",
+    "Victor Fung",
+    "Guoxiang Hu"
+   ],
+   "label": "arXiv:2611.33913v1",
+   "primary_category": "cond-mat.mtrl-sci",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "PerovAgent is an LLM-driven multi-agent framework that autonomously designs surface-capping ligands for CsPbBr3 perovskite nanocrystals, optimizing a binding-energy objective and testing LLM-generated design principles statistically, with a DFT check on one principle.",
+    "plain": "Tiny crystal particles called perovskite nanocrystals are coated with molecules, called ligands, that help them work well in devices. Choosing those coating molecules is a huge search problem. This paper describes an AI system that uses a language model to propose and test ligand ideas automatically, combining chemistry simulation tools and statistical checks.",
+    "why": "It shows an AI system that does not just search for a better molecule but also turns its search results into rules that can be checked, which is useful for anyone thinking about automated scientific discovery. The text reports 35 principles, of which 19 were prospectively supported and 7 passed a confound audit; whether these rules hold up more broadly is not shown here.",
+    "background": "- Halide perovskite nanocrystals: tiny light-emitting or light-absorbing crystal particles used in displays and solar cells.\n- Surface-capping ligands: molecules bonded to a particle's surface that control its stability and properties.\n- Binding energy: a computed measure of how strongly a molecule sticks to a surface; lower (more negative) usually means stronger binding.\n- Large language model (LLM) agents: AI systems that reason in text and call software tools in a loop.\n- Machine-learned interatomic potential: a fast learned approximation of atomic forces, used instead of slower quantum calculations.\n- Density functional theory (DFT): a standard quantum-mechanical simulation method used here to check one result.\n- Confound audit: a check that a pattern is not explained by a hidden variable rather than the chemistry itself.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Designing surface-capping ligands for high-performance halide perovskite nanocrystals requires navigating a vast molecular space while discovering design rules that govern ligand-surface interactions. Here, we introduce PerovAgent, an autonomous multi-agent framework that combines large language model (LLM)-driven scientific reasoning with computational tools for atomistic model construction, machine-learned interatomic potential evaluation, and statistical validation. Across ten independent campaigns on CsPbBr3 surfaces, PerovAgent adaptively explored and refined diverse ligand chemistries while progressively improving the binding-energy objective. Beyond optimization, the framework converts recurring chemical observations into explicit design principles that can be statistically evaluated. Of 35 formulated principles, 19 were prospectively supported, of which seven also passed the confound audit, highlighting the need to systematically validate plausible LLM-generated hypotheses during autonomous discovery. A recurrent alkynyl-phosphonate principle was further examined using density functional theory, which reproduced the predicted energetic preference. These results demonstrate an autonomous discovery framework that not only searches molecular space and optimizes the scalar objective but also transforms its search trajectory into systematically testable design principles. The framework can also be extended to more complex ligands, including zwitterionic, multidentate, and polymerizable ligands, to explore a wider range of ligand-surface interactions and uncover new design principles for halide perovskite nanocrystals.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33408",
    "title": "Computing hydration free energies and crystalline solubility of drug-like molecules with MACE",
@@ -20,12 +75,12 @@
    "primary_category": "physics.chem-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A workflow built on MACE machine-learning interatomic potentials (including a new λ-MACE variant) computes hydration and sublimation free energies to predict crystalline solubility of neutral drug-like molecules, reaching experimental accuracy for the hydration leg but a combined error of 1.53 log units.",
-    "plain": "Drug makers need to know how well a candidate molecule dissolves in water, because that affects how much of a pill the body absorbs. This paper tries to calculate that solubility from physics rather than from models trained on past measurements. The authors report that their method predicts how readily molecules dissolve in water (hydration) very accurately on 70 test compounds, but when the crystal-related step is added, the final solubility prediction is still about 1.5 log units off, which is well short of experimental accuracy.",
-    "why": "Solubility is a costly bottleneck in drug discovery, and physics-based predictions could generalise better than data-driven ones outside their training data. The paper is candid that the remaining gap lies in the crystal (solid-state) thermodynamics, so it is best read as a useful benchmark and a map of what still needs improving rather than a finished tool.",
+    "ai": true,
     "background": "- Solubility: how much of a substance dissolves in a solvent; reported here as log units, where one unit is a tenfold difference.\n- Free energy: a thermodynamic quantity that determines whether a process happens spontaneously; hydration free energy is the energy change when a molecule moves from gas into water.\n- Sublimation free energy: the energy change when a solid turns directly into gas; used here to link the solid crystal to the dissolved state.\n- Free energy perturbation: a simulation method that computes free energy differences by gradually transforming one molecule into another.\n- Interatomic potential: a machine-learned function that estimates the forces between atoms, replacing slower quantum calculations or hand-built force fields.\n- DFT (density functional theory): a standard quantum-mechanical calculation method used as the reference for accuracy.\n- Chemical accuracy: roughly 1 kcal/mol error in energy, the benchmark the authors say is needed for each leg.\n- FreeSolv: a public database of experimentally measured hydration free energies.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A workflow built on MACE machine-learning interatomic potentials (including a new λ-MACE variant) computes hydration and sublimation free energies to predict crystalline solubility of neutral drug-like molecules, reaching experimental accuracy for the hydration leg but a combined error of 1.53 log units.",
+    "plain": "Drug makers need to know how well a candidate molecule dissolves in water, because that affects how much of a pill the body absorbs. This paper tries to calculate that solubility from physics rather than from models trained on past measurements. The authors report that their method predicts how readily molecules dissolve in water (hydration) very accurately on 70 test compounds, but when the crystal-related step is added, the final solubility prediction is still about 1.5 log units off, which is well short of experimental accuracy.",
+    "why": "Solubility is a costly bottleneck in drug discovery, and physics-based predictions could generalise better than data-driven ones outside their training data. The paper is candid that the remaining gap lies in the crystal (solid-state) thermodynamics, so it is best read as a useful benchmark and a map of what still needs improving rather than a finished tool."
    },
    "abstract": "Accurate prediction of thermodynamic solubility is critical in drug discovery, where it influences oral bioavailability and drives decisions in formulation chemistry. First-principles calculations of intrinsic solubility offer the potential to achieve superior generalization to existing direct, data-driven predictors, which often suffer significant performance degradation outside of their training distribution. Whilst free energy perturbation calculations provide a rigorous framework to estimate these quantities, their accuracy is typically limited by the quality of the empirical force field used. In this work, we present a computational workflow driven by the MACE family of machine learning interatomic potentials to compute the solubility of neutral drug-like molecules. We introduce $\\lambda$-MACE, a potential optimised for condensed-phase free energy calculations, which enables hydration free energy calculations at experimental accuracy on an evaluation set of 70 compounds from the FreeSolv database selected for their relevance to medicinal chemistry. We further combine these hydration free energy calculations with sublimation free energy calculations to predict crystalline solubility given a known experimental crystal structure, on an additional set of 10 compounds. We achieve state-of-the-art performance for each leg of the calculation, with experimental accuracy for the hydration leg, and accuracy competitive with industry-standard DFT for the sublimation leg. However, the overall errors after combining both legs lead to accuracy of 1.53 log units. This is significantly above the experimental accuracy (0.17-0.6 log units). Closing this gap will require substantially tighter accuracy in each leg, on the order of half of chemical accuracy (0.5 kcal/mol), with crystalline thermodynamics the hardest remaining challenge.",
    "source": "arxiv"
@@ -44,12 +99,12 @@
    "primary_category": "physics.chem-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "PineIR is a generative model that builds 3D molecular structures atom by atom from an infrared spectrum alone, subtracting each atom's predicted spectral contribution as it goes, and is trained on machine-learned-potential IR spectra of millions of molecules.",
-    "plain": "Chemists often use an infrared (IR) spectrum, a fingerprint made by how a molecule absorbs light, to spot which chemical groups are present, but not to work out the full 3D shape of the molecule. This paper presents a computer model that tries to rebuild the 3D structure from the IR spectrum alone, without the extra measurements that earlier models needed. On computed spectra of molecules the model had not seen, the best of fifty candidate structures had the correct connectivity (which atoms are joined to which) in 43% of cases.",
-    "why": "Getting a full structure from one cheap, fast measurement would be useful for identifying unknown compounds, if it holds up on real measured spectra. The text only reports results on computed spectra, so how well it works on laboratory data is not shown here.",
+    "ai": true,
     "background": "- Infrared (IR) spectrum: a plot of which frequencies of light a molecule absorbs; it reflects its bonds and groups.\n- Connectivity: which atoms are bonded to which, the skeleton of a molecule, separate from its 3D arrangement.\n- Conformer: a different 3D shape the same molecule can take by rotating around its bonds.\n- Diastereomer: a stereoisomer (same bonds, different 3D arrangement at some centers) that is not a mirror image.\n- Generative model: a machine-learning model that produces new structures step by step, here one atom at a time.\n- Machine-learned interatomic potential: a fast learned approximation of the forces between atoms, used here to compute spectra cheaply instead of with full quantum calculations.\n- B3LYP: a widely used quantum-chemistry method (hybrid density functional) for computing molecular properties; the model was later fine-tuned on spectra computed at this level.\n- Held-out molecules: molecules kept out of training and used only for testing.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PineIR is a generative model that builds 3D molecular structures atom by atom from an infrared spectrum alone, subtracting each atom's predicted spectral contribution as it goes, and is trained on machine-learned-potential IR spectra of millions of molecules.",
+    "plain": "Chemists often use an infrared (IR) spectrum, a fingerprint made by how a molecule absorbs light, to spot which chemical groups are present, but not to work out the full 3D shape of the molecule. This paper presents a computer model that tries to rebuild the 3D structure from the IR spectrum alone, without the extra measurements that earlier models needed. On computed spectra of molecules the model had not seen, the best of fifty candidate structures had the correct connectivity (which atoms are joined to which) in 43% of cases.",
+    "why": "Getting a full structure from one cheap, fast measurement would be useful for identifying unknown compounds, if it holds up on real measured spectra. The text only reports results on computed spectra, so how well it works on laboratory data is not shown here."
    },
    "abstract": "Computing the infrared (IR) spectrum of a molecule from its structure is routine. The inverse problem is not. In practice, IR spectra are used to identify the functional groups present in a molecule, while the determination of its complete structure requires additional measurements. Machine-learning models that return 3D structures from IR spectra exist, but all of them need extra input, such as Raman, ultraviolet or nuclear magnetic resonance spectra, the molecular formula, or the number of atoms. In this work we present PineIR, a generative model that returns 3D molecular structures from the IR spectrum alone. PineIR builds the molecule atom by atom, and each atom is associated with its contribution to the IR spectrum. This contribution is subtracted from the input spectrum before the next atom is generated. To train it, we computed with a machine-learned interatomic potential the IR spectra of 4.6 million structures of 3.1 million molecules, including conformer ensembles. On computed spectra of held-out molecules, the best-ranked of fifty candidates has the correct connectivity in 43% of the cases, and the generated geometries reproduce the conformer and the diastereomer that produced the input spectrum. After fine-tuning on 161k spectra calculated with the hybrid functional B3LYP, the model can also be applied to spectra at this level of theory.",
    "source": "arxiv"

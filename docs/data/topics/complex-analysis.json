@@ -1,7 +1,50 @@
 {
  "slug": "complex-analysis",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34186",
+   "title": "Independence of Thurston eigenvalues and Lyapunov exponents for quadratic rational maps",
+   "url": "https://arxiv.org/abs/2611.34186",
+   "authors": [
+    "Ayesha Bennett",
+    "Holly Krieger"
+   ],
+   "label": "arXiv:2611.34186v1",
+   "primary_category": "math.DS",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper studies post-critically finite quadratic rational maps with both critical points in one cycle, constructing real bitransitive centres in the curve C_2 along which Lyapunov exponents blow up while Thurston eigenvalues stay in a bounded annulus, and showing a spectral gap for these eigenvalues on compact subsets of C_2.",
+    "plain": "This paper is about a family of simple iterated maps of the Riemann sphere, the complex-number version of a rule applied again and again. For a special subclass, the authors look at two numbers that measure how these maps behave: Thurston eigenvalues, which come from a fixed-point structure, and Lyapunov exponents, which measure how quickly nearby points separate under repeated application. They build a sequence of such maps where the Lyapunov exponents grow without bound while the Thurston eigenvalues stay between 1/10 and 1 in size, and they show the eigenvalues stay separated from 1 in size on compact parts of the family.",
+    "why": "The work addresses questions raised by Buff, Epstein and Koch, and it suggests that the two measures of stability are not tied together in the way one might hope, at least along this curve. The text does not say what wider consequences follow, so the broader significance is uncertain from this summary alone.",
+    "background": "- Rational map: a function of one complex variable, ratio of polynomials, acting on the Riemann sphere (complex plane plus a point at infinity).\n- Quadratic rational map: a rational map of degree two.\n- Critical point: a point where the map locally folds, not one-to-one.\n- Post-critically finite: the orbits of critical points eventually land on a finite set of points.\n- Critical orbit relation curve C_2: a one-dimensional family in moduli space (the space of maps up to change of coordinates) where the two critical points lie in the same cycle.\n- Bitransitive centre: a parameter where both critical points have orbits with the specified cyclic behaviour; treat as a technical term.\n- Thurston pullback map and eigenvalues: a combinatorial tool from Thurston's theory that assigns numbers to a fixed point, used to study the map.\n- Lyapunov exponent: the average rate at which nearby orbits diverge, a standard measure of chaos.\n- Spectral gap: a margin separating the relevant eigenvalues from a threshold, here from modulus 1.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study post-critically finite quadratic rational maps $f: \\mathbb{P}^1\\to\\mathbb{P}^1$ where the two critical points lie in the same cycle. The Thurston eigenvalues of $f$ are those of the derivative of the Thurston pullback map $\\sigma_f$ at its fixed point. Addressing questions of Buff--Epstein--Koch, we construct a sequence of real, bitransitive centres in the critical orbit relation curve $C_2$ which degenerates in moduli space, and whose Lyapunov exponents tend to infinity whilst the Thurston eigenvalues satisfy $\\frac{1}{10}< |\\lambda|<1$. We also show the Thurston eigenvalues across all bitransitive centres in $C_2$ have a spectral gap on compact subsets of the curve.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34654",
+   "title": "Connectedness Principle in the Complex Analytic Setting",
+   "url": "https://arxiv.org/abs/2611.34654",
+   "authors": [
+    "Swapnajit Das"
+   ],
+   "label": "arXiv:2611.34654v1",
+   "primary_category": "math.AG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proves a complex-analytic (Kähler) version of the connectedness principle for normal compact Kähler pairs, showing the non-klt locus has at most two connected components in each fiber of a suitable morphism, and extends this to generalized pairs with transcendental nef part and to projective morphisms of possibly non-compact analytic varieties.",
+    "plain": "The paper studies shapes of \"bad\" regions inside geometric spaces that are described by complex equations. It considers a map between such spaces where the pieces sitting over each point are connected, and shows that the singular trouble zone within each piece splits into at most two separate parts. The authors also extend this statement to more general settings and to some non-compact spaces.",
+    "why": "Connectedness results of this kind are tools used in birational geometry to control how singularities behave under maps, so the result matters mainly to specialists in that area. The text does not discuss applications beyond this, so its wider significance is unclear from the given text alone.",
+    "background": "- Complex analytic variety: a space locally described by complex-number equations.\n- Kähler manifold/variety: a special kind of complex space with a compatible geometric structure, generalizing projective (algebraic) spaces.\n- Normal compact space: a compact space with no pinching in codimension one, \"compact\" meaning bounded and closed.\n- Pair (X, B): a space X together with a weighted divisor B, a combination of special subvarieties with coefficients.\n- Nef: a positivity condition on a line bundle or divisor, roughly \"not negative on curves.\"\n- Non-klt locus (Nklt): the set of points where the singularities are too severe to be \"Kawamata log terminal,\" a standard mildness condition.\n- Proper morphism with connected fibers: a map whose preimages of points are compact and in one piece.\n- Connected components: the separate pieces of a set.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We show that if $(X,B)$ is a normal compact K\\\"ahler pair and $f:X\\to Z$ is a proper morphism with connected fibers to a normal compact K\\\"ahler variety $Z$ such that $(-K_X+B)$ is nef over $Z$, then $\\mathrm{Nklt}(X,B)\\cap f^{-1}(z)$ has at most two connected components for every $z\\in Z$. More generally, we prove the result for generalized pairs whose nef part is allowed to be transcendental. Moreover, we record that the same result holds for projective morphism between analytic varieties (possibly non-compact).",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33697",
    "title": "Singularities in global pluripotential theory",
@@ -13,12 +56,12 @@
    "primary_category": "math.CV",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A book-length treatment of plurisubharmonic singularities on compact Kähler manifolds, linking them to non-Archimedean and toric pluripotential theory.",
-    "plain": "This is a book, expanded from lecture notes, about a branch of advanced geometry that studies functions on complex spaces which are \"bent\" in controlled ways, especially where they blow up or become singular. The author builds up the theory systematically and connects it to two related settings: one that uses a different notion of distance (non-Archimedean) and one built on shapes called toric varieties. The text summary does not list specific new results.",
-    "why": "Pluripotential theory is a central tool for studying the geometry of complex spaces, and bringing together its singular side with non-Archimedean and toric versions may be useful for specialists. The summary is too brief to say which results are new, so its exact importance is unclear from this text alone.",
+    "ai": true,
     "background": "- Complex manifolds: smooth spaces locally described by complex numbers.\n- Kähler manifolds: complex manifolds with a compatible geometric structure, common in algebraic geometry.\n- Plurisubharmonic functions: a class of functions that behave like \"convex\" functions in several complex directions.\n- Singularities: points where such a function or space fails to be smooth.\n- Non-Archimedean geometry: a version of analysis using a distance in which the triangle inequality is strengthened.\n- Toric varieties: spaces built from combinatorial data about polytopes.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A book-length treatment of plurisubharmonic singularities on compact Kähler manifolds, linking them to non-Archimedean and toric pluripotential theory.",
+    "plain": "This is a book, expanded from lecture notes, about a branch of advanced geometry that studies functions on complex spaces which are \"bent\" in controlled ways, especially where they blow up or become singular. The author builds up the theory systematically and connects it to two related settings: one that uses a different notion of distance (non-Archimedean) and one built on shapes called toric varieties. The text summary does not list specific new results.",
+    "why": "Pluripotential theory is a central tool for studying the geometry of complex spaces, and bringing together its singular side with non-Archimedean and toric versions may be useful for specialists. The summary is too brief to say which results are new, so its exact importance is unclear from this text alone."
    },
    "abstract": "This book is an expanded version of the author's lecture notes at the Institute for Advanced Study in Mathematics (IASM) at Zhejiang University. We systematically develop the theory of plurisubharmonic singularities on compact K\\\"ahler manifolds and relate it to the non-Archimedean pluripotential theory and toric pluripotential theory.",
    "source": "arxiv"
@@ -35,12 +78,12 @@
    "primary_category": "math.FA",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives a complete characterization of which polynomials are cyclic in mixed-weighted Dirichlet-type spaces of functions on the bidisk, in terms of their zero sets and the three weight parameters.",
-    "plain": "The paper studies a family of function spaces made of functions of two complex variables, where each coefficient of the function is weighted by a size-dependent factor controlled by three real parameters. A function is \"cyclic\" if, by multiplying it by polynomials and taking limits, one can approximate the constant function 1 inside the space. The authors determine exactly which polynomials have this property, using only where they vanish and the values of the three parameters.",
-    "why": "Cyclicity is a basic structural question for these spaces, since it describes which functions generate the whole space under multiplication. The result extends earlier characterizations for anisotropic and total-degree versions of the same spaces on the bidisk, so it is a systematic completion of that line of work rather than a new direction; its wider significance beyond this specialist area is unclear from the text alone.",
+    "ai": true,
     "background": "- Unit bidisk: the set of pairs of complex numbers (z1, z2) with each having absolute value less than 1.\n- Holomorphic function: a complex-differentiable function of complex variables, here written as a power series in z1 and z2.\n- Dirichlet-type space: a space of functions whose norm combines the size of the function with the size of its derivatives, here via weighted sums of squared coefficients.\n- Mixed weights: the three exponents alpha1, alpha2, alpha3 control how strongly the coefficient indices m, n and m+n are weighted.\n- Cyclic function: a function f such that the closure of all polynomial multiples of f contains the constant 1; informally, f \"generates\" the whole space.\n- Zero set: the set of points where a polynomial equals zero.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives a complete characterization of which polynomials are cyclic in mixed-weighted Dirichlet-type spaces of functions on the bidisk, in terms of their zero sets and the three weight parameters.",
+    "plain": "The paper studies a family of function spaces made of functions of two complex variables, where each coefficient of the function is weighted by a size-dependent factor controlled by three real parameters. A function is \"cyclic\" if, by multiplying it by polynomials and taking limits, one can approximate the constant function 1 inside the space. The authors determine exactly which polynomials have this property, using only where they vanish and the values of the three parameters.",
+    "why": "Cyclicity is a basic structural question for these spaces, since it describes which functions generate the whole space under multiplication. The result extends earlier characterizations for anisotropic and total-degree versions of the same spaces on the bidisk, so it is a systematic completion of that line of work rather than a new direction; its wider significance beyond this specialist area is unclear from the text alone."
    },
    "abstract": "For $\\boldsymbol{\\alpha}=(\\alpha_1,\\alpha_2,\\alpha_3)\\in\\mathbb R^3$, we investigate cyclic polynomials in the mixed-weighted Dirichlet-type space $\\mathscr{D}_{\\boldsymbol{\\alpha}}$ of holomorphic functions $f(z_1,z_2)=\\sum_{m,n\\geq0}a_{m,n}z_1^mz_2^n$ on the unit bidisk satisfying $$ \\sum_{m,n\\geq0}|a_{m,n}|^2 (m+1)^{\\alpha_1}(n+1)^{\\alpha_2} (m+n+1)^{\\alpha_3}<\\infty. $$ We give a complete characterization of cyclic polynomials in terms of their zero sets and the parameters $\\alpha_1,\\alpha_2,\\alpha_3$. Our results extend previously known characterizations for anisotropic and total-degree Dirichlet-type spaces on the unit bidisk.",
    "source": "arxiv"

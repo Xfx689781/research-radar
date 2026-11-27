@@ -1,7 +1,53 @@
 {
  "slug": "condensed-matter",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34116",
+   "title": "Tunable quantum metric driven nonlinear valley Hall effect in the PT-symmetric sliding antiferroelectric MoS$_2$",
+   "url": "https://arxiv.org/abs/2611.34116",
+   "authors": [
+    "Wen-Xin Jiang",
+    "Zhen-Hao Gong",
+    "Zhigang Gui",
+    "M. Umar Farooq",
+    "Li Huang"
+   ],
+   "label": "arXiv:2611.34116v1",
+   "primary_category": "cond-mat.mes-hall",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A first-principles study proposes a four-layer MoS2 stack, with sliding antiferroelectric order and strain-broken C3z symmetry, in which a quantum-metric-driven nonlinear valley Hall effect appears while inversion and time-reversal symmetries are preserved and can be switched by sliding the layers.",
+    "plain": "Electrons in some two-dimensional crystals carry a hidden geometric property, called the quantum metric, that can produce measurable electrical responses. This paper proposes a layered molybdenum disulfide design in which the layers slide relative to each other, and the sliding can be reversed electrically. The calculations suggest this sliding changes the sign and size of a sideways current linked to electron \"valleys,\" and that the effect is mostly driven by the outer layers.",
+    "why": "The work points to a way to read out quantum geometry in a nonmagnetic material without breaking the usual symmetries, and to switch it with a non-volatile control. Its relevance to real devices is still unclear, since the text reports only theoretical calculations and no experiment.",
+    "background": "- Quantum metric: a geometric property of electron wavefunctions that measures how quickly quantum states change as their momentum changes; it is related to the Berry curvature.\n- Valley: distinct energy-minimum points in a crystal's electron momentum space that can act like a binary label for information.\n- Valley Hall effect: a sideways flow of electrons driven by valley differences, without a net magnetic field.\n- Nonlinear response: an electrical effect that depends on the square of the applied field rather than growing in direct proportion to it.\n- Symmetry (inversion P, time reversal T, C3z rotation): mirror-like or reversal operations a crystal may or may not respect; these rules determine which effects are allowed.\n- Antiferroelectric: a stacking arrangement where neighboring layers have opposite electric polarization, so the net polarization cancels.\n- Sliding: shifting one atomic layer horizontally relative to another, which switches the stacking order (ABBA to BAAB here).\n- First-principles calculation: a computer simulation based directly on quantum mechanics, without fitted parameters.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The quantum metric, the real part of a quantum geometric tensor, plays an important role in fundamental transport and optical responses of quantum materials. While net quantum metric effects are typically realized by breaking both time-reversal (T) and inversion (P) symmetries, valley-contrast mechanisms enable the probing of quantum geometry in centrosymmetric, nonmagnetic systems, revealing physical signatures beyond Berry curvature. Here, we design a four-layer MoS$_2$ platform that combines sliding antiferroelectric order with strain-induced $C_{3z}$ breaking to realize a quantum metric driven nonlinear valley Hall effect (NVHE) under preserved P and T symmetries. Reversible interlayer sliding (ABBA $\\leftrightarrow$ BAAB) provides nonvolatile electrical control of the valley response. First-principles calculations reveal an outer-layer-dominated NVHE with tunable sign and magnitude. This symmetry-preserving, sliding-tunable strategy activates hidden quantum geometric phenomena in realistic two-dimensional materials and opens a clean pathway for tunable valleytronics and quantum information devices.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33723",
+   "title": "Superconductivity from the Berry connection from many-electron wave functions: $U(1)$ gauge fluctuation, gauge invariance, and superconductivity",
+   "url": "https://arxiv.org/abs/2611.33723",
+   "authors": [
+    "Hiroyasu Koizumi"
+   ],
+   "label": "arXiv:2611.33723v1",
+   "primary_category": "cond-mat.supr-con",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proposes a superconductivity theory built on the Berry connection of many-electron wave functions and on random, gauge-related fluctuations that drive transitions between quantum states, claiming it retains BCS results while resolving two disagreements with experiment.",
+    "plain": "This paper is a theoretical attempt to explain superconductivity, the state where a material carries electric current with no resistance. The author starts from a mathematical quantity called the Berry connection, which tracks how quantum states change phase as they move, and from random fluctuations that cause electrons to jump between states. The paper argues that this framework explains the reversible switch between superconducting and normal states in a magnetic field, including the balance of forces involved.",
+    "why": "Superconductivity is a long-established field, so a new framework is worth noting mainly as a claim to extend the standard BCS theory and fix two named disagreements with experiment. The abstract does not say what those two disagreements are or give quantitative tests, so its strength cannot be judged from this text alone.",
+    "background": "- Superconductivity: zero electrical resistance below a critical temperature, and expulsion of magnetic fields.\n- BCS theory: the standard microscopic theory (1957), where electrons pair up and the pairs condense.\n- Gauge invariance (U(1)): the principle that electromagnetic physics is unchanged under a certain local change of phase convention for the electric potential and the vector potential.\n- Berry connection: a geometric quantity describing how a quantum state's phase changes as parameters vary; it is the quantum analogue of a gauge field.\n- Many-electron wave function: a mathematical description of the combined quantum state of all electrons in a material.\n- Gauge fluctuation: random variation in that phase convention, which the paper treats as causing transitions between quantum states.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The electromagnetic $U(1)$ gauge invariance and superconductivity are examined by employing the Berry connection from many-electron wave functions and the fluctuations of it that give rise to the probabilistic random transitions among quantum states. The gauge invariance in the classical electrodynamics is regarded as the requirement that extracts unaffected parts by the gauge fluctuation. In quantum mechanics, dissipation-free states from the gauge fluctuation exist, and we identify them as superconducting states. We explain the reversible superconducting-normal phase transition in a magnetic field including the force balance. The present superconductivity theory lifts two fundamental disagreements between theory and experiment existing in the current standard theory with keeping the major results by the BCS theory. Thus, it may be considered as a superconductivity theory encompassing the current standard one.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34145",
    "title": "Nontrivial criticality and weakly first-order transitions in the frustrated spin-1 chain with single-ion anisotropy",
@@ -17,12 +63,12 @@
    "primary_category": "cond-mat.str-el",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A numerical study (large-scale DMRG plus bosonization) of a frustrated spin-1 chain with next-nearest-neighbour coupling and single-ion anisotropy, mapping its phase diagram and reporting weakly first-order, topological, and deconfined quantum critical transitions.",
-    "plain": "This paper looks at a one-dimensional line of tiny magnetic spins that compete with each other, and asks how their collective behaviour changes as the balance of interactions is tuned. The authors used large computer simulations together with a mathematical reduction method to draw a map of the different ordered states and the boundaries between them. They report several transitions, including a weak first-order one, a continuous one, and a dimerized phase whose edge is described as a deconfined quantum critical point.",
-    "why": "The work points to unusual kinds of phase transition in simple quantum chains that go beyond the standard Landau picture of ordering, which is of interest to theorists studying quantum magnets. The text does not establish links to specific experimental materials, so any wider relevance is unclear from this abstract alone.",
+    "ai": true,
     "background": "- Spin chain: a row of quantum magnetic moments (spins) coupled to their neighbours.\n- Spin-1: each site has three magnetic states; the Haldane phase is a known gapped topological state of such chains.\n- Frustration: competing interactions that prevent all neighbours from ordering comfortably; here, next-nearest-neighbour coupling.\n- Single-ion anisotropy: a preference of each spin for particular directions, tuned by a parameter D.\n- Phase transition: an abrupt or continuous change between states, such as ice melting into water; \"first-order\" means a jump, \"continuous\" means a smooth change.\n- DMRG (density-matrix renormalization group): a numerical method for approximating ground states of quantum chains.\n- Bosonization: a mathematical mapping of such chains onto simpler field theories.\n- Deconfined quantum critical point: a transition between two ordered states not described by the usual single-order-parameter theory.\n- Central charge c and universality class: numbers that label the type of critical behaviour.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A numerical study (large-scale DMRG plus bosonization) of a frustrated spin-1 chain with next-nearest-neighbour coupling and single-ion anisotropy, mapping its phase diagram and reporting weakly first-order, topological, and deconfined quantum critical transitions.",
+    "plain": "This paper looks at a one-dimensional line of tiny magnetic spins that compete with each other, and asks how their collective behaviour changes as the balance of interactions is tuned. The authors used large computer simulations together with a mathematical reduction method to draw a map of the different ordered states and the boundaries between them. They report several transitions, including a weak first-order one, a continuous one, and a dimerized phase whose edge is described as a deconfined quantum critical point.",
+    "why": "The work points to unusual kinds of phase transition in simple quantum chains that go beyond the standard Landau picture of ordering, which is of interest to theorists studying quantum magnets. The text does not establish links to specific experimental materials, so any wider relevance is unclear from this abstract alone."
    },
    "abstract": "Frustrated spin chains host exotic phases beyond the Landau paradigm, yet weak first-order transitions and unconventional criticalities remain elusive. Combining large-scale density-matrix renormalization group with bosonization methods, we map the phase diagram of a spin-1 chain with next-nearest-neighbor (NNN) coupling and single-ion anisotropy (SIA). We pinpoint two topological phase transitions: a weakly first-order transition between the Haldane and NNN-Haldane phases with a tiny gap and a continuous transition from the Haldane phase to the large-$D$ phase located via level spectroscopy with Richardson extrapolation. For negative SIA, a spontaneous dimerized phase emerges between the N\\'eel and NNN-N\\'eel phases. Its transition into the N\\'eel phase is a deconfined quantum critical point falling into the eight-vertex universality class, with central charge $c = 1$ and critical exponents varying continuously along the phase boundary. For positive SIA, we identify two vector-spin-chirality orders---an ordinary chiral phase and a narrow Haldane-chiral phase---with a weakly first-order transition between them, evidenced by a soft jump in the string order parameter. Our results reveal that frustration and anisotropy generate emergent orders and non-Landau criticalities, providing a platform for deconfined and topological phase transitions.",
    "source": "arxiv"
@@ -47,12 +93,12 @@
    "primary_category": "cond-mat.mes-hall",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper reports quantized Hall resistance in monolayer graphene interfaced with CrOCl, measured at 50 K and 100 K, which the authors propose as a route to a resistance standard that works above liquid nitrogen temperature.",
-    "plain": "Electrical resistance standards are defined using a quantum effect that normally needs very cold temperatures, around liquid helium levels, to work precisely. This paper describes a graphene device placed on a magnetic-ordered material (CrOCl) that the authors say keeps this effect precise at much warmer temperatures, including 50 K and 100 K. The reported measurements are for a single device under a 12 tesla magnetic field and a 10 microamp current.",
-    "why": "A resistance standard that works at 100 K, which can be reached without the liquid helium and bulky refrigerators used today, could make precise electrical measurements cheaper and easier to run. The text does not show how widely the result would reproduce, so its practical reach is still an open question.",
+    "ai": true,
     "background": "- Hall effect: when current flows through a conductor in a magnetic field, a voltage appears across it; in the quantum Hall regime this voltage divided by current locks to a fixed value.\n- Von Klitzing constant: the fixed value, h/e², where h is the Planck constant and e is the elementary charge; it sets the SI resistance standard.\n- Graphene: a single layer of carbon atoms that conducts electricity very efficiently.\n- Landau gap: an energy gap that forms for electrons in a magnetic field; a larger gap usually allows the effect to hold at higher temperatures.\n- Fermi velocity: how fast electrons move at the top of their energy range; the paper says the interface increases it.\n- Direct current comparator (DCC): a precision instrument used to compare two resistances with very high accuracy.\n- Parts per billion: a measure of relative error; 23 ppb means the deviation is about 0.000023 percent.\n- Kelvin: 50 K is about -223 °C and 100 K is about -173 °C; liquid nitrogen boils near 77 K.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper reports quantized Hall resistance in monolayer graphene interfaced with CrOCl, measured at 50 K and 100 K, which the authors propose as a route to a resistance standard that works above liquid nitrogen temperature.",
+    "plain": "Electrical resistance standards are defined using a quantum effect that normally needs very cold temperatures, around liquid helium levels, to work precisely. This paper describes a graphene device placed on a magnetic-ordered material (CrOCl) that the authors say keeps this effect precise at much warmer temperatures, including 50 K and 100 K. The reported measurements are for a single device under a 12 tesla magnetic field and a 10 microamp current.",
+    "why": "A resistance standard that works at 100 K, which can be reached without the liquid helium and bulky refrigerators used today, could make precise electrical measurements cheaper and easier to run. The text does not show how widely the result would reproduce, so its practical reach is still an open question."
    },
    "abstract": "Quantum Hall effect (QHE) -- the pioneering demonstration of one-dimensional topologically-protected edge channels -- manifest a transversal resistance quantized solely by two universal constants $e$ and $h$ (the elementary charge and the Planck constant, respectively), referred to as the von Klitzing constant $R_\\mathrm{K}=h/e^{2}$. For decades, this has enabled a unique route for realizing quantum Hall resistance (QHR) standard in the Syst\\`eme international d'unit\\`es (SI), yet high precision QHR under relaxed conditions, especially temperature higher than 30 K, has not been possible. Here, we show that interfacial charge-order coupling inbetween CrOCl and monolayer graphene offers enhanced Fermi velocity, creating a robust Landau cyclotron gap. Using a customized direct current comparator (DCC, mounted at room temperature), we obtain relative deviation of the Hall resistance from $R_\\mathrm{K}/2$ of (15 $\\pm$ 23)\\,n$\\Omega$ $\\Omega$$^{-1}$ (23 parts per billion of relative uncertainty) at 50 K, with an external magnetic field of 12 T and a dc current of 10 $\\mu$A. At 100 K, the system exhibits QHR with 2 parts per million of relative uncertainty. Our results therefore suggest a platform toward a next-generation quantum resistance standard that may work at above liquid nitrogen temperature and free of conventional compressor refrigerators.",
    "source": "arxiv"

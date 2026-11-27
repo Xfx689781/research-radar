@@ -1,7 +1,79 @@
 {
  "slug": "biology",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.24.769041",
+   "title": "Structural deformations of lipid bilayers around membrane proteins inform oligomerization type",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769041v1",
+   "authors": [
+    "Diaz Vazquez, G.",
+    "Condon, S. G. F.",
+    "Robertson, J. L."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.24.769041 v1",
+   "primary_category": "biophysics",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Coarse-grained molecular dynamics simulations of monomeric and oligomeric forms of ten membrane channels and transporters in POPC bilayers compare membrane thickness, deformation energy and lipid packing near protein-protein interfaces to test whether these lipid defects relate to oligomerization type.",
+    "plain": "Cell membranes are made of fatty lipid sheets, and proteins embedded in them can bend and thin the surrounding sheet. This computational study simulated ten channel and transporter proteins, alone and assembled into groups, to see how the membrane around them is disturbed. The authors report that disturbances reach about 3 nm from each protein, and that proteins which always assemble the same way show larger disturbances at their contact surfaces, which become smaller when they join.",
+    "why": "The work proposes that the shape of the membrane around a protein may help determine which partners it binds and how strongly, a link that could matter for understanding how membrane protein complexes form. The text does not show how these simulation findings would be tested experimentally, so their wider significance remains uncertain.",
+    "background": "- Biological membranes are double layers of lipids (fat-like molecules) that act as a barrier around cells.\n- Membrane proteins sit inside this layer; channels and transporters move molecules across it.\n- Oligomerization means several copies of a protein joining into one complex.\n- Coarse-grained molecular dynamics is a simulation method that groups atoms into larger beads to model how molecules move over time.\n- Membrane thickness, deformation energy and lipid packing parameter are measures of how strained or disordered the lipid layer is near a protein.\n- POPC is a common lab lipid used as a simplified membrane model.\n- \"Obligatory\" or \"structurally monomorphic\" complexes always assemble in the same arrangement; homologs are related proteins from different species.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "A functional definition of a membrane protein's structure is the three-dimensional arrangement of the polypeptide and the structure of the membrane around it. Biological membranes are composed of self-assembled lipid bilayers, with membrane proteins acting as inclusions that perturb this phase. These inclusions induce long-range changes in membrane structure and create an intrinsic, lipid-mediated driving force for membrane protein association. The question is how much different membrane protein folds shape their surrounding membrane to tune the affinity and specificity of this driving force. To investigate this, we conducted a computational study to evaluate whether different membrane protein oligomers exhibit characteristic membrane defects that indicate specificity in complexation. We performed coarse-grained molecular dynamics simulations of monomeric and oligomeric states of ten different channels and transporters in POPC bilayers and evaluated changes in membrane thickness, deformation energy, and lipid packing parameters. We found that all the proteins affect their surrounding membrane up to 3 nm from the protein surface. However, we observed larger defects at oligomeric interfaces for obligatory or structurally monomorphic complexes, suggesting that their oligomerization is partly driven by burial of membrane defects. In contrast, oligomers that adopt different quaternary structures across homologs show weaker perturbations at known binding interfaces, and larger perturbations at lipid-facing surfaces. Nevertheless, all systems show fewer membrane defects upon oligomerization, suggesting an underlying lipid-mediated driving force that each protein fold modulates to tune affinity via membrane-mediated oligomerization.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.25.768918",
+   "title": "A spatiotemporal perturbational atlas of the post-pneumonectomy lung",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.768918v1",
+   "authors": [
+    "Obata, T.",
+    "Aracena, D. P.",
+    "Tomas Gracia, M.",
+    "Edelstein, S. E.",
+    "Mizoguchi, S.",
+    "Wang, N.",
+    "Mensah Sowah, N.-E.",
+    "Danelski, C.",
+    "Haynes, C.",
+    "Porcaro, O.",
+    "Kitamura, N.",
+    "Lile, K.",
+    "Dorst, W.",
+    "Greaney, A. M.",
+    "Adams, T. S.",
+    "Rivero, R.",
+    "Kim, H.",
+    "Lee, V.",
+    "Yang, J.",
+    "Yuan, Y.",
+    "Schupp, J. C.",
+    "Levchenko, A.",
+    "Osgood-Zimmerman, A.",
+    "Stitelman, D.",
+    "Tsuchiya, T.",
+    "Kyriakides, T.",
+    "Kaminski, N.",
+    "Niklason, L. E.",
+    "Raredon, M. S. B."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.768918 v1",
+   "primary_category": "systems biology",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A multi-method atlas (single-cell RNA sequencing, Xenium spatial transcriptomics, and NICHES-based spatial connectomics) mapping cell composition and intercellular signaling across days 3, 7 and 14 after pneumonectomy (lung removal) in rats.",
+    "plain": "When one lung is surgically removed, the remaining lung grows and reorganizes itself. This paper follows that repair process in rats over several days, looking at which cell types are present and how they appear to communicate in different parts of the tissue. The authors report three different tissue patterns at successive time points, rather than a single steady process.",
+    "why": "Understanding how lung tissue remodels after major injury could inform regenerative medicine and lung disease research, but the text is a short abstract and the connection to human treatment is not shown here. The paper also presents a spatial connectomics analysis framework that may be reusable in other tissues.",
+    "background": "- Pneumonectomy: surgical removal of an entire lung; the remaining lung must adapt and regrow.\n- Single-cell RNA sequencing: measures which genes are active in individual cells, used to identify cell types.\n- Spatial transcriptomics (Xenium): measures gene activity while keeping each cell's location in the tissue.\n- Connectomics here means mapping likely cell-to-cell signaling (who may be sending signals to whom), not neural wiring.\n- Mesothelium: the thin protective lining over the lung surface.\n- Macrophages: immune cells that clear debris and help direct tissue repair.\n- Fibrosis: excessive scar-like tissue buildup; \"fibrosis-mimetic\" signaling refers to signals resembling those seen in fibrosis.\n- Alveologenic: relating to formation of new alveoli, the tiny air sacs where gas exchange occurs.\n- Perturbational atlas: a map of tissue changes measured after a deliberate disturbance over time.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Perturbational spatial atlases have begun to map regenerative dynamics in a variety of tissues, yet lung remodeling has not been characterized at comparable spatial and temporal resolution. Post-pneumonectomy lung regeneration (PPLR) provides a tractable mammalian model for tissue regeneration that can be studied in situ. Here, we present a spatiotemporal perturbational atlas of PPLR in Rattus norvegicus, combining single-cell RNA sequencing (scRNAseq), high-resolution spatial transcriptomics (10x Genomics Xenium), and NICHES-based spatial tissue connectomics. We observe three distinct tissue architectures at successive timepoints after pneumonectomy, each characterized by coordinated shifts in local cellular composition and intercellular signaling. At Day 3 (D3), a line of interstitial macrophages colocalizes directly beneath an intact mesothelium among active mechanotransductive and inflammatory signaling. We also observe the unexpected appearance of a transitional remodeling cellular community at D7 which appears largely absent at later timepoints, marked by fibrosis- mimetic signaling. At D14, an alveologenic architecture at distal lung tissue displays a connectivity signature consistent with active de novo growth, distinct from baseline homeostasis. Our findings establish a spatiotemporal map of multicellular architecture during regenerative lung remodeling and introduce a generalizable framework for spatial connectomic analysis to be used in perturbational tissue systems biology.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.20.768148",
    "title": "NanoHIV-DR: a Nextflow workflow for consensus and read level HIV-1 drug resistance profiling from Oxford Nanopore sequencing",
@@ -16,12 +88,12 @@
    "primary_category": "bioinformatics",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "NanoHIV-DR is a Nextflow workflow that takes raw Oxford Nanopore HIV-1 sequencing data through basecalling, demultiplexing, host-read removal, filtering, alignment and consensus building, then reports drug-resistance mutations using both consensus-level (Sierra) and read-level analysis.",
-    "plain": "HIV treatment can fail when the virus carries mutations that make drugs less effective, so labs sequence the virus to check for them. This paper describes a software pipeline that automates the many computing steps needed to turn raw data from a portable DNA-reading device (Oxford Nanopore) into a readable drug-resistance report. The pipeline can also pick up mutations that exist only in a minority of viral copies, which a standard averaged result would miss.",
-    "why": "Faster, portable sequencing for HIV drug resistance could make testing easier to run in clinics with limited bioinformatics staff, which matters for treatment decisions. The text describes the workflow and its goals but does not report accuracy or validation results, so its practical performance is not yet shown here.",
+    "ai": true,
     "background": "- HIV-1 drug resistance: viral mutations that reduce how well antiretroviral drugs work.\n- Genotyping: reading the viral genetic sequence to look for these mutations.\n- Oxford Nanopore sequencing: a portable method that reads long DNA/RNA strands by measuring electrical signal changes as they pass through a pore; raw signal files are POD5 format.\n- Basecalling: converting raw signal into letters (A, C, G, T).\n- Demultiplexing: sorting pooled reads back to their original samples by barcode.\n- Read alignment and consensus: matching reads to a reference genome and summarising them into one sequence.\n- Sierra: a tool that interprets resistance from consensus sequences.\n- Nextflow: a workflow system for running chained analysis steps reproducibly.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "NanoHIV-DR is a Nextflow workflow that takes raw Oxford Nanopore HIV-1 sequencing data through basecalling, demultiplexing, host-read removal, filtering, alignment and consensus building, then reports drug-resistance mutations using both consensus-level (Sierra) and read-level analysis.",
+    "plain": "HIV treatment can fail when the virus carries mutations that make drugs less effective, so labs sequence the virus to check for them. This paper describes a software pipeline that automates the many computing steps needed to turn raw data from a portable DNA-reading device (Oxford Nanopore) into a readable drug-resistance report. The pipeline can also pick up mutations that exist only in a minority of viral copies, which a standard averaged result would miss.",
+    "why": "Faster, portable sequencing for HIV drug resistance could make testing easier to run in clinics with limited bioinformatics staff, which matters for treatment decisions. The text describes the workflow and its goals but does not report accuracy or validation results, so its practical performance is not yet shown here."
    },
    "abstract": "Oxford Nanopore sequencing offers a rapid and portable approach for HIV-1 drug resistance (HIVDR) genotyping, but analysis of the resulting long-read data requires multiple bioinformatics steps and currently available nanopore workflows are limited. We developed NanoHIV-DR, a Nextflow-based workflow that streamlines the analysis of Oxford Nanopore sequencing data and generation of HIVDR reports. NanoHIV-DR processes raw POD5 files through basecalling, demultiplexing, host-read removal, quality filtering, read alignment and consensus generation, before identifying resistance-associated mutations and interpreting predicted drug susceptibility. The workflow provides two complementary approaches to HIVDR analysis: consensus-based resistance interpretation using Sierra and read-level detection of resistance-associated variants, enabling mutations below the consensus level to be identified and quantified. Outputs are integrated with clinical metadata to generate human-readable HIVDR reports. NanoHIV-DR provides a reproducible and accessible workflow for Nanopore-based HIVDR analysis with reduced bioinformatics expertise and manual processing for translating long-read sequencing data into interpretable resistance profiles.",
    "source": "biorxiv"
@@ -38,12 +110,12 @@
    "primary_category": "bioinformatics",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "GlycoBind is a computational toolkit that scores how likely a protein structure is to bind an intact IUPAC-named glycan, without needing a solved complex or docking pose, by combining frozen DeepGlycanSite protein features with frozen GlycanGT glycan graph features through a small trainable classifier.",
-    "plain": "Sugar chains (glycans) decorate proteins and cells and help them recognise one another, for example in immune responses and in how pathogens stick to host tissue. This paper presents GlycoBind, a software tool that takes a protein's 3D structure and a written description of a sugar chain and outputs a score for how strongly they might bind. The authors report a mean AUROC (a 0 to 1 measure of ranking accuracy, where 0.5 is chance) of 0.767 across five holdout tests grouped by protein, and say it ranked binding strength better than existing models on six external glycan-array datasets.",
-    "why": "Predicting which sugar chains a protein will grab is hard, and lab screening is slow and costly, so a tool that flags likely strong binders could help choose experiments. The text suggests possible uses in studying recognition mechanisms and designing glycan-targeted drugs, but these are stated as possibilities rather than demonstrated results.",
+    "ai": true,
     "background": "- Glycans: chains of sugar molecules attached to proteins and lipids on cell surfaces.\n- Protein-glycan binding: a protein physically docking onto a specific sugar chain, a key step in cell signalling and infection.\n- Protein Data Bank (PDB) format: the standard file type for 3D protein structures.\n- IUPAC-condensed notation: a text string that spells out a glycan's structure.\n- Glycan arrays: lab plates printed with many different sugars, used to measure which proteins bind which glycans and how strongly.\n- AUROC: a score for how well a model ranks true binders above non-binders; 0.5 is random guessing.\n- Frozen representations: pretrained feature encoders (DeepGlycanSite, GlycanGT) whose weights are fixed; only the small final classifier is trained.\n- Holdout test: evaluating on proteins or data withheld from training, to check the model generalises.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "GlycoBind is a computational toolkit that scores how likely a protein structure is to bind an intact IUPAC-named glycan, without needing a solved complex or docking pose, by combining frozen DeepGlycanSite protein features with frozen GlycanGT glycan graph features through a small trainable classifier.",
+    "plain": "Sugar chains (glycans) decorate proteins and cells and help them recognise one another, for example in immune responses and in how pathogens stick to host tissue. This paper presents GlycoBind, a software tool that takes a protein's 3D structure and a written description of a sugar chain and outputs a score for how strongly they might bind. The authors report a mean AUROC (a 0 to 1 measure of ranking accuracy, where 0.5 is chance) of 0.767 across five holdout tests grouped by protein, and say it ranked binding strength better than existing models on six external glycan-array datasets.",
+    "why": "Predicting which sugar chains a protein will grab is hard, and lab screening is slow and costly, so a tool that flags likely strong binders could help choose experiments. The text suggests possible uses in studying recognition mechanisms and designing glycan-targeted drugs, but these are stated as possibilities rather than demonstrated results."
    },
    "abstract": "Protein-glycan recognition controls immune responses, host-pathogen adhesion, cell signalling and the functional organization of the glycocalyx. Computational models can predict protein binding to monosaccharides or short oligosaccharides, but predicting binding to structurally diverse intact glycans remains challenging. Here we present GlycoBind, a general toolkit that accepts a protein structure in Protein Data Bank (PDB) format and an International Union of Pure and Applied Chemistry (IUPAC)-condensed glycan, and returns a binding score without requiring a protein-glycan complex or a docking pose. GlycoBind adopts the frozen residue-state representation of DeepGlycanSite, a carbohydrate-binding-site predictor, and combines this protein representation with frozen GlycanGT graph representations through a compact trainable classifier. Across five protein-grouped holdouts, GlycoBind achieved a mean area under the receiver operating characteristic curve (AUROC) of 0.767. On six external glycan-array datasets after exact protein and glycan cleaning for both models, GlycoBind showed higher aggregate binding-strength ranking performance and stronger recovery of high-intensity binding pairs than the existing models. By prioritizing high-intensity pairs for experimental follow-up, GlycoBind may support mechanistic studies of protein-glycan recognition and the rational development of glycan-targeted therapeutics.",
    "source": "biorxiv"

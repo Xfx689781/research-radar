@@ -1,7 +1,54 @@
 {
  "slug": "interpretability",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33364",
+   "title": "Discovering Explicit Magnetic Core-Loss Equations via Symbolic Sparse Identification",
+   "url": "https://arxiv.org/abs/2611.33364",
+   "authors": [
+    "Haoyu Wang",
+    "Jialin Zheng",
+    "Ziyang Xu",
+    "Yihao Wu",
+    "Alex Hanson"
+   ],
+   "label": "arXiv:2611.33364v1",
+   "primary_category": "cs.LG",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proposes Symbolic Sparse Identification (SSI), which picks a small set of interpretable terms from a large candidate library via sparse regression and then fits their coefficients with AdamW to produce explicit core-loss equations for Fair-Rite 78, 79 and 95 ferrites.",
+    "plain": "Magnetic cores in power electronics lose energy as heat, and engineers need equations to predict that loss. Classic formulas are simple but not very accurate, while machine-learning models are accurate but act as black boxes. This paper uses a data-driven method to find a short, readable equation directly from measurements, and reports test errors of about 1 to 2 percent on three ferrite materials.",
+    "why": "It aims to offer a middle ground between accuracy and interpretability for a design task that matters in power electronics, and it claims the equations are physically guided. The text does not show how well the approach generalizes beyond these three materials or operating conditions, so its wider value is uncertain.",
+    "background": "- Core loss: energy lost as heat in magnetic materials (such as ferrite cores in transformers and inductors) when they are driven by alternating magnetic fields.\n- Steinmetz Equation: a long-standing empirical power-law formula for core loss, compact but limited in accuracy.\n- Symbolic regression: searching for a mathematical formula that fits data, rather than fixing its form in advance.\n- Sparse regression: a fitting method that keeps only a few relevant terms from a large set of candidates.\n- Mean absolute percentage error (MAPE): the average size of prediction errors as a percentage of the true values.\n- AdamW: a standard gradient-based optimizer used to tune numerical coefficients.\n- Fair-Rite 78, 79, 95: commercial ferrite core materials.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Compact core loss equations are essential tools in magnetic component design, but existing approaches trade accuracy against interpretability. Empirical models such as the Steinmetz Equation (SE) yield compact expressions of limited accuracy, while machine learning methods achieve high accuracy as black-box predictors. This paper bridges the gap with a Symbolic Sparse Identification (SSI) framework, which casts core loss modeling as a data-driven symbolic regression problem and recovers unknown equations directly from measured data, without presuming a functional form. First, a comprehensively expanded library of symbolic candidate terms far richer than the SE is constructed. Second, the governing terms are isolated from this library by sparse regression. Third, the coefficients of the retained terms are refined with an AdamW optimizer to maximize accuracy and form an analytical equation. Experiments on Fair-Rite 78, 79, and 95 yield test mean absolute percentage errors of 1.89%, 1.01%, and 1.56%, respectively, with only 10, 10, and 7 active terms. Comparisons with empirical, numerical, and symbolic models quantify the resulting balance of accuracy and compactness. SSI thus provides an explicit and physically guided approach for high-frequency magnetic characterization and design.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33175",
+   "title": "Feature-Based Explainability of Transformer Scoring Models: A Fidelity-First Framework for Automated Writing Assessment",
+   "url": "https://arxiv.org/abs/2611.33175",
+   "authors": [
+    "Michael Hemenway",
+    "Edward W. Wolfe"
+   ],
+   "label": "arXiv:2611.33175v1",
+   "primary_category": "cs.CL",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A post-hoc study that approximates DeBERTa-v3 essay-scoring predictions for Grade 6 and 8 ELA responses using 61 interpretable linguistic features, comparing four surrogate explanation approaches and reporting SHAP feature-importance patterns for two writing traits.",
+    "plain": "Automated systems now score student writing with transformer language models, but it is hard to see what features of a response drive those scores. This paper tests a way to explain the scores using 61 measurable writing features, and first checks how well each explanation actually reproduces the model's scores before interpreting which features matter. The authors found that a Random Forest stand-in model reproduced the scores best, and that the two scoring traits (Expression and Conventions) leaned on overlapping features with different weightings.",
+    "why": "Scoring tools used in schools need to be transparent about what they reward, and this paper shows a way to check an explanation's fidelity before trusting it. The authors are explicit that their rubric-correspondence figures are descriptive, depend on their own mappings, and are not direct explanations of the transformer's internals, so the work is best read as a careful method for auditing scoring models rather than proof of what they \"really\" measure.",
+    "background": "- Automated writing scoring: software that assigns scores to student essays, here trained on human-scored responses.\n- Transformer model (DeBERTa-v3-base): a large neural network for language; its internal workings are hard to read directly.\n- Post-hoc explanation: explaining a trained model from the outside, by fitting a simpler model to its outputs.\n- Surrogate model: a simpler, interpretable model that imitates another model's predictions.\n- R2: the share of variation in the model's scores that the surrogate reproduces; higher means closer imitation. Held-out means measured on data not used for fitting.\n- SHAP: a standard method that estimates how much each input feature contributes to a prediction.\n- Exploratory factor analysis: a statistical method that groups correlated features into underlying factors.\n- Traits: rubric dimensions; here Expression (ideas and language) and Conventions (grammar and mechanics).",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Transformer-based automated writing scoring models can achieve strong agreement with human scores while providing limited transparency into the response characteristics associated with their predictions. This study evaluated a feature-based post-hoc explanation approach in which explanatory fidelity was established before feature importance was interpreted. English Language Arts responses from three writing prompts in Grades 6 and 8 were analyzed, with about 12,700 responses per prompt and separate DeBERTa-v3-base research models for Expression and Conventions. Each response was represented by 61 interpretable linguistic and writing-quality features. Four approaches - theory-driven composites, hierarchical feature groupings, exploratory factor analysis, and Random Forest surrogates - were compared in their ability to reproduce DeBERTa predictions. Random Forest surrogates produced the largest observed R2 values across all six prompt-by-trait conditions, with held-out R2 values from .81 to .95. SHAP analyses showed substantial overlap in high-importance features across traits, with 75% to 90% of the top 20 features shared. Trait differentiation occurred mainly through relative feature weighting: Expression showed greater importance for lexical and conceptual indicators, whereas Conventions showed greater importance for sentence-level and syntactic-control indicators. Under researcher-defined mappings, rubric correspondence was 90%-95% for Expression and 12%-18% for Conventions. These percentages are descriptive and conditional on the mappings and available linguistic features. The findings support a fidelity-first framework for examining apparent scoring priorities while distinguishing post-hoc evidence about model behavior from direct explanation of transformer internals.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34930",
    "title": "A gene informed benchmark for BioScoring of pathology foundation models",
@@ -18,12 +65,12 @@
    "primary_category": "cs.LG",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "BioScore is a label-free benchmark that scores how well pathology image encoders capture 52 marker-gene-defined cell identities, using sparse-autoencoder feature groups matched against spatial transcriptomics of the same tissue.",
-    "plain": "Pathology AI models read tissue slide images, but they are usually judged only by how well they do on tasks like classification, which says little about what biology they have learned. This paper proposes a test that checks whether each model's internal features line up with specific cell types, using gene-activity maps from the same tissue as a reference. The authors scored 8 pathology models and 3 general natural-image models, and found that all the pathology models scored higher.",
-    "why": "It offers a way to look inside pathology models at the biology they represent, rather than only their task scores, which may help researchers compare and understand them. The text does not show how well these scores predict real-world clinical usefulness, so that link remains open.",
+    "ai": true,
     "background": "- Pathology foundation models: large AI models trained on many tissue images, then reused for many tasks.\n- Image encoder: the part of a model that turns an image patch into a list of numbers (an embedding).\n- Sparse autoencoder: a method that re-expresses those numbers as a small set of mostly-off features, which can be easier to interpret.\n- Spatial transcriptomics: a technique that measures which genes are active at each location in a tissue section.\n- Marker genes: genes whose activity is characteristic of a particular cell type.\n- Linear probe: a simple supervised classifier trained on frozen model features; BioScore is compared against this kind of benchmark.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "BioScore is a label-free benchmark that scores how well pathology image encoders capture 52 marker-gene-defined cell identities, using sparse-autoencoder feature groups matched against spatial transcriptomics of the same tissue.",
+    "plain": "Pathology AI models read tissue slide images, but they are usually judged only by how well they do on tasks like classification, which says little about what biology they have learned. This paper proposes a test that checks whether each model's internal features line up with specific cell types, using gene-activity maps from the same tissue as a reference. The authors scored 8 pathology models and 3 general natural-image models, and found that all the pathology models scored higher.",
+    "why": "It offers a way to look inside pathology models at the biology they represent, rather than only their task scores, which may help researchers compare and understand them. The text does not show how well these scores predict real-world clinical usefulness, so that link remains open."
    },
    "abstract": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that quantifies how well an image encoder captures cell identities, with spatial transcriptomics of the same tissue as the reference. A sparse autoencoder splits the encoder's patch embeddings into sparse features, which we cluster into a fixed number of groups. BioScore then measures, for each of 52 cell identities defined by marker genes, how specifically one group follows the identity's expression over the tissue. Because the autoencoder training is fully unsupervised, a match shows that the model represents the cell identity from the image alone. We score 8 pathology foundation models and 3 natural-image models. Every pathology model scores above every natural-image model (0.299--0.371 \\vs 0.214--0.232), and paired tests separate three tiers among the pathology models. Unlike a supervised probe, BioScore needs no labels, builds its reference from the data and scores even from few sections, yet it ranks the encoders as a probe does. Its per-identity breakdown indicates which cell identities each encoder captures or misses.",
    "source": "arxiv"
@@ -43,12 +90,12 @@
    "primary_category": "cs.AI",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "PatternMiner is an LLM-agent system that generates mathematical datasets, trains small models, interprets them to propose conjectures, and searches for counterexamples, applied to five positivity problems in algebraic combinatorics.",
-    "plain": "This paper describes a computer system that tries to discover new mathematical facts. A language-model agent builds datasets of mathematical objects, trains small machine-learning models on them, and then inspects those models to suggest possible rules. The system also hunts for counterexamples with mathematical software, and it reports that it proved several new theorems in one area of combinatorics.",
-    "why": "It combines two approaches to AI-assisted mathematics, one based on text reasoning by large language models and one based on interpretable models over concrete data, which the text says each lacks alone. Its value rests on the new theorems it reports, and the text does not say how significant those results are to the field.",
+    "ai": true,
     "background": "- Positivity problems: questions about whether certain numbers or polynomial coefficients are always nonnegative, a common theme in algebraic combinatorics.\n- Schubert calculus and Kazhdan–Lusztig theory: areas of algebra and combinatorics where such positivity questions arise.\n- Conjecture: a statement believed to be true but not yet proven.\n- Counterexample: a specific case that shows a conjecture is false.\n- Interpretability: techniques for explaining what a trained machine-learning model has learned.\n- Large language model (LLM) agent: an AI system that writes text and can call external tools such as mathematical software.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PatternMiner is an LLM-agent system that generates mathematical datasets, trains small models, interprets them to propose conjectures, and searches for counterexamples, applied to five positivity problems in algebraic combinatorics.",
+    "plain": "This paper describes a computer system that tries to discover new mathematical facts. A language-model agent builds datasets of mathematical objects, trains small machine-learning models on them, and then inspects those models to suggest possible rules. The system also hunts for counterexamples with mathematical software, and it reports that it proved several new theorems in one area of combinatorics.",
+    "why": "It combines two approaches to AI-assisted mathematics, one based on text reasoning by large language models and one based on interpretable models over concrete data, which the text says each lacks alone. Its value rests on the new theorems it reports, and the text does not say how significant those results are to the field."
    },
    "abstract": "There are several approaches to AI-driven mathematical discovery. One of these involves the use of large language models (LLMs) to resolve well-specified conjectures via text-based reasoning, while another uses narrow models and interpretability for more open-ended, human-in-the-loop exploration using object-based mathematical data. The latter is limited in its ability to move beyond simple empirical pattern detection while the former is not well-designed for direct, open-ended exploration of large mathematical datasets. In this paper we introduce PatternMiner, a system that combines these two paradigms. In PatternMiner, an LLM agent generates mathematical datasets based on an initial broad question, trains narrow machine learning models on them, uses interpretability techniques to extract patterns from these trained models, and uses these patterns to formulate conjectures. Once an initial conjecture has been formulated, PatternMiner instructs the agent to search for counterexamples using calls to mathematical software. If a set of counterexamples can be found, these are used as feedback for conjecture refinement or another round of training and interpretability. The conjecture progressively evolves through this iterative sequence with the agent allowed to try to prove it at any point. We describe the results of applying PatternMiner to five well-known positivity problems in algebraic combinatorics. PatternMiner proves several new theorems related to Schubert positivity and projection, a character-row evaluation formula, a restricted version of the Kazhdan--Lusztig combinatorial invariance conjecture, and Schur positivity for a family of immanant coefficients. We end by analyzing the most common routes to conjecture generation that are used by PatternMiner in our case studies as well as documenting the most common failure modes.",
    "source": "arxiv"

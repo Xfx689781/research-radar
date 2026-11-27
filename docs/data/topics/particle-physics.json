@@ -1,7 +1,57 @@
 {
  "slug": "particle-physics",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34438",
+   "title": "Lighting up LZ with Loopy Transitions in a leptophilic Dark Sector",
+   "url": "https://arxiv.org/abs/2611.34438",
+   "authors": [
+    "Simone Biondini",
+    "Clara Hofheinz",
+    "Stefan Melchin",
+    "Lorenzo Tiberi",
+    "Stefan Vogl"
+   ],
+   "label": "arXiv:2611.34438v1",
+   "primary_category": "hep-ph",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A study of a multicomponent, leptophilic dark sector with a charged vector-like fermion t-channel mediator, showing that nearly degenerate scalar and vector dark matter can produce endothermic (up-scattering) nuclear recoils on xenon consistent with a single high-energy LZ event while matching the observed relic abundance.",
+    "plain": "Some physicists are asking whether dark matter could be detected by a rare, high-energy knock on a xenon nucleus in underground detectors. This paper looks at a hypothetical hidden sector whose particles interact mainly with electrons-type particles (leptons), and whose two closely spaced mass states let dark matter gain a little energy when it hits a nucleus. The authors report that this can account for one reported recoil event of about 248 keV from the LZ experiment, while still producing the amount of dark matter we observe in the universe.",
+    "why": "The LZ detector reported a single unusually energetic nuclear recoil, and this paper tests whether a specific, theoretically consistent model can explain it without conflicting with the dark matter abundance. Its value is as a model-building check; the text alone does not show whether the explanation is correct or how it fares against other limits.",
+    "background": "- Dark matter: unseen matter that makes up most of the mass of galaxies; its identity is unknown.\n- Direct detection: searching for dark matter by watching for tiny energy deposits when it hits atoms in a sensitive detector, here liquid xenon.\n- Nuclear recoil: the kick a xenon nucleus receives when struck; its energy is measured in keV (thousands of electron-volts).\n- Endothermic (inelastic) scattering: a collision where dark matter first needs energy to jump to a slightly heavier state, so the recoil must come from incoming energy; this pushes the recoil spectrum to higher energies.\n- Mass splitting: the small mass difference (here a few hundred keV) between the nearly identical dark states.\n- Leptophilic: interacting mainly with leptons such as electrons and muons rather than quarks.\n- t-channel mediator: an intermediate particle exchanged between dark and Standard Model particles.\n- Effective operators and dimension: a way of describing interactions by their leading contribution at a given energy scale; a lower dimension usually means a stronger interaction.\n- Relic abundance: the amount of dark matter left over from the early universe, which the model must match.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We study the direct detection phenomenology and cosmology of a multicomponent dark sector with a leptophilic t-channel portal. The coupling to right-handed Standard Model leptons is mediated by a charged vector-like fermion, allowing both a scalar and a vector dark candidate to connect to the SM through the same mediator. Motivated by the high-energy nuclear-recoil event recently reported by the LUX-ZEPLIN (LZ) experiment, we consider a nearly degenerate dark sector with mass splittings of order a few hundred keV and investigate the resulting inelastic transitions. Concretely, we focus on endothermic scattering of the dark states, which can shift the recoil spectrum towards the high-energy region preferred by LZ while suppressing low-energy events. We scrutinize the effective operators generating the dark-matter-photon coupling, which provides the essential interaction for nuclear recoils. Interestingly, the inelastic transition arises at dimension five whereas elastic scattering on nuclei is induced only at dimension six. This naturally explains the prominence of endothermic scattering compared to its elastic counterpart. We determine the parameter space compatible with the observed dark matter abundance and scrutinize the event rate and signal shape for scattering on xenon. Our results demonstrate that the observation of a single $E_R=248\\pm 46$ keV nuclear recoil event in LZ can be accommodated by thermally produced dark matter in a leptophilic dark sector.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34213",
+   "title": "Lower Bound on the Lightest Neutrino Mass with Resonant Neutrino Self-Interactions",
+   "url": "https://arxiv.org/abs/2611.34213",
+   "authors": [
+    "Shao-Feng Ge",
+    "Joao Paulo Pinheiro",
+    "Shaoyang Qin",
+    "Ruitao Sun",
+    "Oleg Titov"
+   ],
+   "label": "arXiv:2611.34213v1",
+   "primary_category": "hep-ph",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proposes using resonant s-channel scattering of ultra-high-energy astrophysical neutrinos off the low-energy cosmic neutrino background, mediated by a light (~1 MeV) scalar, to derive a lower bound on the lightest neutrino mass, and compares simulated IceCube HESE 7.5-year event spectra to that prediction.",
+    "plain": "Neutrinos are tiny, nearly massless particles that fill the universe, and we do not yet know the mass of the lightest one. This paper looks at very high-energy neutrinos from space that could bump into the faint background of low-energy neutrinos left over from the early universe, in a specific resonant way. The authors simulate how many such events IceCube, a neutrino detector at the South Pole, should record and compare that with its observed data to get a lower limit on the lightest neutrino mass.",
+    "why": "Neutrino masses are known to be nonzero but their absolute scale is still unmeasured, so a credible bound from astrophysical data would be a useful independent constraint. The text does not indicate how strong or how robust the bound is compared with existing cosmological or laboratory limits, so its significance should be judged from the full paper.",
+    "background": "- Neutrinos: very light, weakly interacting particles; three types, with masses that are small but nonzero.\n- Cosmic neutrino background: a relic sea of low-energy neutrinos left from the early universe, not yet directly detected.\n- Self-interaction via a mediator: neutrinos scattering off each other by exchanging a hypothetical light particle (here a scalar of about 1 MeV).\n- s-channel resonance: a sharply enhanced scattering rate when the collision energy matches the mediator's mass, like a tuned-in radio station.\n- Transport equations: equations describing how a population of particles spreads, is absorbed, and is regenerated as it travels; here applied to neutrinos and antineutrinos.\n- IceCube HESE: High-Energy Starting Events, a dataset of neutrino events recorded by the IceCube detector in Antarctica.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We show the possibility of using the resonant $s$-channel scattering of ultra high energy astrophysical neutrinos with the low energy cosmic neutrino background to put a lower bound on the lightest neutrino mass. This can be realized and illustrated by neutrino self-interactions with a light scalar mediator of $\\mathcal O(1)$ MeV mass. After analyzing the kinematics and cross section features of the $s$-channel resonance, we derive from first principles the double transport equations with double regeneration terms for the coupled evolution of neutrinos and anti-neutrinos. The simulated event spectrum is then compared with the HESE 7.5 year data observed at IceCube to give a clear lower bound on the lightest neutrino mass.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34808",
    "title": "Probing Ultralight Dark Matter at the Electroweak Scale",
@@ -14,12 +64,12 @@
    "primary_category": "hep-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper estimates how well current and future collider measurements of Z and Higgs boson widths, and CP-odd observables such as tau dipole moments in Z decays, could detect oscillating signals from ultralight dark matter at the electroweak scale.",
-    "plain": "The paper asks whether particle colliders could spot a very light, invisible form of dark matter that makes certain properties of particles wobble over time. The authors look at how precisely the widths of the Z and Higgs bosons, and certain lopsided decay effects in Z particles decaying to tau pairs, can be measured. They report that the tau-based measurements could be more sensitive than atomic clocks or tests of the equivalence principle, which are the usual ways of searching for this kind of dark matter.",
-    "why": "If dark matter is an ultralight field, it could leave time-varying traces in particle physics measurements, so a new search channel would be useful. The text only supports a claim of better sensitivity than atomic clocks and equivalence tests under the paper's assumptions; it does not say whether any signal has been seen.",
+    "ai": true,
     "background": "- Dark matter: unseen matter that holds galaxies together; its nature is unknown.\n- Ultralight dark matter: a hypothesized field with an extremely small particle mass, behaving like a wave that oscillates over time.\n- Misalignment mechanism: a way such a field could have been produced in the early universe with the right overall density, leaving it oscillating now.\n- Electroweak scale: the energy range (around the mass of the W, Z and Higgs bosons) where the weak force and the Higgs field operate.\n- Z and Higgs bosons: heavy, short-lived particles; their \"width\" describes how quickly they decay and how spread out their measured mass is.\n- CP-odd observables: measurements sensitive to asymmetry between matter and antimatter behavior, such as electric or magnetic dipole moments.\n- Dipole moment: a measure of how a particle's charge or magnetism is lopsided along an axis.\n- Atomic clocks and equivalence principle tests: precision experiments that currently constrain such fields.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper estimates how well current and future collider measurements of Z and Higgs boson widths, and CP-odd observables such as tau dipole moments in Z decays, could detect oscillating signals from ultralight dark matter at the electroweak scale.",
+    "plain": "The paper asks whether particle colliders could spot a very light, invisible form of dark matter that makes certain properties of particles wobble over time. The authors look at how precisely the widths of the Z and Higgs bosons, and certain lopsided decay effects in Z particles decaying to tau pairs, can be measured. They report that the tau-based measurements could be more sensitive than atomic clocks or tests of the equivalence principle, which are the usual ways of searching for this kind of dark matter.",
+    "why": "If dark matter is an ultralight field, it could leave time-varying traces in particle physics measurements, so a new search channel would be useful. The text only supports a claim of better sensitivity than atomic clocks and equivalence tests under the paper's assumptions; it does not say whether any signal has been seen."
    },
    "abstract": "Ultralight dark matter provides an explanation for astrophysical evidence for dark matter at all scales. This non-thermal dark matter requires a misalignment mechanism to reproduce the observed matter energy density of the Universe and therefore induce oscillating, time-dependent signals. We determine the sensitivity of current and future collider measurements of the width of the Z and Higgs bosons, and show that CP odd observables such as dipole moments in $Z\\to \\tau^+\\tau^-$ decays provide a better sensitivity to ultralight dark matter than atomic clocks or equivalence principle tests.",
    "source": "arxiv"
@@ -37,12 +87,12 @@
    "primary_category": "hep-ph",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "This paper studies how the Sun's gravitational focusing and the Earth-based detector's Doppler motion reshape the expected energy spectrum of ultralight dark matter signals, and how ignoring these effects can bias inferred dark matter parameters.",
-    "plain": "Some proposed dark matter particles are extremely light and could be detected as faint, repeating signals in sensitive instruments. This paper asks how two local effects change the shape of the expected signal: the Sun's gravity pulling dark matter toward it, and the motion of the detector as the Earth moves. The authors estimate the signal strength analytically and run Bayesian statistical tests on simulated data to show that these effects matter for parameter estimates.",
-    "why": "If these local effects are left out of the signal models, a detection could lead to wrong estimates of the dark matter's properties, so the modeling matters for interpreting any future signal. The text does not say whether any experiment has observed such a signal, so the practical payoff depends on future detections.",
+    "ai": true,
     "background": "- Dark matter: invisible matter that makes up most of the mass of galaxies; its particle nature is unknown.\n- Ultralight dark matter: hypothetical particles far lighter than an electron, behaving more like waves than particles.\n- Signal spectrum: how the strength of a detected signal varies with energy or frequency.\n- Phase-space distribution: a description of how dark matter particles are spread across positions and velocities.\n- Gravitational focusing: the Sun's gravity bends the paths of passing dark matter, concentrating it in some directions.\n- Doppler effect: the shift in observed frequency caused by a source or detector moving relative to the signal.\n- Bayesian analysis: a statistical method that updates estimates of unknown parameters using data and prior assumptions.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "This paper studies how the Sun's gravitational focusing and the Earth-based detector's Doppler motion reshape the expected energy spectrum of ultralight dark matter signals, and how ignoring these effects can bias inferred dark matter parameters.",
+    "plain": "Some proposed dark matter particles are extremely light and could be detected as faint, repeating signals in sensitive instruments. This paper asks how two local effects change the shape of the expected signal: the Sun's gravity pulling dark matter toward it, and the motion of the detector as the Earth moves. The authors estimate the signal strength analytically and run Bayesian statistical tests on simulated data to show that these effects matter for parameter estimates.",
+    "why": "If these local effects are left out of the signal models, a detection could lead to wrong estimates of the dark matter's properties, so the modeling matters for interpreting any future signal. The text does not say whether any experiment has observed such a signal, so the practical payoff depends on future detections."
    },
    "abstract": "Ultralight dark matter can produce signals in experiments through its couplings with the Standard Model particles. The resulting signal spectrum is determined by the phase-space distribution of dark matter, which encodes information about its production mechanism and the history of the local universe. However, the local environmental effects can modify the observed spectrum and should be included in signal modeling to avoid biased parameter estimates. In this work, we investigate how the gravitational focusing by Sun and the Doppler effect due to the detector's motion modify the signal spectrum and affect inferring the underlying dark matter parameters. We analytically estimate the signal significance and perform Bayesian analysis on simulated data to demonstrate their impact.",
    "source": "arxiv"

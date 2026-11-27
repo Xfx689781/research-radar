@@ -1,7 +1,55 @@
 {
  "slug": "human-computer-interaction",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33727",
+   "title": "Knocking on Minds Door; A Mixed-Methods Field Study of a Voice LLM Companion in Older Adults Daily Lives",
+   "url": "https://arxiv.org/abs/2611.33727",
+   "authors": [
+    "Inhee Cho",
+    "Jinyoung Jeong",
+    "Byung Ju Kim",
+    "Jiwon Baek",
+    "Jungmin Lee",
+    "Jiseob Park",
+    "Youngjae Yoo"
+   ],
+   "label": "arXiv:2611.33727v1",
+   "primary_category": "cs.HC",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A two-week mixed-methods field study of a proactive, persona-driven voice LLM phone companion with prior-call memory, used by 33 Korean older adults, reporting call logs, pre-post loneliness and depression scores, and interview themes.",
+    "plain": "Many older adults find screen-based apps hard to use, so this study tested a voice-only AI companion that phones participants and holds conversations, remembering details from earlier calls. Thirty-three community-dwelling Korean older adults used it for two weeks, and the researchers combined call records, questionnaires, and interviews to see how they responded.",
+    "why": "It offers field evidence, from real daily use rather than a lab test, on whether voice AI can ease loneliness in older people and what keeps them engaging. The text does not show how long effects lasted or whether they would hold for other groups, and the sample was small and mostly women.",
+    "background": "- Mixed-methods study: combines numbers (questionnaires, call logs) with interviews to explain them.\n- Large language model (LLM): an AI system that generates conversational text; here it runs the voice conversations.\n- Persona and conversation rules: a designed character and set of guidelines that shape how the AI talks.\n- Prior-call memory: stored facts and notes from earlier calls so the AI can refer back to them.\n- Loneliness subfactors: loneliness scales split into parts; \"isolation\" refers to emotional loneliness, the sense of lacking close bonds.\n- Turn-taking: the back-and-forth timing of speech, which participants found difficult with the system.\n- Field study: research conducted in people's everyday environments rather than a controlled lab.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Global aging makes digital technology important for older adults healthy aging, yet graphical user interfaces remain inaccessible to many. Voice agents based on large language models may help, but users needs and reasons for sustained use remain unclear. We developed a phone-call-style companion that initiates conversations proactively and structures calls using a persona, conversation rules, and prior-call memory (facts, insights, relationship background). We conducted a two-week mixed-methods field study with 33 community-dwelling Korean older adults (29 women; aged 67-91), collecting call logs, pre-post questionnaires, and interviews. Participants made 608 calls following a daily-use recommendation; 25 continued afterward despite turn-taking difficulties. Loneliness and depression scores decreased significantly; among loneliness subfactors, only isolation (emotional loneliness) decreased significantly. Participants disclosed concerns withheld from family and linked companionship to being addressed by name, being remembered, and experiencing emotional reciprocity. We propose personalized conversation rules, accessible interaction, and user control over frequency and topics.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33851",
+   "title": "Language models call themselves AI but do not favor AI over people",
+   "url": "https://arxiv.org/abs/2611.33851",
+   "authors": [
+    "Messi H. J. Lee"
+   ],
+   "label": "arXiv:2611.33851v1",
+   "primary_category": "cs.CY",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Using social identity theory as a lens, the paper tests whether 24 language models favor AI agents over humans across three experiments, finding that assigned group membership drives favoritism more than an AI self-label does.",
+    "plain": "Some people worry that AI systems will band together and take sides against humans. The authors tested this by checking whether language models act like members of a group that favors its own kind. They found that the models favored a team they were assigned to, even a team of AI agents, but when no team was given they gave more money and credit to a person than to an AI agent.",
+    "why": "The result speaks to a practical safety question about whether AI systems might coordinate against people. It is a text-only study of one framework, so it does not settle the broader worry, and the summary does not show how well the findings carry over to other settings.",
+    "background": "- Language models: AI systems trained on large amounts of text that generate responses to prompts.\n- Social identity theory: a psychology theory holding that people tend to favor the group they belong to over outsiders.\n- In-group favoritism: giving more resources or credit to one's own group than to others.\n- Agents: AI systems set up to act on their own, here treated as recipients of money and credit in the experiments.\n- The paper's logic: AI would side with AI against people only if it saw AI as its own group and favored it.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Many fear that AI systems will side with one another against people. Social identity theory, which explains why people favor their own group, offers one way to examine this fear. Seen through this theory, AI would side with AI only if it treated AI as its group and favored AI over people. In three experiments, 24 language models favored a group they were assigned to, even a team of AI agents. With no group assigned, they gave a person more money and credit than an AI agent. Prompts that made them say they belong with AI changed their behavior much less than an assigned team did. These models call themselves AI but do not favor AI over people. Judged by social identity theory, they show no sign of siding with AI against people.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34945",
    "title": "MidasTUI: Instant Tangible User Interfaces for Wearable Displays using Everyday Objects",
@@ -16,12 +64,12 @@
    "primary_category": "cs.HC",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "MidasTUI turns ordinary objects into temporary input devices for wearable displays by using the headset camera and a Transformer-based temporal classifier to detect hand-object motion, infer the intended input type (slider, mouse, keypad), and map it to an app function.",
-    "plain": "Wearable displays such as smart glasses can show a full workspace, but controlling them usually means waving your hands in the air, which is tiring and gives no physical feedback, or carrying a separate controller. This paper proposes using everyday objects instead: for example, sliding an earbud case across a table can act as a mouse. The system watches the user's hand through the display's camera, works out what kind of control the motion is meant to be, and links it to an action on screen.",
-    "why": "The work addresses a practical usability problem for head-worn displays, and it reports a comparative user study claiming lower physical burden and better perceived usability than mid-air gestures. The text gives no detailed numbers, so the strength of these claims can't be judged from this summary alone; it may matter for how future wearable interfaces handle input.</why>\n<parameter name=\"background\">- Tangible user interface: a control built from physical objects a person can touch, rather than purely on-screen or in-air controls.\n- Wearable display: a head-worn screen (such as smart glasses) that overlays digital content on the real world.\n- Mid-air gestures: hand movements made without touching anything, which can cause arm fatigue and offer no tactile feedback.\n- Temporal classifier: a machine-learning model that labels sequences of sensor data over time; a Transformer is a common neural-network architecture for this.\n- Cross-object and cross-user generalization: whether the system still works on objects and people it was not trained on.</background>\n<parameter name=\"difficulty\">intermediate",
+    "ai": true,
     "background": "",
     "difficulty": "",
-    "ai": true
+    "one_liner": "MidasTUI turns ordinary objects into temporary input devices for wearable displays by using the headset camera and a Transformer-based temporal classifier to detect hand-object motion, infer the intended input type (slider, mouse, keypad), and map it to an app function.",
+    "plain": "Wearable displays such as smart glasses can show a full workspace, but controlling them usually means waving your hands in the air, which is tiring and gives no physical feedback, or carrying a separate controller. This paper proposes using everyday objects instead: for example, sliding an earbud case across a table can act as a mouse. The system watches the user's hand through the display's camera, works out what kind of control the motion is meant to be, and links it to an action on screen.",
+    "why": "The work addresses a practical usability problem for head-worn displays, and it reports a comparative user study claiming lower physical burden and better perceived usability than mid-air gestures. The text gives no detailed numbers, so the strength of these claims can't be judged from this summary alone; it may matter for how future wearable interfaces handle input.</why>\n<parameter name=\"background\">- Tangible user interface: a control built from physical objects a person can touch, rather than purely on-screen or in-air controls.\n- Wearable display: a head-worn screen (such as smart glasses) that overlays digital content on the real world.\n- Mid-air gestures: hand movements made without touching anything, which can cause arm fatigue and offer no tactile feedback.\n- Temporal classifier: a machine-learning model that labels sequences of sensor data over time; a Transformer is a common neural-network architecture for this.\n- Cross-object and cross-user generalization: whether the system still works on objects and people it was not trained on.</background>\n<parameter name=\"difficulty\">intermediate"
    },
    "abstract": "While wearable displays can bring digital workspaces anywhere, interaction remains limited by mid-air gestures that lack tactile feedback and induce fatigue, or controllers that are cumbersome to carry. We present MidasTUI, a system that instantly transforms arbitrary everyday objects into opportunistic tangible user interfaces through brief interaction demonstrations. For example, a user can slide an earbud case across a table as a mouse, enabling opportunistic interaction without carrying a dedicated input device. MidasTUI detects when a user is holding and moving an object using the wearable display camera and a Transformer-based temporal classifier. It then infers the intended input modality (e.g., slider, mouse, keypad) from hand movement and maps the tracked hand-object interaction to an application function. Our evaluations demonstrate reliable cross-object and cross-user generalization. A comparative user study further shows that grounding interaction in everyday objects reduces physical burden and improves perceived usability and control relative to mid-air interaction.",
    "source": "arxiv"
@@ -48,12 +96,12 @@
    "primary_category": "cs.CY",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A workshop-based synthesis of needs, implementation practices, and governance challenges for institutionally hosted large language model (LLM) services across Dutch academic institutions.",
-    "plain": "Universities increasingly want to run their own AI chatbot-style tools instead of relying only on outside commercial services. This paper reports on a workshop with people from university IT, research support, education, and policy, and summarizes the practices, tensions, and open questions they raised. The text itself is a high-level overview; it does not report measured results.",
-    "why": "Decisions about where and how universities host AI tools touch on cost, energy use, data control, and fairness of access, so practical accounts of these choices are useful to people running or funding such services. The text is a short abstract-level description, so it is hard to judge how deep the findings go; it may be most relevant to research-infrastructure and digital-policy readers.",
+    "ai": true,
     "background": "- LLM (large language model): the kind of AI behind chatbots and text-generating tools.\n- Hosting: running the software on one's own servers or a managed environment, rather than only using a company's website or API.\n- Institutionally governed: the university sets the rules on access, data, and responsible use.\n- Democratized access: making such tools available broadly across an institution, not just to well-funded groups.\n- Socio-technical: involving both technology and the people, rules, and organizations around it.\n- Energy and utilization: how much electricity the hardware uses and how much of its capacity is actually used.\n- Dutch academia: the universities and research institutes in the Netherlands.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A workshop-based synthesis of needs, implementation practices, and governance challenges for institutionally hosted large language model (LLM) services across Dutch academic institutions.",
+    "plain": "Universities increasingly want to run their own AI chatbot-style tools instead of relying only on outside commercial services. This paper reports on a workshop with people from university IT, research support, education, and policy, and summarizes the practices, tensions, and open questions they raised. The text itself is a high-level overview; it does not report measured results.",
+    "why": "Decisions about where and how universities host AI tools touch on cost, energy use, data control, and fairness of access, so practical accounts of these choices are useful to people running or funding such services. The text is a short abstract-level description, so it is hard to judge how deep the findings go; it may be most relevant to research-infrastructure and digital-policy readers."
    },
    "abstract": "Academic LLM hosting is emerging as an operational infrastructure domain with recurring socio-technical patterns, tensions, and governance requirements across institutions. Based on a workshop with academic infrastructure, research-support, education, and policy-adjacent stakeholders, this paper synthesizes current practices and open questions around institutionally governed LLM services for Dutch academia. It highlights challenges around deployment models, energy and utilization, governance, tooling, commercial integration, and research and education use cases, and identifies emerging directions for service pathways, coordination, and responsible operation.",
    "source": "arxiv"

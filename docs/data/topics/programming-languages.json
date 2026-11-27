@@ -1,7 +1,50 @@
 {
  "slug": "programming-languages",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.24990",
+   "title": "Show Your Work: Can Small Open Models Read SEC Filings with Evidence a Machine Can Check?",
+   "url": "https://arxiv.org/abs/2611.24990",
+   "authors": [
+    "Krishna Nandula"
+   ],
+   "label": "arXiv:2611.24990v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "A benchmark of 1,000 questions over 90 recent SEC 10-K/10-Q filings tests whether small open language models (7–21B parameters, run on one consumer GPU) can extract figures and back each one with a page reference and a verbatim quote that an automatic checker can verify.",
+    "plain": "Companies file yearly and quarterly financial reports with the US SEC, and language models are often asked to pull numbers out of them. This paper asks whether smaller, freely available models can give answers that come with proof a computer can check, namely the page and an exact quote containing the number. The authors built a test set of 1,000 questions from 90 filings by 45 companies, using the answer tags the companies embed in their filings, and tried ten models in three modes.",
+    "why": "Checkable evidence matters for anyone relying on automated reading of financial documents, where a fluent but wrong number can look convincing. The main finding is a caution: even when the checker passes an answer, a noticeable share of answers are still wrong, mostly from scale, unit, or wrong-period errors, so a passing check is not proof of correctness.",
+    "background": "- SEC 10-K (annual) and 10-Q (quarterly) filings are public financial reports from US companies.\n- Inline XBRL is a machine-readable tagging format embedded in these filings; the tags supply the reference answers.\n- Small open models here means roughly 7–21 billion parameter models that run locally on one consumer graphics card.\n- \"Instruct\" models are fine-tuned to follow user requests; \"reasoning mode\" means the model writes out intermediate steps before answering.\n- \"Check-and-retry\" means an automatic checker tests the evidence and the model tries again if it fails.\n- Scale or unit errors are mistakes like reading \"thousands\" as \"millions\"; period or column errors pick the right line item but the wrong year or column.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "A fluent answer from a language model is not a verified one. We ask whether small open models that run on a single consumer GPU can extract numbers from SEC filings with evidence a machine can check: the page and a verbatim quote containing the number. We introduce Filing-Evidence, a benchmark of 1,000 questions over 90 recent 10-K and 10-Q filings of 45 US companies, with answer keys taken from the filers' inline XBRL tags. We evaluate ten instruct models from ten developers (7-21B parameters) on one RTX 4090 in three setups: plain, check-and-retry, and the model's own reasoning mode. Accuracy with checkable evidence ranges from 17.1% to 82.7% in the plain setup, and the best result is 84.5% (Qwen3.5-9B). An automatic checker rejects many wrong answers, but between 16 and 167 answers per 1,000 give a wrong value for an answerable question and still pass every check. In the plain setup, 57% of these are scale or unit errors and 30% take another period or column of the right line. Reasoning significantly reduces such errors for 4 of 5 models that offer it. Retrying after a failed check raises accuracy by up to 3.9 points but never reduces them. Questions, model outputs, code and protocol are public.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34377",
+   "title": "SmartLens: Turning AI Agent Changes into Learning, Review, and Risk Signals in the IDE",
+   "url": "https://arxiv.org/abs/2611.34377",
+   "authors": [
+    "Vahid Etemadi",
+    "Gregorio Robles"
+   ],
+   "label": "arXiv:2611.34377v1",
+   "primary_category": "cs.SE",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "SmartLens is an IntelliJ IDEA plugin that attributes pending changes to AI coding agents or developers and uses that attribution, combined with Git history, for skill-learning, review prioritization, and file-level risk hotspot signals, with a preliminary evaluation.",
+    "plain": "Software developers are increasingly handing coding tasks to AI agents and then needing to check, ship, and learn from the results. SmartLens is a plugin for a popular programming editor that labels each pending change as written by the AI, by the developer, or by both. The preliminary tests found it labeled 8 of 12 scripted scenarios correctly, with the misses all in cases the authors expected to be hard, and on 8 open-source projects the agents introduced up to 253 programming skills that did not appear in the main developer's own commits.",
+    "why": "As AI agents write more code, knowing which changes need careful review and where a team's knowledge is thin could matter for software quality. The text reports that the risk ranking did about as well as or better than simple churn (how often a file changes) at predicting later bug fixes, but notes part of that gain may come from recency, so the benefit is not yet clear.",
+    "background": "- IDE: integrated development environment, the software a programmer writes code in (here IntelliJ IDEA).\n- Plugin: an add-on that extends an IDE with new features.\n- AI coding agent: an AI system that makes multi-step code edits on its own, rather than only suggesting single lines.\n- Git: a version-control system that records the history of code changes as commits.\n- Attribution: working out who or what wrote a given line or change.\n- Churn: how often and how much a file changes; a common simple predictor of bugs.\n- Recency: the tendency for recently changed code to be more likely to need fixes, which can inflate a predictor's apparent accuracy.\n- Scripted scenarios: prepared test cases run in a controlled way, not real-world use.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Developers increasingly act as managers of AI agents: they hand tasks to AI coding agents and then have to understand, verify, ship, and learn from what the agents produce. IDEs and recent tools can show which committed lines were written by AI, but they do not attribute the pending changes of external agents, and they do not use attribution to help the developer review, learn, or judge risk. We present SmartLens, an IntelliJ IDEA plugin that attributes changes to an AI agent, the developer, or both. It combines this attribution with the Git history to support three goals: (i) Learn compares the skills (APIs, language features, annotations) that agents used with the skills the developer has used in their own commits; (ii) Understand ranks pending changes by review priority; and (iii) Risk shows hotspots: files that change often, are mostly written by AI, and that the developer barely knows. In a preliminary evaluation, SmartLens attributed 8 of 12 scripted IDE scenarios correctly; all failures were in (expected) blind spots. On 8 Open Source Software repositories with agent co-authored commits, agents introduced up to 253 skills that do not appear in the main developer's own commits. The Risk ranking was as good as or better than plain churn at predicting later bug fixes, but part of this gain is due to recency.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.34210",
    "title": "Direct cognition problem: a semantic skeleton of mathematics and its growth",
@@ -14,12 +57,12 @@
    "primary_category": "cs.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper builds a finite set of reusable intermediate lemmas (\"anchors\") from the three axioms of classical propositional logic, grown without a fixed target theorem, and reports that these anchors shorten proofs of previously unseen structures in two external corpora.",
-    "plain": "The authors start from three basic rules of logic and let a program grow a small library of useful intermediate results, chosen by how often they get reused across many proofs. They then test whether this library makes new proofs shorter, and report that it does on two sets of held-out proofs. The text gives only a summary, so the details of the method and how the proof counts were measured are not visible here.",
-    "why": "It is a concrete, measured attempt to find shared structure underlying many proofs, which bears on how proof assistants and automated theorem provers could reuse lemmas. The reported gains are modest in some cases and rest on a post hoc test, so the claim should be read cautiously; the wider significance is unclear from this text alone.",
+    "ai": true,
     "background": "- Propositional logic: statements built from \"and\", \"or\", \"not\", \"if-then\", with no quantifiers.\n- Axioms: starting rules assumed true; every proof is built from them.\n- Proof structure / combinator: a proof written as a tree of simple steps, here in a typed combinator style.\n- Lemma: a helper result proved once and reused in later proofs.\n- Anchor: a lemma the paper selects as a reusable building block.\n- Post hoc test: an analysis done after seeing the results, so it is weaker evidence than a pre-planned test.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper builds a finite set of reusable intermediate lemmas (\"anchors\") from the three axioms of classical propositional logic, grown without a fixed target theorem, and reports that these anchors shorten proofs of previously unseen structures in two external corpora.",
+    "plain": "The authors start from three basic rules of logic and let a program grow a small library of useful intermediate results, chosen by how often they get reused across many proofs. They then test whether this library makes new proofs shorter, and report that it does on two sets of held-out proofs. The text gives only a summary, so the details of the method and how the proof counts were measured are not visible here.",
+    "why": "It is a concrete, measured attempt to find shared structure underlying many proofs, which bears on how proof assistants and automated theorem provers could reuse lemmas. The reported gains are modest in some cases and rest on a post hoc test, so the claim should be read cautiously; the wider significance is unclear from this text alone."
    },
    "abstract": "We construct a finite semantic skeleton from three axioms of classical propositional logic without specifying a target theorem. During growth, the constructor records which proofs share an intermediate lemma. When choosing the final anchors, it also counts inferences that use a premise the lemma can supply by substitution. The primary skeleton contains ten anchors whose certificates expand to the axioms through 27 shared inference steps. It shortens all 30 previously unseen proof structures in an external catalogue of typed combinators, saving 90 of 412 steps. One anchor recurs in all five runs of the constructor. In a post hoc test, this anchor alone shortens 26 of the 30 proofs. It also shortens 331 of 475 previously unseen proofs of familiar theorems in a second corpus.",
    "source": "arxiv"
@@ -36,12 +79,12 @@
    "primary_category": "cs.LO",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper introduces a logic whose formulas finitely describe possibly infinite first-order theories generated by higher-order recursion schemes, and studies their expressiveness, model checking, and satisfiability under conjunctive and disjunctive interpretations.",
-    "plain": "The paper is about a way to describe very large, even infinite, collections of logical statements using a short, structured recipe. The recipe is a small grammar that can build statements in layers, where the building blocks can themselves be operations. The authors work out how much these descriptions can express, how hard it is to check whether a structure satisfies them, and when it is possible to tell whether such a collection can be satisfied at all.",
-    "why": "The paper gives exact complexity results: over finite ordered structures, disjunctive theories at each scheme order match a level of the exponential-time hierarchy, and one fragment's satisfiability becomes undecidable already at order one. It extends earlier work on regular first-order theories (Mathur et al., POPL 2025), so it is mainly of interest to researchers in logic and verification; its wider relevance is not addressed in the text.",
+    "ai": true,
     "background": "- First-order logic: statements using \"for all\", \"there exists\", and relations between objects.\n- Theory: a set of such statements; a model is a structure that makes them all true.\n- Satisfiability: whether some model exists; decidable means a program can always answer yes or no.\n- Model checking: testing whether a given structure satisfies a given theory.\n- Higher-order recursion scheme: a finite grammar that generates trees, where rules can take other rules as inputs.\n- Complexity classes: polynomial time (0-EXPTIME) and the exponential-time hierarchy (k-EXPTIME), which bound how long the best algorithms need as problems grow.\n- Conjunctive vs. disjunctive reading: a model must satisfy all generated sentences vs. at least one.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper introduces a logic whose formulas finitely describe possibly infinite first-order theories generated by higher-order recursion schemes, and studies their expressiveness, model checking, and satisfiability under conjunctive and disjunctive interpretations.",
+    "plain": "The paper is about a way to describe very large, even infinite, collections of logical statements using a short, structured recipe. The recipe is a small grammar that can build statements in layers, where the building blocks can themselves be operations. The authors work out how much these descriptions can express, how hard it is to check whether a structure satisfies them, and when it is possible to tell whether such a collection can be satisfied at all.",
+    "why": "The paper gives exact complexity results: over finite ordered structures, disjunctive theories at each scheme order match a level of the exponential-time hierarchy, and one fragment's satisfiability becomes undecidable already at order one. It extends earlier work on regular first-order theories (Mathur et al., POPL 2025), so it is mainly of interest to researchers in logic and verification; its wider relevance is not addressed in the text."
    },
    "abstract": "We introduce a logic whose formulae are finite descriptions of possibly infinite first-order theories. A theory is a set of first-order sentences, generated in our setting by a higher-order recursion scheme. Such a scheme is a finite grammar whose parameters may denote trees or operations on trees. We consider two interpretations: a model must satisfy every generated sentence under the conjunctive interpretation, and at least one under the disjunctive interpretation. For schemes of order $k=0$, these theories coincide with the regular first-order theories of Mathur et al. (POPL 2025). We generalize this representation by allowing higher-order schemes, while retaining first-order quantification in every generated sentence. We study the expressive power, model checking, and satisfiability of this logic. Over finite ordered structures, we show that disjunctive theories of existential sentences generated at order at most $k$ capture $k$-EXPTIME, for every $k\\geq0$. Allowing unrestricted first-order sentences captures $(k+1)$-EXPTIME at the same scheme order, where $0$-EXPTIME denotes polynomial time. We also give model-checking algorithms in the corresponding time classes for each fixed signature, variable-name set, and order bound. For satisfiability under either interpretation, we extend several decidability results for regular theories to every order. However, we show that conjunctive satisfiability of quantifier-free theories, decidable at order zero, becomes undecidable already at order one. Finally, we recover decidable conjunctive satisfiability at every order by separating higher-order generation of Boolean structure from independent regular generation of ground atoms. Together, these results show how higher-order generation of first-order syntax captures the exponential-time hierarchy while retaining decidable satisfiability in restricted fragments.",
    "source": "arxiv"

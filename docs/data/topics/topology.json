@@ -1,7 +1,51 @@
 {
  "slug": "topology",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34110",
+   "title": "Colored Jones polynomial of figure eight knot and non-perturbative topological recursion",
+   "url": "https://arxiv.org/abs/2611.34110",
+   "authors": [
+    "Alexander Hock",
+    "Sergey Shadrin"
+   ],
+   "label": "arXiv:2611.34110v1",
+   "primary_category": "math-ph",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proves that the asymptotic expansion of the colored Jones polynomial of the figure eight knot is linked to non-perturbative topological recursion on its elliptic spectral curve, as proposed by Borot and Eynard.",
+    "plain": "This work is about knots, the tangled loops studied in topology, and a family of numbers called the colored Jones polynomial that encodes information about a knot. The author looks at how these numbers behave for large values of the color parameter, and shows they match a predicted structure coming from a recursive method built on a special curve. The summary given here is brief, so the exact steps of the proof are not described.",
+    "why": "It supports a proposal by Borot and Eynard that links knot invariants to a recursive method from mathematical physics and geometry, and it gives a concrete test case, the figure eight knot. The text does not say how far the connection extends beyond this knot, so the wider significance is uncertain.",
+    "background": "- Knot: a closed loop tangled in three-dimensional space; the figure eight knot is the simplest non-trivial example with this name.\n- Colored Jones polynomial: a sequence of polynomials assigned to a knot, indexed by a \"color\" (a dimension parameter), used as a knot invariant.\n- Asymptotic expansion: a series that approximates a quantity well as a parameter grows large, though it may not converge exactly.\n- Perturbative vs. non-perturbative: perturbative terms are the first-order approximation series; non-perturbative terms are extra corrections invisible to that series.\n- Topological recursion: a method that builds counting data recursively from a geometric object called a spectral curve.\n- Elliptic spectral curve: a spectral curve of genus one, with a shape tied to elliptic curves.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "The asymptotic expansion of the colored Jones polynomial of the figure eight knot is proved to be connected with non-perturbative topological recursion on the underlying elliptic spectral curve, following the proposal of Borot and Eynard.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2610.23209",
+   "title": "Regular Additive Scalar Invariants of ${\\mathcal N}=1$ Hyperbolic Spin Supertriangles",
+   "url": "https://arxiv.org/abs/2610.23209",
+   "authors": [
+    "Ilia Gaiur",
+    "Robert Penner"
+   ],
+   "label": "arXiv:2610.23209v1",
+   "primary_category": "math.GT",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper classifies regular cyclic scalar invariants of non-degenerate hyperbolic N=1 spin supertriangles that are additive under geodesic subdivision, finding a superdimension 3|1 space of such invariants using a \"common-first\" gauge fixing a 3|4 modulus.",
+    "plain": "The paper studies triangles in a curved (hyperbolic) space whose sides and corners carry extra \"odd\" algebraic bookkeeping of the kind used in supersymmetry. It asks which measurable quantities of such triangles stay consistent when a triangle is cut into smaller pieces, and it sorts those quantities by their algebraic degree. The text reports that the quantities form a small family: ordinary area, two even-type quantities, and one odd-type quantity.",
+    "why": "The result is a classification within a narrow mathematical framework, so its importance depends on how well the framework is used elsewhere; the text does not say. It may connect to supergeometry and to geometric ideas about angle defects, but the text itself does not establish such links.",
+    "background": "- Hyperbolic geometry: geometry on a surface of constant negative curvature, where triangle angles sum to less than 180 degrees.\n- Angle defect: the shortfall from the Euclidean angle sum; in hyperbolic triangles it equals the area.\n- Additivity under subdivision: a quantity that equals the sum of its values on the pieces when a triangle is cut by a geodesic (shortest-path line).\n- Supergeometry: a extension of geometry with \"odd\" coordinates that square to zero, graded by degree; superdimension counts even and odd directions.\n- Spin lift: a choice of extra structure (a sign choice) needed to define spinor-type data on the triangle.\n- Gauge fixing: choosing a canonical representative so that redundant parameters are removed, leaving a clean modulus.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We classify regular cyclic scalar invariants of non-degenerate hyperbolic ${\\mathcal N}=1$ spin supertriangles which are additive under geodesic subdivision. After fixing the spin lift, the common-first gauge (introduced in earlier work by the second-named author and further developed here) gives a complete $3|4$ modulus of such supertriangles.. The space of additive scalar invariants is proved to have superdimension $3|1$: ordinary hyperbolic area in degree zero, two even generators in degree two, and one odd generator in degree three; the degree-one and degree-four sectors vanish. One degree-two generator is the fermionic first variation of body area, equivalently the nilpotent correction from ordinary body angle defect to super angle defect. The degree-three generator changes sign under reversal of the spin lift, while the other generators are fixed, so ordinary supertriangles carry only three even invariants.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33663",
    "title": "Graded Monoidal Categories and Internalization",
@@ -13,12 +57,12 @@
    "primary_category": "math.CT",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives a general categorical framework for internalizing a graded monoidal product, studies its 2-categorical properties, and recovers Day convolution and the smash product of S-modules as examples.",
-    "plain": "Mathematicians who study stable homotopy theory (a branch of topology that treats spaces through their \"stable\" behavior) have several ways to build a point-level product of spectra, which are objects that generalize spaces. Each construction has trade-offs, and they often follow a similar pattern of turning a product indexed by grading labels into a single product. This paper packages that shared pattern into one general framework so the constructions can be compared in a common language.",
-    "why": "The text presents this as a unifying framework rather than a new result on a specific problem, so its value lies mainly in clarifying how several known constructions relate. It may matter to researchers who build multiplicative structures on spectra, though the text does not say more about its wider impact.",
+    "ai": true,
     "background": "- Monoidal category: a category with an associative product and a unit, like multiplication of numbers or tensor of vector spaces.\n- Graded object: a family of pieces indexed by labels (grades), such as a sequence indexed by integers or by a group.\n- External vs. internal product: an external product combines objects from different sources into a graded-indexed object; internalizing it turns this into a product within a single category.\n- Spectrum: a generalized space used in stable homotopy theory, where classical homotopy operations become well behaved.\n- Day convolution: a standard way to multiply functors on a monoidal category.\n- 2-category: a setting with objects, morphisms between them, and morphisms between morphisms.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives a general categorical framework for internalizing a graded monoidal product, studies its 2-categorical properties, and recovers Day convolution and the smash product of S-modules as examples.",
+    "plain": "Mathematicians who study stable homotopy theory (a branch of topology that treats spaces through their \"stable\" behavior) have several ways to build a point-level product of spectra, which are objects that generalize spaces. Each construction has trade-offs, and they often follow a similar pattern of turning a product indexed by grading labels into a single product. This paper packages that shared pattern into one general framework so the constructions can be compared in a common language.",
+    "why": "The text presents this as a unifying framework rather than a new result on a specific problem, so its value lies mainly in clarifying how several known constructions relate. It may matter to researchers who build multiplicative structures on spectra, though the text does not say more about its wider impact."
    },
    "abstract": "In stable homotopy theory, there are a variety of ways to construct a point-set level smash product of spectra, each with its own advantages and limitations. These constructions often involve internalizing some graded external product. In this paper, we aim to formalize this process through a general categorical framework, providing a common language for these constructions. We propose a general theory for internalizing a graded monoidal product, investigate its 2-categorical properties, and use this framework to recover both Day convolution and the smash product of $S$-modules.",
    "source": "arxiv"
@@ -35,12 +79,12 @@
    "primary_category": "math.GT",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper gives an explicit, computable obstruction, based on norm groups of orders from algebraic number theory, that can rule out a knot having algebraic unknotting number one, and uses it to show that T(2,5) # -T(2,3) has algebraic unknotting number one while T(2,5) has algebraic unknotting number two.",
-    "plain": "The paper studies knots, which are closed loops of string tangled in space, and asks how few \"crossing changes\" of a special algebraic kind are needed to untangle one into a plain circle. The authors use tools from number theory to build a test that can show a knot cannot be undone this way with a single change. As an example, they show that joining a cinquefoil knot to a mirror-image trefoil gives a knot that can be undone with one change, even though the cinquefoil alone needs two.",
-    "why": "The result shows that combining two knots can make the simplest-untangling count drop, which is a notable and concrete fact about this measure. The text does not say how far the method reaches beyond the example, so its wider importance is unclear from the abstract alone.",
+    "ai": true,
     "background": "- Knot: a closed loop of string embedded in three-dimensional space; the goal is to classify knots up to deformation.\n- Unknotting number: the minimum number of crossing changes needed to turn a knot into the unknot (a plain circle).\n- Algebraic unknotting number: a variant where the allowed changes are restricted to algebraic ones, tied to the knot's algebraic structure.\n- Connected sum: a way of joining two knots into one new knot.\n- T(2,3) and T(2,5): torus knots, the trefoil and cinquefoil; \"negative\" means the mirror image.\n- Number theory tools: norm groups of orders are objects from algebraic number theory (fields of algebraic numbers and their integer-like subrings) used here as an invariant.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper gives an explicit, computable obstruction, based on norm groups of orders from algebraic number theory, that can rule out a knot having algebraic unknotting number one, and uses it to show that T(2,5) # -T(2,3) has algebraic unknotting number one while T(2,5) has algebraic unknotting number two.",
+    "plain": "The paper studies knots, which are closed loops of string tangled in space, and asks how few \"crossing changes\" of a special algebraic kind are needed to untangle one into a plain circle. The authors use tools from number theory to build a test that can show a knot cannot be undone this way with a single change. As an example, they show that joining a cinquefoil knot to a mirror-image trefoil gives a knot that can be undone with one change, even though the cinquefoil alone needs two.",
+    "why": "The result shows that combining two knots can make the simplest-untangling count drop, which is a notable and concrete fact about this measure. The text does not say how far the method reaches beyond the example, so its wider importance is unclear from the abstract alone."
    },
    "abstract": "We use number-theoretic tools to find an explicit and effective obstruction for a knot to have algebraic unknotting number equal to $1$. As an example, we show that the connected sum of $T(2,5)$ (the cinquefoil) and $-T(2,3)$ (the negative trefoil) has algebraic unknotting number $1$, even though $T(2,5)$ has algebraic unknotting number $2$.",
    "source": "arxiv"

@@ -1,7 +1,53 @@
 {
  "slug": "statistics-theory",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.33484",
+   "title": "Estimation for High-Dimensional Hawkes Processes with Inhibition via CIR Approximation",
+   "url": "https://arxiv.org/abs/2611.33484",
+   "authors": [
+    "Nadia Belmabrouk",
+    "Mohamed Ben Alaya",
+    "Xavier Erny"
+   ],
+   "label": "arXiv:2611.33484v1",
+   "primary_category": "math.ST",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proposes parametric estimators for a high-dimensional Hawkes process with inhibition by approximating it with a CIR (Cox-Ingersoll-Ross) diffusion, giving an explicit convergence rate in a joint large-population, long-time regime and establishing consistency and asymptotic normality of the estimators.",
+    "plain": "The paper studies a model of many interacting random event streams, where each event can make others more or less likely to occur, and inhibition means events suppress further activity. The authors replace the complicated event model with a simpler, smoother random process (a CIR process) that is easier to work with. This lets them build estimators of the model's unknown parameters that are straightforward to compute.",
+    "why": "Estimating interaction parameters in large networks of events matters for fields such as neuroscience, finance and social modelling, where spikes or trades influence one another. The text gives a stated convergence rate and asymptotic results, but it does not show how the methods perform beyond the numerical experiments it mentions, so its practical reach is unclear from this summary alone.",
+    "background": "- Hawkes process: a random process of events (like spikes or trades) where each past event changes the chance of future events; \"inhibition\" means it lowers them instead of raising them.\n- High-dimensional: many interacting components at once, here a large population of such processes.\n- CIR process: a mean-reverting random process, often used in finance for interest rates, whose noise term depends on its current level, which makes it hard to analyse (the \"non-Lipschitz\" issue).\n- Diffusion approximation: replacing a jumpy process by a smooth continuous one that behaves similarly when the population is large.\n- Consistency: estimates converge to the true values with more data. Asymptotic normality: estimation errors follow a bell-shaped distribution in large samples.\n- Convergence rate: how quickly the approximation error shrinks as population and time grow.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "In this paper, we develop a parametric estimation method for a high-dimensional Hawkes processes with inhibition. The proposed approach relies on a quantitative approximation of the Hawkes process by a Cox-Ingersoll-Ross (CIR) process. In particular, we establish an explicit convergence rate in the joint large-population and long-time regime. This result requires specific techniques to handle the non-Lipschitz diffusion coefficient of the limiting CIR process.Based on this approximation, we construct explicit and easily implementable estimators of the model parameters. We establish their consistency and asymptotic normality. We also conduct numerical experiments to illustrate our findings.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.34809",
+   "title": "PrO Filtering via Kernel Mean Embedding Dynamics",
+   "url": "https://arxiv.org/abs/2611.34809",
+   "authors": [
+    "Linfeng Wang",
+    "Nikolas N\\\"usken",
+    "Chris. J. Oates"
+   ],
+   "label": "arXiv:2611.34809v1",
+   "primary_category": "stat.ME",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper gives the first particle-based (nonparametric) implementation of predictively-oriented (PrO) filtering, using kernel mean embedding dynamics to transport particles from the forecast to the PrO filtering distribution along a path with a closed-form rate.",
+    "plain": "Filtering is the task of tracking a hidden quantity over time from noisy readings, such as following a moving object from radar returns. When the model used for this is slightly wrong, standard Bayesian filters can become overconfident and drift off course. This paper develops a way to run a recently proposed filter that is designed to stay cautious in those cases, without assuming the uncertainty has a simple bell-shaped form.",
+    "why": "The method targets settings where the usual Bayesian filters are known to fail under misspecification, and the authors claim it handles this better than a Gaussian version of the same filter in hard nonlinear examples. It is a methods paper, so its practical value depends on the empirical evidence and on how it scales, which the summary text does not fully establish.",
+    "background": "- State-space model: a hidden process evolving over time, observed through noisy measurements.\n- Filtering: updating beliefs about the hidden state as each new observation arrives.\n- Model misspecification: the assumed model differs from the true process, so the filter's beliefs can be wrong.\n- Bayesian update and tempering: the standard way to combine a forecast with an observation, and a gradual path between them.\n- PrO filtering: an update that hedges, placing probability near both the forecast and the observation when they conflict.\n- Gaussian approximation: representing uncertainty as a bell curve, which can be too restrictive.\n- Particles and kernel mean embeddings: representing a distribution by a cloud of sample points and moving those points with a kernel-based flow.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Filtering methods are routinely deployed with misspecified state-space models, where Bayesian filters can diverge and become overconfident. Predictively-oriented (PrO) filtering is a recent, hyperparameter-free alternative that was demonstrated to outperform (generalised) Bayesian filtering methods when either the dynamical model or the measurement model is structurally misspecified. This can be attributed to \\emph{hedging} behaviour: when an observation conflicts with the forecast, the PrO update places mass near both. Yet existing implementations of PrO filtering rely on unimodal (Gaussian) approximations, whose ability to effectively hedge is limited. This paper develops the first nonparametric, particle-based implementation of PrO filtering. The key obstacle, that PrO filtering distributions are only implicitly defined, is overcome by constructing a path from the predictive to the PrO filtering distribution whose rate is available in closed form, enabling the use of kernel mean embedding dynamics for measure transport. The resulting algorithm requires only simulation from the dynamical model and evaluations of the likelihood, with neither importance weights nor the predictive density. Moreover, as we prove, the number of pseudo-time steps it requires does not grow with the outlyingness of the observation, in contrast to transport along the Bayesian tempering path. An empirical assessment shows substantial improvement over Gaussian variation of PrO filtering in challenging nonlinear examples where Gaussian approximation is unreasonably limited.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33892",
    "title": "Certifying a Sufficient Gaussian Dependence Regime for Learned Weighted FDR Control",
@@ -13,12 +59,12 @@
    "primary_category": "stat.ME",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper certifies, using reference data, that the joint Gaussian dependence among one-sided tests is mild enough for weighted Benjamini-Hochberg to control the false discovery rate, falling back to a prespecified procedure otherwise, and gives minimax sample-size bounds for this certification.",
-    "plain": "When many hypotheses are tested at once, researchers try to keep the share of false alarms among their discoveries small. This paper studies a version of that method where each test is given a learned weight, and the guarantee only holds if the test results are not too strongly correlated. The authors use separate reference data to check whether that condition is likely satisfied, and switch to a safer fallback procedure if it is not.",
-    "why": "Learned weights can add statistical power, but their validity depends on how the tests are related, which is often unknown in practice. The paper frames this as a sample-size question: how much reference data is needed to certify the condition, with the requirement growing only logarithmically in the number of pairs checked. The text does not indicate how the approach performs beyond the simulations and the Healthy Brain Network-based designs it reports.",
+    "ai": true,
     "background": "- False discovery rate (FDR): the expected fraction of rejected hypotheses that are actually true nulls.\n- Benjamini-Hochberg (BH) procedure: a standard step-up rule that controls FDR under certain dependence conditions; weighted versions multiply p-values by learned weights.\n- Gaussian correlation: how strongly pairs of normally distributed test statistics move together; the sign and size of these correlations matter for validity.\n- One-sided tests: tests that only look in one direction (e.g., effect greater than zero).\n- Intersection-union test: a test that declares a conclusion only if every one of several sub-hypotheses is rejected.\n- Minimax sample size: the smallest amount of data needed to guarantee a task succeeds in the worst case over allowed settings.\n- Power: the probability of detecting a real effect.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper certifies, using reference data, that the joint Gaussian dependence among one-sided tests is mild enough for weighted Benjamini-Hochberg to control the false discovery rate, falling back to a prespecified procedure otherwise, and gives minimax sample-size bounds for this certification.",
+    "plain": "When many hypotheses are tested at once, researchers try to keep the share of false alarms among their discoveries small. This paper studies a version of that method where each test is given a learned weight, and the guarantee only holds if the test results are not too strongly correlated. The authors use separate reference data to check whether that condition is likely satisfied, and switch to a safer fallback procedure if it is not.",
+    "why": "Learned weights can add statistical power, but their validity depends on how the tests are related, which is often unknown in practice. The paper frames this as a sample-size question: how much reference data is needed to certify the condition, with the requirement growing only logarithmically in the number of pairs checked. The text does not indicate how the approach performs beyond the simulations and the Healthy Brain Network-based designs it reports."
    },
    "abstract": "Learning hypothesis weights from informative auxiliary data can improve the power of multiple testing. Even when the weights are learned independently of the tests, the validity of weighted Benjamini-Hochberg depends on their joint distribution. We use reference observations to certify a sufficient dependence condition for one-sided Gaussian tests. An intersection-union test of uncertain correlation signs determines whether to apply weighted Benjamini-Hochberg or a prespecified fallback at an adjusted level. Under conditional separation of certification and testing, the procedure controls the false discovery rate (FDR) for every Gaussian correlation matrix satisfying the stated sampling assumptions and weight constraints. We establish a boundary obstruction to uniform certification and matching minimax sample-size bounds for worst-case pair sets and the all-pairs problem. In the parameter ranges of the matching bounds, the minimax sample size grows logarithmically with the number of checked pairs and quadratically with the inverse of their positive margin. For homogeneous Gaussian observations with known marginal variances, residual contrasts from the testing subjects provide an independent source of certification scores. Simulations with up to 4,950 checked pairs, comparisons under a common subject budget, and Gaussian designs based on correlations estimated from the Healthy Brain Network illustrate the trade-off between certification and detection power.",
    "source": "arxiv"
@@ -38,12 +84,12 @@
    "primary_category": "stat.ME",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "The paper proposes a robust inference method for panel count data with time-varying covariates using rate models instead of mean models, with EM-based variance estimators and simulation and clinical-application support.",
-    "plain": "The paper concerns studies where each person's count of events (such as hospital visits) is recorded at a few check-in times, and factors that change over time may affect those counts. Existing robust methods assume the average event count can only go up over time, which fails when the factors fluctuate. The authors instead use a rate-based model without that constraint, and build a variance estimator using the EM algorithm, a standard iterative computing method.",
-    "why": "Reliable inference from count data is important in clinical and public-health studies, and the approach aims to hold up when the correlation structure is misspecified. The text reports simulations and a real clinical application, but the abstract alone does not show how large the gains are or how the method compares in other settings.",
+    "ai": true,
     "background": "- Panel count data: each subject's number of events is observed only at a few irregular visit times, not continuously.\n- Time-varying covariates: explanatory variables (e.g., a patient's treatment status) that change over the study.\n- Mean model vs. rate model: a mean model specifies the average event count directly (and implicitly assumes it is non-decreasing over time); a rate model specifies the instantaneous rate of events, which can change in either direction.\n- Within-subject correlation: repeated measures on the same person are related, so the assumed correlation pattern affects standard errors; \"robust\" methods aim to remain valid if that pattern is wrong.\n- Asymptotic variance: the approximate variance of an estimate for large samples; here it has no simple closed form, so it must be estimated computationally.\n- EM algorithm: an iterative method for maximum-likelihood estimation with missing or hidden information.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "The paper proposes a robust inference method for panel count data with time-varying covariates using rate models instead of mean models, with EM-based variance estimators and simulation and clinical-application support.",
+    "plain": "The paper concerns studies where each person's count of events (such as hospital visits) is recorded at a few check-in times, and factors that change over time may affect those counts. Existing robust methods assume the average event count can only go up over time, which fails when the factors fluctuate. The authors instead use a rate-based model without that constraint, and build a variance estimator using the EM algorithm, a standard iterative computing method.",
+    "why": "Reliable inference from count data is important in clinical and public-health studies, and the approach aims to hold up when the correlation structure is misspecified. The text reports simulations and a real clinical application, but the abstract alone does not show how large the gains are or how the method compares in other settings."
    },
    "abstract": "The validity of statistical inference for panel count data with time-varying covariates depends on the correct specification of within-subject correlation structures; misspecification often leads to questionable inference. To alleviate, robust inference has been proposed for mean models, which implicitly assume monotone mean functions. When covariate values fluctuate with time, however, the assumed monotonicity becomes unrealistic. In this research, we propose a robust inference based on rate models that are free of such constraints. Since the asymptotic variance has no closed form under the rate model, we further develop computationally efficient robust variance estimators using the Expectation-Maximization (EM) algorithm, thus sidestepping the need for computationally intensive numerical methods, which could undermine the robustness. Rigorous theoretical development is provided in support of parameter estimation and inference. Extensive simulation studies demonstrate the superiority of the proposed method. We present a real clinical application to illustrate the use of the proposed method.",
    "source": "arxiv"

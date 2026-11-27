@@ -1,7 +1,56 @@
 {
  "slug": "high-energy-astrophysics",
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "papers": [
+  {
+   "uid": "arxiv:2611.34399",
+   "title": "Clouds as near-horizon backgrounds in the radio detection of air showers",
+   "url": "https://arxiv.org/abs/2611.34399",
+   "authors": [
+    "Enrique Huesca Santiago",
+    "Giulia Cantarini",
+    "Anna Nelles"
+   ],
+   "label": "arXiv:2611.34399v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proposes that radio signals from human-made transmitters reflected off clouds could form a background that confuses stand-alone radio detection of cosmic-ray and neutrino air showers, and uses a simplified model of cloud reflection strength at MHz frequencies.",
+    "plain": "Scientists detect some high-energy particles from space by listening for the faint radio pulses they create when they hit the atmosphere, and they must filter out radio noise from human sources. This paper suggests that radio waves from human transmitters bouncing off clouds could mimic or mask those pulses. The authors built a simplified model of how strongly clouds reflect radio waves in the MHz range and found such reflections may be detectable, especially when the geometry is nearly horizontal.",
+    "why": "If cloud reflections can imitate air-shower signals, detector teams would need to account for them to avoid false signals or wrongly rejected events. The work is a first modelling step, so its size and practical impact are not yet established by the text.",
+    "background": "- Air showers: cascades of particles produced when a high-energy cosmic ray or neutrino hits the atmosphere.\n- Radio detection: these showers emit brief radio pulses (MHz range) that antennas can record, even without other detectors.\n- Human-made noise: radio transmitters and electronics that contaminate the signal and must be suppressed.\n- Reflection/background: a transmitter's signal bouncing off a cloud could reach the antenna and look like a real pulse.\n- Near-horizon geometry: signals arriving at very shallow angles, close to the horizon, which the paper says is where reflections are most detectable.\n- The model is simplified and the abstract gives no quantitative results, so the strength of the effect is not established here.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Stand-alone radio detection of air showers from cosmic rays or neutrinos relies on effective and efficient suppression of human-made noise sources. We propose here that reflections of human- made transmitters on clouds or other atmospheric phenomena, can cause confusion backgrounds that have not been studied previously. Given the absence of prior modelling, we have developed a simplified model for the reflection strength of clouds in the MHz regime. The results indicate that such reflections are, in principle, detectable, in particular in extremely horizontal geometries with typical experimental set-ups.",
+   "source": "arxiv"
+  },
+  {
+   "uid": "arxiv:2611.33858",
+   "title": "Constraining the Inner Accretion Geometry of GX 9+9 with Broadband Spectral and Timing Studies",
+   "url": "https://arxiv.org/abs/2611.33858",
+   "authors": [
+    "Swadesh Chand",
+    "Srimanta Banerjee",
+    "Hsiang-Kuang Chang",
+    "Andrzej A. Zdziarski",
+    "Gulab C. Dewangan",
+    "Vivek K. Agrawal"
+   ],
+   "label": "arXiv:2611.33858v1",
+   "primary_category": "astro-ph.HE",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Broadband X-ray spectral and timing analysis (NICER, NuSTAR, MAXI; 2019 and 2022) of the atoll neutron star GX 9+9, finding reflection features, a truncated inner disk, and an upper limit on the magnetic field of about 3x10^10 G.",
+    "plain": "This paper studies GX 9+9, a neutron star that pulls gas from a companion star, using X-ray telescopes that watched it in 2019 and 2022. The authors fit the combined X-ray spectrum and find signs that hot gas near the star reflects X-rays off the surrounding disk of infalling material. They also find that the disk stops short of the star, and use that to estimate an upper limit on the star's magnetic field.",
+    "why": "Measuring how close the inner disk gets to a neutron star, and how strong its magnetic field is, helps test models of how matter falls onto these objects. The magnetic field value is an upper limit inferred under the assumption that the disk is truncated at the magnetospheric radius, so it depends on that model.",
+    "background": "- Low-mass X-ray binary: a neutron star pulling gas from a companion star, which heats up and emits X-rays.\n- Atoll source: a common class of these systems, named after the pattern its brightness traces in colour diagrams.\n- Soft state: a spectral state where most X-rays come from the cooler disk and a softer hot component.\n- Accretion disk: the rotating ring of infalling gas around the star.\n- Reflection: X-rays from the hot region bounce off the disk, leaving a bump and an iron emission line near 6-7 keV.\n- Truncated disk: the disk ends at some distance from the star instead of reaching its surface.\n- Magnetospheric radius: the distance where the star's magnetic field starts to dominate the flow of gas.\n- r_g: gravitational radius, a unit of distance set by the star's mass (about 1.5 km per solar mass).\n- Instruments: NICER and NuSTAR are space X-ray telescopes; MAXI monitors the sky for X-ray activity.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "We present a broadband spectral and timing study of the bright atoll neutron star low-mass X-ray binary GX~9+9, using simultaneous NICER, NuSTAR, and MAXI observations from 2019 and 2022. The broadband spectra are well described by a combination of multicolor disk emission, thermal Comptonization of blackbody seed photons from the neutron star surface or boundary layer, and associated disk reflection. We report a clear detection of reflection features in this source, including a moderately broad Fe K$\\alpha$ complex and a reflection hump, confirming an earlier detection from a different observation. These features likely arise from the illumination of the moderately ionized disk by thermally Comptonized emission from the boundary layer or warm corona. While the source remained in the soft spectral state during both observations, the 2022 observation exhibits a relatively larger thermal contribution, together with a steeper Comptonized component and lower coronal optical depth. Both reflection and disk-continuum modeling favor a truncated disk, with the latter indicating a smaller inner disk radius in 2022. The inferred radial extent of the boundary layer of $\\sim8~r_{\\rm g}$ may play a role in the observed disk truncation. Assuming that the disk is truncated at the magnetospheric radius, we obtain an upper limit on the magnetic field strength of $\\lesssim3\\times10^{10}$ G. Timing analysis reveals a relatively stable disk component and a highly variable Comptonized component, consistent with the typical characteristics of the soft state.",
+   "source": "arxiv"
+  },
   {
    "uid": "arxiv:2611.33906",
    "title": "Fast radio bursts track cosmic star formation history with time delay: the effect of burst fluence",
@@ -17,12 +66,12 @@
    "primary_category": "astro-ph.HE",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "Forward-modeling of CHIME/FRB non-repeating bursts finds that, once fluence (burst energy as seen at Earth) is included alongside dispersion measure, the FRB rate tracks cosmic star formation with little delay, whereas a DM-only analysis implies a 3–4 Gyr delay, which the authors attribute to biases in mapping fluence to signal-to-noise.",
-    "plain": "Fast radio bursts are very brief, very bright flashes of radio waves from distant galaxies, and nobody yet knows what produces them. This paper asks how often they occur at different distances into the past, which hints at whether their sources are young stars or old stars. The authors fit a model to the catalogued bursts from the CHIME telescope and report that the answer depends on whether the burst brightness (fluence) is included in the analysis.</plain>\n<parameter name=\"why>Whether FRB sources are young or old objects is a basic open question about their origin, and the two earlier studies the paper mentions disagree. The paper suggests that a measurement choice, not just the data, can change the conclusion, which matters for anyone using FRB rates to test progenitor models. The text does not establish which progenitor model is correct.</plain>\n<parameter name=\"background\">- Fast radio bursts (FRBs): millisecond radio flashes from outside our galaxy; their sources are unidentified.\n- Redshift: a measure of how far away (and how far back in time) an object is.\n- Star formation rate (SFR): how quickly new stars form across the universe at each epoch; it peaks several billion years ago.\n- Time delay: the lag between when stars form and when a source population forms or explodes. Young progenitors follow star formation closely; old progenitors lag behind it by billions of years.\n- Dispersion measure (DM): how much a radio signal is smeared out by electrons along its path; used as a proxy for distance.\n- Fluence: the total energy received per unit area from a burst; a brightness-related quantity that affects whether a burst is detected.\n- Forward modeling: proposing a model of the source population, simulating how it would appear through the telescope's selection effects, and comparing with observations.\n- CHIME/FRB: the Canadian Hydrogen Intensity Mapping Experiment's FRB detector and its published burst catalogs.</background>\n<parameter name=\"difficulty\">research-level",
-    "why": "",
+    "ai": true,
     "background": "",
     "difficulty": "",
-    "ai": true
+    "one_liner": "Forward-modeling of CHIME/FRB non-repeating bursts finds that, once fluence (burst energy as seen at Earth) is included alongside dispersion measure, the FRB rate tracks cosmic star formation with little delay, whereas a DM-only analysis implies a 3–4 Gyr delay, which the authors attribute to biases in mapping fluence to signal-to-noise.",
+    "plain": "Fast radio bursts are very brief, very bright flashes of radio waves from distant galaxies, and nobody yet knows what produces them. This paper asks how often they occur at different distances into the past, which hints at whether their sources are young stars or old stars. The authors fit a model to the catalogued bursts from the CHIME telescope and report that the answer depends on whether the burst brightness (fluence) is included in the analysis.</plain>\n<parameter name=\"why>Whether FRB sources are young or old objects is a basic open question about their origin, and the two earlier studies the paper mentions disagree. The paper suggests that a measurement choice, not just the data, can change the conclusion, which matters for anyone using FRB rates to test progenitor models. The text does not establish which progenitor model is correct.</plain>\n<parameter name=\"background\">- Fast radio bursts (FRBs): millisecond radio flashes from outside our galaxy; their sources are unidentified.\n- Redshift: a measure of how far away (and how far back in time) an object is.\n- Star formation rate (SFR): how quickly new stars form across the universe at each epoch; it peaks several billion years ago.\n- Time delay: the lag between when stars form and when a source population forms or explodes. Young progenitors follow star formation closely; old progenitors lag behind it by billions of years.\n- Dispersion measure (DM): how much a radio signal is smeared out by electrons along its path; used as a proxy for distance.\n- Fluence: the total energy received per unit area from a burst; a brightness-related quantity that affects whether a burst is detected.\n- Forward modeling: proposing a model of the source population, simulating how it would appear through the telescope's selection effects, and comparing with observations.\n- CHIME/FRB: the Canadian Hydrogen Intensity Mapping Experiment's FRB detector and its published burst catalogs.</background>\n<parameter name=\"difficulty\">research-level",
+    "why": ""
    },
    "abstract": "Fast radio bursts (FRBs) are luminous millisecond-duration radio transients of extragalactic origin, yet their progenitor systems remain unidentified. The redshift evolution of the FRB event rate provides a powerful, model-independent discriminant between young progenitors and old progenitors, but recent studies have reached conflicting conclusions. In this work, we perform a forward-modeling analysis of the apparent non-repeating FRB sample from the CHIME/FRB catalogs to constrain the intrinsic FRB population. We find that the FRB rate follows the star formation rate (SFR) with little time delay when both dispersion measure (DM) and fluence are considered. In contrast, when only DM is taken into account, a significant time delay ($3 \\sim 4$ Gyr) exists between the FRB rate and the SFR. The main reason for this discrepancy is that systematic biases exist in the mapping process from burst fluence to signal-to-noise ratio. These results support that at least a fraction of FRBs arise from a progenitor population whose event rate is delayed relative to star formation.",
    "source": "arxiv"
@@ -42,12 +91,12 @@
    "primary_category": "astro-ph.HE",
    "date": "2026-11-26",
    "summary": {
-    "one_liner": "A theoretical study proposing that terahertz-band space interferometry, operating near the quantum noise limit, could distinguish the lensed central images of a Schwarzschild black hole from those of a JMN-1 naked singularity around Sgr A* and M87*.",
-    "plain": "The Event Horizon Telescope has imaged the glowing gas around the centers of galaxies M87 and our Milky Way (Sgr A*). This paper asks whether a black hole and a hypothetical object without an event horizon, a \"naked singularity,\" could be told apart by the way their light is combined across telescope spacings. The authors report that, for a simple model of gas falling in thinly and evenly, the two cases become separable on certain baseline ranges at noise levels they estimate are about 28 times below the EHT's 2017 statistical uncertainty.",
-    "why": "Whether the centers of galaxies contain event horizons bears on the cosmic censorship conjecture, a central open question in black hole physics. The text gives only a theoretical forecast for a future space interferometer, so it is a proposal to test rather than a demonstration.",
+    "ai": true,
     "background": "- Event Horizon Telescope (EHT): a global network of radio dishes that produced the first images of black hole shadows, M87* in 2019 and Sgr A* in 2022.\n- Event horizon: the boundary around a black hole beyond which light cannot escape.\n- Naked singularity: a hypothetical compact object with a singularity but no horizon hiding it; the cosmic censorship conjecture says such objects should not form in nature.\n- JMN-1: a specific family of spacetime models describing a naked singularity, used here as the alternative to Schwarzschild black holes.\n- Gravitational lensing: bending of light by strong gravity, which shapes the central image.\n- Interferometry and baselines: combining signals from telescopes separated by a distance (baseline); longer baselines probe finer detail. Measured in gigawavelengths (G-lambda), a unit of baseline relative to observing wavelength.\n- Visibility: the complex Fourier-domain measurement interferometers record, from which images are reconstructed.\n- Optically thin accretion: gas that is diffuse enough that light passes through it rather than being absorbed.\n- Quantum-limited detection: the lowest noise that the laws of quantum mechanics allow for a detector.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A theoretical study proposing that terahertz-band space interferometry, operating near the quantum noise limit, could distinguish the lensed central images of a Schwarzschild black hole from those of a JMN-1 naked singularity around Sgr A* and M87*.",
+    "plain": "The Event Horizon Telescope has imaged the glowing gas around the centers of galaxies M87 and our Milky Way (Sgr A*). This paper asks whether a black hole and a hypothetical object without an event horizon, a \"naked singularity,\" could be told apart by the way their light is combined across telescope spacings. The authors report that, for a simple model of gas falling in thinly and evenly, the two cases become separable on certain baseline ranges at noise levels they estimate are about 28 times below the EHT's 2017 statistical uncertainty.",
+    "why": "Whether the centers of galaxies contain event horizons bears on the cosmic censorship conjecture, a central open question in black hole physics. The text gives only a theoretical forecast for a future space interferometer, so it is a proposal to test rather than a demonstration."
    },
    "abstract": "The images of the galactic centers, M87$^*$ and Sgr~A$^*$, obtained by the Event Horizon Telescope (EHT) provide hitherto unknown revelations on these supermassive objects. The key issue here is the presence or otherwise of an event horizon at these ultra-compact entities. We show here that distinguishing the central images generated by gravitational lensing of a Schwarzschild black hole and a Joshi--Malafarina--Narayan (JMN-1) central naked singularity provides important insights into the nature of these supermassive objects and would help test the cosmic censorship conjecture, central to black hole physics. For optically thin spherical accretion onto Sgr~A$^*$, their interferometric visibilities become separable, independently of the emission model, on three baseline ranges within 1.4--6.2 G$\\lambda$ at errors of $\\simeq36\\,\\mu$Jy, and at $L_\\star=2.64\\,$G$\\lambda$ at $\\simeq71\\,\\mu$Jy. This is about 28 times below the 2017 Event Horizon Telescope statistical uncertainty. We suggest that the widest detection window demands minutes-long coherent integrations, favoring a near-quantum-limited space interferometer.",
    "source": "arxiv"
