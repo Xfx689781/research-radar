@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33306",
-   "title": "Bosonic Magic Resources at Quantum Criticality",
-   "url": "https://arxiv.org/abs/2611.33306",
-   "authors": [
-    "Paolo Stornati",
-    "Piotr Sierant",
-    "Emanuele Tirrito"
-   ],
-   "label": "arXiv:2611.33306v1",
-   "primary_category": "cond-mat.quant-gas",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper uses quantum relative entropy, a measure of non-Gaussianity determined by one-body correlations, to study quantum phase transitions in the ground state of the one-dimensional extended Bose-Hubbard model.",
-    "plain": "The paper asks whether a quantity that measures how \"non-Gaussian\" (non-simple) a quantum state of bosonic particles is can reveal when a many-particle system changes its phase. The authors compute this measure for the ground state (lowest-energy state) of a one-dimensional lattice model of interacting bosons and track how it scales with system size. They report that the scaling picks out transitions involving hidden order and conventional order, with distinct signatures at each.",
-    "why": "It proposes non-Gaussianity, a resource needed for universal quantum computing with continuous-variable systems, as a probe of many-body criticality, which links quantum information ideas to strongly correlated matter. The text does not show how broadly the approach applies beyond this model, so its wider significance is still to be tested.",
-    "background": "- Bosons: particles (such as photons or atoms of certain types) that can pile into the same quantum state.\n- Bose-Hubbard model: a lattice model of interacting bosons; the extended version adds interactions between neighbouring sites.\n- Ground state: the lowest-energy state of a quantum system, which is what the paper studies.\n- Quantum phase transition: a sharp change in the collective behaviour of a system at zero temperature, driven by a parameter such as interaction strength.\n- Gaussian vs non-Gaussian states: Gaussian states have a simple statistical structure that is efficiently describable and not enough for universal quantum computation; non-Gaussianity is the extra ingredient needed.\n- Quantum relative entropy: a distance-like measure between a state and its nearest simple (Gaussian) reference; it depends only on one-body correlations here.\n- Luttinger liquid: a standard low-energy description of one-dimensional interacting quantum fluids.\n- Hidden (string) order vs conventional order: hidden order is not visible through a simple local observable, whereas conventional order is, e.g. density patterns.\n- Ising criticality: the universal behaviour of the Ising model at its critical point, used as a benchmark class of transitions.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Non-Gaussianity is a resource for bosonic quantum information processing, providing a necessary ingredient for universal quantum computation in continuous-variable systems. Here we quantify non-Gaussianity in the ground state of the one-dimensional extended Bose-Hubbard model using quantum relative entropy (QRE), a measure determined solely by one-body correlations. The scaling of the QRE with system size reveals quantum phase transitions involving hidden and conventional order. We connect QRE scaling in the weakly interacting superfluid phase to Luttinger-liquid correlations and identify distinct critical signatures in its extensive and subleading contributions. At the Mott-Haldane transition, subtracting the extensive background reveals a pronounced peak in the subleading contribution, providing a clear signature of the onset of hidden string order. At the Haldane-density-wave transition, the extensive contribution to the QRE instead exhibits scaling consistent with Ising criticality. These results establish non-Gaussianity as a probe of many-body criticality, linking bosonic quantum resources to strongly correlated matter.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33281",
-   "title": "Neural Network Field Theory and the AdS/CFT Correspondence",
-   "url": "https://arxiv.org/abs/2611.33281",
-   "authors": [
-    "Dmitry S. Ageev",
-    "Yulia A. Ageeva",
-    "Anna S. Bernakevich"
-   ],
-   "label": "arXiv:2611.33281v1",
-   "primary_category": "hep-th",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper builds a neural-network realization of a massive scalar field on Euclidean anti-de Sitter space, adds quartic interactions in two ways, and recovers the boundary two-point function and leading four-point contact Witten diagram via the BDHM prescription.",
-    "plain": "The authors ask whether a random neural network can reproduce the behavior of a quantum-style field living in a curved space, and whether its outputs on the edge of that space match known holographic (AdS/CFT) correlations. They build neurons from Fourier-Bessel cosine functions whose statistics match the known propagator, and add interactions either by reshaping how the network's weights are sampled or by using auxiliary binary neurons. They report that the expected boundary correlators come out of this setup, and that different architectures can give the same boundary results while describing different interior theories.",
-    "why": "It offers a concrete way to view holography through the lens of neural network ensembles, and it points to architecture choice as something that can change the bulk description without changing boundary observables. The text does not show whether this framework leads to new physics or practical tools beyond this setting, so its wider significance is uncertain.",
-    "background": "- Neural network field theory: a neural network with random weights, in the infinite-width limit, behaves like a Gaussian field; finite width gives corrections.\n- Anti-de Sitter (AdS) space: a curved, negatively curved spacetime; \"Euclidean\" means time is replaced by an imaginary direction, which is standard for statistical-physics calculations.\n- AdS/CFT (holography): a conjectured correspondence between a gravitational theory in the bulk of AdS space and a conformal field theory living on its boundary.\n- Propagator and two-point function: the correlation between field values at two points; the bulk-to-boundary propagator links interior points to boundary points.\n- Witten diagram: a diagrammatic way to compute correlators in AdS; a contact diagram comes from a single interaction vertex.\n- Quartic interaction: a four-field term in the action, the simplest non-Gaussian (interacting) case.\n- BDHM prescription: a standard recipe (Banks–Douglas–Horowitz–Martinec style) for extracting boundary correlators from bulk generating functionals.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We develop a neural realization of massive scalar field theory on Euclidean anti--de Sitter space and its holographic boundary observables within neural network field theory (NN--FT). We construct Fourier--Bessel cosine neurons whose covariance reproduces the regulated massive AdS propagator exactly at finite network width, with the Gaussian field theory recovered in the infinite-width limit. We introduce quartic interactions through two complementary approaches. The first implements a prescribed interaction by deforming the neural parameter measure, while the second generates a local quartic interaction from the statistics of auxiliary binary neurons. Applying the BDHM prescription directly to the neural ensemble, we recover the scalar bulk-to-boundary propagator, the conformal boundary two-point function, and the leading connected four-point contact Witten diagram. We further show that distinct neural architectures can reproduce the same leading boundary correlators while defining inequivalent bulk theories. These results establish a framework for studying interacting scalar holography within NN--FT and clarify the role of neural architecture in encoding bulk dynamics and boundary observables.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34004",
    "title": "Discrete truncated Wigner approximation of the quantum phase transition in the transverse-field Ising model",
    "url": "https://arxiv.org/abs/2611.34004",

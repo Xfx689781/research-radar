@@ -3,55 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34399",
-   "title": "Clouds as near-horizon backgrounds in the radio detection of air showers",
-   "url": "https://arxiv.org/abs/2611.34399",
-   "authors": [
-    "Enrique Huesca Santiago",
-    "Giulia Cantarini",
-    "Anna Nelles"
-   ],
-   "label": "arXiv:2611.34399v1",
-   "primary_category": "astro-ph.HE",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proposes that radio signals from human-made transmitters reflected off clouds could create a background that confuses stand-alone radio detection of cosmic-ray and neutrino air showers, and uses a simplified model of cloud reflection strength in the MHz range.",
-    "plain": "Scientists detect cosmic rays and neutrinos by picking up the faint radio flashes they leave in the air as they hit the atmosphere. This paper points out that radio waves from human transmitters could bounce off clouds and mimic or hide those signals. The authors built a simplified model of how strongly clouds reflect these radio waves and found the reflections could in principle be detectable, especially when the geometry is nearly horizontal.",
-    "why": "Stand-alone radio detectors must reject human-made noise to find real air showers, so an unexamined source of confusing reflections matters for how these detectors are designed and trusted. The text does not show measured effects; it is a proposal supported by a simplified model, so the size of the problem in practice is still uncertain.",
-    "background": "- Air showers: cascades of particles produced when a high-energy cosmic ray or neutrino hits the atmosphere.\n- Radio detection: these showers emit short radio pulses (in the MHz range) that antennas can record, even without other instruments.\n- Human-made noise: broadcast and communication transmitters whose signals contaminate radio measurements.\n- Reflection/confusion background: unwanted signals that look like the target events and are hard to separate from them.\n- Near-horizon geometry: signals arriving at very shallow angles, close to the horizon, where the paper finds reflections most detectable.\n- The text is brief and gives no numerical results, so details of the model and its validation are not available here.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Stand-alone radio detection of air showers from cosmic rays or neutrinos relies on effective and efficient suppression of human-made noise sources. We propose here that reflections of human- made transmitters on clouds or other atmospheric phenomena, can cause confusion backgrounds that have not been studied previously. Given the absence of prior modelling, we have developed a simplified model for the reflection strength of clouds in the MHz regime. The results indicate that such reflections are, in principle, detectable, in particular in extremely horizontal geometries with typical experimental set-ups.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33858",
-   "title": "Constraining the Inner Accretion Geometry of GX 9+9 with Broadband Spectral and Timing Studies",
-   "url": "https://arxiv.org/abs/2611.33858",
-   "authors": [
-    "Swadesh Chand",
-    "Srimanta Banerjee",
-    "Hsiang-Kuang Chang",
-    "Andrzej A. Zdziarski",
-    "Gulab C. Dewangan",
-    "Vivek K. Agrawal"
-   ],
-   "label": "arXiv:2611.33858v1",
-   "primary_category": "astro-ph.HE",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A joint NICER, NuSTAR and MAXI spectral and timing study of the atoll neutron-star X-ray binary GX 9+9 (2019 and 2022 data) finds reflection features, a truncated inner disk, and an upper limit on the neutron star's magnetic field of about 3×10^10 G.",
-    "plain": "This paper studies GX 9+9, a system where a neutron star pulls gas off a companion star and the gas swirls into a hot disk before falling in. Using three X-ray telescopes watching at the same time in 2019 and 2022, the authors split the X-ray light into parts coming from the cool disk, from hot gas near the star, and from the disk glowing under that hot gas's light. They report that the inner edge of the disk sits farther out than the star's surface and estimate an upper limit on the star's magnetic field.",
-    "why": "Measuring where the inner disk ends tells us how strong a neutron star's magnetic field is and how gas flows onto it, which are hard quantities to measure directly. The result is an upper limit based on a model assumption (disk truncated at the magnetospheric radius), so it should be read as a constrained estimate rather than a firm measurement.",
-    "background": "- Neutron star: a very dense star left after a massive star explodes; about 20 km across with more mass than the Sun.\n- Low-mass X-ray binary: a pair of stars where a neutron star pulls matter from a companion and heats it enough to emit X-rays.\n- Accretion disk: a flat, spinning ring of gas that spirals inward onto the compact object.\n- Atoll source and soft state: classes of neutron-star X-ray binaries and a spectral mode where most light comes from the cool disk.\n- Comptonization: a process where low-energy light gains energy by bouncing off hot electrons, forming a hard X-ray component.\n- Reflection: X-rays from the hot region striking the disk and re-emitting as iron lines and a broad hump.\n- Truncated disk: a disk whose inner edge stops short of the star, often set by the star's magnetic field.\n- Gravitational radius (r_g): a unit of distance near a compact object, GM/c^2.\n- NICER, NuSTAR, MAXI: X-ray telescopes on the ISS, NuSTAR satellite, and ISS monitor used together here.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We present a broadband spectral and timing study of the bright atoll neutron star low-mass X-ray binary GX~9+9, using simultaneous NICER, NuSTAR, and MAXI observations from 2019 and 2022. The broadband spectra are well described by a combination of multicolor disk emission, thermal Comptonization of blackbody seed photons from the neutron star surface or boundary layer, and associated disk reflection. We report a clear detection of reflection features in this source, including a moderately broad Fe K$\\alpha$ complex and a reflection hump, confirming an earlier detection from a different observation. These features likely arise from the illumination of the moderately ionized disk by thermally Comptonized emission from the boundary layer or warm corona. While the source remained in the soft spectral state during both observations, the 2022 observation exhibits a relatively larger thermal contribution, together with a steeper Comptonized component and lower coronal optical depth. Both reflection and disk-continuum modeling favor a truncated disk, with the latter indicating a smaller inner disk radius in 2022. The inferred radial extent of the boundary layer of $\\sim8~r_{\\rm g}$ may play a role in the observed disk truncation. Assuming that the disk is truncated at the magnetospheric radius, we obtain an upper limit on the magnetic field strength of $\\lesssim3\\times10^{10}$ G. Timing analysis reveals a relatively stable disk component and a highly variable Comptonized component, consistent with the typical characteristics of the soft state.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33906",
    "title": "Fast radio bursts track cosmic star formation history with time delay: the effect of burst fluence",
    "url": "https://arxiv.org/abs/2611.33906",

@@ -3,54 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34452",
-   "title": "Global Convergence of Second-Order Methods for Physics-Informed Neural Networks in the Overparameterized Limit",
-   "url": "https://arxiv.org/abs/2611.34452",
-   "authors": [
-    "Konstantin Riedl",
-    "Justin Sirignano",
-    "Konstantinos Spiliopoulos"
-   ],
-   "label": "arXiv:2611.34452v1",
-   "primary_category": "math.NA",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A convergence analysis of regularized Newton and Gauss-Newton training for physics-informed neural networks (PINNs) and deep Galerkin methods, in the infinite-width limit, showing residual decay and a spectral-filtering role for the regularization parameter.",
-    "plain": "This paper studies how neural networks are trained to solve equations that describe physical systems, such as heat or fluid flow. Training with more powerful \"second-order\" optimizers is common in practice and often works better, but its theory was largely missing. The authors show that, as the network gets very wide, training converges to a predictable limiting process, and that the training error on the equation shrinks toward zero.",
-    "why": "The text claims that a regularization setting acts as a filter that speeds up the slow, smooth-error components that gradient descent handles poorly (the so-called spectral bias). This matters for anyone relying on these solvers, though the text gives no experiments, so the practical size of the effect cannot be judged from it.",
-    "background": "- Neural network training: adjusting many weights to reduce a loss function.\n- Overparameterized limit: the regime where the network has very many hidden units.\n- PDE (partial differential equation): an equation relating a function to its rates of change, used to model physical processes.\n- Residual: how far the network's output is from satisfying the PDE.\n- First-order vs second-order optimizers: gradient descent uses slopes only; Newton-type methods also use curvature information.\n- Neural tangent kernel: a limiting object describing how training on one input affects predictions on others in very wide networks.\n- Eigenfunctions and spectral bias: smooth, low-frequency error components are learned faster than rough, high-frequency ones.\n- Regularization: a small added term that stabilizes the update step.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Solving high-dimensional partial differential equations (PDEs) constitutes a core task in many engineering and scientific disciplines. Physics-informed neural networks and the deep Galerkin method effectively leverage machine learning models to approximate solutions of known PDEs by minimizing residuals corresponding to the PDE operator alongside external constraints. Although second-order optimizers are becoming increasingly popular for training neural networks (NNs) to solve PDEs and empirically outperform their first-order counterparts in both speed and accuracy, the convergence theory for training such models is essentially confined to first-order methods. In this paper, we close this gap and develop a convergence analysis for the regularized Newton and Gauss-Newton methods. As the number of hidden units tends to infinity, the training dynamics converge in probability, with explicit rates, to the solution of a deterministic limit equation involving a Newton neural tangent kernel operator associated with the PDE. Although the limiting kernel operator admits no spectral gap, we prove that, in the overparameterized limit, the PDE residual vanishes as training proceeds, and, under mild assumptions, the NN converges to the PDE solution. We further show that, provided a sufficiently small regularization parameter, the projection of the residual onto any fixed number of leading eigenfunctions decays exponentially fast, demonstrating that this hyperparameter acts as a spectral filter: it lifts the convergence rates of high-frequency components toward those of low-frequency ones, thereby mitigating the spectral bias inherent in gradient descent. Mathematical challenges arise from the implicit parameter update involving a linear system whose dimension increases with the NN width and, for Newton's method, a potentially indefinite Hessian, as well as from the PDE operator entering the kernel.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34275",
-   "title": "LatentCP-DPO: Conformal Pessimism for DPO with Finite-Sample Guarantees",
-   "url": "https://arxiv.org/abs/2611.34275",
-   "authors": [
-    "Hongwei Xu",
-    "Jingyi Liu",
-    "Vincent Y. F. Tan",
-    "Zai Yang",
-    "Yulian Wu"
-   ],
-   "label": "arXiv:2611.34275v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "LatentCP-DPO combines conformal prediction uncertainty sets with pessimistic (worst-case) direct preference optimization for Bradley-Terry and Plackett-Luce feedback, with finite-sample suboptimality upper bounds and a matching lower bound for the Bradley-Terry case.",
-    "plain": "The paper studies how to train an AI model to match human preferences when the set of human comparison labels is small and noisy, so the model can overfit. The authors build a set of plausible values for the hidden reward scores behind the preferences, using a statistical method called conformal prediction, and train the policy to do well even under the least favorable value in that set. They report finite-sample bounds on how far the resulting policy can fall short of the best achievable one, and a lower bound showing that the uncertainty sets can add a bias that does not vanish with more unlabeled prompts.",
-    "why": "Preference-based fine-tuning of language models often depends on limited labeled data, so a principled way to account for label uncertainty is relevant. The main value is the explicit tradeoff: the paper says the uncertainty sets can introduce a persistent bias, not just a benefit, which is worth weighing against the reported experimental gains on finite datasets. I am not certain how the approach would perform at the scale of real systems, since the text only mentions experiments on finite preference datasets.",
-    "background": "- Direct Preference Optimization (DPO): training a language model directly from pairs of responses labeled as preferred or not, without a separate reward model.\n- Bradley-Terry model: a standard way to turn pairwise comparisons into scores, where the chance one item beats another depends on the difference in their hidden scores.\n- Plackett-Luce model: an extension of Bradley-Terry to full rankings of several items.\n- Conformal prediction: a method that builds prediction sets with a guaranteed long-run coverage rate, without strong distributional assumptions beyond exchangeability (data points behaving interchangeably).\n- Pessimism / worst-case optimization: choosing the policy that performs best under the least favorable plausible values, to guard against overfitting.\n- Finite-sample bounds: guarantees that hold for a specific sample size rather than only asymptotically.\n- Suboptimality: how much worse a learned policy is than the best policy in the class considered.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Direct Preference Optimization (DPO) learns a response policy from human preference data, but with a limited dataset it can overfit to noisy or weakly informative preference labels. We introduce LatentCP-DPO, a framework that combines conformal prediction with pessimistic preference optimization for Bradley-Terry (BT) pairwise feedback and Plackett-Luce (PL) ranking feedback. Building on LatentCP's construction of uncertainty sets for unobserved model parameters, we address how to incorporate this uncertainty into preference optimization and characterize its effect on policy performance. Under exchangeability and a correctly specified preference model, we construct uncertainty sets for latent relative rewards with finite-sample marginal coverage from conformal prediction sets for observable preferences. We then learn a response policy by maximizing the worst-case expected preference log-likelihood over these uncertainty sets, using an independent collection of prompts and candidate responses without preference labels. Under suitable assumptions, we establish finite-sample upper bounds on regularized policy suboptimality that separate policy-class approximation error, conformal uncertainty, and statistical estimation error. For BT feedback, we further establish a worst-case lower bound for LatentCP-DPO that matches the upper bound's reciprocal dependence on the number of unlabeled optimization examples. The lower bound also shows that the uncertainty sets can induce a bias that persists as the optimization sample grows. Together, these results characterize both the statistical accuracy and potential limitations of preference optimization using conformal uncertainty sets. Experiments support the benefits of the proposed framework in finite preference datasets.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33759",
    "title": "Understanding Double Descent through Universal Compression",
    "url": "https://arxiv.org/abs/2611.33759",

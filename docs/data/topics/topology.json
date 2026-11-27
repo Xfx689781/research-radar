@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34110",
-   "title": "Colored Jones polynomial of figure eight knot and non-perturbative topological recursion",
-   "url": "https://arxiv.org/abs/2611.34110",
-   "authors": [
-    "Alexander Hock",
-    "Sergey Shadrin"
-   ],
-   "label": "arXiv:2611.34110v1",
-   "primary_category": "math-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proves that the asymptotic expansion of the colored Jones polynomial of the figure eight knot is linked to non-perturbative topological recursion on its elliptic spectral curve, as proposed by Borot and Eynard.",
-    "plain": "This work is about knots, the tangled loops studied in topology, and a family of numbers that can be attached to them called the colored Jones polynomial. The authors show that the large-scale behaviour of these numbers for the figure eight knot matches a specific mathematical recipe, known as non-perturbative topological recursion, that was previously only proposed as a conjecture.",
-    "why": "It supports a proposal by Borot and Eynard that links knot invariants to curves and geometry, a connection that is of interest to researchers in topology and mathematical physics. The abstract does not say how far the result extends beyond the figure eight knot, so wider impact is unclear from the text alone.",
-    "background": "- Knot: a closed loop tangled in three-dimensional space, studied up to deformation.\n- Knot invariant: a number or polynomial computed from a knot that does not change when the knot is deformed without cutting.\n- Colored Jones polynomial: a family of knot invariants indexed by an integer \"color\" (a dimension parameter); large-color limits are studied.\n- Asymptotic expansion: a series that approximates a quantity as a parameter grows large.\n- Spectral curve: an algebraic curve encoding a problem, here an elliptic (torus-shaped) one.\n- Topological recursion: a recursive procedure that builds invariants of a curve; \"non-perturbative\" refers to including corrections beyond the leading series terms.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The asymptotic expansion of the colored Jones polynomial of the figure eight knot is proved to be connected with non-perturbative topological recursion on the underlying elliptic spectral curve, following the proposal of Borot and Eynard.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2610.23209",
-   "title": "Regular Additive Scalar Invariants of ${\\mathcal N}=1$ Hyperbolic Spin Supertriangles",
-   "url": "https://arxiv.org/abs/2610.23209",
-   "authors": [
-    "Ilia Gaiur",
-    "Robert Penner"
-   ],
-   "label": "arXiv:2610.23209v1",
-   "primary_category": "math.GT",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper classifies the regular cyclic scalar invariants of non-degenerate hyperbolic N=1 spin supertriangles that are additive under geodesic subdivision, using a \"common-first\" gauge to fix a 3|4 modulus, and reports that this space has superdimension 3|1.",
-    "plain": "The paper studies triangles in a curved, non-Euclidean plane whose sides and angles carry both ordinary numbers and \"odd\" (fermion-like) quantities, as in supersymmetric geometry. It asks which measurable quantities of such triangles can be added up when a triangle is cut into smaller pieces by a geodesic line, and it finds the complete list of them.",
-    "why": "The result gives a precise, countable answer (ordinary area, two even invariants, and one odd invariant) and shows that ordinary supertriangles carry only three even invariants. It may matter for work connecting supergeometry with area and angle-defect formulas, but the text does not say how far those connections extend, so its wider significance is unclear.",
-    "background": "- Hyperbolic geometry: a curved plane where triangle angles sum to less than 180 degrees; the \"angle defect\" is the shortfall from 180 degrees, and area is tied to it.\n- Geodesic: the shortest path between two points in a curved space, the non-Euclidean analogue of a straight line.\n- Supergeometry: an extension of geometry that adds \"odd\" coordinates which anticommute, giving a grading (degree) and a split between even and odd parts.\n- Superdimension \"3|1\": 3 even dimensions and 1 odd dimension of the space of invariants.\n- Additive invariant: a quantity whose value for a whole shape equals the sum of its values for the pieces.\n- Spin lift: a choice of spin structure on the triangle; reversing it flips the sign of one invariant.\n- Gauge fixing: choosing a standard normal form so that a shape is described by a fixed set of parameters.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We classify regular cyclic scalar invariants of non-degenerate hyperbolic ${\\mathcal N}=1$ spin supertriangles which are additive under geodesic subdivision. After fixing the spin lift, the common-first gauge (introduced in earlier work by the second-named author and further developed here) gives a complete $3|4$ modulus of such supertriangles.. The space of additive scalar invariants is proved to have superdimension $3|1$: ordinary hyperbolic area in degree zero, two even generators in degree two, and one odd generator in degree three; the degree-one and degree-four sectors vanish. One degree-two generator is the fermionic first variation of body area, equivalently the nilpotent correction from ordinary body angle defect to super angle defect. The degree-three generator changes sign under reversal of the spin lift, while the other generators are fixed, so ordinary supertriangles carry only three even invariants.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33663",
    "title": "Graded Monoidal Categories and Internalization",
    "url": "https://arxiv.org/abs/2611.33663",

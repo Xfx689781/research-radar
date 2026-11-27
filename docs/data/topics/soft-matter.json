@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34415",
-   "title": "A Thermodynamically Consistent Model of a Rechargeable Salt-in-Polyelectrolyte Battery",
-   "url": "https://arxiv.org/abs/2611.34415",
-   "authors": [
-    "Charlotte Beckford",
-    "Rajeev Kumar",
-    "Steven M. Wise"
-   ],
-   "label": "arXiv:2611.34415v1",
-   "primary_category": "cond-mat.soft",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "An isothermal, thermodynamically consistent continuum model of a rechargeable salt-in-polyelectrolyte battery, with cation intercalation at electrode-electrolyte interfaces, that reduces to dual-ion-conductor and single-ion-conductor limits and is compared in 1D galvanostatic charge-discharge simulations.",
-    "plain": "This paper builds a mathematical model of a lithium-type battery whose electrolyte is a charged polymer (a chain of negatively charged units with lithium ions attached) that may also contain extra dissolved salt. The authors check that the model follows basic thermodynamic rules and reduce it to two simpler battery types, one with added salt and one with only the charged polymer. Simulations of charging and discharging in one dimension show how ion concentrations shift, how the voltage is polarized, and how much of the electrode gets used, though the text does not report specific headline numbers.",
-    "why": "Polymer electrolytes are a candidate for safer batteries, and a model that is consistent with thermodynamics and that can compare salt-containing and salt-free designs could help guide design choices. The text does not establish practical performance claims, so its relevance to real devices is unverified.",
-    "background": "- Electrolyte: the medium that carries ions between battery electrodes.\n- Polyelectrolyte: a polymer whose repeat units carry electric charge; here the polymer is negatively charged and lithium ions balance it.\n- Dual-ion vs single-ion conductor: in the first, both positive and negative ions move; in the second, mainly the lithium ions move because the polymer backbone is fixed in place.\n- Intercalation: lithium ions inserting into and leaving the crystal structure of an electrode material.\n- Galvanostatic: charging or discharging at a constant current.\n- Butler-Volmer equation: a standard formula relating electrode reaction speed to voltage driving force.\n- Fick's law: the standard rule that ions diffuse from high to low concentration.\n- Thermodynamically consistent: the model obeys energy and entropy bookkeeping, so it does not create or destroy energy.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We present an isothermal, thermodynamically consistent model of a salt-in-polyelectrolyte battery with intercalation and deintercalation reactions of cations occurring at the electrode-electrolyte interfaces under galvanostatic conditions. For the electrolyte, we consider polyelectrolytes, which are polyanions, with neutralizing cations (i.e., counterions) such as lithium, along with a monovalent salt containing the same cations. Models of batteries containing either a dual-ion-conductor (DIC) electrolyte (i.e., uncharged polymers with added salt) or a single-ion-conductor (SIC) electrolyte (i.e., charged polymers without added salt) emerge as limiting cases of this thermodynamically consistent model. Once the model is presented in its most general context, we make specific choices so that it captures well-known mechanisms. In particular, the governing diffusion equations recover Fick's law of diffusion, and the cation-transfer reaction rate is described by the Butler--Volmer equation. The DIC and SIC limiting cases provide a framework for comparing the corresponding batteries. One-dimensional DIC and SIC charge--discharge simulations at matched current and duration illustrate concentration redistribution, polarization, and electrode utilization. Numerical accuracy checks quantify sensitivity to discretization; distinct initial inventories qualify the comparison.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34796",
-   "title": "Discotic columnar phase in a three-dimensional monomer-tetramer model of Heilmann and Lieb with side-to-side attraction",
-   "url": "https://arxiv.org/abs/2611.34796",
-   "authors": [
-    "Qidong He"
-   ],
-   "label": "arXiv:2611.34796v1",
-   "primary_category": "math-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A rigorous statistical-mechanics proof that a three-dimensional Heilmann–Lieb monomer-tetramer lattice model with side-to-side attraction orders into discotic columnar phases, with exactly twelve extremal periodic Gibbs measures at low temperature, resolving an earlier conjecture for the stated parameter regime.",
-    "plain": "This paper studies a simplified mathematical model of liquid crystals, where flat disc-shaped molecules (here called tetramers, or plaquettes) sit on a cubic grid and attract their neighbours when they lie flat in the same plane and point the same way. The author shows that, at low enough temperature, these pieces stack up into one-dimensional columns that are themselves arranged in a square pattern. This settles a conjecture from 1979 that had been open for the stated range of settings.",
-    "why": "Proving with full mathematical rigour that a specific lattice model forms columnar liquid-crystal order is a useful check on how such phases arise from simple interactions. The text does not say how the result would be applied to real materials, so any wider connection is uncertain.",
-    "background": "- Liquid crystals: states of matter between solid and liquid, where molecules have partial order in orientation or position.\n- Discotic phase: a liquid-crystal phase built from disc-shaped molecules that stack into columns.\n- Lattice model: a simplified model in which particles sit on the points of a grid and interact only with nearby particles.\n- Hard-core repulsion: particles cannot overlap.\n- Chemical potential (mu): a parameter controlling how many particles the system tends to hold.\n- Gibbs measure: a probability distribution describing the random configurations of a system at a given temperature; \"extremal\" ones are the pure, unmixed states.\n- Ground state / zero-temperature picture: the lowest-energy arrangements, which the paper says are degenerate (many equally good), with thermal fluctuations choosing among them.\n- Symmetry breaking: a state that picks one direction or orientation out of several equally possible ones.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study Model III of Heilmann--Lieb (1979), a lattice model for liquid crystals consisting of tetramers (plaquettes) on the cubic lattice at chemical potential $\\mu$, interacting via a hard-core repulsion and a lateral attraction of strength $a>0$ between coplanar, aligned tetramers. The model was conjectured to exhibit liquid-crystalline order at low temperature provided that $\\mu+2a>0$. We establish discotic columnar order throughout this regime, fully resolving the conjecture. Specifically, we prove the existence of exactly twelve extremal and periodic Gibbs measures, each breaking rotational symmetry, with one of three tetramer orientations dominant, and translational symmetry in exactly two directions, with one of four tetramer parities dominant within that orientation. Thus, the tetramers form one-dimensional columns arranged on a square lattice. This arrangement is not a priori evident from the zero-temperature picture, where energy only enforces a layered structure: each layer is fully packed and crystalline, but different layers are free to shift independently within their planes. The main novelty here lies in showing how thermal fluctuations lift this degeneracy in favor of the twelve ground states in which all tetramers share a common parity.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34194",
    "title": "Length-scales and fractal scaling in dairy gels: comparisons of the insights from ultra-small angle neutron scattering and rheology",
    "url": "https://arxiv.org/abs/2611.34194",

@@ -3,54 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34923",
-   "title": "Mixture-of-Loops Transformer",
-   "url": "https://arxiv.org/abs/2611.34923",
-   "authors": [
-    "Lianghui Zhu",
-    "Shijie Wang",
-    "Xinggang Wang",
-    "Jinze Bai",
-    "Bo Wang",
-    "Xiang Bai"
-   ],
-   "label": "arXiv:2611.34923v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Proposes Mixture-of-Loops Transformer (MoLT), which uses attention keys and values as a memory passed between repeated passes (\"loops\") of a shared-weight Transformer, with variants (MoLT-R, MoLT-KV, U-MoLT) trading expressivity against efficiency.",
-    "plain": "Standard language models run their layers once per token. Looped Transformers reuse the same layers several times, which makes them more capable per parameter but slower. This paper asks what information should carry over from one loop to the next, and proposes storing it as a small memory of keys and values, with a variant that is cheaper to run.",
-    "why": "The paper reports that its U-shaped variant beats an OLMo3 baseline in 400B-token pretraining and gives 1.7x token efficiency at 700M parameters, and that it matches the non-looped baseline's inference latency in one small setting (996.6 vs. 1,000.6 ms). These are the authors' own results on their setup, and independent replication is not yet shown; the work may matter for how cheaply models can gain depth, but that is an open question.",
-    "background": "- Transformer: the neural network architecture behind most modern language models, built from stacked attention and feed-forward layers.\n- Looped / shared-weight layers: the same block of layers applied repeatedly, trading parameter count for extra computation.\n- Keys and values (KV): the internal vectors attention uses to decide what to look at; caching them is a common speed trick.\n- Residual stream: the running vector each layer adds its output to.\n- Pretraining and token efficiency: training on large text corpora; token efficiency means reaching the same loss with fewer training tokens.\n- Cross-entropy (CE) and perplexity: standard measures of how well a model predicts text; lower is better.\n- OLMo3: an openly released baseline language model family used for comparison.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Looped Transformers boost expressivity by reusing shared layers across loops, yet at the cost of efficiency. Pushing their expressivity-efficiency frontier requires rethinking the core mechanism connecting adjacent loops: What should be passed as a Transformer loops? We introduce Mixture-of-Loops Transformer (MoLT), whose Mixture-of-Loops Attention (MoLA) uses keys and values (KV) as memory for selective reuse across depths and loops. Under loop residual, MoLT-R retains the residual stream and reads local KV across loops for expressivity. Under loop KV, MoLT-KV instead restarts from embeddings and reads current-loop local KV with preceding-loop memory KV at earlier positions for efficiency. MoLT-KV eliminates same-position cross-loop dependence and, paired with loop forcing for parallel training, unlocks single-traversal Mixture-of-Loops (MoL) decoding beyond the training loop horizon. To balance efficiency and quality, we introduce U-shaped MoLT (U-MoLT), which separates memory construction from prediction readout and skips unused decoder traversals without changing predictions. In 400B-token pretraining, U-MoLT outperforms OLMo3 across 700M/1.5B dense and 3B MoE models, achieving 1.7x validation cross-entropy (CE) token efficiency at 700M while improving 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points. In 100B-token continued pretraining of Qwen3.5-0.8B-Base, our U-MoLT adaptation lowers CE on all 11 domains over the matched baseline with 1.4x mean token efficiency. At inference, U-MoLT with MoL-Hybrid-2 matches non-looped OLMo3 latency at 996.6 vs. 1,000.6 ms on S-size (~113M) models. Code is available at https://github.com/hustvl/MoLT",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33625",
-   "title": "State Space Attention: Learning Context-Dependent Memory Retention",
-   "url": "https://arxiv.org/abs/2611.33625",
-   "authors": [
-    "Ege \\c{C}akar",
-    "Cengiz Pehlevan"
-   ],
-   "label": "arXiv:2611.33625v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "State Space Attention (SSA) proposes learning which past chunks a sequence model keeps in a fixed-size memory, read via standard attention, and compares it against recurrent, bounded-memory, and full-attention models on retrieval, reasoning, and language modeling.",
-    "plain": "Language models normally store a record of every word they have seen, and that record grows with the length of the text. This paper asks whether a model could instead learn which pieces of the past are worth keeping in a small, fixed-size memory. The authors report that their approach matches or comes within a few points of full attention on most retrieval and reasoning tasks, while using constant memory at inference, with the largest gap on the RULER benchmark at small scale.",
-    "why": "It targets a practical cost of long-context models: memory that grows with input length. The text suggests it could be combined with existing cache-eviction methods, but that combination is only proposed, not tested here.",
-    "background": "- Attention: a mechanism where a model looks back over earlier tokens to decide what matters.\n- KV cache: the stored keys and values for past tokens, which grows with context length during generation.\n- Full attention / Transformer: the standard architecture that keeps all past tokens available.\n- Recurrent model: a model that compresses the past into a fixed-size state instead of storing everything.\n- Retrieval and RULER benchmarks: tests of whether a model can find and use specific details buried in long inputs.\n- Soft vs. hard retention: soft weighting blends memories gradually; hard retention keeps or drops each chunk outright.\n- Parameter count (400M): the size of the models trained in the paper's final experiments.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Standard attention's key-value cache grows linearly with context length. Bounding it raises the question of what a sequence model should retain for long-context reasoning. We argue this choice should be learned, and introduce State Space Attention (SSA), which learns to keep a bounded set of past representations and reads them with standard attention. A learned scorer rescores every chunk against newly arriving context and the rest of memory. A fixed-context Transformer is then the special case that always keeps the most recent tokens. We train the scorer and reader jointly, either moving gradually from a differentiable soft weighting of memories to hard retention, or with hard retention from the start. To produce signal for the scorer, we generate supervised samples during training, a technique we call recovery. We compare SSA with recurrent models, bounded-memory attention methods, and full-attention Transformers across retrieval, variable tracking, multi-hop reasoning, and language modeling. On our retrieval and reasoning benchmarks, SSA matches or comes within a few points of full attention on most tasks, far outperforms a Transformer with the same readable budget on every long-context retrieval task we evaluate, and matches or outperforms one with about 4 times that budget, while using constant inference memory. The largest remaining gap to full attention at small language model scale is on RULER. SSA makes a fixed number of tokens useful over a longer context, and since it reads memory with standard attention, we propose that it can be stacked with KV cache eviction methods. We also pretrain and post-train 400M-parameter models and measure how SSA's training and inference costs scale with context length and model size. Together, these experiments examine the capabilities and limitations of learned memory retention for long-context sequence modeling.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33257",
    "title": "One Token, Many Lessons: Sliding-Window Attention within Gated Delta Networks",
    "url": "https://arxiv.org/abs/2611.33257",

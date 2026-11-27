@@ -3,53 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33740",
-   "title": "Exclusion and internal structure in the association/dissociation kinetics of DNA-binding proteins in the fast diffusion limit",
-   "url": "https://arxiv.org/abs/2611.33740",
-   "authors": [
-    "Xiangting Li",
-    "Tom Chou"
-   ],
-   "label": "arXiv:2611.33740v1",
-   "primary_category": "q-bio.BM",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A coarse-grained stochastic model, reduced to an effective Markov model and mean-field approximation, of how multi-state DNA-binding proteins with finite footprints and internal conformational switching adsorb, desorb, and slide along DNA in the fast-diffusion regime, fitted to RPA binding on ssDNA.",
-    "plain": "Many proteins that regulate DNA stick to it, slide along it, and let go again, and they can change shape while doing so. This paper builds a simplified mathematical model of that process, in which each protein takes up a certain stretch of DNA and can switch between shapes. The authors fit the model to previously published measurements of Replication Protein A (RPA), a protein that coats single-stranded DNA, and use it to examine how proteins that bind across several segments can exchange quickly while staying tightly bound.",
-    "why": "Tractable closed-form models of how sliding, crowding and shape changes interact could help researchers interpret binding-kinetics experiments on DNA-processing proteins. The text claims broad applicability to nucleosomes and other systems, but that is a claim the abstract makes and has not been tested here, so its reach beyond RPA is uncertain.",
-    "background": "- DNA-binding proteins: proteins that attach to DNA and regulate or copy it.\n- Nonspecific binding: sticking to DNA regardless of its exact sequence.\n- Adsorption/desorption: attaching to and detaching from a surface, here DNA.\n- Fast diffusion limit: the regime where a protein slides along DNA much faster than it detaches, so it can be averaged over.\n- Footprint: the length of DNA a single bound protein covers, which blocks neighbours (exclusion).\n- Markov model: a model where the next state depends only on the current state, with fixed switching rates.\n- Mean-field approximation: replacing detailed interactions with averaged effects to get simpler equations.\n- Facilitated exchange: a bound protein's neighbour or partly bound state speeding up swapping of proteins on DNA.\n- RPA: a single-stranded DNA-binding protein involved in DNA replication and repair.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "In many canonical biophysical and biochemical contexts, complex diffusing DNA-binding proteins undergoing nonspecific adsorption and desorption can exist in different conformational states. Equilibrium binding theories and kinetic models of competing ligands provide a basis for describing these systems. Coupling the internal conformational kinetics of bound proteins to exclusion and diffusion requires tracking both protein positions and binding states. Closed-form, tractable mathematical models that accurately describe the stochastic dynamics of structured proteins that bind to and diffuse along DNA are lacking. Here, we develop a new coarse-grained stochastic model of nonspecific DNA-protein binding in the fast diffusion regime, from which we derive an effective Markov model and its corresponding mean-field approximation that incorporates protein footprint size and conformational switching. We fit our new model quantitatively to previously measured dynamics of Replication Protein A (RPA) binding to ssDNA. Finally, by including multisegment binding states, our analysis captures facilitated exchange, revealing how multisegment architecture balances high affinity with rapid remodeling. Our theoretical model applies broadly to many other DNA-binding protein systems, including nucleosomes, ssDNA-binding proteins, and other multisegment complexes, providing accurate predictions and new strategies for evaluating experimental data.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34735",
-   "title": "A multi-patch model for sylvatic hematophagous vector dynamics: the impact of landscape anthropization",
-   "url": "https://arxiv.org/abs/2611.34735",
-   "authors": [
-    "Ivric Valaire Yatat-Djeumen",
-    "Lukas Eigentler",
-    "Orville Wright Happi-Tchakount\\'e",
-    "Imma Tcheferi",
-    "Pierre Couteron"
-   ],
-   "label": "arXiv:2611.34735v1",
-   "primary_category": "q-bio.PE",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A multi-patch mathematical model of tsetse fly and wild animal populations in Cameroonian districts, in which human landscape change (anthropization) alters animal carrying capacity and drives dispersal under three dispersal rules, analysed for equilibria, stability, and invasion speed via pulled traveling waves.",
-    "plain": "This paper builds a computer model of how blood-feeding flies (tsetse flies) and the wild animals they feed on spread across a set of connected local areas, as human settlement and land use change the landscape. The authors fitted the model to districts in Cameroon and compared three ways animals and flies might move between areas. They report that how animals disperse matters a lot: under one rule, more human-altered areas speed up invasion, while under a more realistic local-neighbour rule they can either speed it up or have no effect.",
-    "why": "Tsetse flies carry trypanosomes, the parasites behind sleeping sickness and nagana in livestock, so understanding how their populations spread as land changes bears on disease risk. The text only supports modelling conclusions, and it itself says more empirical data on animal dispersal are needed, so its practical implications are uncertain.",
-    "background": "- Patch model: the landscape is split into connected local areas (\"patches\"), each with its own population that grows and exchanges individuals with other patches.\n- Carrying capacity: the maximum population an area can sustain given its resources.\n- Anthropization: the degree to which an area is changed or shaped by humans.\n- Equilibrium and local stability: a steady population level, and whether small disturbances die out and return to it.\n- Pulled traveling wave: a model of a population front moving outward into empty territory, used here to estimate invasion speed.\n- Tsetse flies (Glossina): blood-feeding insects that transmit trypanosome parasites to humans and animals.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We develop a multi-patch model for sylvatic hematophagous vector--(wild) animal interactions with nonlinear migration terms that depend on landscape anthropization. Every patch is a suitable habitat for both animals and vectors, but anthropization reduces the animal carrying capacity and induces animal and vector displacement. We considered three dispersal types. Under unconstrained global dispersal, displaced individuals can move to any other patch. Under the more realistic random and constrained neighbor dispersal, displaced animals move to a neighboring patch chosen either at random or preferentially among less anthropized ones. We parameterized our model for tsetse flies (Glossina spp.) in the districts of Campo, Ny\\'e'\\'et\\'e, and Ma'an, Ocean division, Cameroon. We characterized the equilibria and their local stability analytically for unconstrained global dispersal, and found numerically that, under both neighbor dispersal regimes, populations progressively expand before settling into a stable equilibrium. Under random neighbor dispersal, the effect of anthropization on migration had a much larger impact on steady state densities than its effect on animal carrying capacity. Under constrained neighbor dispersal, populations spread noticeably more slowly, and numerous patches maintained extremely sparse populations. We further investigated invasion speed under different anthropization scenarios. For random neighbor dispersal, invasion times decreased upon introduction of newly anthropized regions, while for constrained neighbor dispersal, anthropized regions either increased or did not affect invasion times. Approximating invasions by pulled traveling waves, we found that anthropized regions act as ``invasion highways'' or ``invasion barriers'' depending on the dispersal type. We conclude that more empirical data on animal dispersal are needed to understand these dynamics.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33634",
    "title": "The evolution of extreme spatial heterochiasmy in amphibians: interactions between sex-specific meiotic program and chromosome architecture",
    "url": "https://arxiv.org/abs/2611.33634",

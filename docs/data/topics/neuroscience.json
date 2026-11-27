@@ -3,6 +3,41 @@
  "updated": "2026-11-27",
  "papers": [
   {
+   "uid": "biorxiv:10.64898/2026.11.26.769462",
+   "title": "Conditional feature importance with error control for machine-learning-based biomarker discovery in Alzheimer's disease",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.26.769462v1",
+   "authors": [
+    "Paillard, J.",
+    "Silvestri, E.",
+    "Bryois, J.",
+    "Kam-Thong, T.",
+    "Di Paolo, G.",
+    "Reyero Lobo, A.",
+    "Chamma, A.",
+    "Stomrud, E.",
+    "Palmqvist, S.",
+    "Janelidze, S.",
+    "Mattsson-Carlgren, N.",
+    "Thirion, B.",
+    "Engemann, D. A.",
+    "for the Swedish BioFINDER study group,",
+    "for the Alzheimer's Disease Neuroimaging Initiative,"
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.26.769462 v1",
+   "primary_category": "neuroscience",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "The paper proposes Conditional Feature Importance (CFI), a statistically grounded way to measure each biomarker's unique predictive contribution, with false-discovery control, and applies it to protein and imaging data for Alzheimer's diagnosis, onset, and progression across three cohorts.",
+    "plain": "Researchers wanted to know which measurements in blood, spinal fluid, genes, and brain scans really carry unique information about Alzheimer's disease, rather than just repeating what other measurements already show. They developed a method called Conditional Feature Importance that works with any machine-learning model and tries to control false discoveries. Applied to data from about 48,000 people in three large studies, it reported that age and a nerve-damage marker (neurofilament light chain) mattered for all three outcomes, and that some markers added unique information only in specific cases.",
+    "why": "Many biomarker studies struggle because measurements are highly correlated, so it is hard to tell which one adds something new. A method that separates unique from redundant signals, with error control, could make machine-learning results easier to interpret. The text does not show how well the findings hold up outside these cohorts, so the specific biological claims should be treated as preliminary.",
+    "background": "- Alzheimer's disease: a progressive brain disease; biomarkers are measurable signs (in blood, spinal fluid, genes, or scans) linked to it.\n- Machine learning model: a computer program that learns patterns from data to make predictions.\n- Feature importance: a score for how much a model relies on a given variable.\n- Conditional (unique) contribution: how much a variable adds after accounting for the other variables, so overlapping measurements are not double-counted.\n- False discovery control: statistical safeguards that limit the number of findings that are due to chance.\n- Cohorts named: ADNI, BioFINDER, and UK Biobank are large research datasets of participants.\n- Abbreviations: APOE ε4 is a common genetic risk variant; NfL is neurofilament light, a marker of nerve injury; p-tau181 and tau are proteins linked to the disease; Aβ42 and Aβ40 are amyloid-beta protein fragments.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Alzheimer's disease (AD) is characterized by complex biology captured by proteomics, transcriptomics, genetics, and brain imaging. These high-dimensional and correlated data make biomarker discovery challenging. To disentangle biomedical AD data, we propose Conditional Feature Importance (CFI), a theory-grounded framework quantifying the unique contribution of individual or grouped variables in any machine learning model while controlling false discoveries. Across ADNI, BioFINDER, and UK Biobank (nearly 48,000 participants), CFI uncovered a striking contrast between unique versus redundant biomarkers across protein and imaging signatures of AD diagnosis, onset, and progression. Age and neurofilament light chain (NfL) were important for all three outcomes, and A{beta}42 was common to diagnosis and progression. Beyond these shared predictors, in BioFINDER, markers associated with neuronal and synaptic injury, including plasma total tau, CSF -synuclein, and CSF neurogranin, contributed unique predictive information for diagnosis, whereas markers related to the amyloid cascade, CSF p-tau181 and A{beta}40, contributed unique predictive information for progression. APOE {varepsilon}4 offered no unique information once downstream proteins were accounted for, whereas contextual markers such as CSF A{beta}40 emerged only through interactions with other biomarkers. We argue that CFI increases the scientific value of machine learning by providing rigorous statistical insights on complex datasets.",
+   "source": "biorxiv"
+  },
+  {
    "uid": "biorxiv:10.64898/2026.11.24.769047",
    "title": "Human iPSC-derived Olfactory Sensory Organoids model olfactory function and drug response",
    "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.769047v1",
@@ -22,44 +57,14 @@
    "primary_category": "neuroscience",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "The authors report human iPSC-derived olfactory sensory organoids that show cell-type diversity, developmental transcriptional programs matched to a fetal nasal atlas, spontaneous network bursting, and altered network activity after three kinase inhibitors (Dasatinib, Trametinib, Selumetinib).",
-    "plain": "Some drugs are being considered for delivery through the nose, which may bypass the blood-brain barrier to reach the brain. This paper describes a lab-grown, three-dimensional mini-tissue made from human stem cells that resembles the developing smell system. The researchers found that the tissue contains several cell types, shows electrical activity, and responds in measurable ways to three cancer-related drugs.",
-    "why": "Little is known about how drugs given intranasally affect human olfactory tissue, so a human model for testing this has practical value for safety and drug development. The text does not report any clinical or in vivo data, so its usefulness for predicting effects in patients remains to be tested.",
-    "background": "- Organoid: a small, lab-grown 3D tissue made from stem cells that mimics some features of a real organ.\n- Induced pluripotent stem cells (iPSCs): adult cells reprogrammed back to an early, flexible state so they can become many cell types.\n- Olfactory sensory neurons: nerve cells in the nose that detect smells and send signals to the brain.\n- Blood-brain barrier: a filter that limits which substances pass from the blood into the brain.\n- Intranasal delivery: giving medicine through the nose, a possible route to the brain.\n- Single-nuclei RNA sequencing: a method that reads which genes are active in individual cells, used to identify cell types.\n- Kinase inhibitors: drugs that block certain enzymes (kinases) involved in cell growth; here they are relevant to glioma, a brain tumour.\n- Network bursting: coordinated, rhythmic bursts of electrical firing across many cells.",
+    "one_liner": "Human iPSC-derived olfactory sensory organoids, grown for three months, show olfactory-like neuron and glial populations, developmental transcriptional changes compared with a fetal nasal atlas, spontaneous network bursting, and distinct activity responses to three glioma-relevant kinase inhibitors.",
+    "plain": "Researchers grew small three-dimensional clusters of tissue from human stem cells that resemble the developing smell system in the nose. They tracked how the cells mature over three months, found that the clusters develop electrical firing and synchronized bursts of activity, and showed that three cancer-related drugs change that activity in different ways. The aim is a lab model for studying smell development and for checking how drugs given through the nose might affect nerve tissue there.",
+    "why": "Intranasal delivery is being explored as a way to get drugs past the blood-brain barrier, but little is known about how those drugs affect human olfactory tissue. A human model that can be tested with drugs could help screen for such effects before people are exposed, though the text does not show how well it predicts effects in real patients.",
+    "background": "- Induced pluripotent stem cells (iPSCs): adult cells reprogrammed to an embryonic-like state, which can then be coaxed into other cell types.\n- Organoid: a small, lab-grown 3D tissue culture that mimics some features of a real organ.\n- Olfactory sensory neurons: nerve cells in the nose that detect smells and send signals to the brain.\n- Single-nuclei RNA sequencing: a method that reads which genes are active in each cell nucleus, used to identify cell types.\n- Electrical network bursting: synchronized bursts of firing across many cells, a sign of functional connectivity.\n- Kinase inhibitors: drugs that block enzymes (kinases) involved in cell growth signaling; Dasatinib, Trametinib and Selumetinib are examples used in glioma (brain tumor) research.\n- Blood-brain barrier: a protective layer that limits which substances pass from blood into the brain.",
     "difficulty": "research-level",
     "ai": true
    },
    "abstract": "Intranasal drug delivery is being explored as an alternative approach to overcome the blood-brain barrier in the treatment of central nervous system diseases. However, little is known about how therapeutics administered through this route affect human olfactory tissue. Here, we develop human induced pluripotent stem cell-derived olfactory sensory organoids that reproduce key cellular and functional features of the developing olfactory system. Over three months of differentiation, the organoids acquire diverse neuronal and glial-associated populations, including cells expressing markers of olfactory sensory neurons and interneurons. Single-nuclei RNA sequencing shows changes in cellular composition and lineage-associated transcriptional programs during maturation, while comparison with a human fetal nasal atlas identifies shared neural populations and developmental signatures. Alongside these molecular changes, the organoids develop spontaneous electrical activity and coordinated network bursting. Exposure to the glioma-relevant kinase inhibitors Dasatinib, Trametinib, and Selumetinib produces distinct changes in neuronal network activity, demonstrating the ability of the model to capture compound-associated functional responses. Together, these findings establish a human Olfactory Sensory Organoid system for investigating olfactory development and evaluating how therapeutics may affect olfactory neural tissue during intranasal drug administration.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.20.768070",
-   "title": "Investigating Motor Skill Acquisition in Mice and Humans: Towards A Cross-Species Paradigm",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768070v1",
-   "authors": [
-    "Hille, M.",
-    "Justus, L. C.",
-    "Zocher, S.",
-    "Stark, T.",
-    "Bonhoeffer, M.",
-    "Lerch, J. P.",
-    "Czisch, M.",
-    "Kühn, S.",
-    "Lindenberger, U.",
-    "Bonhoeffer, T."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.20.768070 v1",
-   "primary_category": "neuroscience",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A cross-species study that uses a matched chopstick grasping task in mice and humans, paired with structural and quantitative MRI before, during, and after training, to compare early brain changes linked to motor skill learning.",
-    "plain": "Scientists want to connect brain scans taken from living people with the cell-level changes seen in animal studies, but the two are hard to compare. This paper builds a similar reaching-and-grasping task for mice and people, trains some of each, and scans their brains over time. In mice, the motor-control area of the cortex shrank somewhat in trained animals; in people, no reliable change in overall gray matter volume appeared, but tissue-sensitive scan measures shifted in a way that may reflect more myelin (the fatty insulation around nerve fibers).",
-    "why": "It offers a way to line up human brain imaging with animal experiments, which could help interpret what MRI signals mean at the cellular level. The authors are careful to say that it is unclear whether the changes in the two species share a common biological mechanism, so the work is a starting point rather than a settled link.",
-    "background": "- Motor skill learning: getting better at a movement such as grasping through practice.\n- Single-pellet reaching task: a standard test in rodents where they reach through a slot to grab a food pellet.\n- Structural MRI: scans that measure the size or volume of brain regions such as gray matter.\n- Quantitative MRI (MTsat, R1): scan measures sensitive to tissue properties; these are often used as proxies for myelin content, which is an indirect inference.\n- Myelin: the insulating layer on nerve fibers that can change with learning.\n- Cross-species paradigm: an experiment designed to run the same kind of task in different animals, here mice and humans.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Relating non-invasive observations of human brain plasticity to cellular processes identified in animal models remains a major challenge in neuroscience. We address this challenge by introducing a paradigm for studying motor skill acquisition across species. We designed a human chopstick grasping task modeled after the rodent single-pellet reaching task, resulting in a comparable sequence of reach-to-grasp movements across species. We studied 48 young adult male C57BL/6N mice and 71 young men, comparing trained groups with untrained controls. In both mice and humans, structural magnetic resonance imaging (MRI) was performed before, during, and after motor training. The functional form of behavioral performance gains on the trained task was highly similar across species. In trained compared to control mice, analysis of the early learning interval revealed decreases in regional volume in contralateral primary motor and forelimb somatosensory cortices, with greater volume reductions in primary motor cortex associated with better reaching performance. In humans, performance gains transferred to other chopstick tasks but not to general dexterity, and no reliable changes in gray matter volume were observed. Quantitative MRI, however, revealed early training-related changes in tissue-sensitive measures, including increases in magnetization transfer saturation (MTsat) and longitudinal relaxation rate (R1) in contralateral motor and frontal regions, potentially reflecting an increase in intracortical myelin. Thus, early structural changes in the contralateral motor cortex were detected in both species, but the degree to which these changes reflect a common biological mechanism is unclear. We conclude that the present cross-species paradigm provides a viable starting point for studying brain plasticity across species. Future work needs to relate macroscopic structural changes more directly to cellular processes by applying longitudinal microscopic imaging and MRI in the same animals.",
    "source": "biorxiv"
   },
   {

@@ -3,49 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33345",
-   "title": "A Sequent Calculus for the Quantified Reflection Calculus $\\mathrm{QRC}_1$: Cut-Elimination, Interpolation, and NP-Completeness",
-   "url": "https://arxiv.org/abs/2611.33345",
-   "authors": [
-    "Mitar Nedeljkovi\\'c"
-   ],
-   "label": "arXiv:2611.33345v1",
-   "primary_category": "math.LO",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper gives the first Gentzen-style sequent calculus for the quantified reflection calculus QRC_1, proves cut-admissibility, interpolation and finite model property results, and claims NP-completeness of its decision problem over fixed signatures.",
-    "plain": "This paper is about a formal logic that describes what provability in arithmetic can say, extended to allow quantifiers over statements. The authors build a new proof system for this logic, in which every step of reasoning follows a fixed set of rules, and use it to establish several structural properties. They also state that deciding whether a given formula is valid in this logic is NP-complete, meaning it is hard in a precise but comparatively manageable sense.",
-    "why": "The paper matters mainly to specialists in proof theory and modal logic, since it offers a clean proof system for a logic that earlier results suggested would be hard to handle. Its links to provability in Peano and Heyting Arithmetic make it relevant to the foundations of mathematics, but the text itself does not say how far these results reach beyond that area.",
-    "background": "- Modal logic: a logic with operators such as \"it is provable that\", studied with possible-worlds (Kripke) semantics.\n- Sequent calculus (Gentzen-style): a proof system where proofs are built from rules that manipulate sequents, which are lists of assumptions and conclusions.\n- Cut-elimination: showing that a proof rule called \"cut\" (a shortcut that uses an intermediate lemma) can always be removed, which gives proofs with controlled structure.\n- Craig interpolation: given a valid implication, one can find an intermediate formula using only shared vocabulary.\n- Decision problem and NP-completeness: asking whether an algorithm can decide validity, and how hard that is; NP means answers can be checked quickly, though finding them may be hard.\n- Peano and Heyting Arithmetic: standard formal systems of arithmetic (classical and intuitionistic).",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We introduce $\\mathrm{G3QRC}_1$, the first Gentzen-style sequent calculus for Borges and Joosten's Quantified Reflection Calculus ($\\mathrm{QRC}_1$). As a strictly positive, first-order modal logic, $\\mathrm{QRC}_1$ crucially escapes Vardanyan's $\\Pi^0_2$-completeness theorem for quantified provability logic, while remaining arithmetically complete with respect to Peano and Heyting Arithmetic. The central innovation of $\\mathrm{G3QRC}_1$ is a pair of context-erasing modal rules that simultaneously account for the monotonicity and transitivity axioms by deliberately discarding parametric context across modal boundaries. This structural bottleneck allows for a clean proof of cut-admissibility via a standard lexicographic induction, circumventing the complex loop-checking typically required for provability logics. Cut admissibility yields an instantiated subformula property and supports a direct canonical proof of the finite model property. We streamline the adequate Kripke semantics by interpreting constants globally. We also establish a split-context Craig interpolation theorem and a contextual form of left uniform interpolation, uniformly eliminating private predicate symbols, constants, and free parameters. Finally, by leveraging the rigid structural constraints of the context-erasing rules and the absence of left-branching connectives, we prove that, over the standard fixed countable signatures specified in the paper, the decision problem for $\\mathrm{QRC}_1$ is $\\mathbf{NP}$-complete, situating this quantified modal logic in a comparatively low nondeterministic complexity class.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34850",
-   "title": "Well-foundedness of the strict Lipschitz order on countably complete filters",
-   "url": "https://arxiv.org/abs/2611.34850",
-   "authors": [
-    "Gabriel Fernandes",
-    "Matheus Duzi"
-   ],
-   "label": "arXiv:2611.34850v1",
-   "primary_category": "math.LO",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "In ZF+DC, the strict Lipschitz order on proper countably complete filters on a fixed ordinal is shown to be well-founded, and two ultrafilters on the same ordinal are shown to be equal when each is nonexpansively reducible to the other, answering both parts of Question 9.2.11 of The Ultrapower Axiom.",
-    "plain": "This paper is about a question in set theory: how to compare certain collections of large-scale \"measurements\" on infinite sets, called filters, so that there is no endless downward chain of ever-smaller ones. The text reports that, under the standard background axioms (ZF plus dependent choice), such a comparison order has no infinite descending chains. It also reports that two of these special collections, called ultrafilters, are equal whenever each can be reduced to the other in a bounded way.",
-    "why": "The results settle both parts of a specific open question posed in a known book on the Ultrapower Axiom, a proposed principle in set theory. The text does not say more broadly how much this affects the field, and I am not certain what further consequences it has beyond answering that question.",
-    "background": "- ZF and DC: standard foundational axioms of set theory (Zermelo-Fraenkel, plus dependent choice), without the full axiom of choice.\n- Ordinal: a well-ordered \"counting\" number extending the natural numbers into the infinite.\n- Filter: a family of large subsets of a set, closed under taking supersets and intersections; \"countably complete\" means closed under countable intersections.\n- Ultrafilter: a maximal filter, which decides for every subset whether it is \"large.\"\n- Well-founded order: one with no infinite descending chains, which allows induction and recursion.\n- Lipschitz/nonexpansive reduction: a way of comparing filters via a map that does not stretch distances, roughly a bounded-complexity comparison.\n- Ultrapower Axiom: a proposed set-theoretic principle studied in a book by Goldberg; the question numbering refers to that book.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "In $\\mathsf{ZF}+\\mathsf{DC}$, the strict Lipschitz order on proper countably complete filters on any fixed ordinal is well-founded. The proof uses transfinite recursion and closure under countable intersections to derive a contradiction from a descending chain. Restricting each filter to the least ordinal it contains yields a set-like well-founded order that compares filters on different ordinals. In $\\mathsf{ZF}$, two ultrafilters on the same ordinal are equal if each is nonexpansively reducible to the other. These results answer both parts of Question 9.2.11 in The Ultrapower Axiom.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34109",
    "title": "A family of forcings with hyperfinite equivalence of generics",
    "url": "https://arxiv.org/abs/2611.34109",

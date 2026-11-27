@@ -3,58 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34928",
-   "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
-   "url": "https://arxiv.org/abs/2611.34928",
-   "authors": [
-    "Lukas Aichberger",
-    "Adam Golinski",
-    "Arno Blaas",
-    "Arwen Bradley",
-    "Jacob Springer",
-    "Mehrdad Farajtabar",
-    "Michael Kirchhof",
-    "Sinead Williamson"
-   ],
-   "label": "arXiv:2611.34928v1",
-   "primary_category": "cs.CL",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "DART mines rejected reasoning traces on hard math problems by ranking uncertain steps, generating distinct alternatives with reference-answer guidance and a meta-thought, and completing them, to recover more problems and produce post-training data for Llama-3.1-8B-Instruct.",
-    "plain": "Language models learn math better when trained on worked solutions that reach the right answer, but for very hard problems such solutions are rare. This paper proposes a way to salvage wrong attempts: it finds the steps in a failed solution that the model was least sure about, writes deliberately different alternatives for those steps, and finishes the solutions to see whether any now reach the correct answer.",
-    "why": "The approach targets a real bottleneck, the scarcity of correct solutions to hard problems, which limits how much useful training data a model can get. Its reported gains are measured against simple repeated sampling on one dataset and a few benchmarks, so it is unclear how well they carry over to other models or problem types.",
-    "background": "- LLM post-training: extra training after initial learning, often on examples of good answers.\n- Verifier: a checker that marks whether a final answer is correct.\n- Monte Carlo (MC) sampling: generating many independent attempts and keeping those that work.\n- Greedy decoding: always picking the single most likely next word, giving one deterministic attempt per problem.\n- Position-weighted uncertainty: a score for how unsure the model was at each step, weighted by where the step falls in the solution.\n- Reference-answer guidance: using the known correct answer to steer the generated alternatives.\n- Benchmarks: MATH-500 and AIME are standard sets of competition-style math questions.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning Traces (DART), a trace-mining method that starts from a rejected trace, decomposes it into reasoning steps, and ranks them by position-weighted uncertainty. It then generates deliberately distinct alternative candidates for highly ranked steps using reference-answer guidance and a meta-thought before completing the resulting traces. On greedy-unsolved DeepMath-103K problems, DART recovers 37% more problems than MC sampling at a matched number of generated traces. Its estimated generation cost per recovered problem is nearly identical, while its cost per accepted trace is 30% lower. Post-training Llama-3.1-8B-Instruct on traces mined by DART achieves the highest point estimate in five of six evaluations across MATH-500 and AIME benchmarks. These results demonstrate that revisiting rejected traces with DART can expand problem coverage and provide effective post-training data.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33962",
-   "title": "DLaR: Dynamic Stochasticity Control for Latent Reasoning in Large Language Models",
-   "url": "https://arxiv.org/abs/2611.33962",
-   "authors": [
-    "Xiaocheng Luo",
-    "Peng Xu",
-    "Zaifu Zhan",
-    "Xiangyu Duan"
-   ],
-   "label": "arXiv:2611.33962v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "DLaR adds input-dependent and training-stage-dependent noise to latent (continuous-embedding) reasoning in LLMs trained with GRPO, reporting gains on math benchmarks over uniform-noise baselines.",
-    "plain": "Large language models usually think by writing out words one at a time. Some newer methods let the model reason inside its hidden numerical state instead, but those methods tend to follow one fixed path. This paper proposes DLaR, which adds controlled randomness to that hidden reasoning: more when the model seems unsure, less when it is confident, and gradually less as training progresses. The authors report better average scores on math tests than prior approaches.",
-    "why": "It targets a concrete weakness of latent reasoning, namely that deterministic inference cannot explore alternative solution paths, and offers a measured way to balance exploration and stability. The text reports results only on math benchmarks for two small models, so how well it generalizes is not shown here.",
-    "background": "- LLM: a large language model that generates text by predicting tokens.\n- Latent reasoning: reasoning carried out in the model's continuous hidden vectors rather than in written words.\n- Stochasticity / perturbation: deliberate random noise added so the model can try different paths.\n- Exploration vs. exploitation: trying new options versus sticking with what already works.\n- Entropy and confidence: measures of how spread out versus peaked the model's next-step predictions are.\n- GRPO: a reinforcement learning method that rewards better answers among a group of sampled attempts.\n- Pass@1 / Pass@8: the share of problems solved on the first try, or within eight sampled attempts.\n- Curriculum schedule: a plan that changes a setting gradually over training.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Latent reasoning enables LLMs to operate in continuous embedding space, yet existing methods suffer from deterministic inference that precludes exploration of diverse reasoning paths. While recent approaches inject stochasticity to restore exploration, we identify two fundamental limitations: \\textit{uniform stochasticity} across all steps is suboptimal, and unconstrained perturbations disrupt reasoning coherence. We propose Dynamic Stochasticity Control for Latent Reasoning (DLaR), a framework with two complementary mechanisms that operate at different temporal granularities within the GRPO reinforcement learning framework. At the token level, Adaptive Stochasticity Modulation (ASM) dynamically adjusts perturbation intensity at each latent step based on a confidence-entropy fusion signal, increasing exploration when the model is uncertain and preserving stability when confident. At the training level, Training-Aware Stochasticity Tuning (TAST) progressively decays the base stochasticity level following a curriculum schedule. Through this dual-level design, DLaR establishes a hierarchical exploration-exploitation strategy that operates at both token and training levels. Extensive experiments on four in-distribution and three out-of-distribution mathematical reasoning benchmarks demonstrate that DLaR achieves the highest average performance across model scales, reaching 27.9%/50.6% Pass@1/Pass@8 on Llama-3.2-1B and 46.8%/68.2% on Qwen2.5-1.5B. Code: \\href{https://github.com/xiaocen-luo/DLaR}{https://github.com/xiaocen-luo/DLaR}.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33165",
    "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
    "url": "https://arxiv.org/abs/2611.33165",

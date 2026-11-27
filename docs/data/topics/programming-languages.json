@@ -3,49 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.24990",
-   "title": "Show Your Work: Can Small Open Models Read SEC Filings with Evidence a Machine Can Check?",
-   "url": "https://arxiv.org/abs/2611.24990",
-   "authors": [
-    "Krishna Nandula"
-   ],
-   "label": "arXiv:2611.24990v1",
-   "primary_category": "cs.SE",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A benchmark of 1,000 questions over 90 SEC 10-K/10-Q filings tests whether small open language models (7–21B parameters, run on one consumer GPU) can extract numbers together with machine-checkable evidence (page plus verbatim quote), and finds that checks catch many errors but not all.",
-    "plain": "Companies file yearly and quarterly financial reports with the US SEC, and an AI model asked to pull a figure from one of them can sound confident while being wrong. This paper asks whether small AI models that run on a single gaming-class graphics card can instead point to the exact page and quote the number comes from, so a program can verify the answer. The authors built a test of 1,000 questions over 90 recent filings from 45 companies, using the official tagged values as answer keys, and compared ten models under three setups.",
-    "why": "Trustworthy extraction of financial figures matters for anyone relying on automated reading of filings, and the paper shows that a simple automatic check is useful but incomplete: a noticeable share of wrong answers still pass it, mostly from scale, unit, or wrong-period mistakes. Its findings on reasoning modes and retries are concrete, though they come from one benchmark and one hardware setup, so how far they generalise is an open question.",
-    "background": "- SEC 10-K (annual) and 10-Q (quarterly) filings: standard US company financial reports.\n- Inline XBRL: a machine-readable tagging format embedded in these reports; the tags supply the answer keys.\n- Instruct model: a language model fine-tuned to follow user requests; \"open\" means weights are publicly released.\n- Parameters (7–21B): a rough measure of model size; small models can run on one consumer GPU.\n- Check-and-retry: the model's answer is verified against its quoted evidence, and if the check fails it tries again.\n- Reasoning mode: a setting where the model writes out intermediate reasoning before answering.\n- Scale or unit errors: e.g., reporting figures in thousands as if they were in millions.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "A fluent answer from a language model is not a verified one. We ask whether small open models that run on a single consumer GPU can extract numbers from SEC filings with evidence a machine can check: the page and a verbatim quote containing the number. We introduce Filing-Evidence, a benchmark of 1,000 questions over 90 recent 10-K and 10-Q filings of 45 US companies, with answer keys taken from the filers' inline XBRL tags. We evaluate ten instruct models from ten developers (7-21B parameters) on one RTX 4090 in three setups: plain, check-and-retry, and the model's own reasoning mode. Accuracy with checkable evidence ranges from 17.1% to 82.7% in the plain setup, and the best result is 84.5% (Qwen3.5-9B). An automatic checker rejects many wrong answers, but between 16 and 167 answers per 1,000 give a wrong value for an answerable question and still pass every check. In the plain setup, 57% of these are scale or unit errors and 30% take another period or column of the right line. Reasoning significantly reduces such errors for 4 of 5 models that offer it. Retrying after a failed check raises accuracy by up to 3.9 points but never reduces them. Questions, model outputs, code and protocol are public.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34377",
-   "title": "SmartLens: Turning AI Agent Changes into Learning, Review, and Risk Signals in the IDE",
-   "url": "https://arxiv.org/abs/2611.34377",
-   "authors": [
-    "Vahid Etemadi",
-    "Gregorio Robles"
-   ],
-   "label": "arXiv:2611.34377v1",
-   "primary_category": "cs.SE",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "SmartLens is an IntelliJ IDEA plugin that attributes pending changes to AI coding agents versus the developer and uses that attribution, combined with Git history, for skill learning, review prioritization, and risk hotspot detection, with a preliminary evaluation.",
-    "plain": "Software developers are increasingly handing coding tasks to AI agents and then having to check, ship, and learn from the code those agents write. SmartLens is a plugin for a popular programming editor that labels which uncommitted edits came from an AI agent, the developer, or both. It then uses those labels to point out new skills the agent used, rank changes by how urgently they need review, and flag risky files.",
-    "why": "As more code is written by AI agents, knowing who wrote what and where the risk sits could matter for code quality and for developers' own learning. The evaluation is preliminary: attribution was correct in 8 of 12 scripted scenarios, and the risk ranking's advantage over plain churn (how often a file changes) is partly explained by recency, so its value is not yet established.",
-    "background": "- IDE: integrated development environment, the software a programmer writes code in.\n- IntelliJ IDEA: a widely used IDE; a \"plugin\" is an add-on to it.\n- AI coding agent: a program that makes multi-step code edits on its own when given a task.\n- Git: a version-control system that records the history of code changes as \"commits.\"\n- Attribution: working out who or what produced a given change.\n- Churn: how often a file is modified; used here as a baseline for predicting bugs.\n- Blind spots: cases where the attribution method is expected to be unreliable.\n- Recency: the tendency for recently changed files to be more likely to have bugs regardless of other factors.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Developers increasingly act as managers of AI agents: they hand tasks to AI coding agents and then have to understand, verify, ship, and learn from what the agents produce. IDEs and recent tools can show which committed lines were written by AI, but they do not attribute the pending changes of external agents, and they do not use attribution to help the developer review, learn, or judge risk. We present SmartLens, an IntelliJ IDEA plugin that attributes changes to an AI agent, the developer, or both. It combines this attribution with the Git history to support three goals: (i) Learn compares the skills (APIs, language features, annotations) that agents used with the skills the developer has used in their own commits; (ii) Understand ranks pending changes by review priority; and (iii) Risk shows hotspots: files that change often, are mostly written by AI, and that the developer barely knows. In a preliminary evaluation, SmartLens attributed 8 of 12 scripted IDE scenarios correctly; all failures were in (expected) blind spots. On 8 Open Source Software repositories with agent co-authored commits, agents introduced up to 253 skills that do not appear in the main developer's own commits. The Risk ranking was as good as or better than plain churn at predicting later bug fixes, but part of this gain is due to recency.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34210",
    "title": "Direct cognition problem: a semantic skeleton of mathematics and its growth",
    "url": "https://arxiv.org/abs/2611.34210",

@@ -3,61 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34348",
-   "title": "List coloring degenerate graphs with requests",
-   "url": "https://arxiv.org/abs/2611.34348",
-   "authors": [
-    "Rajat Adak",
-    "L. Sunil Chandran",
-    "Shiwali Gupta",
-    "Tom\\'a\\v{s} Kaiser",
-    "Subrahmanyam Kalyanasundaram",
-    "Rogers Mathew",
-    "Saraswati Girish Nanoti",
-    "Suraj Kumar Sahoo",
-    "Umesh Shankar",
-    "Joel M. Thomas"
-   ],
-   "label": "arXiv:2611.34348v1",
-   "primary_category": "math.CO",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper improves the known bounds on list size and satisfaction ratio for flexible list coloring of d-degenerate graphs, at the two extreme parameter values set by the complete graph on d+1 vertices.",
-    "plain": "The paper studies a graph-coloring problem: each vertex gets a short menu of allowed colors, and some vertices request a specific color from their menu, and the question is how many of those requests can be honored at once. The authors prove three results about graphs that are \"d-degenerate\" (they can be built up or stripped down one vertex at a time, each vertex touching at most d others at that stage). The results concern the extreme settings where the menus are as small as possible and the fraction of satisfiable requests is as large as possible.",
-    "why": "The work sharpens a known trade-off between how large each menu must be and what fraction of requests can be guaranteed, and the authors state that the complete graph on d+1 vertices shows these extremes are the natural limits. The text does not say what applications it may have beyond graph theory, so that connection is unclear.",
-    "background": "- Graph: vertices joined by edges; a coloring gives adjacent vertices different colors.\n- List coloring: each vertex has its own allowed list of colors of a fixed size k.\n- d-degenerate graph: every subgraph has a vertex with at most d neighbors, so the graph can be emptied one vertex at a time.\n- Flexible (k, epsilon) coloring: for any lists and any set of requested colors, a proper coloring exists that satisfies at least an epsilon fraction of the requests.\n- Complete graph on d+1 vertices: every pair of vertices is adjacent; it shows list size must be at least d+1 and epsilon at most 1/(d+1).\n- Inverse polynomial / inverse exponential: the satisfaction fraction shrinks like a power of d versus like a constant raised to d; the polynomial version is much larger for big d.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We prove three results on the flexible list coloring of $d$-degenerate graphs. Following Dvo\\v{r}\\'{a}k, Norin and Postle [J. Graph Theory 2019], a graph $G$ is $(k,\\epsilon)$-flexible if for any assignment $L$ of lists of size $k$ to its vertices and any choice of requested colors by a set $\\widehat V$ of the vertices from their respective lists, there is an $L$-coloring satisfying at least $\\epsilon|\\widehat V|$ of the requests. The complete graph on $d+1$ vertices shows that if all $d$-degenerate graphs are $(k,\\epsilon)$-flexible for some list size $k$ and satisfaction ratio $\\epsilon$, then $k \\geq d+1$ and $\\epsilon\\leq\\tfrac1{d+1}$. Our results concern values at or near these extremes. For list size $d+2$, we improve the satisfaction ratio from an inverse exponential to an inverse polynomial function of $d$. For satisfaction ratio $\\tfrac1{d+1}$, we prove that it is achievable for list size $2d$ as well as $\\left\\lfloor(d+2)\\left(2-\\tfrac1e\\right)\\right\\rfloor$ (which is less than $2d$ for $d\\geq 9$).",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34794",
-   "title": "Monoid Representation of the Determinants of the Adjacency Matrices of 1-joined Path Graphs",
-   "url": "https://arxiv.org/abs/2611.34794",
-   "authors": [
-    "Daniel Pinzon",
-    "Daniel Pragel",
-    "Joshua Roberts",
-    "Zack Marshall",
-    "Olivia Strain"
-   ],
-   "label": "arXiv:2611.34794v1",
-   "primary_category": "math.CO",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper studies determinants of adjacency matrices of labeled path graphs joined by one edge, shows the resulting operation forms a finite matrix monoid, and characterizes it via representation theory from Khovanov et al. (2024).",
-    "plain": "The paper looks at networks made of simple chains of connected points, where each chain carries a label saying how it is attached to others. For each network it computes a single number, the determinant of a table (matrix) that records which points are linked. Joining chains together by one link follows a consistent rule, and the authors show that these numbers and the joining operation form a finite algebraic system whose full structure they describe.",
-    "why": "The text presents a complete description of this algebraic structure and says it yields general formulas for determinants of chains of joined paths, which is a concrete payoff. The text does not say how far these methods extend beyond this family of graphs, so wider connections are uncertain.",
-    "background": "- Graph: a set of points (vertices) joined by lines (edges).\n- Adjacency matrix: a grid of 0s and 1s recording which vertices are directly linked.\n- Determinant: a single number computed from a square grid of numbers; it summarizes certain properties of that grid.\n- Monoid: a set with an associative combining operation and an identity element, like multiplication of numbers but without requiring inverses.\n- Finite monoid of matrices: a finite collection of matrices closed under multiplication, with an identity.\n- Representation theory: a way of studying abstract algebraic objects by mapping them to concrete matrices or linear transformations.\n- Prior work: the paper builds on earlier work by the same authors and on Khovanov et al. (2024), which the text does not describe.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Following previous work by these authors, this paper explores all labeled path graphs joined by 1 edge where the labeling contains the information on how to join that graph. The algebraic structure that this operation has on the determinant of the adjacency matrix of the graph gives a finite monoid of matrices under matrix multiplication. We completely characterize the monoid using the representation theory discussed in Khovanov et al(2024). Finally, we demonstrate how these results can be used to find general formulas for the determinants of chains of 1-joined labeled paths.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33423",
    "title": "From random intersection to spatial graphs: a unified asymptotic framework",
    "url": "https://arxiv.org/abs/2611.33423",

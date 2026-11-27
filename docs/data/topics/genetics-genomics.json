@@ -3,51 +3,56 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.19.767897",
-   "title": "The 'near T2T' Canton-S assembly is inconsistent with other Canton-S genomes",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767897v1",
+   "uid": "biorxiv:10.64898/2026.11.26.769172",
+   "title": "Genomic conformation reflects epigenetic programming rather than gene expression",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.26.769172v1",
    "authors": [
-    "Emerson, J. J."
+    "Edwards, C. A.",
+    "Dearden, F. L.",
+    "Weinberg-Shukron, A.",
+    "Moreno-Barriga, A.",
+    "Freeman, A. K.",
+    "Gray, D. J.",
+    "Ferguson-Smith, A. C."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.19.767897 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.26.769172 v1",
    "primary_category": "genomics",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A commentary arguing that the recently published \"near T2T\" genome assembly of the Drosophila Canton-S strain differs from three other independently sequenced Canton-S assemblies by an amount comparable to differences between distinct strains, raising doubts about its genetic identity.",
-    "plain": "Canton-S is a fruit fly strain that scientists have used for decades as a standard reference in many experiments. A recent project produced a very complete genetic \"map\" (genome assembly) of this strain, and this short note argues that the map does not match three other independent maps of the same strain. The author's concern is that the new map may not truly represent Canton-S, so labs should think carefully before adopting it.",
-    "why": "Canton-S is a common baseline in fly genetics and behavior research, so whether its reference genome is accurate affects many studies. The note is a single critical comparison, and the text provided does not show how the original authors respond, so the strength of the concern should be judged alongside their reply.",
-    "background": "- Genome assembly: reconstructing an organism's full DNA sequence from short sequencing reads into long continuous pieces.\n- \"T2T\" (telomere-to-telomere): an assembly covering each chromosome end to end, including repetitive regions; \"near T2T\" means nearly complete.\n- Canton-S: a laboratory strain of the fruit fly Drosophila melanogaster, widely used as a \"wild-type\" reference.\n- Strain identity: labs routinely have genetically distinct copies of \"the same\" strain; a reference genome should match the strain actually in use.\n- Comparing assemblies: differences between independent assemblies of one strain are expected to be small; large differences can signal a different genetic background or assembly errors.\n- Commentary: this is a short critical note, not a full study with new experiments as described in the text.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Canton-S is among the most widely used Drosophila melanogaster strains, underlying substantial community infrastructure, including serving as a wild-type strain for: genetics studies; studying phenotypes, especially in behavioral studies; and complex trait mapping studies among many others. The recent 'near T2T' assembly of Canton-S (LIU et al.) is presented as delivering modern sequencing and assembly quality to the Drosophila community via this important strain. I find that this assembly is inconsistent with three other independently sequenced Canton-S genome assemblies on a magnitude comparable to differences between distinct strains, raising concerns about its genetic identity that the community should consider when choosing whether to adopt it as a resource.",
-   "source": "biorxiv"
-  },
-  {
-   "uid": "biorxiv:10.64898/2026.11.20.768178",
-   "title": "Genomics of the diversification of Heliconius cydno (Lepidoptera: Nymphalidae) in northern South America: geographic and phenotypic patterns",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768178v1",
-   "authors": [
-    "Arias Cardenas, A.",
-    "Rueda-M, N.",
-    "Arias, C. F.",
-    "Ravinet, M.",
-    "McMillan, O.",
-    "Pardo-Diaz, C.",
-    "Salazar, C."
-   ],
-   "label": "bioRxiv doi:10.64898/2026.11.20.768178 v1",
-   "primary_category": "genomics",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Whole-genome analysis of 133 Heliconius cydno butterflies that tests how Andean mountain uplift, geography and gene flow shaped its recent diversification, and maps the ivory:mir-193 locus behind a hindwing colour band that appears to have been passed to H. melpomene through introgression.",
-    "plain": "This study looks at a group of tropical butterflies whose wing patterns vary a lot from place to place in Central and northern South America. The researchers sequenced the complete genomes of 133 butterflies covering all the recognised subspecies, and asked how mountains, geography and interbreeding between species shaped how the group split apart. They found five of the fourteen described subspecies form distinct genetic lineages, and they traced one wing-pattern trait to a specific gene region.",
-    "why": "It shows how geography and mixing between related species can together drive the spread of a visible trait, and it adds a concrete genetic locus to the study of mimicry. The text does not report how strongly these findings generalise beyond these butterflies, so the wider significance is best treated as provisional.",
-    "background": "- Heliconius butterflies are known for warning colours (aposematism) and for mimicry, where unrelated-looking species share patterns to deter predators.\n- A subspecies is a geographic population with recognisably different traits; a monophyletic lineage is a group descended from one common ancestor.\n- Introgression means genes moving between species through occasional interbreeding and hybrids.\n- Andean orogeny is the uplift of the Andes mountains, which can split populations and create new ones.\n- Gene flow is the exchange of genes between populations; cis-regulatory elements are DNA stretches that switch genes on or off, rather than encoding proteins.\n- A microRNA (mir-193) is a short RNA that regulates other genes; ivory is a gene already known to affect wing patterns in this genus.\n- Whole-genome sequencing reads the full DNA of each individual, allowing comparisons across populations.",
+    "one_liner": "In the imprinted Dlk1-Dio3 region, parent-of-origin-specific 3D chromatin folding in fetal brain depends on the germline-derived imprinting control region and CTCF binding at a secondary element, and this folding can be disrupted without changing imprinting, transcription, or epigenetic state.",
+    "plain": "Cells pack their long DNA into folded loops and neighbourhoods, and this study asks whether that folding drives gene activity or follows from it. Using the Dlk1-Dio3 region, a stretch of DNA where a gene's expression depends on which parent it came from, the authors mapped how the DNA folds in fetal brain and then used genetic edits to test what depends on what. They found the folding can be changed while the chemical marks and gene activity stay the same.",
+    "why": "It suggests that 3D genome shape and gene activity can be controlled separately, which challenges a simple view that folding causes expression. The text does not say how far this holds outside this one region or this developmental stage, so its wider significance is uncertain.",
+    "background": "- Genomic imprinting: some genes are expressed only from the copy inherited from one parent, set by chemical tags (epigenetic marks) laid down in the germline.\n- Imprinting control region: a DNA element that carries these parent-specific marks and coordinates nearby genes.\n- Chromatin conformation: how DNA folds in three dimensions inside the nucleus, often mapped with chromosome-contact methods.\n- Topological domains: regions of DNA that fold together as units.\n- CTCF: a protein that binds DNA and helps anchor loops in the folded structure.\n- Transcription: the copying of a gene into RNA, the first step toward making a protein.",
     "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "The interplay between natural selection, gene flow, and geography is a key driver of population differentiation. This study investigates their influence on the recent adaptive radiation of Heliconius cydno, a mimetic and aposematic butterfly with striking variation in wing color pattern across its distribution in Central and northern South America. The genetic basis of this phenotypic diversity has a modular architecture, whereby a few key genes and cis-regulatory elements control differences among morphotypes. Using whole-genome sequences from 133 individuals representing all subspecies of H. cydno, we investigated (1) the role of Andean orogeny in its diversification and (2) the genetic basis of the variation in the hindwing white submarginal band, which to date, had remained unknown. First, we found that five of the fourteen described subspecies correspond to distinct monophyletic lineages and well-defined genetic clusters that originated in northwestern South America and later expanded into Central America and the Colombian inter-Andean valleys. Second, we observed signatures of genetic structure that were consistent with geographic patterns, particularly those associated with the inter-Andean region and Gorgona Island. Third, we identified ivory:mir-193 as the locus underlying variation in the white submarginal band on the hindwing. We also detected evidence of introgression suggesting that this trait was likely transferred from H. cydno to H. melpomene, contributing to the establishment of a novel mimicry ring with H. erato. Altogether, these findings highlight the roles of geography, genomic architecture, and introgression in the diversification of H. cydno.",
+   "abstract": "Genome function is regulated temporally and tissue-specifically through coordinated interplay between epigenetic modifications and genomic elements, however, the extent to which chromatin conformation shapes or is shaped by epigenetic programming and transcriptional activity in vivo, remains largely unresolved. Through analysis of the well-characterised Dlk1-Dio3 imprinted domain, we have identified tissue and parent-of-origin specific conformations and taken a genetic approach to determine the hierarchical relationships between conformation, epigenetic state and transcription. Parental-origin specific topological domains identified in fetal brain are dependent on the germline-derived imprinting control region. In the absence of specific CTCF binding at a secondary imprinting control element, the parental origin-specific CTCF-mediated conformation can be disrupted without a change to domain-wide imprinting, transcription or epigenetic state. These findings indicate that, in this developmental context, conformation can be decoupled from transcription and that each can be independently governed by a hierarchy of epigenetically controlled regulatory features initiated in the germline.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.26.769437",
+   "title": "AHCY inhibition reshapes DNA methylation and transcriptional regulation in colorectal cancer cells",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.26.769437v1",
+   "authors": [
+    "Tikkakoski, I.",
+    "Karttunen, K.",
+    "Patel, D.",
+    "Datta, S.",
+    "Sahu, B.",
+    "Pihlajamaa, P."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.26.769437 v1",
+   "primary_category": "genomics",
+   "date": "2026-11-27",
+   "summary": {
+    "one_liner": "Pharmacological inhibition of AHCY in GP5d colorectal cancer cells raised SAH, caused genome-wide DNA hypomethylation with some localized hypermethylation, slowed proliferation, and linked promoter hypomethylation to upregulation of cell cycle genes such as CDKN1A.",
+    "plain": "Cells rely on a chain of chemical reactions that moves small chemical \"methyl\" tags around, and these tags help switch genes on or off. This study blocked one enzyme in that chain, AHCY, in a colon cancer cell line and measured the cells' chemistry, their DNA tagging across the genome, and which genes were active. The cells lost tags across much of their DNA, grew more slowly, and a cell cycle brake gene, CDKN1A, was strongly turned up.",
+    "why": "It suggests a possible link between cell metabolism, DNA methylation and the control of cancer cell growth, which may matter for thinking about metabolic drugs aimed at cancer. The text is a single cell-line study, so it does not show whether the same effects occur in tumours or patients.",
+    "background": "- DNA methylation: adding a small chemical tag to DNA, usually reducing how active a nearby gene is; hypomethylation means losing tags, hypermethylation means gaining them.\n- Methionine cycle: a metabolic pathway that supplies methyl groups for tagging DNA and other molecules.\n- S-adenosylhomocysteine (SAH): a by-product of methyl transfers that, when it builds up, blocks the enzymes that add tags.\n- AHCY: the enzyme that breaks down SAH; blocking it causes SAH to accumulate.\n- Promoter vs gene body: the promoter is the switch region just before a gene; the gene body is the coding stretch itself.\n- CDKN1A: a protein that slows cell division, acting as a brake on the cell cycle.\n- Nanopore sequencing: a DNA-reading method that can detect methyl tags directly from the DNA molecule.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "DNA methylation is an important epigenetic mechanism regulating gene expression, and its maintenance depends on cellular methyl group metabolism. Adenosylhomocysteinase (AHCY) is a key enzyme in the methionine cycle that hydrolyzes S-adenosylhomocysteine (SAH), thereby preventing its accumulation and inhibition of methyltransferase activity. Although AHCY has been implicated in cancer cell proliferation and transcriptional regulation, the effects of its inhibition on genome-wide DNA methylation and their relationship to gene expression remain poorly understood in colorectal cancer (CRC). Here, we investigated the consequences of pharmacological AHCY inhibition in GP5d colorectal cancer cells by integrating metabolomic profiling, nanopore sequencing-based DNA methylation analysis and RNA sequencing. AHCY inhibition resulted in SAH accumulation, widespread DNA hypomethylation and reduced cell proliferation, accompanied by changes in purine metabolism and gene expression. Despite the overall loss of DNA methylation, localized hypermethylation was also observed, particularly at CpG-rich regulatory regions. Transcriptomic analysis revealed changes in proliferation-associated and cell cycle checkpoint pathways, including strong upregulation of the cell cycle regulator CDKN1A. Importantly, promoter hypomethylation was significantly enriched among upregulated genes, including genes involved in cell cycle regulation, whereas gene body hypomethylation showed no comparable association with differential gene expression. Together, these findings demonstrate that AHCY inhibition induces extensive metabolic, epigenetic and transcriptional changes in CRC cells and suggest that promoter hypomethylation may contribute to the transcriptional responses associated with reduced cell proliferation.",
    "source": "biorxiv"
   },
   {

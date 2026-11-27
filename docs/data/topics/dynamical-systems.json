@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34251",
-   "title": "Integrable nearest neighbor interaction Hamiltonians and the rigidity of the Toda Lattice",
-   "url": "https://arxiv.org/abs/2611.34251",
-   "authors": [
-    "Vadim Kaloshin",
-    "Illya Koval",
-    "Daniel Tsodikovich"
-   ],
-   "label": "arXiv:2611.34251v1",
-   "primary_category": "math.DS",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper shows that certain analytic deformations of the three-particle nearest-neighbour Toda lattice potential destroy integrability, without assuming any form for the integrals, using a link between high-energy Toda orbits and billiard orbits in polytopes.",
-    "plain": "The paper studies a simple model of particles on a line, where each particle only pushes on its immediate neighbours, and a famous special case called the Toda lattice that can be solved exactly. The authors alter the pushing law slightly and ask whether the system can still be solved exactly. For three particles, they show that some kinds of smooth alterations break this exact solvability.",
-    "why": "The result says the Toda lattice is \"rigid\": small smooth changes to its interaction law lose the special solvable structure. The authors draw an analogy with the local rigidity of ellipses in billiards, and the link to billiard orbits in polytopes is the main tool, so the work connects mechanics and billiard dynamics. The abstract does not say how broadly the result extends beyond three particles or the stated classes of deformations.",
-    "background": "- Hamiltonian system: a model of mechanics where energy determines how particles move over time.\n- Integrable system: one with enough conserved quantities to be solved exactly, so its motion is regular and predictable.\n- Nearest-neighbour interaction: each particle is affected only by the particles directly beside it.\n- Toda lattice: a known chain of particles with exponential neighbour interactions that is integrable.\n- Deformation: a small change to the interaction law.\n- Analytic: smooth in a strong sense, with convergent power series.\n- Billiards: the motion of a point bouncing inside a region with straight-line paths between reflections; rigidity of ellipses means an ellipse table cannot be slightly changed while keeping integrability.\n- Polytope: a higher-dimensional analogue of a polygon or polyhedron.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We consider mechanical Hamiltonian systems, where the potentials describe a nearest-neighbor interaction law. In this setting, a non trivial example of an integrable system is the celebrated Toda lattice. We study deformations of this potential (for three particles), and show that some classes of analytic deformations of the potential break its integrability, without assuming anything about the form of the integrals. This result is reminiscent of local rigidity of ellipses in billiards. The proof relies on the fact that high energy orbits for the Toda lattice approximate billiard orbits in some polytopes.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34514",
-   "title": "Limit laws for Siegel theta sums",
-   "url": "https://arxiv.org/abs/2611.34514",
-   "authors": [
-    "Jory Griffin",
-    "Jens Marklof",
-    "Tariq Osman"
-   ],
-   "label": "arXiv:2611.34514v1",
-   "primary_category": "math.NT",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proves limit laws and precise heavy-tail asymptotics for the modulus of normalised Siegel theta sums when the quadratic form is chosen at random from the full space of quadratic forms or from the diagonal forms, extending work of Jurkat–Van Horne and Götze–Gordin.",
-    "plain": "The paper studies a kind of exponential sum over a grid of integer points, where the phase of each term is set by a quadratic form (a rule built from squared and cross terms). If the quadratic form is picked at random, the authors show how the size of the normalised sum behaves as the range of summation grows. The limiting behaviour depends on which collection of forms the random choice is drawn from, and they give precise tail estimates for two such collections.",
-    "why": "Theta sums appear in number theory, harmonic analysis and the study of automorphic forms, so limit laws for them add to a body of classical results. The text does not say what concrete applications follow, so beyond extending known one-variable and half-space results, its wider significance is unclear from the text alone.",
-    "background": "- Exponential sum: adding up complex numbers of the form e^(i·phase) over many points; its modulus measures how much the terms cancel.\n- Quadratic form: a polynomial whose terms are all of degree two, such as x^2 + 3xy - y^2.\n- Lattice: the regular grid of integer points in space.\n- Limit law: a statement that a rescaled random quantity converges to a fixed probability distribution.\n- Heavy-tail asymptotics: precise description of how slowly the probability of very large values decays.\n- Metaplectic group and Shale–Weil representation: a symmetry group and a way of representing it on functions, used as the main tool.\n- Unipotent flow and ergodic theory: studying long-run averages of a flow that moves points on a space of lattices, used to analyse the random sums.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Siegel theta sums are exponential sums over the integer lattice whose phases are determined by a quadratic form. For a random choice of quadratic form, we prove a limit law for the modulus of the normalised sum as the summation range tends to infinity. The limiting distribution depends on the space from which the quadratic form is sampled. We prove precise heavy-tail asymptotics for random sampling from (a) the full space of quadratic forms and (b) the space of diagonal forms. This study extends classic results by Jurkat and Van Horne for one-variable theta sums and by G\\\"otze and Gordin for theta series on Siegel half-spaces. Our approach uses the Shale--Weil representation of the metaplectic group and the ergodic theory of unipotent flows.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34165",
    "title": "Entropic continuity of Lyapunov exponents in arbitrary dimension",
    "url": "https://arxiv.org/abs/2611.34165",

@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34536",
-   "title": "Kant-Q: A Q-Learning Algorithm for Kantian Equilibrium in Symmetric Markov Games",
-   "url": "https://arxiv.org/abs/2611.34536",
-   "authors": [
-    "Rishi Bharadwaj",
-    "Sujit Gujar",
-    "Yadati Narahari"
-   ],
-   "label": "arXiv:2611.34536v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Proposes Kant-Q, a Q-learning variant that learns a \"Kantian equilibrium\" (each agent plays the action it would want everyone to play) in symmetric Markov games, with convergence and Pareto-efficiency results for a subclass of symmetric monotone games and experiments on iterated Prisoner's Dilemma and the GovSim fishery.",
-    "plain": "The paper looks at how AI agents learn to cooperate when their goals are partly shared and partly in conflict, such as a group of agents sharing a fishery. Instead of aiming for the usual game-theory stable outcome (Nash equilibrium), which can leave everyone worse off than necessary, the authors have each agent learn the single action it would most want all agents to take. They report that this approach reliably learns that outcome in the games they tested, including a fishery with up to 200 agents, while the comparison methods did worse.",
-    "why": "Many multi-agent learning methods settle on outcomes that are stable but wasteful, so a method that targets better group outcomes is relevant to cooperative AI and to how AI systems that are copies of one another might coordinate. The text supports the theoretical and experimental claims only within the games studied, and whether the idea carries over to messier real-world settings is not shown here.",
-    "background": "- Markov game: a repeated decision problem where several agents act at once and each one's reward depends on everyone's actions.\n- Q-learning: a standard trial-and-error method where an agent learns the value of each action in each situation.\n- Nash equilibrium: a state where no single agent gains by changing only its own action; it can still be inefficient for the group.\n- Pareto-efficient: no outcome exists that makes someone better off without making someone else worse off.\n- Symmetric game: all agents face the same rules and payoffs, so a shared strategy makes sense.\n- Kantian equilibrium: each agent asks which action it would want all agents to adopt, a universalization idea borrowed from Kant's ethics.\n- Iterated Prisoner's Dilemma: a repeated game where mutual cooperation beats mutual defection but defection is tempting.\n- GovSim: a benchmark simulating a shared resource (here, a fishery) that agents can overharvest.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "AI agents increasingly interact with one another, and many of these interactions are mixed-motive games, which have posed a persistent challenge for learning algorithms. Most multi-agent reinforcement learning (MARL) algorithms are designed to reach Nash equilibria, yet in many such games these equilibria are Pareto-inefficient. We instead study Kantian equilibria, an economic solution concept in which each agent plays the action it would want all agents to adopt. In symmetric games, this corresponds to an optimal common policy. We propose Kant-Q, a Q-learning algorithm in which each agent learns action profiles where all agents play the same action. Each update is then a sample from a single-agent MDP, so Kant-Q inherits the convergence guarantees of standard Q-learning. We show that every symmetric Markov game has a pure Kantian equilibrium. We also prove that all agents' Q-tables converge to the same limit, whose greedy policy is such an equilibrium, and that greedy play converges whenever the optimal common action is unique at every state. We further show that in a subclass of symmetric monotone games, the Kantian equilibrium is Pareto-efficient among pure strategy profiles and strictly individually rational. Empirically, on the iterated Prisoner's Dilemma and the GovSim fishery with up to 200 agents, Kant-Q learns the Kantian equilibrium, while the baselines underperform. Since copies of the same AI system naturally face one another in symmetric games, these results suggest universalization as a design principle for cooperative AI-AI interaction.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34861",
-   "title": "Last-Iterate Equilibrium Learning in Symmetric Congestion Games under Semi-Bandit Feedback",
-   "url": "https://arxiv.org/abs/2611.34861",
-   "authors": [
-    "Katerina Michou",
-    "Marina Kontalexi",
-    "Dimitris Fotakis"
-   ],
-   "label": "arXiv:2611.34861v1",
-   "primary_category": "cs.GT",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper gives a last-iterate learning method for mixed Nash equilibria in atomic symmetric congestion games with resource semi-bandit feedback, using a quadratic consensus penalty to make the symmetric equilibrium the unique minimizer of a transformed potential.",
-    "plain": "The paper studies a group of players who repeatedly choose shared resources, such as roads, where costs rise as more people use them, and each player learns from the costs and loads it observes. The authors add a penalty term that keeps the players' strategies consistent with a symmetric equilibrium, so the learning process has a single well-defined target. They propose a variant of gradient descent, a step-by-step improvement rule, and report that the players' strategies approach equilibrium at stated rates in expectation and that the played strategies converge almost surely.",
-    "why": "Congestion games model traffic and shared-resource problems, so a provable guarantee about the final strategies, not just averages over time, is useful for understanding when decentralized learning settles down. The text does not show how these rates compare with prior work or how the method performs in practice, so its wider significance is unclear from this excerpt alone.",
-    "background": "- Nash equilibrium: a state where no player can gain by unilaterally switching strategies.\n- Mixed strategy: a player randomizes over choices, using probabilities.\n- Congestion game: each resource's cost grows with the number of players using it.\n- Potential function: a single score that tracks how players' incentives change; in these games minimizing it corresponds to equilibrium.\n- Strong convexity: a shape of function with a single bowl-shaped minimum that curves upward steadily, making the minimum easy to find.\n- Semi-bandit feedback: after acting, a player sees the cost and load of each resource it used, but not the full outcome of other choices.\n- Last-iterate convergence: the current strategy profile itself approaches equilibrium, not just the time-average.\n- Online projected gradient descent: repeatedly nudging a strategy along the improving direction and then projecting it back onto the set of valid strategies.\n- Almost sure convergence: convergence with probability one.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study last-iterate learning of mixed Nash equilibria in atomic symmetric congestion games under resource semi-bandit feedback, where players observe both the costs and the loads of their selected resources. For strictly increasing latency functions, the restriction of the potential function to symmetric marginal profiles is strongly convex. However, players' independent stochastic updates need not preserve this symmetry without explicit synchronization. We show that a quadratic consensus penalty makes the potential globally strongly convex while making the symmetric equilibrium the unique minimizer of the transformed potential. We propose a variant of online projected gradient descent that achieves $O(t^{-2/3})$ squared distance to equilibrium and $O(t^{-1/3})$ maximum deviation gain in expectation, for every $t\\geq 1$ and for any initialization. The played profile also converges to equilibrium almost surely.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33193",
    "title": "Formalization, Transparency, and Collusion in Open-Source Game Theory",
    "url": "https://arxiv.org/abs/2611.33193",

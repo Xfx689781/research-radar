@@ -3,61 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34775",
-   "title": "State of the UNIONS: Four Milky Way companions discovered in a systematic search for northern Local Group satellites",
-   "url": "https://arxiv.org/abs/2611.34775",
-   "authors": [
-    "Simon E. T. Smith",
-    "Alan W. McConnachie",
-    "Thomas de Boer",
-    "Ken C. Chambers",
-    "Stephen Gwyn",
-    "Hendrik Hildebrandt",
-    "Jaclyn Jensen",
-    "Eugene Magnier",
-    "Nicolas F. Martin",
-    "Akshara Viswanathan",
-    "Shiyang Zhang"
-   ],
-   "label": "arXiv:2611.34775v1",
-   "primary_category": "astro-ph.GA",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Using gri photometry from the UNIONS northern sky survey, the authors report four new Milky Way satellites, two of which (Boötes VI and Draco III) are candidate ultra-faint dwarf galaxies pending chemodynamical follow-up, while UNIONS 2 and UNIONS 3 are too faint and compact to classify definitively.",
-    "plain": "Astronomers searched a large map of the northern sky for faint clusters of stars orbiting our Milky Way. They found four new small star systems. Two look like possible faint dwarf galaxies, and two are so dim and small that the paper cannot yet say what they are.",
-    "why": "Faint satellite galaxies are among the best tests of how much dark matter surrounds the Milky Way and of how many such small systems should exist. The paper says the faintest objects like these will turn up in growing numbers in upcoming wide-field surveys, but the classifications remain tentative.",
-    "background": "- Milky Way satellites: small stellar systems that orbit our galaxy, ranging from dense star clusters to faint dwarf galaxies.\n- Photometry: measuring object brightness through coloured filters (g, r, i here); colours help estimate distance and stellar age.\n- Absolute magnitude (M_V): how bright an object really is, independent of distance; more negative means brighter.\n- Half-light radius: the radius containing half the light, a measure of how spread out a system is.\n- Ultra-faint dwarf galaxy: a very dim, dark-matter-dominated galaxy; distinguishing it from a dense star cluster usually needs spectroscopy to measure stellar motions and chemistry.\n- Parsec (pc) and kiloparsec (kpc): astronomical distance units (about 3.26 light-years per parsec).\n- Globular cluster: a dense, ancient ball of stars; used here as the comparison class.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We present four newly discovered Milky Way satellites from a systematic search through the $gri$ photometry from the Ultraviolet Near-Infrared Optical Northern Survey (UNIONS). Two of these satellites are likely ultra-faint dwarf galaxies that we have named Bo\\\"otes VI and Draco III. Both galaxy candidates are $\\gtrsim 100$ kpc from the Galactic center and have absolute $V$-band magnitudes ($M_V$) of $-2.7^{+0.6}_{-0.5}$ and $-4.0\\pm0.6$, respectively. Bo\\\"otes VI and Draco III have physical half-light radii ($r_{\\rm h}$) of $\\sim 50$ pc, or about twice as large as the most extended Milky Way globular clusters with similar luminosities. They are therefore candidate galaxies, though chemodynamical analyses will be needed to secure these classifications. We name the two other systems UNIONS 2 and UNIONS 3. They are extremely faint ($M_V = +0.4^{+0.6}_{-0.9}$ and $-0.7^{+0.6}_{-0.8}$) and compact ($r_{\\rm h} = 5\\,\\pm\\,1$ and $10^{+3}_{-2} pc), and zero giant stars are identified in either of their present-day stellar populations. Morphological measurements alone are not sufficient to assess the presence of dark matter in either system, so do not provide definitive classifications. We discuss the challenges in either detecting or refuting the presence of dark matter in UNIONS 2 and UNIONS 3, two systems that are archetypal of the faintest satellites that will be discovered in increasing numbers in upcoming wide-field surveys.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33956",
-   "title": "The role of hierarchy in Galactic molecular clouds",
-   "url": "https://arxiv.org/abs/2611.33956",
-   "authors": [
-    "Kotora Sasaki",
-    "Nario Kuno",
-    "Hajime Fukushima",
-    "Shingo Nozaki"
-   ],
-   "label": "arXiv:2611.33956v1",
-   "primary_category": "astro-ph.GA",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A statistical study of 13 Galactic massive star-forming regions, using FUGIN CO survey data and a non-binary dendrogram, compares hierarchical gas structures (trunks, internal leaves, isolated structures) and their low-mass star and clump formation efficiencies.",
-    "plain": "Stars form inside clouds of cold gas, and this paper asks how the gas in massive star-forming regions is nested, from large clumps down to smaller dense pockets. The authors sorted the gas in 13 regions of our Milky Way into large \"trunks,\" the densest pieces inside them (\"leaves\"), and isolated pieces, then compared them. They report that leaves hold more dense, massive clumps than isolated pieces of similar size, without forming more low-mass stars.",
-    "why": "The results suggest that massive star formation depends on gas organized over scales larger than a single core, which bears on how massive stars and clusters form. The authors themselves note that the data come from a single epoch and constrain only structural differences, so the proposed accretion and fragmentation explanation remains an interpretation rather than a demonstrated mechanism.",
-    "background": "- Molecular clouds: cold, dense gas in galaxies where stars are born.\n- CO survey: observations of carbon monoxide, a molecular tracer used to map cloud gas and its motion along the line of sight.\n- Dendrogram: a tree-like map that nests gas structures inside larger ones, like branches within a trunk.\n- Trunks, leaves: trunks are large connected gas structures; leaves are the densest substructures within them.\n- Star formation efficiency: the fraction of gas that ends up in stars or dense clumps.\n- YSOs and Hi-GAL clumps: young stellar objects and dense gas clumps identified by infrared surveys, used as signposts of star formation.\n- Fragmentation: the breakup of a gas cloud into smaller pieces that can collapse.\n- Position-position-velocity data: maps giving sky position plus gas velocity, used to infer motion.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "To probe the role of hierarchical gas structures in massive star formation, we statistically analyzed 13 Galactic massive star-forming regions using FUGIN CO survey data. Applying a non-binary dendrogram to the position-position-velocity data, we classified the extracted structures into trunks, internal leaves (the densest substructures within trunks), and isolated structures, and compared their properties with an analysis of variance controlling for regional differences. In representative regions, the trunks correspond to morphologies such as filaments and hub-filament systems, or to kinematic signatures of structure-forming events such as cloud-cloud collisions. Across the sample, the trunks are extended, massive, and strongly bound reservoirs, while the leaves are significantly more massive, denser, and more tightly bound than isolated structures of similar spatial scale. Using YSOs and Hi-GAL clumps, we find that the leaves have a lower low-mass star formation efficiency than isolated structures, whereas their clump formation efficiency is comparable. At a fixed gas mass, the leaves show no higher low-mass star formation efficiency than isolated structures but convert a larger fraction of their gas into dense clumps. We interpret these contrasts, together with inward gas motions in the position-velocity diagrams, as indicating that the deep potential of the trunks sustains continuous accretion onto the leaves and promotes mutual interactions among them. These processes may raise the characteristic fragmentation mass, as theoretically expected for a dynamically accreting medium, so that a larger fraction of the gas forms massive clumps without a corresponding increase in low-mass star formation. Our single-epoch data constrain only these structural contrasts, but indicate that the gas available for massive star formation is organized on scales larger than a single core.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34625",
    "title": "The tangled warp of the Milky Way II: The red clump",
    "url": "https://arxiv.org/abs/2611.34625",

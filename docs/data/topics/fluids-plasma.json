@@ -3,51 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33961",
-   "title": "AI Buckingham: Agentic Discovery of Dimensionless Scaling Laws Across Physical Regimes",
-   "url": "https://arxiv.org/abs/2611.33961",
-   "authors": [
-    "Ao Cheng",
-    "Lei Zhang",
-    "Guowei He"
-   ],
-   "label": "arXiv:2611.33961v1",
-   "primary_category": "physics.comp-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "AI Buckingham is an LLM-driven agentic framework that uses mutual information and regime clustering to pick dominant dimensionless groups from problem descriptions and data, applied to ten systems including turbulent drag over rough surfaces.",
-    "plain": "This paper describes a computer system that tries to find the simplest meaningful way to group the variables in a physics problem, so that many experiments can be compared on one scale. A language model plans the work and calls mathematical and numerical tools to check units, sort data into physical regimes, and rank which groupings matter most. The authors report that it recovers known similarity groupings across ten systems and suggests better ways to describe surface roughness for estimating friction drag in turbulent flow.",
-    "why": "Choosing the right dimensionless groups is a long-standing step in engineering and fluid mechanics, and automating it could speed up modelling. The text does not show how well the approach performs against existing methods or how far the roughness improvement generalises, so its practical value remains to be tested.",
-    "background": "- Dimensionless group: a ratio of physical quantities with no units (for example, the Reynolds number, which compares inertia to viscous forces in a flow).\n- Dimensional analysis (Buckingham Pi theorem): a classical method that says which unit-free combinations are possible, but not which ones matter most.\n- Regime: a range of conditions in which one physical behaviour dominates, so the same relationship may change between regimes.\n- Mutual information: a statistical measure of how much knowing one quantity tells you about another, used here to rank groups.\n- Equivalent sand-grain roughness: a standard way to summarise a rough surface's effect on drag using a single roughness length.\n- Large language model (LLM) agent: a language model that plans steps and calls external tools.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Classical dimensional analysis defines admissible dimensionless representations but does not determine which combinations capture the dominant physical dependence, whether it changes across physical regimes, or when dependent-variable rescaling is required. We present AI Buckingham, an agentic framework for autonomous dimensionless discovery from natural-language descriptions of physical problems and observational data. It couples reasoning and planning by a large language model (LLM) with predefined symbolic and numerical tools. Literature-based knowledge retrieval supports dimensional checking, gradient-based clustering identifies physical regimes, and mutual information provides an objective, reparameterization-invariant criterion for identifying dominant dimensionless groups. Explicit numerical criteria determine the group count and assess simplification. Across ten physical systems spanning fluid dynamics, magnetohydrodynamics, thermal convection and additive manufacturing, AI Buckingham recovers established similarity representations and resolves regime-dependent scalings. For the longstanding challenge of predicting turbulent drag on rough surfaces, it identifies informative reparameterizations of surface statistics that improve equivalent sand-grain roughness estimates for engineering-oriented drag modelling.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33357",
-   "title": "Butterfly Effect in Kinetic Plasma Turbulence",
-   "url": "https://arxiv.org/abs/2611.33357",
-   "authors": [
-    "Louis Henderson",
-    "Vladimir Zhdankin"
-   ],
-   "label": "arXiv:2611.33357v1",
-   "primary_category": "physics.plasm-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Using particle-in-cell simulations of driven kinetic plasma turbulence, the paper shows that a localized perturbation, down to a single particle, is exponentially amplified and fully decorrelates paired simulations within a few dynamical times, and it builds an analytical model for the early-time growth.",
-    "plain": "The paper asks how strongly a tiny nudge can change the future of a turbulent, electrically charged gas (a plasma). The authors ran pairs of computer simulations that were identical except that one had a tiny change to a single particle at the start. They found that this small difference spread outward and grew quickly, until the two simulations looked statistically unrelated.",
-    "why": "It gives a detailed, quantitative picture of the \"butterfly effect\" (sensitive dependence on initial conditions) in a collisionless plasma, which bears on how predictable such systems are. The text does not go beyond this, so its wider implications are the authors' own suggestion rather than something shown here.",
-    "background": "- Plasma: a hot gas of charged particles, common in space and fusion devices.\n- Collisionless: particles interact mainly through electric and magnetic fields, not by bumping into each other.\n- Turbulence: chaotic, swirling motion across many scales.\n- Particle-in-cell (PIC) simulation: a computer method that tracks many particles and the fields they produce on a grid.\n- Butterfly effect: tiny differences in starting conditions grow into large differences later.\n- Decorrelated: the two runs no longer match statistically, even though they started almost the same.\n- Plasma beta: ratio of gas pressure to magnetic pressure; temperature sets how close particles move to light speed (sub- vs ultra-relativistic).\n- Machine precision: the smallest difference a computer can represent; perturbations smaller than this cannot be tracked.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The butterfly effect is a fundamental process in chaotic systems, but it has not previously been characterized in detail for a collisionless turbulent plasma. In this work, we apply particle-in-cell (PIC) simulations of driven turbulence to study the emergence of the butterfly effect from a small initial perturbation to the simulated particles. In particular, we compare pairs of (baseline and perturbed) simulations that differ only by a localized initial perturbation (down to the single-particle level). We find that the effect of the localized perturbation spreads radially throughout the PIC simulation, causing a difference between each simulation pair that is exponentially amplified over time within the affected region. The fields, including the electric current density, eventually become statistically decorrelated. We construct an analytical model combining spatial expansion with exponential amplification to approximate the early-time evolution. Varying the initial perturbation primarily affects the early-time evolution, while having little effect on the final, decorrelated state. We describe parameter scans with varying plasma beta and temperature (covering sub-relativistic and ultra-relativistic regimes). Our results show that remarkably small perturbations will grow to decorrelate each pair of simulations within a few dynamical times; the imposed perturbation can no longer be resolved once it falls below the numerical precision floor set by the machine precision. These results confirm that the butterfly effect is very strong and robust in a collisionless plasma, with implications for the predictability of turbulent plasma systems.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33412",
    "title": "Point vortex dynamics influenced by the surface motion",
    "url": "https://arxiv.org/abs/2611.33412",

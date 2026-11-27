@@ -3,57 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34188",
-   "title": "MINE: A Training-Free Defense against Indirect Prompt Injection via Mutual Information and Embedding Variance",
-   "url": "https://arxiv.org/abs/2611.34188",
-   "authors": [
-    "Truong Phan",
-    "Ngoc-Quan Pham",
-    "Dat Quoc Nguyen"
-   ],
-   "label": "arXiv:2611.34188v1",
-   "primary_category": "cs.CL",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "MINE is a training-free defense against indirect prompt injection in retrieval-augmented generation that ranks retrieved text by relevance and mutual information, using embedding variance, and also works as a query-conditioned reranker.",
-    "plain": "AI systems that answer questions by pulling in outside documents can be tricked when a document hides instructions meant to hijack the model. This paper proposes MINE, a way to defend against this without retraining the model or learning to spot each attack style. Instead, it keeps the text that is most relevant to the question, and the authors report it does best on the accuracy-versus-security trade-off among methods that need no training across four test sets.",
-    "why": "Indirect prompt injection is a practical security concern for AI tools that read web pages, emails, or tool outputs, so a defense that does not depend on knowing the attack in advance may matter. The paper's claims rest on its own benchmarks, including a new long-context test set, so independent replication would be needed before drawing wider conclusions.",
-    "background": "- Retrieval-augmented generation (RAG): an AI model looks up documents and writes answers based on them.\n- Indirect prompt injection: hidden instructions inside retrieved content try to make the AI do something the user did not ask for.\n- Training-free defense: a protection that works without extra model training or labeled attack examples.\n- Reranker: a step that reorders retrieved passages by how well they match the question.\n- Mutual information and embedding variance: statistical measures of how much information two pieces of text share and how spread out their numerical representations are.\n- Adaptive attacker: an adversary who designs attacks knowing the defense.\n- Inference latency: how long the system takes to produce an answer.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Existing defenses against indirect prompt injection in retrieval-augmented generation (RAG) are inherently reactive: prompt-engineering methods are often overridden by the injected instructions, while supervised detectors must be retrained for each new attack style. We propose a different paradigm: defend by maximizing relevance, not by detecting attacks. Our method, MINE, is training-free and attack-agnostic, and it also serves as a query-conditioned reranker. To evaluate defenses under realistic conditions, we introduce LC-Inj-SQuAD, a long-context benchmark with an average of 4,032 words per context. We evaluate on four datasets spanning short-context QA (Inj-SQuAD, Inj-TriviaQA), long-context QA (LC-Inj-SQuAD), and agent tool-call injection (InjecAgent). Across all four, MINE achieves the best accuracy--security trade-off among training-free defenses. It is also the only defense that stays usable against a fully adaptive attacker, generalizes to agent tool-call injection, and achieves the lowest inference latency on long contexts.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34819",
-   "title": "VulnSafe: Measuring Vulnerability-Aware Relational Safety in Large Language Models",
-   "url": "https://arxiv.org/abs/2611.34819",
-   "authors": [
-    "Jiaming Luo",
-    "Jiacheng Ji",
-    "Haoan Jin",
-    "Xiaoning Sun",
-    "Qiuzhi Xiong",
-    "Yuxin Zhang",
-    "Hanhui Xu",
-    "Mengyue Wu"
-   ],
-   "label": "arXiv:2611.34819v1",
-   "primary_category": "cs.CL",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "VulnSafe is a Chinese-language capability assessment that scores LLMs on five vulnerability-aware relational safety constructs (Risk Perception, Safety Preservation, Autonomy Protection, Supportive Response, Boundary Management), using 41 scenarios and 2,050 balanced prompts, with separate scoring of proactive should-do and prohibitive should-not behaviors.",
-    "plain": "Chatbots are increasingly used for emotional support, where they need to do more than avoid obviously harmful replies. This paper proposes a test called VulnSafe, built from 41 emotionally sensitive scenarios and 2,050 prompts, that tries to measure several separate skills, such as noticing that a user is vulnerable and respecting their independence. The authors report that eight LLMs show different skill profiles, and that the gaps between models are larger on the \"should do\" items than on the \"should not do\" items.",
-    "why": "Safety scores often reduce to whether a model refuses, which may hide whether it actually responds well to someone in distress. The paper's approach of breaking safety into measurable competencies could matter for how emotional-support AI is evaluated, though the text does not show how well the scores predict real-world outcomes.",
-    "background": "- Large language model (LLM): an AI system trained on large amounts of text to generate replies.\n- Safety benchmark: a standard test set used to score how a model behaves on risky prompts.\n- Evidence-centered design: a test-building method that starts by defining the skills to be measured and what behavior would show them.\n- Scoring rubric: a written guide that defines how each response earns points.\n- Proactive vs. prohibitive behavior: \"should do\" actions (e.g., offering support) versus \"should not do\" actions (e.g., giving harmful advice).\n- Construct: a specific underlying ability the test is meant to measure.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Emotionally supportive interactions require large language models not only to avoid overtly harmful content, but also to recognize vulnerability-related risk, regulate their relational stance, preserve user agency, and provide context-appropriate support. Existing safety benchmarks often measure isolated violations, leaving unclear what underlying response competence their scores represent. We introduce VulnSafe, a Chinese capability assessment centered on Vulnerability-Aware Response Competence (VARC). VARC organizes relational safety into five complementary constructs: Risk Perception, Safety Preservation, Autonomy Protection, Supportive Response, and Boundary Management. Following an evidence-centered design, 41 scenarios elicit construct-relevant behavior through 2,050 balanced prompts and scenario-specific scoring rubrics. The assessment further separates proactive should-do behavior from prohibitive should-not behavior. Across eight representative LLMs, results show distinct competence profiles and larger disparities than prohibitive requirements. VulnSafe therefore makes relational safety interpretable as a multidimensional model capability rather than as refusal compliance alone.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33195",
    "title": "Verified experience improves materials prediction with large language models",
    "url": "https://arxiv.org/abs/2611.33195",

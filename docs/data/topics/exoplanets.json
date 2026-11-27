@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33404",
-   "title": "Planetary biotechnospheres, biotechnosignatures and the search for extraterrestrial intelligence",
-   "url": "https://arxiv.org/abs/2611.33404",
-   "authors": [
-    "Irina K. Romanovskaya"
-   ],
-   "label": "arXiv:2611.33404v1",
-   "primary_category": "astro-ph.EP",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A conceptual paper proposing ten possible biotechnosignatures (observable traces of technology-coupled biospheres) and search strategies for them in the Solar System and over interstellar distances, including a \"Cosmic Descendants\" hypothesis and an estimate of the low likelihood that interstellar asteroids carry such biotechnospheres.",
-    "plain": "The paper asks how we might detect signs of advanced technology that is woven into living systems, either from past or present civilizations, whether on Earth, in our Solar System, or farther away. The author proposes ten kinds of such signs and ways to look for them. One idea is that engineered bacteria from an ancient civilization could have left descendants still living on Earth, and another is that ancient technology could have drifted to the outer Solar System. The author also estimates that interstellar asteroids are very unlikely to carry such systems.",
-    "why": "It widens the search for extraterrestrial intelligence beyond radio signals and spacecraft to include signs of technology merged with biology, which may be easier to test in samples from Earth, asteroids or space missions. The text itself gives no measured results or observations, so its practical value depends on how the proposed signatures are later developed and checked.",
-    "background": "- Biosphere: all living things on a planet; technosphere: human-made technology and infrastructure.\n- A biotechnosphere is the zone where the two overlap, with technology and living organisms affecting each other.\n- A biosignature is a sign of past or present life; a technosignature is a sign of technology; this paper proposes biotechnosignatures, which combine both.\n- Interstellar asteroids and free-floating planets are objects that travel between stars rather than orbiting one.\n- The Oort cloud is a distant shell of icy bodies at the edge of the Solar System; post-main-sequence stars are stars that have passed their main, hydrogen-burning stage.\n- Terraforming means reshaping a planet's environment to suit life.\n- The paper is a speculative proposal rather than a report of observations.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The concept of planetary intelligence as collective intelligence is used to consider possible evolutionary paths of biotechnospheres that emerge on the intersection of the technosphere with the biosphere and support coupling of the technosphere with the biosphere, thus affecting planetary evolution. In mature biotechnospheres, the intelligence of technologies and the intelligence of life forms, including engineered life forms, could act in concert to perform various tasks (e.g. monitoring and restoring planetary environments and biodiversity; supporting space missions; terraforming cosmic objects). Space exploration can expand biotechnospheres beyond planets and create cosmic ecosystems. Humankind, other civilizations or their intelligent machines may produce biotechnosignatures (i.e. observables and artefacts of biotechnospheres) in the Solar System and beyond. I propose ten possible biotechnosignatures and strategies for the search for these biotechnosignatures in situ and over interstellar distances. For example, if a non-human advanced civilization existed and built biotechnospheres on Earth in the past, the descendants of its engineered bacteria could currently exist on Earth and have properties pertaining to the functions of the ancient bacteria in the biotechnospheres; intelligent technologies created by the ancient civilization could migrate to the Solar System's outer regions; these two scenarios are described as the Cosmic Descendants hypothesis. Interstellar asteroids, free-floating planets, spacecraft and objects gravitationally bound to flyby stars might carry extraterrestrial biotechnospheres and pass through the Solar System. In connection to the fate of post-main-sequence stars and their Oort clouds, the probability for interstellar asteroids to carry biotechnospheres or to be interstellar spacecraft is estimated as very low.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33290",
-   "title": "line racer: Rapid Calculation of Exoplanetary Radiative Opacities",
-   "url": "https://arxiv.org/abs/2611.33290",
-   "authors": [
-    "David B. H\\\"agele",
-    "Paul Molli\\`ere",
-    "Michiel Min"
-   ],
-   "label": "arXiv:2611.33290v1",
-   "primary_category": "astro-ph.IM",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "line racer is a Python package for computing high-resolution radiative opacities of molecules and atoms from large line lists, designed for parallel execution and output compatible with atmospheric modeling and retrieval tools.",
-    "plain": "Astronomers study the air of distant planets and brown dwarfs by looking at which colors of light the gases there absorb. This paper describes a software tool, called line racer, that calculates how strongly those gases absorb light across many temperatures and pressures, using large catalogs of spectral lines. The text presents it as a way to do this quickly and to tailor the calculation to the user's computers.",
-    "why": "Accurate opacity tables are a basic input to models that interpret exoplanet spectra, so faster and more flexible calculations can make such modeling easier to run. The text does not report benchmark speeds or validation results, so its practical impact is not something this brief can confirm.",
-    "background": "- Opacity: how strongly a gas absorbs light at a given wavelength; higher means more light is blocked.\n- Spectral lines: narrow absorption features produced when molecules or atoms take in light at specific wavelengths.\n- Line list: a large catalog recording the wavelength, strength and other properties of each such line for a given species.\n- Temperature and pressure dependence: opacities change with the conditions of the atmosphere, so they must be computed over a grid of conditions.\n- Retrieval: inferring atmospheric composition and temperature by fitting models to observed spectra.\n- Parallelization: splitting a computation across many processor cores or computers to finish faster.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Detailed studies of exoplanet and brown dwarf atmospheres rely on precise knowledge of the spectral features of possible atmospheric species. These features are a result of the interaction of different molecules and atoms with the radiation of the host star or the intrinsic thermal radiation of the object. The interaction is described by the opacity of a species, which determines how much light is absorbed at a given wavelength. The strength and shape of these opacities are very dependent on the temperature and pressure of the atmosphere, which is why they have to be calculated for a wide range of conditions. line racer is a Python package that enables computing high-resolution opacities from large molecular and atomic line lists in an effective manner. It offers users a wide range of options to customize opacity calculations to their needs and available hardware. The code is designed for efficient parallelization on multi-core and multi-node systems and can produce outputs compatible with popular atmospheric modeling and retrieval tools.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34613",
    "title": "Discovery of Trailing Spiral Dust Alignment in the Dust Polarization of HL Tau at $\\lambda = 2.1$ mm",
    "url": "https://arxiv.org/abs/2611.34613",

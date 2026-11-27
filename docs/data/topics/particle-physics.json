@@ -3,56 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34438",
-   "title": "Lighting up LZ with Loopy Transitions in a leptophilic Dark Sector",
-   "url": "https://arxiv.org/abs/2611.34438",
-   "authors": [
-    "Simone Biondini",
-    "Clara Hofheinz",
-    "Stefan Melchin",
-    "Lorenzo Tiberi",
-    "Stefan Vogl"
-   ],
-   "label": "arXiv:2611.34438v1",
-   "primary_category": "hep-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A study of a multicomponent, leptophilic dark sector with a charged vector-like fermion t-channel mediator, showing that endothermic (up-scattering) inelastic transitions between nearly degenerate scalar and vector dark matter states could produce the single high-energy xenon recoil reported by LZ while keeping the relic abundance consistent with thermal production.",
-    "plain": "The LUX-ZEPLIN (LZ) experiment, which looks for dark matter by watching for tiny flashes of energy when particles hit xenon atoms, recently recorded one unusually energetic nuclear recoil. This paper proposes that a hidden family of closely matched dark particles could explain it: a dark particle absorbs a small amount of energy and becomes a slightly heavier partner, which shifts the recoil energies upward. The authors report that this scenario can fit the single event while still producing the right amount of dark matter in the early universe.",
-    "why": "A single event is a weak signal, so this is a model-building exercise rather than a confirmed discovery; it is worth attention because it shows how a dark sector that couples mainly to leptons could account for an unusual signal while remaining consistent with cosmology. The text does not indicate how the scenario fares against other experimental limits in detail.",
-    "background": "- Dark matter: invisible matter making up most of the universe's mass; direct detection looks for it hitting ordinary atoms in underground detectors.\n- Nuclear recoil: the kick a xenon nucleus gets when struck; its energy (in keV) is what the detector measures.\n- Leptophilic: interacting mainly with leptons (such as electrons and muons) rather than quarks.\n- t-channel mediator: a heavy intermediate particle exchanged between the dark sector and Standard Model particles.\n- Vector-like fermion: a type of matter particle whose left and right parts behave the same way under the forces, used here as the mediator.\n- Inelastic/endothermic scattering: the incoming dark particle must gain a small energy to turn into a slightly heavier dark partner; the mass splitting (a few hundred keV) sets the energy cost, which pushes recoils toward higher energies.\n- Effective operators at dimension five and six: a way of describing interactions by their strength and complexity; the paper argues the inelastic process appears at a lower order than elastic scattering, which explains why it dominates.\n- Relic abundance: the amount of dark matter left over from the early universe, used to test whether a model is viable.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study the direct detection phenomenology and cosmology of a multicomponent dark sector with a leptophilic t-channel portal. The coupling to right-handed Standard Model leptons is mediated by a charged vector-like fermion, allowing both a scalar and a vector dark candidate to connect to the SM through the same mediator. Motivated by the high-energy nuclear-recoil event recently reported by the LUX-ZEPLIN (LZ) experiment, we consider a nearly degenerate dark sector with mass splittings of order a few hundred keV and investigate the resulting inelastic transitions. Concretely, we focus on endothermic scattering of the dark states, which can shift the recoil spectrum towards the high-energy region preferred by LZ while suppressing low-energy events. We scrutinize the effective operators generating the dark-matter-photon coupling, which provides the essential interaction for nuclear recoils. Interestingly, the inelastic transition arises at dimension five whereas elastic scattering on nuclei is induced only at dimension six. This naturally explains the prominence of endothermic scattering compared to its elastic counterpart. We determine the parameter space compatible with the observed dark matter abundance and scrutinize the event rate and signal shape for scattering on xenon. Our results demonstrate that the observation of a single $E_R=248\\pm 46$ keV nuclear recoil event in LZ can be accommodated by thermally produced dark matter in a leptophilic dark sector.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34213",
-   "title": "Lower Bound on the Lightest Neutrino Mass with Resonant Neutrino Self-Interactions",
-   "url": "https://arxiv.org/abs/2611.34213",
-   "authors": [
-    "Shao-Feng Ge",
-    "Joao Paulo Pinheiro",
-    "Shaoyang Qin",
-    "Ruitao Sun",
-    "Oleg Titov"
-   ],
-   "label": "arXiv:2611.34213v1",
-   "primary_category": "hep-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proposes using resonant s-channel scattering of ultra-high-energy astrophysical neutrinos off the cosmic neutrino background, mediated by a roughly 1 MeV scalar, to derive a lower bound on the lightest neutrino mass by comparing simulated event spectra with IceCube HESE 7.5-year data.",
-    "plain": "Neutrinos are tiny, nearly massless particles that pass through almost everything, and we still do not know the mass of the lightest one. This paper proposes a way to probe that mass by looking at very high-energy neutrinos from space that might briefly interact with the faint sea of low-energy neutrinos left over from the early universe. The authors simulate what IceCube, a neutrino detector at the South Pole, should see under this scenario and compare it with its observed events to get a lower limit on the mass.",
-    "why": "Pinning down the neutrino mass scale matters for particle physics and cosmology, and this offers a new route that relies on neutrino self-interactions rather than standard laboratory or cosmological measurements. The text does not indicate how strong or robust the resulting bound is relative to existing limits, so its significance should be judged after checking the full paper.",
-    "background": "- Neutrinos come in three types (flavors) and have small masses; only mass differences are well measured, so the absolute mass of the lightest one is unknown.\n- The cosmic neutrino background is a relic sea of low-energy neutrinos from the early universe.\n- An s-channel resonance is a sharply enhanced interaction that occurs when the energy of the colliding system matches a specific intermediate particle's mass.\n- A scalar mediator is a hypothetical light, spin-zero particle that carries the interaction between neutrinos.\n- Transport equations describe how particle populations change as they travel and interact; \"regeneration\" terms account for particles reappearing from interactions.\n- IceCube HESE is a catalog of high-energy starting events recorded by the IceCube detector.\n- Neutrinos and anti-neutrinos are evolved together here, which is what the \"double\" transport equations refer to.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We show the possibility of using the resonant $s$-channel scattering of ultra high energy astrophysical neutrinos with the low energy cosmic neutrino background to put a lower bound on the lightest neutrino mass. This can be realized and illustrated by neutrino self-interactions with a light scalar mediator of $\\mathcal O(1)$ MeV mass. After analyzing the kinematics and cross section features of the $s$-channel resonance, we derive from first principles the double transport equations with double regeneration terms for the coupled evolution of neutrinos and anti-neutrinos. The simulated event spectrum is then compared with the HESE 7.5 year data observed at IceCube to give a clear lower bound on the lightest neutrino mass.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34808",
    "title": "Probing Ultralight Dark Matter at the Electroweak Scale",
    "url": "https://arxiv.org/abs/2611.34808",

@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33662",
-   "title": "Introducing Parton-Level Fluctuations in the TRENTo-Sea Model",
-   "url": "https://arxiv.org/abs/2611.33662",
-   "authors": [
-    "Jacob Reinach",
-    "Andreas Kirchner"
-   ],
-   "label": "arXiv:2611.33662v1",
-   "primary_category": "nucl-th",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper extends the TRENTo-Sea initial-condition model for heavy-ion collisions by sampling quark and gluon momentum fractions from nuclear parton distribution functions, using perturbative QCD parton-level collisions with an infrared damping scale tuned to proton-proton cross sections.",
-    "plain": "When heavy atomic nuclei are smashed together at high energy, the hot droplet they form starts from a lumpy, uneven shape set by the tiny particles inside each proton and neutron. This paper builds a model that takes those inner particles' sharing of momentum from measured nuclear data, instead of only fitting the lumpiness to experimental results. The authors report that the model matches a standard measure of the droplet's shape (ε2) in most collisions, though not in the most head-on ones.",
-    "why": "Knowing how lumpy the starting point is matters for reading the shape and flow measured in heavy-ion experiments, so a model constrained by independent nuclear data is a useful cross-check. The authors say it may help future work on correlations between soft and hard particles and on comparing different nuclear parton distribution sets, though the text does not show these outcomes.",
-    "background": "- Heavy-ion collisions: nuclei smashed together to make a brief, very hot, dense droplet of quark-gluon matter.\n- Initial conditions: the lumpy starting geometry of that droplet, which later expands and flows.\n- Eccentricity ε2{2}: a number describing how elliptical (non-round) the droplet's shape is, averaged over collisions.\n- Partons: the quarks and gluons inside protons and neutrons.\n- Parton distribution functions (PDFs): measured tables giving how much momentum fraction each parton type typically carries; nuclear PDFs (nPDFs) are versions for bound nuclei.\n- Perturbative QCD: calculation method for strong-force interactions at high energy.\n- Infrared regulator: a cutoff that keeps low-energy calculations finite; here tuned to proton-proton data.\n- TRENTo: an existing parametric model of initial conditions that this work extends.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "A variety of experimental and theoretical data suggest that initial condition models for heavy-ion collisions contain a degree of sub-nucleonic fluctuations. While current models fit the number and size of these fluctuations to data, we use nuclear parton distribution functions to constrain sub-nucleonic structure and fluctuations in TRENTo-Sea, an extension of TRENTo. Sampling the momentum fraction distributions of quarks and gluons in heavy ions, we use perturbative quantum chromodynamics to collide nuclei at the parton level, and we introduce an infrared center-of-momentum damping scale which is tuned to proton-proton cross sections. We find that our model successfully reproduces the $\\varepsilon_2\\{2\\}$ of data-calibrated models except in central collisions, and an analysis of the power spectrum and granularity of the pre-equilibrium fireball shows that the number of low-$x$ partons in a nucleon has a significant effect on the local transverse geometry. Our model is largely insensitive to variations of the infrared parameters, as such changes are absorbed into the calibration of the infrared regulator. We expect that this work will aid future research on soft-hard correlations and constraining different nPDF sets.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34752",
-   "title": "Microscopic Approach to Neutron Elastic and Inelastic Cross Sections",
-   "url": "https://arxiv.org/abs/2611.34752",
-   "authors": [
-    "Ibrahim Abdurrahman",
-    "Chloe Hebborn",
-    "Filomena Nunes",
-    "Gregory Potel"
-   ],
-   "label": "arXiv:2611.34752v1",
-   "primary_category": "nucl-th",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper builds a shell-model-based S-matrix framework for low-energy neutron elastic and inelastic scattering on 20Ne, using 21Ne resonance states and spectroscopic amplitudes, and compares the resulting cross sections, level densities, partial widths and Shannon entropy against ENDF evaluations and GOE predictions.",
-    "plain": "Nuclear reactions, where a neutron hits an atomic nucleus and bounces off or knocks it into an excited state, are usually described by separate models for different energy ranges, and those models lean on fitted inputs. This paper tries to describe these low-energy neutron reactions in one framework that starts from a detailed quantum calculation of the nucleus's structure, using neon-20 as a test case. The authors report that the method qualitatively reproduces the standard evaluated neon-20 cross-section data.",
-    "why": "Reliable neutron reaction data matter for reactor design and for modeling how elements form in stars, and reducing reliance on fitted inputs could make predictions more trustworthy where measurements are scarce. The text only shows a qualitative match for one nucleus and says the framework is planned to be extended, so its broader value is not yet established.",
-    "background": "- Cross section: a measure of how likely a reaction is, expressed as an effective target area.\n- Elastic vs. inelastic scattering: the neutron bounces off the nucleus leaving it in its ground state (elastic) or leaving it excited (inelastic).\n- Shell model: a quantum model that computes a nucleus's energy levels from its nucleons arranged in shells.\n- Resonance: a short-lived, highly excited state of the combined neutron-plus-nucleus system.\n- Level density and partial width: how many energy states lie in a range, and how strongly a state decays through a given channel.\n- S-matrix: a mathematical object encoding all scattering outcomes of a reaction.\n- ENDF: a standard library of evaluated nuclear data.\n- Shannon entropy and GOE: an information measure of spread, and a random-matrix benchmark for the statistics of quantum energy levels.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Depending on the nuclei involved and the beam energies, reaction timescales differ tremendously. Today, distinct models are often used to describe each timescale, relying on phenomenological inputs, such as level densities or partial-widths, which limits their predictive power. This work aims to address this issue by providing a unified description of low-energy neutron elastic and inelastic reaction channels starting from microscopic predictions of the structure of mid-mass nuclei. The goal is to build a framework that is general enough to span the different reaction regimes while remaining anchored in microscopic theory. For illustration purposes, this work focuses on reactions $n+^{20}$Ne to the elastic and inelastic channels. The S-matrix is build from shell model predictions of resonances states and their spectroscopic amplitudes for $^{21}$Ne, using two different approximations of the single-particle asymptotics. Then, the shell-model predictions for the level density and single-particle partial widths are analyzed and the final cross sections are compared with evaluated ones. This method qualitatively reproduces the ENDF evaluation for the $^{20}$Ne$(n,el)$ and $^{20}$Ne$(n,n')$ cross sections. The present study also compares the Shannon entropy obtained from this model to the Gaussian Orthogonal Ensemble (GOE). In the future, the framework will be extended to include more complex reaction channels, such as two-nucleon and gamma channels, enabling more accurate predictions of neutron-induced reactions such as those of astrophysical interest.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34503",
    "title": "Nuclear Modification of $\\pi^0$ Production in pO and OO Collisions with ALICE",
    "url": "https://arxiv.org/abs/2611.34503",

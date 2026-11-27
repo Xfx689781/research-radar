@@ -3,48 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33778",
-   "title": "The Dolbeault geometric Langlands-type conjecture for smooth surfaces",
-   "url": "https://arxiv.org/abs/2611.33778",
-   "authors": [
-    "Yukinobu Toda"
-   ],
-   "label": "arXiv:2611.33778v1",
-   "primary_category": "math.AG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper builds semiorthogonal decompositions for moduli stacks of one-dimensional sheaves on smooth surfaces with nef anti-canonical divisor, identifies their pieces as quasi-BPS categories of local Calabi–Yau threefolds, and proposes a Dolbeault geometric Langlands-type conjecture for surfaces with Hecke actions on the resulting categories.</one_liner>\n<parameter name=\"plain\">This paper is about a very abstract area of mathematics that studies families of geometric objects and how they can be cut into simpler pieces. The authors split a large collection of \"sheaves\" (a way of attaching data to points of a curved space) on certain surfaces into smaller building blocks, and compare these blocks with another collection of sheaves. From this comparison they propose a conjecture, a precise guess not yet proven, that extends a known correspondence from the Langlands program.",
-    "plain": "",
-    "why": "The text presents a construction and a conjecture, not a proven theorem for the full statement, so its importance depends on whether the conjecture holds. It links to the Dolbeault geometric Langlands conjecture and to BPS cohomology, a tool from string-theory-inspired counting of geometric invariants, and it suggests a categorical lift of Hecke operators from recent work by Davison, Hennecart, Kinjo, Schiffmann and Vasserot.</ref>\n<parameter name=\"background\">- Coherent sheaf: a algebraic way of attaching vector-space-like data to a geometric space, used as the basic objects here.\n- Moduli stack: a space parametrizing such objects together with their symmetries.\n- Semiorthogonal decomposition: a way of splitting a category into pieces that interact in a controlled order, analogous to a basis.\n- Calabi–Yau threefold: a special kind of 3-dimensional geometric space from string theory; the paper's building blocks are tied to local ones.\n- BPS cohomology and quasi-BPS categories: invariants and categorical analogues originating in string-theory counting.\n- Higgs bundles and the (Dolbeault) geometric Langlands program: a framework relating vector bundles with extra structure on curves to dual objects.\n- Hecke operators: symmetry-like operators acting on these spaces, central to the Langlands program.",
-    "background": "",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Using a general theory of limit categories for symmetric stacks, we construct their semiorthogonal decompositions for moduli stacks of pure one-dimensional coherent sheaves on smooth surfaces with nef anti-canonical divisors. The components of these semiorthogonal decompositions are quasi-BPS categories associated with the corresponding local Calabi--Yau threefolds. By comparing these semiorthogonal decompositions with those of dg-categories of coherent sheaves on moduli stacks of semistable sheaves, we propose a Dolbeault geometric Langlands-type conjecture for surfaces, generalizing the Dolbeault geometric Langlands conjecture for $\\GL_r$-Higgs bundles. Our conjecture includes a correspondence for Higgs bundles twisted by sufficiently ample line bundles on curves. We discuss examples and construct Hecke actions on limit categories and, under certain conditions, on quasi-BPS categories. For symplectic surfaces, these actions are expected to provide a categorical lift of the corresponding Hecke operators on BPS cohomology constructed by Davison--Hennecart--Kinjo--Schiffmann--Vasserot.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34570",
-   "title": "Cohomology of pseudo-reductive groups over local function fields",
-   "url": "https://arxiv.org/abs/2611.34570",
-   "authors": [
-    "Zev Rosengarten"
-   ],
-   "label": "arXiv:2611.34570v1",
-   "primary_category": "math.NT",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper gives a duality pairing identifying the first Galois cohomology of a pseudo-reductive group over a local function field with the Pontryagin dual of the group of translation-invariant line bundles on that group, and equips Picard groups of schemes over Hausdorff topological fields with a topology having favorable properties.",
-    "plain": "The paper studies a certain family of symmetry groups (algebraic groups) defined over a local function field, a kind of number system built from polynomials over a finite field. It shows that one collection of algebraic invariants attached to these groups is the mirror image (dual) of another collection, via an explicit pairing. To make this work, the authors also give a topology to the group of line bundles on such spaces and show it behaves well under mild conditions.",
-    "why": "The result is a structural duality theorem in arithmetic algebraic geometry, so its interest is mainly to specialists in algebraic groups and Galois cohomology. The text does not say what wider applications it has, so I cannot say more about its reach.",
-    "background": "- Algebraic group: a group whose elements are described by polynomial equations, such as matrices with determinant one.\n- Pseudo-reductive group: a well-behaved class of algebraic groups that generalises reductive groups (like general linear groups) and is more flexible.\n- Local function field: the field of Laurent series over a finite field, the function-field analogue of the p-adic numbers.\n- Galois cohomology: an invariant measuring obstructions to solving equations over a field, using symmetries of its algebraic closure.\n- Picard group and line bundles: the group of ways of attaching a one-dimensional \"twist\" to a space, used here with translation-invariance.\n- Pontryagin dual: the group of continuous characters (homomorphisms to the circle) of a topological abelian group, which pairs with it.\n- Topological field (Hausdorff): a field with a topology in which distinct points can be separated by open sets.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We give a pairing which describes the first Galois cohomology of a pseudo-reductive group $G$ over a local function field $K$ as the Pontryagin dual of the group $\\Ext^1(G, \\Gm)$ of translation-invariant line bundles on $G$. In order to accomplish this, we endow the Picard group of a scheme $X$ over a (Hausdorff) topological field with a topology, and prove that this topology enjoys favorable properties under certain mild conditions on $X$ and on the field.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33771",
    "title": "Semiorthogonal decompositions of limit categories for symmetric stacks",
    "url": "https://arxiv.org/abs/2611.33771",

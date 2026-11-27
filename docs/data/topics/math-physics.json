@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34768",
-   "title": "The integrable Lie-Trotter-Suzuki decomposition for nonlinear dynamics: Efficient Hamiltonian simulation of the Stepanoff flow",
-   "url": "https://arxiv.org/abs/2611.34768",
-   "authors": [
-    "Ilon Joseph",
-    "Ivan Novikau",
-    "Michael R. Montgomery",
-    "Joanna Slawinska",
-    "Dimitrios Giannakis"
-   ],
-   "label": "arXiv:2611.34768v1",
-   "primary_category": "quant-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proposes an \"integrable Lie-Trotter-Suzuki\" time-stepping scheme for nonlinear dynamics and applies it to the Stepanoff flow on a torus, mapping the two-dimensional system onto a quantum circuit built from quantum Fourier transforms and quantum signal processing, checked with a fault-tolerant quantum emulator.</one_liner>\n<parameter name=\"plain\">The paper looks at how to step forward in time a nonlinear system, meaning one whose rules do not add up neatly, such as certain fluid-like flows. The authors split the system's update rule into pieces that can each be computed efficiently, then combine them in small time steps. They apply this to a two-dimensional flow on a torus (a donut-shaped surface) and report that a simulated quantum computer gives results consistent with several classical methods.</plain>\n<parameter name=\"why\">The work offers a way to bring nonlinear dynamics within reach of quantum-style, unitary (norm-preserving) simulation, which could matter for fluid and chaotic-system modelling. The text does not establish a practical speed-up over classical methods, and it notes that the small time steps and the linear cost of the advection operator with grid size remain limitations.</why>\n<parameter name=\"background\">- Nonlinear dynamics: systems where the change at each moment depends non-proportionally on the current state, so they can behave unpredictably.\n- Hamiltonian simulation: computing how a system evolves over time using a unitary operator, which preserves total \"amount\" (norm) of the state.\n- Lie-Trotter-Suzuki decomposition: approximating a complicated time evolution by alternating simpler steps, with accuracy improving as the time step shrinks.\n- Tensor product factorization and block-encoding: ways of writing a large matrix so a quantum or tensor-network computer can apply it efficiently.\n- Quantum Fourier transform (QFT) and quantum signal processing (QSP): standard quantum subroutines, the first for changing between position and frequency representations, the second for applying polynomial functions of an operator.\n- Fault-tolerant quantum computing: the error-corrected regime; here it is simulated numerically rather than run on hardware.\n- Transfer operator: a linear operator that describes how probability or densities move under the dynamics.</background>\n<parameter name=\"difficulty\">research-level",
-    "plain": "",
-    "why": "",
-    "background": "",
-    "difficulty": "",
-    "ai": true
-   },
-   "abstract": "We propose an efficient unitary numerical time integration strategy for nonlinear dynamical systems: the integrable Lie-Trotter-Suzuki decomposition (I-LTS). First, express the generator as a sum of integrable parts. Second, approximate the full evolution operator using a Lie-Trotter-Suzuki (LTS) decomposition of the desired approximation order in time step. The I-LTS construction ensures that the full evolution operator can be represented as a product of terms that each have an efficient explicit tensor product factorization that can be handled efficiently with tensor network and/or quantum block-encoding methods. Next, we apply this method to an important non-integrable point example of a dynamical system: the Stepanoff flow on the torus. First, we derive an efficient unitary quantum algorithm for simulating the Stepanoff flow that can be thought of as a unitary classical version of a quantum map. Then, we provide a detailed description of the encoding of the two-dimensional system into an efficient quantum circuit, including an efficient block-encoding for all required operators. An efficient Hamiltonian simulation algorithm is constructed using a sequence of alternating quantum Fourier transforms (QFT) and Quantum Signal Processing (QSP) circuits. Finally, the circuit is simulated using a numerical emulator of fault-tolerant quantum computers, and the results are found to be consistent with several alternative classical computational methods. While efficient, the need for Trotterization introduces fundamental complexity in requiring small enough time step for an accurate approximation and solving for the transfer operator requires one to confront the linear scaling of the advection operator with grid size.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34114",
-   "title": "Schwinger-Dyson recursion, Gr\\\"obner elimination and graph combinatorics",
-   "url": "https://arxiv.org/abs/2611.34114",
-   "authors": [
-    "Oleg Evnin"
-   ],
-   "label": "arXiv:2611.34114v1",
-   "primary_category": "math-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Applies Schwinger-Dyson equations, reduced via Gröbner elimination, to zero-dimensional QFT moment problems and obtains a finite recursion for counting labelled 9- and 10-regular graphs on n vertices.",
-    "plain": "This paper is about counting graphs, the networks of points joined by lines, that have a fixed number of connections at every point. The authors borrow a set of equations from quantum field theory that relate averages of polynomial expressions to one another, and use an algebra tool (Gröbner elimination) to reduce them to a small finite set of basic quantities. They report that for graphs with 9 or 10 connections per vertex this gives a recursive method that computes the total count in O(n) arithmetic steps, where n is the number of vertices.",
-    "why": "The text describes the result as a computational improvement over the existing state of the art for these graph counts, and the link to counting discrete geometries in simplicial approaches to quantum gravity suggests where it could matter. The abstract alone does not show how broadly the method extends beyond 9- and 10-regular graphs, so its wider reach is unclear.",
-    "background": "- Schwinger-Dyson equations: relations from integration by parts that link averages (correlators) of different polynomial orders.\n- Zero-dimensional QFT: a quantum field theory with no space or time, reducing to multivariate Gaussian integrals.\n- Moments/correlators: averages of powers of variables under a Gaussian weight.\n- Gröbner elimination: a systematic algebra method for rewriting polynomial relations so that higher quantities are expressed through a fixed finite basis.\n- k-regular graph: a graph where every vertex has exactly k edges; labelled means vertices are distinguishable.\n- Big-O notation: O(n) means the work grows roughly in proportion to n.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Schwinger-Dyson equations are a cornerstone of quantum field theory (QFT). Derived using integration by parts, they capture relations between correlators of different orders, forming an open, infinite-dimensional system. In zero-dimensional QFTs with polynomial actions, which is just a physical interpretation for multivariate Gaussian integrals with polynomial insertions, conventional Gr\\\"obner elimination can be used to express all higher-order correlators (moments) in terms of a fixed basis set. One consequence is a closed finite-dimensional system of differential equations for the coupling dependence of these `master' correlators. An important application of zero-dimensional QFTs is in counting discrete geometric structures (as in simplicial approaches to quantum gravity). For the problem of counting labelled regular graphs, applying this Schwinger-Dyson closure results in a computational breakthrough relative to the existing state-of-the-art: for 9- and 10-regular graphs on $n$ vertices, a finite-depth, finite-width recursive formulation is obtained, making it possible to compute the total graph counts in $O(n)$ arithmetic operations.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2610.15905",
    "title": "Quantum limit cycles from phase coupling: A framework for NISQ thermodynamic devices",
    "url": "https://arxiv.org/abs/2610.15905",

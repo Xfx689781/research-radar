@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33954",
-   "title": "Ferroionic CuCrP2S6 Integrated Silicon Photonics for Neuromorphic Computing",
-   "url": "https://arxiv.org/abs/2611.33954",
-   "authors": [
-    "Ghada Dushaq",
-    "Srinivasa R. Tamalampudi",
-    "Mahmoud Rasras"
-   ],
-   "label": "arXiv:2611.33954v1",
-   "primary_category": "physics.optics",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper integrates the layered ferroionic material CuCrP2S6 onto silicon microring resonators and shows that electrical pulses shift the optical resonance via mobile copper-ion redistribution, giving volatile and nonvolatile optical memory that can mimic a leaky integrate-and-fire neuron.",
-    "plain": "Researchers built a tiny light-based circuit on a silicon chip and coated it with a special layered crystal whose copper ions can be moved by electric pulses. Each pulse nudges the color at which the chip's ring resonates, and that shift builds up with repeated pulses, partly fading over time and partly staying put. The authors use this behavior to show a light-based version of a simple artificial neuron that adds up inputs, leaks some away, and fires once a threshold is crossed.",
-    "why": "Optical computing that stores and accumulates information without constant power could be useful for energy-efficient neuromorphic (brain-inspired) hardware. The text reports device-level demonstrations only; its broader significance for practical photonic computing is not established by the text shown.",
-    "background": "- Microring resonator: a tiny circular waveguide on a chip that transmits light most strongly at specific wavelengths; shifts in that wavelength are the readout.\n- Silicon photonics: using light-guiding structures fabricated on silicon chips, as in electronics manufacturing.\n- Van der Waals material: a crystal made of stacked atomic sheets that can be integrated onto other surfaces.\n- Ferroionic: a material where mobile ions (here copper) can be moved by an electric field and stay in place after the field is removed, giving memory.\n- Volatile vs. nonvolatile memory: volatile states fade without power; nonvolatile states persist.\n- Leaky integrate-and-fire neuron: a standard simplified model of a neuron that accumulates input, slowly loses charge, and produces an output spike when a threshold is reached.\n- Picometer (pm) and nanometer (nm): units of wavelength shift; 1000 pm = 1 nm.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Neuromorphic photonic computing calls for optical states that combine stimulus accumulation, spontaneous relaxation, and nonvolatile state retention without continuous power dissipation. Here, we demonstrate a ferroionic photonic platform by integrating layered van der Waals CuCrP2S6 onto silicon microring resonators using a back-end integration process. Electrical pulsing produces unidirectional blue shifts in the optical resonance, consistent with field-driven redistribution of mobile Cu ions and giving rise to a history-dependent optical response. The resulting optical state is strongly pulse dependent, exhibiting both volatile and nonvolatile components. A short 20-pulse excitation produces an initial 70 pm resonance shift that relaxes toward baseline within approximately 60 s, with a volatile relaxation time constant of 27-29 s. In contrast, after 1000 pulses, an initial 0.27 nm resonance shift relaxes to a persistent 0.13 nm nonvolatile state that is retained for at least 24 h. Repeated 6 V electrical pulses produce a progressive resonance shift over 1000 cycles, demonstrating cumulative optical integration. A fixed-wavelength readout converts the accumulated resonance shift into a thresholded optical response, with the normalized transmission remaining above the selected threshold through 600 pulses and falling below it at the 800-pulse state. These dynamics realize the basis for a leaky integrate-and-fire photonic neuron, where the pulse-dependent ionic response provides integration, spontaneous relaxation supplies a passive leak, persistent states provide nonvolatile memory, and fixed-wavelength readout provides an optical threshold response.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33483",
-   "title": "Statistical analysis of crossing beam speckle fields",
-   "url": "https://arxiv.org/abs/2611.33483",
-   "authors": [
-    "Ian D. Min-Roberts",
-    "Wojciech Rozmus",
-    "Pierre A. Michel"
-   ],
-   "label": "arXiv:2611.33483v1",
-   "primary_category": "physics.optics",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A statistical treatment of speckle patterns from two or more crossing laser beams, deriving effective speckle size from intensity-field curvature, an asymptotic Kac-Rice abundance formula checked by Monte Carlo simulation, and an extension to many beams that yields the spectral density of laser-driven electron density fluctuations.",
-    "plain": "When several laser beams cross in a plasma, their overlap creates a grainy pattern of bright and dark spots called speckles. This paper builds a statistical description of how big these spots are and how many there are, and checks the counting formula against computer simulations, which agree well. It then applies the approach to a four-beam arrangement and to a general many-beam case, and reports that spreading the beams farther apart lowers the expected scattering of light from the brightest spots.",
-    "why": "The work is aimed at laser fusion research, where speckle patterns can drive unwanted light scattering that reduces the efficiency of compressing fuel. The text supports the claim that wider beam separation reduces expected scattering from saturated speckles in the quad configuration, but the text alone does not show how directly these results carry over to any particular experiment.",
-    "background": "- Speckle: a random pattern of bright and dark spots produced when coherent laser light interferes.\n- Intensity field: how bright the light is at each point in space.\n- Stimulated Brillouin scattering: a process in which laser light scatters off sound-like waves in plasma, losing energy and reducing the laser's useful effect.\n- Polarization smoothing: a technique that mixes light polarizations to make the laser intensity pattern more uniform.\n- Kac-Rice formula: a standard probability tool for counting how often a random smooth function crosses a level, here used to count speckles.\n- Monte Carlo simulation: repeated random computer sampling used to test a theory.\n- Spectral density: a description of how strongly fluctuations occur at each frequency or wavelength.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Building on the statistical analysis of single beam speckles, this paper develops a statistical description of speckle fields formed by crossing laser beams. A formal definition of individual speckles and their domains allows us to quantify the effective size and abundance of speckles. For two crossing beams, the effective speckle size is derived from the local curvature of the intensity field, and the expected speckle abundance is found asymptotically with the Kac-Rice formula. Monte Carlo simulations of speckle abundance show excellent agreement with the theoretical abundance formula. The two beam speckle analysis is then applied to a symmetric quad beam configuration motivated by polarization smoothing and demonstrates that increasing the separation between beams reduces expected stimulated Brillouin scattering reflectivity from saturated speckles. The statistical model is then extended to an arbitrary number of beams using a coordinate free formulation to obtain the spectral density of laser driven electron density fluctuations.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34518",
    "title": "Site-Resolved Optical Spectroscopy of Thulium in Solid Argon",
    "url": "https://arxiv.org/abs/2611.34518",

@@ -3,57 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33672",
-   "title": "Node Differential Privacy via Node-Stable Graph Projections",
-   "url": "https://arxiv.org/abs/2611.33672",
-   "authors": [
-    "Ishaq Aden-Ali",
-    "Adam Sealfon",
-    "Adam Smith",
-    "Thomas Steinke",
-    "Jonathan Ullman"
-   ],
-   "label": "arXiv:2611.33672v1",
-   "primary_category": "cs.CR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper gives a nearly linear-time randomized graph projection that degree-clips arbitrary graphs in a node-stable way, plus a deterministic Lipschitz extension for total edge weight, and applies both to node-private vector summation and gradient descent on graph-structured data.",
-    "plain": "The paper is about releasing useful statistics from network data (such as who emailed whom) while protecting each person fully, meaning all of their connections at once. The authors build two tools for this: a way to trim overly connected nodes so that no one person has too much influence, and a way to extend a total-weight calculation so it behaves well on every graph. They use these tools to design private methods for summing vectors and for gradient descent when each record is tied to a link between two people.",
-    "why": "Protecting whole individuals in network data is harder than protecting single rows, so better tools for doing it accurately and efficiently matter for privacy-preserving analysis of social and communication graphs. The text does not report experimental accuracy comparisons, so its practical gains beyond the stated guarantees are not shown here.",
-    "background": "- Differential privacy: a guarantee that an output reveals little about whether any one record was included, usually achieved by adding carefully calibrated random noise.\n- Node-differential privacy: the stronger version where the protected unit is a whole node (a person) and all their edges (connections) at once.\n- Graph and degree: a graph is nodes joined by edges; a node's degree is how many edges it has. Most real networks have few high-degree nodes.\n- Graph projection: a transformation that maps a graph to a nearby graph satisfying a degree limit.\n- Lipschitz extension: a way to extend a function from a restricted set of inputs to all inputs while never changing its output by more than a fixed amount per unit of change in the input.\n- Nearly linear time: an algorithm whose running time grows roughly in step with the size of the input.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Node-differentially private algorithms enable learning on network-structured datasets in which records reflect interactions among individuals. They protect the privacy of each individual's information, including all their associated records. A key challenge in the design of such algorithms is to exploit the structure of realistic graphs---where most nodes have low degree---to achieve high accuracy, without compromising on the worst-case privacy guarantee. In this work we give two new tools for designing accurate, computationally efficient node-differentially private algorithms. First, we give a nearly linear time, randomized, node-stable graph projection: the projection leaves graphs of maximum degree $D$ unchanged, maps arbitrary graphs to subgraphs of maximum degree $\\hat D \\approx D$, and ensures that changing one node of the input graph has only a small effect on the distribution of the edges selected among the remaining vertices. Unlike prior approaches, which abstain when the input violates the degree bound, our projection acts as degree clipping: even when $D$ is set well below the true maximum degree (trading truncation bias at high-degree outliers for lower privacy noise), it retains at least as many edges as a maximal $D$-bounded subgraph. Second, for graphs with bounded edge weights, we give a deterministic nearly linear time Lipschitz extension for the total edge weight that agrees with the original sum on graphs of maximum degree $D$ yet is $D$-Lipschitz on all graphs. Finally, we show how to apply these methods to design node-private algorithms for high-dimensional vector summation and gradient descent on datasets where records are associated with graph edges, such as email threads.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34859",
-   "title": "Model Weights, Airlocks and Sandboxes: A Call for Technical Validation of Re-identification Tests under the EDPB Anonymisation Guidelines",
-   "url": "https://arxiv.org/abs/2611.34859",
-   "authors": [
-    "Rickard Br\\\"annvall",
-    "Henrik Forsgren",
-    "Erik Ylip\\\"a\\\"a",
-    "Aslak Felin",
-    "Michael Popoff",
-    "Susanne Stenberg"
-   ],
-   "label": "arXiv:2611.34859v1",
-   "primary_category": "cs.CR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A position paper arguing that re-identification tests used under the EDPB's draft anonymisation guidelines should be validated as measurement methods, with stated detection limits, bias and uncertainty, and examining this across model weight release, airlock output review, and regulatory sandboxes.",
-    "plain": "The paper looks at how regulators should judge whether data, or an AI model trained on data, is anonymous enough to be shared. Its authors say the European Data Protection Board's draft guidance asks for \"re-identification tests\" but does not explain how to design or check them. They propose treating these tests like laboratory measurements, so that a failed attempt to re-identify someone is only trusted once the test's limits are known.",
-    "why": "Whether a trained AI model counts as anonymous affects how companies and researchers can release it under European privacy law. The paper is a reasoned call for clearer standards rather than a reported result, so its value depends on whether regulators adopt its suggestions; the text does not show how that will play out.",
-    "background": "- Anonymisation: making personal data so that people cannot reasonably be identified, which under EU data protection law takes it outside most rules.\n- EDPB: the European Data Protection Board, which advises on how the GDPR is applied; its Guidelines 02/2026 on anonymisation were, per the text, published for consultation in July 2026.\n- Re-identification test: an attempt to link anonymised data back to a specific person, used to check how well data is protected.\n- Model weights: the numerical parameters learned by a machine learning model during training.\n- Airlock: a secure environment where outputs are reviewed before they leave, so that only checked results are released.\n- Regulatory sandbox: a supervised setting where an authority oversees development and testing of a product.\n- Measurement validation: the practice, common in fields like medicine and engineering, of stating a method's detection limit, bias and uncertainty before trusting its results.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The Guidelines 02/2026 on anonymisation of the European Data Protection Board (EDPB), published for consultation in July 2026, assess anonymity relative to the entities that may access data. They bring AI models into scope and call for testing, but do not say how a re-identification test should be designed or validated, or how far its result counts as evidence. Building on our reply to the consultation, we describe a framework based on a secure processing environment whose outputs are reviewed before release (an airlock), and distinguish forms of release and three types of evidence: formal, empirical and indirect. We raise seven open questions, each with a scenario, and examine their technical side in three settings: the release of model weights (the trained parameters of a machine learning model), review at an airlock, and regulatory sandboxes, in which an authority supervises development and testing. In each setting the assessment depends on how far a test result can be relied on, since a failed re-identification attempt may mean only that the test was too weak. Drawing on measurement practice in other regulated fields, we call for re-identification tests to be validated as measurement methods, with stated detection limit, bias and uncertainty.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34229",
    "title": "Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth",
    "url": "https://arxiv.org/abs/2611.34229",

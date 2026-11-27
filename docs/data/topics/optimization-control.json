@@ -3,53 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34002",
-   "title": "Policy and Value Iteration for Entropy-Regularized Stochastic Control",
-   "url": "https://arxiv.org/abs/2611.34002",
-   "authors": [
-    "Yuling Jiao",
-    "Peiying Wu",
-    "Jerry Zhijian Yang",
-    "Ruizhe Zhang",
-    "Tao Zhou"
-   ],
-   "label": "arXiv:2611.34002v1",
-   "primary_category": "math.OC",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper analyzes a policy-and-value iteration scheme for finite-horizon entropy-regularized stochastic control with action-independent diffusion, proving a uniform error bound on the final policy's excess regularized cost and convergence under vanishing errors.",
-    "plain": "The paper studies how to find a good strategy for steering a system that is pushed around by random noise, when the strategy is allowed to be deliberately spread out rather than fixed. The method alternates between two steps: it estimates how good the current strategy is, then rebuilds the strategy as a weighted \"Gibbs\" distribution based on that estimate. The authors prove a guaranteed bound on how far the final strategy's cost can be from the best possible, and they test the method on finite-horizon problems and a discounted routing problem.",
-    "why": "The text gives a provable error bound and tests on problems with known solutions and on a 10,000-dimensional benchmark, which suggests the method is practical for high-dimensional control. Its relevance beyond control theory is not established by the text, so any wider connections should be treated as speculative.",
-    "background": "- Stochastic control: choosing actions over time for a system affected by random noise, aiming to minimize a cost.\n- Entropy regularization: adding a penalty for strategies that are too deterministic, so the best strategy becomes a spread-out probability distribution.\n- Hamilton-Jacobi-Bellman (HJB) equation: a partial differential equation whose solution gives the optimal cost-to-go from each state and time.\n- Policy iteration vs. value iteration: alternating between evaluating a strategy and improving it, which is the general pattern used here.\n- Gibbs distribution: a probability distribution that favors lower-cost actions, with weights set by an exponential of the cost.\n- Kullback-Leibler (KL) divergence: a measure of how different one probability distribution is from another.\n- Finite vs. infinite horizon: planning over a fixed time window versus an ongoing discounted problem.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study finite-horizon entropy-regularized stochastic control with action-independent diffusion. To solve the associated Hamilton-Jacobi-Bellman (HJB) equation, we alternate between value and policy updates. Each iteration approximately solves a linear backward equation for the current policy, then approximates the Gibbs distribution defined by the resulting value gradient. We prove a uniform bound on the final policy's excess regularized cost. The bound assigns explicit, summable weights to the evaluation residuals and the Kullback-Leibler divergences from the updated policies to their Gibbs targets. Under the stated assumptions and with exact terminal data, vanishing errors in both steps imply uniform convergence to the optimal value. Two finite-horizon execution problems test value accuracy against a known solution and closed-loop performance when no exact solution is available. We also evaluate the iteration on a discounted infinite-horizon routing problem with twelve modes and an unregularized HJB benchmark in up to 10,000 dimensions.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34494",
-   "title": "The Monge Optimal Transport Barycenter Problem with Adaptive Features",
-   "url": "https://arxiv.org/abs/2611.34494",
-   "authors": [
-    "Yige Zhou",
-    "Esteban G. Tabak"
-   ],
-   "label": "arXiv:2611.34494v1",
-   "primary_category": "math.OC",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper extends the data-driven Monge optimal transport barycenter problem by making the test features themselves adaptive, using Gaussian radial basis functions whose centers and bandwidths are optimized, and applies it to multidimensional covariates.",
-    "plain": "The paper studies how to adjust a measurement so that it no longer carries information about another variable, such as age or weather, while changing it as little as possible. The usual numerical method checks for leftover dependence using a fixed set of test functions, and how well it works depends heavily on which functions are chosen. The authors let those functions adapt during the procedure and report that this removes dependence better than a fixed small set, reaching results comparable to a larger fixed set in synthetic tests.",
-    "why": "Removing a variable's dependence on confounding factors matters in fields such as biomedical measurement and demand forecasting, and the text reports applications to age-related biomedical data and bike-sharing demand. The text does not say how these results compare with other established methods, so its practical advantage is not established beyond the reported experiments.",
-    "background": "- Optimal transport: finding the least-disruptive way to reshape one distribution into another, here a map y = T(x, z).\n- Barycenter / dependence removal: the goal is an output that is statistically independent of covariates z.\n- Test functions: fixed or learned functions used to detect leftover statistical dependence; the independence condition is only approximated with a finite set of them.\n- Radial basis functions (RBFs): smooth bumps centered at chosen points with a width (bandwidth); here their centers and widths are tuned during optimization.\n- Synthetic vs. real experiments: the core evidence is simulated data, with real-world tests described only briefly in the text.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The data-driven Monge optimal transport barycenter problem seeks a map $y=T(x,z)$ that minimally perturbs an outcome $x$ while removing its statistical dependence on covariates $z$. Numerical implementations approximate the independence constraint through finite-dimensional test-function spaces, making the effectiveness of dependence removal sensitive to the choice of features. This article develops a procedure whereby the features themselves are optimized throughout the procedure. In particular, we adopt a feature space for $f$ consisting of Gaussian radial basis functions (RBFs) with adaptive individual centers and bandwidths. Synthetic experiments show that while fixed nonlinear RBF features can capture dependence structures that are poorly represented by linear features, adapting the RBF centers and bandwidths can further improve dependence removal within a limited feature space and achieve residual dependence comparable to that obtained with a larger fixed basis. We further extend the formulation to multidimensional covariates and evaluate its applicability to real-world problems, including removing age-related dependence in biomedical measurements and dependence on temperature and humidity in bike-sharing demand.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33923",
    "title": "Wasserstein-Fisher-Rao Reconstruction of Discrete space Population Dynamics",
    "url": "https://arxiv.org/abs/2611.33923",

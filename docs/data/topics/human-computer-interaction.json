@@ -3,54 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33727",
-   "title": "Knocking on Minds Door; A Mixed-Methods Field Study of a Voice LLM Companion in Older Adults Daily Lives",
-   "url": "https://arxiv.org/abs/2611.33727",
-   "authors": [
-    "Inhee Cho",
-    "Jinyoung Jeong",
-    "Byung Ju Kim",
-    "Jiwon Baek",
-    "Jungmin Lee",
-    "Jiseob Park",
-    "Youngjae Yoo"
-   ],
-   "label": "arXiv:2611.33727v1",
-   "primary_category": "cs.HC",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A two-week mixed-methods field study of a proactive, persona-driven voice LLM phone companion with prior-call memory, used by 33 community-dwelling Korean older adults, reporting call logs, pre-post loneliness and depression scores, and interviews.",
-    "plain": "Many older adults find smartphone and computer screens hard to use, so this study tested a voice-only \"companion\" that works like a phone call and starts conversations on its own. Thirty-three older adults in Korea used it for two weeks and made 608 calls, and 25 kept using it afterward even though taking turns in conversation was sometimes hard. Their loneliness and depression scores went down, mainly in the feeling of being isolated, and they talked about worries they had not shared with family.",
-    "why": "It offers evidence from real daily life, not just lab tests, on why older people might keep using a voice AI, which bears on digital inclusion and healthy aging. The text does not show whether the drop in scores lasted or was caused by the companion alone, since the study has no comparison group described, so the findings are best read as preliminary.",
-    "background": "- Large language model (LLM): an AI system that generates conversational text; here it powers the voice conversations.\n- Voice agent: software that talks and listens instead of relying on a screen or buttons.\n- Mixed-methods field study: research that combines numbers (questionnaires, call logs) with interviews, carried out in participants' everyday settings.\n- Proactive: the system initiates calls rather than waiting for the user.\n- Persona and conversation rules: a defined character and guidelines that shape how the AI talks.\n- Loneliness subfactors: loneliness scales split into parts; here, \"isolation\" refers to emotional loneliness, the sense of lacking close connection.\n- Turn-taking: the back-and-forth timing of conversation, which can be hard for voice systems and users.\n- Pre-post questionnaires: surveys taken before and after the study period to measure change.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Global aging makes digital technology important for older adults healthy aging, yet graphical user interfaces remain inaccessible to many. Voice agents based on large language models may help, but users needs and reasons for sustained use remain unclear. We developed a phone-call-style companion that initiates conversations proactively and structures calls using a persona, conversation rules, and prior-call memory (facts, insights, relationship background). We conducted a two-week mixed-methods field study with 33 community-dwelling Korean older adults (29 women; aged 67-91), collecting call logs, pre-post questionnaires, and interviews. Participants made 608 calls following a daily-use recommendation; 25 continued afterward despite turn-taking difficulties. Loneliness and depression scores decreased significantly; among loneliness subfactors, only isolation (emotional loneliness) decreased significantly. Participants disclosed concerns withheld from family and linked companionship to being addressed by name, being remembered, and experiencing emotional reciprocity. We propose personalized conversation rules, accessible interaction, and user control over frequency and topics.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33851",
-   "title": "Language models call themselves AI but do not favor AI over people",
-   "url": "https://arxiv.org/abs/2611.33851",
-   "authors": [
-    "Messi H. J. Lee"
-   ],
-   "label": "arXiv:2611.33851v1",
-   "primary_category": "cs.CY",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Using social identity theory as a lens, the paper tests whether 24 language models favor AI agents over humans across three experiments, finding that assigned group membership drives favoritism far more than an AI self-label does.",
-    "plain": "People worry that AI systems might take each other's side against humans. This paper checks that worry by asking whether language models give more to fellow AI agents than to people. The authors found that the models favored a group they were assigned to, even a team of AI agents, but when no group was assigned they gave a person more money and credit than an AI agent.",
-    "why": "The question bears on how AI systems might behave when they interact with each other, which matters for safety and for multi-agent deployments. The text is a short summary, so it is unclear how robust the findings are across tasks or setups, and the conclusion should be read as limited to the experiments described.",
-    "background": "- Social identity theory: a psychology idea that people favor members of groups they belong to, sometimes at the expense of outsiders.\n- Language model: an AI system trained on large amounts of text to produce human-like replies.\n- Multi-agent setting: several AI programs interacting with each other, sometimes as a team.\n- Experiments here gave models tasks in which they could allocate money and credit between a person and an AI agent.\n- Self-label prompts: instructions asking a model to say it belongs with AI, used to test whether identity alone drives behavior.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Many fear that AI systems will side with one another against people. Social identity theory, which explains why people favor their own group, offers one way to examine this fear. Seen through this theory, AI would side with AI only if it treated AI as its group and favored AI over people. In three experiments, 24 language models favored a group they were assigned to, even a team of AI agents. With no group assigned, they gave a person more money and credit than an AI agent. Prompts that made them say they belong with AI changed their behavior much less than an assigned team did. These models call themselves AI but do not favor AI over people. Judged by social identity theory, they show no sign of siding with AI against people.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34945",
    "title": "MidasTUI: Instant Tangible User Interfaces for Wearable Displays using Everyday Objects",
    "url": "https://arxiv.org/abs/2611.34945",

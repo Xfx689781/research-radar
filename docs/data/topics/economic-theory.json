@@ -3,27 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34524",
-   "title": "Lone Wolves and Lattices in Bayesian Matching with Transfers",
-   "url": "https://arxiv.org/abs/2611.34524",
-   "authors": [
-    "Xiyu Li"
-   ],
-   "label": "arXiv:2611.34524v1",
-   "primary_category": "econ.TH",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "This paper studies Lone Wolf and lattice properties of stable outcomes in one-to-one transferable-utility matching with one-sided incomplete information, showing these properties can fail in general but hold under an additive-separability condition with a generic exception set.",
-    "plain": "The paper looks at how workers and firms get paired when a firm does not know everything about the workers it might hire, and money (wages) can be adjusted between them. The author shows by example that some tidy properties of stable pairings can break down in general. Under an extra assumption that a worker's value splits into a part about his type and a part about the firm, the author proves several regularities hold, such as a firm that goes unmatched in one stable outcome earns zero in all of them.",
-    "why": "Stable matching results like these underpin how markets with incomplete information are analyzed, so clarifying exactly when the \"lone wolf\" and lattice structures hold matters for theory. The text does not indicate applications beyond theory, so its practical reach is unclear from the abstract alone.",
-    "background": "- Matching markets: pairing agents (here workers and firms) so that no pair would rather break off and form a new match.\n- Transferable utility: payments such as wages can be shifted between the two sides.\n- Incomplete information: a firm does not observe each worker's type (private characteristics) and forms beliefs about it.\n- Stable outcome: an allocation with payments where no blocking pair exists.\n- Lone Wolf property: a result about which agents end up unmatched across stable outcomes.\n- Lattice: a set of outcomes closed under taking best-for-one-side combinations, which guarantees a worker-optimal and a firm-optimal stable outcome exist.\n- Additively separable: the value splits into a sum of a type-part and a firm-part.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "I study the Lone Wolf and lattice properties of stable outcomes in one-to-one matching with transferable utility and one-sided incomplete information, using the Bayesian stable market states of Liu (2020) and Chen and Hu (2024). With transfers, the wage in a blocking offer screens the worker's types, so it determines both whom the firm attracts and what the firm learns. I show by example that the firm-side and matched-set versions of the Lone Wolf property, as well as the lattice property, can fail even when outcomes are compared under the same information structure. I then assume that each worker's matching value is additively separable in his type and the firm's identity. Under this condition, a firm that is unmatched in some stable outcome earns zero in every stable outcome with the same type profile and information structure. Workers can retain information rents, so the worker-side property can fail. Nevertheless, outside a finite union of affine hyperplanes in the space of firm values, all such stable outcomes leave the same agents unmatched. Whenever they do, the stable payoff vectors form a lattice, and worker-optimal and firm-optimal outcomes exist. The results extend to comonotonicity of relative preferences when posterior beliefs are independent across workers.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34271",
    "title": "AI Misalignment and the Limits of Market Discipline",
    "url": "https://arxiv.org/abs/2611.34271",

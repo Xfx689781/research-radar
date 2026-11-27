@@ -3,55 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33406",
-   "title": "WADJET: Whole-Job Authorization and Dispatch for Job Execution Trust on FPGA System-on-Chip Accelerators",
-   "url": "https://arxiv.org/abs/2611.33406",
-   "authors": [
-    "Mohamed El-Hadedy"
-   ],
-   "label": "arXiv:2611.33406v1",
-   "primary_category": "cs.AR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "WADJET is a hardware gate on an FPGA system-on-chip that authorizes, decrypts, and sequence-checks each whole accelerator job with Ascon-AEAD128 before writing the accelerator's registers, and reports a proven release path, a software model test, and a Zynq-7020 evaluation.",
-    "plain": "Chips that pair a processor with a programmable accelerator trust the processor's software to tell the accelerator what to do, so buggy or hijacked software can alter a single register or send the same job twice. This paper proposes a small hardware gate that sits between the processor and the accelerator: it checks that each complete job was approved, is intact, and has not been used before, and only then lets it through. In the authors' tests, the gate accepted all 21,000 approved jobs and rejected all 14,700 altered or repeated ones, at about a third of the logic cost of a comparable existing protection and with roughly ten extra microseconds per job start.",
-    "why": "It addresses a gap where existing protections control who can reach an accelerator or guard its data, but not whether a specific job was approved and is still unused. The evidence is a single platform and a language-model workload, and the design assumes its key, reset, and configuration are trusted, so the scope is narrower than the headline suggests.",
-    "background": "- FPGA: a reconfigurable chip whose internal logic can be designed to act like custom hardware.\n- System-on-chip (SoC): one chip combining a processor with accelerator hardware.\n- Accelerator: a special-purpose circuit that does one kind of computation faster than the main processor.\n- Registers: memory slots the processor writes to control a device.\n- Authenticated encryption (AEAD, here Ascon): scrambles data so it cannot be read, and detects any tampering.\n- Sequence number: a counter that lets a receiver reject old or repeated messages (replay protection).\n- Formal proof on Verilog: a mathematical check that the hardware description behaves correctly for all possible inputs.\n- Zynq-7020: a specific commercial FPGA SoC used for the tests.\n- Lookup tables (LUTs): basic logic building blocks on an FPGA; fewer means a smaller design.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "On an FPGA system-on-chip, the software that submits work to an accelerator also decides what the accelerator does. It writes the registers one by one, and the hardware runs whatever it finds, so faulty or compromised software can change one address or resend a job. Existing protections decide who may reach an accelerator or keep its data safe. Deciding whether one job was approved and is still unused takes three things in one place: the only way to the accelerator, the whole job held back until checked, and a record of used approvals. WADJET puts the three in one gate in FPGA logic. A separate authority encrypts and authenticates each approved job, with a sequence number, using Ascon-AEAD128. The gate verifies the whole job before releasing any part, accepts only a newer sequence number, uses it up, and writes the registers of an unmodified accelerator itself. The gate replaces only the processor's direct line to the registers and works beside the existing protections. In a software model, a check on each write ran jobs mixed from two approved ones; the whole-job rule released none. Its release path is proven on the Verilog for all inputs. On a Zynq-7020 running a language model, it released all 21,000 approved jobs and none of 14,700 altered or repeated ones. It needs a third of the lookup tables of ShEF's register protection, which protects more, and adds about ten microseconds to starting a job. It assumes trusted control of its key, reset, and configuration.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34262",
-   "title": "From Telemetry to Intelligence: A Data-Centric Survey of O-RAN",
-   "url": "https://arxiv.org/abs/2611.34262",
-   "authors": [
-    "Samara Mayhoub",
-    "Zhengjia Xu",
-    "Tareq M. Shami",
-    "Mohammad Asif Habibi",
-    "Hamed Alimohammadi",
-    "Ayhan Akbas",
-    "Chuan Heng Foh",
-    "Jose Maria Alcaraz Calero"
-   ],
-   "label": "arXiv:2611.34262v1",
-   "primary_category": "cs.NI",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A survey that reviews O-RAN (open, software-driven radio access networks for mobile networks) from a data-centric angle, classifying O-RAN data by source, accessibility, abstraction level, and application, and mapping how that data supports rule-based, AI/ML, and agentic AI control across different timescales.",
-    "plain": "Mobile phone networks increasingly rely on software that makes automatic decisions about radio resources, and those decisions are only as good as the data behind them. This paper surveys the kinds of data available in an open mobile network design called O-RAN, how it is collected and organized, and which control tasks it can support. It also lists the main data problems that could limit smarter, automated network control.",
-    "why": "Network operators are trying to automate radio networks with machine learning and newer agent-style AI, so a clear map of what data exists and where it comes from is useful for both researchers and engineers. The text itself does not report experimental results; its value is as an organizing framework and review of the field.",
-    "background": "- O-RAN: an open, multi-vendor design for the radio part of mobile networks (the base stations and their control software), intended to let different companies' parts work together.\n- Telemetry: measurements a network continuously reports, such as signal quality, load, and errors.\n- Control loops at different timescales: some decisions are made in milliseconds, others over minutes or longer.\n- AI/ML: machine learning methods that learn patterns from data to make predictions or decisions.\n- Agentic AI: AI systems that plan and take multi-step actions with some autonomy, rather than only answering a single query.\n- Rule-based control: fixed if-then policies written by engineers.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "The Open Radio Access Network (O-RAN) has emerged as a new architecture for enabling programmability, intelligence, automation, and multi-vendor interoperability in the wireless domain of public telecommunications networks. Artificial Intelligence/Machine Learning (AI/ML), and more recently Agentic AI, are considered key enablers of automation and intelligentization in O-RAN. However, the effectiveness of such systems is constrained by the availability, quality, and structure of O-RAN data. In this survey, we present a data-centric perspective of O-RAN, focusing on how data support rule-based, AI/ML-driven, and emerging Agentic AI applications across various timescale control loops. We analyze O-RAN data along multiple dimensions, including source, accessibility, abstraction level, and application. We further identify key data challenges, and discuss their implications for intelligent control. The overarching objective of this work is to present the first comprehensive review of the data-centric perspective on intelligent applications in O-RAN. To this end, it introduces a unified framework for understanding the role of O-RAN data in enabling network intelligence and automation.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34630",
    "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
    "url": "https://arxiv.org/abs/2611.34630",

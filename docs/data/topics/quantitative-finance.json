@@ -3,31 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34696",
-   "title": "Distance from the Truth: Why Fragmented Merchant Underwriting Misses Risk, and What Source-Attributable Evidence Changes",
-   "url": "https://arxiv.org/abs/2611.34696",
-   "authors": [
-    "Russell Lessard",
-    "Jeremy Blackburn",
-    "Tim Hines",
-    "Matthew Koepp",
-    "Jason Patrick"
-   ],
-   "label": "arXiv:2611.34696v1",
-   "primary_category": "cs.CR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A position paper arguing that fragmented merchant underwriting misses linked risks across identity, authority, and settlement, and proposing a source-attributable evidence architecture, receipt format, 90-day shadow pilot design, and self-assessment, with all controls and pilot measures explicitly unobserved.",
-    "plain": "This paper is about how payment companies decide whether to let a business accept card payments. It argues that checking each piece of evidence separately (a registration, an ID, a bank account) can miss whether those pieces actually belong to the same business and the same authorized person. The authors propose keeping a single, traceable record of what was checked, who it relates to, when, and under which rule, and they describe a planned test rather than reporting results.",
-    "why": "Merchant onboarding failures can lead to fraud losses and compliance problems for payment processors and banks, so a clearer way to link evidence could matter to that industry. The text itself presents the proposals as untested, so its practical value is not yet shown; it is a framework and a proposed pilot, not a measured improvement.",
-    "background": "- Merchant underwriting: the process a payment processor uses to approve a business before it can take card payments.\n- Know-your-customer / customer due diligence: rules requiring institutions to verify who their customers are and who controls them.\n- Sanctions screening: checking customers against lists of restricted individuals or entities.\n- Card-network and Nacha rules: requirements from Visa/Mastercard-type networks and the Nacha body that governs bank payment transfers (ACH).\n- Settlement destination: the bank account where a merchant's money is sent.\n- Point-in-time check: a verification that was true on one date but may not still be true later.\n- Shadow pilot: a trial run that operates alongside existing processes without actually making the decisions.\n- The \"ChainIT Transaction Truth Architecture\" is a named framework referenced by the paper; the text does not explain it in detail.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Merchant underwriting becomes vulnerable when evidence is evaluated without enough visibility into its source, freshness, relationship to the applicant, or meaning for the proposed activity. Individually favorable checks do not necessarily establish that the same business is operating the merchant account, that its representative may bind it, or that its settlement instructions are authorized. We describe three failure modes of fragmented underwriting: distance from the source, the gap between a decision and the evidence needed to justify it; the correlation gap, in which material relationships among the person, legal entity, owners or controllers, representative, business activity, and settlement destination are not evaluated when each signal is considered alone; and point-in-time controls, in which a historical verification is treated as present eligibility. We map these failure modes to identity-proofing, customer-due-diligence, sanctions, third-party-risk, card-network, and Nacha requirements, and propose a merchant-underwriting application of the ChainIT Transaction Truth Architecture built on provenance, correlation, and persistence. The application keeps a logically unified evidence record that identifies what was checked, the subject and relationship involved, the relevant times, the applicable policy, the decision, and any exceptions, and it keeps evidence validation, applicant verification, organizational authority, and the institution's risk judgment separate. We also set out a proposed evidence and decision receipt, a defined 90-day shadow enrollment pilot with adjudicated outcome measures and deliberate control-failure tests, and a ten-question self-assessment. Proposed controls, illustrative scenarios, and pilot measures are identified as such and are not represented as observed production results.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34567",
    "title": "Large deviations for integrated exponentials of Gaussian Volterra processes - application to variance options",
    "url": "https://arxiv.org/abs/2611.34567",

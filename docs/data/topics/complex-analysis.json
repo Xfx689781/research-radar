@@ -3,49 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34186",
-   "title": "Independence of Thurston eigenvalues and Lyapunov exponents for quadratic rational maps",
-   "url": "https://arxiv.org/abs/2611.34186",
-   "authors": [
-    "Ayesha Bennett",
-    "Holly Krieger"
-   ],
-   "label": "arXiv:2611.34186v1",
-   "primary_category": "math.DS",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper studies post-critically finite quadratic rational maps with both critical points in one cycle, constructing real bitransitive centres in the curve C_2 that degenerate in moduli space, and shows Thurston eigenvalues have a spectral gap on compact subsets of C_2.",
-    "plain": "The paper looks at a family of simple iterated maps of the Riemann sphere, the kind of rule you get by repeatedly applying a fraction-shaped function to complex numbers. It concerns maps whose special \"critical\" points behave in a tightly linked way, and it asks how two different numerical measures of how these maps stretch things, called Thurston eigenvalues and Lyapunov exponents, relate to each other. The authors build a sequence of such maps where the Lyapunov exponents grow without bound while the Thurston eigenvalues stay in a fixed range, and they show the Thurston eigenvalues stay separated from the unit circle in a uniform way on compact parts of the curve.",
-    "why": "The work responds to questions raised by Buff, Epstein and Koch about whether these two quantities are independent, and the example suggests they are not tied together in the way one might hope. The text does not say more about wider applications, so the broader significance is uncertain from this abstract alone.",
-    "background": "- Complex numbers and the Riemann sphere (the complex plane plus a point at infinity).\n- Rational maps: functions given as a ratio of polynomials, iterated repeatedly.\n- Quadratic rational maps: maps of degree two.\n- Critical points: points where the map's derivative vanishes; post-critically finite means their orbits under iteration are finite in number (eventually periodic).\n- Moduli space: the space parametrising maps up to change of coordinates; \"degenerate\" means a sequence of maps escapes to a boundary of this space.\n- Thurston pullback map and its fixed point: a combinatorial tool whose derivative's eigenvalues are the Thurston eigenvalues.\n- Lyapunov exponent: a long-run average measure of how fast nearby orbits separate.\n- Spectral gap: a uniform separation of the relevant eigenvalues from the unit circle.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study post-critically finite quadratic rational maps $f: \\mathbb{P}^1\\to\\mathbb{P}^1$ where the two critical points lie in the same cycle. The Thurston eigenvalues of $f$ are those of the derivative of the Thurston pullback map $\\sigma_f$ at its fixed point. Addressing questions of Buff--Epstein--Koch, we construct a sequence of real, bitransitive centres in the critical orbit relation curve $C_2$ which degenerates in moduli space, and whose Lyapunov exponents tend to infinity whilst the Thurston eigenvalues satisfy $\\frac{1}{10}< |\\lambda|<1$. We also show the Thurston eigenvalues across all bitransitive centres in $C_2$ have a spectral gap on compact subsets of the curve.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34654",
-   "title": "Connectedness Principle in the Complex Analytic Setting",
-   "url": "https://arxiv.org/abs/2611.34654",
-   "authors": [
-    "Swapnajit Das"
-   ],
-   "label": "arXiv:2611.34654v1",
-   "primary_category": "math.AG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proves a complex-analytic version of the connectedness principle for Kähler pairs: under a nefness condition over a base, the non-klt locus has at most two connected components in each fiber, and it extends the result to generalized pairs with transcendental nef part and to projective morphisms of possibly non-compact analytic varieties.",
-    "plain": "The paper studies shapes of special subsets inside geometric spaces that are built from curves, surfaces and their higher-dimensional analogues, such as complex manifolds. It asks how many separate pieces the \"bad\" part of such a space can break into when the space is mapped onto a simpler base. The authors show that, under the stated conditions, each fiber of the map has at most two separate pieces.",
-    "why": "This is a complex-analytic extension of a connectedness principle that is known in algebraic geometry, so it brings those tools to the non-algebraic (Kähler) setting. The text does not say what applications it has beyond this extension, so its wider significance is unclear from the given material.",
-    "background": "- Complex analytic variety: a space locally described by complex-number equations, more flexible than algebraic varieties.\n- Kähler: a geometric compatibility condition on a complex space that allows tools from differential geometry.\n- Normal pair (X, B): a space X with a weighting divisor B on it, used to track singularities.\n- Non-klt locus (Nklt): the set of points where the singularities are severe enough to count as \"bad\".\n- Proper morphism with connected fibers: a map whose preimages of points are single pieces and which does not blow up to infinity.\n- Nef (over Z): a positivity condition on the canonical-type divisor, relative to the base Z.\n- Generalized pair: an extended framework where an extra nef-type part is allowed; here that part may be transcendental (not coming from algebraic data).\n- Fiber: the preimage f^{-1}(z) of a point z in the base.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We show that if $(X,B)$ is a normal compact K\\\"ahler pair and $f:X\\to Z$ is a proper morphism with connected fibers to a normal compact K\\\"ahler variety $Z$ such that $(-K_X+B)$ is nef over $Z$, then $\\mathrm{Nklt}(X,B)\\cap f^{-1}(z)$ has at most two connected components for every $z\\in Z$. More generally, we prove the result for generalized pairs whose nef part is allowed to be transcendental. Moreover, we record that the same result holds for projective morphism between analytic varieties (possibly non-compact).",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33697",
    "title": "Singularities in global pluripotential theory",
    "url": "https://arxiv.org/abs/2611.33697",

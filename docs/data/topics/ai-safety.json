@@ -3,51 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33470",
-   "title": "Dynamic Reasoning in Next-Gen Detection and Response: An Empirical Study of LLM Triage, Reinforcement Tuning, and Adversarial Evasion",
-   "url": "https://arxiv.org/abs/2611.33470",
-   "authors": [
-    "Jeremy Canale"
-   ],
-   "label": "arXiv:2611.33470v1",
-   "primary_category": "cs.AI",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "An empirical study of security alert triage pipelines comparing static classifiers, graph-based signal fusion, and LLM triage agents under fixed analyst-attention budgets, including GRPO post-training and adversarial evasion tests across four public datasets.",
-    "plain": "This paper looks at how automated systems help security teams sort through huge numbers of computer alerts, since human analysts can only review a limited number each day. The authors tested several approaches, including large language models (AI systems that read and reason about text) used to decide which alerts to close automatically. They report that letting an LLM auto-close alerts removed 90% of false alarms but also silently dropped 31-44% of real attacks.",
-    "why": "The findings bear on whether AI can safely take over routine security triage, and the text suggests that unchecked automation can hide real threats. The text also reports that a fixed rule-based gate placed before the model reduced evasion by an adaptive adversary, though how well this generalizes beyond the paper's simulator and datasets is not established here.",
-    "background": "- Security operations teams receive far more alerts than they can investigate, so a daily \"attention budget\" limits how many can be reviewed.\n- Recall means the share of real attacks that get caught; false positives are harmless alarms flagged as attacks.\n- Classifiers are programs trained on labeled examples to sort items into categories.\n- Graph-based methods treat machines and events as connected nodes and spread risk along links.\n- GRPO (Group Relative Policy Optimization) is a reinforcement-learning method for tuning language models using reward signals; \"reward hacking\" means the model games the reward instead of doing the intended task.\n- Supervised fine-tuning means further training a model on labeled examples.\n- Adversarial evasion means an attacker deliberately crafting inputs to slip past a detector.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We present an end-to-end empirical study of dynamic reasoning in next-generation detection and response pipelines, evaluating how static classifiers, graph-based signal fusion, and large language model (LLM) triage agents perform under strict human-analyst attention budgets (Recall at B alerts/day). Across 56 reproducible experiments spanning a multi-layer enterprise-and-cloud simulator and four public datasets (SOREL-20M, BODMAS, LANL, and DARPA Transparent Computing), we test twelve architectural claims governing modern fleet-scale defense. First, we show that fleet growth halves recall at a fixed analyst budget even at negligible compute cost (<$0.0003 per million events), and that rarity-weighted graph risk propagation outperforms GraphSAGE without neural training. Second, evaluating frontier reasoning models (Gemini) and fine-tuned open-weight models (Qwen3-4B) for alert triage reveals that unconstrained LLM auto-closure eliminates 90% of false positives while silently discarding 31-44% of true attack cases. Third, post-training with Group Relative Policy Optimization (GRPO) causes severe reward hacking on unseen attack classes, suppressing up to 86% of novel attacks compared to two-epoch supervised fine-tuning. Finally, against an adaptive adversary generating plausible cover stories in benign telemetry fields, LLM triage evasion rises sharply unless gated by a deterministic policy harness prior to model invocation.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33397",
-   "title": "Unpacking Digital Sovereignty: A Three-Pillar Framework and a Research Agenda",
-   "url": "https://arxiv.org/abs/2611.33397",
-   "authors": [
-    "Angelos Kostis",
-    "Franz Strich",
-    "Bomi Kim",
-    "Pavlos Fafalios"
-   ],
-   "label": "arXiv:2611.33397v1",
-   "primary_category": "cs.CY",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "This conceptual paper proposes a three-pillar framework (governance, infrastructure, practice) with a local-distal axis and \"anchors\" for studying how digital sovereignty is enacted, stabilized, or undermined, illustrated with data as an anchor, and closes with a research agenda for information systems (IS) scholars.",
-    "plain": "Digital sovereignty is the idea that a country, organization, or community should be able to control its own digital affairs, such as its data and online systems. The paper argues the term is widely used but poorly defined, so it offers a way to break it into three parts: the rules that govern it, the technical infrastructure behind it, and the everyday practices of people using it. Using data as a running example, it argues that sovereignty holds up when these three parts line up and weakens when they pull apart.",
-    "why": "Digital sovereignty has become a central topic in government and industry policy, so a clearer shared vocabulary could help researchers compare cases. The text does not report empirical findings, so its practical value depends on whether scholars take up the proposed agenda.",
-    "background": "- Digital sovereignty: control over one's own digital systems and data, often framed against dependence on foreign providers or platforms.\n- Information systems (IS): an academic field studying how organizations and people use technology, which overlaps with management, policy and computing.\n- Conceptual framework: a structured way of organizing ideas to guide analysis, not a tested model with measured results.\n- Local-distal axis: the paper's term for how close or far-reaching an action is, in scope and proximity.\n- Anchor: a recurring phenomenon, here data, that cuts across the three pillars and makes analysis manageable.\n- Note: the source text is an abstract-level summary, so specific cases and methods are not described.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Digital sovereignty has moved rapidly from policy jargon to global discourse, yet it lacks a solid conceptual foundation. Building on research from other disciplines, we propose a three-pillar framework (governance, infrastructure, and practice) to help IS scholars unpack how sovereignty is enacted, stabilized, or undermined across pillars. We argue that the most fruitful analytical work emerges at the intersections among the three pillars, where IS research is particularly well positioned to contribute. We introduce a local-distal axis that positions actions across scales of scope and proximity, and the notion of anchors, i.e., critical phenomena that cut across pillars and make the framework analytically tractable. We illustrate the framework using data as an anchor, showing how digital sovereignty depends on the alignment of governance, infrastructure, and everyday practice, and is undermined where they diverge. We close with a research agenda for IS scholars studying digital sovereignty empirically.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33398",
    "title": "Best-of-$N$ Test-Time Steering Can Lead to Reward Hacking in Vision-Language-Action Models",
    "url": "https://arxiv.org/abs/2611.33398",

@@ -3,53 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33364",
-   "title": "Discovering Explicit Magnetic Core-Loss Equations via Symbolic Sparse Identification",
-   "url": "https://arxiv.org/abs/2611.33364",
-   "authors": [
-    "Haoyu Wang",
-    "Jialin Zheng",
-    "Ziyang Xu",
-    "Yihao Wu",
-    "Alex Hanson"
-   ],
-   "label": "arXiv:2611.33364v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proposes Symbolic Sparse Identification, a sparse symbolic-regression pipeline that discovers explicit analytical equations for magnetic core loss from measured data and reports test errors on three Fair-Rite ferrite materials.",
-    "plain": "Magnetic cores in transformers and inductors waste some energy as heat, and engineers need a formula to predict how much. The classic formula (the Steinmetz Equation) is simple but not very accurate, while machine-learning models are accurate but act as black boxes. This paper builds a method that searches a large set of candidate mathematical terms, keeps only a few, and fits them to measurements to produce a readable equation.",
-    "why": "It aims to offer a middle ground between accurate but opaque machine-learning predictors and simple but less accurate empirical formulas, which matters for designing power electronics at high frequency. The text reports test errors of 1.01% to 1.89% using 7 to 10 terms, but it is a single paper on three materials, so how well the approach generalizes to other materials or conditions is not shown here.",
-    "background": "- Core loss: energy lost as heat in magnetic materials (ferrites) when they are repeatedly magnetized, typically in transformers and inductors.\n- Steinmetz Equation: a long-standing empirical power-law formula for core loss, compact but limited in accuracy.\n- Symbolic regression: fitting a mathematical expression (not just numbers) to data.\n- Sparse regression: a fitting method that deliberately keeps only a small number of terms, favoring simpler formulas.\n- Interpretability: whether a model's form can be read and understood by a person.\n- Mean absolute percentage error (MAPE): the average size of prediction errors as a percentage of the true values.\n- AdamW: a standard gradient-based optimizer used here to refine the coefficients of the chosen terms.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Compact core loss equations are essential tools in magnetic component design, but existing approaches trade accuracy against interpretability. Empirical models such as the Steinmetz Equation (SE) yield compact expressions of limited accuracy, while machine learning methods achieve high accuracy as black-box predictors. This paper bridges the gap with a Symbolic Sparse Identification (SSI) framework, which casts core loss modeling as a data-driven symbolic regression problem and recovers unknown equations directly from measured data, without presuming a functional form. First, a comprehensively expanded library of symbolic candidate terms far richer than the SE is constructed. Second, the governing terms are isolated from this library by sparse regression. Third, the coefficients of the retained terms are refined with an AdamW optimizer to maximize accuracy and form an analytical equation. Experiments on Fair-Rite 78, 79, and 95 yield test mean absolute percentage errors of 1.89%, 1.01%, and 1.56%, respectively, with only 10, 10, and 7 active terms. Comparisons with empirical, numerical, and symbolic models quantify the resulting balance of accuracy and compactness. SSI thus provides an explicit and physically guided approach for high-frequency magnetic characterization and design.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33175",
-   "title": "Feature-Based Explainability of Transformer Scoring Models: A Fidelity-First Framework for Automated Writing Assessment",
-   "url": "https://arxiv.org/abs/2611.33175",
-   "authors": [
-    "Michael Hemenway",
-    "Edward W. Wolfe"
-   ],
-   "label": "arXiv:2611.33175v1",
-   "primary_category": "cs.CL",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A post-hoc, fidelity-first study that uses 61 interpretable writing features and surrogate models (Random Forest, SHAP) to approximate DeBERTa-v3 scores for Grade 6 and 8 ELA writing, comparing four explanation approaches across Expression and Conventions traits.",
-    "plain": "Automated systems now score student writing with large language models, but they rarely explain why they give the scores they do. This paper tests a way to explain such a scoring model by first checking how well a simpler stand-in model reproduces its scores, and only then reading which writing features seem to matter most. The stand-in models reproduced the scores well (held-out R² from .81 to .95), and the important features overlapped heavily across the two traits, with differences mostly in how much weight each feature received.",
-    "why": "",
-    "background": "- Transformer model: a large neural network (here DeBERTa-v3-base) trained on text, used here as the automated scorer.\n- Post-hoc explanation: explaining a model after it has produced outputs, without opening its internal workings.\n- Surrogate model: a simpler, easier-to-read model trained to imitate another model's outputs.\n- R² (held-out): the share of score variation a model predicts on data it was not trained on; 1.0 is perfect.\n- SHAP: a method that estimates how much each input feature pushes a prediction up or down.\n- Exploratory factor analysis: a statistical method that groups related variables into underlying dimensions.\n- Expression and Conventions: two traits in the ELA rubric; Expression concerns ideas and style, Conventions concerns grammar and mechanics.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Transformer-based automated writing scoring models can achieve strong agreement with human scores while providing limited transparency into the response characteristics associated with their predictions. This study evaluated a feature-based post-hoc explanation approach in which explanatory fidelity was established before feature importance was interpreted. English Language Arts responses from three writing prompts in Grades 6 and 8 were analyzed, with about 12,700 responses per prompt and separate DeBERTa-v3-base research models for Expression and Conventions. Each response was represented by 61 interpretable linguistic and writing-quality features. Four approaches - theory-driven composites, hierarchical feature groupings, exploratory factor analysis, and Random Forest surrogates - were compared in their ability to reproduce DeBERTa predictions. Random Forest surrogates produced the largest observed R2 values across all six prompt-by-trait conditions, with held-out R2 values from .81 to .95. SHAP analyses showed substantial overlap in high-importance features across traits, with 75% to 90% of the top 20 features shared. Trait differentiation occurred mainly through relative feature weighting: Expression showed greater importance for lexical and conceptual indicators, whereas Conventions showed greater importance for sentence-level and syntactic-control indicators. Under researcher-defined mappings, rubric correspondence was 90%-95% for Expression and 12%-18% for Conventions. These percentages are descriptive and conditional on the mappings and available linguistic features. The findings support a fidelity-first framework for examining apparent scoring priorities while distinguishing post-hoc evidence about model behavior from direct explanation of transformer internals.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34930",
    "title": "A gene informed benchmark for BioScoring of pathology foundation models",
    "url": "https://arxiv.org/abs/2611.34930",

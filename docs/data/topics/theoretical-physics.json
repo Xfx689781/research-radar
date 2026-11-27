@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33287",
-   "title": "Chaotic singularities inside vacuum black holes",
-   "url": "https://arxiv.org/abs/2611.33287",
-   "authors": [
-    "Robie A. Hennigar",
-    "Ayan K. Patra"
-   ],
-   "label": "arXiv:2611.33287v1",
-   "primary_category": "hep-th",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Constructs stationary, asymptotically locally AdS5 black holes with regular, triaxially squashed horizons whose homogeneous interiors realize the cosmological billiard of generic five-dimensional vacuum gravity, giving an algebraic criterion for interior chaos and showing that regular-horizon solutions locally access an open set of billiard trajectories.",
-    "plain": "The paper asks whether the inside of a black hole, near the point where spacetime breaks down, can behave chaotically, as a 1960s conjecture by Belinski, Khalatnikov and Lifshitz predicted for generic spacelike singularities in Einstein's gravity. Until now no pure-gravity black hole had been shown to do this. The authors build five-dimensional black holes (in a setting with anti-de Sitter boundary conditions) whose interiors follow the kind of chaotic bouncing dynamics the conjecture describes, and they give a simple algebraic test on the horizon shape that is needed for this chaos.",
-    "why": "It is a concrete, checkable case where the long-standing conjecture about chaos near singularities is realized inside a vacuum black hole, which matters for understanding what happens inside black holes. The text does not say how far the result extends beyond five dimensions or to other settings, so its wider reach is uncertain.",
-    "background": "- General relativity: Einstein's theory of gravity, in which black holes contain singularities where the equations break down.\n- Horizon: the boundary of a black hole beyond which nothing escapes.\n- Spacelike singularity: a singularity that lies in the future of an infalling observer, like the Big Bang in time, not a point in space.\n- BKL conjecture: the proposal that near generic singularities, space stretches and squeezes in oscillating, chaotic-looking cycles.\n- Cosmological billiard: a simplified geometric model where the BKL dynamics is a ball bouncing between walls in an abstract space, and chaos corresponds to trajectories that never settle into a regular pattern.\n- AdS (anti-de Sitter) space: a negatively curved spacetime often used as a theoretical laboratory; \"asymptotically locally AdS5\" means the geometry looks like this far away, in five spacetime dimensions.\n- Vacuum: no matter or energy fields, only gravity.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "According to the conjecture of Belinski, Khalatnikov and Lifshitz, general relativity gives rise to chaotic dynamics in the vicinity of generic spacelike singularities. However, no vacuum black hole has been shown to exhibit this behaviour. Here we construct stationary, asymptotically locally AdS$_5$ black holes with regular, triaxially squashed horizons and causal exteriors, whose homogeneous interiors realize the cosmological billiard of generic five-dimensional vacuum gravity. We identify a simple algebraic condition on the horizon data that is necessary for the interior billiard to be chaotic, and show that solutions with regular horizons locally access an open set of billiard trajectories.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33744",
-   "title": "Late-time OTOCs in Toda conformal field theory",
-   "url": "https://arxiv.org/abs/2611.33744",
-   "authors": [
-    "Giwan Kim",
-    "Masahito Yamazaki"
-   ],
-   "label": "arXiv:2611.33744v1",
-   "primary_category": "hep-th",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Late-time out-of-time-order correlators of semi-degenerate primary fields in two-dimensional A_{N-1} Toda conformal field theory, examined for N=2 (Liouville), N=3, and N≥4, with a conditional phase-diagram result.",
-    "plain": "This paper studies a measure of how quickly scrambling-type information spreads in a simplified quantum field model, the late-time behaviour of out-of-time-order correlators (OTOCs). For the simplest case (Liouville theory) the author reports that the OTOC decays as a power of time, t to the power -3/2, rather than settling to a constant as earlier work reported. For the N=3 case, the author finds the late-time value is a pure phase under an assumed completeness condition, and says a dominant discrete term gives a constant limit.",
-    "why": "It corrects a previously reported result for a well-studied model and identifies where a simple picture of late-time scrambling breaks down at higher rank. Its connection to broader questions about chaos and information spreading in gravity-related holographic models is suggested by the field, but the text itself does not establish that link.",
-    "background": "- OTOC: a correlation between measurements at different times that is used as a diagnostic of how quickly quantum information spreads and mixes (chaos).\n- Two-dimensional conformal field theory: quantum field theory on a plane with scale invariance, where symmetry strongly constrains correlators.\n- Liouville and Toda theories: families of such theories labelled by a rank N; Liouville is the N=2 case.\n- Primary fields and intermediate states: operators with definite scaling weights; correlators are expanded as sums or integrals over intermediate states.\n- Continuum edge and discrete residue: the lower boundary of a continuous spectrum of states, and isolated states whose contributions can dominate late times.\n- Crossing symmetry: a consistency condition relating different channels of the same correlator.\n- Braiding phase: a phase acquired when operators are exchanged around each other.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study late-time out-of-time-order correlators (OTOCs) of semi-degenerate primary fields in two-dimensional $A_{N-1}$ Toda conformal field theory. In Liouville theory ($N=2$), we find that the OTOC decays as $t^{-3/2}$ when the continuum edge dominates, correcting a previously reported constant limit. For $N=3$, a transverse contour pinch reduces the spectral integral to one dimension. Assuming that the reduced expansion is complete, in the continuous phase the regulated edge behaves as a discrete state, and the OTOC approaches a pure braiding phase. As we check numerically, the edge block is a free-field correlator in a charge-neutral Weyl frame; this explains the pure phase and is consistent with crossing symmetry. For both $N=2$ and $N=3$, a dominant discrete residue gives a constant late-time limit. For $N\\geq4$, the same one-dimensional reduction violates a crossing bound on the lowest intermediate weight of a positive diagonal expansion. Hence the $N=2,3$ phase diagram does not extend to higher rank without additional contributions below the reduced continuum edge or outside a positive diagonal expansion.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34026",
    "title": "Kiselev black hole from semiclassical gravity with conformal anomaly",
    "url": "https://arxiv.org/abs/2611.34026",

@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33578",
-   "title": "Co-amenability and local reflexivity of $C^*$-algebras",
-   "url": "https://arxiv.org/abs/2611.33578",
-   "authors": [
-    "Yafei Zhao",
-    "Zhe Dong"
-   ],
-   "label": "arXiv:2611.33578v1",
-   "primary_category": "math.OA",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper shows that local reflexivity passes from a unital C*-subalgebra A to a larger algebra B when the bidual inclusion A** ⊂ B** is co-amenable, and derives several preservation results and answers to Kirchberg's 2011 questions.",
-    "plain": "This is about a property of infinite-dimensional algebras of operators, which are the mathematical objects used to describe quantum systems. Local reflexivity is a condition saying that finite pieces of such an algebra can be approximated in a controlled way by simpler, matrix-like pieces. The paper proves that this property survives several standard ways of building new algebras from old ones, and it answers five of the open questions Kirchberg listed in 2011.",
-    "why": "Kirchberg's list is a guide to open problems in this area, so settling five of its questions clarifies which constructions preserve this property. The text does not say how the results bear on other fields, so any wider connection is unclear from the abstract alone.",
-    "background": "- C*-algebra: a collection of bounded operators on a space closed under addition, multiplication, scalar multiples and taking adjoints (the \"conjugate transpose\").\n- Bidual (A**): a much larger algebra built from A, containing A, used to study A's structure.\n- Local reflexivity: a approximation property for C*-algebras, relating finite-dimensional pieces to the bidual.\n- Co-amenability: a condition on the inclusion A** ⊂ B** (roughly, a way of extending structure from the smaller to the larger algebra); the text does not define it.\n- Exactness, tensor products, crossed products by groups, free products, and simplicity: standard constructions for building new C*-algebras from given ones.\n- Kirchberg's 2011 list: a published set of open questions about these algebras.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Let $A\\subset B$ be a unital inclusion of $C^*$-algebras. We prove that local reflexivity passes from $A$ to $B$ if the inclusion $A^{**}\\subset B^{**}$ is co-amenable. It follows that local reflexivity is preserved by minimal tensor products with exact $C^*$-algebras, by inductive limits over directed sets, and by reduced crossed products by discrete amenable groups. We also prove that reduced free products with respect to states with faithful GNS representations preserve local reflexivity and that every locally reflexive $C^*$-algebra embeds into a simple locally reflexive $C^*$-algebra. These results answer Questions~(b), (c), (d), (f) and~(h) in Kirchberg's 2011 list.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33996",
-   "title": "Duality of finite-dimensional Hopf $\\mathrm{C}^*$-algebra actions via inclusions",
-   "url": "https://arxiv.org/abs/2611.33996",
-   "authors": [
-    "Anshu",
-    "Hyun Ho Lee"
-   ],
-   "label": "arXiv:2611.33996v1",
-   "primary_category": "math.OA",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper studies actions of finite-dimensional Hopf C*-algebras on unital C*-algebras, defining Rokhlin property and approximate representability and proving a duality between these properties for an action and its dual action on the crossed product, under simplicity and saturation hypotheses.",
-    "plain": "This paper is about symmetry in a very abstract setting: operator algebras are collections of operations on spaces of \"observables,\" and finite-dimensional Hopf algebras generalize groups as sources of symmetry. The authors study when such a symmetry acts on an algebra in a well-behaved way, using a \"Rokhlin property\" (a strong form of evenly spreading out the symmetry) and a weaker property called approximate representability. They show that, under stated conditions, one action has one of these properties exactly when the dual action on the associated crossed product has the other.",
-    "why": "The result gives a duality, a two-way correspondence, between an action and its dual, which extends known symmetry-and-duality results from group actions to the broader Hopf-algebra setting. The text also gives examples both with and without the Rokhlin property, and for separable algebras it links the properties to earlier spatial formulations by Barlak, Szabó and Voigt. I am not sure of wider applications beyond this area, and the text does not say.",
-    "background": "- C*-algebra: a algebra of bounded operators closed under adjoints and norm limits, used as a mathematical model of quantum observables.\n- Unital and simple: contains an identity element, and has no nontrivial two-sided ideals.\n- Action: a way a symmetry structure (here a Hopf algebra) transforms the algebra.\n- Hopf algebra: a generalization of a group that still carries multiplication, comultiplication and antipode; finite-dimensional ones are the case studied.\n- Fixed-point algebra and conditional expectation: the subalgebra left unchanged by the action, and a projection map onto it.\n- Crossed product and dual action: a bigger algebra built from the action, carrying a dual symmetry that reverses the construction.\n- Rokhlin property: a condition saying the symmetry can be \"spread out\" so that the algebra looks like many disjoint copies, a strong form of regularity.\n- Saturation and approximate representability: technical conditions on how the action sits inside the algebra.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We study actions of finite-dimensional Hopf $\\mathrm{C}^*$-algebras on a unital $\\mathrm{C}^*$-algebra $A$. We first define the Rokhlin property and approximate representability directly for an action $H\\curvearrowright A$ and characterize these properties, under appropriate hypotheses, in terms of the corresponding properties of the canonical conditional expectation $E\\colon A\\to A^H$. Based on this characterization, we establish the following duality for a saturated action on a simple unital $\\mathrm{C}^*$-algebra $A$ such that $A\\rtimes H$ is simple: 1. $H\\curvearrowright A$ has the Rokhlin property if and only if the dual action $H^{\\circ}\\curvearrowright A\\rtimes H$ is approximately representable. 2. $H\\curvearrowright A$ is approximately representable if and only if the dual action $H^{\\circ}\\curvearrowright A\\rtimes H$ has the Rokhlin property. For separable $A$, we also identify these properties with the corresponding spatial formulations introduced by Barlak--Szab{\\'o}--Voigt, assuming saturation in the Rokhlin comparison. We present examples of Hopf $\\mathrm{C}^*$-algebra actions both with and without the Rokhlin property.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33960",
    "title": "On Shepp's property in free probability",
    "url": "https://arxiv.org/abs/2611.33960",

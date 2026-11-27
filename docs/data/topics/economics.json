@@ -3,49 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34099",
-   "title": "Will AI Replace Juniors? How Task Complexity Reduces Automation Risk",
-   "url": "https://arxiv.org/abs/2611.34099",
-   "authors": [
-    "Vincent Rost",
-    "Fabian Stephany"
-   ],
-   "label": "arXiv:2611.34099v1",
-   "primary_category": "econ.GN",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A pre-registered survey experiment with managers at 1,435 German firms finds that tasks requiring judgement and independent problem-solving make managers less willing to substitute AI for entry-level hiring, and that managers expect AI to reduce entry-level hiring more than experienced hiring.",
-    "plain": "The paper asks whether companies would use AI tools instead of hiring junior staff. Managers were randomly given one of two hypothetical staffing needs: standardised, well-structured work, or more complex work requiring professional judgement and independent problem-solving. The complex-task framing made managers noticeably less inclined to choose AI over a new junior hire, and it raised the importance they placed on human oversight.",
-    "why": "It speaks to a live public worry that AI will squeeze entry-level jobs first, and it suggests that the kind of work matters more than the mere availability of AI. The text reports only survey responses from German firms in two sectors, so how far the findings carry to other countries or jobs is not established here.",
-    "background": "- Survey experiment: participants are randomly assigned to different versions of a scenario, so differences in answers can be attributed to the change in the scenario.\n- Pre-registered: the researchers publicly specified their hypotheses and analysis before collecting data, which limits selective reporting.\n- Five-point scale: managers rated their willingness on a 1 to 5 scale; the reported effect is 0.54 points lower for complex tasks.\n- Entry-level labour: newly hired or junior staff with little work experience.\n- Human oversight: people checking or supervising the output of automated tools.\n- Information economy and manufacturing: the two sectors sampled.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "How does task complexity shape firms' willingness to substitute entry-level labour with artificial intelligence (AI) tools? We study this question using a pre-registered survey experiment with managers from 1,435 German firms in the information economy and manufacturing industry. Managers are randomly assigned to consider a long lasting need for additional capacity involving either well-structured and standardised tasks, or more complex tasks that require professional judgement, contextual knowledge and independent problem-solving. Relative to standardised tasks, complex tasks reduce willingness to use AI rather than hire an entry-level employee by 0.54 points on a five-point scale and increase the importance attached to human oversight by 0.15 points. Further, pre-treatment responses indicate that managers expect the availability of AI applications to reduce hiring of both entry-level employees and experienced workers, but significantly more strongly for entry-level workers.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33350",
-   "title": "Geodesic Causal Forests: Learning Heterogeneous Treatment Effects for Random Objects",
-   "url": "https://arxiv.org/abs/2611.33350",
-   "authors": [
-    "Yidong Zhou"
-   ],
-   "label": "arXiv:2611.33350v1",
-   "primary_category": "stat.ME",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proposes geodesic causal forests, a tree-based method that estimates heterogeneous treatment effects when outcomes are random objects in curved metric spaces (e.g., compositions, covariance matrices, distributions, networks), using geodesic transport to Fréchet-mean references and a squared-distance loss correction that stands in for Euclidean residual corrections.",
-    "plain": "Many studies now measure outcomes that are not simple numbers but whole objects, such as a household's mix of activities, a table of correlations, or a probability distribution. These objects cannot be added or subtracted in the usual way, so standard methods for finding who benefits most from a program do not directly apply. The authors build a forest-based method that works in this setting and test it on simulated covariance-matrix data and on data from a Bangladeshi antipoverty program about women's livelihood mixes.",
-    "why": "Outcome data of this kind are becoming more common, and a method that can say who is affected most, in such settings, could be useful for program evaluation. The text reports consistency and convergence guarantees and simulation gains, but the empirical application's findings are described only briefly, so its practical weight is best judged from the full paper.",
-    "background": "- Treatment effect: the difference a program makes for an individual compared with not receiving it.\n- Heterogeneous treatment effects: how that difference varies across people (e.g., by age or prior work).\n- Causal forest: an ensemble of decision trees that splits people into groups with different estimated effects.\n- Random object: an outcome such as a matrix, distribution, or network, rather than a single number.\n- Metric space and geodesic: a space with a distance measure; a geodesic is the shortest path between two points in it, which may be curved.\n- Fréchet mean: the generalization of an average to curved spaces, found by minimizing squared distances.\n- Doubly robust learning: estimation that stays accurate if either of two supporting models is roughly right.\n- Nuisance error: error in auxiliary models (such as predicted outcomes or treatment probabilities) that the main estimate must tolerate.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Causal forests and orthogonal learners estimate heterogeneous treatment effects for scalar or Euclidean outcomes, yet outcomes are increasingly random objects, such as compositions, covariance matrices, distributions, or networks, in metric spaces without linear structure. We introduce geodesic causal forests for conditional geodesic treatment effects. Geodesic transport moves each geodesic between conditional Fr\\'echet means of the potential outcomes to a common reference, making effects comparable across individuals. Because random objects cannot be added or subtracted, Euclidean residual corrections are unavailable; we instead correct the squared-distance loss through which the forest selects splits and estimates effects. The loss is real-valued for every candidate effect, so the correction requires only Fr\\'echet means and leaves second-order nuisance error; for Euclidean outcomes, it recovers doubly robust learning. We establish consistency, convergence rates, and split-selection guarantees under conditions verified for curved and nonsmooth spaces. In simulations with covariance-matrix outcomes, the correction substantially reduces estimation error. For women's livelihood compositions in BRAC's randomized antipoverty program in Bangladesh, new livestock work mainly replaces casual wage work; after alignment, a single effect reproduces much of the variation in percentage-point changes across baseline activities, and the fitted effects are largest among former domestic workers and older women.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34722",
    "title": "How Large are Monetary Policy Effects? dentifying the Shocks in a VAR also Identifies the Constants",
    "url": "https://arxiv.org/abs/2611.34722",

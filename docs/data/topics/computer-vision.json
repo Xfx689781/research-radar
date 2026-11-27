@@ -3,63 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34680",
-   "title": "Neural Rendering Compiler: Generative Video Models as Programmable Renderers",
-   "url": "https://arxiv.org/abs/2611.34680",
-   "authors": [
-    "Yuxia Zhu",
-    "Xinglong Xu",
-    "Hao Liang",
-    "Linzhuang Sun",
-    "Caijun Jia",
-    "Qifeng Cai",
-    "Jincen Luo",
-    "Lei Li",
-    "Alden Cai",
-    "Asher Qin",
-    "Wentao Zhang",
-    "Cheng Tan"
-   ],
-   "label": "arXiv:2611.34680v1",
-   "primary_category": "cs.CV",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "NeurCo probes frozen generative video models to build per-model capability manuals, then compiles a model-agnostic description of user intent into execution strategies that avoid requirements each model is unreliable at, evaluated on a 380-task compositional benchmark (VComBench).",
-    "plain": "Modern AI video generators can make clips from text, images, or reference footage, but it is hard to know which instructions they will actually follow. This paper proposes a \"compiler\" that first tests a given video model to see which kinds of requests it handles reliably, then rewrites or reroutes the parts it tends to get wrong. On a new benchmark of 380 tasks with several requirements each, the authors report modest gains in how often the requirements were met.",
-    "why": "Predictable control over generative video matters for anyone who wants to use these models as tools rather than black boxes. The approach, treating a model's abilities as something to measure and program around, may be useful beyond this paper, though the reported gains are fairly small and the text gives no detail on how general the findings are.",
-    "background": "- Generative video model: an AI system that produces video from a text prompt, an image, or reference material.\n- \"Frozen\" model: the model's internal parameters are not retrained; only the inputs and how they are phrased change.\n- Prompt enhancer: a tool that rewrites or expands a user's text prompt before it reaches the video model.\n- Compositional, multi-requirement task: a request combining several conditions at once, such as specific objects, their motions, events, and camera moves.\n- Intermediate representation: a neutral, structured description of intent that is not tied to any one model, similar to an intermediate code form in a traditional compiler.\n- Requirement satisfaction rate: the share of individual requested conditions that appear correctly in the generated video.\n- Controllability vs. photorealism: the trade-off where forcing a specific instruction can make the output look less natural.",
-    "difficulty": "intermediate",
-    "ai": true
-   },
-   "abstract": "Generative video models are becoming powerful renderers, yet lack the predictable control interfaces of conventional systems such as HTML/CSS engines or Blender. Their capabilities emerge implicitly from training, making it difficult to determine what they can reliably execute. We present Neural Rendering Compiler (NeurCo), which automatically probes frozen video models to construct model-specific capability manuals describing which semantic requirements they can reliably satisfy. NeurCo represents user intent in a model-agnostic intermediate representation of objects, constraints, events, and cameras, then compiles it into model-specific execution strategies. Reliable requirements remain unchanged, while unreliable ones are selectively rewritten or compiled into alternative execution strategies. We introduce VComBench, a benchmark of 380 compositional, multi-requirement tasks spanning text-to-video, image-to-video, and reference-to-video generation. NeurCo improves requirement satisfaction from 46.8% to 52.3% on Wan and from 66.5% to 69.3% on Minimax H3, and achieves further gains when combined with prompt enhancers, including on Seedance 2.5. Our analysis reveals model-specific differences in control capabilities and trade-offs between controllability and photorealism, highlighting capability-guided compilation as a promising approach to programmable generative video rendering.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34220",
-   "title": "Variation-aware Temporal Correspondence for Self-Supervised Video Representation Learning",
-   "url": "https://arxiv.org/abs/2611.34220",
-   "authors": [
-    "Yang Liu",
-    "Qianqian Xu",
-    "Peisong Wen",
-    "Siran Dai",
-    "Qingming Huang"
-   ],
-   "label": "arXiv:2611.34220v1",
-   "primary_category": "cs.CV",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "VT-CoRe is a self-supervised video representation learning framework that uses sandwich-sampled temporal references, a Patch Registration Module for patch-level correspondence, and a self-distillation objective with temporal variation modeling on top of masked video modeling.",
-    "plain": "Computers can learn to understand videos without human labels by hiding parts of each clip and trying to fill them in from other frames. This paper targets a weakness of that approach: objects in video move and change, so matching the same region across frames is hard. The authors propose a method that picks frames before and after a clip, links matching image patches between them, and trains the model to keep meaning stable while tracking how things change over time.",
-    "why": "Learning from unlabeled video is useful because labeled video is expensive, and the paper reports tests on 8 downstream tasks across 16 benchmarks, including robotic learning. The text does not show how large the gains are over existing methods, so its practical impact remains to be judged from the full results.",
-    "background": "- Self-supervised learning: training on data without human-written labels, using the data's own structure as the training signal.\n- Masked image/video modeling: hiding parts of an input and training the model to reconstruct or predict the hidden content.\n- Temporal correspondence: working out which region in one video frame corresponds to which region in another frame.\n- Patch: a small square block of pixels that vision models split an image or frame into.\n- Self-distillation: a teacher network (often a slowly updated copy) guides a student network to produce matching internal representations, without labels.\n- Latent space: the model's internal numerical description of an input, where similar content should sit close together.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Self-supervised video representation learning has achieved remarkable progress by leveraging large-scale unlabeled video data. Recent methods commonly extend Masked Image Modeling (MIM) to Masked Video Modeling (MVM), where video representations are learned by capturing semantic information from temporal contexts during masked content recovery. Unlike static images, videos exhibit inherent temporal variation, as visual objects continuously change their positions, appearances, and motion states across frames. Therefore, MVM needs to preserve semantic consistency while capturing temporal changes of corresponding regions, which raises two central challenges: 1) how to establish reliable temporal correspondence across frames, and 2) how to formulate an appropriate representation learning objective for modeling both semantic consistency and temporal variation. To address these challenges, we propose Variation-aware Temporal Correspondence for video Representation learning (VT-CoRe) framework. For challenge 1), VT-CoRe introduces a sandwich sampling strategy to construct two-sided temporal references and a Patch Registration Module (PRM) to establish reliable patch-level correspondence. For challenge 2), VT-CoRe imposes latent-space semantic alignment on registered representations through a self-distillation architecture and further proposes temporal variation modeling to constrain representation trajectories over time. Experiments on 8 downstream tasks across 16 benchmarks demonstrate the effectiveness and applicability of VT-CoRe across pixel-level, frame-level, video-level, and vision-based robotic learning scenarios. Complementary representation analysis shows that VT-CoRe learns a more structured latent space for variation-aware temporal correspondence learning.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34025",
    "title": "Incorporating the Knowledge Distillation to Improve the EfficientNet Transfer Learning Capability",
    "url": "https://arxiv.org/abs/2611.34025",

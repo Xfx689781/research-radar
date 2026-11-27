@@ -3,30 +3,35 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "biorxiv:10.64898/2026.11.24.768994",
-   "title": "Trade-off between resource excretion and reliance maintains biodiversity of a cross-feeding mutualism",
-   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768994v1",
+   "uid": "biorxiv:10.64898/2026.11.25.768829",
+   "title": "Biodiversity turnover in coastal marine eukaryotic plankton revealed by a 20-year metabarcoding time series",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.768829v1",
    "authors": [
-    "Yu, Y.",
-    "Bisesi, A. T.",
-    "Mandyam Dhati, A.",
-    "Kambouridis, I.",
-    "Parikh, H.",
-    "Goyal, A.",
-    "Abreu, C. I."
+    "Warwick-Dugdale, J.",
+    "Ostle, C.",
+    "Bird, K.",
+    "Touhami, Y.",
+    "Allen, R.",
+    "Roberts, C.",
+    "Branscombe, L.",
+    "Helliwell, K.",
+    "Henry, N.",
+    "Djeghri, N.",
+    "Smyth, T.",
+    "Cunliffe, M."
    ],
-   "label": "bioRxiv doi:10.64898/2026.11.24.768994 v1",
+   "label": "bioRxiv doi:10.64898/2026.11.25.768829 v1",
    "primary_category": "ecology",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A mathematical model of a bacteria-yeast cross-feeding mutualism shows that high reliance on cross-fed resources, not just cheating by reduced excretion, can cause community collapse, and that a trade-off between excretion and reliance can allow several bacterial auxotrophs to coexist.",
-    "plain": "Some microbes trade nutrients: one species gives off a substance another needs, and receives something back. This paper uses a computer model of a bacteria-yeast pair, where bacteria break down lactose and share galactose with yeast in return for amino acids, to ask when such partnerships fall apart. The authors find that a species that depends heavily on what its partner provides can cause the community to collapse, even without cheating, and that trading off how much each species gives out against how much it relies on others can let several bacterial types live together.",
-    "why": "Cheaters are a standard worry for cooperative systems, and this text suggests dependence on a partner deserves equal attention as a source of instability. The link to wider biodiversity questions is stated in the text, but its reach beyond this model is not shown here.",
-    "background": "- Mutualism: two species that both benefit from each other.\n- Cross-feeding: one species' waste or secreted product becomes food for another.\n- Auxotroph: an organism that cannot make a particular nutrient itself and must get it from outside.\n- Excretion: releasing substances into the environment; here, how much a microbe gives to its partner.\n- Reliance: how much a species depends on resources supplied by its partner.\n- Cheater: a partner that takes benefits while giving less back.\n- Phase diagram: a map showing which parameter combinations lead to stable coexistence versus collapse.\n- Coexistence and biodiversity: several species persisting together in one community.",
-    "difficulty": "intermediate",
+    "one_liner": "A 20-year (2001-2023) high-frequency 18S rRNA (V9) metabarcoding time series from a Western English Channel coastal observatory shows recurrent seasonal plankton cycles plus a transient 2008-2011 community shift linked to negative North Atlantic Oscillation phases.",
+    "plain": "Scientists tracked tiny sea-dwelling organisms (plankton) off the south coast of England for more than twenty years by reading their genetic traces in water samples. They found the community follows yearly seasonal patterns, but between about 2008 and 2011 it temporarily shifted toward smaller organisms and lower diversity, before largely returning to its earlier state.",
+    "why": "Decade-long records of marine plankton are rare, and this one suggests that large-scale climate patterns can reorganise coastal ecosystems in ways that seasonal monitoring alone would miss. The text reports the shift but does not establish its mechanism, so the link to climate forcing should be read as an association the authors propose.",
+    "background": "- Plankton: free-floating microscopic organisms in water, including algae (diatoms), animal-like drifters (copepods), and single-celled eukaryotes.\n- Metabarcoding: identifying species by sequencing a short standard stretch of DNA (here 18S rRNA gene, region V9) from a water sample, rather than by microscope.\n- Picoeukaryotes: very small single-celled eukaryotes; heterotrophic stramenopiles: non-photosynthetic single-celled organisms in that group.\n- Biodiversity turnover: change in which species are present and how abundant they are over time.\n- North Atlantic Oscillation (NAO): a recurring pattern of air-pressure differences across the North Atlantic that shifts winds, storms and temperatures across the region; \"negative phase\" refers to one direction of this swing.\n- Stratification: layering of warmer, lighter water over colder water, which affects nutrient mixing.",
+    "difficulty": "research-level",
     "ai": true
    },
-   "abstract": "Microbial mutualisms, in which species exchange resources through cross-feeding, are common in nature. Yet the stability of mutualistic interactions is debated, and cross-feeding communities are vulnerable to cheaters that benefit from the excretions of others but reduce or cease their own excretion of resources, which can lead to community collapse. Here, we demonstrate with a mathematical model that in addition to decreased excretion, increased reliance on cross-fed resources can also lead to community collapse. In a two-species model of bacteria that metabolizes lactose and provides yeast with galactose, in exchange for amino acids from yeast, we show that the set of excretion and reliance parameters that maximizes biomass is adjacent to a region of community collapse in the phase diagram. By expanding the model to include multiple bacterial auxotrophs competing for lactose and either separate or overlapping amino acids, we also demonstrate that a trade-off between reliance and excretion can enable coexistence within the bacterial mutualist guild. Finally, we show that intraguild coexistence of bacteria favors yeast, increasing biodiversity but decreasing total community biomass. Our results argue that the question of cheaters should be paired with analysis of reliance on mutualistic exchange, and that both of these parameters modulate biodiversity and the stability of mutualisms to collapse.",
+   "abstract": "Long-term observations are essential to resolve how ecosystems respond to environmental variability, yet decadal-scale molecular time series of marine plankton communities remain rare. Here, we analysed a >20-year (2001-2023) high-frequency 18S rRNA gene (V9) metabarcoding time series of eukaryotic plankton from a coastal observatory in the Western English Channel. Community composition exhibited recurrent seasonal cycles driven primarily by seawater temperature and water column stratification. Superimposed on this seasonal baseline, we identified a pronounced but transient community shift between 2008 and 2011, characterised by reduced diversity, and distinct community structuring, indicating plankton ecosystem-wide biodiversity turnover. This period reflected marked community reorganisation, with potential declines in larger plankton taxa (including copepods and diatoms) and concurrent increases in picoeukaryotes and heterotrophic stramenopiles, consistent with a shift toward smaller-sized, microbial communities. While temperature explained much of the seasonal-scale variation, it did not account for the proposed biodiversity turnover. Instead, the shift was associated with negative phases of the North Atlantic Oscillation, implicating basin-scale climate forcing. Following 2011, communities returned to a state resembling earlier years, indicating a reversible, rather than persistent, change. These findings demonstrate that coastal plankton communities can undergo rapid, climate-driven but reversible biodiversity turnover that is not captured by seasonal dynamics alone and highlight the power of long-term metabarcoding time series to detect transient and recoverable ecologically significant community reorganisation.",
    "source": "biorxiv"
   },
   {
@@ -42,10 +47,10 @@
    "primary_category": "ecology",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A field experiment testing whether sodium-enriched nectar raises seed set in black-eyed Susan plants, and whether that effect depends on how diverse the surrounding prairie plant community is.",
-    "plain": "Flowers make nectar, a sugary liquid that feeds pollinating insects, and nectar can also carry small amounts of minerals like sodium, which plants do not need much of but many pollinators do. The researchers grew black-eyed Susan plants in soil with added sodium, placed them in prairie plots planted with either many or few plant species, and counted the seeds the plants produced. They found that sodium-enriched plants made more seeds in the low-diversity prairies but not in the high-diversity ones, while seed germination was unchanged.",
-    "why": "It suggests that a single mineral in nectar can affect plant reproduction, and that the surrounding plant community can change whether that effect shows up. The text does not show how far these results extend beyond this one plant species and these plots, so the wider importance is still open.",
-    "background": "- Pollinators such as bees and butterflies visit flowers for nectar, and in doing so move pollen between plants.\n- Seed set means the proportion of flower ovules that become seeds; it is a common measure of plant reproductive success.\n- Germination rate is the share of seeds that sprout, which can differ from how many seeds are made.\n- Sodium is a micronutrient: plants need very little, but animal pollinators seek it out.\n- Context dependency means an effect seen in one setting may not appear in another, here a prairie with many versus few plant species.\n- Black-eyed Susan (Rudbeckia hirta) is a common North American wildflower used as the study plant.\n- The text is only an abstract-level summary, so details such as sample sizes and statistics are not available here.",
+    "one_liner": "A field experiment testing whether sodium-enriched nectar raises seed set in black-eyed Susan (Rudbeckia hirta) planted in low- versus high-diversity prairie plots, with germination and a supplementary floral-visitation study.",
+    "plain": "Flowers make nectar, a sugary liquid that feeds pollinating insects, and it can also contain small amounts of minerals such as sodium, which plants themselves barely need but many pollinators do. The authors grew black-eyed Susan plants in soil with added sodium or ordinary soil, then placed paired plants in prairie plots seeded with either many or few plant species. They found that the sodium-fed plants had sodium-rich nectar and set more seeds, but only in the low-diversity prairies.",
+    "why": "It suggests that a mineral in nectar can affect plant reproduction, and that the effect depends on the surrounding plant community, which matters for how pollination is studied and for managing restored prairies. The text does not show how broadly this holds beyond this one species and these plots.",
+    "background": "- Nectar: sugary fluid flowers offer pollinators; it can also carry trace minerals.\n- Sodium: plants need very little, but many animals, including bees and butterflies, seek it out.\n- Seed set: the share of flowers that produce seeds, a common measure of plant reproductive success.\n- Germination rate: the share of seeds that sprout, used here to check seed quality.\n- Context dependency: an effect that changes depending on surrounding conditions, here the diversity of the plant community.\n- Prairie diversity: low-diversity plots had fewer seeded plant species than high-diversity plots.",
     "difficulty": "intermediate",
     "ai": true
    },

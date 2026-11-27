@@ -3,62 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34450",
-   "title": "Investigating the Neupert Effect with HEL1OS/Aditya-L1",
-   "url": "https://arxiv.org/abs/2611.34450",
-   "authors": [
-    "Srikar Paavan Tadepalli",
-    "Abhishekh Kumar Srivastava",
-    "K. Sankarasubramanian",
-    "Manju Sudhakar",
-    "Anand Jain",
-    "Brajpal Singh",
-    "Reenu Palawat",
-    "Ravishankar B. T.",
-    "Anuj Nandi"
-   ],
-   "label": "arXiv:2611.34450v1",
-   "primary_category": "astro-ph.SR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Using HEL1OS hard X-ray spectrograms from Aditya-L1 for 312 solar flares (Nov 2023 to May 2026), the authors test the Neupert effect, reporting a median soft-hard X-ray correlation of 0.984 and an empirical forward model that reconstructs the thermal lightcurve from non-thermal hard X-ray emission, including quasi-periodic pulsations.",
-    "plain": "Solar flares are sudden bursts of energy on the Sun that heat plasma and give off X-rays. This study uses an Indian solar satellite's instrument to split the X-ray signal from 312 flares into a hot \"thermal\" part and a fast-changing \"non-thermal\" part. The authors find the two track each other very closely and build a model that rebuilds the heat signal from the fast bursts.",
-    "why": "The Neupert effect is a long-standing empirical pattern linking flare heating to energy bursts, so a large sample testing it with broadband data could help interpret how flares release energy. The text reports a strong correlation and a model that reproduces the observed thermal evolution; its broader significance for flare physics is for specialists to judge.",
-    "background": "- Solar flare: a sudden release of magnetic energy on the Sun, producing X-rays and heating plasma.\n- Hard vs soft X-rays: hard X-rays come from fast-moving electrons hitting material; soft X-rays come from hot plasma that has been heated.\n- Neupert effect: an observed pattern where the soft X-ray signal roughly follows the time-accumulated hard X-ray signal.\n- Lightcurve: a graph of brightness over time.\n- Quasi-periodic pulsations (QPPs): repeating-but-irregular ups and downs in flare brightness.\n- Aditya-L1: India's solar observatory satellite; HEL1OS is its hard X-ray spectrometer.\n- Correlation coefficient: a number from 0 to 1 measuring how closely two quantities move together.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We investigate the Neupert effect in solar flares using broadband hard X-ray observations from the HEL1OS instrument onboard Aditya-L1. By separating thermal and non-thermal components from HEL1OS spectrograms, we analyse a sample of 312 flares observed between November 2023 and May 2026. We find that the soft X-ray flux is strongly correlated with the time-integrated hard X-ray emission, with a median correlation coefficient of 0.984, indicating that Neupert-like behaviour is nearly ubiquitous in flares with detectable non-thermal emission. Extending beyond statistical correlation, we develop an empirical forward model in which the thermal lightcurve is reconstructed from the non-thermal emission by resolving the hard X-ray lightcurve into individual energy-release episodes and convolving their fitted profiles with finite thermal-response functions. This approach successfully reproduces the observed thermal evolution, including flares that exhibit quasi-periodic pulsations (QPPs). Our results demonstrate that the broadband HEL1OS observations sample both thermal-dominated and non-thermal-dominated flare emission within a single instrument, providing an observation-driven link between the temporal structure of non-thermal HXR emission and the thermal X-ray response. This provides a different framework for interpreting flare energetics and temporal evolution using broadband hard X-ray measurements.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33301",
-   "title": "Evidence for an Evolving Surface on the Partly Burnt Runaway Stellar Remnant GD 492",
-   "url": "https://arxiv.org/abs/2611.33301",
-   "authors": [
-    "Reuben Dsouza",
-    "J. J. Hermes",
-    "Boris T. G\\\"ansicke",
-    "Ken J. Shen",
-    "Ciarra Coston",
-    "Roberto Raddi",
-    "Mark Hollands"
-   ],
-   "label": "arXiv:2611.33301v1",
-   "primary_category": "astro-ph.SR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Analysis of 12 TESS sectors of photometry shows that the 8.9-hour brightness modulation of the hypervelocity, partly burnt stellar remnant GD 492 drifts in period and shape over months, consistent with evolving surface spots.",
-    "plain": "GD 492 is a dense, fast-moving star remnant that is thought to have survived a thermonuclear supernova explosion, and it was previously reported to brighten and dim about every 8.9 hours. Using more than four years of data from NASA's TESS satellite, the authors found that this cycle is not fixed: its apparent period shifts by about 0.5 percent, and its shape changes over one to two months. A simple two-spot model can reproduce several of the observed light patterns, though the spot geometry is not uniquely determined.",
-    "why": "If the brightness changes come from shifting surface features, this would be a new handle on the star's outer convective layers and could bear on how to read its unusual atmospheric chemistry. The text does not settle the cause, and it names differential rotation and magnetic activity only as possible contributors.",
-    "background": "- GD 492 is a white dwarf-like remnant (a dense, Earth-sized leftover of a star) moving unusually fast through the galaxy.\n- \"Partly burnt\" means it appears to have been only partly fused by a thermonuclear (nuclear-fuel) explosion before being ejected.\n- TESS is a NASA space telescope that measures star brightness over time (photometry); a \"sector\" is one roughly month-long observing run.\n- A \"modulation\" is a regular rise and fall in brightness, here attributed to rotation of uneven surface patches.\n- Period is the time for one full cycle; the paper reports the cycle drifting between 8.86 and 8.90 hours.\n- Differential rotation means different latitudes spin at different rates; spots are dark or bright surface patches that can make a star's brightness vary as it turns.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "GD 492 (LP 40-365) is a partly burnt, hypervelocity runaway stellar remnant thought to have survived a thermonuclear supernova. We analyze 12 sectors of TESS photometry spanning more than four years to investigate the previously reported 8.9-hr photometric modulation of the star. We find that the modulation changes with time, with individual-sector fits yielding apparent periods ranging from 8.8606 to 8.9048 hr (0.5% changes), more than 25 times the formal measurement uncertainties. Both the period and shape of the modulation evolve on a timescales of approximately one to two months. We show qualitatively that a two-spot model with evolving surface structure can reproduce several of the observed light-curve morphologies, although the geometry of the spots is not uniquely constrained. These observations suggest that changing surface inhomogeneities are a plausible origin of the photometric variability. Differential rotation and magnetic activity may contribute to this evolution, potentially providing new constraints on the outer convective structure of GD 492 and on the interpretation of its atmospheric abundances.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33598",
    "title": "Transport of High Energy Protons from CME-Shock to the Sun and its Connection to Extended Gamma-rays Observed by FERMI",
    "url": "https://arxiv.org/abs/2611.33598",

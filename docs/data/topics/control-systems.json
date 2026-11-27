@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34866",
-   "title": "Adaptive Control Barrier Functions for Nonlinear Singularly Perturbed Systems",
-   "url": "https://arxiv.org/abs/2611.34866",
-   "authors": [
-    "Prashanth Krishnamurthy",
-    "Farshad Khorrami"
-   ],
-   "label": "arXiv:2611.34866v1",
-   "primary_category": "eess.SY",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper extends adaptive control barrier functions to uncertain nonlinear singularly perturbed (two-time-scale) systems, giving robustness conditions under which both slow and fast subsystems stay within their safe sets despite parameter uncertainty.",
-    "plain": "Many machines have parts that move at very different speeds, and a controller must keep the whole system inside safe limits even when some of its physical parameters are not known exactly. This paper develops a method that does this for such two-speed systems by estimating the unknown parameters online. The authors report that if the slow part is kept safe with a suitable margin, the slow part stays close to its safe region when the speed-ratio parameter is small, and they give conditions for joint safety of the slow and fast parts.",
-    "why": "Safety guarantees for systems with mixed time scales and unknown parameters are a practical concern in robotics and vehicles, so the framework may be relevant there. The text only reports simulations on two example systems (a synthetic fourth-order system and a unicycle with obstacle avoidance), so how well it applies to real hardware is not shown here.",
-    "background": "- Control barrier function (CBF): a function whose sign defines a safe region; a controller is designed so the system never leaves it.\n- Adaptive control: the controller continuously updates estimates of unknown physical parameters while it runs.\n- Singular perturbation / two-time-scale system: a system with fast and slow dynamics, where a small parameter epsilon is the ratio of the two time scales; the slow part approximates the whole system when epsilon is small.\n- Reduced-order (slow) model: the simpler model obtained by ignoring the fast dynamics.\n- O(epsilon) neighborhood: a region whose size shrinks in proportion to epsilon.\n- Robustness margin: an extra safety buffer added to the constraint to absorb modeling errors.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Control barrier functions (CBFs) have emerged as a flexible and efficient approach for enforcing dynamic safety constraints. In this paper, we consider a class of uncertain nonlinear systems with singular perturbations and develop an adaptive CBF framework for such systems to enforce safety constraints on both the slow and fast subsystems in the overall singularly perturbed nonlinear system with uncertain parameters. We first develop a robustness property showing that if an adaptive controller for the slow subsystem satisfies the slow CBF condition with an appropriate safety margin, then for sufficiently small values of the singular perturbation parameter $\\varepsilon$, the slow subsystem remains within an $O(\\varepsilon)$-neighborhood of its safe set. We then consider the more general case of safety constraints on both the fast and slow subsystems and provide conditions under which joint slow-fast safety is achieved despite the parametric uncertainties. The reduced-order slow model and the slow and fast CBF conditions are evaluated using an online parameter estimate and the parameter mismatch between the estimated and true reduced-order models is addressed via a state-dependent robustness margin in the CBF inequalities. To illustrate the proposed framework, we present simulation studies for two systems with parametric uncertainties: a synthetic two-time-scale fourth-order example system and a unicycle with a fast turn-rate actuator and an obstacle avoidance safety constraint.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34597",
-   "title": "$\\mu$MPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation",
-   "url": "https://arxiv.org/abs/2611.34597",
-   "authors": [
-    "Devesh Nath",
-    "Glen Chou"
-   ],
-   "label": "arXiv:2611.34597v1",
-   "primary_category": "cs.RO",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "μMPC is a model predictive control framework that uses learned Koopman-linearized dynamics and precomputed control-to-output maps to reduce the online quadratic program to an action-only problem with Hn_u variables, solved by primal-dual iterations using only matrix-vector products and projections.",
-    "plain": "Robots and drones often need to work out their next moves many times per second while obeying limits, such as staying inside safe bounds. This paper presents a method that does most of that work ahead of time, so the real-time calculation is small enough to run in tens of microseconds on a desktop and in about 24 ms on a tiny drone microcontroller. The authors report that the same approach scales to large learned models, such as 4096-dimensional quadruped control and 200-quadrotor collision-aware planning on a GPU.",
-    "why": "Fast, constraint-respecting control on cheap hardware matters for robots, drones and any system that must plan in real time. The reported speedups (up to 108x for constrained MPC and 1907x for visuomotor planning) are compared against unspecified competing methods, so they should be read as the authors' own benchmark claims until independent tests are available.",
-    "background": "- Model predictive control (MPC): at each moment, the controller predicts future behavior over a short horizon, solves an optimization problem for the best actions, applies the first one, and repeats.\n- Quadratic program (QP): an optimization problem with a quadratic cost and linear constraints; solving it quickly is the main cost of MPC.\n- Koopman operator: a way to turn a nonlinear system into an approximately linear one by lifting its state into a higher-dimensional space where linear tools apply.\n- Primal-dual iterations: iterative solver steps that alternate between updating the decision variables and the constraint multipliers.\n- Precomputation / \"compiling\": doing expensive matrix work offline so the online step needs only cheap multiplications.\n- World model: a learned model of how an environment evolves, often used for planning from images.\n- DAgger: an imitation-learning method that collects new training data from the controller's own rollouts.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We present $\\mu$MPC, a fast model predictive control (MPC) framework that reduces online computation using learned Koopman-linearized dynamics. By precomputing finite-horizon control-to-output maps, $\\mu$MPC eliminates lifted-state trajectories, yielding an action-only Koopman-Compiled QP (KC-QP) with $Hn_u$ decision variables, independent of lifted dimension. A fixed, precomputed primal operator enables efficient primal-dual iterations using only matrix-vector products and projections, accommodating changing goals and constraints without refactorization. This efficiency also enables control-aware dynamics learning through differentiable KC-QPs in the training loop and batched DAgger-style data aggregation. $\\mu$MPC achieves solve times as low as $23\\mu$s on a desktop CPU and 24 ms onboard a 168 MHz Crazyflie microcontroller. It scales to 4096D quadruped control in under 5 ms, visual planning with 2048D world models in 0.4 ms, and collision-aware planning for 200 quadrotors at over 30 Hz on the GPU. Across these benchmarks, $\\mu$MPC achieves up to $108\\times$ faster constrained MPC and $1907\\times$ faster visuomotor planning than competing methods.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33514",
    "title": "Model Predictive Control of a Multirotor UAV with a Cable-Suspended Payload: A Comparison of Shifted and Transformer-Based Warm Starts",
    "url": "https://arxiv.org/abs/2611.33514",

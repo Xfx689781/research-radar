@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33623",
-   "title": "Using waveform types, discrete Sobolev distances, and trend compatibility to cluster short time series of clinical data",
-   "url": "https://arxiv.org/abs/2611.33623",
-   "authors": [
-    "Robyn J. N. Kettlitz",
-    "Daniel Cisternas",
-    "Alvaro Olivera-Nappa",
-    "David Medina-Ortiz",
-    "Seba Contreras"
-   ],
-   "label": "arXiv:2611.33623v1",
-   "primary_category": "q-bio.QM",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A nonparametric method that groups short, undersampled clinical response curves (five-point oral glucose tolerance tests) by sorting them into trend-compatible unit waveforms and comparing shapes with discrete Sobolev-type distances, with the number of clusters set by the trend patterns the cohort actually populates.",
-    "plain": "Clinical tests such as the glucose tolerance test push the body out of rest and record how glucose and insulin change over a few timed blood samples. The paper proposes a way to group these very short curves by their overall shape, so that patients who recover from the test in similar ways end up together. Applied to 1283 tests, it found 7 glycemia response types and 8 insulin response types, and it kept the same count across a threefold range of resolution.",
-    "why": "Short clinical curves usually get reduced to a few summary numbers, which discards how the body recovers after the challenge; this paper offers a way to keep that trend information. The text reports benchmarks against six classical clustering methods, where the proposed method alone never mixed opposite trends, but it does not establish clinical usefulness, and the link to diagnosis is only suggested by the graded clinical-normality result.",
-    "background": "- Oral glucose tolerance test (OGTT): a patient drinks a sugar solution and blood glucose and insulin are measured at a few times afterward.\n- Time series: a sequence of measurements over time; \"undersampled\" means only a few points are taken.\n- Clustering: grouping items so that members of a group are similar and different groups are distinct.\n- Finite differences: changes between neighbouring points; the order k indicates how many times you take differences, capturing trend and curvature.\n- Sobolev-type distance: a way of measuring how different two curves are, including how their slopes and bends differ, not just their heights.\n- Resampling validation: checking that a result holds when the data are randomly re-drawn or re-split.\n- Nonparametric: makes few assumptions about the shape of the underlying data distribution.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Clinical tests, such as the oral glucose tolerance test (OGTT), perturb a physiological system at rest and record its excursion over a fixed protocol window as a short, undersampled time series. Such curves rarely allow parameter identification at the individual level, yet their trends carry physiological information that emerges at the population level as recurrent response patterns. Standard clustering methods aggregate differences globally and average out those trends, losing precisely the information about how the system regains control after the perturbation; identifying response patterns requires a method that preserves them. We present a nonparametric framework that factorizes each curve into unit waveforms, sorts them with a symbolic trend-compatibility filter, and compares compatible shapes using discrete Sobolev-type distances on finite differences up to order $k$. The number of clusters, i.e., distinct response types, equals the number of realizable trend patterns the cohort populates, validated by resampling. Applied to 1283 five-point OGTTs, the method identifies 7 glycemia and 8 insulinemia types. The count holds across a threefold range of resolution. In benchmarks against six classical clustering methods, ours alone never mixes opposite trends, with comparable reconstruction error and stability. Clinical normality, assessed after clustering, is graded, overlapping, and distributed unevenly across response types ($h=0.14$--$0.48$). Overall, our method distinguishes response types among curves too short for alignment-based methods yet too informative for reduction to summary values. It applies to any protocol recording a system's response to a standardized perturbation on a short grid.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33596",
-   "title": "k-Nearest Neighbors estimation of the drift of an ergodic diffusion process under Osgood regularity",
-   "url": "https://arxiv.org/abs/2611.33596",
-   "authors": [
-    "Eddy Michel Ella-Mintsa"
-   ],
-   "label": "arXiv:2611.33596v1",
-   "primary_category": "stat.ME",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proves consistency of k-nearest-neighbors estimators for the drift (deterministic trend) of an ergodic diffusion process over compact and non-compact intervals, under relatively weak regularity (Osgood-type) conditions on the coefficients.",
-    "plain": "The paper studies how to estimate the hidden \"pull\" that shapes a randomly moving process, such as a noisy price or particle path that keeps returning to a typical range. The authors apply the k-nearest-neighbors method, a simple idea that averages nearby observations, and show it converges to the true answer under fairly mild assumptions. Previous work on this approach had mostly relied on computer experiments rather than proofs.",
-    "why": "Putting a mathematical guarantee behind a popular, easy-to-use method extends the justification for using it in the statistics of continuous-time random processes. The text does not indicate applications beyond the numerical illustrations it mentions, so wider impact is unclear.",
-    "background": "- Diffusion process: a continuous random motion, described by a drift (average direction of movement) and a volatility (size of random noise).\n- Ergodic: the process over time explores its typical states, so long observations reveal its long-run behaviour.\n- Drift estimation: inferring the drift function from observed trajectory data.\n- k-nearest neighbors (kNN): estimating a value at a point by averaging the k observations closest to it.\n- Consistency: the estimator converges to the true function as the amount of data grows.\n- Osgood regularity: a mild smoothness condition on the coefficients, weaker than the usual differentiability assumptions.\n- Compact vs non-compact interval: whether the state range is bounded or extends without limit.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The k-Nearest Neighbors (kNN) algorithm is a widely used machine learning method with well-established theoretical guarantees for consistent estimation in multivariate settings and functional time series analysis. In the context of nonparametric estimation of the coefficients of ergodic diffusion processes, however, its use has so far been mainly illustrated through numerical experiments. The main contribution of this paper is to establish theoretical consistency results for drift kNN estimators over both compact and non-compact intervals, under relatively weak regularity conditions on the coefficients of the underlying ergodic diffusion process. The theoretical results are completed with numerical illustrations.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34057",
    "title": "Design-based causal inference for ROC curves",
    "url": "https://arxiv.org/abs/2611.34057",

@@ -3,53 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33454",
-   "title": "A Realistic End-to-End Runtime Crossover Estimation for Quantum-Enhanced Training of Large-Scale Machine Learning Models",
-   "url": "https://arxiv.org/abs/2611.33454",
-   "authors": [
-    "Maximilian Alexander Wolf",
-    "Alona Sakhnenko",
-    "Florian Geissler",
-    "Andrea Matic",
-    "Jeanette Miriam Lorenz"
-   ],
-   "label": "arXiv:2611.33454v1",
-   "primary_category": "quant-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper gives realistic end-to-end resource estimates (data loading, computation, and readout) for training a linearized neural network with a quantum linear solver, and locates the problem sizes where a quantum approach could beat classical methods.",
-    "plain": "Quantum computers are often promised to speed up machine learning, but those promises usually compare only the core mathematical step and ignore the cost of getting data in and results out. This paper takes a proposed quantum method for training a simplified neural network and estimates the full cost of running it, across three increasingly realistic scenarios. It finds that the quantum approach only pulls ahead over classical computing for very large problems, long computation times, and very narrow output requirements.",
-    "why": "It is a sober check on a claimed quantum speedup for machine learning, showing how hidden engineering costs can erase asymptotic advantages. It may matter to anyone judging when quantum hardware could be useful for industrial AI, though the text does not say how close current hardware is to these regimes.",
-    "background": "- Machine learning training: adjusting a model's parameters to fit data, which typically involves solving large systems of equations.\n- Quantum linear solver: a quantum algorithm for solving systems of linear equations, whose speed claims are usually stated in asymptotic (large-scale, scaling-law) terms.\n- Asymptotic complexity: how cost grows as problem size grows, ignoring constant factors and overheads.\n- Data access / readout: the cost of loading classical data into a quantum computer and extracting answers back out, which can dominate runtime.\n- Sparsity: the fraction of zero entries in a matrix; sparser matrices are usually cheaper to handle.\n- Crossover point: the problem size at which a quantum method becomes faster than the best classical method.\n- Quantum utility: a quantum computer doing useful work better than classical alternatives in practice.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Machine Learning (ML) is one promising application domain for Quantum Computing (QC) speedups, but asymptotic complexity considerations often mask the actual engineering costs of actual end-to-end workflows. For the use case of training a linearized Neural Network with a Quantum Linear Solver, a provably favorable quantum scaling has been suggested. We present realistic resource estimates for this problem, accounting for data access, computation, and readout. Our analysis examines three increasingly complex benchmarking scenarios, under distinct sparsity-scaling assumptions, thereby enabling progressively more realistic resource estimates. We identify crossover regimes relative to classical methods and find that crossover points emerge only for very large problem sizes, long computation times, and highly restrictive output requirements. This work provides a blueprint for evaluating quantum-enhanced ML algorithms under realistic hardware constraints and help identifying the bottlenecks that must be overcome to approach industrial quantum utility.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33853",
-   "title": "Efficient Quantum Algorithm for the Generalised Geography Game",
-   "url": "https://arxiv.org/abs/2611.33853",
-   "authors": [
-    "Mriganka Sandilya",
-    "Shibdas Roy"
-   ],
-   "label": "arXiv:2611.33853v1",
-   "primary_category": "quant-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper claims a bounded-error quantum polynomial-time (BQP) algorithm for the Generalized Geography Game, a PSPACE-complete problem, running in O(N^2/ε^6) time with ε = O(1/poly(N)).",
-    "plain": "The paper looks at a two-player game played on a network of arrows, where players take turns moving a marker along arrows without revisiting a spot, and the question is who can force a win. Deciding this in general is known to be very hard for ordinary computers. The authors describe a quantum computing method that they say solves this decision problem in polynomial time, with a small allowed error rate.",
-    "why": "If correct, it would be a notable claim, since a PSPACE-complete problem being solvable in BQP would bear on how quantum computers relate to classical complexity classes. The summary alone does not show the method or its checks, so the claim should be read cautiously until independent review.",
-    "background": "- Directed graph: dots (vertices) joined by one-way arrows (edges).\n- Combinatorial game: a two-player game with perfect information and no chance, where the question is who wins with best play.\n- PSPACE-complete: a class of problems believed to need huge amounts of memory or time on ordinary computers; a hard benchmark problem.\n- BQP: problems a quantum computer can solve in polynomial time with bounded error (a small chance of being wrong).\n- Bounded error and ε: the allowed chance of a wrong answer; here it is set to shrink polynomially with input size N.\n- Quantum algorithm: a procedure that uses quantum-mechanical effects such as superposition and interference.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The Generalized Geography Game ($GGG$) is a two-player combinatorial game played on a directed graph, where players alternately move a token along edges without revisiting previously visited vertices. In the existing literature, determining whether an arbitrary position in a graph is a winning position for either player is a well-known $PSPACE$-complete decision problem. Certain formulations of $GGG$ have been shown to fall outside the $PSPACE$-complete complexity class. While $PSPACE$-complete problems are believed to take exponential time for classical computation, quantum computation offers new possibilities. In this work, we present a bounded-error quantum polynomial-time ($BQP$) algorithm for solving the $GGG$ problem. The proposed algorithm runs in time $O(N^{2}/\\epsilon^{6})$, which is polynomial in the input size $N$, and achieves bounded error with $\\epsilon = O(1/\\mathrm{poly}(N))$. This result demonstrates the potential of quantum algorithms to efficiently solve combinatorial game problems that are traditionally considered computationally hard in the classical setting.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33806",
    "title": "QPAT: A Universal Quantum Machine Learning Framework for Quantum-Assisted Training and Classical Inference",
    "url": "https://arxiv.org/abs/2611.33806",

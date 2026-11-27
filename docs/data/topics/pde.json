@@ -3,51 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34533",
-   "title": "Viscosity solutions for integro-differential equations with gradient and source terms",
-   "url": "https://arxiv.org/abs/2611.34533",
-   "authors": [
-    "Russell Schwab",
-    "Son N. T. Tu",
-    "Olga Turanova"
-   ],
-   "label": "arXiv:2611.34533v1",
-   "primary_category": "math.AP",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proves comparison principles and existence (via Perron's method) for viscosity solutions of integro-differential equations with gradient and source terms, using a \"global comparison property\" together with a local Lipschitz assumption on the operator.",
-    "plain": "This paper is about a family of equations that describe how a quantity changes when it depends both on nearby values and on far-away values, as in models with jumps or long-range effects. The authors show that these equations have a well-defined solution, and that two solutions cannot differ in the wrong way (a comparison principle). Their approach tries to bring together two older styles of argument into one framework.",
-    "why": "The text presents this as an attempt to unify earlier results and to improve on some recent examples, so its value lies mainly in the technical framework rather than in any single new application. It is most relevant to researchers working on nonlocal or free-boundary problems; the text does not say what concrete applications it connects to.",
-    "background": "- Partial differential equation (PDE): an equation relating a function to its rates of change in space.\n- Integro-differential equation: an equation that also involves an integral, so the value at a point depends on values elsewhere (nonlocal effects).\n- Gradient term: a term involving the slope or rate of change of the unknown function.\n- Viscosity solution: a weak notion of solution that allows equations without smooth solutions to still be handled rigorously.\n- Comparison principle: if one function is a supersolution and another a subsolution, the first stays above the second; this implies uniqueness.\n- Perron's method: a way to construct a solution as the supremum of subsolutions.\n- Min-max structure and free boundary problems: ways of writing an operator as a minimum/maximum, and problems where the boundary between regions is unknown in advance.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We address global well-posedness for integro-differential equations with gradient and source terms. This naturally results from establishing the comparison principle for viscosity solutions and existence via Perron's method. There are many earlier results for similar equations, and our work attempts to give a unified approach and improve upon some recent examples. There is a natural juxtaposition of earlier results in the usual framework of viscosity solutions which rely on a min-max structure, with some more recent implementations coming from the free boundary literature in which a min-max is not apparent initially, but does appear a posteriori due to certain rigid structural constraints. Here we give a presentation that combines ideas from both situations. The most important feature of the operators in our equations is what we call the global comparison property. This is combined with a natural local Lipschitz assumption on the operator defining the equation.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34197",
-   "title": "The confined discrete DLSS equation: gradient flow structure and long-time asymptotics",
-   "url": "https://arxiv.org/abs/2611.34197",
-   "authors": [
-    "Daniel Matthes",
-    "Andr\\'e Schlichting"
-   ],
-   "label": "arXiv:2611.34197v1",
-   "primary_category": "math.AP",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A structure-preserving finite-difference-style discretization of the fourth-order DLSS equation in rescaled variables with linear confinement on the real line, shown to be a discrete gradient flow of relative entropy with exponential decay to a discrete Gaussian via a discrete modified log-Sobolev inequality.",
-    "plain": "The paper studies a numerical version of a fourth-order equation that describes how a spread-out quantity (a density) evolves over time, here with a confining force that keeps it from spreading indefinitely. The authors build a discrete version of the equation that keeps its key mathematical structure, and show that solutions stay positive and settle toward a Gaussian (bell-shaped) equilibrium at an exponential rate. They also report numerical experiments that agree with their analysis.",
-    "why": "Preserving the underlying structure of an equation when discretizing it means the computer model inherits its long-term behaviour, which is useful for trusting simulations. The work extends the authors' earlier unconfined version, and the stated result is that the discrete decay rate matches the continuous rate as the grid is refined; the text does not say what applications it may feed into.",
-    "background": "- Partial differential equation (PDE): an equation relating a function to its rates of change in space and time.\n- Fourth-order equation: involves up to fourth spatial derivatives, making it harder to analyse than heat-type equations.\n- Discretization: replacing a continuous problem with a grid-based version that a computer can solve.\n- Gradient flow: evolution that steadily decreases a given \"energy\" (here, relative entropy), measuring distance from equilibrium.\n- Relative entropy: a measure of how far a distribution is from a reference distribution.\n- Gaussian equilibrium: the bell-shaped distribution the solution converges to over time.\n- Log-Sobolev inequality: a functional inequality used to prove that such decay happens at a guaranteed exponential rate.\n- Mesh size: the spacing of the grid; the limit of small mesh size recovers the continuous equation.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We propose and analyse a structure-preserving discretization of the fourth-order DLSS equation in dynamically rescaled variables leading to a linear confinement on the one-dimensional real line. The scheme is obtained as a discrete analogue of the Carrillo--Toscani splitting. It allows for a new interpretation of the DLSS equation as gradient flow of the relative entropy with respect to a combined diffusive and transport metric, extending the structure of the discretization introduced in our earlier work with Giuseppe Savar\\'{e} for the unconfined equation. We prove global existence of positive solutions and, as the main analytical result, exponential decay of the relative entropy towards the discrete Gaussian equilibrium. The decay rate is obtained via a discrete modified logarithmic Sobolev inequality. The resulting rate is consistent with the continuum rate and converges to it from below in the vanishing mesh-size limit. Numerical results illustrate and confirm our findings.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34456",
    "title": "Existence of odd-frequency free boundary points in the Signorini problem",
    "url": "https://arxiv.org/abs/2611.34456",

@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33484",
-   "title": "Estimation for High-Dimensional Hawkes Processes with Inhibition via CIR Approximation",
-   "url": "https://arxiv.org/abs/2611.33484",
-   "authors": [
-    "Nadia Belmabrouk",
-    "Mohamed Ben Alaya",
-    "Xavier Erny"
-   ],
-   "label": "arXiv:2611.33484v1",
-   "primary_category": "math.ST",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper builds parametric estimators for a high-dimensional Hawkes process with inhibition by approximating it with a CIR process, proving an explicit convergence rate in the joint large-population, long-time regime and establishing consistency and asymptotic normality of the estimators.",
-    "plain": "The paper studies a model of many interacting random event streams, where each event can make others more or less likely to occur (here, \"inhibition\" means events suppress further events). Rather than analyzing the original model directly, the authors show it can be closely approximated by a simpler, well-studied random process (the Cox-Ingersoll-Ross process). Using that approximation, they build simple estimators for the model's unknown parameters and report numerical experiments that illustrate the results.",
-    "why": "Estimating parameters in systems with many interacting components over long observation times is hard, and a simpler approximating process can make the calculations tractable. The stated technical contribution is handling a diffusion coefficient that is not Lipschitz (it does not change smoothly enough for standard tools), which the text says required specific techniques. The text does not indicate specific application areas, so its wider relevance is unclear from the abstract alone.",
-    "background": "- Hawkes process: a random point process in which past events raise (excitation) or lower (inhibition) the rate of future events; widely used to model things like neuron spikes, trades or earthquakes.\n- High-dimensional: many interacting components (here, a large population of such processes).\n- CIR process: a mean-reverting random process, often used in finance for interest rates, that stays nonnegative.\n- Parametric estimation: inferring a model's unknown numerical parameters from observed data.\n- Consistency and asymptotic normality: estimators converge to the true values as data grows and their errors follow a bell-shaped distribution in the large-sample limit.\n- Lipschitz condition: a smoothness requirement on a function that many standard convergence proofs rely on; its failure makes the analysis harder.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "In this paper, we develop a parametric estimation method for a high-dimensional Hawkes processes with inhibition. The proposed approach relies on a quantitative approximation of the Hawkes process by a Cox-Ingersoll-Ross (CIR) process. In particular, we establish an explicit convergence rate in the joint large-population and long-time regime. This result requires specific techniques to handle the non-Lipschitz diffusion coefficient of the limiting CIR process.Based on this approximation, we construct explicit and easily implementable estimators of the model parameters. We establish their consistency and asymptotic normality. We also conduct numerical experiments to illustrate our findings.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34809",
-   "title": "PrO Filtering via Kernel Mean Embedding Dynamics",
-   "url": "https://arxiv.org/abs/2611.34809",
-   "authors": [
-    "Linfeng Wang",
-    "Nikolas N\\\"usken",
-    "Chris. J. Oates"
-   ],
-   "label": "arXiv:2611.34809v1",
-   "primary_category": "stat.ME",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "This paper gives the first particle-based (nonparametric) implementation of predictively-oriented (PrO) filtering, using kernel mean embedding dynamics to transport particles from the forecast distribution to the PrO filtering distribution.",
-    "plain": "Filters are methods that keep updating a best guess of a hidden system's state as new measurements arrive, and they can become overconfident or fail when the model behind them is wrong. This paper extends a recent alternative, PrO filtering, which hedges by placing probability near both the forecast and the conflicting observation, and replaces its earlier Gaussian (bell-curve) approximation with a flexible sample-based method. The authors report substantial gains over the Gaussian version on challenging nonlinear examples.",
-    "why": "Filters that stay reliable under model misspecification matter in tracking, forecasting and control, and the paper's proof that the number of update steps does not grow with how surprising an observation is gives it a concrete theoretical point of comparison with the standard Bayesian tempering approach. The text does not show how broadly the method would perform beyond the examples reported, so its wider practical reach is uncertain.",
-    "background": "- State-space model: a hidden system state that evolves over time, observed only through noisy measurements.\n- Bayesian filter: recursively updates the probability distribution of the state using a forecast and each new observation.\n- Misspecified model: the assumed model differs structurally from the true process, so Bayesian updates can become overconfident.\n- Hedging: spreading belief over both the forecast and the observation when they conflict.\n- Particle method: representing a distribution by many weighted or unweighted sample points.\n- Kernel mean embedding: representing a distribution as a point in a function space so it can be moved (transported) smoothly.\n- Tempering path: gradually moving from one distribution to another in small steps, here as a function of how surprising the observation is.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Filtering methods are routinely deployed with misspecified state-space models, where Bayesian filters can diverge and become overconfident. Predictively-oriented (PrO) filtering is a recent, hyperparameter-free alternative that was demonstrated to outperform (generalised) Bayesian filtering methods when either the dynamical model or the measurement model is structurally misspecified. This can be attributed to \\emph{hedging} behaviour: when an observation conflicts with the forecast, the PrO update places mass near both. Yet existing implementations of PrO filtering rely on unimodal (Gaussian) approximations, whose ability to effectively hedge is limited. This paper develops the first nonparametric, particle-based implementation of PrO filtering. The key obstacle, that PrO filtering distributions are only implicitly defined, is overcome by constructing a path from the predictive to the PrO filtering distribution whose rate is available in closed form, enabling the use of kernel mean embedding dynamics for measure transport. The resulting algorithm requires only simulation from the dynamical model and evaluations of the likelihood, with neither importance weights nor the predictive density. Moreover, as we prove, the number of pseudo-time steps it requires does not grow with the outlyingness of the observation, in contrast to transport along the Bayesian tempering path. An empirical assessment shows substantial improvement over Gaussian variation of PrO filtering in challenging nonlinear examples where Gaussian approximation is unreasonably limited.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33892",
    "title": "Certifying a Sufficient Gaussian Dependence Regime for Learned Weighted FDR Control",
    "url": "https://arxiv.org/abs/2611.33892",

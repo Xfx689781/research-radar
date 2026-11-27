@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33433",
-   "title": "Differentiability of the shape function in the planar corner growth model",
-   "url": "https://arxiv.org/abs/2611.33433",
-   "authors": [
-    "Christopher Janjigian",
-    "Firas Rassoul-Agha",
-    "Timo Sepp\\\"al\\\"ainen"
-   ],
-   "label": "arXiv:2611.33433v1",
-   "primary_category": "math.PR",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proves that the time-constant (shape) function of planar directed last-passage percolation with general i.i.d. real weights is differentiable on the open first quadrant, under moment conditions on the weights, and gives a Lean-formalized proof adapted from an AI-assisted first-passage percolation argument.",
-    "plain": "The paper studies a random growth model where paths collect random weights and the maximum total weight from a corner grows in a predictable way. It shows that the function describing this growth speed, as the direction changes, is smooth (differentiable) in the open first quadrant, provided the weights have enough finite moments. The proof is also written and checked in the Lean proof assistant, and it was adapted from an AI-assisted proof for a related model.",
-    "why": "Whether the shape function is differentiable is a long-standing question in this area, so a result settling it in a broad setting is of interest to specialists in growth models. The text does not say how it connects to wider applications, and the use of an AI-assisted, machine-checked proof is noted as a feature of the work.",
-    "background": "- Last-passage percolation: a random growth model where you find the path from a corner to a far point that collects the largest total of random weights placed on sites.\n- i.i.d. weights: each site's weight is drawn independently from the same distribution.\n- Shape function: the limiting growth rate in each direction, which describes the typical size of the maximum-weight path as a function of direction.\n- Differentiable: smooth, meaning the shape function has a well-defined slope at each point of the open quadrant.\n- Moment assumption: a condition that the weights' tails are not too heavy, measured by finite moments of a given order.\n- Percolation cone: a set of directions already handled by known results, so only directions outside it need proof.\n- Van den Berg–Kesten inequality: a probability bound on the chance of two events occurring disjointly.\n- Lean: a computer proof assistant used to check that a proof is fully correct.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We prove that the shape function of planar directed last-passage percolation with general i.i.d.\\ real-valued weights is differentiable on the open first quadrant, under a moment assumption of order $p''>4$ on the positive part of the weight and a nearly optimal order $p'>1$ on the negative part. Due to known results, only directions outside a percolation cone need be considered. The proof is a multiscale path-counting argument that uses the shape theorem, oriented percolation on a coarse-grained lattice, a simple change of measure in a finite region, and the van den Berg--Kesten inequality. Our Lean-formalized proof is an AI-assisted adaptation and improvement of the OpenAI proof of differentiability in planar first-passage percolation.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33209",
-   "title": "Besicovitch Pseudo Almost Periodic Stochastic Processes and Their Applications to Delayed Stochastic Neural Networks",
-   "url": "https://arxiv.org/abs/2611.33209",
-   "authors": [
-    "Yongkun Li",
-    "Yuwei Cao",
-    "Bing Li"
-   ],
-   "label": "arXiv:2611.33209v1",
-   "primary_category": "math.DS",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper defines Besicovitch pseudo almost periodic stochastic processes and uses them to study solutions in distribution and their p-th mean stability for delayed stochastic neural networks whose parameters, apart from the time delays, are pseudo almost periodic.",
-    "plain": "The paper is about systems whose random behaviour repeats in a loose, approximate rhythm, the way a noisy seasonal signal might. It introduces a formal definition for such random processes under a weaker notion of repetition (the Besicovitch sense), then applies it to a model of neural networks that have time delays and random noise. The authors state that they establish existence of such solutions and stability criteria for them.",
-    "why": "The work extends a mathematical framework for describing oscillating behaviour in randomly driven systems, which may matter for modelling neural networks and similar stochastic dynamical systems. The text does not show applications beyond this theoretical setting, so its practical reach is unclear.",
-    "background": "- Almost periodic function: a function that is not exactly periodic but returns arbitrarily close to its earlier patterns at regular-ish intervals.\n- Pseudo almost periodic: almost periodic apart from a small part that decays over time.\n- Besicovitch sense: a way of measuring closeness on average over long stretches, which is looser than requiring closeness at every moment.\n- Stochastic process: a quantity that evolves randomly over time.\n- Solution in distribution: describes the statistical behaviour of a random solution rather than one exact path.\n- Delayed neural network: a network model in which signals take time to pass between units.\n- p-th mean stability: stability measured through the average of the p-th power of the deviation, which is a standard way to measure random errors.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The Besicovitch almost periodic concept is a generalization of the Bohr, Stepanov, and Weyl almost periodic concepts and, in a certain sense, has broader coverage and weaker conditions. However, the concept of pseudo almost periodic stochastic processes in the Besicovitch sense has not yet been systematically proposed, which limits the characterization of the complex oscillatory behavior of a broader class of stochastic non-autonomous systems. This paper proposes the concept of Besicovitch pseudo almost periodic stochastic processes. As an application of this concept, we study the existence of Besicovitch pseudo almost periodic solutions in distribution for a class of stochastic delayed neural networks in which all parameters except the time delays are pseudo almost periodic and establish stability criteria for such solutions in the $p$-th mean sense. The work of this paper fills the gap caused by the lack of the concept of Besicovitch pseudo almost periodic stochastic processes and provides a new conceptual tool and analytical approach for characterizing the complex oscillatory behavior of stochastic differential equations and stochastic neural network systems.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34304",
    "title": "Converse comparison of $g$-expectations and uniqueness of generators of BSDEs: a novel approach and some sharp results",
    "url": "https://arxiv.org/abs/2611.34304",

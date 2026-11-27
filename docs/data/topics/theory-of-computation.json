@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.33464",
-   "title": "PAC Learning to Sample: On Computational Aspects of Language Generation",
-   "url": "https://arxiv.org/abs/2611.33464",
-   "authors": [
-    "Alkis Kalavasis",
-    "Shuchen Li",
-    "Manolis Zampetakis"
-   ],
-   "label": "arXiv:2611.33464v1",
-   "primary_category": "stat.ML",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "This paper studies a PAC-style model of learning to sample from a Boolean concept class, showing that online learnability is not necessary for efficient PAC learning to sample and giving new algorithms built on offline ERM oracles plus approximate sampling/counting and SQ learners.",
-    "plain": "The paper looks at how a program can learn to produce new examples that look like the ones it has seen, such as text from a language model, with quantitative limits on how many examples and how much computation it needs. The authors work in a simplified setting where the target is a yes/no rule over binary strings and the learner receives random positive examples. They show that one standard ingredient, the ability to learn online, is not strictly required: they build a rule class where online learning is cryptographically hard but learning to sample is still efficient, and they give algorithms that use a different kind of learning oracle instead.",
-    "why": "Language generation in the limit is a recent theoretical framework for why models can produce valid new text, but most of its guarantees are qualitative. Putting concrete sample and time bounds on it, and identifying which ingredients are needed, is a step toward understanding its computational cost; the text itself frames this as a first step, and its connection to practical language models is suggested rather than established here.",
-    "background": "- Concept class: a family of yes/no rules over n-bit strings; a \"concept\" labels each string as in or out.\n- PAC learning: learning from random labeled examples with guarantees on accuracy and confidence, with efficiency measured in samples and time.\n- Total variation distance: a measure of how different two probability distributions are.\n- Sampler: a procedure whose outputs follow a target distribution, here uniform over the strings the rule accepts.\n- Online learner, ERM (empirical risk minimization) oracle, SQ (statistical query) learner: three learning-algorithm models with different access rules.\n- Cryptographically hard: believed infeasible for any efficient algorithm under standard cryptographic assumptions.\n- Language generation in the limit: Kleinberg and Mullainathan's 2024 model, in which a generator must eventually produce unseen valid strings from a language given positive examples.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The success of language models has motivated theoretical work on learning to sample from distributions on discrete domains. A prominent abstraction is the model of language generation in the limit, introduced by Kleinberg and Mullainathan (NeurIPS 2024), in which the algorithm must generate from the target language after some finite but unspecified number of positive examples. While its positive results are surprisingly general, most guarantees are qualitative. In this work, we seek quantitative guarantees on sample and time complexity, inspired by statistical and computational learning theory. To this end, we study a PAC model of language generation, proposed (in a different context) by De, Diakonikolas, and Servedio (SODA 2015), in which a Boolean concept class $C$ over $\\{-1,1\\}^n$ defines the target languages: given uniformly random positive examples of an unknown concept $f \\in C$, the learner must output a sampler whose output distribution (conditioned on the training data) is close in total variation to the uniform distribution over $f^{-1}(1)$. Their work implicitly gives an efficient algorithm for PAC learning to sample $C$, given three primitives for $C$: an online learner, approximate sampling and counting oracles, and an SQ learner. We ask whether these ingredients, in particular online learnability, are necessary. First, we construct a Boolean concept class $C$ for which online learning is cryptographically hard, yet PAC learning to sample is computationally efficient. Then, we develop new algorithms that use offline ERM oracles instead of online learners, together with approximate sampling/counting oracles for intersections of concepts in $C$ and an SQ learner for $C$. We view our results, together with the work of De, Diakonikolas, and Servedio, as a first step towards understanding the computational complexity of language generation.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33485",
-   "title": "Fast Algorithms for Permanents of Permutationally-Dominant Matrices",
-   "url": "https://arxiv.org/abs/2611.33485",
-   "authors": [
-    "Ryan L. Mann"
-   ],
-   "label": "arXiv:2611.33485v1",
-   "primary_category": "cs.DS",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper gives a fully polynomial randomised approximation scheme for the permanent of permutationally-dominant matrices, with runtime quadratic in both the matrix dimension and the inverse of the error, using a polymer model and importance sampling of the log partition function via heaps of pieces.",
-    "plain": "The permanent is a way of combining the entries of a grid of numbers, similar to a determinant but without the sign flips, and computing it exactly is very hard in general. This paper focuses on a special class of grids, called permutationally-dominant matrices, and shows how to estimate their permanent quickly, using randomness, with a speed that grows only polynomially as the grid gets bigger or the wanted accuracy gets tighter.",
-    "why": "Approximating permanents is a classic problem in algorithms and complexity theory, and special classes where it becomes tractable help map where the hard cases begin. The text does not say how far the class extends beyond the matrices studied, so its wider reach is unclear from this abstract alone.",
-    "background": "- Matrix permanent: like the determinant, but all terms are added with plus signs; exact computation is #P-hard in general.\n- Approximation scheme (FPRAS): a randomised method that gets an answer within a chosen error margin with high probability, in time polynomial in the size and in 1/error.\n- Partition function: a weighted sum over configurations, used in statistics and physics; its logarithm is often what is estimated.\n- Polymer model: a way of writing such sums as collections of compatible, non-overlapping building blocks (\"polymers\").\n- Importance sampling: estimating a sum by drawing random samples from a convenient distribution and reweighting them.\n- Heaps of pieces (Viennot): a combinatorial framework for counting stacks of pieces with non-overlap rules.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We establish a fast algorithm for approximating the permanent of permutationally-dominant matrices. In particular, we obtain a fully polynomial randomised approximation scheme whose runtime is quadratic in both the dimension of the matrix and the inverse of the approximation error. Our approach is based on a polymer model representation of the permanent and importance sampling of the logarithm of its partition function via the theory of heaps of pieces of Viennot.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.33738",
    "title": "Toggle Tree: A New Data Structure for Efficient Parallel Graph Processing",
    "url": "https://arxiv.org/abs/2611.33738",

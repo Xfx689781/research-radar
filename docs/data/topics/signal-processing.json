@@ -3,62 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34754",
-   "title": "AutoRSP: An AI Agent for Radar Sensing Pipeline Design",
-   "url": "https://arxiv.org/abs/2611.34754",
-   "authors": [
-    "Zhi Zheng",
-    "Xincheng Xie",
-    "Avery Gump",
-    "Sacha Jungerman",
-    "Hongyang Li",
-    "Yin Li",
-    "Mohit Gupta",
-    "Akarsh Prabhakara"
-   ],
-   "label": "arXiv:2611.34754v1",
-   "primary_category": "cs.NI",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "AutoRSP is an AI agent that designs end-to-end radar sensing pipelines across five stack layers, using RF simulation, on-sensor emulation, and real edge-device runs as search feedback instead of an LLM judge.",
-    "plain": "Radar systems need a full chain of processing, from the hardware settings up to the software that turns reflected signals into useful results, and building that chain takes expert time and money. This paper asks whether an AI agent can design such chains automatically. The authors report that their agent, AutoRSP, produced runnable pipelines for robotic imaging, car perception, and vital-sign sensing that performed comparably to or better than human-expert and closed-source agent pipelines.",
-    "why": "It offers a concrete way to let an AI agent search over hardware-linked engineering choices using physical measurements rather than another language model's opinion, which may matter for sensing work beyond large labs. The text does not give enough detail to judge how broad or robust the gains are, and the promised release of tools and benchmarks is not yet available for checking.",
-    "background": "- Radar: sends radio waves and reads the echoes to detect objects or motion.\n- RF simulation: a computer model of how radio signals behave, used to test designs before building hardware.\n- Edge device: a small, local computing unit (such as one inside a sensor or car) that runs the processing on site.\n- Sensing pipeline: the ordered chain of steps from raw signal capture to final output.\n- Stack layers: separate levels of the system (for example hardware settings, signal processing, and application software) that affect each other.\n- AI agent: a language-model-driven program that proposes designs, tests them, and iterates.\n- LLM judge: using a language model to score candidate designs, which the paper avoids in favor of measured feedback.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Radar sensing demands a pipeline that is well-thought-out across hardware and software. We ask whether an AI agent can automatically design radar sensing pipelines at a fraction of the time, cost, and expertise that current practice needs. We present AutoRSP, an agent that embeds radar-system-level structure through sub-agents mapped to five stack layers, a code-based representation of every layer with explicitly modeled cross-layer dependencies. Feedback for the agentic search process comes from a pipeline of realistic RF simulation, on-sensor emulation, and execution on real edge devices, rather than from an LLM judge. Because such feedback can be slower than an LLM call, we present methods to efficiently optimize agentic loops. We evaluate AutoRSP on robotic imaging, automotive perception, and vital sign sensing. It produces executable pipelines with performance comparable to or better than human-expert pipelines and closed-source agents. AutoRSP's harness, tools, and benchmarks will be released to bridge the rising gap in agentic research abilities outside of frontier labs.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34639",
-   "title": "Doppler RaDAR Single-Frame Anomaly Detection and Consistency Assessment by Velocity-Conditioned Gaussian Spectral Modeling",
-   "url": "https://arxiv.org/abs/2611.34639",
-   "authors": [
-    "Malte Stelzer",
-    "Timo Bartels",
-    "Dinu Mihailescu-Stoica",
-    "Niko Harnge",
-    "S\\\"oren Kohnert",
-    "Florian Poprawa",
-    "Marc Zeller",
-    "Tim Fingscheidt"
-   ],
-   "label": "arXiv:2611.34639v1",
-   "primary_category": "eess.SP",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A velocity-conditioned Gaussian spectral model, with a neural encoder and Gaussian decoder, that scores single radar Doppler frames for anomalies and checks consistency between the spectrum and the estimated speed of a railway vehicle.",
-    "plain": "Trains on railway radar signals must know their own speed, and a speed number alone does not show whether the radar reading behind it is trustworthy. This paper proposes a method that looks at each radar frame's frequency pattern, estimates speed from it, and then checks whether the pattern matches what is expected at that speed. On controlled test anomalies, the authors report that two of their three scores beat conventional spectral indicators in most conditions, and a third tracks speed errors closely.",
-    "why": "Railway speed sensing is safety-relevant, so a way to flag implausible radar frames without needing ground-truth speed during operation could be useful. The text reports results only on controlled synthetic anomalies, so how well it transfers to real field conditions is not shown here.",
-    "background": "- RaDAR (radio detection and ranging): sends radio waves and measures echoes to sense distance and motion.\n- Doppler spectrum: the distribution of signal strength across frequency shifts; the shift reveals how fast something moves toward or away from the sensor.\n- Speed-over-ground: how fast a vehicle moves along the track, as estimated by the sensor.\n- Gaussian model: a bell-shaped probability distribution used here to describe the expected shape of the spectrum.\n- Anomaly score: a number that is higher when an input looks unlike what the model learned as normal.\n- Pearson r: a correlation measure from -1 to 1; values above 0.99 indicate a near-linear relationship.\n- Ground truth: a reference value known to be correct, used for checking estimates.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Reliable speed-over-ground estimation is essential for automated railway vehicles. However, the accuracy of a velocity estimate alone does not indicate whether the underlying RaDAR measurement is physically plausible. This paper introduces a velocity-conditioned Gaussian spectral modeling framework for anomaly detection and velocity consistency assessment. A neural encoder estimates the vehicle velocity from complex Doppler spectra, while a Gaussian decoder models the expected spectral distribution conditioned on a velocity estimate. Three complementary inference-time online indicators are derived: the spectral anomaly score (SAS), conditional anomaly score (CAS), and absolute velocity disagreement (AVD). Experiments demonstrate the sensitivity of the scores to velocity deviations. Under controlled spectral anomalies, SAS and CAS outperform conventional spectral indicators in most conditions. Furthermore, AVD exhibits strong correlations with actual velocity estimation errors (Pearson $r>0.99$) for the investigated extra-peak and local anomalies. These results demonstrate the potential of online conditional spectral modeling to assess measurement plausibility and velocity estimation reliability without requiring ground-truth velocities during inference.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34677",
    "title": "First Order Real Resonant Digital Filters and A Novel Orthogonal State Generator",
    "url": "https://arxiv.org/abs/2611.34677",

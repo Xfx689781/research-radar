@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34799",
-   "title": "Split-RL: Local Conflict Resolution in Reinforcement Learning",
-   "url": "https://arxiv.org/abs/2611.34799",
-   "authors": [
-    "Benjamin Fuhrer",
-    "Chen Tessler",
-    "Gal Dalal"
-   ],
-   "label": "arXiv:2611.34799v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Split-RL uses guidance labels to build gradient boosting trees that route conflicting reinforcement-learning feedback into separate state-space regions, evaluated on constrained and offline RL with mixed datasets.",
-    "plain": "Robots and other learning agents are often trained with feedback that pulls in opposite directions depending on the situation, such as going fast in open areas but carefully through tight gaps. This paper proposes Split-RL, which uses hints or rule-based labels to split the situations an agent can face into regions, so each conflicting goal is learned in its own region rather than blended together. The authors report that it met cost limits in their tests while keeping competitive rewards, and performed well in offline settings with mixed datasets.",
-    "why": "Conflicting objectives that apply only in certain places or moments are a common practical problem for learned controllers, and the paper offers a way to combine learned policies with existing rules. The text does not show how broadly the approach generalizes beyond the domains tested, so its wider significance is uncertain.",
-    "background": "- Reinforcement learning: an agent learns a policy (a decision rule) by trying actions and receiving reward or penalty signals.\n- Constrained RL: the agent must keep a secondary quantity, such as accumulated cost per episode, under a budget while maximizing reward.\n- Offline RL: learning from a fixed log of past data rather than new interaction.\n- Gradient boosting trees: an ensemble of decision trees built one after another, each correcting the errors of the previous ones; trees split the input space into regions.\n- Neural networks share parameters across all inputs, so conflicting updates from different situations can interfere with each other.\n- Gradient: the direction in which model parameters should change to reduce error; aggregating conflicting gradients can cancel useful information.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Reinforcement learning (RL) policies are often trained by mixing contradictory feedback that is localized in space and time. For example, a robot may prioritize speed in open areas versus precision in tight gaps. We introduce Split-RL, a Gradient Boosting Trees (GBT) algorithm that uses guidance labels to locally isolate these conflicting signals. Standard neural networks (NNs) lack the structural mechanism to do this, as their parameters share feedback from all sources. While GBT provides the inductive bias to explicitly partition the state-space per objective, standard tree-fitting procedures aggregate contradictory gradient signals before they reach the leaves. Split-RL leverages this bias to integrate guidance labels into tree construction, routing these updates into disjoint state-space regions and preventing signal interference. Such labels can arise from heuristics, sensor-derived events, or existing rule-based systems, allowing Split-RL to incorporate rule-derived structure while retaining a learned policy. We theoretically show how early gradient aggregation loses objective-specific information and characterize when the Split-RL score isolates conflicting updates. We focus on constrained RL and offline RL with mixed datasets, each balancing two objectives that conflict locally. Across domains with spatial, rare-event, and temporal conflicts, Split-RL consistently outperforms existing methods by meeting the episodic cost budget while maintaining competitive rewards. In offline settings, Split-RL localizes the tradeoff between imitation and policy improvement, outperforming other methods and achieving near-expert performance across varying dataset sizes.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.34678",
-   "title": "Provably Efficient Concave Utility Reinforcement Learning with Linear Function Approximation",
-   "url": "https://arxiv.org/abs/2611.34678",
-   "authors": [
-    "Max Qiushi Lin",
-    "Ahmed Magd",
-    "Sharan Vaswani"
-   ],
-   "label": "arXiv:2611.34678v1",
-   "primary_category": "cs.LG",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "Proposes a model-based optimistic policy optimization framework (OCUPO) for concave utility RL in finite-horizon bilinear and linear MDPs, with on-policy and off-policy algorithms whose sample complexities are reported as Õ(ε^-4) and Õ(ε^-2) respectively, up to a projection error in the off-policy case.",
-    "plain": "Standard reinforcement learning trains an agent to maximize a sum of rewards. This paper studies a more general version, where the goal is a nonlinear function of how often the agent visits each situation and takes each action. The authors show how to estimate those visit patterns efficiently when the environment has a simple low-dimensional structure, and they give algorithms with provable sample-efficiency bounds.",
-    "why": "The text gives theoretical sample-complexity bounds and says the off-policy version matches the epsilon-dependence of standard RL with linear function approximation, which suggests the general goal can be handled at little extra cost. It does not report experiments, so practical impact is untested; the connection to applications such as imitation learning and exploration is stated in the abstract as motivation only.</even>\n<parameter name=\"background\">- Reinforcement learning (RL): an agent learns by trying actions in an environment and receiving rewards.\n- Occupancy measure: the long-run frequency with which an agent visits each state and takes each action.\n- Concave utility RL (CURL): the goal is a concave (curved, diminishing-returns style) function of the occupancy measure, which covers imitation learning and maximum-entropy exploration.\n- Markov decision process (MDP): a standard mathematical model of an environment with states, actions, and transitions.\n- Linear and bilinear MDPs: environments whose transition behavior can be expressed with a small set of known features, making learning tractable.\n- Function approximation: using a parameterized formula to generalize across many states instead of storing each one.\n- Sample complexity: how many interactions with the environment are needed to reach a given accuracy ε; smaller exponents mean fewer samples.\n- Off-policy learning: learning from data gathered by earlier versions of the policy rather than only the current one.",
-    "background": "",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Concave utility reinforcement learning (CURL) unifies a diverse range of problems, including standard reinforcement learning (RL), imitation learning, and maximum entropy exploration. Unlike standard RL, CURL generally requires estimating high-dimensional state-action occupancy measures. Consequently, existing methods for CURL either sidestep the exploration problem, are restricted to the tabular setting, or lack computationally efficient policy optimization. To address this, we study CURL in finite-horizon episodic bilinear MDPs, where the transition model admits a low-dimensional representation in known feature spaces. We use the bilinear structure to efficiently estimate occupancy measures via low-dimensional feature expectations, and propose a model-based optimistic concave utility policy optimization (OCUPO) framework. We first instantiate OCUPO in the on-policy setting, where each iteration uses independent trajectories to estimate the concave utility policy gradient, and prove an $\\widetilde{O}(\\epsilon^{-4})$ sample complexity. To improve sample efficiency, we then instantiate OCUPO in the off-policy setting. We propose a novel backward feature regression subroutine that reuses trajectories collected by past policies to estimate the occupancy measure of the current policy. Under suitable technical assumptions on the policy class (satisfied, e.g., by log-linear policies with sufficiently expressive features), we prove that the resulting algorithm achieves an $\\widetilde{O}(\\epsilon^{-2})$ sample complexity, up to a controllable projection error. We further extend our framework to linear MDPs and show that the resulting off-policy algorithm retains the same sample complexity. In these settings, the dependence on $\\epsilon$ matches that for standard RL with linear function approximation. Moreover, our algorithms do not rely on the integral oracle required by prior work.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34840",
    "title": "Provably Efficient Offline Discounted Reinforcement Learning under Recursive Entropic Risk",
    "url": "https://arxiv.org/abs/2611.34840",

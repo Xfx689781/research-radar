@@ -3,52 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34116",
-   "title": "Tunable quantum metric driven nonlinear valley Hall effect in the PT-symmetric sliding antiferroelectric MoS$_2$",
-   "url": "https://arxiv.org/abs/2611.34116",
-   "authors": [
-    "Wen-Xin Jiang",
-    "Zhen-Hao Gong",
-    "Zhigang Gui",
-    "M. Umar Farooq",
-    "Li Huang"
-   ],
-   "label": "arXiv:2611.34116v1",
-   "primary_category": "cond-mat.mes-hall",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "A first-principles study proposes a four-layer MoS2 stack with sliding antiferroelectric order and strain-broken C3z symmetry, where a quantum-metric-driven nonlinear valley Hall response appears while inversion and time-reversal symmetries are preserved and can be switched by interlayer sliding.",
-    "plain": "The paper looks at a thin, layered crystal of molybdenum disulfide, a material that can carry information in its \"valleys,\" which are distinct energy peaks electrons can occupy. The authors propose stacking four atomic layers so that they slide relative to one another, and that sliding can be reversed electrically. Their calculations suggest this produces a sideways electron current that depends on the valley, with its direction and size tunable by the slide state.",
-    "why": "It offers a way to probe quantum geometry, a property of electron wavefunctions beyond the usual Berry curvature, in a nonmagnetic material without breaking the usual symmetries, and to switch it electrically in a non-volatile way. Its relevance to real valleytronic or quantum information devices is a proposal based only on the abstract and has not been tested experimentally here.",
-    "background": "- Quantum metric: a geometric property of electron wavefunctions that measures how quickly quantum states change; its real part is the quantum geometric tensor.\n- Berry curvature: a related geometric quantity that drives many Hall-type transport effects.\n- Valley: a local energy minimum or maximum in a crystal's electron band structure that can act as a label, like a bit, for electrons.\n- Valley Hall effect: a sideways electron flow that depends on valley label, rather than on charge alone.\n- Nonlinear response: an effect whose strength depends on the square of an applied electric field, not just linearly.\n- Symmetry (inversion P, time reversal T, rotation C3z): operations that leave a crystal unchanged; breaking them usually enables new effects.\n- Antiferroelectric / sliding ferroelectric: layered materials where neighboring layers shift and create opposing electric polarization that can be flipped.\n- First-principles calculations: quantum-mechanical computer simulations that predict material properties from basic physics without fitted experimental parameters.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The quantum metric, the real part of a quantum geometric tensor, plays an important role in fundamental transport and optical responses of quantum materials. While net quantum metric effects are typically realized by breaking both time-reversal (T) and inversion (P) symmetries, valley-contrast mechanisms enable the probing of quantum geometry in centrosymmetric, nonmagnetic systems, revealing physical signatures beyond Berry curvature. Here, we design a four-layer MoS$_2$ platform that combines sliding antiferroelectric order with strain-induced $C_{3z}$ breaking to realize a quantum metric driven nonlinear valley Hall effect (NVHE) under preserved P and T symmetries. Reversible interlayer sliding (ABBA $\\leftrightarrow$ BAAB) provides nonvolatile electrical control of the valley response. First-principles calculations reveal an outer-layer-dominated NVHE with tunable sign and magnitude. This symmetry-preserving, sliding-tunable strategy activates hidden quantum geometric phenomena in realistic two-dimensional materials and opens a clean pathway for tunable valleytronics and quantum information devices.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33723",
-   "title": "Superconductivity from the Berry connection from many-electron wave functions: $U(1)$ gauge fluctuation, gauge invariance, and superconductivity",
-   "url": "https://arxiv.org/abs/2611.33723",
-   "authors": [
-    "Hiroyasu Koizumi"
-   ],
-   "label": "arXiv:2611.33723v1",
-   "primary_category": "cond-mat.supr-con",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper proposes a superconductivity theory built on the Berry connection of many-electron wave functions and on fluctuations of that connection, arguing that it reproduces major BCS results while resolving two stated disagreements with experiment.",
-    "plain": "The paper is a theoretical attempt to explain superconductivity, the state where a metal carries electric current with no resistance. The author treats the electromagnetic gauge (a mathematical freedom in how electric and magnetic potentials are written) and random jumps between quantum states as the key ingredients. The text claims this approach explains the reversible switch between superconducting and normal states in a magnetic field, including the force balance involved.",
-    "why": "Superconductivity is a long-studied, well-established field, so any new framework draws attention mainly if it resolves known mismatches with experiment. The abstract says the theory claims to fix two such disagreements, but the text does not list them or show the evidence, so the claim is currently unverified and should be checked against the full paper.",
-    "background": "- Superconductivity: zero electrical resistance below a critical temperature or magnetic field.\n- BCS theory: the standard microscopic theory (1957), where electrons pair up and the paired state has no resistance.\n- Gauge invariance: the principle that physical results do not change when potentials are shifted by a mathematical convention; it underlies electromagnetism.\n- Berry connection: a geometric quantity describing how a quantum state's phase changes as parameters vary; it is computed from the wave function.\n- Gauge fluctuation: random variation of this phase-like quantity, which the paper links to transitions between quantum states.\n- The abstract is brief and gives no equations, so detailed methods cannot be assessed from it.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "The electromagnetic $U(1)$ gauge invariance and superconductivity are examined by employing the Berry connection from many-electron wave functions and the fluctuations of it that give rise to the probabilistic random transitions among quantum states. The gauge invariance in the classical electrodynamics is regarded as the requirement that extracts unaffected parts by the gauge fluctuation. In quantum mechanics, dissipation-free states from the gauge fluctuation exist, and we identify them as superconducting states. We explain the reversible superconducting-normal phase transition in a magnetic field including the force balance. The present superconductivity theory lifts two fundamental disagreements between theory and experiment existing in the current standard theory with keeping the major results by the BCS theory. Thus, it may be considered as a superconductivity theory encompassing the current standard one.",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34145",
    "title": "Nontrivial criticality and weakly first-order transitions in the frustrated spin-1 chain with single-ion anisotropy",
    "url": "https://arxiv.org/abs/2611.34145",

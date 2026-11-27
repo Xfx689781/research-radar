@@ -3,50 +3,6 @@
  "updated": "2026-11-27",
  "papers": [
   {
-   "uid": "arxiv:2611.34550",
-   "title": "An Information-Theoretic Analysis of Information Hiding in Semantic Communication",
-   "url": "https://arxiv.org/abs/2611.34550",
-   "authors": [
-    "Yanhao Huo",
-    "Shijun Xiang"
-   ],
-   "label": "arXiv:2611.34550v1",
-   "primary_category": "cs.IT",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper builds an information-theoretic framework for hiding messages in semantic communication, extending the classical Moulin-O'Sullivan hiding capacity to a two-layer semantic/syntactic model cast as a Stackelberg (leader-follower) maximin game, and compares the resulting capacity with the classical one via endpoint bounds.",
-    "plain": "The paper asks how much hidden information can be sent when communication is judged by meaning rather than by exact symbols, and whether hiding at the meaning level beats classical hiding. The authors model the problem as a two-layer system with distortion limits on both the raw signal and the meaning, and express the capacity as a game where the hider moves first. They report that semantic hiding is not always better than classical hiding, and show with binary, ternary and Gaussian examples that it loses capacity when the mapping between meanings and symbols is coarsened.",
-    "why": "Semantic communication is an active area for future networks, and information hiding (covert or watermarked messages inside a signal) is a natural security question for it. The paper gives a formal benchmark for when meaning-level hiding helps or hurts, though its value depends on the correctness of the derivations, which I have not checked.",
-    "background": "- Channel capacity: the maximum rate at which information can be sent reliably over a noisy channel.\n- Mutual information: how much knowing one signal reduces uncertainty about another.\n- Information hiding (steganography/watermarking): embedding a message in a host signal so that it stays nearly undetectable and the host is not much distorted.\n- Semantic communication: transmitting the meaning of a message rather than exact symbols, so that different symbol strings with the same meaning count as equivalent.\n- Synonymous mapping: a conversion between a meaning and the set of symbol strings that express it.\n- Stackelberg game: a two-player game where one player commits to a strategy first and the other responds.\n- Maximin: choosing the strategy that maximizes the worst-case payoff.\n- Random coding and joint typicality: standard proof tools for showing a rate is achievable and is an upper limit.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "Semantic communication shifts the transmission goal from the accurate recovery of syntactic symbols to the reliable conveyance of semantic content, yet a systematic information-theoretic characterization of information hiding at the semantic layer is still missing. Building on the semantic information theory of Niu-Zhang and the classical information hiding theory of Moulin-O'Sullivan, this paper establishes an information-theoretic framework for information hiding under semantic communication. The classical hiding model is extended to a two-layer structure (semantic host, syntactic host, syntactic composite signal, syntactic received, semantic received) bridged by synonymous mappings f_s, f_x and the inverse mapping f_y^{-1}, subject to four distortion constraints: syntactic transparency, semantic fidelity, syntactic perturbation, and semantic destruction. The capacity is cast as a Stackelberg game with the hider moving first and the payoff J(Q,A) = I(U~; Y~ | K) - I(U~; S~ | K), yielding the single-letter maximin C^s = max_Q min_A J(Q,A), whose achievability and converse follow from random coding and joint typicality decoding. Relative to the classical capacity, comparison payoffs built from the up/down semantic mutual information give the endpoint sandwich C^s_end(0,1) <= C^s <= C^s_end(1,0) with the classical value C in the same interval, while closing semantic tolerance yields C^s_no-tol <= C_cl under a fair comparison. These results clarify that semantic hiding is not unconditionally superior to classical hiding. Binary, ternary, and Gaussian examples confirm the degeneration under one-to-one mappings and the capacity loss under coarsening.",
-   "source": "arxiv"
-  },
-  {
-   "uid": "arxiv:2611.33270",
-   "title": "Sharp one-shot bounds and optimal exponents of universal randomness extraction",
-   "url": "https://arxiv.org/abs/2611.33270",
-   "authors": [
-    "Bartosz Regula",
-    "Hao-Chung Cheng"
-   ],
-   "label": "arXiv:2611.33270v1",
-   "primary_category": "quant-ph",
-   "date": "2026-11-27",
-   "summary": {
-    "one_liner": "The paper derives tight one-shot bounds and exact asymptotic error exponents for quantum privacy amplification (randomness extraction against quantum side information) using universal hash functions, via quadratically constrained hypothesis testing and operator-space methods.",
-    "plain": "The paper studies how to turn a partly unpredictable source of random bits into nearly perfect secret randomness, even when an eavesdropper may hold quantum information about it. It works out how fast the leftover error shrinks as the amount of input grows, in several regimes. The authors find that a previously known bound is tight up to a constant factor for certain hash functions, and they pin down the exact rate at which the error decays in the strong converse regime for 2-universal hashes.",
-    "why": "Privacy amplification is a basic building block of quantum cryptography and secure key generation, so sharper error scalings matter for knowing what key rates are achievable in practice. The text reports matching upper and lower bounds, which is what makes the exponents \"exact\"; the connection to non-commutative Khintchine inequalities is a noted technical link, but its wider significance is not spelled out in the text.",
-    "background": "- Randomness extraction: converting a weak, partly secret source into close-to-uniform secret bits using a randomly chosen hash function.\n- Quantum side information: an eavesdropper may hold quantum systems correlated with the source.\n- Trace distance: the standard measure of how far a quantum state is from an ideal one; here it measures security error.\n- Universal hash functions (2-universal, strongly 4-universal): families of hashes such that random members behave well on average, used to bound collision-type behavior.\n- One-shot versus i.i.d. regimes: one-shot means a single use of the source with a finite-size guarantee; i.i.d. means many independent copies, where asymptotic error exponents describe decay rates.\n- Error exponent and strong converse regime: the exponent gives how fast error vanishes when the extraction rate is below the entropy limit; the strong converse regime is when the rate is above it, so error tends to one.\n- Hypothesis testing: deciding between two candidate states; its optimal error rates underpin many of the bounds.",
-    "difficulty": "research-level",
-    "ai": true
-   },
-   "abstract": "We introduce techniques for the study of randomness extraction against quantum side information (privacy amplification) by relating this problem to variants of hypothesis testing tasks with quadratic constraints. Building also on the recently introduced measured smooth entropy approach of [Regula and Tomamichel, arXiv:2603.04493], we precisely determine the optimal scaling of the error of quantum privacy amplification in several regimes. Our results apply to the standard operational security criterion based on trace distance and focus in particular on universal classes of hash functions. On the technical side, our investigation reveals connections with operator space theory methods used in non-commutative Khintchine inequalities. As one application, we give a one-shot converse bound that shows the leftover hash lemma of [arXiv:2603.04493] to be tight up to a constant factor for all strongly 4-universal hash functions. This allows us to evaluate the asymptotic i.i.d. error exponent of universal randomness extraction for all rates, matching the bound of [Dupuis, arXiv:2105.05342] and improving also earlier classical asymptotic results of [Hayashi, arXiv:1010.1358]. We furthermore give new one-shot achievability and converse bounds on the error in the strong converse regime, which we show to match up to a constant factor. This establishes the exact strong converse exponent of quantum privacy amplification under 2-universal hash functions, complementing the converse bound of [Shen, Gao, and Cheng, arXiv:2202.10263].",
-   "source": "arxiv"
-  },
-  {
    "uid": "arxiv:2611.34468",
    "title": "Exponential Analysis for Trace-Distance Errors in Quantum Information Theory",
    "url": "https://arxiv.org/abs/2611.34468",
