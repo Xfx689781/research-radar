@@ -1,7 +1,68 @@
 {
  "slug": "biology",
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.25.769365",
+   "title": "Robust single-cell analysis through subsampling reveals hidden naive T cell states in aging",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769365v1",
+   "authors": [
+    "Rahmani, E.",
+    "Alber, S.",
+    "Reich-Zeliger, S.",
+    "Mark, M.",
+    "Etxezarreta Arrastoa, O.",
+    "Ergen, C.",
+    "Wagner, A.",
+    "Benuck, E.",
+    "Avram, O.",
+    "Song, Y. S.",
+    "Quintana, F. J.",
+    "Anderson, A. C.",
+    "Chavdarova, T.",
+    "Jordan, M. I.",
+    "Wang, Y.",
+    "Yosef, N."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769365 v1",
+   "primary_category": "bioinformatics",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "A subsampling-based framework that favors robust statistical tests (a t-test, a chi-squared test, and a linear projection) over richer models improves cross-cohort replicability in single-cell studies and, applied to aging naive CD4 T cells, reveals replicating subpopulations including a CTLA4-high naive-like group.",
+    "plain": "Single-cell studies measure gene activity in individual immune cells, but results comparing groups of people (such as young versus old) often fail to hold up in other sample sets. The authors propose resampling individuals so that findings must hold regardless of hidden personal differences, and they use this to find several groups of naive T cells that change with age. One group carries the CTLA4 marker, which is usually linked to experienced or regulatory T cells, yet looks naive; in lab tests on cells, blocking CTLA4 partly restored their normal response to stimulation.",
+    "why": "Reproducibility is a known problem in single-cell research, and the paper argues that study design, not model complexity, drives it. The age-related finding about T cells may bear on why immune responses weaken in older people, though the text only describes lab and mouse experiments and the link to aging-related decline remains a suggestion, not established.",
+    "background": "- Single-cell genomics: measuring which genes are active in each individual cell, producing thousands of cells per sample.\n- Naive T cells: immune cells that have not yet encountered their target antigen; they respond to new infections.\n- CTLA4: an immune \"brake\" receptor, usually associated with activated or regulatory T cells.\n- Regulatory T cells: immune cells that suppress other immune responses.\n- Cross-cohort replicability: whether a finding appears again in a separate group of people.\n- Subsampling: repeatedly drawing subsets of individuals to test whether a pattern is stable.\n- Contrastive representation learning: a method that learns a summary of cell data that separates two conditions.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Single-cell genomics has been instrumental for studying the variation between cell states. Yet, the use of single-cell technologies to study variation between sample groups remains challenging, with findings often failing to replicate across cohorts. Here, we introduce a general framework for robust single-cell analysis that uses subsampling of individuals to identify statistical patterns that hold regardless of which unmeasured characteristics of those individuals covary with the condition of interest. Within this framework, a t-test for differential expression, a chi-squared test for differential composition, and a linear projection for contrastive representation learning outperform state-of-the-art alternatives in cross-cohort replicability. This identifies robustness by design, rather than refined distributional assumptions and model expressiveness, as a principal driver of reproducible discovery in single-cell studies. Applying robust contrastive learning to naive CD4 T cells from human blood, we uncover eleven replicating age-associated subpopulations, largely uncharacterized, that express programs of other states and go undetected by standard analysis. One of them is most strongly defined by CTLA4, a checkpoint receptor considered a hallmark of antigen-experienced and regulatory T cells, yet carries a naive surface phenotype and is distinct from regulatory T cells. This population is conserved in mice and increases in frequency with age in both the CD4 and CD8 compartments. Upon stimulation, these cells exhibit attenuated proliferation compared with conventional naive T cells and enrichment of regulatory phenotypes. Blocking CTLA4 signaling largely restores the downstream activation program to that of conventional naive cells, suggesting these cells may be a reversible contributor to the age-associated decline in naive T-cell responsiveness. By prioritizing robustness over richer models, our framework enables discovery of previously hidden cellular heterogeneity and offers a general strategy for improving resolution and replicability in single-cell genomics. Code is available at github.com/robust-precision-medicine.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.25.769154",
+   "title": "Argonomics Explorer: an interactive database for dissecting Argonaute-RNA regulatory networks",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769154v1",
+   "authors": [
+    "Wu, W.-S.",
+    "Bhandari, M.",
+    "Tai, C.-Y.",
+    "Huang, S.-W.",
+    "Lee, H.-C."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769154 v1",
+   "primary_category": "bioinformatics",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "Argonomics Explorer is a free, searchable web database that integrates public small-RNA sequencing data from Argonaute-IP and mutant experiments in worm, fly, and human cells to compare AGO-sRNA and AGO-target interactions.",
+    "plain": "Cells use tiny RNA molecules as guides to switch off specific messenger RNAs, and the Argonaute proteins carry those guides. Many research groups have measured which guides sit in which Argonaute proteins, but the data are scattered and hard to compare. This paper presents a free website that gathers these public datasets so users can search by protein, RNA, or guide and compare results across proteins.",
+    "why": "The tool makes it easier to see where Argonaute proteins overlap or differ in their roles, which bears on how gene regulation is organized. The authors report a few example findings, such as certain microRNA star strands loading onto AGO-2 but not AGO-1 in flies, and mir-35 family members favoring the worm protein ALG-2. The text does not show how broadly these examples will hold up, so the value of the database for new discoveries is still to be tested by users.",
+    "background": "- Argonaute (AGO) proteins: the core of RNA-silencing complexes that bind small RNAs.\n- Small RNAs (sRNAs): short RNA molecules, such as microRNAs (miRNAs), that guide Argonaute to matching target RNAs.\n- AGO-IP: a lab method that pulls out one Argonaute protein with its bound small RNAs to see which ones it carries.\n- Star strand: the less-abundant partner strand of a microRNA duplex, usually discarded but sometimes loaded.\n- Mutant-derived profiles: small-RNA measurements from animals or cells lacking a given Argonaute, used as a control.\n- Model organisms: C. elegans (worm), D. melanogaster (fruit fly), and human cell lines.",
+    "difficulty": "intermediate",
+    "ai": true
+   },
+   "abstract": "Argonaute (AGO) family proteins associate with small RNAs (sRNAs) to form complexes that direct sequence-specific regulation of target RNAs. Recent studies in Caenorhabditis elegans, Drosophila melanogaster, and human cell lines have systematically characterized the repertoire of sRNA associations and targets for individual AGOs in these organisms; however, the lack of an accessible, searchable platform limits efficient comparison of the specificity and redundancy of Argonaute functions. Here, we present Argonomics Explorer (AE), an interactive database suite that integrates publicly available sRNA sequencing datasets to enable systematic interrogation of AGO-sRNA and AGO-target interactions across common model systems. AE combines independent AGO-IP datasets, AGO mutant-derived sRNA profiles, and systematic analyses to provide a cross-validated framework for examining AGO-RNA interactions. This database empowers users to query specific AGOs, transcripts, or sRNAs, and to compare associated sRNAs or targets across AGOs. Specifically, we recapitulate findings that certain microRNA (miRNA) star strands are uniquely loaded onto AGO-2 but not AGO-1 in flies. In addition, we report a preferential association of most members of the mir-35 family with the worm Argonaute ALG-2 and the association of the oncogenic oncomiR-1 miRNA superfamily with human AGO2. Such applications illustrate how the AE framework facilitates investigations into AGO specificity, redundancy, and the broader regulatory networks that shape gene expression. The Argonomics Explorer suite is freely available at https://cosbi10.ee.ncku.edu.tw/AE/.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.26.769378",
    "title": "Reconstructing regulatory histories of cell fate decisions from single-cell lineage and multi-omics",
@@ -26,12 +87,12 @@
    "primary_category": "bioinformatics",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "RegArch is a probabilistic framework that combines transcriptomic, chromatin-derived, and time-scaled lineage data to reconstruct terminal and unobserved ancestral gene regulatory networks during cell fate decisions, validated in simulations and in C. elegans and zebrafish heart datasets.",
-    "plain": "Cells in an embryo or a healing organ take on different identities, but we usually only see snapshots of their final or current gene activity, not the earlier steps that led there. This paper presents a computational method, RegArch, that combines gene activity measurements, chromatin (DNA packaging) data, and family trees of cells to infer the gene control networks that likely operated in both final cells and their ancestors. The authors report that the method recovers ancestral networks in simulations and gives useful patterns in worm and zebrafish data.",
-    "why": "Being able to infer how regulatory programs were set up along a cell's ancestry could help explain where cell types diversify, and the paper frames its output as hypotheses to test. The text does not show how well the predictions hold up experimentally, so the practical value remains to be judged by follow-up work.",
+    "ai": true,
     "background": "- Gene regulatory network (GRN): a map of which regulator genes switch other genes on or off.\n- Transcriptomic profile: a measurement of which genes are active in cells, typically from RNA sequencing.\n- Chromatin data: information about how accessible DNA is, indicating where regulators may bind.\n- Single-cell lineage: a record of which cells descended from which, often reconstructed from cell division history.\n- Progenitor/ancestral cell: an earlier cell that gives rise to several later cell types.\n- Model organisms: C. elegans (a small worm with a fully mapped cell lineage) and zebrafish (used to study heart repair after injury).\n- Simulation: testing a method on artificial data where the true answer is known.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "RegArch is a probabilistic framework that combines transcriptomic, chromatin-derived, and time-scaled lineage data to reconstruct terminal and unobserved ancestral gene regulatory networks during cell fate decisions, validated in simulations and in C. elegans and zebrafish heart datasets.",
+    "plain": "Cells in an embryo or a healing organ take on different identities, but we usually only see snapshots of their final or current gene activity, not the earlier steps that led there. This paper presents a computational method, RegArch, that combines gene activity measurements, chromatin (DNA packaging) data, and family trees of cells to infer the gene control networks that likely operated in both final cells and their ancestors. The authors report that the method recovers ancestral networks in simulations and gives useful patterns in worm and zebrafish data.",
+    "why": "Being able to infer how regulatory programs were set up along a cell's ancestry could help explain where cell types diversify, and the paper frames its output as hypotheses to test. The text does not show how well the predictions hold up experimentally, so the practical value remains to be judged by follow-up work."
    },
    "abstract": "Understanding how distinct cell identities emerge from common progenitors requires access to regulatory histories that molecular snapshots cannot directly reveal. We introduce RegArch, a probabilistic framework integrating transcriptomic profiles, chromatin-derived evidence, and time-scaled cell lineages to reconstruct terminal and unobserved ancestral gene regulatory networks (GRNs). These lineage-resolved networks enable characterization of regulatory reorganization, prioritization of differentiation-associated and branch-biased regulators, and identification of constitutive, lineage-associated, and state-restricted modules. Simulations demonstrate ancestral network recovery and improved terminal GRN inference. In Caenorhabditis elegans, inferred ancestral GRNs combined with measured regulator expression generated target-expression signatures preferentially matching their corresponding progenitor profiles. EMS lineage analyses identified a shared regulatory module and branch-enriched modules with distinct ancestral representation. In zebrafish hearts sampled after injury, developmental ancestry informed endocardial- and epicardial-associated candidate regulator prioritization. RegArch thus generates testable hypotheses about the regulatory origins of cellular diversity.",
    "source": "biorxiv"
@@ -52,12 +113,12 @@
    "primary_category": "bioinformatics",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "PS-JEPA is a self-supervised model that learns protein backbone-structure representations by predicting masked residue embeddings from visible context, without a coordinate-reconstruction objective, and is evaluated on StructTokenBench and backbone reconstruction.",
-    "plain": "Proteins are chains of amino acids that fold into 3D shapes, and computer models need a compact numerical summary of that shape to make predictions. This paper trains such a model by hiding parts of a protein's backbone and having it predict the hidden parts' summaries, rather than asking it to redraw exact coordinates. The authors report that these summaries do well on several biology prediction tasks, especially detecting remote evolutionary relatives, and can still be decoded back into backbone shapes with about 1.61 Å error on 309 test chains.",
-    "why": "It tests whether learning to predict abstract representations, rather than exact coordinates, can keep both useful biological information and recoverable geometry. The text reports a generation experiment only as exploratory, so its wider significance is uncertain and would need independent replication.",
+    "ai": true,
     "background": "- Protein backbone: the main chain of atoms that defines a protein's 3D shape.\n- Self-supervised learning: training on unlabeled data by hiding part of the input and predicting it.\n- Joint-embedding prediction (JEPA): predicting the representation of a hidden part, not its raw values.\n- Frozen representations: a pretrained model's outputs are used as-is, without further training, for downstream tasks.\n- Remote homology: detecting proteins that share ancestry and fold but have diverged in sequence; scored here by macro F1 (a balanced accuracy-style score, higher is better).\n- RMSD (in Å): root-mean-square deviation between two structures; lower means closer match.\n- Designability: a computational check of whether a generated backbone is likely to be foldable into a real protein.\n- Mamba: a sequence-modeling architecture; bidirectional means it reads context in both directions.\n- GearNet-Edge: an existing graph-based protein structure model used here as the baseline.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "PS-JEPA is a self-supervised model that learns protein backbone-structure representations by predicting masked residue embeddings from visible context, without a coordinate-reconstruction objective, and is evaluated on StructTokenBench and backbone reconstruction.",
+    "plain": "Proteins are chains of amino acids that fold into 3D shapes, and computer models need a compact numerical summary of that shape to make predictions. This paper trains such a model by hiding parts of a protein's backbone and having it predict the hidden parts' summaries, rather than asking it to redraw exact coordinates. The authors report that these summaries do well on several biology prediction tasks, especially detecting remote evolutionary relatives, and can still be decoded back into backbone shapes with about 1.61 Å error on 309 test chains.",
+    "why": "It tests whether learning to predict abstract representations, rather than exact coordinates, can keep both useful biological information and recoverable geometry. The text reports a generation experiment only as exploratory, so its wider significance is uncertain and would need independent replication."
    },
    "abstract": "Motivation: Protein structure representations are often learned by reconstructing coordinates, yet reconstruction quality does not necessarily track performance on biological prediction tasks. We therefore investigate whether joint-embedding prediction can capture information useful for biological prediction while retaining recoverable backbone geometry. Results: We introduce PS-JEPA, a self-supervised model that learns protein structure representations by predicting masked residue embeddings from visible backbone context. The encoder combines geometric graph encoding with bidirectional Mamba and is pretrained without a coordinate-reconstruction objective. On StructTokenBench, frozen PS-JEPA representations achieve a mean remote-homology macro F1 (x100) of 72.24, compared with 67.12 for GearNet-Edge, the strongest baseline for this category, while remaining competitive in functional and flexibility prediction. A separately trained decoder reconstructs backbones from these frozen representations, achieving a mean C RMSD of 1.61 [A] on 309 external test chains filtered to exclude sequence matches to training and reference data. In an exploratory test of unconditional generation, a learned latent prior with the same decoder yields 62 of 384 backbones (16.15%) that meet the computational designability criterion. Together, these results show that joint-embedding prediction can learn representations that support both biological prediction and backbone reconstruction. Availability and Implementation: https://github.com/ahexlwang/PS-JEPA",
    "source": "biorxiv"

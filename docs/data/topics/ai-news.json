@@ -1,7 +1,68 @@
 {
  "slug": "ai-news",
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "papers": [
+  {
+   "uid": "news:040b9138c7904e7b",
+   "title": "Verifiable Social Reasoning for LLM Assistants",
+   "url": "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/",
+   "authors": [],
+   "label": "The latest research from Google",
+   "primary_category": "research.google",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "A short piece titled \"Verifiable Social Reasoning for LLM Assistants,\" filed under generative AI, that appears to concern checking the social reasoning of large language model assistants, though the supplied text is only a section label and gives no details.",
+    "plain": "The item is about how to tell whether an AI chatbot's reasoning about people and social situations can be checked and trusted. The text provided is too thin to say what was tested or found: it contains only the title and the label \"Generative AI,\" with no body describing methods or results.",
+    "why": "Trust in AI assistants that reason about social situations, such as what someone intends or how a group will react, matters for any use where people rely on the advice. I cannot say more about its significance because the source gives no findings or claims.",
+    "background": "- LLM (large language model): the kind of AI system behind chatbots, trained on large amounts of text.\n- Social reasoning: inferring people's beliefs, intentions, or likely reactions from context.\n- Verifiable: able to be checked, for example by tracing steps or confirming answers against a standard.\n- Assistant: a chatbot or AI tool that answers questions or carries out tasks for a user.\n- Source limitation: only the title and category were supplied, so the summary relies on the title alone.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Generative AI",
+   "source": "rss"
+  },
+  {
+   "uid": "news:05f887d0221c3adc",
+   "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+   "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+   "authors": [
+    "Connie Loizos"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "A Yale management scholar argues that Jensen Huang's White House–backed return as Nvidia's CEO and board member may be a serious mistake, citing director liability from lawsuits and Nvidia's chip sales to US adversaries.",
+    "plain": "The article reports on a commentary by Yale's Jeffrey Sonnenfeld. Markets reacted well on Monday to news that Jensen Huang, Nvidia's chief executive, is returning as CEO and board member with backing from the White House. Sonnenfeld says this could be a costly error, and questions whether the country should celebrate a company that has helped get advanced chips into the hands of rival nations.",
+    "why": "It matters because it links a major AI chip company's leadership to questions about national security, export controls and corporate legal risk. The text is a single expert's opinion, and it gives no detail on the lawsuits or the specific chip transfers it mentions, so the claims should be checked against other sources.",
+    "background": "- Nvidia makes the graphics processors (chips) widely used to train and run AI systems.\n- Jensen Huang is Nvidia's CEO and a co-founder; the article describes his return to the CEO role and board seat as backed by the White House.\n- \"Adversaries\" means countries the US sees as geopolitical rivals, such as China.\n- Export controls are government rules limiting which advanced chips can be sold or shipped to certain countries.\n- Directors' personal liability means board members can be held legally responsible, personally, for company failures, for example in lawsuits.\n- The article is an opinion piece by one commentator and reports no new data or court findings.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia's CEO and board member, could prove a giant mistake, exposing the directors to \"historic\" personal liability from a growing pile of lawsuits and raising the question of whether the country is celebrating a company that has helped put advanced chips in its adversaries' hands.",
+   "source": "rss"
+  },
+  {
+   "uid": "news:16ddaf7683c8da25",
+   "title": "Character.AI’s plan to auction off users’ private chats challenged by state AGs",
+   "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+   "authors": [
+    "Sarah Perez"
+   ],
+   "label": "AI News & Artificial Intelligence | TechCrunch",
+   "primary_category": "techcrunch.com",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "State attorneys general are challenging Character.AI's proposed bankruptcy sale, which would include personal chat data from over 21 million U.S. accounts, including 2.1 million tied to minors.",
+    "plain": "Character.AI, a company whose chatbots let people hold conversations with AI characters, is going through bankruptcy and wants to sell its assets, and that sale would include users' private data. A group of state attorneys general (the top lawyers for U.S. states) says the data covers more than 21 million American accounts, about 2.1 million of them belonging to minors, and they are objecting to the plan.",
+    "why": "It raises questions about what happens to sensitive personal conversations when an AI company fails or is sold, and about protecting children's data. The text is brief and does not give the court's response or the details of the objection, so the outcome is unclear.",
+    "background": "- Character.AI is a company offering chatbots that role-play as characters, with many users talking to them.\n- Bankruptcy: a legal process where a company that cannot pay its debts sells its assets, often under court supervision, to pay creditors.\n- Attorneys general (AGs): elected or appointed state-level lawyers who enforce consumer protection and privacy laws.\n- Private chat logs can be sensitive, and data about minors raises extra legal protections in the U.S.\n- The article is short and reports only the AGs' statement; it does not include the company's response or the court's ruling.",
+    "difficulty": "introductory",
+    "ai": true
+   },
+   "abstract": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said.",
+   "source": "rss"
+  },
   {
    "uid": "news:99b93f3e10984935",
    "title": "Clay helps sales teams win with Codex and ChatGPT",
@@ -11,12 +72,12 @@
    "primary_category": "openai.com",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A short announcement describing how sales-tech company Clay uses ChatGPT and Codex integrations, with GPT-6 models handling reasoning, to help users research deals and build go-to-market plans.",
-    "plain": "Clay is a tool that helps businesses find and organize information about potential customers. This short item says its users can now use ChatGPT and Codex, OpenAI's tools, to look into sales deals and turn raw data into plans for reaching the market. The text says the reasoning work is done by GPT-6 models.",
-    "why": "It is a small example of AI models being built into everyday business software, which is a trend worth watching. The text gives no results, user numbers or outcomes, so its real impact is unclear.",
+    "ai": true,
     "background": "- Clay: a company whose software gathers and organizes data on sales prospects.\n- ChatGPT: OpenAI's chat-based AI assistant.\n- Codex: an OpenAI tool that generates and works with computer code.\n- GPT-6: named in the text as the model doing the reasoning; the text gives no further details about it.\n- Go-to-market plan: a business strategy for how a product reaches customers and sells.\n- Integration: connecting one software product to another so they work together.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A short announcement describing how sales-tech company Clay uses ChatGPT and Codex integrations, with GPT-6 models handling reasoning, to help users research deals and build go-to-market plans.",
+    "plain": "Clay is a tool that helps businesses find and organize information about potential customers. This short item says its users can now use ChatGPT and Codex, OpenAI's tools, to look into sales deals and turn raw data into plans for reaching the market. The text says the reasoning work is done by GPT-6 models.",
+    "why": "It is a small example of AI models being built into everyday business software, which is a trend worth watching. The text gives no results, user numbers or outcomes, so its real impact is unclear."
    },
    "abstract": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
    "source": "rss"
@@ -32,12 +93,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A news piece raising open questions about what Nvidia knew regarding where its chips ended up after sales to Megaspeed, and whether a personal relationship between Jensen Huang and a Megaspeed executive gave Nvidia reason to doubt that company's assurances.",
-    "plain": "The article is about an investigation into whether the chipmaker Nvidia knew where its advanced AI chips were ultimately sent after being sold to a company called Megaspeed. It also asks whether a personal relationship between Nvidia's CEO, Jensen Huang, and a Megaspeed executive should have made Nvidia doubt what Megaspeed told it. The text is a short summary of the questions, not a full account of findings.",
-    "why": "Chip sales are closely watched because export rules limit where advanced chips can go, so questions about a buyer's real destination matter for regulators and the industry. The excerpt does not show any conclusion, so it is unclear how the investigation will turn out.",
+    "ai": true,
     "background": "- Nvidia makes the graphics processors (GPUs) that are the main hardware for training and running AI systems.\n- Governments, including the US, restrict exports of advanced chips to certain countries and require sellers to know who the end buyer is.\n- Megaspeed is the company named in the article; the text does not describe its business in detail.\n- Jensen Huang is Nvidia's chief executive.\n- The article relies on questions and reporting; the excerpt contains no confirmed findings, and the affair is mentioned only as a possible factor.",
     "difficulty": "intermediate",
-    "ai": true
+    "one_liner": "A news piece raising open questions about what Nvidia knew regarding where its chips ended up after sales to Megaspeed, and whether a personal relationship between Jensen Huang and a Megaspeed executive gave Nvidia reason to doubt that company's assurances.",
+    "plain": "The article is about an investigation into whether the chipmaker Nvidia knew where its advanced AI chips were ultimately sent after being sold to a company called Megaspeed. It also asks whether a personal relationship between Nvidia's CEO, Jensen Huang, and a Megaspeed executive should have made Nvidia doubt what Megaspeed told it. The text is a short summary of the questions, not a full account of findings.",
+    "why": "Chip sales are closely watched because export rules limit where advanced chips can go, so questions about a buyer's real destination matter for regulators and the industry. The excerpt does not show any conclusion, so it is unclear how the investigation will turn out."
    },
    "abstract": "The central question for investigators is what Nvidia knew about where those chips ended up and whether Huang's affair with a Megaspeed executive gave the company reason to doubt Megaspeed's assurances.",
    "source": "rss"
@@ -53,12 +114,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A news piece reports that Nvidia CEO Jensen Huang still opposes a formal succession plan, framing it as creating unnecessary hierarchy, at a time when the company is described as having spent two weeks without its founder.",
-    "plain": "The article is about Jensen Huang, the leader of the chip company Nvidia, and his view that planning for who would take over his role creates unneeded layers of management. The text is a single short teaser line, so it gives no detail on what happened during the \"two weeks without its founder\" or what the plan would look like. Nothing beyond that framing is stated.",
-    "why": "Leadership succession at a company that is a major supplier of AI chips may matter to investors and the industry, but the text is too thin to say why this particular stance matters or what it connects to. The reader should treat the article as a preview and check the full story for the facts.",
+    "ai": true,
     "background": "- Nvidia makes the graphics processors widely used to train and run AI systems.\n- Jensen Huang is Nvidia's co-founder and chief executive.\n- A succession plan is a company's arrangement for who would replace a top leader if they left or became unavailable.\n- The phrase \"two weeks without its founder\" suggests a period when Huang was absent, but the teaser does not explain why.\n- The article is only a short teaser; the full text is needed for context.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A news piece reports that Nvidia CEO Jensen Huang still opposes a formal succession plan, framing it as creating unnecessary hierarchy, at a time when the company is described as having spent two weeks without its founder.",
+    "plain": "The article is about Jensen Huang, the leader of the chip company Nvidia, and his view that planning for who would take over his role creates unneeded layers of management. The text is a single short teaser line, so it gives no detail on what happened during the \"two weeks without its founder\" or what the plan would look like. Nothing beyond that framing is stated.",
+    "why": "Leadership succession at a company that is a major supplier of AI chips may matter to investors and the industry, but the text is too thin to say why this particular stance matters or what it connects to. The reader should treat the article as a preview and check the full story for the facts."
    },
    "abstract": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
    "source": "rss"
@@ -74,12 +135,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A news piece reporting that shares of Anthropic, an AI company, have dropped below their initial public offering (IPO) price, and suggesting this could pressure valuations of other AI startups.",
-    "plain": "The article says that the stock of Anthropic, an artificial intelligence company, has fallen below the price it was first sold at when it began trading publicly. The text is very short, so it gives no details on how far the shares fell, when, or why. Its main point is that this slump may make investors value other AI startups less.",
-    "why": "Share prices of large AI companies are often used as a signal for how investors feel about the whole sector, so a drop after a public listing may matter to startups seeking funding. The text is too thin to say how large or lasting this effect will be.",
+    "ai": true,
     "background": "- IPO (initial public offering): the first time a private company sells shares to the public on a stock market.\n- Share price vs. IPO price: the IPO price is the level at which shares were first sold; trading below it means early buyers are currently at a loss.\n- Valuation: the total value investors place on a company, often estimated from its share price.\n- AI startup: a young company building artificial intelligence products, often funded by private investors before any public listing.\n- The article is a brief news item with no figures, quotes, or sources, so treat its claims as reported, not verified.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "A news piece reporting that shares of Anthropic, an AI company, have dropped below their initial public offering (IPO) price, and suggesting this could pressure valuations of other AI startups.",
+    "plain": "The article says that the stock of Anthropic, an artificial intelligence company, has fallen below the price it was first sold at when it began trading publicly. The text is very short, so it gives no details on how far the shares fell, when, or why. Its main point is that this slump may make investors value other AI startups less.",
+    "why": "Share prices of large AI companies are often used as a signal for how investors feel about the whole sector, so a drop after a public listing may matter to startups seeking funding. The text is too thin to say how large or lasting this effect will be."
    },
    "abstract": "Anthropic’s post-IPO slump could put pressure on AI startup valuations.",
    "source": "rss"
@@ -95,12 +156,12 @@
    "primary_category": "techcrunch.com",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "Nvidia founder Jensen Huang, at an all-hands staff meeting, reportedly apologized to employees, thanked the White House, and said he is in therapy, while describing gratitude for a second chance to lead the company.",
-    "plain": "The chief executive of Nvidia, the chip maker that makes much of the hardware used to build AI, spoke to all of his staff at a company-wide meeting on Tuesday. According to this short article, he said sorry to the team, thanked the U.S. government, and mentioned that he is in therapy. The text does not say what the apology or the \"second chance\" was about.",
-    "why": "Nvidia is a central company in the AI industry, so comments from its leader can matter to investors, customers, and staff. The article is very brief, though, and gives no detail on the cause of the apology or on the White House connection, so its wider significance is unclear from this text alone.",
+    "ai": true,
     "background": "- Nvidia designs graphics processors (GPUs), which are widely used to train and run AI systems.\n- Jensen Huang is Nvidia's co-founder and chief executive.\n- An \"all-hands meeting\" is a company-wide gathering where leadership addresses all employees.\n- \"Second chance to lead\" suggests he had faced some kind of setback or pressure about his leadership, but the article does not explain it.\n- The White House reference is unexplained in the text; it could relate to government policy on chips, but the article does not say.\n- The text is only a short news summary, so key context is missing.",
     "difficulty": "introductory",
-    "ai": true
+    "one_liner": "Nvidia founder Jensen Huang, at an all-hands staff meeting, reportedly apologized to employees, thanked the White House, and said he is in therapy, while describing gratitude for a second chance to lead the company.",
+    "plain": "The chief executive of Nvidia, the chip maker that makes much of the hardware used to build AI, spoke to all of his staff at a company-wide meeting on Tuesday. According to this short article, he said sorry to the team, thanked the U.S. government, and mentioned that he is in therapy. The text does not say what the apology or the \"second chance\" was about.",
+    "why": "Nvidia is a central company in the AI industry, so comments from its leader can matter to investors, customers, and staff. The article is very brief, though, and gives no detail on the cause of the apology or on the White House connection, so its wider significance is unclear from this text alone."
    },
    "abstract": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
    "source": "rss"

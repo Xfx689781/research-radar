@@ -1,7 +1,65 @@
 {
  "slug": "bioengineering",
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "papers": [
+  {
+   "uid": "biorxiv:10.64898/2026.11.25.769173",
+   "title": "Engineering dynamic interkingdom communication between synthetic organelles and mammalian systems",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769173v1",
+   "authors": [
+    "Kulkarni, S. H.",
+    "Rennells, T. S.",
+    "Jabrio, H.",
+    "Makela, A. V.",
+    "Tandoc, A.",
+    "Huckins, A. M.",
+    "Matsumoto, D.",
+    "Riddle, R.",
+    "Hardy, J. W.",
+    "Contag, C. H."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.25.769173 v1",
+   "primary_category": "synthetic biology",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "A bioluminescent reporter platform quantifies transcriptional activation in mammalian cells and mice driven by engineered, flavin-auxotrophic Listeria monocytogenes (LINQ1) delivering synthetic transcription factors.",
+    "plain": "The authors engineered a weakened strain of the bacterium Listeria to act like a tiny programmable factory inside human-type cells, sending signals that switch genes on. They used a light-producing reporter to measure how strongly, how fast, and how long those genes turned on, in cultured cells, in genetically altered mice, and in mice with breast tumors. The reported results were about 100-fold activation in cells and about 25-fold across several organs in mice, with some effect lasting over three weeks, and a temporary slowing of tumor growth that weakened with repeated doses.",
+    "why": "It is a step toward using microbes as controllable components that influence host cells in living animals, which could matter for future cell or cancer therapies. The text is only an abstract, so the reliability of the numbers, the tumor effects, and the path to any therapeutic use cannot be judged from it alone.",
+    "background": "- Synthetic biology: redesigning living cells or microbes with engineered genetic circuits.\n- Transcription factor: a protein that switches genes on or off by binding DNA; here, synthetic ones are delivered into host cells.\n- Gal4 and tetracycline transactivator (tTA): two engineered switch systems used to control gene expression in mammalian cells.\n- Listeria monocytogenes: a bacterium that can enter host cells; here it is weakened (attenuated) and made dependent on flavin, a nutrient, so it is safer and controllable.\n- Quasiorganelle: a bacterium living inside a cell that performs a useful function, like a built-in organelle.\n- Bioluminescent reporter: a light-producing gene used to measure how active another gene is.\n- Triple-negative breast tumor: a hard-to-treat breast cancer subtype lacking common hormone and growth-factor receptors.\n- Transgenic mouse: a mouse carrying added genes, here a reporter used to read out activity.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Engineering intracellular microbes to function as synthetic organelles, or quasiorganelles, opens new avenues for controlling mammalian cell fates and function through programmable and quantitative interkingdom communication. Here, we develop a bioluminescent reporter platform to quantify the magnitude, kinetics, persistence, and spatial distribution of transcriptional regulation in mammalian host cells directed by quasiorganelles. Using an attenuated, flavin-auxotrophic Listeria monocytogenes chassis (LINQ1) engineered to deliver synthetic transcription factors, we demonstrate approximately 100-fold activation of mammalian reporter genes, with distinct kinetics and dynamics for the tetracycline transactivator and Gal4 systems. In transgenic reporter mice, LINQ1 induced approximately 25-fold reporter activation across multiple organs, with activity persisting beyond three weeks in some animals. In mice bearing triple-negative breast tumors, LINQ1 activated intratumoral transcription and, incidentally, transiently suppressed tumor growth, although responses diminished with repeated administration. These findings establish a quantitative foundation for engineering interkingdom communication in vivo to advance a new paradigm in which programmable microbial systems function as synthetic organelles to direct mammalian cell fates and function for therapeutic benefit.",
+   "source": "biorxiv"
+  },
+  {
+   "uid": "biorxiv:10.64898/2026.11.22.768485",
+   "title": "RoWS Biofabrication of Neuromuscular Tubuloids from Human Neuromesodermal Progenitors",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.22.768485v1",
+   "authors": [
+    "Florkowska, A.",
+    "Ahmad, S.",
+    "Maiullari, F.",
+    "Piletskaya, M.",
+    "Pajouhande, M.",
+    "Rafieyan, S.",
+    "Swiac, A.",
+    "Costantini, M."
+   ],
+   "label": "bioRxiv doi:10.64898/2026.11.22.768485 v1",
+   "primary_category": "bioengineering",
+   "date": "2026-11-28",
+   "summary": {
+    "one_liner": "Rotary wet-spinning biofabrication encapsulates human neuromesodermal progenitors in fibrin cores with alginate shells to form tubular neuromuscular constructs, characterized over 50 days from embryonic and induced pluripotent stem cell lines.",
+    "plain": "Researchers wanted to grow human muscle and nerve tissue together in a tube-shaped structure that is organized more like the body's own tissue. They used a spinning method to wrap stem-cell-derived precursor cells in a soft gel core with an outer shell, then tracked the tubes for up to 50 days. The tubes formed both muscle and nerve regions, and the embryonic-stem-cell version showed spontaneous contractions from day 14.",
+    "why": "A tube-shaped model that combines muscle and nerve could offer a more structured way to study how neuromuscular tissue develops and matures. The text itself says functional nerve-to-muscle signaling is still unproven, so its value for drug testing or disease modeling is not yet shown.",
+    "background": "- Stem cells can be guided to become many cell types, and neuromesodermal progenitors are an early precursor that can give rise to both spinal-cord-type nerve cells and skeletal muscle.\n- Fibrin is a natural gel (the material of blood clots); alginate is a seaweed-derived gel often used as a cell-friendly shell.\n- Wet-spinning forms fibers by extruding material into a liquid bath, here with rotation to shape a tube.\n- Neuromuscular junction: the contact point where a nerve signals a muscle to contract, using acetylcholine as the messenger.\n- Calcium imaging: a way to watch cells light up when they are electrically active or signaled.\n- Immunofluorescence and gene expression: methods for labeling proteins and measuring which genes are switched on.",
+    "difficulty": "research-level",
+    "ai": true
+   },
+   "abstract": "Combining multicellular self-organization with defined tissue architecture remains a challenge in human neuromuscular modeling. Here, we use rotary wet-spinning (RoWS) biofabrication to encapsulate human neuromesodermal progenitors (NMPs) within fibrin-based cores surrounded by alginate shells, generating neuromuscular tubuloids (nmTubs). NMPs derived from a human embryonic stem cell and an induced pluripotent stem cell line were cultured for up to 50 days and assessed by gene expression analysis, immunofluorescence, tissue orientation measurements, and calcium imaging. Both cell lines generated muscle and neural compartments, with distinct differentiation kinetics and tissue proportions. Embryonic stem cell-derived nmTubs developed more extensive neural- and endothelial-associated structures and displayed spontaneous contractions from day 14 onward. Between days 30 and 50, muscle tissue area and myotube diameter increased, while acetylcholine receptor domains underwent spatial remodeling. Neural projections exhibited pronounced longitudinal organization within the constructs. Acetylcholine-associated calcium transients demonstrated tissue responsiveness, although functional neuromuscular transmission remains to be established. These findings show that RoWS can combine a common developmental progenitor population with a defined fibrous architecture to support multicellular neuromuscular development. nmTubs provide a platform to investigate the relationships among biomaterial geometry, tissue organization, and maturation in human neuromuscular models.",
+   "source": "biorxiv"
+  },
   {
    "uid": "biorxiv:10.64898/2026.11.22.768423",
    "title": "Digital light processing of human-scale tissue-engineered heart valves",
@@ -26,12 +84,12 @@
    "primary_category": "bioengineering",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A composite bioink (PEGDA, GelMA and methacrylated quince seed mucilage, called GPQuin) is used with digital light processing to print a human-scale trileaflet tissue-engineered heart valve, with initial mechanical, cell-viability, implantation and pulse-duplicator tests.",
-    "plain": "Replacement heart valves made from living or biological material could avoid some problems of current implants, but they are hard to manufacture at full human size. This paper describes a new printable gel mixture that lets a light-based 3D printer build a valve about the size of a human one, with three separate flaps and sinus-shaped pockets. The printed valves were checked for shape accuracy, stretchiness, cell compatibility, response to 12 weeks under the skin in an animal model, and opening and closing in a test pump.",
-    "why": "Printing full-size, complex valve shapes is a real bottleneck in heart valve tissue engineering, so a printable ink that handles this geometry is relevant to that field. The text reports only early-stage measurements, and it does not show that the valves would work in a patient, so its clinical significance remains uncertain.",
+    "ai": true,
     "background": "- Heart valves control one-way blood flow; current replacements are mechanical or biological (tissue-based) and have known drawbacks such as immune reactions, calcification, and mismatch with patient size.\n- Tissue engineering builds replacement tissue from scaffolds (structures that support cells) combined with cells.\n- Hydrogels are water-swollen soft gels; the ink here is a mix of synthetic PEG-based and natural polymers (gelatin and a plant mucilage from quince seeds).\n- Methacrylation adds light-reactive groups so the material hardens when exposed to light.\n- Digital light processing (DLP) is a 3D printing method that cures a whole layer of liquid resin at once using projected light.\n- Micro-CT is an X-ray scanning method used here to compare printed shape against the design (deviations are in micrometers, thousandths of a millimeter).\n- Induced pluripotent stem cells are adult cells reprogrammed into an embryonic-like state, which can then be turned into other cell types.\n- A pulse duplicator is a pump rig that simulates heartbeat flow to test valve function.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A composite bioink (PEGDA, GelMA and methacrylated quince seed mucilage, called GPQuin) is used with digital light processing to print a human-scale trileaflet tissue-engineered heart valve, with initial mechanical, cell-viability, implantation and pulse-duplicator tests.",
+    "plain": "Replacement heart valves made from living or biological material could avoid some problems of current implants, but they are hard to manufacture at full human size. This paper describes a new printable gel mixture that lets a light-based 3D printer build a valve about the size of a human one, with three separate flaps and sinus-shaped pockets. The printed valves were checked for shape accuracy, stretchiness, cell compatibility, response to 12 weeks under the skin in an animal model, and opening and closing in a test pump.",
+    "why": "Printing full-size, complex valve shapes is a real bottleneck in heart valve tissue engineering, so a printable ink that handles this geometry is relevant to that field. The text reports only early-stage measurements, and it does not show that the valves would work in a patient, so its clinical significance remains uncertain."
    },
    "abstract": "Tissue engineered heart valves (TEHVs) could overcome the complications of current heart valve replacement, such as immunologic events, degenerative fibrocalcific changes, and patient-prosthesis mismatch. Digital light processing (DLP) 3D printing enables creation of complex geometries; however, suitable (bio)inks remain limited. Here, a composite ink comprising poly(ethylene glycol) diacrylate (PEGDA), gelatin methacryloyl (GelMA), and methacrylated quince seed mucilage (QSGM), termed GPQuin, was developed for DLP printing of human-scale TEHVs. GPQuin enabled fabrication of a trileaflet TEHV with separated leaflets and anatomically inspired sinuses. Micro-computed tomography revealed mean positive and negative surface deviations of +214 and -248 micrometers, respectively. The printed hydrogels exhibited a tensile modulus of 117.2 +/- 15.5 kPa, an ultimate tensile strength of 113.2 +/- 17.4 kPa, and an elongation at break of 75.3 +/- 2.3%. Human induced pluripotent stem cell-derived valve cells attached to the hydrogel surfaces and remained predominantly viable over 14 days. After 12 weeks of subcutaneous implantation, the constructs showed a time-dependent inflammatory response. In a pulse duplicator under pulmonary loading, printed valves exhibited good cyclic leaflet opening and closing. Together, these findings establish GPQuin as a printable platform for human-scale valve scaffolds and support further investigation in heart valve tissue engineering.",
    "source": "biorxiv"
@@ -50,12 +108,12 @@
    "primary_category": "bioengineering",
    "date": "2026-11-27",
    "summary": {
-    "one_liner": "A preliminary study compiles 79 published BMP-2 release experiments from 21 papers and tests whether carrier-family labels let machine-learning models predict release across different studies, finding that gains largely disappear under publication-grouped validation.",
-    "plain": "The paper asks whether past published measurements of how a bone-growth protein (BMP-2) leaks out of implant materials can be reused to predict future release. The authors pulled 79 experiments from 21 papers, using an AI assistant plus human checking, and found that only 48% reported BMP-2 alone as a percentage of the loaded dose, so the data are hard to compare. Simple models did better than a basic baseline when test data came from the same studies, but not when whole studies were held out.",
-    "why": "Predicting drug or growth-factor release from carriers could help design bone-repair devices with less trial and error, but this work suggests that published data, as currently reported, may not support predictions for new studies. It is a useful caution about reporting standards in biomaterials research, though the text describes itself as preliminary.",
+    "ai": true,
     "background": "- BMP-2 is a protein that signals bone to form; it is used clinically in bone-repair procedures and is often delivered from a carrier material.\n- \"Release profile\" means how the amount of protein leaking from a carrier changes over time.\n- \"Loaded dose\" is the total amount of protein put into the carrier at the start.\n- Machine learning models learn patterns from data to predict new outcomes; \"mean absolute error\" measures average prediction error, here in log10 units.\n- Random hold-out validation tests on data points mixed from the same studies; publication-grouped cross-validation holds out whole papers, a stricter test of generalization to new studies.\n- \"Carrier family\" is a category of material (such as a class of coating or scaffold) used to group carriers.",
     "difficulty": "research-level",
-    "ai": true
+    "one_liner": "A preliminary study compiles 79 published BMP-2 release experiments from 21 papers and tests whether carrier-family labels let machine-learning models predict release across different studies, finding that gains largely disappear under publication-grouped validation.",
+    "plain": "The paper asks whether past published measurements of how a bone-growth protein (BMP-2) leaks out of implant materials can be reused to predict future release. The authors pulled 79 experiments from 21 papers, using an AI assistant plus human checking, and found that only 48% reported BMP-2 alone as a percentage of the loaded dose, so the data are hard to compare. Simple models did better than a basic baseline when test data came from the same studies, but not when whole studies were held out.",
+    "why": "Predicting drug or growth-factor release from carriers could help design bone-repair devices with less trial and error, but this work suggests that published data, as currently reported, may not support predictions for new studies. It is a useful caution about reporting standards in biomaterials research, though the text describes itself as preliminary."
    },
    "abstract": "Published release profiles offer a potential basis for predicting bone morphogenetic protein-2 (BMP-2) delivery from biomaterial carriers, but heterogeneous reporting and study-specific effects complicate their reuse in machine learning (ML) models. As a preliminary exploration, we compiled 79 release experiments and 487 time points from 21 publications with a workflow that combined a large language model assistant and human verification, and we examined data comparability and cross-study prediction with ML models. Only 38 experiments (48%) reported BMP-2 alone as a percentage of the loaded dose. Within individual studies, binding components and coating layers were associated with slower release, consistent with established carrier mechanisms. Using carrier family as the sole predictor, a family-median model and gradient-boosted decision trees achieved lower mean absolute errors than a global-median baseline under random hold-out validation (0.42 and 0.44 versus 0.52 log10 units). Publication-grouped cross-validation did not establish a corresponding improvement (0.57 and 0.48 versus 0.50). Only 10 of the 28 modeling experiments belonged to carrier families represented in the training data under this scheme, and carrier family was strongly associated with publication. These findings highlight the need to distinguish within-study interpolation from cross-study generalization. Broader coverage of each carrier family, quantitative formulation and assay descriptors, and accessible numerical source data are needed to support predictive modeling of BMP-2 release.",
    "source": "biorxiv"

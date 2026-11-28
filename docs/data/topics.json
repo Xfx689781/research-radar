@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "language": "en",
  "fields": [
   "Mathematics",
@@ -240,7 +240,7 @@
    "description": "New AI models and releases, AI companies and labs, model launches, large language models, open-weight models, AI products and agents, research announcements, funding and partnerships, AI chips and compute, AI policy and regulation.",
    "source": "rss",
    "categories": [],
-   "new_today": 5
+   "new_today": 3
   },
   {
    "slug": "model-architectures",
@@ -821,7 +821,7 @@
    "categories": [
     "infectious diseases"
    ],
-   "new_today": 2
+   "new_today": 1
   },
   {
    "slug": "public-health",
@@ -857,7 +857,7 @@
    "categories": [
     "oncology"
    ],
-   "new_today": 2
+   "new_today": 1
   },
   {
    "slug": "health-informatics",
